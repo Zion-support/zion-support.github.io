@@ -1,11 +1,10 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
-const AiContentStudioPage: React.FC = () => {
+const AiContentStudioPage = () => {
   const features = [
     {
 

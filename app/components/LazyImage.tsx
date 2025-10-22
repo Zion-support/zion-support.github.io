@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const LazyImage: React.FC = () => {
+const LazyImage = () => {
   return (
     <div>
       <h1>LazyImage</h1>

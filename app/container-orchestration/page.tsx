@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const ContainerOrchestrationPage: React.FC = () => {
+const ContainerOrchestrationPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const ContainerOrchestrationPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Container Orchestration - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional containerorchestration solutions powered by advanced AI and cutting-edge technology." />
@@ -112,7 +111,7 @@ const ContainerOrchestrationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

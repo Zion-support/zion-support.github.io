@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const IotSolutionsPage: React.FC = () => {
+const IotSolutionsPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const IotSolutionsPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Iot Solutions - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional iotsolutions solutions powered by advanced AI and cutting-edge technology." />
@@ -112,7 +111,7 @@ const IotSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

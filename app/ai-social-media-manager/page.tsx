@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const AiSocialMediaManagerPage: React.FC = () => {
+const AiSocialMediaManagerPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Social Media Manager - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional aisocialmediamanager solutions powered by advanced AI and cutting-edge technology." />
@@ -111,7 +110,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

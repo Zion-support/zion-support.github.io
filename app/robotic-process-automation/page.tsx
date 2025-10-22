@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const RoboticProcessAutomationPage: React.FC = () => {
+const RoboticProcessAutomationPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const RoboticProcessAutomationPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Robotic Process Automation - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional roboticprocessautomation solutions powered by advanced AI and cutting-edge technology." />
@@ -112,7 +111,7 @@ const RoboticProcessAutomationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

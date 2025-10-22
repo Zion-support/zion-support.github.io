@@ -1,11 +1,7 @@
-import React from "react";
+import React from 'react';
 'use client';
 
-interface AccessibilityEnhancerProps {
-  children?: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer = ({ children }: { children?: React.ReactNode }) => {
   return <>{children}</>;
 };
 

@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const ServerlessArchitecturePage: React.FC = () => {
+const ServerlessArchitecturePage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const ServerlessArchitecturePage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Serverless Architecture - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional serverlessarchitecture solutions powered by advanced AI and cutting-edge technology." />
@@ -112,7 +111,7 @@ const ServerlessArchitecturePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

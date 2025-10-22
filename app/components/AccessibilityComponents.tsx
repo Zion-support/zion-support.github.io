@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const AccessibilityComponents: React.FC = () => {
+const AccessibilityComponents = () => {
   return (
     <div>
       <h1>AccessibilityComponents</h1>

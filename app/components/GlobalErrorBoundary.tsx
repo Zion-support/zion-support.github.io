@@ -1,11 +1,7 @@
-import React from "react";
+import React from 'react';
 'use client';
 
-interface GlobalErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ children }) => {
+const GlobalErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 

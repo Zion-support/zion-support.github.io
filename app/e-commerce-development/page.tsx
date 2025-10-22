@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const ECommerceDevelopmentPage: React.FC = () => {
+const ECommerceDevelopmentPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const ECommerceDevelopmentPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>E Commerce Development - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional ecommercedevelopment solutions powered by advanced AI and cutting-edge technology." />
@@ -112,7 +111,7 @@ const ECommerceDevelopmentPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

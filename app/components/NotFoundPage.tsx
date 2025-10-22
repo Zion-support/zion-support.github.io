@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const NotFoundPage: React.FC = () => {
+const NotFoundPage = () => {
   return (
     <div>
       <h1>NotFoundPage</h1>

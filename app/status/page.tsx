@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 
 
-const StatusPage: React.FC = () => {
+const StatusPage = () => {
   return (
     <>
       <Helmet>

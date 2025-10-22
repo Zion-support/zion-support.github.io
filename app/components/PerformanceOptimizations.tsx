@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const PerformanceOptimizations: React.FC = () => {
+const PerformanceOptimizations = () => {
   return (
     <div>
       <h1>PerformanceOptimizations</h1>

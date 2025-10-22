@@ -1,10 +1,9 @@
-import React from "react";
 
 interface ContactPageProps {
   className?: string;
 }
 
-const ContactPage: React.FC<ContactPageProps> = ({ className = '' }) => {
+const ContactPage = ({ className = '' }) => {
   return (
     <div className={`bg-white p-4 rounded-lg ${className}`}>
       <h2>ContactPage</h2>

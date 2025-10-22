@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const SEOHead: React.FC = () => {
+const SEOHead = () => {
   return (
     <div>
       <h1>SEOHead</h1>

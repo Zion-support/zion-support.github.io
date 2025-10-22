@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -19,7 +18,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-const ZionAIEmailMarketingProPage: React.FC = () => {
+const ZionAIEmailMarketingProPage = () => {
   const features = [
     {
       title: "AI-Powered Email Content Generation",

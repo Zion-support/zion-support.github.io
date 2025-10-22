@@ -1,10 +1,9 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Phone, Mail, Brain, Smartphone, Monitor, Cloud } from 'lucide-react';
 import Footer from '../components/Footer';
 
-const BusinessAppsPage: React.FC = () => {
+const BusinessAppsPage = () => {
   const features = [
     {
       icon: Smartphone,

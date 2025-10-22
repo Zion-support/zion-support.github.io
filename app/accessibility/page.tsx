@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, CheckCircle, Globe, Shield, Zap } from 'lucide-react';
 
-const AccessibilityPage: React.FC = () => {
+const AccessibilityPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const AccessibilityPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Accessibility - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional accessibility solutions powered by advanced AI and cutting-edge technology." />
@@ -150,7 +149,7 @@ const AccessibilityPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 

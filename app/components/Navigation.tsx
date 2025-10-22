@@ -1,10 +1,8 @@
-import React from "react";
 'use client';
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Menu, X } from 'lucide-react';
 
-const Navigation: React.FC = () => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [

@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const AiLeadScoringPage: React.FC = () => {
+const AiLeadScoringPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const AiLeadScoringPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Lead Scoring - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional aileadscoring solutions powered by advanced AI and cutting-edge technology." />
@@ -111,7 +110,7 @@ const AiLeadScoringPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

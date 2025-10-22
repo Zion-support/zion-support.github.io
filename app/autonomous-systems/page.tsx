@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 
 
-const AutonomousSystemsPage: React.FC = () => {
+const AutonomousSystemsPage = () => {
   return (
     <>
       <Helmet>

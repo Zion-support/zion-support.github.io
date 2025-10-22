@@ -1,10 +1,9 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Zap, Shield, Brain, Globe, Phone, Mail } from 'lucide-react';
 import Footer from '../components/Footer';
 
-const BlockchainIntegrationServicesPage: React.FC = () => {
+const BlockchainIntegrationServicesPage = () => {
   const features = [
     {
       icon: Shield,

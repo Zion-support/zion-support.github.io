@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Cloud, Server, Database, Shield, CheckCircle, Phone, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
-const CloudInfrastructurePage: React.FC = () => {
+const CloudInfrastructurePage = () => {
   const features = [
     {
       icon: Cloud,
@@ -39,7 +38,7 @@ const CloudInfrastructurePage: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Cloud Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -129,7 +128,7 @@ const CloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

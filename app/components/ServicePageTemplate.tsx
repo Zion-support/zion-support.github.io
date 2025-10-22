@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const ServicePageTemplate: React.FC = () => {
+const ServicePageTemplate = () => {
   return (
     <div>
       <h1>ServicePageTemplate</h1>

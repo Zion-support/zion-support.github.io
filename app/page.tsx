@@ -1,11 +1,10 @@
-import React from "react";
 'use client';
 import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 
-const AppPage: React.FC = () => {
+const AppPage = () => {
   const features = [
     {
       icon: Brain,

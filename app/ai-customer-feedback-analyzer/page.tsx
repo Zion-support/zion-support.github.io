@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const AiCustomerFeedbackAnalyzerPage: React.FC = () => {
+const AiCustomerFeedbackAnalyzerPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const AiCustomerFeedbackAnalyzerPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Customer Feedback Analyzer - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional aicustomerfeedbackanalyzer solutions powered by advanced AI and cutting-edge technology." />
@@ -112,7 +111,7 @@ const AiCustomerFeedbackAnalyzerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

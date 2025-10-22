@@ -1,4 +1,3 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -6,7 +5,7 @@ import Footer from '../components/Footer';
 
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
-const AICrmAssistantPage: React.FC = () => {
+const AICrmAssistantPage = () => {
   const features = [
     {
       title: 'AI Customer Management',

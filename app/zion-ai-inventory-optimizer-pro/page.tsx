@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -18,7 +17,7 @@ import {
   Globe
 } from 'lucide-react';
 
-const ZionAIInventoryOptimizerProPage: React.FC = () => {
+const ZionAIInventoryOptimizerProPage = () => {
   const features = [
     {
       title: "AI-Powered Demand Forecasting",

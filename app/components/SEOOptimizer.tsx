@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const SEOOptimizer: React.FC = () => {
+const SEOOptimizer = () => {
   return null; // This component only handles SEO, no UI
 };
 

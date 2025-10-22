@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const LowCodePlatformPage: React.FC = () => {
+const LowCodePlatformPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const LowCodePlatformPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Low Code Platform - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional lowcodeplatform solutions powered by advanced AI and cutting-edge technology." />
@@ -112,7 +111,7 @@ const LowCodePlatformPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 
 
-const AiDataVisualizationPage: React.FC = () => {
+const AiDataVisualizationPage = () => {
   return (
     <>
       <Helmet>

@@ -1,6 +1,4 @@
-import React from "react";
 'use client';
-import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -14,7 +12,7 @@ interface PerformanceMonitorProps {
   className?: string;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ isVisible = false, className = '' }) => {
+const PerformanceMonitor = ({ isVisible = false, className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     domContentLoaded: 0,

@@ -1,10 +1,9 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Phone, Mail, Lock, Eye, ShieldCheck } from 'lucide-react';
 import Footer from '../components/Footer';
 
-const CloudSecurityPage: React.FC = () => {
+const CloudSecurityPage = () => {
   const features = [
     {
 

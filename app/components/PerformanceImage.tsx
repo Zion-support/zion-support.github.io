@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const PerformanceImage: React.FC = () => {
+const PerformanceImage = () => {
   return (
     <div>
       <h1>PerformanceImage</h1>

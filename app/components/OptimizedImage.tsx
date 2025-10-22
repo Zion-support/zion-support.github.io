@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const OptimizedImage: React.FC = () => {
+const OptimizedImage = () => {
   return (
     <div>
       <h1>OptimizedImage</h1>

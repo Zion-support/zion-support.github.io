@@ -1,4 +1,3 @@
-import React from "react";
 'use client';
 
 interface LoadingSpinnerProps {
@@ -8,7 +7,7 @@ interface LoadingSpinnerProps {
   fullScreen?: boolean;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+const LoadingSpinner = ({ 
   size = 'md', 
   className = '', 
   text, 

@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Cloud, Database, Mail, Phone, Server, Shield } from 'lucide-react';
 
-const CloudMigrationServicesPage: React.FC = () => {
+const CloudMigrationServicesPage = () => {
   const features = [
     {
 

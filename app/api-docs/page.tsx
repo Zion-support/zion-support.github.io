@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const ApiDocsPage: React.FC = () => {
+const ApiDocsPage = () => {
   const features = [
     {
       icon: Brain,
@@ -28,7 +27,7 @@ const ApiDocsPage: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Api Docs - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional apidocs solutions powered by advanced AI and cutting-edge technology." />
@@ -109,7 +108,7 @@ const ApiDocsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

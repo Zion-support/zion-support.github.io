@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -18,7 +17,7 @@ import {
   MousePointer
 } from 'lucide-react';
 
-const ZionAICustomerChurnPredictorProPage: React.FC = () => {
+const ZionAICustomerChurnPredictorProPage = () => {
   const features = [
     {
       title: "AI-Powered Churn Prediction",

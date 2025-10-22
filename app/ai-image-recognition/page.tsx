@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const AiImageRecognitionPage: React.FC = () => {
+const AiImageRecognitionPage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const AiImageRecognitionPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Image Recognition - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional aiimagerecognition solutions powered by advanced AI and cutting-edge technology." />
@@ -111,7 +110,7 @@ const AiImageRecognitionPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

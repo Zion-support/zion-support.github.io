@@ -1,6 +1,5 @@
-import React from "react";
+import React, { lazy } from 'react';
 'use client';
-import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -68,7 +67,7 @@ const AppLoadingSpinner = () => (
   />
 );
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>

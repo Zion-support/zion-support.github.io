@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const AiPredictiveMaintenancePage: React.FC = () => {
+const AiPredictiveMaintenancePage = () => {
   const features = [
     {
       icon: Brain,
@@ -30,7 +29,7 @@ const AiPredictiveMaintenancePage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Predictive Maintenance - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional aipredictivemaintenance solutions powered by advanced AI and cutting-edge technology." />
@@ -111,7 +110,7 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

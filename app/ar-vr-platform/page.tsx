@@ -1,9 +1,8 @@
-import React from "react";
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const ARVRPlatformPage: React.FC = () => {
+const ARVRPlatformPage = () => {
   const features = [
     {
       icon: Brain,

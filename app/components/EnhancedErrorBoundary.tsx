@@ -1,7 +1,6 @@
-import React from "react";
 'use client';
 
-const EnhancedErrorBoundary: React.FC = () => {
+const EnhancedErrorBoundary = () => {
   return (
     <div>
       <h1>EnhancedErrorBoundary</h1>
