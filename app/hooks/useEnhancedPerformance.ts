@@ -17,7 +17,6 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
   const mountTimeRef = useRef<number>(0)
   const renderCountRef = useRef<number>(0)
-  const errorCountRef = useRef<number>(0)
 
   useEffect(() => {
     mountTimeRef.current = performance.now()
@@ -29,52 +28,67 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
     }
 
     return () => {
-      const unmountTime = performance.now()
-      const mountDuration = unmountTime - mountTimeRef.current
-      
+      // Track component unmount duration
       if (trackPerformance) {
-        console.log(`Component ${component} unmounted after ${mountDuration.toFixed(2)}ms`)
+        const duration = performance.now() - mountTimeRef.current
+        
+        if (duration > 5000) {
+          // Long-lived component
+          console.log(`Long component lifetime: ${component} - ${Math.round(duration)}ms`)
+        }
       }
+
+      // Track component unmount
+      if (trackAnalytics) {
+        console.log(`Component ${component} unmounted`)
+      }
+    };
+  }, [component, trackAnalytics, trackPerformance]);
+
+  // Track render performance
+  useEffect(() => {
+    renderCountRef.current++;
+
+    if (trackPerformance && renderCountRef.current > 10) {
+      // Many re-renders detected
+      console.log(`High render count in ${component}: ${renderCountRef.current}`)
     }
-  }, [component, trackAnalytics, trackPerformance])
+  });
 
-  const trackError = useCallback((error: Error, errorInfo?: any) => {
-    if (!trackErrors) return
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
+    if (trackPerformance) {
+      performance.mark(`${component}-${name}-start`)
+      fn()
+      performance.mark(`${component}-${name}-end`)
+      performance.measure(
+        `${component}-${name}`,
+        `${component}-${name}-start`,
+        `${component}-${name}-end`
+      )
+    } else {
+      fn()
+    }
+  }, [component, trackPerformance])
 
-    errorCountRef.current += 1
-    
-    console.error(`Error in ${component}:`, error, errorInfo)
-    
+  const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
+    if (trackErrors) {
+      console.error(`Error in ${component}:`, error, context)
+      // Here you would typically send to an error tracking service
+    }
+  }, [component, trackErrors])
+
+  const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
-      console.log(`Error tracked for ${component}`)
+      console.log(`Analytics event in ${component}:`, event, data)
+      // Here you would typically send to an analytics service
     }
-  }, [component, trackErrors, trackAnalytics])
-
-  const trackPerformanceMetric = useCallback((metric: string, value: number) => {
-    if (!trackPerformance) return
-
-    console.log(`Performance metric for ${component}: ${metric} = ${value}ms`)
-    
-    if (trackAnalytics) {
-      console.log(`Performance tracked for ${component}`)
-    }
-  }, [component, trackPerformance, trackAnalytics])
-
-  const getPerformanceMetrics = useCallback(() => {
-    return {
-      component,
-      mountTime: mountTimeRef.current,
-      renderCount: renderCountRef.current,
-      errorCount: errorCountRef.current,
-      currentTime: performance.now()
-    }
-  }, [component])
+  }, [component, trackAnalytics])
 
   return {
+    measurePerformance,
     trackError,
-    trackPerformance: trackPerformanceMetric,
-    getPerformanceMetrics,
+    trackAnalytics: trackAnalyticsEvent,
     renderCount: renderCountRef.current,
-    errorCount: errorCountRef.current
+    mountTime: mountTimeRef.current
   }
 }
