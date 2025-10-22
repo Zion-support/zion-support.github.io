@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
+import { CheckCircle, Phone, Mail, Lock, Eye, ShieldCheck } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const CloudSecurityPage: React.FC = () => {
@@ -13,7 +13,7 @@ const CloudSecurityPage: React.FC = () => {
       description: 'End-to-end encryption for all data in transit and at rest'
     },
     {
-      icon: Shield,
+      icon: ShieldCheck,
       title: 'Security Monitoring',
       description: '24/7 security monitoring and threat detection'
     },
