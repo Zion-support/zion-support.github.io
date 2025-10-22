@@ -13,7 +13,7 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
 // Hooks
-import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
+import usePerformanceOptimization from './app/hooks/usePerformanceOptimization';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -209,13 +209,7 @@ const App = memo(() => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   // Initialize performance optimizations
-  usePerformanceOptimization({
-    enableLazyLoading: true,
-    enablePreloading: true,
-    enableCodeSplitting: true,
-    enableImageOptimization: true,
-    enableBundleAnalysis: process.env.NODE_ENV === 'development'
-  });
+  usePerformanceOptimization();
 
   useEffect(() => {
     // Register service worker

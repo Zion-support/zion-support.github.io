@@ -1,6 +1,8 @@
-/// Comment
+// Utility functions
 
-export function accessibilityUtils() {
-  /// Comment
+export function utilFunction() {
+  // Utility function implementation
   return null;
 }
+
+export default utilFunction;

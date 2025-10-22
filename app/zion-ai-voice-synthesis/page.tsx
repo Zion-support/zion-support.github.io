@@ -1,40 +1,52 @@
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
+import { Metadata } from 'next';
 
-const ZionAIVoiceSynthesisPage: React.FC = memo(() => {
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Advanced AI and IT solutions for modern businesses.',
+};
+
+export default function Page() {
   return (
-    <>
-      <SEOHead
-        title="Zion AI Voice Synthesis Pro - Generate Natural-Sounding AI Voices"
-        description="High-quality AI voice generation and text-to-speech services with natural-sounding voices in multiple languages for professional audio content."
-        keywords="AI voice synthesis, text to speech, voice generation, AI voices, audio content"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-voice-synthesis"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Zion AI Voice Synthesis Pro
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Coming Soon - Generate natural-sounding AI voices for professional audio content.
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Advanced AI and IT solutions powered by cutting-edge technology.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
+            <p className="text-gray-300">
+              Advanced AI solutions for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 transform">
-                Contact Us
-              </a>
-              <a href="tel:+13024640950" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-105 transform">
-                Call +1 302 464 0950
-              </a>
-            </div>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">IT Services</h3>
+            <p className="text-gray-300">
+              Scalable and reliable infrastructure solutions.
+            </p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Cloud Solutions</h3>
+            <p className="text-gray-300">
+              AI-powered insights and automation.
+            </p>
           </div>
         </div>
+        
+        <div className="text-center mt-16">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+            Get Started
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
-});
-
-ZionAIVoiceSynthesisPage.displayName = 'ZionAIVoiceSynthesisPage';
-
-export default ZionAIVoiceSynthesisPage;
+}

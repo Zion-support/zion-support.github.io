@@ -1,394 +1,52 @@
-<<<<<<< HEAD
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
-import { useForm } from '../hooks/useForm';
+import { Metadata } from 'next';
 
-const ContactPage: React.FC = memo(() => {
-  const {
-    data: formData,
-    isSubmitting,
-    submitStatus,
-    errors,
-    handleInputChange,
-    handleSubmit,
-  } = useForm({
-    initialData: {
-      name: '',
-      email: '',
-      message: ''
-    },
-    onSubmit: async (_data) => {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Here you would typically send the data to your backend
-      // await apiService.submitContactForm(data);
-    },
-    validate: (data) => {
-      const errors: Record<string, string> = {};
-      if (!data.name.trim()) errors.name = 'Name is required';
-      if (!data.email.trim()) errors.email = 'Email is required';
-      else if (!/\S+@\S+\.\S+/.test(data.email)) errors.email = 'Email is invalid';
-      if (!data.message.trim()) errors.message = 'Message is required';
-      return errors;
-    },
-  });
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Layers } from 'lucide-react';
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Advanced AI and IT solutions for modern businesses.',
+};
 
+export default function Page() {
   return (
-<<<<<<< HEAD
-    <>
-      <SEOHead
-        title="Contact Us"
-        description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
-        canonicalUrl="https://ziontechgroup.com/contact"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Ready to transform your business with our AI and IT solutions? Get in touch with our expert team today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+13024640950" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                📞 Call +1 (302) 464-0950
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-                ✉️ Email Us
-              </a>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">📧</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">kleber@ziontechgroup.com</p>
-                    <p className="text-sm text-gray-500">We respond within 24 hours</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">📞</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+1 (302) 464-0950</p>
-                    <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">📍</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Address</h3>
-                    <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                    <p className="text-sm text-gray-500">United States</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🌐</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Website</h3>
-                    <p className="text-gray-600">https://ziontechgroup.com</p>
-                    <p className="text-sm text-gray-500">Visit our online platform</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Why Choose Zion Tech Group?</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-2">✓</span>
-                    Expert AI and IT professionals
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-2">✓</span>
-                    Proven track record of success
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-2">✓</span>
-                    Custom solutions for your business
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-green-500 mr-2">✓</span>
-                    24/7 support and monitoring
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
-              
-              {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
-                  <p className="text-green-800">Thank you for your message! We'll get back to you soon.</p>
-                </div>
-              )}
-              
-              {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
-                  <p className="text-red-800">Sorry, there was an error sending your message. Please try again.</p>
-                </div>
-              )}
-              
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.name ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="Your full name"
-                  />
-                  {errors.name && (
-                    <p className="mt-1 text-sm text-red-600">{errors.name}</p>
-                  )}
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.email ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="your.email@example.com"
-                  />
-                  {errors.email && (
-                    <p className="mt-1 text-sm text-red-600">{errors.email}</p>
-                  )}
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.message ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="Tell us about your project or how we can help..."
-                  ></textarea>
-                  {errors.message && (
-                    <p className="mt-1 text-sm text-red-600">{errors.message}</p>
-                  )}
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </button>
-              </form>
-            </div>
-          </div>
-
-          {/* Services Overview */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🤖</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Services</h3>
-                <p className="text-gray-600 text-sm">Advanced AI solutions including chatbots, document processing, and predictive analytics</p>
-              </div>
-              <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">☁️</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Infrastructure</h3>
-                <p className="text-gray-600 text-sm">Scalable cloud solutions and infrastructure management for modern businesses</p>
-              </div>
-              <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🔧</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">IT Solutions</h3>
-                <p className="text-gray-600 text-sm">Comprehensive technology services including development, security, and support</p>
-              </div>
-              <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📱</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Micro SaaS</h3>
-                <p className="text-gray-600 text-sm">Innovative micro software solutions designed to solve specific business challenges</p>
-              </div>
-              <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🔒</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cybersecurity</h3>
-                <p className="text-gray-600 text-sm">Advanced security solutions to protect your digital assets and infrastructure</p>
-              </div>
-              <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📊</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Analytics</h3>
-                <p className="text-gray-600 text-sm">Transform your data into actionable insights with advanced analytics and visualization</p>
-              </div>
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Frequently Asked Questions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">How quickly can you start my project?</h3>
-                <p className="text-gray-600">Most projects can begin within 1-2 weeks of contract signing, depending on complexity and current workload.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer ongoing support?</h3>
-                <p className="text-gray-600">Yes, we provide comprehensive ongoing support and maintenance for all our solutions.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Can you work with our existing systems?</h3>
-                <p className="text-gray-600">Absolutely! We specialize in integrating with existing systems and can work with most technologies.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">What industries do you serve?</h3>
-                <p className="text-gray-600">We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, and more.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you provide training for our team?</h3>
-                <p className="text-gray-600">Yes, we offer comprehensive training programs to ensure your team can effectively use our solutions.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">What is your pricing model?</h3>
-                <p className="text-gray-600">We offer flexible pricing models including project-based, monthly subscriptions, and custom enterprise solutions.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Let's discuss how our AI and IT solutions can transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Start Your Project
-              </a>
-              <a href="/pricing" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Pricing
-              </a>
-            </div>
-            <div className="mt-8 text-sm opacity-75">
-              <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>
-              <p>✉️ <strong>Email:</strong> kleber@ziontechgroup.com</p>
-              <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-});
-
-ContactPage.displayName = 'ContactPage';
-
-export default ContactPage;
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact | Zion Tech Group</title>
-        <meta name="description" content="Professional contact solutions for modern businesses." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-            Contact
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Zion Tech Group
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional contact solutions for modern businesses.
+            Advanced AI and IT solutions powered by cutting-edge technology.
           </p>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
-            <Layers className="w-12 h-12 text-cyan-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
-            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
+            <p className="text-gray-300">
+              Advanced AI solutions for modern businesses.
+            </p>
           </div>
           
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
-            <Layers className="w-12 h-12 text-purple-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
-            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">IT Services</h3>
+            <p className="text-gray-300">
+              Scalable and reliable infrastructure solutions.
+            </p>
           </div>
           
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
-            <Layers className="w-12 h-12 text-yellow-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
-            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Cloud Solutions</h3>
+            <p className="text-gray-300">
+              AI-powered insights and automation.
+            </p>
           </div>
         </div>
-
-        <div className="text-center">
-          <p className="text-lg text-gray-300 mb-8">
-            Ready to get started with contact?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-            >
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/demo"
-              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-            >
-              View Demo
-            </Link>
-          </div>
+        
+        <div className="text-center mt-16">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+            Get Started
+          </button>
         </div>
       </div>
     </div>
   );
 }
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

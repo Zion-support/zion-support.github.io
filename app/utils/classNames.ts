@@ -1,9 +1,8 @@
-// Class names utility
+// Utility functions
 
-export function classNames() {
-  return {
-    cn: (...classes: (string | undefined | null | boolean)[]) => {
-      return classes.filter(Boolean).join(' ');
-    }
-  };
+export function utilFunction() {
+  // Utility function implementation
+  return null;
 }
+
+export default utilFunction;

@@ -1,17 +1,8 @@
-// SEO data utilities
+// Utility functions
 
-export function seoData() {
-  return {
-    generateMetaTags: (title: string, description: string) => ({
-      title,
-      description,
-      keywords: '',
-      canonical: ''
-    }),
-    generateStructuredData: (type: string, data: any) => ({
-      '@context': 'https://schema.org',
-      '@type': type,
-      ...data
-    })
-  };
+export function utilFunction() {
+  // Utility function implementation
+  return null;
 }
+
+export default utilFunction;

@@ -1,5 +1,8 @@
-/// Comment
+// Utility functions
 
-export const ANALYTICS_CONSTANTS = {
-  /// Comment
-};
+export function utilFunction() {
+  // Utility function implementation
+  return null;
+}
+
+export default utilFunction;

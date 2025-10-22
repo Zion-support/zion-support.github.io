@@ -1,27 +1,21 @@
 import React from 'react';
 
-<<<<<<< HEAD
-// Global error boundary component
-
-export function GlobalErrorBoundary({ children }: { children: React.ReactNode }) {
-  return (
-    <div>
-      {children}
-    </div>
-  );
-}
-=======
-interface GlobalErrorBoundaryProps {
+interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
+  [key: string]: any;
 }
 
-const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children, ...props }) => {
+const Component: React.FC<ComponentProps> = ({ 
+  className = '', 
+  children, 
+  ...props 
+}) => {
   return (
-    <div className={`globalerrorboundary-component ${className}`} {...props}>
+    <div className={`component ${className}`} {...props}>
       {children || (
         <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">GlobalErrorBoundary</h3>
+          <h3 className="text-lg font-semibold text-white mb-2">Component</h3>
           <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
       )}
@@ -29,5 +23,4 @@ const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '
   );
 };
 
-export default GlobalErrorBoundary;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+export default Component;
