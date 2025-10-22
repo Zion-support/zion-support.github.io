@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Global type definitions
 declare global {
   interface Window {
@@ -6,47 +5,45 @@ declare global {
       command: 'event',
       action: string,
       parameters: {
-        event_category?: string;
-        event_label?: string;
-        value?: number;
-        non_interaction?: boolean;
+        event_category?: string
+        event_label?: string
+        value?: number
+        non_interaction?: boolean
       }
-    ) => void;
+    ) => void
   }
 }
-
-export {};
-=======
+export {}
 import React from 'react'
-// Global type definitions for the application;
+// Global type definitions for the application
 declare global {interface Window {}
     gtag?: (...args: any[]) => void,
     dataLayer?: any[]}}
 }
-// Environment variables;
+// Environment variables
 declare namespace NodeJS {interface ProcessEnv {}
     NODE_ENV: 'development' | 'production' | 'test',
-    NEXT_PUBLIC_GA_ID?: string,;
+    NEXT_PUBLIC_GA_ID?: string,
     NEXT_PUBLIC_SITE_URL?: string;}}
 }
-// Component props interfaces;
+// Component props interfaces
 export interface BaseComponentProps {className?: string;}
   children?: React.ReactNode;}}
 export interface PageProps {}}params: {[key: string]: string ,}searchParams: {[key: string]: string | string[] | undefined ,}}
-// API response types;
+// API response types
 export interface ApiResponse<T = any> {success: boolean,
-  data?: T;
-  error?: string,;
+  data?: T
+  error?: string,
   message?: string;}}
-// Form types;
+// Form types
 export interface ContactFormData {name: string,}
   email: string,
-  company?: string;
+  company?: string
   message: string,
   phone?: string;}}
 export interface NewsletterFormData {email: string,}
   name?: string;}}
-// Service types;
+// Service types
 export interface Service {id: string,}
   title: string,
   description: string,
@@ -62,14 +59,13 @@ export interface BlogPost {id: string,}
   author: string,
   tags: string[],
   featuredImage?: string;}}
-// Navigation types;
+// Navigation types
 export interface NavigationItem {label: string,}
   href: string,
   children?: NavigationItem[]}}
-// Analytics types;
+// Analytics types
 export interface AnalyticsEvent {action: string,}
   category: string,
-  label?: string,;
+  label?: string,
   value?: number;}}
 export {}}
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb

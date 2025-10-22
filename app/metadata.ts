@@ -1,6 +1,5 @@
 
-import { Metadata } from 'next';
-
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI solutions, cloud services, and IT consulting.',
@@ -11,7 +10,5 @@ export const metadata: Metadata = {
     description: 'Advanced AI and IT Solutions',
     type: 'website',
   },
-};
-
-export default metadata;
-
+}
+export default metadata

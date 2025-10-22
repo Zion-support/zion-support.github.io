@@ -1,26 +1,25 @@
 
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  shortDescription: string;
-  icon: string;
-  features: string[];
+  id: string
+  title: string
+  description: string
+  shortDescription: string
+  icon: string
+  features: string[]
   pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number;
-  };
-  benefits: string[];
-  useCases: string[];
-  technologies: string[];
+    basic: number
+    pro: number
+    enterprise: number
+  }
+  benefits: string[]
+  useCases: string[]
+  technologies: string[]
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
+    phone: string
+    email: string
+    website: string
+  }
 }
-
 export const services: Service[] = [
   {
     id: 'ai-solutions',
@@ -127,5 +126,4 @@ export const services: Service[] = [
       website: 'https://ziontech.com/mobile'
     }
   }
-];
-
+]

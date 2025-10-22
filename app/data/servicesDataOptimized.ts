@@ -32,7 +32,6 @@ export const servicesDataOptimized = {
       link: '/ai-services/automation'
     }
   ],
-  
   itServices: [
     {
       id: 'web-development',
@@ -55,7 +54,6 @@ export const servicesDataOptimized = {
       link: '/cloud-infrastructure'
     }
   ],
-  
   microSaaS: [
     {
       id: 'analytics-dashboard',
@@ -78,10 +76,9 @@ export const servicesDataOptimized = {
       link: '/zion-smart-crm-automation'
     }
   ]
-};
-
+}
 // Lazy load full services data when needed
 export const loadFullServicesData = async () => {
-  const { services } = await import('./servicesData');
-  return services;
-};
+  const { services } = await import('./servicesData')
+  return services
+}

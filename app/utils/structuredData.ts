@@ -1,5 +1,4 @@
 // Structured data utilities
-
 export function structuredData() {
   return {
     generateOrganizationSchema: (orgData: any) => ({
@@ -22,5 +21,5 @@ export function structuredData() {
         item: item.url
       }))
     })
-  };
+  }
 }

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 export const generateSitemap = () => {
-  const baseUrl = 'https://ziontechgroup.com';
-  
+  const baseUrl = 'https://ziontechgroup.com'
   const staticPages = [
     '',
     '/about',
@@ -54,8 +52,7 @@ export const generateSitemap = () => {
     '/zion-ai-workflow-automator-pro',
     '/zion-customer-satisfaction-monitor',
     '/zion-smart-expense-tracker'
-  ];
-
+  ]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${staticPages.map(page => `  <url>
@@ -64,14 +61,12 @@ ${staticPages.map(page => `  <url>
     <changefreq>weekly</changefreq>
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>`).join('\n')}
-</urlset>`;
-
-  return sitemap;
-};
-=======
+</urlset>`
+  return sitemap
+}
 import {MetadataRoute} from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {return [;}
-    {;
+    {
       url: 'https://ziontechgroup.com',
       lastModified: new Date(),
       changeFrequency: 'yearly',
@@ -118,4 +113,3 @@ export default function sitemap(): MetadataRoute.Sitemap {return [;}
       priority: 0.5,},
   ]
 }
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb

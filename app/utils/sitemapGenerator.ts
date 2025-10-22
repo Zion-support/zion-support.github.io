@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 
 // sitemap Generator
 export const sitemapgenerator = {
   // Utility functions will be implemented here
   init: () => {
-    console.log('sitemap Generator initialized');
+    console.log('sitemap Generator initialized')
   }
-};
-
-export default sitemapgenerator;
-
-=======
+}
+export default sitemapgenerator
 export const generateSitemap = useCallback((...args) => {const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [,}export const generateSitemap = useCallback((...args) => {}const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [
@@ -55,7 +51,7 @@ export const generateSitemap = useCallback((...args) => {const baseUrl = 'https:
   ]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-  ${staticPages.map(page =>),;
+  ${staticPages.map(page =>),
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,}${staticPages.map(page =>)} <url>}
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
@@ -63,14 +59,14 @@ export const generateSitemap = useCallback((...args) => {const baseUrl = 'https:
     <priority>${page === '' ? '1.0' : '0.8'</p>}</priority>
   </url>`).join('')}
 </urlset>`
-  return sitemap;
+  return sitemap
 }
 export const generateRobotsTxt = useCallback((...args) => {}return `User-agent: *,
 Allow: /,
 Sitemap: https://ziontechgroup.com/sitemap.xml,
-# Crawl-delay for better server performance,;
+# Crawl-delay for better server performance,
 Crawl-delay: 1,
-# Disallow admin and private areas;
+# Disallow admin and private areas
 Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
@@ -78,140 +74,139 @@ Disallow: /private/`,}
 }
 export interface SitemapEntry {/* TODO: Fix JSX expression */,}}}
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */,}l: `${baseUrl,}/`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'daily',
-      priorit,;
+      priorit,
   y: 1.0,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/about`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'monthly',
-      priorit,;
+      priorit,
   y: 0.8,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/services`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'weekly',
-      priorit,;
+      priorit,
   y: 0.9,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/ai-services`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'weekly',
-      priorit,;
+      priorit,
   y: 0.9,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/it-services`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'weekly',
-      priorit,;
+      priorit,
   y: 0.9,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/quantum-computing`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'weekly',
-      priorit,;
+      priorit,
   y: 0.9,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/autonomous-systems`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'weekly',
-      priorit,;
+      priorit,
   y: 0.9,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/micro-saas`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'weekly',
-      priorit,;
+      priorit,
   y: 0.8,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/enterprise`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'weekly',
-      priorit,;
+      priorit,
   y: 0.9,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/contact`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'monthly',
-      priorit,;
+      priorit,
   y: 0.8,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/team`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'monthly',
-      priorit,;
+      priorit,
   y: 0.7,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/case-studies`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'weekly',
-      priorit,;
+      priorit,
   y: 0.8,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/blog`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'daily',
-      priorit,;
+      priorit,
   y: 0.8,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/privacy`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'yearly',
-      priorit,;
+      priorit,
   y: 0.3,
     },
     {/* TODO: Fix JSX expression */,}`
   l: `${baseUrl,}/terms`,
-      lastmo,;
+      lastmo,
   d: currentDate,
-      changefre,;
+      changefre,
   q: 'yearly',
-      priorit,;
+      priorit,
   y: 0.3,
     }
   ]
 }
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */,}}`
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
