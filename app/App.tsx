@@ -1,3 +1,4 @@
+import React from "react";
 'use client';
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

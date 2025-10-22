@@ -1,5 +1,5 @@
+import React from "react";
 'use client';
-import React from 'react';
 
 const PerformanceDashboard: React.FC = () => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from 'lucide-react';
 
