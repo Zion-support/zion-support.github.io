@@ -1,47 +1,33 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-
-const AiSalesAutomationPage: React.FC = () => {
+export default function PagePage() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Sales Automation - Zion Tech Group</title>
-        <meta name="description" content="Boost sales performance with AI-powered automation tools for lead generation, qualification, and conversion optimization." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI Sales Automation
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Accelerate sales growth with AI-powered automation tools for lead generation, qualification, and conversion.
-            </p>
-          </div>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced page solutions by Zion Tech Group
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto">
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Lead Scoring</h3>
-              <p className="text-gray-600">AI-powered lead scoring and qualification systems.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Sales Forecasting</h3>
-              <p className="text-gray-600">Predictive analytics for accurate sales forecasting.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Follow-up Automation</h3>
-              <p className="text-gray-600">Automated follow-up sequences and nurturing campaigns.</p>
-            </div>
-          </div>
+      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+        <p className="text-gray-300">
+          This page is under development. Please check back later for updates.
+        </p>
+      </div>
+    
         </div>
       </div>
-    </>
+    </div>
   );
-};
-
-
-export default AiSalesAutomationPage;
+}

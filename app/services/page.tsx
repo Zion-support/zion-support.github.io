@@ -1,118 +1,86 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Globe, Shield, Zap } from 'lucide-react';
+import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from 'lucide-react';
 
-const ServicesPage: React.FC = () => {
-  const features = [
+export default function ServicesPage() {
+  const services = [
     {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Solutions",
+      description: "Transform your business with cutting-edge artificial intelligence and machine learning technologies.",
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
+      icon: <Shield className="w-8 h-8" />,
+      title: "Cybersecurity",
+      description: "Protect your digital assets with our comprehensive cybersecurity solutions and threat monitoring.",
+      features: ["Threat Detection", "Security Audits", "Incident Response", "Compliance"]
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Services",
+      description: "Migrate and optimize your infrastructure with our cloud solutions and managed services.",
+      features: ["Cloud Migration", "Infrastructure Management", "Scalability", "Cost Optimization"]
     },
     {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+      icon: <Zap className="w-8 h-8" />,
+      title: "Micro SAAS",
+      description: "Ready-to-use software solutions that can transform your business operations immediately.",
+      features: ["AI Tools", "Business Automation", "Quick Deployment", "No Setup Required"]
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "5G Solutions",
+      description: "Leverage the power of 5G technology for next-generation connectivity and IoT solutions.",
+      features: ["5G Infrastructure", "IoT Solutions", "Edge Computing", "Smart Cities"]
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Data Analytics",
+      description: "Unlock insights from your data with our advanced analytics and business intelligence solutions.",
+      features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"]
     }
   ];
 
-  
-
   return (
-    <React.Fragment>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Services - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional services solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="services, AI solutions, IT services, automation, technology, business solutions" />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and IT services by Zion Tech Group" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Services
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional services solutions powered by advanced AI and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive technology services designed to accelerate your digital transformation and drive business growth.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                {service.icon}
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {service.description}
               </p>
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>
-            </div>
-          </div>
-        </section>
+          ))}
+        </div>
       </div>
-    </React.Fragment>
+    </div>
   );
-};
-
-export default ServicesPage;
+}
