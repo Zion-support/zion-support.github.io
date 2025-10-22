@@ -1,3 +1,9 @@
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+}
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -129,6 +135,130 @@ class PerformanceOptimizer {
     }).memory;
     if (memory) {
       this.metrics.memoryUsage = memory.usedJSHeapSize;
+    }
+  }
+
+  /**
+   * Observe Largest Contentful Paint (LCP)
+   */
+  private observeLCP(): void {
+    if (typeof window === 'undefined' || typeof PerformanceObserver === 'undefined') return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.lcp = lastEntry.startTime;
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(observer);
+    } catch {
+      // LCP not supported in this environment
+    }
+  }
+
+  /**
+   * Observe First Input Delay (FID)
+   */
+  private observeFID(): void {
+    if (typeof window === 'undefined' || typeof PerformanceObserver === 'undefined') return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          const fidEntry = entry as PerformanceEventTiming;
+          if (fidEntry.processingStart) {
+            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['first-input'] });
+      this.observers.push(observer);
+    } catch {
+      // FID not supported in this environment
+    }
+  }
+
+  /**
+   * Observe Cumulative Layout Shift (CLS)
+   */
+  private observeCLS(): void {
+    if (typeof window === 'undefined' || typeof PerformanceObserver === 'undefined') return;
+
+    try {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        });
+        this.metrics.cls = clsValue;
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(observer);
+    } catch {
+      // CLS not supported in this environment
+    }
+  }
+
+  /**
+   * Observe First Contentful Paint (FCP)
+   */
+  private observeFCP(): void {
+    if (typeof window === 'undefined' || typeof PerformanceObserver === 'undefined') return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          this.metrics.fcp = entry.startTime;
+        });
+      });
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
+    } catch {
+      // FCP not supported in this environment
+    }
+  }
+
+  /**
+   * Observe Time to First Byte (TTFB)
+   */
+  private observeTTFB(): void {
+    if (typeof window === 'undefined' || !window.performance) return;
+
+    try {
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this.metrics.ttfb = navigation.responseStart - navigation.requestStart;
+      }
+    } catch {
+      // TTFB calculation failed
+    }
+  }
+
+  /**
+   * Observe memory usage
+   */
+  private observeMemory(): void {
+    if (typeof window === 'undefined' || !('memory' in window.performance)) return;
+
+    try {
+      const memory = (window.performance as Performance & {
+        memory?: {
+          usedJSHeapSize: number;
+          totalJSHeapSize: number;
+          jsHeapSizeLimit: number;
+        };
+      }).memory;
+      if (memory) {
+        this.metrics.memory = memory.usedJSHeapSize;
+      }
+    } catch {
+      // Memory observation failed
     }
   }
 
