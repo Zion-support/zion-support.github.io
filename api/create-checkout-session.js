@@ -18,12 +18,12 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    const { 
-      priceId, 
-      successUrl, 
-      cancelUrl,
-      customerEmail 
-    } = req.body;
+  const { 
+    priceId, 
+    successUrl, 
+    cancelUrl,
+    customerEmail 
+  } = req.body;
 
     if (!priceId) {
       return res.status(400).json({ error: 'Price ID is required' });
