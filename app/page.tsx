@@ -2,6 +2,7 @@
 import React from 'react';
 import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
