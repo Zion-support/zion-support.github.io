@@ -15,31 +15,11 @@ const Navigation: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
-  const aiServices = [
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
-    { name: 'AI Content Generator', href: '/ai-content-generator' },
-    { name: 'AI Data Visualizer', href: '/ai-data-visualizer' },
-    { name: 'AI Document Intelligence', href: '/ai-document-intelligence' },
-    { name: 'AI Financial Forecasting', href: '/ai-financial-forecasting' },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' }
-  ];
+  
 
-  const itServices = [
-    { name: 'Web Development', href: '/web-development' },
-    { name: 'Mobile Development', href: '/mobile-development' },
-    { name: 'API Development', href: '/api-development' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Data Analytics', href: '/data-analytics' }
-  ];
+  
 
-  const microSaas = [
-    { name: 'Analytics Dashboard', href: '/analytics-dashboard' },
-    { name: 'Expense Tracker Pro', href: '/expense-tracker-pro' },
-    { name: 'Inventory Manager', href: '/inventory-manager' },
-    { name: 'Task Manager Pro', href: '/task-manager-pro' },
-    { name: 'Social Media Scheduler', href: '/social-media-scheduler' }
-  ];
+  
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">

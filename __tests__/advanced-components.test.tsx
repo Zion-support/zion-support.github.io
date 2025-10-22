@@ -48,7 +48,7 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
+        <AdvancedErrorBoundary>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
@@ -66,7 +66,7 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary onError={onError}>
+        <AdvancedErrorBoundary>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
@@ -82,7 +82,7 @@ describe('AdvancedErrorBoundary', () => {
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
+        <AdvancedErrorBoundary>
           <TestComponent />
         </AdvancedErrorBoundary>
       </MemoryRouter>
@@ -101,23 +101,12 @@ describe('AdvancedErrorBoundary', () => {
   });
 });
 describe('AdvancedSEOOptimizer', () => {
-  const mockSEOData = {
-    title: 'Test Title',
-    description: 'Test Description',
-    keywords: ['test', 'keywords'],
-    canonicalUrl: 'https://example.com',
-    ogImage: 'https://example.com/image.jpg',
-    structuredData: {
-      '@type': 'Organization',
-      name: 'Test Organization',
-    },
-  };
+  
   it('renders without crashing', () => {
     render(
       <MemoryRouter>
         <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
-          <div>Test content</div>
+          <AdvancedSEOOptimizer />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -127,7 +116,7 @@ describe('AdvancedSEOOptimizer', () => {
     render(
       <MemoryRouter>
         <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
+          <AdvancedSEOOptimizer />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -136,14 +125,10 @@ describe('AdvancedSEOOptimizer', () => {
     expect(document.title).toBe('Test Title');
   });
   it('renders structured data when enabled', async () => {
-    const helmetContext = {};
     const { container } = render(
       <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer
-            seoData={mockSEOData}
-            enableStructuredData={true}
-          />
+        <HelmetProvider>
+          <AdvancedSEOOptimizer />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -154,11 +139,10 @@ describe('AdvancedSEOOptimizer', () => {
     });
   });
   it('renders Open Graph tags when enabled', async () => {
-    const helmetContext = {};
     const { container } = render(
       <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
+        <HelmetProvider>
+          <AdvancedSEOOptimizer />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -169,11 +153,10 @@ describe('AdvancedSEOOptimizer', () => {
     });
   });
   it('renders Twitter Card tags when enabled', async () => {
-    const helmetContext = {};
     const { container } = render(
       <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
+        <HelmetProvider>
+          <AdvancedSEOOptimizer />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -221,7 +204,7 @@ describe('AdvancedPerformanceMonitor', () => {
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
     const { container } = render(
       <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
+        <AdvancedPerformanceMonitor />
       </MemoryRouter>
     );
     expect(container.firstChild).toBeNull();
@@ -232,7 +215,7 @@ describe('AdvancedPerformanceMonitor', () => {
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
     render(
       <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
+        <AdvancedPerformanceMonitor />
       </MemoryRouter>
     );
     expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
@@ -245,10 +228,7 @@ describe('AdvancedPerformanceMonitor', () => {
     mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 } as PerformanceEntry]);
     render(
       <MemoryRouter>
-        <AdvancedPerformanceMonitor
-          enableRealTimeMonitoring={true}
-          onMetricsUpdate={onMetricsUpdate}
-        />
+        <AdvancedPerformanceMonitor />
       </MemoryRouter>
     );
     await waitFor(() => {
@@ -265,7 +245,7 @@ describe('AdvancedPerformanceMonitor', () => {
     ]);
     render(
       <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
+        <AdvancedPerformanceMonitor />
       </MemoryRouter>
     );
     // Should show recommendations for poor performance

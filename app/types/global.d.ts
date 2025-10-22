@@ -9,7 +9,7 @@ declare global {
 }
 
 // Environment variables
-declare namespace NodeJS {
+declare namespace ProcessEnv {
   interface ProcessEnv {
     NODE_ENV: 'development' | 'production' | 'test'
     NEXT_PUBLIC_GA_ID?: string
