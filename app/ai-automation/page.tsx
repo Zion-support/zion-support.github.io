@@ -43,4 +43,5 @@ const AiAutomationPage: React.FC = () => {
   );
 };
 
-export default AiAutomationPage
+export default AiAutomationPage;
+
