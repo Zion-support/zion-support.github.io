@@ -88,6 +88,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
       }
     };
 
+    // Run monitoring after page load
     if (document.readyState === 'complete') {
       monitorWebVitals();
     } else {

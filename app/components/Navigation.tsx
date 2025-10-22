@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Brain, ArrowRight } from 'lucide-react';
+import { Brain, ArrowRight, X, Menu } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +15,11 @@ const Navigation: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
+  
+
+  
+
+  
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">

@@ -35,7 +35,8 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
       return () => observer.disconnect()
     }
-    return undefined;
+    
+    return undefined
   }, [component, trackPerformance])
 
   const measurePerformance = useCallback((name: string, fn: () => void): void => {
