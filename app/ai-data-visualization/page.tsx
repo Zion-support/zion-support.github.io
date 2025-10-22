@@ -7,6 +7,7 @@ const AiDataVisualizationPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Data Visualization - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Transform complex data into clear, actionable insights with AI-powered visualization tools and dashboards." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
@@ -34,6 +35,16 @@ const AiDataVisualizationPage: React.FC = () => {
               <p className="text-gray-600">Identify patterns and trends in your data automatically.</p>
             </div>
           </div>
+=======
+        <meta name="description" content="Transform complex data into actionable insights with AI-powered visualization and interactive dashboards." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-center mb-8">AI Data Visualization</h1>
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
+            Transform complex data into actionable insights with AI-powered visualization tools.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

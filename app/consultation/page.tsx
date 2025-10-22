@@ -7,6 +7,7 @@ const ConsultationPage: React.FC = () => {
     <>
       <Helmet>
         <title>Free Consultation - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Schedule a free consultation with our experts to discuss your AI and IT needs." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -44,6 +45,16 @@ const ConsultationPage: React.FC = () => {
               </button>
             </form>
           </div>
+=======
+        <meta name="description" content="Schedule a free consultation with our experts to discuss your technology needs and solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-center mb-8">Free Consultation</h1>
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
+            Schedule a free consultation with our experts to discuss your technology needs and solutions.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

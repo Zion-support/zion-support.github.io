@@ -9,6 +9,7 @@ const StatusPage: React.FC = () => {
         <title>System Status - Zion Tech Group</title>
         <meta name="description" content="Check the current status of our systems and services." />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-12">
@@ -34,6 +35,14 @@ const StatusPage: React.FC = () => {
               <p className="text-gray-600">Database services are operating at full capacity.</p>
             </div>
           </div>
+=======
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-center mb-8">System Status</h1>
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
+            All systems are operational. Check back here for any service updates or maintenance notifications.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

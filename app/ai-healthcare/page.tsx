@@ -7,6 +7,7 @@ const AiHealthcarePage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Healthcare Solutions - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Transform healthcare with AI-powered diagnostic tools, patient care, and medical research solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-pink-100">
@@ -34,6 +35,16 @@ const AiHealthcarePage: React.FC = () => {
               <p className="text-gray-600">Accelerate drug discovery and development with AI algorithms.</p>
             </div>
           </div>
+=======
+        <meta name="description" content="Revolutionize healthcare with AI-powered diagnostic tools, patient care, and medical research solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-center mb-8">AI Healthcare Solutions</h1>
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
+            Transform healthcare delivery with AI-powered diagnostic tools, patient monitoring, and medical research solutions.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>
