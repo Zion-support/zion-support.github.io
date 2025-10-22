@@ -40,3 +40,7 @@ const AiCustomerSupportPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+export default AiCustomerSupportPage
