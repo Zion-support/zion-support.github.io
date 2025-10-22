@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { CheckCircle, Zap, Shield, Brain, BarChart, TrendingUp, Eye } from 'lucide-react';
 
 const AiAnalyticsPage: React.FC = () => {
   const features = [
@@ -46,47 +46,6 @@ const AiAnalyticsPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
-  const useCases = [
-    {
-      title: 'Business Intelligence',
-      description: 'Transform raw data into actionable business insights',
-      icon: '📊'
-    },
-    {
-      title: 'Marketing Analytics',
-      description: 'Optimize marketing campaigns with AI-powered insights',
-      icon: '📈'
-    },
-    {
-      title: 'Financial Analysis',
-      description: 'Monitor financial performance and identify trends',
-      icon: '💰'
-    },
-    {
-      title: 'Customer Analytics',
-      description: 'Understand customer behavior and preferences',
-      icon: '👥'
-    },
-    {
-      title: 'Operations Monitoring',
-      description: 'Track operational metrics and optimize processes',
-      icon: '⚙️'
-    },
-    {
-      title: 'Risk Management',
-      description: 'Identify and mitigate business risks proactively',
-      icon: '🛡️'
-
-    }
-  ];
 
   return (
     <>

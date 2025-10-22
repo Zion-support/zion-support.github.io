@@ -23,49 +23,25 @@ const CookiesPage = lazy(() => import('./cookies/page'));
 
 // AI Services
 const AiServicesPage = lazy(() => import('./ai-services/page'));
-const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
-const AiAutomationPage = lazy(() => import('./ai-automation/page'));
-const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
-const AiFintechPage = lazy(() => import('./ai-fintech/page'));
-const AiContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
-const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
-const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
-const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
-const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
-const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
-const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
 
 // IT Services
 const ItServicesPage = lazy(() => import('./it-services/page'));
-const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
-const ItSupportPage = lazy(() => import('./it-support/page'));
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
-
-// Emerging Technologies
-const BlockchainPage = lazy(() => import('./blockchain/page'));
-const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
-const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
-const ARVRSolutionsPage = lazy(() => import('./ar-vr-solutions/page'));
-const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
-
-// Micro SaaS
-const MicroSaasPage = lazy(() => import('./micro-saas/page'));
 
 // Support Pages
 const DocsPage = lazy(() => import('./docs/page'));
 const ApiDocsPage = lazy(() => import('./api-docs/page'));
 const SupportPage = lazy(() => import('./support/page'));
-const StatusPage = lazy(() => import('./status/page'));
-const ConsultationPage = lazy(() => import('./consultation/page'));
 
 // Loading component
 const AppLoadingSpinner = () => (
-  <LoadingSpinner
-    size="xl"
-    text="Loading Zion Tech Group..."
-    fullScreen
-  />
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="text-center">
+      <LoadingSpinner size="lg" />
+      <p className="mt-4 text-gray-600">Loading Zion Tech Group...</p>
+    </div>
+  </div>
 );
 
 const App: React.FC = () => {
@@ -75,7 +51,7 @@ const App: React.FC = () => {
         <BrowserRouter>
           <div className="App">
             <PerformanceMonitor />
-            <AccessibilityEnhancer />
+            <AccessibilityEnhancer>
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
@@ -93,39 +69,18 @@ const App: React.FC = () => {
                 <Route path="/cookies" element={<CookiesPage />} />
                 {/* AI Services */}
                 <Route path="/ai-services" element={<AiServicesPage />} />
-                <Route path="/ai-marketing" element={<AiMarketingPage />} />
-                <Route path="/ai-automation" element={<AiAutomationPage />} />
-                <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-                <Route path="/ai-fintech" element={<AiFintechPage />} />
-                <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
-                <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
-                <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
-                <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
-                <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
-                <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
-                <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
                 {/* IT Services */}
                 <Route path="/it-services" element={<ItServicesPage />} />
-                <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
-                <Route path="/it-support" element={<ItSupportPage />} />
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
                 {/* Emerging Technologies */}
-                <Route path="/blockchain" element={<BlockchainPage />} />
-                <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-                <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
-                <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
-                <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-                {/* Micro SaaS */}
-                <Route path="/micro-saas" element={<MicroSaasPage />} />
                 {/* Support Pages */}
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
-                <Route path="/status" element={<StatusPage />} />
-                <Route path="/consultation" element={<ConsultationPage />} />
               </Routes>
             </Suspense>
+            </AccessibilityEnhancer>
           </div>
         </BrowserRouter>
       </HelmetProvider>
