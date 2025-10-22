@@ -79,6 +79,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.removeEventListener('focusout', handleFocusOut)
       }
     }
+
+    return () => {
+      // Cleanup function
+    }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
 
   return <>{children}</>

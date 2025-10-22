@@ -30,8 +30,7 @@ const AppPage: React.FC = () => {
   
 
   return (
-    <>
-      <AccessibilityEnhancer />
+    <AccessibilityEnhancer>
       <Helmet>
         <title>App - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional app solutions powered by advanced AI and cutting-edge technology." />
@@ -112,7 +111,7 @@ const AppPage: React.FC = () => {
           </div>
         </section>
       </main>
-    </>
+    </AccessibilityEnhancer>
   );
 };
 

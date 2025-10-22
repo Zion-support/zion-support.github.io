@@ -265,10 +265,10 @@ const App = memo(() => {
             <main className="flex-1">
               <ErrorBoundary>
                 <PerformanceMonitor />
-                <AccessibilityEnhancer />
-                <SEOOptimizer />
-                
-                <Suspense fallback={<LoadingFallback />}>
+                <AccessibilityEnhancer>
+                  <SEOOptimizer />
+                  
+                  <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>
                     <Routes>
                     {/* Main Pages */}
@@ -463,6 +463,7 @@ const App = memo(() => {
                     </Routes>
                   </ErrorBoundary>
                 </Suspense>
+                </AccessibilityEnhancer>
               </ErrorBoundary>
             </main>
             

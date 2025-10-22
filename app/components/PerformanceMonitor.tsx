@@ -8,7 +8,7 @@ const PerformanceMonitor: React.FC = () => {
       // Monitor Core Web Vitals
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          console.log('Performance Entry:', entry.name, entry.value)
+          console.log('Performance Entry:', entry.name, (entry as any).value || 'N/A')
         }
       })
 
@@ -29,6 +29,10 @@ const PerformanceMonitor: React.FC = () => {
       return () => {
         observer.disconnect()
       }
+    }
+
+    return () => {
+      // Cleanup function
     }
   }, [])
 

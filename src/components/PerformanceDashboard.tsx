@@ -92,7 +92,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       const interval = setInterval(updateMetrics, 1000);
       return () => clearInterval(interval);
     }
-  }, [isMonitoring, onMetricsUpdate]);
+  }, [isMonitoring, onMetricsUpdate, checkPerformanceAlerts]);
 
   const checkPerformanceAlerts = useCallback((currentMetrics: PerformanceMetrics) => {
     const newAlerts: string[] = [];

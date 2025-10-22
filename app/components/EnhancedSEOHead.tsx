@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Head from 'next/head'
+import { Helmet } from 'react-helmet-async'
 
 interface SEOHeadProps {
   title?: string;
@@ -117,4 +117,4 @@ interface SEOHeadProps {
 }
 
 
-export default SEOHead
+export default EnhancedSEOHead
