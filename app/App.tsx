@@ -51,7 +51,6 @@ const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 
 // Micro SaaS
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
->>>>>>> 825ec302936d182c340af22dacdfec7f6ff6dc74
 
 // Support Pages
 const DocsPage = lazy(() => import('./docs/page'));
