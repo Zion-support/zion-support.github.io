@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom';
 
 // Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-(global as any).TextEncoder = TextEncoder;
-(global as any).TextDecoder = TextDecoder;
+import { TextEncoder as NodeTextEncoder, TextDecoder as NodeTextDecoder } from 'util';
+(global as any).TextEncoder = NodeTextEncoder;
+(global as any).TextDecoder = NodeTextDecoder;
 
 // Mock console methods to reduce noise in tests
 const originalError = console.error;

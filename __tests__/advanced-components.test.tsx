@@ -3,7 +3,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 import React from 'react';
 
-// Mock components with proper implementations
+// Mock components with proper error boundary behavior
 class AdvancedErrorBoundary extends React.Component<{ 
   children: React.ReactNode; 
   enableRetry?: boolean; 
@@ -14,28 +14,19 @@ class AdvancedErrorBoundary extends React.Component<{
     this.state = { hasError: false, retryCount: 0 };
   }
 
-  static getDerivedStateFromError(error: Error) {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+    this.props.onError?.(error, errorInfo);
   }
 
   handleRetry = () => {
-    if (this.state.retryCount < 3) {
-      this.setState({ hasError: false, retryCount: this.state.retryCount + 1 });
-    }
-  };
-
-  handleReload = () => {
-    window.location.reload();
-  };
-
-  handleGoHome = () => {
-    window.location.href = '/';
+    this.setState(prevState => ({
+      hasError: false,
+      retryCount: prevState.retryCount + 1
+    }));
   };
 
   render() {
@@ -48,8 +39,8 @@ class AdvancedErrorBoundary extends React.Component<{
               Try Again ({3 - this.state.retryCount} attempts left)
             </button>
           )}
-          <button onClick={this.handleReload}>Reload Page</button>
-          <button onClick={this.handleGoHome}>Go to Homepage</button>
+          <button onClick={() => window.location.reload()}>Reload Page</button>
+          <button onClick={() => window.location.href = '/'}>Go to Homepage</button>
         </div>
       );
     }
@@ -70,11 +61,11 @@ const AdvancedSEOOptimizer = ({ title, description, seoData }: {
     if (seoData?.title) {
       document.title = seoData.title;
     }
-  }, [seoData]);
+  }, [seoData?.title]);
 
   return (
     <div data-testid="seo-optimizer">
-      {title} - {description}
+      {seoData?.title || title} - {seoData?.description || description}
     </div>
   );
 };
@@ -89,7 +80,7 @@ const AdvancedPerformanceMonitor = ({
   startTime?: number;
 }) => {
   const [metrics, setMetrics] = React.useState<any>(null);
-  const [recommendations, setRecommendations] = React.useState<string[]>([]);
+  const [showRecommendations, setShowRecommendations] = React.useState(false);
 
   React.useEffect(() => {
     if (process.env.NODE_ENV === 'production') {
@@ -106,14 +97,11 @@ const AdvancedPerformanceMonitor = ({
       };
       
       setMetrics(mockMetrics);
+      onMetricsUpdate?.(mockMetrics);
       
-      if (onMetricsUpdate) {
-        onMetricsUpdate(mockMetrics);
-      }
-
-      // Simulate poor performance recommendations
+      // Show recommendations for poor performance
       if (mockMetrics.fcp > 1500) {
-        setRecommendations(['Optimize images', 'Reduce bundle size', 'Enable compression']);
+        setShowRecommendations(true);
       }
     }
   }, [enableRealTimeMonitoring, onMetricsUpdate]);
@@ -125,15 +113,8 @@ const AdvancedPerformanceMonitor = ({
   return (
     <div data-testid="performance-monitor">
       Performance Monitor
-      {recommendations.length > 0 && (
-        <div>
-          <div>Recommendations:</div>
-          <ul>
-            {recommendations.map((rec, index) => (
-              <li key={index}>{rec}</li>
-            ))}
-          </ul>
-        </div>
+      {showRecommendations && (
+        <div>Recommendations: Optimize images, reduce bundle size</div>
       )}
     </div>
   );
@@ -381,37 +362,30 @@ describe('AdvancedPerformanceMonitor', () => {
     // Create a custom component that simulates poor performance
     const PoorPerformanceMonitor = () => {
       const [metrics, setMetrics] = React.useState<any>(null);
-      const [recommendations, setRecommendations] = React.useState<string[]>([]);
+      const [showRecommendations, setShowRecommendations] = React.useState(false);
 
       React.useEffect(() => {
         // Simulate poor performance metrics
         const poorMetrics = {
-          fcp: 2000, // Poor FCP
+          fcp: 2000, // Poor FCP (> 1500)
           lcp: 3000,
           fid: 100,
           cls: 0.3
         };
         
         setMetrics(poorMetrics);
-
-        // Simulate poor performance recommendations
+        
+        // Show recommendations for poor performance
         if (poorMetrics.fcp > 1500) {
-          setRecommendations(['Optimize images', 'Reduce bundle size', 'Enable compression']);
+          setShowRecommendations(true);
         }
       }, []);
 
       return (
         <div data-testid="performance-monitor">
           Performance Monitor
-          {recommendations.length > 0 && (
-            <div>
-              <div>Recommendations:</div>
-              <ul>
-                {recommendations.map((rec, index) => (
-                  <li key={index}>{rec}</li>
-                ))}
-              </ul>
-            </div>
+          {showRecommendations && (
+            <div>Recommendations: Optimize images, reduce bundle size</div>
           )}
         </div>
       );
@@ -423,9 +397,9 @@ describe('AdvancedPerformanceMonitor', () => {
       </MemoryRouter>
     );
     
-    // Wait for the component to render and show recommendations
+    // Wait for the component to update with poor metrics
     await waitFor(() => {
-      expect(screen.getByText('Recommendations:')).toBeInTheDocument();
+      expect(screen.getByText(/Recommendations:/)).toBeInTheDocument();
     });
     
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
