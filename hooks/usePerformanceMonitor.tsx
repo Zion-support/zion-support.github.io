@@ -8,7 +8,6 @@ import { useEffect } from 'react';
 //   cls?: number;
 //   ttfb?: number;
 // }
-
 export const usePerformanceMonitor = () => {
   useEffect(() => {
     // Only run in browser environment

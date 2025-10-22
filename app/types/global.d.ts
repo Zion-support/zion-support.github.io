@@ -10,7 +10,6 @@ declare global {
 }
 
 // Environment variables - removed unused NodeJS namespace
-
 // Component props interfaces
 export interface BaseComponentProps {
   className?: string
