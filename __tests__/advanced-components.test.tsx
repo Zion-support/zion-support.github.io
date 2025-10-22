@@ -2,14 +2,14 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 // Mock components
-const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { 
+const AdvancedErrorBoundary = ({ children }: { 
   children: React.ReactNode; 
   enableRetry?: boolean; 
   onError?: (error: Error, errorInfo: any) => void;
 }) => {
   return <div data-testid="error-boundary">{children}</div>;
 };
-const AdvancedSEOOptimizer = ({ title, description, seoData, enableStructuredData, enableOpenGraph, enableTwitterCards }: { 
+const AdvancedSEOOptimizer = ({ title, description }: { 
   title?: string; 
   description?: string;
   seoData?: any;
@@ -231,7 +231,7 @@ describe('AdvancedPerformanceMonitor', () => {
     const onMetricsUpdate = jest.fn();
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 } as PerformanceEntry]);
+    // mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 } as any]);
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor />
@@ -246,9 +246,9 @@ describe('AdvancedPerformanceMonitor', () => {
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
     // Mock poor performance metrics
-    mockPerformance.getEntriesByName.mockReturnValue([
-      { startTime: 2000 } as PerformanceEntry, // Poor FCP
-    ]);
+    // mockPerformance.getEntriesByName.mockReturnValue([
+    //   { startTime: 2000 } as any, // Poor FCP
+    // ]);
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor />
