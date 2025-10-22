@@ -1,43 +1,29 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';const AccessibilityPage: React.FC = () => {
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+
+const AccessibilityPage: React.FC = () => {
   const features = [
     {
-      icon: Eye,
-      title: 'Visual Accessibility',
-      description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
-      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
+      icon: Brain,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology and AI.'
     },
     {
-      icon: MousePointer,
-      title: 'Motor Accessibility',
-      description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
-      benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls']
-    },
-    {
-      icon: Volume2,
-      title: 'Audio Accessibility',
-      description: 'Audio alternatives and visual indicators for users with hearing impairments.',
-      benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support']
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
     },
     {
       icon: Shield,
-      title: 'Security & Privacy',
-      description: 'Secure accessibility features that protect user data while providing inclusive experiences.',
-      benefits: ['Data protection', 'Secure forms', 'Privacy controls', 'Encrypted communications']
-    },
-    {
-      icon: Users,
-      title: 'Inclusive Design',
-      description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',
-      benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces']
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards.'
     },
     {
       icon: Globe,
-      title: 'Global Standards',
-      description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
-      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
   ];
 
@@ -47,14 +33,16 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Databa
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
 
   return (
     <React.Fragment>
       <Helmet>
         <title>Accessibility - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional accessibility solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="accessibility, AI solutions, IT services, automation, technology, business solutions" />      </Helmet>
+        <meta name="keywords" content="accessibility, AI solutions, IT services, automation, technology, business solutions" />
+      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -76,6 +64,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Databa
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
+              </a>
             </div>
           </div>
         </section>
@@ -98,30 +87,16 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Databa
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>              ))}
-            </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits
-              </h2>
-              <p className="text-lg text-gray-300">
-                Why choose our solution
-              </p>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>                </div>              ))}
-            </section>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -138,9 +113,10 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Databa
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </React.Fragment>
   );

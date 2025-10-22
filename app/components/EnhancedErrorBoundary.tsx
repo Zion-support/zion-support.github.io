@@ -1,14 +1,10 @@
+'use client';
 import React from 'react';
 
-interface EnhancedErrorBoundaryProps {
-  className?: string;
-}
-
-const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {
+const EnhancedErrorBoundary: React.FC = () => {
   return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>EnhancedErrorBoundary</h2>
-      <p>This is a clean, functional component.</p>
+    <div>
+      <h1>EnhancedErrorBoundary</h1>
     </div>
   );
 };

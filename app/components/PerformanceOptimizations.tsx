@@ -1,14 +1,10 @@
+'use client';
 import React from 'react';
 
-interface PerformanceOptimizationsProps {
-  className?: string;
-}
-
-const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ className = '' }) => {
+const PerformanceOptimizations: React.FC = () => {
   return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>PerformanceOptimizations</h2>
-      <p>This is a clean, functional component.</p>
+    <div>
+      <h1>PerformanceOptimizations</h1>
     </div>
   );
 };

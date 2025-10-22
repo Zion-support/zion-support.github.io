@@ -40,8 +40,8 @@ const ZionSmartAnalyticsDashboardPage: React.FC = () => {
     <React.Fragment>
       <Helmet>
         <title>Zion Smart Analytics Dashboard - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional zion smart analytics dashboard solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="zion smart analytics dashboard, AI solutions, IT services, automation, technology, business solutions" />
+        <meta name="description" content="Professional zionsmartanalyticsdashboard solutions powered by advanced AI and cutting-edge technology." />
+        <meta name="keywords" content="zionsmartanalyticsdashboard, AI solutions, IT services, automation, technology, business solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -52,7 +52,7 @@ const ZionSmartAnalyticsDashboardPage: React.FC = () => {
               Zion Smart Analytics Dashboard
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional zion smart analytics dashboard solutions powered by advanced AI and cutting-edge technology.
+              Professional zionsmartanalyticsdashboard solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -64,6 +64,7 @@ const ZionSmartAnalyticsDashboardPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
+              </a>
             </div>
           </div>
         </section>
@@ -93,31 +94,9 @@ const ZionSmartAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits
-              </h2>
-              <p className="text-lg text-gray-300">
-                Why choose our solution
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -134,6 +113,7 @@ const ZionSmartAnalyticsDashboardPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
         </section>

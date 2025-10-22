@@ -1,5 +1,12 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const PerformanceDashboard: React.FC = () => {
+  return (
+    <div>
+      <h1>PerformanceDashboard</h1>
+    </div>
+  );
+};
 
 export default PerformanceDashboard;

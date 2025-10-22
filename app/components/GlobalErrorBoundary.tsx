@@ -1,14 +1,10 @@
+'use client';
 import React from 'react';
 
-interface GlobalErrorBoundaryProps {
-  className?: string;
-  children: React.ReactNode;
-}
-
-const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children }) => {
+const GlobalErrorBoundary: React.FC = () => {
   return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      {children}
+    <div>
+      <h1>GlobalErrorBoundary</h1>
     </div>
   );
 };

@@ -1,14 +1,10 @@
+'use client';
 import React from 'react';
 
-interface EnhancedSEOHeadProps {
-  className?: string;
-}
-
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => {
+const EnhancedSEOHead: React.FC = () => {
   return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>EnhancedSEOHead</h2>
-      <p>This is a clean, functional component.</p>
+    <div>
+      <h1>EnhancedSEOHead</h1>
     </div>
   );
 };

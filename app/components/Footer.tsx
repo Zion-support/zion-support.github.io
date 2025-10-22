@@ -1,7 +1,7 @@
-'use client'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Brain, Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Brain, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const aiServices = [
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     { name: 'AI Document Intelligence', href: '/ai-document-intelligence' },
     { name: 'AI Financial Forecasting', href: '/ai-financial-forecasting' },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection' }
-  ]
+  ];
 
   const itServices = [
     { name: 'Web Development', href: '/web-development' },
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
     { name: 'Cloud Solutions', href: '/cloud-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Data Analytics', href: '/data-analytics' }
-  ]
+  ];
 
   const microSaas = [
     { name: 'Analytics Dashboard', href: '/analytics-dashboard' },
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
     { name: 'Inventory Manager', href: '/inventory-manager' },
     { name: 'Task Manager Pro', href: '/task-manager-pro' },
     { name: 'Social Media Scheduler', href: '/social-media-scheduler' }
-  ]
+  ];
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Partnerships', href: '/partnerships' }
-  ]
+  ];
 
   const supportLinks = [
     { name: 'Help Center', href: '/help' },
@@ -44,14 +44,14 @@ const Footer: React.FC = () => {
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'API Documentation', href: '/api-docs' },
     { name: 'Status Page', href: '/status' }
-  ]
+  ];
 
   const quickLinks = [
     { name: 'Free Consultation', href: '/consultation' },
     { name: 'Request Demo', href: '/demo' },
     { name: 'Contact Sales', href: '/contact' },
     { name: 'Technical Support', href: '/support' }
-  ]
+  ];
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -68,19 +68,16 @@ const Footer: React.FC = () => {
             <p className="text-gray-300 text-sm mb-4">
               Leading provider of AI and IT solutions for modern businesses.
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-gray-300">
-                <Phone className="w-4 h-4 mr-2" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <Mail className="w-4 h-4 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-start text-sm text-gray-300">
-                <MapPin className="w-4 h-4 mr-2 mt-0.5" />
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
+            <div className="flex space-x-4">
+              <a href="tel:+1234567890" className="text-gray-400 hover:text-white transition-colors">
+                <Phone className="w-5 h-5" />
+              </a>
+              <a href="mailto:info@ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">
+                <Mail className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <MapPin className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -88,25 +85,16 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
-              {aiServices.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+              {aiServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.href} 
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium flex items-center"
-                >
-                  View All AI Services
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -114,63 +102,45 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
-              {itServices.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+              {itServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.href} 
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium flex items-center"
-                >
-                  View All IT Services
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Micro SAAS */}
+          {/* Micro SaaS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Micro SAAS</h3>
+            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
             <ul className="space-y-2">
-              {microSaas.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+              {microSaas.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.href} 
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/micro-saas-solutions"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium flex items-center"
-                >
-                  View All Micro SAAS
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Additional Links */}
+          {/* Company & Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {companyLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+            <ul className="space-y-2 mb-6">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.href} 
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -178,13 +148,13 @@ const Footer: React.FC = () => {
               ))}
             </ul>
             
-            <h3 className="text-lg font-semibold mb-4 mt-6">Support</h3>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              {supportLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+              {supportLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.href} 
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -194,55 +164,29 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div className="mt-8 pt-8 border-t border-slate-700">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {quickLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-gray-300 hover:text-white text-sm transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Social Links */}
-        <div className="mt-6 flex justify-center space-x-6">
-          <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-            GitHub
-          </a>
-          <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-            LinkedIn
-          </a>
-          <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-            Twitter
-          </a>
-        </div>
-
         {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-sm text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
-          </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-              Terms of Service
-            </Link>
-            <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-              Cookie Policy
-            </Link>
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2024 Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6">
+              {quickLinks.map((link, index) => (
+                <Link 
+                  key={index}
+                  to={link.href} 
+                  className="text-gray-400 hover:text-white transition-colors text-sm flex items-center"
+                >
+                  {link.name}
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-Footer.displayName = 'Footer'
-export default Footer
+export default Footer;
