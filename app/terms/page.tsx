@@ -1,147 +1,122 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+'use client'
+import React from 'react'
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
 
-const TermsPage: React.FC = () => {
-  const features = [
+export default function TermsPage() {
+  const lastUpdated = 'January 1, 2024'
+  
+  const sections = [
     {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
+      title: 'Acceptance of Terms',
+      icon: CheckCircle,
+      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
+      title: 'Use License',
+      icon: Key,
+      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
     },
     {
+      title: 'Service Availability',
+      icon: Server,
+      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.'
+    },
+    {
+      title: 'Limitation of Liability',
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
+      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.'
     },
     {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+      title: 'Privacy Policy',
+      icon: Lock,
+      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.'
+    },
+    {
+      title: 'Intellectual Property',
+      icon: Database,
+      content: 'All content, trademarks, and other intellectual property on this website are the property of Zion Tech Group.'
+    },
+    {
+      title: 'Termination',
+      icon: AlertTriangle,
+      content: 'We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.'
+    },
+    {
+      title: 'Governing Law',
+      icon: Scale,
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
     }
-  ];
-
-  const benefits = [
-    'AI-powered automation',
-    'Real-time processing',
-    'Scalable solutions',
-    'Enterprise-grade security',
-    '24/7 support',
-    'Custom integrations'
-  ];
+  ]
 
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Terms - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional terms solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="terms, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Terms
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional terms solutions powered by advanced AI and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
-              </a>
-            </div>
+    <div className="min-h-screen bg-white">
+      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Terms of Service
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Please read these terms carefully before using our services
+          </p>
+          <div className="flex items-center justify-center text-sm text-blue-200">
+            <Calendar className="h-4 w-4 mr-2" />
+            Last updated: {lastUpdated}
           </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits
-              </h2>
-              <p className="text-lg text-gray-300">
-                Why choose our solution
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-    </React.Fragment>
-  );
-};
 
-export default TermsPage;
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Introduction */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                These Terms of Service ("Terms") govern your use of our website and services operated by Zion Tech Group ("us", "we", or "our"). By accessing or using our services, you agree to be bound by these Terms.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                If you disagree with any part of these terms, then you may not access our services.
+              </p>
+            </section>
+
+            {/* Terms Sections */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Terms and Conditions</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {sections.map((section, index) => (
+                  <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                    <div className="flex items-center mb-4">
+                      <section.icon className="h-8 w-8 text-blue-600 mr-3" />
+                      <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
+                    </div>
+                    <p className="text-gray-600">{section.content}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Contact Information */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <p className="text-gray-600 mb-4">
+                  If you have any questions about these Terms of Service, please contact us:
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center">
+                    <Mail className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="text-gray-700">legal@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Phone className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="text-gray-700">+1 (302) 464-0950</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

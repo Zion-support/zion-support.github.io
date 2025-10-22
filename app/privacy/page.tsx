@@ -1,147 +1,181 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
 
-const PrivacyPage: React.FC = () => {
-  const features = [
+export default function PrivacyPage() {
+  const lastUpdated = 'January 1, 2024'
+  
+  const dataTypes = [
     {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
+      category: 'Personal Information',
+      icon: User,
+      description: 'Name, email address, phone number, company information',
+      examples: ['Contact forms', 'Newsletter signups', 'Account creation']
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
+      category: 'Usage Data',
+      icon: Database,
+      description: 'Information about how you use our website and services',
+      examples: ['Page views', 'Time spent', 'Features used', 'Device information']
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+      category: 'Technical Data',
+      icon: Server,
+      description: 'IP address, browser type, operating system, cookies',
+      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
     }
-  ];
+  ]
 
-  const benefits = [
-    'AI-powered automation',
-    'Real-time processing',
-    'Scalable solutions',
-    'Enterprise-grade security',
-    '24/7 support',
-    'Custom integrations'
-  ];
+  const purposes = [
+    {
+      title: 'Service Provision',
+      icon: Globe,
+      description: 'To provide and maintain our services'
+    },
+    {
+      title: 'Communication',
+      icon: Mail,
+      description: 'To communicate with you about our services'
+    },
+    {
+      title: 'Improvement',
+      icon: ArrowRight,
+      description: 'To improve and develop new features'
+    },
+    {
+      title: 'Security',
+      icon: Shield,
+      description: 'To protect against fraud and abuse'
+    }
+  ]
+
+  const rights = [
+    {
+      title: 'Access',
+      description: 'Request access to your personal data',
+      icon: Eye
+    },
+    {
+      title: 'Rectification',
+      description: 'Correct inaccurate or incomplete data',
+      icon: CheckCircle
+    },
+    {
+      title: 'Erasure',
+      description: 'Request deletion of your personal data',
+      icon: Lock
+    },
+    {
+      title: 'Portability',
+      description: 'Receive your data in a structured format',
+      icon: Database
+    }
+  ]
 
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Privacy - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional privacy solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="privacy, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Privacy
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional privacy solutions powered by advanced AI and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
-              </a>
-            </div>
+    <div className="min-h-screen bg-white">
+      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Privacy Policy
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Your privacy is important to us. Learn how we collect, use, and protect your information.
+          </p>
+          <div className="flex items-center justify-center text-sm text-blue-200">
+            <Calendar className="h-4 w-4 mr-2" />
+            Last updated: {lastUpdated}
           </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits
-              </h2>
-              <p className="text-lg text-gray-300">
-                Why choose our solution
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-    </React.Fragment>
-  );
-};
 
-export default PrivacyPage;
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          {/* Introduction */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              By using our website, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not use our website.
+            </p>
+          </section>
+
+          {/* Information We Collect */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {dataTypes.map((type, index) => (
+                <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                  <div className="flex items-center mb-4">
+                    <type.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">{type.category}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{type.description}</p>
+                  <ul className="text-sm text-gray-500">
+                    {type.examples.map((example, idx) => (
+                      <li key={idx} className="mb-1">• {example}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* How We Use Information */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {purposes.map((purpose, index) => (
+                <div key={index} className="flex items-start p-6 bg-gray-50 rounded-lg">
+                  <purpose.icon className="h-6 w-6 text-blue-600 mr-4 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{purpose.title}</h3>
+                    <p className="text-gray-600">{purpose.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Your Rights */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {rights.map((right, index) => (
+                <div key={index} className="flex items-start p-6 bg-gray-50 rounded-lg">
+                  <right.icon className="h-6 w-6 text-green-600 mr-4 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{right.title}</h3>
+                    <p className="text-gray-600">{right.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Contact Information */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <p className="text-gray-600 mb-4">
+                If you have any questions about this Privacy Policy or our data practices, please contact us:
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
+                  <span className="text-gray-700">privacy@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
+                  <span className="text-gray-700">+1 (302) 464-0950</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  )
+}

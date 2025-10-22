@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
@@ -24,6 +23,7 @@ export default defineConfig({
     sourcemap: false,
     minify: 'esbuild',
     target: 'es2020',
+    cssCodeSplit: true,
     cssTarget: 'chrome80',
     reportCompressedSize: true,
     chunkSizeWarningLimit: 500,
@@ -92,6 +92,7 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
+    // Optimize chunk size
     // Additional optimizations
     assetsInlineLimit: 4096,
     cssMinify: true,
