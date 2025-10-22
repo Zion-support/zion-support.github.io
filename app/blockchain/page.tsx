@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap, Link, Target, Star, Cpu, Sparkles, BarChart } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
-  const features = [
+  // const features = [
     {
       icon: Shield,
       title: 'Secure Blockchain Solutions',
@@ -70,8 +70,8 @@ const BlockchainPage: React.FC = () => {
               </div>
 
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -132,8 +132,8 @@ const BlockchainPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Services by Category */}
-        {categories.map(category => (
+        {/* Services by Category - Removed for now */}
+        {/* {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">

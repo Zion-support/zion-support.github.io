@@ -6,8 +6,7 @@ import Footer from '../components/Footer';
 
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
-
-const AiContentStudioPage: React.FC = () => {
+const AIContentStudioPage: React.FC = () => {
   const features = [
     {
 
@@ -153,7 +152,7 @@ const AiContentStudioPage: React.FC = () => {
 
 
       <Footer />
-    </>
+    </div>
   );
 };
 
