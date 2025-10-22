@@ -40,3 +40,7 @@ const AiAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+export default AiAutomationPage;
