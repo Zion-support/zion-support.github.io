@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck, Smartphone, Monitor, Cloud, BarChart, TrendingUp, Eye, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
 import Footer from '../components/Footer';
 
 const AnalyticsToolsPage: React.FC = () => {
@@ -46,7 +47,6 @@ const AnalyticsToolsPage: React.FC = () => {
         <meta name="description" content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>
-
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">

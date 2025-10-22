@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck, Smartphone, Monitor, Cloud, BarChart, TrendingUp, Eye, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react';
+
 import Footer from '../components/Footer';
 
 const BusinessAppsPage: React.FC = () => {

@@ -32,11 +32,22 @@ function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep the newer version (after =======)
+    // Remove any remaining merge conflict markers and branch names
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [a-f0-9]+/g, '$1');
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [a-f0-9]+/g, '$1');
     
-    // Also handle cases where there might be multiple conflict sections
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [a-f0-9]+/g, '$1');
+    // Remove any leftover branch names or conflict markers
+    content = content.replace(/cursor\/fix-errors-and-merge-to-main-[a-f0-9]+/g, '');
+    content = content.replace(/<<<<<<< HEAD/g, '');
+    content = content.replace(/=======/g, '');
+    content = content.replace(/>>>>>>> [a-f0-9]+/g, '');
+    
+    // Clean up any extra whitespace or newlines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    // Fix any broken syntax around the end of files
+    content = content.replace(/\s+\);\s*$/gm, ');');
+    content = content.replace(/\s+\);\s*}\s*$/gm, ');\n}');
     
     fs.writeFileSync(filePath, content);
     console.log(`Fixed merge conflicts in ${filePath}`);

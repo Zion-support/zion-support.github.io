@@ -1,28 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-const AiFintechPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>AI Fintech Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionize financial services with AI-powered fraud detection, risk assessment, and automated trading solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">AI Fintech Solutions</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Transform financial services with AI-powered fraud detection, risk assessment, and automated trading solutions.
-          </p>
-        </div>
-      </div>
-    </>
-=======
 import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck, Smartphone, Monitor, Cloud, BarChart, TrendingUp, Eye, Users } from 'lucide-react';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const AiFintechPage: React.FC = () => {
   const features = [
@@ -39,10 +20,8 @@ const AiFintechPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Fraud Detection',
-      description: 'Real-time fraud detection and prevention systems'
-    }
+      description: 'Real-time fraud detection and prevention systems'}
   ];
-
   const benefits = [
     'Improved financial decision making',
     'Reduced fraud incidents',
@@ -51,7 +30,6 @@ const AiFintechPage: React.FC = () => {
     'Real-time analytics',
     'Proven track record of success'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -59,9 +37,7 @@ const AiFintechPage: React.FC = () => {
         <meta name="description" content="Professional AI Fintech services by Zion Tech Group. Advanced AI and IT solutions for financial services." />
         <meta name="keywords" content="AI fintech, financial AI, fintech automation, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-      
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -87,7 +63,6 @@ const AiFintechPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -97,7 +72,6 @@ const AiFintechPage: React.FC = () => {
               Advanced AI solutions designed for modern financial services
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
@@ -111,7 +85,6 @@ const AiFintechPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -121,7 +94,6 @@ const AiFintechPage: React.FC = () => {
               Experience the benefits of our proven AI fintech solutions
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -134,7 +106,6 @@ const AiFintechPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -149,11 +120,7 @@ const AiFintechPage: React.FC = () => {
           </button>
         </div>
       </section>
-
       <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ac19
-  );
+    </div>);
 };
-
 export default AiFintechPage;

@@ -1,28 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-const ConsultationPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Free Consultation - Zion Tech Group</title>
-        <meta name="description" content="Schedule a free consultation with our experts to discuss your technology needs and solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">Free Consultation</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Schedule a free consultation with our experts to discuss your technology needs and solutions.
-          </p>
-        </div>
-      </div>
-    </>
-=======
 import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck, Smartphone, Monitor, Cloud, BarChart, TrendingUp, Eye, Users } from 'lucide-react';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, Shield } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
   const consultationTypes = [
@@ -39,10 +20,8 @@ const ConsultationPage: React.FC = () => {
     {
       icon: Clock,
       title: 'Implementation Planning',
-      description: 'Roadmap development for AI and IT solution implementation'
-    }
+      description: 'Roadmap development for AI and IT solution implementation'}
   ];
-
   const benefits = [
     'Expert guidance from industry professionals',
     'Customized solutions for your business',
@@ -51,7 +30,6 @@ const ConsultationPage: React.FC = () => {
     'Proven methodologies',
     'Scalable solutions'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -59,9 +37,7 @@ const ConsultationPage: React.FC = () => {
         <meta name="description" content="Professional consultation services by Zion Tech Group. Expert guidance for AI and IT solutions." />
         <meta name="keywords" content="consultation, business strategy, technology assessment, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-      
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -87,7 +63,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Consultation Types Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -97,7 +72,6 @@ const ConsultationPage: React.FC = () => {
               Professional consultation services tailored to your business needs
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {consultationTypes.map((type, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
@@ -111,7 +85,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -121,7 +94,6 @@ const ConsultationPage: React.FC = () => {
               Experience the benefits of our proven consultation approach
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -134,7 +106,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -156,11 +127,7 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ac19
-  );
+    </div>);
 };
-
 export default ConsultationPage;

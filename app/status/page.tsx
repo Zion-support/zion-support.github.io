@@ -1,29 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-const StatusPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>System Status - Zion Tech Group</title>
-        <meta name="description" content="Check the current status of our systems and services." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">System Status</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            All systems are operational. Check back here for any service updates or maintenance notifications.
-          </p>
-        </div>
-      </div>
-    </>
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, XCircle, AlertCircle, Clock } from 'lucide-react';
-
 const StatusPage: React.FC = () => {
   const services = [
     { name: 'AI Services', status: 'operational', uptime: '99.9%' },
@@ -31,9 +11,8 @@ const StatusPage: React.FC = () => {
     { name: 'Cloud Services', status: 'operational', uptime: '99.9%' },
     { name: 'API Services', status: 'operational', uptime: '99.7%' },
     { name: 'Database Services', status: 'operational', uptime: '99.9%' },
-    { name: 'CDN Services', status: 'operational', uptime: '99.8%' }
+    { name: 'CDN Services', status: 'operational', uptime: '99.8%'}
   ];
-
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
@@ -43,10 +22,8 @@ const StatusPage: React.FC = () => {
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
-    }
+        return <Clock className="w-5 h-5 text-gray-500" />;}
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
@@ -56,10 +33,8 @@ const StatusPage: React.FC = () => {
       case 'outage':
         return 'text-red-500';
       default:
-        return 'text-gray-500';
-    }
+        return 'text-gray-500';}
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -67,9 +42,7 @@ const StatusPage: React.FC = () => {
         <meta name="description" content="Real-time system status and uptime information for Zion Tech Group services." />
         <meta name="keywords" content="system status, uptime, service status, Zion Tech Group" />
       </Helmet>
-      
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -86,7 +59,6 @@ const StatusPage: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Status Overview */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -96,7 +68,6 @@ const StatusPage: React.FC = () => {
               All systems are operational with excellent uptime performance
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300">
@@ -121,7 +92,6 @@ const StatusPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Last Updated */}
       <section className="py-10 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -130,11 +100,7 @@ const StatusPage: React.FC = () => {
           </p>
         </div>
       </section>
-
       <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ac19
-  );
+    </div>);
 };
-
 export default StatusPage;
