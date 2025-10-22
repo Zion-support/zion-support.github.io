@@ -2,14 +2,20 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 // Mock components
-const AdvancedErrorBoundary = ({ children }: { 
+const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { 
   children: React.ReactNode; 
+  enableRetry?: boolean; 
+  onError?: (error: Error, errorInfo: any) => void;
 }) => {
   return <div data-testid="error-boundary">{children}</div>;
 };
-const AdvancedSEOOptimizer = ({ title, description }: { 
+const AdvancedSEOOptimizer = ({ title, description, seoData, enableStructuredData, enableOpenGraph, enableTwitterCards }: { 
   title?: string; 
   description?: string;
+  seoData?: any;
+  enableStructuredData?: boolean;
+  enableOpenGraph?: boolean;
+  enableTwitterCards?: boolean;
 }) => {
   return <div data-testid="seo-optimizer">{title} - {description}</div>;
 };
