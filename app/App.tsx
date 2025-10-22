@@ -73,9 +73,7 @@ const App: React.FC = () => {
         <BrowserRouter>
           <div className="App">
             <PerformanceMonitor />
-            <AccessibilityEnhancer>
-              <div></div>
-            </AccessibilityEnhancer>
+            <AccessibilityEnhancer />
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}

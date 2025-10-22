@@ -1,13 +1,10 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-const AiCustomerSupportPage: React.FC = () => {
-=======
-import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
+import { MessageCircle, Clock, Users, Shield } from 'lucide-react';
 
 const AICustomerSupportPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: <MessageCircle className="w-6 h-6" />,
       title: '24/7 AI Chat Support',
@@ -34,7 +31,7 @@ const AICustomerSupportPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
     {
       name: 'Starter',
       price: '$199',
@@ -88,7 +85,7 @@ const AICustomerSupportPage: React.FC = () => {
     }
   ];
 
-  const testimonials = [
+  const _testimonials = [
     {
       name: 'Jennifer Martinez',
       role: 'Customer Success Manager',
@@ -112,14 +109,13 @@ const AICustomerSupportPage: React.FC = () => {
     }
   ];
 
-  const stats = [
+  const _stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '90%', label: 'Faster Response Time' },
     { number: '80%', label: 'Issues Resolved Automatically' },
     { number: '24/7', label: 'Always Available' }
   ];
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   return (
     <>
       <Helmet>
@@ -159,4 +155,4 @@ const AICustomerSupportPage: React.FC = () => {
   );
 };
 
-export default AiCustomerSupportPage;
+export default AICustomerSupportPage;

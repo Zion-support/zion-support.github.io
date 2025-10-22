@@ -1,13 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-const MicroSaasPage: React.FC = () => {
-=======
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+
 
 const MicroSAASPage: React.FC = () => {
-  const microSAASServices = [
+  const _microSAASServices = [
     // AI-Powered Developer Tools
     {
       title: 'AI Code Review Assistant Pro',
@@ -80,7 +77,7 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours/week', 'Improve ROI'],
       marketPrice: '$200-400/month',
       category: 'Marketing',
-      technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
+      technologies: ['SendGrid', 'chimp API', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -573,9 +570,6 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-  
-
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   return (
     <>
       <Helmet>
@@ -615,5 +609,4 @@ const MicroSAASPage: React.FC = () => {
   );
 };
 
-
-export default MicroSaasPage;
+export default MicroSAASPage;

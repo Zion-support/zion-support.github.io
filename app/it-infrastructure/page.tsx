@@ -1,13 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-const ItInfrastructurePage: React.FC = () => {
-=======
-import { CheckCircle, Star, BarChart } from 'lucide-react';
+
 
 const ITInfrastructurePage: React.FC = () => {
-  const itServices = [
+  const _itServices = [
     {
       title: 'Cloud Infrastructure Management',
       description: 'Comprehensive cloud infrastructure setup, optimization, and management across AWS, Azure, and Google Cloud platforms.',
@@ -194,7 +191,7 @@ const ITInfrastructurePage: React.FC = () => {
     }
   ];
 
-  const infrastructureStats = [
+  const _infrastructureStats = [
     { metric: '99.9%', description: 'Uptime Guarantee' },
     { metric: '500+', description: 'Servers Managed' },
     { metric: '50+', description: 'Enterprise Clients' },
@@ -203,7 +200,6 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: '100%', description: 'Security Compliance' }
   ];
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   return (
     <>
       <Helmet>
@@ -243,5 +239,4 @@ const ITInfrastructurePage: React.FC = () => {
   );
 };
 
-
-export default ItInfrastructurePage;
+export default ITInfrastructurePage;

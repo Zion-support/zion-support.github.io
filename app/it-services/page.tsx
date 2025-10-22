@@ -1,39 +1,33 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Brain, Globe, Shield, Zap } from 'lucide-react';
-const ItServicesPage: React.FC = () => {
-  const features = [
-=======
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+
+import { Brain, Zap, Shield, Globe } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
-  const itServices = [
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+  const _itServices = [
+
     {
-      icon: Brain,
+      icon: <Brain className="w-6 h-6" />,
       title: 'Advanced Technology',
       description: 'Cutting-edge solutions powered by the latest technology and AI.'
     },
     {
-      icon: Zap,
+      icon: <Zap className="w-6 h-6" />,
       title: 'High Performance',
       description: 'Optimized for speed and efficiency with real-time processing capabilities.'
     },
     {
-      icon: Shield,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Enterprise Security',
       description: 'Bank-level security with end-to-end encryption and compliance standards.'
     },
     {
-      icon: Globe,
+      icon: <Globe className="w-6 h-6" />,
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
   ];
-
-  
 
   return (
     <React.Fragment>
@@ -57,7 +51,7 @@ const ITServicesPage: React.FC = () => {
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
+                Get ted
               </a>
               <a
                 href="/services"
@@ -80,10 +74,10 @@ const ITServicesPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {_itServices.map((feature: any, index: number) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -97,7 +91,7 @@ const ITServicesPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+              Ready to Get ted?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
               Let us help you implement this solution for your business.
@@ -106,7 +100,7 @@ const ITServicesPage: React.FC = () => {
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Your Project
+                t Your Project
               </a>
               <a
                 href="/services"
@@ -121,4 +115,4 @@ const ITServicesPage: React.FC = () => {
   );
 };
 
-export default ItServicesPage;
+export default ITServicesPage;

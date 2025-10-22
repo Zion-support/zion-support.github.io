@@ -1,4 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react'
+
 export interface UseEnhancedPerformanceOptions {
   component?: string
   trackErrors?: boolean
@@ -14,48 +15,32 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
     trackAnalytics = true
   } = options
 
-<<<<<<< HEAD
-  const renderCountRef = useRef<number>(0)
   const mountTimeRef = useRef<number>(0)
-=======
-  
-  
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+  const renderCountRef = useRef<number>(0)
 
   useEffect(() => {
     mountTimeRef.current = performance.now()
     renderCountRef.current += 1
 
-<<<<<<< HEAD
-    if (trackPerformance) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'measure') {
-            console.log(`Performance measure for ${component}:`, entry.name, entry.duration)
-=======
     // Track component mount
     if (trackAnalytics) {
-      analytics.trackCustomEvent('Component', 'Mounted', component);
+      console.log(`Component ${component} mounted`)
     }
 
     return () => {
       // Track component unmount duration
       if (trackPerformance) {
+        const duration = performance.now() - mountTimeRef.current
         
         if (duration > 5000) {
           // Long-lived component
-          analytics.trackCustomEvent(
-            'Performance',
-            'Long Component Lifetime',
-            component,
-            Math.round(duration)
-          );
+          console.log(`Long component lifetime: ${component} - ${Math.round(duration)}ms`)
         }
       }
 
       // Track component unmount
       if (trackAnalytics) {
-        analytics.trackCustomEvent('Component', 'Unmounted', component);
+        console.log(`Component ${component} unmounted`)
       }
     };
   }, [component, trackAnalytics, trackPerformance]);
@@ -66,64 +51,9 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-
-      analytics.trackCustomEvent(
-        'Performance',
-        'High Render Count',
-        component,
-        renderCountRef.current
-      );
+      console.log(`High render count in ${component}: ${renderCountRef.current}`)
     }
   });
-
-  const trackError = useCallback(
-    (error: Error, context?: Record<string, unknown>) => {
-      if (trackErrors) {
-        errorTracker.trackError(error, {
-          component,
-          ...context,
-        });
-      }
-    },
-    [component, trackErrors]
-  );
-
-  const trackUserAction = useCallback(
-    (action: string, metadata?: Record<string, unknown>) => {
-      if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
-      }
-    },
-    [component, trackAnalytics]
-  );
-
-  const measureOperation = useCallback(
-    (operationName: string) => {
-      
-      
-
-      return {
-        end: () => {
-          
-          
-          if (trackPerformance) {
-            analytics.trackPerformance(
-              `${component}-${operationName}`,
-              duration,
-              duration > 1000 ? 'slow' : 'fast'
-            );
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
-          }
-        }
-      })
-
-      observer.observe({ entryTypes: ['measure'] })
-
-      return () => observer.disconnect()
-    }
-    
-    return undefined
-  }, [component, trackPerformance])
 
   const measurePerformance = useCallback((name: string, fn: () => void) => {
     if (trackPerformance) {

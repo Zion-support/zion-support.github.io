@@ -1,7 +1,14 @@
 'use client';
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Mail, MapPin, Phone } from 'lucide-react';
+import { 
+  Phone, 
+  Mail, 
+  MapPin,
+  ArrowRight,
+  Brain
+} from 'lucide-react';
+
 const Footer: React.FC = () => {
   const aiServices = [
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
@@ -12,25 +19,6 @@ const Footer: React.FC = () => {
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection' }
   ];
 
-<<<<<<< HEAD
-  const itServices = [
-    { name: 'Web Development', href: '/web-development' },
-    { name: 'Mobile Development', href: '/mobile-development' },
-    { name: 'API Development', href: '/api-development' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Data Analytics', href: '/data-analytics' }
-  ];
-=======
-import React, { memo } from 'react';
-import Link from 'next/link';
-import { 
-  Phone, 
-  Mail, 
-  MapPin
-} from 'lucide-react';
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
-
   const microSaas = [
     { name: 'Analytics Dashboard', href: '/analytics-dashboard' },
     { name: 'Expense Tracker Pro', href: '/expense-tracker-pro' },
@@ -39,84 +27,47 @@ import {
     { name: 'Social Media Scheduler', href: '/social-media-scheduler' }
   ];
 
-  const companyLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Partnerships', href: '/partnerships' }
-  ];
-
-  const supportLinks = [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'API Documentation', href: '/api-docs' },
-    { name: 'Status Page', href: '/status' }
-  ];
-
-  const quickLinks = [
-    { name: 'Free Consultation', href: '/consultation' },
-    { name: 'Request Demo', href: '/demo' },
-    { name: 'Contact Sales', href: '/contact' },
-    { name: 'Technical Support', href: '/support' }
+  const itServices = [
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Data Analytics', href: '/data-analytics' },
+    { name: 'DevOps Automation', href: '/devops-automation' },
+    { name: 'IT Infrastructure', href: '/it-infrastructure' },
+    { name: 'Mobile Development', href: '/mobile-development' }
   ];
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <Brain className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 text-sm mb-4">
-              Leading provider of AI and IT solutions for modern businesses.
+            <p className="text-gray-300 text-sm">
+              Advanced AI and IT solutions for modern businesses. 
+              Empowering innovation through cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="tel:+1234567890" className="text-gray-400 hover:text-white transition-colors">
-                <Phone className="w-5 h-5" />
-              </a>
-              <a href="mailto:info@ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <MapPin className="w-5 h-5" />
-              </a>
+              <Phone className="h-5 w-5 text-gray-400" />
+              <Mail className="h-5 w-5 text-gray-400" />
+              <MapPin className="h-5 w-5 text-gray-400" />
             </div>
           </div>
 
           {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    to={service.href} 
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    to={service.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
-            <ul className="space-y-2">
-              {itServices.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to={service.href} 
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
+                    <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
                     {service.name}
                   </Link>
                 </li>
@@ -125,15 +76,16 @@ import {
           </div>
 
           {/* Micro SaaS */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Micro SaaS</h3>
             <ul className="space-y-2">
               {microSaas.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    to={service.href} 
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    to={service.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
+                    <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
                     {service.name}
                   </Link>
                 </li>
@@ -141,31 +93,18 @@ import {
             </ul>
           </div>
 
-          {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 mb-6">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.href} 
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
+          {/* IT Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">IT Services</h3>
             <ul className="space-y-2">
-              {supportLinks.map((link, index) => (
+              {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    to={link.href} 
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    to={service.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
-                    {link.name}
+                    <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -173,23 +112,21 @@ import {
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
+        <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+            <p className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6">
-              {quickLinks.map((link, index) => (
-                <Link 
-                  key={index}
-                  to={link.href} 
-                  className="text-gray-400 hover:text-white transition-colors text-sm flex items-center"
-                >
-                  {link.name}
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              ))}
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
+                Terms of Service
+              </Link>
+              <Link to="/contact" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
@@ -198,4 +135,4 @@ import {
   );
 };
 
-export default Footer;
+export default memo(Footer);

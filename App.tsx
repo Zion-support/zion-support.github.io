@@ -208,14 +208,7 @@ const App = memo(() => {
   // Sidebar state removed as it's not used
 
   // Initialize performance optimizations
-  usePerformanceOptimization({
-    enableLazyLoading: true,
-    enablePreloading: true,
-    enableCodeSplitting: true,
-    enableImageOptimization: true,
-    enableCaching: true,
-    enableBundleAnalysis: process.env.NODE_ENV === 'development'
-  });
+  usePerformanceOptimization();
 
   useEffect(() => {
     // Register service worker
@@ -272,8 +265,8 @@ const App = memo(() => {
             <main className="flex-1">
               <ErrorBoundary>
                 <PerformanceMonitor />
-                <AccessibilityEnhancer>
-                  <SEOOptimizer />
+                <AccessibilityEnhancer />
+                <SEOOptimizer />
                 
                 <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>
@@ -470,11 +463,11 @@ const App = memo(() => {
                     </Routes>
                   </ErrorBoundary>
                 </Suspense>
-                </AccessibilityEnhancer>
               </ErrorBoundary>
             </main>
             
-            <Footer />          </div>
+            <Footer />
+          </div>
         </Router>
       </HelmetProvider>
     </GlobalErrorBoundary>

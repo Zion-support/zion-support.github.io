@@ -5,6 +5,8 @@ export interface AccessibilityIssue {
   element?: HTMLElement
   selector?: string
   code?: string
+  severity?: string
+  wcagLevel?: string
 }
 
 export interface AccessibilityReport {
@@ -137,18 +139,10 @@ export class AccessibilityChecker {
         return `.${classes.join('.')}`
       }
     }
-    
-<<<<<<< HEAD
-    return element.tagName.toLowerCase()
-  }
-}
 
-// Export a singleton instance
-export const accessibilityChecker = new AccessibilityChecker()
-=======
     return this.issues.map(issue => 
       `${issue.severity}: ${issue.message} (${issue.wcagLevel})`
     ).join('\n');
   }
 }
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+

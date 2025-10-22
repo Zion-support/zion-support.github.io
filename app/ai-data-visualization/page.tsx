@@ -1,158 +1,129 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-const AiDataVisualizationPage: React.FC = () => {
-=======
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+import { BarChart3, PieChart, Eye } from 'lucide-react';
 
 const AIDataVisualizationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: 'Interactive Dashboards',
-      description: 'Create stunning, interactive dashboards that automatically update with real-time data and provide deep insights.',
-      benefits: ['Real-time updates', 'Interactive charts', 'Custom layouts', 'Mobile responsive']
+      description: 'Create stunning, interactive data visualizations with real-time updates and customizable charts.',
+      benefits: ['Real-time data', 'Customizable charts', 'Interactive elements', 'Export capabilities']
     },
     {
       icon: <PieChart className="w-6 h-6" />,
-      title: 'AI-Powered Insights',
-      description: 'Let AI analyze your data and automatically generate insights, trends, and recommendations.',
-      benefits: ['Automatic insights', 'Trend detection', 'Anomaly detection', 'Predictive analytics']
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
       title: 'Advanced Analytics',
-      description: 'Perform complex statistical analysis, forecasting, and predictive modeling with built-in AI algorithms.',
-      benefits: ['Statistical analysis', 'Forecasting', 'Predictive modeling', 'Machine learning']
+      description: 'Leverage AI-powered analytics to uncover insights and trends in your data automatically.',
+      benefits: ['AI-powered insights', 'Trend analysis', 'Predictive modeling', 'Pattern recognition']
     },
     {
       icon: <Eye className="w-6 h-6" />,
-      title: 'Visual Storytelling',
-      description: 'Transform complex data into compelling visual stories that engage and inform your audience.',
-      benefits: ['Story templates', 'Auto-narration', 'Export options', 'Presentation mode']
+      title: 'Visual Intelligence',
+      description: 'Transform complex data into intuitive visual representations that anyone can understand.',
+      benefits: ['Intuitive design', 'Complex data simplification', 'Visual storytelling', 'User-friendly interface']
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
     {
       name: 'Starter',
-      price: '$149',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for small teams and individual users',
-      features: [
-        '5 dashboards',
-        'Basic charts',
-        'Standard data sources',
-        'Email support',
-        '1 user',
-        '1GB data storage'
-      ],
+      features: ['Basic visualizations', '5 data sources', 'Standard support'],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$399',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing businesses with moderate data needs',
-      features: [
-        '25 dashboards',
-        'Advanced charts',
-        'All data sources',
-        'Priority support',
-        '10 users',
-        '10GB data storage',
-        'AI insights',
-        'Custom branding',
-        'API access'
-      ],
+      features: ['Advanced analytics', 'Unlimited data sources', 'Priority support', 'Custom dashboards'],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$999',
-      period: '/month',
-      description: 'For large organizations with complex data requirements',
-      features: [
-        'Unlimited dashboards',
-        'All chart types',
-        'All data sources',
-        '24/7 phone support',
-        'Unlimited users',
-        'Unlimited storage',
-        'Advanced AI features',
-        'White-label options',
-        'Full API access',
-        'Custom integrations',
-        'Dedicated support'
-      ],
+      price: 'Custom',
+      period: '',
+      features: ['Full AI capabilities', 'White-label solution', 'Dedicated support', 'Custom integrations'],
       popular: false
     }
   ];
 
-  const testimonials = [
+  const _testimonials = [
     {
-      name: 'Alex Thompson',
+      name: 'Sarah Johnson',
       role: 'Data Analyst',
-      company: 'Analytics Corp',
-      content: 'Zion Tech Group\'s AI data visualization platform has revolutionized how we present data. The AI insights are incredibly accurate and save us hours of analysis.',
+      company: 'TechCorp',
+      content: 'The AI data visualization tools have revolutionized how we present data to stakeholders.',
       rating: 5
     },
     {
-      name: 'Sarah Davis',
-      role: 'Marketing Director',
-      company: 'Growth Marketing',
-      content: 'The interactive dashboards have transformed our reporting. Our clients love the real-time updates and the visual storytelling capabilities.',
-      rating: 5
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'CEO',
-      company: 'Data Insights Inc.',
-      content: 'The predictive analytics feature helped us identify market trends 3 months ahead of our competitors. It\'s been a game-changer for our business.',
+      name: 'Michael Chen',
+      role: 'Business Intelligence Manager',
+      company: 'DataFlow Inc',
+      content: 'Incredible insights and beautiful visualizations. Our team productivity increased by 300%.',
       rating: 5
     }
   ];
 
-  const stats = [
-    { number: '85%', label: 'Faster Insights' },
-    { number: '60%', label: 'Time Saved' },
-    { number: '95%', label: 'Accuracy Rate' },
-    { number: '24/7', label: 'Real-time Updates' }
+  const _stats = [
+    { label: 'Data Sources Supported', value: '50+' },
+    { label: 'Visualization Types', value: '25+' },
+    { label: 'Processing Speed', value: '10x Faster' },
+    { label: 'Customer Satisfaction', value: '98%' }
   ];
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   return (
     <>
       <Helmet>
         <title>AI Data Visualization - Zion Tech Group</title>
-        <meta name="description" content="Transform complex data into actionable insights with AI-powered visualization tools and interactive dashboards." />
+        <meta name="description" content="Transform your data into stunning visualizations with our AI-powered data visualization platform." />
       </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl font-bold text-white mb-6">
               AI Data Visualization
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform complex data into clear, actionable insights with AI-powered visualization tools and interactive dashboards.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform complex data into stunning, interactive visualizations with our advanced AI-powered platform.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Interactive Dashboards</h3>
-              <p className="text-gray-600">Dynamic, interactive dashboards that adapt to your data.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Automated Insights</h3>
-              <p className="text-gray-600">AI-generated insights and pattern recognition in your data.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Real-time Analytics</h3>
-              <p className="text-gray-600">Live data visualization and real-time monitoring capabilities.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {_features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-1">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="text-sm text-gray-400 flex items-center">
+                      <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></span>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">
+              Ready to Visualize Your Data?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Start creating stunning data visualizations today
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
@@ -161,5 +132,4 @@ const AIDataVisualizationPage: React.FC = () => {
   );
 };
 
-
-export default AiDataVisualizationPage;
+export default AIDataVisualizationPage;

@@ -1,87 +1,52 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix merge conflicts in a file
+// Files with merge conflicts
+const filesWithConflicts = [
+  'app/ai-content-generation/page.tsx',
+  'app/ai-customer-support/page.tsx',
+  'app/ai-data-visualization/page.tsx',
+  'app/ai-sales-automation/page.tsx',
+  'app/ai-services/page.tsx',
+  'app/autonomous-systems/page.tsx',
+  'app/business-intelligence/page.tsx',
+  'app/components/Footer.tsx',
+  'app/components/GlobalErrorBoundary.tsx',
+  'app/components/PerformanceDashboard.tsx',
+  'app/hooks/useEnhancedPerformance.ts',
+  'app/hooks/usePerformanceOptimization.ts',
+  'app/iot-edge-computing/page.tsx',
+  'app/it-infrastructure/page.tsx',
+  'app/it-services/page.tsx',
+  'app/micro-saas/page.tsx',
+  'app/utils/accessibilityChecker.ts',
+  'app/utils/accessibilityEnhancer.ts'
+];
+
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflict markers
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
-      
-      // Split by merge conflict markers
-      const lines = content.split('\n');
-      const fixedLines = [];
-      let inConflict = false;
-      let keepSection = null;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('<<<<<<<')) {
-          inConflict = true;
-          keepSection = 'head'; // Keep the HEAD version by default
-          continue;
-        }
-        
-        if (line.includes('=======')) {
-          keepSection = 'incoming';
-          continue;
-        }
-        
-        if (line.includes('>>>>>>>')) {
-          inConflict = false;
-          keepSection = null;
-          continue;
-        }
-        
-        if (inConflict) {
-          // Skip lines that are part of the conflict but not the section we want to keep
-          if (keepSection === 'head') {
-            fixedLines.push(line);
-          }
-          // Skip lines from the incoming section
-        } else {
-          fixedLines.push(line);
-        }
-      }
-      
-      const fixedContent = fixedLines.join('\n');
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed merge conflicts in: ${filePath}`);
-      return true;
-    }
+    // Remove merge conflict markers and keep the current version (after =======)
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
     
-    return false;
+    // Remove any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    
+    // Clean up any extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed merge conflicts in: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Function to recursively find and fix all .tsx files
-function fixAllMergeConflicts(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixedCount += fixAllMergeConflicts(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixMergeConflicts(filePath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
-}
+// Fix all files
+filesWithConflicts.forEach(fixMergeConflicts);
 
-// Fix merge conflicts in the app directory
-console.log('Starting merge conflict resolution...');
-const fixedCount = fixAllMergeConflicts('./app');
-console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+console.log('Merge conflict cleanup completed!');

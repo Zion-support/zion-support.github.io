@@ -1,11 +1,8 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-export default function PagePage() {
-=======
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
-  const aiServices = [
+  const _aiServices = [
     {
       title: 'AI Consulting & Strategy',
       description: 'Comprehensive AI strategy development, implementation planning, and digital transformation consulting for enterprise organizations.',
@@ -171,7 +168,7 @@ const AIServicesPage: React.FC = () => {
       ],
       marketPrice: '$1,500-3,000/month',
       category: 'Conversational AI',
-      technologies: ['Dialogflow', 'Microsoft Bot Framework', 'Rasa', 'OpenAI GPT', 'Webhooks', 'APIs'],
+      technologies: ['Dialogflow', 'Microsoft Framework', 'Rasa', 'OpenAI GPT', 'Webhooks', 'APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -296,8 +293,6 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -326,4 +321,6 @@ const AIServicesPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
+
+export default AIServicesPage;

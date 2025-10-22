@@ -1,152 +1,135 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-export default function PagePage() {
-=======
+'use client';
 import React from 'react';
-import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp, Users, Target } from 'lucide-react';
 
 const AISalesAutomationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: 'Lead Scoring & Qualification',
       description: 'Automatically score and qualify leads using AI to identify the most promising prospects and prioritize your sales efforts.',
-      benefits: ['95% accuracy in lead scoring', 'Automated qualification', 'Priority ranking', 'Behavioral analysis']
+      benefits: ['Automated lead scoring', 'Smart qualification', 'Priority ranking', 'Conversion optimization']
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Automated Follow-ups',
-      description: 'Never miss a follow-up with intelligent automation that sends personalized messages at the perfect time.',
-      benefits: ['Perfect timing', 'Personalized content', 'Multi-channel outreach', 'A/B testing']
+      title: 'Customer Segmentation',
+      description: 'Intelligently segment your customer base to deliver personalized experiences and targeted marketing campaigns.',
+      benefits: ['Dynamic segmentation', 'Behavioral analysis', 'Personalized outreach', 'Campaign optimization']
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: 'Predictive Analytics',
-      description: 'Predict which deals are most likely to close and when, helping you focus on high-probability opportunities.',
-      benefits: ['Deal probability scoring', 'Close date prediction', 'Risk identification', 'Revenue forecasting']
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Performance Optimization',
-      description: 'Continuously optimize your sales process with AI-driven insights and recommendations for better results.',
-      benefits: ['Process optimization', 'Performance insights', 'Best practice recommendations', 'ROI tracking']
+      title: 'Sales Forecasting',
+      description: 'Predict sales outcomes with high accuracy using machine learning algorithms and historical data analysis.',
+      benefits: ['Accurate predictions', 'Revenue forecasting', 'Risk assessment', 'Performance tracking']
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$199',
       period: '/month',
-      description: 'Perfect for small sales teams getting started',
-      features: [
-        '1,000 leads/month',
-        'Basic lead scoring',
-        'Email automation',
-        'Standard analytics',
-        'Email support',
-        '5 team members'
-      ],
+      features: ['Basic automation', 'Lead scoring', 'Email campaigns', 'Standard support'],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$799',
+      price: '$499',
       period: '/month',
-      description: 'Ideal for growing sales teams with moderate volume',
-      features: [
-        '5,000 leads/month',
-        'Advanced lead scoring',
-        'Multi-channel automation',
-        'Advanced analytics',
-        'Priority support',
-        '25 team members',
-        'CRM integration',
-        'Custom workflows',
-        'A/B testing'
-      ],
+      features: ['Advanced AI features', 'Custom workflows', 'Analytics dashboard', 'Priority support'],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'For large sales organizations with high volume',
-      features: [
-        'Unlimited leads',
-        'Premium AI features',
-        'All automation channels',
-        'Custom analytics',
-        '24/7 phone support',
-        'Unlimited team members',
-        'All integrations',
-        'Custom workflows',
-        'Advanced A/B testing',
-        'API access',
-        'White-label options'
-      ],
+      price: 'Custom',
+      period: '',
+      features: ['Full AI capabilities', 'Custom integrations', 'Dedicated support', 'White-label solution'],
       popular: false
     }
   ];
 
-  const testimonials = [
+  const _testimonials = [
     {
-      name: 'Robert Johnson',
-      role: 'VP of Sales',
-      company: 'TechCorp Solutions',
-      content: 'Our sales team increased their close rate by 60% using Zion Tech Group\'s AI automation. The lead scoring is incredibly accurate.',
-      rating: 5
-    },
-    {
-      name: 'Maria Garcia',
+      name: 'Jennifer Martinez',
       role: 'Sales Director',
-      company: 'Growth Inc.',
-      content: 'The automated follow-ups have been a game-changer. We never miss an opportunity, and our response rates have tripled.',
+      company: 'SalesPro Inc',
+      content: 'Our sales team productivity increased by 250% with AI automation. Lead conversion rates are through the roof!',
       rating: 5
     },
     {
-      name: 'James Wilson',
-      role: 'CEO',
-      company: 'StartupXYZ',
-      content: 'The predictive analytics helped us identify which deals to focus on. Our revenue increased by 150% in just 6 months.',
+      name: 'David Thompson',
+      role: 'VP of Sales',
+      company: 'GrowthCorp',
+      content: 'The forecasting accuracy is incredible. We can now predict quarterly results with 95% accuracy.',
       rating: 5
     }
   ];
 
-  const stats = [
-    { number: '60%', label: 'Increase in Close Rate' },
-    { number: '3x', label: 'Higher Response Rates' },
-    { number: '40%', label: 'Time Saved on Follow-ups' },
-    { number: '95%', label: 'Lead Scoring Accuracy' }
+  const _stats = [
+    { label: 'Lead Conversion Rate', value: '+180%' },
+    { label: 'Sales Productivity', value: '+250%' },
+    { label: 'Forecasting Accuracy', value: '95%' },
+    { label: 'Customer Satisfaction', value: '98%' }
   ];
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
+        <title>AI Sales Automation - Zion Tech Group</title>
+        <meta name="description" content="Automate your sales process with AI-powered tools for lead scoring, customer segmentation, and sales forecasting." />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              AI Sales Automation
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Automate your sales process with AI-powered tools that increase conversion rates and boost revenue.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {_features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-1">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="text-sm text-gray-400 flex items-center">
+                      <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">
+              Ready to Automate Your Sales?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Start increasing your sales efficiency today
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
         </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
       </div>
-    
-        </div>
-      </div>
-    </div>
+    </>
   );
-}
+};
+
+export default AISalesAutomationPage;
