@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap, Link, Target, Star, Cpu, Sparkles, BarChart } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
   const features = [
@@ -68,10 +68,9 @@ const BlockchainPage: React.FC = () => {
                   Schedule Blockchain Consultation
                 </button>
               </div>
-
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">

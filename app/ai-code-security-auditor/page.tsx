@@ -148,9 +148,8 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-
       <Footer />
-    </>
+    </div>
   );
 };
 

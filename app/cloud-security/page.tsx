@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const CloudSecurityPage: React.FC = () => {
   const features = [
@@ -89,7 +90,7 @@ const CloudSecurityPage: React.FC = () => {
           </div>
 
         </div>
-
+      </section>
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -154,7 +155,9 @@ const CloudSecurityPage: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };

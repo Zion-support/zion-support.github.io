@@ -23,22 +23,22 @@ const CookiesPage = lazy(() => import('./cookies/page'));
 
 // AI Services
 const AiServicesPage = lazy(() => import('./ai-services/page'));
-const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
-const AiAutomationPage = lazy(() => import('./ai-automation/page'));
-const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
-const AiFintechPage = lazy(() => import('./ai-fintech/page'));
+// const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
+// const AiAutomationPage = lazy(() => import('./ai-automation/page'));
+// const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+// const AiFintechPage = lazy(() => import('./ai-fintech/page'));
 const AiContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
-const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
-const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
-const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
-const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
-const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
-const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
+// const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
+// const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
+// const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
+// const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
+// const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
+// const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
 
 // IT Services
 const ItServicesPage = lazy(() => import('./it-services/page'));
-const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
-const ItSupportPage = lazy(() => import('./it-support/page'));
+// const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
+// const ItSupportPage = lazy(() => import('./it-support/page'));
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 
