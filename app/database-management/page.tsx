@@ -2,27 +2,23 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+
 const DatabaseManagementPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
-    },
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'    },    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
+      icon: Database,
+      title: 'Database Design',
+      description: 'Custom database architecture and design services.'
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
+      title: 'Security',
+      description: 'Advanced security measures and compliance.'
     },
     {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+      icon: Zap,
+      title: 'Performance',
+      description: 'Optimized performance and scalability.'
     }
   ];
 
@@ -32,7 +28,9 @@ const DatabaseManagementPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
+
   return (
     <React.Fragment>
       <Helmet>
@@ -61,6 +59,7 @@ const DatabaseManagementPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
+              </a>
             </div>
           </div>
         </section>
@@ -73,15 +72,19 @@ const DatabaseManagementPage: React.FC = () => {
                 Powerful Features
               </h2>
               <p className="text-lg text-gray-300">
-                Everything you need for success              </p>            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                Everything you need for success
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>              ))}
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -127,6 +130,7 @@ const DatabaseManagementPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
         </section>

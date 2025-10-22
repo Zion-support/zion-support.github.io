@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
-const AiPredictiveMaintenancePage: React.FC = () => {
+
+const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -38,9 +39,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Ai Predictive Maintenance - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional ai predictive maintenance solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="ai predictive maintenance, AI solutions, IT services, automation, technology, business solutions" />
+        <title>Page - Zion Tech Group | Advanced AI and IT Solutions</title>
+        <meta name="description" content="Professional page solutions powered by advanced AI and cutting-edge technology." />
+        <meta name="keywords" content="page, AI solutions, IT services, automation, technology, business solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -48,10 +49,10 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai Predictive Maintenance
+              Page
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional ai predictive maintenance solutions powered by advanced AI and cutting-edge technology.
+              Professional page solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -63,9 +64,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
+              </a>
             </div>
           </div>
-        </div>
         </section>
 
         {/* Features Section */}
@@ -76,7 +77,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
                 Powerful Features
               </h2>
               <p className="text-lg text-gray-300">
-                Everything you need for success              </p>            </div>
+                Everything you need for success
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
@@ -84,7 +87,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>              ))}
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -130,6 +135,7 @@ const AiPredictiveMaintenancePage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
         </section>
@@ -138,4 +144,4 @@ const AiPredictiveMaintenancePage: React.FC = () => {
   );
 };
 
-export default AiPredictiveMaintenancePage;
+export default PagePage;
