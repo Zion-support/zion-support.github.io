@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, FileText, Clock, Users, Shield } from 'lucide-react';
+import { CheckCircle, FileText, Clock, Users, Shield } from 'lucide-react';
 
 const AIContentGenerationPage: React.FC = () => {
   const features = [
