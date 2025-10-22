@@ -2,15 +2,17 @@ import '@testing-library/jest-dom';
 
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-(global as any).TextEncoder = TextEncoder;
-(global as any).TextDecoder = TextDecoder;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(global as any).TextEncoder = TextEncoder as any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(global as any).TextDecoder = TextDecoder as any;
 
 // Mock console methods to reduce noise in tests
 const originalError = console.error;
 const originalWarn = console.warn;
 
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  console.error = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
@@ -20,7 +22,7 @@ beforeAll(() => {
     originalError.call(console, ...args);
   };
 
-  console.warn = (...args: any[]) => {
+  console.warn = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('componentWillReceiveProps') ||

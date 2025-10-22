@@ -1,7 +1,9 @@
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-(global as any).TextEncoder = TextEncoder;
-(global as any).TextDecoder = TextDecoder;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(global as any).TextEncoder = TextEncoder as any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(global as any).TextDecoder = TextDecoder as any;
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -24,6 +26,7 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 } as any;
 
 // Mock ResizeObserver

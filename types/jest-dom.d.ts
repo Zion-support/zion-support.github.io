@@ -13,7 +13,7 @@ declare global {
       toHaveValue(value: string | string[] | number): R;
       toBeChecked(): R;
       toBePartiallyChecked(): R;
-      toHaveFormValues(expectedValues: Record<string, any>): R;
+      toHaveFormValues(expectedValues: Record<string, string | number | boolean>): R;
       toHaveDisplayValue(value: string | RegExp | (string | RegExp)[]): R;
       toHaveDescription(text?: string | RegExp): R;
       toHaveAccessibleDescription(text?: string | RegExp): R;

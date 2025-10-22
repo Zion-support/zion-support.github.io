@@ -4,8 +4,8 @@ import '@testing-library/jest-dom'
 // Global type definitions for the application
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void
-    dataLayer?: any[]
+    gtag?: (...args: (string | number | boolean)[]) => void
+    dataLayer?: (string | number | boolean)[]
   }
 }
 
@@ -22,7 +22,7 @@ export interface PageProps {
 }
 
 // API response types
-export interface ApiResponse<T = any> {
+export interface ApiResponse<T = unknown> {
   success: boolean
   data?: T
   error?: string
