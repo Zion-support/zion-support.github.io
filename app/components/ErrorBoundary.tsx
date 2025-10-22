@@ -8,7 +8,7 @@ interface ErrorBoundaryState {
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
-  fallback?: React.ComponentType<{ error?: Error; resetError: () => void }>;
+  fallback?: React.ComponentType<{ error?: Error | undefined; resetError: () => void }>;
 }
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     this.state = { hasError: false, error: undefined };
   }
 
-  static override getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
@@ -26,7 +26,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 
   resetError = () => {
-    this.setState({ hasError: false, error: null });
+    this.setState({ hasError: false, error: undefined });
   };
 
   override render() {
