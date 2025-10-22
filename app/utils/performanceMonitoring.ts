@@ -1,12 +1,9 @@
-// Performance monitoring utilities
+// performance Monitoring
+export const performancemonitoring = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('performance Monitoring initialized');
+  }
+};
 
-export function performanceMonitoring() {
-  return {
-    startTiming: (name: string) => performance.mark(`${name}-start`),
-    endTiming: (name: string) => {
-      performance.mark(`${name}-end`);
-      performance.measure(name, `${name}-start`, `${name}-end`);
-    },
-    getMetrics: () => performance.getEntriesByType('measure')
-  };
-}
+export default performancemonitoring;

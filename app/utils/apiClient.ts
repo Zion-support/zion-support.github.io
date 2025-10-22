@@ -1,18 +1,9 @@
-// API client utilities
+// api Client
+export const apiclient = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('api Client initialized');
+  }
+};
 
-export function apiClient() {
-  return {
-    get: async (url: string) => {
-      const response = await fetch(url);
-      return response.json();
-    },
-    post: async (url: string, data: any) => {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-      return response.json();
-    }
-  };
-}
+export default apiclient;

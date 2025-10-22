@@ -1,28 +1,61 @@
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export function usePerformance() {
-  const [performanceData, setPerformanceData] = useState<any>(null);
+interface UsePerformanceOptions {
+  measureRenderTime?: boolean;
+  measureMemoryUsage?: boolean;
+}
 
-  useEffect(() => {
-    const getPerformanceData = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      return {
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalTime: navigation.loadEventEnd - navigation.fetchStart
-      };
-    };
+interface UsePerformanceReturn {
+  performanceData: {
+    renderTime: number;
+    memoryUsage: number;
+    fps: number;
+  };
+  measureRenderTime: (fn: () => void) => void;
+  measureMemoryUsage: () => number;
+}
 
-    setPerformanceData(getPerformanceData());
+export const usePerformance = (options: UsePerformanceOptions = {}): UsePerformanceReturn => {
+  const [performanceData, setPerformanceData] = useState({
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0,
+  });
+
+  const measureRenderTime = useCallback((fn: () => void) => {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    setPerformanceData(prev => ({
+      ...prev,
+      renderTime: end - start,
+    }));
   }, []);
 
-  const measureRender = (componentName: string) => {
-    const start = performance.now();
-    return () => {
-      const end = performance.now();
-      console.log(`${componentName} render time: ${end - start}ms`);
-    };
-  };
+  const measureMemoryUsage = useCallback(() => {
+    const memory = (performance as any).memory;
+    if (memory) {
+      const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      setPerformanceData(prev => ({
+        ...prev,
+        memoryUsage,
+      }));
+      return memoryUsage;
+    }
+    return 0;
+  }, []);
 
-  return { performanceData, measureRender };
-}
+  useEffect(() => {
+    if (options.measureMemoryUsage) {
+      measureMemoryUsage();
+    }
+  }, [measureMemoryUsage, options.measureMemoryUsage]);
+
+  return {
+    performanceData,
+    measureRenderTime,
+    measureMemoryUsage,
+  };
+};
+
+export default usePerformance;

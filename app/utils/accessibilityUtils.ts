@@ -1,10 +1,9 @@
-// Accessibility utilities for the application
+// accessibility Utils
+export const accessibilityutils = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('accessibility Utils initialized');
+  }
+};
 
-export function accessibilityUtils() {
-  // Placeholder for accessibility utilities
-  return {
-    checkAriaLabels: () => true,
-    validateFocusManagement: () => true,
-    checkColorContrast: () => true
-  };
-}
+export default accessibilityutils;

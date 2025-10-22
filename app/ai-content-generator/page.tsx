@@ -1,38 +1,24 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Layers, Link, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Layers } from 'lucide-react';
 
-const AIContentGeneratorPage: React.FC = () => {
+export default function AiContentGeneratorPage() {
   return (
     <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Content Generator - Zion Tech Group</title>
-        <meta name="description" content="Generate high-quality content automatically with our AI-powered content generation tools." />
+        <title>Ai Content Generator | Zion Tech Group</title>
+        <meta name="description" content="Professional ai content generator solutions for modern businesses." />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Content Generator</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Generate high-quality content automatically with AI
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Text Generation</h3>
-              <p className="text-gray-600">
-                Generate articles, blog posts, and other written content using advanced AI models.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Content Optimization</h3>
-              <p className="text-gray-600">
-                Optimize your content for SEO and engagement using AI-powered analysis.
-              </p>
-            </div>
-          </div>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+            Ai Content Generator
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ai content generator solutions for modern businesses.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -76,8 +62,7 @@ const AIContentGeneratorPage: React.FC = () => {
           </div>
         </div>
       </div>
+      </div>
     </>
   );
-};
-
-export default AIContentGeneratorPage;
+}

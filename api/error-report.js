@@ -17,9 +17,7 @@ export default async function handler(req, res) {
     // Here you would typically save to a logging service
     // For now, we'll just log to console
     
-    res.status(200).json({ 
-      message: 'Error report received successfully' 
-    });
+res.status(200).json({ message: 'Error reported successfully' });
   } catch (error) {
     console.error('Error reporting error:', error);
     res.status(500).json({ error: 'Internal server error' });

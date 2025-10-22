@@ -1,109 +1,21 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { handleError, logError, AppError } from '../utils/errorHandler';
+import React from 'react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: AppError, errorInfo: ErrorInfo) => void;
+interface ErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null
-    };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Handle error using our error handler
-    const appError = handleError(error);
-    logError(appError, 'ErrorBoundary');
-    
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(appError, errorInfo);
-    }
-
-    // In production, you might want to send this to an error reporting service
-    if (process.env.NODE_ENV === 'production') {
-      // Example: Send to error reporting service
-      // errorReportingService.captureException(error, { extra: errorInfo });
-    }
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50" role="alert" aria-live="polite">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full" aria-hidden="true">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <div className="mt-4 text-center">
-              <h1 className="text-lg font-medium text-gray-900">Something went wrong</h1>
-              <p className="mt-2 text-sm text-gray-500">
-                {this.state.error?.message || 'An unexpected error occurred'}
-              </p>
-              {this.state.errorId && (
-                <p className="mt-1 text-xs text-gray-400">
-                  Error ID: {this.state.errorId}
-                </p>
-              )}
-              <div className="mt-4 space-y-2">
-                <button
-                  onClick={() => window.location.reload()}
-                  className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                  aria-label="Reload the page to try again"
-                >
-                  Reload Page
-                </button>
-                <button
-                  onClick={() => this.setState({ hasError: false, error: null, errorInfo: null })}
-                  className="w-full px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-                  aria-label="Try to continue without reloading"
-                >
-                  Try Again
-                </button>
-              </div>
-            </div>
-          </div>
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`errorboundary-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">ErrorBoundary</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
+      )}
+    </div>
+  );
+};
 
 export default ErrorBoundary;

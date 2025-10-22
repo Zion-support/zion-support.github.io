@@ -1,25 +1,73 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
-export function usePerformanceMonitoring() {
-  const [metrics, setMetrics] = useState<any[]>([]);
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
 
-  useEffect(() => {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      setMetrics(prev => [...prev, ...entries]);
-    });
+interface UsePerformanceMonitoringReturn {
+  metrics: PerformanceMetrics;
+  isMonitoring: boolean;
+  startMonitoring: () => void;
+  stopMonitoring: () => void;
+  measurePerformance: (name: string, fn: () => void) => void;
+}
 
-    observer.observe({ entryTypes: ['measure', 'navigation', 'resource'] });
+export const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0,
+  });
+  const [isMonitoring, setIsMonitoring] = useState(false);
 
-    return () => observer.disconnect();
+  const startMonitoring = useCallback(() => {
+    setIsMonitoring(true);
   }, []);
 
-  const measurePerformance = (name: string, fn: () => void) => {
+  const stopMonitoring = useCallback(() => {
+    setIsMonitoring(false);
+  }, []);
+
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
     performance.mark(`${name}-start`);
     fn();
     performance.mark(`${name}-end`);
     performance.measure(name, `${name}-start`, `${name}-end`);
-  };
+  }, []);
 
-  return { metrics, measurePerformance };
-}
+  useEffect(() => {
+    if (!isMonitoring) return;
+
+    const updateMetrics = () => {
+      const performance = window.performance;
+      if (performance) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+        
+        const memory = (performance as any).memory;
+        const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+
+        setMetrics(prev => ({
+          ...prev,
+          loadTime,
+          memoryUsage,
+        }));
+      }
+    };
+
+    const interval = setInterval(updateMetrics, 1000);
+    return () => clearInterval(interval);
+  }, [isMonitoring]);
+
+  return {
+    metrics,
+    isMonitoring,
+    startMonitoring,
+    stopMonitoring,
+    measurePerformance,
+  };
+};
