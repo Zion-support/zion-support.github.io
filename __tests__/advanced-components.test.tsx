@@ -1,8 +1,13 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+<<<<<<< HEAD
 import { MemoryRouter } from 'react-router-dom';
 import React from 'react';
 import '@testing-library/jest-dom';
+=======
+import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
+import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
+>>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
 
 // Mock components with proper error boundary behavior
 class AdvancedErrorBoundary extends React.Component<{ 
@@ -136,41 +141,67 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
     render(
+<<<<<<< HEAD
       <MemoryRouter>
         <ThrowError shouldThrow={false} />
       </MemoryRouter>
+=======
+      <AdvancedErrorBoundary>
+        <div>Test content</div>
+      </AdvancedErrorBoundary>
+>>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
     );
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
   it('renders error UI when there is an error', () => {
+<<<<<<< HEAD
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
+=======
+    // Suppress console.error for this test
+    const originalError = console.error;
+    console.error = jest.fn();
+
+>>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
     render(
-      <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
-          <ThrowError shouldThrow={true} />
-        </AdvancedErrorBoundary>
-      </MemoryRouter>
+      <AdvancedErrorBoundary enableRetry={true}>
+        <ThrowError shouldThrow={true} />
+      </AdvancedErrorBoundary>
     );
+<<<<<<< HEAD
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
     expect(screen.getByText(/Try Again/)).toBeInTheDocument();
     expect(screen.getByText('Reload Page')).toBeInTheDocument();
     expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
     consoleSpy.mockRestore();
+=======
+
+    expect(screen.getByText(/something went wrong/i)).toBeInTheDocument();
+    expect(screen.getByText(/try again/i)).toBeInTheDocument();
+
+    // Restore console.error
+    console.error = originalError;
+>>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   });
   it('calls onError callback when error occurs', () => {
+<<<<<<< HEAD
     const onError = jest.fn();
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
+=======
+    // Suppress console.error for this test
+    const originalError = console.error;
+    console.error = jest.fn();
+
+>>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
     render(
-      <MemoryRouter>
-        <AdvancedErrorBoundary onError={onError}>
-          <ThrowError shouldThrow={true} />
-        </AdvancedErrorBoundary>
-      </MemoryRouter>
+      <AdvancedErrorBoundary onError={onError}>
+        <ThrowError shouldThrow={true} />
+      </AdvancedErrorBoundary>
     );
+<<<<<<< HEAD
     expect(onError).toHaveBeenCalled();
     consoleSpy.mockRestore();
   });
@@ -198,39 +229,78 @@ describe('AdvancedErrorBoundary', () => {
       ).not.toBeInTheDocument();
     });
     consoleSpy.mockRestore();
+=======
+
+    expect(onError).toHaveBeenCalledWith(
+      expect.any(Error),
+      expect.any(Object)
+    );
+
+    // Restore console.error
+    console.error = originalError;
+  });
+
+  it('shows retry button when enableRetry is true', () => {
+    // Suppress console.error for this test
+    const originalError = console.error;
+    console.error = jest.fn();
+
+    render(
+      <AdvancedErrorBoundary enableRetry={true}>
+        <ThrowError shouldThrow={true} />
+      </AdvancedErrorBoundary>
+    );
+
+    // Should show error UI with retry button
+    expect(screen.getByText(/something went wrong/i)).toBeInTheDocument();
+    expect(screen.getByText(/try again/i)).toBeInTheDocument();
+
+    // Restore console.error
+    console.error = originalError;
+>>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   });
 });
 describe('AdvancedSEOOptimizer', () => {
   const mockSEOData = {
-    title: 'Test Title',
-    description: 'Test Description',
-    keywords: ['test', 'keywords'],
-    canonicalUrl: 'https://example.com',
-    ogImage: 'https://example.com/image.jpg',
+    title: 'Test Page Title',
+    description: 'Test page description',
+    keywords: ['test', 'page', 'seo'],
+    canonicalUrl: 'https://example.com/test',
+    ogTitle: 'Test OG Title',
+    ogDescription: 'Test OG Description',
+    ogImage: 'https://example.com/test-image.jpg',
+    ogType: 'website',
+    twitterCard: 'summary_large_image',
+    twitterTitle: 'Test Twitter Title',
+    twitterDescription: 'Test Twitter Description',
+    twitterImage: 'https://example.com/test-twitter-image.jpg',
     structuredData: {
-      '@type': 'Organization',
-      name: 'Test Organization',
+      '@type': 'WebPage',
+      name: 'Test Page',
     },
+    robots: 'index, follow',
+    author: 'Test Author',
+    publishedTime: '2023-01-01T00:00:00Z',
+    modifiedTime: '2023-01-02T00:00:00Z',
+    section: 'Technology',
+    tags: ['react', 'seo', 'testing'],
   };
   it('renders without crashing', () => {
     render(
-      <MemoryRouter>
-        <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
-          <div>Test content</div>
-        </HelmetProvider>
-      </MemoryRouter>
+      <HelmetProvider>
+        <AdvancedSEOOptimizer seoData={mockSEOData} />
+        <div>Test content</div>
+      </HelmetProvider>
     );
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
   it('sets document title', async () => {
     render(
-      <MemoryRouter>
-        <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
-        </HelmetProvider>
-      </MemoryRouter>
+      <HelmetProvider>
+        <AdvancedSEOOptimizer seoData={mockSEOData} />
+      </HelmetProvider>
     );
+<<<<<<< HEAD
     // Wait for helmet to update the document title
     await new Promise(resolve => setTimeout(resolve, 100));
     expect(document.title).toBe('Test Title');
@@ -348,9 +418,25 @@ describe('AdvancedPerformanceMonitor', () => {
         <AdvancedPerformanceMonitor
           enableRealTimeMonitoring={true}
           onMetricsUpdate={onMetricsUpdate}
+=======
+
+    await waitFor(() => {
+      expect(document.title).toBe('Test Page Title');
+    });
+  });
+
+  it('renders structured data when enabled', () => {
+    const helmetContext = {};
+    const { container } = render(
+      <HelmetProvider context={helmetContext}>
+        <AdvancedSEOOptimizer
+          seoData={mockSEOData}
+          enableStructuredData={true}
+>>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
         />
-      </MemoryRouter>
+      </HelmetProvider>
     );
+<<<<<<< HEAD
     await waitFor(() => {
       expect(onMetricsUpdate).toHaveBeenCalled();
     });
@@ -405,4 +491,31 @@ describe('AdvancedPerformanceMonitor', () => {
     
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
+=======
+
+    expect(container).toBeInTheDocument();
+  });
+
+  it('renders Open Graph tags when enabled', () => {
+    const helmetContext = {};
+    const { container } = render(
+      <HelmetProvider context={helmetContext}>
+        <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
+      </HelmetProvider>
+    );
+
+    expect(container).toBeInTheDocument();
+  });
+
+  it('renders Twitter Card tags when enabled', () => {
+    const helmetContext = {};
+    const { container } = render(
+      <HelmetProvider context={helmetContext}>
+        <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
+      </HelmetProvider>
+    );
+
+    expect(container).toBeInTheDocument();
+  });
+>>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
 });

@@ -12,6 +12,7 @@ const Footer: React.FC = () => {
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection' }
   ];
 
+<<<<<<< HEAD
   const itServices = [
     { name: 'Web Development', href: '/web-development' },
     { name: 'Mobile Development', href: '/mobile-development' },
@@ -20,6 +21,15 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Data Analytics', href: '/data-analytics' }
   ];
+=======
+import React, { memo } from 'react';
+import Link from 'next/link';
+import { 
+  Phone, 
+  Mail, 
+  MapPin
+} from 'lucide-react';
+>>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
 
   const microSaas = [
     { name: 'Analytics Dashboard', href: '/analytics-dashboard' },
