@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
+import { TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
 
 const AISalesAutomationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: 'Lead Scoring & Qualification',
@@ -30,7 +30,7 @@ const AISalesAutomationPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
     {
       name: 'Starter',
       price: '$299',
@@ -86,7 +86,7 @@ const AISalesAutomationPage: React.FC = () => {
     }
   ];
 
-  const testimonials = [
+  const _testimonials = [
     {
       name: 'Robert Johnson',
       role: 'VP of Sales',
@@ -110,7 +110,7 @@ const AISalesAutomationPage: React.FC = () => {
     }
   ];
 
-  const stats = [
+  const _stats = [
     { number: '60%', label: 'Increase in Close Rate' },
     { number: '3x', label: 'Higher Response Rates' },
     { number: '40%', label: 'Time Saved on Follow-ups' },
