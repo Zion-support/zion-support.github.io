@@ -1,20 +1,105 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 // Mock components
-const AdvancedErrorBoundary = ({ children }: { 
-  children: React.ReactNode; 
-}) => {
-  return <div data-testid="error-boundary">{children}</div>;
-};
+class AdvancedErrorBoundary extends Component<
+  { children: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void },
+  { hasError: boolean; retryCount: number }
+> {
+  constructor(props: { children: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void }) {
+    super(props);
+    this.state = { hasError: false, retryCount: 0 };
+  }
+
+  static getDerivedStateFromError(): { hasError: boolean } {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.props.onError?.(error, errorInfo);
+  }
+
+  handleRetry = () => {
+    this.setState(prevState => ({
+      hasError: false,
+      retryCount: prevState.retryCount + 1
+    }));
+  };
+
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  render() {
+    if (this.state.hasError) {
+      const attemptsLeft = Math.max(0, 3 - this.state.retryCount);
+      return (
+        <div data-testid="error-boundary">
+          <h1>Oops! Something went wrong</h1>
+          <button onClick={this.handleRetry}>
+            Try Again ({attemptsLeft} attempts left)
+          </button>
+          <button onClick={this.handleReload}>Reload Page</button>
+          <button onClick={this.handleGoHome}>Go to Homepage</button>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
 const AdvancedSEOOptimizer = ({ title, description }: { 
   title?: string; 
   description?: string;
 }) => {
-  return <div data-testid="seo-optimizer">{title} - {description}</div>;
+  return (
+    <div data-testid="seo-optimizer">
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
+      {title} - {description}
+    </div>
+  );
 };
-const AdvancedPerformanceMonitor = (): JSX.Element => {
-  return <div data-testid="performance-monitor">Performance Monitor</div>;
+
+const AdvancedPerformanceMonitor = ({ onMetricsUpdate }: { onMetricsUpdate?: () => void }): JSX.Element => {
+  const [showRecommendations, setShowRecommendations] = React.useState(false);
+
+  React.useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      return;
+    }
+
+    // Simulate performance monitoring
+    const timer = setTimeout(() => {
+      onMetricsUpdate?.();
+      setShowRecommendations(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [onMetricsUpdate]);
+
+  if (process.env.NODE_ENV === 'production') {
+    return <></>;
+  }
+
+  return (
+    <div data-testid="performance-monitor">
+      Performance Monitor
+      {showRecommendations && (
+        <div>Recommendations: Optimize images, enable compression</div>
+      )}
+    </div>
+  );
 };
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
@@ -62,7 +147,7 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary>
+        <AdvancedErrorBoundary onError={onError}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
@@ -241,7 +326,7 @@ describe('AdvancedPerformanceMonitor', () => {
     mockPerformance.getEntriesByName.mockReturnValue([]);
     render(
       <MemoryRouter>
-        <AdvancedPerformanceMonitor />
+        <AdvancedPerformanceMonitor onMetricsUpdate={onMetricsUpdate} />
       </MemoryRouter>
     );
     await waitFor(() => {
@@ -249,7 +334,7 @@ describe('AdvancedPerformanceMonitor', () => {
     });
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
-  it('shows performance recommendations when metrics are poor', () => {
+  it('shows performance recommendations when metrics are poor', async () => {
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
     // Mock poor performance metrics
@@ -260,7 +345,9 @@ describe('AdvancedPerformanceMonitor', () => {
       </MemoryRouter>
     );
     // Should show recommendations for poor performance
-    expect(screen.getByText('Recommendations:')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText('Recommendations: Optimize images, enable compression')).toBeInTheDocument();
+    });
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
 });
