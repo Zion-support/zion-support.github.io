@@ -27,7 +27,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     enableARIALabels = true
   } = options
 
-  const enhancerRef = useRef<any>({})
+  const _enhancerRef = useRef<any>({})
 
   useEffect(() => {
     if (enableKeyboardNavigation) {

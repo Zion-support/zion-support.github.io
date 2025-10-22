@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+import { } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
-  const microSAASServices = [
+  const _microSAASServices = [
     // AI-Powered Developer Tools
     {
       title: 'AI Code Review Assistant Pro',

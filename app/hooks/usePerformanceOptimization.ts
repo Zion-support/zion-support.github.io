@@ -17,19 +17,19 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
   const {
     enableLazyLoading = true,
     enableImageOptimization = true,
-    enableCodeSplitting = true,
+    enableCodeSplitting: _enableCodeSplitting = true,
     enableCaching = true,
     enablePrefetching = true,
-    enableCompression = true,
-    enableMinification = true,
-    enableTreeShaking = true,
-    enableBundleAnalysis = false,
+    enableCompression: _enableCompression = true,
+    enableMinification: _enableMinification = true,
+    enableTreeShaking: _enableTreeShaking = true,
+    enableBundleAnalysis: _enableBundleAnalysis = false,
     enablePerformanceMonitoring = true
   } = options
 
   const [isOptimized, setIsOptimized] = useState(false)
   const [performanceMetrics, setPerformanceMetrics] = useState<any>({})
-  const optimizationRef = useRef<any>({})
+  const _optimizationRef = useRef<any>({})
 
   useEffect(() => {
     if (enablePerformanceMonitoring) {

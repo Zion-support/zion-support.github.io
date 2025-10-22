@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+import { BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
 
 const AIDataVisualizationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: 'Interactive Dashboards',
@@ -31,7 +31,7 @@ const AIDataVisualizationPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
     {
       name: 'Starter',
       price: '$149',
@@ -87,7 +87,7 @@ const AIDataVisualizationPage: React.FC = () => {
     }
   ];
 
-  const testimonials = [
+  const _testimonials = [
     {
       name: 'Alex Thompson',
       role: 'Data Analyst',
@@ -111,7 +111,7 @@ const AIDataVisualizationPage: React.FC = () => {
     }
   ];
 
-  const stats = [
+  const _stats = [
     { number: '85%', label: 'Faster Insights' },
     { number: '60%', label: 'Time Saved' },
     { number: '95%', label: 'Accuracy Rate' },

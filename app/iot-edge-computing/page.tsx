@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, BarChart, TrendingUp } from 'lucide-react';
+import { } from 'lucide-react';
 
 const IoTEdgeComputingPage: React.FC = () => {
-  const iotServices = [
+  const _iotServices = [
     {
       title: 'IoT Sensor Network Design',
       description: 'Comprehensive IoT sensor networks with real-time data collection and edge processing capabilities.',
