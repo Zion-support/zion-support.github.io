@@ -2853,10 +2853,12 @@ export const getPricingTiers = () => {
     enterprise: 'Enterprise'
   }
 }
-import {Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,;}
+import {
+  Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
   GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
-  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon;}} from 'lucide-react'
+  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon
+} from 'lucide-react'
 export const microSAASServices = [
   // Productivity & Management Tools
   {title: 'AI Project Manager Pro',
@@ -2870,7 +2872,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-    users: '10,000+',}freeTrial: '14 days',},
+    users: '10,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Meeting Assistant Pro',
     description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
     icon: 'target',
@@ -2882,7 +2886,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '20,000+',}freeTrial: '14 days',},
+    users: '20,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Document Intelligence Pro',
     description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
     icon: '📄',
@@ -2894,7 +2900,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.7,
-    users: '15,000+',}freeTrial: '7 days',},
+    users: '15,000+',
+    freeTrial: '7 days'
+  },
   {title: 'AI Personal Assistant Pro',
     description: 'Your intelligent personal assistant that manages emails, schedules, and tasks with natural language processing.',
     icon: '🤖',
@@ -2906,7 +2914,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-    users: '45,000+',}freeTrial: '14 days',},
+    users: '45,000+',
+    freeTrial: '14 days'  },
   {title: 'AI Team Collaboration Hub',
     description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',
     icon: 'users',
@@ -2918,7 +2927,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '25,000+',}freeTrial: '14 days',},
+    users: '25,000+',
+    freeTrial: '14 days'  },
   {title: 'AI Task Manager Pro',
     description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
     icon: 'check',
@@ -2930,7 +2940,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '25,000+',}freeTrial: '7 days',},
+    users: '25,000+',
+    freeTrial: '7 days'  },
   {title: 'AI Workflow Automation Pro',
     description: 'Automate repetitive tasks with AI-powered workflow optimization. Save 20+ hours per week with intelligent automation.',
     icon: 'zap',
@@ -2942,7 +2953,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.7,
-    users: '15,000+',}freeTrial: '14 days',},
+    users: '15,000+',
+    freeTrial: '14 days'  },
   {title: 'AI Meeting Scheduler Pro',
     description: 'Intelligent meeting scheduling with calendar optimization, conflict resolution, and time zone management. Used by Fortune 500 companies.',
     icon: '📅',
@@ -2954,7 +2966,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '30,000+',}freeTrial: '7 days',},
+    users: '30,000+',
+    freeTrial: '7 days'  },
   {title: 'AI Time Tracker Pro',
     description: 'Intelligent time tracking with productivity insights, automated reporting, and team analytics. Trusted by remote teams globally.',
     icon: '⏱️',
@@ -2966,7 +2979,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.6,
-    users: '50,000+',}freeTrial: '14 days',},
+    users: '50,000+',
+    freeTrial: '14 days'  },
   // Content & Marketing Tools
   {title: 'AI Content Writer Pro',
     description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',
@@ -2979,7 +2993,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.9,
-    users: '40,000+',}freeTrial: '7 days',},
+    users: '40,000+',
+    freeTrial: '7 days'  },
   {title: 'AI Video Creator Pro',
     description: 'Professional video creation with AI-powered editing, voice synthesis, and automated production. Create studio-quality videos in minutes.',
     icon: 'film',
@@ -2991,7 +3006,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.8,
-    users: '30,000+',}freeTrial: '14 days',},
+    users: '30,000+',
+    freeTrial: '14 days'  },
   {title: 'AI Podcast Studio Pro',
     description: 'Complete podcast production suite with AI-powered editing, transcription, and distribution. Launch your podcast in 24 hours.',
     icon: '🎙️',
@@ -3003,7 +3019,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.7,
-    users: '18,000+',}freeTrial: '7 days',},
+    users: '18,000+',
+    freeTrial: '7 days'  },
   {title: 'AI Graphic Design Studio',
     description: 'Professional graphic design with AI-powered tools, templates, and brand consistency. Create stunning visuals without design skills.',
     icon: 'palette',
@@ -3015,7 +3032,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.8,
-    users: '35,000+',}freeTrial: '14 days',},
+    users: '35,000+',
+    freeTrial: '14 days'  },
   {title: 'AI Website Builder Pro',
     description: 'Intelligent website builder with AI-powered design, content generation, and SEO optimization. Launch your site in minutes.',
     icon: 'globe',
@@ -3027,7 +3045,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.9,
-    users: '50,000+',}freeTrial: '14 days',},
+    users: '50,000+',
+    freeTrial: '14 days'  },
   {title: 'AI Social Media Manager Pro',
     description: 'Automated social media management with AI-powered content creation, scheduling, and analytics. Grow your audience by 300%.',
     icon: 'smartphone',
@@ -3039,7 +3058,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.7,
-    users: '35,000+',}freeTrial: '14 days',},
+    users: '35,000+',
+    freeTrial: '14 days'  },
   {title: 'AI Email Marketing Suite',
     description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automation. Increase open rates by 150%.',
     icon: 'Email:',
@@ -3051,7 +3071,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.8,
-    users: '28,000+',}freeTrial: '7 days',},
+    users: '28,000+',
+    freeTrial: '7 days'  },
   {title: 'AI SEO Optimizer Pro',
     description: 'Advanced SEO optimization with AI-powered keyword research, content analysis, and ranking tracking. Boost organic traffic by 200%.',
     icon: 'search',
@@ -3063,7 +3084,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.9,
-    users: '22,000+',}freeTrial: '14 days',},
+    users: '22,000+',
+    freeTrial: '14 days'  },
   {title: 'AI Lead Generation Pro',
     description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5 x more qualified leads.',
     icon: '🎯',
@@ -3075,7 +3097,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.8,
-    users: '18,000+',}freeTrial: '7 days',}
+    users: '18,000+',
+    freeTrial: '7 days',}
 ]
 export const aiServices = [
   {title: 'Machine Learning Solutions',
@@ -3089,7 +3112,8 @@ export const aiServices = [
     popular: true,
     category: 'AI Development',
     rating: 4.9,
-    users: '500+',}freeTrial: '30 days',},
+    users: '500+',
+    freeTrial: '30 days'  },
   {title: 'AI Cybersecurity Shield Pro',
     description: 'Advanced AI-powered security solutions with real-time threat detection, behavioral analysis, and automated response.',
     icon: Shield,
@@ -3101,7 +3125,8 @@ export const aiServices = [
     popular: true,
     category: 'Security',
     rating: 4.8,
-    users: '300+',}freeTrial: '30 days',},
+    users: '300+',
+    freeTrial: '30 days'  },
   {title: 'AI Healthcare Assistant Pro',
     description: 'Revolutionary healthcare AI with diagnostic assistance, patient monitoring, and treatment optimization.',
     icon: Stethoscope,
@@ -3113,7 +3138,8 @@ export const aiServices = [
     popular: true,
     category: 'Healthcare',
     rating: 4.9,
-    users: '200+',}freeTrial: '30 days',},
+    users: '200+',
+    freeTrial: '30 days'  },
   {title: 'AI Financial Advisor Pro',
     description: 'Intelligent financial planning with portfolio optimization, risk assessment, and automated trading.',
     icon: DollarSign,
@@ -3125,7 +3151,8 @@ export const aiServices = [
     popular: true,
     category: 'Finance',
     rating: 4.7,
-    users: '400+',}freeTrial: '30 days',},
+    users: '400+',
+    freeTrial: '30 days'  },
   {title: 'AI Supply Chain Optimizer',
     description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
     icon: Truck,
@@ -3137,7 +3164,8 @@ export const aiServices = [
     popular: true,
     category: 'Logistics',
     rating: 4.8,
-    users: '250+',}freeTrial: '30 days',},
+    users: '250+',
+    freeTrial: '30 days'  },
   {title: 'AI Legal Assistant Pro',
     description: 'Advanced legal AI with contract analysis, case research, and document automation.',
     icon: FileText,
@@ -3149,7 +3177,8 @@ export const aiServices = [
     popular: true,
     category: 'Legal',
     rating: 4.6,
-    users: '150+',}freeTrial: '30 days',},
+    users: '150+',
+    freeTrial: '30 days'  },
   {title: 'AI Manufacturing Intelligence',
     description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization.',
     icon: Factory,
@@ -3161,7 +3190,8 @@ export const aiServices = [
     popular: true,
     category: 'Manufacturing',
     rating: 4.9,
-    users: '180+',}freeTrial: '30 days',},
+    users: '180+',
+    freeTrial: '30 days'  },
   {title: 'AI Education Platform Pro',
     description: 'Personalized learning with adaptive curriculum, student analytics, and automated assessment.',
     icon: GraduationCap,
@@ -3173,7 +3203,8 @@ export const aiServices = [
     popular: true,
     category: 'Education',
     rating: 4.7,
-    users: '600+',}freeTrial: '30 days',}
+    users: '600+',
+    freeTrial: '30 days',}
 ]
 export const itServices = [
   {title: 'Cloud Migration Services',
@@ -3187,7 +3218,8 @@ export const itServices = [
     popular: true,
     category: 'Cloud Services',
     rating: 4.8,
-    users: '600+',}freeTrial: '30 days',},
+    users: '600+',
+    freeTrial: '30 days'  },
   {title: 'Enterprise IT Infrastructure',
     description: 'Complete enterprise IT infrastructure with high availability, scalability, and security. Built for Fortune 500 companies.',
     icon: Building,
@@ -3199,7 +3231,8 @@ export const itServices = [
     popular: true,
     category: 'Infrastructure',
     rating: 4.9,
-    users: '100+',}freeTrial: '30 days',},
+    users: '100+',
+    freeTrial: '30 days'  },
   {title: 'DevOps & CI/CD Automation',
     description: 'Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and monitoring.',
     icon: SettingsIcon,
@@ -3211,7 +3244,8 @@ export const itServices = [
     popular: true,
     category: 'DevOps',
     rating: 4.8,
-    users: '400+',}freeTrial: '30 days',},
+    users: '400+',
+    freeTrial: '30 days'  },
   {title: 'Database Management & Optimization',
     description: 'Advanced database services with performance tuning, backup strategies, and high availability setup.',
     icon: Database,
@@ -3223,7 +3257,8 @@ export const itServices = [
     popular: true,
     category: 'Database',
     rating: 4.7,
-    users: '350+',}freeTrial: '30 days',},
+    users: '350+',
+    freeTrial: '30 days'  },
   {title: 'Network Security & Firewall',
     description: 'Advanced network security with next-generation firewalls, intrusion detection, and threat prevention.',
     icon: LockIcon,
@@ -3235,7 +3270,8 @@ export const itServices = [
     popular: true,
     category: 'Security',
     rating: 4.9,
-    users: '500+',}freeTrial: '30 days',},
+    users: '500+',
+    freeTrial: '30 days'  },
   {title: 'IT Consulting & Strategy',
     description: 'Strategic IT consulting with digital transformation, technology roadmaps, and implementation planning.',
     icon: Building,
@@ -3247,7 +3283,8 @@ export const itServices = [
     popular: true,
     category: 'Consulting',
     rating: 4.8,
-    users: '200+',}freeTrial: '30 days',}
+    users: '200+',
+    freeTrial: '30 days',}
 ]
 export const specializedServices = [
   {title: 'Quantum Computing Solutions',
@@ -3261,7 +3298,8 @@ export const specializedServices = [
     popular: true,
     category: 'Quantum',
     rating: 4.9,
-    users: '50+',}freeTrial: '60 days',},
+    users: '50+',
+    freeTrial: '60 days'  },
   {title: 'Autonomous Systems',
     description: 'Advanced autonomous systems with robotics, drones, and self-driving technology. Build the future of automation.',
     icon: SettingsIcon,
@@ -3273,7 +3311,8 @@ export const specializedServices = [
     popular: true,
     category: 'Autonomous',
     rating: 4.8,
-    users: '100+',}freeTrial: '30 days',},
+    users: '100+',
+    freeTrial: '30 days'  },
   {title: 'Blockchain & Web3',
     description: 'Comprehensive blockchain solutions with smart contracts, DeFi, and Web3 development. Build the decentralized future.',
     icon: LockIcon,
@@ -3285,7 +3324,8 @@ export const specializedServices = [
     popular: true,
     category: 'Blockchain',
     rating: 4.7,
-    users: '300+',}freeTrial: '30 days',},
+    users: '300+',
+    freeTrial: '30 days'  },
   {title: 'IoT & Edge Computing',
     description: 'Comprehensive IoT solutions with edge computing, sensor networks, and real-time processing. Connect and optimize everything.',
     icon: Globe,
@@ -3297,35 +3337,42 @@ export const specializedServices = [
     popular: true,
     category: 'IoT',
     rating: 4.8,
-    users: '400+',}freeTrial: '30 days',}
+    users: '400+',
+    freeTrial: '30 days'
+  }
 ]
-export interface Service {id: string,}
+export interface Service {
+  id: string,
   name: string,
   category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech',
   subcategory: string,
   description: string,
   features: string[],
-  pricing: {,
+  pricing: {
     starting: number,
     currency: string,
     period: 'month' | 'year' | 'one-time',
-    custom?: boolean;}}
+    custom?: boolean
+  },
   benefits: string[],
   useCases: string[],
   icon: string,
   popular: boolean,
-  new?: boolean
+  new?: boolean,
   path: string,
-  contact: {,
+  contact: {
     phone: string,
     email: string,
-    demo: string,}}
-  marketPrice?: {min: number,
+    demo: string
+  },
+  marketPrice?: {
+    min: number,
     max: number,
-    currency: string,}}
+    currency: string
+  }
 }
-export const services: Service[] = [,
-  // AI Services,
+export const services: Service[] = [
+  // AI Services
   {id: 'ai-project-manager',
     name: 'AI Project Manager Pro',
     category: 'ai',
@@ -3339,17 +3386,18 @@ export const services: Service[] = [,
       'Team collaboration tools',
       'Integration with 50+ tools'
     ],
-    pricing: {,
+    pricing: {
       starting: 299,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '40% faster project delivery',
       '25% reduction in project costs',
       '95% accuracy in deadline prediction',
       'Real-time risk assessment'
     ],
-    useCases: [,
+    useCases: [
       'Software development projects',
       'Marketing campaign management',
       'Construction project oversight',
@@ -3359,14 +3407,17 @@ export const services: Service[] = [,
     popular: true,
     new: true,
     path: '/ai-project-manager',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+      phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-project-manager',},
-    marketPrice: {,
-    min: 200,
+      demo: 'https://ziontechgroup.com/demo/ai-project-manager'
+    },
+    marketPrice: {
+      min: 200,
       max: 500,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'ai-customer-support-bot',
     name: 'AI Customer Support Bot',
     category: 'ai',
@@ -3380,17 +3431,18 @@ export const services: Service[] = [,
       'Escalation to human agents',
       'Analytics and reporting'
     ],
-    pricing: {,
+    pricing: {
       starting: 199,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '80% reduction in response time',
       '24/7 availability',
       '90% customer satisfaction rate',
       '60% cost reduction vs human agents'
     ],
-    useCases: [,
+    useCases: [
       'E-commerce customer support',
       'SaaS product support',
       'Healthcare patient inquiries',
@@ -3399,14 +3451,17 @@ export const services: Service[] = [,
     icon: '🤖',
     popular: true,
     path: '/ai-customer-support-bot',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot'
+    },
+    marketPrice: {
     min: 150,
       max: 400,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'ai-content-generator',
     name: 'AI Content Generator Studio',
     category: 'ai',
@@ -3420,17 +3475,18 @@ export const services: Service[] = [,
       'Content scheduling',
       'Performance analytics'
     ],
-    pricing: {,
+    pricing: {
       starting: 149,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '10x faster content creation',
       'Consistent brand messaging',
       'SEO-optimized content',
       'Multi-language support'
     ],
-    useCases: [,
+    useCases: [
       'Blog content creation',
       'Social media marketing',
       'Email marketing campaigns',
@@ -3439,14 +3495,17 @@ export const services: Service[] = [,
     icon: '✍️',
     popular: true,
     path: '/ai-content-generation',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-content-generator',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-content-generator'
+    },
+    marketPrice: {
     min: 99,
       max: 300,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'ai-data-analytics',
     name: 'AI Data Analytics Platform',
     category: 'ai',
@@ -3460,17 +3519,18 @@ export const services: Service[] = [,
       'Data visualization',
       'Machine learning models'
     ],
-    pricing: {,
+    pricing: {
       starting: 499,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '50% faster insights generation',
       'Predictive accuracy up to 95%',
       'Automated reporting saves 20 hours/week',
       'Real-time decision making'
     ],
-    useCases: [,
+    useCases: [
       'Business intelligence',
       'Sales forecasting',
       'Customer behavior analysis',
@@ -3479,14 +3539,17 @@ export const services: Service[] = [,
     icon: '📈',
     popular: true,
     path: '/ai-data-analytics',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-data-analytics',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-data-analytics'
+    },
+    marketPrice: {
     min: 300,
       max: 1000,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'ai-cybersecurity',
     name: 'AI Cybersecurity Suite',
     category: 'ai',
@@ -3500,17 +3563,18 @@ export const services: Service[] = [,
       'Compliance monitoring',
       'Security training'
     ],
-    pricing: {,
+    pricing: {
       starting: 799,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '99.9% threat detection accuracy',
       '50% faster incident response',
       'Automated compliance reporting',
       '24/7 security monitoring'
     ],
-    useCases: [,
+    useCases: [
       'Enterprise security',
       'Financial services',
       'Healthcare data protection',
@@ -3519,14 +3583,17 @@ export const services: Service[] = [,
     icon: '🔒',
     popular: true,
     path: '/ai-cybersecurity',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity'
+    },
+    marketPrice: {
     min: 500,
       max: 2000,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   // Micro SAAS Services
   {id: 'ai-social-media-manager',
     name: 'AI Social Media Manager',
@@ -3541,17 +3608,18 @@ export const services: Service[] = [,
       'Hashtag optimization',
       'Competitor analysis'
     ],
-    pricing: {,
+    pricing: {
       starting: 79,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '3x more engagement',
       'Save 15 hours/week',
       'Consistent posting schedule',
       'Data-driven content strategy'
     ],
-    useCases: [,
+    useCases: [
       'Small business marketing',
       'Personal branding',
       'E-commerce promotion',
@@ -3560,14 +3628,16 @@ export const services: Service[] = [,
     icon: '📱',
     popular: true,
     path: '/ai-social-media-manager',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager'  },
+    marketPrice: {
     min: 50,
       max: 150,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'ai-email-marketing',
     name: 'AI Email Marketing Pro',
     category: 'micro-saas',
@@ -3581,17 +3651,18 @@ export const services: Service[] = [,
       'Email template library',
       'Performance analytics'
     ],
-    pricing: {,
+    pricing: {
       starting: 99,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '40% higher open rates',
       '60% increase in click-through rates',
       'Automated campaign optimization',
       'Personalized customer journeys'
     ],
-    useCases: [,
+    useCases: [
       'E-commerce marketing',
       'Newsletter campaigns',
       'Lead nurturing',
@@ -3600,14 +3671,16 @@ export const services: Service[] = [,
     icon: '📧',
     popular: true,
     path: '/ai-email-marketing',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-email-marketing',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-email-marketing'  },
+    marketPrice: {
     min: 60,
       max: 200,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'ai-seo-optimizer',
     name: 'AI SEO Optimizer',
     category: 'micro-saas',
@@ -3621,17 +3694,18 @@ export const services: Service[] = [,
       'Technical SEO audit',
       'Link building recommendations'
     ],
-    pricing: {,
+    pricing: {
       starting: 129,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '50% faster SEO results',
       'Comprehensive keyword analysis',
       'Automated optimization suggestions',
       'Competitive advantage insights'
     ],
-    useCases: [,
+    useCases: [
       'Website optimization',
       'Blog content SEO',
       'E-commerce SEO',
@@ -3640,14 +3714,16 @@ export const services: Service[] = [,
     icon: '🎯',
     popular: true,
     path: '/ai-seo-optimizer',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer'  },
+    marketPrice: {
     min: 80,
       max: 250,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'ai-invoice-generator',
     name: 'AI Invoice Generator',
     category: 'micro-saas',
@@ -3661,17 +3737,18 @@ export const services: Service[] = [,
       'Multi-currency support',
       'Tax calculation'
     ],
-    pricing: {,
+    pricing: {
       starting: 49,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '90% time savings on invoicing',
       'Reduced billing errors',
       'Faster payment processing',
       'Professional invoice templates'
     ],
-    useCases: [,
+    useCases: [
       'Freelancer billing',
       'Small business invoicing',
       'Service-based businesses',
@@ -3680,14 +3757,16 @@ export const services: Service[] = [,
     icon: '💰',
     popular: false,
     path: '/ai-invoice-generator',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator'  },
+    marketPrice: {
     min: 30,
       max: 100,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'ai-time-tracker',
     name: 'AI Time Tracker Pro',
     category: 'micro-saas',
@@ -3701,17 +3780,18 @@ export const services: Service[] = [,
       'Detailed reporting',
       'Integration with 100+ tools'
     ],
-    pricing: {,
+    pricing: {
       starting: 39,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       'Accurate time tracking',
       'Productivity optimization',
       'Project profitability analysis',
       'Team performance insights'
     ],
-    useCases: [,
+    useCases: [
       'Freelancer time tracking',
       'Team productivity monitoring',
       'Project billing',
@@ -3720,14 +3800,16 @@ export const services: Service[] = [,
     icon: '⏰',
     popular: false,
     path: '/ai-time-tracker',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-time-tracker',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-time-tracker'  },
+    marketPrice: {
     min: 20,
       max: 80,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   // IT Services
   {id: 'cloud-infrastructure',
     name: 'Cloud Infrastructure Solutions',
@@ -3742,17 +3824,18 @@ export const services: Service[] = [,
       'Performance monitoring',
       'Cost optimization'
     ],
-    pricing: {,
+    pricing: {
       starting: 999,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '99.9% uptime guarantee',
       '50% cost reduction vs on-premise',
       'Instant scalability',
       'Enhanced security'
     ],
-    useCases: [,
+    useCases: [
       'Enterprise applications',
       'E-commerce platforms',
       'Data analytics',
@@ -3761,14 +3844,16 @@ export const services: Service[] = [,
     icon: '☁️',
     popular: true,
     path: '/cloud-infrastructure',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/cloud-infrastructure',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/cloud-infrastructure'  },
+    marketPrice: {
     min: 500,
       max: 2000,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'cybersecurity-suite',
     name: 'Enterprise Cybersecurity Suite',
     category: 'it',
@@ -3782,17 +3867,18 @@ export const services: Service[] = [,
       'Compliance reporting',
       'Incident response'
     ],
-    pricing: {,
+    pricing: {
       starting: 1299,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '360-degree security coverage',
       'Compliance with industry standards',
       '24/7 security monitoring',
       'Rapid threat response'
     ],
-    useCases: [,
+    useCases: [
       'Enterprise security',
       'Healthcare compliance',
       'Financial services',
@@ -3801,14 +3887,16 @@ export const services: Service[] = [,
     icon: '🛡️',
     popular: true,
     path: '/cybersecurity-suite',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/cybersecurity-suite',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/cybersecurity-suite'  },
+    marketPrice: {
     min: 800,
       max: 3000,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'devops-automation',
     name: 'DevOps & CI/CD Automation',
     category: 'it',
@@ -3822,17 +3910,18 @@ export const services: Service[] = [,
       'Security scanning',
       'Performance optimization'
     ],
-    pricing: {,
+    pricing: {
       starting: 799,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '10x faster deployments',
       'Reduced deployment errors',
       'Automated testing',
       'Improved team productivity'
     ],
-    useCases: [,
+    useCases: [
       'Software development',
       'Microservices deployment',
       'Cloud migration',
@@ -3841,14 +3930,16 @@ export const services: Service[] = [,
     icon: '🔄',
     popular: true,
     path: '/devops-automation',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/devops-automation',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/devops-automation'  },
+    marketPrice: {
     min: 500,
       max: 1500,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'database-management',
     name: 'Database Management & Optimization',
     category: 'it',
@@ -3862,17 +3953,18 @@ export const services: Service[] = [,
       'Migration services',
       '24/7 support'
     ],
-    pricing: {,
+    pricing: {
       starting: 599,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       'Improved database performance',
       'Data security and compliance',
       'Reduced downtime',
       'Expert database administration'
     ],
-    useCases: [,
+    useCases: [
       'Enterprise databases',
       'E-commerce platforms',
       'Data analytics',
@@ -3881,14 +3973,16 @@ export const services: Service[] = [,
     icon: '🗄️',
     popular: false,
     path: '/database-management',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/database-management',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/database-management'  },
+    marketPrice: {
     min: 300,
       max: 1200,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   // Emerging Technologies
   {id: 'quantum-computing',
     name: 'Quantum Computing Solutions',
@@ -3903,18 +3997,18 @@ export const services: Service[] = [,
       'Research collaboration',
       'Custom quantum applications'
     ],
-    pricing: {,
+    pricing: {
       starting: 5000,
       currency: 'USD',
       period: 'month',
-      custom: true,},
-    benefits: [,
+      custom: true  },
+    benefits: [
       'Exponential computational power',
       'Revolutionary problem solving',
       'Future-proof technology',
       'Competitive advantage'
     ],
-    useCases: [,
+    useCases: [
       'Drug discovery',
       'Financial modeling',
       'Cryptography',
@@ -3924,14 +4018,16 @@ export const services: Service[] = [,
     popular: false,
     new: true,
     path: '/quantum-computing',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/quantum-computing',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/quantum-computing'  },
+    marketPrice: {
     min: 3000,
       max: 10000,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'blockchain-solutions',
     name: 'Blockchain & Web3 Solutions',
     category: 'emerging-tech',
@@ -3945,18 +4041,18 @@ export const services: Service[] = [,
       'Token development',
       'Security auditing'
     ],
-    pricing: {,
+    pricing: {
       starting: 2999,
       currency: 'USD',
       period: 'month',
-      custom: true,},
-    benefits: [,
+      custom: true  },
+    benefits: [
       'Decentralized solutions',
       'Enhanced security',
       'Transparency and trust',
       'Future of digital assets'
     ],
-    useCases: [,
+    useCases: [
       'DeFi applications',
       'NFT marketplaces',
       'Supply chain tracking',
@@ -3966,14 +4062,16 @@ export const services: Service[] = [,
     popular: false,
     new: true,
     path: '/blockchain-solutions',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/blockchain-solutions',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/blockchain-solutions'  },
+    marketPrice: {
     min: 2000,
       max: 8000,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
+  },
   {id: 'iot-edge-computing',
     name: 'IoT & Edge Computing Platform',
     category: 'emerging-tech',
@@ -3987,17 +4085,18 @@ export const services: Service[] = [,
       'Device security',
       'Analytics dashboard'
     ],
-    pricing: {,
+    pricing: {
       starting: 1299,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       'Real-time data processing',
       'Reduced latency',
       'Cost-effective data management',
       'Scalable IoT solutions'
     ],
-    useCases: [,
+    useCases: [
       'Smart manufacturing',
       'Smart cities',
       'Healthcare monitoring',
@@ -4006,14 +4105,16 @@ export const services: Service[] = [,
     icon: '🌐',
     popular: false,
     path: '/iot-edge-computing',
-    contact: {,
+    contact: {
     phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/iot-edge-computing',},
-    marketPrice: {,
-    min: 800,
+      demo: 'https://ziontechgroup.com/demo/iot-edge-computing'
+    },
+    marketPrice: {
+      min: 800,
       max: 2500,
-      currency: 'USD',}}
+      currency: 'USD'
+    }
   }
 ]
 export const serviceCategories = [
@@ -4022,19 +4123,21 @@ export const serviceCategories = [
     description: 'Advanced artificial intelligence solutions',
     icon: '🤖',
     color: 'text-purple-400',
-    bgColor: 'bg-purple-500/10',},
+    bgColor: 'bg-purple-500/10'
+  },
   {id: 'micro-saas',
     name: 'Micro SAAS Solutions',
     description: 'Affordable, powerful AI-driven tools',
     icon: '⚡',
     color: 'text-cyan-400',
-    bgColor: 'bg-cyan-500/10',},
+    bgColor: 'bg-cyan-500/10'
+  },
   {id: 'it',
     name: 'IT Services',
     description: 'Enterprise-grade IT solutions',
     icon: '☁️',
     color: 'text-blue-400',
-    bgColor: 'bg-blue-500/10',},
+    bgColor: 'bg-blue-500/10'  },
   {id: 'emerging-tech',
     name: 'Emerging Technologies',
     description: 'Next-generation technology solutions',
