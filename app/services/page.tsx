@@ -55,12 +55,12 @@ const ServicesPage: React.FC = () => {
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Get Started
-              </a>
+             </a>
               <a
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-            </div>
+            </a></div>
           </div>
         </section>
 
@@ -110,6 +110,8 @@ const ServicesPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
+                    <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-gray-100 mb-8">
               Let's discuss your project and find the perfect solution for your business needs.
@@ -120,17 +122,17 @@ const ServicesPage: React.FC = () => {
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
               >
                 Get Started
-              </a>
+             </a>
               <a
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-            </div>
+            </a></div>
           </div>
         </section>
       </div>
-    </div>
-  )
-}
+    </React.Fragment>
+  );
+};
 
 export default ServicesPage;

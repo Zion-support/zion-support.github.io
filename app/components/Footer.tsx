@@ -213,13 +213,13 @@ const Footer: React.FC = () => {
         <div className="mt-6 flex justify-center space-x-6">
           <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
             GitHub
-          </a>
+         </a>
           <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
             LinkedIn
-          </a>
+         </a>
           <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
             Twitter
-          </a>
+         </a>
         </div>
 
         {/* Bottom Section */}
