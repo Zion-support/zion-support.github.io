@@ -11,8 +11,7 @@ const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner')
-      import('./components/ContentCarousel')
+      // Components will be loaded as needed
     }, 100)
   }
 }

@@ -2,6 +2,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react'
+
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -41,6 +42,7 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     }
   ]
+
   const standards = [
     {
       name: 'WCAG 2.1 AA',
@@ -63,6 +65,7 @@ const AccessibilityPage: React.FC = () => {
       status: 'Fully Compliant'
     }
   ]
+
   return (
     <React.Fragment>
       <Helmet>
@@ -81,7 +84,8 @@ const AccessibilityPage: React.FC = () => {
               Accessibility
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Solutions
-              </h1>
+              </span>
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure 
               your applications are usable by people of all abilities and comply with international standards.
@@ -92,7 +96,10 @@ const AccessibilityPage: React.FC = () => {
               </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Learn More
-              </section>
+              </button>
+            </div>
+          </div>
+        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -103,24 +110,29 @@ const AccessibilityPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our solutions cover all aspects of digital accessibility to ensure your applications work for everyone
-              </div>
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{feature.title}
-                  <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}
+                  <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{benefit}
+                        <span>{benefit}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
+                </div>
               ))}
-            </section>
+            </div>
+          </div>
+        </section>
 
         {/* Standards Section */}
         <section className="py-20 px-4 bg-white/5">
@@ -131,19 +143,24 @@ const AccessibilityPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We ensure full compliance with international accessibility standards
-              </div>
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {standards.map((standard, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{standard.name}
-                  <p className="text-gray-300 mb-4 text-sm">{standard.description}
+                  <h3 className="text-xl font-bold text-white mb-3">{standard.name}</h3>
+                  <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>
                   <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm font-semibold">
                     {standard.status}
+                  </div>
+                </div>
               ))}
-            </section>
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -158,37 +175,13 @@ const AccessibilityPage: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
                 Contact Us
-              </section>
-      </React.Fragment>
-  )
-  }
-export default AccessibilityPage
-                                                        </button>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </p>
-                                              </h3>
-                                            </CheckCircle>
-                                          </div>
-                                        </div>
-                                      </p>
-                                    </div>
-                                  </span>
-                                </CheckCircle>
-                              </li>
-                            </ul>
-                          </p>
-                        </h3>
-                      </div>
-                    </p>
-                  </div>
-                </button>
-              </div>
-            </span>
+              </button>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
-  </meta>
-</meta>
+    </React.Fragment>
+  )
+}
+
+export default AccessibilityPage

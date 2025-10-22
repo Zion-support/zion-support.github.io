@@ -206,7 +206,7 @@ const LoadingFallback = () => (
 );
 
 const App = memo(() => {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  // Sidebar state removed as it's not used
 
   // Initialize performance optimizations
   usePerformanceOptimization({
@@ -214,6 +214,7 @@ const App = memo(() => {
     enablePreloading: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
+    enableCaching: true,
     enableBundleAnalysis: process.env.NODE_ENV === 'development'
   });
 
@@ -267,13 +268,13 @@ const App = memo(() => {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />
-            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            <Sidebar />
             
             <main className="flex-1">
               <ErrorBoundary>
                 <PerformanceMonitor />
-                <AccessibilityEnhancer />
-                <SEOOptimizer />
+                <AccessibilityEnhancer>
+                  <SEOOptimizer />
                 
                 <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>
@@ -470,6 +471,7 @@ const App = memo(() => {
                     </Routes>
                   </ErrorBoundary>
                 </Suspense>
+                </AccessibilityEnhancer>
               </ErrorBoundary>
             </main>
             
