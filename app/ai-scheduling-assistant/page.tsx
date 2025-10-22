@@ -1,145 +1,169 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const AISchedulingAssistantPage: React.FC = () => {
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react'
+const AiSchedulingAssistantPage: React.FC = () => {
+  const serviceType = 'ai' // Define serviceType variable
+  const features = [
+    {
+      icon: Brain,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology and AI.'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+    }
+  ]
+  const benefits = [
+    'Increased efficiency by up to 300%',
+    'Reduced operational costs',
+    'Enhanced decision-making capabilities',
+    '24/7 monitoring and support',
+    'Easy integration with existing systems',
+    'Proven ROI within 90 days'
+  ]
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      content: 'This schedulingassistant solution transformed our operations completely. Highly recommended!',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'DataFlow Systems',
+      role: 'CEO',
+      content: 'The performance improvements we\'ve seen are remarkable. Excellent service!',
+      rating: 5
+    }
+  ]
+  const getGradientColors = () => {
+    switch(serviceType) {
+      case 'ai': return 'from-cyan-400 to-purple-400'
+      case 'it': return 'from-purple-400 to-pink-400'
+      case 'microsaas': return 'from-green-400 to-emerald-400'
+      default: return 'from-cyan-400 to-purple-400'
+    }
+  }
+  const getButtonColors = () => {
+    switch(serviceType) {
+      case 'ai': return 'from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600'
+      case 'it': return 'from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
+      case 'microsaas': return 'from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600'
+      default: return 'from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600'
+    }
+  }
+  const getIconColors = () => {
+    switch(serviceType) {
+      case 'ai': return 'from-cyan-500 to-blue-600'
+      case 'it': return 'from-purple-500 to-pink-600'
+      case 'microsaas': return 'from-green-500 to-emerald-600'
+      default: return 'from-cyan-500 to-blue-600'
+    }
+  }
   return (
     <>
-      <SEOHead
-        title="AI Scheduling Assistant - Zion Tech Group"
-        description="Intelligent scheduling assistant powered by AI. Automate appointment booking, optimize schedules, and manage calendar conflicts with smart scheduling algorithms."
-        keywords="AI scheduling assistant, appointment booking, calendar management, smart scheduling, meeting optimization, scheduling automation"
-        canonicalUrl="https://ziontechgroup.com/ai-scheduling-assistant"
-      />
-      
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Scheduling Assistant</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Automate and optimize your scheduling with AI-powered assistance. Handle appointment booking, resolve conflicts, and manage complex scheduling scenarios with intelligent automation.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Smart Features</h2>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="text-lg font-semibold text-gray-900">Intelligent Booking</h3>
-                    <p className="text-gray-600">AI-powered appointment booking with natural language processing</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="text-lg font-semibold text-gray-900">Conflict Resolution</h3>
-                    <p className="text-gray-600">Automatically detect and resolve scheduling conflicts with smart suggestions</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="text-lg font-semibold text-gray-900">Multi-Calendar Sync</h3>
-                    <p className="text-gray-600">Sync with Google Calendar, Outlook, and other calendar platforms</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="text-lg font-semibold text-gray-900">Smart Notifications</h3>
-                    <p className="text-gray-600">Intelligent reminders and notifications based on user preferences</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="text-lg font-semibold text-gray-900">Time Zone Management</h3>
-                    <p className="text-gray-600">Handle multiple time zones and international scheduling automatically</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Pricing Plans</h3>
-              <div className="space-y-4">
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Personal</h4>
-                  <p className="text-3xl font-bold text-pink-600">$29<span className="text-lg text-gray-600">/month</span></p>
-                  <ul className="mt-4 space-y-2 text-sm text-gray-600">
-                    <li>• Up to 5 calendars</li>
-                    <li>• Basic scheduling</li>
-                    <li>• Email notifications</li>
-                    <li>• Mobile app</li>
-                    <li>• Email support</li>
-                  </ul>
-                </div>
-                <div className="border border-pink-500 rounded-lg p-4 bg-pink-50">
-                  <h4 className="text-lg font-semibold text-gray-900">Business</h4>
-                  <p className="text-3xl font-bold text-pink-600">$99<span className="text-lg text-gray-600">/month</span></p>
-                  <ul className="mt-4 space-y-2 text-sm text-gray-600">
-                    <li>• Up to 25 calendars</li>
-                    <li>• Advanced AI features</li>
-                    <li>• Team scheduling</li>
-                    <li>• Custom integrations</li>
-                    <li>• API access</li>
-                    <li>• Priority support</li>
-                  </ul>
-                </div>
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Enterprise</h4>
-                  <p className="text-3xl font-bold text-pink-600">$299<span className="text-lg text-gray-600">/month</span></p>
-                  <ul className="mt-4 space-y-2 text-sm text-gray-600">
-                    <li>• Unlimited calendars</li>
-                    <li>• Full AI capabilities</li>
-                    <li>• Custom workflows</li>
-                    <li>• White-label options</li>
-                    <li>• 24/7 support</li>
-                    <li>• On-premise deployment</li>
-                  </ul>
-                </div>
+      <Helmet>
+        <title>AiSchedulingAssistant - Zion Tech Group | AI Solutions</title>
+        <meta name="description" content="Professional schedulingassistant services by Zion Tech Group. Transform your business with cutting-edge solutions." />
+        <meta name="keywords" content="schedulingassistant, ai solutions, business automation, Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <div className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                AiSchedulingAssistant <span className={"bg-gradient-to-r " + getGradientColors() + " bg-clip-text text-transparent"}>Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Transform your business with our advanced schedulingassistant services.
+                Leverage cutting-edge technology to drive growth and efficiency.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className={"bg-gradient-to-r " + getButtonColors() + " text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2"}>
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+                <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-bold hover:bg-cyan-500/10 transition-all duration-300">
+                  View Case Studies
+                </button>
               </div>
             </div>
-          </div>
-
-          <div className="bg-pink-50 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Automate Your Scheduling</h2>
-            <p className="text-gray-600 mb-6">Save time and reduce scheduling conflicts with AI assistance.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-pink-600 text-white px-8 py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                Start Free Trial
-              </a>
-              <a href="tel:+13024640950" className="border border-pink-600 text-pink-600 px-8 py-3 rounded-lg hover:bg-pink-50 transition-colors">
-                Call: +1 (302) 464-0950
-              </a>
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center">
+                  <div className={"w-16 h-16 bg-gradient-to-r " + getIconColors() + " rounded-2xl flex items-center justify-center mx-auto mb-4"}>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+            {/* Benefits Section */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Our AiSchedulingAssistant Services?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <p className="text-gray-300">{benefit}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Testimonials */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <div>
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* CTA Section */}
+            <div className="bg-gradient-to-r from-cyan-900 to-purple-900 rounded-2xl p-8 text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Contact our experts today and discover how our schedulingassistant solutions can drive your success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className={"bg-gradient-to-r " + getButtonColors() + " text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2"}>
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+                <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all duration-300">
+                  Download Brochure
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </>
-  );
-};
-
-export default AISchedulingAssistantPage;
+  )
+}
+export default AiSchedulingAssistantPage

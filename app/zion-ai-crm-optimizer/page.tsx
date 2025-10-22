@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const ZionAICRMOptimizerPage: React.FC = () => {
   return (
     <>
@@ -10,7 +9,6 @@ const ZionAICRMOptimizerPage: React.FC = () => {
         <meta name="keywords" content="ai crm optimizer, crm enhancement, lead scoring, sales automation, predictive analytics, customer relationship management" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-crm-optimizer" />
       </Helmet>
-      
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
@@ -24,14 +22,14 @@ const ZionAICRMOptimizerPage: React.FC = () => {
                 We're building the most intelligent CRM optimization platform. This page will be available soon with full features and pricing information.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
+                <a
+                  href="/contact"
                   className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Get Notified
                 </a>
-                <a 
-                  href="tel:+13024640950" 
+                <a
+                  href="tel:+13024640950"
                   className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
                 >
                   Call +1 302 464 0950
@@ -42,7 +40,6 @@ const ZionAICRMOptimizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ZionAICRMOptimizerPage;
+  )
+}
+export default ZionAICRMOptimizerPage

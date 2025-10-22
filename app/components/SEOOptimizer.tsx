@@ -1,12 +1,9 @@
 
-<<<<<<< HEAD
-import React from 'react';
-
+import React from 'react'
 interface SEOOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`seooptimizer-component ${className}`} {...props}>
@@ -17,22 +14,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children, .
         </div>
       )}
     </div>
-  );
-};
-
-export default SEOOptimizer;
-
-=======
-  canonicalUrl?: string;
+  )
+}
+export default SEOOptimizer
+  canonicalUrl?: string
   structuredData?: object;}const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
-  title,;
-  description,;
+  title,
+  description,
   keywords = [],
-  canonicalUrl,;
-  structuredData;}) => {;
-  const keywordsString = keywords.join(', ');
-;
-  return(<Helmet />);
+  canonicalUrl,
+  structuredData;}) => {
+  const keywordsString = keywords.join(', ')
+  return(<Helmet />)
       <title>{title}</title>
       <meta name="description" content={description}/>
       <meta name="keywords" content={keywordsString}/>
@@ -43,9 +36,6 @@ export default SEOOptimizer;
       <meta property="og: type" content="website" />
       <meta property="og: url" content={canonicalUrl,}/>
     </Helmet>
-  );
+  )
 }
-;
-export default SEOOptimizer;
-;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+export default SEOOptimizer

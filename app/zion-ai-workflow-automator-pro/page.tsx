@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const ZionAIWorkflowAutomatorProPage: React.FC = () => {
   return (
     <>
@@ -8,7 +7,6 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
         <title>AI Workflow Automator Pro - Zion Tech Group</title>
         <meta name="description" content="Automate complex business workflows with our advanced AI-powered workflow automation solution. Streamline processes and boost productivity." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
@@ -17,7 +15,6 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
               Automate complex business workflows with advanced AI technology. Streamline processes, reduce errors, and boost productivity.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-white p-6 rounded-lg shadow-md border">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Intelligent Automation</h3>
@@ -38,7 +35,6 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
               </p>
             </div>
           </div>
-          
           <div className="bg-gray-50 rounded-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -63,7 +59,6 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ZionAIWorkflowAutomatorProPage;
+  )
+}
+export default ZionAIWorkflowAutomatorProPage

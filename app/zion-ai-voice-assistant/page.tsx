@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 const ZionAIVoiceAssistantPage: React.FC = () => {
   return (
     <>
@@ -11,7 +10,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
         <meta name="keywords" content="AI voice assistant, voice AI, conversational AI, natural language processing, voice recognition, speech synthesis, voice interface" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-voice-assistant" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Hero Section */}
@@ -25,7 +23,7 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
               Zion AI Voice Assistant
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Create intelligent voice experiences with our advanced AI voice assistant. Featuring natural language processing, 
+              Create intelligent voice experiences with our advanced AI voice assistant. Featuring natural language processing,
               multi-language support, and seamless integration to transform how customers interact with your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -37,7 +35,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Advanced Voice AI Capabilities</h2>
@@ -51,7 +48,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Natural Language Processing</h3>
                 <p className="text-gray-600">Understand complex human speech patterns, context, and intent with advanced NLP technology.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,7 +57,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Multi-Language Support</h3>
                 <p className="text-gray-600">Support for 50+ languages with accurate pronunciation and cultural context understanding.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +66,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Context Awareness</h3>
                 <p className="text-gray-600">Maintain conversation context across multiple interactions for more natural conversations.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +75,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-Time Processing</h3>
                 <p className="text-gray-600">Process voice commands and respond instantly with low latency for seamless user experience.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +84,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Emotion Recognition</h3>
                 <p className="text-gray-600">Detect emotional tone and sentiment in voice to provide more empathetic and appropriate responses.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,7 +95,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Perfect for Every Industry</h2>
@@ -130,7 +121,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Benefits Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Why Choose Zion AI Voice Assistant?</h2>
@@ -173,7 +163,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Simple, Transparent Pricing</h2>
@@ -211,7 +200,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
                   Start Free Trial
                 </Link>
               </div>
-              
               <div className="border-2 border-violet-500 rounded-xl p-6 relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-violet-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
@@ -254,7 +242,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
                   Start Free Trial
                 </Link>
               </div>
-              
               <div className="border border-gray-200 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise</h3>
                 <div className="text-3xl font-bold text-gray-900 mb-4">Custom<span className="text-lg text-gray-500">/month</span></div>
@@ -296,12 +283,11 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-violet-600 to-purple-600 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Customer Interactions?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Join leading businesses already using Zion AI Voice Assistant to enhance customer experience. 
+              Join leading businesses already using Zion AI Voice Assistant to enhance customer experience.
               Start your free 14-day trial today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -321,7 +307,6 @@ const ZionAIVoiceAssistantPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ZionAIVoiceAssistantPage;
+  )
+}
+export default ZionAIVoiceAssistantPage

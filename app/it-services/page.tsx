@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Layers } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Layers } from 'lucide-react'
 export default function ItServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -11,7 +9,6 @@ export default function ItServicesPage() {
         <title>It Services | Zion Tech Group</title>
         <meta name="description" content="Professional it services solutions for modern businesses." />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
@@ -21,27 +18,23 @@ export default function ItServicesPage() {
             Professional it services solutions for modern businesses.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-cyan-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
             <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-purple-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
             <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-yellow-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
             <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
           </div>
         </div>
-
         <div className="text-center">
           <p className="text-lg text-gray-300 mb-8">
             Ready to get started with it services?
@@ -64,42 +57,38 @@ export default function ItServicesPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-
-=======
 'use client'
 import React, {useState} from 'react'
 import {Helmet} from 'react-helmet-async'
 import {Link} from 'react-router-dom'
 import {Cloud,}
-  Shield,;
-  Settings,;
-  Database,;
-  Smartphone,;
-  Globe,;
-  Zap,;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  Clock,;
-  Users,;
-  TrendingUp,;
-  Wifi,;
-  Server,;
-  Code,;
-  ShoppingCart,;
-  Monitor,;
-  Headphones,;
+  Shield,
+  Settings,
+  Database,
+  Smartphone,
+  Globe,
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  Users,
+  TrendingUp,
+  Wifi,
+  Server,
+  Code,
+  ShoppingCart,
+  Monitor,
+  Headphones,
   BarChart;}from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer   from '../components/Footer'
-;
 const ItServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-;
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
-    {;
+    {
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services',
@@ -1034,11 +1023,10 @@ const ItServicesPage: React.FC = () => {
     {id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length ,},
     {id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length ,},
     {id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length ,}]
-  const filteredServices = services.filter(service =>);
-    selectedCategory === 'all' || service.category === selectedCategory;
-  );
-;
-  return(<>);
+  const filteredServices = services.filter(service =>)
+    selectedCategory === 'all' || service.category === selectedCategory
+  )
+  return(<>)
       <Helmet />
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development." />
@@ -1047,29 +1035,29 @@ const ItServicesPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">{/* Header */</div>} <div className="text-center mb-16">
-              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6"></h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1>
                 IT Services
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Complete IT solutions to modernize your infrastructure and drive business growth.</p>
-                From cloud migration to cybersecurity, we have the expertise you need.;
+                From cloud migration to cybersecurity, we have the expertise you need.
               </p>
             </div>
             {/* Category Filter */} <div className="mb-12">
               <div className="flex flex-wrap justify-center gap-4">{categories.map((category) => (</div>
-                  <button;
-                    key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                      selectedCategory === category.id;
+                  <button
+                    key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category.id
                         ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover: bg-slate-700',} `}
-                  >;
-                    {category.name}({category.count});
+                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700',} `}
+                  >
+                    {category.name}({category.count})
                   </button>
                 ))}
               </div>
             </div>
-            {/* Services Grid */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
+            {/* Services Grid */} <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
               {filteredServices.map((service) => (
-                <div key={service.id}className="bg-slate-800/50 rounded-lg p-6 hover: bg-slate-800/70 transition-all duration-300"></div>
+                <div key={service.id}className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
@@ -1077,10 +1065,10 @@ const ItServicesPage: React.FC = () => {
                       </div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
                     </div>
-                    {service.popular && (;
+                    {service.popular && (
                       <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
                         <Star className="w-4 h-4 mr-1" />
-                        Popular;
+                        Popular
                       </span>
                     )} </div>
                   <p className="text-gray-300 mb-4">{service.description</p>}</p>
@@ -1094,7 +1082,7 @@ const ItServicesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, index) => (;
+                      {service.features.slice(0, 3).map((feature, index) => (
                         <li key={index}className="flex items-start space-x-2">
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature</span>}</span>
@@ -1103,16 +1091,16 @@ const ItServicesPage: React.FC = () => {
                     </ul>
                   </div>
                   <div className="flex items-center justify-between">
-                    <Link;
+                    <Link
                       to="/contact"
                       className="flex items-center text-purple-400 hover: text-purple-300 transition-colors"
                     >
-                      Learn More;
+                      Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                     <Link
                       to="/contact"
-                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
                       Get Quote
                     </Link>
@@ -1125,18 +1113,18 @@ const ItServicesPage: React.FC = () => {
                 <h2 className="text-2xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>
                 </h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Let our IT experts help you choose the right solutions for your business needs.</p>
-                  Get a free consultation and see how we can transform your technology infrastructure.;
+                  Get a free consultation and see how we can transform your technology infrastructure.
                 </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                   <Link
                     to="/contact"
-                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     Get Free Consultation
                   </Link>
                   <a
                     href="tel: +13024640950",
-                    className="border-2 border-purple-400 text-purple-400 hover: bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     Call: (302) 464-0950
                   </a>
@@ -1150,7 +1138,4 @@ const ItServicesPage: React.FC = () => {
     </>
   )
 }
-;
-export default ItServicesPage;
-;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+export default ItServicesPage

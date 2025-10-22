@@ -1,22 +1,19 @@
 
-import { useCallback, useEffect, useRef } from 'react';
-
+import { useCallback, useEffect, useRef } from 'react'
 interface AccessibilityOptions {
-  enableHighContrast?: boolean;
-  enableReducedMotion?: boolean;
-  enableKeyboardNavigation?: boolean;
-  enableFocusManagement?: boolean;
-  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean
+  enableReducedMotion?: boolean
+  enableKeyboardNavigation?: boolean
+  enableFocusManagement?: boolean
+  enableScreenReaderSupport?: boolean
 }
-
 interface AccessibilityState {
-  isHighContrast: boolean;
-  isReducedMotion: boolean;
-  isKeyboardUser: boolean;
-  currentFocus: HTMLElement | null;
-  focusHistory: HTMLElement[];
+  isHighContrast: boolean
+  isReducedMotion: boolean
+  isKeyboardUser: boolean
+  currentFocus: HTMLElement | null
+  focusHistory: HTMLElement[]
 }
-
 const focusableSelectors = [
   'a[href]',
   'button:not([disabled])',
@@ -25,8 +22,7 @@ const focusableSelectors = [
   'textarea:not([disabled])',
   '[tabindex]:not([tabindex="-1"])',
   '[contenteditable="true"]'
-].join(', ');
-
+].join(', ')
 export const useAccessibility = (options: AccessibilityOptions = {}) => {
   const {
     enableHighContrast = true,
@@ -34,282 +30,239 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     enableKeyboardNavigation = true,
     enableFocusManagement = true,
     enableScreenReaderSupport = true
-  } = options;
-
+  } = options
   const stateRef = useRef<AccessibilityState>({
     isHighContrast: false,
     isReducedMotion: false,
     isKeyboardUser: false,
     currentFocus: null,
     focusHistory: []
-  });
-
-  const focusableElements = useRef<HTMLElement[]>([]);
-
+  })
+  const focusableElements = useRef<HTMLElement[]>([])
   // Check for high contrast mode
   const checkHighContrast = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    stateRef.current.isHighContrast = mediaQuery.matches;
-
+    if (typeof window === 'undefined') return
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)')
+    stateRef.current.isHighContrast = mediaQuery.matches
     const handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isHighContrast = e.matches;
-      document.documentElement.classList.toggle('high-contrast', e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);
-
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
-
+      stateRef.current.isHighContrast = e.matches
+      document.documentElement.classList.toggle('high-contrast', e.matches)
+    }
+    mediaQuery.addEventListener('change', handleChange)
+    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
   // Check for reduced motion preference
   const checkReducedMotion = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    stateRef.current.isReducedMotion = mediaQuery.matches;
-
+    if (typeof window === 'undefined') return
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    stateRef.current.isReducedMotion = mediaQuery.matches
     const handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isReducedMotion = e.matches;
-      document.documentElement.classList.toggle('reduced-motion', e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);
-
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
-
+      stateRef.current.isReducedMotion = e.matches
+      document.documentElement.classList.toggle('reduced-motion', e.matches)
+    }
+    mediaQuery.addEventListener('change', handleChange)
+    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
   // Detect keyboard usage
   const detectKeyboardUsage = useCallback(() => {
-
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        stateRef.current.isKeyboardUser = true;
-        document.body.classList.add('keyboard-user');
+        stateRef.current.isKeyboardUser = true
+        document.body.classList.add('keyboard-user')
       }
-    };
-
+    }
     const handleMouseDown = () => {
-      stateRef.current.isKeyboardUser = false;
-      document.body.classList.remove('keyboard-user');
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
+      stateRef.current.isKeyboardUser = false
+      document.body.classList.remove('keyboard-user')
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, []);
-
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+    }
+  }, [])
   // Update focusable elements
   const updateFocusableElements = useCallback(() => {
     focusableElements.current = Array.from(
       document.querySelectorAll(focusableSelectors)
-    ) as HTMLElement[];
-  }, []);
-
+    ) as HTMLElement[]
+  }, [])
   // Focus management
   const focusElement = useCallback((element: HTMLElement | null) => {
-    if (!element) return;
-
-    stateRef.current.focusHistory.push(element);
+    if (!element) return
+    stateRef.current.focusHistory.push(element)
     if (stateRef.current.focusHistory.length > 10) {
-      stateRef.current.focusHistory.shift();
+      stateRef.current.focusHistory.shift()
     }
-
-    stateRef.current.currentFocus = element;
-    element.focus();
-    element.classList.add('focus-visible');
-  }, []);
-
+    stateRef.current.currentFocus = element
+    element.focus()
+    element.classList.add('focus-visible')
+  }, [])
   const focusNext = useCallback(() => {
-    updateFocusableElements();
-    const currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!);
-    const nextIndex = (currentIndex + 1) % focusableElements.current.length;
-    focusElement(focusableElements.current[nextIndex]);
-  }, [updateFocusableElements, focusElement]);
-
+    updateFocusableElements()
+    const currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
+    const nextIndex = (currentIndex + 1) % focusableElements.current.length
+    focusElement(focusableElements.current[nextIndex])
+  }, [updateFocusableElements, focusElement])
   const focusPrevious = useCallback(() => {
-    updateFocusableElements();
-    const currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!);
-    const prevIndex = currentIndex === 0 ? focusableElements.current.length - 1 : currentIndex - 1;
-    focusElement(focusableElements.current[prevIndex]);
-  }, [updateFocusableElements, focusElement]);
-
+    updateFocusableElements()
+    const currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
+    const prevIndex = currentIndex === 0 ? focusableElements.current.length - 1 : currentIndex - 1
+    focusElement(focusableElements.current[prevIndex])
+  }, [updateFocusableElements, focusElement])
   const focusFirst = useCallback(() => {
-    updateFocusableElements();
+    updateFocusableElements()
     if (focusableElements.current.length > 0) {
-      focusElement(focusableElements.current[0]);
+      focusElement(focusableElements.current[0])
     }
-  }, [updateFocusableElements, focusElement]);
-
+  }, [updateFocusableElements, focusElement])
   const focusLast = useCallback(() => {
-    updateFocusableElements();
+    updateFocusableElements()
     if (focusableElements.current.length > 0) {
-      focusElement(focusableElements.current[focusableElements.current.length - 1]);
+      focusElement(focusableElements.current[focusableElements.current.length - 1])
     }
-  }, [updateFocusableElements, focusElement]);
-
+  }, [updateFocusableElements, focusElement])
   // Trap focus within an element
   const trapFocus = useCallback((container: HTMLElement) => {
     const focusableInContainer = Array.from(
       container.querySelectorAll(focusableSelectors)
-    ) as HTMLElement[];
-
-    if (focusableInContainer.length === 0) return;
-
-    const firstElement = focusableInContainer[0];
-    const lastElement = focusableInContainer[focusableInContainer.length - 1];
-
+    ) as HTMLElement[]
+    if (focusableInContainer.length === 0) return
+    const firstElement = focusableInContainer[0]
+    const lastElement = focusableInContainer[focusableInContainer.length - 1]
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
-            e.preventDefault();
-            lastElement.focus();
+            e.preventDefault()
+            lastElement.focus()
           }
         } else {
           if (document.activeElement === lastElement) {
-            e.preventDefault();
-            firstElement.focus();
+            e.preventDefault()
+            firstElement.focus()
           }
         }
       }
-    };
-
-    container.addEventListener('keydown', handleKeyDown);
-    return () => container.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
+    }
+    container.addEventListener('keydown', handleKeyDown)
+    return () => container.removeEventListener('keydown', handleKeyDown)
+  }, [])
   // Announce to screen readers
   const announce = useCallback((message: string) => {
-    if (!enableScreenReaderSupport) return;
-
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-
-    document.body.appendChild(announcement);
-
+    if (!enableScreenReaderSupport) return
+    const announcement = document.createElement('div')
+    announcement.setAttribute('aria-live', 'polite')
+    announcement.setAttribute('aria-atomic', 'true')
+    announcement.className = 'sr-only'
+    announcement.textContent = message
+    document.body.appendChild(announcement)
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  }, [enableScreenReaderSupport]);
-
+      document.body.removeChild(announcement)
+    }, 1000)
+  }, [enableScreenReaderSupport])
   // Add ARIA labels and roles
   const enhanceElement = useCallback((element: HTMLElement, options: {
-    label?: string;
-    description?: string;
-    role?: string;
-    expanded?: boolean;
-    controls?: string;
+    label?: string
+    description?: string
+    role?: string
+    expanded?: boolean
+    controls?: string
   }) => {
     if (options.label) {
-      element.setAttribute('aria-label', options.label);
+      element.setAttribute('aria-label', options.label)
     }
     if (options.description) {
-      element.setAttribute('aria-describedby', options.description);
+      element.setAttribute('aria-describedby', options.description)
     }
     if (options.role) {
-      element.setAttribute('role', options.role);
+      element.setAttribute('role', options.role)
     }
     if (options.expanded !== undefined) {
-      element.setAttribute('aria-expanded', options.expanded.toString());
+      element.setAttribute('aria-expanded', options.expanded.toString())
     }
     if (options.controls) {
-      element.setAttribute('aria-controls', options.controls);
+      element.setAttribute('aria-controls', options.controls)
     }
-  }, []);
-
+  }, [])
   useEffect(() => {
-    const cleanupFunctions: (() => void)[] = [];
-
+    const cleanupFunctions: (() => void)[] = []
     // Add CSS for accessibility features
-    const style = document.createElement('style');
+    const style = document.createElement('style')
     style.textContent = `
       .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
+        position: absolute
+        width: 1px
+        height: 1px
+        padding: 0
+        margin: -1px
+        overflow: hidden
+        clip: rect(0, 0, 0, 0)
+        white-space: nowrap
+        border: 0
       }
       .focus-visible {
-        outline: 2px solid #3b82f6;
-        outline-offset: 2px;
+        outline: 2px solid #3b82f6
+        outline-offset: 2px
       }
       .keyboard-user *:focus {
-        outline: 2px solid #3b82f6;
-        outline-offset: 2px;
+        outline: 2px solid #3b82f6
+        outline-offset: 2px
       }
       .high-contrast {
-        filter: contrast(1.2);
+        filter: contrast(1.2)
       }
       .reduced-motion * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important
+        animation-iteration-count: 1 !important
+        transition-duration: 0.01ms !important
       }
       .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #000;
-        color: #fff;
-        padding: 8px;
-        text-decoration: none;
-        border-radius: 4px;
+        position: absolute
+        top: -40px
+        left: 6px
+        background: #000
+        color: #fff
+        padding: 8px
+        text-decoration: none
+        border-radius: 4px
       }
       .skip-link:focus {
-        top: 6px;
+        top: 6px
       }
-    `;
-    document.head.appendChild(style);
-
+    `
+    document.head.appendChild(style)
     // Add skip link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
+    const skipLink = document.createElement('a')
+    skipLink.href = '#main-content'
+    skipLink.textContent = 'Skip to main content'
+    skipLink.className = 'skip-link'
+    document.body.insertBefore(skipLink, document.body.firstChild)
     if (enableHighContrast) {
-      const cleanup = checkHighContrast();
-      if (cleanup) cleanupFunctions.push(cleanup);
+      const cleanup = checkHighContrast()
+      if (cleanup) cleanupFunctions.push(cleanup)
     }
-
     if (enableReducedMotion) {
-      const cleanup = checkReducedMotion();
-      if (cleanup) cleanupFunctions.push(cleanup);
+      const cleanup = checkReducedMotion()
+      if (cleanup) cleanupFunctions.push(cleanup)
     }
-
     if (enableKeyboardNavigation) {
-      const cleanup = detectKeyboardUsage();
-      cleanupFunctions.push(cleanup);
+      const cleanup = detectKeyboardUsage()
+      cleanupFunctions.push(cleanup)
     }
-
     if (enableFocusManagement) {
-      updateFocusableElements();
+      updateFocusableElements()
     }
-
     return () => {
-      document.head.removeChild(style);
+      document.head.removeChild(style)
       if (document.body.contains(skipLink)) {
-        document.body.removeChild(skipLink);
+        document.body.removeChild(skipLink)
       }
-      cleanupFunctions.forEach(cleanup => cleanup());
-    };
+      cleanupFunctions.forEach(cleanup => cleanup())
+    }
   }, [
     enableHighContrast,
     enableReducedMotion,
@@ -319,8 +272,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     checkReducedMotion,
     detectKeyboardUsage,
     updateFocusableElements
-  ]);
-
+  ])
   return {
     state: stateRef.current,
     focusElement,
@@ -332,8 +284,6 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     announce,
     enhanceElement,
     updateFocusableElements
-  };
-};
-
-export default useAccessibility;
-
+  }
+}
+export default useAccessibility

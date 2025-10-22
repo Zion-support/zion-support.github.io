@@ -1,17 +1,17 @@
-'use client';
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-import { 
-  UserGroupIcon, 
-  ChartBarIcon, 
-  CogIcon, 
+'use client'
+import React from 'react'
+import SEOHead from '../components/SEOHead'
+import {
+  UserGroupIcon,
+  ChartBarIcon,
+  CogIcon,
   CheckCircleIcon,
   StarIcon,
   ShieldCheckIcon,
   SparklesIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const AICRMOptimizerPage: React.FC = () => {
+  const serviceType = 'ai'; // Define serviceType variable
   const features = [
     {
       icon: UserGroupIcon,
@@ -37,8 +37,7 @@ const AICRMOptimizerPage: React.FC = () => {
       description: 'Enterprise-grade security with end-to-end encryption, GDPR compliance, and SOC 2 Type II certification.',
       benefits: ['100% data encryption', 'GDPR compliant', 'SOC 2 certified']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -84,8 +83,7 @@ const AICRMOptimizerPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -108,16 +106,14 @@ const AICRMOptimizerPage: React.FC = () => {
       content: 'The lead scoring is spot-on. We can now identify high-value prospects before they even express interest, giving us a huge competitive advantage.',
       rating: 5
     }
-  ];
-
+  ]
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="AI CRM Optimizer - Smart Customer Relationship Management | Zion Tech Group"
         description="Transform your sales process with AI-powered CRM optimization. Increase conversion rates by 40%, reduce sales cycle by 25%, and boost revenue with intelligent automation."
         keywords="AI CRM, customer relationship management, lead scoring, predictive analytics, sales automation, CRM optimization"
       />
-      
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 lg:py-32">
@@ -125,24 +121,20 @@ const AICRMOptimizerPage: React.FC = () => {
           <div className="absolute inset-0 opacity-30" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}></div>
-          
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6">
                 <SparklesIcon className="w-5 h-5 text-purple-400 mr-2" />
                 <span className="text-purple-300 text-sm font-medium">AI-Powered CRM Solution</span>
               </div>
-              
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                   AI CRM Optimizer
                 </span>
               </h1>
-              
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your sales process with intelligent automation, predictive analytics, and AI-powered lead scoring that increases conversion rates by 40%.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25">
                   Start Free Trial
@@ -151,7 +143,6 @@ const AICRMOptimizerPage: React.FC = () => {
                   Schedule Demo
                 </button>
               </div>
-              
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
@@ -173,7 +164,6 @@ const AICRMOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,7 +175,6 @@ const AICRMOptimizerPage: React.FC = () => {
                 Leverage cutting-edge artificial intelligence to optimize every aspect of your customer relationship management.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {features.map((feature, index) => (
                 <div key={index} className="group bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
@@ -215,7 +204,6 @@ const AICRMOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -227,12 +215,11 @@ const AICRMOptimizerPage: React.FC = () => {
                 Choose the perfect plan for your business needs. All plans include our core AI features and 24/7 support.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                  plan.popular 
-                    ? 'border-purple-500 shadow-purple-500/20' 
+                  plan.popular
+                    ? 'border-purple-500 shadow-purple-500/20'
                     : 'border-slate-700 hover:border-purple-500 hover:shadow-purple-500/20'
                 }`}>
                   {plan.popular && (
@@ -242,7 +229,6 @@ const AICRMOptimizerPage: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -251,7 +237,6 @@ const AICRMOptimizerPage: React.FC = () => {
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
-                  
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -260,7 +245,6 @@ const AICRMOptimizerPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700'
@@ -273,7 +257,6 @@ const AICRMOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,7 +268,6 @@ const AICRMOptimizerPage: React.FC = () => {
                 Join thousands of businesses that have transformed their sales process with AI CRM Optimizer.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
@@ -304,7 +286,6 @@ const AICRMOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-900/40 via-slate-900 to-cyan-900/40">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -326,7 +307,6 @@ const AICRMOptimizerPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default AICRMOptimizerPage;
+  )
+}
+export default AICRMOptimizerPage

@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const ZionAIDataVisualizerPage: React.FC = () => {
   return (
     <>
@@ -10,7 +9,6 @@ const ZionAIDataVisualizerPage: React.FC = () => {
         <meta name="keywords" content="ai data visualizer, data visualization, interactive charts, business intelligence, data analytics, automated insights" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-data-visualizer" />
       </Helmet>
-      
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
@@ -24,14 +22,14 @@ const ZionAIDataVisualizerPage: React.FC = () => {
                 We're developing the most intelligent data visualization platform. This page will be available soon with full features and pricing information.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
+                <a
+                  href="/contact"
                   className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Get Notified
                 </a>
-                <a 
-                  href="tel:+13024640950" 
+                <a
+                  href="tel:+13024640950"
                   className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
                 >
                   Call +1 302 464 0950
@@ -42,7 +40,6 @@ const ZionAIDataVisualizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ZionAIDataVisualizerPage;
+  )
+}
+export default ZionAIDataVisualizerPage

@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 
-import React from 'react';
-
+import React from 'react'
 interface NavigationProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-
 const Navigation: React.FC<NavigationProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`navigation-component ${className}`} {...props}>
@@ -17,46 +14,36 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children, ...pr
         </div>
       )}
     </div>
-
-  );
-};
-
-=======
+  )
+}
 'use client'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package } from 'lucide-react'
-
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [aiServicesOpen, setAiServicesOpen] = useState(false)
+  const [itServicesOpen, setItServicesOpen] = useState(false)
+  const [microSaasOpen, setMicroSaasOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
     }
-
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 50)
     }
-
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('scroll', handleScroll)
     }
-  }, []);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-
+  }, [])
+  const toggleMenu = () => setIsOpen(!isOpen)
   const services = [
     { name: 'AI Services', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Code },
@@ -65,7 +52,6 @@ const Navigation: React.FC = () => {
     { name: 'Data Analytics', href: '/data-analytics', icon: BarChart },
     { name: 'Custom Development', href: '/custom-development', icon: Settings }
   ]
-
   const aiServices = [
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: MessageCircle },
     { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
@@ -74,7 +60,6 @@ const Navigation: React.FC = () => {
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: TrendingUp },
     { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: Target }
   ]
-
   const itServices = [
     { name: 'Web Development', href: '/web-development', icon: Monitor },
     { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
@@ -83,7 +68,6 @@ const Navigation: React.FC = () => {
     { name: 'DevOps & CI/CD', href: '/devops', icon: Server },
     { name: 'IT Consulting', href: '/it-consulting', icon: Settings }
   ]
-
   const microSaasServices = [
     { name: 'Lead Generation', href: '/micro-saas/lead-scoring', icon: Target },
     { name: 'Email Marketing', href: '/micro-saas/email-marketing', icon: Mail },
@@ -92,7 +76,6 @@ const Navigation: React.FC = () => {
     { name: 'Appointment Scheduler', href: '/micro-saas/appointment-scheduler', icon: Calendar },
     { name: 'Support Bot', href: '/micro-saas/support-bot', icon: MessageCircle }
   ]
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
@@ -108,7 +91,6 @@ const Navigation: React.FC = () => {
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -118,14 +100,12 @@ const Navigation: React.FC = () => {
               >
                 Home
               </Link>
-              
               <Link
                 to="/about"
                 className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 About
               </Link>
-
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
@@ -147,7 +127,6 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* AI Services Dropdown */}
               <div className="relative group">
                 <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
@@ -169,7 +148,6 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* IT Services Dropdown */}
               <div className="relative group">
                 <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
@@ -191,7 +169,6 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Micro SaaS Dropdown */}
               <div className="relative group">
                 <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
@@ -213,7 +190,6 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <Link
                 to="/contact"
                 className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -222,7 +198,6 @@ const Navigation: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
@@ -233,7 +208,6 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden">
@@ -292,8 +266,6 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
+  )
 }
-
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
-export default Navigation;
+export default Navigation

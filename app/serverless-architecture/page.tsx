@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const ServerlessArchitecturePage: React.FC = () => {
   return (
     <>
@@ -10,7 +9,6 @@ const ServerlessArchitecturePage: React.FC = () => {
         keywords="serverless architecture, serverless computing, AWS Lambda, Azure Functions, Google Cloud Functions, event-driven computing"
         canonicalUrl="https://ziontechgroup.com/serverless-architecture"
       />
-      
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
@@ -21,7 +19,6 @@ const ServerlessArchitecturePage: React.FC = () => {
               Build scalable, cost-effective applications with serverless architecture. Event-driven computing, auto-scaling, and pay-per-use pricing.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-slate-800 rounded-lg p-6">
               <h2 className="text-2xl font-semibold mb-4 text-purple-400">Serverless Benefits</h2>
@@ -48,7 +45,6 @@ const ServerlessArchitecturePage: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
             <div className="bg-slate-800 rounded-lg p-6">
               <h2 className="text-2xl font-semibold mb-4 text-pink-400">Serverless Services</h2>
               <ul className="space-y-3 text-gray-300">
@@ -75,7 +71,6 @@ const ServerlessArchitecturePage: React.FC = () => {
               </ul>
             </div>
           </div>
-          
           <div className="bg-slate-800 rounded-lg p-8 mb-12">
             <h2 className="text-3xl font-bold mb-6 text-center">Use Cases</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -86,7 +81,6 @@ const ServerlessArchitecturePage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-3 text-purple-400">API Development</h3>
                 <p className="text-gray-300">Build scalable REST and GraphQL APIs.</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📊</span>
@@ -94,7 +88,6 @@ const ServerlessArchitecturePage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-3 text-pink-400">Data Processing</h3>
                 <p className="text-gray-300">Process data streams and batch operations.</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🤖</span>
@@ -104,7 +97,6 @@ const ServerlessArchitecturePage: React.FC = () => {
               </div>
             </div>
           </div>
-          
           <div className="text-center">
             <a
               href="/contact?service=serverless-architecture"
@@ -116,7 +108,6 @@ const ServerlessArchitecturePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ServerlessArchitecturePage;
+  )
+}
+export default ServerlessArchitecturePage

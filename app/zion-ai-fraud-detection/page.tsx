@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 const ZionAIFraudDetectionPage: React.FC = () => {
   return (
     <>
@@ -11,7 +10,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
         <meta name="keywords" content="AI fraud detection, fraud prevention, machine learning security, real-time fraud monitoring, payment fraud protection, cybersecurity AI" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-fraud-detection" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Hero Section */}
@@ -25,7 +23,7 @@ const ZionAIFraudDetectionPage: React.FC = () => {
               Zion AI Fraud Detection
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Advanced AI-powered fraud detection system that protects your business in real-time using machine learning, 
+              Advanced AI-powered fraud detection system that protects your business in real-time using machine learning,
               behavioral analysis, and advanced pattern recognition to prevent financial losses and secure transactions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -37,7 +35,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Powerful Fraud Detection Features</h2>
@@ -51,7 +48,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-Time Analysis</h3>
                 <p className="text-gray-600">Analyze transactions in milliseconds using advanced machine learning algorithms for instant fraud detection.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,7 +57,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Behavioral Analysis</h3>
                 <p className="text-gray-600">Learn user patterns and detect anomalies in behavior to identify sophisticated fraud attempts.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +66,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Multi-Layer Security</h3>
                 <p className="text-gray-600">Combines device fingerprinting, geolocation analysis, and transaction patterns for comprehensive protection.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +75,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Adaptive Learning</h3>
                 <p className="text-gray-600">Continuously improves detection accuracy by learning from new fraud patterns and user behaviors.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +84,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Custom Rules Engine</h3>
                 <p className="text-gray-600">Create custom fraud detection rules tailored to your business needs and risk tolerance.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,7 +95,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Transparent Pricing</h2>
@@ -141,7 +132,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
                   Start Free Trial
                 </Link>
               </div>
-              
               <div className="border-2 border-red-500 rounded-xl p-6 relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
@@ -184,7 +174,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
                   Start Free Trial
                 </Link>
               </div>
-              
               <div className="border border-gray-200 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise</h3>
                 <div className="text-3xl font-bold text-gray-900 mb-4">Custom<span className="text-lg text-gray-500">/month</span></div>
@@ -226,7 +215,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Benefits Section */}
           <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-8 text-white mb-16">
             <h2 className="text-3xl font-bold text-center mb-8">Why Choose Zion AI Fraud Detection?</h2>
@@ -269,12 +257,11 @@ const ZionAIFraudDetectionPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Protect Your Business?</h2>
             <p className="text-xl text-gray-600 mb-8">
-              Join thousands of businesses already protected by Zion AI Fraud Detection. 
+              Join thousands of businesses already protected by Zion AI Fraud Detection.
               Start your free 14-day trial today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -294,7 +281,6 @@ const ZionAIFraudDetectionPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ZionAIFraudDetectionPage;
+  )
+}
+export default ZionAIFraudDetectionPage

@@ -1,100 +1,169 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const AIWebsiteAnalyzerPage: React.FC = () => {
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react'
+const AiWebsiteAnalyzerPage: React.FC = () => {
+  const serviceType = 'ai' // Define serviceType variable
+  const features = [
+    {
+      icon: Brain,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology and AI.'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+    }
+  ]
+  const benefits = [
+    'Increased efficiency by up to 300%',
+    'Reduced operational costs',
+    'Enhanced decision-making capabilities',
+    '24/7 monitoring and support',
+    'Easy integration with existing systems',
+    'Proven ROI within 90 days'
+  ]
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      content: 'This websiteanalyzer solution transformed our operations completely. Highly recommended!',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'DataFlow Systems',
+      role: 'CEO',
+      content: 'The performance improvements we\'ve seen are remarkable. Excellent service!',
+      rating: 5
+    }
+  ]
+  const getGradientColors = () => {
+    switch(serviceType) {
+      case 'ai': return 'from-cyan-400 to-purple-400'
+      case 'it': return 'from-purple-400 to-pink-400'
+      case 'microsaas': return 'from-green-400 to-emerald-400'
+      default: return 'from-cyan-400 to-purple-400'
+    }
+  }
+  const getButtonColors = () => {
+    switch(serviceType) {
+      case 'ai': return 'from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600'
+      case 'it': return 'from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
+      case 'microsaas': return 'from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600'
+      default: return 'from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600'
+    }
+  }
+  const getIconColors = () => {
+    switch(serviceType) {
+      case 'ai': return 'from-cyan-500 to-blue-600'
+      case 'it': return 'from-purple-500 to-pink-600'
+      case 'microsaas': return 'from-green-500 to-emerald-600'
+      default: return 'from-cyan-500 to-blue-600'
+    }
+  }
   return (
     <>
-      <SEOHead
-        title="AI Website Analyzer - Zion Tech Group"
-        description="Comprehensive website analysis with AI-powered insights, performance optimization, and SEO recommendations. Analyze and optimize your website with AI."
-        keywords="AI website analyzer, website analysis, performance optimization, SEO analysis, website insights, website optimization"
-        canonicalUrl="https://ziontechgroup.com/ai-website-analyzer"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              AI Website Analyzer
-            </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Analyze and optimize your website with AI. Comprehensive website analysis with AI-powered insights, 
-              performance optimization, and SEO recommendations for better website performance.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                Email kleber@ziontechgroup.com
-              </a>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Performance Analysis</h3>
-                <p className="text-gray-600">Analyze website performance and identify optimization opportunities.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">SEO Optimization</h3>
-                <p className="text-gray-600">Get AI-powered SEO recommendations to improve search rankings.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">User Experience Insights</h3>
-                <p className="text-gray-600">Analyze user experience and identify areas for improvement.</p>
+      <Helmet>
+        <title>AiWebsiteAnalyzer - Zion Tech Group | AI Solutions</title>
+        <meta name="description" content="Professional websiteanalyzer services by Zion Tech Group. Transform your business with cutting-edge solutions." />
+        <meta name="keywords" content="websiteanalyzer, ai solutions, business automation, Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <div className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                AiWebsiteAnalyzer <span className={"bg-gradient-to-r " + getGradientColors() + " bg-clip-text text-transparent"}>Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Transform your business with our advanced websiteanalyzer services.
+                Leverage cutting-edge technology to drive growth and efficiency.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className={"bg-gradient-to-r " + getButtonColors() + " text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2"}>
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+                <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-bold hover:bg-cyan-500/10 transition-all duration-300">
+                  View Case Studies
+                </button>
               </div>
             </div>
-          </div>
-
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready to Analyze Your Website?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Get started with our AI website analyzer and optimize your website performance.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Email kleber@ziontechgroup.com
-              </a>
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center">
+                  <div className={"w-16 h-16 bg-gradient-to-r " + getIconColors() + " rounded-2xl flex items-center justify-center mx-auto mb-4"}>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+            {/* Benefits Section */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Our AiWebsiteAnalyzer Services?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <p className="text-gray-300">{benefit}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Testimonials */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <div>
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* CTA Section */}
+            <div className="bg-gradient-to-r from-cyan-900 to-purple-900 rounded-2xl p-8 text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Contact our experts today and discover how our websiteanalyzer solutions can drive your success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className={"bg-gradient-to-r " + getButtonColors() + " text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2"}>
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+                <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all duration-300">
+                  Download Brochure
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </>
-  );
-};
-
-export default AIWebsiteAnalyzerPage;
+  )
+}
+export default AiWebsiteAnalyzerPage

@@ -1,46 +1,37 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-
+import { useState, useEffect } from 'react'
 export function useAnalytics() {
-  const [isInitialized, setIsInitialized] = useState(false);
-
+  const [isInitialized, setIsInitialized] = useState(false)
   useEffect(() => {
     // Initialize analytics
-    setIsInitialized(true);
-  }, []);
-
+    setIsInitialized(true)
+  }, [])
   const trackEvent = (eventName: string, properties?: any) => {
     if (isInitialized) {
-      console.log('Analytics event:', eventName, properties);
+      console.log('Analytics event:', eventName, properties)
     }
-  };
-
+  }
   const trackPageView = (page: string) => {
     if (isInitialized) {
-      console.log('Page view:', page);
-=======
+      console.log('Page view:', page)
 import {useCallback} from 'react'
 interface AnalyticsEvent {event_category: string,}
   event_label: string,
   value?: number;}}
-export const useAnalytics = (;
+export const useAnalytics = (
   const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {,
-    ) => {;
-  return($3;);
-  )}if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('event', eventName, parameters);
+    ) => {
+  return($3;)
+  )}if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('event', eventName, parameters)
     }
-  }, []);
+  }, [])
 const trackPageView = useCallback((pagePath: string, pageTitle: string) => {,
     if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('config', 'GA_MEASUREMENT_ID', {page_path: pagePath,
-        page_title: pageTitle,}});
+        page_title: pageTitle,}})
     }
-  }, []);
+  }, [])
 const trackConversion = useCallback((conversionId: string, value?: number) => {if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('event', 'conversion', {send_to: conversionId,
-        value: value,}});
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+        value: value,}})
     }
-  };
-
-  return { isInitialized, trackEvent, trackPageView };
+  }
+  return { isInitialized, trackEvent, trackPageView }
 }
-;

@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const BlockchainSolutionsPage: React.FC = () => {
   return (
     <>
@@ -10,7 +9,6 @@ const BlockchainSolutionsPage: React.FC = () => {
         keywords="blockchain solutions, smart contracts, DeFi, Web3, cryptocurrency, NFT, blockchain development, distributed ledger"
         canonicalUrl="https://ziontechgroup.com/blockchain-solutions"
       />
-      
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
@@ -19,7 +17,6 @@ const BlockchainSolutionsPage: React.FC = () => {
               Enterprise blockchain solutions and development services. Build secure, scalable blockchain applications with smart contracts, DeFi protocols, and Web3 integrations for your business.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Blockchain Services</h2>
@@ -81,7 +78,6 @@ const BlockchainSolutionsPage: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
             <div className="bg-gray-50 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Pricing Plans</h3>
               <div className="space-y-4">
@@ -121,7 +117,6 @@ const BlockchainSolutionsPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-purple-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Build Your Blockchain Solution</h2>
             <p className="text-gray-600 mb-6">Enterprise-grade blockchain development services.</p>
@@ -137,7 +132,6 @@ const BlockchainSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default BlockchainSolutionsPage;
+  )
+}
+export default BlockchainSolutionsPage

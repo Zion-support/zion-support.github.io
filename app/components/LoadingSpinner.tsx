@@ -1,12 +1,9 @@
-'use client';
-import React from 'react';
-
-<<<<<<< HEAD
+'use client'
+import React from 'react'
 interface LoadingSpinnerProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`loadingspinner-component ${className}`} {...props}>
@@ -16,8 +13,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', childre
           <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
       )}
-
-=======
 const LoadingSpinner: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -25,10 +20,7 @@ const LoadingSpinner: React.FC = () => {
         <div className="spinner mb-4"></div>
         <p className="text-white">Loading...</p>
       </div>
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
     </div>
-  );
-};
-
-export default LoadingSpinner;
-
+  )
+}
+export default LoadingSpinner

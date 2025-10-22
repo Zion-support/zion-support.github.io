@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const ZionAIFormBuilderPage: React.FC = () => {
   return (
     <>
@@ -10,7 +9,6 @@ const ZionAIFormBuilderPage: React.FC = () => {
         <meta name="keywords" content="ai form builder, form creation, smart forms, form validation, conditional logic, data collection, survey forms" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-form-builder" />
       </Helmet>
-      
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-green-600 to-blue-700 text-white">
@@ -21,14 +19,14 @@ const ZionAIFormBuilderPage: React.FC = () => {
                 Create intelligent, dynamic forms with AI-powered features including smart validation, conditional logic, and automated responses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="#features" 
+                <a
+                  href="#features"
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Explore Features
                 </a>
-                <a 
-                  href="/contact" 
+                <a
+                  href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
                   Start Free Trial
@@ -37,7 +35,6 @@ const ZionAIFormBuilderPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Features Section */}
         <div id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
@@ -46,38 +43,32 @@ const ZionAIFormBuilderPage: React.FC = () => {
               Build forms that think, adapt, and optimize themselves for better user experience and higher conversion rates.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl mb-4">🎨</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Drag & Drop Builder</h3>
               <p className="text-gray-600">Create beautiful forms with our intuitive drag-and-drop interface. No coding required.</p>
             </div>
-
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl mb-4">🤖</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">AI-Powered Validation</h3>
               <p className="text-gray-600">Smart validation that learns from user behavior to provide better error messages and suggestions.</p>
             </div>
-
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Conditional Logic</h3>
               <p className="text-gray-600">Create dynamic forms that show/hide fields based on user responses for better user experience.</p>
             </div>
-
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl mb-4">💡</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Field Suggestions</h3>
               <p className="text-gray-600">AI suggests the best field types and options based on your form's purpose and content.</p>
             </div>
-
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl mb-4">📱</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Mobile Optimization</h3>
               <p className="text-gray-600">Forms automatically adapt to mobile devices with touch-friendly interfaces and responsive design.</p>
             </div>
-
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl mb-4">🔒</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Spam Protection</h3>
@@ -85,7 +76,6 @@ const ZionAIFormBuilderPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Pricing Section */}
         <div className="bg-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,7 +85,6 @@ const ZionAIFormBuilderPage: React.FC = () => {
                 Choose the plan that fits your form needs. All plans include our core AI features.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic</h3>
@@ -111,7 +100,6 @@ const ZionAIFormBuilderPage: React.FC = () => {
                   Start Free Trial
                 </a>
               </div>
-
               <div className="bg-green-600 text-white p-8 rounded-xl relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
@@ -131,7 +119,6 @@ const ZionAIFormBuilderPage: React.FC = () => {
                   Start Free Trial
                 </a>
               </div>
-
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-green-600 mb-6">$149<span className="text-lg text-gray-500">/month</span></div>
@@ -151,7 +138,6 @@ const ZionAIFormBuilderPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-green-600 to-blue-700 text-white py-16">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -160,14 +146,14 @@ const ZionAIFormBuilderPage: React.FC = () => {
               Start creating intelligent forms that convert better and provide superior user experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Free Trial
               </a>
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
                 Call +1 302 464 0950
@@ -181,7 +167,6 @@ const ZionAIFormBuilderPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ZionAIFormBuilderPage;
+  )
+}
+export default ZionAIFormBuilderPage

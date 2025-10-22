@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 
-import React from 'react';
-
+import React from 'react'
 interface PerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`performancemonitor-component ${className}`} {...props}>
@@ -17,28 +14,19 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '',
         </div>
       )}
     </div>
-  );
-};
-
-export default PerformanceMonitor;
-
-=======
+  )
+}
+export default PerformanceMonitor
 'use client'
 import React, {useEffect, useState} from 'react'
-;
-  const [isVisible, setIsVisible] = useState(false);
-;
-  useEffect(() => {if (typeof window === 'undefined') return;
-;
-        >;
-          ×;
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {if (typeof window === 'undefined') return
+        >
+          ×
         </button>
       </div>
       </div>
     </div>
-  );
+  )
 }
-;
-export default PerformanceMonitor;
-;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+export default PerformanceMonitor

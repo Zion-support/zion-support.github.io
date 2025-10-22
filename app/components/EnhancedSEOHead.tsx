@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-
+import React from 'react'
 interface EnhancedSEOHeadProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`enhancedseohead-component ${className}`} {...props}>
@@ -16,21 +13,15 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', child
         </div>
       )}
     </div>
-
-  );
-};
-
-=======
+  )
+}
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
-;
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Helmet>
-  );
+  )
 }
-;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
-export default EnhancedSEOHead;
+export default EnhancedSEOHead

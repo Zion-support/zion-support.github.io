@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Layers } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Layers } from 'lucide-react'
 export default function DocsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -11,7 +9,6 @@ export default function DocsPage() {
         <title>Docs | Zion Tech Group</title>
         <meta name="description" content="Professional docs solutions for modern businesses." />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
@@ -21,27 +18,23 @@ export default function DocsPage() {
             Professional docs solutions for modern businesses.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-cyan-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
             <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-purple-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
             <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-yellow-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
             <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
           </div>
         </div>
-
         <div className="text-center">
           <p className="text-lg text-gray-300 mb-8">
             Ready to get started with docs?
@@ -64,19 +57,15 @@ export default function DocsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-
-=======
 'use client'
 import React, {useState} from 'react'
 import {Helmet} from 'react-helmet-async'
 import {Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database} from 'lucide-react'
-;
 const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-;
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen ,},
     {id: 'getting-started', name: 'Getting Started', icon: Zap ,},
@@ -169,17 +158,15 @@ const DocsPage: React.FC = () => {
     {title: 'Community', url: '/community', icon: Users ,},
     {title: 'Support', url: '/support', icon: Shield ,}]
   const filteredDocs = selectedCategory === 'all'
-    ? documentation;
-    : documentation.filter(doc => doc.category === selectedCategory);
-;
-  const searchResults = searchQuery;
-    ? documentation.filter(doc =>);
-        doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        doc.description.toLowerCase().includes(searchQuery.toLowerCase());
-      );
-    : filteredDocs;
-;
-  return(<>);
+    ? documentation
+    : documentation.filter(doc => doc.category === selectedCategory)
+  const searchResults = searchQuery
+    ? documentation.filter(doc =>)
+        doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        doc.description.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : filteredDocs
+  return(<>)
       <Helmet />
         <title>Documentation - Zion Tech Group</title>
         <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />
@@ -192,27 +179,27 @@ const DocsPage: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced"></h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced"></h1>
                 Documentation
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Complete documentation for all our AI, IT, and Micro SaaS services.</p>
-              Find guides, API references, and best practices to help you build amazing applications.;
+              Find guides, API references, and best practices to help you build amazing applications.
             </p>
           </div>
           {/* Search Bar */} <div className="cyber-card-enhanced p-6 mb-12">
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input;
+              <input
                 type="text"
                 placeholder="Search documentation..."
                 value={searchQuery}onChange={(e) => setSearchQuery(e.target.value)}className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
-              />;
+              />
             </div>
           </div>
-          {/* Quick Links */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12"></div>
-            {quickLinks.map((link, index) => (;
-              <a;
+          {/* Quick Links */} <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"></div>
+            {quickLinks.map((link, index) => (
+              <a
                 key={index}href={link.url}className="cyber-card-enhanced p-6 text-center group hover: scale-105 transition-all duration-300"
               >
                 <link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover: text-cyan-300" />
@@ -223,12 +210,12 @@ const DocsPage: React.FC = () => {
           {/* Category Filter */} <div className="mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
             <div className="flex flex-wrap gap-4">{categories.map((category) => (</div>
-                <button;
-                  key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                    selectedCategory === category.id;
+                <button
+                  key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category.id
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',} `}
-                >;
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700',} `}
+                >
                   <category.icon className="w-5 h-5" />
                   <span>{category.name</span>}</span>
                 </button>
@@ -245,7 +232,7 @@ const DocsPage: React.FC = () => {
                     <div className="flex items-center space-x-6 text-sm text-gray-400 mb-4">
                       <span className="flex items-center">
                         <FileText className="w-4 h-4 mr-1" />
-                        {doc.readTime}read;
+                        {doc.readTime}read
                       </span>
                       <span className="flex items-center">
                         <Settings className="w-4 h-4 mr-1" />
@@ -256,7 +243,7 @@ const DocsPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="ml-6">
-                    <span className={`px-3 py-1 rounded text-xs font-semibold ${;
+                    <span className={`px-3 py-1 rounded text-xs font-semibold ${
                       doc.difficulty === 'Beginner'
                         ? 'bg-green-600 text-white'
                         : doc.difficulty === 'Intermediate'
@@ -266,8 +253,8 @@ const DocsPage: React.FC = () => {
                 </div>
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Sections: </h4>
-                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-2"></div>
-                    {doc.sections.map((section, sectionIndex) => (;
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2"></div>
+                    {doc.sections.map((section, sectionIndex) => (
                       <div key={sectionIndex}className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {section} </div>
@@ -276,16 +263,16 @@ const DocsPage: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex space-x-4">
-                    <a;
+                    <a
                       href={`/docs/${doc.id}`}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center"
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center"
                     >
                       Read Guide
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                     <a
                       href={`/docs/${doc.id}/download`}
-                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center"
+                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center"
                     >
                       <Download className="w-4 h-4 mr-2" />
                       Download PDF
@@ -295,26 +282,25 @@ const DocsPage: React.FC = () => {
               </div>
             ))}
           </div>
-          {/* No Results */}{searchResults.length === 0 && searchQuery && (;
+          {/* No Results */}{searchResults.length === 0 && searchQuery && (
             <div className="cyber-card-enhanced p-8 text-center">
               <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
               <p className="text-gray-300 mb-6">Try adjusting your search terms or browse our documentation categories.</p>
               </p>
-              <button;
-                onClick={() =>setSearchQuery('')</button>}className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              <button
+                onClick={() =>setSearchQuery('')</button>}className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Clear Search
               </button>
             </div>
           )}
-;
           {/* Additional Resources */} <div className="cyber-card-enhanced p-8 mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div>
-              <a;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+              <a
                 href="/tutorials"
-                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300"
+                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
                 <BookOpen className="w-8 h-8 text-cyan-400" />
                 <div>
@@ -323,9 +309,9 @@ const DocsPage: React.FC = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
               </a>
-              <a;
+              <a
                 href="/api"
-                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300"
+                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
                 <Code className="w-8 h-8 text-green-400" />
                 <div>
@@ -336,7 +322,7 @@ const DocsPage: React.FC = () => {
               </a>
               <a
                 href="/community"
-                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300"
+                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
                 <Users className="w-8 h-8 text-purple-400" />
                 <div>
@@ -347,7 +333,7 @@ const DocsPage: React.FC = () => {
               </a>
               <a
                 href="/support"
-                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300"
+                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
                 <Shield className="w-8 h-8 text-orange-400" />
                 <div>
@@ -363,6 +349,4 @@ const DocsPage: React.FC = () => {
     </>
   )
 }
-;
-export default DocsPage;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+export default DocsPage

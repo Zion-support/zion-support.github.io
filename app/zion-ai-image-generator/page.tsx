@@ -1,6 +1,5 @@
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React, { memo } from 'react'
+import SEOHead from '../components/SEOHead'
 const ZionAIImageGeneratorPage: React.FC = memo(() => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -21,8 +20,7 @@ const ZionAIImageGeneratorPage: React.FC = memo(() => {
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com"
     }
-  };
-
+  }
   return (
     <>
       <SEOHead
@@ -32,12 +30,10 @@ const ZionAIImageGeneratorPage: React.FC = memo(() => {
         canonicalUrl="https://ziontechgroup.com/zion-ai-image-generator"
         structuredData={structuredData}
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           {/* Hero Section */}
           <div className="text-center mb-20">
@@ -45,7 +41,7 @@ const ZionAIImageGeneratorPage: React.FC = memo(() => {
               Zion AI Image Generator Pro
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Create stunning images, artwork, and marketing materials with advanced AI technology. 
+              Create stunning images, artwork, and marketing materials with advanced AI technology.
               <span className="text-cyan-400 font-semibold"> From text to masterpiece in seconds.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -57,7 +53,6 @@ const ZionAIImageGeneratorPage: React.FC = memo(() => {
               </button>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -108,7 +103,6 @@ const ZionAIImageGeneratorPage: React.FC = memo(() => {
               </div>
             </div>
           </div>
-
           {/* Use Cases Section */}
           <div className="mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
@@ -137,7 +131,6 @@ const ZionAIImageGeneratorPage: React.FC = memo(() => {
               </div>
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -190,7 +183,6 @@ const ZionAIImageGeneratorPage: React.FC = memo(() => {
               </div>
             </div>
           </div>
-
           {/* Contact Section */}
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -214,9 +206,7 @@ const ZionAIImageGeneratorPage: React.FC = memo(() => {
         </div>
       </div>
     </>
-  );
-});
-
-ZionAIImageGeneratorPage.displayName = 'ZionAIImageGeneratorPage';
-
-export default ZionAIImageGeneratorPage;
+  )
+})
+ZionAIImageGeneratorPage.displayName = 'ZionAIImageGeneratorPage'
+export default ZionAIImageGeneratorPage

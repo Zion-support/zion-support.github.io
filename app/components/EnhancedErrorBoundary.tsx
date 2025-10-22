@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 
-import React from 'react';
-
+import React from 'react'
 interface EnhancedErrorBoundaryProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`enhancederrorboundary-component ${className}`} {...props}>
@@ -17,24 +14,17 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         </div>
       )}
     </div>
-  );
-};
-
-=======
+  )
+}
 'use client'
-;
-  error?: Error;
+  error?: Error
   errorInfo?: ErrorInfo;}class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) {,
-    super(props);
-;
+    super(props)
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    this.setState({);
-      error,;
+    this.setState({)
+      error,
     }
-;
-    return this.props.children;
+    return this.props.children
   }
 }
-;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

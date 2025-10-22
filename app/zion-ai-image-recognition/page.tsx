@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 const ZionAIImageRecognitionPage: React.FC = () => {
   return (
     <>
@@ -11,7 +10,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
         <meta name="keywords" content="AI image recognition, computer vision, object detection, facial recognition, image analysis, OCR, visual AI, image processing" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-image-recognition" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Hero Section */}
@@ -25,7 +23,7 @@ const ZionAIImageRecognitionPage: React.FC = () => {
               Zion AI Image Recognition
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Advanced computer vision and image recognition technology that can identify, analyze, and understand visual content 
+              Advanced computer vision and image recognition technology that can identify, analyze, and understand visual content
               with unprecedented accuracy. Perfect for e-commerce, security, healthcare, and automation applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -37,7 +35,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Powerful Image Recognition Capabilities</h2>
@@ -52,7 +49,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Object Detection</h3>
                 <p className="text-gray-600">Identify and locate multiple objects within images with precise bounding boxes and confidence scores.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,7 +58,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Facial Recognition</h3>
                 <p className="text-gray-600">Advanced facial recognition with emotion detection, age estimation, and identity verification capabilities.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +67,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">OCR & Text Extraction</h3>
                 <p className="text-gray-600">Extract text from images, documents, and handwritten notes with high accuracy using advanced OCR technology.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,7 +76,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Scene Understanding</h3>
                 <p className="text-gray-600">Analyze complex scenes to understand context, activities, and relationships between objects.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,7 +85,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Custom Model Training</h3>
                 <p className="text-gray-600">Train custom models for specific use cases with your own datasets and requirements.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,7 +96,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industry Applications</h2>
@@ -131,7 +122,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Flexible Pricing Plans</h2>
@@ -169,7 +159,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                   Start Free Trial
                 </Link>
               </div>
-              
               <div className="border-2 border-purple-500 rounded-xl p-6 relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
@@ -212,7 +201,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                   Start Free Trial
                 </Link>
               </div>
-              
               <div className="border border-gray-200 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise</h3>
                 <div className="text-3xl font-bold text-gray-900 mb-4">Custom<span className="text-lg text-gray-500">/month</span></div>
@@ -254,12 +242,11 @@ const ZionAIImageRecognitionPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to See the World Through AI Eyes?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Transform your business with advanced image recognition technology. 
+              Transform your business with advanced image recognition technology.
               Start your free trial today and experience the power of computer vision.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -279,7 +266,6 @@ const ZionAIImageRecognitionPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ZionAIImageRecognitionPage;
+  )
+}
+export default ZionAIImageRecognitionPage

@@ -1,27 +1,24 @@
-import { useCallback, useEffect, useState } from 'react';
-
+import { useCallback, useEffect, useState } from 'react'
 interface UsePerformanceOptimizationOptions {
-  enabled?: boolean;
-  threshold?: number;
-  enableLazyLoading?: boolean;
-  enableMemoization?: boolean;
-  enableVirtualization?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-  enableImageOptimization?: boolean;
-  enableBundleAnalysis?: boolean;
+  enabled?: boolean
+  threshold?: number
+  enableLazyLoading?: boolean
+  enableMemoization?: boolean
+  enableVirtualization?: boolean
+  enablePreloading?: boolean
+  enableCodeSplitting?: boolean
+  enableImageOptimization?: boolean
+  enableBundleAnalysis?: boolean
 }
-
 interface OptimizationState {
-  lazyLoading: boolean;
-  memoization: boolean;
-  virtualization: boolean;
-  preloading: boolean;
-  codeSplitting: boolean;
-  imageOptimization: boolean;
-  bundleAnalysis: boolean;
+  lazyLoading: boolean
+  memoization: boolean
+  virtualization: boolean
+  preloading: boolean
+  codeSplitting: boolean
+  imageOptimization: boolean
+  bundleAnalysis: boolean
 }
-
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
   const [optimizations, setOptimizations] = useState<OptimizationState>({
     lazyLoading: false,
@@ -31,8 +28,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     codeSplitting: false,
     imageOptimization: false,
     bundleAnalysis: false,
-  });
-  
+  })
   const enableOptimizations = useCallback(() => {
     setOptimizations(prev => ({
       ...prev,
@@ -43,27 +39,23 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       codeSplitting: options.enableCodeSplitting || false,
       imageOptimization: options.enableImageOptimization || false,
       bundleAnalysis: options.enableBundleAnalysis || false,
-    }));
-  }, [options]);
-
+    }))
+  }, [options])
   const init = useCallback(() => {
     if (options.enabled !== false) {
-      enableOptimizations();
+      enableOptimizations()
     }
-  }, [options.enabled, enableOptimizations]);
-
+  }, [options.enabled, enableOptimizations])
   useEffect(() => {
     if (options.enableLazyLoading) {
-      enableOptimizations();
+      enableOptimizations()
     }
-  }, [options.enableLazyLoading, enableOptimizations]);
-
+  }, [options.enableLazyLoading, enableOptimizations])
   return {
     optimizations,
     setOptimizations,
     enableOptimizations,
     init
-  };
-};
-
-export default usePerformanceOptimization;
+  }
+}
+export default usePerformanceOptimization

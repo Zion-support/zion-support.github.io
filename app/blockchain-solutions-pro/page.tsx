@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const BlockchainSolutionsProPage: React.FC = () => {
   return (
     <>
@@ -10,7 +9,6 @@ const BlockchainSolutionsProPage: React.FC = () => {
         keywords="blockchain development, smart contracts, DeFi, NFT, enterprise blockchain, cryptocurrency, blockchain consulting"
         canonicalUrl="https://ziontechgroup.com/blockchain-solutions-pro"
       />
-      
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white">
@@ -21,14 +19,14 @@ const BlockchainSolutionsProPage: React.FC = () => {
                 Comprehensive blockchain development services including smart contracts, DeFi applications, and enterprise blockchain solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="#features" 
+                <a
+                  href="#features"
                   className="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Explore Features
                 </a>
-                <a 
-                  href="/contact?service=blockchain-solutions-pro" 
+                <a
+                  href="/contact?service=blockchain-solutions-pro"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors"
                 >
                   Get Started
@@ -37,7 +35,6 @@ const BlockchainSolutionsProPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Features Section */}
         <div id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
@@ -46,38 +43,32 @@ const BlockchainSolutionsProPage: React.FC = () => {
               Our blockchain solutions combine cutting-edge technology with enterprise-grade security and scalability
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl mb-4">📜</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Contract Development</h3>
               <p className="text-gray-600">Build secure, audited smart contracts for various use cases and blockchain platforms</p>
             </div>
-            
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl mb-4">🏦</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">DeFi Applications</h3>
               <p className="text-gray-600">Create decentralized finance applications including DEXs, lending protocols, and yield farming</p>
             </div>
-            
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl mb-4">🎨</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">NFT Marketplaces</h3>
               <p className="text-gray-600">Build NFT marketplaces and platforms for digital art, collectibles, and unique assets</p>
             </div>
-            
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl mb-4">🪙</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Token Development</h3>
               <p className="text-gray-600">Create custom tokens, cryptocurrencies, and tokenomics for your blockchain project</p>
             </div>
-            
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Blockchain Integration</h3>
               <p className="text-gray-600">Integrate blockchain technology with existing systems and business processes</p>
             </div>
-            
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Security Audits</h3>
@@ -85,7 +76,6 @@ const BlockchainSolutionsProPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Pricing Section */}
         <div className="bg-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,7 +83,6 @@ const BlockchainSolutionsProPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
               <p className="text-lg text-gray-600">Choose the plan that fits your blockchain development needs</p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic</h3>
@@ -108,7 +97,6 @@ const BlockchainSolutionsProPage: React.FC = () => {
                   Get Started
                 </a>
               </div>
-
               <div className="bg-gray-800 text-white p-8 rounded-xl relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
@@ -127,7 +115,6 @@ const BlockchainSolutionsProPage: React.FC = () => {
                   Get Started
                 </a>
               </div>
-
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-gray-800 mb-4">$100,000<span className="text-lg text-gray-500">/project</span></div>
@@ -146,7 +133,6 @@ const BlockchainSolutionsProPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Use Cases Section */}
         <div className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,33 +140,27 @@ const BlockchainSolutionsProPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Use Cases</h2>
               <p className="text-lg text-gray-600">See how our blockchain solutions can transform your business</p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Supply Chain Tracking</h3>
                 <p className="text-gray-600">Track products from origin to consumer with immutable blockchain records and transparency.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Digital Identity</h3>
                 <p className="text-gray-600">Create secure, self-sovereign digital identities for users and organizations.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Financial Services</h3>
                 <p className="text-gray-600">Build DeFi protocols, payment systems, and financial applications on blockchain.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Healthcare Records</h3>
                 <p className="text-gray-600">Secure, interoperable healthcare records with patient-controlled access and privacy.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Real Estate</h3>
                 <p className="text-gray-600">Tokenize real estate assets and create fractional ownership platforms.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Voting Systems</h3>
                 <p className="text-gray-600">Secure, transparent voting systems with verifiable results and audit trails.</p>
@@ -188,7 +168,6 @@ const BlockchainSolutionsProPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -197,14 +176,14 @@ const BlockchainSolutionsProPage: React.FC = () => {
               Join the blockchain revolution with our expert development team and cutting-edge solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact?service=blockchain-solutions-pro" 
+              <a
+                href="/contact?service=blockchain-solutions-pro"
                 className="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Project
               </a>
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors"
               >
                 Call +1 302 464 0950
@@ -218,7 +197,6 @@ const BlockchainSolutionsProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default BlockchainSolutionsProPage;
+  )
+}
+export default BlockchainSolutionsProPage

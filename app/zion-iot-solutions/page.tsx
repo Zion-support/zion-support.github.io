@@ -1,6 +1,5 @@
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React, { memo } from 'react'
+import SEOHead from '../components/SEOHead'
 const ZionIoTSolutionsPage: React.FC = memo(() => {
   return (
     <>
@@ -10,7 +9,6 @@ const ZionIoTSolutionsPage: React.FC = memo(() => {
         keywords="IoT development, Internet of Things, smart devices, IoT integration, connected systems, IoT analytics"
         canonicalUrl="https://ziontechgroup.com/zion-iot-solutions"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="text-center">
@@ -32,9 +30,7 @@ const ZionIoTSolutionsPage: React.FC = memo(() => {
         </div>
       </div>
     </>
-  );
-});
-
-ZionIoTSolutionsPage.displayName = 'ZionIoTSolutionsPage';
-
-export default ZionIoTSolutionsPage;
+  )
+})
+ZionIoTSolutionsPage.displayName = 'ZionIoTSolutionsPage'
+export default ZionIoTSolutionsPage

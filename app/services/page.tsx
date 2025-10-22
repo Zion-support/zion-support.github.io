@@ -1,64 +1,55 @@
-<<<<<<< HEAD
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Clock, Star, Search, Rocket, DollarSign } from 'lucide-react';
-import { useState } from 'react';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { CheckCircle, Clock, Star, Search, Rocket, DollarSign } from 'lucide-react'
+import { useState } from 'react'
 export default function ServicesPage() {
-  const [isVisible] = useState(false);
-=======
+  const [isVisible] = useState(false)
 'use client'
 import React, {useState} from 'react'
 import {Helmet} from 'react-helmet-async'
 import {Brain,}
-  Cloud,;
-  Shield,;
-  BarChart3,;
-  Smartphone,;
-  Database,;
-  Zap,;
-  Globe,;
-  CheckCircle,;
-  ArrowRight,;
-  Search,;
-  Filter,;
-  Eye,;
-  Settings,;
-  Users,;
-  MessageSquare,;
-  FileText,;
+  Cloud,
+  Shield,
+  BarChart3,
+  Smartphone,
+  Database,
+  Zap,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Search,
+  Filter,
+  Eye,
+  Settings,
+  Users,
+  MessageSquare,
+  FileText,
   Target;}from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer   from '../components/Footer'
-;
 const ServicesPage: React.FC = () => {
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('name');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
-
-  const CheckCircleIcon = CheckCircle;
-  const ClockIcon = Clock;
-  const StarIcon = Star;
-  const MagnifyingGlassIcon = Search;
-  const RocketLaunchIcon = Rocket;
-  const CurrencyDollarIcon = DollarSign;
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [sortBy, setSortBy] = useState('name')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const CheckCircleIcon = CheckCircle
+  const ClockIcon = Clock
+  const StarIcon = Star
+  const MagnifyingGlassIcon = Search
+  const RocketLaunchIcon = Rocket
+  const CurrencyDollarIcon = DollarSign
   const categories = [
     { id: 'all', name: 'All Services', icon: '🔧', count: 35 },
     { id: 'ai', name: 'AI Solutions', icon: '🤖', count: 15 },
     { id: 'cloud', name: 'Cloud Services', icon: '☁️', count: 12 },
     { id: 'data', name: 'Data Analytics', icon: '📊', count: 8 }
-  ];
-
+  ]
   const services = [
-    { 
-      id: 1, 
-      name: 'AI Solutions', 
-      category: 'ai', 
-      status: 'active', 
+    {
+      id: 1,
+      name: 'AI Solutions',
+      category: 'ai',
+      status: 'active',
       price: 99,
       description: 'Advanced AI solutions for modern businesses',
       icon: '🤖',
@@ -72,11 +63,11 @@ const ServicesPage: React.FC = () => {
       launchDate: '2024-01-01',
       lastUpdated: '2024-01-15'
     },
-    { 
-      id: 2, 
-      name: 'Cloud Services', 
-      category: 'cloud', 
-      status: 'active', 
+    {
+      id: 2,
+      name: 'Cloud Services',
+      category: 'cloud',
+      status: 'active',
       price: 149,
       description: 'Scalable cloud infrastructure solutions',
       icon: '☁️',
@@ -90,11 +81,11 @@ const ServicesPage: React.FC = () => {
       launchDate: '2024-01-01',
       lastUpdated: '2024-01-15'
     },
-    { 
-      id: 3, 
-      name: 'Data Analytics', 
-      category: 'data', 
-      status: 'active', 
+    {
+      id: 3,
+      name: 'Data Analytics',
+      category: 'data',
+      status: 'active',
       price: 199,
       description: 'Comprehensive data analytics platform',
       icon: '📊',
@@ -108,34 +99,28 @@ const ServicesPage: React.FC = () => {
       launchDate: '2024-01-01',
       lastUpdated: '2024-01-15'
     }
-  ];
-
-
+  ]
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active': return 'text-green-400';
-      case 'inactive': return 'text-red-400';
-      default: return 'text-yellow-400';
+      case 'active': return 'text-green-400'
+      case 'inactive': return 'text-red-400'
+      default: return 'text-yellow-400'
     }
-  };
-
+  }
   const sortedServices = services
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
     .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()))
     .sort((a, b) => {
-      if (sortBy === 'name') return a.name.localeCompare(b.name);
-      if (sortBy === 'price') return a.price - b.price;
-      return 0;
-    });
-
+      if (sortBy === 'name') return a.name.localeCompare(b.name)
+      if (sortBy === 'price') return a.price - b.price
+      return 0
+    })
   return (
-
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Services | Zion Tech Group</title>
         <meta name="description" content="Professional services solutions for modern businesses." />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
@@ -145,7 +130,6 @@ const ServicesPage: React.FC = () => {
             Professional services solutions for modern businesses.
           </p>
         </div>
-
         {/* Service Stats */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 text-center">
@@ -153,20 +137,17 @@ const ServicesPage: React.FC = () => {
             <h3 className="text-2xl font-bold text-white mb-2">{services.length}+</h3>
             <p className="text-gray-300">Services Available</p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 text-center">
             <ClockIcon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-white mb-2">24/7</h3>
             <p className="text-gray-300">Support Available</p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 text-center">
             <StarIcon className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-white mb-2">100%</h3>
             <p className="text-gray-300">Client Satisfaction</p>
           </div>
         </div>
-
         {/* Search and Filter */}
         <div className="mb-12">
           <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -180,7 +161,6 @@ const ServicesPage: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
               />
             </div>
-            
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
@@ -191,7 +171,6 @@ const ServicesPage: React.FC = () => {
               <option value="category">Sort by Category</option>
             </select>
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
@@ -209,7 +188,6 @@ const ServicesPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sortedServices.map((service) => (
@@ -220,16 +198,13 @@ const ServicesPage: React.FC = () => {
                   {service.status}
                 </span>
               </div>
-              
               <p className="text-gray-300 mb-4">{service.description}</p>
-              
               <div className="mb-4">
                 <div className="text-2xl font-bold text-cyan-400 mb-2">
                   ${service.price}/month
                 </div>
                 <div className="text-sm text-gray-400">Starting price</div>
               </div>
-              
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                 <ul className="space-y-1">
@@ -241,7 +216,6 @@ const ServicesPage: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-white mb-2">Technologies:</h4>
                 <div className="flex flex-wrap gap-2">
@@ -250,11 +224,9 @@ const ServicesPage: React.FC = () => {
                       {tech}
                     </span>
                   ))}
-=======
-;
   const services = [
-    // AI Services;
-    {;
+    // AI Services
+    {
       icon: Brain,
       title: 'AI-Powered Chatbots',
       description: 'Advanced conversational AI with natural language processing and sentiment analysis for 24/7 customer support.',
@@ -295,7 +267,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $799/month',
       marketPrice: '$1500-5000/month',
       benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']},
-    // IT Services;
+    // IT Services
     {icon: Cloud,
       title: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services.',
@@ -336,7 +308,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $200/hour',
       marketPrice: '$300-800/hour',
       benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']},
-    // Micro SaaS;
+    // Micro SaaS
     {icon: BarChart3,
       title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights.',
@@ -391,12 +363,12 @@ const ServicesPage: React.FC = () => {
     {id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length ,},
     {id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length ,},
     {id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length ,}]
-  const filteredServices = services.filter(service => {);
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;});
-  return(<>);
+  const filteredServices = services.filter(service => {)
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory;})
+  return(<>)
       <Helmet />
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SaaS services designed to transform your business." />
@@ -405,7 +377,7 @@ const ServicesPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">{/* Header */</div>} <div className="text-center mb-12">
-              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6"></h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1>
                 Our Services
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive solutions to transform your business with cutting-edge technology</p>
@@ -419,23 +391,21 @@ const ServicesPage: React.FC = () => {
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}onChange={(e) => setSearchTerm(e.target.value)}className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
-                  />;
+                  />
                 </div>
                 <div className="flex items-center space-x-2">
                   <Filter className="text-gray-400 w-5 h-5" />
-                  <select;
+                  <select
                     value={selectedCategory}onChange={(e) => setSelectedCategory(e.target.value)}className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     {categories.map(category => ()
                       <option key={category.id}value={category.id}>
-                        {category.name}({category.count});
+                        {category.name}({category.count})
                       </option>
                     ))}
                   </select>
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
                 </div>
               </div>
-              
               <Link
                 to="/contact"
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center block"
@@ -443,10 +413,8 @@ const ServicesPage: React.FC = () => {
                 Get Started
               </Link>
             </div>
-<<<<<<< HEAD
           ))}
         </div>
-
         {/* No Results */}
         {sortedServices.length === 0 && (
           <div className="text-center py-12">
@@ -455,8 +423,8 @@ const ServicesPage: React.FC = () => {
             <p className="text-gray-300 mb-4">Try adjusting your search or filter criteria</p>
             <button
               onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
+                setSearchTerm('')
+                setSelectedCategory('all')
               }}
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
@@ -464,7 +432,6 @@ const ServicesPage: React.FC = () => {
             </button>
           </div>
         )}
-
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -474,31 +441,28 @@ const ServicesPage: React.FC = () => {
             We offer custom solutions tailored to your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="glass-card hover-lift px-8 py-4 text-lg font-semibold text-cyan-400 border-cyan-400/30"
             >
               Get Custom Quote
               <Rocket className="ml-2 h-5 w-5 inline" />
             </Link>
-            <Link 
-              to="/pricing" 
+            <Link
+              to="/pricing"
               className="glass-card hover-lift px-8 py-4 text-lg font-semibold text-cyan-400 border-cyan-400/30"
             >
               View Pricing
               <CurrencyDollarIcon className="ml-2 h-5 w-5 inline" />
             </Link>
           </div>
-
           <div className="mt-8 text-sm text-gray-400">
             <p>📞 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
             <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
           </div>
         </div>
-
       </div>
       <div className="scan-lines"></div>
-
       {/* Header Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -507,10 +471,9 @@ const ServicesPage: React.FC = () => {
               Our Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Discover our comprehensive range of AI-powered solutions, IT services, and enterprise software. 
+              Discover our comprehensive range of AI-powered solutions, IT services, and enterprise software.
               All services come with transparent pricing, detailed documentation, and dedicated support.
             </p>
-            
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <div className="glass-card px-6 py-3 text-cyan-400">
                 <CheckCircleIcon className="h-5 w-5 inline mr-2" />
@@ -523,10 +486,9 @@ const ServicesPage: React.FC = () => {
               <div className="glass-card px-6 py-3 text-purple-400">
                 <StarIcon className="h-5 w-5 inline mr-2" />
                 Enterprise Grade
-=======
-            {/* Services Grid */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {filteredServices.map((service, index) => (;
-                <div key={index}className="bg-slate-800/50 rounded-lg p-6 hover: bg-slate-800/70 transition-all duration-300 group"></div>
+            {/* Services Grid */} <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              {filteredServices.map((service, index) => (
+                <div key={index}className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 group"></div>
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover: scale-110 transition-transform"></div>
                       <service.icon className="w-6 h-6 text-white" />
@@ -535,7 +497,7 @@ const ServicesPage: React.FC = () => {
                       <h3 className="text-xl font-bold text-white">{service.title}</h3>
                       <div className="flex items-center space-x-2 mt-1">
                         <span className="text-cyan-400 font-semibold">{service.price</span>}</span>
-                        {service.marketPrice && (;
+                        {service.marketPrice && (
                           <span className="text-gray-400 text-sm line-through">{service.marketPrice</span>}</span>
                         )}
                       </div>
@@ -545,18 +507,18 @@ const ServicesPage: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features: </h4>
                     <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (;
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex}className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {feature} </li>
                       ))}
                     </ul>
                   </div>
-                  {service.benefits && (;
+                  {service.benefits && (
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-white mb-2">Benefits: </h4>
                       <ul className="space-y-1">
-                        {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (;
+                        {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
                           <li key={benefitIndex}className="flex items-center text-sm text-green-300">
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {benefit} </li>
@@ -564,18 +526,17 @@ const ServicesPage: React.FC = () => {
                       </ul>
                     </div>
                   )}
-;
                   <div className="flex items-center justify-between">
-                    <a;
+                    <a
                       href="/contact"
                       className="flex items-center text-cyan-400 hover: text-cyan-300 transition-colors"
                     >
-                      Learn More;
+                      Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                     <a
                       href="/contact"
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
                       Get Quote
                     </a>
@@ -589,28 +550,25 @@ const ServicesPage: React.FC = () => {
                 </h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Contact our experts for a free consultation and discover how our services can transform your business.</p>
                 </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                   <a
                     href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     Get Free Consultation
                   </a>
                   <a
                     href="tel: +13024640950",
-                    className="border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     Call: (302) 464-0950
                   </a>
                 </div>
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
-
       {/* Filters and Search */}
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -629,7 +587,6 @@ const ServicesPage: React.FC = () => {
                   />
                 </div>
               </div>
-
               {/* Sort */}
               <div className="lg:w-48">
                 <select
@@ -643,7 +600,6 @@ const ServicesPage: React.FC = () => {
                 </select>
               </div>
             </div>
-
             {/* Category Filters */}
             <div className="flex flex-wrap gap-3 mt-6">
               {categories.map((category) => {
@@ -663,20 +619,19 @@ const ServicesPage: React.FC = () => {
                       {category.count}
                     </span>
                   </button>
-                );
+                )
               })}
             </div>
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => {
               return (
-                <div 
+                <div
                   key={service.id}
                   className={`glass-card p-8 card-hover transition-all duration-500 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -692,11 +647,9 @@ const ServicesPage: React.FC = () => {
                       {service.status.toUpperCase()}
                     </div>
                   </div>
-
                   {/* Content */}
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-400 mb-6 leading-relaxed">{service.description}</p>
-
                   {/* Pricing */}
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-4">
@@ -710,7 +663,6 @@ const ServicesPage: React.FC = () => {
                         <div className="text-xs text-gray-500">Basic Plan</div>
                       </div>
                     </div>
-
                     <div className="grid grid-cols-3 gap-2 text-center">
                       <div className="bg-gray-800/50 p-2 rounded">
                         <div className="text-xs text-gray-400">Basic</div>
@@ -726,13 +678,12 @@ const ServicesPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Features */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                     <div className="flex flex-wrap gap-2">
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <span 
+                        <span
                           key={featureIndex}
                           className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20"
                         >
@@ -746,13 +697,12 @@ const ServicesPage: React.FC = () => {
                       )}
                     </div>
                   </div>
-
                   {/* Technologies */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-3">Technologies</h4>
                     <div className="flex flex-wrap gap-2">
                       {service.technologies.slice(0, 3).map((tech, techIndex) => (
-                        <span 
+                        <span
                           key={techIndex}
                           className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
                         >
@@ -766,23 +716,21 @@ const ServicesPage: React.FC = () => {
                       )}
                     </div>
                   </div>
-
                   {/* Actions */}
                   <div className="flex gap-3">
-                    <Link 
+                    <Link
                       to={service.route}
                       className="flex-1 btn-neon text-center py-3 text-sm font-semibold"
                     >
                       Learn More
                     </Link>
-                    <Link 
+                    <Link
                       to={service.demoUrl || '#'}
                       className="px-4 py-3 glass-card text-cyan-400 hover:text-white transition-colors border border-cyan-400/30"
                     >
                       Demo
                     </Link>
                   </div>
-
                   {/* Additional Info */}
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="flex items-center justify-between text-xs text-gray-500">
@@ -791,10 +739,9 @@ const ServicesPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
-
           {sortedServices.length === 0 && (
             <div className="text-center py-12">
               <div className="glass-card p-12 max-w-md mx-auto">
@@ -803,8 +750,8 @@ const ServicesPage: React.FC = () => {
                 <p className="text-gray-400 mb-6">Try adjusting your search or filter criteria</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
+                    setSearchTerm('')
+                    setSelectedCategory('all')
                   }}
                   className="btn-neon px-6 py-3"
                 >
@@ -815,7 +762,6 @@ const ServicesPage: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -824,27 +770,25 @@ const ServicesPage: React.FC = () => {
               Need a Custom Solution?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Don't see exactly what you need? Our team can create custom AI and IT solutions 
+              Don't see exactly what you need? Our team can create custom AI and IT solutions
               tailored to your specific business requirements.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="btn-neon hover-glow focus-neon px-8 py-4 text-lg font-semibold"
               >
                 Discuss Your Project
                 <RocketLaunchIcon className="ml-2 h-5 w-5 inline" />
               </Link>
-              <Link 
-                to="/pricing" 
+              <Link
+                to="/pricing"
                 className="glass-card hover-lift px-8 py-4 text-lg font-semibold text-cyan-400 border-cyan-400/30"
               >
                 View Pricing
                 <CurrencyDollarIcon className="ml-2 h-5 w-5 inline" />
               </Link>
             </div>
-
             <div className="mt-8 text-sm text-gray-400">
               <p>📞 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
               <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
@@ -853,16 +797,11 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 }
-
-=======
       </main>
       <Footer />
     </>
   )
 }
-;
-export default ServicesPage;
-;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+export default ServicesPage

@@ -1,32 +1,30 @@
-<<<<<<< HEAD
 export interface Service {
-  id: string;
-  name: string;
-  description: string;
-  shortDescription: string;
-  category: 'ai' | 'it' | 'saas' | 'blockchain' | 'iot' | 'devops' | 'data' | 'security' | 'cloud' | 'mobile' | 'web';
+  id: string
+  name: string
+  description: string
+  shortDescription: string
+  category: 'ai' | 'it' | 'saas' | 'blockchain' | 'iot' | 'devops' | 'data' | 'security' | 'cloud' | 'mobile' | 'web'
   pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number;
-    currency: string;
-  };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  technologies: string[];
-  demoUrl?: string;
-  documentationUrl?: string;
-  apiUrl?: string;
-  status: 'active' | 'beta' | 'coming-soon';
-  launchDate: string;
-  lastUpdated: string;
-  icon: string;
-  gradient: string;
-  glow: string;
-  route: string;
+    basic: number
+    pro: number
+    enterprise: number
+    currency: string
+  }
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  technologies: string[]
+  demoUrl?: string
+  documentationUrl?: string
+  apiUrl?: string
+  status: 'active' | 'beta' | 'coming-soon'
+  launchDate: string
+  lastUpdated: string
+  icon: string
+  gradient: string
+  glow: string
+  route: string
 }
-
 export const services: Service[] = [
   // AI Services
   {
@@ -582,7 +580,6 @@ export const services: Service[] = [
     glow: 'shadow-cyan-500/25',
     route: '/iot-solutions'
   },
-
   // Additional AI Services
   {
     id: 'ai-lead-scoring',
@@ -934,7 +931,6 @@ export const services: Service[] = [
     glow: 'shadow-orange-500/25',
     route: '/ai-email-optimizer'
   },
-
   // Micro SaaS Solutions
   {
     id: 'social-media-scheduler',
@@ -1286,7 +1282,6 @@ export const services: Service[] = [
     glow: 'shadow-indigo-500/25',
     route: '/ai-audio-processor'
   },
-
   // Advanced IT Solutions
   {
     id: 'web-development',
@@ -1538,7 +1533,6 @@ export const services: Service[] = [
     glow: 'shadow-red-500/25',
     route: '/security-audit'
   },
-
   // Advanced Solutions
   {
     id: 'quantum-computing-solutions',
@@ -2040,7 +2034,6 @@ export const services: Service[] = [
     glow: 'shadow-cyan-500/25',
     route: '/data-lake-solutions'
   },
-
   // Specialized AI Services
   {
     id: 'ai-legal-assistant',
@@ -2342,7 +2335,6 @@ export const services: Service[] = [
     glow: 'shadow-purple-500/25',
     route: '/ai-3d-model-generator'
   },
-
   // Zion AI Specialized Services
   {
     id: 'zion-ai-chatbot-builder',
@@ -2844,34 +2836,29 @@ export const services: Service[] = [
     glow: 'shadow-indigo-500/25',
     route: '/zion-ai-voice-synthesis'
   }
-];
-
+]
 export const getServiceById = (id: string): Service | undefined => {
-  return services.find(service => service.id === id);
-};
-
+  return services.find(service => service.id === id)
+}
 export const getServicesByCategory = (category: string): Service[] => {
-  return services.filter(service => service.category === category);
-};
-
+  return services.filter(service => service.category === category)
+}
 export const getFeaturedServices = (): Service[] => {
-  return services.filter(service => service.status === 'active').slice(0, 6);
-};
-
+  return services.filter(service => service.status === 'active').slice(0, 6)
+}
 export const getPricingTiers = () => {
   return {
     basic: 'Basic',
     pro: 'Professional',
     enterprise: 'Enterprise'
-  };
-};
-=======
+  }
+}
 import {Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,;}
-  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,;
-  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,;
+  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
+  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
   Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon;}} from 'lucide-react'
 export const microSAASServices = [
-  // Productivity & Management Tools;
+  // Productivity & Management Tools
   {title: 'AI Project Manager Pro',
     description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
     icon: 'bar-chart',
@@ -2980,7 +2967,7 @@ export const microSAASServices = [
     category: 'Productivity',
     rating: 4.6,
     users: '50,000+',}freeTrial: '14 days',},
-  // Content & Marketing Tools;
+  // Content & Marketing Tools
   {title: 'AI Content Writer Pro',
     description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',
     icon: '✍️',
@@ -3327,7 +3314,7 @@ export interface Service {id: string,}
   useCases: string[],
   icon: string,
   popular: boolean,
-  new?: boolean;
+  new?: boolean
   path: string,
   contact: {,
     phone: string,
@@ -3338,7 +3325,7 @@ export interface Service {id: string,}
     currency: string,}}
 }
 export const services: Service[] = [,
-  // AI Services,;
+  // AI Services,
   {id: 'ai-project-manager',
     name: 'AI Project Manager Pro',
     category: 'ai',
@@ -3540,7 +3527,7 @@ export const services: Service[] = [,
     min: 500,
       max: 2000,
       currency: 'USD',}},
-  // Micro SAAS Services;
+  // Micro SAAS Services
   {id: 'ai-social-media-manager',
     name: 'AI Social Media Manager',
     category: 'micro-saas',
@@ -3741,7 +3728,7 @@ export const services: Service[] = [,
     min: 20,
       max: 80,
       currency: 'USD',}},
-  // IT Services;
+  // IT Services
   {id: 'cloud-infrastructure',
     name: 'Cloud Infrastructure Solutions',
     category: 'it',
@@ -3902,7 +3889,7 @@ export const services: Service[] = [,
     min: 300,
       max: 1200,
       currency: 'USD',}},
-  // Emerging Technologies;
+  // Emerging Technologies
   {id: 'quantum-computing',
     name: 'Quantum Computing Solutions',
     category: 'emerging-tech',
@@ -4060,5 +4047,3 @@ export const contactInfo = {phone: '+1 (302) 464-0950',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST',}}
-;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb

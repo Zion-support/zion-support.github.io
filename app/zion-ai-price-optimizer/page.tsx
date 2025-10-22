@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 const ZionAIPriceOptimizerPage: React.FC = () => {
   return (
     <>
@@ -11,7 +10,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
         <meta name="keywords" content="AI price optimization, dynamic pricing, revenue optimization, pricing strategy, competitor analysis, demand forecasting, pricing intelligence" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-price-optimizer" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-cyan-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Hero Section */}
@@ -25,7 +23,7 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
               Zion AI Price Optimizer
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Maximize your revenue with intelligent pricing strategies powered by advanced AI. Analyze market conditions, 
+              Maximize your revenue with intelligent pricing strategies powered by advanced AI. Analyze market conditions,
               competitor pricing, and demand patterns to optimize prices in real-time and increase profits by up to 25%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -37,7 +35,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Advanced Pricing Intelligence Features</h2>
@@ -51,7 +48,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Dynamic Pricing</h3>
                 <p className="text-gray-600">Automatically adjust prices based on demand, inventory levels, and market conditions in real-time.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,7 +57,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Competitor Analysis</h3>
                 <p className="text-gray-600">Monitor competitor pricing strategies and market positioning to stay competitive and identify opportunities.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +66,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Demand Forecasting</h3>
                 <p className="text-gray-600">Predict demand patterns and seasonal trends to optimize pricing strategies and inventory management.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +75,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-Time Optimization</h3>
                 <p className="text-gray-600">Continuously optimize prices based on changing market conditions, customer behavior, and business goals.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +84,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">A/B Testing</h3>
                 <p className="text-gray-600">Test different pricing strategies and measure their impact on sales, revenue, and customer satisfaction.</p>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,7 +95,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Industry Applications */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Perfect for Every Industry</h2>
@@ -130,7 +121,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Benefits Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Proven Business Results</h2>
@@ -173,7 +163,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Flexible Pricing Plans</h2>
@@ -211,7 +200,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
                   Start Free Trial
                 </Link>
               </div>
-              
               <div className="border-2 border-emerald-500 rounded-xl p-6 relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
@@ -254,7 +242,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
                   Start Free Trial
                 </Link>
               </div>
-              
               <div className="border border-gray-200 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise</h3>
                 <div className="text-3xl font-bold text-gray-900 mb-4">Custom<span className="text-lg text-gray-500">/month</span></div>
@@ -296,12 +283,11 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Optimize Your Pricing?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Join leading businesses already using Zion AI Price Optimizer to maximize their revenue. 
+              Join leading businesses already using Zion AI Price Optimizer to maximize their revenue.
               Start your free 14-day trial today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -321,7 +307,6 @@ const ZionAIPriceOptimizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ZionAIPriceOptimizerPage;
+  )
+}
+export default ZionAIPriceOptimizerPage

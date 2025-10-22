@@ -1,5 +1,4 @@
 // SEO data utilities
-
 export function seoData() {
   return {
     generateMetaTags: (title: string, description: string) => ({
@@ -13,5 +12,5 @@ export function seoData() {
       '@type': type,
       ...data
     })
-  };
+  }
 }

@@ -1,6 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 export default function ZionaicustomersentimenttrackerPage() {
   return (
     <>
@@ -8,7 +7,6 @@ export default function ZionaicustomersentimenttrackerPage() {
         <title>AI Customer Sentiment Tracker - Zion Tech Group</title>
         <meta name="description" content="Monitor and analyze customer sentiment in real-time with our advanced AI-powered sentiment tracking solution." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
@@ -19,7 +17,6 @@ export default function ZionaicustomersentimenttrackerPage() {
               Monitor and analyze customer sentiment in real-time with our advanced AI-powered sentiment tracking solution.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Key Features</h2>
@@ -70,7 +67,6 @@ export default function ZionaicustomersentimenttrackerPage() {
                 </li>
               </ul>
             </div>
-            
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Benefits</h2>
               <div className="space-y-6">
@@ -93,7 +89,6 @@ export default function ZionaicustomersentimenttrackerPage() {
               </div>
             </div>
           </div>
-          
           <div className="bg-gray-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Track Customer Sentiment?</h2>
             <p className="text-gray-600 mb-6">Start monitoring customer sentiment and improve your customer experience.</p>
@@ -109,5 +104,5 @@ export default function ZionaicustomersentimenttrackerPage() {
         </div>
       </div>
     </>
-  );
+  )
 }

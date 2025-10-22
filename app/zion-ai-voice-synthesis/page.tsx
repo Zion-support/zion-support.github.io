@@ -1,6 +1,5 @@
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React, { memo } from 'react'
+import SEOHead from '../components/SEOHead'
 const ZionAIVoiceSynthesisPage: React.FC = memo(() => {
   return (
     <>
@@ -10,7 +9,6 @@ const ZionAIVoiceSynthesisPage: React.FC = memo(() => {
         keywords="AI voice synthesis, text to speech, voice generation, AI voices, audio content"
         canonicalUrl="https://ziontechgroup.com/zion-ai-voice-synthesis"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="text-center">
@@ -32,9 +30,7 @@ const ZionAIVoiceSynthesisPage: React.FC = memo(() => {
         </div>
       </div>
     </>
-  );
-});
-
-ZionAIVoiceSynthesisPage.displayName = 'ZionAIVoiceSynthesisPage';
-
-export default ZionAIVoiceSynthesisPage;
+  )
+})
+ZionAIVoiceSynthesisPage.displayName = 'ZionAIVoiceSynthesisPage'
+export default ZionAIVoiceSynthesisPage

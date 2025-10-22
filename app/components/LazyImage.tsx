@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 
-import React from 'react';
-
+import React from 'react'
 interface LazyImageProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-
 const LazyImage: React.FC<LazyImageProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`lazyimage-component ${className}`} {...props}>
@@ -14,15 +11,12 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '', children, ...prop
         <div className="p-4">
           <h3 className="text-lg font-semibold text-white mb-2">LazyImage</h3>
           <p className="text-gray-300">This component is ready for implementation.</p>
-
         </div>
       )}
     </div>
-  );
-};
-
-export default LazyImage;
-=======
+  )
+}
+export default LazyImage
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -50,13 +44,13 @@ const benefits = [
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
-              <span>LazyImage;</span>
+              <span>LazyImage </span>
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
-            <p>Transform your business with our advanced lazyimage solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.;
+            <p>Transform your business with our advanced lazyimage solutions. </p>
+              Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>Get Started</button>
@@ -80,13 +74,13 @@ const benefits = [
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>Key Benefits;</h2>
+            <h2>Key Benefits </h2>
             </h2>
             <p>Experience the power of our lazyimage solutions for your business.</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
-            {benefits.map((benefit, index) => (;
+            {benefits.map((benefit, index) => (
                 <div key={index}className="flex items-start space-x-3"></div>
                 <CheckCircle />
                 <p className="text-gray-300 text-lg">{benefit</p>}</p>
@@ -125,7 +119,4 @@ const benefits = [
     </div>
   ),
 }
-;
-export default LazyImagePage;
-;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+export default LazyImagePage

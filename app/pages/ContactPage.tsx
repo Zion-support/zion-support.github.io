@@ -1,10 +1,8 @@
-import React from 'react';
-
+import React from 'react'
 interface ContactPageProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-
 const ContactPage: React.FC<ContactPageProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`contactpage-component ${className}`} {...props}>
@@ -15,8 +13,6 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = '', children, ...
         </div>
       )}
     </div>
-
-  );
-};
-
-export default ContactPage;
+  )
+}
+export default ContactPage

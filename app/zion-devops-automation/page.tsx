@@ -1,6 +1,5 @@
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React, { memo } from 'react'
+import SEOHead from '../components/SEOHead'
 const ZionDevOpsAutomationPage: React.FC = memo(() => {
   return (
     <>
@@ -10,7 +9,6 @@ const ZionDevOpsAutomationPage: React.FC = memo(() => {
         keywords="DevOps automation, CI/CD pipeline, infrastructure as code, deployment automation, development automation"
         canonicalUrl="https://ziontechgroup.com/zion-devops-automation"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="text-center">
@@ -32,9 +30,7 @@ const ZionDevOpsAutomationPage: React.FC = memo(() => {
         </div>
       </div>
     </>
-  );
-});
-
-ZionDevOpsAutomationPage.displayName = 'ZionDevOpsAutomationPage';
-
-export default ZionDevOpsAutomationPage;
+  )
+})
+ZionDevOpsAutomationPage.displayName = 'ZionDevOpsAutomationPage'
+export default ZionDevOpsAutomationPage

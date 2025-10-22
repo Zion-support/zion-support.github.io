@@ -1,6 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 export default function ZionaiworkflowautomatorPage() {
   return (
     <>
@@ -8,7 +7,6 @@ export default function ZionaiworkflowautomatorPage() {
         <title>AI Workflow Automator - Zion Tech Group</title>
         <meta name="description" content="Automate complex business workflows with our intelligent AI-powered automation platform." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
@@ -19,7 +17,6 @@ export default function ZionaiworkflowautomatorPage() {
               Automate complex business workflows with our intelligent AI-powered automation platform.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Automation Features</h2>
@@ -70,7 +67,6 @@ export default function ZionaiworkflowautomatorPage() {
                 </li>
               </ul>
             </div>
-            
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h2>
               <div className="space-y-6">
@@ -93,7 +89,6 @@ export default function ZionaiworkflowautomatorPage() {
               </div>
             </div>
           </div>
-          
           <div className="bg-gray-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Automate Your Workflows?</h2>
             <p className="text-gray-600 mb-6">Start building intelligent workflows that save time and reduce errors.</p>
@@ -109,5 +104,5 @@ export default function ZionaiworkflowautomatorPage() {
         </div>
       </div>
     </>
-  );
+  )
 }

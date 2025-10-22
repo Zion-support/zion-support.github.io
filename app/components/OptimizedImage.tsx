@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 
-import React from 'react';
-
+import React from 'react'
 interface OptimizedImageProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`optimizedimage-component ${className}`} {...props}>
@@ -16,18 +13,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', childre
           <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
       )}
-
     </div>
-  );
-};
-
-export default OptimizedImage;
-=======
+  )
+}
+export default OptimizedImage
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>);
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
         <title>OptimizedImage | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -44,13 +38,13 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
-              <span>OptimizedImage;</span>
+              <span>OptimizedImage </span>
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
-            <p>Transform your business with our advanced optimizedimage solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.;
+            <p>Transform your business with our advanced optimizedimage solutions. </p>
+              Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>Get Started</button>
@@ -78,7 +72,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {features.map((feature, index) => (;
+            {features.map((feature, index) => (
                 <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature />
@@ -99,13 +93,13 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>Key Benefits;</h2>
+            <h2>Key Benefits </h2>
             </h2>
             <p>Experience the power of our optimizedimage solutions for your business.</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
-            {benefits.map((benefit, index) => (;
+            {benefits.map((benefit, index) => (
                 <div key={index}className="flex items-start space-x-3"></div>
                 <CheckCircle />
                 <p className="text-gray-300 text-lg">{benefit</p>}</p>
@@ -144,7 +138,4 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
     </div>
   ),
 }
-;
-export default OptimizedImagePage;
-;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+export default OptimizedImagePage

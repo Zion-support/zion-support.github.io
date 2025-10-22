@@ -1,17 +1,17 @@
-'use client';
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-import { 
-  ChartBarIcon, 
+'use client'
+import React from 'react'
+import SEOHead from '../components/SEOHead'
+import {
+  ChartBarIcon,
   CheckCircleIcon,
   StarIcon,
   ShieldCheckIcon,
   SparklesIcon,
   CpuChipIcon,
   EyeIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const AIEmailOptimizerPage: React.FC = () => {
+  const serviceType = 'ai'; // Define serviceType variable
   const features = [
     {
       icon: CpuChipIcon,
@@ -37,8 +37,7 @@ const AIEmailOptimizerPage: React.FC = () => {
       description: 'Advanced spam detection and deliverability optimization to ensure your emails reach the inbox.',
       benefits: ['99.5% deliverability rate', 'Spam score monitoring', 'Reputation management', 'ISP compliance']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -86,8 +85,7 @@ const AIEmailOptimizerPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const optimizationFeatures = [
     { name: 'Subject Line Optimization', description: 'AI generates high-converting subject lines' },
     { name: 'Send Time Optimization', description: 'Optimal timing for each recipient' },
@@ -101,8 +99,7 @@ const AIEmailOptimizerPage: React.FC = () => {
     { name: 'Click-Through Optimization', description: 'Maximize click-through rates' },
     { name: 'Conversion Tracking', description: 'Track email-to-sale conversions' },
     { name: 'Performance Analytics', description: 'Comprehensive email performance insights' }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Jennifer Martinez',
@@ -125,16 +122,14 @@ const AIEmailOptimizerPage: React.FC = () => {
       content: 'Our email campaigns have never been more effective. The AI content optimization and A/B testing automation have transformed our email marketing strategy.',
       rating: 5
     }
-  ];
-
+  ]
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="AI Email Optimizer - Smart Email Marketing Automation | Zion Tech Group"
         description="Boost email performance with AI-powered optimization. Increase open rates by 40%, click rates by 35%, and conversions with intelligent automation."
         keywords="email marketing, AI optimization, email automation, subject line optimization, email deliverability, marketing automation"
       />
-      
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 lg:py-32">
@@ -142,24 +137,20 @@ const AIEmailOptimizerPage: React.FC = () => {
           <div className="absolute inset-0 opacity-30" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}></div>
-          
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 mb-6">
                 <SparklesIcon className="w-5 h-5 text-green-400 mr-2" />
                 <span className="text-green-300 text-sm font-medium">AI-Powered Email Marketing</span>
               </div>
-              
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                   AI Email Optimizer
                 </span>
               </h1>
-              
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your email marketing with AI-powered optimization that increases open rates by 40% and click rates by 35%.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25">
                   Start Free Trial
@@ -168,7 +159,6 @@ const AIEmailOptimizerPage: React.FC = () => {
                   View Demo
                 </button>
               </div>
-              
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">40%</div>
@@ -190,7 +180,6 @@ const AIEmailOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,7 +191,6 @@ const AIEmailOptimizerPage: React.FC = () => {
                 Leverage advanced AI to optimize every aspect of your email marketing campaigns.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {features.map((feature, index) => (
                 <div key={index} className="group bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
@@ -232,7 +220,6 @@ const AIEmailOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Optimization Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -244,7 +231,6 @@ const AIEmailOptimizerPage: React.FC = () => {
                 Everything you need to optimize your email marketing campaigns for maximum performance.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {optimizationFeatures.map((feature, index) => (
                 <div key={index} className="group bg-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20">
@@ -259,7 +245,6 @@ const AIEmailOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -271,12 +256,11 @@ const AIEmailOptimizerPage: React.FC = () => {
                 Choose the perfect plan for your email marketing needs. All plans include our core AI features.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                  plan.popular 
-                    ? 'border-green-500 shadow-green-500/20' 
+                  plan.popular
+                    ? 'border-green-500 shadow-green-500/20'
                     : 'border-slate-700 hover:border-green-500 hover:shadow-green-500/20'
                 }`}>
                   {plan.popular && (
@@ -286,7 +270,6 @@ const AIEmailOptimizerPage: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -295,7 +278,6 @@ const AIEmailOptimizerPage: React.FC = () => {
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
-                  
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -304,7 +286,6 @@ const AIEmailOptimizerPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
@@ -317,7 +298,6 @@ const AIEmailOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -329,7 +309,6 @@ const AIEmailOptimizerPage: React.FC = () => {
                 Join thousands of marketers who have transformed their email campaigns with AI optimization.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
@@ -348,7 +327,6 @@ const AIEmailOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-900/40 via-slate-900 to-blue-900/40">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -370,7 +348,6 @@ const AIEmailOptimizerPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default AIEmailOptimizerPage;
+  )
+}
+export default AIEmailOptimizerPage

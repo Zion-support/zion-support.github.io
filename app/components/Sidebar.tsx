@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 
-import React from 'react';
-
+import React from 'react'
 interface SidebarProps {
-  className?: string;
-  children?: React.ReactNode;
-  isOpen?: boolean;
-  onClose?: () => void;
+  className?: string
+  children?: React.ReactNode
+  isOpen?: boolean
+  onClose?: () => void
 }
-
 const Sidebar: React.FC<SidebarProps> = ({ className = '', children, ...props }) => {
   return (
     <div className={`sidebar-component ${className}`} {...props}>
@@ -18,46 +15,39 @@ const Sidebar: React.FC<SidebarProps> = ({ className = '', children, ...props })
           <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
       )}
-
     </div>
-  );
-};
-
-export default Sidebar;
-
-=======
+  )
+}
+export default Sidebar
 'use client'
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { 
-  Menu, 
-  Home, 
-  Users, 
-  Settings, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Zap, 
+import {
+  Menu,
+  Home,
+  Users,
+  Settings,
+  Brain,
+  Cloud,
+  Shield,
+  Code,
+  BarChart,
+  Zap,
   X,
   ChevronDown,
   ChevronRight
 } from 'lucide-react'
-
 const Sidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
-  const location = useLocation();
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [expandedSections, setExpandedSections] = useState<string[]>([])
+  const location = useLocation()
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
+    setExpandedSections(prev =>
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
-    );
+    )
   }
-
   const navigationItems = [
     {
       name: 'Dashboard',
@@ -114,7 +104,6 @@ const Sidebar: React.FC = () => {
       current: location.pathname === '/settings'
     }
   ]
-
   return (
     <>
       {/* Mobile menu button */}
@@ -126,7 +115,6 @@ const Sidebar: React.FC = () => {
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
-
       {/* Sidebar */}
       <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -139,7 +127,6 @@ const Sidebar: React.FC = () => {
               <span className="text-xl font-bold text-white">Zion Tech</span>
             </div>
           </div>
-
           {/* Navigation */}
           <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
             {navigationItems.map((item) => (
@@ -173,7 +160,6 @@ const Sidebar: React.FC = () => {
                         <ChevronRight className="w-4 h-4" />
                       )}
                     </button>
-                    
                     {expandedSections.includes(item.name) && item.children && (
                       <div className="ml-6 mt-1 space-y-1">
                         {item.children.map((child) => (
@@ -193,7 +179,6 @@ const Sidebar: React.FC = () => {
               </div>
             ))}
           </nav>
-
           {/* User section */}
           <div className="px-4 py-4 border-t border-gray-200">
             <div className="flex items-center space-x-3">
@@ -208,7 +193,6 @@ const Sidebar: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Overlay for mobile */}
       {isOpen && (
         <div
@@ -217,8 +201,6 @@ const Sidebar: React.FC = () => {
         />
       )}
     </>
-  );
+  )
 }
-
-export default Sidebar;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+export default Sidebar

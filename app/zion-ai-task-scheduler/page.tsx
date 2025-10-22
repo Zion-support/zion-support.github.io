@@ -1,5 +1,4 @@
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async'
 export default function ZionaitaskschedulerPage() {
   return (
     <>
@@ -7,7 +6,6 @@ export default function ZionaitaskschedulerPage() {
         <title>Zion Ai Task Scheduler - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Task Scheduler services and solutions from Zion Tech Group." />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -29,5 +27,5 @@ export default function ZionaitaskschedulerPage() {
         </div>
       </div>
     </>
-  );
+  )
 }

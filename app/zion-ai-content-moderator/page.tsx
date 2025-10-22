@@ -1,6 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 export default function ZionaicontentmoderatorPage() {
   return (
     <>
@@ -8,7 +7,6 @@ export default function ZionaicontentmoderatorPage() {
         <title>AI Content Moderator - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered content moderation solution that automatically detects and filters inappropriate content across multiple platforms." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
@@ -19,7 +17,6 @@ export default function ZionaicontentmoderatorPage() {
               Advanced AI-powered content moderation that automatically detects and filters inappropriate content across multiple platforms.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Features</h2>
@@ -70,7 +67,6 @@ export default function ZionaicontentmoderatorPage() {
                 </li>
               </ul>
             </div>
-            
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">How It Works</h2>
               <div className="space-y-6">
@@ -98,7 +94,6 @@ export default function ZionaicontentmoderatorPage() {
               </div>
             </div>
           </div>
-          
           <div className="bg-gray-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h2>
             <p className="text-gray-600 mb-6">Protect your community with our advanced AI content moderation solution.</p>
@@ -114,5 +109,5 @@ export default function ZionaicontentmoderatorPage() {
         </div>
       </div>
     </>
-  );
+  )
 }
