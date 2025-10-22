@@ -33,17 +33,13 @@ const AiAutomatedReportingPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'
-  ];
-
+    'Custom integrations'  ];
   return (
     <React.Fragment>
       <Helmet>
         <title>Ai Automated Reporting - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional ai automated reporting solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="ai automated reporting, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
-
+        <meta name="keywords" content="ai automated reporting, AI solutions, IT services, automation, technology, business solutions" />      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -64,9 +60,7 @@ const AiAutomatedReportingPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-              </a>
-            </div>
-          </div>
+              </a>            </div>          </div>
         </section>
 
         {/* Features Section */}
@@ -77,18 +71,14 @@ const AiAutomatedReportingPage: React.FC = () => {
                 Powerful Features
               </h2>
               <p className="text-lg text-gray-300">
-                Everything you need for success
-              </p>
-            </div>
+                Everything you need for success              </p>            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>                  <p className="text-gray-300">{feature.description}</p>                </div>
               ))}
             </div>
           </div>
@@ -109,9 +99,7 @@ const AiAutomatedReportingPage: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
+                  <span className="text-gray-300">{benefit}</span>                </div>              ))}
             </div>
           </div>
         </section>
@@ -135,9 +123,7 @@ const AiAutomatedReportingPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>
-            </div>
-          </div>
+              </a>            </div>          </div>
         </section>
       </div>
     </React.Fragment>
