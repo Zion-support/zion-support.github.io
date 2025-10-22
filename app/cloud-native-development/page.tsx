@@ -113,8 +113,8 @@ const CloudNativeDevelopmentPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default CloudNativeDevelopmentPage;

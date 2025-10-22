@@ -192,7 +192,6 @@ class ScheduledCleanupService {
       cleanupStats = await this.runWithTimeout(
         () => dataCleanup.cleanup(this.config.cleanupConfig),
         this.config.maxExecutionTime
-      );
 
       const executionTime = performance.now() - startTime;
       this.updateStats(true, executionTime, cleanupStats);
@@ -335,5 +334,7 @@ export const runCleanupNow = () => scheduledCleanup.runNow();
 export const getCleanupStats = () => scheduledCleanup.getStats();
 export const isCleanupDue = () => scheduledCleanup.isCleanupDue();
 export const getTimeUntilNextCleanup = () => scheduledCleanup.getTimeUntilNextCleanup();
+
+};
 
 export default scheduledCleanup;

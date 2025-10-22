@@ -5,8 +5,8 @@ const EnhancedSEOHead: React.FC = () => {
   return (
     <div>
       <h1>EnhancedSEOHead</h1>
-    </div>
-  );
+    </div>);
+
 };
 
 export default EnhancedSEOHead;

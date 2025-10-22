@@ -112,8 +112,8 @@ const AiVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default AiVoiceAssistantPage;

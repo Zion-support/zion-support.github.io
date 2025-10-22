@@ -5,8 +5,8 @@ const PerformanceOptimizations: React.FC = () => {
   return (
     <div>
       <h1>PerformanceOptimizations</h1>
-    </div>
-  );
+    </div>);
+
 };
 
 export default PerformanceOptimizations;

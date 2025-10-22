@@ -113,8 +113,8 @@ const AiFinancialForecastingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default AiFinancialForecastingPage;

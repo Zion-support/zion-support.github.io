@@ -113,8 +113,8 @@ const SocialMediaSchedulerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default SocialMediaSchedulerPage;

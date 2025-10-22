@@ -112,8 +112,8 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default AiPredictiveMaintenancePage;

@@ -5,5 +5,4 @@ export default function AppBackup() {
       <h1>App Backup</h1>
       <p>This component is under construction.</p>
     </div>
-  );
 }

@@ -140,8 +140,8 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default BlockchainIntegrationServicesPage;

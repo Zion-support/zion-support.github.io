@@ -113,8 +113,8 @@ const ApiDevelopmentAdvancedPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ApiDevelopmentAdvancedPage;

@@ -139,8 +139,8 @@ const CloudSecurityPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default CloudSecurityPage;

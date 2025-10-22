@@ -112,8 +112,8 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default TermsPage;

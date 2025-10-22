@@ -5,5 +5,4 @@ export default function AppMinimal() {
       <h1>App Minimal</h1>
       <p>This component is under construction.</p>
     </div>
-  );
 }

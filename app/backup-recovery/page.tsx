@@ -138,8 +138,8 @@ const BackupRecoveryPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default BackupRecoveryPage;

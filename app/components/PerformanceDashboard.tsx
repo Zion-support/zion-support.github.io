@@ -5,8 +5,8 @@ const PerformanceDashboard: React.FC = () => {
   return (
     <div>
       <h1>PerformanceDashboard</h1>
-    </div>
-  );
+    </div>);
+
 };
 
 export default PerformanceDashboard;

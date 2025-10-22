@@ -113,8 +113,8 @@ const ItProjectManagementPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ItProjectManagementPage;

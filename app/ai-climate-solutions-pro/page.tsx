@@ -144,9 +144,8 @@ const PagePage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default PagePage;
-

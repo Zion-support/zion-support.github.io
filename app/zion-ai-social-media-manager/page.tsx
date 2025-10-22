@@ -113,8 +113,8 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ZionAiSocialMediaManagerPage;

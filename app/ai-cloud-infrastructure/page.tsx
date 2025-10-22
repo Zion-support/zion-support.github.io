@@ -129,10 +129,8 @@ const CloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
-
 export default CloudInfrastructurePage;
-

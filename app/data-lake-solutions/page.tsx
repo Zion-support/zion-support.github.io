@@ -113,8 +113,8 @@ const DataLakeSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default DataLakeSolutionsPage;

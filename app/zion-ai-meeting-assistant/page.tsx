@@ -113,8 +113,8 @@ const ZionAiMeetingAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ZionAiMeetingAssistantPage;

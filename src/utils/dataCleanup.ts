@@ -426,4 +426,6 @@ export const cleanupByAge = (maxAge: number, config?: CleanupConfig) =>
 export const getStorageStats = () => dataCleanup.getStorageStats();
 export const identifyOldRecords = (config?: CleanupConfig) => dataCleanup.identifyOldRecords(config);
 
+};
+
 export default dataCleanup;

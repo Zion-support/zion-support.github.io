@@ -113,8 +113,8 @@ const AiCustomerChurnPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default AiCustomerChurnPage;

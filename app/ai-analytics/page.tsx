@@ -133,8 +133,8 @@ const AiAnalyticsPage: React.FC = () => {
       </main>
       
       <Footer />
-    </>
-  );
+    </>);
+
 };
 
 export default AiAnalyticsPage;

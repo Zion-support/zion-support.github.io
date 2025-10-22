@@ -113,8 +113,8 @@ const ZionIotSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ZionIotSolutionsPage;

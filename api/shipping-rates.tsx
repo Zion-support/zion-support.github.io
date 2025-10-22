@@ -5,5 +5,4 @@ export default function ShippingRates() {
       <h1>Shipping Rates</h1>
       <p>This component is under construction.</p>
     </div>
-  );
 }

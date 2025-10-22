@@ -137,8 +137,8 @@ const BusinessAppsPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default BusinessAppsPage;

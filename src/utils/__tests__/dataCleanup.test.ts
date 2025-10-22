@@ -47,7 +47,6 @@ describe('Data Cleanup', () => {
         'test-category',
         'test-type',
         { ttl: 1000 }
-      );
 
       expect(record).toBeDefined();
       expect(record.id).toMatch(/^data_record_/);

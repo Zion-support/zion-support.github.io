@@ -5,8 +5,8 @@ const OptimizedImage: React.FC = () => {
   return (
     <div>
       <h1>OptimizedImage</h1>
-    </div>
-  );
+    </div>);
+
 };
 
 export default OptimizedImage;

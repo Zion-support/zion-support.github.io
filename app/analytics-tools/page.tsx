@@ -134,8 +134,8 @@ const AnalyticsToolsPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default AnalyticsToolsPage;

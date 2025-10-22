@@ -5,8 +5,8 @@ const EnhancedErrorBoundary: React.FC = () => {
   return (
     <div>
       <h1>EnhancedErrorBoundary</h1>
-    </div>
-  );
+    </div>);
+
 };
 
 export default EnhancedErrorBoundary;

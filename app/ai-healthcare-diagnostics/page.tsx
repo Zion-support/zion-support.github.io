@@ -113,8 +113,8 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default AiHealthcareDiagnosticsPage;

@@ -113,8 +113,8 @@ const ZionAiPriceOptimizerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ZionAiPriceOptimizerPage;

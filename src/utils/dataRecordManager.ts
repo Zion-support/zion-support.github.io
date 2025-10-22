@@ -430,4 +430,6 @@ class DataRecordManagerImpl implements DataRecordManager {
 // Export singleton instance
 export const dataRecordManager = new DataRecordManagerImpl();
 
+};
+
 export default dataRecordManager;

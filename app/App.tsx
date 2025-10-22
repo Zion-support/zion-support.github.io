@@ -65,7 +65,6 @@ const AppLoadingSpinner = () => (
     size="lg"
     className="min-h-screen flex items-center justify-center"
   />
-);
 
 const App: React.FC = () => {
   return (
@@ -131,7 +130,6 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  );
 };
 
 export default App;

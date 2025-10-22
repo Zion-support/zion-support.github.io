@@ -113,8 +113,8 @@ const AiSupplyChainAiPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default AiSupplyChainAiPage;

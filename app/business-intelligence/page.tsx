@@ -135,8 +135,8 @@ const BusinessIntelligencePage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default BusinessIntelligencePage;

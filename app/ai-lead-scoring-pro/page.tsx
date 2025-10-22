@@ -113,8 +113,8 @@ const AiLeadScoringProPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default AiLeadScoringProPage;

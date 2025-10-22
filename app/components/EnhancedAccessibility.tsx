@@ -5,8 +5,8 @@ const EnhancedAccessibility: React.FC = () => {
   return (
     <div>
       <h1>EnhancedAccessibility</h1>
-    </div>
-  );
+    </div>);
+
 };
 
 export default EnhancedAccessibility;

@@ -10,8 +10,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = '' }) => {
       <h2>ContactPage</h2>
       <p>This is a clean, functional component.
               </p>
-            </div>
-  );
+            </div>);
+
 };
 
 export default ContactPage;

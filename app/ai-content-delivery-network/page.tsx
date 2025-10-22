@@ -152,10 +152,8 @@ const PagePage: React.FC = () => {
 
 
       <Footer />
-    </>
-  );
+    </>);
+
 };
 
-
 export default PagePage;
-

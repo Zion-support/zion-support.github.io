@@ -135,8 +135,8 @@ const CloudMigrationServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default CloudMigrationServicesPage;

@@ -113,8 +113,8 @@ const ZionAiTranslationServicePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ZionAiTranslationServicePage;

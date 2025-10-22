@@ -153,10 +153,8 @@ const AICrmAssistantPage: React.FC = () => {
 
 
       <Footer />
-    </>
-  );
+    </>);
+
 };
 
-
 export default AICrmAssistantPage;
-

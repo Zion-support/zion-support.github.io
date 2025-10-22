@@ -110,4 +110,6 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   };
 };
 
+};
+
 export default usePerformanceMonitor;

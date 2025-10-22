@@ -328,6 +328,5 @@ const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({
       )}
     </div>
   );
-};
 
 export default DataCleanupManager;

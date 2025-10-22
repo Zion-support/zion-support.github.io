@@ -113,8 +113,8 @@ const RoboticProcessAutomationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default RoboticProcessAutomationPage;

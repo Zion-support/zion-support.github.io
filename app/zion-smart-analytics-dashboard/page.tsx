@@ -113,8 +113,8 @@ const ZionSmartAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ZionSmartAnalyticsDashboardPage;

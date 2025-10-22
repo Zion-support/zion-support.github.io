@@ -113,8 +113,8 @@ const ZionAiCustomerSupportProPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ZionAiCustomerSupportProPage;

@@ -150,8 +150,8 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default ARVRPlatformPage;

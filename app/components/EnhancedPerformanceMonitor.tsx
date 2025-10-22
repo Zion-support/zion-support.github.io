@@ -5,8 +5,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   return (
     <div>
       <h1>EnhancedPerformanceMonitor</h1>
-    </div>
-  );
+    </div>);
+
 };
 
 export default EnhancedPerformanceMonitor;

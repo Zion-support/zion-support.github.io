@@ -18,21 +18,18 @@ export async function basicCleanupExample() {
     'user-data',
     'profile',
     { ttl: 24 * 60 * 60 * 1000 } // 24 hours
-  );
 
   const record2 = dataRecordManager.createRecord(
     { sessionId: 'abc123', loginTime: Date.now() },
     'session-data',
     'login',
     { ttl: 60 * 60 * 1000 } // 1 hour
-  );
 
   const record3 = dataRecordManager.createRecord(
     { tempData: 'temporary' },
     'temp-data',
     'cache',
     { ttl: 5 * 60 * 1000 } // 5 minutes
-  );
 
   console.log('Created test records:', [record1.id, record2.id, record3.id]);
 
@@ -97,21 +94,18 @@ export async function categoryCleanupExample() {
     'user-profiles',
     'profile',
     { ttl: 30 * 24 * 60 * 60 * 1000 } // 30 days
-  );
 
   dataRecordManager.createRecord(
     { data: 'session1' },
     'user-sessions',
     'session',
     { ttl: 24 * 60 * 60 * 1000 } // 1 day
-  );
 
   dataRecordManager.createRecord(
     { data: 'temp1' },
     'temporary-data',
     'cache',
     { ttl: 60 * 60 * 1000 } // 1 hour
-  );
 
   // Clean up only temporary data
   const tempCleanupStats = await dataCleanup.cleanupByCategory('temporary-data', {
@@ -143,7 +137,6 @@ export async function advancedCleanupExample() {
     'test-category',
     'recent',
     { ttl: 24 * 60 * 60 * 1000 }
-  );
 
   // Old record (should be deleted)
   const oldRecord = dataRecordManager.createRecord(
@@ -151,7 +144,6 @@ export async function advancedCleanupExample() {
     'test-category',
     'old',
     { ttl: 24 * 60 * 60 * 1000 }
-  );
 
   // Manually set old timestamp
   dataRecordManager.updateRecord(oldRecord.id, {

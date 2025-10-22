@@ -212,7 +212,5 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       </div>
     </div>
   );
-};
 
 export default PerformanceDashboard;
-

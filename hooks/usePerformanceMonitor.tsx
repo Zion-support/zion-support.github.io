@@ -92,7 +92,6 @@ export const usePerformanceMonitor = () => {
         const resources = performance.getEntriesByType('resource');
         const slowResources = resources.filter((resource: any) => 
           resource.duration > 1000 || resource.transferSize > 100000
-        );
         
         if (slowResources.length > 0) {
           console.warn('Slow resources detected:', slowResources);

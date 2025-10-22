@@ -132,8 +132,8 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>);
+
 };
 
 export default FiveGImplementationPage;

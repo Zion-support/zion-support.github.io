@@ -112,8 +112,8 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ServicesPage;

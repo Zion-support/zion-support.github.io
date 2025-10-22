@@ -5,5 +5,4 @@ export default function EnhancedFooter() {
       <h1>Enhanced Footer</h1>
       <p>This component is under construction.</p>
     </div>
-  );
 }

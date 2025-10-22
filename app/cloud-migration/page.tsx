@@ -142,8 +142,8 @@ const CloudMigrationPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default CloudMigrationPage;

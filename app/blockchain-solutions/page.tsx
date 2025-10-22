@@ -113,8 +113,8 @@ const BlockchainSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default BlockchainSolutionsPage;

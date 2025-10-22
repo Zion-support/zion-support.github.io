@@ -113,8 +113,8 @@ const ZionAiImageRecognitionPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default ZionAiImageRecognitionPage;

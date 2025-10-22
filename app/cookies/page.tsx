@@ -113,8 +113,8 @@ const CookiesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  );
+    </React.Fragment>);
+
 };
 
 export default CookiesPage;

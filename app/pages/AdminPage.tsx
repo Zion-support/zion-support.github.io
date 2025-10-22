@@ -10,8 +10,8 @@ const AdminPage: React.FC<AdminPageProps> = ({ className = '' }) => {
       <h2>AdminPage</h2>
       <p>This is a clean, functional component.
               </p>
-            </div>
-  );
+            </div>);
+
 };
 
 export default AdminPage;
