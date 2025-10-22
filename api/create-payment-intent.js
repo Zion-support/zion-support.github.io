@@ -1,45 +1,50 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.status(500).json({
-        error: 'Internal server error',
-        message: error.message
-      });
-    }
-  };
-};
-
-export default withErrorLogging(async (req, res) => {
+import { withErrorLogging } from './withErrorLogging.cjs'
+async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.statusCode = 405
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Method not allowed' }))
+    return
+  }
+
+  const { amount, currency = 'usd' } = req.body || {}
+  if (!amount) {
+    res.statusCode = 400
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Amount is required' }))
+    return
   }
 
   try {
-    const { amount, currency = 'usd', description } = req.body;
-
-    if (!amount || amount <= 0) {
-      return res.status(400).json({ error: 'Valid amount is required' });
-    }
-
-    // Mock payment intent creation
-    // In a real implementation, you would use Stripe or another payment processor
     const paymentIntent = {
-      id: `pi_${Date.now()}`,
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
       currency,
-      description: description || 'Zion Tech Group Service',
       status: 'requires_payment_method',
-      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
+      client_secret: 'pi_' + Date.now() + '_secret_' + Math.random().toString(36).substr(2, 9),
+      created: Math.floor(Date.now() / 1000)
     };
 
-    res.status(200).json({ 
-      paymentIntent 
-    });
+    // In a real implementation, you would:
+    // 1. Create a payment intent with Stripe
+    // 2. Store the payment intent in your database
+    // 3. Return the client secret for frontend confirmation
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      success: true,
+      paymentIntent
+    }));
   } catch (error) {
     console.error('Payment intent creation error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to create payment intent',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
-});
+}
+
+export default withErrorLogging(handler)
