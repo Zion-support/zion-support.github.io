@@ -1,13 +1,13 @@
 'use client';
 import { useEffect } from 'react';
 
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-}
+// interface PerformanceMetrics {
+//   fcp?: number;
+//   lcp?: number;
+//   fid?: number;
+//   cls?: number;
+//   ttfb?: number;
+// }
 
 export const usePerformanceMonitor = () => {
   useEffect(() => {
