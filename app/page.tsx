@@ -2,7 +2,7 @@
 import React from 'react';
 import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import AccessibilityEnhancer from './components/EnhancedAccessibility';
+import _AccessibilityEnhancer from './components/EnhancedAccessibility';
 const AppPage: React.FC = () => {
   const features = [
     {
