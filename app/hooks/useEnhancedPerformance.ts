@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export function useEnhancedPerformance() {
@@ -43,26 +42,3 @@ export function useEnhancedPerformance() {
 
   return { isOptimized, measurePerformance };
 }
-=======
-import React from 'react';
-
-interface useEnhancedPerformanceProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const useEnhancedPerformance: React.FC<useEnhancedPerformanceProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`useenhancedperformance-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">useEnhancedPerformance</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default useEnhancedPerformance;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

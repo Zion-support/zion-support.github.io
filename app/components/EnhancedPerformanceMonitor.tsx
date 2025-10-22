@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { PerformanceMetrics, PerformanceConfig } from '../types/enhanced.types';
 
@@ -224,41 +223,10 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
             <span className="text-gray-600">TTI:</span>
             <span className="font-mono">{metrics.timeToInteractive.toFixed(0)}ms</span>
           </div>
-=======
-import React from 'react';
-
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`enhancedperformancemonitor-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">EnhancedPerformanceMonitor</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
         </div>
-      )}
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-        {/* Refresh Button */}
-        <button
-          onClick={measurePerformance}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          Refresh Metrics
-        </button>
       </div>
     </div>
   );
 };
 
-=======
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
 export default EnhancedPerformanceMonitor;

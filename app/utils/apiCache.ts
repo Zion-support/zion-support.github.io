@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // API caching utilities
 
 export function apiCache() {
@@ -8,14 +7,3 @@ export function apiCache() {
     clear: () => localStorage.clear()
   };
 }
-=======
-// api Cache
-export const apicache = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('api Cache initialized');
-  }
-};
-
-export default apicache;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

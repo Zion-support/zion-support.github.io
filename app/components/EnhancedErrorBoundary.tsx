@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 import { Component, ErrorInfo, ReactNode } from 'react';
-import { RefreshCw, Home, AlertTriangle } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -232,26 +231,5 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-=======
-import React from 'react';
-
-interface EnhancedErrorBoundaryProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`enhancederrorboundary-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">EnhancedErrorBoundary</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  );
-};
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
 
 export default EnhancedErrorBoundary;

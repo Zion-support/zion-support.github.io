@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-import { Activity, Zap, TrendingUp, AlertCircle } from 'lucide-react';
+import { Activity, TrendingUp, AlertCircle, Zap } from 'lucide-react';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -201,26 +200,4 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   );
 };
 
-=======
-import React from 'react';
-
-interface PerformanceDashboardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`performancedashboard-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">PerformanceDashboard</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  );
-};
-
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
 export default PerformanceDashboard;

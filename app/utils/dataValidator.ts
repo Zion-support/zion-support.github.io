@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Data validator utilities
 
 export function dataValidator() {
@@ -16,14 +15,3 @@ export function dataValidator() {
     validateRequired: (value: any) => value !== null && value !== undefined && value !== ''
   };
 }
-=======
-// data Validator
-export const datavalidator = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('data Validator initialized');
-  }
-};
-
-export default datavalidator;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

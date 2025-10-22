@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 const ContactPage: React.FC = () => {
@@ -31,24 +30,6 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </>
-=======
-
-interface ContactPageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ContactPage: React.FC<ContactPageProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`contactpage-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">ContactPage</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
   );
 };
 

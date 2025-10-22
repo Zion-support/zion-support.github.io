@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // API client utilities
 
 export function apiClient() {
@@ -17,14 +16,3 @@ export function apiClient() {
     }
   };
 }
-=======
-// api Client
-export const apiclient = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('api Client initialized');
-  }
-};
-
-export default apiclient;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

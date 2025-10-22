@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { usePerformanceOptimization } from '../hooks/usePerformanceOptimization';
 
@@ -142,24 +141,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           height: height ? `${height}px` : 'auto',
         }}
       />
-=======
-import React from 'react';
-
-interface OptimizedImageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`optimizedimage-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">OptimizedImage</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
     </div>
   );
 };
