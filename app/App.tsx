@@ -62,9 +62,8 @@ const ConsultationPage = lazy(() => import('./consultation/page'));
 // Loading component
 const AppLoadingSpinner = () => (
   <LoadingSpinner
-    size="xl"
-    text="Loading Zion Tech Group..."
-    fullScreen
+    size="lg"
+    className="min-h-screen flex items-center justify-center"
   />
 );
 
