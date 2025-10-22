@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
 
 const AISalesAutomationPage: React.FC = () => {
@@ -145,4 +146,6 @@ const AISalesAutomationPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
+
+export default AISalesAutomationPage;

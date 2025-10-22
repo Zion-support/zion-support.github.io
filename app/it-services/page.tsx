@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Brain, Zap, Shield, Globe } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -75,7 +75,7 @@ const ITServicesPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {itServices.map((feature, index) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -116,4 +116,4 @@ const ITServicesPage: React.FC = () => {
   );
 };
 
-export default ItServicesPage;
+export default ITServicesPage;

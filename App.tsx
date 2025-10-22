@@ -210,7 +210,7 @@ const App = memo(() => {
   // Initialize performance optimizations
   usePerformanceOptimization({
     enableLazyLoading: true,
-    enablePreloading: true,
+    enablePrefetching: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
     enableCaching: true,

@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
 
 const AICustomerSupportPage: React.FC = () => {
@@ -155,4 +156,4 @@ const AICustomerSupportPage: React.FC = () => {
   );
 };
 
-export default AiCustomerSupportPage;
+export default AICustomerSupportPage;

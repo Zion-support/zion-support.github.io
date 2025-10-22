@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
 
 const AIDataVisualizationPage: React.FC = () => {
@@ -158,4 +159,4 @@ const AIDataVisualizationPage: React.FC = () => {
 };
 
 
-export default AiDataVisualizationPage;
+export default AIDataVisualizationPage;
