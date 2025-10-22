@@ -52,24 +52,24 @@ const BlogPage: React.FC = () => {
               Blog
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional blog solutions powered by advanced AI and cutting-edge technology.
+              Stay updated with the latest insights, trends, and innovations in AI and technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
+                Contact Us
               </a>
               <a
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
+                Our Services
               </a>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Content Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
