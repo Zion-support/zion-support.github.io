@@ -1,6 +1,5 @@
-import React from "react";
 'use client';
-
+import React from "react";
 const NotFoundPage: React.FC = () => {
   return (
     <div>
