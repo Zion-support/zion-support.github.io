@@ -2,7 +2,7 @@
 import React from 'react';
 import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import _AccessibilityEnhancer from './components/EnhancedAccessibility';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 const AppPage: React.FC = () => {
   const features = [
     {
@@ -31,7 +31,7 @@ const AppPage: React.FC = () => {
 
   return (
     <>
-      {/* AccessibilityEnhancer component removed */}
+      <AccessibilityEnhancer />
       <Helmet>
         <title>App - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional app solutions powered by advanced AI and cutting-edge technology." />

@@ -116,7 +116,6 @@ const AICustomerSupportPage: React.FC = () => {
     { number: '24/7', label: 'Always Available' }
   ];
 
-
   return (
     <>
       <Helmet>
