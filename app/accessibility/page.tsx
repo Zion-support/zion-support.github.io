@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
+import { Brain, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+
 
 const AccessibilityPage: React.FC = () => {
   const features = [
@@ -27,14 +28,7 @@ const AccessibilityPage: React.FC = () => {
     }
   ]
 
-  const benefits = [
-    'AI-powered automation',
-    'Real-time processing',
-    'Scalable solutions',
-    'Enterprise-grade security',
-    '24/7 support',
-    'Custom integrations'
-  ];
+  
 
   return (
     <React.Fragment>
@@ -95,7 +89,7 @@ const AccessibilityPage: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {[].map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{benefit}</span>
@@ -120,13 +114,13 @@ const AccessibilityPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {standards.map((standard, index) => (
+              {[]((standard, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{features[0].title}</h3>
+                  <p className="text-gray-300">{features[0].description}</p>
                 </div>
               ))}
             </div>
