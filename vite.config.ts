@@ -122,7 +122,6 @@ export default defineConfig({
           // Default chunk for other modules
           return 'vendor'
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
