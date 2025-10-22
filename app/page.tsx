@@ -2,6 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import Footer from './components/Footer';
 const AppPage: React.FC = () => {
   const features = [
     {
@@ -35,14 +37,14 @@ const AppPage: React.FC = () => {
     'Custom integrations'  ];
 
   return (
-    <React.Fragment>
+    <AccessibilityEnhancer>
       <Helmet>
         <title>App - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional app solutions powered by advanced AI and cutting-edge technology." />
         <meta name="keywords" content="app, AI solutions, IT services, automation, technology, business solutions" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -83,15 +85,27 @@ const AppPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>              ))}
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>            </div>          </div>
+        <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold text-white mb-8">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Join thousands of companies already using our AI solutions
+            </p>
+            <a
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+              Learn More
+            </a>
+          </div>
         </section>
       </main>
       
