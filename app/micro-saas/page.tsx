@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-const MicroSaasPage: React.FC = () => {
-=======
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
@@ -575,7 +572,7 @@ const MicroSAASPage: React.FC = () => {
 
   
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+
   return (
     <>
       <Helmet>

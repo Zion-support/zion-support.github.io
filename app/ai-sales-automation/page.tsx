@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-export default function PagePage() {
-=======
 import React from 'react';
 import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
 
@@ -120,7 +116,7 @@ const AISalesAutomationPage: React.FC = () => {
     { number: '95%', label: 'Lead Scoring Accuracy' }
   ];
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

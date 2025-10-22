@@ -1,9 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-const AiCustomerSupportPage: React.FC = () => {
-=======
 import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
 
 const AICustomerSupportPage: React.FC = () => {
@@ -119,7 +115,7 @@ const AICustomerSupportPage: React.FC = () => {
     { number: '24/7', label: 'Always Available' }
   ];
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+
   return (
     <>
       <Helmet>

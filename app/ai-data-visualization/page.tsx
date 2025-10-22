@@ -1,9 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-const AiDataVisualizationPage: React.FC = () => {
-=======
 import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
 
 const AIDataVisualizationPage: React.FC = () => {
@@ -121,7 +117,7 @@ const AIDataVisualizationPage: React.FC = () => {
     { number: '24/7', label: 'Real-time Updates' }
   ];
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+
   return (
     <>
       <Helmet>

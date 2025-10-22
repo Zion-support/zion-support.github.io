@@ -1,7 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-export default function PagePage() {
-=======
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
@@ -297,7 +294,7 @@ const AIServicesPage: React.FC = () => {
   ];
 
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

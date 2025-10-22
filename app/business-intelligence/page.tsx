@@ -1,13 +1,8 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Phone, Mail, Brain, BarChart, Database, TrendingUp } from 'lucide-react';
-import Footer from '../components/Footer';
-=======
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
     {

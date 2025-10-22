@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-const ItInfrastructurePage: React.FC = () => {
-=======
 import { CheckCircle, Star, BarChart } from 'lucide-react';
 
 const ITInfrastructurePage: React.FC = () => {
@@ -203,7 +200,7 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: '100%', description: 'Security Compliance' }
   ];
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+
   return (
     <>
       <Helmet>

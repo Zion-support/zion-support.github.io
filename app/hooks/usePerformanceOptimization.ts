@@ -1,201 +1,135 @@
-import { useState, useEffect, useCallback } from 'react';
-interface OptimizationConfig {
-  enableLazyLoading: boolean;
-  enableImageOptimization: boolean;
-  enableCodeSplitting: boolean;
-  enableCaching: boolean;
-  enablePreloading?: boolean;
-  enableBundleAnalysis?: boolean;
+import { useEffect, useCallback, useRef, useState } from 'react'
+
+export interface PerformanceOptimizationOptions {
+  enableLazyLoading?: boolean
+  enableImageOptimization?: boolean
+  enableCodeSplitting?: boolean
+  enableCaching?: boolean
+  enablePrefetching?: boolean
+  enableCompression?: boolean
+  enableMinification?: boolean
+  enableTreeShaking?: boolean
+  enableBundleAnalysis?: boolean
+  enablePerformanceMonitoring?: boolean
 }
 
-<<<<<<< HEAD
-export const usePerformanceOptimization = (config: OptimizationConfig) => {
-  const [isOptimized, setIsOptimized] = useState(false);
-  const [optimizationMetrics, setOptimizationMetrics] = useState({
-    bundleSize: 0,
-    loadTime: 0,
-    renderTime: 0,
-  });
+export function usePerformanceOptimization(options: PerformanceOptimizationOptions = {}) {
+  const {
+    enableLazyLoading = true,
+    enableImageOptimization = true,
+    enableCodeSplitting = true,
+    enableCaching = true,
+    enablePrefetching = true,
+    enableCompression = true,
+    enableMinification = true,
+    enableTreeShaking = true,
+    enableBundleAnalysis = false,
+    enablePerformanceMonitoring = true
+  } = options
 
-  const optimizeImages = useCallback(() => {
-    if (!config.enableImageOptimization) return;
-    
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-    });
-  }, [config.enableImageOptimization]);
-
-  const optimizeLazyLoading = useCallback(() => {
-    if (!config.enableLazyLoading) return;
-    
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          element.classList.add('loaded');
-          observer.unobserve(element);
-=======
-export const usePerformanceOptimization = () => {
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return null;
-    }
-
-    const navigation = performance.getEntriesByType(
-      'navigation'
-    )[0] as PerformanceNavigationTiming;
-    
-
-    const metrics: PerformanceMetrics = {
-      loadTime: navigation
-        ? navigation.loadEventEnd - navigation.loadEventStart
-        : 0,
-      firstContentfulPaint:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
-          ?.startTime || 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0,
-    };
-
-    // Measure LCP
-    const lcpObserver = new PerformanceObserver(list => {
-      
-      
-      if (lastEntry) {
-        metrics.largestContentfulPaint = lastEntry.startTime;
-      }
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // Measure CLS
-    let _clsValue = 0;
-    const clsObserver = new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) {
-        const layoutShiftEntry = entry as PerformanceEntry & {
-          hadRecentInput?: boolean;
-          value?: number;
-        };
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value || 0;
-        }
-      }
-      metrics.cumulativeLayoutShift = clsValue;
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-    // Measure FID
-    const fidObserver = new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) {
-        const fidEntry = entry as PerformanceEntry & {
-          processingStart?: number;
-        };
-        metrics.firstInputDelay =
-          (fidEntry.processingStart || 0) - entry.startTime;
-      }
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-
-    // Cleanup observers after a delay
-    setTimeout(() => {
-      lcpObserver.disconnect();
-      clsObserver.disconnect();
-      fidObserver.disconnect();
-    }, 10000);
-
-    return metrics;
-  }, []);
-
-  const optimizeImages = useCallback(() => {
-    
-    const imageObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
-        }
-      });
-    });
-
-    lazyElements.forEach((element) => observer.observe(element));
-  }, [config.enableLazyLoading]);
-
-<<<<<<< HEAD
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    
-    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    
-    setOptimizationMetrics({
-      bundleSize: navigation.transferSize || 0,
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      renderTime: fcp ? fcp.startTime : 0,
-=======
-  const preloadCriticalResources = useCallback(() => {
-    
-
-    criticalResources.forEach(resource => {
-      
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
-    });
-  }, []);
+  const [isOptimized, setIsOptimized] = useState(false)
+  const [performanceMetrics, setPerformanceMetrics] = useState<any>({})
+  const optimizationRef = useRef<any>({})
 
   useEffect(() => {
-<<<<<<< HEAD
-    if (typeof window === 'undefined') return;
-=======
-    // Measure performance after page load
-    const timer = setTimeout(() => {
-      
-      if (metrics) {
-        // Send metrics to analytics in production
-        if (process.env['NODE_ENV'] === 'production') {
-          // Track metrics in production
-        }
-         
-        if (process.env['NODE_ENV'] === 'development') { 
-          if (import.meta.env.DEV) { 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+    if (enablePerformanceMonitoring) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        setPerformanceMetrics((prev: any) => ({
+          ...prev,
+          entries: [...(prev.entries || []), ...entries]
+        }))
+      })
 
-    const runOptimizations = () => {
-      optimizeImages();
-      optimizeLazyLoading();
-      measurePerformance();
-      setIsOptimized(true);
-    };
+      observer.observe({ entryTypes: ['measure', 'navigation', 'resource'] })
 
-    if (document.readyState === 'complete') {
-      runOptimizations();
-    } else {
-      window.addEventListener('load', runOptimizations);
+      return () => observer.disconnect()
     }
+    return undefined
+  }, [enablePerformanceMonitoring])
 
-    return () => {
-      window.removeEventListener('load', runOptimizations);
-    };
-  }, [optimizeImages, optimizeLazyLoading, measurePerformance]);
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return
+
+    const images = document.querySelectorAll('img')
+    images.forEach(img => {
+      if (img.dataset.src && !img.src) {
+        img.src = img.dataset.src
+        img.classList.add('lazy-loaded')
+      }
+    })
+  }, [enableImageOptimization])
+
+  const optimizeLazyLoading = useCallback(() => {
+    if (!enableLazyLoading) return
+
+    const lazyElements = document.querySelectorAll('[data-lazy]')
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement
+          element.classList.add('lazy-loaded')
+          observer.unobserve(element)
+        }
+      })
+    })
+
+    lazyElements.forEach(el => observer.observe(el))
+  }, [enableLazyLoading])
+
+  const enableCachingStrategy = useCallback(() => {
+    if (!enableCaching) return
+
+    // Service worker registration for caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered:', registration)
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error)
+        })
+    }
+  }, [enableCaching])
+
+  const prefetchResources = useCallback(() => {
+    if (!enablePrefetching) return
+
+    const links = document.querySelectorAll('a[href]')
+    links.forEach(link => {
+      const href = link.getAttribute('href')
+      if (href && href.startsWith('/')) {
+        const prefetchLink = document.createElement('link')
+        prefetchLink.rel = 'prefetch'
+        prefetchLink.href = href
+        document.head.appendChild(prefetchLink)
+      }
+    })
+  }, [enablePrefetching])
+
+  const runOptimizations = useCallback(() => {
+    optimizeImages()
+    optimizeLazyLoading()
+    enableCachingStrategy()
+    prefetchResources()
+    
+    setIsOptimized(true)
+    console.log('Performance optimizations applied')
+  }, [optimizeImages, optimizeLazyLoading, enableCachingStrategy, prefetchResources])
+
+  const getOptimizationStatus = useCallback(() => {
+    return {
+      isOptimized,
+      options,
+      metrics: performanceMetrics,
+      timestamp: Date.now()
+    }
+  }, [isOptimized, options, performanceMetrics])
 
   return {
+    runOptimizations,
+    getOptimizationStatus,
     isOptimized,
-    optimizationMetrics,
-    optimizeImages,
-    optimizeLazyLoading,
-  };
-};
+    performanceMetrics
+  }
+}
