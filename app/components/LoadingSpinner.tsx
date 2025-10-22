@@ -22,14 +22,16 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const containerClasses = fullScreen 
-    ? 'fixed inset-0 flex items-center justify-center bg-white bg-opacity-90 z-50'
+    ? 'fixed inset-0 flex items-center justify-center bg-white/80 backdrop-blur-sm z-50'
     : `flex items-center justify-center ${className}`;
 
   return (
     <div className={containerClasses} role="status" aria-label="Loading">
       <div className="flex flex-col items-center space-y-4">
         <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>
-        {text && <p className="text-gray-600 text-sm">{text}</p>}
+        {text && (
+          <p className="text-gray-600 font-medium">{text}</p>
+        )}
       </div>
     </div>
   );

@@ -46,6 +46,7 @@ const AiAnalyticsPage: React.FC = () => {
     }
   ];
 
+  // Removed unused variables to fix TypeScript errors
 
   return (
     <>

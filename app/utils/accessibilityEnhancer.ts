@@ -6,6 +6,7 @@
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = [];
   private skipLinks: HTMLElement[] = [];
+  // private landmarks: HTMLElement[] = [];
   private isInitialized = false;
 
   constructor() {
@@ -19,6 +20,7 @@ export class AccessibilityEnhancer {
     if (this.isInitialized) return;
     
     this.setupFocusManagement();
+    // this.setupKeyboardNavigation();
     this.setupSkipLinks();
     this.setupLandmarks();
     this.setupAriaLabels();
@@ -42,6 +44,24 @@ export class AccessibilityEnhancer {
     this.setupFocusTrapping();
   }
 
+  /**
+   * Update list of focusable elements
+   */
+  public updateFocusableElements(): void {
+    const selectors = [
+      'a[href]',
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+      '[contenteditable="true"]'
+    ];
+    
+    this.focusableElements = Array.from(
+      document.querySelectorAll(selectors.join(', '))
+    ) as HTMLElement[];
+  }
 
   /**
    * Add focus indicators
@@ -100,7 +120,10 @@ export class AccessibilityEnhancer {
       this.focusableElements[nextIndex]?.focus();
     }
 
+    
+
     event.preventDefault();
+
   }
 
   /**
@@ -249,7 +272,7 @@ export class AccessibilityEnhancer {
     // Add high contrast mode support
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     
-    const handleContrastChange = (e: MediaQueryListEvent | MediaQueryList) => {
+    const handleContrastChange = (e: MediaQueryList) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
       } else {
@@ -306,25 +329,6 @@ export class AccessibilityEnhancer {
   }
 
   /**
-   * Update list of focusable elements (public method)
-   */
-  public updateFocusableElements(): void {
-    const selectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-      '[contenteditable="true"]'
-    ];
-    
-    this.focusableElements = Array.from(
-      document.querySelectorAll(selectors.join(', '))
-    ) as HTMLElement[];
-  }
-
-  /**
    * Get current focusable elements
    */
   public getFocusableElements(): HTMLElement[] {
@@ -352,6 +356,7 @@ export class AccessibilityEnhancer {
     this.isInitialized = false;
     this.focusableElements = [];
     this.skipLinks = [];
+    // this.landmarks = [];
   }
 
 }

@@ -1,6 +1,0 @@
-
-  return ()
-    <div>Content</div>
-  )
-
-
