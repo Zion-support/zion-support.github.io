@@ -1,5 +1,10 @@
 import '@testing-library/jest-dom';
 
+// Polyfill for TextEncoder/TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock console methods to reduce noise in tests
 const originalError = console.error;
 const originalWarn = console.warn;
