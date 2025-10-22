@@ -97,7 +97,7 @@ const TeamPage: React.FC = () => {
       <Helmet>
         <title>Our Team - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Meet the brilliant minds behind Zion Tech Group. Our diverse team of experts is dedicated to pushing the boundaries of AI and technology." />
-        <meta name="keywords" content="team, AI experts, technology team, Zion Tech Group, artificial intelligence, machine learning" />
+        <meta name="keywords" content="team, AI experts, technology team, machine learning, quantum computing, Zion Tech Group" />
       </Helmet>
 
       {/* Header */}
