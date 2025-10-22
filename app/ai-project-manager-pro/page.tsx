@@ -65,9 +65,7 @@ const AiProjectManagerProPage: React.FC = () => {
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
               </a>
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -136,11 +134,7 @@ const AiProjectManagerProPage: React.FC = () => {
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
               </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>
+            </div></div></section></div></React.Fragment>
   );
 };
 

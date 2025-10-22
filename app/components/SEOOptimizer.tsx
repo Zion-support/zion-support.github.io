@@ -156,4 +156,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     
   }, [title, description, canonicalUrl, structuredData])
 
+  return null; // This component doesn't render anything
+};
+
 export default SEOOptimizer;

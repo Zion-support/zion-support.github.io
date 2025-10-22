@@ -25,7 +25,7 @@ const IotDevelopmentPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }  ];
+        ];;
 
   const benefits = [
     'AI-powered automation',
@@ -62,8 +62,7 @@ const IotDevelopmentPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-              </a>            </div>          </div>
-        </section>
+              </a>            </div></div></section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -127,10 +126,7 @@ const IotDevelopmentPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>            </div>          </div>
-        </section>
-      </div>
-    </React.Fragment>
+              </a>            </div></div></section></div></React.Fragment>
   );
 };
 
