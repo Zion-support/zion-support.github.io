@@ -1,128 +1,118 @@
+'use client'
 
-// advanced Caching
-export const advancedcaching = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('advanced Caching initialized')
+// Advanced Caching utility functions
+export interface CacheConfig {
+  maxSize: number
+  ttl: number
+  storage: 'memory' | 'localStorage' | 'sessionStorage'
+}
+
+export interface CacheItem<T = any> {
+  value: T
+  timestamp: number
+  ttl: number
+}
+
+class AdvancedCache {
+  private cache = new Map<string, CacheItem>()
+  private config: CacheConfig
+
+  constructor(config: Partial<CacheConfig> = {}) {
+    this.config = {
+      maxSize: 100,
+      ttl: 5 * 60 * 1000, // 5 minutes
+      storage: 'memory',
+      ...config
+    }
+  }
+
+  set<T>(key: string, value: T, ttl?: number): void {
+    const item: CacheItem<T> = {
+      value,
+      timestamp: Date.now(),
+      ttl: ttl || this.config.ttl
+    }
+
+    this.cache.set(key, item)
+
+    // Enforce max size
+    if (this.cache.size > this.config.maxSize) {
+      const firstKey = this.cache.keys().next().value
+      this.cache.delete(firstKey)
+    }
+
+    // Persist to storage if configured
+    if (this.config.storage !== 'memory') {
+      this.persistToStorage(key, item)
+    }
+  }
+
+  get<T>(key: string): T | null {
+    const item = this.cache.get(key)
+    if (!item) return null
+
+    // Check if expired
+    if (Date.now() - item.timestamp > item.ttl) {
+      this.cache.delete(key)
+      return null
+    }
+
+    return item.value
+  }
+
+  has(key: string): boolean {
+    return this.get(key) !== null
+  }
+
+  delete(key: string): boolean {
+    return this.cache.delete(key)
+  }
+
+  clear(): void {
+    this.cache.clear()
+  }
+
+  size(): number {
+    return this.cache.size
+  }
+
+  private persistToStorage(key: string, item: CacheItem): void {
+    if (typeof window === 'undefined') return
+
+    try {
+      const storage = this.config.storage === 'localStorage' 
+        ? localStorage 
+        : sessionStorage
+      
+      storage.setItem(`cache_${key}`, JSON.stringify(item))
+    } catch (error) {
+      console.warn('Failed to persist cache item:', error)
+    }
+  }
+
+  private loadFromStorage(): void {
+    if (typeof window === 'undefined' || this.config.storage === 'memory') return
+
+    try {
+      const storage = this.config.storage === 'localStorage' 
+        ? localStorage 
+        : sessionStorage
+
+      for (let i = 0; i < storage.length; i++) {
+        const key = storage.key(i)
+        if (key?.startsWith('cache_')) {
+          const item = JSON.parse(storage.getItem(key) || '{}')
+          const cacheKey = key.replace('cache_', '')
+          this.cache.set(cacheKey, item)
+        }
+      }
+    } catch (error) {
+      console.warn('Failed to load cache from storage:', error)
+    }
   }
 }
-export default advancedcaching
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
-const AdvancedCachingPage: React.FC = () => {
-    const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-        <title>AdvancedCaching | Zion Tech Group</title>
-        <meta />
-        <meta />
-      </Helmet>
-      {/* Hero Section */} <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1>
-              <span>AdvancedCaching </span>
-              </span>
-              <br>
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p>Transform your business with our advanced advancedcaching solutions. </p>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button>Get Started</button>
-                <ArrowRight>
-              </button>
-              <button>Learn More</button>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>Why Choose Our AdvancedCaching?</h2>
-            </h2>
-            <p>Our advancedcaching solutions deliver unmatched performance, security, and scalability. </p>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {features.map((feature, index) => (} <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>Key Benefits</h2>
-            </h2>
-            <p>Experience the power of our advancedcaching solutions for your business.</p>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
-            {benefits.map((benefit, index) => (} <div key={index}className="flex items-start space-x-3"></div>
-                <CheckCircle />
-                <p className="text-gray-300 text-lg">{benefit</p>}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>
-            <h2>Ready to Get Started? </h2>
-            </h2>
-            <p>Contact our experts to discuss your advancedcaching needs and get a customized solution. </p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button>
-                <Phone>
-                Call Now
-              </button>
-              <button>
-                <Mail>
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  ),
-}
-export default AdvancedCachingPage
+
+// Create default instance
+export const advancedCache = new AdvancedCache()
+
+export default advancedCache

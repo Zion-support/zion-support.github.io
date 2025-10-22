@@ -2853,10 +2853,10 @@ export const getPricingTiers = () => {
     enterprise: 'Enterprise'
   }
 }
-import {Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,;}
+import {Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
   GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
-  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon;}} from 'lucide-react'
+  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon} from 'lucide-react'
 export const microSAASServices = [
   // Productivity & Management Tools
   {title: 'AI Project Manager Pro',
@@ -2870,7 +2870,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-    users: '10,000+',}freeTrial: '14 days',},
+    users: '10,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Meeting Assistant Pro',
     description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
     icon: 'target',
@@ -2882,7 +2884,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '20,000+',}freeTrial: '14 days',},
+    users: '20,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Document Intelligence Pro',
     description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
     icon: '📄',
@@ -2894,7 +2898,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.7,
-    users: '15,000+',}freeTrial: '7 days',},
+    users: '15,000+',
+    freeTrial: '7 days'
+  },
   {title: 'AI Personal Assistant Pro',
     description: 'Your intelligent personal assistant that manages emails, schedules, and tasks with natural language processing.',
     icon: '🤖',
@@ -2906,7 +2912,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-    users: '45,000+',}freeTrial: '14 days',},
+    users: '45,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Team Collaboration Hub',
     description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',
     icon: 'users',
@@ -2918,7 +2926,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '25,000+',}freeTrial: '14 days',},
+    users: '25,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Task Manager Pro',
     description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
     icon: 'check',
@@ -2930,7 +2940,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '25,000+',}freeTrial: '7 days',},
+    users: '25,000+',
+    freeTrial: '7 days'
+  },
   {title: 'AI Workflow Automation Pro',
     description: 'Automate repetitive tasks with AI-powered workflow optimization. Save 20+ hours per week with intelligent automation.',
     icon: 'zap',
@@ -2942,7 +2954,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.7,
-    users: '15,000+',}freeTrial: '14 days',},
+    users: '15,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Meeting Scheduler Pro',
     description: 'Intelligent meeting scheduling with calendar optimization, conflict resolution, and time zone management. Used by Fortune 500 companies.',
     icon: '📅',
@@ -2954,7 +2968,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-    users: '30,000+',}freeTrial: '7 days',},
+    users: '30,000+',
+    freeTrial: '7 days'
+  },
   {title: 'AI Time Tracker Pro',
     description: 'Intelligent time tracking with productivity insights, automated reporting, and team analytics. Trusted by remote teams globally.',
     icon: '⏱️',
@@ -2966,7 +2982,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.6,
-    users: '50,000+',}freeTrial: '14 days',},
+    users: '50,000+',
+    freeTrial: '14 days'
+  },
   // Content & Marketing Tools
   {title: 'AI Content Writer Pro',
     description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',
@@ -2979,7 +2997,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.9,
-    users: '40,000+',}freeTrial: '7 days',},
+    users: '40,000+',
+    freeTrial: '7 days'
+  },
   {title: 'AI Video Creator Pro',
     description: 'Professional video creation with AI-powered editing, voice synthesis, and automated production. Create studio-quality videos in minutes.',
     icon: 'film',
@@ -2991,7 +3011,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.8,
-    users: '30,000+',}freeTrial: '14 days',},
+    users: '30,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Podcast Studio Pro',
     description: 'Complete podcast production suite with AI-powered editing, transcription, and distribution. Launch your podcast in 24 hours.',
     icon: '🎙️',
@@ -3003,7 +3025,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.7,
-    users: '18,000+',}freeTrial: '7 days',},
+    users: '18,000+',
+    freeTrial: '7 days'
+  },
   {title: 'AI Graphic Design Studio',
     description: 'Professional graphic design with AI-powered tools, templates, and brand consistency. Create stunning visuals without design skills.',
     icon: 'palette',
@@ -3015,7 +3039,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.8,
-    users: '35,000+',}freeTrial: '14 days',},
+    users: '35,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Website Builder Pro',
     description: 'Intelligent website builder with AI-powered design, content generation, and SEO optimization. Launch your site in minutes.',
     icon: 'globe',
@@ -3027,7 +3053,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.9,
-    users: '50,000+',}freeTrial: '14 days',},
+    users: '50,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Social Media Manager Pro',
     description: 'Automated social media management with AI-powered content creation, scheduling, and analytics. Grow your audience by 300%.',
     icon: 'smartphone',
@@ -3039,7 +3067,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.7,
-    users: '35,000+',}freeTrial: '14 days',},
+    users: '35,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Email Marketing Suite',
     description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automation. Increase open rates by 150%.',
     icon: 'Email:',
@@ -3051,7 +3081,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.8,
-    users: '28,000+',}freeTrial: '7 days',},
+    users: '28,000+',
+    freeTrial: '7 days'
+  },
   {title: 'AI SEO Optimizer Pro',
     description: 'Advanced SEO optimization with AI-powered keyword research, content analysis, and ranking tracking. Boost organic traffic by 200%.',
     icon: 'search',
@@ -3063,7 +3095,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.9,
-    users: '22,000+',}freeTrial: '14 days',},
+    users: '22,000+',
+    freeTrial: '14 days'
+  },
   {title: 'AI Lead Generation Pro',
     description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5 x more qualified leads.',
     icon: '🎯',

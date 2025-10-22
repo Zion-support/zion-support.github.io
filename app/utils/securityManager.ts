@@ -1,101 +1,135 @@
-
-// security Manager
-export const securitymanager = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('security Manager initialized')
-  }
-}
-export default securitymanager
-import React from 'react'
 'use client'
-/**
- * Enhanced Security Utilities
- * Generated: 2025-10-08T02:06:22.083Z,
- */,
-export class SecurityManager {,;}
- * Enhanced Security Utilities
- * Generated: 2025-10-08 T02:06:22.083 Z,
- */}export class SecurityManager {}}private static instance: SecurityManager,}
-  private constructor() {}static getInstance(): SecurityManager {}}if (!SecurityManager.instance) {}SecurityManager.instance = new SecurityManager();}
- * Enhanced Security Utilities
- * Generate,
-  d: 2025-10-08T0,
-  2: 0,
-  6: 22.083Z,
- */,
-export class SecurityManager {/* TODO: Fix JSX expression */,}}private constructor() {}static getInstance(): SecurityManager {/* TODO: Fix JSX expression */,}}}
-    return SecurityManager.instance
+
+// Security Manager utility functions
+export interface SecurityConfig {
+  enabled: boolean
+  debug: boolean
+  cspEnabled: boolean
+}
+
+export interface SecurityEvent {
+  type: string
+  message: string
+  timestamp: number
+  severity: 'low' | 'medium' | 'high' | 'critical'
+}
+
+class SecurityManager {
+  private config: SecurityConfig
+  private events: SecurityEvent[] = []
+
+  constructor(config: Partial<SecurityConfig> = {}) {
+    this.config = {
+      enabled: true,
+      debug: false,
+      cspEnabled: true,
+      ...config
+    }
   }
-  /**
-   * Sanitize user input to prevent XSS attacks
-   */
-  sanitizeInput(input: string): string {,}
-    ,
-    return input;}sanitizeInput(input: string): string {,}}return input
-      .replace(/[<React.Fragment>{)</React.Fragment>
-    ]/g, '')
-      .replace(/javascript: /gi, '')
-      .replace(/on\w+=/gi, '')}.trim();}
-  sanitizeInput(inpu)
-  t: string): string {/* TODO: Fix JSX expression */,}}}
-  /**
-   * Validate and sanitize URL
-   */
-  sanitizeUrl(url: string): string {,}
-    ,
-    try {,;}
-      const parsed = new URL(url),
-      if (!['http: ', 'https: '].includes(parsed.protocol)) {,}sanitizeUrl(url: string): string {,}}try {}}const parsed = new URL(url)
-      if (!['http: ', 'https: '].includes(parsed.protocol)) {,}throw new Error('Invalid protocol');}
-      }
-      return parsed.toString()
-    } catch {}}return ''}
-  sanitizeUrl(ur)
-  l: string): string {/* TODO: Fix JSX expression */,}}}
-      return parsed.toString()
-    } catch {/* TODO: Fix JSX expression */,}}}
+
+  init(): void {
+    if (!this.config.enabled) return
+
+    this.setupCSP()
+    this.setupXSSProtection()
+    this.setupCSRFProtection()
+    this.setupClickjackingProtection()
   }
-  /**
-   * Generate secure random token
-   */
-  generateSecureToken(length: number = 32): string {,}
-    ,
-    const array = new Uint8Array(length),
-    if (typeof window !== 'undefined' && window.crypto) {,}window.crypto.getRandomValues(array);}
-    } else {// Fallback for Node.js environment;}}generateSecureToken(length: number = 32): string {,}}const array = new Uint8Array(length)
-    if (typeof window !== 'undefined' && window.crypto) {}window.crypto.getRandomValues(array);}
-    } else {}}// Fallback for Node.js environment
-      const crypto = import("crypto")
-      crypto.randomFillSync(array);}
-  generateSecureToken(lengt)
-  h: number = 32): string {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}}
+
+  private setupCSP(): void {
+    if (!this.config.cspEnabled) return
+
+    const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"
+    
+    const meta = document.createElement('meta')
+    meta.httpEquiv = 'Content-Security-Policy'
+    meta.content = csp
+    document.head.appendChild(meta)
+  }
+
+  private setupXSSProtection(): void {
+    const meta = document.createElement('meta')
+    meta.httpEquiv = 'X-XSS-Protection'
+    meta.content = '1; mode=block'
+    document.head.appendChild(meta)
+  }
+
+  private setupCSRFProtection(): void {
+    // Generate CSRF token
+    const token = this.generateCSRFToken()
+    document.cookie = `csrf-token=${token}; SameSite=Strict; Secure`
+  }
+
+  private setupClickjackingProtection(): void {
+    const meta = document.createElement('meta')
+    meta.httpEquiv = 'X-Frame-Options'
+    meta.content = 'DENY'
+    document.head.appendChild(meta)
+  }
+
+  private generateCSRFToken(): string {
+    const array = new Uint8Array(32)
+    crypto.getRandomValues(array)
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
   }
-  /**
-   * Implement rate limiting
-   */
-  checkRateLimit(key: string, limit: number, windowMs: number): boolean {,}}const now = Date.now()
-    const windowStart = now - windowMs
-    // Simple in-memory rate limiting (replace with Redis in production)
-    const storage = this.getRateLimitStorage()
-    const requests = storage.get(key) || []
-    // Remove old requests
-    const validRequests = requests.filter((time: number) => time > windowStart),
-    if (validRequests.length >= limit) {,
-    // Remove old requests
-    const validRequests = requests.filter((time: number) => time > windowStart),}if (validRequests.length >= limit) {}return false;}
-  checkRateLimit(ke,;)
-  y: string, limi,
-  t: number, windowM)
-  s: number): boolean {/* TODO: Fix JSX expression */,}}}
-    validRequests.push(now)
-    storage.set(key, validRequests)
-    return true
-  }}</React.Fragment>
-  private getRateLimitStorage(): Map<string, number[]> {}if (!global._rateLimitStorage) {}global._rateLimitStorage = new Map();}
-  private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */,}}
-    return global._rateLimitStorage
+
+  validateInput(input: string, type: 'email' | 'url' | 'html' | 'sql'): boolean {
+    if (!this.config.enabled) return true
+
+    switch (type) {
+      case 'email':
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input)
+      case 'url':
+        return /^https?:\/\/.+\..+/.test(input)
+      case 'html':
+        return !/<script|javascript:|on\w+=/i.test(input)
+      case 'sql':
+        return !/(union|select|insert|update|delete|drop|create|alter)/i.test(input)
+      default:
+        return true
+    }
+  }
+
+  sanitizeInput(input: string): string {
+    if (!this.config.enabled) return input
+
+    return input
+      .replace(/[<>]/g, '')
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+=/gi, '')
+      .trim()
+  }
+
+  logSecurityEvent(type: string, message: string, severity: 'low' | 'medium' | 'high' | 'critical'): void {
+    if (!this.config.enabled) return
+
+    const event: SecurityEvent = {
+      type,
+      message,
+      timestamp: Date.now(),
+      severity
+    }
+
+    this.events.push(event)
+
+    if (this.config.debug) {
+      console.log('Security event:', event)
+    }
+  }
+
+  getEvents(): SecurityEvent[] {
+    return [...this.events]
+  }
+
+  clearEvents(): void {
+    this.events = []
   }
 }
-export default SecurityManager.getInstance()
+
+// Create default instance
+export const securityManager = new SecurityManager({
+  enabled: process.env.NODE_ENV === 'production',
+  debug: process.env.NODE_ENV === 'development'
+})
+
+export default securityManager

@@ -1,37 +1,42 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
+
+interface AnalyticsEvent {
+  event_category: string
+  event_label: string
+  value?: number
+}
+
 export function useAnalytics() {
   const [isInitialized, setIsInitialized] = useState(false)
+
   useEffect(() => {
     // Initialize analytics
     setIsInitialized(true)
   }, [])
-  const trackEvent = (eventName: string, properties?: any) => {
-    if (isInitialized) {
-      console.log('Analytics event:', eventName, properties)
-    }
-  }
-  const trackPageView = (page: string) => {
-    if (isInitialized) {
-      console.log('Page view:', page)
-import {useCallback} from 'react'
-interface AnalyticsEvent {event_category: string,}
-  event_label: string,
-  value?: number;}}
-export const useAnalytics = (
-  const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {,
-    ) => {
-  return($3;)
-  )}if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('event', eventName, parameters)
+
+  const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', eventName, parameters)
     }
   }, [])
-const trackPageView = useCallback((pagePath: string, pageTitle: string) => {,
-    if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('config', 'GA_MEASUREMENT_ID', {page_path: pagePath,
-        page_title: pageTitle,}})
+
+  const trackPageView = useCallback((pagePath: string, pageTitle: string) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('config', 'GA_MEASUREMENT_ID', {
+        page_path: pagePath,
+        page_title: pageTitle
+      })
     }
   }, [])
-const trackConversion = useCallback((conversionId: string, value?: number) => {if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('event', 'conversion', {send_to: conversionId,
-        value: value,}})
+
+  const trackConversion = useCallback((conversionId: string, value?: number) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'conversion', {
+        send_to: conversionId,
+        value: value
+      })
     }
-  }
-  return { isInitialized, trackEvent, trackPageView }
+  }, [])
+
+  return { isInitialized, trackEvent, trackPageView, trackConversion }
 }

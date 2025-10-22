@@ -1,3 +1,5 @@
+'use client'
+
 // Analytics utilities
 export function analytics() {
   return {
@@ -12,4 +14,3 @@ export function analytics() {
     }
   }
 }
-'use client'
