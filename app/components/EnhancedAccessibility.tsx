@@ -1,10 +1,14 @@
 'use client';
 import React from 'react';
 
-const EnhancedAccessibility: React.FC = () => {
+interface EnhancedAccessibilityProps {
+  children?: React.ReactNode;
+}
+
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
   return (
     <div>
-      <h1>EnhancedAccessibility</h1>
+      {children}
     </div>
   );
 };
