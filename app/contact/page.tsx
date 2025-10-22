@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
+
 const ContactPage: React.FC = () => {
   const features = [
     {
@@ -22,7 +23,8 @@ const ContactPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+    }
   ];
 
   const benefits = [
@@ -31,9 +33,11 @@ const ContactPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <React.Fragment>
       <Helmet>
         <title>Contact - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional contact solutions powered by advanced AI and cutting-edge technology." />
@@ -60,6 +64,7 @@ const ContactPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
+              </a>
             </div>
           </div>
         </section>
@@ -130,9 +135,11 @@ const ContactPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
-        </section>      </div>
+        </section>
+      </div>
     </React.Fragment>
   );
 };

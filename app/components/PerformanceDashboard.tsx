@@ -1,5 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const PerformanceDashboard: React.FC = () => {
+  return (
+    <div className="bg-white p-4 rounded-lg">
+      <h2>Performance Dashboard</h2>
+      <p>This is a clean, functional component.</p>
+    </div>
+  );
+};
 
 export default PerformanceDashboard;

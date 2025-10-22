@@ -13,4 +13,4 @@ const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '' }) => {
   );
 };
 
-export default NotFoundPagePage;
+export default NotFoundPage;

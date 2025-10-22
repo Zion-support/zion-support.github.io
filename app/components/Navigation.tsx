@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Brain, Menu, X, ChevronDown, Phone, Mail, ArrowRight } from 'lucide-react'
+import { Brain, Menu, X, ChevronDown, Phone, ArrowRight } from 'lucide-react'
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -166,46 +166,51 @@ const Navigation: React.FC = () => {
 
             <Link
               to="/contact"
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              className={`text-sm font-medium transition-colors duration-300 ${
+                isActive('/contact') ? 'text-cyan-400' : 'text-gray-300 hover:text-cyan-400'
+              }`}
             >
               Contact
             </Link>
-
-            {/* Contact Info */}
-            <div className="flex items-center space-x-4">
-              <a
-                href="tel:+13024640950"
-                className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-              >
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">(302) 464-0950</span>
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-              >
-                <Mail className="w-4 h-4" />
-                <span className="text-sm">Email</span>
-              </a>
-            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a
+              href="tel:+13024640950"
+              className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+            >
+              <Phone className="w-4 h-4" />
+              <span>+1 302 464 0950</span>
+            </a>
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t border-slate-700 py-4">
-            <div className="space-y-4">
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
               <Link
                 to="/"
-                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+                  isActive('/') ? 'text-cyan-400 bg-slate-700' : 'text-gray-300 hover:text-cyan-400 hover:bg-slate-700'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 Home
@@ -215,30 +220,23 @@ const Navigation: React.FC = () => {
               <div>
                 <button
                   onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                  className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-slate-700 transition-colors duration-300"
                 >
                   <span>AI Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {aiServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
+                  <div className="pl-4 space-y-1">
                     {aiServices.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700 transition-colors duration-300"
                         onClick={() => setIsOpen(false)}
                       >
                         {service.name}
                       </Link>
                     ))}
-                    <Link
-                      to="/ai-services"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      View All AI Services →
-                    </Link>
                   </div>
                 )}
               </div>
@@ -247,30 +245,23 @@ const Navigation: React.FC = () => {
               <div>
                 <button
                   onClick={() => setItServicesOpen(!itServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                  className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-slate-700 transition-colors duration-300"
                 >
                   <span>IT Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {itServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
+                  <div className="pl-4 space-y-1">
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700 transition-colors duration-300"
                         onClick={() => setIsOpen(false)}
                       >
                         {service.name}
                       </Link>
                     ))}
-                    <Link
-                      to="/it-services"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      View All IT Services →
-                    </Link>
                   </div>
                 )}
               </div>
@@ -279,37 +270,32 @@ const Navigation: React.FC = () => {
               <div>
                 <button
                   onClick={() => setMicroSaasOpen(!microSaasOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                  className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-slate-700 transition-colors duration-300"
                 >
                   <span>Micro SAAS</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {microSaasOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
+                  <div className="pl-4 space-y-1">
                     {microSaas.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700 transition-colors duration-300"
                         onClick={() => setIsOpen(false)}
                       >
                         {service.name}
                       </Link>
                     ))}
-                    <Link
-                      to="/micro-saas-solutions"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      View All Micro SAAS →
-                    </Link>
                   </div>
                 )}
               </div>
 
               <Link
                 to="/about"
-                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+                  isActive('/about') ? 'text-cyan-400 bg-slate-700' : 'text-gray-300 hover:text-cyan-400 hover:bg-slate-700'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 About
@@ -317,35 +303,38 @@ const Navigation: React.FC = () => {
 
               <Link
                 to="/contact"
-                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+                  isActive('/contact') ? 'text-cyan-400 bg-slate-700' : 'text-gray-300 hover:text-cyan-400 hover:bg-slate-700'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
 
-              {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-slate-700 space-y-2">
+              {/* Mobile CTA */}
+              <div className="pt-4 border-t border-slate-700">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                  className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300"
                 >
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">(302) 464-0950</span>
+                  <span>+1 302 464 0950</span>
                 </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                <Link
+                  to="/contact"
+                  className="block mt-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-3 py-2 rounded-lg text-sm font-medium text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
                 >
-                  <Mail className="w-4 h-4" />
-                  <span className="text-sm">kleber@ziontechgroup.com</span>
-              </a>
+                  Get Started
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
         )}
       </div>
     </nav>
   )
 }
 
+Navigation.displayName = 'Navigation'
 export default Navigation

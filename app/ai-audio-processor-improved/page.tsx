@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
 
 const AiAudioProcessorImprovedPage: React.FC = () => {
   const features = [
@@ -40,8 +40,8 @@ const AiAudioProcessorImprovedPage: React.FC = () => {
     <React.Fragment>
       <Helmet>
         <title>Ai Audio Processor Improved - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional ai audio processor improved solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="ai audio processor improved, AI solutions, IT services, automation, technology, business solutions" />
+        <meta name="description" content="Professional ai-audio-processor-improved solutions powered by advanced AI and cutting-edge technology." />
+        <meta name="keywords" content="ai-audio-processor-improved, AI solutions, IT services, automation, technology, business solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -52,7 +52,7 @@ const AiAudioProcessorImprovedPage: React.FC = () => {
               Ai Audio Processor Improved
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional ai audio processor improved solutions powered by advanced AI and cutting-edge technology.
+              Professional ai-audio-processor-improved solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -64,6 +64,7 @@ const AiAudioProcessorImprovedPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
+              </a>
             </div>
           </div>
         </section>
@@ -134,6 +135,7 @@ const AiAudioProcessorImprovedPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
         </section>
