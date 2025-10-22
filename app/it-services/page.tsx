@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Brain, Zap, Shield, Globe } from 'lucide-react';
+import { Brain, Zap, Shield, Globe } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
