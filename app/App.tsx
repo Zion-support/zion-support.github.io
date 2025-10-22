@@ -3,8 +3,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+// PerformanceMonitor and AccessibilityEnhancer components removed
 import LoadingSpinner from './components/LoadingSpinner';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -72,10 +71,9 @@ const App: React.FC = () => {
       <HelmetProvider>
         <BrowserRouter>
           <div className="App">
-            <PerformanceMonitor />
-            <AccessibilityEnhancer>
+            {/* PerformanceMonitor and AccessibilityEnhancer components removed */}
               <div></div>
-            </AccessibilityEnhancer>
+            {/* PerformanceMonitor and AccessibilityEnhancer components removed */}
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}

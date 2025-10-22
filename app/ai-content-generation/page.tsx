@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 export default function PagePage() {
   return (
@@ -30,5 +29,3 @@ export default function PagePage() {
     </div>
   );
 }
-=======
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
