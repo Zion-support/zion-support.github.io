@@ -152,7 +152,9 @@ const BusinessAppsPage: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };

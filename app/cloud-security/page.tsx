@@ -154,7 +154,9 @@ const CloudSecurityPage: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };

@@ -135,10 +135,11 @@ const CloudMigrationPage: React.FC = () => {
                 Email Us
               </button>
             </div>
-
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
