@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
+import { Brain, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+
 
 const VirtualRealitySolutionsPage: React.FC = () => {
   const features = [
@@ -27,14 +28,7 @@ const VirtualRealitySolutionsPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    'AI-powered automation',
-    'Real-time processing',
-    'Scalable solutions',
-    'Enterprise-grade security',
-    '24/7 support',
-    'Custom integrations'
-  ];
+  
 
   return (
     <React.Fragment>
