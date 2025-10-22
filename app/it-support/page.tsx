@@ -40,3 +40,8 @@ const ItSupportPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+
+export default ItSupportPage;

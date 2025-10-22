@@ -40,3 +40,8 @@ const AutonomousSystemsPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+
+export default AutonomousSystemsPage;

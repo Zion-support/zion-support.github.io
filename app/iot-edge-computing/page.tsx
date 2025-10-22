@@ -40,3 +40,8 @@ const IoTEdgeComputingPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+
+export default IoTEdgeComputingPage;
