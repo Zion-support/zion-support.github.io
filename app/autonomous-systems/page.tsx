@@ -7,44 +7,35 @@ const AutonomousSystemsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Develop intelligent autonomous systems with AI-powered robotics and automation solutions." />
+        <meta name="description" content="Develop intelligent autonomous systems with AI-powered robotics and automation solutions for various industries." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100">
+      <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
               Autonomous Systems
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Develop intelligent autonomous systems with AI-powered robotics and automation solutions.
+              Develop intelligent autonomous systems with AI-powered robotics and automation solutions for various industries.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Robotic Systems</h3>
-              <p className="text-gray-600">Develop autonomous robots for various industrial applications.</p>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Robotic Process Automation</h3>
+              <p className="text-gray-600">Intelligent robots for automated business processes.</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Self-Driving Vehicles</h3>
-              <p className="text-gray-600">Create autonomous vehicle systems with advanced AI.</p>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Autonomous Vehicles</h3>
+              <p className="text-gray-600">AI-powered autonomous vehicle systems and solutions.</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Drones</h3>
-              <p className="text-gray-600">Build autonomous drone systems for various use cases.</p>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Smart Manufacturing</h3>
+              <p className="text-gray-600">Autonomous manufacturing systems and quality control.</p>
             </div>
           </div>
-=======
-        <meta name="description" content="Develop intelligent autonomous systems for robotics, vehicles, and smart infrastructure." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">Autonomous Systems</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Develop intelligent autonomous systems for robotics and smart infrastructure.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

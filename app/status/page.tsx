@@ -7,42 +7,44 @@ const StatusPage: React.FC = () => {
     <>
       <Helmet>
         <title>System Status - Zion Tech Group</title>
-        <meta name="description" content="Check the current status of our systems and services." />
+        <meta name="description" content="Check the current status of our services and systems." />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100">
+      <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
               System Status
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Check the current status of our systems and services.
+              Check the current status of our services and systems.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-green-600">All Systems Operational</h3>
-              <p className="text-gray-600">All services are running normally.</p>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                <h3 className="text-xl font-semibold">API Services</h3>
+              </div>
+              <p className="text-gray-600">All systems operational</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-green-600">API Services</h3>
-              <p className="text-gray-600">API endpoints are responding normally.</p>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                <h3 className="text-xl font-semibold">Web Platform</h3>
+              </div>
+              <p className="text-gray-600">All systems operational</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-green-600">Database</h3>
-              <p className="text-gray-600">Database services are operating at full capacity.</p>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                <h3 className="text-xl font-semibold">Database</h3>
+              </div>
+              <p className="text-gray-600">All systems operational</p>
             </div>
           </div>
-=======
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">System Status</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            All systems are operational. Check back here for any service updates or maintenance notifications.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

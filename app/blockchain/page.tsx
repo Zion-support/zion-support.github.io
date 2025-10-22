@@ -7,42 +7,35 @@ const BlockchainPage: React.FC = () => {
     <>
       <Helmet>
         <title>Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Leverage blockchain technology for secure, transparent, and decentralized business solutions." />
+        <meta name="description" content="Leverage blockchain technology for secure, transparent, and decentralized solutions for your business needs." />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100">
+      <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
               Blockchain Solutions
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leverage blockchain technology for secure, transparent, and decentralized business solutions.
+              Leverage blockchain technology for secure, transparent, and decentralized solutions for your business needs.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Smart Contracts</h3>
-              <p className="text-gray-600">Develop and deploy smart contracts for automated business processes.</p>
+              <p className="text-gray-600">Automated contract execution with blockchain technology.</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">DeFi Solutions</h3>
-              <p className="text-gray-600">Build decentralized finance applications and protocols.</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Supply Chain</h3>
-              <p className="text-gray-600">Implement blockchain for transparent supply chain management.</p>
+              <p className="text-gray-600">Transparent and traceable supply chain management.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Digital Identity</h3>
+              <p className="text-gray-600">Secure digital identity verification and management.</p>
             </div>
           </div>
-=======
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">Blockchain Solutions</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Leverage blockchain technology for secure, transparent, and decentralized business solutions.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

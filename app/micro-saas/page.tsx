@@ -7,13 +7,12 @@ const MicroSaasPage: React.FC = () => {
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Build and scale micro SaaS applications with our specialized development and deployment services." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-100">
+      <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
               Micro SaaS Solutions
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -22,29 +21,21 @@ const MicroSaasPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Rapid Development</h3>
-              <p className="text-gray-600">Quickly develop and deploy micro SaaS applications.</p>
+              <p className="text-gray-600">Fast-track micro SaaS development with modern frameworks.</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Scalable Architecture</h3>
-              <p className="text-gray-600">Build scalable, cloud-native applications that grow with your business.</p>
+              <p className="text-gray-600">Cloud-native architecture designed for growth and scale.</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">API Integration</h3>
-              <p className="text-gray-600">Integrate with existing systems and third-party services.</p>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Revenue Optimization</h3>
+              <p className="text-gray-600">Monetization strategies and subscription management.</p>
             </div>
           </div>
-=======
-        <meta name="description" content="Build and scale micro SaaS applications with our specialized development and deployment solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">Micro SaaS Solutions</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Build and scale micro SaaS applications with our specialized development solutions.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

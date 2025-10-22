@@ -6,55 +6,36 @@ const ConsultationPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free Consultation - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Schedule a free consultation with our experts to discuss your AI and IT needs." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Free Consultation
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Schedule a free consultation with our experts to discuss your AI and IT needs.
-            </p>
-          </div>
-          
-          <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-semibold mb-6">Schedule Your Consultation</h2>
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                <input type="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                <textarea rows={4} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-              </div>
-              <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                Schedule Consultation
-              </button>
-            </form>
-          </div>
-=======
-        <meta name="description" content="Schedule a free consultation with our experts to discuss your technology needs and solutions." />
+        <title>Consultation Services - Zion Tech Group</title>
+        <meta name="description" content="Get expert consultation on AI, IT, and emerging technology solutions for your business." />
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">Free Consultation</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Schedule a free consultation with our experts to discuss your technology needs and solutions.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Consultation Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get expert consultation on AI, IT, and emerging technology solutions for your business.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Technology Strategy</h3>
+              <p className="text-gray-600">Strategic planning for technology adoption and digital transformation.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">AI Implementation</h3>
+              <p className="text-gray-600">Expert guidance on AI solution selection and implementation.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">System Architecture</h3>
+              <p className="text-gray-600">Design and optimization of scalable system architectures.</p>
+            </div>
+          </div>
         </div>
       </div>
     </>

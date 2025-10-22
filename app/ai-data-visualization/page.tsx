@@ -7,13 +7,12 @@ const AiDataVisualizationPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Data Visualization - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Transform complex data into clear, actionable insights with AI-powered visualization tools and dashboards." />
+        <meta name="description" content="Transform complex data into actionable insights with AI-powered visualization tools and interactive dashboards." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
+      <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
               AI Data Visualization
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -22,29 +21,21 @@ const AiDataVisualizationPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Interactive Dashboards</h3>
-              <p className="text-gray-600">Create dynamic, interactive dashboards that update in real-time.</p>
+              <p className="text-gray-600">Dynamic, interactive dashboards that adapt to your data.</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Smart Charts</h3>
-              <p className="text-gray-600">AI automatically selects the best chart types for your data.</p>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Automated Insights</h3>
+              <p className="text-gray-600">AI-generated insights and pattern recognition in your data.</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Pattern Recognition</h3>
-              <p className="text-gray-600">Identify patterns and trends in your data automatically.</p>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Real-time Analytics</h3>
+              <p className="text-gray-600">Live data visualization and real-time monitoring capabilities.</p>
             </div>
           </div>
-=======
-        <meta name="description" content="Transform complex data into actionable insights with AI-powered visualization and interactive dashboards." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">AI Data Visualization</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Transform complex data into actionable insights with AI-powered visualization tools.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>
