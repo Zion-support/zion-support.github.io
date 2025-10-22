@@ -40,3 +40,7 @@ const AiFintechPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+export default AiFintechPage
