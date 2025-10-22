@@ -62,14 +62,6 @@ class PerformanceOptimizer {
 
     // Monitor render performance
     this.measureRenderTime();
-    
-    // Initialize Core Web Vitals monitoring
-    this.observeLCP();
-    this.observeFID();
-    this.observeCLS();
-    this.observeFCP();
-    this.observeTTFB();
-    this.observeMemory();
   }
 
   /**
