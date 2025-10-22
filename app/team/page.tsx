@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
 const TeamPage: React.FC = () => {
@@ -96,7 +97,7 @@ const TeamPage: React.FC = () => {
       <Helmet>
         <title>Our Team - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Meet the brilliant minds behind Zion Tech Group. Our diverse team of experts is dedicated to pushing the boundaries of AI and technology." />
-        <meta name="keywords" content="team, AI experts, technology leaders, machine learning, quantum computing, Zion Tech Group" />
+        <meta name="keywords" content="team, AI experts, technology team, Zion Tech Group, artificial intelligence, machine learning" />
       </Helmet>
 
       {/* Header */}
@@ -214,18 +215,18 @@ const TeamPage: React.FC = () => {
               innovation and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 View Open Positions
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to="/about"
                 className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Learn About Our Culture
-              </a>
+              </Link>
             </div>
           </div>
         </div>

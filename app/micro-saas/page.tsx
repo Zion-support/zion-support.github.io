@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, TrendingUp, Globe } from 'lucide-react'
 
 const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -224,3 +224,4 @@ const MicroSaasPage: React.FC = () => {
 }
 
 export default MicroSaasPage
+
