@@ -1,9 +1,58 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap, Link, Target, Star, Cpu, Sparkles, BarChart } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
+  const categories = ['Enterprise', 'DeFi', 'NFT', 'Gaming'];
+  
+  const blockchainServices = [
+    {
+      category: 'Enterprise',
+      icon: '🏢',
+      title: 'Enterprise Blockchain',
+      description: 'Custom blockchain solutions for enterprise applications',
+      price: '$10,000',
+      marketPrice: '$15,000',
+      features: ['Security', 'Scalability', 'Compliance'],
+      technologies: ['Ethereum', 'Hyperledger', 'Corda'],
+      benefits: ['Cost Reduction', 'Transparency', 'Efficiency']
+    },
+    {
+      category: 'DeFi',
+      icon: '💰',
+      title: 'DeFi Platform',
+      description: 'Decentralized finance platform development',
+      price: '$25,000',
+      marketPrice: '$35,000',
+      features: ['Smart Contracts', 'Liquidity Pools', 'Yield Farming'],
+      technologies: ['Solidity', 'Web3', 'IPFS'],
+      benefits: ['Decentralization', 'Accessibility', 'Innovation']
+    },
+    {
+      category: 'NFT',
+      icon: '🎨',
+      title: 'NFT Marketplace',
+      description: 'NFT marketplace and trading platform',
+      price: '$15,000',
+      marketPrice: '$20,000',
+      features: ['Minting', 'Trading', 'Royalties'],
+      technologies: ['ERC-721', 'ERC-1155', 'OpenSea'],
+      benefits: ['Digital Ownership', 'Creativity', 'Monetization']
+    },
+    {
+      category: 'Gaming',
+      icon: '🎮',
+      title: 'Blockchain Gaming',
+      description: 'Gaming platform with blockchain integration',
+      price: '$20,000',
+      marketPrice: '$30,000',
+      features: ['Play-to-Earn', 'NFT Items', 'Decentralized Gaming'],
+      technologies: ['Unity', 'Web3', 'Polygon'],
+      benefits: ['Player Ownership', 'Economic Incentives', 'Community']
+    }
+  ];
+
   const features = [
     {
       icon: Shield,
@@ -70,8 +119,8 @@ const BlockchainPage: React.FC = () => {
               </div>
 
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">

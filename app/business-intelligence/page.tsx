@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
@@ -61,7 +62,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </p>
 
         </div>
-
+      </section>
 
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -86,7 +87,7 @@ const BusinessIntelligencePage: React.FC = () => {
             ))}
           </div>
         </div>
-
+      </section>
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -133,6 +134,7 @@ const BusinessIntelligencePage: React.FC = () => {
         </div>
       </section>
 
+      <Footer />
     </div>
   );
 };

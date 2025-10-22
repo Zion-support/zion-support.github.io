@@ -62,9 +62,7 @@ const ConsultationPage = lazy(() => import('./consultation/page'));
 // Loading component
 const AppLoadingSpinner = () => (
   <LoadingSpinner
-    size="xl"
-    text="Loading Zion Tech Group..."
-    fullScreen
+    size="lg"
   />
 );
 
@@ -75,8 +73,8 @@ const App: React.FC = () => {
         <BrowserRouter>
           <div className="App">
             <PerformanceMonitor />
-            <AccessibilityEnhancer />
-            <Suspense fallback={<AppLoadingSpinner />}>
+            <AccessibilityEnhancer>
+              <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
@@ -126,6 +124,7 @@ const App: React.FC = () => {
                 <Route path="/consultation" element={<ConsultationPage />} />
               </Routes>
             </Suspense>
+            </AccessibilityEnhancer>
           </div>
         </BrowserRouter>
       </HelmetProvider>
