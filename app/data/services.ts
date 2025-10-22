@@ -126,4 +126,4 @@ export const services: Service[] = [
       website: 'https://ziontech.com/mobile'
     }
   }
-}]
+];

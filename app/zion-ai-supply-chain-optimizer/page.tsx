@@ -25,7 +25,7 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }  ];
+  ];;
 
   const benefits = [
     'AI-powered automation',
@@ -62,7 +62,9 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-              </a>            </div>          </div>
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* Features Section */}
@@ -73,7 +75,9 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
                 Powerful Features
               </h2>
               <p className="text-lg text-gray-300">
-                Everything you need for success              </p>            </div>
+                Everything you need for success
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
@@ -127,7 +131,9 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>            </div>          </div>
+              </a>
+            </div>
+          </div>
         </section>
       </div>
     </React.Fragment>

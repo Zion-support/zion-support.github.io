@@ -144,4 +144,3 @@ const CloudInfrastructurePage: React.FC = () => {
 };
 
 export default CloudInfrastructurePage;
-export default CloudInfrastructurePage;

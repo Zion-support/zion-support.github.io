@@ -5,6 +5,14 @@ interface PerformanceMonitorProps {
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({})
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
+
+  return (
+    <div className="performance-monitor">
+      <h3>Performance Monitor</h3>
+      <p>Monitoring performance metrics...</p>
+    </div>
+  );
+};
 
 export default PerformanceMonitor;

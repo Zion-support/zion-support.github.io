@@ -24,7 +24,7 @@ const TeamPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }  ];
+  ];;
 
   const benefits = [
     'AI-powered automation',
@@ -135,7 +135,9 @@ const TeamPage: React.FC = () => {
               </a>
             </div>
           </div>
-        </section>      </div>    </React.Fragment>
+        </section>
+      </div>
+    </React.Fragment>
   );
 };
 

@@ -60,7 +60,8 @@ const ServicesPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-              </a>            </div>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -72,7 +73,8 @@ const ServicesPage: React.FC = () => {
                 Powerful Features
               </h2>
               <p className="text-lg text-gray-300">
-                Everything you need for success              </p>
+                Everything you need for success
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -125,7 +127,9 @@ const ServicesPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>            </div>          </div>
+              </a>
+            </div>
+          </div>
         </section>
       </div>
     </div>

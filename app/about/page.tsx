@@ -33,24 +33,26 @@ const AboutPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
 
   return (
     <React.Fragment>
       <Helmet>
         <title>About - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional about solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="about, AI solutions, IT services, automation, technology, business solutions" />      </Helmet>
+        <meta name="keywords" content="about, AI solutions, IT services, automation, technology, business solutions" />
+      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Zion Tech Group
+              About
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We are a leading provider of advanced AI and IT solutions, helping businesses transform through cutting-edge technology.
+              Professional about solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -62,7 +64,8 @@ const AboutPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-              </a>            </div>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -80,15 +83,42 @@ const AboutPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
               ))}
             </div>
           </div>
         </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-lg text-gray-300">
+                Why choose our solution
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -105,7 +135,8 @@ const AboutPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>            </div>
+              </a>
+            </div>
           </div>
         </section>
       </div>
