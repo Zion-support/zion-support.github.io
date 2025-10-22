@@ -65,7 +65,7 @@ const AiPredictiveMaintenancePage: React.FC = () => {
                 View All Services
               </a>
             </div>
-              </a>            </div>          </div>
+          </div>
         </section>
 
         {/* Features Section */}

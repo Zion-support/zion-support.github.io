@@ -154,6 +154,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     document.head.appendChild(faqScript)
     
-  }, [title, description, canonicalUrl, structuredData])
+  }, [title, description, canonicalUrl, structuredData]);
+
+  return null;
+};
 
 export default SEOOptimizer;

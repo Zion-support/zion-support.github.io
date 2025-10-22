@@ -33,13 +33,12 @@ const ContactPage: React.FC = () => {
     '24/7 support',
     'Custom integrations'  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <React.Fragment>
       <Helmet>
         <title>Contact - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional contact solutions powered by advanced AI and cutting-edge technology." />
         <meta name="keywords" content="contact, AI solutions, IT services, automation, technology, business solutions" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -134,7 +133,8 @@ const ContactPage: React.FC = () => {
               </a>
             </div>
           </div>
-        </section>      </div>
+        </section>
+      </div>
     </React.Fragment>
   );
 };

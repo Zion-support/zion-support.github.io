@@ -37,7 +37,7 @@ const AiChatbotEnterprisePage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }  ];
+  ];
 
   const benefits = [
     'AI-powered automation',

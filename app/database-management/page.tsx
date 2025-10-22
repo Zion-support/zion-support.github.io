@@ -9,7 +9,7 @@ const DatabaseManagementPage: React.FC = () => {
       title: 'Advanced Technology',
       description: 'Cutting-edge solutions powered by the latest technology and AI.'
     },
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'    },    {
+    {
       icon: Zap,
       title: 'High Performance',
       description: 'Optimized for speed and efficiency with real-time processing capabilities.'
