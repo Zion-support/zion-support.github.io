@@ -68,6 +68,14 @@ class PerformanceOptimizer {
 
     // Monitor render performance
     this.measureRenderTime();
+    
+    // Initialize performance observers
+    this.observeLCP();
+    this.observeFID();
+    this.observeCLS();
+    this.observeFCP();
+    this.observeTTFB();
+    this.observeMemory();
   }
 
   /**
