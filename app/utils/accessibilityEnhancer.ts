@@ -29,7 +29,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
 
   const _enhancerRef = useRef<any>({})
 
-  // Define all handler functions first
   const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
     if (event.key === 'Tab') {
       // Handle tab navigation
@@ -76,7 +75,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     target.classList.remove('touch-active')
   }, [])
 
-  // Define all setup functions
   const setupKeyboardNavigation = useCallback(() => {
     document.addEventListener('keydown', handleKeyboardNavigation)
   }, [handleKeyboardNavigation])
@@ -186,33 +184,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     })
   }, [handleKeyboardNavigation, handleTouchStart, handleTouchEnd])
 
-  const getAccessibilityStatus = useCallback(() => {
-    return {
-      keyboardNavigation: enableKeyboardNavigation,
-      screenReader: enableScreenReader,
-      focusManagement: enableFocusManagement,
-      colorContrast: enableColorContrast,
-      textScaling: enableTextScaling,
-      motionReduction: enableMotionReduction,
-      highContrast: enableHighContrast,
-      voiceControl: enableVoiceControl,
-      touchAccessibility: enableTouchAccessibility,
-      ariaLabels: enableARIALabels
-    }
-  }, [
-    enableARIALabels,
-    enableColorContrast,
-    enableFocusManagement,
-    enableHighContrast,
-    enableKeyboardNavigation,
-    enableMotionReduction,
-    enableScreenReader,
-    enableTextScaling,
-    enableTouchAccessibility,
-    enableVoiceControl
-  ])
-
-  // Now the useEffect that uses all the functions
   useEffect(() => {
     if (enableKeyboardNavigation) {
       setupKeyboardNavigation()
@@ -281,8 +252,44 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     cleanup
   ])
 
+  const getAccessibilityStatus = useCallback(() => {
+    return {
+      keyboardNavigation: enableKeyboardNavigation,
+      screenReader: enableScreenReader,
+      focusManagement: enableFocusManagement,
+      colorContrast: enableColorContrast,
+      textScaling: enableTextScaling,
+      motionReduction: enableMotionReduction,
+      highContrast: enableHighContrast,
+      voiceControl: enableVoiceControl,
+      touchAccessibility: enableTouchAccessibility,
+      ariaLabels: enableARIALabels
+    }
+  }, [
+    enableARIALabels,
+    enableColorContrast,
+    enableFocusManagement,
+    enableHighContrast,
+    enableKeyboardNavigation,
+    enableMotionReduction,
+    enableScreenReader,
+    enableTextScaling,
+    enableTouchAccessibility,
+    enableVoiceControl
+  ])
+
   return {
     getAccessibilityStatus,
+    setupKeyboardNavigation,
+    setupScreenReaderSupport,
+    setupFocusManagement,
+    setupColorContrast,
+    setupTextScaling,
+    setupMotionReduction,
+    setupHighContrast,
+    setupVoiceControl,
+    setupTouchAccessibility,
+    setupARIALabels,
     _enhancerRef
   }
 }
