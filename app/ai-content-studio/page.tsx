@@ -153,7 +153,7 @@ const AiContentStudioPage: React.FC = () => {
 
 
       <Footer />
-    </>
+    </div>
   );
 };
 

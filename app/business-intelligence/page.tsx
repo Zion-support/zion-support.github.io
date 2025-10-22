@@ -61,7 +61,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </p>
 
         </div>
-
+      </section>
 
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -86,7 +86,7 @@ const BusinessIntelligencePage: React.FC = () => {
             ))}
           </div>
         </div>
-
+      </section>
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -132,7 +132,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };

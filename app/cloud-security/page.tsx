@@ -89,7 +89,7 @@ const CloudSecurityPage: React.FC = () => {
           </div>
 
         </div>
-
+      </section>
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -154,7 +154,7 @@ const CloudSecurityPage: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

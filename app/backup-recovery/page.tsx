@@ -153,7 +153,7 @@ const BackupRecoveryPage: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

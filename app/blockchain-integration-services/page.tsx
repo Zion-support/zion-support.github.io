@@ -61,7 +61,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
 
 
         </div>
-
+      </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -111,7 +111,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
             ))}
           </div>
         </div>
-
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -133,10 +133,9 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
                 Email Us
               </button>
             </div>
-
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

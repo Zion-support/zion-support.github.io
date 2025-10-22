@@ -150,7 +150,7 @@ const PagePage: React.FC = () => {
 
 
       <Footer />
-    </>
+    </div>
   );
 };
 

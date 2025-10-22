@@ -117,12 +117,14 @@ const PagePage: React.FC = () => {
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
-
                 </div>
-              ))}
-            </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
@@ -137,13 +139,11 @@ const PagePage: React.FC = () => {
               Start Your Free Trial
             </button>
           </div>
-
         </div>
       </section>
 
-
       <Footer />
-    </>
+    </div>
   );
 };
 
