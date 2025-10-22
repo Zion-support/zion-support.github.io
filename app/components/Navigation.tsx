@@ -173,15 +173,13 @@ const Navigation: React.FC = () => {
 
             {/* Contact Info */}
             <div className="flex items-center space-x-4">
-              <a
-                href="tel:+13024640950"
+              <a href="tel:+13024640950"
                 className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
               >
                 <Phone className="w-4 h-4" />
                 <span className="text-sm">(302) 464-0950</span>
               </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
+              <a href="mailto:kleber@ziontechgroup.com"
                 className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
               >
                 <Mail className="w-4 h-4" />
@@ -325,15 +323,13 @@ const Navigation: React.FC = () => {
 
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-slate-700 space-y-2">
-                <a
-                  href="tel:+13024640950"
+                <a href="tel:+13024640950"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
                   <Phone className="w-4 h-4" />
                   <span className="text-sm">(302) 464-0950</span>
                 </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
+                <a href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
                   <Mail className="w-4 h-4" />

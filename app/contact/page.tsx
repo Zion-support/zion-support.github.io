@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
-const ContactPage: React.FC = () => {
+
+const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -22,7 +23,8 @@ const ContactPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+    }
   ];
 
   const benefits = [
@@ -31,13 +33,15 @@ const ContactPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <React.Fragment>
       <Helmet>
-        <title>Contact - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional contact solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="contact, AI solutions, IT services, automation, technology, business solutions" />
+        <title>Page - Zion Tech Group | Advanced AI and IT Solutions</title>
+        <meta name="description" content="Professional page solutions powered by advanced AI and cutting-edge technology." />
+        <meta name="keywords" content="page, AI solutions, IT services, automation, technology, business solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -45,10 +49,10 @@ const ContactPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Contact
+              Page
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional contact solutions powered by advanced AI and cutting-edge technology.
+              Professional page solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -60,6 +64,7 @@ const ContactPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
+              </a>
             </div>
           </div>
         </section>
@@ -130,11 +135,13 @@ const ContactPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
-        </section>      </div>
+        </section>
+      </div>
     </React.Fragment>
   );
 };
 
-export default ContactPage;
+export default PagePage;

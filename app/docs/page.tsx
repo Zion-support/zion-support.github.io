@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
-const DocsPage: React.FC = () => {
+
+const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -24,7 +25,7 @@ const DocsPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }  ];
+  ];
 
   const benefits = [
     'AI-powered automation',
@@ -32,13 +33,15 @@ const DocsPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
+
   return (
     <React.Fragment>
       <Helmet>
-        <title>Docs - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional docs solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="docs, AI solutions, IT services, automation, technology, business solutions" />
+        <title>Page - Zion Tech Group | Advanced AI and IT Solutions</title>
+        <meta name="description" content="Professional page solutions powered by advanced AI and cutting-edge technology." />
+        <meta name="keywords" content="page, AI solutions, IT services, automation, technology, business solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -46,10 +49,10 @@ const DocsPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Docs
+              Page
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional docs solutions powered by advanced AI and cutting-edge technology.
+              Professional page solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -61,6 +64,7 @@ const DocsPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
+              </a>
             </div>
           </div>
         </section>
@@ -73,7 +77,9 @@ const DocsPage: React.FC = () => {
                 Powerful Features
               </h2>
               <p className="text-lg text-gray-300">
-                Everything you need for success              </p>            </div>
+                Everything you need for success
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
@@ -81,7 +87,9 @@ const DocsPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>              ))}
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -101,7 +109,9 @@ const DocsPage: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>                </div>              ))}
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -125,6 +135,7 @@ const DocsPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
         </section>
@@ -133,4 +144,4 @@ const DocsPage: React.FC = () => {
   );
 };
 
-export default DocsPage;
+export default PagePage;
