@@ -1,86 +1,64 @@
-<<<<<<< HEAD
-// Error handling utilities
-export interface AppError {
+export interface ErrorInfo {
   message: string;
-  code?: string | undefined;
-  statusCode?: number | undefined;
-  details?: Record<string, unknown> | undefined;
+  stack?: string;
+  componentStack?: string;
+  errorBoundary?: string;
 }
 
-export class CustomError extends Error {
-  public code?: string | undefined;
-  public statusCode?: number | undefined;
-  public details?: Record<string, unknown> | undefined;
+export class ErrorHandler {
+  private static instance: ErrorHandler;
+  private errorLog: ErrorInfo[] = [];
 
-  constructor(message: string, code: string = 'UNKNOWN_ERROR', statusCode: number = 500, details: Record<string, unknown> = {}) {
-    super(message);
-    this.name = 'CustomError';
-    this.code = code;
-    this.statusCode = statusCode;
-    this.details = details;
+  private constructor() {}
+
+  public static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
   }
-}
 
-export const handleError = (error: unknown): AppError => {
-  if (error instanceof CustomError) {
-    return {
+  public logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
+    const errorData: ErrorInfo = {
       message: error.message,
-      code: error.code,
-      statusCode: error.statusCode,
-      details: error.details,
+      stack: error.stack || '',
+      ...errorInfo,
     };
+
+    this.errorLog.push(errorData);
+    
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error logged:', errorData);
+    }
+
+    // Send to error reporting service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.sendToErrorService(errorData);
+    }
   }
 
-  if (error instanceof Error) {
-    return {
-      message: error.message,
-      code: 'UNKNOWN_ERROR',
-      statusCode: undefined,
-      details: undefined
-    };
+  public getErrors(): ErrorInfo[] {
+    return [...this.errorLog];
   }
 
-  return {
-    message: 'An unexpected error occurred',
-    code: 'UNKNOWN_ERROR',
-    statusCode: undefined,
-    details: undefined
-  };
-};
-
-export const logError = (_error: AppError, _context?: string) => {
-  if (process.env.NODE_ENV === 'development') {
-    // Error logging can be implemented here
-    // console.log('Error:', error, 'Context:', context);
+  public clearErrors(): void {
+    this.errorLog = [];
   }
-  
-  // In production, you would send this to your error monitoring service
-  // Example: sendToErrorService(error, context);
-};
 
-export const createError = (message: string, code?: string, statusCode?: number, details?: Record<string, unknown>): CustomError => {
-  return new CustomError(message, code, statusCode, details);
-};
-=======
-import React from 'react';
-
-interface errorHandlerProps {
-  className?: string;
-  children?: React.ReactNode;
+  private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
+    try {
+      await fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorData),
+      });
+    } catch (err) {
+      console.error('Failed to send error to service:', err);
+    }
+  }
 }
 
-const errorHandler: React.FC<errorHandlerProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`errorhandler-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">errorHandler</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default errorHandler;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+export const errorHandler = ErrorHandler.getInstance();

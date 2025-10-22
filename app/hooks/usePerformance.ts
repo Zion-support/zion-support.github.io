@@ -1,55 +1,61 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export function usePerformance() {
-  const [performanceData, setPerformanceData] = useState<any>(null);
+interface UsePerformanceOptions {
+  measureRenderTime?: boolean;
+  measureMemoryUsage?: boolean;
+}
 
-  useEffect(() => {
-    const getPerformanceData = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      return {
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalTime: navigation.loadEventEnd - navigation.fetchStart
-      };
-    };
-
-    setPerformanceData(getPerformanceData());
-  }, []);
-
-  const measureRender = (componentName: string) => {
-    const start = performance.now();
-    return () => {
-      const end = performance.now();
-      console.log(`${componentName} render time: ${end - start}ms`);
-    };
+interface UsePerformanceReturn {
+  performanceData: {
+    renderTime: number;
+    memoryUsage: number;
+    fps: number;
   };
-
-  return { performanceData, measureRender };
-}
-=======
-import { useCallback, useEffect, useRef, useState } from 'react';
-
-interface use PerformanceOptions {
-  // Options will be defined here
+  measureRenderTime: (fn: () => void) => void;
+  measureMemoryUsage: () => number;
 }
 
-export const use Performance = (options: use PerformanceOptions = {}) => {
-  const [state, setState] = useState({});
-  
-  const init = useCallback(() => {
-    // Hook implementation will be here
+export const usePerformance = (options: UsePerformanceOptions = {}): UsePerformanceReturn => {
+  const [performanceData, setPerformanceData] = useState({
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0,
+  });
+
+  const measureRenderTime = useCallback((fn: () => void) => {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    setPerformanceData(prev => ({
+      ...prev,
+      renderTime: end - start,
+    }));
+  }, []);
+
+  const measureMemoryUsage = useCallback(() => {
+    const memory = (performance as any).memory;
+    if (memory) {
+      const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      setPerformanceData(prev => ({
+        ...prev,
+        memoryUsage,
+      }));
+      return memoryUsage;
+    }
+    return 0;
   }, []);
 
   useEffect(() => {
-    init();
-  }, [init]);
+    if (options.measureMemoryUsage) {
+      measureMemoryUsage();
+    }
+  }, [measureMemoryUsage, options.measureMemoryUsage]);
 
   return {
-    state,
-    init
+    performanceData,
+    measureRenderTime,
+    measureMemoryUsage,
   };
 };
 
-export default use Performance;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+export default usePerformance;

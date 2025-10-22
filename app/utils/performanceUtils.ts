@@ -1,47 +1,98 @@
-<<<<<<< HEAD
-// Performance utilities
+export interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
 
-export function performanceUtils() {
-  return {
-    measurePerformance: (name: string, fn: () => void) => {
-      const start = performance.now();
-      fn();
-      const end = performance.now();
-      console.log(`${name} took ${end - start} milliseconds`);
-    },
-    debounce: (func: (...args: any[]) => void, wait: number) => {
-      let timeout: NodeJS.Timeout;
-      return function executedFunction(...args: any[]) {
-        const later = () => {
-          clearTimeout(timeout);
-          func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-      };
-    }
+export class PerformanceUtils {
+  private static instance: PerformanceUtils;
+  private metrics: PerformanceMetrics = {
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0,
   };
+
+  private constructor() {}
+
+  public static getInstance(): PerformanceUtils {
+    if (!PerformanceUtils.instance) {
+      PerformanceUtils.instance = new PerformanceUtils();
+    }
+    return PerformanceUtils.instance;
+  }
+
+  public measureLoadTime(): number {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+    this.metrics.loadTime = loadTime;
+    return loadTime;
+  }
+
+  public measureRenderTime(fn: () => void): number {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    const renderTime = end - start;
+    this.metrics.renderTime = renderTime;
+    return renderTime;
+  }
+
+  public measureMemoryUsage(): number {
+    const memory = (performance as any).memory;
+    if (memory) {
+      const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      this.metrics.memoryUsage = memoryUsage;
+      return memoryUsage;
+    }
+    return 0;
+  }
+
+  public measureFPS(): Promise<number> {
+    return new Promise((resolve) => {
+      let frameCount = 0;
+      const startTime = performance.now();
+
+      const countFrames = () => {
+        frameCount++;
+        const currentTime = performance.now();
+        
+        if (currentTime - startTime >= 1000) {
+          const fps = Math.round((frameCount * 1000) / (currentTime - startTime));
+          this.metrics.fps = fps;
+          resolve(fps);
+        } else {
+          requestAnimationFrame(countFrames);
+        }
+      };
+      
+      requestAnimationFrame(countFrames);
+    });
+  }
+
+  public getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
+
+  public resetMetrics(): void {
+    this.metrics = {
+      loadTime: 0,
+      renderTime: 0,
+      memoryUsage: 0,
+      fps: 0,
+    };
+  }
+
+  public optimizePerformance(): void {
+    // Force garbage collection if available
+    if ((window as any).gc) {
+      (window as any).gc();
+    }
+    
+    // Update memory usage
+    this.measureMemoryUsage();
+  }
 }
-=======
-import React from 'react';
 
-interface performanceUtilsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const performanceUtils: React.FC<performanceUtilsProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`performanceutils-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">performanceUtils</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default performanceUtils;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+export const performanceUtils = PerformanceUtils.getInstance();

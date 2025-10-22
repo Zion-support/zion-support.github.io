@@ -1,68 +1,82 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
-export function useEnhancedPerformance() {
-  const [isOptimized, setIsOptimized] = useState(false);
+interface PerformanceData {
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+  isVisible: boolean;
+}
 
-  useEffect(() => {
-    const optimizePerformance = () => {
-      // Enable resource hints
-      const criticalResources = [
-        '/app/styles/globals.css',
-        '/app/styles/futuristic.css'
-      ];
-      
-      criticalResources.forEach(href => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'style';
-        link.href = href;
-        document.head.appendChild(link);
-      });
+interface UseEnhancedPerformanceReturn {
+  performanceData: PerformanceData;
+  optimizePerformance: () => void;
+  measureRenderTime: (fn: () => void) => void;
+}
 
-      // Optimize images
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-      });
+export const useEnhancedPerformance = (): UseEnhancedPerformanceReturn => {
+  const [performanceData, setPerformanceData] = useState<PerformanceData>({
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0,
+    isVisible: true,
+  });
 
-      setIsOptimized(true);
-    };
-
-    optimizePerformance();
-  }, []);
-
-  const measurePerformance = (name: string, fn: () => void) => {
+  const measureRenderTime = useCallback((fn: () => void) => {
     const start = performance.now();
     fn();
     const end = performance.now();
-    console.log(`${name} execution time: ${end - start}ms`);
+    setPerformanceData(prev => ({
+      ...prev,
+      renderTime: end - start,
+    }));
+  }, []);
+
+  const optimizePerformance = useCallback(() => {
+    // Force garbage collection if available
+    if ((window as any).gc) {
+      (window as any).gc();
+    }
+    
+    // Update memory usage
+    const memory = (performance as any).memory;
+    if (memory) {
+      setPerformanceData(prev => ({
+        ...prev,
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024,
+      }));
+    }
+  }, []);
+
+  useEffect(() => {
+    const updateFPS = () => {
+      let lastTime = performance.now();
+      let frameCount = 0;
+
+      const countFrames = () => {
+        frameCount++;
+        const currentTime = performance.now();
+        
+        if (currentTime - lastTime >= 1000) {
+          setPerformanceData(prev => ({
+            ...prev,
+            fps: Math.round((frameCount * 1000) / (currentTime - lastTime)),
+          }));
+          frameCount = 0;
+          lastTime = currentTime;
+        }
+        
+        requestAnimationFrame(countFrames);
+      };
+      
+      requestAnimationFrame(countFrames);
+    };
+
+    updateFPS();
+  }, []);
+
+  return {
+    performanceData,
+    optimizePerformance,
+    measureRenderTime,
   };
-
-  return { isOptimized, measurePerformance };
-}
-=======
-import React from 'react';
-
-interface useEnhancedPerformanceProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const useEnhancedPerformance: React.FC<useEnhancedPerformanceProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`useenhancedperformance-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">useEnhancedPerformance</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  );
 };
-
-export default useEnhancedPerformance;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

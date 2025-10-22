@@ -1,55 +1,45 @@
-<<<<<<< HEAD
-import { useState, useEffect, useRef } from 'react';
-
-export function useIntersectionObserver() {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    const currentRef = ref.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
-
-  return { ref, isIntersecting };
-}
-=======
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-interface use Intersection ObserverOptions {
-  // Options will be defined here
+interface UseIntersectionObserverOptions {
+  root?: Element | null;
+  rootMargin?: string;
+  threshold?: number | number[];
 }
 
-export const use Intersection Observer = (options: use Intersection ObserverOptions = {}) => {
-  const [state, setState] = useState({});
-  
-  const init = useCallback(() => {
-    // Hook implementation will be here
+interface UseIntersectionObserverReturn {
+  ref: React.RefObject<HTMLElement>;
+  isIntersecting: boolean;
+  entry: IntersectionObserverEntry | null;
+}
+
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}): UseIntersectionObserverReturn => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
+  const ref = useRef<HTMLElement>(null);
+
+  const observerCallback = useCallback((entries: IntersectionObserverEntry[]) => {
+    const [entry] = entries;
+    setIsIntersecting(entry.isIntersecting);
+    setEntry(entry);
   }, []);
 
   useEffect(() => {
-    init();
-  }, [init]);
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(observerCallback, options);
+    observer.observe(element);
+
+    return () => {
+      observer.unobserve(element);
+    };
+  }, [observerCallback, options]);
 
   return {
-    state,
-    init
+    ref,
+    isIntersecting,
+    entry,
   };
 };
 
-export default use Intersection Observer;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+export default useIntersectionObserver;
