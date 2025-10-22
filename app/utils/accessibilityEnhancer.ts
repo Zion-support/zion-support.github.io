@@ -29,55 +29,53 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
 
   const _enhancerRef = useRef<any>({})
 
-  useEffect(() => {
-    if (enableKeyboardNavigation) {
-      setupKeyboardNavigation()
+  const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
+    if (event.key === 'Tab') {
+      // Handle tab navigation
+      const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )
+      
+      const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element)
+      
+      if (event.shiftKey) {
+        // Shift + Tab (backward)
+        if (currentIndex > 0) {
+          (focusableElements[currentIndex - 1] as HTMLElement).focus()
+        }
+      } else {
+        // Tab (forward)
+        if (currentIndex < focusableElements.length - 1) {
+          (focusableElements[currentIndex + 1] as HTMLElement).focus()
+        }
+      }
     }
+  }, [])
 
-    if (enableScreenReader) {
-      setupScreenReaderSupport()
+  const handleVoiceCommand = useCallback((transcript: string) => {
+    const command = transcript.toLowerCase().trim()
+    
+    if (command.includes('click') || command.includes('press')) {
+      const button = document.querySelector('button')
+      if (button) {
+        button.click()
+      }
     }
+  }, [])
 
-    if (enableFocusManagement) {
-      setupFocusManagement()
-    }
+  const handleTouchStart = useCallback((event: TouchEvent) => {
+    const target = event.target as HTMLElement
+    target.classList.add('touch-active')
+  }, [])
 
-    if (enableColorContrast) {
-      setupColorContrast()
-    }
-
-    if (enableTextScaling) {
-      setupTextScaling()
-    }
-
-    if (enableMotionReduction) {
-      setupMotionReduction()
-    }
-
-    if (enableHighContrast) {
-      setupHighContrast()
-    }
-
-    if (enableVoiceControl) {
-      setupVoiceControl()
-    }
-
-    if (enableTouchAccessibility) {
-      setupTouchAccessibility()
-    }
-
-    if (enableARIALabels) {
-      setupARIALabels()
-    }
-
-    return () => {
-      cleanup()
-    }
-  }, [options])
+  const handleTouchEnd = useCallback((event: TouchEvent) => {
+    const target = event.target as HTMLElement
+    target.classList.remove('touch-active')
+  }, [])
 
   const setupKeyboardNavigation = useCallback(() => {
     document.addEventListener('keydown', handleKeyboardNavigation)
-  }, [])
+  }, [handleKeyboardNavigation])
 
   const setupScreenReaderSupport = useCallback(() => {
     // Add screen reader specific attributes
@@ -154,7 +152,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
         handleVoiceCommand(transcript)
       }
     }
-  }, [])
+  }, [handleVoiceCommand])
 
   const setupTouchAccessibility = useCallback(() => {
     // Enhance touch accessibility
@@ -163,7 +161,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       el.addEventListener('touchstart', handleTouchStart as EventListener)
       el.addEventListener('touchend', handleTouchEnd as EventListener)
     })
-  }, [])
+  }, [handleTouchStart, handleTouchEnd])
 
   const setupARIALabels = useCallback(() => {
     // Add ARIA labels where missing
@@ -175,50 +173,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     })
   }, [])
 
-  const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
-    if (event.key === 'Tab') {
-      // Handle tab navigation
-      const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      )
-      
-      const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element)
-      
-      if (event.shiftKey) {
-        // Shift + Tab (backward)
-        if (currentIndex > 0) {
-          (focusableElements[currentIndex - 1] as HTMLElement).focus()
-        }
-      } else {
-        // Tab (forward)
-        if (currentIndex < focusableElements.length - 1) {
-          (focusableElements[currentIndex + 1] as HTMLElement).focus()
-        }
-      }
-    }
-  }, [])
-
-  const handleVoiceCommand = useCallback((transcript: string) => {
-    const command = transcript.toLowerCase().trim()
-    
-    if (command.includes('click') || command.includes('press')) {
-      const button = document.querySelector('button')
-      if (button) {
-        button.click()
-      }
-    }
-  }, [])
-
-  const handleTouchStart = useCallback((event: TouchEvent) => {
-    const target = event.target as HTMLElement
-    target.classList.add('touch-active')
-  }, [])
-
-  const handleTouchEnd = useCallback((event: TouchEvent) => {
-    const target = event.target as HTMLElement
-    target.classList.remove('touch-active')
-  }, [])
-
   const cleanup = useCallback(() => {
     document.removeEventListener('keydown', handleKeyboardNavigation)
     
@@ -228,6 +182,74 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       el.removeEventListener('touchend', handleTouchEnd as EventListener)
     })
   }, [handleKeyboardNavigation, handleTouchStart, handleTouchEnd])
+
+  useEffect(() => {
+    if (enableKeyboardNavigation) {
+      setupKeyboardNavigation()
+    }
+
+    if (enableScreenReader) {
+      setupScreenReaderSupport()
+    }
+
+    if (enableFocusManagement) {
+      setupFocusManagement()
+    }
+
+    if (enableColorContrast) {
+      setupColorContrast()
+    }
+
+    if (enableTextScaling) {
+      setupTextScaling()
+    }
+
+    if (enableMotionReduction) {
+      setupMotionReduction()
+    }
+
+    if (enableHighContrast) {
+      setupHighContrast()
+    }
+
+    if (enableVoiceControl) {
+      setupVoiceControl()
+    }
+
+    if (enableTouchAccessibility) {
+      setupTouchAccessibility()
+    }
+
+    if (enableARIALabels) {
+      setupARIALabels()
+    }
+
+    return () => {
+      cleanup()
+    }
+  }, [
+    enableKeyboardNavigation,
+    enableScreenReader,
+    enableFocusManagement,
+    enableColorContrast,
+    enableTextScaling,
+    enableMotionReduction,
+    enableHighContrast,
+    enableVoiceControl,
+    enableTouchAccessibility,
+    enableARIALabels,
+    setupKeyboardNavigation,
+    setupScreenReaderSupport,
+    setupFocusManagement,
+    setupColorContrast,
+    setupTextScaling,
+    setupMotionReduction,
+    setupHighContrast,
+    setupVoiceControl,
+    setupTouchAccessibility,
+    setupARIALabels,
+    cleanup
+  ])
 
   const getAccessibilityStatus = useCallback(() => {
     return {
@@ -242,7 +264,18 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       touchAccessibility: enableTouchAccessibility,
       ariaLabels: enableARIALabels
     }
-  }, [options])
+  }, [
+    enableKeyboardNavigation,
+    enableScreenReader,
+    enableFocusManagement,
+    enableColorContrast,
+    enableTextScaling,
+    enableMotionReduction,
+    enableHighContrast,
+    enableVoiceControl,
+    enableTouchAccessibility,
+    enableARIALabels
+  ])
 
   return {
     getAccessibilityStatus,
