@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-
 const StatusPage: React.FC = () => {
   return (
     <>
@@ -12,6 +11,12 @@ const StatusPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
-
+          <h1>System Status</h1>
+          <p>All systems are operational.</p>
+        </div>
       </div>
     </>
+  );
+};
+
+export default StatusPage;
