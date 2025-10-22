@@ -1,58 +1,40 @@
-
-import React from 'react'
-interface ErrorBoundaryProps {
-  className?: string
-  children?: React.ReactNode
-}
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`errorboundary-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">ErrorBoundary</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  )
-}
-'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
+
 interface Props {
   children: ReactNode
 }
+
 interface State {
   hasError: boolean
   error?: Error
 }
+
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
   }
-  public static getDerivedStateFromError(error: Error): State {
+
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Uncaught error:', error, errorInfo)
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error Boundary caught an error:', error, errorInfo)
   }
-  public render() {
+
+  render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-400 mb-8">We're sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Reload Page
-            </button>
-          </div>
+        <div className="p-4 bg-red-900/20 border border-red-500 rounded-lg">
+          <h2 className="text-red-400 font-semibold mb-2">Something went wrong</h2>
+          <p className="text-red-300 text-sm">Please try refreshing the page.</p>
         </div>
       )
     }
+
     return this.props.children
   }
 }
+
 export default ErrorBoundary

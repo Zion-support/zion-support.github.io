@@ -1,25 +1,15 @@
-// Structured data utilities
-export function structuredData() {
-  return {
-    generateOrganizationSchema: (orgData: any) => ({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      ...orgData
-    }),
-    generateWebSiteSchema: (siteData: any) => ({
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      ...siteData
-    }),
-    generateBreadcrumbSchema: (breadcrumbs: any[]) => ({
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((item, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: item.name,
-        item: item.url
-      }))
-    })
+// structuredData utility functions
+
+export const structuredData = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('structuredData initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
   }
 }
+
+export default structuredData

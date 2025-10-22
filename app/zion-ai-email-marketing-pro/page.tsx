@@ -1,64 +1,84 @@
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
-const ZionAIEmailMarketingProPage: React.FC = () => {
+import { Link } from 'react-router-dom'
+import { ArrowRight, Layers, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, CheckCircle, Star, Clock, Zap, Shield } from 'lucide-react'
+
+export default function ZionAiEmailMarketingProPage() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Email Marketing Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your email marketing with AI-powered campaigns, personalization, and automation. Boost engagement and conversions." />
+        <title>Zion | Ai Email Marketing Pro | Zion Tech Group</title>
+        <meta name="description" content="Professional Zion Ai Email Marketing Pro solutions for modern businesses." />
       </Helmet>
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Email Marketing Pro</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Revolutionize your email marketing with AI-powered campaigns, personalization, and automation. Boost engagement and drive conversions.
-            </p>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+            Zion Ai Email Marketing Pro
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional Zion Ai Email Marketing Pro solutions for modern businesses.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Brain className="w-12 h-12 text-cyan-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
+            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI-Powered Personalization</h3>
-              <p className="text-gray-600">
-                Create highly personalized email campaigns that resonate with each recipient using advanced AI algorithms.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Content Generation</h3>
-              <p className="text-gray-600">
-                Generate compelling email content automatically based on your brand voice and campaign objectives.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Analytics</h3>
-              <p className="text-gray-600">
-                Predict customer behavior and optimize send times for maximum engagement and conversion rates.
-              </p>
-            </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <BarChart className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
+            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
           </div>
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Advanced Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Automated A/B Testing</h3>
-                <p className="text-gray-600">Continuously test and optimize your email campaigns with AI-driven A/B testing.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Dynamic Segmentation</h3>
-                <p className="text-gray-600">Automatically segment your audience based on behavior, preferences, and engagement patterns.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Smart Scheduling</h3>
-                <p className="text-gray-600">AI determines the optimal send times for each recipient to maximize open and click rates.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Performance Optimization</h3>
-                <p className="text-gray-600">Continuously optimize campaign performance based on real-time data and AI insights.</p>
-              </div>
-            </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Target className="w-12 h-12 text-yellow-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
+            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <TrendingUp className="w-12 h-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Performance Optimization</h3>
+            <p className="text-gray-300">Optimize your business performance with our advanced solutions.</p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Globe className="w-12 h-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
+            <p className="text-gray-300">Expand your business globally with our comprehensive solutions.</p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Shield className="w-12 h-12 text-red-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Security First</h3>
+            <p className="text-gray-300">Enterprise-grade security to protect your business and data.</p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <p className="text-lg text-gray-300 mb-8">
+            Ready to get started with Zion Ai Email Marketing Pro?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
-export default ZionAIEmailMarketingProPage

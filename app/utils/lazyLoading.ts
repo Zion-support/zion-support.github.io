@@ -1,22 +1,15 @@
-// Lazy loading utilities
-export function lazyLoading() {
-  return {
-    loadImage: (src: string): Promise<HTMLImageElement> => {
-      return new Promise((resolve, reject) => {
-        const img = new Image()
-        img.onload = () => resolve(img)
-        img.onerror = reject
-        img.src = src
-      })
-    },
-    loadScript: (src: string): Promise<void> => {
-      return new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.onload = () => resolve()
-        script.onerror = reject
-        script.src = src
-        document.head.appendChild(script)
-      })
-    }
+// lazyLoading utility functions
+
+export const lazyLoading = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('lazyLoading initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
   }
 }
+
+export default lazyLoading

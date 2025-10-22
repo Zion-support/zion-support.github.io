@@ -1,113 +1,84 @@
-import React from 'react'
-import SEOHead from '../components/SEOHead'
-const AugmentedRealitySolutionsPage: React.FC = () => {
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Layers, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, CheckCircle, Star, Clock, Zap, Shield } from 'lucide-react'
+
+export default function AugmentedRealitySolutionsPage() {
   return (
-    <>
-<SEOHead
-        title="Augmented Reality Solutions - Zion Tech Group"
-        description="Advanced AR solutions for enterprise, retail, education, and healthcare with custom AR applications and immersive experiences."
-        keywords="augmented reality, AR solutions, AR development, immersive technology, AR applications, mixed reality"
-        canonicalUrl="https://ziontechgroup.com/augmented-reality-solutions"
-      />
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Augmented Reality Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Create immersive AR experiences for enterprise, retail, education, and healthcare with our advanced augmented reality solutions.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Augmented | Reality Solutions | Zion Tech Group</title>
+        <meta name="description" content="Professional Augmented Reality Solutions solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+            Augmented Reality Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional Augmented Reality Solutions solutions for modern businesses.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Brain className="w-12 h-12 text-cyan-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
+            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-slate-800 rounded-lg p-6">
-              <h2 className="text-2xl font-semibold mb-4 text-orange-400">AR Development</h2>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Custom AR applications
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Cross-platform AR solutions
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  AR content creation
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  3D object recognition
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Real-time tracking
-                </li>
-              </ul>
-            </div>
-            <div className="bg-slate-800 rounded-lg p-6">
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">AR Applications</h2>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Retail and e-commerce
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Training and education
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Healthcare visualization
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Industrial maintenance
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Marketing and advertising
-                </li>
-              </ul>
-            </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <BarChart className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
+            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
           </div>
-          <div className="bg-slate-800 rounded-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">AR Technology Stack</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📱</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-orange-400">Mobile AR</h3>
-                <p className="text-gray-300">iOS and Android AR applications using ARKit and ARCore.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🥽</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-red-400">AR Glasses</h3>
-                <p className="text-gray-300">Enterprise AR solutions for HoloLens and Magic Leap.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🌐</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-purple-400">Web AR</h3>
-                <p className="text-gray-300">Browser-based AR experiences accessible on any device.</p>
-              </div>
-            </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Target className="w-12 h-12 text-yellow-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
+            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
           </div>
-          <div className="text-center">
-            <a
-              href="/contact?service=augmented-reality-solutions"
-              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300"
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <TrendingUp className="w-12 h-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Performance Optimization</h3>
+            <p className="text-gray-300">Optimize your business performance with our advanced solutions.</p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Globe className="w-12 h-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
+            <p className="text-gray-300">Expand your business globally with our comprehensive solutions.</p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Shield className="w-12 h-12 text-red-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Security First</h3>
+            <p className="text-gray-300">Enterprise-grade security to protect your business and data.</p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <p className="text-lg text-gray-300 mb-8">
+            Ready to get started with Augmented Reality Solutions?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
             >
-              Create AR Experience
-            </a>
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
-export default AugmentedRealitySolutionsPage

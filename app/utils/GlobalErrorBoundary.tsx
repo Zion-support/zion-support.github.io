@@ -1,18 +1,15 @@
-import React from 'react'
-interface GlobalErrorBoundaryProps {
-  className?: string
-  children?: React.ReactNode
+// GlobalErrorBoundary utility functions
+
+export const GlobalErrorBoundary = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('GlobalErrorBoundary initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
-const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`globalerrorboundary-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">GlobalErrorBoundary</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  )
-}
+
 export default GlobalErrorBoundary

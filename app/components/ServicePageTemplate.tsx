@@ -1,31 +1,15 @@
-import React from 'react'
-interface ServicePageTemplateProps {
-  className?: string
-  children?: React.ReactNode
-  title?: string
-  description?: string
-  keywords?: string
-  icon?: React.ComponentType<any>
-  features?: any[]
-  pricing?: any
-  benefits?: string[]
-  useCases?: any[]
-  technologies?: string[]
-  contactInfo?: any
-  ctaLink?: string
-  ctaText?: string
-  technicalSpecs?: any[]
+// ServicePageTemplate utility functions
+
+export const ServicePageTemplate = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('ServicePageTemplate initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
-const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`servicepagetemplate-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">ServicePageTemplate</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  )
-}
+
 export default ServicePageTemplate

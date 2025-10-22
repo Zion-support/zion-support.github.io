@@ -1,18 +1,25 @@
 import React from 'react'
-import DataCleanupManager from '../../src/components/DataCleanupManager'
+
 const AdminPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-4">Admin Dashboard</h1>
-          <p className="text-gray-300 text-xl">Data Management and System Administration</p>
+    <div className="min-h-screen bg-slate-900 p-8">
+      <h1 className="text-3xl font-bold text-white mb-8">Admin Dashboard</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="bg-slate-800 p-6 rounded-lg">
+          <h2 className="text-xl font-semibold text-white mb-4">Users</h2>
+          <p className="text-gray-300">Manage user accounts and permissions</p>
         </div>
-        <div className="max-w-6xl mx-auto">
-          <DataCleanupManager showAdvanced={true} />
+        <div className="bg-slate-800 p-6 rounded-lg">
+          <h2 className="text-xl font-semibold text-white mb-4">Analytics</h2>
+          <p className="text-gray-300">View site analytics and performance</p>
+        </div>
+        <div className="bg-slate-800 p-6 rounded-lg">
+          <h2 className="text-xl font-semibold text-white mb-4">Settings</h2>
+          <p className="text-gray-300">Configure site settings</p>
         </div>
       </div>
     </div>
   )
 }
+
 export default AdminPage

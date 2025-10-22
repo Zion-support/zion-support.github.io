@@ -1,18 +1,15 @@
-import React from 'react'
-interface ContactPageProps {
-  className?: string
-  children?: React.ReactNode
+// ContactPage utility functions
+
+export const ContactPage = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('ContactPage initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
-const ContactPage: React.FC<ContactPageProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`contactpage-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">ContactPage</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  )
-}
+
 export default ContactPage

@@ -1,202 +1,84 @@
-import React from 'react'
-import SEOHead from '../components/SEOHead'
-const BlockchainSolutionsProPage: React.FC = () => {
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Layers, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, CheckCircle, Star, Clock, Zap, Shield } from 'lucide-react'
+
+export default function BlockchainSolutionsProPage() {
   return (
-    <>
-      <SEOHead
-        title="Zion Blockchain Solutions Pro - Enterprise Blockchain Development"
-        description="Transform your business with our comprehensive blockchain solutions. Smart contracts, DeFi applications, and enterprise blockchain development services."
-        keywords="blockchain development, smart contracts, DeFi, NFT, enterprise blockchain, cryptocurrency, blockchain consulting"
-        canonicalUrl="https://ziontechgroup.com/blockchain-solutions-pro"
-      />
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Zion Blockchain Solutions Pro</h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Comprehensive blockchain development services including smart contracts, DeFi applications, and enterprise blockchain solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="#features"
-                  className="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Explore Features
-                </a>
-                <a
-                  href="/contact?service=blockchain-solutions-pro"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors"
-                >
-                  Get Started
-                </a>
-              </div>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Blockchain | Solutions Pro | Zion Tech Group</title>
+        <meta name="description" content="Professional Blockchain Solutions Pro solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+            Blockchain Solutions Pro
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional Blockchain Solutions Pro solutions for modern businesses.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Brain className="w-12 h-12 text-cyan-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
+            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <BarChart className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
+            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Target className="w-12 h-12 text-yellow-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
+            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <TrendingUp className="w-12 h-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Performance Optimization</h3>
+            <p className="text-gray-300">Optimize your business performance with our advanced solutions.</p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Globe className="w-12 h-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
+            <p className="text-gray-300">Expand your business globally with our comprehensive solutions.</p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Shield className="w-12 h-12 text-red-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Security First</h3>
+            <p className="text-gray-300">Enterprise-grade security to protect your business and data.</p>
           </div>
         </div>
-        {/* Features Section */}
-        <div id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Blockchain Features</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our blockchain solutions combine cutting-edge technology with enterprise-grade security and scalability
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">📜</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Contract Development</h3>
-              <p className="text-gray-600">Build secure, audited smart contracts for various use cases and blockchain platforms</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🏦</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">DeFi Applications</h3>
-              <p className="text-gray-600">Create decentralized finance applications including DEXs, lending protocols, and yield farming</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">NFT Marketplaces</h3>
-              <p className="text-gray-600">Build NFT marketplaces and platforms for digital art, collectibles, and unique assets</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🪙</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Token Development</h3>
-              <p className="text-gray-600">Create custom tokens, cryptocurrencies, and tokenomics for your blockchain project</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🔗</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Blockchain Integration</h3>
-              <p className="text-gray-600">Integrate blockchain technology with existing systems and business processes</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Security Audits</h3>
-              <p className="text-gray-600">Comprehensive security audits and penetration testing for blockchain applications</p>
-            </div>
-          </div>
-        </div>
-        {/* Pricing Section */}
-        <div className="bg-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
-              <p className="text-lg text-gray-600">Choose the plan that fits your blockchain development needs</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic</h3>
-                <div className="text-4xl font-bold text-gray-800 mb-4">$5,000<span className="text-lg text-gray-500">/project</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Simple smart contracts</li>
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Basic token development</li>
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Security audit</li>
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Email support</li>
-                </ul>
-                <a href="/contact?service=blockchain-solutions-pro&plan=basic" className="w-full bg-gray-800 text-white text-center py-3 px-4 rounded-lg hover:bg-gray-900 transition-colors">
-                  Get Started
-                </a>
-              </div>
-              <div className="bg-gray-800 text-white p-8 rounded-xl relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Pro</h3>
-                <div className="text-4xl font-bold mb-4">$25,000<span className="text-lg opacity-75">/project</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Complex smart contracts</li>
-                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> DeFi applications</li>
-                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> NFT marketplace</li>
-                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Advanced tokenomics</li>
-                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Integration services</li>
-                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Priority support</li>
-                </ul>
-                <a href="/contact?service=blockchain-solutions-pro&plan=pro" className="w-full bg-white text-gray-800 text-center py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                  Get Started
-                </a>
-              </div>
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-gray-800 mb-4">$100,000<span className="text-lg text-gray-500">/project</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Custom blockchain</li>
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> All features included</li>
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Enterprise integration</li>
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Custom development</li>
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Consulting services</li>
-                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 24/7 dedicated support</li>
-                </ul>
-                <a href="/contact?service=blockchain-solutions-pro&plan=enterprise" className="w-full bg-gray-800 text-white text-center py-3 px-4 rounded-lg hover:bg-gray-900 transition-colors">
-                  Contact Sales
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Use Cases Section */}
-        <div className="bg-gray-50 py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Use Cases</h2>
-              <p className="text-lg text-gray-600">See how our blockchain solutions can transform your business</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Supply Chain Tracking</h3>
-                <p className="text-gray-600">Track products from origin to consumer with immutable blockchain records and transparency.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Digital Identity</h3>
-                <p className="text-gray-600">Create secure, self-sovereign digital identities for users and organizations.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Financial Services</h3>
-                <p className="text-gray-600">Build DeFi protocols, payment systems, and financial applications on blockchain.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Healthcare Records</h3>
-                <p className="text-gray-600">Secure, interoperable healthcare records with patient-controlled access and privacy.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Real Estate</h3>
-                <p className="text-gray-600">Tokenize real estate assets and create fractional ownership platforms.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Voting Systems</h3>
-                <p className="text-gray-600">Secure, transparent voting systems with verifiable results and audit trails.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-4">Ready to Build the Future with Blockchain?</h2>
-            <p className="text-xl mb-8">
-              Join the blockchain revolution with our expert development team and cutting-edge solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact?service=blockchain-solutions-pro"
-                className="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Start Your Project
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
-            </div>
-            <div className="mt-8 text-sm">
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
+
+        <div className="text-center">
+          <p className="text-lg text-gray-300 mb-8">
+            Ready to get started with Blockchain Solutions Pro?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
-export default BlockchainSolutionsProPage
