@@ -34,7 +34,7 @@ const BlockchainPage: React.FC = () => {
               <p className="text-gray-600">Implement blockchain for transparent supply chain management.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

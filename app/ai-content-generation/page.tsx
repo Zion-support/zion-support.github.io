@@ -34,7 +34,7 @@ const AiContentGenerationPage: React.FC = () => {
               <p className="text-gray-600">Generate video content and animations with AI-powered video tools.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

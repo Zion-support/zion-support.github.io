@@ -34,7 +34,7 @@ const AiFintechPage: React.FC = () => {
               <p className="text-gray-600">Automated trading systems powered by AI for optimal investment strategies.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

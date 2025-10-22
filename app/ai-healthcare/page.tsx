@@ -34,7 +34,7 @@ const AiHealthcarePage: React.FC = () => {
               <p className="text-gray-600">Accelerate drug discovery and development with AI algorithms.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

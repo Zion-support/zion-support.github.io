@@ -34,7 +34,7 @@ const AiMarketingPage: React.FC = () => {
               <p className="text-gray-600">Forecast customer behavior and optimize marketing campaigns in real-time.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

@@ -34,7 +34,7 @@ const IoTEdgeComputingPage: React.FC = () => {
               <p className="text-gray-600">Analyze data in real-time for immediate insights and actions.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );
