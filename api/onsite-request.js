@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, company, phone, message, location, serviceType, preferredDate } = req.body || {};
+    const { name, email, company, phone, message, serviceType, preferredDate } = req.body || {};
 
     if (!name || !email) {
       return res.status(400).json({ error: 'Name and email are required' });

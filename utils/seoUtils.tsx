@@ -1,6 +1,7 @@
 // SEO utilities for the Zion Tech Group website
 
 import { Helmet } from 'react-helmet-async';
+import React from 'react';
 
 export interface SEOProps {
   title?: string;
@@ -147,7 +148,4 @@ export const seoUtils = {
   }
 };
 
-// Default SEO component
-export const DefaultSEO: React.FC<SEOProps> = (props) => {
-  return seoUtils.generateMetaTags(props);
-};
+// Default SEO component - moved to separate file to avoid react-refresh warning
