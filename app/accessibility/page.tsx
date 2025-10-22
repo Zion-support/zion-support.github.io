@@ -76,7 +76,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Databa
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-              </a>            </div>
+            </div>
           </div>
         </section>
 
@@ -138,7 +138,8 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Databa
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>            </div>          </div>
+            </div>
+          </div>
         </div>
       </div>
     </React.Fragment>

@@ -107,7 +107,7 @@ const AppPage: React.FC = () => {
       </div>
       
       <Footer />
-    </AccessibilityEnhancer>
+    </React.Fragment>
   )
 }
 
