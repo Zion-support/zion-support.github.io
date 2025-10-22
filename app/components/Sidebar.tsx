@@ -1,9 +1,15 @@
 'use client';
 import React from 'react';
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
-    <div>
+    <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
+      <button onClick={onClose}>Close</button>
       <h1>Sidebar</h1>
     </div>
   );
