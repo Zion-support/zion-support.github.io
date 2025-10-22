@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
 // Components
 import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
@@ -268,7 +267,6 @@ const App = memo(() => {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />
-            <Sidebar />
             
             <main className="flex-1">
               <ErrorBoundary>

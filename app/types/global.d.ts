@@ -1,4 +1,5 @@
 import React from 'react'
+import '@testing-library/jest-dom'
 
 // Global type definitions for the application
 declare global {
@@ -9,11 +10,13 @@ declare global {
 }
 
 // Environment variables
-declare namespace ProcessEnv {
-  interface ProcessEnv {
-    NODE_ENV: 'development' | 'production' | 'test'
-    NEXT_PUBLIC_GA_ID?: string
-    NEXT_PUBLIC_SITE_URL?: string
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      NODE_ENV: 'development' | 'production' | 'test'
+      NEXT_PUBLIC_GA_ID?: string
+      NEXT_PUBLIC_SITE_URL?: string
+    }
   }
 }
 
