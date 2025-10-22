@@ -36,9 +36,8 @@ const PagePage: React.FC = () => {
 
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
@@ -79,7 +78,6 @@ const PagePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced solutions designed for modern business needs
-
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const BusinessAppsPage: React.FC = () => {
   const features = [
@@ -85,9 +86,8 @@ const BusinessAppsPage: React.FC = () => {
               </div>
             ))}
           </div>
-
         </div>
-
+      </section>
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -152,7 +152,9 @@ const BusinessAppsPage: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };

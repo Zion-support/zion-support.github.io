@@ -153,10 +153,10 @@ const AiContentStudioPage: React.FC = () => {
 
 
       <Footer />
-    </>
+    </div>
   );
 };
 
 
-export default AIContentStudioPage;
+export default AiContentStudioPage;
 

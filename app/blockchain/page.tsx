@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap, Link, Target, Star, Cpu, Sparkles, BarChart } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
   const features = [
@@ -24,6 +24,55 @@ const BlockchainPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide blockchain deployment and support for international businesses'
+    }
+  ];
+
+  const categories = ['Enterprise', 'Financial', 'Healthcare', 'Supply Chain'];
+  
+  const blockchainServices = [
+    {
+      title: 'Smart Contract Development',
+      category: 'Enterprise',
+      description: 'Custom smart contracts for business automation',
+      icon: Cpu,
+      price: '$5,000',
+      marketPrice: '$4,500',
+      features: ['Custom Development', 'Security Audit', 'Testing'],
+      technologies: ['Solidity', 'Ethereum', 'Web3'],
+      benefits: ['Cost Effective', 'Secure', 'Scalable']
+    },
+    {
+      title: 'DeFi Solutions',
+      category: 'Financial',
+      description: 'Decentralized finance applications and protocols',
+      icon: Target,
+      price: '$10,000',
+      marketPrice: '$9,000',
+      features: ['DEX Development', 'Yield Farming', 'Liquidity Pools'],
+      technologies: ['React', 'Web3.js', 'Ethereum'],
+      benefits: ['High ROI', 'Decentralized', 'Transparent']
+    },
+    {
+      title: 'NFT Marketplace',
+      category: 'Enterprise',
+      description: 'Non-fungible token marketplace development',
+      icon: Sparkles,
+      price: '$8,000',
+      marketPrice: '$7,200',
+      features: ['Minting', 'Trading', 'Royalties'],
+      technologies: ['IPFS', 'Ethereum', 'React'],
+      benefits: ['Unique Assets', 'Ownership', 'Trading']
+    },
+    {
+      title: 'Blockchain Analytics',
+      category: 'Financial',
+      description: 'Advanced analytics for blockchain data',
+      icon: BarChart,
+      price: '$6,000',
+      marketPrice: '$5,400',
+      features: ['Real-time Data', 'Visualization', 'Reports'],
+      technologies: ['Python', 'Node.js', 'D3.js'],
+      benefits: ['Insights', 'Monitoring', 'Compliance']
     }
   ];
 
@@ -68,10 +117,9 @@ const BlockchainPage: React.FC = () => {
                   Schedule Blockchain Consultation
                 </button>
               </div>
-
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -149,7 +197,9 @@ const BlockchainPage: React.FC = () => {
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}</div>
+                      <div className="text-4xl mb-4">
+                        <service.icon className="w-12 h-12 text-blue-600" />
+                      </div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
                       
