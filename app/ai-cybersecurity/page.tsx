@@ -34,7 +34,7 @@ const AiCybersecurityPage: React.FC = () => {
               <p className="text-gray-600">Automatically respond to security incidents and mitigate threats.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

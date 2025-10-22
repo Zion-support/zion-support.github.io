@@ -44,7 +44,7 @@ const ConsultationPage: React.FC = () => {
               </button>
             </form>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

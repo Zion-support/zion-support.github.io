@@ -34,7 +34,7 @@ const ItInfrastructurePage: React.FC = () => {
               <p className="text-gray-600">Seamlessly migrate your infrastructure to cloud platforms.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

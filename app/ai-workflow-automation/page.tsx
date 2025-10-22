@@ -34,7 +34,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
               <p className="text-gray-600">Workflows that learn and adapt to improve performance over time.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

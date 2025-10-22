@@ -34,7 +34,7 @@ const QuantumComputingPage: React.FC = () => {
               <p className="text-gray-600">Implement quantum-resistant cryptographic solutions.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

@@ -34,7 +34,7 @@ const AiAutomationPage: React.FC = () => {
               <p className="text-gray-600">Let AI make informed decisions based on data and business rules.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );
