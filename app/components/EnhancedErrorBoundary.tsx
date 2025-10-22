@@ -1,16 +1,15 @@
-import React from 'react';
+// EnhancedErrorBoundary utility functions
 
-interface EnhancedErrorBoundaryProps {
-  className?: string;
+export const EnhancedErrorBoundary = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('EnhancedErrorBoundary initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
 
-const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>EnhancedErrorBoundary</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
-
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

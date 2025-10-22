@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 
-interface ErrorBoundaryProps {
-  className?: string;
-  children: React.ReactNode;
+interface Props {
+  children: ReactNode
 }
 
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      {children}
-    </div>
-  );
-};
+interface State {
+  hasError: boolean
+  error?: Error
+}
 
-export default ErrorBoundary;
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error Boundary caught an error:', error, errorInfo)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="p-4 bg-red-900/20 border border-red-500 rounded-lg">
+          <h2 className="text-red-400 font-semibold mb-2">Something went wrong</h2>
+          <p className="text-red-300 text-sm">Please try refreshing the page.</p>
+        </div>
+      )
+    }
+
+    return this.props.children
+  }
+}
+
+export default ErrorBoundary

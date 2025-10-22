@@ -1,16 +1,15 @@
-import React from 'react';
+// OptimizedImage utility functions
 
-interface OptimizedImageProps {
-  className?: string;
+export const OptimizedImage = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('OptimizedImage initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>OptimizedImage</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
-
-export default OptimizedImage;
+export default OptimizedImage

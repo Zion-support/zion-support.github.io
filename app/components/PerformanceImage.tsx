@@ -1,16 +1,15 @@
-import React from 'react';
+// PerformanceImage utility functions
 
-interface PerformanceImageProps {
-  className?: string;
+export const PerformanceImage = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('PerformanceImage initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
 
-const PerformanceImage: React.FC<PerformanceImageProps> = ({ className = '' }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>PerformanceImage</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
-
-export default PerformanceImage;
+export default PerformanceImage

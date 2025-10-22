@@ -1,129 +1,126 @@
-
 export interface Service {
   id: string
-  title: string
+  name: string
   description: string
   shortDescription: string
-  icon: string
-  features: string[]
+  category: 'ai' | 'it' | 'saas' | 'blockchain' | 'iot' | 'devops' | 'data' | 'security' | 'cloud' | 'mobile' | 'web'
   pricing: {
     basic: number
     pro: number
     enterprise: number
+    currency: string
   }
+  features: string[]
   benefits: string[]
   useCases: string[]
   technologies: string[]
-  contactInfo: {
+  demoUrl?: string
+  documentationUrl?: string
+  apiUrl?: string
+  status: 'active' | 'beta' | 'coming-soon'
+  icon: string
+  popular: boolean
+  path: string
+  contact: {
     phone: string
     email: string
-    website: string
+    demo: string
+  }
+  marketPrice: {
+    min: number
+    max: number
+    currency: string
   }
 }
 
 export const services: Service[] = [
   {
-    id: 'ai-solutions',
-    title: 'AI Solutions',
-    description: 'Comprehensive artificial intelligence solutions for modern businesses',
-    shortDescription: 'AI-powered solutions for automation and intelligence',
-    icon: 'brain',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+    id: 'ai-chatbot',
+    name: 'AI Chatbot',
+    description: 'Advanced conversational AI with natural language processing',
+    shortDescription: 'Smart chatbot for customer support',
+    category: 'ai',
     pricing: {
-      basic: 3000,
-      pro: 10000,
-      enterprise: 30000
+      basic: 299,
+      pro: 599,
+      enterprise: 1299,
+      currency: 'USD'
     },
-    benefits: ['Increased Efficiency', 'Cost Reduction', 'Better Decision Making'],
-    useCases: ['Customer Service', 'Data Analysis', 'Process Automation'],
-    technologies: ['Python', 'TensorFlow', 'PyTorch', 'AWS'],
-    contactInfo: {
-      phone: '+1-555-0123',
-      email: 'ai@ziontech.com',
-      website: 'https://ziontech.com/ai'
-    }
-  },
-  {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Scalable cloud infrastructure and migration services',
-    shortDescription: 'Cloud solutions for scalability and reliability',
-    icon: 'cloud',
-    features: ['Cloud Migration', 'Infrastructure as Code', 'Auto Scaling', 'Monitoring'],
-    pricing: {
-      basic: 2000,
-      pro: 8000,
-      enterprise: 25000
+    features: [
+      'Natural language processing',
+      'Multi-language support',
+      'Sentiment analysis',
+      'Custom training'
+    ],
+    benefits: [
+      '24/7 customer support',
+      'Reduced response time',
+      'Scalable solution',
+      'Cost effective'
+    ],
+    useCases: [
+      'Customer support',
+      'Lead generation',
+      'FAQ automation',
+      'Sales assistance'
+    ],
+    technologies: [
+      'OpenAI GPT',
+      'TensorFlow',
+      'Python',
+      'React'
+    ],
+    demoUrl: 'https://ziontechgroup.com/demo/ai-chatbot',
+    documentationUrl: 'https://docs.ziontechgroup.com/ai-chatbot',
+    apiUrl: 'https://api.ziontechgroup.com/ai-chatbot',
+    status: 'active',
+    icon: '🤖',
+    popular: true,
+    path: '/ai-chatbot',
+    contact: {
+      phone: '+1 (302) 464-0950',
+      email: 'kleber@ziontechgroup.com',
+      demo: 'https://ziontechgroup.com/demo/ai-chatbot'
     },
-    benefits: ['Scalability', 'Cost Efficiency', 'High Availability'],
-    useCases: ['Application Hosting', 'Data Storage', 'Disaster Recovery'],
-    technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker'],
-    contactInfo: {
-      phone: '+1-555-0124',
-      email: 'cloud@ziontech.com',
-      website: 'https://ziontech.com/cloud'
-    }
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Advanced security solutions to protect your digital assets',
-    shortDescription: 'Comprehensive security solutions for digital protection',
-    icon: 'shield',
-    features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'],
-    pricing: {
-      basic: 10000,
-      pro: 30000,
-      enterprise: 60000
-    },
-    benefits: ['Data Protection', 'Compliance', 'Risk Mitigation'],
-    useCases: ['Network Security', 'Data Encryption', 'Access Control'],
-    technologies: ['SIEM', 'Firewalls', 'Encryption', 'PKI'],
-    contactInfo: {
-      phone: '+1-555-0125',
-      email: 'security@ziontech.com',
-      website: 'https://ziontech.com/security'
-    }
-  },
-  {
-    id: 'data-analytics',
-    title: 'Data Analytics',
-    description: 'Transform your data into actionable business insights',
-    shortDescription: 'Data-driven insights for better decision making',
-    icon: 'chart',
-    features: ['Data Visualization', 'Predictive Modeling', 'Real-time Analytics', 'Business Intelligence'],
-    pricing: {
-      basic: 15000,
-      pro: 50000,
-      enterprise: 100000
-    },
-    benefits: ['Better Insights', 'Improved Performance', 'Competitive Advantage'],
-    useCases: ['Business Intelligence', 'Market Analysis', 'Performance Tracking'],
-    technologies: ['Python', 'R', 'Tableau', 'Power BI'],
-    contactInfo: {
-      phone: '+1-555-0126',
-      email: 'analytics@ziontech.com',
-      website: 'https://ziontech.com/analytics'
-    }
-  },
-  {
-    id: 'mobile-development',
-    title: 'Mobile Development',
-    description: 'Custom mobile applications for iOS and Android platforms',
-    shortDescription: 'Native and cross-platform mobile app development',    icon: 'smartphone',
-    features: ['Native Development', 'Cross-platform', 'UI/UX Design', 'App Store Optimization'],
-    pricing: {
-      basic: 8000,
-      pro: 25000,
-      enterprise: 50000
-    },
-    benefits: ['User Engagement', 'Market Reach', 'Brand Presence'],
-    useCases: ['Consumer Apps', 'Enterprise Apps', 'E-commerce Apps'],
-    technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin'],
-    contactInfo: {
-      phone: '+1-555-0127',
-      email: 'mobile@ziontech.com',
-      website: 'https://ziontech.com/mobile'
+    marketPrice: {
+      min: 500,
+      max: 2000,
+      currency: 'USD'
     }
   }
-}]
+]
+
+export const serviceCategories = [
+  {
+    id: 'ai',
+    name: 'AI Services',
+    description: 'Advanced artificial intelligence solutions',
+    icon: '🤖',
+    color: 'text-purple-400',
+    bgColor: 'bg-purple-500/10'
+  },
+  {
+    id: 'it',
+    name: 'IT Services',
+    description: 'Enterprise-grade IT solutions',
+    icon: '☁️',
+    color: 'text-blue-400',
+    bgColor: 'bg-blue-500/10'
+  },
+  {
+    id: 'saas',
+    name: 'SAAS Solutions',
+    description: 'Software as a Service solutions',
+    icon: '⚡',
+    color: 'text-cyan-400',
+    bgColor: 'bg-cyan-500/10'
+  }
+]
+
+export const contactInfo = {
+  phone: '+1 (302) 464-0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008, Middletown, DE 19709',
+  website: 'https://ziontechgroup.com',
+  hours: 'Mon-Fri: 9AM-6PM EST'
+}

@@ -1,63 +1,17 @@
-import React from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useState, useEffect } from 'react'
 
-interface UseIntersectionObserverOptions {
-  threshold?: number | number[]
-  root?: Element | null
-  rootMargin?: string
-  freezeOnceVisible?: boolean
-}
-
-interface UseIntersectionObserverReturn {
-  ref: React.RefObject<HTMLElement>
-  isIntersecting: boolean
-  entry: IntersectionObserverEntry | undefined
-}
-
-export function useIntersectionObserver(
-  options: UseIntersectionObserverOptions = {}
-): UseIntersectionObserverReturn {
-  const {
-    threshold = 0,
-    root = null,
-    rootMargin = '0%',
-    freezeOnceVisible = false
-  } = options
-
-  const [isIntersecting, setIsIntersecting] = useState(false)
-  const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>(undefined)
-  const ref = useRef<HTMLElement>(null)
+export const useIntersectionObserver = () => {
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
-    const node = ref.current
-    if (!node) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting)
-        setEntry(entry)
-
-        if (entry.isIntersecting && freezeOnceVisible) {
-          observer.disconnect()
-        }
-      },
-      {
-        threshold,
-        root,
-        rootMargin
-      }
-    )
-
-    observer.observe(node)
-
-    return () => {
-      observer.disconnect()
-    }
-  }, [threshold, root, rootMargin, freezeOnceVisible])
+    // Hook implementation
+  }, [])
 
   return {
-    ref,
-    isIntersecting,
-    entry
+    data,
+    loading,
+    error
   }
 }

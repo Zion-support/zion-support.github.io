@@ -1,5 +1,15 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+// PerformanceDashboard utility functions
 
-export default PerformanceDashboard;
+export const PerformanceDashboard = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('PerformanceDashboard initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
+}
+
+export default PerformanceDashboard

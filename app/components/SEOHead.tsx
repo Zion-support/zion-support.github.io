@@ -1,17 +1,15 @@
-'use client';
-import React from 'react';
+// SEOHead utility functions
 
-interface SEOHeadProps {
-  className?: string;
+export const SEOHead = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('SEOHead initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({ className = '' }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>SEOHead</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
-
-export default SEOHead;
+export default SEOHead

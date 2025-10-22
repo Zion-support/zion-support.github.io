@@ -1,29 +1,17 @@
-import { useCallback } from 'react'
-
-interface AnalyticsEvent {
-  event_category: string
-  event_label: string
-  value?: number
-}
+import { useState, useEffect } from 'react'
 
 export const useAnalytics = () => {
-  const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', eventName, parameters)
-    }
-  }, [])
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
-  const trackPageView = useCallback((pagePath: string, pageTitle: string) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('config', 'GA_MEASUREMENT_ID', {
-        page_path: pagePath,
-        page_title: pageTitle
-      })
-    }
+  useEffect(() => {
+    // Hook implementation
   }, [])
 
   return {
-    trackEvent,
-    trackPageView
+    data,
+    loading,
+    error
   }
 }

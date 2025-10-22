@@ -1,18 +1,30 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 interface SidebarProps {
-  className?: string;
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen?: boolean
+  onClose?: () => void
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ className = '', isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen = false, onClose }) => {
   return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>Sidebar</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
+    <aside className={`w-64 bg-slate-800 min-h-screen p-4 ${isOpen ? 'block' : 'hidden md:block'}`}>
+      <nav className="space-y-2">
+        <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+          Home
+        </Link>
+        <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+          About
+        </Link>
+        <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+          Services
+        </Link>
+        <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+          Contact
+        </Link>
+      </nav>
+    </aside>
+  )
+}
 
-export default Sidebar;
+export default Sidebar

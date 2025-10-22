@@ -1,16 +1,15 @@
-import React from 'react';
+// NotFoundPage utility functions
 
-interface NotFoundPageProps {
-  className?: string;
+export const NotFoundPage = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('NotFoundPage initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
 
-const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '' }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>NotFoundPage</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
-
-export default NotFoundPagePage;
+export default NotFoundPage

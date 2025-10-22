@@ -1,16 +1,15 @@
-import React from 'react';
+// EnhancedPerformanceMonitor utility functions
 
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
+export const EnhancedPerformanceMonitor = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('EnhancedPerformanceMonitor initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
 
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '' }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>EnhancedPerformanceMonitor</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
-
-export default EnhancedPerformanceMonitor;
+export default EnhancedPerformanceMonitor

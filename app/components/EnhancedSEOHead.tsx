@@ -1,16 +1,15 @@
-import React from 'react';
+// EnhancedSEOHead utility functions
 
-interface EnhancedSEOHeadProps {
-  className?: string;
+export const EnhancedSEOHead = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('EnhancedSEOHead initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
 
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>EnhancedSEOHead</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
-
-export default EnhancedSEOHead;
+export default EnhancedSEOHead

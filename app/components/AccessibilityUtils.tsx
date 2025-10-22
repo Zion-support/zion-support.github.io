@@ -1,16 +1,15 @@
-import React from 'react';
+// AccessibilityUtils utility functions
 
-interface AccessibilityUtilsProps {
-  className?: string;
+export const AccessibilityUtils = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('AccessibilityUtils initialized')
+  },
+  
+  // Add more utility functions as needed
+  utils: {
+    // Utility methods
+  }
 }
 
-const AccessibilityUtils: React.FC<AccessibilityUtilsProps> = ({ className = '' }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>AccessibilityUtils</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
-
-export default AccessibilityUtils;
+export default AccessibilityUtils
