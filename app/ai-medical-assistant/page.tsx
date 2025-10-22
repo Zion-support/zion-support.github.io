@@ -1,130 +1,147 @@
+'use client';
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
 
-const AIMedicalAssistantPage: React.FC = () => {
+const AiMedicalAssistantPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology and AI.'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+    }
+  ];
+
+  const benefits = [
+    'AI-powered automation',
+    'Real-time processing',
+    'Scalable solutions',
+    'Enterprise-grade security',
+    '24/7 support',
+    'Custom integrations'
+  ];
+
   return (
-    <>
-<SEOHead
-        title="AI Medical Assistant - Zion Tech Group"
-        description="AI-powered medical assistant for healthcare professionals with diagnostic support, patient monitoring, and medical documentation."
-        keywords="AI medical assistant, healthcare AI, medical diagnosis, patient monitoring, medical documentation, health tech"
-        canonicalUrl="https://ziontechgroup.com/ai-medical-assistant"
-      />
-      
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
-              AI Medical Assistant
+    <React.Fragment>
+      <Helmet>
+        <title>Ai Medical Assistant - Zion Tech Group | Advanced AI and IT Solutions</title>
+        <meta name="description" content="Professional ai medical assistant solutions powered by advanced AI and cutting-edge technology." />
+        <meta name="keywords" content="ai medical assistant, AI solutions, IT services, automation, technology, business solutions" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Ai Medical Assistant
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Enhance healthcare delivery with AI-powered diagnostic support, patient monitoring, and medical documentation assistance.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional ai medical assistant solutions powered by advanced AI and cutting-edge technology.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-slate-800 rounded-lg p-6">
-              <h2 className="text-2xl font-semibold mb-4 text-green-400">Diagnostic Support</h2>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Symptom analysis and assessment
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Medical image analysis
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Differential diagnosis suggestions
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Treatment recommendations
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Drug interaction checking
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-slate-800 rounded-lg p-6">
-              <h2 className="text-2xl font-semibold mb-4 text-teal-400">Patient Care</h2>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Patient monitoring and alerts
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Medical record management
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Appointment scheduling
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Medication reminders
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-400 mr-2">→</span>
-                  Health trend analysis
-                </li>
-              </ul>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                Get Started
+              </a>
+              <a
+                href="/services"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                View All Services
+              </a>
             </div>
           </div>
-          
-          <div className="bg-slate-800 rounded-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">Healthcare Applications</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏥</span>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-lg text-gray-300">
+                Everything you need for success
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-green-400">Hospitals</h3>
-                <p className="text-gray-300">Support clinical decision-making and patient care management.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">👩‍⚕️</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-teal-400">Clinics</h3>
-                <p className="text-gray-300">Streamline patient consultations and documentation.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏠</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-blue-400">Telemedicine</h3>
-                <p className="text-gray-300">Enable remote patient monitoring and consultations.</p>
-              </div>
+              ))}
             </div>
           </div>
-          
-          <div className="bg-slate-800 rounded-lg p-6 mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-center text-yellow-400">Important Notice</h2>
-            <p className="text-gray-300 text-center">
-              This AI medical assistant is designed to support healthcare professionals and should not replace professional medical judgment. 
-              Always consult with qualified medical professionals for medical decisions.
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-lg text-gray-300">
+                Why choose our solution
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Let us help you implement this solution for your business.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                Start Your Project
+              </a>
+              <a
+                href="/services"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                Learn More
+              </a>
+            </div>
           </div>
-          
-          <div className="text-center">
-            <a
-              href="/contact?service=ai-medical-assistant"
-              className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-teal-700 transition-all duration-300"
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
+        </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 
-export default AIMedicalAssistantPage;
+export default AiMedicalAssistantPage;

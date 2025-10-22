@@ -2,21 +2,15 @@ import React from 'react';
 
 interface ContactPageProps {
   className?: string;
-  children?: React.ReactNode;
 }
 
-const ContactPage: React.FC<ContactPageProps> = ({ className = '', children, ...props }) => {
+const ContactPage: React.FC<ContactPageProps> = ({ className = '' }) => {
   return (
-    <div className={`contactpage-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">ContactPage</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
+    <div className={`bg-white p-4 rounded-lg ${className}`}>
+      <h2>ContactPage</h2>
+      <p>This is a clean, functional component.</p>
     </div>
-
   );
 };
 
-export default ContactPage;
+export default ContactPagePage;
