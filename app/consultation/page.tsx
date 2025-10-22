@@ -40,3 +40,7 @@ const ConsultationPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+export default ConsultationPage;

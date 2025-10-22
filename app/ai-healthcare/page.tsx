@@ -40,3 +40,7 @@ const AiHealthcarePage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+export default AiHealthcarePage;

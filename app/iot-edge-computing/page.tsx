@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-const IoTEdgeComputingPage: React.FC = () => {
+const IotEdgeComputingPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -40,3 +40,7 @@ const IoTEdgeComputingPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+export default IotEdgeComputingPage;

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-const ARVRSolutionsPage: React.FC = () => {
+const ArVrSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -40,3 +40,7 @@ const ARVRSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+export default ArVrSolutionsPage;
