@@ -1,5 +1,5 @@
-import React from "react";
 'use client';
+import React from "react";
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Mail, MapPin, Phone } from 'lucide-react';
 

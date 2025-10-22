@@ -222,10 +222,10 @@ const App = memo(() => {
     // Register service worker
     if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
       navigator.serviceWorker.register('/sw.js')
-        .then((_registration) => {
+        .then(() => {
           // Service worker registered successfully
         })
-        .catch((_error) => {
+        .catch(() => {
           // Service worker registration failed
         });
     }
