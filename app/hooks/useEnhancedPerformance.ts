@@ -38,7 +38,7 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
     return undefined;
   }, [component, trackPerformance])
 
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
+  const measurePerformance = useCallback((name: string, fn: () => void): void => {
     if (trackPerformance) {
       performance.mark(`${component}-${name}-start`)
       fn()
