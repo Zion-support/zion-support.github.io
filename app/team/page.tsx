@@ -3,101 +3,101 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
-const TeamPage: React.FC = () => {
-  const teamMembers = [
-    {
-      id: 1,
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Executive Officer',
-      bio: 'AI researcher with 15+ years of experience in machine learning and quantum computing.',
-      image: '/api/placeholder/300/300',
-      expertise: ['AI Research', 'Quantum Computing', 'Leadership'],
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    },
-    {
-      id: 2,
-      name: 'Marcus Johnson',
-      role: 'Head of AI Research',
-      bio: 'Leading expert in neural networks and deep learning with multiple published papers.',
-      image: '/api/placeholder/300/300',
-      expertise: ['Deep Learning', 'Neural Networks', 'Research'],
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    },
-    {
-      id: 3,
-      name: 'Dr. Elena Rodriguez',
-      role: 'Chief Technology Officer',
-      bio: 'Quantum computing specialist with expertise in quantum algorithms and hardware.',
-      image: '/api/placeholder/300/300',
-      expertise: ['Quantum Computing', 'Algorithms', 'Hardware'],
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    },
-    {
-      id: 4,
-      name: 'James Wilson',
-      role: 'Head of Engineering',
-      bio: 'Full-stack engineer with expertise in scalable systems and cloud architecture.',
-      image: '/api/placeholder/300/300',
-      expertise: ['Software Engineering', 'Cloud Architecture', 'DevOps'],
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    },
-    {
-      id: 5,
-      name: 'Dr. Priya Patel',
-      role: 'Head of Data Science',
-      bio: 'Data science expert with focus on machine learning and statistical modeling.',
-      image: '/api/placeholder/300/300',
-      expertise: ['Data Science', 'Machine Learning', 'Statistics'],
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    },
-    {
-      id: 6,
-      name: 'Alex Thompson',
-      role: 'Head of Product',
-      bio: 'Product strategist with experience in AI product development and user experience.',
-      image: '/api/placeholder/300/300',
-      expertise: ['Product Strategy', 'UX Design', 'AI Products'],
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
+const teamMembers = [
+  {
+    id: 1,
+    name: 'Dr. Sarah Chen',
+    role: 'Chief Executive Officer',
+    bio: 'AI researcher with 15+ years of experience in machine learning and quantum computing.',
+    image: '/api/placeholder/300/300',
+    expertise: ['AI Research', 'Quantum Computing', 'Leadership'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
     }
-  ];
+  },
+  {
+    id: 2,
+    name: 'Marcus Johnson',
+    role: 'Head of AI Research',
+    bio: 'Leading expert in neural networks and deep learning with multiple published papers.',
+    image: '/api/placeholder/300/300',
+    expertise: ['Deep Learning', 'Neural Networks', 'Research'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
+    }
+  },
+  {
+    id: 3,
+    name: 'Dr. Elena Rodriguez',
+    role: 'Chief Technology Officer',
+    bio: 'Quantum computing specialist with expertise in quantum algorithms and hardware.',
+    image: '/api/placeholder/300/300',
+    expertise: ['Quantum Computing', 'Algorithms', 'Hardware'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
+    }
+  },
+  {
+    id: 4,
+    name: 'James Wilson',
+    role: 'Head of Engineering',
+    bio: 'Full-stack engineer with expertise in scalable systems and cloud architecture.',
+    image: '/api/placeholder/300/300',
+    expertise: ['Software Engineering', 'Cloud Architecture', 'DevOps'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
+    }
+  },
+  {
+    id: 5,
+    name: 'Dr. Priya Patel',
+    role: 'Head of Data Science',
+    bio: 'Data science expert with focus on machine learning and statistical modeling.',
+    image: '/api/placeholder/300/300',
+    expertise: ['Data Science', 'Machine Learning', 'Statistics'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
+    }
+  },
+  {
+    id: 6,
+    name: 'Alex Thompson',
+    role: 'Head of Product',
+    bio: 'Product strategist with experience in AI product development and user experience.',
+    image: '/api/placeholder/300/300',
+    expertise: ['Product Strategy', 'UX Design', 'AI Products'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
+    }
+  }
+];
 
-  const stats = [
-    { label: 'Years of Experience', value: '50+' },
-    { label: 'AI Projects Delivered', value: '200+' },
-    { label: 'Team Members', value: '25+' },
-    { label: 'Client Satisfaction', value: '99%' }
-  ];
+const stats = [
+  { label: 'Years of Experience', value: '50+' },
+  { label: 'AI Projects Delivered', value: '200+' },
+  { label: 'Team Members', value: '25+' },
+  { label: 'Client Satisfaction', value: '99%' }
+];
 
+const TeamPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Our Team - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Meet the brilliant minds behind Zion Tech Group. Our diverse team of experts is dedicated to pushing the boundaries of AI and technology." />
-        <meta name="keywords" content="team, AI experts, technology team, machine learning, quantum computing, Zion Tech Group" />
+        <title>Team - Zion Tech Group | Advanced AI and IT Solutions</title>
+        <meta name="description" content="Meet our talented team of AI experts, engineers, and innovators at Zion Tech Group." />
+        <meta name="keywords" content="team, AI experts, engineers, technology team, Zion Tech Group" />
       </Helmet>
 
       {/* Header */}
