@@ -74,10 +74,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     target.classList.remove('touch-active')
   }, [])
 
-<<<<<<< HEAD
   // Setup functions
-=======
->>>>>>> 0cdbb1d360bd3315ef9c91bff9b02a5b7fffaeb7
   const setupKeyboardNavigation = useCallback(() => {
     document.addEventListener('keydown', handleKeyboardNavigation)
   }, [handleKeyboardNavigation])
@@ -188,7 +185,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     })
   }, [handleKeyboardNavigation, handleTouchStart, handleTouchEnd])
 
-<<<<<<< HEAD
   const getAccessibilityStatus = useCallback(() => {
     return {
       keyboardNavigation: enableKeyboardNavigation,
@@ -214,9 +210,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     enableTouchAccessibility,
     enableARIALabels
   ])
-
-=======
->>>>>>> 0cdbb1d360bd3315ef9c91bff9b02a5b7fffaeb7
   useEffect(() => {
     if (enableKeyboardNavigation) {
       setupKeyboardNavigation()
@@ -283,32 +276,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     setupTouchAccessibility,
     setupARIALabels,
     cleanup
-  ])
-
-  const getAccessibilityStatus = useCallback(() => {
-    return {
-      keyboardNavigation: enableKeyboardNavigation,
-      screenReader: enableScreenReader,
-      focusManagement: enableFocusManagement,
-      colorContrast: enableColorContrast,
-      textScaling: enableTextScaling,
-      motionReduction: enableMotionReduction,
-      highContrast: enableHighContrast,
-      voiceControl: enableVoiceControl,
-      touchAccessibility: enableTouchAccessibility,
-      ariaLabels: enableARIALabels
-    }
-  }, [
-    enableARIALabels,
-    enableColorContrast,
-    enableFocusManagement,
-    enableHighContrast,
-    enableKeyboardNavigation,
-    enableMotionReduction,
-    enableScreenReader,
-    enableTextScaling,
-    enableTouchAccessibility,
-    enableVoiceControl
   ])
 
   return {
