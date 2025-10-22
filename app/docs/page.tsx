@@ -1,168 +1,158 @@
 'use client';
-import React, { useState } from 'react';
-import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-export default function DocsPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const docCategories = [
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const DocsPage: React.FC = () => {
+  const features = [
     {
-      title: 'Getting Started',
-      icon: 'rocket',
-      description: 'Quick start guides and basic setup instructions',
-      docs: [
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-        { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
-      ];
-    },;
-    {;
-      title: 'API Reference',;
-      icon: 'code',;
-      description: 'Complete API documentation and endpoints',;
-      docs: [;}
-        { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },;
-        { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },;
-        { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
-      ];
-    },;
-    {;
-      title: 'AI Solutions',;
-      icon: 'brain',;
-      description: 'AI and machine learning documentation',;
-      docs: [;}
-        { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },;
-        { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },;
-        { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
-      ];
-    },;
-    {;
-      title: 'Cloud Services',;
-      icon: 'cloud',;
-      description: 'Cloud infrastructure and services',;
-      docs: [;}
-        { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },;
-        { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },;
-        { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
-      ];
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-  const popularDocs = [
-    { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
-    { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
-    { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
-    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
   ];
-  const filteredDocs = docCategories.map(category => ({
-    ...category,
-    docs: category.docs.filter(doc => 
-      doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      doc.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  })).filter(category => category.docs.length > 0);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
-        title="Documentation - Zion Tech Group"
-        description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."
-        keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
-      />
-      <Navigation />
+    <React.Fragment>
+      <Helmet>
+        <title>Docs - Zion Tech Group | Advanced AI Solutions</title>
+        <meta name="description" content="Advanced AI-powered solution for modern businesses." />
+        <meta name="keywords" content="AI solution, artificial intelligence, automation, AI solutions, intelligent automation" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Docs
+              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered solution for modern businesses. 
+              Transform your operations with intelligent automation and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Popular Docs */}
-      <section className="py-16 px-4"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>;
-            {popularDocs.map((doc, index) => (;}
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"></div>;
-                <div className="flex items-center gap-3 mb-4"></div>;
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center"></div>;
-                    <BookOpen className="w-5 h-5 text-white" />;
-                  </div>;
-                  <span className="text-purple-400 text-sm font-medium">{doc.category}</span>;
-                </div>;
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">;
-                  {doc.title}
-                </h3>;
-                <p className="text-gray-300 text-sm mb-4">{doc.description}</p>;
-                <a;
-                  href={doc.link}
-                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
-                  Read More
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Documentation Categories */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredDocs.map((category, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-6 h-6 text-white" />
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to transform your business with AI.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
-                    <p className="text-gray-300">{category.description}</p>
-                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="space-y-4">
-                  {category.docs.map((doc, docIndex) => (
-                    <a
-                      key={docIndex}
-                      href={doc.link}
-                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
-                            {doc.title}
-                          </h4>;
-                          <p className="text-gray-300 text-sm">{doc.description}</p>;
-                        </div>;
-                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />;
-                      </div>;
-                    </a>;
-                  ))}
-                </div>;
-              </div>;
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Need Help?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Can't find what you're looking for? Our support team is here to help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Contact Support;
-  </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Join Community;
-  </
+        </section>
+
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of intelligent automation.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Start your AI transformation journey today with our advanced solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </React.Fragment>
   );
-}
-  </button>
-  </button>
-  </SEOOptimizer>
+};
+
+export default DocsPage;

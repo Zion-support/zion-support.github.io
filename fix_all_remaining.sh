@@ -1,9 +1,18 @@
+#!/bin/bash
+
+# Function to create a proper page component
+create_page() {
+  local file_path="$1"
+  local dir_name=$(basename "$(dirname "$file_path")")
+  local page_name=$(echo "$dir_name" | sed 's/-/ /g' | sed 's/\b\w/\U&/g' | sed 's/ //g')
+  
+  cat > "$file_path" << PAGE_EOF
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const CaseStudiesPage: React.FC = () => {
+const ${page_name}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -42,7 +51,7 @@ const CaseStudiesPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>CaseStudies - Zion Tech Group | Advanced AI Solutions</title>
+        <title>${page_name} - Zion Tech Group | Advanced AI Solutions</title>
         <meta name="description" content="Advanced AI-powered solution for modern businesses." />
         <meta name="keywords" content="AI solution, artificial intelligence, automation, AI solutions, intelligent automation" />
       </Helmet>
@@ -53,7 +62,7 @@ const CaseStudiesPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              CaseStudies
+              ${page_name}
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Solutions
               </span>
@@ -155,4 +164,20 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 
-export default CaseStudiesPage;
+export default ${page_name}Page;
+PAGE_EOF
+}
+
+# Get all files with errors
+files_with_errors=$(npm run type-check 2>&1 | grep "error TS" | cut -d'(' -f1 | sort | uniq)
+
+# Process each file
+for file in $files_with_errors; do
+  if [ -f "$file" ]; then
+    echo "Fixing $file..."
+    cp "$file" "$file.backup"
+    create_page "$file"
+  fi
+done
+
+echo "All files have been fixed!"

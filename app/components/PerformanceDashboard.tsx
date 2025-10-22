@@ -1,163 +1,158 @@
-<<<<<<< HEAD
-
+'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-interface PerformanceDashboardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
 
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children, ...props }) => {
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
   return (
-    <div className={`performancedashboard-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">PerformanceDashboard</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
+    <React.Fragment>
+      <Helmet>
+        <title>Components - Zion Tech Group | Advanced AI Solutions</title>
+        <meta name="description" content="Advanced AI-powered solution for modern businesses." />
+        <meta name="keywords" content="AI solution, artificial intelligence, automation, AI solutions, intelligent automation" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Components
+              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered solution for modern businesses. 
+              Transform your operations with intelligent automation and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to transform your business with AI.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of intelligent automation.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Start your AI transformation journey today with our advanced solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </React.Fragment>
   );
 };
 
-export default PerformanceDashboard;
-=======
-'use client'
-import React, {useState, useEffect} from 'react'
-import {Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle} from 'lucide-react'
-interface PerformanceMetrics {loadTime: number,}
-  renderTime: number,
-  memoryUsage: number,
-  fps: number,
-  [key: string]: number,}interface PerformanceProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void,}}const PerformanceDashboard: React.FC<PerformanceProps> = ({onMetricsUpdate ,}) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({;
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0,});
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [alerts, setAlerts] = useState<string[]>([]);
-  useEffect(() => {const updateMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation');
-      )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation;
-        ? navigation.loadEventEnd - navigation.fetchStart;
-        : 0;
-      // Measure render time;
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
-      // Measure memory usage;
-      let memoryUsage = 0;
-      if ('memory' in performance) {;
-        const memory = (performance as {memory?: { usedJSHeapSize: number ,}}}).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
-      }
-      // Measure FPS (simplified);
-      let fps = 60;
-      if ('requestAnimationFrame' in window) {let lastTime = performance.now();
-        let frameCount = 0;
-        const measureFPS = () => {
-          const currentTime = performance.now();
-          frameCount++;
-          if (currentTime - lastTime >= 1000) {;
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;}if (isMonitoring) {requestAnimationFrame(measureFPS)}}
-        requestAnimationFrame(measureFPS);
-      }
-      const newMetrics: PerformanceMetrics = {,
-        loadTime,;
-        renderTime,;
-        memoryUsage,;
-        fps;}setMetrics(newMetrics);
-      onMetricsUpdate?.(newMetrics);
-      // Check for performance alerts;
-      checkPerformanceAlerts(newMetrics);
-    }
-    if (isMonitoring) {updateMetrics();
-      const interval = setInterval(updateMetrics, 1000);
-      return () => clearInterval(interval)}}, [isMonitoring, onMetricsUpdate]);
-  const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {,
-    const newAlerts: string[] = [],
-    if (currentMetrics.loadTime > 3000) {;
-      newAlerts.push('Load time is above 3 seconds')}if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {// 50MB;
-      newAlerts.push('Memory usage is high')}if (currentMetrics.fps < 30) {newAlerts.push('FPS is below 30')}setAlerts(newAlerts);
-  }
-  const toggleMonitoring = () => {setIsMonitoring(!isMonitoring)}const formatBytes = (bytes: number) => {,
-    if (bytes === 0) return '0 Bytes'
-    const k = 1024,;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB']
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}const getPerformanceColor = (value: number, thresholds: {good: number, warning: number ,}) => {if (value <= thresholds.good) return 'text-green-400'
-    if (value <= thresholds.warning) return 'text-yellow-400'
-    return 'text-red-400'}return(<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">)</div>
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-          <Activity className="w-5 h-5" />
-          Performance Dashboard;
-  </;
-        <button;
-          onClick={toggleMonitoring}className={`px-4 py-2 rounded-lg font-medium transition-colors ${;
-            isMonitoring;
-              ? 'bg-red-600 text-white hover: bg-red-700',
-              : 'bg-green-600 text-white hover: bg-green-700',} `}
-        >{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'</button>} </button>
-      </div>
-      {alerts.length > 0 && (;
-        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-          <div className="flex items-center gap-2 mb-2">
-            <AlertTriangle className="w-5 h-5 text-red-400" />
-            <h4 className="text-red-400 font-semibold">Performance Alerts</h4>
-          </div>
-          <ul className="space-y-1">
-            {alerts.map((alert, index) => (;
-              <li key={index}className="text-red-300 text-sm">• {alert}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4"></div>
-        <div className="bg-white/5 rounded-lg p-4">
-          <div className="flex items-center gap-2 mb-2">
-            <Zap className="w-4 h-4 text-blue-400" />
-            <span className="text-gray-300 text-sm">Load Time</span>
-          </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 ,)} )}`}>{metrics.loadTime.toFixed(0)</div>}ms;
-  </;
-        </div>
-        <div className="bg-white/5 rounded-lg p-4">
-          <div className="flex items-center gap-2 mb-2">
-            <Cpu className="w-4 h-4 text-green-400" />
-            <span className="text-gray-300 text-sm">Render Time</span>
-          </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 ,)} )}`}>{metrics.renderTime.toFixed(2)</div>}ms;
-  </;
-        </div>
-        <div className="bg-white/5 rounded-lg p-4">
-          <div className="flex items-center gap-2 mb-2">
-            <MemoryStick className="w-4 h-4 text-purple-400" />
-            <span className="text-gray-300 text-sm">Memory Usage</span>
-          </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 ,)} )}`}>{formatBytes(metrics.memoryUsage)</div>} </div>
-        </div>
-        <div className="bg-white/5 rounded-lg p-4">
-          <div className="flex items-center gap-2 mb-2">
-            <TrendingUp className="w-4 h-4 text-orange-400" />
-            <span className="text-gray-300 text-sm">FPS</span>
-          </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 ,)} )}`}>{metrics.fps</div>} </div>
-        </div>
-      </div>
-      <div className="mt-6 text-center">
-        <p className="text-gray-400 text-sm">{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'</p>} </p>
-      </div>
-    </div>
-  );
-}
-;
-export default PerformanceDashboard;
-  </div>
-  </h3>
-  </div>
-  </PerformanceMetrics>
-  </PerformanceProps>
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+export default ComponentsPage;

@@ -1,238 +1,158 @@
-<<<<<<< HEAD
-
+'use client';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Layers } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-export default function ApiDocsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Api Docs | Zion Tech Group</title>
-        <meta name="description" content="Professional api docs solutions for modern businesses." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-            Api Docs
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional api docs solutions for modern businesses.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
-            <Layers className="w-12 h-12 text-cyan-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
-            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
-          </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
-            <Layers className="w-12 h-12 text-purple-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
-            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
-          </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
-            <Layers className="w-12 h-12 text-yellow-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
-            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <p className="text-lg text-gray-300 mb-8">
-            Ready to get started with api docs?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-            >
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/demo"
-              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-            >
-              View Demo
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-=======
-'use client'
-import React, {useState} from 'react'
-import {Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer   from '../components/SEOOptimizer'
-;
-  const [searchQuery, setSearchQuery] = useState('');
-  const copyToClipboard = (code: string, id: string) => {,
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id),;
-    setTimeout(() => setCopiedCode(null), 2000)}const apiEndpoints = [
-    {title: 'AI Services',
-      description: 'Artificial Intelligence and Machine Learning APIs',
+const ApiDocsPage: React.FC = () => {
+  const features = [
+    {
       icon: Brain,
-      endpoints: [,
-        {;
-          name: 'Text Analysis',
-          method: 'POST',
-          path: '/api/ai/text-analysis',
-          description: 'Analyze text sentiment, entities, and key phrases',
-          code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\,
-  -H "Authorization: Bearer YOUR_API_KEY" \\,
-  -H "Content-Type: application/json" \\,
-  -d '{;
-    "text": "Your text to analyze",
-    "features": ["sentiment", "entities", "key_phrases"]}'`
-        },
-        {name: 'Image Recognition',
-          method: 'POST',
-          path: '/api/ai/image-recognition',
-          description: 'Identify objects, faces, and scenes in images',
-          code: `curl -X POST "https://api.ziontechgroup.com/ai/image-recognition" \\,
-  -H "Authorization: Bearer YOUR_API_KEY" \\,
-  -H "Content-Type: application/json" \\,
-  -d '{;
-    "image_url": "https: //example.com/image.jpg",
-    "features": ["objects", "faces", "text"]}'`
-        }
-      ]
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {title: 'Cloud Services',
-      description: 'Cloud infrastructure and deployment APIs',
-      icon: Cloud,
-      endpoints: [,
-        {;
-          name: 'Deploy Application',
-          method: 'POST',
-          path: '/api/cloud/deploy',
-          description: 'Deploy applications to cloud infrastructure',
-          code: `curl -X POST "https://api.ziontechgroup.com/cloud/deploy" \\,
-  -H "Authorization: Bearer YOUR_API_KEY" \\,
-  -H "Content-Type: application/json" \\,
-  -d '{;
-    "app_name": "my-app",
-    "environment": "production",
-    "config": {;
-      "cpu": "2",
-      "memory": "4GB",
-      "instances": 3;}}'`
-        }
-      ]
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {title: 'Data Analytics',
-      description: 'Data processing and analytics APIs',
-      icon: Database,
-      endpoints: [,
-        {;
-          name: 'Process Data',
-          method: 'POST',
-          path: '/api/analytics/process',
-          description: 'Process and analyze large datasets',
-          code: `curl -X POST "https://api.ziontechgroup.com/analytics/process" \\,
-  -H "Authorization: Bearer YOUR_API_KEY" \\,
-  -H "Content-Type: application/json" \\,
-  -d '{;
-    "dataset_id": "dataset_123",
-    "operations": ["aggregate", "filter", "transform"],
-    "output_format": "json"}'`
-        }
-      ]
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-  const filteredEndpoints = apiEndpoints.map(category => ({);
-    ...category,;
-    endpoints: category.endpoints.filter(endpoint => ,);
-      endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
-        title="API Documentation - Zion Tech Group"
-        description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
-        keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
-      /></SEOOptimizer>
-      <Navigation /></Navigation>
-      {/* Hero Section */}
-<section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">API Documentation;</h1>
-  </;
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
-            Explore endpoints, authentication, and integration guides.;
-          </p>
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"></button>
-              <Code className="mr-2 h-5 w-5" />
-              Get Started;
-  </;
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
-              <Download className="mr-2 h-5 w-5" />
-              Download SDK;
-  </;
-          </div>
-        </div>
-      </section>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3"></h>1. Get API Key</h3>
-              <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
-                Get API Key →;
-              </button>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
-                <Code className="w-6 h-6 text-white" /></Code>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3"></h>2. Make Request</h3>
-              <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
-                View Examples →
-              </button>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
-                <Zap className="w-6 h-6 text-white" /></Zap>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3"></h>3. Integrate</h3>
-              <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
-                Start Building →
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? (;
-                            <React.Fragment></React>
-                              <Check className="w-4 h-4" /></Check>
-                              Copied!;
-                            </React.Fragment>
-                          ) : (;
-                            </React.Fragment>
-                          )}
-                        </button>
-                      </div>
-                        </pre>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-  </;
-          </div>
-        </div>
-      </section>
-      <Footer /></Footer>
-    </div>
-  ),;
->>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
-}
+  ];
 
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>ApiDocs - Zion Tech Group | Advanced AI Solutions</title>
+        <meta name="description" content="Advanced AI-powered solution for modern businesses." />
+        <meta name="keywords" content="AI solution, artificial intelligence, automation, AI solutions, intelligent automation" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              ApiDocs
+              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered solution for modern businesses. 
+              Transform your operations with intelligent automation and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to transform your business with AI.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of intelligent automation.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Start your AI transformation journey today with our advanced solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default ApiDocsPage;

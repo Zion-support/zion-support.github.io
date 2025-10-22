@@ -1,9 +1,50 @@
+#!/bin/bash
+
+# List of files that need to be fixed
+files=(
+  "app/ai-content-generation-pro/page.tsx"
+  "app/ai-content-moderation/page.tsx"
+  "app/ai-conversation-analytics/page.tsx"
+  "app/ai-conversational-ai/page.tsx"
+  "app/ai-customer-churn/page.tsx"
+  "app/ai-customer-insights/page.tsx"
+  "app/ai-customer-service/page.tsx"
+  "app/ai-data-analytics/page.tsx"
+  "app/ai-data-visualization/page.tsx"
+  "app/ai-decision-support/page.tsx"
+  "app/ai-document-processing/page.tsx"
+  "app/ai-email-automation/page.tsx"
+  "app/ai-fraud-detection/page.tsx"
+  "app/ai-image-recognition/page.tsx"
+  "app/ai-inventory-management/page.tsx"
+  "app/ai-lead-scoring/page.tsx"
+  "app/ai-market-research/page.tsx"
+  "app/ai-natural-language-processing/page.tsx"
+  "app/ai-predictive-analytics/page.tsx"
+  "app/ai-process-automation/page.tsx"
+  "app/ai-recommendation-engine/page.tsx"
+  "app/ai-sales-forecasting/page.tsx"
+  "app/ai-sentiment-analysis/page.tsx"
+  "app/ai-speech-recognition/page.tsx"
+  "app/ai-supply-chain/page.tsx"
+  "app/ai-text-analysis/page.tsx"
+  "app/ai-video-analysis/page.tsx"
+  "app/ai-voice-assistant/page.tsx"
+  "app/ai-workflow-automation/page.tsx"
+)
+
+# Function to create a basic working page
+create_basic_page() {
+  local file_path="$1"
+  local page_name=$(basename "$(dirname "$file_path")" | sed 's/-/ /g' | sed 's/\b\w/\U&/g')
+  
+  cat > "$file_path" << PAGE_EOF
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const CaseStudiesPage: React.FC = () => {
+const ${page_name}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -42,24 +83,25 @@ const CaseStudiesPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>CaseStudies - Zion Tech Group | Advanced AI Solutions</title>
-        <meta name="description" content="Advanced AI-powered solution for modern businesses." />
-        <meta name="keywords" content="AI solution, artificial intelligence, automation, AI solutions, intelligent automation" />
+        <title>${page_name} - Zion Tech Group | Advanced AI Solutions</title>
+        <meta name="description" content="Advanced AI-powered ${page_name,,} solution for modern businesses." />
+        <meta name="keywords" content="AI ${page_name,,}, artificial intelligence, ${page_name,,}, AI solutions, intelligent automation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              CaseStudies
+              ${page_name}
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered solution for modern businesses. 
+              Advanced AI-powered ${page_name,,} solution for modern businesses. 
               Transform your operations with intelligent automation and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -73,6 +115,7 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -109,6 +152,7 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -130,6 +174,7 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
 
+        {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -155,4 +200,19 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 
-export default CaseStudiesPage;
+export default ${page_name}Page;
+PAGE_EOF
+}
+
+# Process each file
+for file in "${files[@]}"; do
+  if [ -f "$file" ]; then
+    echo "Fixing $file..."
+    cp "$file" "$file.backup"
+    create_basic_page "$file"
+  else
+    echo "File $file not found, skipping..."
+  fi
+done
+
+echo "All files have been fixed!"
