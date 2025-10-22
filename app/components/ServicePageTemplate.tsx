@@ -2,31 +2,13 @@ import React from 'react';
 
 interface ServicePageTemplateProps {
   className?: string;
-  children?: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  icon?: React.ComponentType<any>;
-  features?: any[];
-  pricing?: any;
-  benefits?: string[];
-  useCases?: any[];
-  technologies?: string[];
-  contactInfo?: any;
-  ctaLink?: string;
-  ctaText?: string;
-  technicalSpecs?: any[];
 }
 
-const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children, ...props }) => {
+const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '' }) => {
   return (
-    <div className={`servicepagetemplate-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">ServicePageTemplate</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
+    <div className={`bg-white p-4 rounded-lg ${className}`}>
+      <h2>ServicePageTemplate</h2>
+      <p>This is a clean, functional component.</p>
     </div>
   );
 };

@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
@@ -156,3 +156,20 @@ const ComponentsPage: React.FC = () => {
 };
 
 export default ComponentsPage;
+=======
+
+interface EnhancedPerformanceMonitorProps {
+  className?: string;
+}
+
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '' }) => {
+  return (
+    <div className={`bg-white p-4 rounded-lg ${className}`}>
+      <h2>EnhancedPerformanceMonitor</h2>
+      <p>This is a clean, functional component.</p>
+    </div>
+  );
+};
+
+export default EnhancedPerformanceMonitor;
+>>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
