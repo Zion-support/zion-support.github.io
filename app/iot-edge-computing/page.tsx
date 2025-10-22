@@ -7,7 +7,6 @@ const IoTEdgeComputingPage: React.FC = () => {
     <>
       <Helmet>
         <title>IoT & Edge Computing - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Connect and process data at the edge with IoT and edge computing solutions for real-time insights." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-100">
@@ -34,17 +33,7 @@ const IoTEdgeComputingPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Real-time Analytics</h3>
               <p className="text-gray-600">Analyze data in real-time for immediate insights and actions.</p>
             </div>
-          </div>
-=======
-        <meta name="description" content="Connect and process data at the edge with IoT solutions and edge computing infrastructure." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">IoT & Edge Computing</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Connect and process data at the edge with IoT solutions and edge computing infrastructure.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
+          </div>ursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

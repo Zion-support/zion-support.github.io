@@ -7,7 +7,6 @@ const AutonomousSystemsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Develop intelligent autonomous systems with AI-powered robotics and automation solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100">
@@ -34,17 +33,7 @@ const AutonomousSystemsPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Drones</h3>
               <p className="text-gray-600">Build autonomous drone systems for various use cases.</p>
             </div>
-          </div>
-=======
-        <meta name="description" content="Develop intelligent autonomous systems for robotics, vehicles, and smart infrastructure." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">Autonomous Systems</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Develop intelligent autonomous systems for robotics and smart infrastructure.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
+          </div>ursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

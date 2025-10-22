@@ -7,7 +7,6 @@ const AiContentGenerationPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Content Generation - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Generate high-quality content at scale with AI-powered content creation tools and solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
@@ -34,17 +33,7 @@ const AiContentGenerationPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Video Production</h3>
               <p className="text-gray-600">Generate video content and animations with AI-powered video tools.</p>
             </div>
-          </div>
-=======
-        <meta name="description" content="Generate high-quality content at scale with AI-powered writing, design, and multimedia creation tools." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">AI Content Generation</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Create compelling content at scale with AI-powered writing, design, and multimedia generation tools.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
+          </div>ursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>
