@@ -1,0 +1,46 @@
+const fs = require('fs');
+const path = require('path');
+
+const conflictedFiles = [
+  'app/ai-automation/page.tsx',
+  'app/ai-customer-support/page.tsx',
+  'app/ai-cybersecurity/page.tsx',
+  'app/ai-data-analytics/page.tsx',
+  'app/ai-data-visualization/page.tsx',
+  'app/ai-fintech/page.tsx',
+  'app/ai-healthcare/page.tsx',
+  'app/ai-marketing/page.tsx',
+  'app/ai-sales-automation/page.tsx',
+  'app/ai-workflow-automation/page.tsx',
+  'app/ar-vr-solutions/page.tsx',
+  'app/autonomous-systems/page.tsx',
+  'app/backup-recovery/page.tsx',
+  'app/blockchain-integration-services/page.tsx',
+  'app/cloud-migration/page.tsx',
+  'app/consultation/page.tsx',
+  'app/iot-edge-computing/page.tsx',
+  'app/it-infrastructure/page.tsx',
+  'app/it-support/page.tsx',
+  'app/micro-saas/page.tsx',
+  'app/quantum-computing/page.tsx',
+  'app/status/page.tsx'
+];
+
+conflictedFiles.forEach(filePath => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove all merge conflict markers and keep our version (the one after =======)
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> cursor\/fix-errors-and-merge-to-main-9f4a/g, '$1');
+    
+    // Also handle the case where there might be other conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Resolved conflicts in ${filePath}`);
+  } catch (error) {
+    console.error(`Error resolving ${filePath}:`, error.message);
+  }
+});
+
+console.log('All merge conflicts resolved!');

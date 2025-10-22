@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Phone, Mail, Database, Clock, ShieldCheck, Globe } from 'lucide-react';
+import { CheckCircle, Database, Clock, ShieldCheck, Globe, Phone, Mail } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const BackupRecoveryPage: React.FC = () => {
