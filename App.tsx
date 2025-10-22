@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, memo } from 'react';
+import { Suspense, lazy, useEffect, memo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
@@ -13,7 +13,7 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
 // Hooks
-import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
+// import { useEnhancedPerformance } from './app/hooks/useEnhancedPerformance';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -206,16 +206,16 @@ const LoadingFallback = () => (
 );
 
 const App = memo(() => {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  // const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   // Initialize performance optimizations
-  usePerformanceOptimization({
-    enableLazyLoading: true,
-    enablePreloading: true,
-    enableCodeSplitting: true,
-    enableImageOptimization: true,
-    enableBundleAnalysis: process.env.NODE_ENV === 'development'
-  });
+  // usePerformanceOptimization({
+  //   enableLazyLoading: true,
+  //   enablePreloading: true,
+  //   enableCodeSplitting: true,
+  //   enableImageOptimization: true,
+  //   enableBundleAnalysis: process.env.NODE_ENV === 'development'
+  // });
 
   useEffect(() => {
     // Register service worker
@@ -267,14 +267,15 @@ const App = memo(() => {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />
-            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            <Sidebar />
             
             <main className="flex-1">
               <ErrorBoundary>
-                <PerformanceMonitor />
-                <AccessibilityEnhancer />
-                <SEOOptimizer />
+                <PerformanceMonitor enableRealTimeMonitoring={false} />
+                <AccessibilityEnhancer>
+                  <SEOOptimizer />
                 
+                </AccessibilityEnhancer>
                 <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>
                     <Routes>

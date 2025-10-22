@@ -9,13 +9,13 @@ declare global {
 }
 
 // Environment variables
-declare namespace NodeJS {
-  interface ProcessEnv {
-    NODE_ENV: 'development' | 'production' | 'test'
-    NEXT_PUBLIC_GA_ID?: string
-    NEXT_PUBLIC_SITE_URL?: string
-  }
-}
+// declare namespace NodeJS {
+//   interface ProcessEnv {
+//     NODE_ENV: 'development' | 'production' | 'test'
+//     NEXT_PUBLIC_GA_ID?: string
+//     NEXT_PUBLIC_SITE_URL?: string
+//   }
+// }
 
 // Component props interfaces
 export interface BaseComponentProps {
