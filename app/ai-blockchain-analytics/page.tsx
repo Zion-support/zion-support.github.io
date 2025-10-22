@@ -1,63 +1,47 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-const AiCustomerSupportPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>AI Customer Support - Zion Tech Group</title>
-        <meta name="description" content="Enhance customer experience with AI-powered support solutions, chatbots, and intelligent ticket routing." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">AI Customer Support</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Enhance customer experience with AI-powered support solutions and intelligent chatbots.
-          </p>
-        </div>
-      </div>
-    </>
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const AiCustomerSupportPage: React.FC = () => {
+import { CheckCircle, ArrowRight } from 'lucide-react';
+
+const PagePage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Support',
-      description: 'Intelligent customer support with AI-driven responses'
+      title: 'Feature 1',
+      description: 'Description of feature 1',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
     {
-      icon: Zap,
-      title: '24/7 Availability',
-      description: 'Round-the-clock customer support with automated responses'
+      title: 'Feature 2',
+      description: 'Description of feature 2',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
     {
-      icon: Shield,
-      title: 'Secure Support',
-      description: 'Secure handling of customer data and support interactions'
+      title: 'Feature 3',
+      description: 'Description of feature 3',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
 
   const benefits = [
-    'Improved customer satisfaction',
-    'Reduced response times',
-    'Cost-effective support',
-    'Scalable solutions',
-    'Multilingual support',
-    'Proven track record of success'
+    'Benefit 1',
+    'Benefit 2',
+    'Benefit 3',
+    'Benefit 4',
+    'Benefit 5',
+    'Benefit 6'
   ];
 
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AI Customer Support | Zion Tech Group</title>
-        <meta name="description" content="Professional AI Customer Support services by Zion Tech Group. Advanced AI and IT solutions for customer support." />
-        <meta name="keywords" content="AI customer support, customer support automation, AI solutions, IT services, Zion Tech Group" />
+
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
       <Navigation />
@@ -68,13 +52,13 @@ const AiCustomerSupportPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Customer Support
+            Page
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform customer support with AI-powered solutions. Advanced support automation for better customer experience.
+            Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
@@ -92,20 +76,33 @@ const AiCustomerSupportPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">AI Customer Support Features</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI solutions designed for modern customer support needs
+              Advanced solutions designed for modern business needs
+
             </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+              Start Your Free Trial
+            </button>
           </div>
+
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
+                  <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -116,9 +113,9 @@ const AiCustomerSupportPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Customer Support?</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven AI customer support solutions
+              Experience the benefits of our proven solutions
             </p>
           </div>
           
@@ -128,7 +125,7 @@ const AiCustomerSupportPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
+                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
           </div>
@@ -136,24 +133,27 @@ const AiCustomerSupportPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Customer Support?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join businesses already using our AI customer support platform.
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Transform your business with our page solutions today
           </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-            Start Your Free Trial
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Sales
+            </button>
+          </div>
         </div>
       </section>
 
       <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ac19
+    </>
   );
 };
 
-export default AiCustomerSupportPage;
+export default PagePage;
+
