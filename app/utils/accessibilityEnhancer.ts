@@ -29,7 +29,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
 
   const _enhancerRef = useRef<any>({})
 
-  // Event handlers
   const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
     if (event.key === 'Tab') {
       // Handle tab navigation
@@ -266,16 +265,16 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       ariaLabels: enableARIALabels
     }
   }, [
-    enableARIALabels,
-    enableColorContrast,
-    enableFocusManagement,
-    enableHighContrast,
     enableKeyboardNavigation,
-    enableMotionReduction,
     enableScreenReader,
+    enableFocusManagement,
+    enableColorContrast,
     enableTextScaling,
+    enableMotionReduction,
+    enableHighContrast,
+    enableVoiceControl,
     enableTouchAccessibility,
-    enableVoiceControl
+    enableARIALabels
   ])
 
   return {
@@ -289,7 +288,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     setupHighContrast,
     setupVoiceControl,
     setupTouchAccessibility,
-    setupARIALabels,
-    _enhancerRef
+    setupARIALabels
   }
 }
