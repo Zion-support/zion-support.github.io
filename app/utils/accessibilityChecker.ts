@@ -5,8 +5,8 @@ export interface AccessibilityIssue {
   element?: HTMLElement
   selector?: string
   code?: string
-  severity: 'error' | 'warning' | 'info'
-  wcagLevel: string
+  severity?: string
+  wcagLevel?: string
 }
 
 export interface AccessibilityReport {
@@ -15,7 +15,6 @@ export interface AccessibilityReport {
   passed: number
   failed: number
   warnings: number
-  timestamp: Date
 }
 
 export class AccessibilityChecker {
@@ -33,9 +32,7 @@ export class AccessibilityChecker {
           message: 'Image missing alt text',
           element: img,
           selector: this.getSelector(img),
-          code: 'IMG_MISSING_ALT',
-          severity: 'error',
-          wcagLevel: 'A'
+          code: 'IMG_MISSING_ALT'
         })
       }
     })
@@ -53,14 +50,12 @@ export class AccessibilityChecker {
           message: 'Form input missing label',
           element: input as HTMLElement,
           selector: this.getSelector(input as HTMLElement),
-          code: 'INPUT_MISSING_LABEL',
-          severity: 'error',
-          wcagLevel: 'A'
+          code: 'INPUT_MISSING_LABEL'
         })
       }
     })
 
-    // Check for missing heading hierarchy
+    // Check for proper heading hierarchy
     const headings = element.querySelectorAll('h1, h2, h3, h4, h5, h6')
     let lastLevel = 0
     headings.forEach((heading) => {
@@ -68,53 +63,41 @@ export class AccessibilityChecker {
       if (level > lastLevel + 1) {
         elementIssues.push({
           type: 'warning',
-          message: 'Heading hierarchy skipped',
+          message: `Heading level ${level} follows level ${lastLevel}, skipping level ${lastLevel + 1}`,
           element: heading as HTMLElement,
           selector: this.getSelector(heading as HTMLElement),
-          code: 'HEADING_HIERARCHY',
-          severity: 'warning',
-          wcagLevel: 'AA'
+          code: 'HEADING_SKIP_LEVEL'
         })
       }
       lastLevel = level
     })
 
-    // Check for missing focus indicators
-    const focusableElements = element.querySelectorAll('button, a, input, select, textarea, [tabindex]')
-    focusableElements.forEach((el) => {
-      const computedStyle = window.getComputedStyle(el as Element)
-      const outline = computedStyle.outline
-      const boxShadow = computedStyle.boxShadow
-      
-      if (outline === 'none' && !boxShadow.includes('inset')) {
-        elementIssues.push({
-          type: 'warning',
-          message: 'Focusable element missing focus indicator',
-          element: el as HTMLElement,
-          selector: this.getSelector(el as HTMLElement),
-          code: 'MISSING_FOCUS_INDICATOR',
-          severity: 'warning',
-          wcagLevel: 'AA'
-        })
-      }
-    })
+    // Check for missing main landmark
+    const main = element.querySelector('main')
+    if (!main) {
+      elementIssues.push({
+        type: 'warning',
+        message: 'Page missing main landmark',
+        element: element,
+        selector: this.getSelector(element),
+        code: 'MISSING_MAIN_LANDMARK'
+      })
+    }
 
-    // Check for color contrast (simplified)
+    // Check for proper color contrast (simplified check)
     const textElements = element.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6')
     textElements.forEach((el) => {
-      const computedStyle = window.getComputedStyle(el as Element)
-      const color = computedStyle.color
-      const backgroundColor = computedStyle.backgroundColor
+      const styles = window.getComputedStyle(el as HTMLElement)
+      const color = styles.color
+      const backgroundColor = styles.backgroundColor
       
-      if (color && backgroundColor && color === backgroundColor) {
+      if (color === backgroundColor) {
         elementIssues.push({
           type: 'error',
-          message: 'Text color same as background color',
+          message: 'Text and background colors are identical',
           element: el as HTMLElement,
           selector: this.getSelector(el as HTMLElement),
-          code: 'COLOR_CONTRAST',
-          severity: 'error',
-          wcagLevel: 'AA'
+          code: 'INSUFFICIENT_COLOR_CONTRAST'
         })
       }
     })
@@ -125,27 +108,23 @@ export class AccessibilityChecker {
   checkPage(): AccessibilityReport {
     this.issues = []
     
-    // Check all elements on the page
-    const allElements = document.querySelectorAll('*')
-    allElements.forEach((element) => {
-      const elementIssues = this.checkElement(element as HTMLElement)
-      this.issues.push(...elementIssues)
-    })
+    // Check the entire document
+    const documentIssues = this.checkElement(document.body)
+    this.issues.push(...documentIssues)
 
-    // Calculate scores
+    // Calculate score
     const errors = this.issues.filter(issue => issue.type === 'error').length
     const warnings = this.issues.filter(issue => issue.type === 'warning').length
     const total = this.issues.length
-    const passed = total - errors - warnings
-    const score = total > 0 ? Math.round((passed / total) * 100) : 100
+    
+    const score = total === 0 ? 100 : Math.max(0, 100 - (errors * 10) - (warnings * 5))
 
     return {
       issues: this.issues,
       score,
-      passed,
+      passed: this.issues.filter(issue => issue.type === 'info').length,
       failed: errors,
-      warnings,
-      timestamp: new Date()
+      warnings
     }
   }
 
@@ -155,19 +134,15 @@ export class AccessibilityChecker {
     }
     
     if (element.className) {
-      return `.${element.className.split(' ').join('.')}`
+      const classes = element.className.split(' ').filter(c => c.length > 0)
+      if (classes.length > 0) {
+        return `.${classes.join('.')}`
+      }
     }
-    
-    return element.tagName.toLowerCase()
-  }
 
-  getReport(): string {
-    if (this.issues.length === 0) {
-      return 'No accessibility issues found!'
-    }
-    
     return this.issues.map(issue => 
       `${issue.severity}: ${issue.message} (${issue.wcagLevel})`
-    ).join('\n')
+    ).join('\n');
   }
 }
+

@@ -8,8 +8,8 @@ import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
-import _PerformanceMonitor from './app/components/EnhancedPerformanceMonitor';
-import _AccessibilityEnhancer from './app/components/EnhancedAccessibility';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
 // Hooks
@@ -208,14 +208,7 @@ const App = memo(() => {
   // Sidebar state removed as it's not used
 
   // Initialize performance optimizations
-  usePerformanceOptimization({
-    enableLazyLoading: true,
-    enablePrefetching: true,
-    enableCodeSplitting: true,
-    enableImageOptimization: true,
-    enableCaching: true,
-    enableBundleAnalysis: process.env.NODE_ENV === 'development'
-  });
+  usePerformanceOptimization();
 
   useEffect(() => {
     // Register service worker
@@ -271,8 +264,9 @@ const App = memo(() => {
             
             <main className="flex-1">
               <ErrorBoundary>
-                {/* PerformanceMonitor and AccessibilityEnhancer components removed */}
-                  <SEOOptimizer />
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                <SEOOptimizer />
                 
                 <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>
@@ -469,11 +463,11 @@ const App = memo(() => {
                     </Routes>
                   </ErrorBoundary>
                 </Suspense>
-                {/* PerformanceMonitor and AccessibilityEnhancer components removed */}
               </ErrorBoundary>
             </main>
             
-            <Footer />          </div>
+            <Footer />
+          </div>
         </Router>
       </HelmetProvider>
     </GlobalErrorBoundary>
