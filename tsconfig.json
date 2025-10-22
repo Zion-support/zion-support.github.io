@@ -24,7 +24,7 @@
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
-    "noImplicitOverride": true,
+    "noImplicitOverride": false,
     "exactOptionalPropertyTypes": true,
     "baseUrl": ".",
     "paths": {

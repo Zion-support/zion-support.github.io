@@ -20,7 +20,7 @@ class GlobalErrorBoundary extends Component<GlobalErrorBoundaryProps, GlobalErro
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
   }
 

@@ -1,29 +1,33 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import { CheckCircle, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const DataAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
+      description: 'Cutting-edge solutions powered by the latest technology and AI.',
+      benefits: ['AI-powered automation', 'Real-time processing', 'Scalable solutions']
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
+      description: 'Optimized for speed and efficiency with real-time processing capabilities.',
+      benefits: ['Fast response times', 'Efficient resource usage', 'Optimized algorithms']
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
+      description: 'Bank-level security with end-to-end encryption and compliance standards.',
+      benefits: ['End-to-end encryption', 'Compliance standards', 'Data protection']
     },
     {
       icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.',
+      benefits: ['Multi-region support', 'Auto-scaling', 'Load balancing']
     }
   ];
 
