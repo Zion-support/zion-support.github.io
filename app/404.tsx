@@ -1,5 +1,5 @@
 'use client';
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react';

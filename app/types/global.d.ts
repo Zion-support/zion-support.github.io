@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 // Global type definitions for the application
 declare global {
   interface Window {
-    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void
+    gtag?: (...args: unknown[]) => void
     dataLayer?: unknown[]
   }
 }

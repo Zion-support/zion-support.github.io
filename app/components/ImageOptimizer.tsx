@@ -1,3 +1,4 @@
+
 interface ImageOptimizerProps {
   src: string;
   alt: string;

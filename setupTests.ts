@@ -2,10 +2,8 @@ import '@testing-library/jest-dom';
 
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-(global as any).TextEncoder = TextEncoder;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-(global as any).TextDecoder = TextDecoder;
+(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextEncoder = TextEncoder;
+(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextDecoder = TextDecoder;
 
 // Mock console methods to reduce noise in tests
 const originalError = console.error;

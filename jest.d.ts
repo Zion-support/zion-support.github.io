@@ -17,7 +17,7 @@ declare global {
       toHaveAccessibleDescription(text?: string | RegExp): R;
       toHaveAccessibleName(text?: string | RegExp): R;
       toHaveAttribute(attr: string, value?: string): R;
-      toHaveStyle(css: string | Record<string, string | number>): R;
+      toHaveStyle(css: string | Record<string, unknown>): R;
       toBeRequired(): R;
       toBeInvalid(): R;
       toBeValid(): R;

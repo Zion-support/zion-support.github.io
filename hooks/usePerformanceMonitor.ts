@@ -29,8 +29,8 @@ export const usePerformanceMonitor = () => {
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
           firstContentfulPaint: fcp ? fcp.startTime : 0,
           largestContentfulPaint: lcp ? lcp.startTime : 0,
-          cumulativeLayoutShift: cls ? (cls as PerformanceEntry & { value: number }).value : 0,
-          firstInputDelay: fid ? (fid as PerformanceEntry & { processingStart: number }).processingStart - fid.startTime : 0,
+          cumulativeLayoutShift: cls ? (cls as unknown as { value: number }).value : 0,
+          firstInputDelay: fid ? (fid as unknown as { processingStart: number }).processingStart - fid.startTime : 0,
         });
       } catch (error) {
         console.error('Error measuring performance:', error);
