@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 interface SEOOptimizerProps {
   title?: string
   description?: string
@@ -154,6 +154,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     document.head.appendChild(faqScript)
     
-  }, [title, description, canonicalUrl, structuredData])
+  }, [title, description, canonicalUrl, structuredData]);
+
+  return null; // This component doesn't render anything visible
+};
 
 export default SEOOptimizer;

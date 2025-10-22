@@ -21,18 +21,18 @@ const AboutPage = lazy(() => import('./app/about/page'));
 const ContactPage = lazy(() => import('./app/contact/page'));
 const ServicesPage = lazy(() => import('./app/services/page'));
 const PricingPage = lazy(() => import('./app/pricing/page'));
-const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
-const BlogPage = lazy(() => import('./app/blog/page'));
+// const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
+// const BlogPage = lazy(() => import('./app/blog/page'));
 const TeamPage = lazy(() => import('./app/team/page'));
-const CareersPage = lazy(() => import('./app/careers/page'));
-const PrivacyPage = lazy(() => import('./app/privacy/page'));
-const TermsPage = lazy(() => import('./app/terms/page'));
+// const CareersPage = lazy(() => import('./app/careers/page'));
+// const PrivacyPage = lazy(() => import('./app/privacy/page'));
+// const TermsPage = lazy(() => import('./app/terms/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
 const AdminPage = lazy(() => import('./app/pages/AdminPage'));
 
 // AI Services Pages
-const AIServicesPage = lazy(() => import('./app/ai-services/page'));
-const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+// const AIServicesPage = lazy(() => import('./app/ai-services/page'));
+// const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
 
 // IT Services Pages
 const ITServicesPage = lazy(() => import('./app/it-services/page'));
@@ -47,13 +47,13 @@ const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
 
 // Additional AI Services
 const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
-const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
+// const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
 const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
-const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
-const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
-const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+// const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
+// const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+// const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
 const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
-const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
+// const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
 const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
 const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
 const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
@@ -84,7 +84,7 @@ const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
 const AITranslatorPage = lazy(() => import('./app/ai-translator/page'));
 const AIAudioProcessorPage = lazy(() => import('./app/ai-audio-processor/page'));
 const AI3DModelGeneratorPage = lazy(() => import('./app/ai-3d-model-generator/page'));
-const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
+// const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
 const AIMedicalAssistantPage = lazy(() => import('./app/ai-medical-assistant/page'));
 const AIEducationTutorPage = lazy(() => import('./app/ai-education-tutor/page'));
 const AIRealEstateAnalyzerPage = lazy(() => import('./app/ai-real-estate-analyzer/page'));
@@ -102,7 +102,7 @@ const LowCodePlatformPage = lazy(() => import('./app/low-code-platform/page'));
 // Additional missing pages
 const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
-const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
+// const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
 const ServerlessArchitecturePage = lazy(() => import('./app/serverless-architecture/page'));
 const ContainerOrchestrationPage = lazy(() => import('./app/container-orchestration/page'));
 const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'));
@@ -284,18 +284,18 @@ const App = memo(() => {
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/services" element={<ServicesPage />} />
                     <Route path="/pricing" element={<PricingPage />} />
-                    <Route path="/case-studies" element={<CaseStudiesPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
+                    {/* <Route path="/case-studies" element={<CaseStudiesPage />} /> */}
+                    {/* <Route path="/blog" element={<BlogPage />} /> */}
                     <Route path="/team" element={<TeamPage />} />
-                    <Route path="/careers" element={<CareersPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
+                    {/* <Route path="/careers" element={<CareersPage />} /> */}
+                    {/* <Route path="/privacy" element={<PrivacyPage />} /> */}
+                    {/* <Route path="/terms" element={<TermsPage />} /> */}
                     <Route path="/cookies" element={<CookiesPage />} />
                     <Route path="/admin" element={<AdminPage />} />
                     
                     {/* AI Services */}
-                    <Route path="/ai-services" element={<AIServicesPage />} />
-                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                    {/* <Route path="/ai-services" element={<AIServicesPage />} /> */}
+                    {/* <Route path="/ai-solutions" element={<AISolutionsPage />} /> */}
                     
                     {/* IT Services */}
                     <Route path="/it-services" element={<ITServicesPage />} />
@@ -310,13 +310,13 @@ const App = memo(() => {
                     
                     {/* Additional AI Services */}
                     <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
-                    <Route path="/ai-document-processor" element={<AIDocumentProcessorPage />} />
+                    {/* <Route path="/ai-document-processor" element={<AIDocumentProcessorPage />} /> */}
                     <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
-                    <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
-                    <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
-                    <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} />
+                    {/* <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} /> */}
+                    {/* <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} /> */}
+                    {/* <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} /> */}
                     <Route path="/ai-lead-scoring" element={<AILeadScoringPage />} />
-                    <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
+                    {/* <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} /> */}
                     <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
                     <Route path="/ai-scheduling-assistant" element={<AISchedulingAssistantPage />} />
                     <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
@@ -347,7 +347,7 @@ const App = memo(() => {
                     <Route path="/partnerships" element={<PartnershipsPage />} />
                     
                     {/* Additional missing pages */}
-                    <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                    {/* <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} /> */}
                     <Route path="/ai-medical-assistant" element={<AIMedicalAssistantPage />} />
                     <Route path="/ai-education-tutor" element={<AIEducationTutorPage />} />
                     <Route path="/ai-real-estate-analyzer" element={<AIRealEstateAnalyzerPage />} />
@@ -370,7 +370,7 @@ const App = memo(() => {
                     <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
                     <Route path="/ai-predictive-maintenance-pro" element={<AIPredictiveMaintenanceProPage />} />
                     <Route path="/ai-price-optimizer-pro" element={<AIPriceOptimizerProPage />} />
-                    <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                    {/* <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} /> */}
                     <Route path="/ai-voice-assistant-pro" element={<AIVoiceAssistantProPage />} />
                     <Route path="/ai-website-analyzer" element={<AIWebsiteAnalyzerPage />} />
                     
@@ -432,7 +432,7 @@ const App = memo(() => {
                     <Route path="/ai-translator" element={<AITranslatorPage />} />
                     <Route path="/ai-audio-processor" element={<AIAudioProcessorPage />} />
                     <Route path="/ai-3d-model-generator" element={<AI3DModelGeneratorPage />} />
-                    <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                    {/* <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} /> */}
                     <Route path="/ai-medical-assistant" element={<AIMedicalAssistantPage />} />
                     <Route path="/ai-education-tutor" element={<AIEducationTutorPage />} />
                     <Route path="/ai-real-estate-analyzer" element={<AIRealEstateAnalyzerPage />} />

@@ -108,17 +108,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 11: Fix malformed object syntax in arrays
-  const malformedObjectFix = content.replace(
-    /(\s+description:\s*'[^']*'\s*)\s+description:\s*'[^']*'\s*}\s*\]/g,
-    '$1\n    }\n  ];'
-  );
-  if (malformedObjectFix !== content) {
-    content = malformedObjectFix;
-    modified = true;
-  }
-
-  // Fix 12: Fix missing closing tags for sections
+  // Fix 11: Fix missing closing tags for sections
   const sectionFix2 = content.replace(
     /(\s*<\/div>\s*)\s*<\/section>/g,
     '$1\n          </div>\n        </section>'
@@ -128,7 +118,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 13: Fix missing closing tags for React.Fragment
+  // Fix 12: Fix missing closing tags for React.Fragment
   const fragmentFix2 = content.replace(
     /(\s*<\/div>\s*)\s*<\/React\.Fragment>/g,
     '$1\n      </div>\n    </React.Fragment>'
@@ -138,7 +128,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 14: Fix missing closing tags for CTA sections
+  // Fix 13: Fix missing closing tags for CTA sections
   const ctaFix2 = content.replace(
     /(\s*Learn More\s*<\/a>\s*)\s*<\/div>\s*<\/section>/g,
     '$1\n            </div>\n          </div>\n        </section>'
@@ -148,7 +138,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 15: Fix missing closing tags for main div
+  // Fix 14: Fix missing closing tags for main div
   const mainDivFix2 = content.replace(
     /(\s*<\/section>\s*)\s*<\/div>\s*<\/React\.Fragment>/g,
     '$1\n      </div>\n    </React.Fragment>'
@@ -158,83 +148,13 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 16: Remove extra closing div tags
+  // Fix 15: Remove extra closing div tags
   const extraDivFix2 = content.replace(
     /(\s*<\/section>\s*)\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/React\.Fragment>/g,
     '$1\n      </div>\n    </React.Fragment>'
   );
   if (extraDivFix2 !== content) {
     content = extraDivFix2;
-    modified = true;
-  }
-
-  // Fix 17: Fix malformed object syntax in arrays
-  const malformedObjectFix2 = content.replace(
-    /(\s+description:\s*'[^']*'\s*)\s+description:\s*'[^']*'\s*}\s*\]/g,
-    '$1\n    }\n  ];'
-  );
-  if (malformedObjectFix2 !== content) {
-    content = malformedObjectFix2;
-    modified = true;
-  }
-
-  // Fix 18: Fix missing closing tags for sections
-  const sectionFix3 = content.replace(
-    /(\s*<\/div>\s*)\s*<\/section>/g,
-    '$1\n          </div>\n        </section>'
-  );
-  if (sectionFix3 !== content) {
-    content = sectionFix3;
-    modified = true;
-  }
-
-  // Fix 19: Fix missing closing tags for React.Fragment
-  const fragmentFix3 = content.replace(
-    /(\s*<\/div>\s*)\s*<\/React\.Fragment>/g,
-    '$1\n      </div>\n    </React.Fragment>'
-  );
-  if (fragmentFix3 !== content) {
-    content = fragmentFix3;
-    modified = true;
-  }
-
-  // Fix 20: Fix missing closing tags for CTA sections
-  const ctaFix3 = content.replace(
-    /(\s*Learn More\s*<\/a>\s*)\s*<\/div>\s*<\/section>/g,
-    '$1\n            </div>\n          </div>\n        </section>'
-  );
-  if (ctaFix3 !== content) {
-    content = ctaFix3;
-    modified = true;
-  }
-
-  // Fix 21: Fix missing closing tags for main div
-  const mainDivFix3 = content.replace(
-    /(\s*<\/section>\s*)\s*<\/div>\s*<\/React\.Fragment>/g,
-    '$1\n      </div>\n    </React.Fragment>'
-  );
-  if (mainDivFix3 !== content) {
-    content = mainDivFix3;
-    modified = true;
-  }
-
-  // Fix 22: Remove extra closing div tags
-  const extraDivFix3 = content.replace(
-    /(\s*<\/section>\s*)\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/React\.Fragment>/g,
-    '$1\n      </div>\n    </React.Fragment>'
-  );
-  if (extraDivFix3 !== content) {
-    content = extraDivFix3;
-    modified = true;
-  }
-
-  // Fix 23: Fix malformed object syntax in arrays
-  const malformedObjectFix3 = content.replace(
-    /(\s+description:\s*'[^']*'\s*)\s+description:\s*'[^']*'\s*}\s*\]/g,
-    '$1\n    }\n  ];'
-  );
-  if (malformedObjectFix3 !== content) {
-    content = malformedObjectFix3;
     modified = true;
   }
 
@@ -249,13 +169,6 @@ function fixJsxStructure(filePath) {
 // Function to fix all problematic files
 function fixAllFiles() {
   const files = [
-    'app/ai-services/page.tsx',
-    'app/privacy/page.tsx',
-    'app/terms/page.tsx',
-    'app/sitemap/page.tsx',
-    'app/robots/page.tsx',
-    'app/404/page.tsx',
-    'app/500/page.tsx',
     'app/ai-chatbot-enterprise/page.tsx',
     'app/ai-content-generation-pro/page.tsx',
     'app/ai-content-moderation/page.tsx',
@@ -271,6 +184,7 @@ function fixAllFiles() {
     'app/ai-lead-scoring/page.tsx',
     'app/ai-predictive-modeling/page.tsx',
     'app/ai-sentiment-analysis/page.tsx',
+    'app/ai-services/page.tsx',
     'app/ai-speech-synthesis/page.tsx',
     'app/ai-supply-chain-ai/page.tsx',
     'app/ai-video-analysis/page.tsx',

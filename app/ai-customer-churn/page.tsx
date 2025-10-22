@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock, Crown, Building } from 'lucide-react';
+
 const AiCustomerChurnPage: React.FC = () => {
   const features = [
     {
@@ -33,13 +34,27 @@ const AiCustomerChurnPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'  
+  
+  
+  
+  
+  
+  
+  ];;;;;;;;
   return (
     <React.Fragment>
       <Helmet>
         <title>Ai Customer Churn - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional ai customer churn solutions powered by advanced AI and cutting-edge technology." />
         <meta name="keywords" content="ai customer churn, AI solutions, IT services, automation, technology, business solutions" />
+      
+      
+      
+      
+      
+      
+      
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -62,7 +77,34 @@ const AiCustomerChurnPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-              </a>            </div>          </div>
+              </a>            
+            
+            
+            
+            
+            
+            
+            </div>          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
         </section>
 
         {/* Features Section */}
@@ -86,6 +128,26 @@ const AiCustomerChurnPage: React.FC = () => {
               ))}
             </div>
           </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
         </section>
 
         {/* Benefits Section */}
@@ -105,6 +167,26 @@ const AiCustomerChurnPage: React.FC = () => {
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>                </div>              ))}
             </div>
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
           </div>
         </section>
 
@@ -127,8 +209,44 @@ const AiCustomerChurnPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>            </div>          </div>
+              </a>            
+            
+            
+            
+            
+            
+            
+            </div>          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
+        
+          </div>
         </section>
+      
+      </div>
+    
+      </div>
+    
+      </div>
+    
+      </div>
+    
       </div>
     </React.Fragment>
   );

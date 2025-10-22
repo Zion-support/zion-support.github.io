@@ -8,57 +8,17 @@ function fixJsxStructure(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   let modified = false;
 
-  // Fix 1: Remove duplicate description properties
-  const duplicateDescriptionFix = content.replace(
+  // Fix 1: Fix malformed object syntax in arrays - remove duplicate properties
+  const duplicatePropertyFix = content.replace(
     /(\s+description:\s*'[^']*'\s*)\s+description:\s*'[^']*'\s*}\s*\]/g,
     '$1\n    }\n  ];'
   );
-  if (duplicateDescriptionFix !== content) {
-    content = duplicateDescriptionFix;
+  if (duplicatePropertyFix !== content) {
+    content = duplicatePropertyFix;
     modified = true;
   }
 
-  // Fix 2: Fix missing closing tags for benefits arrays
-  const benefitsFix = content.replace(
-    /(\s*'Custom integrations'\s*)\s*\]/g,
-    '$1\n  ];'
-  );
-  if (benefitsFix !== content) {
-    content = benefitsFix;
-    modified = true;
-  }
-
-  // Fix 3: Fix missing closing tags for features arrays
-  const featuresFix = content.replace(
-    /(\s*description:\s*'[^']*'\s*)\s*\]/g,
-    '$1\n  ];'
-  );
-  if (featuresFix !== content) {
-    content = featuresFix;
-    modified = true;
-  }
-
-  // Fix 4: Fix missing closing tags for Helmet
-  const helmetFix = content.replace(
-    /(\s*<meta[^>]*\/>\s*)\s*<\/Helmet>/g,
-    '$1\n      </Helmet>'
-  );
-  if (helmetFix !== content) {
-    content = helmetFix;
-    modified = true;
-  }
-
-  // Fix 5: Fix missing closing tags for div elements
-  const divFix = content.replace(
-    /(\s*<a[^>]*>\s*[^<]*<\/a>\s*)\s*<\/div>/g,
-    '$1\n            </div>'
-  );
-  if (divFix !== content) {
-    content = divFix;
-    modified = true;
-  }
-
-  // Fix 6: Fix missing closing tags for sections
+  // Fix 2: Fix missing closing tags for sections and divs
   const sectionFix = content.replace(
     /(\s*<\/div>\s*)\s*<\/section>/g,
     '$1\n          </div>\n        </section>'
@@ -68,7 +28,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 7: Fix missing closing tags for React.Fragment
+  // Fix 3: Fix missing closing tags for React.Fragment
   const fragmentFix = content.replace(
     /(\s*<\/div>\s*)\s*<\/React\.Fragment>/g,
     '$1\n      </div>\n    </React.Fragment>'
@@ -78,7 +38,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 8: Fix missing closing tags for CTA sections
+  // Fix 4: Fix missing closing tags for CTA sections
   const ctaFix = content.replace(
     /(\s*Learn More\s*<\/a>\s*)\s*<\/div>\s*<\/section>/g,
     '$1\n            </div>\n          </div>\n        </section>'
@@ -88,7 +48,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 9: Fix missing closing tags for main div
+  // Fix 5: Fix missing closing tags for main div
   const mainDivFix = content.replace(
     /(\s*<\/section>\s*)\s*<\/div>\s*<\/React\.Fragment>/g,
     '$1\n      </div>\n    </React.Fragment>'
@@ -98,27 +58,47 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 10: Remove extra closing div tags
-  const extraDivFix = content.replace(
-    /(\s*<\/section>\s*)\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/React\.Fragment>/g,
-    '$1\n      </div>\n    </React.Fragment>'
+  // Fix 6: Fix missing closing tags for benefits arrays
+  const benefitsFix = content.replace(
+    /(\s*'Custom integrations'\s*)\s*\]/g,
+    '$1\n  ];'
   );
-  if (extraDivFix !== content) {
-    content = extraDivFix;
+  if (benefitsFix !== content) {
+    content = benefitsFix;
     modified = true;
   }
 
-  // Fix 11: Fix malformed object syntax in arrays
-  const malformedObjectFix = content.replace(
-    /(\s+description:\s*'[^']*'\s*)\s+description:\s*'[^']*'\s*}\s*\]/g,
-    '$1\n    }\n  ];'
+  // Fix 7: Fix missing closing tags for features arrays
+  const featuresFix = content.replace(
+    /(\s*description:\s*'[^']*'\s*)\s*\]/g,
+    '$1\n  ];'
   );
-  if (malformedObjectFix !== content) {
-    content = malformedObjectFix;
+  if (featuresFix !== content) {
+    content = featuresFix;
     modified = true;
   }
 
-  // Fix 12: Fix missing closing tags for sections
+  // Fix 8: Fix missing closing tags for Helmet
+  const helmetFix = content.replace(
+    /(\s*<meta[^>]*\/>\s*)\s*<\/Helmet>/g,
+    '$1\n      </Helmet>'
+  );
+  if (helmetFix !== content) {
+    content = helmetFix;
+    modified = true;
+  }
+
+  // Fix 9: Fix missing closing tags for div elements
+  const divFix = content.replace(
+    /(\s*<a[^>]*>\s*[^<]*<\/a>\s*)\s*<\/div>/g,
+    '$1\n            </div>'
+  );
+  if (divFix !== content) {
+    content = divFix;
+    modified = true;
+  }
+
+  // Fix 10: Fix missing closing tags for sections
   const sectionFix2 = content.replace(
     /(\s*<\/div>\s*)\s*<\/section>/g,
     '$1\n          </div>\n        </section>'
@@ -128,7 +108,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 13: Fix missing closing tags for React.Fragment
+  // Fix 11: Fix missing closing tags for React.Fragment
   const fragmentFix2 = content.replace(
     /(\s*<\/div>\s*)\s*<\/React\.Fragment>/g,
     '$1\n      </div>\n    </React.Fragment>'
@@ -138,7 +118,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 14: Fix missing closing tags for CTA sections
+  // Fix 12: Fix missing closing tags for CTA sections
   const ctaFix2 = content.replace(
     /(\s*Learn More\s*<\/a>\s*)\s*<\/div>\s*<\/section>/g,
     '$1\n            </div>\n          </div>\n        </section>'
@@ -148,7 +128,7 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 15: Fix missing closing tags for main div
+  // Fix 13: Fix missing closing tags for main div
   const mainDivFix2 = content.replace(
     /(\s*<\/section>\s*)\s*<\/div>\s*<\/React\.Fragment>/g,
     '$1\n      </div>\n    </React.Fragment>'
@@ -158,23 +138,43 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 16: Remove extra closing div tags
-  const extraDivFix2 = content.replace(
-    /(\s*<\/section>\s*)\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/React\.Fragment>/g,
-    '$1\n      </div>\n    </React.Fragment>'
+  // Fix 14: Fix missing closing tags for benefits arrays
+  const benefitsFix2 = content.replace(
+    /(\s*'Custom integrations'\s*)\s*\]/g,
+    '$1\n  ];'
   );
-  if (extraDivFix2 !== content) {
-    content = extraDivFix2;
+  if (benefitsFix2 !== content) {
+    content = benefitsFix2;
     modified = true;
   }
 
-  // Fix 17: Fix malformed object syntax in arrays
-  const malformedObjectFix2 = content.replace(
-    /(\s+description:\s*'[^']*'\s*)\s+description:\s*'[^']*'\s*}\s*\]/g,
-    '$1\n    }\n  ];'
+  // Fix 15: Fix missing closing tags for features arrays
+  const featuresFix2 = content.replace(
+    /(\s*description:\s*'[^']*'\s*)\s*\]/g,
+    '$1\n  ];'
   );
-  if (malformedObjectFix2 !== content) {
-    content = malformedObjectFix2;
+  if (featuresFix2 !== content) {
+    content = featuresFix2;
+    modified = true;
+  }
+
+  // Fix 16: Fix missing closing tags for Helmet
+  const helmetFix2 = content.replace(
+    /(\s*<meta[^>]*\/>\s*)\s*<\/Helmet>/g,
+    '$1\n      </Helmet>'
+  );
+  if (helmetFix2 !== content) {
+    content = helmetFix2;
+    modified = true;
+  }
+
+  // Fix 17: Fix missing closing tags for div elements
+  const divFix2 = content.replace(
+    /(\s*<a[^>]*>\s*[^<]*<\/a>\s*)\s*<\/div>/g,
+    '$1\n            </div>'
+  );
+  if (divFix2 !== content) {
+    content = divFix2;
     modified = true;
   }
 
@@ -218,23 +218,43 @@ function fixJsxStructure(filePath) {
     modified = true;
   }
 
-  // Fix 22: Remove extra closing div tags
-  const extraDivFix3 = content.replace(
-    /(\s*<\/section>\s*)\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/React\.Fragment>/g,
-    '$1\n      </div>\n    </React.Fragment>'
+  // Fix 22: Fix missing closing tags for benefits arrays
+  const benefitsFix3 = content.replace(
+    /(\s*'Custom integrations'\s*)\s*\]/g,
+    '$1\n  ];'
   );
-  if (extraDivFix3 !== content) {
-    content = extraDivFix3;
+  if (benefitsFix3 !== content) {
+    content = benefitsFix3;
     modified = true;
   }
 
-  // Fix 23: Fix malformed object syntax in arrays
-  const malformedObjectFix3 = content.replace(
-    /(\s+description:\s*'[^']*'\s*)\s+description:\s*'[^']*'\s*}\s*\]/g,
-    '$1\n    }\n  ];'
+  // Fix 23: Fix missing closing tags for features arrays
+  const featuresFix3 = content.replace(
+    /(\s*description:\s*'[^']*'\s*)\s*\]/g,
+    '$1\n  ];'
   );
-  if (malformedObjectFix3 !== content) {
-    content = malformedObjectFix3;
+  if (featuresFix3 !== content) {
+    content = featuresFix3;
+    modified = true;
+  }
+
+  // Fix 24: Fix missing closing tags for Helmet
+  const helmetFix3 = content.replace(
+    /(\s*<meta[^>]*\/>\s*)\s*<\/Helmet>/g,
+    '$1\n      </Helmet>'
+  );
+  if (helmetFix3 !== content) {
+    content = helmetFix3;
+    modified = true;
+  }
+
+  // Fix 25: Fix missing closing tags for div elements
+  const divFix3 = content.replace(
+    /(\s*<a[^>]*>\s*[^<]*<\/a>\s*)\s*<\/div>/g,
+    '$1\n            </div>'
+  );
+  if (divFix3 !== content) {
+    content = divFix3;
     modified = true;
   }
 
@@ -249,13 +269,6 @@ function fixJsxStructure(filePath) {
 // Function to fix all problematic files
 function fixAllFiles() {
   const files = [
-    'app/ai-services/page.tsx',
-    'app/privacy/page.tsx',
-    'app/terms/page.tsx',
-    'app/sitemap/page.tsx',
-    'app/robots/page.tsx',
-    'app/404/page.tsx',
-    'app/500/page.tsx',
     'app/ai-chatbot-enterprise/page.tsx',
     'app/ai-content-generation-pro/page.tsx',
     'app/ai-content-moderation/page.tsx',
@@ -271,6 +284,7 @@ function fixAllFiles() {
     'app/ai-lead-scoring/page.tsx',
     'app/ai-predictive-modeling/page.tsx',
     'app/ai-sentiment-analysis/page.tsx',
+    'app/ai-services/page.tsx',
     'app/ai-speech-synthesis/page.tsx',
     'app/ai-supply-chain-ai/page.tsx',
     'app/ai-video-analysis/page.tsx',
