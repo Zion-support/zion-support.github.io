@@ -2,6 +2,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 import React from 'react';
+import '@testing-library/jest-dom';
 
 // Mock components with proper error boundary behavior
 class AdvancedErrorBoundary extends React.Component<{ 
