@@ -225,7 +225,7 @@ describe('AdvancedPerformanceMonitor', () => {
     const onMetricsUpdate = jest.fn();
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 } as PerformanceEntry]);
+    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }] as any);
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor />
@@ -241,8 +241,8 @@ describe('AdvancedPerformanceMonitor', () => {
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
     // Mock poor performance metrics
     mockPerformance.getEntriesByName.mockReturnValue([
-      { startTime: 2000 } as PerformanceEntry, // Poor FCP
-    ]);
+      { startTime: 2000 } // Poor FCP
+    ] as any);
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor />
