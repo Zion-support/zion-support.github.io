@@ -9,7 +9,6 @@ const ARVRSolutionsPage: React.FC = () => {
         <title>AR/VR Solutions - Zion Tech Group</title>
         <meta name="description" content="Create immersive experiences with augmented and virtual reality solutions for training, marketing, and entertainment." />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-12">
@@ -35,14 +34,6 @@ const ARVRSolutionsPage: React.FC = () => {
               <p className="text-gray-600">Build virtual reality experiences for marketing and entertainment.</p>
             </div>
           </div>
-=======
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">AR/VR Solutions</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Create immersive experiences with augmented and virtual reality solutions.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>

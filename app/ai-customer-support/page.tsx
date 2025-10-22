@@ -7,7 +7,6 @@ const AiCustomerSupportPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Customer Support - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Enhance customer experience with AI-powered support solutions including chatbots and intelligent routing." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100">
@@ -35,16 +34,6 @@ const AiCustomerSupportPage: React.FC = () => {
               <p className="text-gray-600">Analyze customer sentiment to provide personalized support experiences.</p>
             </div>
           </div>
-=======
-        <meta name="description" content="Enhance customer experience with AI-powered support solutions, chatbots, and intelligent ticket routing." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">AI Customer Support</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Enhance customer experience with AI-powered support solutions and intelligent chatbots.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
         </div>
       </div>
     </>
