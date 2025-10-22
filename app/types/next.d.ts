@@ -1,4 +1,4 @@
-// Next.js type definitions
+// import { MetadataRoute } from 'next' // Unused import
 
 // Extend Next.js types
 declare module 'next' {
