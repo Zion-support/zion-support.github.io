@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Brain, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-
+import { Brain, CheckCircle, Globe, Shield, Zap } from 'lucide-react';
 
 const AccessibilityPage: React.FC = () => {
   const features = [
