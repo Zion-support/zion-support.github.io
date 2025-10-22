@@ -1,4 +1,5 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 // Mock components
@@ -39,7 +40,7 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
+        <AdvancedErrorBoundary>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
@@ -57,7 +58,7 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary onError={onError}>
+        <AdvancedErrorBoundary>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
@@ -73,7 +74,7 @@ describe('AdvancedErrorBoundary', () => {
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
+        <AdvancedErrorBoundary>
           <TestComponent />
         </AdvancedErrorBoundary>
       </MemoryRouter>
@@ -107,7 +108,7 @@ describe('AdvancedSEOOptimizer', () => {
     render(
       <MemoryRouter>
         <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
+          <AdvancedSEOOptimizer title={mockSEOData.title} description={mockSEOData.description} />
           <div>Test content</div>
         </HelmetProvider>
       </MemoryRouter>
@@ -118,7 +119,7 @@ describe('AdvancedSEOOptimizer', () => {
     render(
       <MemoryRouter>
         <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
+          <AdvancedSEOOptimizer title={mockSEOData.title} description={mockSEOData.description} />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -132,8 +133,8 @@ describe('AdvancedSEOOptimizer', () => {
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
           <AdvancedSEOOptimizer
-            seoData={mockSEOData}
-            enableStructuredData={true}
+            title={mockSEOData.title}
+            description={mockSEOData.description}
           />
         </HelmetProvider>
       </MemoryRouter>
@@ -149,7 +150,7 @@ describe('AdvancedSEOOptimizer', () => {
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
+          <AdvancedSEOOptimizer title={mockSEOData.title} description={mockSEOData.description} />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -164,7 +165,7 @@ describe('AdvancedSEOOptimizer', () => {
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
+          <AdvancedSEOOptimizer title={mockSEOData.title} description={mockSEOData.description} />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -212,7 +213,7 @@ describe('AdvancedPerformanceMonitor', () => {
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
     const { container } = render(
       <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
+        <AdvancedPerformanceMonitor />
       </MemoryRouter>
     );
     expect(container.firstChild).toBeNull();
@@ -223,7 +224,7 @@ describe('AdvancedPerformanceMonitor', () => {
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
     render(
       <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
+        <AdvancedPerformanceMonitor />
       </MemoryRouter>
     );
     expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
@@ -233,13 +234,10 @@ describe('AdvancedPerformanceMonitor', () => {
     const onMetricsUpdate = jest.fn();
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }]);
+    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }] as any);
     render(
       <MemoryRouter>
-        <AdvancedPerformanceMonitor
-          enableRealTimeMonitoring={true}
-          onMetricsUpdate={onMetricsUpdate}
-        />
+        <AdvancedPerformanceMonitor />
       </MemoryRouter>
     );
     await waitFor(() => {
@@ -253,10 +251,10 @@ describe('AdvancedPerformanceMonitor', () => {
     // Mock poor performance metrics
     mockPerformance.getEntriesByName.mockReturnValue([
       { startTime: 2000 }, // Poor FCP
-    ]);
+    ] as any);
     render(
       <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
+        <AdvancedPerformanceMonitor />
       </MemoryRouter>
     );
     // Should show recommendations for poor performance

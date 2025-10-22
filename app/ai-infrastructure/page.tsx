@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Layers, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, CheckCircle, Star, Clock, Zap, Shield } from 'lucide-react'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, Globe, Shield } from 'lucide-react'
 
 export default function AiInfrastructurePage() {
   return (

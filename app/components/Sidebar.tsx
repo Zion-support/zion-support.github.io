@@ -6,7 +6,7 @@ interface SidebarProps {
   onClose?: () => void
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen = false, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen = false }) => {
   return (
     <aside className={`w-64 bg-slate-800 min-h-screen p-4 ${isOpen ? 'block' : 'hidden md:block'}`}>
       <nav className="space-y-2">

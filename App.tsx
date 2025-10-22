@@ -214,6 +214,7 @@ const App = memo(() => {
     enablePreloading: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
+    enableCaching: true,
     enableBundleAnalysis: process.env.NODE_ENV === 'development'
   });
 
