@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock , Crown, Building, MousePointer, Volume2 } from 'lucide-react';
 const AiSocialMediaManagerPage: React.FC = () => {
   const features = [
     {
@@ -63,7 +63,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-            </div>
+            </a></section></React.Fragment></React.Fragment></section></section></React.Fragment></React.Fragment></section></section></React.Fragment></React.Fragment></section></section></React.Fragment></div>
           </div>
         </div>
         </section>
@@ -130,7 +130,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-            </div>
+            </a></div>
           </div>
         </section>
       </div>

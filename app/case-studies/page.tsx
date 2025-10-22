@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock , Crown, Building, MousePointer, Volume2 } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const features = [
     {
@@ -60,6 +60,7 @@ const CaseStudiesPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
+              </a>
             </div>
           </div>
         </section>
@@ -81,7 +82,8 @@ const CaseStudiesPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -102,7 +104,8 @@ const CaseStudiesPage: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>                </div>
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -127,9 +130,13 @@ const CaseStudiesPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+    </div>
+  );
+};
 
 export default CaseStudiesPage;

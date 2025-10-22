@@ -8,33 +8,26 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Files with specific syntax errors that need manual fixing
-const problemFiles = [
-  'app/ai-chatbot-enterprise/page.tsx',
-  'app/ai-content-generation-pro/page.tsx',
-  'app/ai-content-moderation/page.tsx',
-  'app/ai-conversation-analytics/page.tsx',
-  'app/ai-conversational-ai/page.tsx',
-  'app/ai-customer-churn/page.tsx',
-  'app/ai-document-intelligence/page.tsx',
-  'app/ai-document-processor/page.tsx',
-  'app/ai-financial-forecasting/page.tsx',
-  'app/ai-fraud-detection/page.tsx',
-  'app/ai-healthcare-diagnostics/page.tsx',
-  'app/ai-image-recognition/page.tsx',
-  'app/ai-integration-services/page.tsx',
-  'app/ai-iot-analytics/page.tsx',
-  'app/ai-knowledge-management/page.tsx',
-  'app/ai-lead-scoring/page.tsx',
-  'app/ai-legal-assistant/page.tsx',
-  'app/ai-predictive-maintenance/page.tsx',
-  'app/ai-predictive-modeling/page.tsx'
-];
-
-function fixSyntaxErrors(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
+    
+    // Fix missing imports - add common missing icons
+    const missingImports = ['Crown', 'Building', 'MousePointer', 'Volume2', 'Target', 'BarChart'];
+    const importLine = content.match(/import.*from 'lucide-react';/);
+    if (importLine) {
+      const currentImports = importLine[0];
+      const missingIcons = missingImports.filter(icon => !currentImports.includes(icon));
+      if (missingIcons.length > 0) {
+        const newImport = currentImports.replace(
+          /} from 'lucide-react';/,
+          `, ${missingIcons.join(', ')} } from 'lucide-react';`
+        );
+        content = content.replace(currentImports, newImport);
+        modified = true;
+      }
+    }
     
     // Fix malformed object definitions with duplicate description
     const duplicateDescPattern = /(\s+description:\s*'[^']*'\s*)\s+description:\s*'[^']*'\s*\}\s*\]/g;
@@ -43,17 +36,17 @@ function fixSyntaxErrors(filePath) {
       modified = true;
     }
     
-    // Fix missing closing tags in React.Fragment and sections
+    // Fix missing closing tags in React.Fragment
     const fragmentPattern = /(<React\.Fragment>[\s\S]*?)(<\/div>\s*<\/div>\s*<\/div>)/g;
     if (fragmentPattern.test(content)) {
       content = content.replace(fragmentPattern, '$1</React.Fragment>$2');
       modified = true;
     }
     
-    // Fix malformed JSX structure
-    const jsxPattern = /(<section[^>]*>[\s\S]*?)(<\/div>\s*<\/div>\s*<\/div>)/g;
-    if (jsxPattern.test(content)) {
-      content = content.replace(jsxPattern, '$1</section>$2');
+    // Fix missing closing tags for sections
+    const sectionPattern = /(<section[^>]*>[\s\S]*?)(<\/div>\s*<\/div>\s*<\/div>)/g;
+    if (sectionPattern.test(content)) {
+      content = content.replace(sectionPattern, '$1</section>$2');
       modified = true;
     }
     
@@ -82,6 +75,18 @@ function fixSyntaxErrors(filePath) {
       '$1</React.Fragment>$2'
     );
     
+    // Fix malformed JSX structure with missing closing tags
+    content = content.replace(
+      /(<div\s+key={[^}]+}\s+className="[^"]*"[^>]*>[\s\S]*?<p[^>]*>[^<]+<\/p>)\s*(<\/div>\s*\)\s*\)\s*<\/div>\s*<\/section>)/g,
+      '$1</div>$2'
+    );
+    
+    // Fix missing closing tags in button groups
+    content = content.replace(
+      /(<a\s+href="[^"]*"\s+className="[^"]*"[^>]*>\s*[^<]+\s*)\s*(<\/div>\s*<\/div>\s*<\/section>)/g,
+      '$1</a>$2'
+    );
+    
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
@@ -95,16 +100,34 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
 // Main execution
-console.log('Fixing remaining syntax errors...');
+console.log('Starting comprehensive error fixes...');
+
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
 
 let fixedCount = 0;
-for (const file of problemFiles) {
-  const fullPath = path.join(__dirname, file);
-  if (fs.existsSync(fullPath)) {
-    if (fixSyntaxErrors(fullPath)) {
-      fixedCount++;
-    }
+for (const file of tsxFiles) {
+  if (fixFile(file)) {
+    fixedCount++;
   }
 }
 
