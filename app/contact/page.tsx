@@ -33,7 +33,7 @@ const ContactPage: React.FC = () => {
     '24/7 support',
     'Custom integrations'  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <React.Fragment>
       <Helmet>
         <title>Contact - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional contact solutions powered by advanced AI and cutting-edge technology." />
