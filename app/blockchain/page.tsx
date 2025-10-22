@@ -3,58 +3,41 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Shield, Brain, BarChart, TrendingUp, Eye } from 'lucide-react';
+import { CheckCircle, Zap, Shield, Brain, BarChart } from 'lucide-react';
 
-const AiAnalyticsPage: React.FC = () => {
+const BlockchainPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations.',
+      benefits: ['Smart automation', 'Intelligent insights', 'Process optimization', 'ROI maximization']
     },
     {
       icon: BarChart,
-
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimize your business performance with AI-driven recommendations and insights.',
-      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics and reporting for better decision making.',
+      benefits: ['Real-time insights', 'Performance tracking', 'Predictive analytics', 'Custom reports']
     },
     {
       icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-    },
-    {
-      icon: Eye,
-      title: 'Visual Analytics',
-      description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
+      title: 'Fast Implementation',
+      description: 'Quick deployment and integration with your existing systems.',
+      benefits: ['Rapid deployment', 'Easy integration', 'Minimal downtime', 'Seamless migration']
     },
     {
       icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
+      title: 'Enterprise Security',
+      description: 'Enterprise-grade security and compliance for your business.',
+      benefits: ['Data protection', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-
-  // Removed unused variables to fix TypeScript errors
 
   return (
     <>
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
-
+        <title>Blockchain - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our blockchain solutions powered by cutting-edge AI technology." />
       </Helmet>
       
       <Navigation />
@@ -65,10 +48,10 @@ const AiAnalyticsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                AI Analytics
+                Blockchain
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Transform your business with intelligent analytics powered by cutting-edge AI technology.
+                Transform your business with our blockchain solutions powered by cutting-edge AI technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
@@ -87,10 +70,10 @@ const AiAnalyticsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Analytics Features
+                Powerful Blockchain Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover how our AI analytics platform can revolutionize your business intelligence.
+                Discover how our blockchain platform can transform your business.
               </p>
             </div>
             
@@ -120,10 +103,10 @@ const AiAnalyticsPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Analytics?
+              Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join thousands of businesses already using our AI analytics platform.
+              Join thousands of businesses already using our blockchain platform.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial
@@ -137,4 +120,4 @@ const AiAnalyticsPage: React.FC = () => {
   );
 };
 
-export default AiAnalyticsPage;
+export default BlockchainPage;
