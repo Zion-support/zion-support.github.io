@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to resolve merge conflicts by keeping the "ours" version (current branch)
+// Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -20,44 +20,35 @@ function resolveMergeConflicts(filePath) {
     
     console.log(`Resolving merge conflicts in: ${filePath}`);
     
-    // Split content by lines
+    // Split content by conflict markers
     const lines = content.split('\n');
     const resolvedLines = [];
     let inConflict = false;
-    let inOurs = false;
-    let inTheirs = false;
+    let conflictStart = -1;
+    let conflictEnd = -1;
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
       if (line.startsWith('<<<<<<<')) {
         inConflict = true;
-        inOurs = true;
-        inTheirs = false;
+        conflictStart = i;
         continue;
       }
       
       if (line.startsWith('=======')) {
-        inOurs = false;
-        inTheirs = true;
-        continue;
+        continue; // Skip the separator
       }
       
       if (line.startsWith('>>>>>>>')) {
         inConflict = false;
-        inOurs = false;
-        inTheirs = false;
+        conflictEnd = i;
         continue;
       }
       
       if (!inConflict) {
-        // Outside conflict, keep the line
-        resolvedLines.push(line);
-      } else if (inOurs) {
-        // Inside conflict, keep "ours" version
         resolvedLines.push(line);
       }
-      // Skip "theirs" version (inTheirs = true)
     }
     
     // Write the resolved content back
@@ -98,7 +89,7 @@ function findFilesWithConflicts(dir) {
 }
 
 // Main execution
-console.log('Starting merge conflict resolution (keeping our version)...');
+console.log('Starting merge conflict resolution...');
 
 const appDir = path.join(__dirname, 'app');
 const filesWithConflicts = findFilesWithConflicts(appDir);

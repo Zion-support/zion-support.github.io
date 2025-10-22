@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-=======
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
 
 // https://vitejs.dev/config/
 export default defineConfig({
-<<<<<<< HEAD
-  plugins: [react()],
-  server: {
-    port: 3000,
-  },
-  build: {
-    outDir: 'dist',
-  },
-})
-=======
   plugins: [
     react({
       // Optimize JSX runtime
@@ -139,4 +124,3 @@ export default defineConfig({
     devSourcemap: true,
   },
 });
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import {
   Users,
   Award,
@@ -72,60 +71,18 @@ const AboutPage: React.FC = () => {
       role: "Lead Developer",
       bio: "Backend systems and cloud architecture expert."
     }
-=======
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
-
-const AboutPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
-    }
-  ];
-
-  const benefits = [
-    'AI-powered automation',
-    'Real-time processing',
-    'Scalable solutions',
-    'Enterprise-grade security',
-    '24/7 support',
-    'Custom integrations'
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
   ];
 
   return (
     <React.Fragment>
       <Helmet>
-<<<<<<< HEAD
         <title>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." />
         <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
-=======
-        <title>About - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional about solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="about, AI solutions, IT services, automation, technology, business solutions" />
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -266,85 +223,15 @@ const AboutPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
                   <p className="text-blue-400 mb-3">{member.role}</p>
                   <p className="text-gray-300 text-sm">{member.bio}</p>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional about solutions powered by advanced AI and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits
-              </h2>
-              <p className="text-lg text-gray-300">
-                Why choose our solution
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
             <p className="text-xl text-gray-100 mb-8">
               Let's discuss how we can help transform your business with AI and technology.
@@ -356,25 +243,6 @@ const AboutPage: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
                 Contact Us
               </button>
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
             </div>
           </div>
         </section>
@@ -383,8 +251,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AboutPage;
-=======
-export default AboutPage;
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2

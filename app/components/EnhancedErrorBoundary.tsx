@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
@@ -156,20 +155,3 @@ const ComponentsPage: React.FC = () => {
 };
 
 export default ComponentsPage;
-=======
-
-interface EnhancedErrorBoundaryProps {
-  className?: string;
-}
-
-const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>EnhancedErrorBoundary</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
-  );
-};
-
-export default EnhancedErrorBoundary;
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
