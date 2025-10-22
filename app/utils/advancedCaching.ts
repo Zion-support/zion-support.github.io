@@ -1,128 +1,253 @@
+interface CacheOptions {
+  ttl?: number // Time to live in milliseconds
+  maxSize?: number // Maximum number of items
+  strategy?: 'lru' | 'fifo' | 'lfu' // Cache eviction strategy
+}
 
-// advanced Caching
-export const advancedcaching = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('advanced Caching initialized')
+interface CacheItem<T> {
+  value: T
+  timestamp: number
+  accessCount: number
+  lastAccessed: number
+}
+
+export class AdvancedCache<T = any> {
+  private cache = new Map<string, CacheItem<T>>()
+  private options: Required<CacheOptions>
+  private accessOrder: string[] = []
+
+  constructor(options: CacheOptions = {}) {
+    this.options = {
+      ttl: options.ttl || 5 * 60 * 1000, // 5 minutes default
+      maxSize: options.maxSize || 100,
+      strategy: options.strategy || 'lru'
+    }
+  }
+
+  set(key: string, value: T): void {
+    const now = Date.now()
+    
+    // Remove expired items
+    this.cleanup()
+    
+    // Check if we need to evict items
+    if (this.cache.size >= this.options.maxSize) {
+      this.evict()
+    }
+
+    const item: CacheItem<T> = {
+      value,
+      timestamp: now,
+      accessCount: 1,
+      lastAccessed: now
+    }
+
+    this.cache.set(key, item)
+    this.updateAccessOrder(key)
+  }
+
+  get(key: string): T | undefined {
+    const item = this.cache.get(key)
+    
+    if (!item) {
+      return undefined
+    }
+
+    const now = Date.now()
+    
+    // Check if item has expired
+    if (now - item.timestamp > this.options.ttl) {
+      this.cache.delete(key)
+      this.removeFromAccessOrder(key)
+      return undefined
+    }
+
+    // Update access information
+    item.accessCount++
+    item.lastAccessed = now
+    this.updateAccessOrder(key)
+    
+    return item.value
+  }
+
+  has(key: string): boolean {
+    return this.get(key) !== undefined
+  }
+
+  delete(key: string): boolean {
+    const deleted = this.cache.delete(key)
+    if (deleted) {
+      this.removeFromAccessOrder(key)
+    }
+    return deleted
+  }
+
+  clear(): void {
+    this.cache.clear()
+    this.accessOrder = []
+  }
+
+  size(): number {
+    return this.cache.size
+  }
+
+  keys(): string[] {
+    return Array.from(this.cache.keys())
+  }
+
+  values(): T[] {
+    return Array.from(this.cache.values()).map(item => item.value)
+  }
+
+  private cleanup(): void {
+    const now = Date.now()
+    const expiredKeys: string[] = []
+
+    for (const [key, item] of this.cache.entries()) {
+      if (now - item.timestamp > this.options.ttl) {
+        expiredKeys.push(key)
+      }
+    }
+
+    expiredKeys.forEach(key => {
+      this.cache.delete(key)
+      this.removeFromAccessOrder(key)
+    })
+  }
+
+  private evict(): void {
+    if (this.cache.size === 0) return
+
+    let keyToEvict: string | undefined
+
+    switch (this.options.strategy) {
+      case 'lru':
+        keyToEvict = this.accessOrder[0]
+        break
+      case 'fifo': {
+        // Find the oldest item by timestamp
+        let oldestTime = Infinity
+        for (const [key, item] of this.cache.entries()) {
+          if (item.timestamp < oldestTime) {
+            oldestTime = item.timestamp
+            keyToEvict = key
+          }
+        }
+        break
+      }
+      case 'lfu': {
+        // Find the least frequently used item
+        let minAccessCount = Infinity
+        for (const [key, item] of this.cache.entries()) {
+          if (item.accessCount < minAccessCount) {
+            minAccessCount = item.accessCount
+            keyToEvict = key
+          }
+        }
+        break
+      }
+    }
+
+    if (keyToEvict) {
+      this.cache.delete(keyToEvict)
+      this.removeFromAccessOrder(keyToEvict)
+    }
+  }
+
+  private updateAccessOrder(key: string): void {
+    this.removeFromAccessOrder(key)
+    this.accessOrder.push(key)
+  }
+
+  private removeFromAccessOrder(key: string): void {
+    const index = this.accessOrder.indexOf(key)
+    if (index > -1) {
+      this.accessOrder.splice(index, 1)
+    }
+  }
+
+  getStats(): {
+    size: number
+    maxSize: number
+    hitRate: number
+    missRate: number
+  } {
+    const totalAccesses = Array.from(this.cache.values())
+      .reduce((sum, item) => sum + item.accessCount, 0)
+    
+    return {
+      size: this.cache.size,
+      maxSize: this.options.maxSize,
+      hitRate: totalAccesses > 0 ? totalAccesses / (totalAccesses + this.cache.size) : 0,
+      missRate: totalAccesses > 0 ? this.cache.size / (totalAccesses + this.cache.size) : 0
+    }
   }
 }
-export default advancedcaching
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
-const AdvancedCachingPage: React.FC = () => {
-    const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-        <title>AdvancedCaching | Zion Tech Group</title>
-        <meta />
-        <meta />
-      </Helmet>
-      {/* Hero Section */} <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1>
-              <span>AdvancedCaching </span>
-              </span>
-              <br>
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p>Transform your business with our advanced advancedcaching solutions. </p>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button>Get Started</button>
-                <ArrowRight>
-              </button>
-              <button>Learn More</button>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>Why Choose Our AdvancedCaching?</h2>
-            </h2>
-            <p>Our advancedcaching solutions deliver unmatched performance, security, and scalability. </p>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {features.map((feature, index) => (} <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>Key Benefits</h2>
-            </h2>
-            <p>Experience the power of our advancedcaching solutions for your business.</p>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
-            {benefits.map((benefit, index) => (} <div key={index}className="flex items-start space-x-3"></div>
-                <CheckCircle />
-                <p className="text-gray-300 text-lg">{benefit</p>}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>
-            <h2>Ready to Get Started? </h2>
-            </h2>
-            <p>Contact our experts to discuss your advancedcaching needs and get a customized solution. </p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button>
-                <Phone>
-                Call Now
-              </button>
-              <button>
-                <Mail>
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  ),
+
+// Memory cache instance
+export const memoryCache = new AdvancedCache()
+
+// Session storage cache
+export class SessionCache<T = any> {
+  private prefix = 'cache_'
+
+  set(key: string, value: T, ttl: number = 5 * 60 * 1000): void {
+    const item = {
+      value,
+      timestamp: Date.now(),
+      ttl
+    }
+    
+    try {
+      sessionStorage.setItem(
+        `${this.prefix}${key}`,
+        JSON.stringify(item)
+      )
+    } catch (error) {
+      console.warn('Failed to set session cache item:', error)
+    }
+  }
+
+  get(key: string): T | undefined {
+    try {
+      const itemStr = sessionStorage.getItem(`${this.prefix}${key}`)
+      if (!itemStr) return undefined
+
+      const item = JSON.parse(itemStr)
+      const now = Date.now()
+
+      if (now - item.timestamp > item.ttl) {
+        this.delete(key)
+        return undefined
+      }
+
+      return item.value
+    } catch (error) {
+      console.warn('Failed to get session cache item:', error)
+      return undefined
+    }
+  }
+
+  delete(key: string): void {
+    try {
+      sessionStorage.removeItem(`${this.prefix}${key}`)
+    } catch (error) {
+      console.warn('Failed to delete session cache item:', error)
+    }
+  }
+
+  clear(): void {
+    try {
+      const keys = Object.keys(sessionStorage)
+      keys.forEach(key => {
+        if (key.startsWith(this.prefix)) {
+          sessionStorage.removeItem(key)
+        }
+      })
+    } catch (error) {
+      console.warn('Failed to clear session cache:', error)
+    }
+  }
 }
-export default AdvancedCachingPage
+
+export const sessionCache = new SessionCache()

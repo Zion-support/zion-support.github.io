@@ -1,148 +1,262 @@
-
-// monitoring
-export const monitoring = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('monitoring initialized')
-  }
-}
-export default monitoring
-'use client'
 /**
- * Comprehensive Monitoring Utility
- * Real-time application monitoring, performance tracking, and error reporting
+ * Performance Monitoring System
+ * Tracks web vitals, errors, and user interactions
  */
-import React from 'react'
-import {performanceConfig} from '../../performance.config'
-export interface PerformanceMetrics {lcp?: number;}
-  fid?: number
-  cls?: number
-  fcp?: number
-  ttfb?: number
-  inp?: number;}}
-export interface ErrorReport {message: string,}
+
+export interface PerformanceMetrics {
+  lcp?: number // Largest Contentful Paint
+  fid?: number // First Input Delay
+  cls?: number // Cumulative Layout Shift
+  fcp?: number // First Contentful Paint
+  ttfb?: number // Time to First Byte
+  inp?: number // Interaction to Next Paint
+}
+
+export interface ErrorReport {
+  message: string
   stack?: string
-  component?: string
-  timestamp: number,
-  userAgent: string,
-  url: string,}}
-class MonitoringService {}}private metrics: PerformanceMetrics = {,}private errors: ErrorReport[] = [],
-  private observer: PerformanceObserver | null = null,
-  constructor() {if (typeof window !== 'undefined') {
-      this.initializeMonitoring()}}
+  url?: string
+  line?: number
+  column?: number
+  timestamp: number
+  userAgent?: string
+  userId?: string
+}
+
+export interface UserInteraction {
+  type: 'click' | 'scroll' | 'keydown' | 'resize' | 'focus' | 'blur'
+  target?: string
+  timestamp: number
+  x?: number
+  y?: number
+  duration?: number
+}
+
+export interface MonitoringConfig {
+  enablePerformance: boolean
+  enableErrors: boolean
+  enableInteractions: boolean
+  enableWebVitals: boolean
+  sampleRate: number
+  endpoint?: string
+}
+
+export class MonitoringSystem {
+  private config: MonitoringConfig
+  private metrics: PerformanceMetrics = {}
+  private errors: ErrorReport[] = []
+  private interactions: UserInteraction[] = []
+  private observer?: PerformanceObserver
+
+  constructor(config: Partial<MonitoringConfig> = {}) {
+    this.config = {
+      enablePerformance: true,
+      enableErrors: true,
+      enableInteractions: true,
+      enableWebVitals: true,
+      sampleRate: 1.0,
+      ...config
+    }
+
+    this.initialize()
   }
-  private initializeMonitoring(): void {// Monitor Web Vitals;}
-    this.monitorWebVitals()
-    // Monitor Long Tasks
-    this.monitorLongTasks()
-    // Monitor Resource Loading
-    this.monitorResourceTiming()
-    // Global Error Handler
-    this.setupErrorHandling()}}
-  private monitorWebVitals(): void {if ('PerformanceObserver' in window) {}
-      try {// Largest Contentful Paint;}
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()}const lastEntry = entries[entries.length - 1] as PerformanceEntry & {renderTime?: number; loadTime?: number}this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
-          this.reportMetric('lcp', this.metrics.lcp)
-        })
-        lcpObserver.observe({entryTypes: ['largest-contentful-paint'] ,)})
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {,
-            this.metrics.fid = (entry as any).processingStart - entry.startTime,
-            this.reportMetric('fid', this.metrics.fid)}})
-        })
-        fidObserver.observe({entryTypes: ['first-input'] ,)})
-        // Cumulative Layout Shift
-        let clsValue = 0
-        const clsObserver = new PerformanceObserver(list => {)
-    const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {,
-            if (!(entry as any).hadRecentInput) {
-    // Keep HEAD version
-              this.metrics.cls = clsValue,
-              this.reportMetric('cls', clsValue)}}
-          })
-        })
-        clsObserver.observe({entryTypes: ['layout-shift'] ,)})
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {)
-    const entries = list.getEntries()
-          entries.forEach(entry => {)
-            this.metrics.fcp = entry.startTime
-            this.reportMetric('fcp', entry.startTime)}})
-        })
-        fcpObserver.observe({entryTypes: ['paint'] ,)})
-      } catch (error) {// Keep HEAD version;}}
-  }
-  private monitorLongTasks(): void {if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {}
-      try {const longTaskObserver = new PerformanceObserver((list) => {}
-          for (const entry of list.getEntries()) {
-    // Keep HEAD version;}})
-        longTaskObserver.observe({entryTypes: ['longtask'] ,)})
-      } catch (error) {// Long task API might not be available;}}
+
+  private initialize(): void {
+    if (typeof window === 'undefined') return
+
+    if (this.config.enablePerformance) {
+      this.observePerformance()
+    }
+
+    if (this.config.enableErrors) {
+      this.observeErrors()
+    }
+
+    if (this.config.enableInteractions) {
+      this.observeInteractions()
+    }
+
+    if (this.config.enableWebVitals) {
+      this.observeWebVitals()
     }
   }
-  private monitorResourceTiming(): void {if ('PerformanceObserver' in window) {}
-      try {const resourceObserver = new PerformanceObserver((list) => {}
-          const entries = list.getEntries()
-    // Keep HEAD version;}})
-        })
-        resourceObserver.observe({entryTypes: ['resource'] ,)})
-      } catch (_error) {// Keep HEAD version;}}
+
+  private observePerformance(): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
+
+    try {
+      this.observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          this.handlePerformanceEntry(entry)
+        }
+      })
+
+      this.observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
+    } catch (error) {
+      console.warn('Failed to initialize performance observer:', error)
+    }
   }
-  private setupErrorHandling(): void {// Global error handler;}
+
+  private handlePerformanceEntry(entry: PerformanceEntry): void {
+    switch (entry.entryType) {
+      case 'navigation':
+        const navEntry = entry as PerformanceNavigationTiming
+        this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
+        break
+      case 'paint':
+        const paintEntry = entry as PerformancePaintTiming
+        if (paintEntry.name === 'first-contentful-paint') {
+          this.metrics.fcp = paintEntry.startTime
+        }
+        break
+      case 'largest-contentful-paint':
+        const lcpEntry = entry as PerformanceEntry
+        this.metrics.lcp = lcpEntry.startTime
+        break
+    }
+  }
+
+  private observeErrors(): void {
+    if (typeof window === 'undefined') return
+
     window.addEventListener('error', (event) => {
-      this.logError({)
+      this.reportError({
         message: event.message,
         stack: event.error?.stack,
+        url: event.filename,
+        line: event.lineno,
+        column: event.colno,
         timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,}})
+        userAgent: navigator.userAgent
+      })
     })
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {this.logError({)}message: `Unhandled Promise Rejection: ${event.reason,}`,
+
+    window.addEventListener('unhandledrejection', (event) => {
+      this.reportError({
+        message: event.reason?.message || 'Unhandled Promise Rejection',
+        stack: event.reason?.stack,
         timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
+        userAgent: navigator.userAgent
       })
     })
   }
-  private reportMetric(name: string, value: number): void {,}
-    // Sample rate,
-    if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return;}}
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-    // Keep HEAD version
-    // Send to analytics (if configured)
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {)
-        value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals',}})
+
+  private observeInteractions(): void {
+    if (typeof window === 'undefined') return
+
+    const interactionTypes: (keyof WindowEventMap)[] = ['click', 'scroll', 'keydown', 'resize', 'focus', 'blur']
+
+    interactionTypes.forEach(type => {
+      window.addEventListener(type, (event) => {
+        this.recordInteraction({
+          type: type as UserInteraction['type'],
+          target: (event.target as Element)?.tagName?.toLowerCase(),
+          timestamp: Date.now(),
+          x: (event as MouseEvent).clientX,
+          y: (event as MouseEvent).clientY
+        })
+      }, { passive: true })
+    })
+  }
+
+  private observeWebVitals(): void {
+    if (typeof window === 'undefined') return
+
+    // Observe CLS
+    if ('PerformanceObserver' in window) {
+      try {
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+              this.metrics.cls = (this.metrics.cls || 0) + (entry as any).value
+            }
+          }
+        })
+        clsObserver.observe({ entryTypes: ['layout-shift'] })
+      } catch (error) {
+        console.warn('Failed to observe CLS:', error)
+      }
     }
   }
-  public logError(error: ErrorReport): void {,}
+
+  private reportError(error: ErrorReport): void {
+    if (Math.random() > this.config.sampleRate) return
+
     this.errors.push(error)
-    // Keep only last 50 errors,
-    if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)}}
-    // Send to error tracking service (if configured)
-  }
-  public getMetrics(): PerformanceMetrics {}}return {...this.metrics}}}
-  public getErrors(): ErrorReport[] {return [...this.errors]}}
-  public clearErrors(): void {this.errors = []}}}
-  public measureMemory(): void {if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}}const memory = (performance as Performance & {memory?: { usedJSHeapSize: number totalJSHeapSize: number, jsHeapSizeLimit: number ,}}).memory
-      if (memory) {// Keep HEAD version;}}
+
+    // Send to remote endpoint if configured
+    if (this.config.endpoint) {
+      this.sendToRemote('error', error)
     }
   }
-  public measureNavigationTiming(): void {if ('performance' in window && 'getEntriesByType' in performance) {}
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigation) {
-    // Keep HEAD version;}}
+
+  private recordInteraction(interaction: UserInteraction): void {
+    if (Math.random() > this.config.sampleRate) return
+
+    this.interactions.push(interaction)
+
+    // Keep only recent interactions
+    if (this.interactions.length > 1000) {
+      this.interactions = this.interactions.slice(-500)
+    }
+  }
+
+  private async sendToRemote(type: string, data: any): Promise<void> {
+    if (!this.config.endpoint) return
+
+    try {
+      await fetch(this.config.endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          type,
+          data,
+          timestamp: Date.now(),
+          url: window.location.href,
+          userAgent: navigator.userAgent
+        })
+      })
+    } catch (error) {
+      console.warn('Failed to send monitoring data:', error)
+    }
+  }
+
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics }
+  }
+
+  getErrors(): ErrorReport[] {
+    return [...this.errors]
+  }
+
+  getInteractions(): UserInteraction[] {
+    return [...this.interactions]
+  }
+
+  clearData(): void {
+    this.metrics = {}
+    this.errors = []
+    this.interactions = []
+  }
+
+  setConfig(config: Partial<MonitoringConfig>): void {
+    this.config = { ...this.config, ...config }
+  }
+
+  destroy(): void {
+    if (this.observer) {
+      this.observer.disconnect()
     }
   }
 }
-// Singleton instance
-const monitoring = new MonitoringService()
-export default monitoring
+
+// Default monitoring instance
+export const monitoring = new MonitoringSystem({
+  enablePerformance: true,
+  enableErrors: true,
+  enableInteractions: true,
+  enableWebVitals: true,
+  sampleRate: process.env.NODE_ENV === 'production' ? 0.1 : 1.0
+})

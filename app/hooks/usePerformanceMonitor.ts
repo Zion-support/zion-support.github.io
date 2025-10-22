@@ -1,25 +1,35 @@
 import { useCallback, useEffect, useState, useRef } from 'react'
+
 interface UsePerformanceMonitorOptions {
   enabled?: boolean
   threshold?: number
   measureMemoryUsage?: boolean
 }
+
 interface PerformanceData {
   fps: number
   memoryUsage: number
   loadTime: number
   renderTime: number
 }
+
 export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
+  const {
+    enabled = true,
+    measureMemoryUsage = true
+  } = options
+
   const [metrics, setMetrics] = useState<PerformanceData>({
     fps: 0,
     memoryUsage: 0,
     loadTime: 0,
-    renderTime: 0,
+    renderTime: 0
   })
+
   const [isMonitoringFPS, setIsMonitoringFPS] = useState(false)
   const frameCountRef = useRef(0)
   const lastTimeRef = useRef(performance.now())
+
   const measureMemoryUsage = useCallback(() => {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as any).memory
@@ -29,58 +39,82 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
       }))
     }
   }, [])
-  const init = useCallback(() => {
-    if (options.enabled !== false) {
-      setIsMonitoringFPS(true)
-      measureMemoryUsage()
-    }
-  }, [options.enabled, measureMemoryUsage])
-  useEffect(() => {
+
+  const measureFPS = useCallback(() => {
     if (!isMonitoringFPS) return
-    const countFrames = () => {
-      frameCountRef.current++
-      const currentTime = performance.now()
-      if (currentTime - lastTimeRef.current >= 1000) {
-        const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current))
+
+    frameCountRef.current++
+    const currentTime = performance.now()
+    const deltaTime = currentTime - lastTimeRef.current
+
+    if (deltaTime >= 1000) {
+      const fps = Math.round((frameCountRef.current * 1000) / deltaTime)
+      setMetrics(prev => ({
+        ...prev,
+        fps
+      }))
+      
+      frameCountRef.current = 0
+      lastTimeRef.current = currentTime
+    }
+
+    requestAnimationFrame(measureFPS)
+  }, [isMonitoringFPS])
+
+  const startFPSMonitoring = useCallback(() => {
+    setIsMonitoringFPS(true)
+  }, [])
+
+  const stopFPSMonitoring = useCallback(() => {
+    setIsMonitoringFPS(false)
+  }, [])
+
+  const measureLoadTime = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (navigation) {
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart
         setMetrics(prev => ({
           ...prev,
-          fps,
+          loadTime
         }))
-        frameCountRef.current = 0
-        lastTimeRef.current = currentTime
+        console.log('Page load time:', loadTime)
       }
-      requestAnimationFrame(countFrames)
     }
-    requestAnimationFrame(countFrames)
-  }, [isMonitoringFPS])
+  }, [])
+
   useEffect(() => {
-    if (options.measureMemoryUsage) {
-      measureMemoryUsage()
+    if (!enabled) return
+
+    // Run monitoring after page load
+    if (document.readyState === 'complete') {
+      measureLoadTime()
+    } else {
+      window.addEventListener('load', measureLoadTime)
     }
-  }, [measureMemoryUsage, options.measureMemoryUsage])
+
+    return () => {
+      window.removeEventListener('load', measureLoadTime)
+    }
+  }, [enabled, measureLoadTime])
+
+  useEffect(() => {
+    if (isMonitoringFPS) {
+      measureFPS()
+    }
+  }, [isMonitoringFPS, measureFPS])
+
+  useEffect(() => {
+    if (measureMemoryUsage) {
+      const interval = setInterval(measureMemoryUsage, 1000)
+      return () => clearInterval(interval)
+    }
+  }, [measureMemoryUsage])
+
   return {
     metrics,
-    setMetrics,
-    isMonitoringFPS,
-    setIsMonitoringFPS,
-    measureMemoryUsage,
-    init
+    startFPSMonitoring,
+    stopFPSMonitoring,
+    measureLoadTime
   }
-}
-export default usePerformanceMonitor
-'use client'
-import {useEffect} from 'react'
-export const usePerformanceMonitor = () => {useEffect(() => {
-    if (typeof window === 'undefined') return
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
-      // This is a simplified version - in production you'd use the web-vitals library
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart
-          console.log('Page load time: ', loadTime);}}
-    }
-    // Run monitoring after page load
-    if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, [])
 }

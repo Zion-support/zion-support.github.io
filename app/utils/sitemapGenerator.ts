@@ -1,15 +1,110 @@
+/**
+ * Sitemap Generator
+ * Generates XML sitemaps for SEO optimization
+ */
 
-// sitemap Generator
-export const sitemapgenerator = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('sitemap Generator initialized')
+import { MetadataRoute } from 'next'
+
+interface SitemapEntry {
+  url: string
+  lastModified: Date
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority: number
+}
+
+interface SitemapConfig {
+  baseUrl: string
+  staticPages: string[]
+  dynamicPages?: (() => Promise<string[]>)
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority: number
+}
+
+export class SitemapGenerator {
+  private config: SitemapConfig
+
+  constructor(config: SitemapConfig) {
+    this.config = config
+  }
+
+  async generateSitemap(): Promise<MetadataRoute.Sitemap> {
+    const sitemap: MetadataRoute.Sitemap = []
+
+    // Add static pages
+    for (const page of this.config.staticPages) {
+      sitemap.push({
+        url: `${this.config.baseUrl}${page}`,
+        lastModified: new Date(),
+        changeFrequency: this.config.changeFrequency,
+        priority: this.config.priority
+      })
+    }
+
+    // Add dynamic pages if provided
+    if (this.config.dynamicPages) {
+      try {
+        const dynamicPages = await this.config.dynamicPages()
+        for (const page of dynamicPages) {
+          sitemap.push({
+            url: `${this.config.baseUrl}${page}`,
+            lastModified: new Date(),
+            changeFrequency: this.config.changeFrequency,
+            priority: this.config.priority
+          })
+        }
+      } catch (error) {
+        console.error('Failed to generate dynamic pages:', error)
+      }
+    }
+
+    return sitemap
+  }
+
+  generateXMLSitemap(sitemap: MetadataRoute.Sitemap): string {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemap.map(entry => `  <url>
+    <loc>${entry.url}</loc>
+    <lastmod>${entry.lastModified.toISOString()}</lastmod>
+    <changefreq>${entry.changeFrequency}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`
+
+    return xml
+  }
+
+  generateRobotsTxt(sitemapUrl: string): string {
+    return `User-agent: *
+Allow: /
+
+Sitemap: ${sitemapUrl}`
+  }
+
+  async saveSitemap(sitemap: MetadataRoute.Sitemap, outputPath: string): Promise<void> {
+    const xml = this.generateXMLSitemap(sitemap)
+    
+    if (typeof window !== 'undefined') {
+      // Client-side: download the sitemap
+      const blob = new Blob([xml], { type: 'application/xml' })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = 'sitemap.xml'
+      a.click()
+      URL.revokeObjectURL(url)
+    } else {
+      // Server-side: write to file
+      const fs = await import('fs')
+      fs.writeFileSync(outputPath, xml)
+    }
   }
 }
-export default sitemapgenerator
-export const generateSitemap = useCallback((...args) => {const baseUrl = 'https: //ziontechgroup.com',
-  const staticPages = [,}export const generateSitemap = useCallback((...args) => {}const baseUrl = 'https: //ziontechgroup.com',
-  const staticPages = [
+
+// Default sitemap generator
+export const sitemapGenerator = new SitemapGenerator({
+  baseUrl: 'https://ziontechgroup.com',
+  staticPages: [
     '',
     '/services',
     '/contact',
@@ -17,196 +112,25 @@ export const generateSitemap = useCallback((...args) => {const baseUrl = 'https:
     '/it-services',
     '/about',
     '/blog',
-    '/case-studies',
-    '/pricing',
-    '/ai-project-manager',
-    '/ai-social-media-manager',
-    '/ai-analytics',
-    '/ai-email-marketing',
-    '/ai-customer-support-bot',
-    '/ai-code-generation',
-    '/ai-video-generation',
-    '/ai-voice-cloning',
-    '/ai-workflow-automation',
-    '/ai-sales-automation',
-    '/ai-content-writer',
-    '/ai-financial-advisor',
-    '/ai-data-visualization',
-    '/ai-3 d-generation',
-    '/ai-customer-support',
-    '/ai-inventory-manager',
-    '/ai-hr-assistant',
-    '/ai-legal-assistant',
-    '/cloud-migration',
-    '/it-consulting',
-    '/cybersecurity',
-    '/devops',
-    '/database-services',
-    '/network-infrastructure',
-    '/it-support',
-    '/compliance',
-    '/developer-tools',
-    '/marketing-tools',
-    '/productivity'
-  ]
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-  ${staticPages.map(page =>),
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,}${staticPages.map(page =>)} <url>}
-    <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'</p>}</priority>
-  </url>`).join('')}
-</urlset>`
-  return sitemap
+    '/privacy-policy',
+    '/terms-of-service'
+  ],
+  changeFrequency: 'monthly',
+  priority: 0.8
+})
+
+// Utility function to generate sitemap
+export const generateSitemap = async (): Promise<MetadataRoute.Sitemap> => {
+  return sitemapGenerator.generateSitemap()
 }
-export const generateRobotsTxt = useCallback((...args) => {}return `User-agent: *,
-Allow: /,
-Sitemap: https://ziontechgroup.com/sitemap.xml,
-# Crawl-delay for better server performance,
-Crawl-delay: 1,
-# Disallow admin and private areas
-Disallow: /admin/,
-Disallow: /api/,
-Disallow: /_next/,
-Disallow: /private/`,}
+
+// Utility function to generate XML sitemap
+export const generateXMLSitemap = async (): Promise<string> => {
+  const sitemap = await sitemapGenerator.generateSitemap()
+  return sitemapGenerator.generateXMLSitemap(sitemap)
 }
-export interface SitemapEntry {/* TODO: Fix JSX expression */,}}}
-export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */,}l: `${baseUrl,}/`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'daily',
-      priorit,
-  y: 1.0,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/about`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'monthly',
-      priorit,
-  y: 0.8,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/services`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'weekly',
-      priorit,
-  y: 0.9,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/ai-services`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'weekly',
-      priorit,
-  y: 0.9,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/it-services`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'weekly',
-      priorit,
-  y: 0.9,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/quantum-computing`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'weekly',
-      priorit,
-  y: 0.9,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/autonomous-systems`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'weekly',
-      priorit,
-  y: 0.9,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/micro-saas`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'weekly',
-      priorit,
-  y: 0.8,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/enterprise`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'weekly',
-      priorit,
-  y: 0.9,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/contact`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'monthly',
-      priorit,
-  y: 0.8,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/team`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'monthly',
-      priorit,
-  y: 0.7,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/case-studies`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'weekly',
-      priorit,
-  y: 0.8,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/blog`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'daily',
-      priorit,
-  y: 0.8,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/privacy`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'yearly',
-      priorit,
-  y: 0.3,
-    },
-    {/* TODO: Fix JSX expression */,}`
-  l: `${baseUrl,}/terms`,
-      lastmo,
-  d: currentDate,
-      changefre,
-  q: 'yearly',
-      priorit,
-  y: 0.3,
-    }
-  ]
+
+// Utility function to generate robots.txt
+export const generateRobotsTxt = (): string => {
+  return sitemapGenerator.generateRobotsTxt('https://ziontechgroup.com/sitemap.xml')
 }
-export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */,}}`
