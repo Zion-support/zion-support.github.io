@@ -1,16 +1,17 @@
-
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useRef } from 'react';
 
 interface UseIntersectionObserverOptions {
   threshold?: number;
   rootMargin?: string;
 }
 
-export const useIntersectionObserver = (_options: UseIntersectionObserverOptions = {}) => {
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) => {
   const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLElement>(null);
   
-  const init = useCallback(() => {
-    // Hook implementation will be here
+  const observerCallback = useCallback((entries: IntersectionObserverEntry[]) => {
+    const [entry] = entries;
+    setIsVisible(entry.isIntersecting);
   }, []);
 
   useEffect(() => {
@@ -27,9 +28,9 @@ export const useIntersectionObserver = (_options: UseIntersectionObserverOptions
 
   return {
     isVisible,
-    setIsVisible
+    setIsVisible,
+    ref
   };
 };
 
 export default useIntersectionObserver;
-

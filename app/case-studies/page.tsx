@@ -65,6 +65,7 @@ export default function CaseStudiesPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

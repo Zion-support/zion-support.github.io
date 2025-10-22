@@ -65,6 +65,7 @@ export default function AiSolutionsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

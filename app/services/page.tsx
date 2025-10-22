@@ -1,7 +1,7 @@
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Layers, CheckCircle, Clock, Star, Search, Rocket, DollarSign } from 'lucide-react';
+import { CheckCircle, Clock, Star, Search, Rocket, DollarSign } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ServicesPage() {
@@ -167,15 +167,15 @@ export default function ServicesPage() {
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                  selectedCategory === category
+                  selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'
                 }`}
               >
-                {getCategoryIcon(category)} {category}
+                {category.icon} {category.name}
               </button>
             ))}
           </div>
@@ -273,7 +273,7 @@ export default function ServicesPage() {
               className="glass-card hover-lift px-8 py-4 text-lg font-semibold text-cyan-400 border-cyan-400/30"
             >
               View Pricing
-              <Currency className="ml-2 h-5 w-5 inline" />
+              <CurrencyDollarIcon className="ml-2 h-5 w-5 inline" />
             </Link>
           </div>
 

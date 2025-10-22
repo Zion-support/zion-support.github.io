@@ -65,6 +65,7 @@ export default function AiContentGeneratorPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

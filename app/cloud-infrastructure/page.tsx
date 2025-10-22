@@ -65,6 +65,7 @@ export default function CloudInfrastructurePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

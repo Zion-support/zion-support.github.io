@@ -5,8 +5,22 @@ interface UseAdvancedPerformanceMonitoringOptions {
   threshold?: number;
 }
 
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
+
 export const useAdvancedPerformanceMonitoring = (options: UseAdvancedPerformanceMonitoringOptions = {}) => {
   const [performance, setPerformance] = useState<number>(0);
+  const [isMonitoring, setIsMonitoring] = useState<boolean>(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0,
+  });
 
   const startMonitoring = useCallback(() => {
     setIsMonitoring(true);
@@ -52,6 +66,11 @@ export const useAdvancedPerformanceMonitoring = (options: UseAdvancedPerformance
 
   return {
     performance,
+    isMonitoring,
+    metrics,
+    startMonitoring,
+    stopMonitoring,
+    resetMetrics,
     measurePerformance
   };
 };

@@ -1,18 +1,12 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Layers, CheckCircle, Clock, Star, Rocket, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle, Sparkles } from 'lucide-react';
 import { useState } from 'react';
 
 export default function PricingPage() {
-  const [isVisible] = useState(false);
   const [billingCycle, setBillingCycle] = useState('monthly');
 
   const CheckCircleIcon = CheckCircle;
-  const ClockIcon = Clock;
-  const StarIcon = Star;
-  const ArrowRightIcon = ArrowRight;
-  const RocketLaunchIcon = Rocket;
   const SparklesIcon = Sparkles;
 
   const basicFeatures = [
@@ -44,7 +38,6 @@ export default function PricingPage() {
   };
 
   return (
-
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Pricing | Zion Tech Group</title>
@@ -177,9 +170,6 @@ export default function PricingPage() {
           </div>
         </div>
 
-      </div>
-      <div className="scan-lines"></div>
-
         {/* Popular Services */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Popular Services</h2>
@@ -230,4 +220,3 @@ export default function PricingPage() {
     </div>
   );
 }
-

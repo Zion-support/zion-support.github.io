@@ -1,17 +1,46 @@
-
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useRef } from 'react';
 
 interface UsePerformanceMonitorOptions {
   enabled?: boolean;
   threshold?: number;
+  measureMemoryUsage?: boolean;
 }
 
-export const usePerformanceMonitor = (_options: UsePerformanceMonitorOptions = {}) => {
-  const [metrics, setMetrics] = useState({});
+interface PerformanceData {
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
+  renderTime: number;
+}
+
+export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
+  const [metrics, setMetrics] = useState<PerformanceData>({
+    fps: 0,
+    memoryUsage: 0,
+    loadTime: 0,
+    renderTime: 0,
+  });
   
-  const init = useCallback(() => {
-    // Hook implementation will be here
+  const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
+  const frameCountRef = useRef(0);
+  const lastTimeRef = useRef(performance.now());
+  
+  const measureMemoryUsage = useCallback(() => {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({
+        ...prev,
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+      }));
+    }
   }, []);
+
+  const init = useCallback(() => {
+    if (options.enabled !== false) {
+      setIsMonitoringFPS(true);
+      measureMemoryUsage();
+    }
+  }, [options.enabled, measureMemoryUsage]);
 
   useEffect(() => {
     if (!isMonitoringFPS) return;
@@ -22,7 +51,7 @@ export const usePerformanceMonitor = (_options: UsePerformanceMonitorOptions = {
       
       if (currentTime - lastTimeRef.current >= 1000) {
         const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
-        setPerformanceData(prev => ({
+        setMetrics(prev => ({
           ...prev,
           fps,
         }));
@@ -44,9 +73,12 @@ export const usePerformanceMonitor = (_options: UsePerformanceMonitorOptions = {
 
   return {
     metrics,
-    setMetrics
+    setMetrics,
+    isMonitoringFPS,
+    setIsMonitoringFPS,
+    measureMemoryUsage,
+    init
   };
 };
 
 export default usePerformanceMonitor;
-
