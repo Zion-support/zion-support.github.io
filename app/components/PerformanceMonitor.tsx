@@ -14,11 +14,24 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ isVisible = false, className = '' }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [, ] = useState<PerformanceMetrics>({
     loadTime: 0,
     domContentLoaded: 0,
     firstPaint: 0,
     firstContentfulPaint: 0
   });
+
+  useEffect(() => {
+    // Performance monitoring logic would go here
+  }, []);
+
+  if (!isVisible) return null;
+
+  return (
+    <div className={className}>
+      <div>Performance Monitor</div>
+    </div>
+  );
+};
 
 export default PerformanceMonitor;

@@ -32,14 +32,15 @@ const AppPage: React.FC = () => {
   
 
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>App - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional app solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="app, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
+    <AccessibilityEnhancer>
+      <React.Fragment>
+        <Helmet>
+          <title>App - Zion Tech Group | Advanced AI and IT Solutions</title>
+          <meta name="description" content="Professional app solutions powered by advanced AI and cutting-edge technology." />
+          <meta name="keywords" content="app, AI solutions, IT services, automation, technology, business solutions" />
+        </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -112,7 +113,8 @@ const AppPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </main>
+        </div>
+      </React.Fragment>
     </AccessibilityEnhancer>
   );
 };
