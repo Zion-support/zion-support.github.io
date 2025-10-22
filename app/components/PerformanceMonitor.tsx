@@ -37,6 +37,7 @@ const PerformanceMonitor: React.FC = () => {
 
     const interval = setInterval(updateMetrics, 1000);
 
+
     return () => {
       if (interval) {
         clearInterval(interval);
