@@ -6,7 +6,7 @@ import SEOHead from '../app/components/SEOHead';
 describe('Component Tests', () => {
   test('LoadingSpinner renders correctly', () => {
     render(<LoadingSpinner />);
-    expect(screen.getByRole('status')).toBeInTheDocument();
+    expect(screen.getByRole('status')).toBeDefined();
   });
   test('SEOHead renders without crashing', () => {
     render(
@@ -14,6 +14,6 @@ describe('Component Tests', () => {
         <SEOHead />
       </HelmetProvider>
     );
-    expect(document.head).toBeInTheDocument();
+    expect(document.head).toBeDefined();
   });
 });

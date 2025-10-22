@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import { Zap, Shield, Brain, Globe, CheckCircle } from 'lucide-react';
 
 const AccessibilityPage: React.FC = () => {
   const features = [
@@ -27,13 +27,23 @@ const AccessibilityPage: React.FC = () => {
     }
   ]
 
-  const benefits = [
-    'AI-powered automation',
-    'Real-time processing',
-    'Scalable solutions',
-    'Enterprise-grade security',
-    '24/7 support',
-    'Custom integrations'
+  const standards = [
+    {
+      title: 'WCAG 2.1 AA',
+      description: 'Web Content Accessibility Guidelines compliance',
+    },
+    {
+      title: 'Section 508',
+      description: 'US federal accessibility standards',
+    },
+    {
+      title: 'ADA Compliance',
+      description: 'Americans with Disabilities Act compliance',
+    },
+    {
+      title: 'EN 301 549',
+      description: 'European accessibility standard',
+    },
   ];
 
   return (
@@ -94,14 +104,6 @@ const AccessibilityPage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
             </div>
@@ -125,8 +127,8 @@ const AccessibilityPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{standard.title}</h3>
+                  <p className="text-gray-300">{standard.description}</p>
                 </div>
               ))}
             </div>

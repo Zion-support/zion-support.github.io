@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 
-const GlobalErrorBoundary: React.FC = () => {
+const GlobalErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div>
-      <h1>GlobalErrorBoundary</h1>
+      {children}
     </div>
   );
 };
