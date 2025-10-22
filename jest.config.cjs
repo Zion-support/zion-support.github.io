@@ -23,6 +23,7 @@ module.exports = {
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
+  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
   testMatch: [
     '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',

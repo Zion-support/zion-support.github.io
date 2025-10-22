@@ -9,11 +9,12 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
-  const [isVisible, setIsVisible] = useState(false)
+  const [, setMetrics] = useState<PerformanceMetrics>({})
+  const [, setIsVisible] = useState(false)
 
   useEffect(() => {
     // Performance monitoring logic would go here
+    setMetrics({})
     setIsVisible(true)
   }, [])
 

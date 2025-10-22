@@ -2,14 +2,14 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 // Mock components
-const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { 
+const AdvancedErrorBoundary = ({ children }: { 
   children: React.ReactNode; 
   enableRetry?: boolean; 
   onError?: (error: Error, errorInfo: any) => void;
 }) => {
   return <div data-testid="error-boundary">{children}</div>;
 };
-const AdvancedSEOOptimizer = ({ title, description, seoData, enableStructuredData, enableOpenGraph, enableTwitterCards }: { 
+const AdvancedSEOOptimizer = ({ title, description }: { 
   title?: string; 
   description?: string;
   seoData?: any;
@@ -19,7 +19,7 @@ const AdvancedSEOOptimizer = ({ title, description, seoData, enableStructuredDat
 }) => {
   return <div data-testid="seo-optimizer">{title} - {description}</div>;
 };
-const AdvancedPerformanceMonitor = ({ enableRealTimeMonitoring, onMetricsUpdate, startTime }: { 
+const AdvancedPerformanceMonitor = ({ enableRealTimeMonitoring: _enableRealTimeMonitoring }: { 
   enableRealTimeMonitoring?: boolean;
   onMetricsUpdate?: (metrics: any) => void;
   startTime?: number;
@@ -193,9 +193,9 @@ describe('AdvancedSEOOptimizer', () => {
 describe('AdvancedPerformanceMonitor', () => {
   // Mock performance API
   const mockPerformance = {
-    getEntriesByName: jest.fn(() => []),
-    getEntriesByType: jest.fn(() => []),
-    getEntries: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []) as jest.Mock,
+    getEntriesByType: jest.fn(() => []) as jest.Mock,
+    getEntries: jest.fn(() => []) as jest.Mock,
     measurePageLoad: jest.fn(),
     reportWebVitals: jest.fn(),
   };
@@ -248,7 +248,7 @@ describe('AdvancedPerformanceMonitor', () => {
     const onMetricsUpdate = jest.fn();
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }]);
+    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100, duration: 50 }] as any);
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor
@@ -267,8 +267,8 @@ describe('AdvancedPerformanceMonitor', () => {
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
     // Mock poor performance metrics
     mockPerformance.getEntriesByName.mockReturnValue([
-      { startTime: 2000 }, // Poor FCP
-    ]);
+      { startTime: 2000, duration: 100 }, // Poor FCP
+    ] as any);
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />

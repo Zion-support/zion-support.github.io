@@ -6,7 +6,7 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ className = '', isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ className = '', isOpen: _isOpen, onClose: _onClose }) => {
   return (
     <div className={`bg-white p-4 rounded-lg ${className}`}>
       <h2>Sidebar</h2>
