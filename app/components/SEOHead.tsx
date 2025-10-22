@@ -1,14 +1,15 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;}
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
+  }
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -20,8 +21,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -47,11 +48,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "https://www.linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup"
     ]
-  };
+  }
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{fullTitle}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -78,11 +79,34 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       {/* Structured Data */}
-      <script type="application/ld+json">;
+      <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>;
-    </Helmet>;
-  );
-};
-export default SEOHead;
+  )
+  }
+export default SEOHead
   </SEOHeadProps>
+
+                                              </script>
+                                            </meta>
+                                          </meta>
+                                        </meta>
+                                      </meta>
+                                    </meta>
+                                  </meta>
+                                </meta>
+                              </meta>
+                            </meta>
+                          </meta>
+                        </meta>
+                      </meta>
+                    </meta>
+                  </meta>
+                </meta>
+              </link>
+            </meta>
+          </meta>
+        </meta>
+      </meta>
+    </meta>
+  </title>
+</Helmet>

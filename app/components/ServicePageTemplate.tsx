@@ -1,22 +1,21 @@
-import React from 'react';
-
+import React from 'react'
 interface ServicePageTemplateProps {
-  className?: string;
-  children?: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  icon?: React.ComponentType<any>;
-  features?: any[];
-  pricing?: any;
-  benefits?: string[];
-  useCases?: any[];
-  technologies?: string[];
-  contactInfo?: any;
-  ctaLink?: string;
-  ctaText?: string;
-  technicalSpecs?: any[];
-}
+  className?: string
+  children?: React.ReactNode
+  title?: string
+  description?: string
+  keywords?: string
+  icon?: React.ComponentType<any>
+  features?: any[]
+  pricing?: any
+  benefits?: string[]
+  useCases?: any[]
+  technologies?: string[]
+  contactInfo?: any
+  ctaLink?: string
+  ctaText?: string
+  technicalSpecs?: any[]
+  }
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children, ...props }) => {
   return (
@@ -24,11 +23,12 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '
       {children || (
         <div className="p-4">
           <h3 className="text-lg font-semibold text-white mb-2">ServicePageTemplate</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
+          <p className="text-gray-300">This component is ready for implementation.</div>
       )}
+  )
+  }
+export default ServicePageTemplate
+      </p>
     </div>
-  );
-};
-
-export default ServicePageTemplate;
+  </ServicePageTemplateProps>
+</any>

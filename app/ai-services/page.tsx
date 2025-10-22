@@ -1,7 +1,7 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   MessageSquare, 
@@ -38,10 +38,10 @@ import {
   Headphones,
   Mail,
   MapPin
-} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AIServicesPagePage: React.FC = () => {
   const features = [
     {
@@ -214,14 +214,14 @@ const AIServicesPagePage: React.FC = () => {
       marketPrice: '$300-1200/month',
       benefits: ['Faster design process', 'Consistent branding', 'Creative inspiration', 'Cost-effective solutions']
     }
-  ];
+  ]
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -232,8 +232,7 @@ const AIServicesPagePage: React.FC = () => {
       <Navigation />
       
       <main className="pt-20">
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -249,7 +248,7 @@ const AIServicesPagePage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Services;
+              AI Services
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business with cutting-edge artificial intelligence solutions. 
@@ -257,23 +256,20 @@ const AIServicesPagePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started;
+                Get Started
   </
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo;
-  </
-            </div>
-          </div>
-        </section>
+                View Demo
+  </section>
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features;
+                Key Features
   </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results;
+                Advanced AI technology that drives results
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -283,9 +279,7 @@ const AIServicesPagePage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </section>
 
         {/* Search and Filter Section */}
         <section className="py-10 px-4 sm:px-6 lg:px-8">
@@ -311,12 +305,8 @@ const AIServicesPagePage: React.FC = () => {
                   {categories.map(category => (
                     <option key={category} value={category} className="bg-slate-800">
                       {category === 'all' ? 'All Categories' : category}
-                    </option>
                   ))}
-                </select>
-              </div>
-            </div>
-          </div>
+                </div>
         </section>
 
         {/* Services Grid */}
@@ -328,33 +318,28 @@ const AIServicesPagePage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}
+                  <p className="text-gray-300 mb-4">{service.description}
                   
                   <div className="mb-4">
                     <span className="text-sm text-gray-400">Category: </span>
-                    <span className="text-sm text-purple-400 font-medium">{service.category}</span>
-                  </div>
+                    <span className="text-sm text-purple-400 font-medium">{service.category}
 
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feature}
-                      </li>
                     ))}
                   </ul>
 
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center justify-between">
                       <span className="text-purple-400 font-semibold">Our Price:</span>
-                      <span className="text-white font-bold">{service.price}</span>
-                    </div>
+                      <span className="text-white font-bold">{service.price}
                     <div className="flex items-center justify-between">
                       <span className="text-gray-400 text-sm">Market Price:</span>
-                      <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
-                    </div>
-                  </div>
+                      <span className="text-gray-300 text-sm line-through">{service.marketPrice}
 
                   <div className="flex items-center justify-between">
                     <Link 
@@ -369,13 +354,9 @@ const AIServicesPagePage: React.FC = () => {
                       className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
                       Get Quote
-                    </Link>
-                  </div>
-                </div>
+                    </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </section>
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -384,7 +365,7 @@ const AIServicesPagePage: React.FC = () => {
                 Why Choose Our AI Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency;
+                Proven results that drive business growth and efficiency
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -393,24 +374,19 @@ const AIServicesPagePage: React.FC = () => {
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Increase Efficiency by 60%</h3>
-                <p className="text-gray-300">Our AI solutions automate repetitive tasks and optimize workflows, delivering measurable efficiency gains.</p>
-              </div>
+                <p className="text-gray-300">Our AI solutions automate repetitive tasks and optimize workflows, delivering measurable efficiency gains.</div>
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Reduce Costs by 40%</h3>
-                <p className="text-gray-300">Automation and AI-driven optimization significantly reduce operational costs and resource requirements.</p>
-              </div>
+                <p className="text-gray-300">Automation and AI-driven optimization significantly reduce operational costs and resource requirements.</div>
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Enhanced Decision Making</h3>
-                <p className="text-gray-300">AI-powered insights and predictive analytics enable data-driven decision making at scale.</p>
-              </div>
-            </div>
-          </div>
+                <p className="text-gray-300">AI-powered insights and predictive analytics enable data-driven decision making at scale.</div>
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -424,10 +400,10 @@ const AIServicesPagePage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us;
+                  Contact Us
   </
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More;
+                  Learn More
   </
                 Ready to Get Started?
               </h2>
@@ -440,25 +416,15 @@ const AIServicesPagePage: React.FC = () => {
                 </button>
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+                </div>
+        </main>
       
       <Footer />
     </React.Fragment>
-  );
-};
-export default AIServicesPagePage;
-  </button>
-  </button>
+  )
+  }
+export default AIServicesPagePage
   </p>
-  </p>
-  </h2>
-  </button>
-  </button>
   </h1>
 
 const AIServicesPage: React.FC = () => {
@@ -499,8 +465,7 @@ const AIServicesPage: React.FC = () => {
       description: 'Advanced AI security solutions for threat detection, fraud prevention, and risk management.',
       benefits: ['Real-time threat detection', 'Fraud pattern recognition', 'Behavioral analysis', 'Risk assessment', 'Security monitoring', 'Compliance automation', 'Incident response', 'Threat intelligence']
     }
-  ];
-
+  ]
   const services = [
     {
       icon: Zap,
@@ -558,8 +523,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $12,000/project',
       features: ['Object detection', 'Image classification', 'OCR solutions', 'Quality inspection', 'Real-time processing']
     }
-  ];
-
+  ]
   const benefits = [
     'Increased operational efficiency',
     'Better decision making with data insights',
@@ -569,15 +533,13 @@ const AIServicesPage: React.FC = () => {
     'Scalable AI solutions',
     '24/7 AI-powered support',
     'Continuous learning and improvement'
-  ];
-
+  ]
   const stats = [
     { icon: Brain, value: '95%', label: 'Accuracy Rate' },
     { icon: Zap, value: '10x', label: 'Faster Processing' },
     { icon: Shield, value: '99.9%', label: 'Uptime' },
     { icon: TrendingUp, value: '300%', label: 'Efficiency Gain' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -605,10 +567,7 @@ const AIServicesPage: React.FC = () => {
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
-            </button>
-          </div>
-        </div>
-      </section>
+            </section>
 
       {/* Stats Section */}
       <section className="py-16 px-4">
@@ -619,13 +578,10 @@ const AIServicesPage: React.FC = () => {
                 <div className="flex justify-center mb-4">
                   <stat.icon className="w-8 h-8 text-blue-400" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}
+                <div className="text-gray-300">{stat.label}
             ))}
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -636,8 +592,7 @@ const AIServicesPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive AI solutions designed to solve complex business challenges
-            </p>
-          </div>
+            </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
             {features.map((feature, index) => (
@@ -645,21 +600,17 @@ const AIServicesPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}
+                <p className="text-gray-300 mb-6">{feature.description}
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      <span>{benefit}</span>
-                    </li>
+                      <span>{benefit}
                   ))}
-                </ul>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* Services Section */}
       <section className="py-20 px-4">
@@ -668,8 +619,7 @@ const AIServicesPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">Our AI Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end AI solutions tailored to your business needs
-            </p>
-          </div>
+            </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {services.map((service, index) => (
@@ -677,25 +627,21 @@ const AIServicesPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                <h3 className="text-xl font-bold text-white mb-4">{service.title}
+                <p className="text-gray-300 mb-4">{service.description}
+                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}
                 <ul className="space-y-2 text-sm text-gray-300">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
+                      <span>{feature}
                   ))}
                 </ul>
                 <button className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Learn More
-                </button>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
@@ -704,19 +650,15 @@ const AIServicesPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Services?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of our proven AI solutions
-            </p>
-          </div>
+            </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
+                <span className="text-gray-300">{benefit}
             ))}
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4">
@@ -734,22 +676,112 @@ const AIServicesPage: React.FC = () => {
               </button>
               <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </div>
+              </div>
       </section>
 
       <Footer />
     </div>
-  );
-};
-
-export default AIServicesPage;
+  )
+  }
+export default AIServicesPage
       </div>
       <Footer />
     </>
-  );
-};
-
-export default AIServicesPage;
+  )
+  }
+export default AIServicesPage
+                                                                                                                                                                                            </Footer>
+                                                                                                                                                                                          </Footer>
+                                                                                                                                                                                        </button>
+                                                                                                                                                                                      </span>
+                                                                                                                                                                                    </CheckCircle>
+                                                                                                                                                                                  </div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                              </p>
+                                                                                                                                                                            </div>
+                                                                                                                                                                          </button>
+                                                                                                                                                                        </span>
+                                                                                                                                                                      </CheckCircle>
+                                                                                                                                                                    </li>
+                                                                                                                                                                  </p>
+                                                                                                                                                                </h3>
+                                                                                                                                                              </div>
+                                                                                                                                                            </div>
+                                                                                                                                                          </p>
+                                                                                                                                                        </div>
+                                                                                                                                                      </span>
+                                                                                                                                                    </CheckCircle>
+                                                                                                                                                  </li>
+                                                                                                                                                </ul>
+                                                                                                                                              </p>
+                                                                                                                                            </h3>
+                                                                                                                                          </div>
+                                                                                                                                        </p>
+                                                                                                                                      </div>
+                                                                                                                                    </div>
+                                                                                                                                  </div>
+                                                                                                                                </div>
+                                                                                                                              </div>
+                                                                                                                            </div>
+                                                                                                                          </button>
+                                                                                                                        </div>
+                                                                                                                      </div>
+                                                                                                                    </div>
+                                                                                                                  </div>
+                                                                                                                </Navigation>
+                                                                                                              </meta>
+                                                                                                            </meta>
+                                                                                                          </div>
+                                                                                                        </Footer>
+                                                                                                      </button>
+                                                                                                    </button>
+                                                                                                  </button>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </section>
+                                                                                        </Brain>
+                                                                                      </p>
+                                                                                    </DollarSign>
+                                                                                  </p>
+                                                                                </TrendingUp>
+                                                                              </div>
+                                                                            </p>
+                                                                          </div>
+                                                                        </ArrowRight>
+                                                                      </span>
+                                                                    </div>
+                                                                  </span>
+                                                                </div>
+                                                              </div>
+                                                            </CheckCircle>
+                                                          </li>
+                                                        </span>
+                                                      </div>
+                                                    </p>
+                                                  </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </option>
+                                        </Settings>
+                                      </Search>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </p>
+                          </div>
+                        </button>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Navigation>
+        </meta>
+      </meta>
+    </Navigation>
+  </meta>
+</meta>

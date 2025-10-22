@@ -1,6 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 export default function ZionaisalespredictorPage() {
   return (
     <>
@@ -17,8 +16,7 @@ export default function ZionaisalespredictorPage() {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Predict sales trends and optimize revenue with our advanced AI-powered sales prediction solution.
-            </p>
-          </div>
+            </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
@@ -28,47 +26,34 @@ export default function ZionaisalespredictorPage() {
                   <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
                     <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div>
                     <h3 className="font-medium text-gray-900">Accurate Forecasting</h3>
-                    <p className="text-gray-600">Predict sales with 95%+ accuracy using advanced machine learning models</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Predict sales with 95%+ accuracy using advanced machine learning models</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
                     <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div>
                     <h3 className="font-medium text-gray-900">Real-time Analytics</h3>
-                    <p className="text-gray-600">Get instant insights and predictions as your data updates</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Get instant insights and predictions as your data updates</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
                     <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div>
                     <h3 className="font-medium text-gray-900">Trend Analysis</h3>
-                    <p className="text-gray-600">Identify seasonal patterns and market trends automatically</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Identify seasonal patterns and market trends automatically</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
                     <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div>
                     <h3 className="font-medium text-gray-900">Custom Models</h3>
-                    <p className="text-gray-600">Train models specific to your industry and business model</p>
-                  </div>
-                </li>
-              </ul>
+                    <p className="text-gray-600">Train models specific to your industry and business model</ul>
             </div>
             
             <div>
@@ -76,22 +61,16 @@ export default function ZionaisalespredictorPage() {
               <div className="space-y-6">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-blue-900 mb-2">Increase Revenue</h3>
-                  <p className="text-blue-700">Optimize pricing and inventory based on predicted demand</p>
-                </div>
+                  <p className="text-blue-700">Optimize pricing and inventory based on predicted demand</div>
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-green-900 mb-2">Reduce Risk</h3>
-                  <p className="text-green-700">Make informed decisions with data-driven predictions</p>
-                </div>
+                  <p className="text-green-700">Make informed decisions with data-driven predictions</div>
                 <div className="bg-purple-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-purple-900 mb-2">Save Time</h3>
-                  <p className="text-purple-700">Automate forecasting processes and focus on strategy</p>
-                </div>
+                  <p className="text-purple-700">Automate forecasting processes and focus on strategy</div>
                 <div className="bg-orange-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-orange-900 mb-2">Improve Planning</h3>
-                  <p className="text-orange-700">Better resource allocation and budget planning</p>
-                </div>
-              </div>
-            </div>
+                  <p className="text-orange-700">Better resource allocation and budget planning</div>
           </div>
           
           <div className="bg-gray-50 rounded-lg p-8 text-center">
@@ -103,11 +82,37 @@ export default function ZionaisalespredictorPage() {
               </Link>
               <Link to="/pricing" className="border border-green-600 text-green-600 px-8 py-3 rounded-lg hover:bg-green-50 transition-colors">
                 View Pricing
-              </Link>
-            </div>
+              </div>
+      </>
+  )
+  }
+
+                                                        </Link>
+                                                      </div>
+                                                    </p>
+                                                  </p>
+                                                </p>
+                                              </p>
+                                            </div>
+                                          </p>
+                                        </path>
+                                      </svg>
+                                    </li>
+                                  </p>
+                                </div>
+                              </path>
+                            </svg>
+                          </p>
+                        </div>
+                      </path>
+                    </svg>
+                  </p>
+                </div>
+              </path>
+            </svg>
           </div>
         </div>
-      </div>
-    </>
-  );
-}
+      </p>
+    </div>
+  </div>
+</meta>

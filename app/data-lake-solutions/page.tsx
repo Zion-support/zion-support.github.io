@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const DataLakeSolutionsPage: React.FC = () => {
   return (
     <>
@@ -19,8 +18,7 @@ const DataLakeSolutionsPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Build scalable data lakes for big data analytics, machine learning, and data warehousing. Store, process, and analyze structured and unstructured data.
-            </p>
-          </div>
+            </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-slate-800 rounded-lg p-6">
@@ -45,9 +43,7 @@ const DataLakeSolutionsPage: React.FC = () => {
                 <li className="flex items-center">
                   <span className="text-green-400 mr-2">✓</span>
                   Security and access control
-                </li>
-              </ul>
-            </div>
+                </div>
             
             <div className="bg-slate-800 rounded-lg p-6">
               <h2 className="text-2xl font-semibold mb-4 text-purple-400">Analytics Capabilities</h2>
@@ -71,39 +67,28 @@ const DataLakeSolutionsPage: React.FC = () => {
                 <li className="flex items-center">
                   <span className="text-blue-400 mr-2">→</span>
                   Predictive analytics
-                </li>
-              </ul>
-            </div>
-          </div>
+                </div>
           
           <div className="bg-slate-800 rounded-lg p-8 mb-12">
             <h2 className="text-3xl font-bold mb-6 text-center">Data Lake Architecture</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💾</span>
-                </div>
+                  <span className="text-2xl">💾</div>
                 <h3 className="text-xl font-semibold mb-3 text-indigo-400">Storage Layer</h3>
-                <p className="text-gray-300">Scalable object storage for all data types.</p>
-              </div>
+                <p className="text-gray-300">Scalable object storage for all data types.</div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚙️</span>
-                </div>
+                  <span className="text-2xl">⚙️</div>
                 <h3 className="text-xl font-semibold mb-3 text-purple-400">Processing Layer</h3>
-                <p className="text-gray-300">Data processing and transformation engines.</p>
-              </div>
+                <p className="text-gray-300">Data processing and transformation engines.</div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📊</span>
-                </div>
+                  <span className="text-2xl">📊</div>
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">Analytics Layer</h3>
-                <p className="text-gray-300">Business intelligence and analytics tools.</p>
-              </div>
-            </div>
-          </div>
+                <p className="text-gray-300">Business intelligence and analytics tools.</div>
           
           <div className="text-center">
             <a
@@ -111,12 +96,24 @@ const DataLakeSolutionsPage: React.FC = () => {
               className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300"
             >
               Build Data Lake
-            </a>
-          </div>
-        </div>
-      </div>
+            </div>
     </>
-  );
-};
-
-export default DataLakeSolutionsPage;
+  )
+  }
+export default DataLakeSolutionsPage
+                              </p>
+                            </span>
+                          </p>
+                        </span>
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </p>
+  </div>
+</div>

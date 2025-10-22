@@ -1,9 +1,8 @@
 <<<<<<< HEAD
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Layers } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Layers } from 'lucide-react'
 export default function TutorialsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -19,28 +18,23 @@ export default function TutorialsPage() {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Professional tutorials solutions for modern businesses.
-          </p>
-        </div>
+          </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-cyan-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
-            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
-          </div>
+            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-purple-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
-            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
-          </div>
+            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-yellow-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
-            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
-          </div>
-        </div>
+            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</div>
 
         <div className="text-center">
           <p className="text-lg text-gray-300 mb-8">
@@ -59,23 +53,20 @@ export default function TutorialsPage() {
               className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
             >
               View Demo
-            </Link>
-          </div>
-        </div>
-      </div>
+            </div>
     </div>
-  );
-}
+  )
+  }
 
 =======
 'use client'
 import React, {useState} from 'react'
 import {Helmet} from 'react-helmet-async'
 import {Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download} from 'lucide-react'
-;
+
 const TutorialsPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-;
+  const [selectedCategory, setSelectedCategory] = useState('all')
+
   const categories = [
     { id: 'all', name: 'All Tutorials', icon: BookOpen ,},
     {id: 'ai', name: 'AI Services', icon: Brain ,},
@@ -206,12 +197,12 @@ const TutorialsPage: React.FC = () => {
         ]}}
   ]
   const filteredTutorials = selectedCategory === 'all'
-    ? tutorials;
-    : tutorials.filter(tutorial => tutorial.category === selectedCategory);
-;
-  const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
-;
-  return(<>);
+    ? tutorials
+    : tutorials.filter(tutorial => tutorial.category === selectedCategory)
+
+  const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3)
+
+  return(<>)
       <Helmet />
         <title>Tutorials & Learning Resources - Zion Tech Group</title>
         <meta name="description" content="Learn how to use Zion Tech Group's AI, IT, and Micro SaaS services with our comprehensive tutorials and learning resources." />
@@ -224,51 +215,44 @@ const TutorialsPage: React.FC = () => {
               Tutorials & Learning
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Master our AI, IT, and Micro SaaS services with step-by-step tutorials</p>
-              code examples, and best practices from our expert team.;
+              code examples, and best practices from our expert team.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a;
+              <a
                 href="#featured"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
-                Featured Tutorials;
+                Featured Tutorials
               </a>
-              <a;
+              <a
                 href="#all-tutorials"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Browse All;
+                Browse All
               </a>
               <a
                 href="/contact"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-slate-900 transition-all duration-300"
               >
                 Request Tutorial
-              </a>
-            </div>
-          </div>
+              </div>
           {/* Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16"></div>
             <div className="cyber-card-enhanced p-6 text-center">
               <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-300">Tutorials</div>
-            </div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Users className="w-8 h-8 text-green-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">5,000+</div>
               <div className="text-gray-300">Students</div>
-            </div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Star className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">4.8</div>
               <div className="text-gray-300">Average Rating</div>
-            </div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Clock className="w-8 h-8 text-purple-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">20+</div>
               <div className="text-gray-300">Hours of Content</div>
-            </div>
-          </div>
           {/* Featured Tutorials */} <section id="featured" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Tutorials</h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -284,57 +268,48 @@ const TutorialsPage: React.FC = () => {
                           ? 'bg-green-600 text-white'
                           : tutorial.difficulty === 'Intermediate'
                           ? 'bg-yellow-600 text-white'
-                          : 'bg-red-600 text-white'} `}>{tutorial.difficulty</span>} </span>
-                    </div>
-                  </div>
+                          : 'bg-red-600 text-white'} `}>{tutorial.difficulty</span>}
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors">,
-                      {tutorial.title} </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tutorial.description</p>} </p>
+                      {tutorial.title}
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tutorial.description</p>}
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center space-x-4 text-sm text-gray-400">
                         <span className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-                          {tutorial.duration} </span>
+                          {tutorial.duration}
                         <span className="flex items-center">
                           <Users className="w-4 h-4 mr-1" />
-                          {tutorial.students} </span>
+                          {tutorial.students}
                         <span className="flex items-center">
                           <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                          {tutorial.rating} </span>
-                      </div>
-                    </div>
+                          {tutorial.rating}
                     <div className="flex flex-wrap gap-2 mb-4">{tutorial.tags.slice(0, 3).map((tag, index) => (</div>
-                        <span key={index}className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">{tag</span>} </span>
+                        <span key={index}className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">{tag</span>}
                       ))}
                     </div>
-                    <a;
+                    <a
                       href={`/tutorials/${tutorial.id}`}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                     >
                       Start Tutorial
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                  </div>
-                </div>
+                    </div>
               ))}
-            </div>
-          </section>
+            </section>
           {/* Category Filter */} <section className="mb-12">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
             <div className="flex flex-wrap justify-center gap-4">{categories.map((category) => (</div>
-                <button;
-                  key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                    selectedCategory === category.id;
+                <button
+                  key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+    selectedCategory === category.id
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover: bg-slate-700',} `}
-                >;
+                >
                   <category.icon className="w-5 h-5" />
-                  <span>{category.name</span>}</span>
-                </button>
+                  <span>{category.name</span>}
               ))}
-            </div>
-          </section>
+            </section>
           {/* All Tutorials */} <section id="all-tutorials" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -350,56 +325,47 @@ const TutorialsPage: React.FC = () => {
                           ? 'bg-green-600 text-white'
                           : tutorial.difficulty === 'Intermediate'
                           ? 'bg-yellow-600 text-white'
-                          : 'bg-red-600 text-white'} `}>{tutorial.difficulty</span>} </span>
-                    </div>
-                  </div>
+                          : 'bg-red-600 text-white'} `}>{tutorial.difficulty</span>}
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors">,
-                      {tutorial.title} </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tutorial.description</p>} </p>
+                      {tutorial.title}
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tutorial.description</p>}
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center space-x-4 text-sm text-gray-400">
                         <span className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-                          {tutorial.duration} </span>
+                          {tutorial.duration}
                         <span className="flex items-center">
                           <Users className="w-4 h-4 mr-1" />
-                          {tutorial.students} </span>
+                          {tutorial.students}
                         <span className="flex items-center">
                           <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                          {tutorial.rating} </span>
-                      </div>
-                    </div>
+                          {tutorial.rating}
                     <div className="flex flex-wrap gap-2 mb-4">{tutorial.tags.map((tag, index) => (</div>
-                        <span key={index}className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">{tag</span>} </span>
+                        <span key={index}className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">{tag</span>}
                       ))}
                     </div>
-                    <a;
+                    <a
                       href={`/tutorials/${tutorial.id}`}
                       className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                     >
                       Start Tutorial
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                  </div>
-                </div>
+                    </div>
               ))}
-            </div>
-          </section>
+            </section>
           {/* Learning Paths */} <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-4">
                   <Brain className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">AI Developer Path</h3>
-                </div>
+                  <h3 className="text-xl font-bold text-white">AI Developer Path</div>
                 <p className="text-gray-300 mb-6">Master AI development from basics to advanced implementations.</p>
-                </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    AI Fundamentals;
+                    AI Fundamentals
                   </li>
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -408,64 +374,52 @@ const TutorialsPage: React.FC = () => {
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Advanced AI Features
-                  </li>
-                </ul>
+                  </ul>
                 <a href="#" className="text-cyan-400 hover: text-cyan-300 font-semibold">,
                   Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
-                </a>
-              </div>
+                </div>
               <div className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-4">
                   <Cloud className="w-8 h-8 text-green-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">Cloud Architect Path</h3>
-                </div>
+                  <h3 className="text-xl font-bold text-white">Cloud Architect Path</div>
                 <p className="text-gray-300 mb-6">Learn cloud architecture and infrastructure management.</p>
-                </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Cloud Fundamentals;
+                    Cloud Fundamentals
                   </li>
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Security & Compliance;
+                    Security & Compliance
                   </li>
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Advanced Architecture;
-                  </li>
-                </ul>
+                    Advanced Architecture
+                  </ul>
                 <a href="#" className="text-green-400 hover: text-green-300 font-semibold">,
                   Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
-                </a>
-              </div>
+                </div>
               <div className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-4">
                   <Zap className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">SaaS Entrepreneur Path</h3>
-                </div>
+                  <h3 className="text-xl font-bold text-white">SaaS Entrepreneur Path</div>
                 <p className="text-gray-300 mb-6">Build and scale your own SaaS business from scratch.</p>
-                </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    SaaS Fundamentals;
+                    SaaS Fundamentals
                   </li>
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Business Models;
+                    Business Models
                   </li>
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Scaling & Growth;
-                  </li>
-                </ul>
+                    Scaling & Growth
+                  </ul>
                 <a href="#" className="text-purple-400 hover: text-purple-300 font-semibold">,
                   Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
-                </a>
-              </div>
-            </div>
-          </section>
+                </section>
           {/* Resources */} <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div>
@@ -473,66 +427,136 @@ const TutorialsPage: React.FC = () => {
                 <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Code Examples</h3>
                 <p className="text-gray-300 mb-4 text-sm">Ready-to-use code examples for all our services</p>
-                </p>
                 <a href="#" className="text-cyan-400 hover: text-cyan-300 text-sm">,
                   Browse Examples <ExternalLink className="w-4 h-4 inline ml-1" />
-                </a>
-              </div>
+                </div>
               <div className="cyber-card-enhanced p-6 text-center">
                 <Download className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">SDKs & Libraries</h3>
                 <p className="text-gray-300 mb-4 text-sm">Official SDKs for popular programming languages;</p>
-                </p>
                 <a href="/api" className="text-green-400 hover: text-green-300 text-sm">,
                   View SDKs <ExternalLink className="w-4 h-4 inline ml-1" />
-                </a>
-              </div>
+                </div>
               <div className="cyber-card-enhanced p-6 text-center">
                 <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Community</h3>
                 <p className="text-gray-300 mb-4 text-sm">Join our developer community for support and discussions;</p>
-                </p>
                 <a href="/community" className="text-purple-400 hover: text-purple-300 text-sm">,
                   Join Community <ExternalLink className="w-4 h-4 inline ml-1" />
-                </a>
-              </div>
+                </div>
               <div className="cyber-card-enhanced p-6 text-center">
                 <BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
                 <p className="text-gray-300 mb-4 text-sm">Comprehensive API and service documentation;</p>
-                </p>
                 <a href="/docs" className="text-orange-400 hover: text-orange-300 text-sm">,
                   View Docs <ExternalLink className="w-4 h-4 inline ml-1" />
-                </a>
-              </div>
-            </div>
-          </section>
+                </section>
           {/* CTA */} <section className="mb-16">
             <div className="cyber-card-enhanced p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
               <p className="text-gray-300 mb-6">Join thousands of developers who are already building amazing applications with our services.</p>
-              </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a;
+                <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
-                  Get Started Free;
+                  Get Started Free
                 </a>
                 <a
                   href="/demo"
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Request Demo
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </>
+                </section>
+        </>
   )
 }
-;
-export default TutorialsPage;
+
+export default TutorialsPage
 >>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+
+                                                                                                                                                                        </div>
+                                                                                                                                                                      </div>
+                                                                                                                                                                    </ExternalLink>
+                                                                                                                                                                  </BookOpen>
+                                                                                                                                                                </div>
+                                                                                                                                                              </ExternalLink>
+                                                                                                                                                            </a>
+                                                                                                                                                          </Users>
+                                                                                                                                                        </ExternalLink>
+                                                                                                                                                      </a>
+                                                                                                                                                    </Download>
+                                                                                                                                                  </ExternalLink>
+                                                                                                                                                </a>
+                                                                                                                                              </Code>
+                                                                                                                                            </ArrowRight>
+                                                                                                                                          </a>
+                                                                                                                                        </CheckCircle>
+                                                                                                                                      </li>
+                                                                                                                                    </CheckCircle>
+                                                                                                                                  </CheckCircle>
+                                                                                                                                </h3>
+                                                                                                                              </Zap>
+                                                                                                                            </div>
+                                                                                                                          </ArrowRight>
+                                                                                                                        </a>
+                                                                                                                      </CheckCircle>
+                                                                                                                    </li>
+                                                                                                                  </CheckCircle>
+                                                                                                                </CheckCircle>
+                                                                                                              </h3>
+                                                                                                            </Cloud>
+                                                                                                          </ArrowRight>
+                                                                                                        </a>
+                                                                                                      </CheckCircle>
+                                                                                                    </li>
+                                                                                                  </CheckCircle>
+                                                                                                </CheckCircle>
+                                                                                              </h3>
+                                                                                            </Brain>
+                                                                                          </ArrowRight>
+                                                                                        </Star>
+                                                                                      </span>
+                                                                                    </Users>
+                                                                                  </span>
+                                                                                </Clock>
+                                                                              </span>
+                                                                            </h3>
+                                                                          </div>
+                                                                        </div>
+                                                                      </BookOpen>
+                                                                    </div>
+                                                                  </ArrowRight>
+                                                                </Star>
+                                                              </Users>
+                                                            </span>
+                                                          </Clock>
+                                                        </span>
+                                                      </h3>
+                                                    </div>
+                                                  </div>
+                                                </Play>
+                                              </div>
+                                            </Clock>
+                                          </div>
+                                        </Star>
+                                      </div>
+                                    </Users>
+                                  </div>
+                                </BookOpen>
+                              </div>
+                            </div>
+                          </link>
+                        </meta>
+                      </meta>
+                    </ArrowRight>
+                  </Layers>
+                </p>
+              </Layers>
+            </p>
+          </Layers>
+        </div>
+      </p>
+    </div>
+  </meta>
+</div>

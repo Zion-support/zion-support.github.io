@@ -1,16 +1,16 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  siteName?: string;
-  structuredData?: object;
-}
+  title: string
+  description: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  siteName?: string
+  structuredData?: object
+  }
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.',
@@ -69,8 +69,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
         "description": "Tailored software solutions for specific business needs"
       }
     ]
-  };
-
+  }
   const websiteStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -81,12 +80,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
-  };
-
+  }
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{title}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -140,12 +138,51 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
-      </script>
       <script type="application/ld+json">
         {JSON.stringify(websiteStructuredData)}
-      </script>
-    </Helmet>
-  );
-};
-
-export default EnhancedSEOHead;
+  )
+  }
+export default EnhancedSEOHead
+                                                                                    </script>
+                                                                                  </script>
+                                                                                </link>
+                                                                              </link>
+                                                                            </meta>
+                                                                          </meta>
+                                                                        </meta>
+                                                                      </link>
+                                                                    </link>
+                                                                  </meta>
+                                                                </meta>
+                                                              </meta>
+                                                            </meta>
+                                                          </meta>
+                                                        </meta>
+                                                      </meta>
+                                                    </meta>
+                                                  </meta>
+                                                </meta>
+                                              </meta>
+                                            </meta>
+                                          </meta>
+                                        </meta>
+                                      </meta>
+                                    </meta>
+                                  </meta>
+                                </meta>
+                              </meta>
+                            </meta>
+                          </meta>
+                        </meta>
+                      </meta>
+                    </meta>
+                  </link>
+                </meta>
+              </meta>
+            </meta>
+          </meta>
+        </meta>
+      </meta>
+    </title>
+  </Helmet>
+</SEOHeadProps>

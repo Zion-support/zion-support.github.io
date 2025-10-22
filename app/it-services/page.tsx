@@ -1,12 +1,11 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react'
 const ItServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const itServices = [
     {
       id: 1,
@@ -224,23 +223,20 @@ const ItServicesPage: React.FC = () => {
       marketPrice: '$2500-8000/month',
       benefits: ['Improved efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation']
     }
-  ];
-
-  const categories = ['all', 'Cloud', 'Security', 'DevOps', 'Database', 'Infrastructure', 'Support', 'Development', 'Analytics', 'Networking', 'Consulting', 'Automation'];
-
+  ]
+  const categories = ['all', 'Cloud', 'Security', 'DevOps', 'Database', 'Infrastructure', 'Support', 'Development', 'Analytics', 'Networking', 'Consulting', 'Automation']
   const filteredServices = itServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
   const stats = [
     { icon: <Server className="w-8 h-8 text-cyan-500" />, value: '500+', label: 'Servers Managed' },
     { icon: <Shield className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Security Uptime' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Clients Served' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -252,8 +248,7 @@ const ItServicesPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Services</span>
-            </h1>
+              IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Services</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth. 
               From cloud migration to cybersecurity, we deliver enterprise-grade technology services.
@@ -270,10 +265,7 @@ const ItServicesPage: React.FC = () => {
                 className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
               >
                 Free Consultation
-              </Link>
-            </div>
-          </div>
-        </section>
+              </section>
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -285,15 +277,13 @@ const ItServicesPage: React.FC = () => {
                   <service.icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {service.name}
-                  </h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                  <p className="text-gray-300 mb-4">{service.description}
+                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
-                        <span>{feature}</span>
-                      </li>
+                        <span>{feature}
                     ))}
                   </ul>
                   <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
@@ -308,16 +298,37 @@ const ItServicesPage: React.FC = () => {
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
                     {stat.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}
+                  <div className="text-gray-300">{stat.label}
               ))}
             </div>
-          </div>
-        </section>
-      </div>
     </React.Fragment>
-  );
-};
-export default ItServicesPage;
+  )
+  }
+export default ItServicesPage
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </section>
+                                      </ArrowRight>
+                                    </div>
+                                  </span>
+                                </li>
+                              </div>
+                            </p>
+                          </h3>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </meta>
+        </meta>
+      </Zap>
+    </Users>
+  </Shield>
+</Server>

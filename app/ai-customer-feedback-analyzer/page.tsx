@@ -1,5 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 import { 
   CheckCircleIcon, 
   ChartBarIcon,
@@ -9,8 +9,7 @@ import {
   EnvelopeIcon,
   GlobeAltIcon,
   ArrowTrendingUpIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const AICustomerFeedbackAnalyzerPage: React.FC = () => {
   const features = [
     'Real-time sentiment analysis',
@@ -23,8 +22,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
     'Custom dashboard creation',
     'API integration with 100+ tools',
     'Advanced reporting and analytics'
-  ];
-
+  ]
   const benefits = [
     '85% improvement in customer satisfaction',
     '60% faster response to feedback',
@@ -32,8 +30,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
     'Real-time insights and alerts',
     'Automated action recommendations',
     'Comprehensive feedback analytics'
-  ];
-
+  ]
   const pricing = [
     {
       plan: 'Starter',
@@ -80,8 +77,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
         'Advanced security'
       ]
     }
-  ];
-
+  ]
   return (
     <>
       <SEOHead 
@@ -101,8 +97,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6">
                 <SparklesIcon className="w-5 h-5 text-cyan-400 mr-2" />
-                <span className="text-cyan-300 font-medium">AI-Powered Feedback Analysis</span>
-              </div>
+                <span className="text-cyan-300 font-medium">AI-Powered Feedback Analysis</div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 holographic leading-tight">
                 AI Customer Feedback Analyzer
@@ -110,8 +105,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
               
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed">
                 Transform customer feedback into actionable insights with our advanced AI analysis platform. 
-                <span className="text-cyan-400 font-semibold"> Boost customer satisfaction by 85% and increase retention by 40%.</span>
-              </p>
+                <span className="text-cyan-400 font-semibold"> Boost customer satisfaction by 85% and increase retention by 40%.</p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a 
@@ -121,50 +115,39 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
                   <span className="relative z-10 flex items-center">
                     Start Free Trial
                     <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </a>
+                  </a>
                 <a 
                   href="#demo"
                   className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 text-lg hover:shadow-lg hover:shadow-cyan-400/25"
                 >
                   Watch Demo
-                </a>
-              </div>
+                </div>
               
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
                   <div className="text-2xl lg:text-3xl font-bold text-cyan-400 mb-1">85%</div>
                   <div className="text-gray-300 text-sm">Satisfaction Improvement</div>
-                </div>
                 <div className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
                   <div className="text-2xl lg:text-3xl font-bold text-green-400 mb-1">60%</div>
                   <div className="text-gray-300 text-sm">Faster Response</div>
-                </div>
                 <div className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
                   <div className="text-2xl lg:text-3xl font-bold text-purple-400 mb-1">40%</div>
                   <div className="text-gray-300 text-sm">Retention Increase</div>
-                </div>
                 <div className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
                   <div className="text-2xl lg:text-3xl font-bold text-pink-400 mb-1">100+</div>
                   <div className="text-gray-300 text-sm">Integrations</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
 
         {/* Features Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">AI Features</span>
-              </h2>
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">AI Features</h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
                 Harness the power of artificial intelligence to understand and act on customer feedback like never before.
-              </p>
-            </div>
+              </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -175,13 +158,8 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
                     </div>
                     <h3 className="text-xl font-semibold text-white ml-4 group-hover:text-cyan-300 transition-colors">
                       {feature}
-                    </h3>
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </section>
 
         {/* Benefits Section */}
         <section className="py-20">
@@ -192,8 +170,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience measurable improvements in customer satisfaction, retention, and business growth.
-              </p>
-            </div>
+              </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -201,24 +178,19 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <ArrowTrendingUpIcon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{benefit}</h3>
-                </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{benefit}
               ))}
-            </div>
-          </div>
-        </section>
+            </section>
 
         {/* Pricing Section */}
         <section id="pricing" className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Simple, <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">Transparent Pricing</span>
-              </h2>
+                Simple, <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">Transparent Pricing</h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan for your feedback analysis needs. All plans include our core AI features.
-              </p>
-            </div>
+              </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
@@ -231,24 +203,20 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-green-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular
-                      </span>
-                    </div>
+                      </div>
                   )}
                   
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}
                     <div className="text-4xl font-bold text-cyan-400 mb-2">
-                      {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300">{plan.description}</p>
-                  </div>
+                      {plan.price}<span className="text-lg text-gray-400">{plan.period}
+                    <p className="text-gray-300">{plan.description}
                   
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
                     ))}
                   </ul>
                   
@@ -261,12 +229,9 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
                     }`}
                   >
                     Get Started
-                  </a>
-                </div>
+                  </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </section>
 
         {/* Contact Section */}
         <section className="py-20">
@@ -277,8 +242,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
                 Join thousands of companies already using AI Customer Feedback Analyzer to improve customer satisfaction and drive growth.
-              </p>
-            </div>
+              </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
@@ -287,8 +251,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
                 <p className="text-cyan-400 font-semibold text-lg">+1 302 464 0950</p>
-                <p className="text-gray-400 text-sm mt-2">Available 24/7 for support</p>
-              </div>
+                <p className="text-gray-400 text-sm mt-2">Available 24/7 for support</div>
               
               <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -296,8 +259,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
                 <p className="text-purple-400 font-semibold text-lg">kleber@ziontechgroup.com</p>
-                <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</p>
-              </div>
+                <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</div>
               
               <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -305,9 +267,7 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
                 <p className="text-green-400 font-semibold text-lg">ziontechgroup.com</p>
-                <p className="text-gray-400 text-sm mt-2">364 E Main St STE 1008, Middletown DE 19709</p>
-              </div>
-            </div>
+                <p className="text-gray-400 text-sm mt-2">364 E Main St STE 1008, Middletown DE 19709</div>
             
             <div className="text-center">
               <a 
@@ -317,14 +277,58 @@ const AICustomerFeedbackAnalyzerPage: React.FC = () => {
                 <span className="relative z-10 flex items-center">
                   Start Your Free Trial Today
                   <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default AICustomerFeedbackAnalyzerPage;
+                </div>
+        </>
+  )
+  }
+export default AICustomerFeedbackAnalyzerPage
+                                                                                                  </ArrowRightIcon>
+                                                                                                </span>
+                                                                                              </p>
+                                                                                            </GlobeAltIcon>
+                                                                                          </p>
+                                                                                        </EnvelopeIcon>
+                                                                                      </p>
+                                                                                    </PhoneIcon>
+                                                                                  </div>
+                                                                                </p>
+                                                                              </div>
+                                                                            </section>
+                                                                          </CheckCircleIcon>
+                                                                        </li>
+                                                                      </p>
+                                                                    </span>
+                                                                  </h3>
+                                                                </div>
+                                                              </span>
+                                                            </div>
+                                                          </p>
+                                                        </span>
+                                                      </div>
+                                                    </h3>
+                                                  </ArrowTrendingUpIcon>
+                                                </div>
+                                              </div>
+                                            </p>
+                                          </div>
+                                        </h3>
+                                      </ChartBarIcon>
+                                    </div>
+                                  </div>
+                                </div>
+                              </p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ArrowRightIcon>
+            </span>
+          </span>
+        </span>
+      </SparklesIcon>
+    </div>
+  </div>
+</div>

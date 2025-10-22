@@ -1,5 +1,4 @@
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async'
 export default function ZionaisocialschedulerproPage() {
   return (
     <>
@@ -23,11 +22,13 @@ export default function ZionaisocialschedulerproPage() {
               </button>
               <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
                 Learn More
-              </button>
-            </div>
-          </div>
-        </div>
+              </div>
+      </>
+  )
+  }
+
+        </button>
       </div>
-    </>
-  );
-}
+    </div>
+  </div>
+</meta>

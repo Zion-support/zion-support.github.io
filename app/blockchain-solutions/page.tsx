@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const BlockchainSolutionsPage: React.FC = () => {
   return (
     <>
@@ -17,8 +16,7 @@ const BlockchainSolutionsPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 mb-6">Blockchain Solutions</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Enterprise blockchain solutions and development services. Build secure, scalable blockchain applications with smart contracts, DeFi protocols, and Web3 integrations for your business.
-            </p>
-          </div>
+            </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
@@ -28,58 +26,42 @@ const BlockchainSolutionsPage: React.FC = () => {
                   <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">Smart Contract Development</h3>
-                    <p className="text-gray-600">Build secure, audited smart contracts for various blockchain platforms</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Build secure, audited smart contracts for various blockchain platforms</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">DeFi Protocol Development</h3>
-                    <p className="text-gray-600">Create decentralized finance protocols and applications</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Create decentralized finance protocols and applications</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">NFT Marketplace Development</h3>
-                    <p className="text-gray-600">Build NFT marketplaces and digital asset platforms</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Build NFT marketplaces and digital asset platforms</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">Web3 Integration</h3>
-                    <p className="text-gray-600">Integrate Web3 features into existing applications and websites</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Integrate Web3 features into existing applications and websites</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">Blockchain Consulting</h3>
-                    <p className="text-gray-600">Strategic consulting for blockchain adoption and implementation</p>
-                  </div>
-                </li>
-              </ul>
+                    <p className="text-gray-600">Strategic consulting for blockchain adoption and implementation</ul>
             </div>
             
             <div className="bg-gray-50 p-8 rounded-lg">
@@ -87,40 +69,32 @@ const BlockchainSolutionsPage: React.FC = () => {
               <div className="space-y-4">
                 <div className="border border-gray-200 rounded-lg p-4">
                   <h4 className="text-lg font-semibold text-gray-900">Smart Contract</h4>
-                  <p className="text-3xl font-bold text-purple-600">$9,999<span className="text-lg text-gray-600">/project</span></p>
+                  <p className="text-3xl font-bold text-purple-600">$9,999<span className="text-lg text-gray-600">/project</p>
                   <ul className="mt-4 space-y-2 text-sm text-gray-600">
                     <li>• Basic smart contract</li>
                     <li>• Security audit</li>
                     <li>• Testing suite</li>
                     <li>• 4 weeks delivery</li>
-                    <li>• Email support</li>
-                  </ul>
-                </div>
+                    <li>• Email support</div>
                 <div className="border border-purple-500 rounded-lg p-4 bg-purple-50">
                   <h4 className="text-lg font-semibold text-gray-900">DeFi Protocol</h4>
-                  <p className="text-3xl font-bold text-purple-600">$29,999<span className="text-lg text-gray-600">/project</span></p>
+                  <p className="text-3xl font-bold text-purple-600">$29,999<span className="text-lg text-gray-600">/project</p>
                   <ul className="mt-4 space-y-2 text-sm text-gray-600">
                     <li>• Complete DeFi protocol</li>
                     <li>• Frontend interface</li>
                     <li>• Security audit</li>
                     <li>• 8 weeks delivery</li>
-                    <li>• Priority support</li>
-                  </ul>
-                </div>
+                    <li>• Priority support</div>
                 <div className="border border-gray-200 rounded-lg p-4">
                   <h4 className="text-lg font-semibold text-gray-900">Enterprise Solution</h4>
-                  <p className="text-3xl font-bold text-purple-600">$99,999<span className="text-lg text-gray-600">/project</span></p>
+                  <p className="text-3xl font-bold text-purple-600">$99,999<span className="text-lg text-gray-600">/project</p>
                   <ul className="mt-4 space-y-2 text-sm text-gray-600">
                     <li>• Custom blockchain solution</li>
                     <li>• Full-stack development</li>
                     <li>• Enterprise security</li>
                     <li>• 16 weeks delivery</li>
-                    <li>• 24/7 support</li>
-                  </ul>
-                </div>
-              </div>
+                    <li>• 24/7 support</div>
             </div>
-          </div>
 
           <div className="bg-purple-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Build Your Blockchain Solution</h2>
@@ -131,13 +105,42 @@ const BlockchainSolutionsPage: React.FC = () => {
               </a>
               <a href="mailto:kleber@ziontechgroup.com" className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors">
                 Email: kleber@ziontechgroup.com
-              </a>
-            </div>
-          </div>
+              </div>
+      </>
+  )
+  }
+export default BlockchainSolutionsPage
+                                                                  </a>
+                                                                </div>
+                                                              </li>
+                                                            </ul>
+                                                          </li>
+                                                        </ul>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </p>
+                                              </path>
+                                            </svg>
+                                          </li>
+                                        </p>
+                                      </div>
+                                    </path>
+                                  </svg>
+                                </p>
+                              </div>
+                            </path>
+                          </svg>
+                        </p>
+                      </div>
+                    </path>
+                  </svg>
+                </p>
+              </div>
+            </path>
+          </svg>
         </div>
       </div>
-    </>
-  );
-};
-
-export default BlockchainSolutionsPage;
+    </p>
+  </div>
+</div>

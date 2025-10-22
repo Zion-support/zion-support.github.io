@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import ServicePageTemplate from '../components/ServicePageTemplate';
-import { MicrophoneIcon } from '@heroicons/react/24/outline';
-
+'use client'
+import React from 'react'
+import ServicePageTemplate from '../components/ServicePageTemplate'
+import { MicrophoneIcon } from '@heroicons/react/24/outline'
 const AIAudioProcessorPage: React.FC = () => {
   const features = [
     'Real-time Audio Processing',
@@ -11,14 +10,12 @@ const AIAudioProcessorPage: React.FC = () => {
     'Transcription Services',
     'Audio Enhancement',
     'Music Analysis'
-  ];
-
+  ]
   const pricing = {
     basic: 199,
     pro: 399,
     enterprise: 799
-  };
-
+  }
   const benefits = [
     '95% accuracy in speech recognition',
     'Real-time processing capabilities',
@@ -28,15 +25,13 @@ const AIAudioProcessorPage: React.FC = () => {
     'Easy API integration',
     'Custom model training',
     '24/7 technical support'
-  ];
-
+  ]
   const useCases = [
     'Call Center Automation',
     'Content Creation',
     'Meeting Intelligence',
     'Accessibility Services'
-  ];
-
+  ]
   const technicalSpecs = [
     'Real-time processing',
     'Batch processing support',
@@ -50,8 +45,7 @@ const AIAudioProcessorPage: React.FC = () => {
     'WebSocket support',
     'SDK for major languages',
     'Webhook notifications'
-  ];
-
+  ]
   return (
     <ServicePageTemplate
       title="AI Audio Processor Pro"
@@ -66,7 +60,6 @@ const AIAudioProcessorPage: React.FC = () => {
       ctaText="Start Free Trial"
       ctaLink="/contact"
     />
-  );
-};
-
-export default AIAudioProcessorPage;
+  )
+  }
+export default AIAudioProcessorPage

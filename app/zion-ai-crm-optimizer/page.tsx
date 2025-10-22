@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const ZionAICRMOptimizerPage: React.FC = () => {
   return (
     <>
@@ -35,14 +34,15 @@ const ZionAICRMOptimizerPage: React.FC = () => {
                   className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
                 >
                   Call +1 302 464 0950
-                </a>
-              </div>
+                </div>
+        </>
+  )
+  }
+export default ZionAICRMOptimizerPage
             </div>
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default ZionAICRMOptimizerPage;
+    </link>
+  </meta>
+</meta>

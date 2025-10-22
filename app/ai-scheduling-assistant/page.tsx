@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const AISchedulingAssistantPage: React.FC = () => {
   return (
     <>
@@ -17,8 +16,7 @@ const AISchedulingAssistantPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Scheduling Assistant</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Automate and optimize your scheduling with AI-powered assistance. Handle appointment booking, resolve conflicts, and manage complex scheduling scenarios with intelligent automation.
-            </p>
-          </div>
+            </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
@@ -28,58 +26,42 @@ const AISchedulingAssistantPage: React.FC = () => {
                   <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">Intelligent Booking</h3>
-                    <p className="text-gray-600">AI-powered appointment booking with natural language processing</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">AI-powered appointment booking with natural language processing</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">Conflict Resolution</h3>
-                    <p className="text-gray-600">Automatically detect and resolve scheduling conflicts with smart suggestions</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Automatically detect and resolve scheduling conflicts with smart suggestions</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">Multi-Calendar Sync</h3>
-                    <p className="text-gray-600">Sync with Google Calendar, Outlook, and other calendar platforms</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Sync with Google Calendar, Outlook, and other calendar platforms</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">Smart Notifications</h3>
-                    <p className="text-gray-600">Intelligent reminders and notifications based on user preferences</p>
-                  </div>
-                </li>
+                    <p className="text-gray-600">Intelligent reminders and notifications based on user preferences</li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                    </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold text-gray-900">Time Zone Management</h3>
-                    <p className="text-gray-600">Handle multiple time zones and international scheduling automatically</p>
-                  </div>
-                </li>
-              </ul>
+                    <p className="text-gray-600">Handle multiple time zones and international scheduling automatically</ul>
             </div>
             
             <div className="bg-gray-50 p-8 rounded-lg">
@@ -87,42 +69,34 @@ const AISchedulingAssistantPage: React.FC = () => {
               <div className="space-y-4">
                 <div className="border border-gray-200 rounded-lg p-4">
                   <h4 className="text-lg font-semibold text-gray-900">Personal</h4>
-                  <p className="text-3xl font-bold text-pink-600">$29<span className="text-lg text-gray-600">/month</span></p>
+                  <p className="text-3xl font-bold text-pink-600">$29<span className="text-lg text-gray-600">/month</p>
                   <ul className="mt-4 space-y-2 text-sm text-gray-600">
                     <li>• Up to 5 calendars</li>
                     <li>• Basic scheduling</li>
                     <li>• Email notifications</li>
                     <li>• Mobile app</li>
-                    <li>• Email support</li>
-                  </ul>
-                </div>
+                    <li>• Email support</div>
                 <div className="border border-pink-500 rounded-lg p-4 bg-pink-50">
                   <h4 className="text-lg font-semibold text-gray-900">Business</h4>
-                  <p className="text-3xl font-bold text-pink-600">$99<span className="text-lg text-gray-600">/month</span></p>
+                  <p className="text-3xl font-bold text-pink-600">$99<span className="text-lg text-gray-600">/month</p>
                   <ul className="mt-4 space-y-2 text-sm text-gray-600">
                     <li>• Up to 25 calendars</li>
                     <li>• Advanced AI features</li>
                     <li>• Team scheduling</li>
                     <li>• Custom integrations</li>
                     <li>• API access</li>
-                    <li>• Priority support</li>
-                  </ul>
-                </div>
+                    <li>• Priority support</div>
                 <div className="border border-gray-200 rounded-lg p-4">
                   <h4 className="text-lg font-semibold text-gray-900">Enterprise</h4>
-                  <p className="text-3xl font-bold text-pink-600">$299<span className="text-lg text-gray-600">/month</span></p>
+                  <p className="text-3xl font-bold text-pink-600">$299<span className="text-lg text-gray-600">/month</p>
                   <ul className="mt-4 space-y-2 text-sm text-gray-600">
                     <li>• Unlimited calendars</li>
                     <li>• Full AI capabilities</li>
                     <li>• Custom workflows</li>
                     <li>• White-label options</li>
                     <li>• 24/7 support</li>
-                    <li>• On-premise deployment</li>
-                  </ul>
-                </div>
-              </div>
+                    <li>• On-premise deployment</div>
             </div>
-          </div>
 
           <div className="bg-pink-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Automate Your Scheduling</h2>
@@ -133,13 +107,42 @@ const AISchedulingAssistantPage: React.FC = () => {
               </a>
               <a href="tel:+13024640950" className="border border-pink-600 text-pink-600 px-8 py-3 rounded-lg hover:bg-pink-50 transition-colors">
                 Call: +1 (302) 464-0950
-              </a>
-            </div>
-          </div>
+              </div>
+      </>
+  )
+  }
+export default AISchedulingAssistantPage
+                                                                  </a>
+                                                                </div>
+                                                              </li>
+                                                            </ul>
+                                                          </li>
+                                                        </ul>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </p>
+                                              </path>
+                                            </svg>
+                                          </li>
+                                        </p>
+                                      </div>
+                                    </path>
+                                  </svg>
+                                </p>
+                              </div>
+                            </path>
+                          </svg>
+                        </p>
+                      </div>
+                    </path>
+                  </svg>
+                </p>
+              </div>
+            </path>
+          </svg>
         </div>
       </div>
-    </>
-  );
-};
-
-export default AISchedulingAssistantPage;
+    </p>
+  </div>
+</div>

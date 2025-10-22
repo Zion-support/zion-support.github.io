@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const AI3DModelGeneratorPage: React.FC = () => {
   return (
     <>
@@ -19,8 +18,7 @@ const AI3DModelGeneratorPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Create stunning 3D models with AI technology. Perfect for games, VR, AR, and visualization projects.
-            </p>
-          </div>
+            </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-slate-800 rounded-lg p-6">
@@ -45,9 +43,7 @@ const AI3DModelGeneratorPage: React.FC = () => {
                 <li className="flex items-center">
                   <span className="text-green-400 mr-2">✓</span>
                   UV mapping and texturing
-                </li>
-              </ul>
-            </div>
+                </div>
             
             <div className="bg-slate-800 rounded-lg p-6">
               <h2 className="text-2xl font-semibold mb-4 text-purple-400">Export Formats</h2>
@@ -71,47 +67,34 @@ const AI3DModelGeneratorPage: React.FC = () => {
                 <li className="flex items-center">
                   <span className="text-blue-400 mr-2">→</span>
                   Web and mobile optimized
-                </li>
-              </ul>
-            </div>
-          </div>
+                </div>
           
           <div className="bg-slate-800 rounded-lg p-8 mb-12">
             <h2 className="text-3xl font-bold mb-6 text-center">Applications</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎮</span>
-                </div>
+                  <span className="text-2xl">🎮</div>
                 <h3 className="text-xl font-semibold mb-3 text-cyan-400">Game Development</h3>
-                <p className="text-gray-300">Create characters, environments, and props for games.</p>
-              </div>
+                <p className="text-gray-300">Create characters, environments, and props for games.</div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🥽</span>
-                </div>
+                  <span className="text-2xl">🥽</div>
                 <h3 className="text-xl font-semibold mb-3 text-purple-400">VR/AR</h3>
-                <p className="text-gray-300">Generate immersive 3D content for virtual and augmented reality.</p>
-              </div>
+                <p className="text-gray-300">Generate immersive 3D content for virtual and augmented reality.</div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏗️</span>
-                </div>
+                  <span className="text-2xl">🏗️</div>
                 <h3 className="text-xl font-semibold mb-3 text-green-400">Architecture</h3>
-                <p className="text-gray-300">Create architectural visualizations and building models.</p>
-              </div>
+                <p className="text-gray-300">Create architectural visualizations and building models.</div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🖨️</span>
-                </div>
+                  <span className="text-2xl">🖨️</div>
                 <h3 className="text-xl font-semibold mb-3 text-orange-400">3D Printing</h3>
-                <p className="text-gray-300">Generate models optimized for 3D printing and prototyping.</p>
-              </div>
-            </div>
-          </div>
+                <p className="text-gray-300">Generate models optimized for 3D printing and prototyping.</div>
           
           <div className="text-center">
             <a
@@ -119,12 +102,26 @@ const AI3DModelGeneratorPage: React.FC = () => {
               className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
             >
               Generate 3D Models
-            </a>
-          </div>
-        </div>
-      </div>
+            </div>
     </>
-  );
-};
-
-export default AI3DModelGeneratorPage;
+  )
+  }
+export default AI3DModelGeneratorPage
+                                  </p>
+                                </span>
+                              </p>
+                            </span>
+                          </p>
+                        </span>
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </p>
+  </div>
+</div>

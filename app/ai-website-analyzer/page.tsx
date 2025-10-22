@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const AIWebsiteAnalyzerPage: React.FC = () => {
   return (
     <>
@@ -33,9 +32,7 @@ const AIWebsiteAnalyzerPage: React.FC = () => {
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Email kleber@ziontechgroup.com
-              </a>
-            </div>
-          </div>
+              </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Key Features</h2>
@@ -44,32 +41,24 @@ const AIWebsiteAnalyzerPage: React.FC = () => {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
+                  </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Performance Analysis</h3>
-                <p className="text-gray-600">Analyze website performance and identify optimization opportunities.</p>
-              </div>
+                <p className="text-gray-600">Analyze website performance and identify optimization opportunities.</div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
+                  </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">SEO Optimization</h3>
-                <p className="text-gray-600">Get AI-powered SEO recommendations to improve search rankings.</p>
-              </div>
+                <p className="text-gray-600">Get AI-powered SEO recommendations to improve search rankings.</div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
+                  </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">User Experience Insights</h3>
-                <p className="text-gray-600">Analyze user experience and identify areas for improvement.</p>
-              </div>
-            </div>
-          </div>
+                <p className="text-gray-600">Analyze user experience and identify areas for improvement.</div>
 
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Analyze Your Website?</h2>
@@ -88,13 +77,24 @@ const AIWebsiteAnalyzerPage: React.FC = () => {
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Email kleber@ziontechgroup.com
-              </a>
-            </div>
-          </div>
+              </div>
+      </>
+  )
+  }
+export default AIWebsiteAnalyzerPage
+                              </div>
+                            </p>
+                          </path>
+                        </path>
+                      </svg>
+                    </p>
+                  </path>
+                </svg>
+              </p>
+            </path>
+          </svg>
         </div>
       </div>
-    </>
-  );
-};
-
-export default AIWebsiteAnalyzerPage;
+    </div>
+  </div>
+</div>

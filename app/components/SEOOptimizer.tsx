@@ -1,15 +1,14 @@
-'use client';
-
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: Record<string, unknown>;
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  structuredData?: Record<string, unknown>
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -22,42 +21,43 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {
   useEffect(() => {
     // Update page title
-    document.title = title;
-
+    document.title = title
+    
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
+    const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', description);
+      metaDescription.setAttribute('content', description)
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.name = 'description'
+      meta.content = description
+      document.head.appendChild(meta)
     }
-    meta.setAttribute('content', content);
-  };
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
+    
+    // Update canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
     }
-    canonical.setAttribute('href', url);
-  };
-  const addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    // Remove existing structured data
-    const existing = document.getElementById('structured-data');
-    if (existing) {
-      existing.remove();
+    canonical.setAttribute('href', canonicalUrl)
+    
+    // Add structured data
+    if (structuredData) {
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.textContent = JSON.stringify(structuredData)
+      script.id = 'structured-data'
+      // Remove existing structured data
+      const existing = document.getElementById('structured-data')
+      if (existing) {
+        existing.remove()
+      }
+      document.head.appendChild(script)
     }
-    document.head.appendChild(script);
-  };
-  const addBreadcrumbStructuredData = () => {
+    
+    // Add breadcrumb structured data
     const breadcrumbData = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -69,19 +69,19 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           'item': 'https://ziontechgroup.com'
         }
       ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
-    script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data
-    const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {
-      existing.remove();
     }
-    document.head.appendChild(script);
-  };
-  const addOrganizationStructuredData = () => {
+    const breadcrumbScript = document.createElement('script')
+    breadcrumbScript.type = 'application/ld+json'
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbData)
+    breadcrumbScript.id = 'breadcrumb-structured-data'
+    // Remove existing breadcrumb data
+    const existingBreadcrumb = document.getElementById('breadcrumb-structured-data')
+    if (existingBreadcrumb) {
+      existingBreadcrumb.remove()
+    }
+    document.head.appendChild(breadcrumbScript)
+    
+    // Add organization structured data
     const organizationData = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -94,91 +94,70 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       'industry': 'Technology',
       'contactPoint': {
         '@type': 'ContactPoint',
-        'telephone': '+1-302-464-0950',
-        'contactType': 'Customer Service',
-        'areaServed': 'US',
-        'availableLanguage': 'en'
+        'telephone': '+1-555-0123',
+        'contactType': 'customer service',
+        'availableLanguage': 'English'
       },
       'address': {
         '@type': 'PostalAddress',
-        'streetAddress': '364 E Main St STE 1008',
-        'addressLocality': 'Middletown',
-        'addressRegion': 'DE',
-        'postalCode': '19709',
+        'streetAddress': '123 Tech Street',
+        'addressLocality': 'San Francisco',
+        'addressRegion': 'CA',
+        'postalCode': '94105',
         'addressCountry': 'US'
       },
       'sameAs': [
         'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup'
+        'https://linkedin.com/company/ziontechgroup',
+        'https://github.com/ziontechgroup'
       ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(organizationData);
-    script.id = 'organization-structured-data';
+    }
+    const orgScript = document.createElement('script')
+    orgScript.type = 'application/ld+json'
+    orgScript.textContent = JSON.stringify(organizationData)
+    orgScript.id = 'organization-structured-data'
     // Remove existing organization data
-    const existing = document.getElementById('organization-structured-data');
-    if (existing) {
-      existing.remove();
+    const existingOrg = document.getElementById('organization-structured-data')
+    if (existingOrg) {
+      existingOrg.remove()
     }
-
-    // Update canonical URL
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute('href', canonicalUrl);
-    } else {
-      const link = document.createElement('link');
-      link.rel = 'canonical';
-      link.href = canonicalUrl;
-      document.head.appendChild(link);
+    document.head.appendChild(orgScript)
+    
+    // Add FAQ structured data
+    const faqData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What services does Zion Tech Group offer?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'We offer AI-powered enterprise solutions, quantum computing services, autonomous systems development, and comprehensive digital transformation consulting.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How can I get started with your services?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Contact us through our website or call us directly. We offer free consultations to assess your needs and provide tailored solutions.'
+          }
+        }
+      ]
     }
-
-    // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', title);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = title;
-      document.head.appendChild(meta);
+    const faqScript = document.createElement('script')
+    faqScript.type = 'application/ld+json'
+    faqScript.textContent = JSON.stringify(faqData)
+    faqScript.id = 'faq-structured-data'
+    // Remove existing FAQ data
+    const existingFaq = document.getElementById('faq-structured-data')
+    if (existingFaq) {
+      existingFaq.remove()
     }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', ogImage);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
-
-    // Add structured data
-    if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      script.id = 'structured-data';
-      
-      // Remove existing structured data
-      const existing = document.getElementById('structured-data');
-      if (existing) {
-        existing.remove();
-      }
-      document.head.appendChild(script);
-    }
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+    document.head.appendChild(faqScript)
+    
+  }, [title, description, canonicalUrl, structuredData])
 
   return (
     <Helmet>
@@ -187,14 +166,15 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />
       
-      {/* Open Graph */}
+      {/* Open Graph tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Zion Tech Group" />
       
-      {/* Twitter Card */}
+      {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
@@ -204,15 +184,15 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     </Helmet>
-  );
-};
-export default SEOOptimizer;
-  </SEOOptimizerProps>
+  )
+}
+
+export default SEOOptimizer

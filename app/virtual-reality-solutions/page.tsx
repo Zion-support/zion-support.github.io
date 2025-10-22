@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const VirtualRealitySolutionsPage: React.FC = () => {
   return (
     <>
@@ -19,8 +18,7 @@ const VirtualRealitySolutionsPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Create immersive virtual reality experiences for training, entertainment, education, and enterprise applications.
-            </p>
-          </div>
+            </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-slate-800 rounded-lg p-6">
@@ -45,9 +43,7 @@ const VirtualRealitySolutionsPage: React.FC = () => {
                 <li className="flex items-center">
                   <span className="text-green-400 mr-2">✓</span>
                   Spatial audio design
-                </li>
-              </ul>
-            </div>
+                </div>
             
             <div className="bg-slate-800 rounded-lg p-6">
               <h2 className="text-2xl font-semibold mb-4 text-purple-400">VR Applications</h2>
@@ -71,39 +67,28 @@ const VirtualRealitySolutionsPage: React.FC = () => {
                 <li className="flex items-center">
                   <span className="text-blue-400 mr-2">→</span>
                   Virtual showrooms and tours
-                </li>
-              </ul>
-            </div>
-          </div>
+                </div>
           
           <div className="bg-slate-800 rounded-lg p-8 mb-12">
             <h2 className="text-3xl font-bold mb-6 text-center">VR Platforms</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🥽</span>
-                </div>
+                  <span className="text-2xl">🥽</div>
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">Oculus & Meta</h3>
-                <p className="text-gray-300">Quest, Rift, and enterprise VR solutions.</p>
-              </div>
+                <p className="text-gray-300">Quest, Rift, and enterprise VR solutions.</div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎮</span>
-                </div>
+                  <span className="text-2xl">🎮</div>
                 <h3 className="text-xl font-semibold mb-3 text-purple-400">HTC Vive</h3>
-                <p className="text-gray-300">High-end VR experiences and enterprise solutions.</p>
-              </div>
+                <p className="text-gray-300">High-end VR experiences and enterprise solutions.</div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💻</span>
-                </div>
+                  <span className="text-2xl">💻</div>
                 <h3 className="text-xl font-semibold mb-3 text-green-400">Web VR</h3>
-                <p className="text-gray-300">Browser-based VR experiences accessible on any device.</p>
-              </div>
-            </div>
-          </div>
+                <p className="text-gray-300">Browser-based VR experiences accessible on any device.</div>
           
           <div className="text-center">
             <a
@@ -111,12 +96,24 @@ const VirtualRealitySolutionsPage: React.FC = () => {
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
             >
               Build VR Experience
-            </a>
-          </div>
-        </div>
-      </div>
+            </div>
     </>
-  );
-};
-
-export default VirtualRealitySolutionsPage;
+  )
+  }
+export default VirtualRealitySolutionsPage
+                              </p>
+                            </span>
+                          </p>
+                        </span>
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </p>
+  </div>
+</div>

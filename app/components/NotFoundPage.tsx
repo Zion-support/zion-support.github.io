@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 const NotFoundPage: React.FC = () => {
   return (
     <>
@@ -18,8 +17,7 @@ const NotFoundPage: React.FC = () => {
             <h2 className="text-3xl font-semibold text-gray-900 mb-4">Page Not Found</h2>
             <p className="text-xl text-gray-600 mb-8 max-w-md mx-auto">
               Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you entered the wrong URL.
-            </p>
-          </div>
+            </div>
           
           <div className="space-y-4">
             <Link 
@@ -34,14 +32,16 @@ const NotFoundPage: React.FC = () => {
               <div className="mt-2 space-x-4">
                 <Link to="/services" className="text-blue-600 hover:text-blue-800">Services</Link>
                 <Link to="/about" className="text-blue-600 hover:text-blue-800">About</Link>
-                <Link to="/contact" className="text-blue-600 hover:text-blue-800">Contact</Link>
-              </div>
+                <Link to="/contact" className="text-blue-600 hover:text-blue-800">Contact</div>
+        </>
+  )
+  }
+export default NotFoundPage
+              </Link>
             </div>
           </div>
-        </div>
+        </p>
       </div>
-    </>
-  );
-};
-
-export default NotFoundPage;
+    </div>
+  </meta>
+</meta>

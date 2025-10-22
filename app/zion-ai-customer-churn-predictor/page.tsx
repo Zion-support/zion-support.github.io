@@ -1,6 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 export default function ZionaicustomerchurnpredictorPage() {
   return (
     <>
@@ -23,29 +22,24 @@ export default function ZionaicustomerchurnpredictorPage() {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Predict customer churn with AI-powered analytics. Identify at-risk customers and take proactive retention actions to reduce churn rates.
-            </p>
-          </div>
+            </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-white p-6 rounded-lg shadow-md border">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Analytics</h3>
               <p className="text-gray-600">
                 Advanced machine learning models analyze customer behavior patterns to predict churn probability with high accuracy.
-              </p>
-            </div>
+              </div>
             <div className="bg-white p-6 rounded-lg shadow-md border">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Alerts</h3>
               <p className="text-gray-600">
                 Get instant notifications when customers show high churn risk, allowing for immediate intervention strategies.
-              </p>
-            </div>
+              </div>
             <div className="bg-white p-6 rounded-lg shadow-md border">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Retention Strategies</h3>
               <p className="text-gray-600">
                 Receive personalized recommendations for retention campaigns based on individual customer profiles and risk factors.
-              </p>
-            </div>
-          </div>
+              </div>
           
           <div className="bg-gray-50 rounded-lg p-8 mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Key Features</h2>
@@ -74,8 +68,7 @@ export default function ZionaicustomerchurnpredictorPage() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Automated alert system
-                </li>
-              </ul>
+                </ul>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -100,10 +93,7 @@ export default function ZionaicustomerchurnpredictorPage() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Detailed analytics dashboard
-                </li>
-              </ul>
-            </div>
-          </div>
+                </div>
           
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -112,11 +102,36 @@ export default function ZionaicustomerchurnpredictorPage() {
               </Link>
               <Link to="/pricing" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                 View Pricing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+              </div>
+      </>
+  )
+  }
+
+                                                      </Link>
+                                                    </div>
+                                                  </path>
+                                                </li>
+                                              </path>
+                                            </path>
+                                          </path>
+                                        </ul>
+                                      </path>
+                                    </li>
+                                  </path>
+                                </path>
+                              </path>
+                            </div>
+                          </p>
+                        </p>
+                      </p>
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </link>
+          </meta>
+        </meta>
+      </meta>
+    </meta>
+  </meta>
+</meta>

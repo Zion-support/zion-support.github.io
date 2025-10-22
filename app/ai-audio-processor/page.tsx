@@ -1,6 +1,5 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 const AIAudioProcessorPage: React.FC = () => {
   return (
     <>
@@ -19,8 +18,7 @@ const AIAudioProcessorPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your audio with AI-powered processing, noise reduction, enhancement, and real-time transcription.
-            </p>
-          </div>
+            </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-slate-800 rounded-lg p-6">
@@ -45,9 +43,7 @@ const AIAudioProcessorPage: React.FC = () => {
                 <li className="flex items-center">
                   <span className="text-green-400 mr-2">✓</span>
                   Multi-format support
-                </li>
-              </ul>
-            </div>
+                </div>
             
             <div className="bg-slate-800 rounded-lg p-6">
               <h2 className="text-2xl font-semibold mb-4 text-red-400">Transcription & Analysis</h2>
@@ -71,39 +67,28 @@ const AIAudioProcessorPage: React.FC = () => {
                 <li className="flex items-center">
                   <span className="text-blue-400 mr-2">→</span>
                   Audio content analysis
-                </li>
-              </ul>
-            </div>
-          </div>
+                </div>
           
           <div className="bg-slate-800 rounded-lg p-8 mb-12">
             <h2 className="text-3xl font-bold mb-6 text-center">Use Cases</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎙️</span>
-                </div>
+                  <span className="text-2xl">🎙️</div>
                 <h3 className="text-xl font-semibold mb-3 text-orange-400">Podcasting</h3>
-                <p className="text-gray-300">Enhance podcast audio quality and create professional transcripts.</p>
-              </div>
+                <p className="text-gray-300">Enhance podcast audio quality and create professional transcripts.</div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📞</span>
-                </div>
+                  <span className="text-2xl">📞</div>
                 <h3 className="text-xl font-semibold mb-3 text-red-400">Call Centers</h3>
-                <p className="text-gray-300">Improve call quality and generate automatic call summaries.</p>
-              </div>
+                <p className="text-gray-300">Improve call quality and generate automatic call summaries.</div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎓</span>
-                </div>
+                  <span className="text-2xl">🎓</div>
                 <h3 className="text-xl font-semibold mb-3 text-purple-400">Education</h3>
-                <p className="text-gray-300">Create accessible content with automatic captions and transcripts.</p>
-              </div>
-            </div>
-          </div>
+                <p className="text-gray-300">Create accessible content with automatic captions and transcripts.</div>
           
           <div className="text-center">
             <a
@@ -111,12 +96,24 @@ const AIAudioProcessorPage: React.FC = () => {
               className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300"
             >
               Process Your Audio
-            </a>
-          </div>
-        </div>
-      </div>
+            </div>
     </>
-  );
-};
-
-export default AIAudioProcessorPage;
+  )
+  }
+export default AIAudioProcessorPage
+                              </p>
+                            </span>
+                          </p>
+                        </span>
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </p>
+  </div>
+</div>

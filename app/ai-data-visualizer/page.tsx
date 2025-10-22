@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import SEOHead from '../components/SEOHead';
+'use client'
+import React from 'react'
+import SEOHead from '../components/SEOHead'
 import { 
   ChartBarIcon, 
   EyeIcon, 
@@ -9,8 +9,7 @@ import {
   SparklesIcon,
   CpuChipIcon,
   GlobeAltIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const AIDataVisualizerPage: React.FC = () => {
   const features = [
     {
@@ -37,8 +36,7 @@ const AIDataVisualizerPage: React.FC = () => {
       description: 'Connect to 100+ data sources including databases, APIs, cloud services, and file uploads.',
       benefits: ['100+ data connectors', 'Real-time sync', 'Data transformation', 'Automated scheduling']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -86,8 +84,7 @@ const AIDataVisualizerPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const chartTypes = [
     { name: 'Bar Charts', description: 'Perfect for comparing categories' },
     { name: 'Line Charts', description: 'Ideal for showing trends over time' },
@@ -101,8 +98,7 @@ const AIDataVisualizerPage: React.FC = () => {
     { name: 'Funnel Charts', description: 'Show conversion processes' },
     { name: 'Sankey Diagrams', description: 'Flow and process visualization' },
     { name: 'Geographic Maps', description: 'Location-based data analysis' }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'David Kim',
@@ -125,8 +121,7 @@ const AIDataVisualizerPage: React.FC = () => {
       content: 'We went from static reports to dynamic, interactive visualizations. Our team productivity increased by 60% and decision-making is much faster.',
       rating: 5
     }
-  ];
-
+  ]
   return (
     <>
       <SEOHead 
@@ -147,14 +142,12 @@ const AIDataVisualizerPage: React.FC = () => {
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6">
                 <SparklesIcon className="w-5 h-5 text-cyan-400 mr-2" />
-                <span className="text-cyan-300 text-sm font-medium">AI-Powered Data Visualization</span>
-              </div>
+                <span className="text-cyan-300 text-sm font-medium">AI-Powered Data Visualization</div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                   AI Data Visualizer
-                </span>
-              </h1>
+                </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform complex data into stunning, interactive visualizations with AI-powered insights and automated pattern detection.
@@ -166,42 +159,32 @@ const AIDataVisualizerPage: React.FC = () => {
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                   View Demo
-                </button>
-              </div>
+                </div>
               
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
                   <div className="text-gray-300 text-sm">Chart Types</div>
-                </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>
                   <div className="text-gray-300 text-sm">Data Sources</div>
-                </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">Real-time</div>
                   <div className="text-gray-300 text-sm">Updates</div>
-                </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">AI</div>
                   <div className="text-gray-300 text-sm">Insights</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
 
         {/* Features Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Visualization Features</span>
-              </h2>
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Visualization Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Create stunning visualizations with advanced AI-powered insights and real-time data processing.
-              </p>
-            </div>
+              </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {features.map((feature, index) => (
@@ -213,64 +196,47 @@ const AIDataVisualizerPage: React.FC = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                         {feature.title}
-                      </h3>
                       <p className="text-gray-400 mb-4">
                         {feature.description}
-                      </p>
                       <ul className="space-y-2">
                         {feature.benefits.map((benefit, benefitIndex) => (
                           <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                             <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                            <span>{benefit}</span>
-                          </li>
+                            <span>{benefit}
                         ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                      </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </section>
 
         {/* Chart Types Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">50+ Chart Types</span>
-              </h2>
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">50+ Chart Types</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose from a comprehensive library of visualization types to best represent your data.
-              </p>
-            </div>
+              </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {chartTypes.map((chart, index) => (
                 <div key={index} className="group bg-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20">
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                     {chart.name}
-                  </h3>
                   <p className="text-gray-400 text-sm">
                     {chart.description}
-                  </p>
-                </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </section>
 
         {/* Pricing Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
-              </h2>
+                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan for your data visualization needs. All plans include our core features and support.
-              </p>
-            </div>
+              </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
@@ -283,25 +249,21 @@ const AIDataVisualizerPage: React.FC = () => {
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
-                      </span>
-                    </div>
+                      </div>
                   )}
                   
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}
+                    <p className="text-gray-400 mb-4">{plan.description}
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
+                      <span className="text-4xl font-bold text-cyan-400">{plan.price}
+                      <span className="text-gray-400 ml-1">{plan.period}
                   
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                        <span>{feature}</span>
-                      </li>
+                        <span>{feature}
                     ))}
                   </ul>
                   
@@ -311,24 +273,18 @@ const AIDataVisualizerPage: React.FC = () => {
                       : 'border-2 border-cyan-400 text-cyan-300 hover:bg-cyan-400 hover:text-white'
                   }`}>
                     {plan.popular ? 'Get Started' : 'Choose Plan'}
-                  </button>
-                </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </section>
 
         {/* Testimonials Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                What Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Customers Say</span>
-              </h2>
+                What Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Customers Say</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Join thousands of data professionals who trust AI Data Visualizer for their analytics needs.
-              </p>
-            </div>
+              </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
@@ -340,14 +296,10 @@ const AIDataVisualizerPage: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
+                    <div className="font-semibold text-white">{testimonial.name}
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}
               ))}
-            </div>
-          </div>
-        </section>
+            </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-900/40 via-slate-900 to-purple-900/40">
@@ -364,13 +316,64 @@ const AIDataVisualizerPage: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Contact Sales
-              </button>
+              </section>
+      </>
+  )
+  }
+export default AIDataVisualizerPage
+                                                                                                              </button>
+                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                        </div>
+                                                                                                      </div>
+                                                                                                    </div>
+                                                                                                  </StarIcon>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </p>
+                                                                                          </span>
+                                                                                        </div>
+                                                                                      </span>
+                                                                                    </CheckCircleIcon>
+                                                                                  </li>
+                                                                                </span>
+                                                                              </span>
+                                                                            </div>
+                                                                          </p>
+                                                                        </h3>
+                                                                      </div>
+                                                                    </span>
+                                                                  </div>
+                                                                </p>
+                                                              </span>
+                                                            </div>
+                                                          </p>
+                                                        </h3>
+                                                      </div>
+                                                    </div>
+                                                  </p>
+                                                </span>
+                                              </div>
+                                            </span>
+                                          </CheckCircleIcon>
+                                        </li>
+                                      </ul>
+                                    </p>
+                                  </h3>
+                                </div>
+                              </div>
+                            </div>
+                          </p>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default AIDataVisualizerPage;
+          </button>
+        </span>
+      </span>
+    </SparklesIcon>
+  </div>
+</div>

@@ -1,6 +1,5 @@
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
-
+import React, { memo } from 'react'
+import SEOHead from '../components/SEOHead'
 const ZionAICodeAssistantPage: React.FC = memo(() => {
   return (
     <>
@@ -26,15 +25,13 @@ const ZionAICodeAssistantPage: React.FC = memo(() => {
               </a>
               <a href="tel:+13024640950" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-105 transform">
                 Call +1 302 464 0950
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-});
-
-ZionAICodeAssistantPage.displayName = 'ZionAICodeAssistantPage';
-
-export default ZionAICodeAssistantPage;
+              </div>
+      </>
+  )
+  })
+ZionAICodeAssistantPage.displayName = 'ZionAICodeAssistantPage'
+export default ZionAICodeAssistantPage
+      </a>
+    </div>
+  </div>
+</div>

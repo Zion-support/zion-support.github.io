@@ -1,9 +1,8 @@
 <<<<<<< HEAD
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Layers } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Layers } from 'lucide-react'
 export default function CloudInfrastructurePage() {
   return (
     <>
@@ -20,29 +19,23 @@ export default function CloudInfrastructurePage() {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Professional cloud infrastructure solutions for modern businesses.
-          </p>
-
-        </div>
+          </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-cyan-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
-            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
-          </div>
+            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-purple-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
-            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
-          </div>
+            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <Layers className="w-12 h-12 text-yellow-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
-            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
-          </div>
-        </div>
+            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</div>
 
         <div className="text-center">
           <p className="text-lg text-gray-300 mb-8">
@@ -76,8 +69,8 @@ const CloudInfrastructurePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-            Transform your business with our advanced cloud infrastructure solutions.;
-            Powered by cutting-edge AI technology and industry expertise.;
+            Transform your business with our advanced cloud infrastructure solutions.
+            Powered by cutting-edge AI technology and industry expertise.
           </p>
       {/* Features Section */}
       <section className="py-16 px-4"></section>
@@ -87,50 +80,46 @@ const CloudInfrastructurePage: React.FC = () => {
               Why Choose Our Cloud Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Our cloud infrastructure solutions deliver unmatched performance, security, and scalability.;
-            </p>
-          </div>
+              Our cloud infrastructure solutions deliver unmatched performance, security, and scalability.
+            </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature, index) => (;
+            {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" /></feature>
-                <h3 className="text-xl font-semibold text-white mb-2"></h>{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2;
+                <h3 className="text-xl font-semibold text-white mb-2"></h>{feature.title}
+                <p className="text-gray-300">{feature.description}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </div>
             ))}
           </div>
-        </div>
-      </section>
-              </div>
             ))}
           </div>
-        </div>
-            Ready to Get Started?;
-          </h2>
-  </;
+            Ready to Get Started?
+          </
 >>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
           </div>
-        </div>
-      </div>
-    </div>
 <<<<<<< HEAD
     </>
-  );
-}
+  )
+  }
 
 =======
-  ),;
-}
-;
-export default CloudInfrastructurePage;
-  </button>
-  </button>
-  </section>
+  ),
+  }
+
+export default CloudInfrastructurePage
   </h2>
-  </section>
-  </div>
-  </h1>
   </div>
   </div>
 >>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
+
+                  </p>
+                </h3>
+              </ArrowRight>
+            </Layers>
+          </p>
+        </Layers>
+      </p>
+    </Layers>
+  </p>
+</meta>

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 const ZionAIImageRecognitionPage: React.FC = () => {
   return (
     <>
@@ -19,8 +18,7 @@ const ZionAIImageRecognitionPage: React.FC = () => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-purple-100 rounded-full mb-6">
               <svg className="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </div>
+              </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Zion AI Image Recognition
             </h1>
@@ -34,9 +32,7 @@ const ZionAIImageRecognitionPage: React.FC = () => {
               </Link>
               <Link to="/pricing" className="border border-purple-600 text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors text-center font-semibold">
                 View Pricing
-              </Link>
-            </div>
-          </div>
+              </div>
 
           {/* Key Features */}
           <div className="mb-16">
@@ -47,63 +43,49 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                   <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
+                  </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Object Detection</h3>
-                <p className="text-gray-600">Identify and locate multiple objects within images with precise bounding boxes and confidence scores.</p>
-              </div>
+                <p className="text-gray-600">Identify and locate multiple objects within images with precise bounding boxes and confidence scores.</div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
+                  </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Facial Recognition</h3>
-                <p className="text-gray-600">Advanced facial recognition with emotion detection, age estimation, and identity verification capabilities.</p>
-              </div>
+                <p className="text-gray-600">Advanced facial recognition with emotion detection, age estimation, and identity verification capabilities.</div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </div>
+                  </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">OCR & Text Extraction</h3>
-                <p className="text-gray-600">Extract text from images, documents, and handwritten notes with high accuracy using advanced OCR technology.</p>
-              </div>
+                <p className="text-gray-600">Extract text from images, documents, and handwritten notes with high accuracy using advanced OCR technology.</div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 12h6m-6 4h6" />
-                  </svg>
-                </div>
+                  </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Scene Understanding</h3>
-                <p className="text-gray-600">Analyze complex scenes to understand context, activities, and relationships between objects.</p>
-              </div>
+                <p className="text-gray-600">Analyze complex scenes to understand context, activities, and relationships between objects.</div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
+                  </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Custom Model Training</h3>
-                <p className="text-gray-600">Train custom models for specific use cases with your own datasets and requirements.</p>
-              </div>
+                <p className="text-gray-600">Train custom models for specific use cases with your own datasets and requirements.</div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
+                  </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-Time Processing</h3>
-                <p className="text-gray-600">Process images in real-time with low latency for live applications and video streams.</p>
-              </div>
-            </div>
-          </div>
+                <p className="text-gray-600">Process images in real-time with low latency for live applications and video streams.</div>
 
           {/* Use Cases */}
           <div className="mb-16">
@@ -112,25 +94,19 @@ const ZionAIImageRecognitionPage: React.FC = () => {
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
                 <div className="text-4xl mb-4">🛒</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">E-commerce</h3>
-                <p className="text-gray-600 text-sm">Product recognition, visual search, and automated cataloging</p>
-              </div>
+                <p className="text-gray-600 text-sm">Product recognition, visual search, and automated cataloging</div>
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
                 <div className="text-4xl mb-4">🏥</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Healthcare</h3>
-                <p className="text-gray-600 text-sm">Medical image analysis, diagnosis assistance, and patient monitoring</p>
-              </div>
+                <p className="text-gray-600 text-sm">Medical image analysis, diagnosis assistance, and patient monitoring</div>
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
                 <div className="text-4xl mb-4">🚗</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Automotive</h3>
-                <p className="text-gray-600 text-sm">Autonomous driving, traffic monitoring, and vehicle inspection</p>
-              </div>
+                <p className="text-gray-600 text-sm">Autonomous driving, traffic monitoring, and vehicle inspection</div>
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
                 <div className="text-4xl mb-4">🏭</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Manufacturing</h3>
-                <p className="text-gray-600 text-sm">Quality control, defect detection, and automated inspection</p>
-              </div>
-            </div>
-          </div>
+                <p className="text-gray-600 text-sm">Quality control, defect detection, and automated inspection</div>
 
           {/* Pricing Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
@@ -138,7 +114,7 @@ const ZionAIImageRecognitionPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="border border-gray-200 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Starter</h3>
-                <div className="text-3xl font-bold text-gray-900 mb-4">$199<span className="text-lg text-gray-500">/month</span></div>
+                <div className="text-3xl font-bold text-gray-900 mb-4">$199<span className="text-lg text-gray-500">/month</div>
                 <ul className="space-y-3 text-gray-600 mb-6">
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -163,19 +139,16 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     API access
-                  </li>
-                </ul>
+                  </ul>
                 <Link to="/contact" className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors text-center block">
                   Start Free Trial
-                </Link>
-              </div>
+                </div>
               
               <div className="border-2 border-purple-500 rounded-xl p-6 relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-                </div>
+                  <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Professional</h3>
-                <div className="text-3xl font-bold text-gray-900 mb-4">$499<span className="text-lg text-gray-500">/month</span></div>
+                <div className="text-3xl font-bold text-gray-900 mb-4">$499<span className="text-lg text-gray-500">/month</div>
                 <ul className="space-y-3 text-gray-600 mb-6">
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -206,16 +179,14 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     Priority support
-                  </li>
-                </ul>
+                  </ul>
                 <Link to="/contact" className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors text-center block">
                   Start Free Trial
-                </Link>
-              </div>
+                </div>
               
               <div className="border border-gray-200 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise</h3>
-                <div className="text-3xl font-bold text-gray-900 mb-4">Custom<span className="text-lg text-gray-500">/month</span></div>
+                <div className="text-3xl font-bold text-gray-900 mb-4">Custom<span className="text-lg text-gray-500">/month</div>
                 <ul className="space-y-3 text-gray-600 mb-6">
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -246,14 +217,10 @@ const ZionAIImageRecognitionPage: React.FC = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     SLA guarantee
-                  </li>
-                </ul>
+                  </ul>
                 <Link to="/contact" className="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 transition-colors text-center block">
                   Contact Sales
-                </Link>
-              </div>
-            </div>
-          </div>
+                </div>
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
@@ -268,18 +235,77 @@ const ZionAIImageRecognitionPage: React.FC = () => {
               </Link>
               <Link to="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
                 Schedule Consultation
-              </Link>
-            </div>
+              </div>
             <div className="mt-8 text-sm opacity-75">
               <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>
               <p>✉️ <strong>Email:</strong> kleber@ziontechgroup.com</p>
-              <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
+              <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</div>
+      </>
+  )
+  }
+export default ZionAIImageRecognitionPage
+                                                                                                                                </p>
+                                                                                                                              </p>
+                                                                                                                            </p>
+                                                                                                                          </div>
+                                                                                                                        </Link>
+                                                                                                                      </div>
+                                                                                                                    </Link>
+                                                                                                                  </path>
+                                                                                                                </li>
+                                                                                                              </path>
+                                                                                                            </path>
+                                                                                                          </path>
+                                                                                                        </path>
+                                                                                                      </Link>
+                                                                                                    </path>
+                                                                                                  </li>
+                                                                                                </path>
+                                                                                              </path>
+                                                                                            </path>
+                                                                                          </path>
+                                                                                        </span>
+                                                                                      </Link>
+                                                                                    </path>
+                                                                                  </li>
+                                                                                </path>
+                                                                              </path>
+                                                                            </path>
+                                                                          </div>
+                                                                        </div>
+                                                                      </p>
+                                                                    </p>
+                                                                  </p>
+                                                                </p>
+                                                              </div>
+                                                            </div>
+                                                          </p>
+                                                        </path>
+                                                      </svg>
+                                                    </p>
+                                                  </path>
+                                                </svg>
+                                              </p>
+                                            </path>
+                                          </svg>
+                                        </p>
+                                      </path>
+                                    </svg>
+                                  </p>
+                                </path>
+                              </svg>
+                            </p>
+                          </path>
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              </path>
+            </svg>
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default ZionAIImageRecognitionPage;
+    </link>
+  </meta>
+</meta>
