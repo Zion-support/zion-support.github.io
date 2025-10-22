@@ -73,11 +73,34 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     return () => {
       cleanup()
     }
-  }, [options])
+  }, [
+    options,
+    cleanup,
+    enableARIALabels,
+    enableColorContrast,
+    enableFocusManagement,
+    enableHighContrast,
+    enableKeyboardNavigation,
+    enableMotionReduction,
+    enableScreenReader,
+    enableTextScaling,
+    enableTouchAccessibility,
+    enableVoiceControl,
+    setupARIALabels,
+    setupColorContrast,
+    setupFocusManagement,
+    setupHighContrast,
+    setupKeyboardNavigation,
+    setupMotionReduction,
+    setupScreenReaderSupport,
+    setupTextScaling,
+    setupTouchAccessibility,
+    setupVoiceControl
+  ])
 
   const setupKeyboardNavigation = useCallback(() => {
     document.addEventListener('keydown', handleKeyboardNavigation)
-  }, [])
+  }, [handleKeyboardNavigation])
 
   const setupScreenReaderSupport = useCallback(() => {
     // Add screen reader specific attributes
@@ -154,7 +177,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
         handleVoiceCommand(transcript)
       }
     }
-  }, [])
+  }, [handleVoiceCommand])
 
   const setupTouchAccessibility = useCallback(() => {
     // Enhance touch accessibility
@@ -163,7 +186,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       el.addEventListener('touchstart', handleTouchStart as EventListener)
       el.addEventListener('touchend', handleTouchEnd as EventListener)
     })
-  }, [])
+  }, [handleTouchStart, handleTouchEnd])
 
   const setupARIALabels = useCallback(() => {
     // Add ARIA labels where missing
@@ -242,7 +265,18 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       touchAccessibility: enableTouchAccessibility,
       ariaLabels: enableARIALabels
     }
-  }, [options])
+  }, [
+    enableARIALabels,
+    enableColorContrast,
+    enableFocusManagement,
+    enableHighContrast,
+    enableKeyboardNavigation,
+    enableMotionReduction,
+    enableScreenReader,
+    enableTextScaling,
+    enableTouchAccessibility,
+    enableVoiceControl
+  ])
 
   return {
     getAccessibilityStatus,
