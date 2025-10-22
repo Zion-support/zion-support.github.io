@@ -1,4 +1,5 @@
 // Type definitions for Next.js compatibility in Vite
+
 export interface Metadata {
   title?: string;
   description?: string;
