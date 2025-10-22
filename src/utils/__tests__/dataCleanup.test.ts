@@ -2,7 +2,7 @@
  * Data Cleanup Tests
  * Tests for the data cleanup functionality
  */
-import { dataCleanup, CleanupConfig } from '../dataCleanup';
+import { dataCleanup } from '../dataCleanup';
 import { dataRecordManager } from '../dataRecordManager';
 import { scheduledCleanup } from '../scheduledCleanup';
 

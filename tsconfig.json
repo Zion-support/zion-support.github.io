@@ -48,6 +48,11 @@
     "corrupted-src-backup/**",
     "src/**",
     "scripts/**",
+    "__tests__/**",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
     "**/*.cjs",
     "**/*.js"
   ]

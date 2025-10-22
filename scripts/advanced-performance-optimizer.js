@@ -1,8 +1,6 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-
 
   try {
 
@@ -39,7 +37,6 @@ body {
   text-align: center
 }
 
-
 }
 
 .skeleton {
@@ -47,7 +44,6 @@ body {
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
 }
-
 
   }
 }

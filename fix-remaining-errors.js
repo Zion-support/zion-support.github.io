@@ -83,7 +83,7 @@ const filesToFix = [
 const createCleanPage = (title, description, keywords) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import { CheckCircle, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page: React.FC = () => {
   const features = [

@@ -14,7 +14,7 @@ const analysis = JSON.parse(fs.readFileSync('missing_pages_analysis.json', 'utf8
 const pageTemplate = (serviceName, servicePath, serviceType) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const ${serviceName}Page: React.FC = () => {
   const features = [
