@@ -20,7 +20,6 @@ export default withErrorLogging(async (req, res) => {
   try {
     const { 
       priceId, 
-      quantity = 1, 
       successUrl, 
       cancelUrl,
       customerEmail 
@@ -47,7 +46,6 @@ export default withErrorLogging(async (req, res) => {
       checkoutSession 
     });
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error('Checkout session creation error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
