@@ -211,10 +211,9 @@ const App = memo(() => {
   // Initialize performance optimizations
   usePerformanceOptimization({
     enableLazyLoading: true,
-    enablePreloading: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
-    enableBundleAnalysis: process.env.NODE_ENV === 'development'
+    enableCaching: true
   });
 
   useEffect(() => {

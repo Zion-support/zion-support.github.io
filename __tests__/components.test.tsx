@@ -1,19 +1,20 @@
 import { describe, test, expect } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
-import LoadingSpinner from '../src/components/LoadingSpinner';
-import SEOEnhancer from '../src/components/SEOEnhancer';
+import '@testing-library/jest-dom';
+import LoadingSpinner from '../app/components/LoadingSpinner';
+import SEOOptimizer from '../app/components/SEOOptimizer';
 describe('Component Tests', () => {
   test('LoadingSpinner renders correctly', () => {
     render(<LoadingSpinner />);
-    expect(screen.getByRole('status')).toBeInTheDocument();
+    expect(screen.getByRole('status')).toBeDefined();
   });
-  test('SEOEnhancer renders without crashing', () => {
+  test('SEOOptimizer renders without crashing', () => {
     render(
       <HelmetProvider>
-        <SEOEnhancer />
+        <SEOOptimizer />
       </HelmetProvider>
     );
-    expect(document.head).toBeInTheDocument();
+    expect(document.head).toBeDefined();
   });
 });
