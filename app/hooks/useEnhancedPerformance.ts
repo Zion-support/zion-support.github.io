@@ -35,6 +35,7 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
       return () => observer.disconnect()
     }
+    return undefined;
   }, [component, trackPerformance])
 
   const measurePerformance = useCallback((name: string, fn: () => void) => {
@@ -59,7 +60,7 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
     }
   }, [component, trackErrors])
 
-  const trackAnalytics = useCallback((event: string, data?: Record<string, unknown>) => {
+  const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
       console.log(`Analytics event in ${component}:`, event, data)
       // Here you would typically send to an analytics service
@@ -69,7 +70,7 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
   return {
     measurePerformance,
     trackError,
-    trackAnalytics,
+    trackAnalytics: trackAnalyticsEvent,
     renderCount: renderCountRef.current,
     mountTime: mountTimeRef.current
   }

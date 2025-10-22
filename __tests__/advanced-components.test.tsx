@@ -3,15 +3,19 @@ import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 // Mock components
 const AdvancedErrorBoundary = ({ children }: { 
-  children: React.ReactNode; 
+  children: React.ReactNode;
+  enableRetry?: boolean;
+  onError?: (error: Error, errorInfo: any) => void;
 }) => {
   return <div data-testid="error-boundary">{children}</div>;
 };
-const AdvancedSEOOptimizer = ({ title, description }: { 
-  title?: string; 
-  description?: string;
+const AdvancedSEOOptimizer = ({ seoData }: { 
+  seoData?: any;
+  enableStructuredData?: boolean;
+  enableOpenGraph?: boolean;
+  enableTwitterCards?: boolean;
 }) => {
-  return <div data-testid="seo-optimizer">{title} - {description}</div>;
+  return <div data-testid="seo-optimizer">{seoData?.title} - {seoData?.description}</div>;
 };
 const AdvancedPerformanceMonitor = ({ }: { 
   enableRealTimeMonitoring?: boolean;
@@ -187,9 +191,9 @@ describe('AdvancedSEOOptimizer', () => {
 describe('AdvancedPerformanceMonitor', () => {
   // Mock performance API
   const mockPerformance = {
-    getEntriesByName: jest.fn(() => []),
-    getEntriesByType: jest.fn(() => []),
-    getEntries: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []) as any,
+    getEntriesByType: jest.fn(() => []) as any,
+    getEntries: jest.fn(() => []) as any,
     measurePageLoad: jest.fn(),
     reportWebVitals: jest.fn(),
   };
@@ -242,7 +246,7 @@ describe('AdvancedPerformanceMonitor', () => {
     const onMetricsUpdate = jest.fn();
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 } as PerformanceEntry]);
+    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 } as any]);
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor
@@ -261,7 +265,7 @@ describe('AdvancedPerformanceMonitor', () => {
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
     // Mock poor performance metrics
     mockPerformance.getEntriesByName.mockReturnValue([
-      { startTime: 2000 } as PerformanceEntry, // Poor FCP
+      { startTime: 2000 } as any, // Poor FCP
     ]);
     render(
       <MemoryRouter>
