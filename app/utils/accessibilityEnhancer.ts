@@ -272,7 +272,7 @@ export class AccessibilityEnhancer {
     // Add high contrast mode support
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     
-    const handleContrastChange = (e: MediaQueryList) => {
+    const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
       } else {
