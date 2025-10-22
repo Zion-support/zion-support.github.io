@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Database, Brain, Phone, Mail, Zap, Shield, Globe } from 'lucide-react';
-import { CheckCircle, Star, BarChart } from 'lucide-react';
+// import { Phone, Mail } from 'lucide-react';
+// import { CheckCircle } from 'lucide-react';
 
 const ITInfrastructurePage: React.FC = () => {
-  const itServices = [
+  const _itServices = [
     {
       title: 'Cloud Infrastructure Management',
       description: 'Comprehensive cloud infrastructure setup, optimization, and management across AWS, Azure, and Google Cloud platforms.',
@@ -192,7 +192,7 @@ const ITInfrastructurePage: React.FC = () => {
     }
   ];
 
-  const infrastructureStats = [
+  const _infrastructureStats = [
     { metric: '99.9%', description: 'Uptime Guarantee' },
     { metric: '500+', description: 'Servers Managed' },
     { metric: '50+', description: 'Enterprise Clients' },

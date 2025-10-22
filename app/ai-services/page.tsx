@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+// import { CheckCircle } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
-  const aiServices = [
+  const _aiServices = [
     {
       title: 'AI Consulting & Strategy',
       description: 'Comprehensive AI strategy development, implementation planning, and digital transformation consulting for enterprise organizations.',
