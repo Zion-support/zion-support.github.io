@@ -1,7 +1,13 @@
 'use client';
 import { useEffect } from 'react';
 
-// Performance monitoring hook
+// interface PerformanceMetrics {
+//   fcp?: number;
+//   lcp?: number;
+//   fid?: number;
+//   cls?: number;
+//   ttfb?: number;
+// }
 
 export const usePerformanceMonitor = () => {
   useEffect(() => {
