@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, CheckCircle, Star, Brain, Cloud, Code, BarChart, Users, Zap, Shield } from 'lucide-react'
 
-<<<<<<< HEAD
 const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
