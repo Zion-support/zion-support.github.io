@@ -1,31 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap, Link, Target, Star, Cpu, Sparkles, BarChart } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
-  const features = [
-    {
-      icon: Shield,
-      title: 'Secure Blockchain Solutions',
-      description: 'Advanced blockchain technology with enterprise-grade security and compliance'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast blockchain transactions and smart contract execution'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Intelligent blockchain solutions powered by advanced AI technology'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide blockchain deployment and support for international businesses'
-    }
-  ];
 
   const benefits = [
     'Advanced blockchain technology integration',
@@ -36,6 +14,84 @@ const BlockchainPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+  ];
+
+  const categories = [
+    'Smart Contracts',
+    'DeFi Solutions',
+    'NFT Platforms',
+    'Supply Chain',
+    'Identity Management',
+    'Payment Systems'
+  ];
+
+  const blockchainServices = [
+    {
+      title: 'Smart Contract Development',
+      description: 'Custom smart contracts for various blockchain platforms',
+      icon: '📜',
+      category: 'Smart Contracts',
+      price: '$5,000',
+      marketPrice: '$10,000',
+      features: ['Solidity development', 'Security auditing', 'Testing & deployment', 'Maintenance support'],
+      technologies: ['Ethereum', 'Solidity', 'Truffle', 'Web3.js'],
+      benefits: ['Cost-effective', 'Secure', 'Scalable', 'Well-documented']
+    },
+    {
+      title: 'DeFi Platform Development',
+      description: 'Decentralized finance solutions and protocols',
+      icon: '💰',
+      category: 'DeFi Solutions',
+      price: '$15,000',
+      marketPrice: '$30,000',
+      features: ['DEX development', 'Yield farming', 'Liquidity pools', 'Governance tokens'],
+      technologies: ['React', 'Web3', 'Ethereum', 'IPFS'],
+      benefits: ['High liquidity', 'Automated trading', 'Yield optimization', 'Community governance']
+    },
+    {
+      title: 'NFT Marketplace',
+      description: 'Complete NFT marketplace development and deployment',
+      icon: '🎨',
+      category: 'NFT Platforms',
+      price: '$8,000',
+      marketPrice: '$16,000',
+      features: ['Minting interface', 'Marketplace', 'Wallet integration', 'Royalty system'],
+      technologies: ['Next.js', 'Ethereum', 'IPFS', 'MetaMask'],
+      benefits: ['User-friendly', 'Low fees', 'Fast transactions', 'Mobile responsive']
+    },
+    {
+      title: 'Supply Chain Tracking',
+      description: 'Blockchain-based supply chain transparency and tracking',
+      icon: '📦',
+      category: 'Supply Chain',
+      price: '$12,000',
+      marketPrice: '$24,000',
+      features: ['Product tracking', 'Quality verification', 'Transparency reports', 'Integration APIs'],
+      technologies: ['Hyperledger', 'Node.js', 'MongoDB', 'React'],
+      benefits: ['Full traceability', 'Quality assurance', 'Cost reduction', 'Brand trust']
+    },
+    {
+      title: 'Identity Verification',
+      description: 'Decentralized identity management systems',
+      icon: '🆔',
+      category: 'Identity Management',
+      price: '$6,000',
+      marketPrice: '$12,000',
+      features: ['Digital identity', 'KYC integration', 'Privacy protection', 'Cross-platform'],
+      technologies: ['Ethereum', 'IPFS', 'React', 'Node.js'],
+      benefits: ['Privacy-first', 'Self-sovereign', 'Interoperable', 'Secure']
+    },
+    {
+      title: 'Payment Integration',
+      description: 'Cryptocurrency payment processing and integration',
+      icon: '💳',
+      category: 'Payment Systems',
+      price: '$4,000',
+      marketPrice: '$8,000',
+      features: ['Multi-crypto support', 'Real-time conversion', 'Secure processing', 'API integration'],
+      technologies: ['Web3', 'Ethereum', 'Bitcoin', 'Stripe'],
+      benefits: ['Low fees', 'Fast settlement', 'Global reach', 'Easy integration']
+    }
   ];
 
   return (
@@ -68,10 +124,9 @@ const BlockchainPage: React.FC = () => {
                   Schedule Blockchain Consultation
                 </button>
               </div>
-
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">

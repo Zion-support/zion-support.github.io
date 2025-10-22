@@ -31,6 +31,7 @@ const CookiesPage = lazy(() => import('./app/cookies/page'));
 const AdminPage = lazy(() => import('./app/pages/AdminPage'));
 
 // AI Services Pages
+// AI Services Pages
 const AIServicesPage = lazy(() => import('./app/ai-services/page'));
 const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
 
@@ -275,8 +276,7 @@ const App = memo(() => {
                 <PerformanceMonitor />
                 <AccessibilityEnhancer>
                   <SEOOptimizer />
-                
-                <Suspense fallback={<LoadingFallback />}>
+                  <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>
                     <Routes>
                     {/* Main Pages */}

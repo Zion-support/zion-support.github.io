@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const CloudMigrationPage: React.FC = () => {
   const features = [
@@ -63,7 +64,7 @@ const CloudMigrationPage: React.FC = () => {
 
 
         </div>
-
+      </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -113,7 +114,7 @@ const CloudMigrationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -135,10 +136,11 @@ const CloudMigrationPage: React.FC = () => {
                 Email Us
               </button>
             </div>
-
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
