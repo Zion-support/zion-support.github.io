@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Shield, Brain, BarChart, TrendingUp } from 'lucide-react';
+import { BarChart, Brain, CheckCircle, Shield, TrendingUp, Zap } from 'lucide-react';
 
 const AiAnalyticsPage: React.FC = () => {
   const features = [
