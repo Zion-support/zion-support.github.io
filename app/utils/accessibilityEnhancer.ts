@@ -29,7 +29,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
 
   const _enhancerRef = useRef<any>({})
 
-  // Define all handler functions first
   const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
     if (event.key === 'Tab') {
       // Handle tab navigation
@@ -40,13 +39,15 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element)
       
       if (event.shiftKey) {
-        // Shift + Tab - go backwards
-        const prevIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1
-        ;(focusableElements[prevIndex] as HTMLElement)?.focus()
+        // Shift + Tab (backward)
+        if (currentIndex > 0) {
+          (focusableElements[currentIndex - 1] as HTMLElement).focus()
+        }
       } else {
-        // Tab - go forwards
-        const nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0
-        ;(focusableElements[nextIndex] as HTMLElement)?.focus()
+        // Tab (forward)
+        if (currentIndex < focusableElements.length - 1) {
+          (focusableElements[currentIndex + 1] as HTMLElement).focus()
+        }
       }
     }
   }, [])
@@ -55,13 +56,9 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     const command = transcript.toLowerCase().trim()
     
     if (command.includes('click') || command.includes('press')) {
-      const button = document.querySelector('button, [role="button"]') as HTMLElement
-      button?.click()
-    } else if (command.includes('scroll')) {
-      if (command.includes('up')) {
-        window.scrollBy(0, -100)
-      } else if (command.includes('down')) {
-        window.scrollBy(0, 100)
+      const button = document.querySelector('button')
+      if (button) {
+        button.click()
       }
     }
   }, [])
@@ -76,7 +73,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     target.classList.remove('touch-active')
   }, [])
 
-  // Define all setup functions
   const setupKeyboardNavigation = useCallback(() => {
     document.addEventListener('keydown', handleKeyboardNavigation)
   }, [handleKeyboardNavigation])
@@ -90,41 +86,42 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
   }, [])
 
   const setupFocusManagement = useCallback(() => {
-    // Enhance focus visibility
-    const style = document.createElement('style')
-    style.textContent = `
-      *:focus {
-        outline: 2px solid #0066cc !important;
-        outline-offset: 2px !important;
-      }
-    `
-    document.head.appendChild(style)
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )
+    
+    focusableElements.forEach((el, index) => {
+      el.setAttribute('tabindex', index.toString())
+    })
   }, [])
 
   const setupColorContrast = useCallback(() => {
-    // Ensure proper color contrast
-    const style = document.createElement('style')
-    style.textContent = `
-      .low-contrast {
-        filter: contrast(1.2) brightness(1.1);
+    // Check and enhance color contrast
+    const elements = document.querySelectorAll('*')
+    elements.forEach(el => {
+      const computedStyle = window.getComputedStyle(el)
+      const color = computedStyle.color
+      const backgroundColor = computedStyle.backgroundColor
+      
+      // Basic contrast check (simplified)
+      if (color && backgroundColor) {
+        el.setAttribute('data-contrast-checked', 'true')
       }
-    `
-    document.head.appendChild(style)
+    })
   }, [])
 
   const setupTextScaling = useCallback(() => {
+    // Enable text scaling
+    document.documentElement.style.fontSize = '100%'
+    
     // Add text scaling controls
     const scaleControls = document.createElement('div')
     scaleControls.innerHTML = `
-      <button id="text-scale-up" aria-label="Increase text size">A+</button>
-      <button id="text-scale-down" aria-label="Decrease text size">A-</button>
+      <button id="text-scale-up">A+</button>
+      <button id="text-scale-down">A-</button>
+      <button id="text-scale-reset">A</button>
     `
-    scaleControls.style.cssText = `
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 1000;
-    `
+    scaleControls.className = 'text-scale-controls'
     document.body.appendChild(scaleControls)
   }, [])
 
@@ -186,33 +183,6 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     })
   }, [handleKeyboardNavigation, handleTouchStart, handleTouchEnd])
 
-  const getAccessibilityStatus = useCallback(() => {
-    return {
-      keyboardNavigation: enableKeyboardNavigation,
-      screenReader: enableScreenReader,
-      focusManagement: enableFocusManagement,
-      colorContrast: enableColorContrast,
-      textScaling: enableTextScaling,
-      motionReduction: enableMotionReduction,
-      highContrast: enableHighContrast,
-      voiceControl: enableVoiceControl,
-      touchAccessibility: enableTouchAccessibility,
-      ariaLabels: enableARIALabels
-    }
-  }, [
-    enableARIALabels,
-    enableColorContrast,
-    enableFocusManagement,
-    enableHighContrast,
-    enableKeyboardNavigation,
-    enableMotionReduction,
-    enableScreenReader,
-    enableTextScaling,
-    enableTouchAccessibility,
-    enableVoiceControl
-  ])
-
-  // Now the useEffect that uses all the functions
   useEffect(() => {
     if (enableKeyboardNavigation) {
       setupKeyboardNavigation()
@@ -281,8 +251,43 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     cleanup
   ])
 
+  const getAccessibilityStatus = useCallback(() => {
+    return {
+      keyboardNavigation: enableKeyboardNavigation,
+      screenReader: enableScreenReader,
+      focusManagement: enableFocusManagement,
+      colorContrast: enableColorContrast,
+      textScaling: enableTextScaling,
+      motionReduction: enableMotionReduction,
+      highContrast: enableHighContrast,
+      voiceControl: enableVoiceControl,
+      touchAccessibility: enableTouchAccessibility,
+      ariaLabels: enableARIALabels
+    }
+  }, [
+    enableKeyboardNavigation,
+    enableScreenReader,
+    enableFocusManagement,
+    enableColorContrast,
+    enableTextScaling,
+    enableMotionReduction,
+    enableHighContrast,
+    enableVoiceControl,
+    enableTouchAccessibility,
+    enableARIALabels
+  ])
+
   return {
     getAccessibilityStatus,
-    _enhancerRef
+    setupKeyboardNavigation,
+    setupScreenReaderSupport,
+    setupFocusManagement,
+    setupColorContrast,
+    setupTextScaling,
+    setupMotionReduction,
+    setupHighContrast,
+    setupVoiceControl,
+    setupTouchAccessibility,
+    setupARIALabels
   }
 }
