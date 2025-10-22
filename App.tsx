@@ -8,8 +8,8 @@ import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import PerformanceMonitor from './app/components/EnhancedPerformanceMonitor';
+import AccessibilityEnhancer from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
 // Hooks
