@@ -280,7 +280,7 @@ export class AccessibilityEnhancer {
       }
     };
     
-    mediaQuery.addEventListener('change', handleContrastChange);
+    mediaQuery.addEventListener('change', handleContrastChange as EventListener);
     handleContrastChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
   }
 
