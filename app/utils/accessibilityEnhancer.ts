@@ -29,6 +29,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
 
   const _enhancerRef = useRef<any>({})
 
+  // Event handlers
   const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
     if (event.key === 'Tab') {
       // Handle tab navigation
@@ -73,6 +74,10 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     target.classList.remove('touch-active')
   }, [])
 
+<<<<<<< HEAD
+  // Setup functions
+=======
+>>>>>>> 0cdbb1d360bd3315ef9c91bff9b02a5b7fffaeb7
   const setupKeyboardNavigation = useCallback(() => {
     document.addEventListener('keydown', handleKeyboardNavigation)
   }, [handleKeyboardNavigation])
@@ -183,6 +188,35 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     })
   }, [handleKeyboardNavigation, handleTouchStart, handleTouchEnd])
 
+<<<<<<< HEAD
+  const getAccessibilityStatus = useCallback(() => {
+    return {
+      keyboardNavigation: enableKeyboardNavigation,
+      screenReader: enableScreenReader,
+      focusManagement: enableFocusManagement,
+      colorContrast: enableColorContrast,
+      textScaling: enableTextScaling,
+      motionReduction: enableMotionReduction,
+      highContrast: enableHighContrast,
+      voiceControl: enableVoiceControl,
+      touchAccessibility: enableTouchAccessibility,
+      ariaLabels: enableARIALabels
+    }
+  }, [
+    enableKeyboardNavigation,
+    enableScreenReader,
+    enableFocusManagement,
+    enableColorContrast,
+    enableTextScaling,
+    enableMotionReduction,
+    enableHighContrast,
+    enableVoiceControl,
+    enableTouchAccessibility,
+    enableARIALabels
+  ])
+
+=======
+>>>>>>> 0cdbb1d360bd3315ef9c91bff9b02a5b7fffaeb7
   useEffect(() => {
     if (enableKeyboardNavigation) {
       setupKeyboardNavigation()
