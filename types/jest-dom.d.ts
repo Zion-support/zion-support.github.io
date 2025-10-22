@@ -9,9 +9,21 @@ declare global {
       toBeVisible(): R;
       toBeDisabled(): R;
       toBeEnabled(): R;
-      toHaveValue(value: string | string[] | number): R;
       toHaveAttribute(attr: string, value?: string): R;
-      toHaveStyle(css: string | Record<string, any>): R;
+      toHaveValue(value: string | string[] | number): R;
+      toBeChecked(): R;
+      toBePartiallyChecked(): R;
+      toHaveFormValues(expectedValues: Record<string, any>): R;
+      toHaveDisplayValue(value: string | RegExp | (string | RegExp)[]): R;
+      toHaveDescription(text?: string | RegExp): R;
+      toHaveAccessibleDescription(text?: string | RegExp): R;
+      toHaveAccessibleName(text?: string | RegExp): R;
+      toHaveRole(role: string, options?: { hidden?: boolean }): R;
+      toHaveFocus(): R;
+      toBeRequired(): R;
+      toBeInvalid(): R;
+      toBeValid(): R;
+      toHaveErrorMessage(text?: string | RegExp): R;
     }
   }
 }

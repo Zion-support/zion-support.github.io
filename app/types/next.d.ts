@@ -1,4 +1,4 @@
-// // import { MetadataRoute } from 'next' // Unused import removed // Unused import removed
+// // import { MetadataRoute } from 'next' // Unused import removed
 
 // Extend Next.js types
 declare module 'next' {
