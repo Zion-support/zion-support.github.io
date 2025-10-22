@@ -33,7 +33,7 @@ const AiContentGenerationPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Video Production</h3>
               <p className="text-gray-600">Generate video content and animations with AI-powered video tools.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

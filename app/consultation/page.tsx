@@ -43,7 +43,7 @@ const ConsultationPage: React.FC = () => {
                 Schedule Consultation
               </button>
             </form>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

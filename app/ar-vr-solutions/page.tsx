@@ -33,7 +33,7 @@ const ARVRSolutionsPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">VR Experiences</h3>
               <p className="text-gray-600">Build virtual reality experiences for marketing and entertainment.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

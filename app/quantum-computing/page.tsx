@@ -33,7 +33,7 @@ const QuantumComputingPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Cryptography</h3>
               <p className="text-gray-600">Implement quantum-resistant cryptographic solutions.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

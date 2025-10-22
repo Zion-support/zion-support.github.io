@@ -33,7 +33,7 @@ const AiAutomationPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Decision Automation</h3>
               <p className="text-gray-600">Let AI make informed decisions based on data and business rules.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

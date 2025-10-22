@@ -33,7 +33,7 @@ const AiCybersecurityPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Automated Response</h3>
               <p className="text-gray-600">Automatically respond to security incidents and mitigate threats.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

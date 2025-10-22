@@ -33,7 +33,7 @@ const BlockchainPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Supply Chain</h3>
               <p className="text-gray-600">Implement blockchain for transparent supply chain management.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

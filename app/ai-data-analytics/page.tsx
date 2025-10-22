@@ -33,7 +33,7 @@ const AiDataAnalyticsPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Data Visualization</h3>
               <p className="text-gray-600">Create interactive dashboards and visualizations for better understanding.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

@@ -33,7 +33,7 @@ const AiCustomerSupportPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Sentiment Analysis</h3>
               <p className="text-gray-600">Analyze customer sentiment to provide personalized support experiences.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

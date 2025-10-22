@@ -33,7 +33,7 @@ const AutonomousSystemsPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Drones</h3>
               <p className="text-gray-600">Build autonomous drone systems for various use cases.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

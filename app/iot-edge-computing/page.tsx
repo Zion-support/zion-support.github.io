@@ -33,7 +33,7 @@ const IoTEdgeComputingPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Real-time Analytics</h3>
               <p className="text-gray-600">Analyze data in real-time for immediate insights and actions.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

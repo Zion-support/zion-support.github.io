@@ -33,7 +33,7 @@ const ItSupportPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Proactive Monitoring</h3>
               <p className="text-gray-600">Monitor your systems to prevent issues before they occur.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

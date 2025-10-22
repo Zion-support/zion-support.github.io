@@ -33,7 +33,7 @@ const AiHealthcarePage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Drug Discovery</h3>
               <p className="text-gray-600">Accelerate drug discovery and development with AI algorithms.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

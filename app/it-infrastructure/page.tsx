@@ -33,7 +33,7 @@ const ItInfrastructurePage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Cloud Migration</h3>
               <p className="text-gray-600">Seamlessly migrate your infrastructure to cloud platforms.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

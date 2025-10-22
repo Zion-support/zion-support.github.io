@@ -33,7 +33,7 @@ const StatusPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4 text-green-600">Database</h3>
               <p className="text-gray-600">Database services are operating at full capacity.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>

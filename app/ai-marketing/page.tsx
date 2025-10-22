@@ -33,7 +33,7 @@ const AiMarketingPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Predictive Analytics</h3>
               <p className="text-gray-600">Forecast customer behavior and optimize marketing campaigns in real-time.</p>
             </div>
-          </div>ursor/fix-errors-and-merge-to-main-b63b
+          </div>
         </div>
       </div>
     </>
