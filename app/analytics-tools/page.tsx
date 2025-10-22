@@ -83,9 +83,8 @@ const AnalyticsToolsPage: React.FC = () => {
               </div>
             ))}
           </div>
-
         </div>
-
+      </section>
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -150,7 +149,9 @@ const AnalyticsToolsPage: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };

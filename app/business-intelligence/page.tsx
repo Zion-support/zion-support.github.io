@@ -45,7 +45,6 @@ const BusinessIntelligencePage: React.FC = () => {
       <Helmet>
         <title>Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-
         <meta name="keywords" content="business intelligence, data analytics, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -61,7 +60,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </p>
 
         </div>
-
+      </section>
 
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -86,7 +85,7 @@ const BusinessIntelligencePage: React.FC = () => {
             ))}
           </div>
         </div>
-
+      </section>
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -133,6 +132,7 @@ const BusinessIntelligencePage: React.FC = () => {
         </div>
       </section>
 
+      <Footer />
     </div>
   );
 };

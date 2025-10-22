@@ -85,9 +85,8 @@ const BusinessAppsPage: React.FC = () => {
               </div>
             ))}
           </div>
-
         </div>
-
+      </section>
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -152,7 +151,9 @@ const BusinessAppsPage: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };

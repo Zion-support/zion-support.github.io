@@ -45,7 +45,6 @@ const CloudMigrationPage: React.FC = () => {
       <Helmet>
         <title>Cloud Migration | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-
         <meta name="keywords" content="cloud migration, cloud services, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -63,7 +62,7 @@ const CloudMigrationPage: React.FC = () => {
 
 
         </div>
-
+      </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -113,7 +112,7 @@ const CloudMigrationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -138,7 +137,9 @@ const CloudMigrationPage: React.FC = () => {
 
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };

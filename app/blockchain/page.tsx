@@ -39,15 +39,12 @@ const BlockchainPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Helmet>
         <title>Blockchain Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
-
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-30"></div>
@@ -68,10 +65,10 @@ const BlockchainPage: React.FC = () => {
                   Schedule Blockchain Consultation
                 </button>
               </div>
-
             </div>
-          ))}
+          </div>
         </div>
+        </section>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -86,7 +83,7 @@ const BlockchainPage: React.FC = () => {
             ))}
           </div>
         </div>
-
+        </section>
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">

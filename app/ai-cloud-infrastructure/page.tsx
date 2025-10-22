@@ -119,9 +119,10 @@ const PagePage: React.FC = () => {
                   <CheckCircle className="w-8 h-8 text-white" />
 
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
+        </div>
         </section>
 
         {/* CTA Section */}
@@ -137,13 +138,11 @@ const PagePage: React.FC = () => {
               Start Your Free Trial
             </button>
           </div>
-
-        </div>
-      </section>
+        </section>
 
 
       <Footer />
-    </>
+    </div>
   );
 };
 
