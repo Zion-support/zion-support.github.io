@@ -87,7 +87,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   return (
     <div
       ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
+      className="relative overflow-hidden"
       style={{ width, height }}
     >
       {!isLoaded && !isError && (
@@ -103,9 +103,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         <img
           src={imageSrc}
           alt={alt}
+          width={width}
+          height={height}
           className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          } ${className}`}
           onLoad={handleLoad}
           onError={handleError}
           loading={priority ? 'eager' : 'lazy'}
