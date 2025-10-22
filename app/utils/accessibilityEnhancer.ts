@@ -217,18 +217,28 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     if (enableKeyboardNavigation) {
       setupKeyboardNavigation()
     }
+  }, [])
 
-    if (enableScreenReader) {
-      setupScreenReaderSupport()
+  const handleVoiceCommand = useCallback((transcript: string) => {
+    const command = transcript.toLowerCase().trim()
+    
+    if (command.includes('click') || command.includes('press')) {
+      const button = document.querySelector('button')
+      if (button) {
+        button.click()
+      }
     }
+  }, [])
 
-    if (enableFocusManagement) {
-      setupFocusManagement()
-    }
+  const handleTouchStart = useCallback((event: TouchEvent) => {
+    const target = event.target as HTMLElement
+    target.classList.add('touch-active')
+  }, [])
 
-    if (enableColorContrast) {
-      setupColorContrast()
-    }
+  const handleTouchEnd = useCallback((event: TouchEvent) => {
+    const target = event.target as HTMLElement
+    target.classList.remove('touch-active')
+  }, [])
 
     if (enableTextScaling) {
       setupTextScaling()
