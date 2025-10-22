@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, Zap, Shield, Brain, Globe, Phone, Mail } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const BlockchainIntegrationServicesPage: React.FC = () => {
