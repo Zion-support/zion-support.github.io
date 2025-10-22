@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { MetadataRoute } from 'next'
 
 // Extend Next.js types

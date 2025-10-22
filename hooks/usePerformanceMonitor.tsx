@@ -1,6 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface PerformanceMetrics {
   fcp?: number;
   lcp?: number;
