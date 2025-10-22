@@ -1,39 +1,11 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
-
 const BlogPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
       title: 'Advanced Technology',
       description: 'Cutting-edge solutions powered by the latest technology and AI.'
     },
@@ -50,60 +22,20 @@ const BlogPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
-    }
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-=======
     'AI-powered automation',
     'Real-time processing',
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
-  ];
+    'Custom integrations'  ];
 
   return (
     <React.Fragment>
       <Helmet>
-<<<<<<< HEAD
-        <title>Blog - Zion Tech Group | Advanced AI Solutions</title>
-        <meta name="description" content="Advanced AI-powered solution for modern businesses." />
-        <meta name="keywords" content="AI solution, artificial intelligence, automation, AI solutions, intelligent automation" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Blog
-              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered solution for modern businesses. 
-              Transform your operations with intelligent automation and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-=======
         <title>Blog - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional blog solutions powered by advanced AI and cutting-edge technology." />
         <meta name="keywords" content="blog, AI solutions, IT services, automation, technology, business solutions" />
@@ -200,9 +132,7 @@ const BlogPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>
->>>>>>> f563287378132e4fba4bd1b14d03814b3a513de2
-            </div>
+              </a>            </div>
           </div>
         </section>
 
