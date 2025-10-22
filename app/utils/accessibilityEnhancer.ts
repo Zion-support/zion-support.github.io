@@ -74,7 +74,7 @@ export class AccessibilityEnhancer {
       if (event.key === 'Tab') {
         this.handleTabKey(event);
       } else if (event.key === 'Escape') {
-        this.handleEscapeKey(event);
+        this.handleEscapeKey();
       } else if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
         this.handleArrowKeys(event);
       }
@@ -106,7 +106,7 @@ export class AccessibilityEnhancer {
   /**
    * Handle escape key
    */
-  private handleEscapeKey(_event: KeyboardEvent): void {
+  private handleEscapeKey(): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {
@@ -249,7 +249,7 @@ export class AccessibilityEnhancer {
     // Add high contrast mode support
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     
-    const handleContrastChange = (e: MediaQueryListEvent | MediaQueryList) => {
+    const handleContrastChange = (e: MediaQueryList | MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
       } else {

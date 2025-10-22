@@ -26,6 +26,8 @@ const AiServicesPage = lazy(() => import('./ai-services/page'));
 
 // IT Services
 const ItServicesPage = lazy(() => import('./it-services/page'));
+const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
+const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 
 // Support Pages
 const DocsPage = lazy(() => import('./docs/page'));
@@ -35,9 +37,8 @@ const SupportPage = lazy(() => import('./support/page'));
 // Loading component
 const AppLoadingSpinner = () => (
   <LoadingSpinner
-    size="xl"
-    text="Loading Zion Tech Group..."
-    fullScreen
+    size="lg"
+    className="min-h-screen flex items-center justify-center"
   />
 );
 
@@ -68,6 +69,8 @@ const App: React.FC = () => {
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 {/* IT Services */}
                 <Route path="/it-services" element={<ItServicesPage />} />
+                <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
                 {/* Support Pages */}
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />

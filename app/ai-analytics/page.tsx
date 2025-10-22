@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Shield, Brain, BarChart, TrendingUp, Eye } from 'lucide-react';
+import { CheckCircle, Zap, Shield, Brain, BarChart, TrendingUp } from 'lucide-react';
 
 const AiAnalyticsPage: React.FC = () => {
   const features = [
@@ -33,7 +33,7 @@ const AiAnalyticsPage: React.FC = () => {
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
     },
     {
-      icon: Eye,
+      icon: BarChart,
       title: 'Visual Analytics',
       description: 'Transform complex data into intuitive visualizations and interactive charts.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
