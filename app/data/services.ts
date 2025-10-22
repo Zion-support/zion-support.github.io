@@ -348,13 +348,7 @@ export const getPricingTiers = () => {
     pro: 'Professional',
     enterprise: 'Enterprise'
   }
-<<<<<<< HEAD
 }
-import {Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
-  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
-  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
-  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon} from 'lucide-react'
-export const microSAASServices = [
   // Productivity & Management Tools
   {title: 'AI Project Manager Pro',
     description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
@@ -887,23 +881,14 @@ export interface Service {
   popular: boolean,
   new?: boolean
 }
-  path: string,
-  contact: {,
-    phone: string,
-    email: string,
-    demo: string,}}
-  marketPrice?: {min: number,
-    max: number,
-    currency: string,}}
-}
-export const services: Service[] = [,
-  // AI Services,
+export const services: Service[] = [
+  // AI Services
   {id: 'ai-project-manager',
     name: 'AI Project Manager Pro',
     category: 'ai',
     subcategory: 'Project Management',
     description: 'Intelligent project management with AI-powered scheduling, resource allocation, and risk prediction.',
-    features: [,
+    features: [
       'AI-powered task prioritization',
       'Automated resource allocation',
       'Risk prediction and mitigation',
@@ -911,17 +896,18 @@ export const services: Service[] = [,
       'Team collaboration tools',
       'Integration with 50+ tools'
     ],
-    pricing: {,
+    pricing: {
       starting: 299,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '40% faster project delivery',
       '25% reduction in project costs',
       '95% accuracy in deadline prediction',
       'Real-time risk assessment'
     ],
-    useCases: [,
+    useCases: [
       'Software development projects',
       'Marketing campaign management',
       'Construction project oversight',
@@ -931,20 +917,24 @@ export const services: Service[] = [,
     popular: true,
     new: true,
     path: '/ai-project-manager',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-project-manager',},
-    marketPrice: {,
-    min: 200,
+      demo: 'https://ziontechgroup.com/demo/ai-project-manager'
+    },
+    marketPrice: {
+      min: 200,
       max: 500,
-      currency: 'USD',}},
-  {id: 'ai-customer-support-bot',
+      currency: 'USD'
+    }
+  },
+  {
+    id: 'ai-customer-support-bot',
     name: 'AI Customer Support Bot',
     category: 'ai',
     subcategory: 'Customer Service',
     description: '24/7 AI-powered customer support with natural language processing and multi-channel support.',
-    features: [,
+    features: [
       'Natural language understanding',
       'Multi-language support (50+ languages)',
       'Integration with CRM systems',
@@ -952,17 +942,18 @@ export const services: Service[] = [,
       'Escalation to human agents',
       'Analytics and reporting'
     ],
-    pricing: {,
+    pricing: {
       starting: 199,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '80% reduction in response time',
       '24/7 availability',
       '90% customer satisfaction rate',
       '60% cost reduction vs human agents'
     ],
-    useCases: [,
+    useCases: [
       'E-commerce customer support',
       'SaaS product support',
       'Healthcare patient inquiries',
@@ -971,20 +962,24 @@ export const services: Service[] = [,
     icon: '🤖',
     popular: true,
     path: '/ai-customer-support-bot',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot',},
-    marketPrice: {,
-    min: 150,
+      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot'
+    },
+    marketPrice: {
+      min: 150,
       max: 400,
-      currency: 'USD',}},
-  {id: 'ai-content-generator',
+      currency: 'USD'
+    }
+  },
+  {
+    id: 'ai-content-generator',
     name: 'AI Content Generator Studio',
     category: 'ai',
     subcategory: 'Content Creation',
     description: 'Advanced AI-powered content creation for blogs, social media, emails, and marketing materials.',
-    features: [,
+    features: [
       'Multi-format content generation',
       'SEO optimization',
       'Brand voice consistency',
@@ -992,17 +987,18 @@ export const services: Service[] = [,
       'Content scheduling',
       'Performance analytics'
     ],
-    pricing: {,
+    pricing: {
       starting: 149,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '10x faster content creation',
       'Consistent brand messaging',
       'SEO-optimized content',
       'Multi-language support'
     ],
-    useCases: [,
+    useCases: [
       'Blog content creation',
       'Social media marketing',
       'Email marketing campaigns',
@@ -1011,20 +1007,24 @@ export const services: Service[] = [,
     icon: '✍️',
     popular: true,
     path: '/ai-content-generation',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-content-generator',},
-    marketPrice: {,
-    min: 99,
+      demo: 'https://ziontechgroup.com/demo/ai-content-generator'
+    },
+    marketPrice: {
+      min: 99,
       max: 300,
-      currency: 'USD',}},
-  {id: 'ai-data-analytics',
+      currency: 'USD'
+    }
+  },
+  {
+    id: 'ai-data-analytics',
     name: 'AI Data Analytics Platform',
     category: 'ai',
     subcategory: 'Analytics',
     description: 'Advanced AI-powered data analytics with predictive insights and automated reporting.',
-    features: [,
+    features: [
       'Real-time data processing',
       'Predictive analytics',
       'Automated report generation',
@@ -1032,17 +1032,18 @@ export const services: Service[] = [,
       'Data visualization',
       'Machine learning models'
     ],
-    pricing: {,
+    pricing: {
       starting: 499,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '50% faster insights generation',
       'Predictive accuracy up to 95%',
       'Automated reporting saves 20 hours/week',
       'Real-time decision making'
     ],
-    useCases: [,
+    useCases: [
       'Business intelligence',
       'Sales forecasting',
       'Customer behavior analysis',
@@ -1051,20 +1052,22 @@ export const services: Service[] = [,
     icon: '📈',
     popular: true,
     path: '/ai-data-analytics',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-data-analytics',},
-    marketPrice: {,
-    min: 300,
+      demo: 'https://ziontechgroup.com/demo/ai-data-analytics'
+    },
+    marketPrice: {
+      min: 300,
       max: 1000,
-      currency: 'USD',}},
+      currency: 'USD'
+    }
   {id: 'ai-cybersecurity',
     name: 'AI Cybersecurity Suite',
     category: 'ai',
     subcategory: 'Security',
     description: 'Advanced AI-powered cybersecurity with threat detection, prevention, and response automation.',
-    features: [,
+    features: [
       'Real-time threat detection',
       'Behavioral analysis',
       'Automated incident response',
@@ -1072,17 +1075,18 @@ export const services: Service[] = [,
       'Compliance monitoring',
       'Security training'
     ],
-    pricing: {,
+    pricing: {
       starting: 799,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '99.9% threat detection accuracy',
       '50% faster incident response',
       'Automated compliance reporting',
       '24/7 security monitoring'
     ],
-    useCases: [,
+    useCases: [
       'Enterprise security',
       'Financial services',
       'Healthcare data protection',
@@ -1091,21 +1095,21 @@ export const services: Service[] = [,
     icon: '🔒',
     popular: true,
     path: '/ai-cybersecurity',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity'}
+    marketPrice: {
     min: 500,
       max: 2000,
-      currency: 'USD',}},
+      currency: 'USD'},
   // Micro SAAS Services
   {id: 'ai-social-media-manager',
     name: 'AI Social Media Manager',
     category: 'micro-saas',
     subcategory: 'Social Media',
     description: 'Automated social media management with AI-powered content creation and scheduling.',
-    features: [,
+    features: [
       'Multi-platform posting',
       'AI content suggestions',
       'Optimal timing analysis',
@@ -1113,17 +1117,18 @@ export const services: Service[] = [,
       'Hashtag optimization',
       'Competitor analysis'
     ],
-    pricing: {,
+    pricing: {
       starting: 79,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '3x more engagement',
       'Save 15 hours/week',
       'Consistent posting schedule',
       'Data-driven content strategy'
     ],
-    useCases: [,
+    useCases: [
       'Small business marketing',
       'Personal branding',
       'E-commerce promotion',
@@ -1132,20 +1137,20 @@ export const services: Service[] = [,
     icon: '📱',
     popular: true,
     path: '/ai-social-media-manager',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager'}
+    marketPrice: {
     min: 50,
       max: 150,
-      currency: 'USD',}},
+      currency: 'USD'},
   {id: 'ai-email-marketing',
     name: 'AI Email Marketing Pro',
     category: 'micro-saas',
     subcategory: 'Email Marketing',
     description: 'Intelligent email marketing with AI-powered segmentation, personalization, and automation.',
-    features: [,
+    features: [
       'AI-powered segmentation',
       'Personalized content',
       'Send time optimization',
@@ -1153,17 +1158,18 @@ export const services: Service[] = [,
       'Email template library',
       'Performance analytics'
     ],
-    pricing: {,
+    pricing: {
       starting: 99,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '40% higher open rates',
       '60% increase in click-through rates',
       'Automated campaign optimization',
       'Personalized customer journeys'
     ],
-    useCases: [,
+    useCases: [
       'E-commerce marketing',
       'Newsletter campaigns',
       'Lead nurturing',
@@ -1172,20 +1178,20 @@ export const services: Service[] = [,
     icon: '📧',
     popular: true,
     path: '/ai-email-marketing',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-email-marketing',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-email-marketing'}
+    marketPrice: {
     min: 60,
       max: 200,
-      currency: 'USD',}},
+      currency: 'USD'},
   {id: 'ai-seo-optimizer',
     name: 'AI SEO Optimizer',
     category: 'micro-saas',
     subcategory: 'SEO',
     description: 'AI-powered SEO optimization with keyword research, content analysis, and ranking tracking.',
-    features: [,
+    features: [
       'AI keyword research',
       'Content optimization suggestions',
       'Competitor analysis',
@@ -1193,17 +1199,18 @@ export const services: Service[] = [,
       'Technical SEO audit',
       'Link building recommendations'
     ],
-    pricing: {,
+    pricing: {
       starting: 129,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '50% faster SEO results',
       'Comprehensive keyword analysis',
       'Automated optimization suggestions',
       'Competitive advantage insights'
     ],
-    useCases: [,
+    useCases: [
       'Website optimization',
       'Blog content SEO',
       'E-commerce SEO',
@@ -1212,20 +1219,20 @@ export const services: Service[] = [,
     icon: '🎯',
     popular: true,
     path: '/ai-seo-optimizer',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer'}
+    marketPrice: {
     min: 80,
       max: 250,
-      currency: 'USD',}},
+      currency: 'USD'},
   {id: 'ai-invoice-generator',
     name: 'AI Invoice Generator',
     category: 'micro-saas',
     subcategory: 'Finance',
     description: 'Automated invoice generation with AI-powered data extraction and payment tracking.',
-    features: [,
+    features: [
       'Automated invoice creation',
       'AI data extraction',
       'Payment tracking',
@@ -1233,17 +1240,18 @@ export const services: Service[] = [,
       'Multi-currency support',
       'Tax calculation'
     ],
-    pricing: {,
+    pricing: {
       starting: 49,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '90% time savings on invoicing',
       'Reduced billing errors',
       'Faster payment processing',
       'Professional invoice templates'
     ],
-    useCases: [,
+    useCases: [
       'Freelancer billing',
       'Small business invoicing',
       'Service-based businesses',
@@ -1252,20 +1260,20 @@ export const services: Service[] = [,
     icon: '💰',
     popular: false,
     path: '/ai-invoice-generator',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator'}
+    marketPrice: {
     min: 30,
       max: 100,
-      currency: 'USD',}},
+      currency: 'USD'},
   {id: 'ai-time-tracker',
     name: 'AI Time Tracker Pro',
     category: 'micro-saas',
     subcategory: 'Productivity',
     description: 'Intelligent time tracking with AI-powered productivity insights and automated reporting.',
-    features: [,
+    features: [
       'Automatic time tracking',
       'AI productivity insights',
       'Project time allocation',
@@ -1273,17 +1281,18 @@ export const services: Service[] = [,
       'Detailed reporting',
       'Integration with 100+ tools'
     ],
-    pricing: {,
+    pricing: {
       starting: 39,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       'Accurate time tracking',
       'Productivity optimization',
       'Project profitability analysis',
       'Team performance insights'
     ],
-    useCases: [,
+    useCases: [
       'Freelancer time tracking',
       'Team productivity monitoring',
       'Project billing',
@@ -1292,21 +1301,21 @@ export const services: Service[] = [,
     icon: '⏰',
     popular: false,
     path: '/ai-time-tracker',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/ai-time-tracker',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/ai-time-tracker'}
+    marketPrice: {
     min: 20,
       max: 80,
-      currency: 'USD',}},
+      currency: 'USD'},
   // IT Services
   {id: 'cloud-infrastructure',
     name: 'Cloud Infrastructure Solutions',
     category: 'it',
     subcategory: 'Cloud Computing',
     description: 'Enterprise-grade cloud infrastructure with 99.9% uptime guarantee and 24/7 support.',
-    features: [,
+    features: [
       'Multi-cloud deployment',
       'Auto-scaling capabilities',
       'Disaster recovery',
@@ -1314,17 +1323,18 @@ export const services: Service[] = [,
       'Performance monitoring',
       'Cost optimization'
     ],
-    pricing: {,
+    pricing: {
       starting: 999,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '99.9% uptime guarantee',
       '50% cost reduction vs on-premise',
       'Instant scalability',
       'Enhanced security'
     ],
-    useCases: [,
+    useCases: [
       'Enterprise applications',
       'E-commerce platforms',
       'Data analytics',
@@ -1333,20 +1343,20 @@ export const services: Service[] = [,
     icon: '☁️',
     popular: true,
     path: '/cloud-infrastructure',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/cloud-infrastructure',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/cloud-infrastructure'}
+    marketPrice: {
     min: 500,
       max: 2000,
-      currency: 'USD',}},
+      currency: 'USD'},
   {id: 'cybersecurity-suite',
     name: 'Enterprise Cybersecurity Suite',
     category: 'it',
     subcategory: 'Security',
     description: 'Comprehensive cybersecurity solution with threat detection, prevention, and compliance.',
-    features: [,
+    features: [
       'Network security monitoring',
       'Endpoint protection',
       'Email security',
@@ -1354,17 +1364,18 @@ export const services: Service[] = [,
       'Compliance reporting',
       'Incident response'
     ],
-    pricing: {,
+    pricing: {
       starting: 1299,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '360-degree security coverage',
       'Compliance with industry standards',
       '24/7 security monitoring',
       'Rapid threat response'
     ],
-    useCases: [,
+    useCases: [
       'Enterprise security',
       'Healthcare compliance',
       'Financial services',
@@ -1373,20 +1384,20 @@ export const services: Service[] = [,
     icon: '🛡️',
     popular: true,
     path: '/cybersecurity-suite',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/cybersecurity-suite',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/cybersecurity-suite'}
+    marketPrice: {
     min: 800,
       max: 3000,
-      currency: 'USD',}},
+      currency: 'USD'},
   {id: 'devops-automation',
     name: 'DevOps & CI/CD Automation',
     category: 'it',
     subcategory: 'DevOps',
     description: 'Complete DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring.',
-    features: [,
+    features: [
       'Automated CI/CD pipelines',
       'Infrastructure as Code',
       'Container orchestration',
@@ -1394,17 +1405,18 @@ export const services: Service[] = [,
       'Security scanning',
       'Performance optimization'
     ],
-    pricing: {,
+    pricing: {
       starting: 799,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       '10x faster deployments',
       'Reduced deployment errors',
       'Automated testing',
       'Improved team productivity'
     ],
-    useCases: [,
+    useCases: [
       'Software development',
       'Microservices deployment',
       'Cloud migration',
@@ -1413,20 +1425,20 @@ export const services: Service[] = [,
     icon: '🔄',
     popular: true,
     path: '/devops-automation',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/devops-automation',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/devops-automation'}
+    marketPrice: {
     min: 500,
       max: 1500,
-      currency: 'USD',}},
+      currency: 'USD'},
   {id: 'database-management',
     name: 'Database Management & Optimization',
     category: 'it',
     subcategory: 'Database',
     description: 'Professional database management with optimization, backup, and performance tuning.',
-    features: [,
+    features: [
       'Database optimization',
       'Automated backups',
       'Performance monitoring',
@@ -1434,17 +1446,18 @@ export const services: Service[] = [,
       'Migration services',
       '24/7 support'
     ],
-    pricing: {,
+    pricing: {
       starting: 599,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       'Improved database performance',
       'Data security and compliance',
       'Reduced downtime',
       'Expert database administration'
     ],
-    useCases: [,
+    useCases: [
       'Enterprise databases',
       'E-commerce platforms',
       'Data analytics',
@@ -1453,21 +1466,21 @@ export const services: Service[] = [,
     icon: '🗄️',
     popular: false,
     path: '/database-management',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/database-management',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/database-management'}
+    marketPrice: {
     min: 300,
       max: 1200,
-      currency: 'USD',}},
+      currency: 'USD'},
   // Emerging Technologies
   {id: 'quantum-computing',
     name: 'Quantum Computing Solutions',
     category: 'emerging-tech',
     subcategory: 'Quantum',
     description: 'Next-generation quantum computing capabilities for complex problem solving and optimization.',
-    features: [,
+    features: [
       'Quantum algorithm development',
       'Optimization problems',
       'Cryptography solutions',
@@ -1475,18 +1488,18 @@ export const services: Service[] = [,
       'Research collaboration',
       'Custom quantum applications'
     ],
-    pricing: {,
+    pricing: {
       starting: 5000,
       currency: 'USD',
       period: 'month',
-      custom: true,},
-    benefits: [,
+      custom: true    },
+    benefits: [
       'Exponential computational power',
       'Revolutionary problem solving',
       'Future-proof technology',
       'Competitive advantage'
     ],
-    useCases: [,
+    useCases: [
       'Drug discovery',
       'Financial modeling',
       'Cryptography',
@@ -1496,20 +1509,20 @@ export const services: Service[] = [,
     popular: false,
     new: true,
     path: '/quantum-computing',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/quantum-computing',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/quantum-computing'}
+    marketPrice: {
     min: 3000,
       max: 10000,
-      currency: 'USD',}},
+      currency: 'USD'},
   {id: 'blockchain-solutions',
     name: 'Blockchain & Web3 Solutions',
     category: 'emerging-tech',
     subcategory: 'Blockchain',
     description: 'Comprehensive blockchain solutions including smart contracts, DeFi, and NFT platforms.',
-    features: [,
+    features: [
       'Smart contract development',
       'DeFi platform creation',
       'NFT marketplace development',
@@ -1517,18 +1530,18 @@ export const services: Service[] = [,
       'Token development',
       'Security auditing'
     ],
-    pricing: {,
+    pricing: {
       starting: 2999,
       currency: 'USD',
       period: 'month',
-      custom: true,},
-    benefits: [,
+      custom: true    },
+    benefits: [
       'Decentralized solutions',
       'Enhanced security',
       'Transparency and trust',
       'Future of digital assets'
     ],
-    useCases: [,
+    useCases: [
       'DeFi applications',
       'NFT marketplaces',
       'Supply chain tracking',
@@ -1538,20 +1551,20 @@ export const services: Service[] = [,
     popular: false,
     new: true,
     path: '/blockchain-solutions',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/blockchain-solutions',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/blockchain-solutions'}
+    marketPrice: {
     min: 2000,
       max: 8000,
-      currency: 'USD',}},
+      currency: 'USD'},
   {id: 'iot-edge-computing',
     name: 'IoT & Edge Computing Platform',
     category: 'emerging-tech',
     subcategory: 'IoT',
     description: 'Complete IoT and edge computing solution with real-time data processing and analytics.',
-    features: [,
+    features: [
       'IoT device management',
       'Edge computing infrastructure',
       'Real-time data processing',
@@ -1559,17 +1572,18 @@ export const services: Service[] = [,
       'Device security',
       'Analytics dashboard'
     ],
-    pricing: {,
+    pricing: {
       starting: 1299,
       currency: 'USD',
-      period: 'month',},
-    benefits: [,
+      period: 'month'
+    },
+    benefits: [
       'Real-time data processing',
       'Reduced latency',
       'Cost-effective data management',
       'Scalable IoT solutions'
     ],
-    useCases: [,
+    useCases: [
       'Smart manufacturing',
       'Smart cities',
       'Healthcare monitoring',
@@ -1578,14 +1592,14 @@ export const services: Service[] = [,
     icon: '🌐',
     popular: false,
     path: '/iot-edge-computing',
-    contact: {,
-    phone: '+1 (302) 464-0950',
+    contact: {
+        phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
-      demo: 'https://ziontechgroup.com/demo/iot-edge-computing',},
-    marketPrice: {,
+      demo: 'https://ziontechgroup.com/demo/iot-edge-computing'}
+    marketPrice: {
     min: 800,
       max: 2500,
-      currency: 'USD',}}
+      currency: 'USD'}
   }
 ]
 export const serviceCategories = [
@@ -1594,31 +1608,41 @@ export const serviceCategories = [
     description: 'Advanced artificial intelligence solutions',
     icon: '🤖',
     color: 'text-purple-400',
-    bgColor: 'bg-purple-500/10',},
-  {id: 'micro-saas',
+    bgColor: 'bg-purple-500/10'    }
+  },
+  {
+    id: 'micro-saas',
     name: 'Micro SAAS Solutions',
     description: 'Affordable, powerful AI-driven tools',
     icon: '⚡',
     color: 'text-cyan-400',
-    bgColor: 'bg-cyan-500/10',},
-  {id: 'it',
+    bgColor: 'bg-cyan-500/10'    }
+  },
+  {
+    id: 'it',
     name: 'IT Services',
     description: 'Enterprise-grade IT solutions',
     icon: '☁️',
     color: 'text-blue-400',
-    bgColor: 'bg-blue-500/10',},
-  {id: 'emerging-tech',
+    bgColor: 'bg-blue-500/10'    }
+  },
+  {
+    id: 'emerging-tech',
     name: 'Emerging Technologies',
     description: 'Next-generation technology solutions',
     icon: '🚀',
     color: 'text-pink-400',
-    bgColor: 'bg-pink-500/10',}}
+    bgColor: 'bg-pink-500/10'}
 ]
 export const contactInfo = {phone: '+1 (302) 464-0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
+<<<<<<< HEAD
   hours: 'Mon-Fri: 9AM-6PM EST',}}
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-1a33
+=======
+  hours: 'Mon-Fri: 9AM-6PM EST'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca3f
