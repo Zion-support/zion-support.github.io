@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, Zap, Shield, Brain, Globe, Phone, Mail } from 'lucide-react';
-=======
 import { CheckCircle, Phone, Mail, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> e350d49af5c4f80889ffcfb11466a632bf2e3db1
 import Footer from '../components/Footer';
 
 const CloudMigrationPage: React.FC = () => {
@@ -16,7 +12,6 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Safe and secure migration of your applications and data to the cloud'
     },
     {
-
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
@@ -50,7 +45,6 @@ const CloudMigrationPage: React.FC = () => {
       <Helmet>
         <title>Cloud Migration | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-
         <meta name="keywords" content="cloud migration, cloud services, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -58,15 +52,12 @@ const CloudMigrationPage: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-
             Cloud Migration
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud migration solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-
-
         </div>
       </section>
 
@@ -109,7 +100,6 @@ const CloudMigrationPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
@@ -140,7 +130,6 @@ const CloudMigrationPage: React.FC = () => {
                 Email Us
               </button>
             </div>
-
           </div>
         </div>
       </section>

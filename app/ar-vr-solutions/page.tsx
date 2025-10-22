@@ -40,3 +40,7 @@ const ARVRSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
+  );
+};
+
+export default ARVRSolutionsPage;

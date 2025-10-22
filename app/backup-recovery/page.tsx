@@ -1,17 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, Database, Clock, ShieldCheck } from 'lucide-react';
-=======
 import { CheckCircle, Phone, Mail, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
->>>>>>> e350d49af5c4f80889ffcfb11466a632bf2e3db1
 import Footer from '../components/Footer';
 
 const BackupRecoveryPage: React.FC = () => {
   const features = [
     {
-
       icon: Database,
       title: 'Automated Backups',
       description: 'Automated backup solutions with intelligent scheduling and monitoring'
@@ -38,7 +33,6 @@ const BackupRecoveryPage: React.FC = () => {
 
     'Automated backup scheduling',
     'Real-time data protection',
-
     'Enterprise-grade security and compliance',
     'Scalable and flexible backup solutions',
     '24/7 technical support',
@@ -52,7 +46,6 @@ const BackupRecoveryPage: React.FC = () => {
       <Helmet>
         <title>Backup & Recovery | Zion Tech Group</title>
         <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-
         <meta name="keywords" content="backup recovery, data protection, disaster recovery, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -60,14 +53,12 @@ const BackupRecoveryPage: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-
             Backup & Recovery
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced backup and recovery solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-
         </div>
       </section>
 
@@ -136,7 +127,6 @@ const BackupRecoveryPage: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
-
           </div>
         </div>
       </section>
