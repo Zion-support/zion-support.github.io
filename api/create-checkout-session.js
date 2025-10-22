@@ -20,7 +20,6 @@ export default withErrorLogging(async (req, res) => {
   try {
     const { 
       priceId, 
-      // quantity = 1, 
       successUrl, 
       cancelUrl,
       customerEmail 
