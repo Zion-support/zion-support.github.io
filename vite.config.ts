@@ -35,6 +35,7 @@ export default defineConfig({
         moduleSideEffects: false,
       },
       output: {
+        chunkFileNames: 'assets/[name]-[hash].js',
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
             // Split React into smaller chunks
@@ -86,7 +87,40 @@ export default defineConfig({
           if (id.includes('/app/pages/')) {
             return 'pages';
           }
-          return undefined;
+          // SEO and meta
+          if (id.includes('react-helmet')) {
+            return 'seo'
+          }
+          // Charts and data visualization
+          if (id.includes('recharts')) {
+            return 'charts'
+          }
+          // Utility libraries
+          if (id.includes('clsx') || id.includes('tailwind-merge')) {
+            return 'utils'
+          }
+          // Performance monitoring
+          if (id.includes('web-vitals')) {
+            return 'performance'
+          }
+          // AI service pages
+          if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
+            return 'ai-pages'
+          }
+          // IT service pages
+          if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
+            return 'it-pages'
+          }
+          // Micro SAAS pages
+          if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
+            return 'saas-pages'
+          }
+          // Other pages
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            return 'pages'
+          }
+          // Default chunk for other modules
+          return 'vendor'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
