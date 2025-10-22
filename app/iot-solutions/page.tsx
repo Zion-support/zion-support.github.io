@@ -39,9 +39,9 @@ const IotSolutionsPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Iot Solutions - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional iot solutions solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="iot solutions, AI solutions, IT services, automation, technology, business solutions" />
+        <title>IoT Solutions - Zion Tech Group | Advanced AI and IT Solutions</title>
+        <meta name="description" content="Professional IoT solutions powered by advanced AI and cutting-edge technology." />
+        <meta name="keywords" content="IoT solutions, AI solutions, IT services, automation, technology, business solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -49,10 +49,10 @@ const IotSolutionsPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Iot Solutions
+              IoT Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional iot solutions solutions powered by advanced AI and cutting-edge technology.
+              Professional IoT solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

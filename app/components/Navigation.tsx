@@ -339,8 +339,8 @@ const Navigation: React.FC = () => {
                   <Mail className="w-4 h-4" />
                   <span className="text-sm">kleber@ziontechgroup.com</span>
                 </a>
-              </div>
             </div>
+          </div>
           </div>
         )}
       </div>

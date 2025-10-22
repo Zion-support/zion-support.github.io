@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 interface SEOOptimizerProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  canonicalUrl?: string
-  ogImage?: string
-  structuredData?: Record<string, unknown>
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  structuredData?: Record<string, unknown>;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -18,40 +19,40 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {
   useEffect(() => {
     // Update page title
-    document.title = title
+    document.title = title;
     
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]')
+    const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', description)
+      metaDescription.setAttribute('content', description);
     } else {
-      const meta = document.createElement('meta')
-      meta.name = 'description'
-      meta.content = description
-      document.head.appendChild(meta)
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
+      document.head.appendChild(meta);
     }
     
     // Update canonical URL
-    let canonical = document.querySelector('link[rel="canonical"]')
+    let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.setAttribute('rel', 'canonical')
-      document.head.appendChild(canonical)
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', canonicalUrl)
+    canonical.setAttribute('href', canonicalUrl);
     
     // Add structured data
     if (structuredData) {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.textContent = JSON.stringify(structuredData)
-      script.id = 'structured-data'
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      script.id = 'structured-data';
       // Remove existing structured data
-      const existing = document.getElementById('structured-data')
+      const existing = document.getElementById('structured-data');
       if (existing) {
-        existing.remove()
+        existing.remove();
       }
-      document.head.appendChild(script)
+      document.head.appendChild(script);
     }
     
     // Add breadcrumb structured data
@@ -66,17 +67,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           'item': 'https://ziontechgroup.com'
         }
       ]
-    }
-    const breadcrumbScript = document.createElement('script')
-    breadcrumbScript.type = 'application/ld+json'
-    breadcrumbScript.textContent = JSON.stringify(breadcrumbData)
-    breadcrumbScript.id = 'breadcrumb-structured-data'
+    };
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbData);
+    breadcrumbScript.id = 'breadcrumb-structured-data';
     // Remove existing breadcrumb data
-    const existingBreadcrumb = document.getElementById('breadcrumb-structured-data')
+    const existingBreadcrumb = document.getElementById('breadcrumb-structured-data');
     if (existingBreadcrumb) {
-      existingBreadcrumb.remove()
+      existingBreadcrumb.remove();
     }
-    document.head.appendChild(breadcrumbScript)
+    document.head.appendChild(breadcrumbScript);
     
     // Add organization structured data
     const organizationData = {
@@ -108,17 +109,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'https://linkedin.com/company/ziontechgroup',
         'https://github.com/ziontechgroup'
       ]
-    }
-    const orgScript = document.createElement('script')
-    orgScript.type = 'application/ld+json'
-    orgScript.textContent = JSON.stringify(organizationData)
-    orgScript.id = 'organization-structured-data'
+    };
+    const orgScript = document.createElement('script');
+    orgScript.type = 'application/ld+json';
+    orgScript.textContent = JSON.stringify(organizationData);
+    orgScript.id = 'organization-structured-data';
     // Remove existing organization data
-    const existingOrg = document.getElementById('organization-structured-data')
+    const existingOrg = document.getElementById('organization-structured-data');
     if (existingOrg) {
-      existingOrg.remove()
+      existingOrg.remove();
     }
-    document.head.appendChild(orgScript)
+    document.head.appendChild(orgScript);
     
     // Add FAQ structured data
     const faqData = {
@@ -142,18 +143,21 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           }
         }
       ]
-    }
-    const faqScript = document.createElement('script')
-    faqScript.type = 'application/ld+json'
-    faqScript.textContent = JSON.stringify(faqData)
-    faqScript.id = 'faq-structured-data'
+    };
+    const faqScript = document.createElement('script');
+    faqScript.type = 'application/ld+json';
+    faqScript.textContent = JSON.stringify(faqData);
+    faqScript.id = 'faq-structured-data';
     // Remove existing FAQ data
-    const existingFaq = document.getElementById('faq-structured-data')
+    const existingFaq = document.getElementById('faq-structured-data');
     if (existingFaq) {
-      existingFaq.remove()
+      existingFaq.remove();
     }
-    document.head.appendChild(faqScript)
+    document.head.appendChild(faqScript);
     
-  }, [title, description, canonicalUrl, structuredData])
+  }, [title, description, canonicalUrl, structuredData]);
+
+  return null; // This component doesn't render anything
+};
 
 export default SEOOptimizer;

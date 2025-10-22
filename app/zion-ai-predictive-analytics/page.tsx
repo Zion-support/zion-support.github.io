@@ -34,7 +34,7 @@ const ZionAiPredictiveAnalyticsPage: React.FC = () => {
     'Enterprise-grade security',
     '24/7 support',
     'Custom integrations'
-  ];
+  ];;
 
   return (
     <React.Fragment>
@@ -66,7 +66,6 @@ const ZionAiPredictiveAnalyticsPage: React.FC = () => {
                 View All Services
               </a>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -91,7 +90,6 @@ const ZionAiPredictiveAnalyticsPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -113,7 +111,6 @@ const ZionAiPredictiveAnalyticsPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -137,7 +134,6 @@ const ZionAiPredictiveAnalyticsPage: React.FC = () => {
                 Learn More
               </a>
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>

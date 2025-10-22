@@ -32,7 +32,8 @@ const DatabaseManagementPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];;
   return (
     <React.Fragment>
       <Helmet>
@@ -61,7 +62,8 @@ const DatabaseManagementPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-              </a>            </div>          </div>
+              </a>
+            </div>
         </section>
 
         {/* Features Section */}
@@ -72,7 +74,9 @@ const DatabaseManagementPage: React.FC = () => {
                 Powerful Features
               </h2>
               <p className="text-lg text-gray-300">
-                Everything you need for success              </p>            </div>
+                Everything you need for success
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
@@ -82,7 +86,6 @@ const DatabaseManagementPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>                </div>              ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -104,7 +107,6 @@ const DatabaseManagementPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -126,7 +128,8 @@ const DatabaseManagementPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>            </div>          </div>
+              </a>
+            </div>
         </section>
       </div>
     </React.Fragment>

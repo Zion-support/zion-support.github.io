@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+
 const TeamPage: React.FC = () => {
   const features = [
     {
@@ -24,7 +25,7 @@ const TeamPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }  ];
+  ];
 
   const benefits = [
     'AI-powered automation',
@@ -32,7 +33,9 @@ const TeamPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
+
   return (
     <React.Fragment>
       <Helmet>
@@ -46,7 +49,7 @@ const TeamPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Team
+              Our Team
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional team solutions powered by advanced AI and cutting-edge technology.
@@ -135,7 +138,9 @@ const TeamPage: React.FC = () => {
               </a>
             </div>
           </div>
-        </section>      </div>    </React.Fragment>
+        </section>
+      </div>
+    </React.Fragment>
   );
 };
 

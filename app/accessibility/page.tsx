@@ -98,7 +98,6 @@ const AccessibilityPage: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -131,7 +130,6 @@ const AccessibilityPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Standards Section */}
@@ -159,7 +157,6 @@ const AccessibilityPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -177,7 +174,6 @@ const AccessibilityPage: React.FC = () => {
                 Contact Us
               </button>
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>

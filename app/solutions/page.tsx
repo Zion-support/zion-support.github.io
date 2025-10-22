@@ -40,7 +40,7 @@ const SolutionsPage: React.FC = () => {
     <React.Fragment>
       <Helmet>
         <title>Solutions - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional solutions solutions powered by advanced AI and cutting-edge technology." />
+        <meta name="description" content="Professional solutions powered by advanced AI and cutting-edge technology." />
         <meta name="keywords" content="solutions, AI solutions, IT services, automation, technology, business solutions" />
       </Helmet>
 
@@ -52,7 +52,7 @@ const SolutionsPage: React.FC = () => {
               Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional solutions solutions powered by advanced AI and cutting-edge technology.
+              Professional solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

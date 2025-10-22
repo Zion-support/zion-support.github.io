@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+
 const CookiesPage: React.FC = () => {
   const features = [
     {
@@ -24,7 +25,7 @@ const CookiesPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }  ];
+  ];
 
   const benefits = [
     'AI-powered automation',
@@ -32,7 +33,9 @@ const CookiesPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
+
   return (
     <React.Fragment>
       <Helmet>
@@ -135,7 +138,9 @@ const CookiesPage: React.FC = () => {
               </a>
             </div>
           </div>
-        </section>      </div>    </React.Fragment>
+        </section>
+      </div>
+    </React.Fragment>
   );
 };
 

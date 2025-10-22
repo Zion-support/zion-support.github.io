@@ -176,7 +176,7 @@ const HomePage: React.FC = () => {
                 >
                   Our Services
                 </a>
-              </div>
+            </div>
             </div>
           </div>
         </section>
@@ -299,7 +299,7 @@ const HomePage: React.FC = () => {
       
       <Footer />
     </AccessibilityEnhancer>
-  )
-}
+  );
+};
 
 export default HomePage
