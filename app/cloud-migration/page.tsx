@@ -2,6 +2,7 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck, Smartphone, Monitor, Cloud, BarChart, TrendingUp, Eye, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Phone, Mail, Shield, Brain, Globe } from 'lucide-react';
 
 import Footer from '../components/Footer';
 
