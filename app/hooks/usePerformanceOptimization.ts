@@ -27,9 +27,16 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
     enablePerformanceMonitoring = true
   } = options
 
+  // Suppress unused variable warnings for destructured options
+  void enableCodeSplitting
+  void enableCompression
+  void enableMinification
+  void enableTreeShaking
+  void enableBundleAnalysis
+
   const [isOptimized, setIsOptimized] = useState(false)
   const [performanceMetrics, setPerformanceMetrics] = useState<any>({})
-  const optimizationRef = useRef<any>({})
+  const _optimizationRef = useRef<any>({})
 
   useEffect(() => {
     if (enablePerformanceMonitoring) {

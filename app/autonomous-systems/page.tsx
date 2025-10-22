@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Bot, Cpu, BarChart } from 'lucide-react';
+import { } from 'lucide-react';
 
 
 const AutonomousSystemsPage: React.FC = () => {

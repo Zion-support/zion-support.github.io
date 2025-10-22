@@ -14,9 +14,8 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-    let frameCount = 0;
+    let _frameCount = 0;
     let lastTime = performance.now();
-    let interval: NodeJS.Timeout;
 
     const updateMetrics = () => {
       const currentTime = performance.now();
@@ -24,7 +23,7 @@ const PerformanceMonitor: React.FC = () => {
       
       const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
       
-      frameCount++;
+      _frameCount++;
       const fps = Math.round(1000 / renderTime);
       
       setMetrics({
@@ -36,7 +35,7 @@ const PerformanceMonitor: React.FC = () => {
       lastTime = currentTime;
     };
 
-    interval = setInterval(updateMetrics, 1000);
+    const interval = setInterval(updateMetrics, 1000);
 
     return () => {
       if (interval) {
