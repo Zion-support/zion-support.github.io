@@ -1,57 +1,40 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
-export function useAdvancedPerformanceMonitoring() {
-  const [metrics, setMetrics] = useState<any[]>([]);
-  const [isMonitoring, setIsMonitoring] = useState(false);
+interface UseAdvancedPerformanceMonitoringOptions {
+  enabled?: boolean;
+  threshold?: number;
+}
+
+export const useAdvancedPerformanceMonitoring = (options: UseAdvancedPerformanceMonitoringOptions = {}) => {
+  const [performance, setPerformance] = useState<number>(0);
 
   useEffect(() => {
-    if (isMonitoring) {
+    if (options.enabled !== false && typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        setMetrics(prev => [...prev, ...entries]);
+        if (entries.length > 0) {
+          setPerformance(entries[0].duration);
+        }
       });
-
-      observer.observe({ entryTypes: ['measure', 'navigation', 'resource', 'paint'] });
-
+      
+      observer.observe({ entryTypes: ['measure'] });
+      
       return () => observer.disconnect();
     }
     return undefined;
-  }, [isMonitoring]);
+  }, [options.enabled]);
 
-  const startMonitoring = () => setIsMonitoring(true);
-  const stopMonitoring = () => setIsMonitoring(false);
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
+    if (typeof window !== 'undefined' && 'performance' in window && window.performance.mark) {
+      window.performance.mark(name + '-start');
+      fn();
+      window.performance.mark(name + '-end');
+      window.performance.measure(name, name + '-start', name + '-end');
+    }
+  }, []);
 
-  const measureAsync = async (name: string, fn: () => Promise<any>) => {
-    performance.mark(`${name}-start`);
-    const result = await fn();
-    performance.mark(`${name}-end`);
-    performance.measure(name, `${name}-start`, `${name}-end`);
-    return result;
+  return {
+    performance,
+    measurePerformance
   };
-
-  return { metrics, isMonitoring, startMonitoring, stopMonitoring, measureAsync };
-}
-=======
-import React from 'react';
-
-interface useAdvancedPerformanceMonitoringProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const useAdvancedPerformanceMonitoring: React.FC<useAdvancedPerformanceMonitoringProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`useadvancedperformancemonitoring-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">useAdvancedPerformanceMonitoring</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  );
 };
-
-export default useAdvancedPerformanceMonitoring;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

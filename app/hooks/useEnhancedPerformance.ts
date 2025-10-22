@@ -1,68 +1,40 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
-export function useEnhancedPerformance() {
-  const [isOptimized, setIsOptimized] = useState(false);
+interface UseEnhancedPerformanceOptions {
+  enabled?: boolean;
+  threshold?: number;
+}
+
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+  const [performance, setPerformance] = useState<number>(0);
 
   useEffect(() => {
-    const optimizePerformance = () => {
-      // Enable resource hints
-      const criticalResources = [
-        '/app/styles/globals.css',
-        '/app/styles/futuristic.css'
-      ];
-      
-      criticalResources.forEach(href => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'style';
-        link.href = href;
-        document.head.appendChild(link);
-      });
-
-      // Optimize images
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
+    if (options.enabled !== false && typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        if (entries.length > 0) {
+          setPerformance(entries[0].duration);
         }
       });
+      
+      observer.observe({ entryTypes: ['measure'] });
+      
+      return () => observer.disconnect();
+    }
+    return undefined;
+  }, [options.enabled]);
 
-      setIsOptimized(true);
-    };
-
-    optimizePerformance();
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
+    if (typeof window !== 'undefined' && 'performance' in window && window.performance.mark) {
+      window.performance.mark(name + '-start');
+      fn();
+      window.performance.mark(name + '-end');
+      window.performance.measure(name, name + '-start', name + '-end');
+    }
   }, []);
 
-  const measurePerformance = (name: string, fn: () => void) => {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
-    console.log(`${name} execution time: ${end - start}ms`);
+  return {
+    performance,
+    measurePerformance
   };
-
-  return { isOptimized, measurePerformance };
-}
-=======
-import React from 'react';
-
-interface useEnhancedPerformanceProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const useEnhancedPerformance: React.FC<useEnhancedPerformanceProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`useenhancedperformance-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">useEnhancedPerformance</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  );
 };
-
-export default useEnhancedPerformance;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

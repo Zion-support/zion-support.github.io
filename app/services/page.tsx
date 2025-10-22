@@ -1,98 +1,106 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
-import { services, getServicesByCategory, } from '../data/services';
-import { CpuChipIcon, CloudIcon, ShieldCheckIcon, CodeBracketIcon, CircleStackIcon, SignalIcon, CogIcon, ChartBarIcon, CurrencyDollarIcon, CheckCircleIcon, StarIcon, ClockIcon, SparklesIcon, RocketLaunchIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
-const ServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Layers, CheckCircle, Clock, Star, Search, Rocket, DollarSign } from 'lucide-react';
+import { useState } from 'react';
+
+export default function ServicesPage() {
+  const [isVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [isVisible, setIsVisible] = useState(false);
   const [sortBy, setSortBy] = useState('name');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const CheckCircleIcon = CheckCircle;
+  const ClockIcon = Clock;
+  const StarIcon = Star;
+  const MagnifyingGlassIcon = Search;
+  const RocketLaunchIcon = Rocket;
+  const CurrencyDollarIcon = DollarSign;
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, count: services.length },
-    { id: 'ai', name: 'AI Services', icon: CpuChipIcon, count: getServicesByCategory('ai').length },
-    { id: 'it', name: 'IT Services', icon: CodeBracketIcon, count: getServicesByCategory('it').length },
-    { id: 'cloud', name: 'Cloud Solutions', icon: CloudIcon, count: getServicesByCategory('cloud').length },
-    { id: 'security', name: 'Security', icon: ShieldCheckIcon, count: getServicesByCategory('security').length },
-    { id: 'blockchain', name: 'Blockchain', icon: CircleStackIcon, count: getServicesByCategory('blockchain').length },
-    { id: 'iot', name: 'IoT Solutions', icon: SignalIcon, count: getServicesByCategory('iot').length },
-    { id: 'devops', name: 'DevOps', icon: CogIcon, count: getServicesByCategory('devops').length },
-    { id: 'data', name: 'Data Analytics', icon: ChartBarIcon, count: getServicesByCategory('data').length }
+    { id: 'all', name: 'All Services', icon: '🔧', count: 35 },
+    { id: 'ai', name: 'AI Solutions', icon: '🤖', count: 15 },
+    { id: 'cloud', name: 'Cloud Services', icon: '☁️', count: 12 },
+    { id: 'data', name: 'Data Analytics', icon: '📊', count: 8 }
   ];
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
-        return a.pricing.basic - b.pricing.basic;
-      case 'name':
-        return a.name.localeCompare(b.name);
-      case 'category':
-        return a.category.localeCompare(b.category);
-      default:
-        return 0;
+  const services = [
+    { 
+      id: 1, 
+      name: 'AI Solutions', 
+      category: 'ai', 
+      status: 'active', 
+      price: 99,
+      description: 'Advanced AI solutions for modern businesses',
+      icon: '🤖',
+      count: 15,
+      gradient: 'from-blue-500 to-purple-600',
+      features: ['Machine Learning', 'Natural Language Processing'],
+      technologies: ['Python', 'TensorFlow', 'PyTorch'],
+      pricing: { basic: 99, pro: 199, enterprise: 499 },
+      route: '/ai-solutions',
+      demoUrl: '/demo/ai-solutions',
+      launchDate: '2024-01-01',
+      lastUpdated: '2024-01-15'
+    },
+    { 
+      id: 2, 
+      name: 'Cloud Services', 
+      category: 'cloud', 
+      status: 'active', 
+      price: 149,
+      description: 'Scalable cloud infrastructure solutions',
+      icon: '☁️',
+      count: 12,
+      gradient: 'from-green-500 to-blue-600',
+      features: ['Auto-scaling', 'Load Balancing'],
+      technologies: ['AWS', 'Azure', 'Docker'],
+      pricing: { basic: 149, pro: 299, enterprise: 599 },
+      route: '/cloud-solutions',
+      demoUrl: '/demo/cloud-solutions',
+      launchDate: '2024-01-01',
+      lastUpdated: '2024-01-15'
+    },
+    { 
+      id: 3, 
+      name: 'Data Analytics', 
+      category: 'data', 
+      status: 'active', 
+      price: 199,
+      description: 'Comprehensive data analytics platform',
+      icon: '📊',
+      count: 8,
+      gradient: 'from-purple-500 to-pink-600',
+      features: ['Real-time Analytics', 'Data Visualization'],
+      technologies: ['Python', 'R', 'Tableau'],
+      pricing: { basic: 199, pro: 399, enterprise: 799 },
+      route: '/data-analytics',
+      demoUrl: '/demo/data-analytics',
+      launchDate: '2024-01-01',
+      lastUpdated: '2024-01-15'
     }
-  });
+  ];
 
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon || SparklesIcon;
-  };
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active':
-        return 'text-green-400 bg-green-400/10 border-green-400/20';
-      case 'beta':
-        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
-      case 'coming-soon':
-        return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
-      default:
-        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+      case 'active': return 'text-green-400';
+      case 'inactive': return 'text-red-400';
+      default: return 'text-yellow-400';
     }
   };
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Layers } from 'lucide-react';
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+
+  const sortedServices = services
+    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
+    .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    .sort((a, b) => {
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
+      if (sortBy === 'price') return a.price - b.price;
+      return 0;
+    });
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen">
-      <SEOHead 
-        title="Our Services - AI & IT Solutions | Zion Tech Group"
-        description="Explore our comprehensive range of AI services, IT solutions, cloud infrastructure, and enterprise software. Professional services with transparent pricing."
-        keywords="AI services, IT solutions, cloud infrastructure, software development, pricing, enterprise solutions"
-      />
-      
-      {/* Enhanced Animated Background */}
-      <div className="futuristic-bg"></div>
-      <div className="cyber-grid-enhanced"></div>
-      <div className="quantum-particles">
-        {[...Array(20)].map((_, i) => (
-          <div key={i} className="quantum-particle" style={{
-            left: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 20}s`,
-            animationDuration: `${20 + Math.random() * 10}s`
-          }}></div>
-        ))}
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Services | Zion Tech Group</title>
@@ -149,7 +157,7 @@ import { ArrowRight, Layers } from 'lucide-react';
             </Link>
           </div>
         </div>
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+
       </div>
       <div className="scan-lines"></div>
 
@@ -219,7 +227,6 @@ import { ArrowRight, Layers } from 'lucide-react';
             {/* Category Filters */}
             <div className="flex flex-wrap gap-3 mt-6">
               {categories.map((category) => {
-                const Icon = category.icon;
                 return (
                   <button
                     key={category.id}
@@ -230,7 +237,7 @@ import { ArrowRight, Layers } from 'lucide-react';
                         : 'bg-gray-800/50 border-gray-600 text-gray-300 hover:border-cyan-400/50 hover:text-cyan-400'
                     }`}
                   >
-                    <Icon className="h-4 w-4 mr-2" />
+                    <span className="text-lg mr-2">{category.icon}</span>
                     {category.name}
                     <span className="ml-2 px-2 py-1 bg-gray-700 text-xs rounded-full">
                       {category.count}
@@ -248,7 +255,6 @@ import { ArrowRight, Layers } from 'lucide-react';
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => {
-              const CategoryIcon = getCategoryIcon(service.category);
               return (
                 <div 
                   key={service.id}
@@ -259,8 +265,8 @@ import { ArrowRight, Layers } from 'lucide-react';
                 >
                   {/* Header */}
                   <div className="flex items-start justify-between mb-6">
-                    <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.gradient} p-4 icon-bounce`}>
-                      <CategoryIcon className="h-8 w-8 text-white" />
+                    <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.gradient} p-4 icon-bounce flex items-center justify-center`}>
+                      <span className="text-2xl">{service.icon}</span>
                     </div>
                     <div className={`px-3 py-1 rounded-full text-xs font-semibold border ${getStatusColor(service.status)}`}>
                       {service.status.toUpperCase()}
@@ -428,10 +434,5 @@ import { ArrowRight, Layers } from 'lucide-react';
       </section>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default ServicesPage;
-=======
 }
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+

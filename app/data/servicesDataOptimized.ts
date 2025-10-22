@@ -82,6 +82,6 @@ export const servicesDataOptimized = {
 
 // Lazy load full services data when needed
 export const loadFullServicesData = async () => {
-  const { servicesData } = await import('./servicesData');
-  return servicesData;
+  const { services } = await import('./servicesData');
+  return services;
 };

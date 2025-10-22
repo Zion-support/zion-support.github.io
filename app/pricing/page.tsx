@@ -1,91 +1,50 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState, useEffect } from 'react';
+
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
-import { services } from '../data/services';
-import { CheckCircleIcon, StarIcon, RocketLaunchIcon, ClockIcon, ArrowRightIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { ArrowRight, Layers, CheckCircle, Clock, Star, Rocket, Sparkles } from 'lucide-react';
+import { useState } from 'react';
 
-const PricingPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [] = useState<string | null>(null);
+export default function PricingPage() {
+  const [isVisible] = useState(false);
+  const [billingCycle, setBillingCycle] = useState('monthly');
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  // const pricingTiers = getPricingTiers();
-
-  const enterpriseFeatures = [
-    'Unlimited API Calls',
-    'Priority Support',
-    'Custom Integrations',
-    'Dedicated Account Manager',
-    'SLA Guarantee',
-    'Custom Training',
-    'On-premise Deployment',
-    'Advanced Analytics',
-    'White-label Solutions',
-    '24/7 Phone Support'
-  ];
+  const CheckCircleIcon = CheckCircle;
+  const ClockIcon = Clock;
+  const StarIcon = Star;
+  const ArrowRightIcon = ArrowRight;
+  const RocketLaunchIcon = Rocket;
+  const SparklesIcon = Sparkles;
 
   const basicFeatures = [
-    'Standard API Access',
-    'Email Support',
-    'Basic Documentation',
-    'Community Forum',
-    'Monthly Updates'
+    'Basic AI integration',
+    'Standard support',
+    'Core functionality'
   ];
 
   const proFeatures = [
-    'Enhanced API Access',
-    'Priority Email Support',
-    'Advanced Documentation',
-    'Phone Support',
-    'Weekly Updates',
-    'Custom Integrations',
-    'Advanced Analytics',
-    'SLA Support'
+    'Advanced AI features',
+    'Priority support',
+    'Custom integrations'
+  ];
+
+  const enterpriseFeatures = [
+    'Full AI suite',
+    '24/7 dedicated support',
+    'Custom development'
+  ];
+
+  const popularServices = [
+    { id: 1, name: 'AI Solutions', price: 99, shortDescription: 'Advanced AI solutions', route: '/ai-solutions', demoUrl: '/demo/ai-solutions' },
+    { id: 2, name: 'Cloud Services', price: 149, shortDescription: 'Scalable cloud infrastructure', route: '/cloud-solutions', demoUrl: '/demo/cloud-solutions' },
+    { id: 3, name: 'Data Analytics', price: 199, shortDescription: 'Comprehensive data analytics', route: '/data-analytics', demoUrl: '/demo/data-analytics' }
   ];
 
   const getServicePricing = (service: any) => {
-    const discount = billingCycle === 'yearly' ? 0.2 : 0;
-    return {
-      basic: Math.round(service.pricing.basic * (1 - discount)),
-      pro: Math.round(service.pricing.pro * (1 - discount)),
-      enterprise: Math.round(service.pricing.enterprise * (1 - discount))
-    };
+    return billingCycle === 'monthly' ? service.price : service.price * 12 * 0.9;
   };
 
-  const popularServices = services.slice(0, 6);
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Layers } from 'lucide-react';
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen">
-      <SEOHead 
-        title="Pricing - Transparent AI & IT Solutions | Zion Tech Group"
-        description="Transparent pricing for all our AI services, IT solutions, and enterprise software. Choose the plan that fits your business needs."
-        keywords="pricing, AI services pricing, IT solutions cost, enterprise pricing, transparent pricing"
-      />
-      
-      {/* Enhanced Animated Background */}
-      <div className="futuristic-bg"></div>
-      <div className="cyber-grid-enhanced"></div>
-      <div className="quantum-particles">
-        {[...Array(25)].map((_, i) => (
-          <div key={i} className="quantum-particle" style={{
-            left: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 20}s`,
-            animationDuration: `${20 + Math.random() * 10}s`
-          }}></div>
-        ))}
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Pricing | Zion Tech Group</title>
@@ -142,7 +101,7 @@ import { ArrowRight, Layers } from 'lucide-react';
             </Link>
           </div>
         </div>
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+
       </div>
       <div className="scan-lines"></div>
 
@@ -459,10 +418,5 @@ import { ArrowRight, Layers } from 'lucide-react';
       </section>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default PricingPage;
-=======
 }
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+
