@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
+import { CheckCircle, Phone, Mail, Shield, Cloud, Server, Database } from 'lucide-react';
 
 
 const CloudMigrationServicesPage: React.FC = () => {
