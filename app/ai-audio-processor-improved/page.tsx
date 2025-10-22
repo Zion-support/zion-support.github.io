@@ -1,8 +1,7 @@
-import React from "react";
 'use client';
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
-
 const AiAudioProcessorImprovedPage: React.FC = () => {
   const features = [
     {

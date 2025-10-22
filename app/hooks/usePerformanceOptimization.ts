@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-
 interface OptimizationConfig {
   enableLazyLoading: boolean;
   enableImageOptimization: boolean;

@@ -1,6 +1,5 @@
 'use client';
 import { useCallback, useEffect, useState, useRef } from 'react';
-
 interface UsePerformanceMonitorOptions {
   enabled?: boolean;
   threshold?: number;
@@ -28,11 +27,13 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
 
   const measureMemoryUsage = useCallback(() => {
     if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory;
-      setMetrics(prev => ({
-        ...prev,
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-      }));
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        }));
+      }
     }
   }, []);
 

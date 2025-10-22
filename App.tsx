@@ -14,7 +14,6 @@ import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
 // Hooks
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
-
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
 const AboutPage = lazy(() => import('./app/about/page'));
@@ -222,10 +221,10 @@ const App = memo(() => {
     // Register service worker
     if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
       navigator.serviceWorker.register('/sw.js')
-        .then((_registration) => {
+        .then(() => {
           // Service worker registered successfully
         })
-        .catch((_error) => {
+        .catch(() => {
           // Service worker registration failed
         });
     }
