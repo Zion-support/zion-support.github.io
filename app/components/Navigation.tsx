@@ -177,14 +177,14 @@ const Navigation: React.FC = () => {
                 href="tel:+13024640950"
                 className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
               >
-                <Phone className="w-4 h-4" />
+                <</a>Phone className="w-4 h-4" />
                 <span className="text-sm">(302) 464-0950</span>
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
               >
-                <Mail className="w-4 h-4" />
+                <</a>Mail className="w-4 h-4" />
                 <span className="text-sm">Email</span>
               </a>
             </div>
@@ -329,14 +329,14 @@ const Navigation: React.FC = () => {
                   href="tel:+13024640950"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
-                  <Phone className="w-4 h-4" />
+                  <</a>Phone className="w-4 h-4" />
                   <span className="text-sm">(302) 464-0950</span>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
-                  <Mail className="w-4 h-4" />
+                  <</a>Mail className="w-4 h-4" />
                   <span className="text-sm">kleber@ziontechgroup.com</span>
               </a>
             </div>

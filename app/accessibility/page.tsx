@@ -1,7 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';const AccessibilityPage: React.FC = () => {
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock, MousePointer, Volume2 } from 'lucide-react';
+
+const AccessibilityPage: React.FC = () => {
   const features = [
     {
       icon: Eye,
@@ -71,12 +73,12 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Databa
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Get Started
-              </a>
+              <</a>/a>
               <a
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-            </div>
+            <</a>/div>
           </div>
         </section>
 
@@ -133,12 +135,12 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Databa
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Start Your Project
-              </a>
+              <</a>/a>
               <a
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-            </div>
+            <</a>/div>
           </div>
         </div>
       </div>
@@ -147,3 +149,9 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Databa
 };
 
 export default AccessibilityPage;
+        </section>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
