@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
-import AccessibilityEnhancer from '../utils/accessibilityEnhancer';
+import React from 'react';
+import { useAccessibilityEnhancer } from '../utils/accessibilityEnhancer';
 
 const AccessibilityEnhancerComponent: React.FC = () => {
-  useEffect(() => {
-    const enhancer = new AccessibilityEnhancer();
-    enhancer.init();
-  }, []);
+  useAccessibilityEnhancer();
 
   return null;
 };
