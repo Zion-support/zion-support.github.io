@@ -209,13 +209,7 @@ const App = memo(() => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   // Initialize performance optimizations
-  usePerformanceOptimization({
-    enableLazyLoading: true,
-    enablePreloading: true,
-    enableCodeSplitting: true,
-    enableImageOptimization: true,
-    enableBundleAnalysis: process.env.NODE_ENV === 'development'
-  });
+  usePerformanceOptimization();
 
   useEffect(() => {
     // Register service worker

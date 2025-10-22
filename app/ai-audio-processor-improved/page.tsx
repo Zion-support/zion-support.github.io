@@ -1,56 +1,103 @@
-'use client';
-import React from 'react';
 import ServicePageTemplate from '../components/ServicePageTemplate';
-import { MicrophoneIcon, CpuChipIcon, ShieldCheckIcon, DocumentTextIcon, SpeakerWaveIcon, MusicalNoteIcon } from '@heroicons/react/24/outline';
+import { MicrophoneIcon } from '@heroicons/react/24/outline';
 
-const AIAudioProcessorPage: React.FC = () => {
+export default function AiAudioProcessorImprovedPage() {
   const features = [
     {
-      icon: MicrophoneIcon,
-      title: 'Real-time Audio Processing',
-      description: 'Advanced AI algorithms process audio in real-time with ultra-low latency for seamless user experience.'
-    },
-    {
-      icon: CpuChipIcon,
       title: 'AI-Powered Analysis',
-      description: 'Machine learning models analyze audio patterns, speech recognition, and sound classification with 99.5% accuracy.'
+      description: 'Machine learning models analyze audio patterns, speech recognition, and sound classification with 99.5% accuracy.',
+      items: [
+        '99.5% accuracy rate',
+        'Real-time processing',
+        'Multi-language support',
+        'Custom model training'
+      ]
     },
     {
-      icon: ShieldCheckIcon,
       title: 'Enterprise Security',
-      description: 'Bank-level encryption and secure processing ensure your audio data remains private and protected.'
+      description: 'Bank-level encryption and secure processing ensure your audio data remains private and protected.',
+      items: [
+        'End-to-end encryption',
+        'SOC 2 compliance',
+        'GDPR compliant',
+        'Secure data storage'
+      ]
     },
     {
-      icon: DocumentTextIcon,
       title: 'Transcription Services',
-      description: 'Convert speech to text with advanced natural language processing and multi-language support.'
+      description: 'Convert speech to text with advanced natural language processing and multi-language support.',
+      items: [
+        '50+ language support',
+        'Real-time transcription',
+        'Speaker identification',
+        'Punctuation and formatting'
+      ]
     },
     {
-      icon: SpeakerWaveIcon,
       title: 'Audio Enhancement',
-      description: 'AI-powered noise reduction, echo cancellation, and audio quality improvement for crystal-clear sound.'
+      description: 'AI-powered noise reduction, echo cancellation, and audio quality improvement for crystal-clear sound.',
+      items: [
+        'Noise reduction',
+        'Echo cancellation',
+        'Volume normalization',
+        'Audio quality enhancement'
+      ]
     },
     {
-      icon: MusicalNoteIcon,
       title: 'Music Analysis',
-      description: 'Analyze music patterns, detect genres, extract features, and provide intelligent music recommendations.'
+      description: 'Analyze music patterns, detect genres, extract features, and provide intelligent music recommendations.',
+      items: [
+        'Genre detection',
+        'BPM analysis',
+        'Key detection',
+        'Music recommendation engine'
+      ]
     }
   ];
 
-  const pricing = {
-    monthly: '$199/mo',
-    original: '$399/mo',
-    features: [
-      'Unlimited audio processing',
-      'Real-time transcription',
-      '50+ language support',
-      'Advanced noise reduction',
-      'API access included',
-      '24/7 technical support',
-      'Custom model training',
-      '99.9% uptime guarantee'
-    ]
-  };
+  const pricing = [
+    {
+      name: 'Starter',
+      price: '$99',
+      period: 'month',
+      features: [
+        'Up to 100 hours/month',
+        'Basic transcription',
+        'Email support',
+        'Standard quality'
+      ]
+    },
+    {
+      name: 'Professional',
+      price: '$199',
+      period: 'month',
+      features: [
+        'Unlimited audio processing',
+        'Real-time transcription',
+        '50+ language support',
+        'Advanced noise reduction',
+        'API access included',
+        'Priority support',
+        'Custom model training',
+        '99.9% uptime guarantee'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: 'month',
+      features: [
+        'Unlimited everything',
+        'Custom integrations',
+        'Dedicated support',
+        'SLA guarantee',
+        'White-label options',
+        'Custom development',
+        'On-premise deployment'
+      ]
+    }
+  ];
 
   const benefits = [
     '95% accuracy in speech recognition',
@@ -66,48 +113,42 @@ const AIAudioProcessorPage: React.FC = () => {
   const useCases = [
     {
       title: 'Call Center Automation',
-      description: 'Automatically transcribe customer calls, analyze sentiment, and extract key insights for improved customer service.'
+      description: 'Automatically transcribe customer calls, analyze sentiment, and extract key insights for improved customer service.',
+      items: [
+        'Real-time call transcription',
+        'Sentiment analysis',
+        'Key phrase extraction',
+        'Quality assurance scoring'
+      ]
     },
     {
       title: 'Content Creation',
-      description: 'Generate transcripts, captions, and summaries for podcasts, videos, and audio content automatically.'
-    },
-    {
-      title: 'Meeting Intelligence',
-      description: 'Transcribe meetings, extract action items, and provide intelligent summaries for better collaboration.'
-    },
-    {
-      title: 'Accessibility Services',
-      description: 'Provide real-time captions and audio descriptions to make content accessible to all users.'
-    }
-  ];
-
-  const technicalSpecs = [
-    {
-      category: 'Processing',
-      specs: [
-        'Real-time processing',
-        'Batch processing support',
-        'Multi-format audio support',
-        'Custom model training'
+      description: 'Generate transcripts, captions, and summaries for podcasts, videos, and audio content.',
+      items: [
+        'Podcast transcription',
+        'Video captioning',
+        'Content summarization',
+        'SEO optimization'
       ]
     },
     {
-      category: 'Languages',
-      specs: [
-        '50+ languages supported',
-        'Automatic language detection',
-        'Custom vocabulary support',
-        'Accent recognition'
+      title: 'Medical Transcription',
+      description: 'Accurate medical transcription with specialized terminology and compliance requirements.',
+      items: [
+        'Medical terminology support',
+        'HIPAA compliance',
+        'High accuracy rates',
+        'Secure processing'
       ]
     },
     {
-      category: 'Integration',
-      specs: [
-        'RESTful API',
-        'WebSocket support',
-        'SDK for major languages',
-        'Webhook notifications'
+      title: 'Music Industry',
+      description: 'Analyze music patterns, detect copyright issues, and provide intelligent recommendations.',
+      items: [
+        'Copyright detection',
+        'Music analysis',
+        'Recommendation engine',
+        'Trend analysis'
       ]
     }
   ];
@@ -122,11 +163,6 @@ const AIAudioProcessorPage: React.FC = () => {
       pricing={pricing}
       benefits={benefits}
       useCases={useCases}
-      technicalSpecs={technicalSpecs}
-      ctaText="Start Free Trial"
-      ctaLink="/contact"
     />
   );
-};
-
-export default AIAudioProcessorPage;
+}

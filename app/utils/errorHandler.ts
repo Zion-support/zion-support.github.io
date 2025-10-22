@@ -1,86 +1,137 @@
-<<<<<<< HEAD
-// Error handling utilities
-export interface AppError {
+interface ErrorInfo {
   message: string;
-  code?: string | undefined;
-  statusCode?: number | undefined;
-  details?: Record<string, unknown> | undefined;
+  stack?: string;
+  componentStack?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
 }
 
-export class CustomError extends Error {
-  public code?: string | undefined;
-  public statusCode?: number | undefined;
-  public details?: Record<string, unknown> | undefined;
-
-  constructor(message: string, code: string = 'UNKNOWN_ERROR', statusCode: number = 500, details: Record<string, unknown> = {}) {
-    super(message);
-    this.name = 'CustomError';
-    this.code = code;
-    this.statusCode = statusCode;
-    this.details = details;
-  }
+interface ErrorHandlerOptions {
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onUnhandledRejection?: (reason: any) => void;
+  logToConsole?: boolean;
+  logToServer?: boolean;
 }
 
-export const handleError = (error: unknown): AppError => {
-  if (error instanceof CustomError) {
-    return {
-      message: error.message,
-      code: error.code,
-      statusCode: error.statusCode,
-      details: error.details,
+class ErrorHandler {
+  private options: ErrorHandlerOptions;
+  private errorQueue: ErrorInfo[] = [];
+
+  constructor(options: ErrorHandlerOptions = {}) {
+    this.options = {
+      logToConsole: true,
+      logToServer: false,
+      ...options,
     };
+
+    this.setupGlobalErrorHandlers();
   }
 
-  if (error instanceof Error) {
-    return {
+  private setupGlobalErrorHandlers(): void {
+    // Handle uncaught errors
+    window.addEventListener('error', (event) => {
+      this.handleError(event.error, {
+        message: event.message,
+        stack: event.error?.stack,
+        componentStack: '',
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+      });
+    });
+
+    // Handle unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      this.handleUnhandledRejection(event.reason);
+    });
+  }
+
+  private handleError(error: Error, errorInfo: Partial<ErrorInfo>): void {
+    const fullErrorInfo: ErrorInfo = {
       message: error.message,
-      code: 'UNKNOWN_ERROR',
-      statusCode: undefined,
-      details: undefined
+      stack: error.stack || '',
+      componentStack: '',
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      ...errorInfo,
     };
+
+    // Add to error queue
+    this.errorQueue.push(fullErrorInfo);
+
+    // Log to console if enabled
+    if (this.options.logToConsole) {
+      console.error('Error caught by ErrorHandler:', error, fullErrorInfo);
+    }
+
+    // Log to server if enabled
+    if (this.options.logToServer) {
+      this.logToServer(fullErrorInfo);
+    }
+
+    // Call custom error handler
+    if (this.options.onError) {
+      this.options.onError(error, fullErrorInfo);
+    }
   }
 
-  return {
-    message: 'An unexpected error occurred',
-    code: 'UNKNOWN_ERROR',
-    statusCode: undefined,
-    details: undefined
-  };
-};
+  private handleUnhandledRejection(reason: any): void {
+    const errorInfo: ErrorInfo = {
+      message: reason?.message || 'Unhandled Promise Rejection',
+      stack: reason?.stack,
+      componentStack: '',
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    };
 
-export const logError = (_error: AppError, _context?: string) => {
-  if (process.env.NODE_ENV === 'development') {
-    // Error logging can be implemented here
-    // console.log('Error:', error, 'Context:', context);
+    this.errorQueue.push(errorInfo);
+
+    if (this.options.logToConsole) {
+      console.error('Unhandled Promise Rejection:', reason, errorInfo);
+    }
+
+    if (this.options.logToServer) {
+      this.logToServer(errorInfo);
+    }
+
+    if (this.options.onUnhandledRejection) {
+      this.options.onUnhandledRejection(reason);
+    }
   }
-  
-  // In production, you would send this to your error monitoring service
-  // Example: sendToErrorService(error, context);
-};
 
-export const createError = (message: string, code?: string, statusCode?: number, details?: Record<string, unknown>): CustomError => {
-  return new CustomError(message, code, statusCode, details);
-};
-=======
-import React from 'react';
+  private async logToServer(errorInfo: ErrorInfo): Promise<void> {
+    try {
+      await fetch('/api/errors', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorInfo),
+      });
+    } catch (error) {
+      console.error('Failed to log error to server:', error);
+    }
+  }
 
-interface errorHandlerProps {
-  className?: string;
-  children?: React.ReactNode;
+  public getErrorQueue(): ErrorInfo[] {
+    return [...this.errorQueue];
+  }
+
+  public clearErrorQueue(): void {
+    this.errorQueue = [];
+  }
+
+  public reportError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
+    this.handleError(error, errorInfo || {});
+  }
 }
 
-const errorHandler: React.FC<errorHandlerProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`errorhandler-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">errorHandler</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  );
-};
+// Create singleton instance
+export const errorHandler = new ErrorHandler();
 
-export default errorHandler;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+// Export class for custom instances
+export { ErrorHandler };
+export type { ErrorInfo, ErrorHandlerOptions };

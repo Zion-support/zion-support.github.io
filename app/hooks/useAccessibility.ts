@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-
-export function useAccessibility() {
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [isHighContrast, setIsHighContrast] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setIsReducedMotion(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsReducedMotion(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsHighContrast(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
-
-  return { isReducedMotion, isHighContrast };
-}
-=======
 import { useCallback, useEffect, useRef } from 'react';
 
 interface AccessibilityOptions {
@@ -117,18 +83,14 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 
   // Detect keyboard usage
   const detectKeyboardUsage = useCallback(() => {
-    let isKeyboardUser = false;
-
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        isKeyboardUser = true;
         stateRef.current.isKeyboardUser = true;
         document.body.classList.add('keyboard-user');
       }
     };
 
     const handleMouseDown = () => {
-      isKeyboardUser = false;
       stateRef.current.isKeyboardUser = false;
       document.body.classList.remove('keyboard-user');
     };
@@ -372,4 +334,3 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 };
 
 export default useAccessibility;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

@@ -1,55 +1,50 @@
-<<<<<<< HEAD
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export function useIntersectionObserver() {
+interface UseIntersectionObserverOptions {
+  threshold?: number | number[];
+  root?: Element | null;
+  rootMargin?: string;
+}
+
+interface UseIntersectionObserverReturn {
+  ref: React.RefObject<HTMLElement>;
+  isIntersecting: boolean;
+  entry: IntersectionObserverEntry | null;
+}
+
+export const useIntersectionObserver = (
+  options: UseIntersectionObserverOptions = {}
+): UseIntersectionObserverReturn => {
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
+        setEntry(entry);
       },
-      { threshold: 0.1 }
+      {
+        threshold: options.threshold || 0,
+        root: options.root || null,
+        rootMargin: options.rootMargin || '0px',
+      }
     );
 
-    const currentRef = ref.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
+    observer.observe(element);
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      observer.unobserve(element);
     };
-  }, []);
-
-  return { ref, isIntersecting };
-}
-=======
-import { useCallback, useEffect, useRef, useState } from 'react';
-
-interface use Intersection ObserverOptions {
-  // Options will be defined here
-}
-
-export const use Intersection Observer = (options: use Intersection ObserverOptions = {}) => {
-  const [state, setState] = useState({});
-  
-  const init = useCallback(() => {
-    // Hook implementation will be here
-  }, []);
-
-  useEffect(() => {
-    init();
-  }, [init]);
+  }, [options.threshold, options.root, options.rootMargin]);
 
   return {
-    state,
-    init
+    ref,
+    isIntersecting,
+    entry,
   };
 };
-
-export default use Intersection Observer;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
