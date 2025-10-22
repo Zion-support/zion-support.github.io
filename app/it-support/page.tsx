@@ -34,7 +34,7 @@ const ItSupportPage: React.FC = () => {
               <p className="text-gray-600">Monitor your systems to prevent issues before they occur.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

@@ -34,7 +34,7 @@ const AiSalesAutomationPage: React.FC = () => {
               <p className="text-gray-600">Predict sales outcomes and optimize pipeline management.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

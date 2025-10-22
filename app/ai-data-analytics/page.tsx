@@ -34,7 +34,7 @@ const AiDataAnalyticsPage: React.FC = () => {
               <p className="text-gray-600">Create interactive dashboards and visualizations for better understanding.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

@@ -34,7 +34,7 @@ const AutonomousSystemsPage: React.FC = () => {
               <p className="text-gray-600">Build autonomous drone systems for various use cases.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

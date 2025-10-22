@@ -34,7 +34,7 @@ const MicroSaasPage: React.FC = () => {
               <p className="text-gray-600">Integrate with existing systems and third-party services.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

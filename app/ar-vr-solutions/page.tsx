@@ -34,7 +34,7 @@ const ARVRSolutionsPage: React.FC = () => {
               <p className="text-gray-600">Build virtual reality experiences for marketing and entertainment.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

@@ -34,7 +34,7 @@ const AiCustomerSupportPage: React.FC = () => {
               <p className="text-gray-600">Analyze customer sentiment to provide personalized support experiences.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

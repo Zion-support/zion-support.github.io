@@ -34,7 +34,7 @@ const StatusPage: React.FC = () => {
               <p className="text-gray-600">Database services are operating at full capacity.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );

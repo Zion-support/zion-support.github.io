@@ -34,7 +34,7 @@ const AiDataVisualizationPage: React.FC = () => {
               <p className="text-gray-600">Identify patterns and trends in your data automatically.</p>
             </div>
           </div>
-        </div>
+        </div> (Fix merge conflicts in TypeScript files)
       </div>
     </>
   );
