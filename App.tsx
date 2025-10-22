@@ -8,8 +8,8 @@ import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import _PerformanceMonitor from './app/components/EnhancedPerformanceMonitor';
+import _AccessibilityEnhancer from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
 // Hooks
@@ -271,8 +271,7 @@ const App = memo(() => {
             
             <main className="flex-1">
               <ErrorBoundary>
-                <PerformanceMonitor />
-                <AccessibilityEnhancer>
+                {/* PerformanceMonitor and AccessibilityEnhancer components removed */}
                   <SEOOptimizer />
                 
                 <Suspense fallback={<LoadingFallback />}>
@@ -470,7 +469,7 @@ const App = memo(() => {
                     </Routes>
                   </ErrorBoundary>
                 </Suspense>
-                </AccessibilityEnhancer>
+                {/* PerformanceMonitor and AccessibilityEnhancer components removed */}
               </ErrorBoundary>
             </main>
             

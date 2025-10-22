@@ -1,10 +1,14 @@
 'use client';
 import React from 'react';
 
-const EnhancedPerformanceMonitor: React.FC = () => {
+interface EnhancedPerformanceMonitorProps {
+  children?: React.ReactNode;
+}
+
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ children }) => {
   return (
     <div>
-      <h1>EnhancedPerformanceMonitor</h1>
+      {children}
     </div>
   );
 };

@@ -1,13 +1,8 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
 import { MemoryRouter } from 'react-router-dom';
 import React from 'react';
 import '@testing-library/jest-dom';
-=======
-import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
 
 // Mock components with proper error boundary behavior
 class AdvancedErrorBoundary extends React.Component<{ 
@@ -125,6 +120,7 @@ const AdvancedPerformanceMonitor = ({
     </div>
   );
 };
+
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
@@ -132,104 +128,48 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   }
   return <div>Test content</div>;
 };
-// Test component for error boundary tests
-// const TestComponent = () => <div>Test component</div>;
-// Mock onError callback
-// const onError = jest.fn();
-// Mock helmet context
-// const helmetContext = {};
+
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
     render(
-<<<<<<< HEAD
       <MemoryRouter>
-        <ThrowError shouldThrow={false} />
+        <AdvancedErrorBoundary>
+          <div>Test content</div>
+        </AdvancedErrorBoundary>
       </MemoryRouter>
-=======
-      <AdvancedErrorBoundary>
-        <div>Test content</div>
-      </AdvancedErrorBoundary>
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
     );
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
+
   it('renders error UI when there is an error', () => {
-<<<<<<< HEAD
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
-=======
     // Suppress console.error for this test
     const originalError = console.error;
     console.error = jest.fn();
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
     render(
       <AdvancedErrorBoundary enableRetry={true}>
         <ThrowError shouldThrow={true} />
       </AdvancedErrorBoundary>
     );
-<<<<<<< HEAD
-    expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
-    expect(screen.getByText(/Try Again/)).toBeInTheDocument();
-    expect(screen.getByText('Reload Page')).toBeInTheDocument();
-    expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
-    consoleSpy.mockRestore();
-=======
 
     expect(screen.getByText(/something went wrong/i)).toBeInTheDocument();
     expect(screen.getByText(/try again/i)).toBeInTheDocument();
 
     // Restore console.error
     console.error = originalError;
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   });
+
   it('calls onError callback when error occurs', () => {
-<<<<<<< HEAD
     const onError = jest.fn();
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
-=======
     // Suppress console.error for this test
     const originalError = console.error;
     console.error = jest.fn();
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
     render(
       <AdvancedErrorBoundary onError={onError}>
         <ThrowError shouldThrow={true} />
       </AdvancedErrorBoundary>
     );
-<<<<<<< HEAD
-    expect(onError).toHaveBeenCalled();
-    consoleSpy.mockRestore();
-  });
-  it('retries when retry button is clicked', async () => {
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
-    let shouldThrow = true;
-    const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
-    render(
-      <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
-          <TestComponent />
-        </AdvancedErrorBoundary>
-      </MemoryRouter>
-    );
-    const retryButton = screen.getByText('Try Again (3 attempts left)');
-    // Change shouldThrow before clicking retry
-    shouldThrow = false;
-    fireEvent.click(retryButton);
-    // After retry, the error boundary should reset and show the child component
-    await waitFor(() => {
-      expect(
-        screen.queryByText('Oops! Something went wrong')
-      ).not.toBeInTheDocument();
-    });
-    consoleSpy.mockRestore();
-=======
 
     expect(onError).toHaveBeenCalledWith(
       expect.any(Error),
@@ -257,9 +197,9 @@ describe('AdvancedErrorBoundary', () => {
 
     // Restore console.error
     console.error = originalError;
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   });
 });
+
 describe('AdvancedSEOOptimizer', () => {
   const mockSEOData = {
     title: 'Test Page Title',
@@ -285,6 +225,7 @@ describe('AdvancedSEOOptimizer', () => {
     section: 'Technology',
     tags: ['react', 'seo', 'testing'],
   };
+
   it('renders without crashing', () => {
     render(
       <HelmetProvider>
@@ -294,131 +235,13 @@ describe('AdvancedSEOOptimizer', () => {
     );
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
+
   it('sets document title', async () => {
     render(
       <HelmetProvider>
         <AdvancedSEOOptimizer seoData={mockSEOData} />
       </HelmetProvider>
     );
-<<<<<<< HEAD
-    // Wait for helmet to update the document title
-    await new Promise(resolve => setTimeout(resolve, 100));
-    expect(document.title).toBe('Test Title');
-  });
-  it('renders structured data when enabled', async () => {
-    const helmetContext = {};
-    const { container } = render(
-      <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer
-            seoData={mockSEOData}
-            enableStructuredData={true}
-          />
-        </HelmetProvider>
-      </MemoryRouter>
-    );
-    // In test environment, helmet may not render scripts in the DOM
-    // Just verify component renders without crashing
-    await waitFor(() => {
-      expect(container).toBeTruthy();
-    });
-  });
-  it('renders Open Graph tags when enabled', async () => {
-    const helmetContext = {};
-    const { container } = render(
-      <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
-        </HelmetProvider>
-      </MemoryRouter>
-    );
-    // In test environment, helmet renders to document head, not container
-    // Just verify component renders without crashing
-    await waitFor(() => {
-      expect(container).toBeTruthy();
-    });
-  });
-  it('renders Twitter Card tags when enabled', async () => {
-    const helmetContext = {};
-    const { container } = render(
-      <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
-        </HelmetProvider>
-      </MemoryRouter>
-    );
-    // In test environment, helmet renders to document head, not container
-    // Just verify component renders without crashing
-    await waitFor(() => {
-      expect(container).toBeTruthy();
-    });
-  });
-});
-describe('AdvancedPerformanceMonitor', () => {
-  // Mock performance API
-  const mockPerformance = {
-    getEntriesByName: jest.fn(() => []),
-    getEntriesByType: jest.fn(() => []),
-    getEntries: jest.fn(() => []),
-    measurePageLoad: jest.fn(),
-    reportWebVitals: jest.fn(),
-  };
-  // Mock PerformanceObserver
-  class MockPerformanceObserver {
-    constructor(callback: PerformanceObserverCallback) {
-      this.callback = callback;
-    }
-    callback: PerformanceObserverCallback;
-    observe() {}
-    disconnect() {}
-    takeRecords() { return []; }
-  }
-  beforeEach(() => {
-    // Mock performance API
-    Object.defineProperty(window, 'performance', {
-      value: mockPerformance,
-      writable: true,
-      configurable: true,
-    });
-    // Mock PerformanceObserver
-    global.PerformanceObserver = MockPerformanceObserver as any;
-  });
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-  it('renders nothing in production mode', () => {
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
-    const { container } = render(
-      <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
-    );
-    expect(container.firstChild).toBeNull();
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
-  });
-  it('renders performance monitor in development mode', () => {
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    render(
-      <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
-    );
-    expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
-  });
-  it('calls onMetricsUpdate when metrics change', async () => {
-    const onMetricsUpdate = jest.fn();
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    // mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 } as any]);
-    render(
-      <MemoryRouter>
-        <AdvancedPerformanceMonitor
-          enableRealTimeMonitoring={true}
-          onMetricsUpdate={onMetricsUpdate}
-=======
 
     await waitFor(() => {
       expect(document.title).toBe('Test Page Title');
@@ -432,16 +255,116 @@ describe('AdvancedPerformanceMonitor', () => {
         <AdvancedSEOOptimizer
           seoData={mockSEOData}
           enableStructuredData={true}
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
         />
       </HelmetProvider>
     );
-<<<<<<< HEAD
+
+    expect(container).toBeInTheDocument();
+  });
+
+  it('renders Open Graph tags when enabled', () => {
+    const helmetContext = {};
+    const { container } = render(
+      <HelmetProvider context={helmetContext}>
+        <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
+      </HelmetProvider>
+    );
+
+    expect(container).toBeInTheDocument();
+  });
+
+  it('renders Twitter Card tags when enabled', () => {
+    const helmetContext = {};
+    const { container } = render(
+      <HelmetProvider context={helmetContext}>
+        <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
+      </HelmetProvider>
+    );
+
+    expect(container).toBeInTheDocument();
+  });
+});
+
+describe('AdvancedPerformanceMonitor', () => {
+  // Mock performance API
+  const mockPerformance = {
+    getEntriesByName: jest.fn(() => []),
+    getEntriesByType: jest.fn(() => []),
+    getEntries: jest.fn(() => []),
+    measurePageLoad: jest.fn(),
+    reportWebVitals: jest.fn(),
+  };
+
+  // Mock PerformanceObserver
+  class MockPerformanceObserver {
+    constructor(callback: PerformanceObserverCallback) {
+      this.callback = callback;
+    }
+    callback: PerformanceObserverCallback;
+    observe() {}
+    disconnect() {}
+    takeRecords() { return []; }
+  }
+
+  beforeEach(() => {
+    // Mock performance API
+    Object.defineProperty(window, 'performance', {
+      value: mockPerformance,
+      writable: true,
+      configurable: true,
+    });
+    // Mock PerformanceObserver
+    global.PerformanceObserver = MockPerformanceObserver as any;
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('renders nothing in production mode', () => {
+    const originalEnv = process.env['NODE_ENV'];
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
+    const { container } = render(
+      <MemoryRouter>
+        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
+      </MemoryRouter>
+    );
+    expect(container.firstChild).toBeNull();
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+  });
+
+  it('renders performance monitor in development mode', () => {
+    const originalEnv = process.env['NODE_ENV'];
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+    render(
+      <MemoryRouter>
+        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+  });
+
+  it('calls onMetricsUpdate when metrics change', async () => {
+    const onMetricsUpdate = jest.fn();
+    const originalEnv = process.env['NODE_ENV'];
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+
+    render(
+      <MemoryRouter>
+        <AdvancedPerformanceMonitor
+          enableRealTimeMonitoring={true}
+          onMetricsUpdate={onMetricsUpdate}
+        />
+      </MemoryRouter>
+    );
+
     await waitFor(() => {
       expect(onMetricsUpdate).toHaveBeenCalled();
     });
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
+
   it('shows performance recommendations when metrics are poor', async () => {
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
@@ -491,31 +414,4 @@ describe('AdvancedPerformanceMonitor', () => {
     
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
-=======
-
-    expect(container).toBeInTheDocument();
-  });
-
-  it('renders Open Graph tags when enabled', () => {
-    const helmetContext = {};
-    const { container } = render(
-      <HelmetProvider context={helmetContext}>
-        <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
-      </HelmetProvider>
-    );
-
-    expect(container).toBeInTheDocument();
-  });
-
-  it('renders Twitter Card tags when enabled', () => {
-    const helmetContext = {};
-    const { container } = render(
-      <HelmetProvider context={helmetContext}>
-        <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
-      </HelmetProvider>
-    );
-
-    expect(container).toBeInTheDocument();
-  });
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
 });
