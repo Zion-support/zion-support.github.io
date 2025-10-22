@@ -349,7 +349,7 @@ describe('AdvancedPerformanceMonitor', () => {
     const onMetricsUpdate = jest.fn();
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    
+
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor
