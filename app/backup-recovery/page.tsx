@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+import React from 'react';
 'use client';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Database, Clock, ShieldCheck, Globe, Phone, Mail } from 'lucide-react';
