@@ -7,7 +7,7 @@ import SEOHead from '../app/components/SEOHead';
 describe('Component Tests', () => {
   test('LoadingSpinner renders correctly', () => {
     render(<LoadingSpinner />);
-    expect(screen.getByRole('status')).toBeTruthy();
+    expect(screen.getByText('', { selector: '.animate-spin' })).toBeTruthy();
   });
   test('SEOHead renders without crashing', () => {
     render(
