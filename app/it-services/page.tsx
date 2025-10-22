@@ -1,17 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 const ItServicesPage: React.FC = () => {
-  const features = [
-=======
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
-
-const ITServicesPage: React.FC = () => {
-  const itServices = [
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
-    {
+  const features = [    {
       icon: Brain,
       title: 'Advanced Technology',
       description: 'Cutting-edge solutions powered by the latest technology and AI.'

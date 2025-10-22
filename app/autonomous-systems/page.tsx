@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import { CheckCircle, Star, Bot, Cpu, BarChart } from 'lucide-react';
-
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
+// Icons imported but not used in current implementation
 const AutonomousSystemsPage: React.FC = () => {
   return (
     <>

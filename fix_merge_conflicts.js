@@ -5,72 +5,81 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const filesWithConflicts = [
-  'app/micro-saas/page.tsx',
-  'app/quantum-computing/page.tsx',
-  'app/status/page.tsx',
-  'app/it-infrastructure/page.tsx',
-  'app/it-support/page.tsx',
-  'app/iot-edge-computing/page.tsx',
-  'app/consultation/page.tsx',
-  'app/ai-cybersecurity/page.tsx',
-  'app/ar-vr-solutions/page.tsx',
-  'app/ai-sales-automation/page.tsx',
-  'app/ai-healthcare/page.tsx',
-  'app/ai-workflow-automation/page.tsx',
-  'app/ai-marketing/page.tsx',
-  'app/ai-data-analytics/page.tsx',
-  'app/ai-fintech/page.tsx',
-  'app/ai-data-visualization/page.tsx',
-  'app/autonomous-systems/page.tsx',
-  'app/ai-automation/page.tsx',
-  'app/ai-customer-support/page.tsx'
-];
-
+// Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    // Split by merge conflict markers
-    const parts = content.split(/^<<<<<<< HEAD$/m);
+    // Remove merge conflict markers and keep the HEAD version
+    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+\n/g, '$1');
     
-    if (parts.length === 1) {
-      console.log(`No conflicts found in ${filePath}`);
-      return;
-    }
+    // Remove any remaining merge conflict markers
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======\n/g, '');
+    content = content.replace(/>>>>>>> [a-f0-9]+\n/g, '');
     
-    let fixedContent = parts[0]; // Keep everything before the first conflict
+    // Clean up any duplicate imports
+    const lines = content.split('\n');
+    const seenImports = new Set();
+    const cleanedLines = [];
     
-    for (let i = 1; i < parts.length; i++) {
-      const conflictPart = parts[i];
-      const conflictSections = conflictPart.split(/^=======$/m);
-      
-      if (conflictSections.length === 2) {
-        // Keep the part after ======= (the incoming changes)
-        const afterEquals = conflictSections[1].split(/^>>>>>>>/m);
-        if (afterEquals.length > 0) {
-          fixedContent += afterEquals[0];
+    for (const line of lines) {
+      if (line.trim().startsWith('import ') && line.includes('from ')) {
+        const importKey = line.trim();
+        if (!seenImports.has(importKey)) {
+          seenImports.add(importKey);
+          cleanedLines.push(line);
         }
+      } else {
+        cleanedLines.push(line);
       }
     }
     
-    // Write the fixed content back
-    fs.writeFileSync(filePath, fixedContent);
-    console.log(`Fixed merge conflicts in ${filePath}`);
+    content = cleanedLines.join('\n');
     
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed merge conflicts in: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Fix all files
-filesWithConflicts.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath);
+// List of files with merge conflicts
+const filesToFix = [
+  'app/ai-content-generation/page.tsx',
+  'app/ai-customer-support/page.tsx',
+  'app/ai-data-visualization/page.tsx',
+  'app/ai-sales-automation/page.tsx',
+  'app/ai-services/page.tsx',
+  'app/autonomous-systems/page.tsx',
+  'app/business-intelligence/page.tsx',
+  'app/iot-edge-computing/page.tsx',
+  'app/it-infrastructure/page.tsx',
+  'app/it-services/page.tsx',
+  'app/micro-saas/page.tsx',
+  'app/components/Footer.tsx',
+  'app/components/GlobalErrorBoundary.tsx',
+  'app/components/PerformanceDashboard.tsx',
+  'app/hooks/useEnhancedPerformance.ts',
+  'app/hooks/usePerformanceOptimization.ts',
+  'app/utils/accessibilityChecker.ts',
+  'app/utils/accessibilityEnhancer.ts'
+];
+
+console.log('Fixing merge conflicts...');
+
+let fixedCount = 0;
+filesToFix.forEach(file => {
+  const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
-    fixMergeConflicts(fullPath);
+    if (fixMergeConflicts(fullPath)) {
+      fixedCount++;
+    }
   } else {
-    console.log(`File not found: ${fullPath}`);
+    console.log(`File not found: ${file}`);
   }
 });
 
-console.log('Merge conflict fixing completed!');
+console.log(`Fixed merge conflicts in ${fixedCount} files.`);

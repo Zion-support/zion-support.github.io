@@ -138,17 +138,9 @@ export class AccessibilityChecker {
       }
     }
     
-<<<<<<< HEAD
     return element.tagName.toLowerCase()
   }
 }
 
 // Export a singleton instance
 export const accessibilityChecker = new AccessibilityChecker()
-=======
-    return this.issues.map(issue => 
-      `${issue.severity}: ${issue.message} (${issue.wcagLevel})`
-    ).join('\n');
-  }
-}
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5

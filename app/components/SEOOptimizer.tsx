@@ -1,8 +1,12 @@
 'use client';
 import React from 'react';
 
-const SEOOptimizer: React.FC = () => {
-  return null; // This component only handles SEO, no UI
+interface SEOOptimizerProps {
+  children: React.ReactNode;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
+  return <>{children}</>; // Pass through children for now
 };
 
 export default SEOOptimizer;

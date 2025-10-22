@@ -1,9 +1,14 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
 
 const PerformanceDashboard: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -22,21 +27,20 @@ const PerformanceDashboard: React.FC = () => {
         : 0;
 
       // Measure render time
-      
-      
+      const renderTime = performance.now();
 
       // Measure memory usage
-      let _memoryUsage = 0;
+      let memoryUsage = 0;
       if ('memory' in performance) {
-        
+        const memory = (performance as any).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
 
       // Measure FPS (simplified)
-      let _fps = 0;
+      let fps = 0;
       if ('requestAnimationFrame' in window) {
-        let _lastTime = performance.now();
-        let _frameCount = 0;
+        let lastTime = performance.now();
+        let frameCount = 0;
         const measureFPS = (currentTime: number) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {
@@ -60,7 +64,7 @@ const PerformanceDashboard: React.FC = () => {
     updateMetrics();
 
     // Update metrics every 5 seconds
-    
+    const interval = setInterval(updateMetrics, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -69,17 +73,43 @@ const PerformanceDashboard: React.FC = () => {
     return (
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+        className="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-600 transition-colors"
       >
         Show Performance
       </button>
     );
   }
 
->>>>>>> bda5d40addebc09fc3c74601f15d6b21b20062c5
   return (
-    <div>
-      <h1>PerformanceDashboard</h1>
+    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 max-w-sm">
+      <div className="flex justify-between items-center mb-2">
+        <h3 className="text-lg font-semibold">Performance Metrics</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-500 hover:text-gray-700"
+        >
+          ×
+        </button>
+      </div>
+      
+      <div className="space-y-2 text-sm">
+        <div className="flex justify-between">
+          <span>Load Time:</span>
+          <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Render Time:</span>
+          <span className="font-mono">{metrics.renderTime.toFixed(2)}ms</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Memory Usage:</span>
+          <span className="font-mono">{(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</span>
+        </div>
+        <div className="flex justify-between">
+          <span>FPS:</span>
+          <span className="font-mono">{metrics.fps}</span>
+        </div>
+      </div>
     </div>
   );
 };
