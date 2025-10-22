@@ -1,4 +1,5 @@
 import React from 'react';
+
 interface ServicePageTemplateProps {
   className?: string;
   children?: React.ReactNode;
@@ -6,18 +7,15 @@ interface ServicePageTemplateProps {
   description?: string;
   keywords?: string;
   icon?: React.ComponentType<any>;
-  features?: string[];
-  technologies?: string[];
-  pricing?: {
-    basic: number;
-    pro: number;
-    enterprise: number;
-  };
+  features?: any[];
+  pricing?: any;
   benefits?: string[];
-  useCases?: string[];
-  technicalSpecs?: string[];
-  ctaText?: string;
+  useCases?: any[];
+  technologies?: string[];
+  contactInfo?: any;
   ctaLink?: string;
+  ctaText?: string;
+  technicalSpecs?: any[];
 }
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children, ...props }) => {
@@ -32,4 +30,5 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '
     </div>
   );
 };
+
 export default ServicePageTemplate;

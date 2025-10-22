@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface SEOOptimizerProps {
@@ -19,3 +20,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children, .
 };
 
 export default SEOOptimizer;
+

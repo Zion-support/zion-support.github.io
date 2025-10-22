@@ -19,3 +19,4 @@ const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '
 };
 
 export default GlobalErrorBoundary;
+

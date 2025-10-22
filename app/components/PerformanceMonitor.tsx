@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface PerformanceMonitorProps {
@@ -19,3 +20,4 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '',
 };
 
 export default PerformanceMonitor;
+

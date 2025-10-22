@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Layers } from 'lucide-react';
@@ -25,6 +26,7 @@ export default function AiSocialMediaManagerPage() {
             <Layers className="w-12 h-12 text-cyan-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
             <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
+
           </div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
@@ -40,7 +42,7 @@ export default function AiSocialMediaManagerPage() {
           </div>
         </div>
 
-<div className="text-center">
+        <div className="text-center">
           <p className="text-lg text-gray-300 mb-8">
             Ready to get started with ai social media manager?
           </p>
@@ -64,3 +66,4 @@ export default function AiSocialMediaManagerPage() {
     </div>
   );
 }
+

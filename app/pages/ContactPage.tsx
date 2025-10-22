@@ -1,4 +1,5 @@
 import React from 'react';
+
 interface ContactPageProps {
   className?: string;
   children?: React.ReactNode;
@@ -14,6 +15,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = '', children, ...
         </div>
       )}
     </div>
+
   );
 };
 

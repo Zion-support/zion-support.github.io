@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface SidebarProps {
@@ -16,8 +17,10 @@ const Sidebar: React.FC<SidebarProps> = ({ className = '', children, ...props })
           <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
       )}
+
     </div>
   );
 };
 
 export default Sidebar;
+

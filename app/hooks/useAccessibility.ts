@@ -1,3 +1,4 @@
+
 import { useCallback, useEffect, useRef } from 'react';
 
 interface AccessibilityOptions {
@@ -83,6 +84,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 
   // Detect keyboard usage
   const detectKeyboardUsage = useCallback(() => {
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         stateRef.current.isKeyboardUser = true;
@@ -334,3 +336,4 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 };
 
 export default useAccessibility;
+

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface NavigationProps {
@@ -15,6 +16,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children, ...pr
         </div>
       )}
     </div>
+
   );
 };
 

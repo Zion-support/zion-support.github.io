@@ -1,3 +1,4 @@
+
 // accessibility Enhancer
 export const accessibilityenhancer = {
   // Utility functions will be implemented here
@@ -7,3 +8,4 @@ export const accessibilityenhancer = {
 };
 
 export default accessibilityenhancer;
+

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -19,3 +20,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ className
 };
 
 export default AccessibilityEnhancer;
+

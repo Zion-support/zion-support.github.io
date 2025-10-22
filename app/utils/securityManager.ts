@@ -1,3 +1,4 @@
+
 // security Manager
 export const securitymanager = {
   // Utility functions will be implemented here
@@ -7,3 +8,4 @@ export const securitymanager = {
 };
 
 export default securitymanager;
+

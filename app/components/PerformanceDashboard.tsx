@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface PerformanceDashboardProps {
@@ -17,4 +18,5 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className =
     </div>
   );
 };
+
 export default PerformanceDashboard;

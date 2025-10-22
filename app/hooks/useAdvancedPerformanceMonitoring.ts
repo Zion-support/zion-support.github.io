@@ -1,28 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+interface UseAdvancedPerformanceMonitoringOptions {
+  enabled?: boolean;
+  threshold?: number;
 }
 
-interface UseAdvancedPerformanceMonitoringReturn {
-  metrics: PerformanceMetrics;
-  isMonitoring: boolean;
-  startMonitoring: () => void;
-  stopMonitoring: () => void;
-  resetMetrics: () => void;
-}
-
-export const useAdvancedPerformanceMonitoring = (): UseAdvancedPerformanceMonitoringReturn => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0,
-  });
-  const [isMonitoring, setIsMonitoring] = useState(false);
+export const useAdvancedPerformanceMonitoring = (options: UseAdvancedPerformanceMonitoringOptions = {}) => {
+  const [performance, setPerformance] = useState<number>(0);
 
   const startMonitoring = useCallback(() => {
     setIsMonitoring(true);
@@ -42,34 +26,32 @@ export const useAdvancedPerformanceMonitoring = (): UseAdvancedPerformanceMonito
   }, []);
 
   useEffect(() => {
-    if (!isMonitoring) return;
+    if (options.enabled !== false && typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        if (entries.length > 0) {
+          setPerformance(entries[0].duration);
+        }
+      });
+      
+      observer.observe({ entryTypes: ['measure'] });
+      
+      return () => observer.disconnect();
+    }
+    return undefined;
+  }, [options.enabled]);
 
-    const updateMetrics = () => {
-      const performance = window.performance;
-      if (performance) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-        
-        const memory = (performance as any).memory;
-        const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
-
-        setMetrics(prev => ({
-          ...prev,
-          loadTime,
-          memoryUsage,
-        }));
-      }
-    };
-
-    const interval = setInterval(updateMetrics, 1000);
-    return () => clearInterval(interval);
-  }, [isMonitoring]);
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
+    if (typeof window !== 'undefined' && 'performance' in window && window.performance.mark) {
+      window.performance.mark(name + '-start');
+      fn();
+      window.performance.mark(name + '-end');
+      window.performance.measure(name, name + '-start', name + '-end');
+    }
+  }, []);
 
   return {
-    metrics,
-    isMonitoring,
-    startMonitoring,
-    stopMonitoring,
-    resetMetrics,
+    performance,
+    measurePerformance
   };
 };

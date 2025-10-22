@@ -1,50 +1,50 @@
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Layers, CheckCircle, Clock, Star, Rocket, Sparkles } from 'lucide-react';
 import { useState } from 'react';
-import { 
-  ArrowRight, 
-  CheckCircleIcon, 
-  SparklesIcon 
-} from 'lucide-react';
 
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [isVisible] = useState(false);
+  const [billingCycle, setBillingCycle] = useState('monthly');
+
+  const CheckCircleIcon = CheckCircle;
+  const ClockIcon = Clock;
+  const StarIcon = Star;
+  const ArrowRightIcon = ArrowRight;
+  const RocketLaunchIcon = Rocket;
+  const SparklesIcon = Sparkles;
 
   const basicFeatures = [
-    'Basic AI Solutions',
-    'Email Support',
-    'Standard Templates',
-    'Basic Analytics'
+    'Basic AI integration',
+    'Standard support',
+    'Core functionality'
   ];
 
   const proFeatures = [
-    'Advanced AI Solutions',
-    'Priority Support',
-    'Custom Templates',
-    'Advanced Analytics',
-    'API Access'
+    'Advanced AI features',
+    'Priority support',
+    'Custom integrations'
   ];
 
   const enterpriseFeatures = [
-    'Enterprise AI Solutions',
-    '24/7 Dedicated Support',
-    'Custom Development',
-    'Advanced Analytics',
-    'Full API Access',
-    'Custom Integrations'
+    'Full AI suite',
+    '24/7 dedicated support',
+    'Custom development'
   ];
 
   const popularServices = [
-    { name: 'AI Chatbot', price: 99 },
-    { name: 'AI Content Generator', price: 149 },
-    { name: 'AI Analytics', price: 199 }
+    { id: 1, name: 'AI Solutions', price: 99, shortDescription: 'Advanced AI solutions', route: '/ai-solutions', demoUrl: '/demo/ai-solutions' },
+    { id: 2, name: 'Cloud Services', price: 149, shortDescription: 'Scalable cloud infrastructure', route: '/cloud-solutions', demoUrl: '/demo/cloud-solutions' },
+    { id: 3, name: 'Data Analytics', price: 199, shortDescription: 'Comprehensive data analytics', route: '/data-analytics', demoUrl: '/demo/data-analytics' }
   ];
 
   const getServicePricing = (service: any) => {
-    return billingCycle === 'yearly' ? service.price * 10 : service.price;
+    return billingCycle === 'monthly' ? service.price : service.price * 12 * 0.9;
   };
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Pricing | Zion Tech Group</title>
@@ -177,6 +177,9 @@ export default function PricingPage() {
           </div>
         </div>
 
+      </div>
+      <div className="scan-lines"></div>
+
         {/* Popular Services */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Popular Services</h2>
@@ -227,3 +230,4 @@ export default function PricingPage() {
     </div>
   );
 }
+

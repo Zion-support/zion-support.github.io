@@ -1,3 +1,4 @@
+
 export interface Service {
   id: string;
   title: string;
@@ -128,4 +129,3 @@ export const services: Service[] = [
   }
 ];
 
-export const servicesData = services;

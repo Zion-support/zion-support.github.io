@@ -1,4 +1,5 @@
 import React from 'react';
+
 interface EnhancedSEOHeadProps {
   className?: string;
   children?: React.ReactNode;
@@ -14,6 +15,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', child
         </div>
       )}
     </div>
+
   );
 };
 

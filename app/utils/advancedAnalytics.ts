@@ -1,3 +1,4 @@
+
 // advanced Analytics
 export const advancedanalytics = {
   // Utility functions will be implemented here
@@ -7,3 +8,4 @@ export const advancedanalytics = {
 };
 
 export default advancedanalytics;
+

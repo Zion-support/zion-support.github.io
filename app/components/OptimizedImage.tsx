@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface OptimizedImageProps {
@@ -14,6 +15,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', childre
           <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
       )}
+
     </div>
   );
 };

@@ -14,8 +14,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', childre
           <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
       )}
+
     </div>
   );
 };
 
 export default LoadingSpinner;
+

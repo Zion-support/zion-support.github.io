@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Layers } from 'lucide-react';
@@ -19,6 +20,7 @@ export default function AiSolutionsPage() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Professional ai solutions solutions for modern businesses.
           </p>
+
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -62,7 +64,7 @@ export default function AiSolutionsPage() {
           </div>
         </div>
       </div>
-      </div>
-    </>
+    </div>
   );
 }
+

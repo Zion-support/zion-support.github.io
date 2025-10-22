@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface LazyImageProps {
@@ -12,6 +13,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '', children, ...prop
         <div className="p-4">
           <h3 className="text-lg font-semibold text-white mb-2">LazyImage</h3>
           <p className="text-gray-300">This component is ready for implementation.</p>
+
         </div>
       )}
     </div>

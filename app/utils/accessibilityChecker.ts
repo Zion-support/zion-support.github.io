@@ -1,3 +1,4 @@
+
 // accessibility Checker
 export const accessibilitychecker = {
   // Utility functions will be implemented here
@@ -7,3 +8,4 @@ export const accessibilitychecker = {
 };
 
 export default accessibilitychecker;
+

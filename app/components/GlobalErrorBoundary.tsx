@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface GlobalErrorBoundaryProps {
@@ -17,4 +18,5 @@ const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '
     </div>
   );
 };
+
 export default GlobalErrorBoundary;
