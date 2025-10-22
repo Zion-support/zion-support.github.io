@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance enhancer utilities
 
 export function performanceEnhancer() {
@@ -25,3 +26,14 @@ export function performanceEnhancer() {
     }
   };
 }
+=======
+// performance Enhancer
+export const performanceenhancer = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('performance Enhancer initialized');
+  }
+};
+
+export default performanceenhancer;
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Accessibility checker utilities
 
 export function accessibilityChecker() {
@@ -25,3 +26,14 @@ export function accessibilityChecker() {
     }
   };
 }
+=======
+// accessibility Checker
+export const accessibilitychecker = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('accessibility Checker initialized');
+  }
+};
+
+export default accessibilitychecker;
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

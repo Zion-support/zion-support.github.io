@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Accessibility enhancer utilities
 
 export function accessibilityEnhancer() {
@@ -23,3 +24,14 @@ export function accessibilityEnhancer() {
     }
   };
 }
+=======
+// accessibility Enhancer
+export const accessibilityenhancer = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('accessibility Enhancer initialized');
+  }
+};
+
+export default accessibilityenhancer;
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

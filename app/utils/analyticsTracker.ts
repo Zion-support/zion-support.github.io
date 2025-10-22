@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Analytics tracker utilities
 
 export function analyticsTracker() {
@@ -13,3 +14,14 @@ export function analyticsTracker() {
     }
   };
 }
+=======
+// analytics Tracker
+export const analyticstracker = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('analytics Tracker initialized');
+  }
+};
+
+export default analyticstracker;
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Sitemap generator utilities
 
 export function sitemapGenerator() {
@@ -15,3 +16,14 @@ ${routes.map(route => `  <url>
     }
   };
 }
+=======
+// sitemap Generator
+export const sitemapgenerator = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('sitemap Generator initialized');
+  }
+};
+
+export default sitemapgenerator;
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

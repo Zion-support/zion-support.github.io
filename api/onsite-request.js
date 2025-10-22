@@ -32,6 +32,7 @@ export default async function handler(req, res) {
 
     // Add new request
     const newRequest = {
+<<<<<<< HEAD
       id: `onsite_${Date.now()}`,
       name,
       email,
@@ -40,6 +41,17 @@ export default async function handler(req, res) {
       message: message || 'No message provided',
       location: location || 'Not specified',
       createdAt: new Date().toISOString(),
+=======
+      id: Date.now().toString(),
+      name,
+      email,
+      company,
+      phone,
+      message,
+      serviceType,
+      preferredDate,
+      timestamp: new Date().toISOString(),
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
       status: 'pending'
     };
 
@@ -56,4 +68,8 @@ export default async function handler(req, res) {
     console.error('Onsite request error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

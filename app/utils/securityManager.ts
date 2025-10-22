@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Security manager utilities
 
 export function securityManager() {
@@ -15,3 +16,14 @@ export function securityManager() {
     }
   };
 }
+=======
+// security Manager
+export const securitymanager = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('security Manager initialized');
+  }
+};
+
+export default securitymanager;
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

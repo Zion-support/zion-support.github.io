@@ -27,4 +27,8 @@ export default async function handler(req, res) {
     console.error('Newsletter subscription error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyImageProps {
@@ -77,6 +78,22 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {hasError && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
           <span>Failed to load image</span>
+=======
+import React from 'react';
+
+interface LazyImageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LazyImage: React.FC<LazyImageProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`lazyimage-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">LazyImage</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
         </div>
       )}
     </div>

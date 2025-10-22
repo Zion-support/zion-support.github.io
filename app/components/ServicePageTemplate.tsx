@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import SEOHead from './SEOHead';
 import { CheckCircleIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -252,4 +253,25 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   );
 };
 
+=======
+
+interface ServicePageTemplateProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`servicepagetemplate-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">ServicePageTemplate</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
 export default ServicePageTemplate;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { handleError, logError, AppError } from '../utils/errorHandler';
 
@@ -98,12 +99,34 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
             </div>
           </div>
-        </div>
-      );
-    }
+=======
+import React from 'react';
 
+interface ErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`errorboundary-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">ErrorBoundary</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
+        </div>
+      )}
+    </div>
+  );
+};
+
+<<<<<<< HEAD
     return this.props.children;
   }
 }
 
 export default ErrorBoundary;
+=======
+export default ErrorBoundary;
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

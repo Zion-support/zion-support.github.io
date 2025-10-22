@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Advanced analytics utilities
 
 export function advancedAnalytics() {
@@ -13,3 +14,14 @@ export function advancedAnalytics() {
     }
   };
 }
+=======
+// advanced Analytics
+export const advancedanalytics = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('advanced Analytics initialized');
+  }
+};
+
+export default advancedanalytics;
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

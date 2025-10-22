@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Monitoring utilities
 
 export function monitoring() {
@@ -13,3 +14,14 @@ export function monitoring() {
     }
   };
 }
+=======
+// monitoring
+export const monitoring = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('monitoring initialized');
+  }
+};
+
+export default monitoring;
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

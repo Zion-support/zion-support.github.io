@@ -12,7 +12,11 @@ const withErrorLogging = (handler) => {
   };
 };
 
+<<<<<<< HEAD
 const handler = async (req, res) => {
+=======
+export default withErrorLogging(async (req, res) => {
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -42,6 +46,10 @@ const handler = async (req, res) => {
     console.error('Payment intent creation error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+<<<<<<< HEAD
 };
 
 export default withErrorLogging(handler);
+=======
+});
+>>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
