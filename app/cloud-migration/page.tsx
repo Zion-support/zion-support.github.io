@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import Footer from '../components/Footer';
+import { Brain, CheckCircle, Globe, Mail, Phone, Shield } from 'lucide-react';
 
 const CloudMigrationPage: React.FC = () => {
   const features = [

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Cloud, Server, Database, Shield, CheckCircle, Phone, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Cloud, Database, Mail, Phone, Server, Shield } from 'lucide-react';
 
 const CloudInfrastructurePage: React.FC = () => {
   const features = [

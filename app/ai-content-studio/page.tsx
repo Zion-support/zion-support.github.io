@@ -3,9 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
+import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const AiContentStudioPage: React.FC = () => {
   const features = [
