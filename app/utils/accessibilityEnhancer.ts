@@ -6,7 +6,6 @@
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = [];
   private skipLinks: HTMLElement[] = [];
-  private landmarks: HTMLElement[] = [];
   private isInitialized = false;
 
   constructor() {
@@ -20,7 +19,6 @@ export class AccessibilityEnhancer {
     if (this.isInitialized) return;
     
     this.setupFocusManagement();
-    this.setupKeyboardNavigation();
     this.setupSkipLinks();
     this.setupLandmarks();
     this.setupAriaLabels();
@@ -44,24 +42,6 @@ export class AccessibilityEnhancer {
     this.setupFocusTrapping();
   }
 
-  /**
-   * Update list of focusable elements
-   */
-  private updateFocusableElements(): void {
-    const selectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-      '[contenteditable="true"]'
-    ];
-    
-    this.focusableElements = Array.from(
-      document.querySelectorAll(selectors.join(', '))
-    ) as HTMLElement[];
-  }
 
   /**
    * Add focus indicators
@@ -120,16 +100,13 @@ export class AccessibilityEnhancer {
       this.focusableElements[nextIndex]?.focus();
     }
 
-    
-
     event.preventDefault();
-
   }
 
   /**
    * Handle escape key
    */
-  private handleEscapeKey(event: KeyboardEvent): void {
+  private handleEscapeKey(_event: KeyboardEvent): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {
@@ -272,7 +249,7 @@ export class AccessibilityEnhancer {
     // Add high contrast mode support
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     
-    const handleContrastChange = (e: MediaQueryListEvent) => {
+    const handleContrastChange = (e: MediaQueryListEvent | MediaQueryList) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
       } else {
@@ -324,8 +301,27 @@ export class AccessibilityEnhancer {
   /**
    * Update focusable elements (call when DOM changes)
    */
-  public updateFocusableElements(): void {
+  public refreshFocusableElements(): void {
     this.updateFocusableElements();
+  }
+
+  /**
+   * Update list of focusable elements (public method)
+   */
+  public updateFocusableElements(): void {
+    const selectors = [
+      'a[href]',
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+      '[contenteditable="true"]'
+    ];
+    
+    this.focusableElements = Array.from(
+      document.querySelectorAll(selectors.join(', '))
+    ) as HTMLElement[];
   }
 
   /**
@@ -356,7 +352,6 @@ export class AccessibilityEnhancer {
     this.isInitialized = false;
     this.focusableElements = [];
     this.skipLinks = [];
-    this.landmarks = [];
   }
 
 }
@@ -370,7 +365,7 @@ export const announceToScreenReader = (message: string) => {
 };
 
 export const updateFocusableElements = () => {
-  accessibilityEnhancer.updateFocusableElements();
+  accessibilityEnhancer.refreshFocusableElements();
 };
 
 export const focusFirstElement = () => {
