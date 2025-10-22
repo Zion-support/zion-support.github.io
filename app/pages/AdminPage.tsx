@@ -14,4 +14,4 @@ const AdminPage: React.FC<AdminPageProps> = ({ className = '' }) => {
   );
 };
 
-export default AdminPagePage;
+export default AdminPage;
