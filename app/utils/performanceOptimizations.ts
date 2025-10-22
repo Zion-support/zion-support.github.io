@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Performance optimizations utilities
 
 export function performanceOptimizations() {
@@ -26,14 +25,3 @@ export function performanceOptimizations() {
     }
   };
 }
-=======
-// performance Optimizations
-export const performanceoptimizations = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('performance Optimizations initialized');
-  }
-};
-
-export default performanceoptimizations;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

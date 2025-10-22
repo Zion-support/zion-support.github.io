@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const siteMetadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI solutions, micro SaaS applications, and comprehensive IT services. Transform your business with cutting-edge technology.',
@@ -38,20 +37,3 @@ export const siteMetadata = {
     creator: '@ziontechgroup'
   }
 };
-=======
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI solutions, cloud services, and IT consulting.',
-  keywords: ['AI', 'Cloud', 'IT Solutions', 'Technology'],
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Zion Tech Group',
-    description: 'Advanced AI and IT Solutions',
-    type: 'website',
-  },
-};
-
-export default metadata;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

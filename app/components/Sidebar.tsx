@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import {
@@ -237,30 +236,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-=======
-import React from 'react';
-
-interface SidebarProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`sidebar-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">Sidebar</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Sidebar;
-=======
-export default Sidebar;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

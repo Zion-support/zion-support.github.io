@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Performance optimization utilities
  */
@@ -183,14 +182,3 @@ export function performanceOptimizer() {
     addResourceHints,
   };
 }
-=======
-// performance Optimizer
-export const performanceoptimizer = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('performance Optimizer initialized');
-  }
-};
-
-export default performanceoptimizer;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

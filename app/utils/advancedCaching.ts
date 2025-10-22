@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Advanced caching utilities
 
 export function advancedCaching() {
@@ -19,14 +18,3 @@ export function advancedCaching() {
     }
   };
 }
-=======
-// advanced Caching
-export const advancedcaching = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('advanced Caching initialized');
-  }
-};
-
-export default advancedcaching;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

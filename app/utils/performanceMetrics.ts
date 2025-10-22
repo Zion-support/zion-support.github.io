@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Performance metrics utilities
 
 export function performanceMetrics() {
@@ -16,14 +15,3 @@ export function performanceMetrics() {
     }
   };
 }
-=======
-// performance Metrics
-export const performancemetrics = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('performance Metrics initialized');
-  }
-};
-
-export default performancemetrics;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

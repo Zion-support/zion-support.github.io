@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 const LoadingSpinner: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen" role="status" aria-live="polite">
@@ -11,28 +10,8 @@ const LoadingSpinner: React.FC = () => {
         </div>
       </div>
       <span className="sr-only">Loading content, please wait...</span>
-=======
-interface LoadingSpinnerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`loadingspinner-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">LoadingSpinner</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default LoadingSpinner;
-=======
-export default LoadingSpinner;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

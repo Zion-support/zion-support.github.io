@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Performance monitor hook
 
 export function usePerformanceMonitor() {
@@ -19,14 +18,3 @@ export function usePerformanceMonitor() {
     }
   };
 }
-=======
-// use Performance Monitor
-export const useperformancemonitor = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('use Performance Monitor initialized');
-  }
-};
-
-export default useperformancemonitor;
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442

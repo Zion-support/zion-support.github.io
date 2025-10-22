@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Layers, Link, ArrowRight } from 'lucide-react';
 
 const AIContentGeneratorPage: React.FC = () => {
   return (
@@ -33,28 +33,6 @@ const AIContentGeneratorPage: React.FC = () => {
               </p>
             </div>
           </div>
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Layers } from 'lucide-react';
-
-export default function AiContentGeneratorPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Ai Content Generator | Zion Tech Group</title>
-        <meta name="description" content="Professional ai content generator solutions for modern businesses." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-            Ai Content Generator
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ai content generator solutions for modern businesses.
-          </p>
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -100,10 +78,6 @@ export default function AiContentGeneratorPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 };
 
 export default AIContentGeneratorPage;
-=======
-}
->>>>>>> e8c0fc9337d69fc2277cc41f3d1f9a45a721f442
