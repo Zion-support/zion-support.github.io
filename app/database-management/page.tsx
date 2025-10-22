@@ -9,7 +9,7 @@ const DatabaseManagementPage: React.FC = () => {
       title: 'Advanced Technology',
       description: 'Cutting-edge solutions powered by the latest technology and AI.'
     },
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'    },    {
+    {
       icon: Zap,
       title: 'High Performance',
       description: 'Optimized for speed and efficiency with real-time processing capabilities.'
@@ -80,7 +80,9 @@ const DatabaseManagementPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>              ))}
+                  <p className="text-gray-300">{feature.description}
+              </p>
+            </div>              ))}
             </div>
           </div>
         </section>

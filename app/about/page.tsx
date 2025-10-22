@@ -63,7 +63,8 @@ const AboutPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View All Services
-              </a>            </div>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -85,11 +86,17 @@ const AboutPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>
+                  <p className="text-gray-300">{feature.description}
+              </p>
+            </div>
               ))}
             </div>
           </div>
         </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>

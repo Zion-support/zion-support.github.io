@@ -81,7 +81,9 @@ const TermsPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>                </div>
+                  <p className="text-gray-300">{feature.description}
+              </p>
+            </div>
               ))}
             </div>
           </div>
@@ -127,8 +129,13 @@ const TermsPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </a>            </div>
+              </a>
+            </div>
           </div>
-        </section>      </div>
+        </section>
+      </div>
+    </React.Fragment>
+  );
+};
 
 export default TermsPage;

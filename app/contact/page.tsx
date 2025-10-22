@@ -33,7 +33,7 @@ const ContactPage: React.FC = () => {
     '24/7 support',
     'Custom integrations'  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <React.Fragment>
       <Helmet>
         <title>Contact - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional contact solutions powered by advanced AI and cutting-edge technology." />
@@ -83,8 +83,9 @@ const ContactPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                  <p className="text-gray-300">{feature.description}
+              </p>
+            </div>
               ))}
             </div>
           </div>
@@ -134,7 +135,8 @@ const ContactPage: React.FC = () => {
               </a>
             </div>
           </div>
-        </section>      </div>
+        </section>
+      </div>
     </React.Fragment>
   );
 };
