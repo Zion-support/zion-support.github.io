@@ -1,8 +1,6 @@
 'use client';
 import { useEffect } from 'react';
 
-// Performance monitoring hook
-
 export const usePerformanceMonitor = () => {
   useEffect(() => {
     // Only run in browser environment
