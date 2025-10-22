@@ -22,42 +22,38 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ isVisible = fal
   });
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && isVisible) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            setMetrics(prev => ({
-              ...prev,
-              loadTime: navEntry.loadEventEnd - navEntry.loadEventStart,
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart
-            }));
-          }
+    // Monitor performance metrics
+    const updateMetrics = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paintEntries = performance.getEntriesByType('paint');
+        
+        setMetrics({
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
+          firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
         });
-      });
+      }
+    };
 
-      observer.observe({ entryTypes: ['navigation', 'paint'] });
-
-      return () => observer.disconnect();
-    }
-    return undefined;
-  }, [isVisible]);
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 1000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   if (!isVisible) return null;
 
   return (
-    <div className={`performance-monitor ${className}`}>
-      <div className="metrics-grid">
-        <div className="metric">
-          <span className="metric-label">Load Time:</span>
-          <span className="metric-value">{metrics.loadTime.toFixed(2)}ms</span>
+    <div className={`fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono ${className}`}>
+      <div className="mb-2 font-bold">Performance Metrics</div>
+      {Object.entries(metrics).map(([key, value]) => (
+        <div key={key} className="flex justify-between">
+          <span>{key}:</span>
+          <span>{typeof value === 'number' ? `${value.toFixed(2)}ms` : value}</span>
         </div>
-        <div className="metric">
-          <span className="metric-label">DOM Ready:</span>
-          <span className="metric-value">{metrics.domContentLoaded.toFixed(2)}ms</span>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

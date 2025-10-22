@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import '@testing-library/jest-dom';
 
-// Extend expect with jest-dom matchers
+// Extend Jest matchers
 declare global {
   namespace jest {
     interface Matchers<R> {
