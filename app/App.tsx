@@ -62,9 +62,8 @@ const ConsultationPage = lazy(() => import('./consultation/page'));
 // Loading component
 const AppLoadingSpinner = () => (
   <LoadingSpinner
-    size="xl"
-    text="Loading Zion Tech Group..."
-    fullScreen
+    size="lg"
+    className="min-h-screen flex items-center justify-center"
   />
 );
 
@@ -75,7 +74,9 @@ const App: React.FC = () => {
         <BrowserRouter>
           <div className="App">
             <PerformanceMonitor />
-            <AccessibilityEnhancer />
+            <AccessibilityEnhancer>
+              <div></div>
+            </AccessibilityEnhancer>
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
