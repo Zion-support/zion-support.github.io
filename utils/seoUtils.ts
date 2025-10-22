@@ -45,7 +45,6 @@ export const seoUtils = {
       priority: page.priority || 0.8
     }));
   },
-
   // Validate SEO props
   validateSEOProps: (props: SEOProps): string[] => {
     const errors: string[] = [];

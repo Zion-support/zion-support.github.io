@@ -12,104 +12,35 @@ export interface SEOProps {
   nofollow?: boolean;
 }
 
-export const seoUtils = {
-  // Generate meta tags
-  generateMetaTags: (props: SEOProps) => {
-    const {
-      title = 'Zion Tech Group - Advanced AI and IT Solutions',
-      description = 'Leading provider of AI and IT solutions for businesses. Expert consulting, development, and implementation services.',
-      keywords = ['AI', 'IT solutions', 'technology', 'consulting', 'development'],
-      canonical,
-      ogImage = '/images/og-image.jpg',
-      ogType = 'website',
-      twitterCard = 'summary_large_image',
-      noindex = false,
-      nofollow = false
-    } = props;
+export const seoConstants = {
+  defaultTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+  defaultDescription: 'Leading provider of AI and IT solutions for businesses. Expert consulting, development, and implementation services.',
+  defaultKeywords: ['AI', 'IT solutions', 'technology', 'consulting', 'development'],
+  defaultOgImage: '/images/og-image.jpg',
+  defaultOgType: 'website',
+  defaultTwitterCard: 'summary_large_image',
+  baseUrl: process.env.REACT_APP_BASE_URL || 'https://ziontechgroup.com'
+};
 
-    const metaTags = [
-      { name: 'description', content: description },
-      { name: 'keywords', content: keywords.join(', ') },
-      { property: 'og:title', content: title },
-      { property: 'og:description', content: description },
-      { property: 'og:image', content: ogImage },
-      { property: 'og:type', content: ogType },
-      { name: 'twitter:card', content: twitterCard },
-      { name: 'twitter:title', content: title },
-      { name: 'twitter:description', content: description },
-      { name: 'twitter:image', content: ogImage }
-    ];
-
-    if (canonical) {
-      metaTags.push({ name: 'canonical', content: canonical });
-    }
-
-    if (noindex) {
-      metaTags.push({ name: 'robots', content: 'noindex' });
-    }
-
-    if (nofollow) {
-      metaTags.push({ name: 'robots', content: 'nofollow' });
-    }
-
-    return metaTags;
+export const pageSEOData: Record<string, SEOProps> = {
+  home: {
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI and IT solutions for businesses. Expert consulting, development, and implementation services.',
+    keywords: ['AI', 'IT solutions', 'technology', 'consulting', 'development', 'artificial intelligence']
   },
-
-  // Generate structured data
-  generateStructuredData: (props: SEOProps) => {
-    const {
-      title = 'Zion Tech Group - Advanced AI and IT Solutions',
-      description = 'Leading provider of AI and IT solutions for businesses. Expert consulting, development, and implementation services.'
-    } = props;
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description,
-      url: 'https://zion.app',
-      logo: 'https://zion.app/images/logo.png',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      },
-      sameAs: [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/zion-tech-group'
-      ]
-    };
+  about: {
+    title: 'About Us - Zion Tech Group',
+    description: 'Learn about Zion Tech Group\'s mission, team, and expertise in AI and IT solutions.',
+    keywords: ['about', 'company', 'team', 'mission', 'expertise']
   },
-
-  // Generate breadcrumb structured data
-  generateBreadcrumbData: (breadcrumbs: Array<{ name: string; url: string }>) => {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((crumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: crumb.name,
-        item: `https://zion.app${crumb.url}`
-      }))
-    };
+  services: {
+    title: 'Our Services - AI and IT Solutions',
+    description: 'Comprehensive AI and IT services including consulting, development, and implementation.',
+    keywords: ['services', 'AI consulting', 'IT development', 'implementation', 'solutions']
   },
-
-  // Generate FAQ structured data
-  generateFAQData: (faqs: Array<{ question: string; answer: string }>) => {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faqs.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    };
+  contact: {
+    title: 'Contact Us - Zion Tech Group',
+    description: 'Get in touch with our team for AI and IT solutions. Contact information and inquiry form.',
+    keywords: ['contact', 'get in touch', 'inquiry', 'support']
   }
 };
