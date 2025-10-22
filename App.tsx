@@ -170,7 +170,7 @@ const AICustomerFeedbackAnalyzerPage = lazy(() => import('./app/ai-customer-feed
 const AIInventoryOptimizerProPage = lazy(() => import('./app/ai-inventory-optimizer-pro/page'));
 const AILegalDocumentAnalyzerPage = lazy(() => import('./app/ai-legal-document-analyzer/page'));
 
-  // New IT Solutions
+// New IT Solutions
 
 // New AI Medical Services
 const AIMedicalDiagnosisAssistantPage = lazy(() => import('./app/ai-medical-diagnosis-assistant/page'));
