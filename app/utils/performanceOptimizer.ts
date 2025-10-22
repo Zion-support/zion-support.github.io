@@ -22,7 +22,7 @@ interface OptimizationConfig {
   enableCompression: boolean;
 }
 
-interface PerformanceConfig extends OptimizationConfig {}
+type PerformanceConfig = OptimizationConfig;
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
@@ -42,7 +42,6 @@ class PerformanceOptimizer {
   };
 
   private observers: PerformanceObserver[] = [];
-  private isMonitoring: boolean = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
     this.config = { ...this.config, ...config };
@@ -63,6 +62,14 @@ class PerformanceOptimizer {
 
     // Monitor render performance
     this.measureRenderTime();
+    
+    // Initialize Core Web Vitals monitoring
+    this.observeLCP();
+    this.observeFID();
+    this.observeCLS();
+    this.observeFCP();
+    this.observeTTFB();
+    this.observeMemory();
   }
 
   /**
@@ -191,7 +198,7 @@ class PerformanceOptimizer {
 
       observer.observe({ entryTypes: ['measure'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch {
       // PerformanceObserver may not support 'measure' entryType in some environments
     }
   }
@@ -396,10 +403,10 @@ class PerformanceOptimizer {
     console.log('Web Vitals reported', metrics);
     
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+    if (typeof window !== 'undefined' && (window as { gtag?: (...args: unknown[]) => void }).gtag) {
       Object.entries(metrics).forEach(([key, value]) => {
         if (typeof value === 'number') {
-          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+          (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'web_vitals', {
             metric_name: key,
             metric_value: value,
             metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
@@ -450,7 +457,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-    this.isMonitoring = false;
   }
 }
 
