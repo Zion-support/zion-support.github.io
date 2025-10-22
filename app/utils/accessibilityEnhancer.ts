@@ -29,7 +29,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
 
   const _enhancerRef = useRef<any>({})
 
-  // Define all handler functions first
+  // Event handlers
   const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
     if (event.key === 'Tab') {
       // Handle tab navigation
@@ -76,7 +76,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     target.classList.remove('touch-active')
   }, [])
 
-  // Define all setup functions
+  // Setup functions
   const setupKeyboardNavigation = useCallback(() => {
     document.addEventListener('keydown', handleKeyboardNavigation)
   }, [handleKeyboardNavigation])
@@ -200,19 +200,18 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       ariaLabels: enableARIALabels
     }
   }, [
-    enableARIALabels,
-    enableColorContrast,
-    enableFocusManagement,
-    enableHighContrast,
     enableKeyboardNavigation,
-    enableMotionReduction,
     enableScreenReader,
+    enableFocusManagement,
+    enableColorContrast,
     enableTextScaling,
+    enableMotionReduction,
+    enableHighContrast,
+    enableVoiceControl,
     enableTouchAccessibility,
-    enableVoiceControl
+    enableARIALabels
   ])
 
-  // Now the useEffect that uses all the functions
   useEffect(() => {
     if (enableKeyboardNavigation) {
       setupKeyboardNavigation()
@@ -283,6 +282,15 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
 
   return {
     getAccessibilityStatus,
-    _enhancerRef
+    setupKeyboardNavigation,
+    setupScreenReaderSupport,
+    setupFocusManagement,
+    setupColorContrast,
+    setupTextScaling,
+    setupMotionReduction,
+    setupHighContrast,
+    setupVoiceControl,
+    setupTouchAccessibility,
+    setupARIALabels
   }
 }
