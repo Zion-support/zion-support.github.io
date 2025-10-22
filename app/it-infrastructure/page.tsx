@@ -40,3 +40,8 @@ const ItInfrastructurePage: React.FC = () => {
         </div>
       </div>
     </>
+
+  );
+};
+
+export default ItInfrastructurePage;
