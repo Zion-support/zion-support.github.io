@@ -2,8 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Footer from '../components/Footer';
-import { Database, Brain, Phone, Mail, Zap, Shield, Globe } from 'lucide-react';
-import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
+import { Database, Brain, Phone, Mail, BarChart, TrendingUp } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 
 const BusinessIntelligencePage: React.FC = () => {
