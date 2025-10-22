@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, memo } from 'react';
+import { Suspense, lazy, useEffect, memo, useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
@@ -206,7 +206,8 @@ const LoadingFallback = () => (
 );
 
 const App = memo(() => {
-  // Sidebar state removed as it's not used
+  // Sidebar state
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Initialize performance optimizations
   usePerformanceOptimization({
@@ -217,6 +218,10 @@ const App = memo(() => {
     enableCaching: true,
     enableBundleAnalysis: process.env.NODE_ENV === 'development'
   });
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
   useEffect(() => {
     // Register service worker
@@ -268,7 +273,7 @@ const App = memo(() => {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />
-            <Sidebar />
+            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
             
             <main className="flex-1">
               <ErrorBoundary>
