@@ -1,40 +1,28 @@
-
-import React from 'react'
-interface ErrorBoundaryProps {
-  className?: string
-  children?: React.ReactNode
-}
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`errorboundary-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">ErrorBoundary</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  )
-}
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
+
 interface Props {
   children: ReactNode
 }
+
 interface State {
   hasError: boolean
   error?: Error
 }
+
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
   }
+
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
+
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Uncaught error:', error, errorInfo)
   }
+
   public render() {
     if (this.state.hasError) {
       return (
@@ -52,7 +40,9 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       )
     }
+
     return this.props.children
   }
 }
+
 export default ErrorBoundary

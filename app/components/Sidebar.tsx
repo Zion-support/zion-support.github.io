@@ -1,24 +1,3 @@
-
-import React from 'react'
-interface SidebarProps {
-  className?: string
-  children?: React.ReactNode
-  isOpen?: boolean
-  onClose?: () => void
-}
-const Sidebar: React.FC<SidebarProps> = ({ className = '', children, ...props }) => {
-  return (
-    <div className={`sidebar-component ${className}`} {...props}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-white mb-2">Sidebar</h3>
-          <p className="text-gray-300">This component is ready for implementation.</p>
-        </div>
-      )}
-    </div>
-  )
-}
-export default Sidebar
 'use client'
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
@@ -37,10 +16,12 @@ import {
   ChevronDown,
   ChevronRight
 } from 'lucide-react'
+
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [expandedSections, setExpandedSections] = useState<string[]>([])
   const location = useLocation()
+
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
       prev.includes(section)
@@ -48,159 +29,159 @@ const Sidebar: React.FC = () => {
         : [...prev, section]
     )
   }
+
   const navigationItems = [
     {
-      name: 'Dashboard',
+      name: 'Home',
       href: '/',
-      icon: Home,
-      current: location.pathname === '/'
+      icon: Home
     },
     {
-      name: 'AI Services',
+      name: 'AI Solutions',
+      href: '/ai-solutions',
       icon: Brain,
       children: [
-        { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { name: 'AI Customer Support', href: '/ai-customer-support' },
-        { name: 'AI Marketing Automation', href: '/ai-marketing' },
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' }
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Video Generator', href: '/ai-video-generator' },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant' }
       ]
     },
     {
       name: 'IT Services',
+      href: '/it-services',
       icon: Code,
       children: [
-        { name: 'Web Development', href: '/web-development' },
-        { name: 'Mobile Development', href: '/mobile-development' },
-        { name: 'Cloud Solutions', href: '/cloud-services' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'DevOps & CI/CD', href: '/devops' },
-        { name: 'Database Management', href: '/database' }
+        { name: 'API Development', href: '/api-development' },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+        { name: 'Cybersecurity', href: '/cybersecurity' }
       ]
     },
     {
-      name: 'Micro SaaS',
-      icon: Zap,
-      children: [
-        { name: 'Lead Generation', href: '/micro-saas/lead-scoring' },
-        { name: 'Email Marketing', href: '/micro-saas/email-marketing' },
-        { name: 'Analytics Dashboard', href: '/micro-saas/analytics-dashboard' },
-        { name: 'Content Generator', href: '/micro-saas/content-generator' },
-        { name: 'Appointment Scheduler', href: '/micro-saas/appointment-scheduler' },
-        { name: 'Support Bot', href: '/micro-saas/support-bot' }
-      ]
+      name: 'About',
+      href: '/about',
+      icon: Users
     },
     {
-      name: 'Analytics',
-      href: '/analytics',
-      icon: BarChart,
-      current: location.pathname === '/analytics'
-    },
-    {
-      name: 'Settings',
-      href: '/settings',
-      icon: Settings,
-      current: location.pathname === '/settings'
+      name: 'Contact',
+      href: '/contact',
+      icon: Settings
     }
   ]
+
+  const renderNavigationItem = (item: any) => {
+    const isActive = location.pathname === item.href
+    const hasChildren = item.children && item.children.length > 0
+    const isExpanded = expandedSections.includes(item.name)
+
+    return (
+      <div key={item.name}>
+        <div
+          className={`flex items-center justify-between p-3 rounded-lg transition-colors ${
+            isActive
+              ? 'bg-cyan-500/20 text-cyan-400'
+              : 'text-gray-300 hover:bg-slate-700/50'
+          }`}
+        >
+          <Link
+            to={item.href}
+            className="flex items-center space-x-3 flex-1"
+            onClick={() => !hasChildren && setIsOpen(false)}
+          >
+            <item.icon className="w-5 h-5" />
+            <span className="font-medium">{item.name}</span>
+          </Link>
+          {hasChildren && (
+            <button
+              onClick={() => toggleSection(item.name)}
+              className="p-1 hover:bg-slate-600 rounded"
+            >
+              {isExpanded ? (
+                <ChevronDown className="w-4 h-4" />
+              ) : (
+                <ChevronRight className="w-4 h-4" />
+              )}
+            </button>
+          )}
+        </div>
+        {hasChildren && isExpanded && (
+          <div className="ml-6 mt-2 space-y-1">
+            {item.children.map((child: any) => {
+              const isChildActive = location.pathname === child.href
+              return (
+                <Link
+                  key={child.name}
+                  to={child.href}
+                  className={`block p-2 rounded-lg text-sm transition-colors ${
+                    isChildActive
+                      ? 'bg-cyan-500/20 text-cyan-400'
+                      : 'text-gray-400 hover:bg-slate-700/50 hover:text-white'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {child.name}
+                </Link>
+              )
+            })}
+          </div>
+        )}
+      </div>
+    )
+  }
+
   return (
     <>
       {/* Mobile menu button */}
-      <div className="lg:hidden fixed top-4 left-4 z-50">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="p-2 rounded-md bg-white shadow-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-        >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
-      </div>
-      {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}>
-        <div className="flex flex-col h-full">
-          {/* Logo */}
-          <div className="flex items-center justify-center h-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
-            <div className="flex items-center space-x-2">
-              <Brain className="w-8 h-8 text-white" />
-              <span className="text-xl font-bold text-white">Zion Tech</span>
-            </div>
-          </div>
-          {/* Navigation */}
-          <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
-            {navigationItems.map((item) => (
-              <div key={item.name}>
-                {item.href ? (
-                  <Link
-                    to={item.href}
-                    className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      item.current
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <item.icon className="w-5 h-5 mr-3" />
-                    {item.name}
-                  </Link>
-                ) : (
-                  <div>
-                    <button
-                      onClick={() => toggleSection(item.name)}
-                      className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900"
-                    >
-                      <div className="flex items-center">
-                        <item.icon className="w-5 h-5 mr-3" />
-                        {item.name}
-                      </div>
-                      {expandedSections.includes(item.name) ? (
-                        <ChevronDown className="w-4 h-4" />
-                      ) : (
-                        <ChevronRight className="w-4 h-4" />
-                      )}
-                    </button>
-                    {expandedSections.includes(item.name) && item.children && (
-                      <div className="ml-6 mt-1 space-y-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            to={child.href}
-                            className="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-          {/* User section */}
-          <div className="px-4 py-4 border-t border-gray-200">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
-                <Users className="w-5 h-5 text-gray-600" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-900 truncate">Admin User</p>
-                <p className="text-xs text-gray-500 truncate">admin@ziontech.com</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Overlay for mobile */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-slate-800 text-white rounded-lg shadow-lg"
+      >
+        <Menu className="w-6 h-6" />
+      </button>
+
+      {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-30 bg-black bg-opacity-50 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full w-80 bg-slate-900 border-r border-slate-700 z-50 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        } lg:translate-x-0 lg:static lg:z-auto`}
+      >
+        <div className="flex items-center justify-between p-6 border-b border-slate-700">
+          <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="lg:hidden p-2 hover:bg-slate-700 rounded-lg"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <nav className="p-6 space-y-2">
+          {navigationItems.map(renderNavigationItem)}
+        </nav>
+
+        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-slate-700">
+          <div className="text-center">
+            <p className="text-sm text-gray-400 mb-2">Need help?</p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
+
 export default Sidebar
