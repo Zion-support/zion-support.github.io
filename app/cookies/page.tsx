@@ -24,7 +24,7 @@ const CookiesPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }  ];
+  ];
 
   const benefits = [
     'AI-powered automation',
@@ -32,7 +32,8 @@ const CookiesPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
   return (
     <React.Fragment>
       <Helmet>

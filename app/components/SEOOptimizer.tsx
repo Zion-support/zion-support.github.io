@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 interface SEOOptimizerProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  canonicalUrl?: string
-  ogImage?: string
-  structuredData?: Record<string, unknown>
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  structuredData?: Record<string, unknown>;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -154,6 +155,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     document.head.appendChild(faqScript)
     
-  }, [title, description, canonicalUrl, structuredData])
+  }, [title, description, canonicalUrl, structuredData]);
+
+  return null;
+};
 
 export default SEOOptimizer;

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
+
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
@@ -24,7 +25,7 @@ const AiChatbotBuilderPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'    }  ];
+  ];
 
   const benefits = [
     'AI-powered automation',

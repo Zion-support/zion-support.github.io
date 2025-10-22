@@ -31,7 +31,8 @@ const ServicesPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

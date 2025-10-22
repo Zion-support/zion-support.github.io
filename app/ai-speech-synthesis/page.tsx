@@ -33,7 +33,8 @@ const AiSpeechSynthesisPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
   return (
     <React.Fragment>
       <Helmet>

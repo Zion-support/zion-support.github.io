@@ -30,7 +30,8 @@ const TermsPage: React.FC = () => {
     'Scalable solutions',
     'Enterprise-grade security',
     '24/7 support',
-    'Custom integrations'  ];
+    'Custom integrations'
+  ];
 
   return (
     <React.Fragment>
@@ -129,6 +130,10 @@ const TermsPage: React.FC = () => {
                 Learn More
               </a>            </div>
           </div>
-        </section>      </div>
+        </section>
+      </div>
+    </React.Fragment>
+  );
+};
 
 export default TermsPage;
