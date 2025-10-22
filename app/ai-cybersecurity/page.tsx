@@ -7,7 +7,6 @@ const AiCybersecurityPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Cybersecurity Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Protect your digital assets with AI-powered cybersecurity solutions and threat detection systems." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-pink-100">
@@ -34,18 +33,7 @@ const AiCybersecurityPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Automated Response</h3>
               <p className="text-gray-600">Automatically respond to security incidents and mitigate threats.</p>
             </div>
-          </div>
-=======
-        <meta name="description" content="Protect your digital assets with AI-powered cybersecurity solutions, threat detection, and automated response systems." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">AI Cybersecurity Solutions</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Protect your digital assets with AI-powered threat detection and automated cybersecurity solutions.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
-        </div>
+          </div>        </div>
       </div>
     </>
   );

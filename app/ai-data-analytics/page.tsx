@@ -7,7 +7,6 @@ const AiDataAnalyticsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Data Analytics - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Transform your data into actionable insights with AI-powered analytics and machine learning solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100">
@@ -34,18 +33,7 @@ const AiDataAnalyticsPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Data Visualization</h3>
               <p className="text-gray-600">Create interactive dashboards and visualizations for better understanding.</p>
             </div>
-          </div>
-=======
-        <meta name="description" content="Unlock insights from your data with AI-powered analytics, predictive modeling, and business intelligence solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">AI Data Analytics</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Unlock powerful insights from your data with AI-powered analytics and predictive modeling solutions.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
-        </div>
+          </div>        </div>
       </div>
     </>
   );

@@ -7,7 +7,6 @@ const ItInfrastructurePage: React.FC = () => {
     <>
       <Helmet>
         <title>IT Infrastructure Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Build robust, scalable IT infrastructure with our comprehensive technology solutions and support services." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100">
@@ -34,18 +33,7 @@ const ItInfrastructurePage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Cloud Migration</h3>
               <p className="text-gray-600">Seamlessly migrate your infrastructure to cloud platforms.</p>
             </div>
-          </div>
-=======
-        <meta name="description" content="Build robust and scalable IT infrastructure with our comprehensive technology solutions and expert support." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8">IT Infrastructure Solutions</h1>
-          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Build robust and scalable IT infrastructure with our comprehensive technology solutions.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b63b
-        </div>
+          </div>        </div>
       </div>
     </>
   );
