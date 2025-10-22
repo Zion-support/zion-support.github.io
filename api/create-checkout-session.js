@@ -20,7 +20,7 @@ export default withErrorLogging(async (req, res) => {
   try {
     const { 
       priceId, 
-      // quantity = 1, // Removed unused variable 
+      // quantity = 1, // Removed unused variable
       successUrl, 
       cancelUrl,
       customerEmail 

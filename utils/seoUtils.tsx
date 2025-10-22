@@ -75,5 +75,5 @@ export const StructuredData: React.FC<{ type: 'organization' | 'website' | 'arti
 
 // Default SEO component
 export const DefaultSEO: React.FC<SEOProps> = (props) => {
-  return seoUtils.generateMetaTags(props);
+  return <SEOHead {...props} />;
 };
