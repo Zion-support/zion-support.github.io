@@ -61,7 +61,7 @@ const AboutPage: React.FC = () => {
               <a
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
+                View All Services</a>
             </div>
           </div>
         </section>
@@ -89,6 +89,10 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -105,6 +109,7 @@ const AboutPage: React.FC = () => {
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
+              </a>
             </div>
           </div>
         </section>

@@ -33,7 +33,7 @@ const CaseStudiesPage: React.FC = () => {
     '24/7 support',
     'Custom integrations'  ];
   return (
-    <div className="min-h-screen bg-gray-50">
+    <React.Fragment>
       <Helmet>
         <title>Case Studies - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Professional case studies solutions powered by advanced AI and cutting-edge technology." />
@@ -56,10 +56,8 @@ const CaseStudiesPage: React.FC = () => {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Get Started
               </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
+              <a href="/services"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">View All Services</a>
             </div>
           </div>
         </section>
@@ -123,13 +121,14 @@ const CaseStudiesPage: React.FC = () => {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Start Your Project
               </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
+              <a href="/services"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">Learn More</a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+    </React.Fragment>
+  );
+};
 
 export default CaseStudiesPage;
