@@ -35,7 +35,7 @@
       "@/types/*": ["./app/types/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "types/**/*.d.ts"],
   "exclude": [
     "node_modules",
     "dist",
@@ -49,6 +49,6 @@
     "src/**",
     "scripts/**",
     "**/*.cjs",
-    "**/*.js"
+    "__tests__/**"
   ]
 }
