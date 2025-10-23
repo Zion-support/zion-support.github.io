@@ -1,4 +1,5 @@
 import React from 'react';
+import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Camera, Palette, Video, Music, Calendar, Code, Bot, Helmet, MapPin, Check } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [

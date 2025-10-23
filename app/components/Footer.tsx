@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-
+import { Phone, Mail, ArrowRight, Brain, Bot, MapPin } from 'lucide-react';
 import Link from "next/link";
-import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
   const aiServices = [

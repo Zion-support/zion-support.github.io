@@ -1,4 +1,5 @@
 import React from 'react';
+import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

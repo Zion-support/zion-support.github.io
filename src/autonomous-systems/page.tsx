@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { CheckCircle, Star, Bot, Cpu, BarChart, Check } from 'lucide-react';
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [

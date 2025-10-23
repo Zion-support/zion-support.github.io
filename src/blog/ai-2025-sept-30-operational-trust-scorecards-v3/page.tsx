@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'lucide-react';
 
 const OperationalTrustScorecardsPage: React.FC = () => {
   return (

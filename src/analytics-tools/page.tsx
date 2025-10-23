@@ -1,4 +1,5 @@
 import React from 'react';
+import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, BarChart, Helmet, MapPin, Check } from 'lucide-react';
 
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [

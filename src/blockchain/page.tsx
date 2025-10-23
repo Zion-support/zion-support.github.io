@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Coins } from 'lucide-react';
+import { Coins, CheckCircle, Star, Brain, Zap, Shield, Target, Code, Cpu, BarChart, Helmet, Check } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
     {

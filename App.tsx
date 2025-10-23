@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';import { Helmet } from 'lucide-react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -152,7 +153,7 @@ function App() {
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">
                       <div className="text-center">
                         <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                        <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
                         <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
                           Go Home
                         </a>

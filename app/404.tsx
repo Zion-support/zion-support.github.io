@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const 404Page: React.FC = () => {
   const features = [
@@ -144,4 +144,4 @@ const 404Page: React.FC = () => {
   );
 };
 
-export default 404Page;
+export default NotFoundPage;

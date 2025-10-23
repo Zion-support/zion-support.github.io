@@ -1,3 +1,4 @@
+import { Phone, Code } from 'lucide-react';
 
 export default function NotFound() {
   const popularPages = [

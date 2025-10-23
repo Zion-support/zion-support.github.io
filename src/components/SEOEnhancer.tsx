@@ -1,4 +1,5 @@
 import React from 'react';
+import { Code, Helmet } from 'lucide-react';
 
 interface SEOEnhancerProps {
   title?: string;

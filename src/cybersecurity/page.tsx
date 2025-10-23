@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Lock } from 'lucide-react';
+import { Lock, CheckCircle, Star, Shield, Globe, Database, Helmet, Eye, Check } from 'lucide-react';
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
     {
