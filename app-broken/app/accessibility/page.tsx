@@ -142,52 +142,52 @@ const AccessibilityPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <section className=&quot;relative py-20 overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20&quot;></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;></div>
+          <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
             Accessibility
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
             We are committed to making our AI solutions accessible to everyone, regardless of ability
           </p>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className=&quot;py-16 bg-white/5&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
               Accessibility Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
               Our comprehensive accessibility features ensure everyone can use our AI solutions
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;></div>
             {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-white" />
+              <div key={index} className=&quot;cyber-card p-8 hover:scale-105 transition-all duration-300&quot;></div>
+                <div className=&quot;flex items-start space-x-4 mb-6&quot;></div>
+                  <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0&quot;></div>
+                    <feature.icon className=&quot;w-6 h-6 text-white&quot; />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
+                  <div></div>
+                    <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{feature.title}</h3>
+                    <p className=&quot;text-gray-300&quot;>{feature.description}</p>
                   </div>
                 </div>
 
-                <ul className="space-y-2">
+                <ul className=&quot;space-y-2&quot;>
                   {feature.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    <li key={detailIndex} className=&quot;flex items-center space-x-2 text-sm text-gray-300&quot;>
+                      <CheckCircle className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -199,26 +199,26 @@ const AccessibilityPage: React.FC = () => {
       </section>
 
       {/* Standards Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className=&quot;py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
               Compliance Standards
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
               We meet and exceed international accessibility standards
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
             {standards.map((standard, index) => (
-              <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <div className="flex items-center justify-center mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-400 mr-2" />
-                  <span className="text-green-400 font-bold">{standard.status}</span>
+              <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
+                <div className=&quot;flex items-center justify-center mb-4&quot;></div>
+                  <CheckCircle className=&quot;w-8 h-8 text-green-400 mr-2&quot; />
+                  <span className=&quot;text-green-400 font-bold&quot;>{standard.status}</span>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{standard.name}</h3>
-                <p className="text-gray-300 text-sm">{standard.description}</p>
+                <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>{standard.name}</h3>
+                <p className=&quot;text-gray-300 text-sm&quot;>{standard.description}</p>
               </div>
             ))}
           </div>
@@ -226,25 +226,25 @@ const AccessibilityPage: React.FC = () => {
       </section>
 
       {/* Tools Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className=&quot;py-16 bg-white/5&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
               Supported Technologies
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
               Our solutions work with a wide range of assistive technologies
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
             {tools.map((tool, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <tool.icon className="w-8 h-8 text-white" />
+              <div key={index} className=&quot;text-center&quot;></div>
+                <div className=&quot;w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6&quot;></div>
+                  <tool.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
-                <p className="text-gray-300">{tool.description}</p>
+                <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{tool.title}</h3>
+                <p className=&quot;text-gray-300&quot;>{tool.description}</p>
               </div>
             ))}
           </div>
@@ -252,25 +252,25 @@ const AccessibilityPage: React.FC = () => {
       </section>
 
       {/* Commitments Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className=&quot;py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
               Our Accessibility Commitments
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
               We are committed to creating an inclusive digital experience for all users
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
             {commitments.map((commitment, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <commitment.icon className="w-8 h-8 text-white" />
+              <div key={index} className=&quot;text-center&quot;></div>
+                <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6&quot;></div>
+                  <commitment.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{commitment.title}</h3>
-                <p className="text-gray-300">{commitment.description}</p>
+                <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{commitment.title}</h3>
+                <p className=&quot;text-gray-300&quot;>{commitment.description}</p>
               </div>
             ))}
           </div>
@@ -278,20 +278,20 @@ const AccessibilityPage: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className=&quot;py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;></div>
+          <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>
             Accessibility Support
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
             Need help with accessibility features or have suggestions for improvement? We're here to help.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <button className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;>
               Contact Accessibility Team
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+            <button className=&quot;border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;>
               Report Accessibility Issue
             </button>
           </div>

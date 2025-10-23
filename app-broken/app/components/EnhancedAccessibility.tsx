@@ -70,7 +70,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content with Tab
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
+          const skipLink = document.querySelector('a[href=&quot;#main-content&quot;]') as HTMLAnchorElement
           if (skipLink) {
             skipLink.focus()
             event.preventDefault()
@@ -78,7 +78,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         }
         // Close dropdowns with Escape
         if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]')
+          const openDropdowns = document.querySelectorAll('[aria-expanded=&quot;true&quot;]')
           openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false')
           })
@@ -171,10 +171,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       })
     }
     // Trap focus in modals
-    const modals = document.querySelectorAll('[role="dialog"]')
+    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
     modals.forEach(modal => {
       const focusableElements = modal.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
       )
       const firstElement = focusableElements[0] as HTMLElement
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement

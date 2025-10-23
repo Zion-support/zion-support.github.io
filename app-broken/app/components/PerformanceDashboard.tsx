@@ -102,10 +102,10 @@ if (value <= thresholds.warning) return 'text-yellow-400'
 return 'text-red-400'
 }
 return (
-<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-<div className="flex items-center justify-between mb-6">
-<h3 className="text-xl font-semibold text-white flex items-center gap-2">
-<Activity className="w-5 h-5" />
+<div className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10&quot;></div>
+<div className=&quot;flex items-center justify-between mb-6&quot;></div>
+<h3 className=&quot;text-xl font-semibold text-white flex items-center gap-2&quot;>
+<Activity className=&quot;w-5 h-5&quot; />
 Performance Dashboard
 
 <button
@@ -120,59 +120,59 @@ isMonitoring
 </button>
 </div>
 {alerts.length > 0 && (
-<div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-<div className="flex items-center gap-2 mb-2">
-<AlertTriangle className="w-5 h-5 text-red-400" />
-<h4 className="text-red-400 font-semibold">Performance Alerts</h4>
+<div className=&quot;mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<AlertTriangle className=&quot;w-5 h-5 text-red-400&quot; />
+<h4 className=&quot;text-red-400 font-semibold&quot;>Performance Alerts</h4>
 </div>
-<ul className="space-y-1">
+<ul className=&quot;space-y-1&quot;>
 {alerts.map((alert, index) => (
-<li key={index} className="text-red-300 text-sm">• {alert}</li>
+<li key={index} className=&quot;text-red-300 text-sm&quot;>• {alert}</li>
 ))}
 </ul>
 </div>
 )}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-<div className="bg-white/5 rounded-lg p-4">
-<div className="flex items-center gap-2 mb-2">
-<Zap className="w-4 h-4 text-blue-400" />
-<span className="text-gray-300 text-sm">Load Time</span>
+<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;></div>
+<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<Zap className=&quot;w-4 h-4 text-blue-400&quot; />
+<span className=&quot;text-gray-300 text-sm&quot;>Load Time</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}></div>
 {metrics.loadTime.toFixed(0)}ms
 
 </div>
-<div className="bg-white/5 rounded-lg p-4">
-<div className="flex items-center gap-2 mb-2">
-<Cpu className="w-4 h-4 text-green-400" />
-<span className="text-gray-300 text-sm">Render Time</span>
+<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<Cpu className=&quot;w-4 h-4 text-green-400&quot; />
+<span className=&quot;text-gray-300 text-sm&quot;>Render Time</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}></div>
 {metrics.renderTime.toFixed(2)}ms
 
 </div>
-<div className="bg-white/5 rounded-lg p-4">
-<div className="flex items-center gap-2 mb-2">
-<MemoryStick className="w-4 h-4 text-purple-400" />
-<span className="text-gray-300 text-sm">Memory Usage</span>
+<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<MemoryStick className=&quot;w-4 h-4 text-purple-400&quot; />
+<span className=&quot;text-gray-300 text-sm&quot;>Memory Usage</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}></div>
 {formatBytes(metrics.memoryUsage)}
 </div>
 </div>
-<div className="bg-white/5 rounded-lg p-4">
-<div className="flex items-center gap-2 mb-2">
-<TrendingUp className="w-4 h-4 text-orange-400" />
-<span className="text-gray-300 text-sm">FPS</span>
+<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<TrendingUp className=&quot;w-4 h-4 text-orange-400&quot; />
+<span className=&quot;text-gray-300 text-sm&quot;>FPS</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>
+<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}></div>
 {metrics.fps}
 </div>
 </div>
 </div>
-<div className="mt-6 text-center">
-<p className="text-gray-400 text-sm">
-{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}
+<div className=&quot;mt-6 text-center&quot;></div>
+<p className=&quot;text-gray-400 text-sm&quot;>
+{isMonitoring ? 'Monitoring performance metrics...' : 'Click &quot;Start Monitoring&quot; to begin tracking performance'}
 </p>
 </div>
 </div>

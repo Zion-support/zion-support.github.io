@@ -6,7 +6,7 @@ const Header: React.FC = () => {
     <>
       <Navigation />
       {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
+      <div className=&quot;h-16 lg:h-20&quot; /></div>
     </>
   )
 }

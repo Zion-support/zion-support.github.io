@@ -35,27 +35,27 @@ const PagePage: React.FC = () => {
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions powered by AI technology." />
+        <meta name=&quot;description&quot; content=&quot;Advanced page solutions powered by AI technology.&quot; />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse&quot; /></div>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse&quot; style={{ animationDelay: '1s' }} /></div>
+          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
+            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
               Page
 
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced page solutions powered by AI technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
                 Get Started
               </button>
 
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
                 Learn More
               </button>
 
@@ -63,29 +63,29 @@ const PagePage: React.FC = () => {
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <section className=&quot;py-20 px-4&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Key Features
 
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Powerful AI technology that drives results
 
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
+                <div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group&quot;></div>
+                  <div className=&quot;w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform&quot;></div>
+                    <feature.icon className=&quot;w-8 h-8 text-white&quot; />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{feature.title}</h3>
+                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   {feature.benefits && (
-                    <ul className="space-y-2">
+                    <ul className=&quot;space-y-2&quot;>
                       {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        <li key={idx} className=&quot;flex items-center text-sm text-gray-400&quot;>
+                          <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
                           {benefit}
                         </li>
                       ))}
@@ -97,20 +97,20 @@ const PagePage: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <section className=&quot;py-20 px-4&quot;>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <div className=&quot;bg-white/5 backdrop-blur-sm rounded-3xl p-12&quot;></div>
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Contact our experts to discuss your requirements and get started today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+                <button className=&quot;bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
                   Contact Us
 
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className=&quot;border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300&quot;>
                   Learn More
 
               </div>
