@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Target, Users, Award, CheckCircle, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export const dynamic = 'force-dynamic';
 
