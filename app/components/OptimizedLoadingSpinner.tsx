@@ -220,7 +220,7 @@ return (</div>
 <div className={containerClasses}></div>
 <div className='text-center'>{renderSpinner}</div>
 {text && (</div>;}
-<p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p>
+<p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>
 )}
 </div>
 )

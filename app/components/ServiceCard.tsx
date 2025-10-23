@@ -157,7 +157,7 @@ onSelect,
 className = ''
 }) => {
 return (
-<div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${
+    <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${
 popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 }`}>{popular && (</div>
 <div className="flex items-center gap-2 mb-4">

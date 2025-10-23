@@ -237,7 +237,7 @@ type="submit"
 disabled={isSubmitting}
 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">{isSubmitting ? (</button>
 <>
-<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
 <span>Sending...</span>
 </>
 ) : (
@@ -261,7 +261,7 @@ and we'll get back to you as soon as possible.
 <div className="space-y-8">
 <div>
 <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-<p className="text-gray-300 mb-8">We're here to help you transform your business with cutting-edge AI and technology solutions.</p>p>
+<p className="text-gray-300 mb-8">We're here to help you transform your business with cutting-edge AI and technology solutions.</p>
 </div>
 <div className="space-y-6">
 <div className="flex items-center">
@@ -270,8 +270,8 @@ and we'll get back to you as soon as possible.
 </div>
 <div>
 <h3 className="text-lg font-semibold text-white mb-1">$3</h3>
-<p className="text-cyan-400 font-medium mb-1">{info.details}</p>p>
-<p className="text-gray-300 text-sm">{info.description}</p>p>
+<p className="text-cyan-400 font-medium mb-1">{info.details}</p>
+<p className="text-gray-300 text-sm">{info.description}</p>
 </div>
 </div>
 <div className="flex items-center">

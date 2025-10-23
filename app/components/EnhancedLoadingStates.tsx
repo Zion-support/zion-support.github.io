@@ -151,7 +151,7 @@ lg: 'w-12h-1 2'}
 return(<divclassName="flex flex-colitems-centerjustify-centerp-8"><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName="mt-2text-smtext-gray-500">{text}</p>)}</di>)
 }
 return (
-<div className="flex flex-col items-center justify-center p-8">
+    <div className="flex flex-col items-center justify-center p-8">
 <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
 {text && (
 <p className="mt-2 text-sm text-gray-500">{text}</p>

@@ -117,7 +117,7 @@ const ContentPromotionBanner: React.FC = () => {
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We provide comprehensive AI and IT solutions that deliver real results for your business.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We provide comprehensive AI and IT solutions that deliver real results for your business.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{/* Stats Section */}</div>
         <div className="grid md:grid-cols-3 gap-8 mb-16">{stats.map((stat, index) => (</div>
@@ -146,7 +146,7 @@ const ContentPromotionBanner: React.FC = () => {
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Join the future of business technology. Get started with our AI solutions today and see the difference.</p>p>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Join the future of business technology. Get started with our AI solutions today and see the difference.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
