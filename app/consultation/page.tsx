@@ -326,7 +326,8 @@ const ConsultationPage: React.FC = () => {
                       <Building className="w-5 h-5 text-purple-400 mr-3" />
                       <span>Available Monday - Friday, 9 AM - 6 PM EST</span>
                     </div>
-                  </div>                </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
