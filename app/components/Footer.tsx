@@ -2,7 +2,7 @@
 'use client'
 <<<<<<< HEAD
 import React, { memo } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react'
 import { Mail, Brain, Code, Cloud } from 'lucide-react'
 import { MapPin } from 'lucide-react'
