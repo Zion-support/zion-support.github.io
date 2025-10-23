@@ -1,9 +1,6 @@
 export const generateSitemap = useCallback((...args) => {
-const baseUrl = 'https: //ziontechgroup.com',
-const staticPages = [,;}
-export const generateSitemap = useCallback((...args) => {}
-const baseUrl = 'https://ziontechgroup.com'
-const staticPages = [
+  const baseUrl = 'https://ziontechgroup.com'
+  const staticPages = [
 '',
 '/services',
 '/contact',
@@ -44,11 +41,9 @@ const staticPages = [
 '/productivity'
 ]
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${staticPages.map(page =>),
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;}
-${staticPages.map(page =>)}
-<url>}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${staticPages.map(page => `
+<url>
 <loc>${baseUrl}${page}</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <changefreq>weekly</changefreq>
