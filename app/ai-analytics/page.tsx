@@ -82,15 +82,16 @@ description: 'Identify and mitigate business risks proactively',
 icon: '🛡️'
 }
 ]
-return (
-<React.Fragment>
-<Helmet>
-<title>AI Analytics - Zion Tech Group</title>
-<meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
-<meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
-</Helmet>
-<Navigation />
-<main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
+        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
 {/* Hero Section */}
 <section className="relative py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-7xl mx-auto">
@@ -156,16 +157,12 @@ Join thousands of businesses already using our AI analytics platform.
 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
 Start Your Free Trial
 </
-</div>
-</section>
-</main>
-<Footer />
-</React.Fragment>
-)
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </React.Fragment>
+  )
 }
+
 export default AiAnalyticsPage
-</button>
-</h2>
-</button>
-</button>
-</h1>
