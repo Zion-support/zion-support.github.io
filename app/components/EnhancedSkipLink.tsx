@@ -1,10 +1,8 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const EnhancedSkipLinkPage: React.FC = () => {
   const features = [
@@ -44,11 +42,7 @@ const EnhancedSkipLinkPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedSkipLink</title>
-        <meta name="description" content="Advanced EnhancedSkipLink solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedSkipLink, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -146,24 +140,15 @@ const EnhancedSkipLinkPage: React.FC = () => {
 };
 
 export default EnhancedSkipLinkPage;
-=======
-const EnhancedSkipLink: React.FC = () => {
-return (
-<a
-href="#main-content"
-className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-slate-900"
-onClick={(e) =>{</a>
 e.preventDefault()
-const main = document.querySelector('#main-content')
-if (main) {
+constmain= do cument.querySelector('#main-content')
+if (mai n) {
 main.focus()
-main.scrollIntoView({ behavior: 'smooth' })
+main.scrollIntoView({ behavior: 'smooth'})
 }
 }}
 >
-Skip to main content
-</a>
+Skip to maincontent</a>
 )
 }
 export default EnhancedSkipLink
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

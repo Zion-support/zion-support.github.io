@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
@@ -6,13 +5,6 @@ import Footer from '../components/Footer'
 import { Key, Copy } from 'lucide-react'
 import { Code } from 'lucide-react'
 import { Check } from 'lucide-react'
-=======
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Key, Copy, Code, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
@@ -23,37 +15,36 @@ const ApiDocsPage: React.FC = () => {
     setTimeout(() => setCopiedCode(null), 2000)
   }
 
-  const apiEndpoints = [
-    {
-      id: 'ai-chat',
+  constapiEndpoints= [
+    {id: 'ai-chat',
       title: 'AI Chat API',
       method: 'POST',
-      endpoint: '/api/v1/ai/chat',
+      endpoint: '/$1/v1/$1/chat',
       description: 'Send messages to our AI chatbot and get intelligent responses.',
-      example: `curl -X POST "https://api.ziontechgroup.com/v1/ai/chat" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
+      example: `curl -X POST "https://api.ziontechgroup.com/$1/ai/chat" \\
+  -H "Authorization: BearerYOUR_API_KEY" \\
+  -H "Content-Type:application/json" \\
   -d '{
-    "message": "Hello, how can you help me?",
-    "context": "customer_support"
-  }'`
+    "message":"Hello, how can you help me?",
+   "context":"customer_support"
+}'`
     },
-    {
-      id: 'ai-analysis',
+    {id: 'ai-analysis',
       title: 'AI Data Analysis',
       method: 'POST',
-      endpoint: '/api/v1/ai/analyze',
+      endpoint: '/$1/v1/$1/analyze',
       description: 'Analyze data using our AI models for insights and predictions.',
-      example: `curl -X POST "https://api.ziontechgroup.com/v1/ai/analyze" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
+      example: `curl -X POST"https:// api.ziontechgroup.com/$1/ai/analyze" \\
+  -H"Authorization: Bearer YOUR_API_KEY" \\
+  -H"Content-Type: application/json" \\
   -d '{
-    "data": [1, 2, 3, 4, 5],
-    "analysis_type": "trend_analysis"
-  }'`
+   "data": [1, 2, 3, 4, 5],
+   "analysis_type":"trend_analysis"
+}'`
     }
   ]
 
+const Page = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
@@ -137,4 +128,4 @@ const ApiDocsPage: React.FC = () => {
   )
 }
 
-export default ApiDocsPage
+export default Page;

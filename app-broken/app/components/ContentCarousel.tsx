@@ -71,130 +71,130 @@ const ContentCarousel: React.FC = () => {
   }, [])
   const currentSlideData = slides[currentSlide]
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    <div className=&quot;relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4&quot;></div>
+      <div className=&quot;max-w-7xl mx-auto&quot;></div>
+        <div className=&quot;text-center mb-12&quot;></div>
+          <h2 className=&quot;text-3xl md:text-4xl font-bold mb-4&quot;>
             Discover Our Solutions
 
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+          <p className=&quot;text-xl text-purple-100 max-w-3xl mx-auto&quot;>
             Explore our comprehensive suite of AI-powered solutions designed to transform your business.
           </p>
         </div>
-        <div className="relative">
-<div className="overflow-hidden rounded-xl">
+        <div className=&quot;relative&quot;></div>
+<div className=&quot;overflow-hidden rounded-xl&quot;></div>
             <div
-              className="flex transition-transform duration-500 ease-in-out"
+              className=&quot;flex transition-transform duration-500 ease-in-out&quot;
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
+            ></div>
               {slides.map((slide, index) => (
-<div key={index} className="w-full flex-shrink-0">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                    <div className="text-center mb-8">
-                      <div className="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <slide.icon className="h-10 w-10 text-white" />
+<div key={index} className=&quot;w-full flex-shrink-0&quot;></div>
+                  <div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;></div>
+                    <div className=&quot;text-center mb-8&quot;></div>
+                      <div className=&quot;bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
+                        <slide.icon className=&quot;h-10 w-10 text-white&quot; />
                       </div>
-                      <h3 className="text-2xl font-bold mb-4">{slide.title}</h3>
-                      <p className="text-purple-100 text-lg max-w-2xl mx-auto">{slide.description}</p>
+                      <h3 className=&quot;text-2xl font-bold mb-4&quot;>{slide.title}</h3>
+                      <p className=&quot;text-purple-100 text-lg max-w-2xl mx-auto&quot;>{slide.description}</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;></div>
                       {slide.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center">
-                          <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-purple-100">{feature}</span>
+                        <div key={featureIndex} className=&quot;flex items-center&quot;></div>
+                          <CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; />
+                          <span className=&quot;text-purple-100&quot;>{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
               ))}
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4&quot;></div>
+      <div className=&quot;max-w-7xl mx-auto&quot;></div>
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+        <div className=&quot;text-center mb-16&quot;></div>
+          <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>
+            Discover Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Solutions</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
             Explore our comprehensive suite of AI and IT solutions designed to transform your business.
           </p>
         </div>
         {/* Carousel Container */}
         {/* Carousel */}
-        <div className="relative">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center">
-                  <currentSlideData.icon className="w-8 h-8 text-slate-900" />
+        <div className=&quot;relative&quot;></div>
+          <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden&quot;></div>
+            <div className=&quot;flex items-center justify-between mb-8&quot;></div>
+              <div className=&quot;flex items-center gap-4&quot;></div>
+                <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center&quot;></div>
+                  <currentSlideData.icon className=&quot;w-8 h-8 text-slate-900&quot; />
                 </div>
                 {/* Features */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className=&quot;space-y-4&quot;></div>
+                  <h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Key Features:</h4>
+                  <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-3&quot;></div>
                     {currentSlideData.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                      <div key={index} className=&quot;flex items-center space-x-3&quot;></div>
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; />
+                        <span className=&quot;text-gray-300&quot;>{feature}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 {/* Stats */}
                 {currentSlideData.stats && (
-                  <div className="grid grid-cols-3 gap-6">
+                  <div className=&quot;grid grid-cols-3 gap-6&quot;></div>
                     {currentSlideData.stats.map((stat, index) => (
-                      <div key={index} className="text-center">
-                        <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                        <div className="text-gray-400 text-sm">{stat.label}</div>
+                      <div key={index} className=&quot;text-center&quot;></div>
+                        <div className=&quot;text-2xl font-bold text-white mb-1&quot;>{stat.value}</div>
+                        <div className=&quot;text-gray-400 text-sm&quot;>{stat.label}</div>
                       </div>
                     ))}
                   </div>
                 )}
                 {/* CTA */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                    <Zap className="w-5 h-5" />
+                <div className=&quot;flex flex-col sm:flex-row gap-4&quot;></div>
+                  <button className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;>
+                    <Zap className=&quot;w-5 h-5&quot; />
                     Get Started
 
-                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                    <ArrowRight className="w-5 h-5" />
+                  <button className=&quot;inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300&quot;>
+                    <ArrowRight className=&quot;w-5 h-5&quot; />
                     Learn More
 
                 </div>
               </div>
               {/* Visual Element */}
-              <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <currentSlideData.icon className="w-16 h-16 text-white" />
+              <div className=&quot;relative&quot;></div>
+                <div className=&quot;aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center&quot;></div>
+                  <div className=&quot;text-center&quot;></div>
+                    <div className=&quot;w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center&quot;></div>
+                      <currentSlideData.icon className=&quot;w-16 h-16 text-white&quot; />
                     </div>
-                    <div className="text-4xl font-bold text-white mb-2">
+                    <div className=&quot;text-4xl font-bold text-white mb-2&quot;></div>
                       {currentSlideData.title}
                     </div>
-                    <div className="text-gray-300">
+                    <div className=&quot;text-gray-300&quot;></div>
                       Slide {currentSlide + 1} of {slides.length}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;></div>
               {currentSlideData.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                <div key={index} className=&quot;flex items-center gap-3&quot;></div>
+                  <CheckCircle className=&quot;w-5 h-5 text-cyan-400 flex-shrink-0&quot; />
+                  <span className=&quot;text-gray-300&quot;>{feature}</span>
                 </div>
               ))}
             </div>
             {/* Stats */}
             {currentSlideData.stats && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700&quot;></div>
                 {currentSlideData.stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
+                  <div key={index} className=&quot;text-center&quot;></div>
+                    <div className=&quot;text-3xl font-bold text-white mb-1&quot;>{stat.value}</div>
+                    <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -203,29 +203,29 @@ const ContentCarousel: React.FC = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
-            <ChevronLeft className="h-6 w-6" />
+            className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;>
+            <ChevronLeft className=&quot;h-6 w-6&quot; />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
-            <ChevronRight className="h-6 w-6" />
+            className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;>
+            <ChevronRight className=&quot;h-6 w-6&quot; />
           </button>
         </div>
 {/* Slide Indicators */}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className=&quot;w-6 h-6&quot; />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className=&quot;w-6 h-6&quot; />
           </button>
         </div>
         {/* Slide Indicators */}
-        <div className="flex justify-center mt-8 space-x-2">
+        <div className=&quot;flex justify-center mt-8 space-x-2&quot;></div>
           {slides.map((_, index) => (
             <button
               key={index}
@@ -237,34 +237,34 @@ const ContentCarousel: React.FC = () => {
           ))}
         </div>
         {/* Additional Info */}
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-3 text-white">
-              <Star className="w-6 h-6 text-yellow-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">4.9/5</div>
-                <div className="text-gray-400 text-sm">Customer Rating</div>
+        <div className=&quot;mt-16 text-center&quot;></div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto&quot;></div>
+            <div className=&quot;flex items-center justify-center gap-3 text-white&quot;></div>
+              <Star className=&quot;w-6 h-6 text-yellow-400&quot; />
+              <div className=&quot;text-left&quot;></div>
+                <div className=&quot;text-2xl font-bold&quot;>4.9/5</div>
+                <div className=&quot;text-gray-400 text-sm&quot;>Customer Rating</div>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-3 text-white">
-              <Users className="w-6 h-6 text-blue-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">10,000+</div>
-                <div className="text-gray-400 text-sm">Happy Customers</div>
+            <div className=&quot;flex items-center justify-center gap-3 text-white&quot;></div>
+              <Users className=&quot;w-6 h-6 text-blue-400&quot; />
+              <div className=&quot;text-left&quot;></div>
+                <div className=&quot;text-2xl font-bold&quot;>10,000+</div>
+                <div className=&quot;text-gray-400 text-sm&quot;>Happy Customers</div>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-3 text-white">
-              <TrendingUp className="w-6 h-6 text-green-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">99.9%</div>
-                <div className="text-gray-400 text-sm">Uptime</div>
+            <div className=&quot;flex items-center justify-center gap-3 text-white&quot;></div>
+              <TrendingUp className=&quot;w-6 h-6 text-green-400&quot; />
+              <div className=&quot;text-left&quot;></div>
+                <div className=&quot;text-2xl font-bold&quot;>99.9%</div>
+                <div className=&quot;text-gray-400 text-sm&quot;>Uptime</div>
               </div>
             </div>
           </div>
-        <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto">
+        <div className=&quot;text-center mt-12&quot;></div>
+          <button className=&quot;bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto&quot;>
             Get Started Today
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
           </button>
         </div>
       </div>

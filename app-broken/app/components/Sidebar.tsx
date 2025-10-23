@@ -141,15 +141,15 @@ return (
 {/* Mobile Menu Button */}
 <button
 onClick={() => setIsOpen(true)}
-className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
-aria-label="Open sidebar"
+className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot;
+aria-label=&quot;Open sidebar&quot;
 >
-<Menu className="w-6 h-6" />
+<Menu className=&quot;w-6 h-6&quot; />
 </button>
 {/* Sidebar Overlay */}
 {isOpen && (
 <div
-className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
+className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}
 onClick={() => setIsOpen(false)}
 />
 )}
@@ -157,43 +157,43 @@ onClick={() => setIsOpen(false)}
 <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}>
-<div className="flex flex-col h-full">
+<div className=&quot;flex flex-col h-full&quot;></div>
 {/* Header */}</div>
-<div className="flex items-center justify-between p-6 border-b border-slate-700/50">
-<Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
-<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
-<Brain className="w-6 h-6 text-white" />
+<div className=&quot;flex items-center justify-between p-6 border-b border-slate-700/50&quot;></div>
+<Link to=&quot;/&quot; className=&quot;flex items-center space-x-3&quot; onClick={() => setIsOpen(false)}>
+<div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center&quot;></div>
+<Brain className=&quot;w-6 h-6 text-white&quot; />
 </div>
 <div></div>
-<h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
-<p className="text-xs text-cyan-400">AI & IT Solutions</p>
+<h2 className=&quot;text-xl font-bold text-white cyber-text&quot;>Zion Tech Group</h2>
+<p className=&quot;text-xs text-cyan-400&quot;>AI & IT Solutions</p>
 </div>
 </Link>
 <button
 onClick={() => setIsOpen(false)}
-className="lg:hidden text-gray-400 hover:text-white transition-colors"
-aria-label="Close sidebar"
+className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot;
+aria-label=&quot;Close sidebar&quot;
 >
-<X className="w-6 h-6" />
+<X className=&quot;w-6 h-6&quot; />
 </button>
 </div>
 {/* Navigation */}
-<div className="flex-1 overflow-y-auto py-6"></div>
-<nav className="space-y-2 px-4">
+<div className=&quot;flex-1 overflow-y-auto py-6&quot;></div>
+<nav className=&quot;space-y-2 px-4&quot;>
 {navigationSections.map((section, sectionIndex) => (;}
-<div key={sectionIndex} className="space-y-1"></div>
+<div key={sectionIndex} className=&quot;space-y-1&quot;></div>
 <button
 onClick={() => section.key && toggleSection(section.key)}
-className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
 <span>{section.title}</span>
 {section.key && (
 expandedSections.has(section.key) ?
-<ChevronDown className="w-4 h-4" /> :
-<ChevronRight className="w-4 h-4" />
+<ChevronDown className=&quot;w-4 h-4&quot; /> :
+<ChevronRight className=&quot;w-4 h-4&quot; />
 )}
 </button>
 {(!section.key || expandedSections.has(section.key)) && (
-<div className="ml-4 space-y-1">
+<div className=&quot;ml-4 space-y-1&quot;></div>
 {section.items.map((item, itemIndex) => (</div>
 <Link
 key={itemIndex}
@@ -205,7 +205,7 @@ location.pathname === item.path
 : 'text-gray-300 hover:text-white hover:bg-slate-800/50';}
 }`}
 >
-<item.icon className="w-4 h-4 flex-shrink-0" />
+<item.icon className=&quot;w-4 h-4 flex-shrink-0&quot; />
 <span>{item.name}</span>
 </Link>
 ))}
@@ -216,24 +216,24 @@ location.pathname === item.path
 </nav>
 </div>
 {/* Contact Info */}
-<div className="border-t border-slate-700/50 p-6">
-<h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
-<div className="space-y-3 text-sm text-gray-300">
-<div className="flex items-center space-x-3">
-<Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+<div className=&quot;border-t border-slate-700/50 p-6&quot;></div>
+<h3 className=&quot;text-sm font-semibold text-cyan-400 mb-4&quot;>Contact Information</h3>
+<div className=&quot;space-y-3 text-sm text-gray-300&quot;></div>
+<div className=&quot;flex items-center space-x-3&quot;></div>
+<Phone className=&quot;w-4 h-4 text-cyan-400 flex-shrink-0&quot; />
 <span>{contactInfo.phone}</span>
 </div>
-<div className="flex items-center space-x-3">
-<Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-<span className="truncate">{contactInfo.email}</span>
+<div className=&quot;flex items-center space-x-3&quot;></div>
+<Mail className=&quot;w-4 h-4 text-cyan-400 flex-shrink-0&quot; />
+<span className=&quot;truncate&quot;>{contactInfo.email}</span>
 </div>
-<div className="flex items-center space-x-3">
-<MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-<span className="text-xs">{contactInfo.address}</span>
+<div className=&quot;flex items-center space-x-3&quot;></div>
+<MapPin className=&quot;w-4 h-4 text-cyan-400 flex-shrink-0&quot; />
+<span className=&quot;text-xs&quot;>{contactInfo.address}</span>
 </div>
-<div className="flex items-center space-x-3">
-<Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-<span className="text-xs">{contactInfo.hours}</span>
+<div className=&quot;flex items-center space-x-3&quot;></div>
+<Clock className=&quot;w-4 h-4 text-cyan-400 flex-shrink-0&quot; />
+<span className=&quot;text-xs&quot;>{contactInfo.hours}</span>
 </div>
 </div>
 </aside>

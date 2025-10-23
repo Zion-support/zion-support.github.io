@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 "use client"
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 const PerformanceOptimizationsPage: React.FC = () => {
   const features = [
@@ -46,11 +38,7 @@ const PerformanceOptimizationsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>PerformanceOptimizations</title>
-        <meta name="description" content="Advanced PerformanceOptimizations solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, PerformanceOptimizations, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -148,4 +136,3 @@ const PerformanceOptimizationsPage: React.FC = () => {
 };
 
 export default PerformanceOptimizationsPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

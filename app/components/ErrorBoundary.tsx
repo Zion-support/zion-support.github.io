@@ -1,10 +1,8 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const ErrorBoundaryPage: React.FC = () => {
   const features = [
@@ -44,11 +42,7 @@ const ErrorBoundaryPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ErrorBoundary</title>
-        <meta name="description" content="Advanced ErrorBoundary solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ErrorBoundary, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -146,45 +140,24 @@ const ErrorBoundaryPage: React.FC = () => {
 };
 
 export default ErrorBoundaryPage;
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
-import { Phone } from 'lucide-react'
-import { Home } from 'lucide-react'
-
-interface Props {
-children: ReactNode
-fallback?: ReactNode
-}
-interface State {
-hasError: boolean
 error?: Error
-errorInfo?: ErrorInfo
-}
-class ErrorBoundary extends Component<Props, State> {
-constructor(props: Props) {
+errorInfo?: ErrorInfo}
+class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
 super(props)
-this.state = { hasError: false }
+this.state= { hasError: false}
 }
-static getDerivedStateFromError(error: Error): State {
-return { hasError: true, error }
+static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 }
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-// Log error for monitoring in production
-if (process.env.NODE_ENV === 'production') {
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production
+if (process.env.NODE_ENV=== 'production') {
 // In production, you would send this to an error reporting service
-// Example: errorReportingService.captureException(error, { extra: errorInfo })
+// Example: errorReportingService.captureException(error, { extra: errorInfo})
 }
-this.setState({ error, errorInfo })
+this.setState({errorerrorInfo})
 }
-handleReload = () => {
-window.location.reload()
-}
-handleGoHome = () => {
-window.location.href = '/'
-}
-render() {
-if (this.state.hasError) {
+handleReload= () => {windo w.location.reload()}
+handleGoHome= () => {windo w.location.href= '/'}
+render() {if (this.state.hasError) {
 if (this.props.fallback) {
 return this.props.fallback
 }
@@ -194,19 +167,15 @@ return (
 <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
 <AlertTriangle className="w-8 h-8 text-red-400" />
 </div>
-<h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>h1>
+<h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
 <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>p>
 {process.env.NODE_ENV === 'development' && this.state.error && (
 <details className="mb-6 text-left">
 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
 Error Details (Development)
 </summary>
-<<<<<<< HEAD
 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></p>
 {this.state.error.toString()}
-=======
-<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">{this.state.error.toString()}</p>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 {this.state.errorInfo?.componentStack}
 </pre>
 </details>
@@ -238,10 +207,3 @@ kleber@ziontechgroup.com
 </div>
 </div>
 </div>
-)
-}
-return this.props.children
-}
-}
-export default ErrorBoundary
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

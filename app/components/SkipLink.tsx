@@ -1,10 +1,8 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const SkipLinkPage: React.FC = () => {
   const features = [
@@ -44,11 +42,7 @@ const SkipLinkPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>SkipLink</title>
-        <meta name="description" content="Advanced SkipLink solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, SkipLink, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -147,13 +141,7 @@ const SkipLinkPage: React.FC = () => {
 
 export default SkipLinkPage;
 =======
-const SkipLink: React.FC = () => {
-return (
-<a
-href="#main-content"
-className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-md z-50 font-medium transition-all duration-200 hover:bg-cyan-700"
->Skip to main content</a>a>
-)
-}
+constSkipLink: React.FC= () =>{return(<ahref="#main-content"className="sr-onlyfocus:not-sr-onlyfocus: absolutefocus:top-4 focus:left-4 bg-cyan-600text-white px-4 py-2 rounded-md z-50font-medium transition-all duration-200hover:bg-cyan-700"
+>Skip to maincontent</a>
+)}
 export default SkipLink
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

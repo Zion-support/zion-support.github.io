@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
@@ -6,17 +5,8 @@ import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
-=======
-import { CheckCircle, Star, Phone, Mail, Check, Clock } from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -46,79 +36,65 @@ const ConsultationPage: React.FC = () => {
     window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
-  const consultationBenefits = [
-    {
-      icon: Target,
+  constconsultationBenefits= [
+    {icon: Target,
       title: 'Strategic Assessment',
       description: 'Comprehensive analysis of your current technology stack and business processes'
-    },
-    {
-      icon: Brain,
+   },
+    {icon: Brain,
       title: 'AI Readiness Evaluation',
       description: 'Determine how AI can best serve your specific business needs'
-    },
-    {
-      icon: Shield,
+   },
+    {icon: Shield,
       title: 'Security Audit',
       description: 'Identify potential vulnerabilities and security improvements'
-    },
-    {
-      icon: TrendingUp,
+   },
+    {icon: TrendingUp,
       title: 'Growth Strategy',
       description: 'Develop a roadmap for scaling your technology infrastructure'
     }
   ]
 
-  const consultationProcess = [
-    {
-      step: '1',
+  constconsultationProcess= [
+    {step: '1',
       title: 'Initial Assessment',
       description: 'We review your current setup and understand your business goals'
-    },
-    {
-      step: '2',
+   },
+    {step: '2',
       title: 'Gap Analysis',
       description: 'Identify areas where technology can drive improvement'
-    },
-    {
-      step: '3',
+   },
+    {step: '3',
       title: 'Solution Design',
       description: 'Create a customized technology roadmap for your business'
-    },
-    {
-      step: '4',
+   },
+    {step: '4',
       title: 'Implementation Plan',
       description: 'Provide detailed steps and timeline for your transformation'
     }
   ]
 
-  const testimonials = [
-    {
-      name: 'David Thompson',
+  consttestimonials= [
+    {name: 'David Thompson',
       company: 'Manufacturing Plus',
       text: 'The free consultation opened our eyes to possibilities we never considered. Highly valuable session.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Wang',
+      rating:5},
+    {name: 'Lisa Wang',
       company: 'Retail Innovations',
       text: 'Professional, insightful, and completely free. They helped us plan our digital transformation.',
-      rating: 5
-    },
-    {
-      name: 'Robert Martinez',
+      rating:5},
+    {name: 'Robert Martinez',
       company: 'Healthcare Solutions',
       text: 'The consultation was worth every minute. Clear recommendations and actionable insights.',
       rating: 5
     }
   ]
 
+const Page = () => {
   return (
-    <>
-      <SEOOptimizer
-        title="Free Business Consultation - Zion Tech Group"
-        description="Get a free 30-minute consultation with our technology experts. Discover how AI and IT solutions can transform your business."
-        keywords={['free consultation', 'business consultation', 'technology assessment', 'AI consultation', 'IT consultation']}
+  <><SEOOptimizertitle="Free Business Consultation - ZionTechGroup"
+        description="Get a free30-minute consultation with our technology experts. Discover how AI and IT solutions can transformyourbusiness."
+        keywords={['free consultation', 'business consultation', 'technology assessment', 'AI consultation', 'ITconsultation']}
         canonicalUrl="https://ziontechgroup.com/consultation"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -208,173 +184,75 @@ const ConsultationPage: React.FC = () => {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                          placeholder="Enter your full name"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                          Email Address *
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          required
-                          value={formData.email}
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                         placeholder="Enter your fullname"
+                        /></di><di v><labelhtmlFor="email"className="block text-sm font-medium text-gray-300mb-2">Email Address *
+                      </labe><inputtype="email"
+                         id="email"
+                         name="email"
+                          requiredvalue={formData.email}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                          placeholder="Enter your email"
-                        />
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                          Company Name *
-                        </label>
-                        <input
-                          type="text"
-                          id="company"
-                          name="company"
-                          required
-                          value={formData.company}
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                         placeholder="Enter youremail"
+                        /></di></di><divclassName="grid grid-cols-1md:grid-cols-2gap-4"><di v><labelhtmlFor="company"className="block text-sm font-medium text-gray-300mb-2">Company Name *
+                      </labe><inputtype="text"
+                         id="company"
+                         name="company"
+                          requiredvalue={formData.company}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                          placeholder="Enter your company name"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                         placeholder="Enter your companyname"
+                        /></di><di v><labelhtmlFor="phone"className="block text-sm font-medium text-gray-300mb-2">Phone Number
+                      </labe><inputtype="tel"
+                         id="phone"
+                         name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                          placeholder="Enter your phone number"
-                        />
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="industry" className="block text-sm font-medium text-gray-300 mb-2">
-                          Industry
-                        </label>
-                        <select
-                          id="industry"
-                          name="industry"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                         placeholder="Enter your phonenumber"
+                        /></di></di><divclassName="grid grid-cols-1md:grid-cols-2gap-4"><di v><labelhtmlFor="industry"className="block text-sm font-medium text-gray-300mb-2">Industry
+                      </labe><selectid="industry"
+                         name="industry"
                           value={formData.industry}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        >
-                          <option value="">Select your industry</option>
-                          <option value="healthcare">Healthcare</option>
-                          <option value="finance">Finance</option>
-                          <option value="manufacturing">Manufacturing</option>
-                          <option value="retail">Retail</option>
-                          <option value="technology">Technology</option>
-                          <option value="education">Education</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label htmlFor="companySize" className="block text-sm font-medium text-gray-300 mb-2">
-                          Company Size
-                        </label>
-                        <select
-                          id="companySize"
-                          name="companySize"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                        ><optionvalue="">Selectyourindustry</optio><optionvalue="healthcare">Healthcare</optio><optionvalue="finance">Finance</optio><optionvalue="manufacturing">Manufacturing</optio><optionvalue="retail">Retail</optio><optionvalue="technology">Technology</optio><optionvalue="education">Education</optio><optionvalue="other">Other</optio></selec></di><di v><labelhtmlFor="companySize"className="block text-sm font-medium text-gray-300mb-2">Company Size
+                      </labe><selectid="companySize"
+                         name="companySize"
                           value={formData.companySize}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        >
-                          <option value="">Select company size</option>
-                          <option value="1-10">1-10 employees</option>
-                          <option value="11-50">11-50 employees</option>
-                          <option value="51-200">51-200 employees</option>
-                          <option value="201-500">201-500 employees</option>
-                          <option value="500+">500+ employees</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div>
-                      <label htmlFor="currentChallenges" className="block text-sm font-medium text-gray-300 mb-2">
-                        Current Challenges
-                      </label>
-                      <textarea
-                        id="currentChallenges"
-                        name="currentChallenges"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                        ><optionvalue="">Selectcompanysize</optio><optionvalue="1-10">1-10employees</optio><optionvalue="1 1-50">11-50employees</optio><optionvalue="5 1-200">51-200employees</optio><optionvalue="20 1-500">201-500employees</optio><optionvalue="500+">500+employees</optio></selec></di></di><di v><labelhtmlFor="currentChallenges"className="block text-sm font-medium text-gray-300mb-2">Current Challenges
+                    </labe><textareaid="currentChallenges"
+                       name="currentChallenges"
                         rows={3}
                         value={formData.currentChallenges}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        placeholder="Describe your current technology challenges"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="goals" className="block text-sm font-medium text-gray-300 mb-2">
-                        Business Goals
-                      </label>
-                      <textarea
-                        id="goals"
-                        name="goals"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                       placeholder="Describe your current technologychallenges"
+                      /></di><di v><labelhtmlFor="goals"className="block text-sm font-medium text-gray-300mb-2">Business Goals
+                    </labe><textareaid="goals"
+                       name="goals"
                         rows={3}
                         value={formData.goals}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        placeholder="What are your main business objectives?"
-                      />
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
-                          Implementation Timeline
-                        </label>
-                        <select
-                          id="timeline"
-                          name="timeline"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                       placeholder="What are your main businessobjectives?"
+                      /></di><divclassName="grid grid-cols-1md:grid-cols-2gap-4"><di v><labelhtmlFor="timeline"className="block text-sm font-medium text-gray-300mb-2">Implementation Timeline
+                      </labe><selectid="timeline"
+                         name="timeline"
                           value={formData.timeline}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        >
-                          <option value="">Select timeline</option>
-                          <option value="immediate">Immediate (0-3 months)</option>
-                          <option value="short">Short term (3-6 months)</option>
-                          <option value="medium">Medium term (6-12 months)</option>
-                          <option value="long">Long term (12+ months)</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                          Budget Range
-                        </label>
-                        <select
-                          id="budget"
-                          name="budget"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                        ><optionvalue="">Selecttimeline</optio><optionvalue="immediate">Immediate(0-3months)</optio><optionvalue="short">Short term(3-6months)</optio><optionvalue="medium">Mediumterm(6-12months)</optio><optionvalue="long">Long term (12+months)</optio></selec></di><di v><labelhtmlFor="budget"className="block text-sm font-medium text-gray-300mb-2">Budget Range
+                      </labe><selectid="budget"
+                         name="budget"
                           value={formData.budget}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        >
-                          <option value="">Select budget range</option>
-                          <option value="under-10k">Under $10,000</option>
-                          <option value="10k-50k">$10,000 - $50,000</option>
-                          <option value="50k-100k">$50,000 - $100,000</option>
-                          <option value="100k-500k">$100,000 - $500,000</option>
-                          <option value="500k+">$500,000+</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                        Additional Information
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                        ><optionvalue="">Selectbudgetrange</optio><optionvalue="under-10k">Under $10,000</optio><optionvalue="10 k-50k">$1 0,000- $50,000</optio><optionvalue="50 k-100k">$5 0,000- $100,000</optio><optionvalue="100 k-500k">$10 0,000- $500,000</optio><optionvalue="500k+">$500000+</optio></selec></di></di><di v><labelhtmlFor="message"className="block text-sm font-medium text-gray-300mb-2">Additional Information
+                    </labe><textareaid="message"
+                       name="message"
                         rows={4}
                         value={formData.message}
                         onChange={handleInputChange}
@@ -471,4 +349,4 @@ const ConsultationPage: React.FC = () => {
   )
 }
 
-export default ConsultationPage
+export default Page;

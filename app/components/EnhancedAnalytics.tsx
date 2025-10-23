@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client"
 
 import React, { createContext, useContext, useEffect } from "react"
@@ -25,12 +24,10 @@ interface AnalyticsProviderProps {
   children: React.ReactNode
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-}) => {
-  useEffect(() => {
+exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+  
     // Initialize analytics
-    if (typeof window !== "undefined") {
+    if (type of windo w !=="undefined") {
       // Google Analytics
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
@@ -49,12 +46,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, [])
 
-  const track = (event: string, properties?: Record<string, unknown>) => {
-    if (typeof window !== "undefined") {
+  consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "event",
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
+         "event",
           event,
           properties,
         )
@@ -64,15 +59,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   }
 
-  const identify = (userId: string, traits?: Record<string, unknown>) => {
-    if (typeof window !== "undefined") {
+  constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "config",
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
+         "config",
           process.env.REACT_APP_GA_ID,
-          {
-            user_id: userId,
+          {user_id: userId,
             custom_map: traits,
           },
         )
@@ -82,16 +74,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   }
 
-  const page = (name: string, properties?: Record<string, unknown>) => {
-    if (typeof window !== "undefined") {
+  constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "event",
-          "page_view",
-          {
-            page_title: name,
-            page_location: window.location.href,
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
+         "event",
+         "page_view",
+          {page_title: name,
+            page_location: windo w.location.href,
             ...properties,
           },
         )
@@ -101,8 +90,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   }
 
-  const value: AnalyticsContextType = {
-    track,
+  constvalue: AnalyticsContextType = {track,
     identify,
     page,
   }
@@ -124,10 +112,9 @@ declare global {
 =======
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const EnhancedAnalyticsPage: React.FC = () => {
   const features = [
@@ -167,11 +154,7 @@ const EnhancedAnalyticsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedAnalytics</title>
-        <meta name="description" content="Advanced EnhancedAnalytics solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedAnalytics, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -269,4 +252,3 @@ const EnhancedAnalyticsPage: React.FC = () => {
 };
 
 export default EnhancedAnalyticsPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

@@ -1,9 +1,8 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const PagePage: React.FC = () => {
   const features = [
@@ -43,12 +42,7 @@ const PagePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
-        <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
-      </Helmet>
-<<<<<<< HEAD
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -70,14 +64,6 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
-
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Page</h1>h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional page services tailored to your business needs.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 

@@ -36,38 +36,47 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <meta name=&quot;description&quot; content=&quot;Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;page, AI solutions, IT services, Zion Tech Group, page&quot; />
       </Helmet>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced page solutions.</p>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>Transform your business with our advanced page solutions.</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>p>
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Our page solutions deliver unmatched performance, security, and scalability.</p>p>
           </div>
           </div>
         </div>
       </section>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>p>
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Experience the power of our page solutions for your business.</p>p>
           </div>
           </div>
         </div>
       </section>
-              Ready to Get Started?
-            </h2>
+<<<<<<< HEAD:app/it-infrastructure/page.tsx
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page needs and get a customized solution.</p>p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
 
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                <Mail className="mr-2 h-5 w-5" />
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
+                <Mail className=&quot;mr-2 h-5 w-5&quot; />
                 Email Us
 
             </div>
@@ -81,5 +90,3 @@ export default PagePage
 <<<<<<< HEAD:app-broken/app/it-training/page.tsx
 </button>
 </button>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/iot-edge/page.tsx

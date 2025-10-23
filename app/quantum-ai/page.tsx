@@ -1,9 +1,8 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const PagePage: React.FC = () => {
   const features = [
@@ -43,11 +42,7 @@ const PagePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -57,30 +52,9 @@ const PagePage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Page
             </h1>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
             </p>
-=======
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced page solutions.</p>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>p>
-          </div>
-          </div>
-        </div>
-      </section>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>p>
-          </div>
-          </div>
-        </div>
-      </section>
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page needs and get a customized solution.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
@@ -91,7 +65,6 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -167,11 +140,3 @@ const PagePage: React.FC = () => {
 };
 
 export default PagePage;
-=======
-        </div>
-      </section>
-    </div>
-  )
-}
-export default PagePage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

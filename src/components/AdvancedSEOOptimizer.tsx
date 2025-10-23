@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 'use client'
 import React, { useEffect, useCallback, useRef } from 'react'
 import { Helmet } from 'lucide-react'
-=======
-import { Helmet } from 'lucide-react';
-'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 interface SEOData {
   title: string
@@ -50,17 +44,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
+      url: 'https:// ziontechgroup.com',
+      logo: 'https:// ziontechgroup.com/logo.png',
       description: 'Advanced AI and IT Solutions',
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'US'
-      },
+     },
       sameAs: [
-        'https://www.linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/Zion-Holdings',
+        'https:// www.linkedin.com/$1/zion-tech-group',
+        'https:// twitter.com/ziontechgroup',
+        'https:// github.com/Zion-Holdings',
       ],
       ...seoData.structuredData
     }
@@ -76,14 +70,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://ziontechgroup.com'
-        },
-        {
-          '@type': 'ListItem',
+          item: 'https:// ziontechgroup.com'
+       },
+        {'@type': 'ListItem',
           position: 2,
           name: seoData.title,
           item: seoData.canonicalUrl
-        },
+       },
       ]
     }
     return breadcrumbData
@@ -96,19 +89,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
+          name: 'What services do es Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.'
-          }
+         }
         },
-        {
-          '@type': 'Question',
+        {'@type': 'Question',
           name: 'How can I contact Zion Tech Group?',
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.'
-          }
+         }
         },
       ]
     }
@@ -170,55 +162,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
-      <meta name="keywords" content={seoData.keywords.join(', ')} />
-      <link rel="canonical" href={seoData.canonicalUrl} />
-      {/* Open Graph Tags */}
+  <Helme t>{/* Basic MetaTags */}
+    <titl e>{seoData.title}</titl><metaname="description" content={seoData.description} /><metaname="keywords" content={seoData.keywords.join(',')} /><linkrel="canonical" href={seoData.canonicalUrl} />{/* Open GraphTags */}
       {enableOpenGraph && (
-        <>
-          <meta property="og:title" content={seoData.title} />
-          <meta property="og:image:height" content="630" />
-          <meta property="og:site_name" content="Zion Tech Group" />
-          <meta property="og:locale" content="en_US" />
-        </>
-      )}
-      {/* Twitter Card Tags */}
+      <><metaproperty="og:title"content={seoData.title} /><metaproperty="og:image:height"content="630" /><metaproperty="og:site_name"content="Zion TechGroup" /><metaproperty="og:locale"content="en_US" /></>)}
+      {/* Twitter CardTags */}
       {enableTwitterCards && (
-        <>
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={seoData.title} />
-          <meta name="twitter:description" content={seoData.description} />
-          <meta name="twitter:image" content={seoData.ogImage} />
-          <meta name="twitter:site" content="@ziontechgroup" />
-          <meta name="twitter:creator" content="@ziontechgroup" />
-        </>
-      )}
-      {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      <meta name="theme-color" content="#4F46E5" />
-      {/* Structured Data */}
+      <><metaname="twitter:card"content="summary_large_image" /><metaname="twitter:title"content={seoData.title} /><metaname="twitter:description" content={seoData.description} /><metaname="twitter:image" content={seoData.ogImage} /><metaname="twitter:site"content="@ziontechgroup" /><metaname="twitter:creator"content="@ziontechgroup" /></>)}
+      {/* Additional SEO MetaTags */}
+   <metaname="robots"content="index, follow, max-snippet:-1, max-image-preview:large,max-video-preview:-1" /><metaname="googlebot"content="index,follow" /><metaname="bingbot"content="index,follow" /><metaname="author"content="Zion TechGroup" /><metaname="publisher"content="Zion TechGroup" /><metaname="copyright"content="Zion TechGroup" /><metaname="language"content="en" /><metaname="revisit-after"content="7days" /><metaname="distribution"content="global" /><metaname="rating"content="general" /><metaname="theme-color"content="#4F46E5" />{/* StructuredData */}
       {enableSchemaMarkup && _structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(_structuredData)}
-        </script>
-      )}
+      <scripttype="application/ld+json">{JSON.stringify(_structuredData)}
+      </scrip>)}
       {enableSchemaMarkup && _breadcrumbData && (
-        <script type="application/ld+json">
-          {JSON.stringify(_breadcrumbData)}
-        </script>
-      )}
+      <scripttype="application/ld+json">{JSON.stringify(_breadcrumbData)}
+      </scrip>)}
       {enableSchemaMarkup && _faqData && (
         <script type="application/ld+json">
           {JSON.stringify(_faqData)}

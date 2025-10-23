@@ -125,11 +125,11 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   const industries = [
-    { name: 'Technology', icon: <Zap className="w-5 h-5" />, count: 12 },
-    { name: 'Finance', icon: <Building2 className="w-5 h-5" />, count: 8 },
-    { name: 'Healthcare', icon: <Shield className="w-5 h-5" />, count: 6 },
-    { name: 'Retail', icon: <TrendingUp className="w-5 h-5" />, count: 10 },
-    { name: 'Manufacturing', icon: <Users className="w-5 h-5" />, count: 7 }
+    { name: 'Technology', icon: <Zap className=&quot;w-5 h-5&quot; />, count: 12 },
+    { name: 'Finance', icon: <Building2 className=&quot;w-5 h-5&quot; />, count: 8 },
+    { name: 'Healthcare', icon: <Shield className=&quot;w-5 h-5&quot; />, count: 6 },
+    { name: 'Retail', icon: <TrendingUp className=&quot;w-5 h-5&quot; />, count: 10 },
+    { name: 'Manufacturing', icon: <Users className=&quot;w-5 h-5&quot; />, count: 7 }
   ];
 
   const stats = [
@@ -140,28 +140,28 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=&quot;min-h-screen bg-gray-50&quot;></div>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful technology implementations and see how we've helped businesses transform their operations with AI, cybersecurity, cloud computing, and more." />
-        <meta name="keywords" content="case studies, technology solutions, AI implementation, cybersecurity projects, cloud migration" />
+        <meta name=&quot;description&quot; content=&quot;Explore our successful technology implementations and see how we've helped businesses transform their operations with AI, cybersecurity, cloud computing, and more.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;case studies, technology solutions, AI implementation, cybersecurity projects, cloud migration&quot; />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <section className=&quot;bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h1 className=&quot;text-4xl md:text-6xl font-bold mb-6&quot;>
               Success Stories
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className=&quot;text-xl md:text-2xl mb-8 text-blue-100&quot;>
               Discover how we've helped businesses transform their operations with cutting-edge technology solutions
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+            <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mt-12&quot;></div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">{stat.value}</div>
-                  <div className="text-blue-100">{stat.label}</div>
+                <div key={index} className=&quot;text-center&quot;></div>
+                  <div className=&quot;text-3xl md:text-4xl font-bold text-yellow-400 mb-2&quot;>{stat.value}</div>
+                  <div className=&quot;text-blue-100&quot;>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -170,18 +170,18 @@ const CaseStudiesPage: React.FC = () => {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industries We Serve</h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+      <section className=&quot;py-16 bg-white&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-6xl mx-auto&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-center text-gray-900 mb-12&quot;>Industries We Serve</h2>
+            <div className=&quot;grid grid-cols-2 md:grid-cols-5 gap-6&quot;></div>
               {industries.map((industry, index) => (
-                <div key={index} className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                  <div className="flex justify-center mb-3 text-blue-600">
+                <div key={index} className=&quot;text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors&quot;></div>
+                  <div className=&quot;flex justify-center mb-3 text-blue-600&quot;></div>
                     {industry.icon}
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-1">{industry.name}</h3>
-                  <p className="text-sm text-gray-600">{industry.count} projects</p>
+                  <h3 className=&quot;font-semibold text-gray-900 mb-1&quot;>{industry.name}</h3>
+                  <p className=&quot;text-sm text-gray-600&quot;>{industry.count} projects</p>
                 </div>
               ))}
             </div>
@@ -190,73 +190,73 @@ const CaseStudiesPage: React.FC = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Featured Case Studies</h2>
-            <div className="space-y-12">
+      <section className=&quot;py-16 bg-gray-50&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-6xl mx-auto&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-center text-gray-900 mb-12&quot;>Featured Case Studies</h2>
+            <div className=&quot;space-y-12&quot;></div>
               {caseStudies.map((study, index) => (
-                <div key={study.id} className={`bg-white rounded-xl shadow-lg overflow-hidden ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} lg:flex`}>
-                  <div className="lg:w-1/2">
-                    <div className="h-64 lg:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                      <div className="text-white text-center">
-                        <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Award className="w-8 h-8" />
+                <div key={study.id} className={`bg-white rounded-xl shadow-lg overflow-hidden ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} lg:flex`}></div>
+                  <div className=&quot;lg:w-1/2&quot;></div>
+                    <div className=&quot;h-64 lg:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center&quot;></div>
+                      <div className=&quot;text-white text-center&quot;></div>
+                        <div className=&quot;w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
+                          <Award className=&quot;w-8 h-8&quot; />
                         </div>
-                        <p className="text-sm font-medium">{study.industry}</p>
+                        <p className=&quot;text-sm font-medium&quot;>{study.industry}</p>
                       </div>
                     </div>
                   </div>
-                  <div className="lg:w-1/2 p-8">
-                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                      <span className="flex items-center gap-1">
-                        <Building2 className="w-4 h-4" />
+                  <div className=&quot;lg:w-1/2 p-8&quot;></div>
+                    <div className=&quot;flex items-center gap-4 text-sm text-gray-500 mb-4&quot;></div>
+                      <span className=&quot;flex items-center gap-1&quot;>
+                        <Building2 className=&quot;w-4 h-4&quot; />
                         {study.client}
                       </span>
-                      <span className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
+                      <span className=&quot;flex items-center gap-1&quot;>
+                        <Users className=&quot;w-4 h-4&quot; />
                         {study.team}
                       </span>
-                      <span className="flex items-center gap-1">
-                        <TrendingUp className="w-4 h-4" />
+                      <span className=&quot;flex items-center gap-1&quot;>
+                        <TrendingUp className=&quot;w-4 h-4&quot; />
                         {study.duration}
                       </span>
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{study.title}</h3>
+                    <h3 className=&quot;text-2xl font-bold text-gray-900 mb-4&quot;>{study.title}</h3>
                     
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                      <p className="text-gray-600 text-sm">{study.challenge}</p>
+                    <div className=&quot;mb-6&quot;></div>
+                      <h4 className=&quot;font-semibold text-gray-900 mb-2&quot;>Challenge</h4>
+                      <p className=&quot;text-gray-600 text-sm&quot;>{study.challenge}</p>
                     </div>
                     
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                      <p className="text-gray-600 text-sm">{study.solution}</p>
+                    <div className=&quot;mb-6&quot;></div>
+                      <h4 className=&quot;font-semibold text-gray-900 mb-2&quot;>Solution</h4>
+                      <p className=&quot;text-gray-600 text-sm&quot;>{study.solution}</p>
                     </div>
                     
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">Results</h4>
-                      <div className="grid grid-cols-2 gap-3">
+                    <div className=&quot;mb-6&quot;></div>
+                      <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Results</h4>
+                      <div className=&quot;grid grid-cols-2 gap-3&quot;></div>
                         {study.results.map((result, resultIndex) => (
-                          <div key={resultIndex} className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                            <span className="text-sm text-gray-600">{result}</span>
+                          <div key={resultIndex} className=&quot;flex items-center gap-2&quot;></div>
+                            <CheckCircle className=&quot;w-4 h-4 text-green-500 flex-shrink-0&quot; />
+                            <span className=&quot;text-sm text-gray-600&quot;>{result}</span>
                           </div>
                         ))}
                       </div>
                     </div>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-500">
-                        <span className="font-medium">{study.industry}</span> industry
+                    <div className=&quot;flex items-center justify-between&quot;></div>
+                      <div className=&quot;text-sm text-gray-500&quot;></div>
+                        <span className=&quot;font-medium&quot;>{study.industry}</span> industry
                       </div>
                       <Link
                         to={`/case-studies/${study.id}`}
-                        className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+                        className=&quot;flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium&quot;
                       >
                         Read Full Case Study
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className=&quot;w-4 h-4&quot; />
                       </Link>
                     </div>
                   </div>
@@ -268,27 +268,27 @@ const CaseStudiesPage: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Start Your Success Story?</h2>
-            <p className="text-xl mb-8 text-blue-100">
+      <section className=&quot;py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h2 className=&quot;text-3xl font-bold mb-6&quot;>Ready to Start Your Success Story?</h2>
+            <p className=&quot;text-xl mb-8 text-blue-100&quot;>
               Let's discuss how we can help transform your business with our proven technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to=&quot;/contact&quot;
+                className=&quot;inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors&quot;
               >
                 Start Your Project
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className=&quot;w-4 h-4&quot; />
               </Link>
               <Link
-                to="/services"
-                className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                to=&quot;/services&quot;
+                className=&quot;inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors&quot;
               >
                 View Our Services
-                <ExternalLink className="w-4 h-4" />
+                <ExternalLink className=&quot;w-4 h-4&quot; />
               </Link>
             </div>
           </div>

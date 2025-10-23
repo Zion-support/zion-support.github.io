@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Play } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Zap, Heart } from 'lucide-react'
-=======
-import React from 'react';
-import { Play, CheckCircle, Zap, Heart, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-const AIFitnessCoachPage: React.FC = () => {
-  const features = [
+constAIFitnessCoachPage: React.FC= () =>{constfeatures= [
     'Personalized Plans',
     'Progress Tracking',
     'Nutrition Analysis',
@@ -27,45 +18,42 @@ const AIFitnessCoachPage: React.FC = () => {
     'Wearable Integration'
   ]
 
-  const benefits = [
+  constbenefits= [
     'Better results',
-    '24/7 guidance',
+    '2 4/7 guidance',
     'Personalized approach',
     'Health insights',
     'Motivation support',
     'Cost-effective'
   ]
 
-  const pricingPlans = [
+  constpricingPlans= [
     {
       name: 'Basic',
-      price: '$99',
+      price: '$9 9',
       period: '/month',
       features: ['Basic plans', 'Progress tracking', 'Email support', 'Mobile app'],
       popular: false
-    },
-    {
-      name: 'Premium',
-      price: '$149',
+   },
+    {name: 'Premium',
+      price: '$14 9',
       period: '/month',
       features: ['Personalized plans', 'Nutrition analysis', 'Video workouts', 'Wearable sync', 'Priority support'],
       popular: true
-    },
-    {
-      name: 'Pro',
-      price: '$249',
+   },
+    {name: 'Pro',
+      price: '$24 9',
       period: '/month',
       features: ['Everything in Premium', '1-on-1 coaching', 'Custom programs', 'Advanced analytics', 'Dedicated support'],
       popular: false
     }
   ]
 
+const Page = () => {
   return (
-    <>
-      <SEOOptimizer
-        title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
-        description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get 24/7 guidance, and achieve your health goals starting at $99/month."
-        keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']}
+  <><SEOOptimizertitle="AI Fitness Coach - Personalized Fitness & Nutrition Plans | ZionTechGroup"
+        description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get24/7 guidance, and achieve your health goals starting at$99/month."
+        keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitnessautomation']}
         canonicalUrl="https://ziontechgroup.com/ai-fitness-coach"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -210,4 +198,4 @@ const AIFitnessCoachPage: React.FC = () => {
   )
 }
 
-export default AIFitnessCoachPage
+export default Page;

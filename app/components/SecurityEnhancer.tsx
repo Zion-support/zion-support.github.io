@@ -1,10 +1,8 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const SecurityEnhancerPage: React.FC = () => {
   const features = [
@@ -44,11 +42,7 @@ const SecurityEnhancerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>SecurityEnhancer</title>
-        <meta name="description" content="Advanced SecurityEnhancer solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, SecurityEnhancer, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -146,42 +140,3 @@ const SecurityEnhancerPage: React.FC = () => {
 };
 
 export default SecurityEnhancerPage;
-=======
-'use client'
-import React, { useEffect } from 'react'
-interface SecurityEnhancerProps {
-children: React.ReactNode
-}
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
-useEffect(() => {
-// Security enhancement logic
-const enhanceSecurity = () => {
-// Add security headers
-const securityHeaders = {
-'X-Content-Type-Options': 'nosniff',
-'X-Frame-Options': 'DENY',
-'X-XSS-Protection': '1; mode=block',
-'Referrer-Policy': 'strict-origin-when-cross-origin'
-}
-// Add CSP meta tag
-const cspMeta = document.createElement('meta')
-cspMeta.httpEquiv = 'Content-Security-Policy'
-cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
-document.head.appendChild(cspMeta)
-// Disable right-click context menu
-document.addEventListener('contextmenu', (e) => {
-e.preventDefault()
-})
-// Disable F12 and other dev tools shortcuts
-document.addEventListener('keydown', (e) => {
-if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-e.preventDefault()
-}
-})
-}
-enhanceSecurity()
-}, [])
-return <>{children}</>
-}
-export default SecurityEnhancer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

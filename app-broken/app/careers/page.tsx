@@ -175,22 +175,22 @@ const CareersPage: React.FC = () => {
 
   const companyValues = [
     {
-      icon: <Star className="w-8 h-8 text-yellow-500" />,
+      icon: <Star className=&quot;w-8 h-8 text-yellow-500&quot; />,
       title: 'Excellence',
       description: 'We strive for excellence in everything we do, delivering exceptional results for our clients.'
     },
     {
-      icon: <Users className="w-8 h-8 text-blue-500" />,
+      icon: <Users className=&quot;w-8 h-8 text-blue-500&quot; />,
       title: 'Collaboration',
       description: 'We believe in the power of teamwork and collaboration to achieve great things together.'
     },
     {
-      icon: <Heart className="w-8 h-8 text-red-500" />,
+      icon: <Heart className=&quot;w-8 h-8 text-red-500&quot; />,
       title: 'Passion',
       description: 'We are passionate about technology and its potential to transform businesses and lives.'
     },
     {
-      icon: <Award className="w-8 h-8 text-purple-500" />,
+      icon: <Award className=&quot;w-8 h-8 text-purple-500&quot; />,
       title: 'Innovation',
       description: 'We embrace innovation and continuously push the boundaries of what\'s possible.'
     }
@@ -198,66 +198,63 @@ const CareersPage: React.FC = () => {
 
   const perks = [
     {
-      icon: <Zap className="w-6 h-6 text-blue-600" />,
+      icon: <Zap className=&quot;w-6 h-6 text-blue-600&quot; />,
       title: 'Flexible Work',
       description: 'Work from anywhere with flexible hours'
     },
     {
-      icon: <GraduationCap className="w-6 h-6 text-green-600" />,
+      icon: <GraduationCap className=&quot;w-6 h-6 text-green-600&quot; />,
       title: 'Learning Budget',
       description: '$2,000 annual learning and development budget'
     },
     {
-      icon: <Heart className="w-6 h-6 text-red-600" />,
+      icon: <Heart className=&quot;w-6 h-6 text-red-600&quot; />,
       title: 'Health & Wellness',
       description: 'Comprehensive health insurance and wellness programs'
     },
     {
-      icon: <Award className="w-6 h-6 text-purple-600" />,
+      icon: <Award className=&quot;w-6 h-6 text-purple-600&quot; />,
       title: 'Career Growth',
       description: 'Clear career paths and promotion opportunities'
     },
     {
-      icon: <Users className="w-6 h-6 text-orange-600" />,
+      icon: <Users className=&quot;w-6 h-6 text-orange-600&quot; />,
       title: 'Team Events',
       description: 'Regular team building and social events'
     },
     {
-      icon: <Star className="w-6 h-6 text-yellow-600" />,
+      icon: <Star className=&quot;w-6 h-6 text-yellow-600&quot; />,
       title: 'Equity',
       description: 'Stock options for all employees'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=&quot;min-h-screen bg-gray-50&quot;></div>
       <Helmet>
         <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team of innovative technologists and help shape the future of AI, cybersecurity, and cloud computing." />
-        <meta name="keywords" content="tech careers, AI jobs, cybersecurity jobs, cloud computing jobs, remote work" />
+        <meta name=&quot;description&quot; content=&quot;Join our team of innovative technologists and help shape the future of AI, cybersecurity, and cloud computing.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;tech careers, AI jobs, cybersecurity jobs, cloud computing jobs, remote work&quot; />
       </Helmet>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Join Our Team
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Build the future of technology with us. We're looking for passionate individuals who want to make a difference.
-            </p>
+<<<<<<< HEAD:app/careers/page.tsx
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">Build the future of technology with us. We're looking for passionate individuals who want to make a difference.</p>p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
                 Remote & On-site
               </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
+              <div className=&quot;flex items-center gap-2&quot;></div>
+                <Clock className=&quot;w-4 h-4&quot; />
                 Flexible Hours
               </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4" />
+              <div className=&quot;flex items-center gap-2&quot;></div>
+                <Award className=&quot;w-4 h-4&quot; />
                 Competitive Benefits
               </div>
             </div>
@@ -266,18 +263,18 @@ const CareersPage: React.FC = () => {
       </section>
 
       {/* Company Values */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Values</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className=&quot;py-16 bg-white&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-6xl mx-auto&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-center text-gray-900 mb-12&quot;>Our Values</h2>
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {companyValues.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
+                <div key={index} className=&quot;text-center&quot;></div>
+                  <div className=&quot;flex justify-center mb-4&quot;></div>
                     {value.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  <h3 className=&quot;text-xl font-semibold text-gray-900 mb-3&quot;>{value.title}</h3>
+                  <p className=&quot;text-gray-600&quot;>{value.description}</p>
                 </div>
               ))}
             </div>
@@ -286,18 +283,18 @@ const CareersPage: React.FC = () => {
       </section>
 
       {/* Perks & Benefits */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Perks & Benefits</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className=&quot;py-16 bg-gray-100&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-6xl mx-auto&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-center text-gray-900 mb-12&quot;>Perks & Benefits</h2>
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {perks.map((perk, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                  <div className="flex items-center gap-4">
+                <div key={index} className=&quot;bg-white p-6 rounded-lg shadow-md&quot;></div>
+                  <div className=&quot;flex items-center gap-4&quot;></div>
                     {perk.icon}
-                    <div>
-                      <h3 className="font-semibold text-gray-900">{perk.title}</h3>
-                      <p className="text-gray-600 text-sm">{perk.description}</p>
+                    <div></div>
+                      <h3 className=&quot;font-semibold text-gray-900&quot;>{perk.title}</h3>
+                      <p className=&quot;text-gray-600 text-sm&quot;>{perk.description}</p>
                     </div>
                   </div>
                 </div>
@@ -308,67 +305,67 @@ const CareersPage: React.FC = () => {
       </section>
 
       {/* Open Positions */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Open Positions</h2>
-            <div className="space-y-6">
+      <section className=&quot;py-16 bg-white&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-6xl mx-auto&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-center text-gray-900 mb-12&quot;>Open Positions</h2>
+            <div className=&quot;space-y-6&quot;></div>
               {openPositions.map((position) => (
-                <div key={position.id} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{position.title}</h3>
-                      <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-3">
-                        <span className="flex items-center gap-1">
-                          <Briefcase className="w-4 h-4" />
+                <div key={position.id} className=&quot;bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow&quot;></div>
+                  <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4&quot;></div>
+                    <div></div>
+                      <h3 className=&quot;text-xl font-semibold text-gray-900 mb-2&quot;>{position.title}</h3>
+                      <div className=&quot;flex flex-wrap gap-4 text-sm text-gray-600 mb-3&quot;></div>
+                        <span className=&quot;flex items-center gap-1&quot;>
+                          <Briefcase className=&quot;w-4 h-4&quot; />
                           {position.department}
                         </span>
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
+                        <span className=&quot;flex items-center gap-1&quot;>
+                          <MapPin className=&quot;w-4 h-4&quot; />
                           {position.location}
                         </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
+                        <span className=&quot;flex items-center gap-1&quot;>
+                          <Clock className=&quot;w-4 h-4&quot; />
                           {position.type}
                         </span>
-                        <span className="text-green-600 font-medium">{position.salary}</span>
+                        <span className=&quot;text-green-600 font-medium&quot;>{position.salary}</span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <div className=&quot;flex items-center gap-2 text-sm text-gray-500&quot;></div>
                       <span>Posted {new Date(position.posted).toLocaleDateString()}</span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4">{position.description}</p>
+                  <p className=&quot;text-gray-600 mb-4&quot;>{position.description}</p>
                   
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Requirements</h4>
-                      <ul className="space-y-1">
+                  <div className=&quot;grid md:grid-cols-2 gap-6 mb-6&quot;></div>
+                    <div></div>
+                      <h4 className=&quot;font-semibold text-gray-900 mb-2&quot;>Requirements</h4>
+                      <ul className=&quot;space-y-1&quot;>
                         {position.requirements.slice(0, 3).map((req, index) => (
-                          <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <li key={index} className=&quot;flex items-start gap-2 text-sm text-gray-600&quot;>
+                            <CheckCircle className=&quot;w-4 h-4 text-green-500 mt-0.5 flex-shrink-0&quot; />
                             {req}
                           </li>
                         ))}
                         {position.requirements.length > 3 && (
-                          <li className="text-sm text-gray-500">
+                          <li className=&quot;text-sm text-gray-500&quot;>
                             +{position.requirements.length - 3} more requirements
                           </li>
                         )}
                       </ul>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Benefits</h4>
-                      <ul className="space-y-1">
+                    <div></div>
+                      <h4 className=&quot;font-semibold text-gray-900 mb-2&quot;>Benefits</h4>
+                      <ul className=&quot;space-y-1&quot;>
                         {position.benefits.slice(0, 3).map((benefit, index) => (
-                          <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <li key={index} className=&quot;flex items-start gap-2 text-sm text-gray-600&quot;>
+                            <CheckCircle className=&quot;w-4 h-4 text-green-500 mt-0.5 flex-shrink-0&quot; />
                             {benefit}
                           </li>
                         ))}
                         {position.benefits.length > 3 && (
-                          <li className="text-sm text-gray-500">
+                          <li className=&quot;text-sm text-gray-500&quot;>
                             +{position.benefits.length - 3} more benefits
                           </li>
                         )}
@@ -376,16 +373,16 @@ const CareersPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">
-                      <span className="font-medium">{position.experience}</span> experience required
+                  <div className=&quot;flex items-center justify-between&quot;></div>
+                    <div className=&quot;text-sm text-gray-500&quot;></div>
+                      <span className=&quot;font-medium&quot;>{position.experience}</span> experience required
                     </div>
                     <Link
                       to={`/careers/${position.id}`}
-                      className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                      className=&quot;flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors&quot;
                     >
                       Apply Now
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className=&quot;w-4 h-4&quot; />
                     </Link>
                   </div>
                 </div>
@@ -396,19 +393,19 @@ const CareersPage: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Don't See Your Dream Job?</h2>
-            <p className="text-xl mb-8 text-blue-100">
+      <section className=&quot;py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h2 className=&quot;text-3xl font-bold mb-6&quot;>Don't See Your Dream Job?</h2>
+            <p className=&quot;text-xl mb-8 text-blue-100&quot;>
               We're always looking for talented individuals. Send us your resume and let's start a conversation.
             </p>
             <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              to=&quot;/contact&quot;
+              className=&quot;inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors&quot;
             >
               Get in Touch
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className=&quot;w-4 h-4&quot; />
             </Link>
           </div>
         </div>

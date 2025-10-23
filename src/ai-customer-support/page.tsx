@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -7,58 +6,44 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { MessageCircle } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
-=======
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, CheckCircle, Phone, Mail, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
       icon: MessageCircle,
-      title: '24/7 AI Chat Support',
+      title: '2 4/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
       benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
-    },
-    {
-      icon: Users,
+   },
+    {icon: Users,
       title: 'Smart Ticket Routing',
-      description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
+      description: 'AI-powered ticket class ification and routing to the most appropriate support agent based on expertise and workload.',
       benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
-    },
-    {
-      icon: Clock,
+   },
+    {icon: Clock,
       title: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
       benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
-    },
-    {
-      icon: Shield,
+   },
+    {icon: Shield,
       title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
     }
   ]
 
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$149/month',
+  constpricing= [
+    {name: 'Starter',
+      price: '$14 9/month',
       description: 'Perfect for small businesses',
-      features: ['Up to 1,000 conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']
-    },
-    {
-      name: 'Professional',
-      price: '$299/month',
+      features: ['Up to 1,000conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']
+   },
+    {name: 'Professional',
+      price: '$29 9/month',
       description: 'Ideal for growing companies',
-      features: ['Up to 10,000 conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']
-    },
-    {
-      name: 'Enterprise',
-      price: '$599/month',
+      features: ['Up to10,000conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']
+   },
+    {name: 'Enterprise',
+      price: '$59 9/month',
       description: 'For large organizations',
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
@@ -72,11 +57,9 @@ const AICustomerSupportPage: React.FC = () => {
   ]
 
   return (
-    <>
-      <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
+  <><SEOOptimizertitle="AI Customer Support Solutions - ZionTechGroup"
+        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by95% and reduce costs by60%."
+        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AIhelpdesk']}
         canonicalUrl="https://ziontechgroup.com/ai-customer-support"
       />
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -201,11 +184,9 @@ const AICustomerSupportPage: React.FC = () => {
             </div>
           </section>
         </div>
-        </main>
-        <Footer />
       </div>
     </>
   )
 }
 
-export default AICustomerSupportPage
+export default Page;

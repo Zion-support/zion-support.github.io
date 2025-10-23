@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
@@ -6,17 +5,8 @@ import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
-=======
-import { CheckCircle, Star, Phone, Mail, Check, Clock } from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-const DemoPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -41,56 +31,46 @@ const DemoPage: React.FC = () => {
     window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
-  const demoFeatures = [
-    {
-      icon: Brain,
+  constdemoFeatures= [
+    {icon: Brain,
       title: 'AI Solutions Demo',
       description: 'See our AI services in action with live demonstrations'
-    },
-    {
-      icon: Shield,
+   },
+    {icon: Shield,
       title: 'Security Assessment',
       description: 'Get a free security evaluation of your current setup'
-    },
-    {
-      icon: Zap,
+   },
+    {icon: Zap,
       title: 'Performance Analysis',
       description: 'Learn how to optimize your business processes'
-    },
-    {
-      icon: Users,
+   },
+    {icon: Users,
       title: 'Team Training',
       description: 'Hands-on training for your team members'
     }
   ]
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
+  consttestimonials= [
+    {name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
       text: 'The demo was incredibly insightful. We saw immediate value in their AI solutions.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
+      rating:5},
+    {name: 'Michael Chen',
       company: 'InnovateLabs',
       text: 'Professional team with deep expertise. The demo exceeded our expectations.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
+      rating:5},
+    {name: 'Emily Rodriguez',
       company: 'DataFlow Systems',
       text: 'Clear, concise, and very informative. Highly recommend scheduling a demo.',
       rating: 5
     }
   ]
 
+const Page = () => {
   return (
-    <>
-      <SEOOptimizer
-        title="Request a Demo - Zion Tech Group"
-        description="Schedule a personalized demo of our AI and IT services. See how we can transform your business with cutting-edge technology."
-        keywords={['demo', 'AI demo', 'IT demo', 'business consultation', 'technology demonstration']}
+  <><SEOOptimizertitle="Request a Demo - ZionTechGroup"
+        description="Schedule a personalized demo of our AI and IT services. See how we can transform your business withcutting-edgetechnology."
+        keywords={['demo', 'AI demo', 'IT demo', 'business consultation', 'technologydemonstration']}
         canonicalUrl="https://ziontechgroup.com/demo"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -145,81 +125,41 @@ const DemoPage: React.FC = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                       placeholder="Enter your fullname"
+                      /></di><di v><labelhtmlFor="email"className="block text-sm font-medium text-gray-300mb-2">Email Address *
+                    </labe><inputtype="email"
+                       id="email"
+                       name="email"
+                        requiredvalue={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        required
-                        value={formData.company}
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                       placeholder="Enter youremail"
+                      /></di><di v><labelhtmlFor="company"className="block text-sm font-medium text-gray-300mb-2">Company Name *
+                    </labe><inputtype="text"
+                       id="company"
+                       name="company"
+                        requiredvalue={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        placeholder="Enter your company name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                       placeholder="Enter your companyname"
+                      /></di><di v><labelhtmlFor="phone"className="block text-sm font-medium text-gray-300mb-2">Phone Number
+                    </labe><inputtype="tel"
+                       id="phone"
+                       name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                        Service of Interest
-                      </label>
-                      <select
-                        id="service"
-                        name="service"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                       placeholder="Enter your phonenumber"
+                      /></di><di v><labelhtmlFor="service"className="block text-sm font-medium text-gray-300mb-2">Service of Interest
+                    </labe><selectid="service"
+                       name="service"
                         value={formData.service}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                      >
-                        <option value="">Select a service</option>
-                        <option value="ai-services">AI Services</option>
-                        <option value="it-services">IT Services</option>
-                        <option value="cloud-services">Cloud Services</option>
-                        <option value="cybersecurity">Cybersecurity</option>
-                        <option value="data-analytics">Data Analytics</option>
-                        <option value="custom-solution">Custom Solution</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                        Additional Information
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
+                      ><optionvalue="">Selectaservice</optio><optionvalue="ai-services">AIServices</optio><optionvalue="it-services">ITServices</optio><optionvalue="cloud-services">CloudServices</optio><optionvalue="cybersecurity">Cybersecurity</optio><optionvalue="data-analytics">DataAnalytics</optio><optionvalue="custom-solution">CustomSolution</optio></selec></di><di v><labelhtmlFor="message"className="block text-sm font-medium text-gray-300mb-2">Additional Information
+                    </labe><textareaid="message"
+                       name="message"
                         rows={4}
                         value={formData.message}
                         onChange={handleInputChange}
@@ -312,4 +252,4 @@ const DemoPage: React.FC = () => {
   )
 }
 
-export default DemoPage
+export default Page;

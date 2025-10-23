@@ -61,19 +61,7 @@ const PWAInstaller: React.FC = () => {
     return null
   }
   return (
-    <div className="fixed bottom-4 right-4 z-50 max-w-sm">
-      <div className="bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4">
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-              <Download className="w-4 h-4 text-white" />
-            </div>
-            <div>
-              <h3 className="text-white text-sm font-medium">Install App</h3>
-              <p className="text-gray-300 text-xs">Get quick access to Zion Tech Group</p>
-            </div>
-          </div>
-          <button
+  <divclassName="fixed bottom-4 right-4z-50max-w-sm"><divclassName="bg-slate-80 0/95backdrop-blur-md rounded-lg shado w-xl border border-cyan-500/20p-4"><divclassName="flexitems-startjustify-betweenmb-3"><divclassName="flexitems-centerspace-x-2"><divclassName="w-8 h-8 bg-gradient-to-r from-cyan-400to-purple-500rounded-lg flexitems-centerjustify-center"><DownloadclassName="w-4h-4text-white" /></di><di v><h3className="text-whitetext-smfont-medium">InstallApp</h><pclassName="text-gray-300text-xs">Get quick access to ZionTechGroup</p></di></di><
             onClick={handleDismiss}
             className="text-gray-400 hover:text-white transition-colors"
             aria-label="Dismiss install prompt"
@@ -84,11 +72,12 @@ const PWAInstaller: React.FC = () => {
         <div className="space-y-2">
           <button
             onClick={handleInstallClick}
-            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
-          >
-            Install Now
-          </button>
-          <button
+           className="w-full bg-gradient-to-r from-cyan-50 0 to-purple-600text-white px-4 py-2 rounded-lghover:from-cyan-600 hover:to-purple-700transition-allduration-300text-smfont-medium"
+          ></
+            onClick={handleInstallClick}
+           className="w-full bg-gradient-to-r from-cyan-50 0 to-purple-600text-white px-4 py-2 rounded-lghover:from-cyan-600 hover:to-purple-700transition-allduration-300text-smfont-medium"
+          >Install Now
+        </butto><
             onClick={handleDismiss}
             className="w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm"
           >

@@ -1,10 +1,8 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const ServiceCardPage: React.FC = () => {
   const features = [
@@ -44,11 +42,7 @@ const ServiceCardPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ServiceCard</title>
-        <meta name="description" content="Advanced ServiceCard solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ServiceCard, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -146,25 +140,14 @@ const ServiceCardPage: React.FC = () => {
 };
 
 export default ServiceCardPage;
-=======
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { CheckCircle } from 'lucide-react'
-
-interface ServiceCardProps {
-title: string
-description: string
-features: string[]
 price?: string
 popular?: boolean
-onSelect?: () => void
-className?: string
-}
-const ServiceCard: React.FC<ServiceCardProps> = ({
-title,
+onSelect?: () =>void
+class Nam e?: string}constServiceCard:React.FC<ServiceCardProp s>= ({title,
 description,
 features,
 price,
-popular = false,
+popular= false,
 onSelect,
 className = ''
 }) => {
@@ -178,7 +161,7 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 </div>
 )}
 <div className="mb-4">
-<h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">{title}</h3>h3>
+<h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">$3</h3>
 <p className="text-gray-300 text-sm">{description}</p>
 </div>
 <div className="space-y-2 mb-6">{features.map((feature, index) => (</div>
@@ -197,12 +180,8 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 {onSelect && (
 <button
 onClick={onSelect}
-<<<<<<< HEAD
 className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"></button>
 Get Started
-=======
-className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">Get Started</button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
 </button>
 )}
@@ -210,4 +189,3 @@ className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 r
 )
 }
 export default ServiceCard
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

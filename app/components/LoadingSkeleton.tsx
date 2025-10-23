@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
@@ -44,11 +42,7 @@ const LoadingSkeletonPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Loading Skeleton - Zion Tech Group</title>
-        <meta name="description" content="Advanced LoadingSkeleton solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, LoadingSkeleton, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -147,30 +141,4 @@ const LoadingSkeletonPage: React.FC = () => {
 
 export default LoadingSkeletonPage;
 =======
-import { Helmet } from "react-helmet-async"
-import { Link } from "react-router-dom"
-import { ArrowRight } from "lucide-react"
-export default function LoadingSkeleton() {
-  return (
-    <div>
-      <Helmet>
-        <title>Loading Skeleton - Zion Tech Group</title>
-      </Helmet>
-      <div className="loading-skeleton-container">
-        <div className="skeleton">
-          <div className="skeleton-line"></div>
-          <div className="skeleton-line"></div>
-          <div className="skeleton-line"></div>
-        </div>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+

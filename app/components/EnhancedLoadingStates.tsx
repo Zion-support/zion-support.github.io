@@ -1,10 +1,8 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const EnhancedLoadingStatesPage: React.FC = () => {
   const features = [
@@ -44,11 +42,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedLoadingStates</title>
-        <meta name="description" content="Advanced EnhancedLoadingStates solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedLoadingStates, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -146,22 +140,10 @@ const EnhancedLoadingStatesPage: React.FC = () => {
 };
 
 export default EnhancedLoadingStatesPage;
-=======
-import { Loader2, Brain, Cloud, Shield, Code } from 'lucide-react'
-import { Brain } from 'lucide-react'
-
-interface LoadingSpinnerProps {
-size?: 'sm' | 'md' | 'lg'
-text?: string
-}
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-size = 'md',
-text = 'Loading...'
-}) => {
-const sizeClasses = {
 sm: 'w-4 h-4',
 md: 'w-8 h-8',
-lg: 'w-12 h-12'
+lg: 'w-12h-1 2'}
+return(<divclassName="flex flex-colitems-centerjustify-centerp-8"><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName="mt-2text-smtext-gray-500">{text}</p>)}</di>)
 }
 return (
 <div className="flex flex-col items-center justify-center p-8">
@@ -214,4 +196,3 @@ export const ContentSkeleton: React.FC = () => (
 </div>
 </div>
 )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

@@ -21,7 +21,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const mainContent = document.querySelector('main, [role="main"]');
+          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
           if (mainContent) {
             (mainContent as HTMLElement).focus();
             event.preventDefault();
@@ -83,7 +83,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Add focus management
     if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
       
       const trapFocus = (element: HTMLElement) => {
         const focusableContent = element.querySelectorAll(focusableElements);
@@ -108,7 +108,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role="dialog"]');
+      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
       modals.forEach(trapFocus);
     }
   }, [enableFocusManagement]);

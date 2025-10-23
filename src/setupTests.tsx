@@ -25,9 +25,7 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
+    addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
@@ -61,24 +59,12 @@ global.fetch = jest.fn()
 const originalConsoleWarn = console.warn
 const originalConsoleInfo = console.info
 console.warn = (...args) => {
-<<<<<<< HEAD
     return
-=======
-  const _message = args[0]?.toString?.() || '';
-  if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
-    return;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
   }
   _originalConsoleWarn(...args)
 }
 console.info = (...args) => {
-<<<<<<< HEAD
     return
-=======
-  const _message = args[0]?.toString?.() || '';
-  if (_message.includes('ReactDOM.render is no longer supported')) {
-    return;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
   }
   _originalConsoleInfo(...args)
 }
@@ -91,27 +77,4 @@ global.PerformanceObserver = class MockPerformanceObserver {
   takeRecords() {
     return []
   }
-}
-// Suppress JSDOM navigation warnings
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
-  _originalConsoleError.apply(console, args)
-}
-// Mock window.location
-delete (window as unknown as Record<string, unknown>).location
-(window as unknown as Record<string, unknown>).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn()
 }

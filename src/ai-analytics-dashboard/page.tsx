@@ -1,18 +1,11 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 
-<<<<<<< HEAD
 import { BarChart3 } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone } from 'lucide-react'
-=======
-import { BarChart3, CheckCircle, Star, Phone, BarChart, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -21,116 +14,11 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     setIsLoaded(true)
   }, [])
 
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent insights and predictions from your data using advanced machine learning',
-      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend forecasting', 'Smart recommendations']
-    },
-    {
-      icon: BarChart3,
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards',
-      benefits: ['Live data updates', 'Custom visualizations', 'Mobile responsive', 'Export capabilities']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Advanced Analytics',
-      description: 'Deep dive into your data with advanced statistical analysis and reporting tools',
-      benefits: ['Cohort analysis', 'Funnel analysis', 'A/B testing', 'Cohort retention']
-    },
-    {
-      icon: Users,
-      title: 'User Behavior Tracking',
-      description: 'Understand user behavior with detailed tracking and segmentation capabilities',
-      benefits: ['User journeys', 'Behavioral cohorts', 'Engagement metrics', 'Conversion tracking']
-    }
-  ]
-
-  const integrations = [
-    { name: 'Google Analytics', icon: '📊', description: 'Seamless integration with GA4' },
-    { name: 'Facebook Ads', icon: '📘', description: 'Track ad performance and ROI' },
-    { name: 'Google Ads', icon: '🔍', description: 'Monitor campaign effectiveness' },
-    { name: 'Salesforce', icon: '💼', description: 'CRM data integration' },
-    { name: 'Shopify', icon: '🛒', description: 'E-commerce analytics' },
-    { name: 'Mailchimp', icon: '📧', description: 'Email marketing metrics' },
-    { name: 'Stripe', icon: '💳', description: 'Payment and revenue tracking' },
-    { name: 'Zapier', icon: '⚡', description: 'Connect 1000+ apps' }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$149/month',
-      description: 'Perfect for small businesses and startups',
-      features: [
-        '5 data sources',
-        'Basic dashboards',
-        'Standard reports',
-        'Email support',
-        '1 user account'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$299/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [
-        '20 data sources',
-        'Advanced dashboards',
-        'AI insights',
-        'Custom reports',
-        'Priority support',
-        '5 user accounts'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$599/month',
-      description: 'For large organizations with complex needs',
-      features: [
-        'Unlimited data sources',
-        'Custom dashboards',
-        'Full AI suite',
-        'White-label options',
-        'API access',
-        'Dedicated support',
-        'Unlimited users'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Robert Johnson',
-      role: 'CEO, DataCorp',
-      content: 'AI Analytics Dashboard helped us identify a 30% increase in conversion opportunities. Game changer!',
-      rating: 5
-    },
-    {
-      name: 'Maria Garcia',
-      role: 'Marketing Director, RetailCo',
-      content: 'The AI insights are incredibly accurate. We made data-driven decisions that increased revenue by 45%.',
-      rating: 5
-    },
-    {
-      name: 'James Wilson',
-      role: 'CTO, TechStartup',
-      content: 'Finally, a dashboard that actually provides actionable insights. Our team productivity increased by 60%.',
-      rating: 5
-    }
-  ]
-
+const Page = () => {
   return (
-    <>
-      <SEOOptimizer
-        title="AI Analytics Dashboard - Intelligent Business Intelligence | Zion Tech Group"
-        description="Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, and intelligent recommendations."
-        keywords={['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'data insights']}
+  <><SEOOptimizertitle="AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup"
+        description="Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations."
+        keywords={['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'datainsights']}
         canonicalUrl="https://ziontechgroup.com/ai-analytics-dashboard"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
