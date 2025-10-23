@@ -25,6 +25,6 @@ export default function FiveGSolutionsPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
