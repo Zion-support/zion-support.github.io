@@ -19,8 +19,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({
       reducedMotion: false,
     };
 
-    // Apply accessibility settings only on client side
-    if (typeof window !== 'undefined') {
+    // Apply accessibility settings only in browser
+    if (typeof window !== 'undefined' && document) {
       if (settings.highContrast) {
         document.body.classList.add("high-contrast");
       }

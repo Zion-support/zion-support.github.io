@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
 import { MessageCircle, Bot, Zap, CheckCircle, ArrowRight } from "lucide-react";
 
 const AIChatbotBuilderPage: React.FC = () => {
@@ -33,11 +33,11 @@ const AIChatbotBuilderPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>AI Chatbot Builder - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Build intelligent chatbots with our AI-powered chatbot builder. No coding required, advanced features included." />
         <meta property="og:type" content="website" />
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

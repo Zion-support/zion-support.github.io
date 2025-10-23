@@ -1,7 +1,7 @@
 
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
 import { Target, Users, Award, ArrowRight, CheckCircle } from "lucide-react";
 
 const AboutPage: React.FC = () => {
@@ -47,11 +47,11 @@ const AboutPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and team. We&apos;re passionate about AI and IT solutions that transform businesses." />
         <meta property="og:type" content="website" />
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

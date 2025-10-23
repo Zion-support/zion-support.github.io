@@ -1,27 +1,29 @@
 "use client";
 import React from "react";
-import Link from "next/link";
+import { Helmet } from "react-helmet-async";
 
-const NotFoundPage: React.FC = () => {
+const NotFoundPagePage: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
-        <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-          Page Not Found
-        </h2>
-        <p className="text-gray-600 mb-6">
-          The page you are looking for does not exist.
-        </p>
-        <Link
-          href="/"
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Go Home
-        </Link>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>NotFoundPage | Zion Tech Group</title>
+        <meta name="description" content="Professional NotFoundPage services by Zion Tech Group." />
+      </Helmet>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              NotFoundPage
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Professional NotFoundPage services tailored to your business needs.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default NotFoundPage;
+export default NotFoundPagePage;

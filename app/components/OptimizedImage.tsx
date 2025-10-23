@@ -38,7 +38,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    if (priority) return;
+    if (priority || typeof window === 'undefined') return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
