@@ -15,6 +15,7 @@ import { ArrowRight } from 'lucide-react'
     'Gain competitive advantage with advanced technology'
   ]
 
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
   return (
     <>
       

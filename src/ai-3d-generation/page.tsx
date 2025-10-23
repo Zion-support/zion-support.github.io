@@ -49,6 +49,7 @@ constAI3 DGenerationPage: React.FC= () =>{constfeatures= [
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="AI3D Generation Studio - Create3D Models & Animations with AI | ZionTechGroup"
         description="Create professional 3 D models, animations, and virtual environments with AI3D Generation Studio. No3D skills needed, starting at$299/month."

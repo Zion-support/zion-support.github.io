@@ -36,11 +36,11 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     'Proven track record of success'
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <Helmet>
         <title>EnhancedSEOOptimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedSEOOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedSEOOptimizer, AI solutions, IT services, Zion Tech Group, enhancedseooptimizer" />
+        <meta name=&quot;description&quot; content=&quot;Professional EnhancedSEOOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;EnhancedSEOOptimizer, AI solutions, IT services, Zion Tech Group, enhancedseooptimizer&quot; />
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -84,13 +84,13 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               Our enhancedseooptimizer solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>{features.map((feature, index) => (</div>
+              <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300&quot;></div>
+                <div className=&quot;flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4&quot;></div>
+                  <feature.icon className=&quot;h-6 w-6 text-white&quot; />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+                <p className=&quot;text-gray-300&quot;>{feature.description}</p>
               </div>
             ))}
           </div>
@@ -123,8 +123,8 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
 
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                <Mail className="mr-2 h-5 w-5" />
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
+                <Mail className=&quot;mr-2 h-5 w-5&quot; />
                 Email Us
 
             </div>

@@ -90,6 +90,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="Free Business Consultation - ZionTechGroup"
         description="Get a free30-minute consultation with our technology experts. Discover how AI and IT solutions can transformyourbusiness."
@@ -348,4 +349,4 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
   )
 }
 
-export default ConsultationPage
+export default Page;

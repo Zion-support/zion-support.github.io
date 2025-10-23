@@ -52,49 +52,49 @@ const Footer: React.FC = memo(() => {
   ]
 
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className=&quot;bg-slate-900 text-white&quot;>
+      <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12&quot;></div>
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8&quot;></div>
           {/* Company Info */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+          <div className=&quot;lg:col-span-2 space-y-4&quot;></div>
+            <div className=&quot;flex items-center space-x-2&quot;></div>
+              <div className=&quot;w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center&quot;></div>
+                <Brain className=&quot;w-5 h-5 text-white&quot; />
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
+              <span className=&quot;text-xl font-bold&quot;>Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 text-sm">
+            <p className=&quot;text-gray-300 text-sm&quot;>
               Leading provider of AI and IT solutions for modern businesses.
               We help companies transform their operations with cutting-edge technology.
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-gray-300">
-                <Phone className="w-4 h-4 mr-2" />
+            <div className=&quot;space-y-2&quot;></div>
+              <div className=&quot;flex items-center text-sm text-gray-300&quot;></div>
+                <Phone className=&quot;w-4 h-4 mr-2&quot; />
                 <span>+1 (302) 464-0950</span>
               </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <Mail className="w-4 h-4 mr-2" />
+              <div className=&quot;flex items-center text-sm text-gray-300&quot;></div>
+                <Mail className=&quot;w-4 h-4 mr-2&quot; />
                 <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-start text-sm text-gray-300">
-                <MapPin className="w-4 h-4 mr-2 mt-0.5" />
+              <div className=&quot;flex items-start text-sm text-gray-300&quot;></div>
+                <MapPin className=&quot;w-4 h-4 mr-2 mt-0.5&quot; />
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
           </div>
           
           {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Brain className="w-5 h-5 mr-2" />
+          <div></div>
+            <h3 className=&quot;text-lg font-semibold mb-4 text-cyan-400 flex items-center&quot;>
+              <Brain className=&quot;w-5 h-5 mr-2&quot; />
               AI Services
             </h3>
-            <ul className="space-y-2">
+            <ul className=&quot;space-y-2&quot;>
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className=&quot;text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm&quot;
                   >
                     {service.name}
                   </Link>
@@ -102,8 +102,8 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link
-                  to="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  to=&quot;/ai-services&quot;
+                  className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium&quot;
                 >
                   View All AI Services →
                 </Link>
@@ -112,17 +112,17 @@ const Footer: React.FC = memo(() => {
           </div>
           
           {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Cloud className="w-5 h-5 mr-2" />
+          <div></div>
+            <h3 className=&quot;text-lg font-semibold mb-4 text-cyan-400 flex items-center&quot;>
+              <Cloud className=&quot;w-5 h-5 mr-2&quot; />
               IT Services
             </h3>
-            <ul className="space-y-2">
+            <ul className=&quot;space-y-2&quot;>
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className=&quot;text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm&quot;
                   >
                     {service.name}
                   </Link>
@@ -130,8 +130,8 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link
-                  to="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  to=&quot;/it-services&quot;
+                  className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium&quot;
                 >
                   View All IT Services →
                 </Link>
@@ -140,17 +140,17 @@ const Footer: React.FC = memo(() => {
           </div>
           
           {/* Micro SAAS */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Code className="w-5 h-5 mr-2" />
+          <div></div>
+            <h3 className=&quot;text-lg font-semibold mb-4 text-cyan-400 flex items-center&quot;>
+              <Code className=&quot;w-5 h-5 mr-2&quot; />
               Micro SAAS
             </h3>
-            <ul className="space-y-2">
+            <ul className=&quot;space-y-2&quot;>
               {microSaasServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className=&quot;text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm&quot;
                   >
                     {service.name}
                   </Link>
@@ -158,8 +158,8 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link
-                  to="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  to=&quot;/micro-saas&quot;
+                  className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium&quot;
                 >
                   View All Micro SAAS →
                 </Link>
@@ -169,15 +169,15 @@ const Footer: React.FC = memo(() => {
         </div>
         
         {/* Additional Links Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 pt-8 border-t border-gray-700">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 pt-8 border-t border-gray-700&quot;></div>
+          <div></div>
+            <h3 className=&quot;text-lg font-semibold mb-4&quot;>Company</h3>
+            <ul className=&quot;space-y-2&quot;>
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.url}
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                    className=&quot;text-gray-300 hover:text-white text-sm transition-colors&quot;
                   >
                     {link.name}
                   </Link>
@@ -186,14 +186,14 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
+          <div></div>
+            <h3 className=&quot;text-lg font-semibold mb-4&quot;>Resources</h3>
+            <ul className=&quot;space-y-2&quot;>
               {resourcesLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.url}
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                    className=&quot;text-gray-300 hover:text-white text-sm transition-colors&quot;
                   >
                     {link.name}
                   </Link>
@@ -202,42 +202,42 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+          <div></div>
+            <h3 className=&quot;text-lg font-semibold mb-4&quot;>Quick Links</h3>
+            <ul className=&quot;space-y-2&quot;>
               <li>
-                <Link to="/consultation" className="text-gray-300 hover:text-white text-sm transition-colors">
+                <Link to=&quot;/consultation&quot; className=&quot;text-gray-300 hover:text-white text-sm transition-colors&quot;>
                   Free Consultation
                 </Link>
               </li>
               <li>
-                <Link to="/demo" className="text-gray-300 hover:text-white text-sm transition-colors">
+                <Link to=&quot;/demo&quot; className=&quot;text-gray-300 hover:text-white text-sm transition-colors&quot;>
                   Request Demo
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white text-sm transition-colors">
+                <Link to=&quot;/contact&quot; className=&quot;text-gray-300 hover:text-white text-sm transition-colors&quot;>
                   Contact Sales
                 </Link>
               </li>
               <li>
-                <Link to="/support" className="text-gray-300 hover:text-white text-sm transition-colors">
+                <Link to=&quot;/support&quot; className=&quot;text-gray-300 hover:text-white text-sm transition-colors&quot;>
                   Technical Support
                 </Link>
               </li>
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+          <div></div>
+            <h3 className=&quot;text-lg font-semibold mb-4&quot;>Follow Us</h3>
+            <div className=&quot;flex space-x-4&quot;></div>
+              <a href=&quot;https://linkedin.com/company/ziontechgroup&quot; className=&quot;text-gray-300 hover:text-white transition-colors&quot;>
                 LinkedIn
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+              <a href=&quot;https://twitter.com/ziontechgroup&quot; className=&quot;text-gray-300 hover:text-white transition-colors&quot;>
                 Twitter
               </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+              <a href=&quot;https://github.com/ziontechgroup&quot; className=&quot;text-gray-300 hover:text-white transition-colors&quot;>
                 GitHub
               </a>
             </div>
@@ -245,19 +245,19 @@ const Footer: React.FC = memo(() => {
         </div>
         
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+        <div className=&quot;border-t border-gray-700 mt-8 pt-8&quot;></div>
+          <div className=&quot;flex flex-col md:flex-row justify-between items-center&quot;></div>
+            <div className=&quot;text-gray-400 text-sm mb-4 md:mb-0&quot;></div>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+            <div className=&quot;flex space-x-6&quot;></div>
+              <a href=&quot;/privacy&quot; className=&quot;text-sm text-gray-400 hover:text-cyan-400 transition-colors&quot;>
                 Privacy Policy
               </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href=&quot;/terms&quot; className=&quot;text-sm text-gray-400 hover:text-cyan-400 transition-colors&quot;>
                 Terms of Service
               </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href=&quot;/cookies&quot; className=&quot;text-sm text-gray-400 hover:text-cyan-400 transition-colors&quot;>
                 Cookie Policy
               </a>
             </div>

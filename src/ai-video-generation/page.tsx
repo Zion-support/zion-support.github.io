@@ -49,6 +49,7 @@ constAIVideoGenerationPage: React.FC= () =>{constfeatures= [
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="AI Video Generator Pro - Create Professional Videos with AI | ZionTechGroup"
         description="Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at$199/month."
@@ -197,4 +198,4 @@ constAIVideoGenerationPage: React.FC= () =>{constfeatures= [
   )
 }
 
-export default AIVideoGenerationPage
+export default Page;

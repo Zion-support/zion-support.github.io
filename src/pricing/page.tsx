@@ -94,6 +94,7 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="Pricing Plans - ZionTechGroup"
         description="Transparent pricing for AI and IT services. Choose the perfect plan for your business needs. Starting at$299/month."
@@ -210,4 +211,4 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
   )
 }
 
-export default PricingPage
+export default Page;

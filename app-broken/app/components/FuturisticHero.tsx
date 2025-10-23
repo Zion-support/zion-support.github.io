@@ -86,8 +86,8 @@ const FuturisticHeroPage: React.FC = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
 
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                <Mail className="mr-2 h-5 w-5" />
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
+                <Mail className=&quot;mr-2 h-5 w-5&quot; />
                 Email Us
 
             </div>

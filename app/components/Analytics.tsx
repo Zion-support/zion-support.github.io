@@ -1,9 +1,7 @@
 import React, { useEffect } from "react"
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-  }
+interface AnalyticsProps {
+  className?: string;
 }
 
 const Analytics: React.FC = () => {

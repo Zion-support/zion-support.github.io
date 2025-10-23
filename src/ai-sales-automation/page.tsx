@@ -74,6 +74,7 @@ const AISalesAutomationPage: React.FC = () => {
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="AI Sales Automation Solutions - ZionTechGroup"
         description="Revolutionize your sales process with AI-powered automation. Increase sales by40%, save60% time, and improve lead accuracy by85%."
@@ -240,4 +241,4 @@ const AISalesAutomationPage: React.FC = () => {
   )
 }
 
-export default AISalesAutomationPage
+export default Page;

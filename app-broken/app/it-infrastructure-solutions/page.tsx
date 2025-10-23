@@ -35,7 +35,7 @@ const PagePage: React.FC = () => {
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions powered by AI technology." />
+        <meta name=&quot;description&quot; content=&quot;Advanced page solutions powered by AI technology.&quot; />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
@@ -74,18 +74,18 @@ const PagePage: React.FC = () => {
                 Powerful AI technology that drives results
 
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>{features.map((feature, index) => (</div>
+                <div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group&quot;></div>
+                  <div className=&quot;w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform&quot;></div>
+                    <feature.icon className=&quot;w-8 h-8 text-white&quot; />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{feature.title}</h3>
+                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   {feature.benefits && (
-                    <ul className="space-y-2">
+                    <ul className=&quot;space-y-2&quot;>
                       {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        <li key={idx} className=&quot;flex items-center text-sm text-gray-400&quot;>
+                          <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
                           {benefit}
                         </li>
                       ))}

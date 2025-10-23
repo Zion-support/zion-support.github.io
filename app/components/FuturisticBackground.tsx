@@ -37,6 +37,7 @@ const FuturisticBackgroundPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className = '' }) => {
   return (
     <>
       

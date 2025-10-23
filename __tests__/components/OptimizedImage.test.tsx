@@ -19,15 +19,15 @@ const OptimizedImage = ({
       alt={alt}
       width={width}
       height={height}
-      data-testid="optimized-image"
-      loading="lazy"
+      data-testid=&quot;optimized-image&quot;
+      loading=&quot;lazy&quot;
     />
   );
 };
 
 describe('OptimizedImage Component', () => {
   it('renders with required props', () => {
-    render(<OptimizedImage src="test.jpg" alt="Test image" />);
+    render(<OptimizedImage src=&quot;test.jpg&quot; alt=&quot;Test image&quot; />);
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toBeInTheDocument();
@@ -36,7 +36,7 @@ describe('OptimizedImage Component', () => {
   });
 
   it('renders with optional dimensions', () => {
-    render(<OptimizedImage src="test.jpg" alt="Test image" width={100} height={100} />);
+    render(<OptimizedImage src=&quot;test.jpg&quot; alt=&quot;Test image&quot; width={100} height={100} />);
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toHaveAttribute('width', '100');
@@ -44,7 +44,7 @@ describe('OptimizedImage Component', () => {
   });
 
   it('has lazy loading enabled', () => {
-    render(<OptimizedImage src="test.jpg" alt="Test image" />);
+    render(<OptimizedImage src=&quot;test.jpg&quot; alt=&quot;Test image&quot; />);
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toHaveAttribute('loading', 'lazy');

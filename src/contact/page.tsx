@@ -64,20 +64,16 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ]
 
+const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Contact Us
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Ready to transform your business with cutting-edge AI and IT solutions?
-            Get in touch with our experts for a free consultation.
+    <div className="min-h-screen bg-gray-100 py-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          Page
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-gray-600">
+            This page is under construction. Please check back later.
           </p>
         </section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -269,10 +265,9 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
             </div>
           </div>
         </div>
-      </main>
-      <Footer />
+      </div>
     </div>
   )
 }
 
-export default ContactPage
+export default Page;

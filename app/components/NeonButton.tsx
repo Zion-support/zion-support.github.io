@@ -1,16 +1,7 @@
 import React from "react"
 import { ArrowRight } from "lucide-react"
 interface NeonButtonProps {
-  children?: React.ReactNode
-  className?: string
-  title?: string
-  description?: string
-  href?: string
-  onClick?: () => void
-  variant?: "primary" | "secondary" | "accent"
-  size?: "sm" | "md" | "lg"
-  icon?: React.ReactNode
-  disabled?: boolean
+  className?: string;
 }
 
 const NeonButton: React.FC<NeonButtonProps> = ({

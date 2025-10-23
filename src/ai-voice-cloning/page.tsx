@@ -49,6 +49,7 @@ constAIVoiceCloningPage: React.FC= () =>{constfeatures= [
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="AI Voice Cloning Studio - Create Realistic Voice Clones | ZionTechGroup"
         description="Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at$199/month."
@@ -197,4 +198,4 @@ constAIVoiceCloningPage: React.FC= () =>{constfeatures= [
   )
 }
 
-export default AIVoiceCloningPage
+export default Page;

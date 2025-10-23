@@ -72,6 +72,7 @@ constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="AI Data Visualization Solutions - ZionTechGroup"
         description="Transform your data into actionable insights with AI-powered visualization tools. Create interactive dashboards, automated reports, andintelligentanalytics."
@@ -238,4 +239,4 @@ constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
   )
 }
 
-export default AIDataVisualizationPage
+export default Page;
