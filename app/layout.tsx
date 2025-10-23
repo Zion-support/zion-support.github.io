@@ -1,21 +1,25 @@
-"use client";
-import React from 'react';
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
 
-const Layout = () => {
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "Zion Tech Group - AI and IT Solutions",
+  description: "Leading provider of AI and IT solutions for modern businesses. We help companies transform their operations with cutting-edge technology.",
+  keywords: "AI solutions, IT services, artificial intelligence, technology consulting, Zion Tech Group",
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <div className="min-h-screen bg-gray-100 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          Layout
-        </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Layout;
+    <html lang="en">
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  )
+}
