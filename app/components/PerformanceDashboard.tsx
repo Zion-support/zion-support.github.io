@@ -78,6 +78,4 @@ const PerformanceDashboard: React.FC = () => {
   );
 };
 
-export default Page;
-
 export default PerformanceDashboard;
