@@ -71,7 +71,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   // Generate WebP src if supported
-  const getOptimizedSrc = (originalSrc: string) => {
+  const _getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith("data:") || originalSrc.startsWith("blob:")) {
       return originalSrc;
     }
@@ -83,7 +83,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return originalSrc;
   };
 
-  const optimizedSrc = getOptimizedSrc(src);
+  const optimizedSrc = _getOptimizedSrc(src);
   const imageSrc = isInView ? optimizedSrc : placeholder;
 
   return (
@@ -124,3 +124,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
+
