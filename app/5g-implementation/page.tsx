@@ -53,10 +53,13 @@ const FiveGImplementationPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
 
+
           <div className="relative max-w-7xl mx-auto text-center">
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               5G Network{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -69,6 +72,7 @@ const FiveGImplementationPage: React.FC = () => {
               applications and IoT ecosystems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                 Get Started
               </button>
@@ -81,8 +85,11 @@ const FiveGImplementationPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="text-center mb-16">
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced 5G Features
               </h2>
@@ -93,7 +100,11 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 group hover:bg-white/10 transition-all duration-300">
+
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">
@@ -104,7 +115,8 @@ const FiveGImplementationPage: React.FC = () => {
                   </p>
                   {feature.benefits && (
                     <ul className="space-y-2">
-
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -119,7 +131,9 @@ const FiveGImplementationPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
+
           <div className="max-w-4xl mx-auto text-center">
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Implement 5G?
             </h2>
@@ -128,6 +142,7 @@ const FiveGImplementationPage: React.FC = () => {
               get started today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2" />

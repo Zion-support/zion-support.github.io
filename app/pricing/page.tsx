@@ -4,8 +4,11 @@
         </section>
         {/* FAQ Section */}
         <section className="py-20 px-4 bg-white/5">
+
           <div className="max-w-4xl mx-auto">
+
             <div className="text-center mb-16">
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
@@ -15,7 +18,9 @@
             </div>
 
             <div className="space-y-8">
+
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
+
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Can I change my plan at any time?
                 </h3>
@@ -26,6 +31,7 @@
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
+
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Is there a free trial available?
                 </h3>
@@ -36,6 +42,7 @@
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
+
                 <h3 className="text-xl font-semibold text-white mb-3">
                   What payment methods do you accept?
                 </h3>
@@ -49,7 +56,9 @@
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
+
           <div className="max-w-4xl mx-auto text-center">
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>

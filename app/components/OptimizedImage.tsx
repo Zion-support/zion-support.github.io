@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 
 
 interface OptimizedImageProps {
@@ -49,7 +51,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       observer.observe(imgRef.current);
     }
 
-    return () => observer.disconnect();
+    return (
+    <>) => observer.disconnect();
   }, [priority]);
 
   const handleLoad = () => {
@@ -80,3 +83,5 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
+    </>
+  );

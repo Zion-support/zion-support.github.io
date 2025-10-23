@@ -1,3 +1,6 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 
 interface SEOHeadProps {
@@ -30,6 +33,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return (
+    <>
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -45,3 +49,5 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 };
 
 export default EnhancedSEOHead;
+    </>
+  );

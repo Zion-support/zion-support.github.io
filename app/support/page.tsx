@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 
 
 const SupportPage: React.FC = () => {
@@ -47,3 +49,4 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
+  );

@@ -121,10 +121,13 @@ const ConsultationPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
 
+
           <div className="relative max-w-7xl mx-auto text-center">
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Free{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -141,22 +144,29 @@ const ConsultationPage: React.FC = () => {
 
         {/* Consultation Form */}
         <section className="py-20 px-4">
+
           <div className="max-w-4xl mx-auto">
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
               {/* Form */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+
                 <h2 className="text-2xl font-bold text-white mb-6">
                   Schedule Your Consultation
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
                     <div>
+
 
                         Full Name *
                       </label>
 
                     </div>
                     <div>
+
 
                         Email Address *
                       </label>
@@ -165,13 +175,16 @@ const ConsultationPage: React.FC = () => {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
                     <div>
+
 
                         Company
                       </label>
 
                     </div>
                     <div>
+
 
                         Phone Number
                       </label>
@@ -180,6 +193,7 @@ const ConsultationPage: React.FC = () => {
                   </div>
 
                   <div>
+
 
                       Service Interest *
                     </label>
@@ -194,6 +208,7 @@ const ConsultationPage: React.FC = () => {
 
                   <div>
 
+
                       Preferred Time
                     </label>
 
@@ -207,6 +222,7 @@ const ConsultationPage: React.FC = () => {
                   </div>
 
                   <div>
+
 
                       Project Budget
                     </label>
@@ -229,6 +245,7 @@ const ConsultationPage: React.FC = () => {
 
                   <div>
 
+
                       Project Details
                     </label>
 
@@ -242,13 +259,17 @@ const ConsultationPage: React.FC = () => {
 
               {/* Benefits & Info */}
               <div className="space-y-8">
+
                 <div>
+
                   <h2 className="text-2xl font-bold text-white mb-6">
                     Why Choose Our Consultation?
                   </h2>
                   <div className="space-y-4">
+
                     {benefits.map((benefit, index) => (
                       <div key={index} className="flex items-start">
+
                         <CheckCircle className="w-6 h-6 text-purple-400 mr-3 flex-shrink-0 mt-1" />
                         <span className="text-gray-300">{benefit}</span>
                       </div>
@@ -257,6 +278,7 @@ const ConsultationPage: React.FC = () => {
                 </div>
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
+
                   <h3 className="text-xl font-bold text-white mb-4">
                     What to Expect
                   </h3>
@@ -281,19 +303,24 @@ const ConsultationPage: React.FC = () => {
                 </div>
 
                 <div className="bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-xl p-6">
+
                   <h3 className="text-xl font-bold text-white mb-4">
                     Contact Information
                   </h3>
                   <div className="space-y-3 text-gray-300">
+
                     <div className="flex items-center">
+
                       <Mail className="w-5 h-5 text-purple-400 mr-3" />
                       <span>consultation@ziontechgroup.com</span>
                     </div>
                     <div className="flex items-center">
+
                       <Phone className="w-5 h-5 text-purple-400 mr-3" />
                       <span>+1 (555) 123-4567</span>
                     </div>
                     <div className="flex items-center">
+
                       <Building className="w-5 h-5 text-purple-400 mr-3" />
                       <span>Available Monday - Friday, 9 AM - 6 PM EST</span>
                     </div>
@@ -306,8 +333,11 @@ const ConsultationPage: React.FC = () => {
 
         {/* Contact Form */}
         <section className="py-20 px-4 bg-white/5">
+
           <div className="max-w-4xl mx-auto">
+
             <div className="text-center mb-12">
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Schedule Your Consultation
               </h2>
@@ -318,15 +348,19 @@ const ConsultationPage: React.FC = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
                   <div>
+
                     <label className="block text-white font-medium mb-2">
                       Full Name *
                     </label>
 
                   </div>
                   <div>
+
                     <label className="block text-white font-medium mb-2">
                       Email Address *
                     </label>
@@ -335,13 +369,16 @@ const ConsultationPage: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
                   <div>
+
                     <label className="block text-white font-medium mb-2">
                       Company
                     </label>
 
                   </div>
                   <div>
+
                     <label className="block text-white font-medium mb-2">
                       Phone Number
                     </label>
@@ -350,6 +387,7 @@ const ConsultationPage: React.FC = () => {
                 </div>
 
                 <div>
+
                   <label className="block text-white font-medium mb-2">
                     Service Interest *
                   </label>
@@ -364,6 +402,7 @@ const ConsultationPage: React.FC = () => {
                 </div>
 
                 <div>
+
                   <label className="block text-white font-medium mb-2">
                     Message
                   </label>
@@ -380,11 +419,16 @@ const ConsultationPage: React.FC = () => {
 
         {/* Contact Info */}
         <section className="py-20 px-4">
+
           <div className="max-w-4xl mx-auto text-center">
+
             <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
               <div className="flex flex-col items-center">
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -393,7 +437,9 @@ const ConsultationPage: React.FC = () => {
                 <p className="text-gray-300">+1-302-464-0950</p>
               </div>
               <div className="flex flex-col items-center">
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+
                   <Mail className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -402,7 +448,9 @@ const ConsultationPage: React.FC = () => {
                 <p className="text-gray-300">consultation@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -419,3 +467,4 @@ const ConsultationPage: React.FC = () => {
 };
 
 export default ConsultationPage;
+  );

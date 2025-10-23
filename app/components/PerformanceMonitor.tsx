@@ -1,5 +1,6 @@
 
-    return () => {
+    return (
+    <>) => {
       // Cleanup function
     };
 
@@ -7,3 +8,5 @@
 };
 
 export default PerformanceMonitor;
+    </>
+  );

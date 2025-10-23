@@ -21,13 +21,18 @@ const NotFoundPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+
         <div className="max-w-2xl w-full text-center">
+
           {/* 404 Animation */}
           <div className="relative mb-8">
+
             <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse">
+
               404
             </div>
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
+
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
@@ -44,7 +49,9 @@ const NotFoundPage: React.FC = () => {
 
           {/* Search Suggestion */}
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
+
             <div className="flex items-center justify-center mb-4">
+
               <Search className="w-6 h-6 text-cyan-400 mr-2" />
               <h2 className="text-lg font-semibold text-white">
                 What were you looking for?
@@ -55,7 +62,18 @@ const NotFoundPage: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
 
-                  {item}
+              {[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Services", path: "/services" },
+                { name: "Contact", path: "/contact" }
+              ].map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-purple-500/30 transition-all duration-300"
+                >
+                  {item.name}
                 </Link>
               ))}
             </div>
@@ -64,10 +82,18 @@ const NotFoundPage: React.FC = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
 
+            <Link
+              to="/"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
               <Home className="w-5 h-5 mr-2" />
               Go Home
             </Link>
 
+            <button
+              onClick={() => window.history.back()}
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-600 to-slate-700 text-white font-semibold rounded-lg hover:from-slate-700 hover:to-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </button>
@@ -75,6 +101,7 @@ const NotFoundPage: React.FC = () => {
 
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
+
             <h3 className="text-lg font-semibold text-white mb-3">
               Still can't find what you need?
             </h3>
@@ -84,10 +111,18 @@ const NotFoundPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
 
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-purple-500/30 transition-all duration-300"
+              >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Contact Support
               </Link>
 
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-lg text-purple-300 hover:from-purple-500/30 hover:to-pink-500/30 transition-all duration-300"
+              >
                 Send Email
               </a>
             </div>
@@ -95,6 +130,7 @@ const NotFoundPage: React.FC = () => {
 
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
+
             <p className="text-sm text-gray-400">
               <span className="text-cyan-400">Fun Fact:</span> Even our AI gets
               confused sometimes. That's why we have humans to help when things

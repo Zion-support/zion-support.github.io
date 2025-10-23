@@ -10,8 +10,11 @@
 
         {/* Industries */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="text-center mb-12">
+
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Trusted Across Industries
               </h2>
@@ -22,9 +25,11 @@
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
 
+
                     {industry.icon}
                   </div>
                   <div className="text-sm text-gray-300 group-hover:text-red-400 transition-colors">
+
                     {industry.name}
                   </div>
                 </div>
@@ -35,8 +40,11 @@
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="text-center mb-16">
+
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Powerful Features for Customer Retention
               </h2>
@@ -48,7 +56,9 @@
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+
                   <div className="text-red-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-400 transition-colors">
@@ -72,8 +82,11 @@
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="text-center mb-16">
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Retention Plan
               </h2>
@@ -85,8 +98,10 @@
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+
                       <span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                         <Star className="w-4 h-4 mr-1" />
                         Most Popular
@@ -95,6 +110,7 @@
                   )}
 
                   <div className="text-center mb-8">
+
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {plan.name}
                     </h3>
@@ -102,6 +118,7 @@
                       {plan.description}
                     </p>
                     <div className="flex items-baseline justify-center">
+
                       <span className="text-4xl font-bold text-red-400">
                         {plan.price}
                       </span>
@@ -127,8 +144,11 @@
 
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="text-center mb-16">
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Trusted by Customer Success Teams
               </h2>
@@ -139,7 +159,9 @@
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
+
                   <div className="flex items-center mb-4">
+
 
                     ))}
                   </div>
@@ -147,14 +169,19 @@
                     "{testimonial.content}"
                   </p>
                   <div className="flex items-center">
+
                     <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+
                       {testimonial.avatar}
                     </div>
                     <div>
+
                       <div className="font-semibold text-white">
+
                         {testimonial.name}
                       </div>
                       <div className="text-sm text-gray-400">
+
                         {testimonial.role}, {testimonial.company}
                       </div>
                     </div>
@@ -167,8 +194,11 @@
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-4xl mx-auto text-center">
+
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20 rounded-2xl p-12">
+
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Reduce Customer Churn?
               </h2>
@@ -181,6 +211,7 @@
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
+
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -191,6 +222,7 @@
               </div>
 
               <div className="mt-8 text-sm text-gray-400">
+
                 <p>
                   ✓ 14-day free trial • ✓ No credit card required • ✓ Cancel
                   anytime
@@ -205,3 +237,4 @@
 };
 
 export default ZionAICustomerChurnPredictorProPage;
+  );

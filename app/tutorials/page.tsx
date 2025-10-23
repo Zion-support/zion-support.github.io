@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 
 
 const TutorialsPage: React.FC = () => {
@@ -30,8 +32,11 @@ const TutorialsPage: React.FC = () => {
 
         {/* Category Filter */}
         <section className="py-8 px-4">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="flex flex-wrap justify-center gap-4">
+
 
                   {category.name}
                 </button>
@@ -42,11 +47,16 @@ const TutorialsPage: React.FC = () => {
 
         {/* Tutorials Grid */}
         <section className="py-20 px-4">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 
+
                   <div className="h-48 bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
+
                     <div className="text-6xl">
+
                       {tutorial.icon === Code
                         ? "💻"
                         : tutorial.icon === Database
@@ -56,7 +66,9 @@ const TutorialsPage: React.FC = () => {
                   </div>
 
                   <div className="p-6">
+
                     <div className="flex items-center gap-4 mb-4">
+
                       <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">
                         {tutorial.category.toUpperCase()}
                       </span>
@@ -73,23 +85,29 @@ const TutorialsPage: React.FC = () => {
                     <p className="text-gray-300 mb-4">{tutorial.description}</p>
 
                     <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+
                       <div className="flex items-center gap-4">
+
                         <div className="flex items-center gap-1">
+
                           <Clock className="w-4 h-4" />
                           <span>{tutorial.duration}</span>
                         </div>
                         <div className="flex items-center gap-1">
+
                           <User className="w-4 h-4" />
                           <span>{tutorial.students} students</span>
                         </div>
                       </div>
                       <div className="flex items-center gap-1">
+
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span>{tutorial.rating}</span>
                       </div>
                     </div>
 
                     <div className="flex items-center justify-between">
+
 
                         {tutorial.difficulty}
                       </span>
@@ -107,8 +125,11 @@ const TutorialsPage: React.FC = () => {
 
         {/* Learning Paths */}
         <section className="py-20 px-4 bg-white/5">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="text-center mb-16">
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Learning Paths
               </h2>
@@ -119,8 +140,11 @@ const TutorialsPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">
@@ -138,7 +162,9 @@ const TutorialsPage: React.FC = () => {
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+
                   <Database className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">
@@ -156,7 +182,9 @@ const TutorialsPage: React.FC = () => {
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">
@@ -178,7 +206,9 @@ const TutorialsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
+
           <div className="max-w-4xl mx-auto text-center">
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Learning?
             </h2>
@@ -187,6 +217,7 @@ const TutorialsPage: React.FC = () => {
               our technology tutorials.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Browse All Tutorials
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -203,3 +234,4 @@ const TutorialsPage: React.FC = () => {
 };
 
 export default TutorialsPage;
+  );

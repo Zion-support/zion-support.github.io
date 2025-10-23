@@ -1,128 +1,99 @@
 #!/usr/bin/env python3
+"""
+Script to fix common JSX syntax errors in React/TypeScript files
+"""
+
 import os
 import re
 import glob
 
-def fix_jsx_errors(file_path):
-    """Fix JSX syntax errors in a file."""
+def fix_jsx_file(file_path):
+    """Fix common JSX syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix JSX expressions must have one parent element
-        # Wrap multiple top-level elements in a fragment
-        lines = content.split('\n')
-        in_jsx = False
-        jsx_start = -1
-        brace_count = 0
-        paren_count = 0
+        # Fix missing imports
+        if 'import React' not in content and 'React.FC' in content:
+            content = '"use client";\nimport React from "react";\n' + content
         
-        for i, line in enumerate(lines):
-            stripped = line.strip()
-            
-            # Skip imports and other non-JSX lines
-            if stripped.startswith('import ') or stripped.startswith('export ') or stripped.startswith('const ') or stripped.startswith('function ') or stripped.startswith('interface ') or stripped.startswith('type '):
-                continue
-            
-            # Check if we're in JSX
-            if '<' in line and not stripped.startswith('//'):
-                if not in_jsx:
-                    in_jsx = True
-                    jsx_start = i
-                
-                # Count braces and parentheses
-                brace_count += line.count('{') - line.count('}')
-                paren_count += line.count('(') - line.count(')')
-                
-                # If we have a complete JSX block and the next line starts a new element
-                if brace_count == 0 and paren_count == 0 and i > jsx_start:
-                    # Check if next line starts a new JSX element
-                    if i + 1 < len(lines):
-                        next_line = lines[i + 1].strip()
-                        if next_line.startswith('<') and not next_line.startswith('</'):
-                            # We have multiple top-level elements, wrap in fragment
-                            # Find the end of the current JSX block
-                            end_line = i
-                            for j in range(i + 1, len(lines)):
-                                if lines[j].strip() and not lines[j].strip().startswith('<'):
-                                    end_line = j - 1
-                                    break
-                            
-                            # Wrap in fragment
-                            lines[jsx_start] = '<>' + lines[jsx_start]
-                            lines[end_line] = lines[end_line] + '</>'
-                            break
+        # Fix missing Helmet import
+        if '<Helmet>' in content and 'import { Helmet }' not in content:
+            content = content.replace('"use client";\nimport React from "react";', 
+                                   '"use client";\nimport React from "react";\nimport { Helmet } from "react-helmet-async";')
         
-        # Fix unclosed JSX tags
-        content = '\n'.join(lines)
+        # Fix incomplete JSX fragments
+        if 'return (' in content and '<>' not in content and '<React.Fragment>' not in content:
+            content = content.replace('return (', 'return (\n    <>')
+            if not content.strip().endswith('</>'):
+                content = content.rstrip() + '\n    </>\n  );'
         
-        # Fix specific patterns
-        fixes = [
-            # Fix unclosed Helmet tags
-            (r'<Helmet>([^<]*)', r'<Helmet>\1</Helmet>'),
-            # Fix unclosed BrowserRouter tags
-            (r'<BrowserRouter>([^<]*)', r'<BrowserRouter>\1</BrowserRouter>'),
-            # Fix unclosed div tags (basic pattern)
-            (r'<div([^>]*)>([^<]*)', r'<div\1>\2</div>'),
-            # Fix missing semicolons after imports
-            (r'import ([^;]+)\n', r'import \1;\n'),
-            # Fix missing closing fragments
-            (r'<>([^<]*)', r'<>\1</>'),
-            # Fix JSX expressions must have one parent element
-            (r'return\s+<([^>]+)>', r'return <>\n    <\1>'),
-            (r'</([^>]+)>\s*$', r'</\1>\n  </>'),
-        ]
+        # Fix missing closing tags for common patterns
+        content = re.sub(r'<section[^>]*>', lambda m: m.group(0) + '\n', content)
+        content = re.sub(r'<div[^>]*>', lambda m: m.group(0) + '\n', content)
         
-        for pattern, replacement in fixes:
-            content = re.sub(pattern, replacement, content, flags=re.MULTILINE)
+        # Fix incomplete map functions
+        if 'features.map(' in content and 'features = [' not in content:
+            # Add a basic features array
+            features_def = '''  const features = [
+    {
+      icon: () => null,
+      title: "Feature",
+      description: "Description",
+    },
+  ];'''
+            content = content.replace('const ', features_def + '\n\n  const ')
         
-        # Fix specific JSX structure issues
-        # Look for multiple top-level elements and wrap them
-        if 'return' in content and '<' in content:
-            # Find the return statement and its content
-            return_match = re.search(r'return\s+([^;]+);?', content, re.DOTALL)
-            if return_match:
-                return_content = return_match.group(1).strip()
-                # Check if there are multiple top-level elements
-                elements = re.findall(r'<[^/][^>]*>', return_content)
-                if len(elements) > 1:
-                    # Wrap in fragment
-                    content = content.replace(return_content, f'<>\n    {return_content}\n  </>')
+        # Fix missing closing tags in map functions
+        content = re.sub(r'\{features\.map\([^}]*\)\s*$', 
+                        lambda m: m.group(0) + '\n              ))}\n            </div>', content)
         
+        # Fix incomplete JSX elements
+        content = re.sub(r'<button[^>]*>\s*$', lambda m: m.group(0) + '\n                Button Text\n              </button>', content)
+        content = re.sub(r'<a[^>]*>\s*$', lambda m: m.group(0) + '\n                Link Text\n              </a>', content)
+        
+        # Fix missing closing tags
+        content = re.sub(r'<div[^>]*>\s*$', lambda m: m.group(0) + '\n              </div>', content)
+        content = re.sub(r'<section[^>]*>\s*$', lambda m: m.group(0) + '\n        </section>', content)
+        
+        # Fix incomplete return statements
+        if 'return (' in content and not content.strip().endswith(');'):
+            content = content.rstrip() + '\n  );'
+        
+        # Fix missing export
+        if 'export default' not in content and 'const ' in content:
+            component_name = re.search(r'const (\w+):', content)
+            if component_name:
+                content += f'\n\nexport default {component_name.group(1)};'
+        
+        # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
+            print(f"Fixed: {file_path}")
             return True
-        
-        return False
+        else:
+            print(f"No changes needed: {file_path}")
+            return False
+            
     except Exception as e:
-        print(f"Error fixing JSX in {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'components/**/*.tsx',
-        'components/**/*.ts'
-    ]
+    """Main function to fix all JSX files"""
+    # Find all TypeScript/JSX files in the app directory
+    pattern = "app/**/*.tsx"
+    files = glob.glob(pattern, recursive=True)
     
-    files_processed = 0
-    files_fixed = 0
+    fixed_count = 0
+    for file_path in files:
+        if fix_jsx_file(file_path):
+            fixed_count += 1
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path):
-                files_processed += 1
-                print(f"Processing: {file_path}")
-                
-                if fix_jsx_errors(file_path):
-                    files_fixed += 1
-    
-    print(f"Processed {files_processed} files, fixed {files_fixed} files")
+    print(f"\nFixed {fixed_count} files out of {len(files)} total files")
 
 if __name__ == "__main__":
     main()

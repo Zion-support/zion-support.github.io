@@ -48,9 +48,13 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   return (
+    <>
     <div className="bg-gradient-to-r from-purple-600 to-blue-700 rounded-2xl p-8 md:p-12">
+
       <div className="max-w-6xl mx-auto">
+
         <div className="text-center mb-12">
+
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Transform Your Business Today
           </h2>
@@ -62,7 +66,8 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
@@ -76,17 +81,22 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Benefits List */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
           <div className="space-y-3">
+
             {benefits.slice(0, 4).map((benefit, index) => (
               <div key={index} className="flex items-center text-purple-100">
+
                 <CheckCircle className="w-5 h-5 text-green-300 mr-3 flex-shrink-0" />
                 {benefit}
               </div>
             ))}
           </div>
           <div className="space-y-3">
+
             {benefits.slice(4).map((benefit, index) => (
               <div key={index} className="flex items-center text-purple-100">
+
                 <CheckCircle className="w-5 h-5 text-green-300 mr-3 flex-shrink-0" />
                 {benefit}
               </div>
@@ -96,6 +106,7 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
           <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -106,6 +117,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

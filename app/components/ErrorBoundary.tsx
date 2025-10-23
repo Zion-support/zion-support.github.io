@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component<
       }
 
       return (
+    <>
 
           </div>
         </div>
@@ -30,3 +31,5 @@ class ErrorBoundary extends React.Component<
 }
 
 export default ErrorBoundary;
+    </>
+  );

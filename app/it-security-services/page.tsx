@@ -40,9 +40,12 @@ const ItSecurityServicesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-7xl mx-auto text-center">
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               It Security Services
             </h1>
@@ -51,6 +54,7 @@ const ItSecurityServicesPage: React.FC = () => {
               and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
 
                 Get Started
               </a>
@@ -63,8 +67,11 @@ const ItSecurityServicesPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="text-center mb-16">
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
               </h2>
@@ -74,7 +81,9 @@ const ItSecurityServicesPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -89,7 +98,9 @@ const ItSecurityServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-7xl mx-auto text-center">
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -97,6 +108,7 @@ const ItSecurityServicesPage: React.FC = () => {
               Let us help you implement this solution for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
 
                 Start Your Project
               </a>
@@ -112,3 +124,4 @@ const ItSecurityServicesPage: React.FC = () => {
 };
 
 export default ItSecurityServicesPage;
+  );

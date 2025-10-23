@@ -90,18 +90,27 @@ const ContentCarousel: React.FC = () => {
   }, [nextSlide]);
 
   return (
+    <>
     <div className="relative">
+
       {/* Carousel Container */}
       <div className="relative overflow-hidden rounded-2xl">
 
+
           {slides.map((slide, index) => (
             <div key={index} className="w-full flex-shrink-0">
+
               <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8 md:p-12">
+
                 <div className="max-w-4xl mx-auto">
+
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
                     {/* Content */}
                     <div>
+
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+
                         <slide.icon className="w-8 h-8 text-white" />
                       </div>
 
@@ -114,7 +123,8 @@ const ContentCarousel: React.FC = () => {
                       </p>
 
                       <ul className="space-y-3 mb-8">
-
+                        {slide.features.map((feature, index) => (
+                          <li key={index} className="flex items-start">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
                           </li>
@@ -129,9 +139,13 @@ const ContentCarousel: React.FC = () => {
 
                     {/* Visual Element */}
                     <div className="flex justify-center">
+
                       <div className="w-80 h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
+
                         <div className="text-center">
+
                           <div className="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+
                             <slide.icon className="w-12 h-12 text-white" />
                           </div>
                           <p className="text-white/60 text-sm">
@@ -147,22 +161,43 @@ const ContentCarousel: React.FC = () => {
           ))}
         </div>
 
+        {/* Navigation Buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-all duration-300"
+          aria-label="Previous slide"
+        >
           <ChevronLeft className="w-6 h-6" />
         </button>
 
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-all duration-300"
+          aria-label="Next slide"
+        >
           <ChevronRight className="w-6 h-6" />
         </button>
 
         {/* Dots Indicator */}
         <div className="flex justify-center mt-6 space-x-2">
-
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? "bg-white" : "bg-white/30"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
           ))}
         </div>
       </div>
 
       {/* Benefits Section */}
       <div className="mt-16">
+
         <div className="text-center mb-12">
+
           <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Our solutions deliver unmatched value and performance for your
@@ -171,7 +206,8 @@ const ContentCarousel: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
+          {benefits.map((benefit, index) => (
+            <div key={index} className="flex items-center">
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
               <span className="text-gray-300">{benefit}</span>
             </div>

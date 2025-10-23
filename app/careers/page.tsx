@@ -1,4 +1,7 @@
-
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Star, Users, Heart, Award } from "lucide-react";
 
 interface JobPosition {
   id: string;
@@ -12,6 +15,7 @@ interface JobPosition {
   benefits: string[];
   featured: boolean;
 }
+
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
     {
@@ -21,8 +25,7 @@ const CareersPage: React.FC = () => {
       location: "San Francisco, CA",
       type: "Full-time",
       experience: "5+ years",
-      description:
-        "Lead the development of cutting-edge AI solutions and machine learning models.",
+      description: "Lead the development of cutting-edge AI solutions and machine learning models.",
       requirements: [
         "Master's degree in Computer Science or related field",
         "5+ years of experience in AI/ML",
@@ -46,8 +49,7 @@ const CareersPage: React.FC = () => {
       location: "Remote",
       type: "Full-time",
       experience: "7+ years",
-      description:
-        "Design and implement scalable cloud infrastructure solutions for enterprise clients.",
+      description: "Design and implement scalable cloud infrastructure solutions for enterprise clients.",
       requirements: [
         "Bachelor's degree in Computer Science or related field",
         "7+ years of cloud architecture experience",
@@ -70,59 +72,82 @@ const CareersPage: React.FC = () => {
     {
       icon: Star,
       title: "Excellence",
-      description:
-        "We strive for excellence in everything we do, delivering exceptional results for our clients.",
+      description: "We strive for excellence in everything we do, delivering exceptional results for our clients.",
     },
     {
       icon: Users,
       title: "Collaboration",
-      description:
-        "We believe in the power of teamwork and fostering an inclusive, collaborative environment.",
+      description: "We believe in the power of teamwork and fostering an inclusive, collaborative environment.",
     },
     {
       icon: Heart,
       title: "Innovation",
-      description:
-        "We embrace innovation and encourage creative thinking to solve complex challenges.",
+      description: "We embrace innovation and encourage creative thinking to solve complex challenges.",
     },
     {
       icon: Award,
       title: "Growth",
-      description:
-        "We invest in our team's growth and development, providing opportunities to learn and advance.",
+      description: "We invest in our team's growth and development, providing opportunities to learn and advance.",
     },
   ];
 
   return (
     <>
       <Helmet>
+        <title>Careers | Zion Tech Group</title>
+        <meta name="description" content="Join our team and build the future of technology" />
+        <meta property="og:title" content="Careers | Zion Tech Group" />
+        <meta property="og:description" content="Join our team and build the future of technology" />
+      </Helmet>
 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Careers
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join our team and help build the future of technology. We're looking for passionate individuals who want to make a difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                View Open Positions
+              </a>
+              <a
+                href="/about"
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Learn About Us
+              </a>
             </div>
           </div>
         </section>
 
         {/* Company Values */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Values
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're committed to creating an environment where our team can
-                thrive and make a meaningful impact.
+              <p className="text-lg text-gray-300">
+                What drives us to deliver exceptional results
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {companyValues.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
+                  <h3 className="text-xl font-semibold text-white mb-3">
                     {value.title}
                   </h3>
-                  <p className="text-gray-300">{value.description}</p>{" "}
+                  <p className="text-gray-300">{value.description}</p>
                 </div>
               ))}
             </div>
@@ -130,86 +155,65 @@ const CareersPage: React.FC = () => {
         </section>
 
         {/* Open Positions */}
-        <section className="py-20 px-4 bg-white/5">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Open Positions
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover exciting career opportunities and join our growing
-                team.
+              <p className="text-lg text-gray-300">
+                Join our team and make an impact
               </p>
             </div>
-            <div className="space-y-8">
-
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {openPositions.map((position) => (
+                <div key={position.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                  <div className="flex items-start justify-between mb-4">
                     <div>
-                      <div className="flex items-center gap-4 mb-2">
-                        <h3 className="text-2xl font-bold text-white">
-                          {position.title}
-                        </h3>
-                        {position.featured && (
-                          <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">
-                            Featured
-                          </span>
-                        )}
-                      </div>
-                      <div className="flex flex-wrap items-center gap-4 text-gray-300">
-                        <div className="flex items-center gap-1">
-                          <Briefcase className="w-4 h-4" />
-                          <span>{position.department}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
-                          <span>{position.location}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{position.type}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <GraduationCap className="w-4 h-4" />
-                          <span>{position.experience}</span>
-                        </div>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        {position.title}
+                      </h3>
+                      <div className="flex flex-wrap gap-2 text-sm text-gray-300">
+                        <span>{position.department}</span>
+                        <span>•</span>
+                        <span>{position.location}</span>
+                        <span>•</span>
+                        <span>{position.type}</span>
                       </div>
                     </div>
-                    <button className="mt-4 lg:mt-0 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center">
-                      Apply Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
+                    {position.featured && (
+                      <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Featured
+                      </span>
+                    )}
                   </div>
-                  <p className="text-gray-300 mb-6">{position.description}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <p className="text-gray-300 mb-4">{position.description}</p>
+                  <div className="space-y-4">
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-3">
-                        Requirements
-                      </h4>
-                      <ul className="space-y-2">
+                      <h4 className="font-semibold text-white mb-2">Requirements:</h4>
+                      <ul className="space-y-1">
                         {position.requirements.map((req, index) => (
-                          <li key={index} className="flex items-start">
-                            <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0 mt-1" />
-                            <span className="text-gray-300 text-sm">{req}</span>
-                          </li>
+                          <li key={index} className="text-gray-300 text-sm">• {req}</li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-3">
-                        Benefits
-                      </h4>
-                      <ul className="space-y-2">
+                      <h4 className="font-semibold text-white mb-2">Benefits:</h4>
+                      <ul className="space-y-1">
                         {position.benefits.map((benefit, index) => (
-                          <li key={index} className="flex items-start">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 mt-1" />
-                            <span className="text-gray-300 text-sm">
-                              {benefit}
-                            </span>
-                          </li>
+                          <li key={index} className="text-gray-300 text-sm">• {benefit}</li>
                         ))}
                       </ul>
                     </div>
-                  </div>{" "}
+                  </div>
+                  <div className="mt-6">
+                    <a
+                      href="/contact"
+                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                    >
+                      Apply Now
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
@@ -217,23 +221,27 @@ const CareersPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Don't See the Right Role?
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Join Our Team?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              We're always looking for talented individuals. Send us your resume
-              and let's start a conversation.
+            <p className="text-lg text-gray-300 mb-8">
+              We're always looking for talented individuals who share our passion for innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Send Resume
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Apply Now
+              </a>
+              <a
+                href="/about"
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
                 Learn More
-              </button>{" "}
+              </a>
             </div>
           </div>
         </section>

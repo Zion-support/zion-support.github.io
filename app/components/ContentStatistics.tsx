@@ -129,10 +129,14 @@ const ContentStatistics: React.FC = () => {
   }, [targetCounters]);
 
   return (
+    <>
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+
       <div className="max-w-7xl mx-auto px-4">
+
         {/* Statistics Section */}
         <div className="text-center mb-16">
+
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Impact in Numbers
           </h2>
@@ -143,20 +147,25 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-
+          {statistics.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
               <div className={`text-4xl font-bold ${stat.color} mb-2`}>
                 {stat.value}
                 {stat.suffix}
               </div>
-              <div className="text-gray-300 font-medium">{stat.label}</div>
+              <div className="text-gray-300 font-medium">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
 
         {/* Features Section */}
         <div className="text-center mb-16">
+
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Why Choose Our Solutions?
           </h2>
@@ -167,7 +176,8 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
@@ -181,6 +191,7 @@ const ContentStatistics: React.FC = () => {
 
         {/* Benefits Section */}
         <div className="text-center mb-12">
+
           <h2 className="text-3xl font-bold text-white mb-4">Key Benefits</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the power of our solutions for your business.
@@ -188,17 +199,22 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+
           <div className="space-y-4">
+
             {benefits.slice(0, 4).map((benefit, index) => (
               <div key={index} className="flex items-center text-gray-300">
+
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                 {benefit}
               </div>
             ))}
           </div>
           <div className="space-y-4">
+
             {benefits.slice(4).map((benefit, index) => (
               <div key={index} className="flex items-center text-gray-300">
+
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                 {benefit}
               </div>
@@ -208,7 +224,9 @@ const ContentStatistics: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center">
+
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -217,6 +235,7 @@ const ContentStatistics: React.FC = () => {
               growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -229,6 +248,7 @@ const ContentStatistics: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -55,12 +55,17 @@ const Footer: React.FC = () => {
   ];
 
   return (
+    <>
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+
           {/* Company Info */}
           <div className="lg:col-span-1">
+
             <div className="flex items-center space-x-2 mb-4">
+
               <Brain className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
@@ -69,6 +74,7 @@ const Footer: React.FC = () => {
               leverage cutting-edge technology to drive growth and innovation.
             </p>
             <div className="flex space-x-4">
+
 
                 <span className="sr-only">Facebook</span>
 
@@ -86,6 +92,7 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div>
+
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.map((service, index) => (
@@ -101,6 +108,7 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div>
+
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
               {itServices.map((service, index) => (
@@ -116,6 +124,7 @@ const Footer: React.FC = () => {
 
           {/* Micro SaaS */}
           <div>
+
             <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
             <ul className="space-y-2">
               {microSaas.map((service, index) => (
@@ -131,6 +140,7 @@ const Footer: React.FC = () => {
 
           {/* Company & Support */}
           <div>
+
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
@@ -157,16 +167,21 @@ const Footer: React.FC = () => {
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
             <div className="flex items-center space-x-3">
+
               <Phone className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">+1 (555) 123-4567</span>
             </div>
             <div className="flex items-center space-x-3">
+
               <Mail className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">contact@ziontechgroup.com</span>
             </div>
             <div className="flex items-center space-x-3">
+
               <MapPin className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">San Francisco, CA</span>
             </div>
@@ -175,10 +190,13 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+
           <div className="text-gray-400 text-sm">
+
             © 2024 Zion Tech Group. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
+
 
               Privacy Policy
             </Link>
@@ -196,3 +214,5 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+    </>
+  );

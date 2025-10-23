@@ -63,10 +63,14 @@ const PartnersPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="text-center">
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Our Partners
@@ -82,12 +86,18 @@ const PartnersPage: React.FC = () => {
 
         {/* Partners Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+
                   <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+
                     <div className="text-center">
+
                       <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-2">
+
                         <ExternalLink className="w-8 h-8 text-white" />
                       </div>
                       <p className="text-white/60 text-sm">Partner Logo</p>
@@ -95,6 +105,7 @@ const PartnersPage: React.FC = () => {
                   </div>
 
                   <div className="text-center">
+
                     <h3 className="text-xl font-bold text-white mb-2">
                       {partner.name}
                     </h3>
@@ -113,8 +124,11 @@ const PartnersPage: React.FC = () => {
 
         {/* Partnership Benefits */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+
           <div className="max-w-7xl mx-auto">
+
             <div className="text-center mb-12">
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Partnership Benefits
               </h2>
@@ -126,6 +140,7 @@ const PartnersPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
+
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
@@ -136,8 +151,11 @@ const PartnersPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
+
           <div className="max-w-4xl mx-auto text-center">
+
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Become Our Partner
               </h2>
@@ -146,6 +164,7 @@ const PartnersPage: React.FC = () => {
                 exceptional solutions to clients worldwide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   Partner With Us
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -163,3 +182,4 @@ const PartnersPage: React.FC = () => {
 };
 
 export default PartnersPage;
+  );

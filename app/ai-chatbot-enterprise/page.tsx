@@ -2,41 +2,38 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Brain, Globe, Shield, Zap } from "lucide-react";
+
 const AiChatbotEnterprisePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "Advanced Technology",
-      description:
-        "Cutting-edge solutions powered by the latest technology and AI.",
+      title: "Advanced AI",
+      description: "Enterprise-grade AI capabilities with natural language understanding and machine learning.",
     },
     {
       icon: Zap,
       title: "High Performance",
-      description:
-        "Optimized for speed and efficiency with real-time processing capabilities.",
+      description: "Optimized for speed and efficiency with real-time processing capabilities.",
     },
     {
       icon: Shield,
       title: "Enterprise Security",
-      description:
-        "Bank-level security with end-to-end encryption and compliance standards.",
+      description: "Bank-level security with end-to-end encryption and compliance standards.",
     },
     {
       icon: Globe,
       title: "Global Scalability",
-      description:
-        "Scale effortlessly across multiple regions with automatic load balancing.",
+      description: "Scale effortlessly across multiple regions with automatic load balancing.",
     },
   ];
 
   return (
     <React.Fragment>
       <Helmet>
-        <title>
-          Ai Chatbot Enterprise - Zion Tech Group | Advanced AI and IT Solutions
-        </title>
-
+        <title>AI Chatbot Enterprise | Zion Tech Group</title>
+        <meta name="description" content="Enterprise-grade AI chatbot solutions for large organizations" />
+        <meta property="og:title" content="AI Chatbot Enterprise | Zion Tech Group" />
+        <meta property="og:description" content="Enterprise-grade AI chatbot solutions for large organizations" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -44,17 +41,22 @@ const AiChatbotEnterprisePage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai Chatbot Enterprise
+              AI Chatbot Enterprise
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional aichatbotenterprise solutions powered by advanced AI
-              and cutting-edge technology.
+              Enterprise-grade AI chatbot solutions for large organizations with advanced features and security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
                 Get Started
               </a>
-
+              <a
+                href="/services"
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
                 View All Services
               </a>
             </div>
@@ -66,14 +68,15 @@ const AiChatbotEnterprisePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
+                Enterprise Features
               </h2>
               <p className="text-lg text-gray-300">
-                Everything you need for success
+                Everything you need for enterprise success
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -94,13 +97,19 @@ const AiChatbotEnterprisePage: React.FC = () => {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
+              Let us help you implement enterprise AI chatbot solutions for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
                 Start Your Project
               </a>
-
+              <a
+                href="/about"
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
                 Learn More
               </a>
             </div>
