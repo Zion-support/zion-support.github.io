@@ -48,15 +48,9 @@ class GlobalErrorBoundary extends Component<Props, State> {
             <br />
             {this.state.errorInfo?.componentStack}
           </details>
-        
-    
-    
-          </div>
         </div>
-      </div>
-    </div>
-  );
-}
+      );
+    }
 
     return this.props.children;
   }

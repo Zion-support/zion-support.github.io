@@ -33,12 +33,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         ></div>
         {text && <p className="text-gray-600 font-medium">{text}</p>}
       </div>
-    
-    
-    
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
