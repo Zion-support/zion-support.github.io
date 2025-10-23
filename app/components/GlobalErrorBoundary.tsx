@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-
 import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
@@ -38,7 +36,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
 
-  override render() {
+  render() {
     if (this.state.hasError) {
       return (
         <div className="error-boundary">
@@ -48,15 +46,9 @@ class GlobalErrorBoundary extends Component<Props, State> {
             <br />
             {this.state.errorInfo?.componentStack}
           </details>
-        
-    
-    
-          </div>
         </div>
-      </div>
-    </div>
-  );
-}
+      );
+    }
 
     return this.props.children;
   }

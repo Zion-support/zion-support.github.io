@@ -55,35 +55,28 @@ const PerformanceDashboard: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
           <div className="bg-blue-50 rounded-lg p-4">
-          <h1 className="text-lg font-semibold text-blue-900 mb-2">
+          <h3 className="text-lg font-semibold text-blue-900 mb-2">
             Render Time
           </h3>
-          
-          </div><p className="text-3xl font-bold text-blue-600">
+          <p className="text-3xl font-bold text-blue-600">
             {metrics.renderTime}ms
           </p>
+        </div>
         <div className="bg-green-50 rounded-lg p-4">
-          <h1 className="text-lg font-semibold text-green-900 mb-2">
+          <h3 className="text-lg font-semibold text-green-900 mb-2">
             Memory Usage
           </h3>
-          
-          </div><p className="text-3xl font-bold text-green-600">
+          <p className="text-3xl font-bold text-green-600">
             {metrics.memoryUsage}MB
           </p>
-        <div className="bg-purple-50 rounded-lg p-4">
-          <h1 className="text-lg font-semibold text-purple-900 mb-2">FPS</h3>
-          
-          </div><p className="text-3xl font-bold text-purple-600">{metrics.fps}</p>
         </div>
-    
-    
-          </div>
+        <div className="bg-purple-50 rounded-lg p-4">
+          <h3 className="text-lg font-semibold text-purple-900 mb-2">FPS</h3>
+          <p className="text-3xl font-bold text-purple-600">{metrics.fps}</p>
         </div>
       </div>
     </div>
   );
 };
-
-export default Page;
 
 export default PerformanceDashboard;

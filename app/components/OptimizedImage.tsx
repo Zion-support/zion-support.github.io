@@ -40,7 +40,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   useEffect(() => {
     if (priority) return;
 
-    const _observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
@@ -60,12 +60,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return () => observer.disconnect();
   }, [priority]);
 
-  const _handleLoad = () => {
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
 
-  const _handleError = () => {
+  const handleError = () => {
     setIsError(true);
     onError?.();
   };
@@ -83,7 +83,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return originalSrc;
   };
 
-  const optimizedSrc = getOptimizedSrc(src);
+  const optimizedSrc = _getOptimizedSrc(src);
   const imageSrc = isInView ? optimizedSrc : placeholder;
 
   return (
@@ -119,15 +119,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           blurDataURL={placeholder}
         />
       )}
-    
-    
-    
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default Page;
+export default OptimizedImage;
 

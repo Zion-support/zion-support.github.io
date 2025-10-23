@@ -35,44 +35,42 @@ class ErrorBoundary extends React.Component<
     this.setState({ hasError: false, error: undefined });
   };
 
-  override render() {
-    if (this.state.hasError) {
-      const FallbackComponent = this.props.fallback;
-      if (FallbackComponent) {
-        return (
-          <FallbackComponent
-            error={this.state.error}
-            resetError={this.resetError}
-          />
-        );
-      }
-
+  renderErrorFallback = () => {
+    const FallbackComponent = this.props.fallback;
+    if (FallbackComponent) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h2>
-            <p className="text-gray-600 mb-6">
-              We apologize for the inconvenience. Please try refreshing the
-              page.
-            </p>
-            <button
-              onClick={this.resetError}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Try Again
-            </button>
-          </div>
-    
-    
-    
-          </div>
+        <FallbackComponent
+          error={this.state.error}
+          resetError={this.resetError}
+        />
+      );
+    }
+
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Something went wrong
+          </h2>
+          <p className="text-gray-600 mb-6">
+            We apologize for the inconvenience. Please try refreshing the
+            page.
+          </p>
+          <button
+            onClick={this.resetError}
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Try Again
+          </button>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  };
+
+  render() {
+    if (this.state.hasError) {
+      return this.renderErrorFallback();
+    }
 
     return this.props.children;
   }
