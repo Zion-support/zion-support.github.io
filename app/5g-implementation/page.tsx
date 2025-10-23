@@ -135,4 +135,4 @@ Learn More
 
 }
 
-export default $1
+export default PagePage

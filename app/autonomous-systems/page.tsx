@@ -26,4 +26,4 @@ const AutonomousSystemsPage: React.FC = () => {
 
 }
 
-export default $1
+export default PagePage

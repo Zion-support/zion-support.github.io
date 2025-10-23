@@ -163,4 +163,4 @@ Email Us
 };
 
 }
-export default CloudInfrastructureManagerPa;g;e;
+export default CloudInfrastructureManagerP;a;g;e;

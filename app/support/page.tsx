@@ -370,7 +370,7 @@ Email Support
 </div>
 )
 }
-export default SupportPa;g;e;
+export default SupportP;a;g;e;
 </button>
 </button>
 </div>
@@ -424,4 +424,4 @@ export default SupportPa;g;e;
 };
 
 }
-export default SupportPa;g;e;
+export default SupportP;a;g;e;

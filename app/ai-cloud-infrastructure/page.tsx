@@ -115,4 +115,4 @@ Start Your Free Trial
 
 }
 
-export default $1
+export default PagePage

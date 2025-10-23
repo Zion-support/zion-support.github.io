@@ -485,7 +485,7 @@ const ConsultationPage: React.FC = () => {
     </div>
   )
 }
-export default ConsultationPa;g;e;
+export default ConsultationP;a;g;e;
   </button>
   </button>
   </Link>
@@ -503,4 +503,4 @@ export default ConsultationPa;g;e;
 };
 
 }
-export default ConsultationPa;g;e;
+export default ConsultationP;a;g;e;

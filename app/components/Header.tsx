@@ -13,4 +13,4 @@ const Header: React.FC = () => {
 
 }
 
-export default $1
+export default HeaderPage

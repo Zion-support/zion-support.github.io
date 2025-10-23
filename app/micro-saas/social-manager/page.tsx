@@ -51,4 +51,4 @@ const SocialMediaManagerPage: React.FC = () => {
 };
 
 }
-export default SocialMediaManagerPa;g;e;
+export default SocialMediaManagerP;a;g;e;

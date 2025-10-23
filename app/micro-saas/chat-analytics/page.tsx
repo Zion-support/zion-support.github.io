@@ -52,4 +52,4 @@ const MicroSaaSPage: React.FC = () => {
 };
 
 }
-export default MicroSaaSPa;g;e;
+export default MicroSaaSP;a;g;e;

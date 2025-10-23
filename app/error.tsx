@@ -115,4 +115,4 @@ Contact Us
 
 }
 
-export default $1
+export default ErrorPage

@@ -426,4 +426,4 @@ const PartnersPage: React.FC = () => {
   );
 };
 
-export default PartnersPag;
+export default PartnersPa;g;

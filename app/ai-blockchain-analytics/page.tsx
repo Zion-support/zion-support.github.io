@@ -171,7 +171,7 @@ Contact Sales
 };
 
 }
-export default PagePag;
+export default PagePa;g;
 </button>
 </button>
 </p>

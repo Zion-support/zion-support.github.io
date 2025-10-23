@@ -253,4 +253,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePag;
+export default HomePa;g;

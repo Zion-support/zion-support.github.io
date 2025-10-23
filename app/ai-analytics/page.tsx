@@ -201,4 +201,4 @@ const AiAnalyticsPage: React.FC = () => {
   );
 };
 
-export default AiAnalyticsPa;g;e;
+export default AiAnalyticsP;a;g;e;

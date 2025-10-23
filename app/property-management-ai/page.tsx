@@ -45,4 +45,4 @@ const features = [
 
 }
 
-export default $1
+export default PagePage

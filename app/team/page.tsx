@@ -37,4 +37,4 @@ const TeamPage: React.FC = () => {
 
 }
 
-export default $1
+export default PagePage

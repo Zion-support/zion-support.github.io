@@ -164,4 +164,4 @@ const AI3DModelGeneratorPage: React.FC = () => {
   );
 };
 
-export default AI3DModelGeneratorPa;g;e;
+export default AI3DModelGeneratorP;a;g;e;

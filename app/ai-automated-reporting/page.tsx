@@ -127,4 +127,4 @@ const AiAutomatedReportingPage: React.FC = () => {
   );
 };
 
-export default AiAutomatedReportingPa;g;e;
+export default AiAutomatedReportingPage;

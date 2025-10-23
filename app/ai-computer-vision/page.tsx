@@ -171,4 +171,4 @@ Contact Sales
 };
 
 }
-export default AiComputerVisionPa;g;e;
+export default AiComputerVisionP;a;g;e;

@@ -46,4 +46,4 @@ const CookiesPage: React.FC = () => {
 
 }
 
-export default $1
+export default PagePage
