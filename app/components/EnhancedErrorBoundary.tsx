@@ -52,15 +52,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
       console.group('🚨 Error Boundary Caught Error');
-      // eslint-disable-next-line no-console
       console.error('Error:', error);
-      // eslint-disable-next-line no-console
       console.error('Error Info:', errorInfo);
-      // eslint-disable-next-line no-console
       console.error('Component Stack:', errorInfo.componentStack);
-      // eslint-disable-next-line no-console
       console.groupEnd();
     }
   }
@@ -104,7 +99,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      // eslint-disable-next-line no-console
       console.warn('Failed to send error report:', reportingError);
     }
   };
