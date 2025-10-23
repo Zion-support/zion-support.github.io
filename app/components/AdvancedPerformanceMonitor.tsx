@@ -1,250 +1,292 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import React, { useState, useEffect, useCallback } from 'react'
+import { Activity, Zap, Clock, TrendingUp, AlertTriangle } from 'lucide-react'
 
-interface AdvancedPerformanceMonitorProps {
-  className?: string;
+interface PerformanceMetrics {
+  fcp: number | null
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  ttfb: number | null
+  memory: number | null
 }
 
-const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '' }) => {
+const AdvancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    memory: null,
+  })
+
+  const measureWebVitals = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) return
+    if (typeof PerformanceObserver === 'undefined') return
+
+    const observers: PerformanceObserver[] = []
+
+    // Measure First Contentful Paint (FCP)
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
+    if (fcpEntries.length > 0) {
+      setMetrics(prev => ({ ...prev, fcp: fcpEntries[0].startTime }))
+    }
+
+    // Measure Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries()
+      const lastEntry = entries[entries.length - 1]
+      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
+    })
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+    observers.push(lcpObserver)
+
+    // Measure First Input Delay (FID)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries()
+      entries.forEach((entry: any) => {
+        setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
+      })
+    })
+    fidObserver.observe({ entryTypes: ['first-input'] })
+    observers.push(fidObserver)
+
+    // Measure Cumulative Layout Shift (CLS)
+    let clsValue = 0
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries()
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value
+          setMetrics(prev => ({ ...prev, cls: clsValue }))
+        }
+      })
+    })
+    clsObserver.observe({ entryTypes: ['layout-shift'] })
+    observers.push(clsObserver)
+
+    // Measure Time to First Byte (TTFB)
+    const navigationEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[]
+    if (navigationEntries.length > 0) {
+      const navEntry = navigationEntries[0]
+      setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }))
+    }
+
+    // Measure Memory Usage
+    if ('memory' in performance) {
+      const memory = (performance as any).memory
+      setMetrics(prev => ({ 
+        ...prev, 
+        memory: memory.usedJSHeapSize / (1024 * 1024) // Convert to MB
+      }))
+    }
+
+    return () => {
+      observers.forEach(observer => observer.disconnect())
+    }
+  }, [])
+
+  useEffect(() => {
+    const cleanup = measureWebVitals()
+    return cleanup
+  }, [measureWebVitals])
+
+  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (value === null) return 'text-gray-400'
+    if (value <= thresholds.good) return 'text-green-400'
+    if (value <= thresholds.poor) return 'text-yellow-400'
+    return 'text-red-400'
+  }
+
+  const getScoreLabel = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (value === null) return 'No data'
+    if (value <= thresholds.good) return 'Good'
+    if (value <= thresholds.poor) return 'Needs improvement'
+    return 'Poor'
+  }
+
+  const metricsData = [
+    {
+      name: 'First Contentful Paint',
+      value: metrics.fcp,
+      unit: 'ms',
+      thresholds: { good: 1800, poor: 3000 },
+      icon: Activity,
+      description: 'Time until first content is painted'
+    },
+    {
+      name: 'Largest Contentful Paint',
+      value: metrics.lcp,
+      unit: 'ms',
+      thresholds: { good: 2500, poor: 4000 },
+      icon: Zap,
+      description: 'Time until largest content is painted'
+    },
+    {
+      name: 'First Input Delay',
+      value: metrics.fid,
+      unit: 'ms',
+      thresholds: { good: 100, poor: 300 },
+      icon: Clock,
+      description: 'Time until first user interaction'
+    },
+    {
+      name: 'Cumulative Layout Shift',
+      value: metrics.cls,
+      unit: '',
+      thresholds: { good: 0.1, poor: 0.25 },
+      icon: TrendingUp,
+      description: 'Visual stability score'
+    },
+    {
+      name: 'Time to First Byte',
+      value: metrics.ttfb,
+      unit: 'ms',
+      thresholds: { good: 800, poor: 1800 },
+      icon: Activity,
+      description: 'Server response time'
+    },
+    {
+      name: 'Memory Usage',
+      value: metrics.memory,
+      unit: 'MB',
+      thresholds: { good: 50, poor: 100 },
+      icon: Activity,
+      description: 'JavaScript heap size'
+    }
+  ]
+
   return (
-    <div className={`p-4 ${className}`}>
-      <h2 className="text-xl font-semibold text-gray-800">
-        AdvancedPerformanceMonitor
-      </h2>
-      <p className="text-gray-600">
-        This component is under construction.
-      </p>
-    </div>
-  );
-};
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text mb-6">
+            Performance Monitor
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Real-time performance metrics and optimization insights for your web application
+          </p>
+        </div>
 
-export default AdvancedPerformanceMonitorPage;
-fcp: null,
-lcp: null,
-fid: null,
-cls: null,
-ttfb: null,
-memory: null,})
-constmeasureWebVitals= useCallback(() => {if (type ofwindow=== 'undefined' || !('performance' in windo w)) return i f (type ofPerformanceObserver=== 'undefined') return constobserver s: PerformanceObserver[] = []
-// Measure First Contentful Paint (FCP)
-constfcpEntries= performance.getEntriesByName('first-contentful-paint') || []
-constfcp= fcpEntries.length >0? fcpEntries[0].startTime: null
-// Measure Largest Contentful Paint (LCP)
-if ('PerformanceObserver' in windo w) {
-try {
-constlcpObserver= new PerformanceObserver(list=> {
-  
-constentries= list.getEntries()
-constlastEntry= entries[entries.length - 1]
-setMetrics(prev=> ({ ...prev, lcp: lastEntry.startTime}))
-})
-lcpObserver.observe({entry Types: ['largest-contentful-paint']})
-observers.push(lcpObserver)
-} catch (error) {// eslint-disable-next-line no-console}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {metricsData.map((metric, index) => {
+            const Icon = metric.icon
+            const scoreColor = getScoreColor(metric.value, metric.thresholds)
+            const scoreLabel = getScoreLabel(metric.value, metric.thresholds)
+
+            return (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="p-2 bg-purple-500/20 rounded-lg">
+                      <Icon className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{metric.name}</h3>
+                      <p className="text-sm text-gray-400">{metric.description}</p>
+                    </div>
+                  </div>
+                  <div className={`px-3 py-1 rounded-full text-xs font-medium ${scoreColor.replace('text-', 'bg-').replace('-400', '-500/20')} ${scoreColor}`}>
+                    {scoreLabel}
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <div className="flex items-baseline space-x-2">
+                    <span className={`text-3xl font-bold ${scoreColor}`}>
+                      {metric.value !== null ? Math.round(metric.value * 100) / 100 : '--'}
+                    </span>
+                    <span className="text-gray-400">{metric.unit}</span>
+                  </div>
+
+                  <div className="w-full bg-gray-700/50 rounded-full h-2">
+                    <div
+                      className={`h-2 rounded-full transition-all duration-500 ${
+                        metric.value !== null
+                          ? metric.value <= metric.thresholds.good
+                            ? 'bg-gradient-to-r from-green-400 to-green-500'
+                            : metric.value <= metric.thresholds.poor
+                            ? 'bg-gradient-to-r from-yellow-400 to-yellow-500'
+                            : 'bg-gradient-to-r from-red-400 to-red-500'
+                          : 'bg-gray-600'
+                      }`}
+                      style={{
+                        width: metric.value !== null
+                          ? `${Math.min((metric.value / (metric.thresholds.poor * 1.5)) * 100, 100)}%`
+                          : '0%'
+                      }}
+                    />
+                  </div>
+
+                  <div className="flex justify-between text-xs text-gray-400">
+                    <span>Good: ≤{metric.thresholds.good}{metric.unit}</span>
+                    <span>Poor: &gt;{metric.thresholds.poor}{metric.unit}</span>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
+          <div className="flex items-center space-x-3 mb-6">
+            <AlertTriangle className="w-8 h-8 text-yellow-400" />
+            <h2 className="text-2xl font-bold text-white">Performance Recommendations</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white">Optimization Tips</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start space-x-2">
+                  <span className="text-green-400 mt-1">•</span>
+                  <span>Optimize images and use modern formats (WebP, AVIF)</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-green-400 mt-1">•</span>
+                  <span>Implement lazy loading for below-the-fold content</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-green-400 mt-1">•</span>
+                  <span>Minimize and compress CSS and JavaScript</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-green-400 mt-1">•</span>
+                  <span>Use a Content Delivery Network (CDN)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white">Monitoring</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start space-x-2">
+                  <span className="text-blue-400 mt-1">•</span>
+                  <span>Set up automated performance monitoring</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-blue-400 mt-1">•</span>
+                  <span>Monitor Core Web Vitals regularly</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-blue-400 mt-1">•</span>
+                  <span>Test on real devices and networks</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-blue-400 mt-1">•</span>
+                  <span>Use performance budgets in CI/CD</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
-// Measure First Input Delay (FID)
-if ('PerformanceObserver' in windo w) {try {
-constfidObserver= new PerformanceObserver(list=> {
-  
-constentries= list.getEntries()
-entries.forEach(entry=> {
-  
-if (
-entry.entryType=== 'first-input' &&
-'processingStart' in entry && 'startTime' in entry
-) {
-constfidEntry= entry as PerformanceEventTiming
-setMetrics(prev=> ({
-...prev,
-fid: fidEntry.processingStart - fidEntry.startTime,}))
-}
-})
-})
-fidObserver.observe({entry Types: ['first-input']})
-observers.push(fidObserver)
-} catch (error) {// eslint-disable-next-line no-console}
-}
-// Measure Cumulative Layout Shift (CLS)
-if ('PerformanceObserver' in windo w) {try {
-letclsValue=0constclsObserver= new PerformanceObserver(list=> {
-  
-constentries= list.getEntries()
-entries.forEach(entry=> {
-  
-if (
-entry.entryType=== 'layout-shift' &&
-'hadRecentInput' in entry && 'value' in entry
-) {
-constclsEntry= entry as LayoutShift
-if (!clsEntry.hadRecentInput) {
-clsValue += clsEntry.value
-setMetrics(prev=> ({ ...prev, cls: clsValue}))
-}
-}
-})
-})
-clsObserver.observe({entry Types: ['layout-shift']})
-observers.push(clsObserver)
-} catch (error) {// eslint-disable-next-line no-console}
-}
-// Measure Time to First Byte (TTFB)
-try {constnavigationEntries= performance.getEntriesByType?.('navigation') || []
-constnavigationEntry= navigationEntries[0] asPerformanceNavigationTimingconstttfb= navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart: null
-// Measure MemoryUsageconstmemory=
-(performance as Performance & { memory?: { usedJSHeapSize : number} })
-.memory?.usedJSHeapSize || null
-setMetrics(prev=> ({...prev,
-fcp,
-ttfb,
-memory,}))
-} catch (error) {// eslint-disable-next-line no-console}
-// Cleanup observers
-return () => {observers.forEach(observer=> {
-  
-try {
-observer.disconnect()} catch (error) {// eslint-disable-next-line no-console}
-})
-}
-}, [])
-constmeasureResourceTiming= useCallback(() => {if (type ofwindow=== 'undefined' || !('performance' in windo w)) return constresources= performance.getEntriesByType('resource')
-constslowResources= resources.filter(
-(resource: PerformanceResourceTiming) => resource.duration > 1000)
-if (slowResources.length > 0) {
-// eslint-disable-next-line no-console
-// console.log(
-'Slow resources detected:',
-slowResources.map((r: PerformanceResourceTiming) => ({
-name: r.name,
-duration: r.duration,
-size: r.transferSize,}))
-)
-}
-}, [])
-constmeasureCoreWebVitals= useCallback(() => {if (type ofwindow=== 'undefined') return
-// Use web-vitals library if available
-try {
-import('web-vitals')
-.then(webVitals=> {
-  
-const { onCLS, onFCP, onLCP, onTTFB} = webVitals
-if (onCL S) {onCLS((metric: { value: number}) =>
-setMetrics(prev=> ({...prev, cls: metric.value}))
-)
-}
-if (onFC P) {onFCP((metric: { value: number}) =>
-setMetrics(prev=> ({...prev, fcp: metric.value}))
-)
-}
-if (onLC P) {onLCP((metric: { value: number}) =>
-setMetrics(prev=> ({...prev, lcp: metric.value}))
-)
-}
-if (onTTF B) {onTTFB((metric: { value: number}) =>
-setMetrics(prev=> ({...prev, ttfb: metric.value}))
-)
-}
-})
-.catch(() => {// web-vitals not available, continue without it})
-} catch {// web-vitals not available, continue without it}
-}, [])
-useEffect(() => {if (!enableRealTimeMonitoring) return constcleanup= measureWebVitals()
-measureResourceTiming()
-measureCoreWebVitals()
-// Monitor performanceevery5secondsconstinterval= setInterval(() => {
-  
-measureResourceTiming()}, 500 0)
-return () => {if (cleanu p) cleanup()
-clearInterval(interval)}
-}, [
-enableRealTimeMonitoring,
-measureWebVitals,
-measureResourceTiming,
-measureCoreWebVitals,
-])
-useEffect(() => {if (onMetricsUpdat e) {
-onMetricsUpdate(metrics)}
-}, [metricsonMetricsUpdate])
-// PerformancerecommendationsconstgetPerformanceRecommendations= useCallback(() => {constrecommendations: string[] = []
-if (metrics.fcp && metrics.fcp >1800) {
-recommendations.push(
-'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-)
-}
-if (metrics.lcp && metrics.lcp > 2500) {
-recommendations.push(
-'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-)
-}
-if (metrics.fid && metrics.fid > 100) {
-recommendations.push(
-'First Input Delay is high. Reduce JavaScript execution time.'
-)
-}
-if (metrics.cls && metrics.cls > 0.1) {
-recommendations.push(
-'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-)
-}
-if (metrics.ttfb && metrics.ttfb > 600) {
-recommendations.push(
-'Time to First Byte is slow. Optimize server response time.'
-)
-}
-return recommendations
-}, [metrics])
-const _recommendations = getPerformanceRecommendations()
-if (process.env.NODE_ENV === 'development') {
-return (
-    <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
-<h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-<div className='text-xs space-y-1'>
-<div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-<div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-<div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-<div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-<div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-<div>Memory:{' '}</div>
-{metrics.memory
-? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
-: 'N/A'}
-</div>
-</div>
-{_recommendations.length > 0 && (
-<div className='mt-2'>
-<h4 className='font-semibold text-xs text-red-600'>
-Recommendations:
-</h4>
-<ul className='text-xs text-red-600'>
-{_recommendations.map((rec, index) => (
-<li key={index}>• {rec}</li>
-))}
-</ul>
-</div>
-)}
-if (metrics.lcp && metrics.lcp > 250 0) {recommendations.push(
-'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-)}
-if (metrics.fid && metrics.fid >100) {recommendations.push(
-'First Input Delay is high. Reduce JavaScript execution time.'
-)}
-if (metrics.cls && metrics.cls > 0.1) {recommendations.push(
-'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-)}
-if (metrics.ttfb && metrics.ttfb >600) {recommendations.push(
-'Time to First Byte is slow. Optimize server response time.'
-)}
-return recommendation s
-}, [metrics])
-const_recommendations= getPerformanceRecommendations()
-if (process.env.NODE_ENV=== 'development') {return(<divclassName='fixed bottom-4 right-4 bg-white p-4 rounded-lg shado w-lg border max-w-sm z-5 0'><h3className='font-semibold text-sm mb-2'>PerformanceMonitor</h><divclassName='text-xs space-y-1'><di v>FCP: {metrics.fcp ?`${metrics.fcp.toFixed(0)}ms`:'N/A'}</di><di v>LCP: {metrics.lcp?`${metrics.lcp.toFixed(0)}ms`:'N/A'}</di><di v>FID: {metrics.fid?`${metrics.fid.toFixed(0)}ms`:'N/A'}</di><di v>CLS: {metrics.cls ?metrics.cls.toFixed(3):'N/A'}</di><di v>TTFB: {metrics.ttfb?`${metrics.ttfb.toFixed(0)}ms`:'N/A'}</di><di v>Memory:{''}
-{metrics.memory
-?`${(metrics.memory /1024/1024).toFixed(1)}MB`
-:'N/A'}</di></di>{_recommendations.length >0&&(<divclassName='mt-2'><h4className='font-semibold text-xs text-red-60 0'>Recommendations:</h><ulclassName='text-xs text-red-60 0'>{_recommendations.map((recindex)=>(<likey={index}>•{rec}</l>))}</u></di>)}</di>)
-}
-return nul l
-}
+
 export default AdvancedPerformanceMonitor
