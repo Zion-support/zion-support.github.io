@@ -12,15 +12,15 @@ interface State {
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
-  retryCount: number;
+  retryCount?: number;
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
   private maxRetries = 3;
-
+  
   constructor(props: Props) {
     super(props);
     this.state = { 
-      hasError: false, 
+      hasError: false,
       retryCount: 0,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
@@ -73,7 +73,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      retryCount: this.state.retryCount,
+      retryCount: this.state.retryCount || 0,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
@@ -86,7 +86,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          retry_count: this.state.retryCount,
+          retry_count: this.state.retryCount || 0,
         }
       });
     }
@@ -121,12 +121,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return sessionId;
   };
   private handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
+    if ((this.state.retryCount || 0) < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
         error: undefined,
         errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
+        retryCount: (prevState.retryCount || 0) + 1
       }));
     } else {
       // Max retries reached, reload the page
@@ -172,26 +172,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-      const canRetry = retryCount < this.maxRetries;
+      const canRetry = (retryCount || 0) < this.maxRetries;
 
       return (
         <div className="error-boundary">
           <h2>Something went wrong</h2>
           <p>Error ID: {errorId}</p>
-          <p>Error: {error?.message}</p>
           {canRetry && (
             <button onClick={this.handleRetry}>
               Try again
             </button>
           )}
           <button onClick={this.handleReload}>
-            Reload page
+            Reload Page
           </button>
           <button onClick={this.handleGoHome}>
-            Go home
+            Go Home
           </button>
           <button id="copy-error-details" onClick={this.copyErrorDetails}>
-            Copy error details
+            Copy Error Details
           </button>
         </div>
       );
