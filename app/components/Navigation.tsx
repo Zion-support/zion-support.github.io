@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server } from 'lucide-react'
 
 const Navigation: React.FC = () => {
@@ -85,24 +85,24 @@ const Navigation: React.FC = () => {
   ]
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">
-                Zion Tech Group
-              </span>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-blue-400 transition-colors">
+            <Link href="/" className="text-white hover:text-blue-400 transition-colors">
               Home
             </Link>
             
@@ -129,7 +129,7 @@ const Navigation: React.FC = () => {
                         {aiServices.slice(0, 4).map((service, index) => (
                           <li key={index}>
                             <Link
-                              to={service.href}
+                              href={service.href}
                               className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
                               onClick={closeAllMenus}
                             >
@@ -150,7 +150,7 @@ const Navigation: React.FC = () => {
                         {itServices.slice(0, 4).map((service, index) => (
                           <li key={index}>
                             <Link
-                              to={service.href}
+                              href={service.href}
                               className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
                               onClick={closeAllMenus}
                             >
@@ -171,7 +171,7 @@ const Navigation: React.FC = () => {
                         {microSaasServices.slice(0, 4).map((service, index) => (
                           <li key={index}>
                             <Link
-                              to={service.href}
+                              href={service.href}
                               className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
                               onClick={closeAllMenus}
                             >
@@ -185,7 +185,7 @@ const Navigation: React.FC = () => {
                   
                   <div className="border-t border-gray-200 mt-4 pt-4 px-6">
                     <Link
-                      to="/services"
+                      href="/services"
                       className="text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center"
                       onClick={closeAllMenus}
                     >
@@ -197,16 +197,16 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link to="/about" className="text-white hover:text-blue-400 transition-colors">
+            <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
               About
             </Link>
-            <Link to="/case-studies" className="text-white hover:text-blue-400 transition-colors">
+            <Link href="/case-studies" className="text-white hover:text-blue-400 transition-colors">
               Case Studies
             </Link>
-            <Link to="/blog" className="text-white hover:text-blue-400 transition-colors">
+            <Link href="/blog" className="text-white hover:text-blue-400 transition-colors">
               Blog
             </Link>
-            <Link to="/contact" className="text-white hover:text-blue-400 transition-colors">
+            <Link href="/contact" className="text-white hover:text-blue-400 transition-colors">
               Contact
             </Link>
           </div>
@@ -214,7 +214,7 @@ const Navigation: React.FC = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
-              to="/consultation"
+              href="/consultation"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center"
             >
               <Sparkles className="w-4 h-4 mr-2" />
@@ -228,22 +228,7 @@ const Navigation: React.FC = () => {
               onClick={toggleMenu}
               className="text-white hover:text-blue-400 transition-colors"
             >
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-purple-600 transition-colors"
-            >
-              {isOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -253,49 +238,49 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 backdrop-blur-md rounded-lg mt-2">
               <Link
-                to="/"
+                href="/"
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               <Link
-                to="/services"
+                href="/services"
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 Services
               </Link>
               <Link
-                to="/about"
+                href="/about"
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 About
               </Link>
               <Link
-                to="/case-studies"
+                href="/case-studies"
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 Case Studies
               </Link>
               <Link
-                to="/blog"
+                href="/blog"
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 Blog
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
               <Link
-                to="/consultation"
+                href="/consultation"
                 className="block px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center"
                 onClick={closeAllMenus}
               >

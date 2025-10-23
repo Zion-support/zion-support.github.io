@@ -239,7 +239,7 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

@@ -6,8 +6,8 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
 const App: React.FC = () => {
-  return (
-    <>
+      return (
+    <React.Fragment>
       <Head>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
@@ -16,13 +16,13 @@ const App: React.FC = () => {
       
       <div className="App">
         <PerformanceMonitor />
-        <Navigation />
+      <Navigation />
         <main>
           {/* Main content will be handled by Next.js routing */}
         </main>
-        <Footer />
+      <Footer />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

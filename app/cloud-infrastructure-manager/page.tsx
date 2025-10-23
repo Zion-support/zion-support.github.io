@@ -57,13 +57,13 @@ const benefits = [
 'Multi-cloud support',
 'Expert technical support'
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
 <meta name="description" content="Comprehensive cloud infrastructure management platform by Zion Tech Group. Manage, monitor, and optimize your cloud resources across multiple providers." />
 <meta name="keywords" content="cloud infrastructure manager, cloud management, multi-cloud, cloud optimization, Zion Tech Group" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 {/* Hero Section */}
 <section className="pt-20 pb-16 px-4">
@@ -158,7 +158,7 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+    </React.Fragment>
+  )
 }
 export default CloudInfrastructureManagerPage

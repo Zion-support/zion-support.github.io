@@ -31,7 +31,7 @@ const AI3DModelGeneratorPage: React.FC = () => {
     "Batch processing capabilities",
   ];
 
-    return (
+      return (
     <React.Fragment>
       <Helmet>
         <title>AI 3D Model Generator - Zion Tech Group | AI & IT Solutions</title>

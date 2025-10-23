@@ -92,13 +92,13 @@ details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
 description: 'Eastern Time'
 }
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>Contact Us - Zion Tech Group | Get in Touch</title>
 <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
 <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
 <div className="container mx-auto px-4">
 {/* Header */}
@@ -243,16 +243,17 @@ type="submit"
 disabled={isSubmitting}
 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">
 {isSubmitting ? (
-<>
-<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+<React.Fragment>
+      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
 <span>Sending...</span>
-</>
+    </React.Fragment>
 ) : (
-<>
+<React.Fragment>
 <Send className="w-5 h-5" />
 <span>Send Message</span>
-</>
-)}
+    </React.Fragment>
+  )
+}
 </button>
 </form>
 </div>

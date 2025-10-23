@@ -193,8 +193,8 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
+      return (
+    <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -257,7 +257,7 @@ const HomePage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
         {/* Navigation */}
-        <Navigation />
+      <Navigation />
         
         {/* Skip to main content for accessibility */}
         <a
@@ -544,10 +544,9 @@ const HomePage: React.FC = () => {
             </div>
           </section>
         </main>
-
-        <Footer />
+      <Footer />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

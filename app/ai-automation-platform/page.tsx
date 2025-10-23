@@ -2,8 +2,8 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiAutomationPlatformPage: React.FC = () => {
-  return (
-    <>
+      return (
+    <React.Fragment>
 <SEOHead 
         title="ai-automation-platform - Zion Tech Group"
         description="Zion Tech Group ai-automation-platform service page"
@@ -14,7 +14,7 @@ const AiAutomationPlatformPage: React.FC = () => {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

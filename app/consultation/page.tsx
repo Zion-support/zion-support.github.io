@@ -149,7 +149,7 @@ const ConsultationPage: React.FC = () => {
     // In a real app, this would open a booking modal or redirect to a booking page
     console.log(`Booking consultation: ${typeId}`)
   }
-    return (
+      return (
     <React.Fragment>
       <Helmet>
         <title>Free Consultation - Zion Tech Group | Expert Technology Consulting</title>

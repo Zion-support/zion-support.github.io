@@ -31,14 +31,14 @@ description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>AI Cloud Infrastructure - Zion Tech Group</title>
 <meta name="description" content="Scalable cloud infrastructure enhanced with AI capabilities." />
 <meta name="keywords" content="AI cloud infrastructure, artificial intelligence, cloud computing, AI solutions, intelligent infrastructure" />
-</Helmet>
-<Navigation />
+      </Helmet>
+      <Navigation />
 <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
 {/* Hero Section */}
 <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -108,9 +108,8 @@ Start Your Free Trial
 </div>
 </section>
 </main>
-<Footer />
+      <Footer />
     </React.Fragment>
   )
 }
-
 export default $1

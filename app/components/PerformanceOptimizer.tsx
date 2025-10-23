@@ -67,7 +67,7 @@ runOptimizations()
 }, 1000)
 return () => clearTimeout(timer)
 }, [runOptimizations])
-  return (
+    return (
     <div className="performance-optimizer">
 {children}
 {/* Performance Status Indicator (only in development) */}

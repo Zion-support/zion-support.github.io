@@ -104,7 +104,7 @@ const BlogPage: React.FC = () => {
 
   const featuredPosts = blogPosts.filter(post => post.featured);
 
-    return (
+      return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Blog - Zion Tech Group</title>

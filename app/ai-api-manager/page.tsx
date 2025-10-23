@@ -47,7 +47,6 @@ const AiApiManagerPage: React.FC = () => {
     'Accelerate time-to-market for new features',
     'Gain competitive advantage with advanced technology'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -55,7 +54,6 @@ const AiApiManagerPage: React.FC = () => {
         <meta name="description" content="Advanced AI-powered API management solution for modern businesses." />
         <meta name="keywords" content="API manager, API governance, microservices, API security, developer portal" />
       </Helmet>
-      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -160,5 +158,4 @@ const AiApiManagerPage: React.FC = () => {
     </React.Fragment>
   )
 }
-
 export default AiApiManagerPage

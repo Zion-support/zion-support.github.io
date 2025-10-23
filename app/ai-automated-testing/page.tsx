@@ -30,7 +30,7 @@ const AiAutomatedTestingPage: React.FC = () => {
     },
   ];
 
-    return (
+      return (
     <React.Fragment>
       <Helmet>
         <title>
@@ -122,7 +122,7 @@ const AiAutomatedTestingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

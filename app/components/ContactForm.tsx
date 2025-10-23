@@ -57,8 +57,8 @@ const ContactForm: React.FC = () => {
   };
 
   if (isSubmitted) {
-    return (
-      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
+      return (
+    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
         <p>
@@ -215,16 +215,17 @@ const ContactForm: React.FC = () => {
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
             >
               {status.type === 'loading' ? (
-                <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                <React.Fragment>
+      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                   Sending...
-                </>
+    </React.Fragment>
               ) : (
-                <>
+                <React.Fragment>
                   Send Message
                   <Send className="w-5 h-5 ml-2" />
-                </>
-              )}
+    </React.Fragment>
+  )
+}
             </button>
           </form>
         </div>

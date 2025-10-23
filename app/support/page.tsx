@@ -153,14 +153,14 @@ return matchesSearch && matchesCategory
 const toggleFAQ = (index: number) => {
 setExpandedFAQ(expandedFAQ === index ? null : index)
 }
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>Support | Zion Tech Group</title>
 <meta name="description" content="Get help and support for our AI and IT solutions. Find answers to common questions and contact our support team." />
 <meta name="keywords" content="support, help, FAQ, customer service, technical support, AI solutions" />
-</Helmet>
-<Navigation />
+      </Helmet>
+      <Navigation />
 <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 {/* Hero Section */}
 <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -367,8 +367,8 @@ Email Support
 </div>
 </section>
 </div>
-</React.Fragment>
-)
+    </React.Fragment>
+  )
 }
 export default SupportPage
 </button>
@@ -418,8 +418,8 @@ export default SupportPage
 </div>
 </section>
 </main>
-<Footer />
-</>
-)
+      <Footer />
+    </React.Fragment>
+  )
 }
 export default SupportPage

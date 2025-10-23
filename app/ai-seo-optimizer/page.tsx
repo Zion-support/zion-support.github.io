@@ -38,8 +38,8 @@ const AiSeoOptimizerPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-  return (
-    <>
+    return (
+    <React.Fragment>
       <Helmet>
         <title>Ai Seo Optimizer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai seo optimizer solution for modern businesses." />
@@ -148,8 +148,7 @@ const AiSeoOptimizerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
+    </React.Fragment>
   )
 }
-
 export default $1

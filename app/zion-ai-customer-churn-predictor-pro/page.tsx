@@ -197,9 +197,8 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
     },
   ];
 
-  return (
-    <>
-
+      return (
+    <React.Fragment>
       <div className="min-h-screen pt-16">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -522,7 +521,7 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

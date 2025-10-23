@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Home, ArrowLeft, RefreshCw } from 'lucide-react'
 export default function NotFound() {
-    return (
+      return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
         <div className="flex justify-center mb-6">

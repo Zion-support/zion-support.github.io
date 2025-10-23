@@ -56,13 +56,13 @@ const benefits = [
 'Increase team productivity',
 'Streamline project workflows'
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
 <meta name="description" content="Advanced project management platform by Zion Tech Group. Manage projects, teams, and tasks with AI-powered insights and automation." />
 <meta name="keywords" content="project management, team collaboration, task management, project tracking, Zion Tech Group" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 {/* Hero Section */}
 <section className="pt-20 pb-16 px-4">
@@ -157,7 +157,7 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+    </React.Fragment>
+  )
 }
 export default ProjectManagementProPage

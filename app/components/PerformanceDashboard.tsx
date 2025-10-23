@@ -101,7 +101,7 @@ if (value <= thresholds.good) return 'text-green-400'
 if (value <= thresholds.warning) return 'text-yellow-400'
 return 'text-red-400'
 }
-  return (
+    return (
     <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
 <div className="flex items-center justify-between mb-6">
 <h3 className="text-xl font-semibold text-white flex items-center gap-2">

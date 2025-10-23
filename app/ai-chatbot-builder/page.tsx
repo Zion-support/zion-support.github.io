@@ -31,8 +31,8 @@ const AIChatbotBuilderPage: React.FC = () => {
     "24/7 customer support",
   ];
 
-  return (
-    <>
+      return (
+    <React.Fragment>
       <Head>
         <title>AI Chatbot Builder - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Build intelligent chatbots with our AI-powered chatbot builder. No coding required, advanced features included." />
@@ -168,8 +168,7 @@ const AIChatbotBuilderPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
+    </React.Fragment>
   )
 }
-
 export default $1

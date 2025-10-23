@@ -38,8 +38,8 @@ const AiFinancialAdvisorPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-  return (
-    <>
+    return (
+    <React.Fragment>
       <Helmet>
         <title>Ai Financial Advisor - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai financial advisor solution for modern businesses." />
@@ -148,8 +148,7 @@ const AiFinancialAdvisorPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
+    </React.Fragment>
   )
 }
-
 export default $1

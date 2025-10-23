@@ -86,8 +86,8 @@ class ErrorHandler extends Component<Props, State> {
         return this.props.fallback
       }
 
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="flex justify-center mb-4">
               <AlertTriangle className="w-16 h-16 text-red-500" />

@@ -4,7 +4,7 @@ import { Settings, ArrowRight } from 'lucide-react'
 const MicroSaaSPage: React.FC = () => {
   const serviceName = 'document-processor'
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-    return (
+      return (
     <React.Fragment>
       <Helmet>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
@@ -47,7 +47,7 @@ const MicroSaaSPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )
 }
 export default MicroSaaSPage

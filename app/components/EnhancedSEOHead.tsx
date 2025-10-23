@@ -92,7 +92,7 @@ const EnhancedSEOHead: React.FC = () => {
   }
   const finalStructuredData = structuredData || defaultStructuredData
     return (
-    <Helmet>
+      <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -171,7 +171,7 @@ const EnhancedSEOHead: React.FC = () => {
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-    </Helmet>
+      </Helmet>
   )
 }
 export default EnhancedSEOHead

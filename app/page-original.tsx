@@ -59,7 +59,7 @@ event_label: 'main_phone_number';}
 })
 }
 }, [])
-  return (
+    return (
     <React.Fragment>
 <SEOOptimizer
 title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -130,7 +130,7 @@ enableContentTypeSniffingProtection={true}
 />
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
 {/* Navigation */}</div>
-<Navigation />
+      <Navigation />
 {/* Skip to main content for accessibility */}
 <a
 href="#main-content"
@@ -1450,9 +1450,9 @@ Send Message
 </section>
 </main>
 {/* Footer */}
-<Footer />
+      <Footer />
 </div>
-</>
+    </React.Fragment>
 )
 })
 HomePage.displayName = 'HomePage'

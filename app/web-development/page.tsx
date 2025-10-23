@@ -83,7 +83,8 @@ description: 'Thorough testing and deployment with ongoing support',
 icon: Shield,
 }
 ]
-return(<>
+    return (
+    <React.Fragment>
 <SEOOptimizer
 title="Web Development Services - Zion Tech Group"
 description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
@@ -168,8 +169,8 @@ description: 'Thorough testing and deployment with ongoing support',
 icon: Shield
 }
 ]
-return (
-<>
+    return (
+    <React.Fragment>
 <SEOOptimizer
 title="Web Development Services - Zion Tech Group"
 description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
@@ -198,7 +199,7 @@ enableClickjackingProtection={true}
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 </div>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-<Navigation />
+      <Navigation />
 <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 <section className="text-center mb-16">
 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
@@ -393,8 +394,9 @@ Call +1 302 464 0950
 </div>
 </section>
 </main>
-<Footer />
+      <Footer />
 </div>,
-</>)
+    </React.Fragment>
+  )
 }
 export default WebDevelopmentPage

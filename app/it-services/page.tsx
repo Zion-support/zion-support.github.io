@@ -140,8 +140,8 @@ const ITServicesPage: React.FC = () => {
 
   const categories = [...new Set(itServices.map(service => service.category))];
 
-  return (
-    <>
+      return (
+    <React.Fragment>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions for modern businesses." />
@@ -321,8 +321,7 @@ const ITServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-        </React.Fragment>
+    </React.Fragment>
   )
 }
-
 export default $1

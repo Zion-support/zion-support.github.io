@@ -2,7 +2,7 @@
 import React from "react";
 
 
-    return (
+      return (
     <React.Fragment>
       <Helmet>
 
@@ -64,7 +64,7 @@ import React from "react";
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

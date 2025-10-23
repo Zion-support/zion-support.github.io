@@ -11,13 +11,13 @@ const features = [
 { icon: BarChart, title: 'Legal Analytics', description: 'Comprehensive analytics on legal matters and case outcomes.' },
 { icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' }
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
 <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently." />
 <meta name="keywords" content="legal document management, contract analysis, legal software, compliance tracking, legal AI" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <section className="py-20 px-4">
 <div className="max-w-7xl mx-auto">
@@ -42,5 +42,4 @@ const features = [
     </React.Fragment>
   )
 }
-
 export default $1

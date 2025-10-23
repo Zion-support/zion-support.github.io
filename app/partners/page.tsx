@@ -112,7 +112,7 @@ const PartnersPage: React.FC = () => {
   const getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]
   }
-    return (
+      return (
     <React.Fragment>
       <Helmet>
         <title>Partners | Zion Tech Group</title>
@@ -260,7 +260,7 @@ const PartnersPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => {
                 const tierInfo = getTierInfo(partner.tier)
-                  return (
+                    return (
     <div key={index} className={`${tierInfo.bgColor} backdrop-blur-lg rounded-2xl p-6 border ${tierInfo.borderColor} hover:border-purple-400 transition-all duration-300 group`}>
                     <div className="text-center">
                       <div className="w-20 h-20 bg-white/10 rounded-lg mx-auto mb-4 flex items-center justify-center">

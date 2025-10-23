@@ -44,8 +44,8 @@ const AiAutomationPage: React.FC = () => {
         <title>Ai Automation - Zion Tech Group</title>
                 <meta name="description" content="Advanced AI-powered ai automation solution for modern businesses." />
                 <meta name="keywords" content="AI ai automation, artificial intelligence, ai automation, AI solutions, intelligent automation" />
-            </Helmet>
-            <Navigation />
+      </Helmet>
+      <Navigation />
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -147,9 +147,8 @@ const AiAutomationPage: React.FC = () => {
                   </div>
         </section>
               </div>
-            <Footer />
-            </React.Fragment>
+      <Footer />
+    </React.Fragment>
   )
 }
-
 export default $1

@@ -236,7 +236,7 @@ return recommendations
 }, [metrics])
 const _recommendations = getPerformanceRecommendations()
 if (process.env.NODE_ENV === 'development') {
-  return (
+    return (
     <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
 <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
 <div className='text-xs space-y-1'>

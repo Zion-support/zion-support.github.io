@@ -47,8 +47,8 @@ const AiAnalyticsDashboardPage: React.FC = () => {
     'Gain competitive advantage with insights',
     'Gain competitive advantage with advanced technology'
   ]
-  return (
-    <>
+    return (
+    <React.Fragment>
       <Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics dashboard solution for modern businesses." />
@@ -155,8 +155,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
+    </React.Fragment>
   )
 }
-
 export default $1

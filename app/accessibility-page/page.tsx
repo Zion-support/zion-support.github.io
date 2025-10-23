@@ -38,8 +38,8 @@ const AccessibilityPage: React.FC = () => {
     "Semantic HTML structure",
   ];
 
-  return (
-    <>
+      return (
+    <React.Fragment>
       <Head>
         <title>Accessibility - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
@@ -170,7 +170,7 @@ const AccessibilityPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

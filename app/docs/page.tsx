@@ -61,14 +61,14 @@ doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
 doc.description.toLowerCase().includes(searchQuery.toLowerCase())
 )
 })).filter(category => category.docs.length > 0)
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <SEOOptimizer
 title="Documentation - Zion Tech Group"
 description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."
 keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
 />
-<Navigation />
+      <Navigation />
 </div>
 </div>
 </div>
@@ -159,7 +159,7 @@ Join Community
 </div>
 </div>
 </section>
-<Footer />
+      <Footer />
 </div>
 )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Share2, ArrowRight } from 'lucide-react'
 const SocialMediaManagerPage: React.FC = () => {
-    return (
+      return (
     <React.Fragment>
       <Helmet>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
@@ -46,7 +46,7 @@ const SocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )
 }
 export default SocialMediaManagerPage

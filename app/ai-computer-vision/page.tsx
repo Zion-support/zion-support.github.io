@@ -31,14 +31,14 @@ description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>AI Computer Vision - Zion Tech Group</title>
 <meta name="description" content="Advanced computer vision solutions powered by AI technology." />
 <meta name="keywords" content="AI computer vision, artificial intelligence, image recognition, AI solutions, intelligent vision" />
-</Helmet>
-<Navigation />
+      </Helmet>
+      <Navigation />
 <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
 {/* Hero Section */}
 <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -165,8 +165,8 @@ Contact Sales
 </div>
 </div>
 </section>
-<Footer />
-</>
-)
+      <Footer />
+    </React.Fragment>
+  )
 }
 export default AiComputerVisionPage

@@ -10,8 +10,8 @@ import {
   RefreshCw,
 } from "lucide-react";
 const NotFoundPage: React.FC = () => {
-  return (
-    <>
+      return (
+    <React.Fragment>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
 
@@ -125,7 +125,7 @@ const NotFoundPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

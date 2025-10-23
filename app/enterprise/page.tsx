@@ -85,14 +85,14 @@ const stats = [
 { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
 { number: '24/7', label: 'Support Available', icon: Clock }
 ]
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 <SEOOptimizer
 title="Enterprise Solutions - Zion Tech Group"
 description="Comprehensive enterprise-grade solutions for large-scale business operations."
 keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
 />
-<Navigation />
+      <Navigation />
 {/* Hero Section */}
 <section className="relative py-20 px-4 overflow-hidden">
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
@@ -207,7 +207,7 @@ Learn More
 </div>
 </div>
 </section>
-<Footer />
+      <Footer />
 </div>
 )
 }

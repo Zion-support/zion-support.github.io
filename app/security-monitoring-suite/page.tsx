@@ -57,13 +57,13 @@ const benefits = [
 'Scalable for any business size',
 'Expert security team support'
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
 <meta name="description" content="Comprehensive security monitoring suite by Zion Tech Group. Advanced cybersecurity platform with real-time monitoring, alerts, and automated response." />
 <meta name="keywords" content="security monitoring suite, cybersecurity platform, threat detection, security alerts, Zion Tech Group" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 {/* Hero Section */}
 <section className="pt-20 pb-16 px-4">
@@ -158,8 +158,8 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+    </React.Fragment>
+  )
 }
 export default SecurityMonitoringSuitePage
 </button>

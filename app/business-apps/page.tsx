@@ -50,13 +50,13 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ]
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<Helmet>
+      <Helmet>
 <title>Business Apps | Zion Tech Group</title>
 <meta name="description" content="Professional Business Apps development by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <meta name="keywords" content="business apps, mobile apps, web apps, AI solutions, IT services, Zion Tech Group" />
-</Helmet>
+      </Helmet>
 {/* Hero Section */}
 <section className="relative py-20 px-4">
 <div className="max-w-7xl mx-auto text-center">

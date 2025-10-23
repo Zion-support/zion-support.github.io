@@ -229,7 +229,7 @@ const CareersPage: React.FC = () => {
     }
   ];
 
-    return (
+      return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Careers - Zion Tech Group</title>

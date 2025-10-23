@@ -92,7 +92,7 @@ const MicroSAASPage: React.FC = () => {
       category: 'Support'
     }
   ]
-  return (
+    return (
     <React.Fragment>
       <Helmet>
         <title>Micro SaaS Solutions | Zion Tech Group - 50+ AI-Powered Tools</title>
@@ -1467,8 +1467,8 @@ const MicroSAASPage: React.FC = () => {
 
   const categories = [...new Set(microSAASServices.map(service => service.category))];
 
-  return (
-    <>
+      return (
+    <React.Fragment>
       <Helmet>
         <title>Micro SAAS Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive micro SAAS solutions for modern businesses. AI-powered tools for analytics, automation, marketing, and more." />
@@ -1637,7 +1637,7 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

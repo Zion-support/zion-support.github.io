@@ -601,7 +601,7 @@ const ServicesPage: React.FC = () => {
   React.useEffect(() => {
     setCurrentPage(1)
   }, [selectedCategory, searchTerm])
-    return (
+      return (
     <React.Fragment>
       <Helmet>
         <title>Services - Zion Tech Group</title>
@@ -791,7 +791,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )
 }
 export default ServicesPage

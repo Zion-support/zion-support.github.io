@@ -45,13 +45,13 @@ question: "What industries do you serve?",
 answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
 }
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
 <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
 <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <section className="py-20 px-4">
 <div className="max-w-7xl mx-auto text-center">
@@ -92,5 +92,4 @@ className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg
     </React.Fragment>
   )
 }
-
 export default $1

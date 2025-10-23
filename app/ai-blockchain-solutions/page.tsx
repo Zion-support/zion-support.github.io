@@ -31,14 +31,14 @@ description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>AI Blockchain Solutions - Zion Tech Group</title>
 <meta name="description" content="Comprehensive blockchain solutions enhanced with AI technology." />
 <meta name="keywords" content="AI blockchain solutions, artificial intelligence, blockchain technology, AI solutions, smart contracts" />
-</Helmet>
-<Navigation />
+      </Helmet>
+      <Navigation />
 <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
 {/* Hero Section */}
 <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -165,7 +165,7 @@ Contact Sales
 </div>
 </div>
 </section>
-<Footer />
+      <Footer />
 </div>
 )
 }

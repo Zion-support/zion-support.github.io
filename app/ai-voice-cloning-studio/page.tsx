@@ -859,7 +859,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
     setIsPlaying(!isPlaying);
   };
 
-    return (
+      return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}>
       <Helmet>
         <title>AI Voice Cloning Studio Pro - Professional Voice Synthesis | Zion Tech Group</title>
@@ -1055,16 +1055,17 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {isGenerating ? (
-                      <>
+                      <React.Fragment>
                         <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
                         Generating Voice...
-                      </>
+    </React.Fragment>
                     ) : (
-                      <>
+                      <React.Fragment>
                         <Zap className="w-5 h-5 mr-2 inline" />
                         Generate Voice
-                      </>
-                    )}
+    </React.Fragment>
+  )
+}
                   </button>
                 </div>
               </div>
@@ -1119,16 +1120,17 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                     >
                       {isRecording ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 inline"></div>
+                        <React.Fragment>
+      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 inline"></div>
                           Recording... (30s)
-                        </>
+    </React.Fragment>
                       ) : (
-                        <>
+                        <React.Fragment>
                           <Mic className="w-5 h-5 mr-2 inline" />
                           Start Recording
-                        </>
-                      )}
+    </React.Fragment>
+  )
+}
                     </button>
                   </div>
 

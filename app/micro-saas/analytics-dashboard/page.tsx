@@ -48,8 +48,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
   ]
-  return (
-    <>
+    return (
+    <React.Fragment>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
@@ -191,7 +191,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )
 }
 export default AIAnalyticsDashboardPage

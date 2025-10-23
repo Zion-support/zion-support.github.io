@@ -99,7 +99,7 @@ const CommunityPage: React.FC = () => {
     { label: 'Countries', value: '50+', icon: <Globe className="w-6 h-6" /> }
   ];
 
-    return (
+      return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
 

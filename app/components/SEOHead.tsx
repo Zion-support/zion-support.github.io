@@ -49,7 +49,7 @@ const defaultStructuredData = {
 ]
 }
   return (
-    <Helmet>
+      <Helmet>
 {/* Basic Meta Tags */}
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
@@ -81,7 +81,7 @@ const defaultStructuredData = {
 <script type="application/ld+json">
 {JSON.stringify(structuredData || defaultStructuredData)}
 </script>
-</Helmet>
+      </Helmet>
 )
 }
 export default SEOHead

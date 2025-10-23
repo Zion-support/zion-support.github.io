@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
       });
     }
   }, [])
-    return (
+      return (
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -94,7 +94,7 @@ const HomePage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}
-        <Navigation />
+      <Navigation />
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"

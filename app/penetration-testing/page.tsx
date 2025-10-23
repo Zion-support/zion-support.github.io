@@ -57,13 +57,13 @@ const benefits = [
 'Expert analysis and reporting',
 'Ongoing security improvement guidance'
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
 <meta name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." />
 <meta name="keywords" content="penetration testing, security assessment, vulnerability testing, security audit, Zion Tech Group" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 {/* Hero Section */}
 <section className="pt-20 pb-16 px-4">
@@ -158,7 +158,7 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+    </React.Fragment>
+  )
 }
 export default PenetrationTestingPage

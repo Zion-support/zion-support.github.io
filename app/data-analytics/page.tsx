@@ -56,13 +56,13 @@ const benefits = [
 'Real-time insights and reporting',
 'Custom analytics solutions'
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
 <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
 <meta name="keywords" content="data analytics, business intelligence, data visualization, AI analytics, Zion Tech Group" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 {/* Hero Section */}
 <section className="pt-20 pb-16 px-4">
@@ -157,7 +157,7 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+    </React.Fragment>
+  )
 }
 export default DataAnalyticsPage

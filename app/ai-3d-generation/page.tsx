@@ -2,8 +2,8 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const Ai3dGenerationPage: React.FC = () => {
-  return (
-    <>
+      return (
+    <React.Fragment>
       <Helmet>
         <title>Ai 3d Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai 3d generation solution for modern businesses." />
@@ -112,8 +112,7 @@ const Ai3dGenerationPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
+    </React.Fragment>
   )
 }
-
 export default $1

@@ -101,14 +101,14 @@ endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
 endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
 )
 })).filter(category => category.endpoints.length > 0)
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <SEOOptimizer
 title="API Documentation - Zion Tech Group"
 description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
 keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
 />
-<Navigation />
+      <Navigation />
 {/* Hero Section */}
 <section className="py-20 px-4">
 <div className="max-w-7xl mx-auto text-center">
@@ -206,13 +206,14 @@ className="flex items-center gap-2 text-gray-400 hover:text-white transition-col
 <React.Fragment>
 <Check className="w-4 h-4" />
 Copied!
-</React.Fragment>
+    </React.Fragment>
 ) : (
 <React.Fragment>
 <Copy className="w-4 h-4" />
 Copy
-</React.Fragment>
-)}
+    </React.Fragment>
+  )
+}
 </button>
 </div>
 <p className="text-gray-300 mb-4">{endpoint.description}</p>
@@ -248,7 +249,7 @@ View SDKs
 </div>
 </div>
 </section>
-<Footer />
+      <Footer />
 </div>
 )
 }

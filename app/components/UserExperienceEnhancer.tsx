@@ -38,6 +38,6 @@ document.head.appendChild(style)
 }
 enhanceUX()
 }, [])
-return <>{children}</>
+return <>{children}        </React.Fragment>
 }
 export default UserExperienceEnhancer

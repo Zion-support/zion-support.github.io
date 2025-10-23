@@ -31,14 +31,14 @@ description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>Loading - Zion Tech Group</title>
 <meta name="description" content="Loading page." />
 <meta name="keywords" content="loading, AI solutions, IT services, business transformation" />
-</Helmet>
-<Navigation />
+      </Helmet>
+      <Navigation />
 <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
 {/* Hero Section */}
 <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -108,9 +108,8 @@ Contact Us
 </div>
 </section>
 </main>
-<Footer />
+      <Footer />
     </React.Fragment>
   )
 }
-
 export default $1

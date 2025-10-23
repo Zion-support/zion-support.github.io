@@ -4,7 +4,7 @@ import Head from "next/head";
 import { Wifi, BarChart, CheckCircle, ArrowRight } from "lucide-react";
 
 const FiveGSolutionsPage: React.FC = () => {
-    return (
+      return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G Solutions | Zion Tech Group</title>
@@ -13,8 +13,8 @@ const FiveGSolutionsPage: React.FC = () => {
         <meta property="og:description" content="Revolutionary 5G solutions for businesses. High-speed connectivity, IoT integration, and next-generation network infrastructure." />
       </Helmet>
 
-  return (
-    <>
+      return (
+    <React.Fragment>
       <Head>
         <title>
           5G Solutions - Zion Tech Group | AI & IT Solutions
@@ -116,7 +116,7 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

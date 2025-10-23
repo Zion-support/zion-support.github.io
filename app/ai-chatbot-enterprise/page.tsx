@@ -30,7 +30,7 @@ const AiChatbotEnterprisePage: React.FC = () => {
     },
   ];
 
-    return (
+      return (
     <React.Fragment>
       <Helmet>
         <title>
@@ -122,7 +122,7 @@ const AiChatbotEnterprisePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

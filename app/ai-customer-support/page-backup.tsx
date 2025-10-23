@@ -31,8 +31,8 @@ const PageBackupPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
-  return (
-    <>
+    return (
+    <React.Fragment>
       <Helmet>
         <title>Page Backup - Zion Tech Group</title>
         <meta name="description" content="Advanced page backup solutions powered by AI technology." />
@@ -117,7 +117,7 @@ const PageBackupPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </React.Fragment>
   )
 }
 export default PageBackupPage

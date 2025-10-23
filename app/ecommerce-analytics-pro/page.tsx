@@ -35,13 +35,13 @@ title: 'Conversion Tracking',
 description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
 }
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
 <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
 <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <section className="py-20 px-4">
 <div className="max-w-7xl mx-auto">
@@ -69,7 +69,7 @@ className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 ho
 </div>
 </section>
 </div>
-</>
-)
+    </React.Fragment>
+  )
 }
 export default EcommerceAnalyticsProPage

@@ -22,7 +22,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {
 const keywordsString = keywords.join(', ')
   return (
-    <Helmet>
+      <Helmet>
 <title>{title}</title>
 <meta name="description" content={description} />
 <meta name="keywords" content={keywordsString} />
@@ -43,7 +43,7 @@ const keywordsString = keywords.join(', ')
 {JSON.stringify(structuredData)}
 </script>
 )}
-</Helmet>
+      </Helmet>
 )
 }
 export default SEOOptimizer

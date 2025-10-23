@@ -31,8 +31,8 @@ const PageFixedPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
-  return (
-    <>
+    return (
+    <React.Fragment>
       <Helmet>
         <title>Page Fixed - Zion Tech Group</title>
         <meta name="description" content="Advanced page fixed solutions powered by AI technology." />
@@ -117,7 +117,7 @@ const PageFixedPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </React.Fragment>
   )
 }
 export default PageFixedPage

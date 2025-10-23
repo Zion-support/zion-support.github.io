@@ -67,7 +67,7 @@ if (value <= thresholds.good) return 'Good'
 if (value <= thresholds.poor) return 'Needs Improvement'
 return 'Poor'
 }
-  return (
+    return (
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
 <div className="flex items-center justify-between mb-2">
 <h3 className="font-semibold text-cyan-400">Performance</h3>

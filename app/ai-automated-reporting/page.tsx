@@ -30,7 +30,7 @@ const AiAutomatedReportingPage: React.FC = () => {
     },
   ];
 
-    return (
+      return (
     <React.Fragment>
       <Helmet>
         <title>
@@ -123,7 +123,7 @@ const AiAutomatedReportingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

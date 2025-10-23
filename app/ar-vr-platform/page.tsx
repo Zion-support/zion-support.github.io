@@ -35,13 +35,13 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ]
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<Helmet>
+      <Helmet>
 <title>AR/VR Platform | Zion Tech Group</title>
 <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <meta name="keywords" content="AR VR platform, AI solutions, IT services, Zion Tech Group, augmented reality, virtual reality" />
-</Helmet>
+      </Helmet>
 {/* Hero Section */}
 <section className="relative py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-7xl mx-auto">

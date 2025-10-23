@@ -39,8 +39,8 @@ const AiFraudDetectionPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-  return (
-    <>
+    return (
+    <React.Fragment>
       <Helmet>
         <title>Ai Fraud Detection - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai fraud detection solution for modern businesses." />
@@ -149,8 +149,7 @@ const AiFraudDetectionPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
+    </React.Fragment>
   )
 }
-
 export default $1

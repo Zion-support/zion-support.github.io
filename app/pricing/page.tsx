@@ -79,7 +79,7 @@ const PricingPage: React.FC = () => {
     }
   ];
 
-  return (
+    return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>

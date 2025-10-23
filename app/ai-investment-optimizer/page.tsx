@@ -810,7 +810,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     return change >= 0 ? TrendingUp : TrendingDown;
   };
 
-    return (
+      return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}>
       <Helmet>
         <title>AI Investment Portfolio Optimizer Pro - Advanced Portfolio Management | Zion Tech Group</title>
@@ -909,7 +909,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 <div className="space-y-4">
                   {portfolio.map((stock) => {
                     const ChangeIcon = getChangeIcon(stock.change);
-                      return (
+                        return (
     <div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">
                         <div className="flex items-center justify-between mb-2">
                           <div className="flex items-center space-x-3">
@@ -1019,16 +1019,17 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {isOptimizing ? (
-                    <>
+                    <React.Fragment>
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
                       Optimizing...
-                    </>
+    </React.Fragment>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <Zap className="w-5 h-5 mr-2 inline" />
                       Optimize Portfolio
-                    </>
-                  )}
+    </React.Fragment>
+  )
+}
                 </button>
               </div>
             </div>

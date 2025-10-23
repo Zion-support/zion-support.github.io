@@ -2,8 +2,8 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiPoweredDevopsPage: React.FC = () => {
-  return (
-    <>
+      return (
+    <React.Fragment>
       <SEOHead 
         title="ai-powered-devops - Zion Tech Group"
         description="Zion Tech Group ai-powered-devops service page"
@@ -14,7 +14,7 @@ const AiPoweredDevopsPage: React.FC = () => {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

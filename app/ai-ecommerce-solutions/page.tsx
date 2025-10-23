@@ -38,8 +38,8 @@ const AiEcommerceSolutionsPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-  return (
-    <>
+    return (
+    <React.Fragment>
       <Helmet>
         <title>Ai Ecommerce Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai ecommerce solutions solution for modern businesses." />
@@ -148,8 +148,7 @@ const AiEcommerceSolutionsPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
+    </React.Fragment>
   )
 }
-
 export default $1

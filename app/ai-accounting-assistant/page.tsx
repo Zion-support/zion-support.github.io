@@ -11,13 +11,13 @@ const features = [
 { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },
 { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' }
 ]
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>AI Accounting Assistant | Zion Tech Group - Intelligent Financial Management</title>
 <meta name="description" content="Streamline your accounting with AI-powered financial management tools. Automated bookkeeping, tax preparation, and financial analytics." />
 <meta name="keywords" content="AI accounting, financial management, bookkeeping automation, tax preparation, accounting software" />
-</Helmet>
+      </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <section className="py-20 px-4">
 <div className="max-w-7xl mx-auto">
@@ -42,5 +42,4 @@ const features = [
     </React.Fragment>
   )
 }
-
 export default $1

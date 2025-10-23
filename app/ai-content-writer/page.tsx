@@ -77,7 +77,6 @@ const AIContentWriterPage: React.FC = () => {
         <meta name="description" content="Advanced AI-powered content writing platform by Zion Tech Group. Create engaging, SEO-optimized content with artificial intelligence." />
         <meta name="keywords" content="AI content writer, content generation, blog writing, SEO content, marketing copy" />
       </Helmet>
-      
       <Navigation />
 
       {/* Hero Section */}
@@ -244,7 +243,6 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

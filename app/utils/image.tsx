@@ -85,10 +85,11 @@ objectFit: 'cover'}
 if (hasError) {</ImageProps>
 return (</ImageProps>;}
 if (hasError) {}
-  return (
+    return (
     <div}
 if (hasError) {;}
-return(<div}
+  return (
+    <div}
 'use client'
 import React, { useState, useCallback } from 'react'
 interface ImageProps {/* TODO: Fix JSX expression */}

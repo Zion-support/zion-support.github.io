@@ -25,7 +25,7 @@ const ResponsiveContainer = ({
     full: 'max-w-full'
   };
 
-  return (
+    return (
     <div className={cn(
       'mx-auto px-4 sm:px-6 lg:px-8',
       maxWidthClasses[maxWidth],

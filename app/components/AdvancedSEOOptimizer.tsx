@@ -94,9 +94,9 @@ const defaultStructuredData = {
 }
 return structuredData || defaultStructuredData
 }
-  return (
+    return (
     <React.Fragment>
-<Helmet>
+      <Helmet>
 <title>{title}</title>
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
@@ -116,7 +116,7 @@ return structuredData || defaultStructuredData
 <script type="application/ld+json">
 {JSON.stringify(generateStructuredData())}
 </script>
-</Helmet>
+      </Helmet>
 {children}
 {process.env.NODE_ENV === 'development' && (
 <div className="seo-debug" style={{
@@ -144,7 +144,7 @@ maxWidth: '300px'
 )}
 </div>
 )}
-</>
-)
+    </React.Fragment>
+  )
 }
 export default AdvancedSEOOptimizer

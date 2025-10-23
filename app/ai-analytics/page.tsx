@@ -65,7 +65,7 @@ const AiAnalyticsPage: React.FC = () => {
       icon: '🛡️'
     }
   ]
-  return (
+    return (
     <React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -197,8 +197,7 @@ const AiAnalyticsPage: React.FC = () => {
         </section>
       </main>
       <Footer />
-        </React.Fragment>
+    </React.Fragment>
   )
 }
-
 export default $1
