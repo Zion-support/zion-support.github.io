@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle } from 'lucide-react'
-
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -58,6 +57,43 @@ const ConsultationPage: React.FC = () => {
     'Detailed project roadmap',
     'Competitive pricing'
   ]
+  const consultationTypes = [
+    {
+      title: 'Initial Consultation',
+      duration: '30 minutes',
+      price: 'Free',
+      description: 'Discuss your needs and explore potential solutions',
+      features: ['Needs assessment', 'Solution overview', 'Next steps planning']
+    },
+    {
+      title: 'Technical Deep Dive',
+      duration: '60 minutes',
+      price: '$200',
+      description: 'Detailed technical analysis and architecture review',
+      features: ['Technical analysis', 'Architecture review', 'Implementation roadmap', 'Cost estimation']
+    },
+    {
+      title: 'Strategic Planning',
+      duration: '90 minutes',
+      price: '$500',
+      description: 'Comprehensive IT strategy and digital transformation planning',
+      features: ['Strategic assessment', 'Technology roadmap', 'Budget planning', 'Timeline development', 'Risk analysis']
+    }
+  ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
 
   return (
     <>
@@ -290,8 +326,143 @@ const ConsultationPage: React.FC = () => {
                       <Building className="w-5 h-5 text-purple-400 mr-3" />
                       <span>Available Monday - Friday, 9 AM - 6 PM EST</span>
                     </div>
+                  </div>                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Schedule Your Consultation
+              </h2>
+              <p className="text-xl text-gray-300">
+                Fill out the form below and we'll get back to you within 24 hours.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-white font-medium mb-2">Full Name *</label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-white font-medium mb-2">Email Address *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                      placeholder="your@email.com"
+                    />
                   </div>
                 </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-white font-medium mb-2">Company</label>
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                      placeholder="Your company name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-white font-medium mb-2">Phone Number</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-white font-medium mb-2">Service Interest *</label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service}>{service}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-white font-medium mb-2">Message</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                    placeholder="Tell us about your project or specific needs..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-4 px-8 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Schedule Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <Phone className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+                <p className="text-gray-300">+1-302-464-0950</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <Mail className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+                <p className="text-gray-300">consultation@ziontechgroup.com</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <MapPin className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-gray-300">Remote consultations available</p>
               </div>
             </div>
           </div>

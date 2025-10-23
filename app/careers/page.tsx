@@ -15,7 +15,6 @@ interface JobPosition {
   benefits: string[]
   featured: boolean
 }
-
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
     {
@@ -40,8 +39,7 @@ const CareersPage: React.FC = () => {
         'Professional development budget',
         '401(k) with company matching'
       ],
-      featured: true
-    },
+      featured: true    },
     {
       id: '2',
       title: 'Cloud Solutions Architect',
@@ -64,8 +62,7 @@ const CareersPage: React.FC = () => {
         'Professional development budget',
         '401(k) with company matching'
       ],
-      featured: false
-    }
+      featured: false    }
   ]
 
   const companyValues = [
@@ -105,8 +102,7 @@ const CareersPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Team</span>
-            </h1>
+              Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Team</span>            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join our team of talented professionals and help shape the future of AI and IT solutions. 
               Explore open positions and career opportunities.
@@ -116,8 +112,7 @@ const CareersPage: React.FC = () => {
                 View Open Positions
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Learn About Us
-              </button>
+                Learn About Us              </button>
             </div>
           </div>
         </section>
@@ -140,8 +135,7 @@ const CareersPage: React.FC = () => {
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
-                </div>
+                  <p className="text-gray-300">{value.description}</p>                </div>
               ))}
             </div>
           </div>
@@ -226,8 +220,7 @@ const CareersPage: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-                  </div>
-                </div>
+                  </div>                </div>
               ))}
             </div>
           </div>
@@ -249,8 +242,7 @@ const CareersPage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Learn More
-              </button>
-            </div>
+              </button>            </div>
           </div>
         </section>
       </div>

@@ -32,7 +32,7 @@ function fixMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Split by merge conflict markers
-    const parts = content.split(/^<<<<<<< HEAD$/m);
+    const parts = content.split(/^$/m);
     
     if (parts.length === 1) {
       console.log(`No conflicts found in ${filePath}`);
@@ -43,11 +43,11 @@ function fixMergeConflicts(filePath) {
     
     for (let i = 1; i < parts.length; i++) {
       const conflictPart = parts[i];
-      const conflictSections = conflictPart.split(/^=======$/m);
+      const conflictSections = conflictPart.split(/^$/m);
       
       if (conflictSections.length === 2) {
-        // Keep the part after ======= (the incoming changes)
-        const afterEquals = conflictSections[1].split(/^>>>>>>>/m);
+        // Keep the part after  (the incoming changes)
+        const afterEquals = conflictSections[1].split(/^/m);
         if (afterEquals.length > 0) {
           fixedContent += afterEquals[0];
         }

@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, TrendingUp, Globe } from 'lucide-react'
-
 const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
@@ -49,8 +48,7 @@ const MicroSaasPage: React.FC = () => {
       features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance reports'],
       price: '$49/month',
       users: '650+',
-      rating: 4.7
-    }
+      rating: 4.7    }
   ]
 
   const categories = [
@@ -64,7 +62,6 @@ const MicroSaasPage: React.FC = () => {
   const filteredProducts = selectedCategory === 'all' 
     ? products 
     : products.filter(product => product.category === selectedCategory)
-
   return (
     <>
       <Helmet>
@@ -90,8 +87,7 @@ const MicroSaasPage: React.FC = () => {
                 Browse Products
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Learn More
-              </button>
+                Learn More              </button>
             </div>
           </div>
         </section>
@@ -111,8 +107,7 @@ const MicroSaasPage: React.FC = () => {
                   }`}
                 >
                   {category.name}
-                </button>
-              ))}
+                </button>              ))}
             </div>
           </div>
         </section>
@@ -157,8 +152,7 @@ const MicroSaasPage: React.FC = () => {
                   
                   <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                     Try Free
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
+                    <ArrowRight className="w-4 h-4 ml-2" />                  </button>
                 </div>
               ))}
             </div>
@@ -193,8 +187,7 @@ const MicroSaasPage: React.FC = () => {
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">4.8</div>
                 <div className="text-gray-300">Average Rating</div>
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </section>
 
@@ -214,8 +207,7 @@ const MicroSaasPage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Contact Sales
-              </button>
-            </div>
+              </button>            </div>
           </div>
         </section>
       </div>

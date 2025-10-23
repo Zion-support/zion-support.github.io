@@ -31,7 +31,7 @@ def resolve_merge_conflicts(content):
         if line.strip().startswith(''):
             keep_lines = False
             continue
-        elif line.strip().startswith('>>>>>>>'):
+        elif line.strip().startswith(''):
             in_conflict = False
             keep_lines = True
             continue

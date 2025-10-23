@@ -15,7 +15,7 @@ def fix_merge_conflicts_advanced(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<<' not in content or '=======' not in content or '>>>>>>>' not in content:
+        if '<<<<<<<' not in content or '' not in content or '' not in content:
             return False
         
         print(f"Fixing merge conflicts in: {file_path}")
@@ -33,10 +33,10 @@ def fix_merge_conflicts_advanced(file_path):
                 conflict_start = i
                 found_equals = False
                 continue
-            elif line.strip().startswith('======='):
+            elif line.strip().startswith(''):
                 found_equals = True
                 continue
-            elif line.strip().startswith('>>>>>>>'):
+            elif line.strip().startswith(''):
                 in_conflict = False
                 conflict_start = -1
                 found_equals = False
@@ -45,11 +45,11 @@ def fix_merge_conflicts_advanced(file_path):
                 # Not in a conflict, keep the line
                 new_lines.append(line)
             elif in_conflict and found_equals:
-                # We're in a conflict and have passed the ======= marker
+                # We're in a conflict and have passed the  marker
                 # This means we want to keep this line (it's the new version)
                 new_lines.append(line)
             # If in_conflict is True but found_equals is False, skip the line
-            # (this is the old version before =======)
+            # (this is the old version before )
         
         new_content = '\n'.join(new_lines)
         

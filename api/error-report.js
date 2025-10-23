@@ -27,7 +27,6 @@ export default function handler(req, res) {
         serverTime: new Date().toISOString()
       })
     }
-
     // For now, just acknowledge receipt
     res.statusCode = 200
     res.setHeader('Content-Type', 'application/json')
@@ -38,8 +37,7 @@ export default function handler(req, res) {
     }));
 
   } catch (error) {
-    console.error('Error in error reporting handler:', error);
-    res.statusCode = 500;
+    console.error('Error in error reporting handler:', error);    res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to process error report',

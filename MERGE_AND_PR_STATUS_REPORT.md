@@ -162,7 +162,7 @@ git status
 
 # For each conflicted file:
 # 1. Open and manually resolve conflicts
-# 2. Remove conflict markers (<<<<<<<, , >>>>>>>)
+# 2. Remove conflict markers (<<<<<<<, , )
 # 3. Stage resolved file
 git add <file>
 

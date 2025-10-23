@@ -12,9 +12,8 @@ def aggressive_resolve_conflicts(content):
     """
     Aggressively resolve merge conflicts by keeping only the HEAD version.
     """
-    # Keep only content between  and     
-    # First, find all conflict blocks
-    pattern = r'\n(.*?)\n.*?\n    
+    # Keep only content between  and     # First, find all conflict blocks
+    pattern = r'\n(.*?)\n.*?\n.*?\n'
     # Replace with just the HEAD content
     resolved = re.sub(pattern, r'\1', content, flags=re.DOTALL)
     
@@ -22,7 +21,7 @@ def aggressive_resolve_conflicts(content):
     # Remove any remaining conflict markers
     resolved = re.sub(r'\n?', '', resolved)
     resolved = re.sub(r'\n?', '', resolved)
-    resolved = re.sub(r'    
+    resolved = re.sub(r'.*?\n?', '', resolved)
     return resolved
 
 def fix_file_aggressive(file_path):
@@ -32,7 +31,8 @@ def fix_file_aggressive(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '' in content or '' in content or '            print(f"Aggressively fixing conflicts in: {file_path}")
+        if '' in content or '' in content or '' in content:
+            print(f"Aggressively fixing conflicts in: {file_path}")
             resolved_content = aggressive_resolve_conflicts(content)
             
             with open(file_path, 'w', encoding='utf-8') as f:

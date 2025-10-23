@@ -47,6 +47,5 @@ export default withErrorLogging(async (req, res) => {
     });
   } catch (error) {
     console.error('Checkout session creation error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+    res.status(500).json({ error: 'Internal server error' });  }
 });

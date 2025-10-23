@@ -51,8 +51,7 @@ const CaseStudiesPage: React.FC = () => {
         satisfaction: '99.5% accuracy rate'
       },
       image: '💼',
-      featured: false
-    }
+      featured: false    }
   ]
 
   return (
@@ -147,8 +146,7 @@ const CaseStudiesPage: React.FC = () => {
                         <h3 className="text-2xl font-bold text-white mb-2">{study.company}</h3>
                         <p className="text-gray-300">{study.industry}</p>
                       </div>
-                    </div>
-                  </div>
+                    </div>                  </div>
                 </div>
               ))}
             </div>
@@ -171,8 +169,7 @@ const CaseStudiesPage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 View All Case Studies
-              </button>
-            </div>
+              </button>            </div>
           </div>
         </section>
       </div>

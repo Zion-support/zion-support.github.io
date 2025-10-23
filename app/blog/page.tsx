@@ -12,8 +12,7 @@ const BlogPage: React.FC = () => {
       author: 'Dr. Sarah Chen',
       date: '2024-01-15',
       readTime: '8 min read',
-      category: 'AI & Machine Learning',
-      featured: true
+      category: 'AI & Machine Learning',      featured: true
     },
     {
       id: 2,
@@ -22,8 +21,7 @@ const BlogPage: React.FC = () => {
       author: 'Michael Rodriguez',
       date: '2024-01-10',
       readTime: '6 min read',
-      category: 'Cloud Computing',
-      featured: false
+      category: 'Cloud Computing',      featured: false
     },
     {
       id: 3,
@@ -38,7 +36,6 @@ const BlogPage: React.FC = () => {
   ]
 
   const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development', 'Business']
-
   return (
     <>
       <Helmet>
@@ -122,8 +119,7 @@ const BlogPage: React.FC = () => {
                           <User className="w-4 h-4" />
                           <span>{post.author}</span>
                         </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
+                        <div className="flex items-center gap-1">                          <Calendar className="w-4 h-4" />
                           <span>{post.date}</span>
                         </div>
                       </div>
@@ -133,8 +129,7 @@ const BlogPage: React.FC = () => {
                       </div>
                     </div>
                     
-                    <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-                      Read More
+                    <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">                      Read More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </button>
                   </div>
@@ -162,8 +157,7 @@ const BlogPage: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                 Subscribe
               </button>
-            </div>
-          </div>
+            </div>          </div>
         </section>
       </div>
     </>

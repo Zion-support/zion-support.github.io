@@ -6,7 +6,6 @@ import { ArrowRight, Phone, Mail, MessageCircle, Clock, CheckCircle, Search, Hel
 const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
-
   const supportChannels = [
     {
       icon: Phone,
@@ -22,8 +21,7 @@ const SupportPage: React.FC = () => {
       description: 'Get detailed assistance via email',
       contact: 'support@ziontechgroup.com',
       hours: '24/7 Available',
-      responseTime: 'Within 2 hours'
-    },
+      responseTime: 'Within 2 hours'    },
     {
       icon: MessageCircle,
       title: 'Live Chat',
@@ -84,6 +82,12 @@ const SupportPage: React.FC = () => {
     return matchesSearch && matchesCategory
   })
 
+  const filteredFaqs = faqs.filter(faq => 
+    (selectedCategory === 'all' || faq.category === selectedCategory) &&
+    (faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+     faq.answer.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+
   return (
     <>
       <Helmet>
@@ -121,8 +125,7 @@ const SupportPage: React.FC = () => {
         </section>
 
         {/* Support Channels */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Get in Touch
@@ -159,8 +162,7 @@ const SupportPage: React.FC = () => {
                   
                   <button className="w-full mt-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                     Contact Now
-                  </button>
-                </div>
+                  </button>                </div>
               ))}
             </div>
           </div>
@@ -198,8 +200,7 @@ const SupportPage: React.FC = () => {
             {/* FAQ Items */}
             <div className="space-y-6">
               {filteredFaqs.map((faq, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6">                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
