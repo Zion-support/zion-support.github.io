@@ -62,7 +62,8 @@ export default [
       'out/**',
       '*.min.js',
       '*.min.css',
-      'chunk-*.js'
+      'chunk-*.js',
+      'coverage/**'
     ]
   },
   // Base JavaScript configuration
