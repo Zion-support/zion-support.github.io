@@ -1,0 +1,393 @@
+'use client'
+import {Phone, Mail, Brain} from 'lucide-react';
+import React from 'react'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+
+const SidebarPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Sidebar</title>
+        <meta name="description" content="Advanced Sidebar solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, Sidebar, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Sidebar
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced Sidebar solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default SidebarPage;
+=======
+import React, { memo, useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import {
+import { Phone, Mail, Brain } from 'lucide-react'
+import { MapPin, Clock } from 'lucide-react'
+
+X,
+=======
+import React, {memo, useState, useEffect} from 'react'
+import {LinkuseLocation} from 'react-router-do m'
+import {X,
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+Menu,
+Home,
+Users,
+Settings,
+Brain,
+Cloud,
+Shield,
+Code,
+BarChart,
+ChevronDown,
+ChevronRight,
+Phone,
+Mail,
+MapPin,Clock;}
+} from 'lucide-react'
+constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
+const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
+constlocation= useLocation()
+useEffect(() => {
+  
+consthandleResize= () => {
+  
+if (windo w.innerWidth >=1024) {
+setIsOpen(false)}
+}
+windo w.addEventListener('resize', handleResize)
+return () => windo w.removeEventListener('resize', handleResize)
+}, [])
+consttoggleSection= (section: string) => {constnewExpanded= new Set(expandedSections)
+if (newExpanded.has(section)) {;) => {
+  
+return (
+$3
+)}
+newExpanded.delete(section);}
+} else {newExpanded.add(section);}
+}
+setExpandedSections(newExpanded)
+}
+constnavigationSections= [
+{title: 'Main',
+items: [
+{ name: 'Home', path: '/', icon: Home},
+{name: 'About', path: '/about', icon: Users},
+{name: 'Services', path: '/services', icon: Settings},
+{name: 'Contact', path: '/contact', icon: Phone},
+{name: 'Blog', path: '/blog', icon: BarChart},
+{name: 'Case Studies', path: '/case-studies', icon: BarChart},
+]
+},
+{title: 'AI Services',
+key: 'ai-services',
+items: [
+{ name: 'AI Services Overview', path: '/ai-services', icon: Brain},
+{name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart},
+{name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings},
+{name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users},
+{name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings},
+{name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings},
+{name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings},
+{name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield},
+{name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings},
+{name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart},
+{name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings},
+{name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield},
+{name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings},
+]
+},
+{title: 'Micro SaaS',
+key: 'micro-saas',
+items: [
+{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
+{name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart},
+{name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users},
+{name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings},
+{name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail},
+{name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings},
+{name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart},
+{name: 'Document Processor', path: '/micro-saas/do cument-processor', icon: Settings},
+{name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings},
+{name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock},
+{name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart},
+{name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart},
+{name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings},
+]
+},
+{title: 'IT Services',
+key: 'it-services',
+items: [
+{ name: 'IT Services Overview', path: '/it-services', icon: Code},
+{name: 'IT Consulting', path: '/it-consulting', icon: Users},
+{name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings},
+{name: 'IT Support', path: '/it-support', icon: Users},
+{name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud},
+{name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud},
+{name: 'Cybersecurity', path: '/cybersecurity', icon: Shield},
+{name: 'Database Management', path: '/database-management', icon: Settings},
+{name: 'Managed IT', path: '/managed-it', icon: Settings},
+]
+},
+{title: 'Company',
+items: [
+{ name: 'Team', path: '/team', icon: Users},
+{name: 'Careers', path: '/careers', icon: Users},
+{name: 'Consultation', path: '/consultation', icon: Phone},
+{name: 'Pricing', path: '/pricing', icon: BarChart},
+]
+},
+{title: 'Resources',
+items: [
+{ name: 'Documentation', path: '/do cs', icon: Settings},
+{name: 'API Docs', path: '/api-do cs', icon: Code},
+{name: 'Support', path: '/support', icon: Users},
+{name: 'Status', path: '/status', icon: Settings},
+]
+}
+]
+constcontactInfo= {phone: '(30 2) 46 4-095 0',
+email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
+address: '364 E Main St STE 1008 Middletown, DE 19709',
+hours: 'Mon-Fri 9AM-6PM EST'
+}
+return (
+<>
+{/* Mobile Menu Button */}
+<button
+<<<<<<< HEAD
+onClick={() =></button> setIsOpen(true)}
+=======
+onClick={() =>setIsOpen(true)}</button>
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
+aria-label="Open sidebar"
+>
+<Menu className="w-6 h-6" />
+</button>
+{/* Sidebar Overlay */}
+{isOpen && (
+<div
+className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
+onClick={() =>setIsOpen(false)}</div>
+/>
+)}
+{/* Sidebar */}</div>
+<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
+isOpen ? 'translate-x-0' : '-translate-x-full'
+} lg:translate-x-0 lg:static lg:z-auto`}>
+<div className="flex flex-col h-full">
+{/* Header */}</div>
+<div className="flex items-center justify-between p-6 border-b border-slate-700/50">
+<Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
+<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+<Brain className="w-6 h-6 text-white" />
+</div>
+<div></div>
+<h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
+<p className="text-xs text-cyan-400">AI & IT Solutions</p>
+</div>
+</Link>
+<button
+<<<<<<< HEAD
+onClick={() =></button> setIsOpen(false)}
+=======
+onClick={() =>setIsOpen(false)}</button>
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+className="lg:hidden text-gray-400 hover:text-white transition-colors"
+aria-label="Close sidebar"
+>
+<X className="w-6 h-6" />
+</button>
+</div>
+{/* Navigation */}
+<div className="flex-1 overflow-y-auto py-6"></div>
+<nav className="space-y-2 px-4">
+{navigationSections.map((section, sectionIndex) => (;}
+<div key={sectionIndex} className="space-y-1"></div>
+<button
+<<<<<<< HEAD
+onClick={() =></button> section.key && toggleSection(section.key)}
+=======
+onClick={() =>section.key && toggleSection(section.key)}</button>
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+<span>{section.title}</span>
+{section.key && (
+expandedSections.has(section.key) ?
+<ChevronDown className="w-4 h-4" /> :
+<ChevronRight className="w-4 h-4" />
+)}
+</button>
+{(!section.key || expandedSections.has(section.key)) && (
+<div className="ml-4 space-y-1">
+{section.items.map((item, itemIndex) => (</div>
+<Link
+key={itemIndex}
+=======
+address: '36 4 E Main St STE 1008Middletown, DE19709',
+hours: 'Mon-Fri9AM-6 PM EST'}
+return(<>{/* Mobile MenuButton*/}<
+onClick={() =></
+onClick={() =>setIsOpen(true)}
+className="lg:hidden fixed top-4 left-4 z-50bg-slate-80 0/90backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-40 0/20 hover:bg-slate-700/90transition-all"
+aria-label="Opensidebar"><MenuclassName="w-6h-6" /></butto>{/* SidebarOverlay */}
+{isOpen &&(<divclassName="fixed inset-0bg-black/50backdrop-blur-smz-40lg:hidden";}
+onClick={() =>setIsOpen(false)}
+/>
+)}
+{/*Sidebar*/}</di><asideclassName={`fixed top-0 left-0 h-full w-8 0 bg-slate-90 0/9 5 backdrop-blur-lg border-r border-cyan-40 0/20z-50transform transition-transform duration-300${
+isOpen ? 'translate-x-0'  : '-translate-x-full'} lg:translate-x-0 lg:staticlg:z-auto`}><divclassName="flexflex-colh-full">{/*Header*/}</di><divclassName="flex items-center justify-between p-6 border-b border-slate-700/50"><Linkto="/"className="flexitems-centerspace-x-3" onClick={() =>setIsOpen(false)}><divclassName="w-1 0 h-10bg-gradient-to-r from-cyan-400to-purple-400rounded-lg flexitems-centerjustify-center"><BrainclassName="w-6h-6text-white" /></di><di v></di><h2className="text-xl font-boldtext-whitecyber-text">ZionTechGroup</h><pclassName="text-xstext-cyan-400">AI &ITSolutions</p></di></Lin><
+onClick={() =></
+onClick={() =>setIsOpen(false)}className="lg:hidden text-gray-400hover:text-whitetransition-colors"aria-label="Closesidebar"><XclassName="w-6h-6" /></butto></di>{/* Navigation*/}<divclassName="flex-1overflow-y-autopy-6"></di><navclassName="space-y-2px-4">{navigationSections.map((sectionsectionIndex)=>(;}<divkey={sectionIndex}className="space-y-1"></di><
+onClick={() =></
+onClick={() =>section.key &&toggleSection(section.key)}className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400hover:text-cyan-300transition-colors"><spa n>{section.title}</spa>{section.key && (
+expandedSections.has(section.key)?<ChevronDownclassName="w-4h-4" />:<ChevronRightclassName="w-4h-4" />)}</butto>{(!section.key || expandedSections.has(section.key)) &&(<divclassName="ml-4space-y-1">{section.items.map((itemitemIndex)=>(</di><Linkkey={itemIndex}
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+to={item.path}
+onClick={() =>setIsOpen(false)}
+className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
+location.pathname=== item.path ? 'bg-cyan-50 0/20text-cyan-400border border-cyan-40 0/3 0'
+ : 'text-gray-300 hover:text-whitehover:bg-slate-800/50';}}`}><item.iconclassName="w-4h-4flex-shrink-0" /><spa n>{item.name}</spa></Lin>))}</di>)}</di>))}</na></di>{/* ContactInfo*/}<divclassName="border-t border-slate-70 0/50p-6"><h3className="text-sm font-semibold text-cyan-400mb-4">ContactInformation</h><divclassName="space-y-3 text-smtext-gray-300"><divclassName="flexitems-centerspace-x-3"><PhoneclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spa n>{contactInfo.phone}</spa></di><divclassName="flexitems-centerspace-x-3"><MailclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="truncate">{contactInfo.email}</spa></di><divclassName="flexitems-centerspace-x-3"><MapPinclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="text-xs">{contactInfo.address}</spa></di><divclassName="flexitems-centerspace-x-3"><ClockclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="text-xs">{contactInfo.hours}</spa></di></di></asid></>)
+}
+<<<<<<< HEAD
+Sidebar.displayName = 'Sidebar'
+export default Sidebar
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+=======
+Sidebar.displayName= 'Sidebar'
+export defaultSidebar</di></strin>
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1

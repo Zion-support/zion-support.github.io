@@ -25,6 +25,7 @@ const PagePage: React.FC = () => {
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
+<<<<<<< HEAD
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
@@ -35,11 +36,20 @@ const PagePage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+=======
+      title: "Micro SaaS",
+      description: "Custom software solutions and micro-SaaS applications tailored to your specific business needs and growth objectives",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      stats: "50% faster deployment",
+      link: "/micro-saas"
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     }
   ]
 
 <<<<<<< HEAD
   const stats = [
+<<<<<<< HEAD
     { number: "500+", label: "Projects Completed" },
     { number: "99.9%", label: "Client Satisfaction" },
     { number: "24/7", label: "Support Available" },
@@ -66,6 +76,13 @@ const PagePage: React.FC = () => {
       rating: 5
     }
   ]
+=======
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "10+" },
+    { label: "Team Members", value: "50+" }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -78,6 +95,7 @@ const PagePage: React.FC = () => {
               {" "}AI & IT Solutions
             </span>
           </h1>
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Leading provider of cutting-edge artificial intelligence and information technology solutions
             that drive innovation, efficiency, and growth for modern businesses.
@@ -86,14 +104,28 @@ const PagePage: React.FC = () => {
             <Link
               href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+=======
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We help businesses leverage cutting-edge technology to drive growth, efficiency, and innovation in the digital age.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
             >
-              Get Started Today
+              Get Started
             </Link>
             <Link
+<<<<<<< HEAD
               href="/services" 
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+=======
+              href="/services"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
             >
-              Explore Services
+              Our Services
             </Link>
           </div>
         </div>
@@ -102,6 +134,7 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Core Services
             </h2>
@@ -136,6 +169,11 @@ const PagePage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Page solution for modern businesses.
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+=======
+            <h2 className="text-4xl font-bold text-white mb-4">Our Core Services</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
@@ -148,10 +186,17 @@ const PagePage: React.FC = () => {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+          <div className="grid md:grid-cols-3 gap-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-slate-800/70 transition-all duration-300 group">
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"
+              >
+                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -160,9 +205,9 @@ const PagePage: React.FC = () => {
                   <span className="text-cyan-400 font-semibold">{feature.stats}</span>
                   <Link
                     href={feature.link}
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-2"
                   >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                    Learn More <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -171,12 +216,13 @@ const PagePage: React.FC = () => {
         </div>
       </section>
       {/* Stats Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+<<<<<<< HEAD
                   {stat.number}
 =======
         </section>
@@ -251,6 +297,13 @@ const PagePage: React.FC = () => {
                 </div>
               ))}
             </div>
+=======
+                  {stat.value}
+                </div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
           </div>
 <<<<<<< HEAD
         </div>
@@ -258,12 +311,13 @@ const PagePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI and IT solutions can drive your success.
+            Let&apos;s discuss how our AI and IT solutions can drive your success.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact" 
@@ -278,6 +332,14 @@ const PagePage: React.FC = () => {
               Request Demo
             </Link>
           </div>
+=======
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-block"
+          >
+            Start Your Project Today
+          </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
         </div>
       </section>
     </div>

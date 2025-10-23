@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from "react"
 
 declare global {
@@ -15,11 +16,30 @@ const Analytics: React.FC = () => {
           page_title: document.title,
           page_location: window.location.href,
         })
+=======
+import React, {useEffect} from "react";
+
+declare global {interface Windo w {
+    gtag: (...args: any[]) => void;
+ }
+}
+
+constAnalytics: React.FC= () => {useEffect(() => {
+  
+    constinitAnalytics= () => {
+  
+      if (type of windo w !=="undefined" && windo w.gtag) {
+        window.gtag("config","GA_MEASUREMENT_ID", {
+          page_title: do cument.title,
+          page_location: windo w.location.href,
+       });
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
     }
     initAnalytics()
   }, [])
 
+<<<<<<< HEAD
   return null; // Analytics component doesn't render anything
 }
 
@@ -169,6 +189,9 @@ const AnalyticsPage: React.FC = () => {
       <Footer />
     </>
   );
+=======
+  return nul l; // Analytics component do esn't render anything
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 };
 
 export default AnalyticsPage;
