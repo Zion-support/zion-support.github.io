@@ -10,15 +10,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = "" }) => {
     <div className={`bg-white p-4 rounded-lg ${className}`}>
       <h2>ContactPage</h2>
       <p>This is a clean, functional component.</p>
-    
-    
-    
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default Page;
-
+export default ContactPage;

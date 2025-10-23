@@ -57,15 +57,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </li>
         </ul>
       </nav>
-    
-    
-    
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default Page;
-
+export default Sidebar;
