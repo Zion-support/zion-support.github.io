@@ -56,14 +56,14 @@ const benefits = [
 'Save time and resources'
 ]
 return (
-<>
-<Helmet>
+    <>
+      <Helmet>
 <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
 <meta name="description" content="Advanced email marketing automation platform by Zion Tech Group. Create, manage, and optimize email campaigns with AI-powered automation." />
 <meta name="keywords" content="email marketing automation, marketing platform, email campaigns, marketing automation, Zion Tech Group" />
 </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-<section className="pt-20 pb-16 px-4">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="pt-20 pb-16 px-4">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
 <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Email Marketing Automation</h1>
@@ -122,7 +122,7 @@ Call (302) 464-0950
 <section className="py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-4xl mx-auto text-center">
 <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Automate Your Marketing?</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Automate Your Marketing?</h2>
 <p className="text-xl text-purple-100 mb-8">Start your free trial today and transform your email marketing with automation.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">

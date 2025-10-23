@@ -848,7 +848,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
               <span className="text-green-300 font-medium">AI Smart Home Controller Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent neon-text">Intelligent Home Automation</h1>h1>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent neon-text">Intelligent Home Automation</h1>
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Control Your Home with AI-Powered Intelligence</p>p>
 
@@ -896,7 +896,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Smart Home Dashboard</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Smart Home Dashboard</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Control and monitor all your smart devices from one place</p>p>
           </div>
 
@@ -1035,7 +1035,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Smart Home Features</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Smart Home Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI-powered features for the ultimate smart home experience</p>p>
           </div>
 
@@ -1060,7 +1060,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Smart Home Plans</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Smart Home Plans</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the smart home plan that fits your needs</p>p>
           </div>
 
@@ -1104,7 +1104,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Transform Your Home Today</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Transform Your Home Today</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our smart home experts to get started with your AI-powered home automation</p>p>
           </div>
 

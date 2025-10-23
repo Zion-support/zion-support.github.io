@@ -29,7 +29,7 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 </div>
 )}
 <div className="mb-4">
-<h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">{title}</h3>h3>
+<h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">$3</h3>
 <p className="text-gray-300 text-sm">{description}</p>
 </div>
 <div className="space-y-2 mb-6">{features.map((feature, index) => (</div>

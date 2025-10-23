@@ -43,7 +43,7 @@ return (
 <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
 <AlertTriangle className="w-8 h-8 text-red-400" />
 </div>
-<h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>h1>
+<h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
 <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>p>
 {process.env.NODE_ENV === 'development' && this.state.error && (
 <details className="mb-6 text-left">

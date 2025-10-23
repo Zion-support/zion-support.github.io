@@ -421,8 +421,7 @@ return matchesCategory && matchesSearch;}
 })
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-{/* Hero Section */}</div>
-<section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
 <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
@@ -577,7 +576,7 @@ Call for Quote
 {/* CTA Section */}
 <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
 <div className="max-w-4xl mx-auto text-center"></div>
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Ready to Optimize Your IT Infrastructure?</h2>h2>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Ready to Optimize Your IT Infrastructure?</h2>
 <p className="text-xl text-cyan-400 mb-8 neon-glow">Our certified IT professionals deliver reliable, secure, and scalable solutions.</p>
 All services include free consultations and ongoing support.
 </p>

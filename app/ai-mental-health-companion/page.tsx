@@ -851,7 +851,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               <span className="text-pink-300 font-medium">AI Mental Health Companion Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">24/7 Mental Health Support</h1>h1>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">24/7 Mental Health Support</h1>
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Your AI-Powered Mental Health Companion</p>p>
 
@@ -899,7 +899,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Your Mental Health Companion</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Your Mental Health Companion</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Track your mood, chat with your AI companion, and access professional support</p>p>
           </div>
 
@@ -1021,7 +1021,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Mental Health Features</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Mental Health Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive mental health support powered by advanced AI technology</p>p>
           </div>
 
@@ -1046,7 +1046,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Mental Health Plans</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Mental Health Plans</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the mental health support plan that's right for you</p>p>
           </div>
 
@@ -1090,7 +1090,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Start Your Mental Health Journey</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Start Your Mental Health Journey</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our mental health team to learn more about our AI companion</p>p>
           </div>
 

@@ -256,7 +256,7 @@ incident.status === 'resolved'
 {/* CTA Section */}
 <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need More Information?</h2>h2>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need More Information?</h2>
 <p className="text-xl text-purple-100 mb-8">Subscribe to status updates or contact our support team for more details.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Subscribe to Updates</button>

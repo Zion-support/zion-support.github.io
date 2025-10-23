@@ -984,7 +984,7 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold h
 {/* Contact Section */}
 <section className="mb-16" aria-labelledby="contact-heading">
 <div className="max-w-6xl mx-auto"></div>
-<h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">Ready to Transform Your Business?</h2>h2>
+<h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">Ready to Transform Your Business?</h2>
 <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.</p>p>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 {/* Contact Information */}</div>

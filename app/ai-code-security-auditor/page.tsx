@@ -897,7 +897,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               <span className="text-red-300 font-medium">AI Code Security Auditor Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent neon-text">Automated Security Analysis</h1>h1>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent neon-text">Automated Security Analysis</h1>
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Secure Your Code with AI-Powered Analysis</p>p>
 
@@ -945,7 +945,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Scanner</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Scanner</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Upload your code or connect your repository for instant security analysis</p>p>
           </div>
 
@@ -1040,7 +1040,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Dashboard</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Dashboard</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Monitor and manage security issues across your codebase</p>p>
           </div>
 
@@ -1094,7 +1094,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Features</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive security analysis tools for modern development</p>p>
           </div>
 
@@ -1119,7 +1119,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Plans</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Plans</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the security plan that fits your development needs</p>p>
           </div>
 
@@ -1163,7 +1163,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Secure Your Code Today</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Secure Your Code Today</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our security experts to discuss your code security needs</p>p>
           </div>
 

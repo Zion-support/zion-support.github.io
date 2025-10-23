@@ -144,13 +144,13 @@ const CloudMigrationPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">{/* Hero Section */}</div>
-          <section className="text-center mb-16">
+        <div className="max-w-7xl mx-auto">
+        <section className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4">
                 <Cloud className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-5xl font-bold text-white neon-text">Cloud Migration</h1>h1>
+              <h1 className="text-5xl font-bold text-white neon-text">Cloud Migration</h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">Seamlessly migrate your infrastructure to the cloud with our expert migration services.</p>
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.

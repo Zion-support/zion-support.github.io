@@ -16,7 +16,7 @@ import React from "react";
             <div className="text-center mb-16">
 
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">$3</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}

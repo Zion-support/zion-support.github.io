@@ -194,7 +194,7 @@ class AdvancedErrorBoundary extends Component<
                     />
                   </svg>
                 </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>h2>
+                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>
                 <p className='mt-2 text-sm text-gray-600'>We&apos;re sorry, but something unexpected happened. Our team</p>
                   has been notified.
                 </p>
@@ -202,7 +202,7 @@ class AdvancedErrorBoundary extends Component<
 
               {process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>h3>
+                  <h3 className='text-sm font-medium text-red-800'>$3</h3>
                   <div className='mt-2 text-sm text-red-700'>
                     <p>
                       <strong>Error ID:</strong> {this.state.errorId}

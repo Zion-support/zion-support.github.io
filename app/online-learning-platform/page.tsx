@@ -12,8 +12,8 @@ const features = [
 { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
 ]
 return (
-<>
-<Helmet>
+    <>
+      <Helmet>
 <title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
 <meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning." />
 <meta name="keywords" content="online learning platform, e-learning, education technology, course management, student analytics, AI tutoring" />

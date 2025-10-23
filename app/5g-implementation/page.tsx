@@ -51,7 +51,7 @@ const FiveGImplementationPage: React.FC = () => {
         </title>
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">
 
           <div className="relative max-w-7xl mx-auto text-center">
@@ -73,7 +73,7 @@ const FiveGImplementationPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Advanced 5G Features</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Advanced 5G Features</h2>
               <p className="text-xl text-gray-300">Cutting-edge 5G technology for the next generation of</p>
                 connectivity
               </p>
@@ -86,7 +86,7 @@ const FiveGImplementationPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>h3>
+                  <h3 className="text-xl font-bold text-white mb-4">$3</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">{feature.description}</p>p>
                   {feature.benefits && (
                     <ul className="space-y-2">
@@ -110,7 +110,7 @@ const FiveGImplementationPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Implement 5G?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Implement 5G?</h2>
             <p className="text-xl text-gray-300 mb-8">Contact our experts to discuss your 5G implementation needs and</p>
               get started today.
             </p>

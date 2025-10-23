@@ -39,10 +39,10 @@ const AIChatbotBuilderPage: React.FC = () => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Chatbot Builder</h1>h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Chatbot Builder</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build intelligent chatbots with our AI-powered builder. No coding</p>
               required, advanced features included.
             </p>
@@ -63,7 +63,7 @@ const AIChatbotBuilderPage: React.FC = () => {
         <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-lg text-gray-300">Everything you need to build intelligent chatbots</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
@@ -74,7 +74,7 @@ const AIChatbotBuilderPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">$3</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
@@ -86,12 +86,12 @@ const AIChatbotBuilderPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Chatbot Builder?</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Chatbot Builder?</h2>
               <p className="text-lg text-gray-300">Advanced AI technology for professional chatbot creation</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3>h3>
+                <h3 className="text-2xl font-bold text-white mb-6">$3</h3>
                 <ul className="space-y-3">
                   {benefits.map((benefit, index) => (
                     <li key={index} className="flex items-center text-gray-300">
@@ -102,7 +102,7 @@ const AIChatbotBuilderPage: React.FC = () => {
                 </ul>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Use Cases</h3>h3>
+                <h3 className="text-2xl font-bold text-white mb-6">$3</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li>• Customer support automation</li>
                   <li>• Lead generation and qualification</li>
@@ -119,7 +119,7 @@ const AIChatbotBuilderPage: React.FC = () => {
         {/* CTA Section */}
         <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Build Your Chatbot?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Build Your Chatbot?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Start building intelligent chatbots today with our AI-powered</p>
               builder platform.
             </p>

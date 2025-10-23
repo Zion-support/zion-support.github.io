@@ -241,7 +241,7 @@ const CareersPage: React.FC = () => {
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">Build the future of technology with us. We're looking for passionate individuals who want to make a difference.</p>p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2">

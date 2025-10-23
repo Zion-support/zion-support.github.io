@@ -123,8 +123,8 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
     return () => clearInterval(timer)
   }, [])
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <section className="py-20 px-4">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
@@ -198,7 +198,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{feature.title}</h3>h3>
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">$3</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 {feature.stats && (
                   <div className="grid grid-cols-3 gap-4">{feature.stats.map((stat, statIndex) => (</div>
@@ -281,7 +281,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Key Benefits</h2>h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Key Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover the advantages that make our solutions the preferred choice for businesses worldwide.</p>p>
           </div>
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -299,7 +299,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">Join thousands of satisfied customers and start your transformation journey today.</p>p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">

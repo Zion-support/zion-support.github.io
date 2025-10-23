@@ -176,7 +176,7 @@ Transform your organization with cutting-edge technology and expert implementati
 {/* CTA Section */}
 <section className="py-20 px-4">
 <div className="max-w-4xl mx-auto text-center"></div>
-<h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>h2>
+<h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>
 <p className="text-xl text-gray-300 mb-8">Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Enterprise Sales</button>

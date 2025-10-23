@@ -1178,7 +1178,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
           <div className="text-center">
 
             <div className="inline-block mb-6">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">AI Services</h1>h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">AI Services</h1>
               <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Transform your business with our comprehensive suite of cutting-edge AI-powered solutions</p>p>
@@ -1202,7 +1202,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                 <div className="text-gray-300">AI Support</div>
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services</h1>h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">Transform your business with our comprehensive suite of AI-powered solutions</p>p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="holographic px-6 py-3 rounded-lg">
@@ -1260,7 +1260,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}</h3>h3>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">$3</h3>
 
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>p>
 
@@ -1324,7 +1324,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
           <p className="text-xl text-purple-100 mb-8">Join 25,000+ companies already using our cutting-edge AI solutions. Start your free trial today!</p>p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <a

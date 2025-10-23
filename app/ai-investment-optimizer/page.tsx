@@ -829,7 +829,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
               <span className="text-blue-300 font-medium">AI Investment Portfolio Optimizer Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">Advanced Portfolio Management</h1>h1>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">Advanced Portfolio Management</h1>
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Maximize Returns with AI-Powered Investment Optimization</p>p>
 
@@ -877,7 +877,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Portfolio Dashboard</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Portfolio Dashboard</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Monitor and optimize your investment portfolio with real-time analytics</p>p>
           </div>
 
@@ -1026,7 +1026,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Investment Features</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Investment Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI-powered tools for intelligent portfolio management</p>p>
           </div>
 
@@ -1051,7 +1051,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Investment Plans</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Investment Plans</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the investment optimization plan that fits your portfolio size</p>p>
           </div>
 
@@ -1095,7 +1095,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Start Optimizing Today</h2>h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Start Optimizing Today</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our investment experts to discuss your portfolio optimization needs</p>p>
           </div>
 

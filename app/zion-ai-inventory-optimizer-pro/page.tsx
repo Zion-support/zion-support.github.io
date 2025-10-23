@@ -205,7 +205,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
   return (
     <>
 
-      <div className="min-h-screen pt-16">{/* Hero Section */}</div>
+      <div className="min-h-screen pt-16">
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-400 to-transparent"></div>
@@ -270,7 +270,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Trusted Across Industries</h2>h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Trusted Across Industries</h2>
               <p className="text-lg text-gray-300">Optimize inventory for any business type</p>p>
             </div>
 
@@ -293,7 +293,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Powerful Features for Inventory Optimization</h2>h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Powerful Features for Inventory Optimization</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">Everything you need to optimize inventory levels, reduce costs,</p>
                 and eliminate stockouts with AI intelligence.
               </p>
@@ -305,7 +305,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
                   className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10"
                 >
                   <div className="text-green-400 mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">{feature.title}</h3>h3>
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">$3</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
@@ -328,7 +328,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Inventory Management Plan</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Inventory Management Plan</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing options designed to scale with your inventory</p>
                 needs
               </p>
@@ -352,7 +352,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
                   )}
 
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">$3</h3>
                     <p className="text-gray-300 text-sm mb-4">{plan.description}</p>p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-green-400">{plan.price}</span>span>
@@ -392,7 +392,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Inventory Professionals</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Inventory Professionals</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">See how businesses are optimizing their inventory with AI</p>p>
             </div>
 
@@ -426,7 +426,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Optimize Your Inventory?</h2>h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Optimize Your Inventory?</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">Join thousands of businesses already using Zion AI Inventory</p>
                 Optimizer Pro to reduce costs and eliminate stockouts. Start
                 your free trial today and see the difference AI can make.

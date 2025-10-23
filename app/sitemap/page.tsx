@@ -52,7 +52,7 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
         <div className="mt-12 bg-blue-50 rounded-lg p-8"></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Help Finding Something?</h2>h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Help Finding Something?</h2>
           <p className="text-gray-600 mb-6">If you can't find what you're looking for, feel free to contact us directly.</p>p>
           <div className="flex flex-col sm:flex-row gap-4"></div>
             <a

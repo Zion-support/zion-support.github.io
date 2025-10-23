@@ -12,8 +12,8 @@ const features = [
 { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' }
 ]
 return (
-<>
-<Helmet>
+    <>
+      <Helmet>
 <title>AI Accounting Assistant | Zion Tech Group - Intelligent Financial Management</title>
 <meta name="description" content="Streamline your accounting with AI-powered financial management tools. Automated bookkeeping, tax preparation, and financial analytics." />
 <meta name="keywords" content="AI accounting, financial management, bookkeeping automation, tax preparation, accounting software" />

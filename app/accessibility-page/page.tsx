@@ -46,10 +46,10 @@ const AccessibilityPage: React.FC = () => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Accessibility</h1>h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Accessibility</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We're committed to creating inclusive digital experiences that are</p>
               accessible to everyone, regardless of ability.
             </p>
@@ -70,7 +70,7 @@ const AccessibilityPage: React.FC = () => {
         <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Accessibility Features</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Accessibility Features</h2>
               <p className="text-lg text-gray-300">Comprehensive accessibility solutions for inclusive design</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
@@ -81,7 +81,7 @@ const AccessibilityPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">$3</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
@@ -93,12 +93,12 @@ const AccessibilityPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Accessibility Standards</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Accessibility Standards</h2>
               <p className="text-lg text-gray-300">We follow international accessibility guidelines and best practices</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">WCAG 2.1 Compliance</h3>h3>
+                <h3 className="text-2xl font-bold text-white mb-6">$3</h3>
                 <ul className="space-y-3">
                   {accessibilityFeatures.map((feature, index) => (
                     <li key={index} className="flex items-center text-gray-300">
@@ -109,7 +109,7 @@ const AccessibilityPage: React.FC = () => {
                 </ul>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Our Commitment</h3>h3>
+                <h3 className="text-2xl font-bold text-white mb-6">$3</h3>
                 <p className="text-gray-300 mb-4">We believe that digital experiences should be accessible to everyone.</p>
                   Our team is trained in accessibility best practices and we continuously
                   work to improve the user experience for all users.
@@ -126,7 +126,7 @@ const AccessibilityPage: React.FC = () => {
         {/* CTA Section */}
         <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Let's work together to create accessible digital experiences that</p>
               include everyone.
             </p>

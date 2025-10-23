@@ -46,8 +46,8 @@ answer: "We serve a wide range of industries including healthcare, finance, e-co
 }
 ]
 return (
-<>
-<Helmet>
+    <>
+      <Helmet>
 <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
 <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
 <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />

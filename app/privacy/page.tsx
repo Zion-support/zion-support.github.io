@@ -84,8 +84,7 @@ Last updated: {lastUpdated}
 <div className="py-20"></div>
 <div className="container mx-auto px-4"></div>
 <div className="max-w-4xl mx-auto space-y-12">
-{/* Introduction */}</div>
-<section>
+        <section>
 <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
 <p className="text-gray-700 leading-relaxed mb-4">At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>p>
 <p className="text-gray-700 leading-relaxed">By using our services, you agree to the collection and use of information in accordance with this policy.</p>p>

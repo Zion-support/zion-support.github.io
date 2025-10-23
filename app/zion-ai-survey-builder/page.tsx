@@ -10,7 +10,7 @@ export default function PageTsxPage() {
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>h2>
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
             <p className="text-gray-300">This page is under development. Please check back later for</p>
               updates.
             </p>

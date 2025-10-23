@@ -58,14 +58,14 @@ const benefits = [
 'Expert technical support'
 ]
 return (
-<>
-<Helmet>
+    <>
+      <Helmet>
 <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
 <meta name="description" content="Comprehensive cloud infrastructure management platform by Zion Tech Group. Manage, monitor, and optimize your cloud resources across multiple providers." />
 <meta name="keywords" content="cloud infrastructure manager, cloud management, multi-cloud, cloud optimization, Zion Tech Group" />
 </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-<section className="pt-20 pb-16 px-4">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="pt-20 pb-16 px-4">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
 <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Cloud Infrastructure Manager</h1>
@@ -124,7 +124,7 @@ Call (302) 464-0950
 <section className="py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-4xl mx-auto text-center">
 <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Optimize Your Cloud?</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Optimize Your Cloud?</h2>
 <p className="text-xl text-purple-100 mb-8">Start your free trial today and experience the power of our cloud infrastructure manager.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">

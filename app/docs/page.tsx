@@ -86,7 +86,7 @@ keywords="documentation, API docs, guides, tutorials, AI solutions, cloud servic
 </div>
 <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
 </div>
-<h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">{doc.title}</h3>h3>
+<h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">$3</h3>
 <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
 <a
 href={doc.link}
@@ -138,7 +138,7 @@ className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-p
 {/* CTA Section */}
 <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need Help?</h2>h2>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need Help?</h2>
 <p className="text-xl text-purple-100 mb-8">Can't find what you're looking for? Our support team is here to help.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Contact Support</button>

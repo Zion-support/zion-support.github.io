@@ -93,8 +93,8 @@ description: 'Eastern Time'
 }
 ]
 return (
-<>
-<Helmet>
+    <>
+      <Helmet>
 <title>Contact Us - Zion Tech Group | Get in Touch</title>
 <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
 <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
@@ -269,7 +269,7 @@ and we'll get back to you as soon as possible.
 <Phone className="w-6 h-6 text-white" />
 </div>
 <div>
-<h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>h3>
+<h3 className="text-lg font-semibold text-white mb-1">$3</h3>
 <p className="text-cyan-400 font-medium mb-1">{info.details}</p>p>
 <p className="text-gray-300 text-sm">{info.description}</p>p>
 </div>

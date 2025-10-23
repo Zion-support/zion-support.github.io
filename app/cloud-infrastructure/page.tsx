@@ -50,7 +50,7 @@ Powered by cutting-edge AI technology and industry expertise.
 </p>
 </div>
 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-<h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Cloud Infrastructure Solutions?</h2>h2>
+<h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Cloud Infrastructure Solutions?</h2>
 <div className="grid md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
 <div key={index} className="flex items-center space-x-3">
 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
@@ -58,7 +58,7 @@ Powered by cutting-edge AI technology and industry expertise.
 <section className="py-16 px-4">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-12">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Cloud Infrastructure?</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Cloud Infrastructure?</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our cloud infrastructure solutions deliver unmatched performance, security, and scalability.</p>p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
@@ -89,7 +89,7 @@ Powered by cutting-edge AI technology and industry expertise.
 {/* CTA Section */}
 <section className="py-16 px-4">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
 <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your cloud infrastructure needs and get a customized solution.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">

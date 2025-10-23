@@ -57,14 +57,14 @@ const benefits = [
 'Custom analytics solutions'
 ]
 return (
-<>
-<Helmet>
+    <>
+      <Helmet>
 <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
 <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
 <meta name="keywords" content="data analytics, business intelligence, data visualization, AI analytics, Zion Tech Group" />
 </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-<section className="pt-20 pb-16 px-4">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="pt-20 pb-16 px-4">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
 <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Data Analytics Services</h1>
@@ -123,7 +123,7 @@ Call (302) 464-0950
 <section className="py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-4xl mx-auto text-center">
 <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Unlock Your Data?</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Unlock Your Data?</h2>
 <p className="text-xl text-purple-100 mb-8">Contact our analytics experts to discuss your data needs and get a customized solution.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">

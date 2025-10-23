@@ -32,8 +32,8 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<>
-<Helmet>
+    <>
+      <Helmet>
 <title>Global Error - Zion Tech Group</title>
 <meta name="description" content="Global error page." />
 <meta name="keywords" content="global error, AI solutions, IT services, business transformation" />
@@ -83,7 +83,7 @@ return (
 {/* CTA Section */}
 <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
 <p className="text-xl text-blue-100 mb-8">Contact us today to learn more about our services.</p>p>
 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">Contact Us</button>
 </div>

@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
           className={`text-center mb-16 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           aria-labelledby="hero-heading"
         >
-          <h1 id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">Zion Tech Group</h1>h1>
+          <h1 id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">Zion Tech Group</h1>
           <p className="text-xl text-gray-600 mb-8" role="doc-subtitle">Advanced AI and IT Solutions</p>p>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.</p>
             Transform your business with our cutting-edge technology.
@@ -64,7 +64,7 @@ const HomePage: React.FC = () => {
 
         {/* Services Section */}
         <section className="grid md:grid-cols-3 gap-8 mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="sr-only">Our Services</h2>h2>
+          <h2 id="services-heading" className="sr-only">Our Services</h2>
 
           <Suspense fallback={<ServiceCardSkeleton />}>
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
@@ -106,7 +106,7 @@ const HomePage: React.FC = () => {
 
         {/* Call to Action Section */}
         <section className="text-center" aria-labelledby="cta-heading">
-          <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>h2>
+          <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
           <a
             href="tel:+13026009898"
             onClick={handlePhoneClick}

@@ -30,7 +30,7 @@ const NotFoundPage: React.FC = () => {
           </div>
 
           {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
 
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">Oops! The page you're looking for seems to have vanished into the</p>
             digital void. Don't worry, even our AI can't predict everything!
@@ -40,7 +40,7 @@ const NotFoundPage: React.FC = () => {
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
             <div className="flex items-center justify-center mb-4">
               <Search className="w-6 h-6 text-cyan-400 mr-2" />
-              <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>h2>
+              <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
             </div>
             <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages:</p>p>
             <div className="flex flex-wrap gap-2 justify-center">{[</div>
@@ -80,7 +80,7 @@ const NotFoundPage: React.FC = () => {
 
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-3">Still can't find what you need?</h3>h3>
+            <h3 className="text-lg font-semibold text-white mb-3">$3</h3>
             <p className="text-gray-300 text-sm mb-4">Our support team is here to help you navigate our services and</p>
               find exactly what you're looking for.
             </p>

@@ -95,8 +95,8 @@ const defaultStructuredData = {
 return structuredData || defaultStructuredData
 }
 return (
-<>
-<Helmet>
+    <>
+      <Helmet>
 <title>{title}</title>
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
