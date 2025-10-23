@@ -14,4 +14,6 @@
 
 };
 
+export default Page;
+
 export default AccessibilityEnhancer;

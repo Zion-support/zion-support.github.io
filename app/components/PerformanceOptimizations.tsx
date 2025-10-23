@@ -1,12 +1,14 @@
-"use client";
 import React from "react";
-
+"use client";
 const PerformanceOptimizations: React.FC = () => {
+  
   return (
     <div>
-          <h$1>PerformanceOptimizations</h1>
+          <h1>PerformanceOptimizations</h1>
     </div>
   );
 };
+
+export default Page;
 
 export default PerformanceOptimizations;

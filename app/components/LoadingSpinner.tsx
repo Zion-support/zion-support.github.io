@@ -6,4 +6,6 @@
   );
 };
 
+export default Page;
+
 export default LoadingSpinner;

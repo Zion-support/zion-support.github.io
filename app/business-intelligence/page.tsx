@@ -67,7 +67,7 @@ import {
   Cpu as CpuIcon2,
 } from "lucide-react";
 
-const biServices = [
+const _biServices = [
   {
     id: 1,
     name: "Data Analytics Platform",
@@ -159,7 +159,7 @@ const biServices = [
     id: 4,
     name: "Data Visualization Studio",
     description: "Create stunning interactive visualizations and infographics",
-    price: "$1,999/month",
+    price: "Page,999/month",
     features: [
       "Interactive Charts",
       "Custom Visualizations",
@@ -216,7 +216,7 @@ const biServices = [
     name: "Self-Service Analytics",
     description:
       "Empower business users with self-service data exploration tools",
-    price: "$1,799/month",
+    price: "Page,799/month",
     features: [
       "Drag & Drop Interface",
       "Natural Language Queries",
@@ -242,7 +242,7 @@ const biServices = [
   },
 ];
 
-const categories = [
+const _categories = [
   "All",
   "Analytics",
   "Business Intelligence",
@@ -253,13 +253,14 @@ const categories = [
 ];
 
 const BusinessIntelligencePage: React.FC = () => {
+  
   const [selectedCategory, setSelectedCategory] = React.useState("All");
   const [searchTerm, setSearchTerm] = React.useState("");
 
-  const filteredServices = biServices.filter((service) => {
+  const _filteredServices = biServices.filter((service) => {
     const matchesCategory =
       selectedCategory === "All" || service.category === selectedCategory;
-    const matchesSearch =
+    const _matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
@@ -281,11 +282,10 @@ const BusinessIntelligencePage: React.FC = () => {
           </div><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         
           </div><div className="text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Business Intelligence Services
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into strategic insights that drive business
               growth. Make informed decisions with our comprehensive BI
               solutions.
@@ -332,7 +332,7 @@ const BusinessIntelligencePage: React.FC = () => {
                     Popular
                   </span>
                 )}
-          <h$1 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+          <h1 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                 {service.name}
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
@@ -362,7 +362,7 @@ const BusinessIntelligencePage: React.FC = () => {
                   </span>
         
           </div><div className="space-y-3 mb-6">
-          <h$1 className="font-semibold text-white">Key Features:</h4>
+          <h1 className="font-semibold text-white">Key Features:</h4>
             
           </div><ul className="space-y-2">
 
@@ -372,7 +372,7 @@ const BusinessIntelligencePage: React.FC = () => {
                   ))}
                 </ul>
         <div className="space-y-3 mb-8">
-          <h$1 className="font-semibold text-white">Capabilities:</h4>
+          <h1 className="font-semibold text-white">Capabilities:</h4>
         
           </div><div className="flex flex-wrap gap-2">
 
@@ -395,7 +395,7 @@ const BusinessIntelligencePage: React.FC = () => {
         {filteredServices.length === 0 && (
           <div className="text-center py-12">
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-          <h$1 className="text-xl font-semibold text-white mb-2">
+          <h1 className="text-xl font-semibold text-white mb-2">
               No services found
             </h3>
           
@@ -412,7 +412,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </div><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
           </div><div className="text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Data into Insights?
             </h2>
           
@@ -434,5 +434,7 @@ const BusinessIntelligencePage: React.FC = () => {
     </div>
   );
 };
+
+export default Page;
 
 export default BusinessIntelligencePage;

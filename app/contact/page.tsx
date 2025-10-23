@@ -1,9 +1,11 @@
 "use client";
+import React from "react";
 import React, { useState, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const ContactPage: React.FC = () => {
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,7 +20,7 @@ const ContactPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const _handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -26,7 +28,7 @@ const ContactPage: React.FC = () => {
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  const _handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -55,7 +57,7 @@ const ContactPage: React.FC = () => {
 
   React.useEffect(() => {
     if (submitStatus === 'success') {
-      const timer = setTimeout(() => {
+      const _timer = setTimeout(() => {
         setFormData({
           name: "",
           email: "",
@@ -71,10 +73,8 @@ const ContactPage: React.FC = () => {
       }, 3000);
     }
   }, [submitStatus]);
-
   return (
     <>
-
     </><<<<<<< HEAD
       <Helmet>
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
@@ -91,22 +91,23 @@ const ContactPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         
-          </div><section className="relative py-20 px-4 overflow-hidden">
+          </div>
+        <section className="relative py-20 px-4 overflow-hidden">
           
-        </section><div
+        </section>
+          <div
             className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
             style={{ animationDelay: "1s" }}
           />
         
           </div><div className="relative max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Contact{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Us
               </span>
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Ready to transform your business with cutting-edge AI and IT solutions? 
               Let's discuss how we can help you achieve your goals.
             </p>
@@ -116,13 +117,14 @@ const ContactPage: React.FC = () => {
         {/* Contact Form Section */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-4xl mx-auto">
+        </section>
+          <div className="max-w-4xl mx-auto">
         
           </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
         
           </div><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-          <h$1 className="text-2xl font-bold text-white mb-6">
+          <h1 className="text-2xl font-bold text-white mb-6">
                   Send us a Message
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -218,10 +220,10 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="">Select budget range</option>
-                      <option value="under-10k">Under $10,000</option>
-                      <option value="10k-50k">$10,000 - $50,000</option>
-                      <option value="50k-100k">$50,000 - $100,000</option>
-                      <option value="100k-500k">$100,000 - $500,000</option>
+                      <option value="under-10k">Under Page0,000</option>
+                      <option value="10k-50k">Page0,000 - $50,000</option>
+                      <option value="50k-100k">$50,000 - Page00,000</option>
+                      <option value="100k-500k">Page00,000 - $500,000</option>
                       <option value="over-500k">Over $500,000</option>
                     </select>
         
@@ -247,13 +249,12 @@ const ContactPage: React.FC = () => {
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
-                      <>
-      
+    <>
     </><div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Sending...
                       </>
                     ) : (
-                      <>
+    <>
                         Send Message
                         
     </><ArrowRight className="w-5 h-5 ml-2" />
@@ -279,7 +280,7 @@ const ContactPage: React.FC = () => {
               <div className="space-y-8">
         
           </div><div>
-          <h$1 className="text-2xl font-bold text-white mb-6">
+          <h1 className="text-2xl font-bold text-white mb-6">
                     Get in Touch
                   </h2>
           
@@ -295,7 +296,7 @@ const ContactPage: React.FC = () => {
                       <Mail className="w-6 h-6 text-blue-400" />
         
           </div><div>
-          <h$1 className="text-lg font-semibold text-white mb-1">Email Us</h3>
+          <h1 className="text-lg font-semibold text-white mb-1">Email Us</h3>
           
           </div><p className="text-gray-300 mb-2">Send us an email anytime</p>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
@@ -307,7 +308,7 @@ const ContactPage: React.FC = () => {
                       <Phone className="w-6 h-6 text-green-400" />
         
           </div><div>
-          <h$1 className="text-lg font-semibold text-white mb-1">Call Us</h3>
+          <h1 className="text-lg font-semibold text-white mb-1">Call Us</h3>
           
           </div><p className="text-gray-300 mb-2">Speak with our team directly</p>
                       <a href="tel:+13024640950" className="text-green-400 hover:text-green-300 transition-colors">
@@ -319,7 +320,7 @@ const ContactPage: React.FC = () => {
                       <MapPin className="w-6 h-6 text-purple-400" />
         
           </div><div>
-          <h$1 className="text-lg font-semibold text-white mb-1">Visit Us</h3>
+          <h1 className="text-lg font-semibold text-white mb-1">Visit Us</h3>
           
           </div><p className="text-gray-300 mb-2">Our headquarters location</p>
                       <p className="text-purple-400">
@@ -332,7 +333,7 @@ const ContactPage: React.FC = () => {
                       <Clock className="w-6 h-6 text-orange-400" />
         
           </div><div>
-          <h$1 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
+          <h1 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
           
           </div><p className="text-gray-300 mb-2">We're available during these times</p>
                       <p className="text-orange-400">
@@ -357,6 +358,8 @@ const ContactPage: React.FC = () => {
   );
 <<<<<<< HEAD
 };
+
+export default Page;
 =======
 >>>>>>> ff557e59c0f892dc6b5ba2dc5c603355d3eaebf1
 

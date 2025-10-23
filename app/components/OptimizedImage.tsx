@@ -1,7 +1,5 @@
-"use client";
 import React from "react";
-
-
+"use client";
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -34,7 +32,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   useEffect(() => {
     if (priority) return;
 
-    const observer = new IntersectionObserver(
+    const _observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
@@ -54,18 +52,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return () => observer.disconnect();
   }, [priority]);
 
-  const handleLoad = () => {
+  const _handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
 
-  const handleError = () => {
+  const _handleError = () => {
     setIsError(true);
     onError?.();
   };
 
   // Generate WebP src if supported
-  const getOptimizedSrc = (originalSrc: string) => {
+  const _getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith("data:") || originalSrc.startsWith("blob:")) {
       return originalSrc;
     }
@@ -80,5 +78,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     </div>
   );
 };
+
+export default Page;
 
 export default OptimizedImage;

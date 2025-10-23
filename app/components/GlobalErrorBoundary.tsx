@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
@@ -40,7 +41,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className="error-boundary">
-          <h$1>Something went wrong.</h1>
+          <h1>Something went wrong.</h1>
           <details style={{ whiteSpace: "pre-wrap" }}>
             {this.state.error && this.state.error.toString()}
             <br />

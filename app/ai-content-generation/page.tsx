@@ -1,9 +1,10 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle, FileText, Clock, Users, Shield } from "lucide-react";
 
 const AIContentGenerationPage: React.FC = () => {
+  
   const _features = [
     {
       icon: <FileText className="w-6 h-6" />,
@@ -118,11 +119,10 @@ const AIContentGenerationPage: React.FC = () => {
           </div><div className="container mx-auto px-4 py-20">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-5xl font-bold text-white mb-6">
+          <h1 className="text-5xl font-bold text-white mb-6">
             AI Content Generation
           </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your content strategy with our advanced AI-powered content
             generation platform. Create engaging, high-quality content at scale
             for blogs, social media, marketing materials, and more.
@@ -148,7 +148,7 @@ const AIContentGenerationPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
         
           </div><div className="text-blue-400 mb-4">{feature.icon}
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                 {feature.title}
               </h3>
           
@@ -166,7 +166,7 @@ const AIContentGenerationPage: React.FC = () => {
 
         {/* Pricing Section */}
         <div className="mb-20">
-          <h$1 className="text-4xl font-bold text-white text-center mb-12">
+          <h1 className="text-4xl font-bold text-white text-center mb-12">
             Choose Your Plan
           </h2>
         
@@ -181,7 +181,7 @@ const AIContentGenerationPage: React.FC = () => {
                   </div>
                 )}
                 <div className="text-center mb-6">
-          <h$1 className="text-2xl font-bold text-white mb-2">
+          <h1 className="text-2xl font-bold text-white mb-2">
                     {plan.name}
                   </h3>
         
@@ -210,7 +210,7 @@ const AIContentGenerationPage: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-12 border border-white/20">
-          <h$1 className="text-3xl font-bold text-white mb-4">
+          <h1 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Content Strategy?
           </h2>
           
@@ -231,5 +231,7 @@ const AIContentGenerationPage: React.FC = () => {
       </div>
   );
 };
+
+export default Page;
 
 export default AIContentGenerationPage;

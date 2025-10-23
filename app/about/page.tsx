@@ -1,10 +1,11 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import { Target, Users, Award, ArrowRight } from "lucide-react";
 
 const AboutPage: React.FC = () => {
-  const values = [
+  
+  const _values = [
     {
       icon: Target,
       title: "Innovation",
@@ -25,7 +26,7 @@ const AboutPage: React.FC = () => {
     },
   ];
 
-  const team = [
+  const _team = [
     {
       name: "Sarah Johnson",
       role: "CEO & Founder",
@@ -43,124 +44,148 @@ const AboutPage: React.FC = () => {
         "Passionate about creating beautiful, user-centered experiences.",
     },
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of AI and IT experts." />
+        <meta
+          name="description"
+          content="Learn about Zion Tech Group's mission to revolutionize business through AI and technology solutions."
+        />
         <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        
-          </div><section className="relative py-20 px-4 overflow-hidden">
-          
-        </section><div className="relative max-w-6xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="relative max-w-6xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               About{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Zion Tech Group
               </span>
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              We are a leading technology company specializing in AI and IT solutions, 
-              dedicated to transforming businesses through innovative technology.
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              We are a forward-thinking technology company dedicated to
+              revolutionizing how businesses operate through cutting-edge AI and
+              IT solutions.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Our Mission
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Meet the Team
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
+              Our Mission
+            </h2>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
+              <h3 className="text-xl font-bold text-white mb-4">
+                Empowering Businesses Through Technology
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                At Zion Tech Group, we believe that every business deserves access to
+                cutting-edge technology solutions. Our mission is to democratize AI
+                and advanced IT capabilities, making them accessible and affordable
+                for companies of all sizes.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Values Section */}
-        <section className="py-20 px-4 bg-white/5">
-          
-        </section><div className="max-w-6xl mx-auto">
-        
-          </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Our Values
-              </h2>
-          
-          </div><p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                These core values guide everything we do and shape our company culture.
-              </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
+              Our Values
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => (
-        
-          </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-        
-          </div><div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-4 rounded-full w-16 h-16 mb-6 flex items-center justify-center">
-                    <value.icon className="w-8 h-8 text-blue-400" />
-          <h$1 className="text-xl font-bold text-white mb-4">
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 text-center group hover:border-purple-500/50 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">
                     {value.title}
                   </h3>
-          
-          </div><p className="text-gray-300">{value.description}</p>
+                  <p className="text-gray-300 leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
               ))}
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
 
         {/* Team Section */}
         <section className="py-20 px-4">
-          
-        </section><div className="max-w-6xl mx-auto">
-        
-          </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Meet Our Team
-              </h2>
-          
-          </div><p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                The talented individuals behind our innovative solutions.
-              </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
+              Meet Our Team
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
-        
-          </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
-        
-          </div><div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                    <Users className="w-10 h-10 text-blue-400" />
-          <h$1 className="text-xl font-bold text-white mb-2">
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 text-center group hover:border-purple-500/50 transition-all duration-300"
+                >
+                  <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <span className="text-2xl font-bold text-white">
+                      {member.name.split(" ").map(n => n[0]).join("")}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {member.name}
                   </h3>
-          
-          </div><p className="text-blue-400 mb-4">{member.role}</p>
-                  <p className="text-gray-300">{member.description}</p>
+                  <p className="text-purple-400 font-semibold mb-4">
+                    {member.role}
+                  </p>
+                  <p className="text-gray-300 text-sm">
+                    {member.description}
+                  </p>
                 </div>
               ))}
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Work With Us?
             </h2>
-          
-          </div><p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can help transform your business with our AI and IT solutions.
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how we can help transform your business with our
+              innovative solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Get Started
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                Get in Touch
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300">
-                Contact Us
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                View Our Work
               </button>
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
       </div>
     </>
   );
 };
+
+export default Page;
 
 export default AboutPage;

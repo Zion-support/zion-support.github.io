@@ -1,8 +1,8 @@
-"use client";
 import React from "react";
-
+"use client";
 const CloudSolutionsPage: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
 
             </p>
@@ -15,7 +15,7 @@ const CloudSolutionsPage: React.FC = () => {
               </a>
         </div>
       </div>
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -39,5 +39,7 @@ const CloudSolutionsPage: React.FC = () => {
     </React.Fragment>
   );
 };
+
+export default Page;
 
 export default CloudSolutionsPage;

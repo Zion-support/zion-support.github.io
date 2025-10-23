@@ -1,16 +1,15 @@
-"use client";
 import React from "react";
-
-
+"use client";
 const DemoPage: React.FC = () => {
+  
   const [selectedDemo, setSelectedDemo] = useState("ai");
 
-  const demos = [
+  const _demos = [
     {
 
   ];
 
-  const testimonials = [
+  const _testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
@@ -37,9 +36,8 @@ const DemoPage: React.FC = () => {
     },
   ];
 
-  const currentDemo =
+  const _currentDemo =
     demos.find((demo) => demo.id === selectedDemo) || demos[0];
-
   return (
     <>
         </div>
@@ -50,10 +48,11 @@ const DemoPage: React.FC = () => {
         
     </><section className="py-20 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Demo
               </h2>
           
@@ -65,7 +64,7 @@ const DemoPage: React.FC = () => {
         
           </div><div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
                     <demo.icon className="w-8 h-8" />
-          <h$1 className="text-xl font-bold mb-2">{demo.title}</h3>
+          <h1 className="text-xl font-bold mb-2">{demo.title}</h3>
           
           </div><p className="text-sm mb-4">{demo.description}</p>
                   <div className="flex items-center gap-4 text-sm">
@@ -88,7 +87,7 @@ const DemoPage: React.FC = () => {
           </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
           </div><div>
-          <h$1 className="text-2xl font-bold text-white mb-4">
+          <h1 className="text-2xl font-bold text-white mb-4">
                     {currentDemo.title}
                   </h3>
           
@@ -97,7 +96,7 @@ const DemoPage: React.FC = () => {
                   </p>
 
                   <div className="space-y-4 mb-8">
-          <h$1 className="text-lg font-semibold text-white">
+          <h1 className="text-lg font-semibold text-white">
                       Key Features:
                     </h4>
             
@@ -121,7 +120,7 @@ const DemoPage: React.FC = () => {
         
           </div><div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <currentDemo.icon className="w-12 h-12 text-white" />
-          <h$1 className="text-xl font-bold text-white mb-2">
+          <h1 className="text-xl font-bold text-white mb-2">
                       Interactive Demo
                     </h4>
           
@@ -138,10 +137,11 @@ const DemoPage: React.FC = () => {
         {/* Testimonials */}
         <section className="py-20 px-4 bg-white/5">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Clients Say
               </h2>
           
@@ -173,8 +173,9 @@ const DemoPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to See More?
             </h2>
           
@@ -197,5 +198,7 @@ const DemoPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default DemoPage;

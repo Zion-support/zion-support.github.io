@@ -8,4 +8,6 @@ interface AccessibilitySettings {
 
 };
 
+export default Page;
+
 export default EnhancedAccessibility;

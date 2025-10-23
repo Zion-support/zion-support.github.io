@@ -1,7 +1,5 @@
-"use client";
 import React from "react";
-
-
+"use client";
 interface EnhancedPerformanceMonitorProps {
   children?: React.ReactNode;
 }
@@ -9,5 +7,7 @@ interface EnhancedPerformanceMonitorProps {
 const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
 
 };
+
+export default Page;
 
 export default EnhancedPerformanceMonitor;

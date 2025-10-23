@@ -12,4 +12,6 @@
   );
 };
 
+export default Page;
+
 export default BlockchainSolutionsProPage;

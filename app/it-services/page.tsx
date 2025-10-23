@@ -1,11 +1,9 @@
 
       selectedCategory === "all" || service.category === selectedCategory,
   );
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>IT Services - Zion Tech Group | Technology Solutions</title>
 
       </Helmet>
@@ -13,18 +11,19 @@
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         
-          </div><section className="relative py-20 px-4 overflow-hidden">
+          </div>
+        <section className="relative py-20 px-4 overflow-hidden">
 
           
-        </section><div className="relative max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </section>
+          <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               IT{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Services
               </span>
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive IT services including cloud infrastructure,
               cybersecurity, custom development, and DevOps solutions. Transform
               your technology infrastructure.
@@ -43,7 +42,8 @@
         {/* Category Filter */}
         <section className="py-8 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="flex flex-wrap justify-center gap-4">
 
@@ -57,13 +57,14 @@
         {/* Services Grid */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
           </div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <service.icon className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-bold text-white mb-4">
+          <h1 className="text-xl font-bold text-white mb-4">
                     {service.title}
                   </h3>
           
@@ -96,8 +97,9 @@
         {/* CTA Section */}
         <section className="py-20 px-4 bg-white/5">
           
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your IT Infrastructure?
             </h2>
           
@@ -120,5 +122,7 @@
     </>
   );
 };
+
+export default Page;
 
 export default ItServicesPage;

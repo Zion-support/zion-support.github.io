@@ -1,9 +1,10 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import { MessageCircle, Clock, Users, Shield } from "lucide-react";
 
 const AICustomerSupportPage: React.FC = () => {
+  
   const _features = [
     {
       icon: <MessageCircle className="w-6 h-6" />,
@@ -58,7 +59,7 @@ const AICustomerSupportPage: React.FC = () => {
   const _pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "Page99",
       period: "/month",
       description: "Perfect for small businesses with basic support needs",
       features: [
@@ -90,7 +91,7 @@ const AICustomerSupportPage: React.FC = () => {
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "Page,299",
       period: "/month",
       description: "For large organizations with high support volume",
       features: [
@@ -142,31 +143,29 @@ const AICustomerSupportPage: React.FC = () => {
     { number: "80%", label: "Issues Resolved Automatically" },
     { number: "24/7", label: "Always Available" },
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>AI Customer Support - Zion Tech Group</title>
 
       </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         
           </div><div className="container mx-auto px-4 py-16">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
               AI Customer Support
             </h1>
-          
-          </div><p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Deliver exceptional customer support with AI-powered chatbots,
               automated responses, and intelligent assistance.
             </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
           </div><div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">
+          <h1 className="text-xl font-semibold mb-4">
                 Intelligent Chatbots
               </h3>
           
@@ -175,14 +174,14 @@ const AICustomerSupportPage: React.FC = () => {
                 queries.
               </p>
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Ticket Routing</h3>
+          <h1 className="text-xl font-semibold mb-4">Ticket Routing</h3>
           
           </div><p className="text-gray-600">
                 Automated ticket classification and routing to appropriate
                 agents.
               </p>
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Sentiment Analysis</h3>
+          <h1 className="text-xl font-semibold mb-4">Sentiment Analysis</h3>
           
           </div><p className="text-gray-600">
                 Real-time customer sentiment analysis and response optimization.
@@ -194,5 +193,7 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default AICustomerSupportPage;

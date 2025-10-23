@@ -1,11 +1,12 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { CheckCircle, ArrowRight } from "lucide-react";
 const AICrmAssistantPage: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
       title: "AI Customer Management",
       description:
@@ -28,7 +29,7 @@ const AICrmAssistantPage: React.FC = () => {
     },
   ];
 
-  const benefits = [
+  const _benefits = [
     "Increase sales by 30%",
     "Improve customer satisfaction",
     "Reduce manual work by 60%",
@@ -36,11 +37,9 @@ const AICrmAssistantPage: React.FC = () => {
     "Automated follow-ups",
     "Enhanced customer insights",
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>AI CRM Assistant | Zion Tech Group</title>
 
       </Helmet>
@@ -50,17 +49,17 @@ const AICrmAssistantPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         
-        </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         
           </div><div className="relative max-w-7xl mx-auto text-center">
-          <h$1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             AI CRM Assistant
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
             </span>
           </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Transform your customer relationships with our AI CRM Assistant.
             Intelligent automation, insights, and management tools for better
             business growth.
@@ -80,10 +79,11 @@ const AICrmAssistantPage: React.FC = () => {
       {/* Features Section */}
       <section className="py-20 px-4">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-4xl font-bold text-white mb-4">
+          <h1 className="text-4xl font-bold text-white mb-4">
               AI CRM Assistant Features
             </h2>
           
@@ -97,7 +97,7 @@ const AICrmAssistantPage: React.FC = () => {
         
           </div><div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-6 h-6 text-white" />
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
           
@@ -118,10 +118,11 @@ const AICrmAssistantPage: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-4xl font-bold text-white mb-4">
+          <h1 className="text-4xl font-bold text-white mb-4">
               Why Choose Our AI CRM Assistant?
             </h2>
           
@@ -132,7 +133,7 @@ const AICrmAssistantPage: React.FC = () => {
         
           </div><div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
-          <h$1 className="text-lg font-semibold text-white">{benefit}</h3>
+          <h1 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
         </div>
@@ -142,8 +143,9 @@ const AICrmAssistantPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-4xl font-bold text-white mb-6">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
           
@@ -166,5 +168,7 @@ const AICrmAssistantPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default AICrmAssistantPage;

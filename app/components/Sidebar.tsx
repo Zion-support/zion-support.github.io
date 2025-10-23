@@ -1,7 +1,5 @@
-"use client";
 import React from "react";
-
-
+"use client";
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -37,5 +35,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
+
+export default Page;
 
 export default Sidebar;

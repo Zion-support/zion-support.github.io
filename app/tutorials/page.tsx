@@ -1,16 +1,15 @@
-"use client";
 import React from "react";
-
-
+"use client";
 const TutorialsPage: React.FC = () => {
+  
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const tutorials = [
+  const _tutorials = [
     {
 
   ];
 
-  const categories = [
+  const _categories = [
     { id: "all", name: "All Tutorials" },
     { id: "ai", name: "AI & ML" },
     { id: "cloud", name: "Cloud" },
@@ -18,11 +17,10 @@ const TutorialsPage: React.FC = () => {
     { id: "development", name: "Development" },
   ];
 
-  const filteredTutorials =
+  const _filteredTutorials =
     selectedCategory === "all"
       ? tutorials
       : tutorials.filter((tutorial) => tutorial.category === selectedCategory);
-
   return (
     <>
         </div>
@@ -33,7 +31,8 @@ const TutorialsPage: React.FC = () => {
         
     </><section className="py-8 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="flex flex-wrap justify-center gap-4">
 
@@ -47,7 +46,8 @@ const TutorialsPage: React.FC = () => {
         {/* Tutorials Grid */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         
@@ -71,7 +71,7 @@ const TutorialsPage: React.FC = () => {
                           Featured
                         </span>
                       )}
-          <h$1 className="text-xl font-bold text-white mb-3">
+          <h1 className="text-xl font-bold text-white mb-3">
                       {tutorial.title}
                     </h3>
           
@@ -112,10 +112,11 @@ const TutorialsPage: React.FC = () => {
         {/* Learning Paths */}
         <section className="py-20 px-4 bg-white/5">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Learning Paths
               </h2>
           
@@ -129,7 +130,7 @@ const TutorialsPage: React.FC = () => {
         
           </div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <BookOpen className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-bold text-white mb-4">
+          <h1 className="text-xl font-bold text-white mb-4">
                   AI Developer Path
                 </h3>
           
@@ -146,7 +147,7 @@ const TutorialsPage: React.FC = () => {
         
           </div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <Database className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-bold text-white mb-4">
+          <h1 className="text-xl font-bold text-white mb-4">
                   Cloud Architect Path
                 </h3>
           
@@ -163,7 +164,7 @@ const TutorialsPage: React.FC = () => {
         
           </div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <Shield className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-bold text-white mb-4">
+          <h1 className="text-xl font-bold text-white mb-4">
                   Security Expert Path
                 </h3>
           
@@ -184,8 +185,9 @@ const TutorialsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Learning?
             </h2>
           
@@ -208,5 +210,7 @@ const TutorialsPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default TutorialsPage;

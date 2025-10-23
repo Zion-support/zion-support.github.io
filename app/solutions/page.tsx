@@ -1,9 +1,10 @@
-"use client";
 import React from "react";
+"use client";
 "use client";
 
 const SolutionsPage: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
         </div>
       </div>
@@ -18,8 +19,9 @@ const SolutionsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        </section>
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
         </div>
@@ -29,5 +31,7 @@ const SolutionsPage: React.FC = () => {
     </React.Fragment>
   );
 };
+
+export default Page;
 
 export default SolutionsPage;

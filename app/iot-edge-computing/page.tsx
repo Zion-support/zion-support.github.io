@@ -1,9 +1,10 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 // import { CheckCircle } from 'lucide-react';
 
 const IoTEdgeComputingPage: React.FC = () => {
+  
   const _iotServices = [
     {
       title: "IoT Sensor Network Design",
@@ -67,7 +68,7 @@ const IoTEdgeComputingPage: React.FC = () => {
         "Reduce downtime by 40%",
         "Improve product quality",
       ],
-      marketPrice: "$15,000-50,000/month",
+      marketPrice: "Page5,000-50,000/month",
       category: "Industrial IoT",
       technologies: [
         "OPC UA",
@@ -82,7 +83,7 @@ const IoTEdgeComputingPage: React.FC = () => {
       description:
         "Comprehensive smart city infrastructure including traffic, utilities, and public services.",
       icon: "🏙️",
-      price: "Starting at $15,000/month",
+      price: "Starting at Page5,000/month",
       features: [
         "Traffic management",
         "Smart lighting",
@@ -173,7 +174,7 @@ const IoTEdgeComputingPage: React.FC = () => {
         "Improve driver safety",
         "Optimize fleet operations",
       ],
-      marketPrice: "$12,000-40,000/month",
+      marketPrice: "Page2,000-40,000/month",
       category: "Connected Vehicles",
       technologies: [
         "OBD-II",
@@ -321,43 +322,41 @@ const IoTEdgeComputingPage: React.FC = () => {
       ],
     },
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>IoT & Edge Computing - Zion Tech Group</title>
 
       </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         
           </div><div className="container mx-auto px-4 py-16">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
               IoT & Edge Computing
             </h1>
-          
-          </div><p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Connect and process data at the edge with IoT solutions and edge
               computing infrastructure for real-time insights.
             </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
           </div><div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Device Management</h3>
+          <h1 className="text-xl font-semibold mb-4">Device Management</h3>
           
           </div><p className="text-gray-600">
                 Comprehensive IoT device management and monitoring.
               </p>
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Edge Analytics</h3>
+          <h1 className="text-xl font-semibold mb-4">Edge Analytics</h3>
           
           </div><p className="text-gray-600">
                 Real-time data processing and analytics at the edge.
               </p>
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">
+          <h1 className="text-xl font-semibold mb-4">
                 Connectivity Solutions
               </h3>
           
@@ -371,5 +370,7 @@ const IoTEdgeComputingPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default IoTEdgeComputingPage;

@@ -64,6 +64,7 @@ import ConsultationPage from "./pages/ConsultationPage";
 import NotFoundPage from "./404";
 
 const App: React.FC = () => {
+  
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -136,5 +137,7 @@ const App: React.FC = () => {
     </ErrorBoundary>
   );
 };
+
+export default Page;
 
 export default App;

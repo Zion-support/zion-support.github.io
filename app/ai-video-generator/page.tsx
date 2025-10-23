@@ -1,11 +1,11 @@
-"use client";
 import React from "react";
+"use client";
         </div>
       </div>
         </section>
 
         {/* Features Section */}
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
 
@@ -32,4 +32,6 @@ import React from "react";
     </React.Fragment>
   );
 };
+
+export default Page;
 

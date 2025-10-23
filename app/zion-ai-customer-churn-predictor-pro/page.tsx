@@ -1,9 +1,6 @@
-
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         </div>
       </div>
         </section>
@@ -11,10 +8,11 @@
         {/* Industries */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-12">
-          <h$1 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Trusted Across Industries
               </h2>
           
@@ -37,10 +35,11 @@
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Powerful Features for Customer Retention
               </h2>
           
@@ -52,7 +51,7 @@
         
           </div><div className="text-red-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
-          <h$1 className="text-xl font-semibold text-white mb-3 group-hover:text-red-400 transition-colors">
+          <h1 className="text-xl font-semibold text-white mb-3 group-hover:text-red-400 transition-colors">
                     {feature.title}
                   </h3>
           
@@ -75,10 +74,11 @@
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Retention Plan
               </h2>
           
@@ -99,7 +99,7 @@
                   )}
 
                   <div className="text-center mb-8">
-          <h$1 className="text-2xl font-bold text-white mb-2">
+          <h1 className="text-2xl font-bold text-white mb-2">
                       {plan.name}
                     </h3>
           
@@ -131,10 +131,11 @@
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Trusted by Customer Success Teams
               </h2>
           
@@ -174,10 +175,11 @@
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-4xl mx-auto text-center">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
         
           </div><div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20 rounded-2xl p-12">
-          <h$1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Reduce Customer Churn?
               </h2>
           
@@ -212,5 +214,7 @@
     </>
   );
 };
+
+export default Page;
 
 export default ZionAICustomerChurnPredictorProPage;

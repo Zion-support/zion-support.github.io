@@ -1,10 +1,11 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle, Shield, Brain, Globe, Phone, Mail } from "lucide-react";
 import Footer from "../components/Footer";
 const CloudMigrationPage: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
       icon: Shield,
       title: "Secure Cloud Migration",
@@ -31,7 +32,7 @@ const CloudMigrationPage: React.FC = () => {
     },
   ];
 
-  const benefits = [
+  const _benefits = [
     "Advanced cloud migration technology",
     "Real-time migration monitoring",
     "Enterprise-grade security and compliance",
@@ -51,14 +52,15 @@ const CloudMigrationPage: React.FC = () => {
 
       {/* Hero Section */}
       
-          </div><section className="relative py-20 px-4">
+          </div>
+        <section className="relative py-20 px-4">
         
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </section>
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Cloud Migration
           </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud migration solutions.
             Powered by cutting-edge AI technology and industry expertise.
           </p>
@@ -68,10 +70,11 @@ const CloudMigrationPage: React.FC = () => {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Cloud Migration?
             </h2>
           
@@ -83,7 +86,7 @@ const CloudMigrationPage: React.FC = () => {
         
           </div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
           
@@ -97,10 +100,11 @@ const CloudMigrationPage: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
           
@@ -123,10 +127,11 @@ const CloudMigrationPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
-        </section><div className="max-w-4xl mx-auto text-center">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
         
           </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
           
@@ -152,5 +157,7 @@ const CloudMigrationPage: React.FC = () => {
     </div>
   );
 };
+
+export default Page;
 
 export default CloudMigrationPage;

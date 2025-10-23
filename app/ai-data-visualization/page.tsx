@@ -1,9 +1,10 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import { BarChart3, PieChart, TrendingUp, Eye } from "lucide-react";
 
 const AIDataVisualizationPage: React.FC = () => {
+  
   const _features = [
     {
       icon: <BarChart3 className="w-6 h-6" />,
@@ -58,7 +59,7 @@ const AIDataVisualizationPage: React.FC = () => {
   const _pricingPlans = [
     {
       name: "Starter",
-      price: "$149",
+      price: "Page49",
       period: "/month",
       description: "Perfect for small teams and individual users",
       features: [
@@ -144,31 +145,29 @@ const AIDataVisualizationPage: React.FC = () => {
     { number: "95%", label: "Accuracy Rate" },
     { number: "24/7", label: "Real-time Updates" },
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>AI Data Visualization - Zion Tech Group</title>
 
       </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         
           </div><div className="container mx-auto px-4 py-16">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
               AI Data Visualization
             </h1>
-          
-          </div><p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform complex data into clear, actionable insights with
               AI-powered visualization tools and interactive dashboards.
             </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
           </div><div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">
+          <h1 className="text-xl font-semibold mb-4">
                 Interactive Dashboards
               </h3>
           
@@ -176,13 +175,13 @@ const AIDataVisualizationPage: React.FC = () => {
                 Dynamic, interactive dashboards that adapt to your data.
               </p>
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Automated Insights</h3>
+          <h1 className="text-xl font-semibold mb-4">Automated Insights</h3>
           
           </div><p className="text-gray-600">
                 AI-generated insights and pattern recognition in your data.
               </p>
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">
+          <h1 className="text-xl font-semibold mb-4">
                 Real-time Analytics
               </h3>
           
@@ -196,5 +195,7 @@ const AIDataVisualizationPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default AIDataVisualizationPage;

@@ -7,4 +7,6 @@
   );
 };
 
+export default Page;
+
 export default Navigation;

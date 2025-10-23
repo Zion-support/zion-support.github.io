@@ -1,5 +1,5 @@
-"use client";
 import React from "react";
+"use client";
         </div>
       </div>
         </section>
@@ -7,13 +7,14 @@ import React from "react";
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
         
           </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
 
@@ -40,4 +41,6 @@ import React from "react";
     </React.Fragment>
   );
 };
+
+export default Page;
 

@@ -1,8 +1,8 @@
-"use client";
 import React from "react";
-
+"use client";
 const SecurityAuditPage: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
       icon: Brain,
       title: "Advanced Technology",
@@ -39,10 +39,11 @@ const SecurityAuditPage: React.FC = () => {
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
               </h2>
           
@@ -53,7 +54,7 @@ const SecurityAuditPage: React.FC = () => {
         
           </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
           
@@ -67,8 +68,9 @@ const SecurityAuditPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        </section>
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
           
@@ -89,5 +91,7 @@ const SecurityAuditPage: React.FC = () => {
     </React.Fragment>
   );
 };
+
+export default Page;
 
 export default SecurityAuditPage;

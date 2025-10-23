@@ -1,5 +1,5 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import {
   CheckCircle,
@@ -12,7 +12,8 @@ import {
   Globe,
 } from "lucide-react";
 const ARVRPlatformPage: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
       icon: Brain,
       title: "AI-Powered AR/VR",
@@ -39,7 +40,7 @@ const ARVRPlatformPage: React.FC = () => {
     },
   ];
 
-  const benefits = [
+  const _benefits = [
     "Advanced AR/VR technology integration",
     "Real-time 3D rendering and interaction",
     "Enterprise-grade security and compliance",
@@ -59,20 +60,21 @@ const ARVRPlatformPage: React.FC = () => {
 
       {/* Hero Section */}
       
-          </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </div>
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 AR/VR Platform
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced AR/VR platform
               solutions. Powered by cutting-edge AI technology and industry
               expertise.
@@ -93,10 +95,11 @@ const ARVRPlatformPage: React.FC = () => {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AR/VR Platform?
             </h2>
           
@@ -107,7 +110,7 @@ const ARVRPlatformPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>{" "}
           
@@ -121,10 +124,11 @@ const ARVRPlatformPage: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
           
@@ -147,10 +151,11 @@ const ARVRPlatformPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
-        </section><div className="max-w-4xl mx-auto text-center">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
         
           </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
           
@@ -174,5 +179,7 @@ const ARVRPlatformPage: React.FC = () => {
     </div>
   );
 };
+
+export default Page;
 
 export default ARVRPlatformPage;

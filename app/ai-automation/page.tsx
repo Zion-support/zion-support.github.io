@@ -10,15 +10,14 @@ export default function PagePage() {
           </div><div className="container mx-auto px-4 py-20">
         
           </div><div className="text-center">
-          <h$1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+            <p className="text-xl text-gray-300 mb-8">
             Advanced page solutions by Zion Tech Group
           </p>
         <div className="max-w-4xl mx-auto">
         
           </div><div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h$1 className="text-2xl font-semibold text-white mb-4">
+          <h1 className="text-2xl font-semibold text-white mb-4">
               Coming Soon
             </h2>
           

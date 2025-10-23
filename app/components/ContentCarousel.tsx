@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import React, { useState, useEffect, useCallback } from "react";
 import {
   ChevronLeft,
@@ -12,9 +13,10 @@ import {
 } from "lucide-react";
 
 const ContentCarousel: React.FC = () => {
+  
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
+  const _slides = [
     {
       icon: Brain,
       title: "AI-Powered Solutions",
@@ -65,7 +67,7 @@ const ContentCarousel: React.FC = () => {
     },
   ];
 
-  const benefits = [
+  const _benefits = [
     "Advanced AI technology integration",
     "Real-time processing and analytics",
     "Enterprise-grade security and compliance",
@@ -76,16 +78,16 @@ const ContentCarousel: React.FC = () => {
     "Proven track record of success",
   ];
 
-  const nextSlide = useCallback(() => {
+  const _nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   }, [slides.length]);
 
-  const prevSlide = useCallback(() => {
+  const _prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   }, [slides.length]);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const _timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, [nextSlide]);
 
@@ -110,7 +112,7 @@ const ContentCarousel: React.FC = () => {
         
           </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                         <slide.icon className="w-8 h-8 text-white" />
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                         {slide.title}
                       </h2>
           
@@ -172,7 +174,7 @@ const ContentCarousel: React.FC = () => {
       <div className="mt-16">
         
           </div><div className="text-center mb-12">
-          <h$1 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
+          <h1 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
           
           </div><p className="text-gray-300 max-w-2xl mx-auto">
             Our solutions deliver unmatched value and performance for your
@@ -189,5 +191,7 @@ const ContentCarousel: React.FC = () => {
     </div>
   );
 };
+
+export default Page;
 
 export default ContentCarousel;

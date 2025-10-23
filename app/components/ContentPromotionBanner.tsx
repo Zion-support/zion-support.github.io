@@ -1,5 +1,5 @@
-"use client";
 import React from "react";
+"use client";
 import {
   CheckCircle,
   ArrowRight,
@@ -10,7 +10,8 @@ import {
 } from "lucide-react";
 
 const ContentPromotionBanner: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
       icon: Brain,
       title: "AI-Powered Solutions",
@@ -36,7 +37,7 @@ const ContentPromotionBanner: React.FC = () => {
     },
   ];
 
-  const benefits = [
+  const _benefits = [
     "Advanced AI technology integration",
     "Real-time processing and analytics",
     "Enterprise-grade security and compliance",
@@ -53,7 +54,7 @@ const ContentPromotionBanner: React.FC = () => {
           </div><div className="max-w-6xl mx-auto">
         
           </div><div className="text-center mb-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Transform Your Business Today
           </h2>
           
@@ -68,7 +69,7 @@ const ContentPromotionBanner: React.FC = () => {
         
           </div><div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-6 h-6 text-white" />
-          <h$1 className="text-lg font-semibold text-white mb-2">
+          <h1 className="text-lg font-semibold text-white mb-2">
                 {feature.title}
               </h3>
           
@@ -113,5 +114,7 @@ const ContentPromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+export default Page;
 
 export default ContentPromotionBanner;

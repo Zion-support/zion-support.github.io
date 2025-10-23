@@ -1,10 +1,11 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 
 
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
+  
+  const _caseStudies = [
     {
       id: 1,
       title: "E-commerce Platform Optimization",
@@ -31,7 +32,7 @@ const CaseStudiesPage: React.FC = () => {
       results: {
         performance: "80% faster data processing",
         conversion: "60% reduction in analysis time",
-        revenue: "$1.8M cost savings",
+        revenue: "Page.8M cost savings",
         satisfaction: "98% accuracy rate",
       },
       image: "🏥",
@@ -54,11 +55,9 @@ const CaseStudiesPage: React.FC = () => {
       featured: false,
     },
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         </div>
       </div>
         </section>
@@ -66,8 +65,9 @@ const CaseStudiesPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 bg-white/5">
           
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Create Your Success Story?
             </h2>
           
@@ -90,5 +90,7 @@ const CaseStudiesPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default CaseStudiesPage;

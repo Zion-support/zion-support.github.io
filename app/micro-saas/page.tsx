@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import {
@@ -12,9 +13,10 @@ import {
   Globe,
 } from "lucide-react";
 const MicroSaasPage: React.FC = () => {
+  
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const products = [
+  const _products = [
     {
       id: 1,
       title: "AI Content Generator",
@@ -45,7 +47,7 @@ const MicroSaasPage: React.FC = () => {
         "Data visualization",
         "Export capabilities",
       ],
-      price: "$19/month",
+      price: "Page9/month",
       users: "850+",
       rating: 4.6,
     },
@@ -85,7 +87,7 @@ const MicroSaasPage: React.FC = () => {
     },
   ];
 
-  const categories = [
+  const _categories = [
     { id: "all", name: "All Products" },
     { id: "content", name: "Content" },
     { id: "analytics", name: "Analytics" },
@@ -93,14 +95,13 @@ const MicroSaasPage: React.FC = () => {
     { id: "security", name: "Security" },
   ];
 
-  const filteredProducts =
+  const _filteredProducts =
     selectedCategory === "all"
       ? products
       : products.filter((product) => product.category === selectedCategory);
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>
           Micro SaaS Products - Zion Tech Group | Innovative Software Solutions
         </title>
@@ -110,18 +111,19 @@ const MicroSaasPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         
-          </div><section className="relative py-20 px-4 overflow-hidden">
+          </div>
+        <section className="relative py-20 px-4 overflow-hidden">
 
           
-        </section><div className="relative max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </section>
+          <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Micro{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 SaaS
               </span>
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Discover our collection of micro SaaS products designed to solve
               specific business challenges. AI-powered tools for content,
               analytics, productivity, and security.
@@ -140,7 +142,8 @@ const MicroSaasPage: React.FC = () => {
         {/* Category Filter */}
         <section className="py-8 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="flex flex-wrap justify-center gap-4">
 
@@ -154,7 +157,8 @@ const MicroSaasPage: React.FC = () => {
         {/* Products Grid */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         
@@ -169,7 +173,7 @@ const MicroSaasPage: React.FC = () => {
                         {product.rating}
                       </span>
         </div>
-          <h$1 className="text-2xl font-bold text-white mb-4">
+          <h1 className="text-2xl font-bold text-white mb-4">
                     {product.title}
                   </h3>
                   <p className="text-gray-300 mb-6">{product.description}</p>
@@ -210,10 +214,11 @@ const MicroSaasPage: React.FC = () => {
         {/* Stats Section */}
         <section className="py-20 px-4 bg-white/5">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Trusted by Thousands
               </h2>
           
@@ -259,8 +264,9 @@ const MicroSaasPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
           
@@ -283,5 +289,7 @@ const MicroSaasPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default MicroSaasPage;

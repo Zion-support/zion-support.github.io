@@ -1,11 +1,12 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star } from "lucide-react";
 
 const HomePage: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
       icon: CheckCircle,
       title: "AI-Powered Solutions",
@@ -17,11 +18,9 @@ const HomePage: React.FC = () => {
       description: "Comprehensive IT services and infrastructure solutions",
     },
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for modern businesses" />
         <meta property="og:type" content="website" />
@@ -30,17 +29,20 @@ const HomePage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         
-          </div><section className="relative py-20 px-4 overflow-hidden">
+          </div>
+        <section className="relative py-20 px-4 overflow-hidden">
           
-        </section><div className="relative max-w-7xl mx-auto text-center">
+        </section>
+          <div className="relative max-w-7xl mx-auto text-center">
             
-          </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Welcome to{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Zion Tech Group
               </span>
             </h1>
-            </h$1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            </h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Leading provider of AI and IT solutions for modern businesses. 
               We help you transform your business with cutting-edge technology.
             </p>
@@ -65,14 +67,15 @@ const HomePage: React.FC = () => {
         {/* Features Section */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
             
           </div><div className="text-center mb-16">
               
           </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Services
               </h2>
-              </h$1><p className="text-xl text-gray-300">
+              </h1><p className="text-xl text-gray-300">
                 Comprehensive AI and IT solutions for your business needs
               </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -86,7 +89,7 @@ const HomePage: React.FC = () => {
           </div><h3 className="text-xl font-bold text-white mb-4">
                     {feature.title}
                   </h3>
-                  </h$1><p className="text-gray-300 leading-relaxed">
+                  </h1><p className="text-gray-300 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -98,12 +101,13 @@ const HomePage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-4xl mx-auto text-center">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
             
           </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            </h$1><p className="text-xl text-gray-300 mb-8">
+            </h1><p className="text-xl text-gray-300 mb-8">
               Let us help you implement cutting-edge AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -127,5 +131,7 @@ const HomePage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default HomePage;

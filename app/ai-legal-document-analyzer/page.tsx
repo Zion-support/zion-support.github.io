@@ -10,10 +10,11 @@
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
           
@@ -36,4 +37,6 @@
     </React.Fragment>
   );
 };
+
+export default Page;
 

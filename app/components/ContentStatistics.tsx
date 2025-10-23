@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import React, { useState, useEffect, useMemo } from "react";
 import {
   CheckCircle,
@@ -14,6 +15,7 @@ import {
 } from "lucide-react";
 
 const ContentStatistics: React.FC = () => {
+  
   const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
@@ -21,7 +23,7 @@ const ContentStatistics: React.FC = () => {
     years: 0,
   });
 
-  const targetCounters = useMemo(
+  const _targetCounters = useMemo(
     () => ({
       clients: 500,
       projects: 1000,
@@ -31,7 +33,7 @@ const ContentStatistics: React.FC = () => {
     [],
   );
 
-  const statistics = [
+  const _statistics = [
     {
       icon: Users,
       value: counters.clients,
@@ -62,7 +64,7 @@ const ContentStatistics: React.FC = () => {
     },
   ];
 
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: "AI-Powered Solutions",
@@ -89,7 +91,7 @@ const ContentStatistics: React.FC = () => {
     },
   ];
 
-  const benefits = [
+  const _benefits = [
     "Advanced AI technology integration",
     "Real-time processing and analytics",
     "Enterprise-grade security and compliance",
@@ -102,12 +104,12 @@ const ContentStatistics: React.FC = () => {
 
   useEffect(() => {
     const duration = 2000; // 2 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
+    const _steps = 60;
+    const _stepDuration = duration / steps;
 
-    const timers = Object.keys(targetCounters).map((key) => {
+    const _timers = Object.keys(targetCounters).map((key) => {
       const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
+      const _increment = target / steps;
       let current = 0;
 
       return setInterval(() => {
@@ -135,7 +137,7 @@ const ContentStatistics: React.FC = () => {
         {/* Statistics Section */}
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Impact in Numbers
           </h2>
           
@@ -159,7 +161,7 @@ const ContentStatistics: React.FC = () => {
 
         {/* Features Section */}
         <div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Why Choose Our Solutions?
           </h2>
           
@@ -171,7 +173,7 @@ const ContentStatistics: React.FC = () => {
         
           </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-white" />
-          <h$1 className="text-xl font-semibold text-white mb-2">
+          <h1 className="text-xl font-semibold text-white mb-2">
                 {feature.title}
               </h3>
           
@@ -182,7 +184,7 @@ const ContentStatistics: React.FC = () => {
 
         {/* Benefits Section */}
         <div className="text-center mb-12">
-          <h$1 className="text-3xl font-bold text-white mb-4">Key Benefits</h2>
+          <h1 className="text-3xl font-bold text-white mb-4">Key Benefits</h2>
           
           </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the power of our solutions for your business.
@@ -212,7 +214,7 @@ const ContentStatistics: React.FC = () => {
         <div className="text-center">
         
           </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
           
@@ -235,5 +237,7 @@ const ContentStatistics: React.FC = () => {
     </div>
   );
 };
+
+export default Page;
 
 export default ContentStatistics;

@@ -1,10 +1,11 @@
-"use client";
 import React from "react";
+"use client";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
-  const aiServices = [
+  
+  const _aiServices = [
     { name: "AI Chatbot Builder", href: "/ai-chatbot-builder" },
     { name: "AI Content Generator", href: "/ai-content-generator" },
     { name: "AI Data Visualizer", href: "/ai-data-visualizer" },
@@ -13,7 +14,7 @@ const Footer: React.FC = () => {
     { name: "AI Fraud Detection", href: "/ai-fraud-detection" },
   ];
 
-  const itServices = [
+  const _itServices = [
     { name: "Web Development", href: "/web-development" },
     { name: "Mobile Development", href: "/mobile-development" },
     { name: "API Development", href: "/api-development" },
@@ -22,7 +23,7 @@ const Footer: React.FC = () => {
     { name: "Data Analytics", href: "/data-analytics" },
   ];
 
-  const microSaas = [
+  const _microSaas = [
     { name: "Analytics Dashboard", href: "/analytics-dashboard" },
     { name: "Expense Tracker Pro", href: "/expense-tracker-pro" },
     { name: "Inventory Manager", href: "/inventory-manager" },
@@ -30,7 +31,7 @@ const Footer: React.FC = () => {
     { name: "Social Media Scheduler", href: "/social-media-scheduler" },
   ];
 
-  const companyLinks = [
+  const _companyLinks = [
     { name: "About Us", href: "/about" },
     { name: "Our Team", href: "/team" },
     { name: "Careers", href: "/careers" },
@@ -38,7 +39,7 @@ const Footer: React.FC = () => {
     { name: "Partnerships", href: "/partnerships" },
   ];
 
-  const supportLinks = [
+  const _supportLinks = [
     { name: "Help Center", href: "/help" },
     { name: "Documentation", href: "/docs" },
     { name: "Tutorials", href: "/tutorials" },
@@ -89,7 +90,7 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div>
-          <h$1 className="text-lg font-semibold mb-4">AI Services</h3>
+          <h1 className="text-lg font-semibold mb-4">AI Services</h3>
             
           </div><ul className="space-y-2">
               {aiServices.map((service, index) => (
@@ -105,7 +106,7 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div>
-          <h$1 className="text-lg font-semibold mb-4">IT Services</h3>
+          <h1 className="text-lg font-semibold mb-4">IT Services</h3>
             
           </div><ul className="space-y-2">
               {itServices.map((service, index) => (
@@ -121,7 +122,7 @@ const Footer: React.FC = () => {
 
           {/* Micro SaaS */}
           <div>
-          <h$1 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+          <h1 className="text-lg font-semibold mb-4">Micro SaaS</h3>
             
           </div><ul className="space-y-2">
               {microSaas.map((service, index) => (
@@ -137,7 +138,7 @@ const Footer: React.FC = () => {
 
           {/* Company & Support */}
           <div>
-          <h$1 className="text-lg font-semibold mb-4">Company</h3>
+          <h1 className="text-lg font-semibold mb-4">Company</h3>
             
           </div><ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
@@ -150,7 +151,7 @@ const Footer: React.FC = () => {
             </ul>
 
             <h3 className="text-lg font-semibold mb-4">Support</h3>
-            </h$1><ul className="space-y-2">
+            </h1><ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
 
@@ -204,5 +205,7 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
+
+export default Page;
 
 export default Footer;

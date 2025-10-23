@@ -1,10 +1,11 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle, Phone, Mail, Lock, Eye, ShieldCheck } from "lucide-react";
 import Footer from "../components/Footer";
 const CloudSecurityPage: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
       icon: Lock,
       title: "Data Encryption",
@@ -27,7 +28,7 @@ const CloudSecurityPage: React.FC = () => {
     },
   ];
 
-  const benefits = [
+  const _benefits = [
     "Advanced security monitoring",
     "Real-time threat detection",
     "Enterprise-grade encryption",
@@ -48,14 +49,15 @@ const CloudSecurityPage: React.FC = () => {
 
       {/* Hero Section */}
       
-          </div><section className="relative py-20 px-4">
+          </div>
+        <section className="relative py-20 px-4">
         
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </section>
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Cloud Security
           </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions.
             Powered by cutting-edge AI technology and industry expertise.
           </p>
@@ -65,10 +67,11 @@ const CloudSecurityPage: React.FC = () => {
       {/* Features Section */}
       <section className="py-16 px-4">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Cloud Security?
             </h2>
           
@@ -79,7 +82,7 @@ const CloudSecurityPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-          <h$1 className="text-xl font-semibold text-white mb-2">
+          <h1 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
           
@@ -93,10 +96,11 @@ const CloudSecurityPage: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
           
@@ -119,8 +123,9 @@ const CloudSecurityPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4">
         
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
           
@@ -145,5 +150,7 @@ const CloudSecurityPage: React.FC = () => {
     </div>
   );
 };
+
+export default Page;
 
 export default CloudSecurityPage;

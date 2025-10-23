@@ -1,10 +1,11 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 
 
 const BlogPage: React.FC = () => {
-  const blogPosts = [
+  
+  const _blogPosts = [
     {
       id: 1,
       title: "The Future of AI in Enterprise: 2024 Trends and Predictions",
@@ -40,7 +41,7 @@ const BlogPage: React.FC = () => {
     },
   ];
 
-  const categories = [
+  const _categories = [
     "All",
     "AI & Machine Learning",
     "Cloud Computing",
@@ -50,8 +51,7 @@ const BlogPage: React.FC = () => {
   ];
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         </div>
       </div>
         </section>
@@ -59,7 +59,8 @@ const BlogPage: React.FC = () => {
         {/* Blog Posts */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
@@ -78,7 +79,7 @@ const BlogPage: React.FC = () => {
                           Featured
                         </span>
                       )}
-          <h$1 className="text-xl font-bold text-white mb-3 line-clamp-2">
+          <h1 className="text-xl font-bold text-white mb-3 line-clamp-2">
                       {post.title}
                     </h2>
           
@@ -120,8 +121,9 @@ const BlogPage: React.FC = () => {
         {/* Newsletter Signup */}
         <section className="py-20 px-4 bg-white/5">
           
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Stay Updated
             </h2>
           
@@ -140,5 +142,7 @@ const BlogPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default BlogPage;

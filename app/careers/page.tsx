@@ -1,5 +1,5 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 
 
@@ -16,6 +16,7 @@ interface JobPosition {
   featured: boolean;
 }
 const CareersPage: React.FC = () => {
+  
   const openPositions: JobPosition[] = [
     {
       id: "1",
@@ -69,7 +70,7 @@ const CareersPage: React.FC = () => {
     },
   ];
 
-  const companyValues = [
+  const _companyValues = [
     {
       icon: Star,
       title: "Excellence",
@@ -95,11 +96,9 @@ const CareersPage: React.FC = () => {
         "We invest in our team's growth and development, providing opportunities to learn and advance.",
     },
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         </div>
       </div>
         </section>
@@ -107,10 +106,11 @@ const CareersPage: React.FC = () => {
         {/* Company Values */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Values
               </h2>
           
@@ -125,7 +125,7 @@ const CareersPage: React.FC = () => {
         
           </div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <value.icon className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-bold text-white mb-4">
+          <h1 className="text-xl font-bold text-white mb-4">
                     {value.title}
                   </h3>
           
@@ -139,10 +139,11 @@ const CareersPage: React.FC = () => {
         {/* Open Positions */}
         <section className="py-20 px-4 bg-white/5">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Open Positions
               </h2>
           
@@ -157,7 +158,7 @@ const CareersPage: React.FC = () => {
           </div><div>
         
           </div><div className="flex items-center gap-4 mb-2">
-          <h$1 className="text-2xl font-bold text-white">
+          <h1 className="text-2xl font-bold text-white">
                           {position.title}
                         </h3>
                         {position.featured && (
@@ -194,7 +195,7 @@ const CareersPage: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         
           </div><div>
-          <h$1 className="text-lg font-semibold text-white mb-3">
+          <h1 className="text-lg font-semibold text-white mb-3">
                         Requirements
                       </h4>
             
@@ -207,7 +208,7 @@ const CareersPage: React.FC = () => {
                         ))}
                       </ul>
         <div>
-          <h$1 className="text-lg font-semibold text-white mb-3">
+          <h1 className="text-lg font-semibold text-white mb-3">
                         Benefits
                       </h4>
             
@@ -232,8 +233,9 @@ const CareersPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Don't See the Right Role?
             </h2>
           
@@ -256,5 +258,7 @@ const CareersPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default CareersPage;

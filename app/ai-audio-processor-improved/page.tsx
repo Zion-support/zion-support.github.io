@@ -1,5 +1,5 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 
   ];
@@ -17,14 +17,15 @@ import { Helmet } from "react-helmet-async";
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         
-          </div><section className="py-20 px-4 sm:px-6 lg:px-8">
+          </div>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </section>
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Ai Audio Processor Improved
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional aiaudioprocessorimproved solutions powered by
               advanced AI and cutting-edge technology.
             </p>
@@ -42,10 +43,11 @@ import { Helmet } from "react-helmet-async";
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
               </h2>
           
@@ -56,7 +58,7 @@ import { Helmet } from "react-helmet-async";
         
           </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
           
@@ -70,8 +72,9 @@ import { Helmet } from "react-helmet-async";
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        </section>
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
           
@@ -92,4 +95,6 @@ import { Helmet } from "react-helmet-async";
     </React.Fragment>
   );
 };
+
+export default Page;
 

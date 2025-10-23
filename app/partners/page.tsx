@@ -1,11 +1,11 @@
-"use client";
-
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle, ArrowRight, ExternalLink } from "lucide-react";
 
 const PartnersPage: React.FC = () => {
-  const partners = [
+  
+  const _partners = [
     {
       name: "Microsoft",
       logo: "/api/placeholder/200/100",
@@ -46,7 +46,7 @@ const PartnersPage: React.FC = () => {
     },
   ];
 
-  const benefits = [
+  const _benefits = [
     "Access to cutting-edge technology",
     "Enhanced service capabilities",
     "Reduced implementation costs",
@@ -54,11 +54,9 @@ const PartnersPage: React.FC = () => {
     "Comprehensive support",
     "Continuous innovation",
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>Partners | Zion Tech Group</title>
 
       </Helmet>
@@ -66,18 +64,19 @@ const PartnersPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         
-          </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </div>
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Our Partners
                 </span>
               </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Strategic partnerships with leading technology companies enable
                 us to deliver world-class AI and IT solutions.
               </p>
@@ -88,7 +87,8 @@ const PartnersPage: React.FC = () => {
         {/* Partners Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
@@ -101,7 +101,7 @@ const PartnersPage: React.FC = () => {
           
           </div><p className="text-white/60 text-sm">Partner Logo</p>
         <div className="text-center">
-          <h$1 className="text-xl font-bold text-white mb-2">
+          <h1 className="text-xl font-bold text-white mb-2">
                       {partner.name}
                     </h3>
                     <span className="inline-block bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium mb-3">
@@ -121,10 +121,11 @@ const PartnersPage: React.FC = () => {
         {/* Partnership Benefits */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Partnership Benefits
               </h2>
           
@@ -145,10 +146,11 @@ const PartnersPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-4xl mx-auto text-center">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
         
           </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Become Our Partner
               </h2>
           
@@ -172,5 +174,7 @@ const PartnersPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default PartnersPage;

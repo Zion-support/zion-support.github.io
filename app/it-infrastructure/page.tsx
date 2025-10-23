@@ -1,10 +1,11 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 // import { Phone, Mail } from 'lucide-react';
 // import { CheckCircle } from 'lucide-react';
 
 const ITInfrastructurePage: React.FC = () => {
+  
   const _itServices = [
     {
       title: "Cloud Infrastructure Management",
@@ -42,7 +43,7 @@ const ITInfrastructurePage: React.FC = () => {
       description:
         "Complete DevOps transformation with automated deployment pipelines, testing, and continuous integration.",
       icon: "🔄",
-      price: "$1,999/month",
+      price: "Page,999/month",
       features: [
         "CI/CD pipeline setup",
         "Automated testing integration",
@@ -73,7 +74,7 @@ const ITInfrastructurePage: React.FC = () => {
       description:
         "Expert database management, optimization, and migration services for MySQL, PostgreSQL, MongoDB, and more.",
       icon: "🗄️",
-      price: "$1,499/month",
+      price: "Page,499/month",
       features: [
         "Database design and optimization",
         "Performance tuning",
@@ -135,7 +136,7 @@ const ITInfrastructurePage: React.FC = () => {
       description:
         "Comprehensive server administration including Windows, Linux, and virtualized environments.",
       icon: "🖥️",
-      price: "$1,799/month",
+      price: "Page,799/month",
       features: [
         "Server setup and configuration",
         "OS updates and patching",
@@ -166,7 +167,7 @@ const ITInfrastructurePage: React.FC = () => {
       description:
         "24/7 IT support services with remote assistance, ticketing system, and proactive monitoring.",
       icon: "🎧",
-      price: "$1,299/month",
+      price: "Page,299/month",
       features: [
         "24/7 technical support",
         "Remote desktop assistance",
@@ -212,7 +213,7 @@ const ITInfrastructurePage: React.FC = () => {
         "Meet compliance requirements",
         "Reduce recovery time to minutes",
       ],
-      marketPrice: "$1500-3000/month",
+      marketPrice: "Page500-3000/month",
       technologies: [
         "Veeam",
         "Acronis",
@@ -243,7 +244,7 @@ const ITInfrastructurePage: React.FC = () => {
         "Ensure email compliance",
         "Enhance productivity",
       ],
-      marketPrice: "$1200-2500/month",
+      marketPrice: "Page200-2500/month",
       technologies: [
         "Microsoft 365",
         "Google Workspace",
@@ -264,44 +265,42 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: "< 1hr", description: "Response Time" },
     { metric: "100%", description: "Security Compliance" },
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         <title>IT Infrastructure Solutions - Zion Tech Group</title>
 
       </Helmet>
+
       <div className="min-h-screen bg-gray-50">
         
           </div><div className="container mx-auto px-4 py-16">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
               IT Infrastructure Solutions
             </h1>
-          
-          </div><p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Build and maintain robust IT infrastructure with our comprehensive
               solutions for servers, networks, and cloud systems.
             </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
           </div><div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Server Management</h3>
+          <h1 className="text-xl font-semibold mb-4">Server Management</h3>
           
           </div><p className="text-gray-600">
                 Comprehensive server setup, configuration, and maintenance
                 services.
               </p>
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Network Design</h3>
+          <h1 className="text-xl font-semibold mb-4">Network Design</h3>
           
           </div><p className="text-gray-600">
                 Scalable network architecture design and implementation.
               </p>
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Cloud Migration</h3>
+          <h1 className="text-xl font-semibold mb-4">Cloud Migration</h3>
           
           </div><p className="text-gray-600">
                 Seamless migration to cloud infrastructure platforms.
@@ -313,5 +312,7 @@ const ITInfrastructurePage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default ITInfrastructurePage;

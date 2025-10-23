@@ -1,5 +1,5 @@
-"use client";
 import React from "react";
+"use client";
 import { Helmet } from "react-helmet-async";
 
 
@@ -24,7 +24,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   siteName = "Zion Tech Group",
   structuredData,
 
-  const defaultStructuredData = {
+  const _defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Zion Tech Group",
@@ -46,5 +46,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     </Helmet>
   );
 };
+
+export default Page;
 
 export default EnhancedSEOHead;

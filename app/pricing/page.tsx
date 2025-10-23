@@ -5,10 +5,11 @@
         {/* FAQ Section */}
         <section className="py-20 px-4 bg-white/5">
           
-        </section><div className="max-w-4xl mx-auto">
+        </section>
+          <div className="max-w-4xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
           
@@ -18,7 +19,7 @@
         <div className="space-y-8">
         
           </div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                   Can I change my plan at any time?
                 </h3>
           
@@ -27,7 +28,7 @@
                   Changes will be reflected in your next billing cycle.
                 </p>
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                   Is there a free trial available?
                 </h3>
           
@@ -36,7 +37,7 @@
                   card required to get started.
                 </p>
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                   What payment methods do you accept?
                 </h3>
           
@@ -51,8 +52,9 @@
         {/* CTA Section */}
         <section className="py-20 px-4">
           
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
         </div>
@@ -62,5 +64,7 @@
     </>
   );
 };
+
+export default Page;
 
 export default PricingPage;

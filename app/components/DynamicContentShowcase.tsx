@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import React, { useState, useEffect } from "react";
 import {
   CheckCircle,
@@ -14,9 +15,10 @@ import {
 } from "lucide-react";
 
 const DynamicContentShowcase: React.FC = () => {
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: "AI-Powered Intelligence",
@@ -43,7 +45,7 @@ const DynamicContentShowcase: React.FC = () => {
     },
   ];
 
-  const benefits = [
+  const _benefits = [
     "Advanced AI technology integration",
     "Real-time processing and analytics",
     "Enterprise-grade security and compliance",
@@ -54,7 +56,7 @@ const DynamicContentShowcase: React.FC = () => {
     "Proven track record of success",
   ];
 
-  const testimonials = [
+  const _testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
@@ -82,7 +84,7 @@ const DynamicContentShowcase: React.FC = () => {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const _timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     return () => clearInterval(timer);
@@ -92,17 +94,18 @@ const DynamicContentShowcase: React.FC = () => {
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       
-          </div><section className="py-20 px-4">
+          </div>
+        <section className="py-20 px-4">
         
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </section>
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Dynamic{" "}
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Content Showcase
             </span>
           </h1>
-          
-          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Experience the power of our cutting-edge solutions with real-time
             demonstrations and interactive showcases that bring your business to
             life.
@@ -122,10 +125,11 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Features Section */}
       <section className="py-20 px-4">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Solutions?
             </h2>
           
@@ -137,7 +141,7 @@ const DynamicContentShowcase: React.FC = () => {
         
           </div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-          <h$1 className="text-xl font-semibold text-white mb-3">
+          <h1 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
           
@@ -151,10 +155,11 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Testimonials Section */}
       <section className="py-20 px-4 bg-white/5">
         
-        </section><div className="max-w-4xl mx-auto">
+        </section>
+          <div className="max-w-4xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What Our Clients Say
             </h2>
           
@@ -190,10 +195,11 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4">
         
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl font-bold text-white mb-4">Key Benefits</h2>
+          <h1 className="text-3xl font-bold text-white mb-4">Key Benefits</h2>
           
           </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our solutions for your business.
@@ -224,10 +230,11 @@ const DynamicContentShowcase: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         
-        </section><div className="max-w-4xl mx-auto text-center">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
         
           </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Experience the Future?
             </h2>
           
@@ -250,5 +257,7 @@ const DynamicContentShowcase: React.FC = () => {
     </div>
   );
 };
+
+export default Page;
 
 export default DynamicContentShowcase;

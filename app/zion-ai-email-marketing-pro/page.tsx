@@ -2,7 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const ZionAIEmailMarketingProPage: React.FC = () => {
-  const features = [
+  
+  const _features = [
     {
       title: "AI-Powered Email Content Generation",
       description:
@@ -63,7 +64,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
     },
   ];
 
-  const emailTypes = [
+  const _emailTypes = [
     {
       name: "Newsletter",
       icon: <Mail className="w-6 h-6" />,
@@ -96,7 +97,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
     },
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
     {
       name: "Starter",
       price: "$29",
@@ -149,7 +150,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
     },
   ];
 
-  const testimonials = [
+  const _testimonials = [
     {
       name: "Rachel Green",
       company: "E-commerce Solutions",
@@ -178,11 +179,9 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
       avatar: "SW",
     },
   ];
-
   return (
     <>
-      
-    </><Helmet>
+      <Helmet>
         </div>
       </div>
           </div>
@@ -191,10 +190,11 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
         {/* Email Types */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-12">
-          <h$1 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 All Types of Email Campaigns
               </h2>
           
@@ -217,10 +217,11 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Powerful Features for Email Marketing Success
               </h2>
           
@@ -232,7 +233,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
         
           </div><div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
-          <h$1 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+          <h1 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                     {feature.title}
                   </h3>
           
@@ -255,10 +256,11 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Email Marketing Plan
               </h2>
           
@@ -279,7 +281,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                   )}
 
                   <div className="text-center mb-8">
-          <h$1 className="text-2xl font-bold text-white mb-2">
+          <h1 className="text-2xl font-bold text-white mb-2">
                       {plan.name}
                     </h3>
           
@@ -311,10 +313,11 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-7xl mx-auto">
+        </section>
+          <div className="max-w-7xl mx-auto">
         
           </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Trusted by Email Marketing Professionals
               </h2>
           
@@ -354,10 +357,11 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
-        </section><div className="max-w-4xl mx-auto text-center">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
         
           </div><div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12">
-          <h$1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Email Marketing?
               </h2>
           
@@ -391,5 +395,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
     </>
   );
 };
+
+export default Page;
 
 export default ZionAIEmailMarketingProPage;
