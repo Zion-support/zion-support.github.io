@@ -14,7 +14,8 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean
 }
 
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true,
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
   enableScreenReader= true,
   enableHighContrast= true,
   enableFocusManagement= true,
@@ -126,7 +127,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const setupKeyboardNavigation = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    consthandleKeyDown= (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
   
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {

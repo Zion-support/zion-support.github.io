@@ -100,7 +100,7 @@ const DynamicContentShowcase: React.FC = () => {
                   ))}
                 </div>
                 <blockquote className="text-lg text-gray-700 mb-6 italic">
-                  "{testimonials[currentTestimonial].content}"
+                  &ldquo;{testimonials[currentTestimonial].content}&rdquo;
                 </blockquote>
                 <div className="text-gray-900 font-semibold">
                   {testimonials[currentTestimonial].name}

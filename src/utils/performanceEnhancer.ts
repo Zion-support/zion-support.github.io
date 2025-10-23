@@ -160,7 +160,7 @@ export const optimizeScrollPerformance = () => {
   // Track Core Web Vitals
   const trackCLS = () => {
     let clsValue = 0
-    let clsEntries: PerformanceEntry[] = []
+    const clsEntries: PerformanceEntry[] = []
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean
       value: number

@@ -1,4 +1,8 @@
 "use client"
+import React from 'react'
+import Navigation from './Navigation'
+import Footer from './Footer'
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
 const PerformanceOptimizationsPage: React.FC = () => {
   const features = [

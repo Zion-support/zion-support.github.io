@@ -27,9 +27,9 @@ interface AnalyticsProviderProps {
   children: ReactNode
 }
 
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
-  
-    if (type of windo w !=="undefined") {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
       // Google Analytics
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")

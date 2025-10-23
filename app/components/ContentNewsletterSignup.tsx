@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
 interface ContentNewsletterSignupProps {
   title?: string
@@ -9,40 +8,47 @@ interface ContentNewsletterSignupProps {
   placeholder?: string
   buttonText?: string
   features?: Array<{
-    icon: React.ComponentType<{ class Nam e?: string}>text: string
+    icon: React.ComponentType<{ className?: string }>
+    text: string
   }>
   onSubscribe?: (email: string) => void
-}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= "Stay Updated with Our LatestInsights",
-  subtitle= "Get exclusive content, industry insights, and early access to new features delivered to yourinbox.",
-  placeholder= "Enter your emailaddress",
-  buttonText= "Subscribe",
-  features= [
-    { icon: Star, text:"Exclusive content"},
-    {icon: Users, text:"Industry insights"},
-    {icon: Globe, text:"Global updates"},
-    {icon: Zap, text:"Early access"}
+}
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
+  title = "Stay Updated with Our Latest Insights",
+  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
+  placeholder = "Enter your email address",
+  buttonText = "Subscribe",
+  features = [
+    { icon: Star, text: "Exclusive content" },
+    { icon: Users, text: "Industry insights" },
+    { icon: Globe, text: "Global updates" },
+    { icon: Zap, text: "Early access" }
   ],
   onSubscribe
-}) => {const [emailsetEmail] = useState('')
-  const [isSubmittingsetIsSubmitting] = useState(false)
-  const [isSubscribedsetIsSubscribed] = useState(false)
-  const [isLoadingsetIsLoading] = useState(false)
-  consthandleSubmit= async (e: React.FormEvent) => {
-  
+}) => {
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email) return setIsLoadin g(true)
+    if (!email) return
+    setIsLoading(true)
     try {
       // Simulate API call
-      await new Promise(resolve=> setTimeout(resolve100 0))
-      if (onSubscrib e) {
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      if (onSubscribe) {
         onSubscribe(email)
-     }
+      }
       setIsSubscribed(true)
       setEmail('')
     } catch (error) {
       // console.error('Subscription error:', error)
     } finally {
       setIsSubmitting(false)
+      setIsLoading(false)
     }
   ]
 

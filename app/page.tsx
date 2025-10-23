@@ -139,7 +139,7 @@ const HomePage = () => {
                       <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+                  <p className="text-gray-600 mb-4">&ldquo;{testimonial.content}&rdquo;</p>
                   <div className="flex items-center">
                     <div>
                       <p className="font-semibold text-gray-900">{testimonial.name}</p>

@@ -139,14 +139,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
   );
 };
 
-export default AdvancedPerformanceMonitorPage;
-fcp: null,
-lcp: null,
-fid: null,
-cls: null,
-ttfb: null,
-memory: null,})
-constmeasureWebVitals= useCallback(() => {if (type ofwindow=== 'undefined' || !('performance' in windo w)) return i f (type ofPerformanceObserver=== 'undefined') return constobserver s: PerformanceObserver[] = []
+export default AdvancedPerformanceMonitorPage
 // Measure First Contentful Paint (FCP)
 constfcpEntries= performance.getEntriesByName('first-contentful-paint') || []
 constfcp= fcpEntries.length >0? fcpEntries[0].startTime: null

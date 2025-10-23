@@ -141,11 +141,12 @@ const BreadcrumbPage: React.FC = () => {
 
 export default BreadcrumbPage;
 // Don't show breadcrumb on home page
-if (location.pathname=== '/') {
-return nul l}
-constpathSegments= location.pathname.split('/').filter(segment=> segment !== '')
-constbreadcrumbItems= [
-{name: 'Home', path: '/', icon: Home}
+if (location.pathname === '/') {
+  return null
+}
+const pathSegments = location.pathname.split('/').filter(segment => segment !== '')
+const breadcrumbItems = [
+  { name: 'Home', path: '/', icon: Home }
 ]
 pathSegments.forEach((segmentindex) => {constpath= '/' + pathSegments.slice(0 index + 1).join('/')
 constname= segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
