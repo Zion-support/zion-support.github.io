@@ -44,7 +44,7 @@ const AdminPagePage: React.FC = () => {
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const AdminPage: React.FC = () => {
+export default function Page() {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-50 py-12">

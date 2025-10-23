@@ -158,4 +158,5 @@ index=== breadcrumbItems.length -1? 'text-cyan-400font-medium'
 >{item.icon&&<item.iconclassName="w-4h-4"/>}<spa n>{item.name}</spa></a></l>))}</o></di></na>
 )
 }
-export default Breadcrumb
+
+export default About;

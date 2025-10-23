@@ -142,4 +142,6 @@ const HeaderPage: React.FC = () => {
 export default HeaderPage;
   )
 }
+};
 export default Header
+

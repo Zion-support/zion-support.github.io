@@ -120,4 +120,4 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = "" }) => {
   );
 };
 
-export default ContactPage;
+export default About;

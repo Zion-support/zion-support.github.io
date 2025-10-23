@@ -139,88 +139,53 @@ const AICybersecurityPage: React.FC = () => {
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Cybersecurity Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+              </h1><p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Protect your business with AI-powered security
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
                 Our AI-powered cybersecurity platform provides advanced threat detection,
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              </p><div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
+                  <span>Call (302) 464-0950</span></a><a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'  );
+};
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Get Security Audit</span>
-                </a>
-              </div>
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                  <span>Get Security Audit</span></a>
+          </div><div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                 {stats.map((stat, index) => (
                   <div key={index} className="cyber-card p-6 text-center">
                     <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
                       {stat.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-          {/* Features Section */}
-          <section className="container mx-auto px-4 py-16">
+                    </div><div className="text-gray-300 font-medium">{stat.label}</div></div></div></div></section><section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Advanced Security Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3><p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
                         <CheckCircle className="w-4 h-4" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
-          {/* Threats Section */}
-          <section className="container mx-auto px-4 py-16">
+                        <span>{benefit}</span></li></ul></div></div></section><section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Protect Against All Threats
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            </h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {threats.map((threat, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <threat.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{threat.title}</h3>
-                  <p className="text-gray-300">{threat.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-          {/* Pricing Section */}
-          <section className="container mx-auto px-4 py-16">
+                  <h3 className="text-xl font-bold text-white mb-3">{threat.title}</h3><p className="text-gray-300">{threat.description}</p></div></div></section><section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Simple, Transparent Pricing
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            </h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
@@ -241,31 +206,23 @@ const AICybersecurityPage: React.FC = () => {
                   >
                     Get Protected
                   </a>
-                </div>
-              ))}
-            </div>
-          </section>
-          {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
+          </div></div></section><section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Secure Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              </h2><p className="text-xl text-gray-300 mb-8">
                 Join 3,000+ companies already protected by our AI cybersecurity platform
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </p><div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
+                  <span>Call (302) 464-0950</span></a><a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'  );
+};
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Security Audit</span>

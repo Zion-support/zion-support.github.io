@@ -113,26 +113,23 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 Free Business Consultation
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+              </h1><p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Discover how technology can transform your business
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
                 Get a free 30-minute consultation with our technology experts. We'll assess your current setup,
                 identify opportunities, and provide actionable recommendations to drive your business forward.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              </p><div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
+                  <span>Call (302) 464-0950</span></a><a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'  );
+};
                 >
                   <Mail className="w-5 h-5" />
                   <span>Schedule Now</span>
@@ -144,8 +141,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               What You'll Get
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {consultationBenefits.map((benefit, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -159,8 +155,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Our Consultation Process
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {consultationProcess.map((step, index) => (
                 <div key={index} className="cyber-card p-6 text-center">
                   <div className="w-16 h-16 bg-cyan-400 text-slate-900 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
@@ -178,14 +173,12 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Form */}
                 <div className="cyber-card p-8">
-                  <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Free Consultation</h2>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Free Consultation</h2><form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                           Full Name *
-                        </label>
-                        <input
+                        </label><input
                           type="text"
                           id="name"
                           name="name"
@@ -267,8 +260,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                         placeholder="Any additional information you'd like to share"
                       />
-                    </div>
-                    <button
+                    </div><button
                       type="submit"
                       className="w-full cyber-button py-3 px-6 text-center"
                     >
@@ -279,25 +271,16 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 {/* Benefits Sidebar */}
                 <div className="space-y-8">
                   <div className="cyber-card p-8">
-                    <h3 className="text-xl font-bold text-white mb-6">Why Choose Our Consultation?</h3>
-                    <ul className="space-y-4">
+                    <h3 className="text-xl font-bold text-white mb-6">Why Choose Our Consultation?</h3><ul className="space-y-4">
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300">Completely free with no obligations</span>
-                      </li>
-                      <li className="flex items-start">
+                        <span className="text-gray-300">Completely free with no obligations</span></li><li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300">Expert analysis of your current setup</span>
-                      </li>
-                      <li className="flex items-start">
+                        <span className="text-gray-300">Expert analysis of your current setup</span></li><li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300">Actionable recommendations</span>
-                      </li>
-                      <li className="flex items-start">
+                        <span className="text-gray-300">Actionable recommendations</span></li><li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300">Customized technology roadmap</span>
-                      </li>
-                      <li className="flex items-start">
+                        <span className="text-gray-300">Customized technology roadmap</span></li><li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
                         <span className="text-gray-300">30-minute focused session</span>
                       </li>
@@ -311,14 +294,12 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
                         <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400">
                           (302) 464-0950
                         </a>
-                      </div>
-                      <div className="flex items-center">
+          </div><div className="flex items-center">
                         <Mail className="w-5 h-5 text-cyan-400 mr-3" />
                         <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400">
                           kleber@ziontechgroup.com
                         </a>
-                      </div>
-                      <div className="flex items-center">
+          </div><div className="flex items-center">
                         <Clock className="w-5 h-5 text-cyan-400 mr-3" />
                         <span className="text-gray-300">Mon-Fri: 9AM-6PM EST</span>
                       </div>
@@ -332,8 +313,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               What Our Clients Say
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            </h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="cyber-card p-6">
                   <div className="flex items-center mb-4">

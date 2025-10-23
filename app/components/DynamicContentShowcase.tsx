@@ -174,24 +174,12 @@ const DynamicContentShowcase: React.FC = () => {
                 <div className="flex justify-center mb-4">{[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (</div>
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
-                </div>
-                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                </div><blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" loading="lazy">
                   "{currentTestimonial.content}"
-                </blockquote>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-semibold text-lg">{testimonials[currentTestimonial].name.charAt(0)}</span>span>
-                  </div>
-                  <div className="text-left">
-                    <h4 className="text-lg font-semibold text-white">{testimonials[currentTestimonial].name}</h4>
-                    <p className="text-gray-400">{testimonials[currentTestimonial].role}</p>
-                    <p className="text-blue-400">{testimonials[currentTestimonial].company}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Navigation Controls */}
-            <div className="flex items-center justify-center gap-4 mt-8">
+                </blockquote><div className="flex items-center justify-center gap-4" loading="lazy">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center" loading="lazy">
+                    <span className="text-white font-semibold text-lg" loading="lazy">{testimonials[currentTestimonial].name.charAt(0)}</span></div><div className="text-left" loading="lazy">
+                    <h4 className="text-lg font-semibold text-white" loading="lazy">{testimonials[currentTestimonial].name}</h4><p className="text-gray-400" loading="lazy">{testimonials[currentTestimonial].role}</p><p className="text-blue-400" loading="lazy">{testimonials[currentTestimonial].company}</p></div></div></div></div><div className="flex items-center justify-center gap-4 mt-8" loading="lazy">
               <button
                 onClick={prevTestimonial}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>

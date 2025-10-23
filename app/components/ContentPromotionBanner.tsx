@@ -77,19 +77,12 @@ const ContentPromotionBanner: React.FC = () => {
 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
-              <ul className="space-y-2">
+              <h3 className="text-2xl font-bold mb-4" loading="lazy">Why Choose Us?</h3><ul className="space-y-2" loading="lazy">
                 {benefits.slice(0, 4).map((benefit, index) => (
-                  <li key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-purple-100">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Additional Benefits</h3>
-              <ul className="space-y-2">
+                  <li key={index} className="flex items-center" loading="lazy">
+                    <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" loading="lazy" />
+                    <span className="text-purple-100" loading="lazy">{benefit}</span></li></ul></div><div>
+              <h3 className="text-2xl font-bold mb-4" loading="lazy">Additional Benefits</h3><ul className="space-y-2" loading="lazy">
                 {benefits.slice(4).map((benefit, index) => (
                   <li key={index} className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
@@ -236,4 +229,5 @@ const ContentPromotionBanner: React.FC = () => {
     </div>
   )
 }
-export default ContentPromotionBanner
+
+export default About;

@@ -5,6 +5,8 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 // Mock components
 const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
   children: React.ReactNode;
+import { Helmet } from 'lucide-react';
+
   enableRetry?: boolean;
   onError?: any;
 }) => {
@@ -30,71 +32,17 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
   if (hasError) {
     return (
       <div data-testid="error-boundary">
-        <h2>Unexpected Application Error!</h2>
-        <p>Oops! Something went wrong</p>
-        {error && (
-          <div>
-            <h3 style={{ fontStyle: 'italic' }}>{error.message}</h3>
-            <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>
+        <h2>Unexpected Application Error!</h2><p>Oops! Something went wrong</p><div>
+            <h3 style={{ fontStyle: 'italic' }}>{error.message}</h3><pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>
               {error.stack}
-            </pre>
-          </div>
-        )}
-        {enableRetry && (
-          <div>
-            <button>Try Again</button>
-            <button>Reload Page</button>
-          </div>
-        )}
-      </div>
-    );
-  }
-  return <>{children}</>;
+            </pre></div><div>
+            <button>Try Again</button><button>Reload Page</button></div></div><>{children}</>;
 };
 
-const TestComponent = () => <div>Test Component</div>;
-
-const ErrorComponent = () => {
-  throw new Error('Test error');
-};
-
-describe('Advanced Components', () => {
-  test('AdvancedErrorBoundary renders children when no error', () => {
-    render(
-      <AdvancedErrorBoundary>
+const TestComponent = () => <div>Test Component</div><AdvancedErrorBoundary>
         <TestComponent />
-      </AdvancedErrorBoundary>
-    )
-    expect(screen.getByText('Test Component')).toBeInTheDocument();
-  });
-
-  test('AdvancedErrorBoundary shows error UI when error occurs', () => {
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
-    
-    // Mock the error boundary to actually catch errors
-    const ErrorBoundaryWrapper = () => {
-      const [hasError, setHasError] = React.useState(false);
-      React.useEffect(() => {
-        try {
-          throw new Error('Test error');
-        } catch (error) {
-          console.error(error);
-          setHasError(true);
-        }
-      }, []);
-      
-      if (hasError) {
-        return (
-          <div data-testid="error-boundary">
-            <h2>Unexpected Application Error!</h2>
-            <p>Oops! Something went wrong</p>
-          </div>
-        );
-      }
-      return <div>No error</div>;
-    };
-    
-    render(<ErrorBoundaryWrapper />);
+      </AdvancedErrorBoundary><div data-testid="error-boundary">
+            <h2>Unexpected Application Error!</h2><p>Oops! Something went wrong</p></div><div>No error</div><ErrorBoundaryWrapper />);
     expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
     consoleSpy.mockRestore();
@@ -103,20 +51,9 @@ describe('Advanced Components', () => {
   test('SEOEnhancer works with HelmetProvider', () => {
     const SEOEnhancer = () => (
       <Helmet>
-        <title>Test Title</title>
-        <meta name="description" content="Test description" />
-      </Helmet>
-    );
-    
-    render(
-      <HelmetProvider>
+        <title>Test Title</title><meta name="description" content="Test description" />
+      </Helmet><HelmetProvider>
         <SEOEnhancer />
       </HelmetProvider>
-    );
-    
-    // Wait for Helmet to update the document title
-    setTimeout(() => {
-      expect(document.title).toBe('Test Title');
-    }, 100);
-  });
-});
+  );
+};

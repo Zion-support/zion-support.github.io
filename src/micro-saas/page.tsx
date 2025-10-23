@@ -128,8 +128,7 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Choose from 100+ ready-to-use AI-powered applications that solve specific business problems.
             Deploy instantly and start seeing results from day one.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p><div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
@@ -153,19 +152,12 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
                 <div className="flex items-center mb-6">
                   <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}>
                     <category.icon className={`w-6 h-6 ${category.color}`} />
-                  </div>
-                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
-                </div>
-                <div className="space-y-3">
+                  </div><h3 className="text-xl font-bold text-white">{category.title}</h3></div><div className="space-y-3">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="flex justify-between items-center p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700/70 transition-colors">
                       <div>
-                        <div className="font-medium text-white text-sm">{service.name}</div>
-                        <div className="text-xs text-gray-400">{service.description}</div>
-                      </div>
-                      <div className="text-right">
-                        <div className={`font-bold ${category.color} text-sm`}>{service.price}</div>
-                        <a
+                        <div className="font-medium text-white text-sm">{service.name}</div><div className="text-xs text-gray-400">{service.description}</div></div><div className="text-right">
+                        <div className={`font-bold ${category.color} text-sm`}>{service.price}</div><a
                           href="/contact"
                           className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
                         >
@@ -182,8 +174,7 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our Micro SAAS Solutions?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our Micro SAAS Solutions?</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -201,79 +192,57 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$19/month</div>
-              <ul className="space-y-2 mb-6">
+              <h3 className="text-xl font-bold text-white mb-4">Starter</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$19/month</div><ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Up to 5 applications
-                </li>
-                <li className="flex items-center text-sm text-gray-300">
+                </li><li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Basic support
-                </li>
-                <li className="flex items-center text-sm text-gray-300">
+                </li><li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Standard features
-                </li>
-              </ul>
-              <a
+                </li></ul><a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
               </a>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
-              <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$99/month</div>
-              <ul className="space-y-2 mb-6">
+          </div><div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
+              <h3 className="text-xl font-bold text-white mb-4">Professional</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$99/month</div><ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Up to 25 applications
-                </li>
-                <li className="flex items-center text-sm text-gray-300">
+                </li><li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Priority support
-                </li>
-                <li className="flex items-center text-sm text-gray-300">
+                </li><li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Advanced features
-                </li>
-                <li className="flex items-center text-sm text-gray-300">
+                </li><li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Custom integrations
-                </li>
-              </ul>
-              <a
+                </li></ul><a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
               </a>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
-              <ul className="space-y-2 mb-6">
+          </div><div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div><ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Unlimited applications
-                </li>
-                <li className="flex items-center text-sm text-gray-300">
+                </li><li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   24/7 dedicated support
-                </li>
-                <li className="flex items-center text-sm text-gray-300">
+                </li><li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Custom development
-                </li>
-                <li className="flex items-center text-sm text-gray-300">
+                </li><li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   On-premise deployment
-                </li>
-              </ul>
-              <a
+                </li></ul><a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
@@ -285,18 +254,16 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2><p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Choose from our extensive library of AI-powered applications and start seeing results immediately.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
                 Browse All Solutions
               </a>
-              <a
+            <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >

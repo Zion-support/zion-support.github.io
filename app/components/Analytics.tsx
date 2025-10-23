@@ -8,6 +8,8 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
+export default function Page() {
+
 declare global {
   interface Window {
     gtag: (...args: any[]) => void

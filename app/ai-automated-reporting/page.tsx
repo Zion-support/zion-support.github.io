@@ -40,6 +40,7 @@ const PagePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const AiAutomatedReporting = () => {
   return (
     <>
       

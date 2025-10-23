@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-
+const ApiDevelopment = () => {
   return (
 
               </a>
@@ -43,7 +43,8 @@ import React from "react";
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
+export default ApiDevelopment;

@@ -303,4 +303,5 @@ export default ContentCarouselPage;
     </div>
   )
 }
-export default ContentCarousel
+
+export default About;

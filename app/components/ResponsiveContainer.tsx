@@ -131,5 +131,5 @@ constResponsiveContainer= ({children,
 export default ResponsiveContainerPage;
   );
 };
-
-export default ResponsiveContainer;
+  );
+}

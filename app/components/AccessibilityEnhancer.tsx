@@ -156,4 +156,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return null;
 };
 
-export default AccessibilityEnhancer;
+
+
+  );
+};
+}
+
+export default About;

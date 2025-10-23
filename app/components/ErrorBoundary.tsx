@@ -200,8 +200,8 @@ className="flex items-center justify-center space-x-2 border border-cyan-600 tex
 <p className="text-sm text-gray-400 mb-3">Still having trouble? Contact our support team:</p>p>
 <a
 href="mailto:kleber@ziontechgroup.com"
-className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-<Phone className="w-4 h-4 mr-2" />
+className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors" loading="lazy">
+<Phone className="w-4 h-4 mr-2" loading="lazy" />
 kleber@ziontechgroup.com
 </a>
 </div>

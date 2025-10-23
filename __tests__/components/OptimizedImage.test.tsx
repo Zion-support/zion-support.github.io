@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/react';
+
+export default function Page() {
 import '@testing-library/jest-dom';
 
 // Mock OptimizedImage component
@@ -50,3 +52,4 @@ describe('OptimizedImage Component', () => {
     expect(image).toHaveAttribute('loading', 'lazy');
   });
 });
+}

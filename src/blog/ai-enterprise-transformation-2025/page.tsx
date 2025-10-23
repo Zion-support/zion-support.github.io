@@ -7,21 +7,17 @@ const EnterpriseTransformationPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Enterprise Transformation: $50M Annual Savings Blueprint | Zion Tech Group</title>
-        <meta name="description" content="Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies." />
+        <title>AI Enterprise Transformation: $50M Annual Savings Blueprint | Zion Tech Group</title><meta name="description" content="Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies." />
         <meta property="og:url" content="/og/ai-enterprise-transformation-2025.jpg" />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
+      </Helmet><div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <span className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               💰 Success Story
-            </span>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            </span><h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Enterprise Transformation: $50M Annual Savings Blueprint
-            </h1>
-            <p className="text-gray-600 text-lg">
+            </h1><p className="text-gray-600 text-lg">
               January 28, 2025 · 50 min read · Enterprise AI
             </p>
           </div>
@@ -91,18 +87,14 @@ const EnterpriseTransformationPage: React.FC = () => {
             <p className="text-gray-700 mb-6">
               Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations.
               Get started with a comprehensive assessment and personalized transformation roadmap.
-            </p>
-            <div className="bg-indigo-50 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your $50M Transformation Today</h3>
-              <p className="text-gray-700 mb-4">
+            </p><div className="bg-indigo-50 p-6 rounded-lg text-center">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your $50M Transformation Today</h3><p className="text-gray-700 mb-4">
                 Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
-              </p>
-              <div className="space-x-4">
+              </p><div className="space-x-4">
                 <a href="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Transformation Assessment
-                </a>
-                <a href="/services"
+                </a><a href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
                 </a>

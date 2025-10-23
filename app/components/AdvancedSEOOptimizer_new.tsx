@@ -205,11 +205,7 @@ return (
 {/* Structured Data */}
 <script type="application/ld+json">
 {JSON.stringify(generateStructuredData())}
-</script>
-</Helmet>
-{children}
-{process.env.NODE_ENV === 'development' && (
-<div className="seo-debug" style={{
+</script></Helmet><div className="seo-debug" loading="lazy" style={{
 position: 'fixed',
 top: '10 px',
 left: '10 px',
@@ -222,3 +218,5 @@ zIndex:1000,
 maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
 }
 export default AdvancedSEOOptimizerNew
+
+}

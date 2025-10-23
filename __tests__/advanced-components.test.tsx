@@ -1,25 +1,38 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from '@testing-library/react';
 
-const TestComponent = () => {
-  return <div>Test content</div>;
+export default function Page() {
+import '@testing-library/jest-dom';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+// Mock advanced components
+const AdvancedButton = ({ onClick, children }: { onClick: () => void; children: React.ReactNode }) => {
+  return <button onClick={onClick} data-testid="advanced-button">{children}</button><input
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      data-testid="advanced-input"
+    />
+  );
 };
 
-describe("Advanced Components", () => {
-  // Test implementation
-  it("should render without errors", () => {
-    expect(true).toBe(true);
+describe('Advanced Components', () => {
+  it('renders advanced button', () => {
+    const mockOnClick = jest.fn();
+    render(<AdvancedButton onClick={mockOnClick}>Click me</AdvancedButton><AdvancedButton onClick={mockOnClick}>Click me</AdvancedButton><AdvancedInput value="test" onChange={mockOnChange} />);
+    
+    const input = screen.getByTestId('advanced-input');
+    expect(input).toBeInTheDocument();
+    expect(input).toHaveValue('test');
   });
 
-  it("should render test content", () => {
-    render(<TestComponent />);
-    expect(screen.getByText("Test content")).toBeInTheDocument();
-  });
-
-  it("should handle console errors", () => {
-    const consoleSpy = jest
-      .spyOn(console, "error")
-      .mockImplementation(() => {});
-    // Test implementation
-    consoleSpy.mockRestore();
+  it('handles input change', () => {
+    const mockOnChange = jest.fn();
+    render(<AdvancedInput value="" onChange={mockOnChange} />);
+    
+    const input = screen.getByTestId('advanced-input');
+    fireEvent.change(input, { target: { value: 'new value' } });
+    
+    expect(mockOnChange).toHaveBeenCalledWith('new value');
   });
 });
+}

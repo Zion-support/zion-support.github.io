@@ -73,9 +73,7 @@ const PWAInstaller: React.FC = () => {
             aria-label="Dismiss install prompt"
           ></button>
             <X className="w-4 h-4" />
-          </button>
-        </div>
-        <div className="space-y-2">
+          </button></div><div className="space-y-2">
           <button
             onClick={handleInstallClick}
            className="w-full bg-gradient-to-r from-cyan-50 0 to-purple-600text-white px-4 py-2 rounded-lghover:from-cyan-600 hover:to-purple-700transition-allduration-300text-smfont-medium"

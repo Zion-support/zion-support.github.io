@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-
+const ZionAiCrmOptimizer = () => {
   return (
     <>
       <Helmet>
@@ -44,7 +44,8 @@ import React from "react";
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
+export default ZionAiCrmOptimizer;

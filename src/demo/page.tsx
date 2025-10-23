@@ -89,8 +89,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 Request a Demo
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+              </h1><p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 See our AI and IT solutions in action
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
@@ -103,8 +102,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               What to Expect
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {demoFeatures.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -120,13 +118,11 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Form */}
                 <div className="cyber-card p-8">
-                  <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Demo</h2>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Demo</h2><form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
-                      </label>
-                      <input
+                      </label><input
                         type="text"
                         id="name"
                         name="name"
@@ -174,8 +170,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                         placeholder="Tell us about your specific needs or questions"
                       />
-                    </div>
-                    <button
+                    </div><button
                       type="submit"
                       className="w-full cyber-button py-3 px-6 text-center"
                     >
@@ -186,21 +181,14 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 {/* Contact Info */}
                 <div className="space-y-8">
                   <div className="cyber-card p-8">
-                    <h3 className="text-xl font-bold text-white mb-6">Why Choose Our Demo?</h3>
-                    <ul className="space-y-4">
+                    <h3 className="text-xl font-bold text-white mb-6">Why Choose Our Demo?</h3><ul className="space-y-4">
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300">Personalized to your business needs</span>
-                      </li>
-                      <li className="flex items-start">
+                        <span className="text-gray-300">Personalized to your business needs</span></li><li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300">Live demonstration of our solutions</span>
-                      </li>
-                      <li className="flex items-start">
+                        <span className="text-gray-300">Live demonstration of our solutions</span></li><li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300">Expert consultation and Q&A</span>
-                      </li>
-                      <li className="flex items-start">
+                        <span className="text-gray-300">Expert consultation and Q&A</span></li><li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
                         <span className="text-gray-300">No obligation, completely free</span>
                       </li>
@@ -214,14 +202,12 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
                         <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400">
                           (302) 464-0950
                         </a>
-                      </div>
-                      <div className="flex items-center">
+          </div><div className="flex items-center">
                         <Mail className="w-5 h-5 text-cyan-400 mr-3" />
                         <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400">
                           kleber@ziontechgroup.com
                         </a>
-                      </div>
-                      <div className="flex items-center">
+          </div><div className="flex items-center">
                         <Clock className="w-5 h-5 text-cyan-400 mr-3" />
                         <span className="text-gray-300">Mon-Fri: 9AM-6PM EST</span>
                       </div>
@@ -235,8 +221,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               What Our Clients Say
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            </h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="cyber-card p-6">
                   <div className="flex items-center mb-4">

@@ -136,8 +136,7 @@ const AILeadGenerationPage: React.FC = () => {
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Lead Generation Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+              </h1><p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Generate 300% more qualified leads with AI
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
@@ -183,31 +182,23 @@ const AILeadGenerationPage: React.FC = () => {
                   >
                     Get Started
                   </a>
-                </div>
-              ))}
-            </div>
-          </section>
-          {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
+          </div></div></section><section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to 3x Your Lead Generation?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              </h2><p className="text-xl text-gray-300 mb-8">
                 Join 2,500+ companies already using our AI lead generation platform
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </p><div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
                   <PhoneIcon className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
+                  <span>Call (302) 464-0950</span></a><a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'  );
+};
                 >
                   <MailIcon className="w-5 h-5" />
                   <span>Schedule Demo</span>

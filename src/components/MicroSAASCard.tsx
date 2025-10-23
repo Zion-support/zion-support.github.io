@@ -52,8 +52,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
       </div>
       <div className="space-y-4">
         <div>
-          <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-          <ul className="space-y-1">
+          <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4><ul className="space-y-1">
             {service.features.slice(0, 4).map((feature, index) => (
               <li key={index} className="flex items-center text-xs text-gray-300">
                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />

@@ -51,16 +51,12 @@ const ContentNewsletterSignup: React.FC = () => {
               className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
             ></button>
               {isSubmitting ? (
-                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
-              ) : (
-                <>
+                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div><>
                   Subscribe
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </>
               )}
-            </button>
-          </form>
-          <p className="text-xs text-purple-200 mt-4">
+            </button></form><p className="text-xs text-purple-200 mt-4">
             We respect your privacy. Unsubscribe at any time.
           </p>
         </div>

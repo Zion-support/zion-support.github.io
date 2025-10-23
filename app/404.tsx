@@ -92,6 +92,9 @@ const 404Page: React.FC = () => {
                 </div>
               ))}
             </div>
+            <p className="text-gray-300 text-sm">
+              Use our search feature to find the information you're looking for.
+            </p>
           </div>
         </section>
 

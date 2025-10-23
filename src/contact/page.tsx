@@ -95,17 +95,12 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
             {isSubmitted ? (
               <div className="text-center py-8">
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Thank You!</h3>
-                <p className="text-gray-300">We'll get back to you within 24 hours.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+                <h3 className="text-xl font-bold text-white mb-2">Thank You!</h3><p className="text-gray-300">We'll get back to you within 24 hours.</p></div><form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
-                    </label>
-                    <input
+                    </label><input
                       type="text"
                       id="name"
                       name="name"
@@ -129,8 +124,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       Company
-                    </label>
-                    <input
+                    </label><input
                       type="text"
                       id="company"
                       name="company"
@@ -152,8 +146,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
-                  </label>
-                  <select
+                  </label><select
                     id="service"
                     name="service"
                     value={formData.service}
@@ -169,8 +162,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
-                  </label>
-                  <textarea
+                  </label><textarea
                     id="message"
                     name="message"
                     value={formData.message}
@@ -200,10 +192,8 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                    <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  </div><div>
+                    <h3 className="text-lg font-semibold text-white mb-1">Phone</h3><a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                       +1 (302) 464-0950
                     </a>
                     <p className="text-sm text-gray-400 mt-1">Mon-Fri 9AM-6PM EST</p>
@@ -212,10 +202,8 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  </div><div>
+                    <h3 className="text-lg font-semibold text-white mb-1">Email</h3><a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                       kleber@ziontechgroup.com
                     </a>
                     <p className="text-sm text-gray-400 mt-1">We respond within 24 hours</p>

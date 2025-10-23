@@ -135,15 +135,12 @@ constAICRMPage: React.FC= () =>{constfeatures= [
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI-Powered CRM Platform
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            </h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer relationships with intelligent automation, predictive analytics, and personalized experiences that drive growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="cyber-button px-8 py-4 text-lg">
                 Start Free Trial
-              </button>
-              <button className="cyber-button-outline px-8 py-4 text-lg">
+              </button><button className="cyber-button-outline px-8 py-4 text-lg">
                 Watch Demo
               </button>
             </div>
@@ -181,10 +178,7 @@ constAICRMPage: React.FC= () =>{constfeatures= [
               <div key={index} className="cyber-card p-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
+                </div><h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
@@ -257,18 +251,10 @@ constAICRMPage: React.FC= () =>{constfeatures= [
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
+                    </span></div><div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><div className="text-4xl font-bold text-cyan-400 mb-2">
                     {plan.price}
-                    <span className="text-lg text-gray-400">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-                <ul className="space-y-3 mb-8">
+                    <span className="text-lg text-gray-400">{plan.period}</span></div><p className="text-gray-300">{plan.description}</p></div><ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
@@ -291,15 +277,12 @@ constAICRMPage: React.FC= () =>{constfeatures= [
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your CRM?</h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your CRM?</h2><p className="text-xl text-gray-300 mb-8">
             Join thousands of businesses using AI-powered CRM to boost sales, improve customer relationships, and drive growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p><div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cyber-button px-8 py-4 text-lg">
               Start Free Trial
-            </button>
-            <button className="cyber-button-outline px-8 py-4 text-lg">
+            </button><button className="cyber-button-outline px-8 py-4 text-lg">
               Contact Sales
             </button>
           </div>

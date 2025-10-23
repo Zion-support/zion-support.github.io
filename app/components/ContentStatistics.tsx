@@ -372,4 +372,5 @@ View Case Studies
 </div>
 )
 }
-export default ContentStatistics
+
+export default About;

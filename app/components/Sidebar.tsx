@@ -277,16 +277,11 @@ aria-label="Open sidebar"
 {isOpen && (
 <div
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
-onClick={() =>setIsOpen(false)}</div>
-/>
-)}
-{/* Sidebar */}</div>
-<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
+onClick={() =>setIsOpen(false)}</div></div><aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}>
 <div className="flex flex-col h-full">
-{/* Header */}</div>
-<div className="flex items-center justify-between p-6 border-b border-slate-700/50">
+{/* Header */}</div><div className="flex items-center justify-between p-6 border-b border-slate-700/50">
 <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
 <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
 <Brain className="w-6 h-6 text-white" />
@@ -318,9 +313,6 @@ expandedSections.has(section.key) ?
 <ChevronDown className="w-4 h-4" /> :
 <ChevronRight className="w-4 h-4" />
 )}
-</button>
-{(!section.key || expandedSections.has(section.key)) && (
-<div className="ml-4 space-y-1">
-{section.items.map((item, itemIndex) => (</div>
-<Link
+</button><div className="ml-4 space-y-1">
+{section.items.map((item, itemIndex) => (</div><Link
 key={itemIndex}

@@ -28,8 +28,8 @@ class MonitoringService {
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
-    }
-  }
+      );
+};
   private initializeMonitoring(): void {
     // Monitor Web Vitals
     this.monitorWebVitals()
@@ -101,8 +101,8 @@ class MonitoringService {
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
         // Long task API might not be available
-      }
-    }
+        );
+};
   }
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
@@ -167,8 +167,8 @@ class MonitoringService {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
       })
-    }
-  }
+      );
+};
   public logError(error: ErrorReport): void {
     this.errors.push(error)
     // Keep only last 50 errors
@@ -179,8 +179,8 @@ class MonitoringService {
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics }
-  }
+    return { ...this.metrics   );
+};
   public getErrors(): ErrorReport[] {
     return [...this.errors]
   }
@@ -196,8 +196,8 @@ class MonitoringService {
         //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         // })
-      }
-    }
+        );
+};
   }
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
@@ -212,10 +212,10 @@ class MonitoringService {
         //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
         //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         // })
-      }
-    }
-  }
-}
+        );
+};
+    );
+};
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring

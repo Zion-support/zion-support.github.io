@@ -64,9 +64,7 @@ const ApiDocsPage: React.FC = () => {
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"></h1>
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   API Documentation
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                </span></h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Integrate with our powerful AI and IT services through our comprehensive REST API.
               </p>
             </div>
@@ -106,31 +104,23 @@ const ApiDocsPage: React.FC = () => {
           {/* CTA Section */}
           <section className="text-center py-16">
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-6 text-lg">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2><p className="text-gray-300 mb-6 text-lg">
                 Contact us for API access and integration support.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              </p><div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="tel:+13024640950"
                   className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   <Key className="w-5 h-5" />
                   +1 302 464 0950
-                </a>
-                <a
+                </a><a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   <Code className="w-5 h-5" />
                   kleber@ziontechgroup.com
                 </a>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-      <Footer />
+          </div></div></section></div></div><Footer />
     </>
   )
 }

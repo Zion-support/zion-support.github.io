@@ -213,15 +213,10 @@ isMonitoring
 ? 'bg-red-600 text-white hover:bg-red-700'
 : 'bg-green-600 text-white hover:bg-green-700'
 }`}
->{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>button>
-</div>
-{alerts.length > 0 && (
-<div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-<div className="flex items-center gap-2 mb-2">
-<AlertTriangle className="w-5 h-5 text-red-400" />
-<h4 className="text-red-400 font-semibold">Performance Alerts</h4>
-</div>
-<ul className="space-y-1">
+ aria-label="Action button"></button></div><div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg" loading="lazy">
+<div className="flex items-center gap-2 mb-2" loading="lazy">
+<AlertTriangle className="w-5 h-5 text-red-400" loading="lazy" />
+<h4 className="text-red-400 font-semibold" loading="lazy">Performance Alerts</h4></div><ul className="space-y-1" loading="lazy">
 {alerts.map((alert, index) => (
 <li key={index} className="text-red-300 text-sm">• {alert}</li>
 ))}

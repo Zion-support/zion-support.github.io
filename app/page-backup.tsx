@@ -41,6 +41,7 @@ const PageBackupPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
+export default function Page() {
   return (
 <<<<<<< HEAD
 =======
@@ -81,15 +82,11 @@ const PageBackupPage: React.FC = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
   </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" aria-label="Action button"><Mail className="mr-2 h-5 w-5" />
                 Email Us
   </
-            </div>
-          </div>
+            </div></div>
         </div>
       </section>
     </div>
-  )
 }
-export default PageBackupPage

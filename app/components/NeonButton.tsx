@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 import React from "react"
+
+export default function Page() {
 import { ArrowRight } from "lucide-react"
 interface NeonButtonProps {
   children?: React.ReactNode

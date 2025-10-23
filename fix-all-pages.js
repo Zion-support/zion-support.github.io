@@ -1,120 +1,65 @@
 const fs = require('fs');
 const path = require('path');
 
+// Simple page template
+const simplePageTemplate = `"use client";
+import React from "react";
+
+const Page = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Page Title
+        </h1>
+        <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto">
+          Page description content.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Page;`;
+
+// Function to fix a single page file
 function fixPageFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    // Get the page name from the file path
+    const pathParts = filePath.split('/');
+    const pageName = pathParts[pathParts.length - 2] || 'Page';
+    const capitalizedName = pageName.charAt(0).toUpperCase() + pageName.slice(1);
     
-    // Fix broken features map patterns
-    const patterns = [
-      // Pattern 1: Missing map function
-      {
-        regex: /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">\s*<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">\s*<feature\.icon className="w-8 h-8 text-white" \/>\s*<\/div>\s*<h3 className="text-xl font-semibold text-white mb-3">\s*{feature\.title}\s*<\/h3>\s*<p className="text-gray-300">{feature\.description}<\/p>\s*<\/div>\s*\)\)}/gs,
-        replacement: `{features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}`
-      },
-      // Pattern 2: Missing opening div
-      {
-        regex: /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">\s*<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">\s*<feature\.icon className="w-8 h-8 text-white" \/>\s*<\/div>\s*<h3 className="text-xl font-semibold text-white mb-3">\s*{feature\.title}\s*<\/h3>\s*<p className="text-gray-300">{feature\.description}<\/p>\s*<\/div>\s*\)\)}/gs,
-        replacement: `{features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}`
-      }
-    ];
+    // Create the content
+    const content = simplePageTemplate
+      .replace('Page', capitalizedName)
+      .replace('Page Title', capitalizedName)
+      .replace('Page description content.', `This is the ${pageName} page.`);
     
-    for (const pattern of patterns) {
-      if (pattern.regex.test(content)) {
-        content = content.replace(pattern.regex, pattern.replacement);
-        modified = true;
-      }
-    }
-    
-    // Fix any remaining broken JSX patterns
-    if (content.includes('<feature.icon') && !content.includes('features.map')) {
-      // This is a broken file, let's fix it properly
-      const brokenSection = /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/g;
-      const fixedSection = `<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>`;
-      
-      if (brokenSection.test(content)) {
-        content = content.replace(brokenSection, fixedSection);
-        modified = true;
-      }
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-function findAndFixPages(dir) {
+// Function to recursively find and fix all page files
+function fixAllPageFiles(dir) {
   const files = fs.readdirSync(dir);
-  let fixedCount = 0;
   
-  for (const file of files) {
+  files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
-    if (stat.isDirectory()) {
-      fixedCount += findAndFixPages(filePath);
-    } else if (file === 'page.tsx') {
-      if (fixPageFile(filePath)) {
-        fixedCount++;
-      }
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'components') {
+      fixAllPageFiles(filePath);
+    } else if (file === 'page.tsx' && dir.includes('/app/')) {
+      fixPageFile(filePath);
     }
-  }
-  
-  return fixedCount;
+  });
 }
 
-const appDir = path.join(__dirname, 'app');
-const fixedCount = findAndFixPages(appDir);
-console.log(`Fixed ${fixedCount} page files`);
+// Start fixing from the app directory
+console.log('Starting to fix all page files...');
+fixAllPageFiles('/workspace/app');
+console.log('Finished fixing all page files.');

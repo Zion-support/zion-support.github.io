@@ -7,21 +7,17 @@ const InnovationLabsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group</title>
-        <meta name="description" content="Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration." />
+        <title>AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group</title><meta name="description" content="Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration." />
         <meta property="og:url" content="/og/ai-innovation-labs-2025.jpg" />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
+      </Helmet><div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               🚀 Innovation Lab
-            </span>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            </span><h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Innovation Labs: Product Development Revolution 2025
-            </h1>
-            <p className="text-gray-600 text-lg">
+            </h1><p className="text-gray-600 text-lg">
               January 28, 2025 · 45 min read · AI Innovation
             </p>
           </div>
@@ -58,23 +54,9 @@ const InnovationLabsPage: React.FC = () => {
             <p className="text-gray-700 mb-6">
               Our AI Innovation Labs follow a systematic approach to product development that leverages
               cutting-edge AI technologies to accelerate every stage of the product lifecycle.
-            </p>
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: AI-Powered Ideation</h3>
-            <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
-              <li>• Market analysis using AI-driven trend prediction</li>
-              <li>• Customer need identification through AI sentiment analysis</li>
-              <li>• Competitive landscape mapping with AI-powered research</li>
-              <li>• Concept generation using generative AI models</li>
-            </ul>
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Rapid Prototyping</h3>
-            <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
-              <li>• AI-assisted design and architecture planning</li>
-              <li>• Automated code generation and testing</li>
-              <li>• Virtual prototyping and simulation</li>
-              <li>• Real-time performance optimization</li>
-            </ul>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact Metrics</h2>
-            <p className="text-gray-700 mb-6">
+            </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: AI-Powered Ideation</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
+              <li>• Market analysis using AI-driven trend prediction</li><li>• Customer need identification through AI sentiment analysis</li><li>• Competitive landscape mapping with AI-powered research</li><li>• Concept generation using generative AI models</li></ul><h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Rapid Prototyping</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
+              <li>• AI-assisted design and architecture planning</li><li>• Automated code generation and testing</li><li>• Virtual prototyping and simulation</li><li>• Real-time performance optimization</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact Metrics</h2><p className="text-gray-700 mb-6">
               The AI Innovation Labs have delivered measurable value across multiple dimensions:
             </p>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Development Efficiency</h3>
@@ -110,18 +92,14 @@ const InnovationLabsPage: React.FC = () => {
             <p className="text-gray-700 mb-6">
               Ready to revolutionize your product development? Our AI Innovation Labs can help you
               achieve breakthrough results in product development speed, cost, and innovation.
-            </p>
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your AI Innovation Journey</h3>
-              <p className="text-gray-700 mb-4">
+            </p><div className="bg-blue-50 p-6 rounded-lg text-center">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your AI Innovation Journey</h3><p className="text-gray-700 mb-4">
                 Join leading companies transforming product development with AI-powered innovation
-              </p>
-              <div className="space-x-4">
+              </p><div className="space-x-4">
                 <a href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Schedule Innovation Assessment
-                </a>
-                <a href="/services"
+                </a><a href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
                 </a>
