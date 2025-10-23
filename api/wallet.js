@@ -32,7 +32,6 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-<<<<<<< HEAD
   } catch {
     // console.error('Error reading existing wallets');
     existing = [];
@@ -68,7 +67,6 @@ export default function handler(req, res) {
       message: 'Wallet added successfully',
       id: newWallet.id
     }));
-<<<<<<< HEAD
   } catch {
     // console.error('Error saving wallet');
     res.statusCode = 500;
