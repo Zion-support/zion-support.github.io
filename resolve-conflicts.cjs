@@ -1,50 +1,52 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-// Find all files with merge conflicts
-const findFilesWithConflicts = (dir) => {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findFilesWithConflicts(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      const content = fs.readFileSync(fullPath, 'utf8');
-      if (content.includes('<<<<<<< HEAD')) {
-        files.push(fullPath);
-      }
-    }
+const conflictedFiles = [
+  "app/ai-automation/page.tsx",
+  "app/ai-customer-support/page.tsx",
+  "app/ai-cybersecurity/page.tsx",
+  "app/ai-data-analytics/page.tsx",
+  "app/ai-data-visualization/page.tsx",
+  "app/ai-fintech/page.tsx",
+  "app/ai-healthcare/page.tsx",
+  "app/ai-marketing/page.tsx",
+  "app/ai-sales-automation/page.tsx",
+  "app/ai-workflow-automation/page.tsx",
+  "app/ar-vr-solutions/page.tsx",
+  "app/autonomous-systems/page.tsx",
+  "app/backup-recovery/page.tsx",
+  "app/blockchain-integration-services/page.tsx",
+  "app/cloud-migration/page.tsx",
+  "app/consultation/page.tsx",
+  "app/iot-edge-computing/page.tsx",
+  "app/it-infrastructure/page.tsx",
+  "app/it-support/page.tsx",
+  "app/micro-saas/page.tsx",
+  "app/quantum-computing/page.tsx",
+  "app/status/page.tsx",
+];
+
+conflictedFiles.forEach((filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+
+    // Remove all merge conflict markers and keep our version (the one after =======)
+    content = content.replace(
+      /<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> cursor\/fix-errors-and-merge-to-main-9f4a/g,
+      "$1",
+    );
+
+    // Also handle the case where there might be other conflict markers
+    content = content.replace(
+      /<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]+/g,
+      "$1",
+    );
+
+    fs.writeFileSync(filePath, content);
+    console.log(`Resolved conflicts in ${filePath}`);
+  } catch (error) {
+    console.error(`Error resolving ${filePath}:`, error.message);
   }
-  
-  return files;
-};
+});
 
-// Resolve conflicts in a single file
-const resolveConflicts = (filePath) => {
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove merge conflict markers and keep HEAD version
-  content = content.replace(/<<<<<<< HEAD\n?/g, '');
-  content = content.replace(/=======\n?/g, '');
-  content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-  
-  // Clean up any remaining empty lines
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
-  fs.writeFileSync(filePath, content);
-  console.log(`Resolved conflicts in: ${filePath}`);
-};
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findFilesWithConflicts(appDir);
-
-console.log(`Found ${files.length} files with merge conflicts`);
-
-files.forEach(resolveConflicts);
-
-console.log('All merge conflicts have been resolved!');
+console.log("All merge conflicts resolved!");

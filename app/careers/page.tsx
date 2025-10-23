@@ -1,82 +1,35 @@
-import React from 'react';
+"use client";
+import React from "react";
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { MapPin, Clock } from 'lucide-react';
-
-const CareersPage: React.FC = () => {
-  const positions = [
-    {
-      title: 'Senior AI Engineer',
-      location: 'Remote',
-      type: 'Full-time',
-      description: 'Lead AI solution development and implementation'
-    },
-    {
-      title: 'DevOps Engineer',
-      location: 'Delaware, USA',
-      type: 'Full-time',
-      description: 'Build and maintain CI/CD pipelines and infrastructure'
-    },
-    {
-      title: 'Frontend Developer',
-      location: 'Remote',
-      type: 'Full-time',
-      description: 'Create modern, responsive user interfaces'
-    },
-    {
-      title: 'Data Scientist',
-      location: 'Remote',
-      type: 'Full-time',
-      description: 'Analyze data and build predictive models'
-    }
-  ];
-
+export default function CareersPage() {
   return (
-
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Be part of the future of AI and technology. We're looking for passionate individuals 
-            who want to make a difference in the world.
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Careers</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced careers solutions by Zion Tech Group
           </p>
-        </div>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">
-            Open Positions
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {positions.map((position, index) => (
-              <div key={index} className="cyber-card hologram-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">{position.title}</h3>
-                <div className="flex items-center text-gray-300 mb-2">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  {position.location}
-                </div>
-                <div className="flex items-center text-gray-300 mb-4">
-                  <Clock className="w-4 h-4 mr-2" />
-                  {position.type}
-                </div>
-                <p className="text-gray-300 mb-4">{position.description}</p>
-                <button className="cyber-button w-full">
-                  Apply Now
-                </button>
-              </div>
-            ))}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </a>
+    
+    
+    
+    
           </div>
-        </section>
-      </main>
-      
-      <Footer />
+        </div>
+      </div>
     </div>
   );
-};
-
-export default CareersPage;
+}

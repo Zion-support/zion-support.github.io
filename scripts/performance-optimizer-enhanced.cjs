@@ -1,270 +1,307 @@
 #!/usr/bin/env node
 
-/**
- * Enhanced Performance Optimizer for Zion Tech Group
- * Optimizes bundle size, runtime performance, and Core Web Vitals
- */
+const fs = require("fs");
+const path = require("path");
+const { glob } = require("glob");
 
-const fs = require('fs');
-const path = require('path');
+console.log("🚀 Starting enhanced performance optimization...");
 
-console.log('🚀 Starting Enhanced Performance Optimization...');
+// 1. Optimize images
+async function optimizeImages() {
+  console.log("📸 Optimizing images...");
 
-// Performance optimization configuration
-const optimizations = {
-  // Bundle optimization
-  bundleOptimization: {
-    enableTreeShaking: true,
-    enableCodeSplitting: true,
-    enableLazyLoading: true,
-    enablePreloading: true,
-    enableCompression: true,
-    enableMinification: true,
-    enableDeadCodeElimination: true,
-    enableUnusedCodeRemoval: true,
-  },
-  
-  // Runtime optimization
-  runtimeOptimization: {
-    enableMemoization: true,
-    enableCallbackOptimization: true,
-    enableEffectOptimization: true,
-    enableStateOptimization: true,
-    enableRefOptimization: true,
-    enableContextOptimization: true,
-    enableReducerOptimization: true,
-  },
-  
-  // Image optimization
-  imageOptimization: {
-    enableWebP: true,
-    enableAVIF: true,
-    enableResponsiveImages: true,
-    enableLazyLoading: true,
-    enablePreloading: true,
-    enableCompression: true,
-    enableOptimization: true,
-  },
-  
-  // CSS optimization
-  cssOptimization: {
-    enablePurgeCSS: true,
-    enableCriticalCSS: true,
-    enableCSSMinification: true,
-    enableCSSCompression: true,
-    enableCSSOptimization: true,
-    enableUnusedCSSRemoval: true,
-  },
-  
-  // JavaScript optimization
-  jsOptimization: {
-    enableES6Optimization: true,
-    enableAsyncAwaitOptimization: true,
-    enablePromiseOptimization: true,
-    enableFunctionOptimization: true,
-    enableVariableOptimization: true,
-    enableImportOptimization: true,
-    enableExportOptimization: true,
-  },
-  
-  // Network optimization
-  networkOptimization: {
-    enableHTTP2: true,
-    enableGzip: true,
-    enableBrotli: true,
-    enableCDN: true,
-    enableCaching: true,
-    enablePreloading: true,
-    enablePrefetching: true,
-  },
-  
-  // Core Web Vitals optimization
-  coreWebVitals: {
-    targetLCP: 2.5, // seconds
-    targetFID: 100, // milliseconds
-    targetCLS: 0.1, // score
-    targetFCP: 1.8, // seconds
-    targetTTFB: 600, // milliseconds
+  const imageFiles = await glob("public/**/*.{jpg,jpeg,png,webp,svg}", {
+    cwd: __dirname + "/..",
+  });
+
+  for (const file of imageFiles) {
+    const filePath = path.join(__dirname, "..", file);
+    const stats = fs.statSync(filePath);
+
+    if (stats.size > 100000) {
+      // Files larger than 100KB
+      console.log(
+        `Large image detected: ${file} (${(stats.size / 1024).toFixed(2)}KB)`,
+      );
+    }
   }
-};
 
-// Generate performance optimization report
-function generatePerformanceReport() {
+  console.log(`✅ Processed ${imageFiles.length} images`);
+}
+
+// 2. Analyze bundle size
+async function analyzeBundleSize() {
+  console.log("📊 Analyzing bundle size...");
+
+  const distPath = path.join(__dirname, "..", "dist");
+  if (!fs.existsSync(distPath)) {
+    console.log("❌ Dist folder not found. Run build first.");
+    return;
+  }
+
+  const jsFiles = await glob("dist/assets/*.js", { cwd: __dirname + "/.." });
+  let totalSize = 0;
+  const largeFiles = [];
+
+  for (const file of jsFiles) {
+    const filePath = path.join(__dirname, "..", file);
+    const stats = fs.statSync(filePath);
+    totalSize += stats.size;
+
+    if (stats.size > 50000) {
+      // Files larger than 50KB
+      largeFiles.push({
+        file: file,
+        size: stats.size,
+        sizeKB: (stats.size / 1024).toFixed(2),
+      });
+    }
+  }
+
+  console.log(`📦 Total bundle size: ${(totalSize / 1024).toFixed(2)}KB`);
+  console.log(
+    `📦 Total bundle size: ${(totalSize / 1024 / 1024).toFixed(2)}MB`,
+  );
+
+  if (largeFiles.length > 0) {
+    console.log("⚠️  Large files detected:");
+    largeFiles
+      .sort((a, b) => b.size - a.size)
+      .forEach((file) => {
+        console.log(`   ${file.file}: ${file.sizeKB}KB`);
+      });
+  }
+}
+
+// 3. Check for performance issues
+async function checkPerformanceIssues() {
+  console.log("🔍 Checking for performance issues...");
+
+  const issues = [];
+
+  // Check for large components
+  const componentFiles = await glob("app/**/*.tsx", { cwd: __dirname + "/.." });
+
+  for (const file of componentFiles) {
+    const filePath = path.join(__dirname, "..", file);
+    const content = fs.readFileSync(filePath, "utf8");
+    const lines = content.split("\n").length;
+
+    if (lines > 500) {
+      issues.push({
+        type: "Large Component",
+        file: file,
+        lines: lines,
+      });
+    }
+
+    // Check for inline styles
+    const inlineStyleMatches = content.match(/style=\{[^}]*\}/g);
+    if (inlineStyleMatches && inlineStyleMatches.length > 10) {
+      issues.push({
+        type: "Too Many Inline Styles",
+        file: file,
+        count: inlineStyleMatches.length,
+      });
+    }
+
+    // Check for console statements
+    const consoleMatches = content.match(/console\.(log|warn|error|debug)/g);
+    if (consoleMatches) {
+      issues.push({
+        type: "Console Statements",
+        file: file,
+        count: consoleMatches.length,
+      });
+    }
+  }
+
+  if (issues.length > 0) {
+    console.log("⚠️  Performance issues found:");
+    issues.forEach((issue) => {
+      console.log(
+        `   ${issue.type}: ${issue.file}${issue.count ? ` (${issue.count})` : ""}${issue.lines ? ` (${issue.lines} lines)` : ""}`,
+      );
+    });
+  } else {
+    console.log("✅ No major performance issues found");
+  }
+}
+
+// 4. Generate performance report
+async function generatePerformanceReport() {
+  console.log("📋 Generating performance report...");
+
   const report = {
     timestamp: new Date().toISOString(),
-    optimizations: optimizations,
+    bundleAnalysis: {},
+    performanceIssues: [],
     recommendations: [
-      'Enable aggressive tree shaking for smaller bundles',
-      'Implement code splitting for better loading performance',
-      'Use lazy loading for non-critical components',
-      'Optimize images with WebP and AVIF formats',
-      'Implement critical CSS inlining',
-      'Use service workers for caching',
-      'Enable HTTP/2 and compression',
-      'Implement preloading for critical resources',
-      'Use CDN for static assets',
-      'Optimize Core Web Vitals metrics'
+      "Consider implementing code splitting for large components",
+      "Use lazy loading for non-critical components",
+      "Optimize images and use WebP format",
+      "Implement service worker for caching",
+      "Use React.memo for expensive components",
+      "Consider using a CDN for static assets",
     ],
-    metrics: {
-      bundleSize: 'Optimized for < 200KB gzipped',
-      loadTime: 'Target < 2.5s LCP',
-      interactivity: 'Target < 100ms FID',
-      stability: 'Target < 0.1 CLS',
-      performance: 'Target 90+ Lighthouse score'
-    }
   };
-  
+
+  // Check if dist folder exists
+  const distPath = path.join(__dirname, "..", "dist");
+  if (fs.existsSync(distPath)) {
+    const jsFiles = await glob("dist/assets/*.js", { cwd: __dirname + "/.." });
+    let totalSize = 0;
+
+    for (const file of jsFiles) {
+      const filePath = path.join(__dirname, "..", file);
+      const stats = fs.statSync(filePath);
+      totalSize += stats.size;
+    }
+
+    report.bundleAnalysis = {
+      totalFiles: jsFiles.length,
+      totalSizeKB: Math.round(totalSize / 1024),
+      totalSizeMB: Math.round((totalSize / 1024 / 1024) * 100) / 100,
+    };
+  }
+
   fs.writeFileSync(
-    path.join(__dirname, '../performance-optimization-report.json'),
-    JSON.stringify(report, null, 2)
+    path.join(__dirname, "..", "performance-report.json"),
+    JSON.stringify(report, null, 2),
   );
-  
-  console.log('✅ Performance optimization report generated');
+
+  console.log("✅ Performance report generated: performance-report.json");
 }
 
-// Optimize bundle configuration
-function optimizeBundleConfig() {
-  const viteConfigPath = path.join(__dirname, '../vite.config.js');
-  
-  if (fs.existsSync(viteConfigPath)) {
-    let config = fs.readFileSync(viteConfigPath, 'utf8');
-    
-    // Add more aggressive optimizations
-    const additionalOptimizations = `
-    // Enhanced performance optimizations
-    build: {
-      outDir: 'dist',
-      target: 'es2015',
-      minify: 'terser',
-      sourcemap: false,
-      chunkSizeWarningLimit: 1000,
-      cssCodeSplit: true,
-      assetsInlineLimit: 4096,
-      reportCompressedSize: true,
-      emptyOutDir: true,
-      copyPublicDir: true,
-      // Enhanced performance optimizations
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-          pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn', 'console.error'],
-          passes: 5,
-          unsafe: true,
-          unsafe_comps: true,
-          unsafe_math: true,
-          unsafe_proto: true,
-          unsafe_arrows: true,
-          unsafe_methods: true,
-          unsafe_regexp: true,
-          unsafe_undefined: true,
-          collapse_vars: true,
-          sequences: true,
-          dead_code: true,
-          conditionals: true,
-          comparisons: true,
-          evaluate: true,
-          booleans: true,
-          loops: true,
-          unused: true,
-          hoist_funs: true,
-          hoist_vars: true,
-          if_return: true,
-          join_vars: true,
-          cascade: true,
-          side_effects: true,
-          properties: true,
-          reduce_vars: true,
-          reduce_funcs: true,
-          keep_fargs: false,
-          keep_fnames: false,
-          keep_infinity: false,
-          toplevel: true,
-          warnings: false,
-          negate_iife: true,
-          screw_ie8: true,
-          typeofs: true,
-          global_defs: {
-            'process.env.NODE_ENV': '"production"'
-          }
-        },
-        mangle: {
-          safari10: true,
-          toplevel: true,
-        },
-        format: {
-          comments: false,
-          ecma: 2015,
-        },
-      },
-      rollupOptions: {
-        maxParallelFileOps: 2,
-        treeshake: {
-          moduleSideEffects: false,
-        },
-        external: id => {
-          if (id.includes('next/') || id.includes('next')) {
-            return true;
-          }
-          return false;
-        },
-        output: {
-          manualChunks: id => {
-            if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-              return 'vendor';
+// 5. Create optimized build configuration
+async function createOptimizedConfig() {
+  console.log("⚙️  Creating optimized configuration...");
+
+  const viteConfig = `import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
+export default defineConfig({
+  plugins: [
+    react({
+      jsxRuntime: 'automatic',
+    })
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './app'),
+      '@components': path.resolve(__dirname, './app/components'),
+      '@pages': path.resolve(__dirname, './app/pages'),
+      '@utils': path.resolve(__dirname, './utils'),
+      '@types': path.resolve(__dirname, './types'),
+    },
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    minify: 'esbuild',
+    target: 'es2020',
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react';
             }
-            if (id.includes('node_modules/react-router-dom')) {
+            if (id.includes('react-router')) {
               return 'router';
             }
-            if (
-              id.includes('node_modules/framer-motion') ||
-              id.includes('node_modules/lucide-react')
-            ) {
-              return 'ui';
+            if (id.includes('@heroicons') || id.includes('lucide-react')) {
+              return 'icons';
             }
-            if (id.includes('node_modules/web-vitals')) {
-              return 'page';
+            if (id.includes('framer-motion')) {
+              return 'motion';
             }
-            if (id.includes('node_modules')) {
-              return 'libs';
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'utils';
             }
-          },
-          assetFileNames: 'assets/[name]-[hash][extname]',
-          chunkFileNames: 'assets/[name]-[hash].js',
-          entryFileNames: 'assets/[name]-[hash].js',
+            if (id.includes('web-vitals')) {
+              return 'analytics';
+            }
+            if (id.includes('react-helmet-async')) {
+              return 'seo';
+            }
+            return 'vendor';
+          }
+          // Split app code by feature
+          if (id.includes('/app/components/')) {
+            return 'components';
+          }
+          if (id.includes('/app/hooks/')) {
+            return 'hooks';
+          }
+          if (id.includes('/app/utils/')) {
+            return 'utils';
+          }
+          return undefined;
         },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    `;
-    
-    console.log('✅ Bundle configuration optimized');
-  }
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: false,
+  },
+  server: {
+    port: 3000,
+    open: true,
+    host: true,
+    cors: true,
+  },
+  preview: {
+    port: 4173,
+    open: true,
+    host: true,
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      '@heroicons/react/24/outline',
+      'framer-motion',
+      'clsx',
+      'tailwind-merge'
+    ],
+  },
+  css: {
+    devSourcemap: true,
+  },
+});`;
+
+  fs.writeFileSync(
+    path.join(__dirname, "..", "vite.config.optimized.ts"),
+    viteConfig,
+  );
+
+  console.log("✅ Optimized configuration created: vite.config.optimized.ts");
 }
 
-// Main optimization function
-function runOptimizations() {
+// Main execution
+async function main() {
   try {
-    console.log('🔧 Running performance optimizations...');
-    
-    // Generate performance report
-    generatePerformanceReport();
-    
-    // Optimize bundle configuration
-    optimizeBundleConfig();
-    
-    console.log('✅ All performance optimizations completed successfully!');
-    console.log('📊 Performance metrics:');
-    console.log('   - Bundle size: < 200KB gzipped');
-    console.log('   - Load time: < 2.5s LCP');
-    console.log('   - Interactivity: < 100ms FID');
-    console.log('   - Stability: < 0.1 CLS');
-    console.log('   - Performance: 90+ Lighthouse score');
-    
+    await optimizeImages();
+    await analyzeBundleSize();
+    await checkPerformanceIssues();
+    await generatePerformanceReport();
+    await createOptimizedConfig();
+
+    console.log("🎉 Enhanced performance optimization completed!");
+    console.log("📊 Check performance-report.json for detailed analysis");
+    console.log(
+      "⚙️  Use vite.config.optimized.ts for better build performance",
+    );
   } catch (error) {
-    console.error('❌ Error during optimization:', error);
+    console.error("❌ Error during optimization:", error.message);
     process.exit(1);
   }
 }
 
-// Run optimizations
-runOptimizations();
+main();
