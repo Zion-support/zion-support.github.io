@@ -17,18 +17,19 @@ const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   useEffect(() => {
   
-    consthandleResize= () => {
-  
-      if (windo w.innerWidth >=1024) {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
         setIsOpen(false)
      }
     }
-    consthandleScroll= () => {setIsScrolled(windo w.scrollY >50)
-   }
-    windo w.addEventListener('resize', handleResize)
-    windo w.addEventListener('scroll', handleScroll)
-    return () => {windo w.removeEventListener('resize', handleResize)
-      windo w.removeEventListener('scroll', handleScroll)
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('scroll', handleScroll)
    }
   }, [])
   const toggleMenu = () => setIsOpen(!isOpen)
@@ -44,7 +45,8 @@ const Navigation: React.FC = () => {
     setIsOpen(false)
  }
 
-  // ServicedataconstaiServices= [
+  // Service data
+  const aiServices = [
     {name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights'},
     {name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows'},
     {name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations'},
