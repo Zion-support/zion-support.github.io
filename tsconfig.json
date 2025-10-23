@@ -5,14 +5,9 @@
       "dom.iterable",
       "esnext"
     ],
-    "types": [
-      "jest",
-      "node"
-    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
-    "noImplicitAny": false,
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
@@ -26,8 +21,7 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true,
-    "target": "ES2017"
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
