@@ -2,7 +2,6 @@
 import React from "react";
 
 const SEOHead: React.FC = () => {
-  
   return (
     <div>
       <h1>SEOHead</h1>
@@ -11,4 +10,3 @@ const SEOHead: React.FC = () => {
 };
 
 export default SEOHead;
-
