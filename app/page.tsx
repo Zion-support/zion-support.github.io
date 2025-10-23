@@ -1,5 +1,5 @@
-'use client'
-import React from 'react'
+"use client"
+import React from "react"
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
@@ -7,28 +7,48 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lu
 export default function HomePage() {
   const features = [
     {
+      title: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: [
+        "Machine Learning Implementation",
+        "Natural Language Processing",
+        "Predictive Analytics",
+        "Automated Decision Making"
+      ]
     },
     {
+      title: "IT Services",
+      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
       icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      benefits: [
+        "Cloud Infrastructure Setup",
+        "Cybersecurity Solutions",
+        "Digital Transformation",
+        "24/7 Technical Support"
+      ]
     },
     {
+      title: "Micro SaaS",
+      description: "Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises",
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      benefits: [
+        "Rapid Deployment",
+        "Scalable Architecture",
+        "Custom Development",
+        "Ongoing Maintenance"
+      ]
     },
     {
+      title: "Business Intelligence",
+      description: "Advanced analytics and reporting tools to help you make data-driven decisions and optimize your business performance",
       icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      benefits: [
+        "Data Visualization",
+        "Performance Analytics",
+        "Custom Dashboards",
+        "Real-time Reporting"
+      ]
     }
   ]
 
@@ -128,7 +148,7 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let's discuss how our AI and IT solutions can help you achieve your goals.
+            Let&apos;s discuss how our AI and IT solutions can help you achieve your goals.
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
             Start Your Journey
