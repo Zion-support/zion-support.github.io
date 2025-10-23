@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 
 
 const SupportPage: React.FC = () => {
@@ -37,9 +39,8 @@ const SupportPage: React.FC = () => {
 
   return (
     <>
-
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
       </div>
     </>

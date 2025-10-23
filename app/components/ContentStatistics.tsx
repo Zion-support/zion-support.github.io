@@ -130,89 +130,93 @@ const ContentStatistics: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-      <div className="max-w-7xl mx-auto px-4">
+        
+          </div><div className="max-w-7xl mx-auto px-4">
         {/* Statistics Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        
+          </div><div className="text-center mb-16">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Impact in Numbers
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how we've helped businesses transform with our AI and IT
             solutions.
           </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
 
                 <stat.icon className="w-8 h-8 text-white" />
-              </div>
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+        
+          </div><div className={`text-4xl font-bold ${stat.color} mb-2`}>
                 {stat.value}
                 {stat.suffix}
-              </div>
-              <div className="text-gray-300 font-medium">{stat.label}</div>
-            </div>
+        
+          </div><div className="text-gray-300 font-medium">{stat.label}
+        </div>
+      </div>
           ))}
         </div>
 
         {/* Features Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Why Choose Our Solutions?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our solutions deliver unmatched performance, security, and
             scalability.
           </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+        
+          </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
+          <h$1 className="text-xl font-semibold text-white mb-2">
                 {feature.title}
               </h3>
-              <p className="text-gray-300">{feature.description}</p>
+          
+          </div><p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>
 
         {/* Benefits Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Key Benefits</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <h$1 className="text-3xl font-bold text-white mb-4">Key Benefits</h2>
+          
+          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the power of our solutions for your business.
           </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <div className="space-y-4">
+        
+          </div><div className="space-y-4">
             {benefits.slice(0, 4).map((benefit, index) => (
-              <div key={index} className="flex items-center text-gray-300">
+        
+          </div><div key={index} className="flex items-center text-gray-300">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                 {benefit}
               </div>
             ))}
-          </div>
-          <div className="space-y-4">
+        <div className="space-y-4">
             {benefits.slice(4).map((benefit, index) => (
-              <div key={index} className="flex items-center text-gray-300">
+        
+          </div><div key={index} className="flex items-center text-gray-300">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                 {benefit}
               </div>
             ))}
-          </div>
         </div>
+      </div>
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        
+          </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+          
+          </div><p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already using our solutions to drive
               growth and innovation.
             </p>
@@ -224,8 +228,8 @@ const ContentStatistics: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Learn More
               </button>
-            </div>
-          </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>

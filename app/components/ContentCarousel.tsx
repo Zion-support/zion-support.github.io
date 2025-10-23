@@ -92,24 +92,29 @@ const ContentCarousel: React.FC = () => {
   return (
     <div className="relative">
       {/* Carousel Container */}
-      <div className="relative overflow-hidden rounded-2xl">
+        
+          </div><div className="relative overflow-hidden rounded-2xl">
 
           {slides.map((slide, index) => (
-            <div key={index} className="w-full flex-shrink-0">
-              <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8 md:p-12">
-                <div className="max-w-4xl mx-auto">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+          </div><div key={index} className="w-full flex-shrink-0">
+        
+          </div><div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8 md:p-12">
+        
+          </div><div className="max-w-4xl mx-auto">
+        
+          </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}
-                    <div>
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+        
+          </div><div>
+        
+          </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                         <slide.icon className="w-8 h-8 text-white" />
-                      </div>
-
-                      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                         {slide.title}
                       </h2>
-
-                      <p className="text-xl text-gray-300 mb-8">
+          
+          </div><p className="text-xl text-gray-300 mb-8">
                         {slide.description}
                       </p>
 
@@ -129,20 +134,23 @@ const ContentCarousel: React.FC = () => {
 
                     {/* Visual Element */}
                     <div className="flex justify-center">
-                      <div className="w-80 h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        
+          </div><div className="w-80 h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
+        
+          </div><div className="text-center">
+        
+          </div><div className="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <slide.icon className="w-12 h-12 text-white" />
-                          </div>
-                          <p className="text-white/60 text-sm">
+          
+          </div><p className="text-white/60 text-sm">
                             Interactive Demo
                           </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </div>
+      </div>
+        </div>
+      </div>
+        </div>
+      </div>
             </div>
           ))}
         </div>
@@ -162,14 +170,14 @@ const ContentCarousel: React.FC = () => {
 
       {/* Benefits Section */}
       <div className="mt-16">
-        <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+        
+          </div><div className="text-center mb-12">
+          <h$1 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
+          
+          </div><p className="text-gray-300 max-w-2xl mx-auto">
             Our solutions deliver unmatched value and performance for your
             business.
           </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />

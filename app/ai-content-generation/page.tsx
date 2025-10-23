@@ -114,41 +114,45 @@ const AIContentGenerationPage: React.FC = () => {
         <title>AI Content Generation - Zion Tech Group</title>
 
       </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
+        
+          </div><div className="container mx-auto px-4 py-20">
+        
+          </div><div className="text-center mb-16">
+          <h$1 className="text-5xl font-bold text-white mb-6">
             AI Content Generation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your content strategy with our advanced AI-powered content
             generation platform. Create engaging, high-quality content at scale
             for blogs, social media, marketing materials, and more.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center text-green-400">
+        
+          </div><div className="flex items-center text-green-400">
               <CheckCircle className="w-5 h-5 mr-2" />
               <span>10x Faster Content Creation</span>
-            </div>
-            <div className="flex items-center text-green-400">
+        
+          </div><div className="flex items-center text-green-400">
               <CheckCircle className="w-5 h-5 mr-2" />
               <span>SEO-Optimized Output</span>
-            </div>
-            <div className="flex items-center text-green-400">
+        
+          </div><div className="flex items-center text-green-400">
               <CheckCircle className="w-5 h-5 mr-2" />
               <span>Brand Voice Consistency</span>
-            </div>
-          </div>
+        </div>
+      </div>
         </div>
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-
-              <div className="text-blue-400 mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-3">
+        
+          </div><div className="text-blue-400 mb-4">{feature.icon}
+          <h$1 className="text-xl font-semibold text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-300 mb-4">{feature.description}</p>
+          
+          </div><p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
 
                     <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
@@ -162,31 +166,33 @@ const AIContentGenerationPage: React.FC = () => {
 
         {/* Pricing Section */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
+          <h$1 className="text-4xl font-bold text-white text-center mb-12">
             Choose Your Plan
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+          </div><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+        
+          </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-400 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">
+          <h$1 className="text-2xl font-bold text-white mb-2">
                     {plan.name}
                   </h3>
-                  <div className="flex items-baseline justify-center">
+        
+          </div><div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">
                       {plan.price}
                     </span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300 mt-2">{plan.description}</p>
-                </div>
-                <ul className="space-y-3 mb-8">
+          
+          </div><p className="text-gray-300 mt-2">{plan.description}</p>
+            <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
@@ -199,15 +205,16 @@ const AIContentGenerationPage: React.FC = () => {
                 </button>
               </div>
             ))}
-          </div>
         </div>
+      </div>
 
         {/* CTA Section */}
         <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-12 border border-white/20">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h$1 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Content Strategy?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          
+          </div><p className="text-xl text-gray-300 mb-8">
             Join thousands of businesses already using our AI content generation
             platform.
           </p>
@@ -218,10 +225,10 @@ const AIContentGenerationPage: React.FC = () => {
             <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Schedule Demo
             </button>
-          </div>
         </div>
       </div>
-    </div>
+        </div>
+      </div>
   );
 };
 

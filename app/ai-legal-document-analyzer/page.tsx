@@ -3,25 +3,25 @@
   ];
 
   return (
-
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
+          
+        </section><div className="max-w-7xl mx-auto">
+        
+          </div><div className="text-center mb-16">
+          <h$1 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300">{feature.description}</p>
+          
+          </div><p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
                 Start Your Project
@@ -29,8 +29,8 @@
 
                 Learn More
               </a>
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
       </div>
     </React.Fragment>

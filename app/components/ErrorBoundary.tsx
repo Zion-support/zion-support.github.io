@@ -19,9 +19,8 @@ class ErrorBoundary extends React.Component<
       }
 
       return (
-
-          </div>
         </div>
+      </div>
       );
     }
 

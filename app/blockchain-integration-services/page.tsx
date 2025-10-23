@@ -57,12 +57,15 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      
+          </div><section className="relative py-20 px-4">
+        
+        </section><div className="max-w-7xl mx-auto text-center">
+          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Blockchain Integration Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain integration
             solutions. Powered by cutting-edge AI technology and industry
             expertise.
@@ -72,64 +75,70 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        
+        </section><div className="max-w-7xl mx-auto">
+        
+          </div><div className="text-center mb-16">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Blockchain Integration Services?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our blockchain integration solutions deliver unmatched
               performance, security, and scalability.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+          </div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
+          <h$1 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300">{feature.description}</p>
+          
+          </div><p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-          </div>
         </div>
+      </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        
+        </section><div className="max-w-7xl mx-auto">
+        
+          </div><div className="text-center mb-16">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our blockchain integration solutions for
               your business.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
+        
+          </div><div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
-          </div>
         </div>
+      </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        
+        </section><div className="max-w-4xl mx-auto text-center">
+        
+          </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+          
+          </div><p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your blockchain integration needs
               and get a customized solution.
             </p>
@@ -142,8 +151,8 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-            </div>
-          </div>
+        </div>
+      </div>
         </div>
       </section>
 

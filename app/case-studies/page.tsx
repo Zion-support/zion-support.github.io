@@ -1,3 +1,6 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const CaseStudiesPage: React.FC = () => {
@@ -54,19 +57,21 @@ const CaseStudiesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-
-            </div>
-          </div>
+      
+    </><Helmet>
+        </div>
+      </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          
+        </section><div className="max-w-4xl mx-auto text-center">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Create Your Success Story?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+          
+          </div><p className="text-xl text-gray-300 mb-8">
               Let's discuss how we can help transform your business with our AI
               and IT solutions.
             </p>
@@ -78,8 +83,8 @@ const CaseStudiesPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 View All Case Studies
               </button>{" "}
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
       </div>
     </>

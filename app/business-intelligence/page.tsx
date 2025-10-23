@@ -273,14 +273,19 @@ const BusinessIntelligencePage: React.FC = () => {
       </Helmet>
 
       {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        
+          </div><div className="relative overflow-hidden">
+        
+          </div><div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+        
+          </div><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        
+          </div><div className="text-center">
+          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Business Intelligence Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into strategic insights that drive business
               growth. Make informed decisions with our comprehensive BI
               solutions.
@@ -292,32 +297,33 @@ const BusinessIntelligencePage: React.FC = () => {
 
                 Learn More
               </Link>
-            </div>
-          </div>
+        </div>
+      </div>
         </div>
       </div>
 
       {/* Search and Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col md:flex-row gap-6 mb-12">
-          <div className="flex-1">
-            <div className="relative">
+        
+          </div><div className="flex flex-col md:flex-row gap-6 mb-12">
+        
+          </div><div className="flex-1">
+        
+          </div><div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-2">
+        
+          </div><div className="flex flex-wrap gap-2">
 
                 {category}
               </button>
             ))}
-          </div>
         </div>
+      </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-              <div className="flex items-center justify-between mb-6">
+        
+          </div><div className="flex items-center justify-between mb-6">
 
                   {service.icon}
                 </div>
@@ -326,9 +332,7 @@ const BusinessIntelligencePage: React.FC = () => {
                     Popular
                   </span>
                 )}
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+          <h$1 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                 {service.name}
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
@@ -336,17 +340,18 @@ const BusinessIntelligencePage: React.FC = () => {
               </p>
 
               <div className="space-y-4 mb-6">
-                <div className="flex items-center justify-between">
+        
+          </div><div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-white">
                     {service.price}
                   </span>
-                  <div className="flex items-center space-x-1">
+        
+          </div><div className="flex items-center space-x-1">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                     <span className="text-gray-300">{service.rating}</span>
                     <span className="text-gray-500">({service.users})</span>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4 text-sm text-gray-400">
+        
+          </div><div className="flex items-center space-x-4 text-sm text-gray-400">
                   <span className="flex items-center">
                     <Users className="w-4 h-4 mr-1" />
                     {service.users} users
@@ -355,49 +360,46 @@ const BusinessIntelligencePage: React.FC = () => {
                     <TrendingUp className="w-4 h-4 mr-1" />
                     {service.category}
                   </span>
-                </div>
-              </div>
-
-              <div className="space-y-3 mb-6">
-                <h4 className="font-semibold text-white">Key Features:</h4>
-                <ul className="space-y-2">
+        
+          </div><div className="space-y-3 mb-6">
+          <h$1 className="font-semibold text-white">Key Features:</h4>
+            
+          </div><ul className="space-y-2">
 
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div className="space-y-3 mb-8">
-                <h4 className="font-semibold text-white">Capabilities:</h4>
-                <div className="flex flex-wrap gap-2">
+        <div className="space-y-3 mb-8">
+          <h$1 className="font-semibold text-white">Capabilities:</h4>
+        
+          </div><div className="flex flex-wrap gap-2">
 
                       {capability}
                     </span>
                   ))}
-                </div>
-              </div>
-
-              <div className="flex space-x-3">
+        
+          </div><div className="flex space-x-3">
 
                   Get Started
                 </Link>
                 <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
                   <Eye className="w-5 h-5" />
                 </button>
-              </div>
-            </div>
+        </div>
+      </div>
           ))}
         </div>
 
         {filteredServices.length === 0 && (
           <div className="text-center py-12">
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">
+          <h$1 className="text-xl font-semibold text-white mb-2">
               No services found
             </h3>
-            <p className="text-gray-400">
+          
+          </div><p className="text-gray-400">
               Try adjusting your search or filter criteria
             </p>
           </div>
@@ -406,12 +408,15 @@ const BusinessIntelligencePage: React.FC = () => {
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        
+          </div><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+          </div><div className="text-center">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Data into Insights?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join hundreds of businesses who have unlocked the power of their
               data with our comprehensive BI solutions.
             </p>
@@ -422,8 +427,8 @@ const BusinessIntelligencePage: React.FC = () => {
 
                 Schedule a Demo
               </Link>
-            </div>
-          </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>

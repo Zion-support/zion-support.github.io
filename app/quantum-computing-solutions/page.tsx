@@ -1,21 +1,18 @@
 "use client";
 import React from "react";
-
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
         {/* Features Section */}
-
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
+          <h$1 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
 
                 </div>
               ))}
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
         {/* CTA Section */}
@@ -28,8 +25,8 @@ import React from "react";
 
                 Learn More
               </a>
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
       </div>
     </React.Fragment>

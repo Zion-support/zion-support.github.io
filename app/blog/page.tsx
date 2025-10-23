@@ -1,3 +1,6 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const BlogPage: React.FC = () => {
@@ -47,23 +50,26 @@ const BlogPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
-
-            </div>
-          </div>
+      
+    </><Helmet>
+        </div>
+      </div>
         </section>
 
         {/* Blog Posts */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                  <div className="h-48 bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
-                    <div className="text-6xl text-purple-400">📝</div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
+          
+        </section><div className="max-w-7xl mx-auto">
+        
+          </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+          </div><div className="h-48 bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
+        
+          </div><div className="text-6xl text-purple-400">📝
+        
+          </div><div className="p-6">
+        
+          </div><div className="flex items-center gap-4 mb-4">
                       <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">
                         {post.category}
                       </span>
@@ -72,33 +78,32 @@ const BlogPage: React.FC = () => {
                           Featured
                         </span>
                       )}
-                    </div>
-
-                    <h2 className="text-xl font-bold text-white mb-3 line-clamp-2">
+          <h$1 className="text-xl font-bold text-white mb-3 line-clamp-2">
                       {post.title}
                     </h2>
-
-                    <p className="text-gray-300 mb-4 line-clamp-3">
+          
+          </div><p className="text-gray-300 mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
 
                     <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-1">
+        
+          </div><div className="flex items-center gap-4">
+        
+          </div><div className="flex items-center gap-1">
                           <User className="w-4 h-4" />
                           <span>{post.author}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
+        
+          </div><div className="flex items-center gap-1">
                           {" "}
                           <Calendar className="w-4 h-4" />
                           <span>{post.date}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1">
+        
+          </div><div className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
                         <span>{post.readTime}</span>
-                      </div>
-                    </div>
+        </div>
+      </div>
 
                     <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
                       {" "}
@@ -108,17 +113,19 @@ const BlogPage: React.FC = () => {
                   </div>
                 </article>
               ))}
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
         {/* Newsletter Signup */}
         <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          
+        </section><div className="max-w-4xl mx-auto text-center">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Stay Updated
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+          
+          </div><p className="text-xl text-gray-300 mb-8">
               Subscribe to our newsletter for the latest insights and updates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">

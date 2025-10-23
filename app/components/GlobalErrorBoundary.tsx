@@ -40,7 +40,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className="error-boundary">
-          <h1>Something went wrong.</h1>
+          <h$1>Something went wrong.</h1>
           <details style={{ whiteSpace: "pre-wrap" }}>
             {this.state.error && this.state.error.toString()}
             <br />

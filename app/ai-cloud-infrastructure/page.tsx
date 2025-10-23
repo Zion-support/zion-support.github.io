@@ -55,12 +55,15 @@ const CloudInfrastructurePage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        
+          </div><section className="relative py-20 px-4">
+          
+        </section><div className="max-w-7xl mx-auto text-center">
+          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cloud Infrastructure
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced cloud infrastructure
               solutions. Powered by cutting-edge AI technology and industry
               expertise.
@@ -70,60 +73,66 @@ const CloudInfrastructurePage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          
+        </section><div className="max-w-7xl mx-auto">
+        
+          </div><div className="text-center mb-12">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our Cloud Infrastructure?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Advanced solutions designed for modern business needs
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                   <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">
+          <h$1 className="text-xl font-semibold text-white mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300">{feature.description}</p>
+          
+          </div><p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          
+        </section><div className="max-w-7xl mx-auto">
+        
+          </div><div className="text-center mb-12">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Key Benefits
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the power of our cloud infrastructure solutions for
                 your business.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
+        
+          </div><div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          
+        </section><div className="max-w-4xl mx-auto text-center">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+          
+          </div><p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your cloud infrastructure needs and
               get a customized solution.
             </p>
@@ -136,8 +145,8 @@ const CloudInfrastructurePage: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
       </div>
     </React.Fragment>

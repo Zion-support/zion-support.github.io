@@ -5,9 +5,9 @@ import { Helmet } from "react-helmet-async";
       <Helmet>
 
             </p>
-          </div>
         </div>
       </div>
-    </div>
+        </div>
+      </div>
   );
 }

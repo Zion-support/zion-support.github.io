@@ -4,8 +4,8 @@
 
                 Learn More
               </a>
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
       </div>
     </React.Fragment>

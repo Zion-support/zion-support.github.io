@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 
 
 const DemoPage: React.FC = () => {
@@ -40,33 +42,35 @@ const DemoPage: React.FC = () => {
 
   return (
     <>
-
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
         {/* Demo Selection */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        
+    </><section className="py-20 px-4">
+          
+        </section><div className="max-w-7xl mx-auto">
+        
+          </div><div className="text-center mb-16">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Demo
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          
+          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Select from our range of interactive demonstrations to see our
                 solutions in action.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-
-                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        
+          </div><div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
                     <demo.icon className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
-                  <p className="text-sm mb-4">{demo.description}</p>
+          <h$1 className="text-xl font-bold mb-2">{demo.title}</h3>
+          
+          </div><p className="text-sm mb-4">{demo.description}</p>
                   <div className="flex items-center gap-4 text-sm">
-                    <div className="flex items-center gap-1">
+        
+          </div><div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
                       <span>{demo.duration}</span>
                     </div>
@@ -80,20 +84,24 @@ const DemoPage: React.FC = () => {
 
             {/* Selected Demo Details */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">
+        
+          </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+          </div><div>
+          <h$1 className="text-2xl font-bold text-white mb-4">
                     {currentDemo.title}
                   </h3>
-                  <p className="text-gray-300 mb-6">
+          
+          </div><p className="text-gray-300 mb-6">
                     {currentDemo.description}
                   </p>
 
                   <div className="space-y-4 mb-8">
-                    <h4 className="text-lg font-semibold text-white">
+          <h$1 className="text-lg font-semibold text-white">
                       Key Features:
                     </h4>
-                    <ul className="space-y-2">
+            
+          </div><ul className="space-y-2">
                       {currentDemo.features.map((feature, index) => (
                         <li key={index} className="flex items-start">
                           <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0 mt-1" />
@@ -107,66 +115,70 @@ const DemoPage: React.FC = () => {
                     <Play className="w-5 h-5 mr-2" />
                     Launch Demo
                   </button>
-                </div>
-
-                <div className="bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-2xl p-8 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <div className="bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-2xl p-8 flex items-center justify-center">
+        
+          </div><div className="text-center">
+        
+          </div><div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <currentDemo.icon className="w-12 h-12 text-white" />
-                    </div>
-                    <h4 className="text-xl font-bold text-white mb-2">
+          <h$1 className="text-xl font-bold text-white mb-2">
                       Interactive Demo
                     </h4>
-                    <p className="text-gray-300">
+          
+          </div><p className="text-gray-300">
                       Click to start the demonstration
                     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+        </div>
+      </div>
           </div>
         </section>
 
         {/* Testimonials */}
         <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          
+        </section><div className="max-w-7xl mx-auto">
+        
+          </div><div className="text-center mb-16">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Clients Say
               </h2>
-              <p className="text-xl text-gray-300">
+          
+          </div><p className="text-xl text-gray-300">
                 See what industry leaders think about our solutions.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                  <div className="flex items-center mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+          </div><div className="flex items-center mb-4">
 
                     ))}
-                  </div>
-                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+          
+          </div><p className="text-gray-300 mb-4">"{testimonial.content}"</p>
                   <div>
-                    <div className="font-semibold text-white">
+        
+          </div><div className="font-semibold text-white">
                       {testimonial.name}
-                    </div>
-                    <div className="text-sm text-gray-400">
+        
+          </div><div className="text-sm text-gray-400">
                       {testimonial.role}, {testimonial.company}
-                    </div>
-                  </div>
+        </div>
+      </div>
                 </div>
               ))}
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          
+        </section><div className="max-w-4xl mx-auto text-center">
+          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to See More?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+          
+          </div><p className="text-xl text-gray-300 mb-8">
               Schedule a personalized demo with our experts to see how our
               solutions can meet your specific needs.
             </p>
@@ -178,8 +190,8 @@ const DemoPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Contact Sales
               </button>
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
       </div>
     </>

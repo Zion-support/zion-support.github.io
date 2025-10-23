@@ -4,12 +4,11 @@
 
                 View All Services
               </a>
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
-
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
 
                 Start Your Project
@@ -17,8 +16,8 @@
 
                 Learn More
               </a>
-            </div>
-          </div>
+        </div>
+      </div>
         </section>
       </div>
     </React.Fragment>
