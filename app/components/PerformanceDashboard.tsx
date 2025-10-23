@@ -68,16 +68,14 @@ const PerformanceDashboard: React.FC = () => {
           <p className="text-3xl font-bold text-green-600">
             {metrics.memoryUsage}MB
           </p>
+        </div>
         <div className="bg-purple-50 rounded-lg p-4">
           <h3 className="text-lg font-semibold text-purple-900 mb-2">FPS</h3>
           <p className="text-3xl font-bold text-purple-600">{metrics.fps}</p>
-        </div>
         </div>
       </div>
     </div>
   );
 };
-
-export default Page;
 
 export default PerformanceDashboard;

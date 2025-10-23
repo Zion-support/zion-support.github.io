@@ -466,19 +466,16 @@ const App = memo(() => {
     }
   }, []);
   return (
-    <GlobalErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-gray-50">
-            <main className="flex-1">
-              <ErrorBoundary>
-                <PerformanceMonitor />
-                <AccessibilityEnhancer>
-                  <SEOOptimizer />
-
-                  <Suspense fallback={<LoadingFallback />}>
-                    <ErrorBoundary>
-                      <Routes>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <main className="flex-1">
+            <GlobalErrorBoundary />
+            <PerformanceMonitor />
+            <SEOOptimizer />
+            <AccessibilityEnhancer>
+              <Suspense fallback={<LoadingFallback />}>
+                <Routes>
                         {/* Main Pages */}
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
@@ -1089,18 +1086,15 @@ const App = memo(() => {
                             </div>
                           }
                         />
-                      </Routes>
-                    </ErrorBoundary>
-                  </Suspense>
-                </AccessibilityEnhancer>
-              </ErrorBoundary>
+                </Routes>
+              </Suspense>
+            </AccessibilityEnhancer>
             </main>
 
             <Footer />
           </div>
         </Router>
       </HelmetProvider>
-    </GlobalErrorBoundary>
   );
 });
 
