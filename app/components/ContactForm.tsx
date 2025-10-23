@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
-        <p>Your message has been sent successfully. We'll get back to you soon.</p>p>
+        <p>Your message has been sent successfully. We'll get back to you soon.</p>
       </div>
     );
   }
@@ -197,7 +197,8 @@ const ContactForm: React.FC = () => {
                 status.type === 'success' ? 'bg-green-500/20 text-green-300' :
                 status.type === 'error' ? 'bg-red-500/20 text-red-300' :
                 'bg-blue-500/20 text-blue-300'
-              }`}>{status.type === 'success' ? (</div>
+              }`}>
+                {status.type === 'success' ? (
                   <CheckCircle className="w-5 h-5 flex-shrink-0" />
                 ) : status.type === 'error' ? (
                   <AlertCircle className="w-5 h-5 flex-shrink-0" />

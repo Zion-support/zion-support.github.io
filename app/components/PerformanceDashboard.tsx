@@ -150,18 +150,18 @@ isMonitoring
 <MemoryStick className="w-4 h-4 text-purple-400" />
 <span className="text-gray-300 text-sm">Memory Usage</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>
 </div>
 <div className="bg-white/5 rounded-lg p-4">
 <div className="flex items-center gap-2 mb-2">
 <TrendingUp className="w-4 h-4 text-orange-400" />
 <span className="text-gray-300 text-sm">FPS</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>
+<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>
 </div>
 </div>
 <div className="mt-6 text-center">
-<p className="text-gray-400 text-sm">{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}</p>p>
+<p className="text-gray-400 text-sm">{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}</p>
 </div>
 </div>
 )

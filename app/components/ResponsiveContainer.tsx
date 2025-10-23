@@ -30,7 +30,7 @@ const ResponsiveContainer = ({
       'mx-auto px-4 sm:px-6 lg:px-8',
       maxWidthClasses[maxWidth],
       className
-    )}>{children}</div>div>
+    )}>{children}</div>
   );
 };
 

@@ -194,15 +194,16 @@ class AdvancedErrorBoundary extends Component<
                     />
                   </svg>
                 </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>h2>
-                <p className='mt-2 text-sm text-gray-600'>We&apos;re sorry, but something unexpected happened. Our team</p>
+                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>
+                <p className='mt-2 text-sm text-gray-600'>
+                  We&apos;re sorry, but something unexpected happened. Our team
                   has been notified.
                 </p>
               </div>
 
               {process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>h3>
+                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>
                   <div className='mt-2 text-sm text-red-700'>
                     <p>
                       <strong>Error ID:</strong> {this.state.errorId}
@@ -214,37 +215,38 @@ class AdvancedErrorBoundary extends Component<
                       <summary className='cursor-pointer font-medium'>
                         Stack Trace
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</p>pre>
+                      <pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</pre>
                     </details>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
                         Component Stack
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</p>pre>
+                      <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</pre>
                     </details>
                   </div>
                 </div>
               )}
 
-              <div className='mt-6 space-y-3'>{this.props.enableRetry &&</div>
+              <div className='mt-6 space-y-3'>
+                {this.props.enableRetry &&
                   this.retryCount < this.maxRetries && (
                     <button
                       onClick={this.handleRetry}
                       className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                    >Try Again ({this.maxRetries - this.retryCount} attempts</button>
-                      left)
+                    >
+                      Try Again ({this.maxRetries - this.retryCount} attempts left)
                     </button>
                   )}
 
                 <button
                   onClick={this.handleReload}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >Reload Page</button>button>
+                >Reload Page</button>
 
                 <button
                   onClick={this.handleGoHome}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >Go to Homepage</button>button>
+                >Go to Homepage</button>
               </div>
 
               <div className='mt-6 text-center'>
@@ -253,7 +255,7 @@ class AdvancedErrorBoundary extends Component<
                   <a
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
-                  >kleber@ziontechgroup.com</a>a>
+                  >kleber@ziontechgroup.com</a>
                 </p>
               </div>
             </div>

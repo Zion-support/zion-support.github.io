@@ -56,7 +56,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 
   if (href) {
     return (
-      <a href={href} className={buttonClasses}>{content}</a>a>
+      <a href={href} className={buttonClasses}>{content}</a>
     );
   }
 

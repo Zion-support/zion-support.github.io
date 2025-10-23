@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 interface Slide {
-  icon: React.ComponentType<any>title: string</a>
+  icon: React.ComponentType<any>;
+  title: string;
   description: string
   features: string[]
   stats?: {
@@ -74,7 +75,7 @@ const ContentCarousel: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Discover Our Solutions</h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">Explore our comprehensive suite of AI-powered solutions designed to transform your business.</p>p>
+          <p className="text-xl text-purple-100 max-w-3xl mx-auto">Explore our comprehensive suite of AI-powered solutions designed to transform your business.</p>
         </div>
         <div className="relative">
 <div className="overflow-hidden rounded-xl">
@@ -107,7 +108,7 @@ const ContentCarousel: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>
         </div>
         {/* Carousel Container */}
         {/* Carousel */}
@@ -158,8 +159,8 @@ const ContentCarousel: React.FC = () => {
                     <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                       <currentSlideData.icon className="w-16 h-16 text-white" />
                     </div>
-                    <div className="text-4xl font-bold text-white mb-2">{currentSlideData.title}</div>div>
-                    <div className="text-gray-300">Slide {currentSlide + 1} of {slides.length}</div>div>
+                    <div className="text-4xl font-bold text-white mb-2">{currentSlideData.title}</div>
+                    <div className="text-gray-300">Slide {currentSlide + 1} of {slides.length}</div>
                   </div>
                 </div>
               </div>
