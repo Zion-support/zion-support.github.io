@@ -1,156 +1,162 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const AIChatbotBuilder: React.FC = () => {
-  const [botName, setBotName] = useState('');
-  const [botPurpose, setBotPurpose] = useState('');
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+const AiChatbotBuilderPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+    <React.Fragment>
+      <Helmet>
+        <title>Ai Chatbot Builder - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered ai chatbot builder solution for modern businesses." />
+        <meta name="keywords" content="AI ai chatbot builder, artificial intelligence, ai chatbot builder, AI solutions, intelligent automation" />
+      </Helmet>
       <Navigation />
-
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">
-            AI Chatbot Builder
-          </h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
-            Create intelligent chatbots for your website without coding
-          </p>
-
-          <div className="cyber-card p-8 mb-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Build Your Chatbot</h2>
-            <div className="space-y-6">
-              <div>
-                <label className="block text-white font-medium mb-2">Bot Name</label>
-                <input
-                  type="text"
-                  value={botName}
-                  onChange={(e) => setBotName(e.target.value)}
-                  className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                  placeholder="Enter your bot name..."
-                />
-              </div>
-              <div>
-                <label className="block text-white font-medium mb-2">Bot Purpose</label>
-                <select
-                  value={botPurpose}
-                  onChange={(e) => setBotPurpose(e.target.value)}
-                  className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                >
-                  <option value="">Select purpose...</option>
-                  <option value="customer-support">Customer Support</option>
-                  <option value="sales">Sales Assistant</option>
-                  <option value="lead-generation">Lead Generation</option>
-                  <option value="faq">FAQ Bot</option>
-                  <option value="booking">Booking Assistant</option>
-                </select>
-              </div>
-              <button className="cyber-button w-full">
-                Create Chatbot
-              </button>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Chatbot Builder
+  </
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai chatbot builder solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+  </
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+  </
             </div>
           </div>
-
-          <div className="cyber-card p-8 mb-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-300">Drag-and-drop builder</span>
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+  </
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI technology that drives results
+  </
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-300">Natural language processing</span>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results that drive business growth and efficiency
+  </
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-300">Multi-language support</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-300">Analytics dashboard</span>
-                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+  </
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+  </
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span className="text-gray-300">Integration with CRM</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span className="text-gray-300">Custom branding</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span className="text-gray-300">Live chat handoff</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span className="text-gray-300">API access</span>
-                </div>
-              </div>
             </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Basic</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>
-              <ul className="text-gray-300 space-y-2">
-                <li>1 chatbot</li>
-                <li>1,000 conversations/month</li>
-                <li>Basic templates</li>
-                <li>Email support</li>
-              </ul>
-            </div>
-            <div className="cyber-card p-6 text-center border-2 border-cyan-400">
-              <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$149/month</div>
-              <ul className="text-gray-300 space-y-2">
-                <li>5 chatbots</li>
-                <li>10,000 conversations/month</li>
-                <li>Advanced features</li>
-                <li>Priority support</li>
-                <li>Analytics</li>
-              </ul>
-            </div>
-            <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$399/month</div>
-              <ul className="text-gray-300 space-y-2">
-                <li>Unlimited chatbots</li>
-                <li>Unlimited conversations</li>
-                <li>Custom integrations</li>
-                <li>24/7 support</li>
-                <li>White-label option</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button mr-4"
-            >
-              📞 Call: (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Start Building
-            </a>
-          </div>
-        </div>
-      </main>
-
+        </section>
+      </div>
       <Footer />
-    </div>
-  );
-};
-
-export default AIChatbotBuilder;
+    </React.Fragment>
+  )
+}
+export default AiChatbotBuilderPage
+  </button>
+  </button>
+  </p>
+  </p>
+  </h2>
+  </button>
+  </button>
+  </h1>

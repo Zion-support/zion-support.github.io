@@ -1,218 +1,83 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const CloudMigration: React.FC = () => {
-  const [currentInfrastructure, setCurrentInfrastructure] = useState('');
-  const [targetCloud, setTargetCloud] = useState('');
-  const [migrationScope, setMigrationScope] = useState('');
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <Navigation />
-
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">
-            Cloud Migration Services
-          </h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
-            Seamlessly migrate your infrastructure to the cloud with zero downtime
-          </p>
-
-          <div className="cyber-card p-8 mb-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Migration Assessment</h2>
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-white font-medium mb-2">Current Infrastructure</label>
-                  <select
-                    value={currentInfrastructure}
-                    onChange={(e) => setCurrentInfrastructure(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                  >
-                    <option value="">Select current setup...</option>
-                    <option value="on-premise">On-Premise</option>
-                    <option value="hybrid">Hybrid Cloud</option>
-                    <option value="other-cloud">Other Cloud Provider</option>
-                    <option value="legacy">Legacy Systems</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Target Cloud</label>
-                  <select
-                    value={targetCloud}
-                    onChange={(e) => setTargetCloud(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                  >
-                    <option value="">Select target...</option>
-                    <option value="aws">Amazon Web Services</option>
-                    <option value="azure">Microsoft Azure</option>
-                    <option value="gcp">Google Cloud Platform</option>
-                    <option value="multi-cloud">Multi-Cloud</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Migration Scope</label>
-                  <select
-                    value={migrationScope}
-                    onChange={(e) => setMigrationScope(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                  >
-                    <option value="">Select scope...</option>
-                    <option value="lift-shift">Lift & Shift</option>
-                    <option value="replatform">Replatform</option>
-                    <option value="refactor">Refactor</option>
-                    <option value="rearchitect">Rearchitect</option>
-                  </select>
-                </div>
-              </div>
-              <button className="cyber-button w-full">
-                Get Migration Plan
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
               </button>
             </div>
           </div>
-
-          <div className="cyber-card p-8 mb-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Our Migration Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">1</div>
-                  <span className="text-gray-300">Assessment & Planning</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">2</div>
-                  <span className="text-gray-300">Architecture Design</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">3</div>
-                  <span className="text-gray-300">Migration Execution</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">4</div>
-                  <span className="text-gray-300">Testing & Validation</span>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">5</div>
-                  <span className="text-gray-300">Go-Live Support</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">6</div>
-                  <span className="text-gray-300">Optimization</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">7</div>
-                  <span className="text-gray-300">Training & Documentation</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">8</div>
-                  <span className="text-gray-300">Ongoing Support</span>
-                </div>
-              </div>
-            </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p>
           </div>
-
-          <div className="cyber-card p-8 mb-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Migration Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-300">Reduced infrastructure costs</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-300">Improved scalability</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-300">Enhanced security</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-300">Better performance</span>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span className="text-gray-300">Disaster recovery</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span className="text-gray-300">Global accessibility</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span className="text-gray-300">Automated backups</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span className="text-gray-300">Compliance support</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Small Business</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
-              <ul className="text-gray-300 space-y-2">
-                <li>Up to 10 servers</li>
-                <li>Basic migration</li>
-                <li>1-month support</li>
-                <li>Documentation</li>
-              </ul>
-            </div>
-            <div className="cyber-card p-6 text-center border-2 border-cyan-400">
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$15,000</div>
-              <ul className="text-gray-300 space-y-2">
-                <li>Up to 100 servers</li>
-                <li>Advanced migration</li>
-                <li>3-month support</li>
-                <li>Training included</li>
-                <li>24/7 monitoring</li>
-              </ul>
-            </div>
-            <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Custom</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">Quote</div>
-              <ul className="text-gray-300 space-y-2">
-                <li>Unlimited servers</li>
-                <li>Custom solution</li>
-                <li>6-month support</li>
-                <li>Dedicated team</li>
-                <li>SLA guarantee</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button mr-4"
-            >
-              📞 Call: (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Get Migration Quote
-            </a>
           </div>
         </div>
-      </main>
-
-      <Footer />
+      </section>
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+  </
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our page solutions for your business.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+  </
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+  </
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  );
-};
-
-export default CloudMigration;
+  )
+}
+export default PagePage
+  </button>
+  </button>
+  </h2>

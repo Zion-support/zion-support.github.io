@@ -1,1034 +1,464 @@
-'use client';
-import { Cloud, Shield, Settings, Database, BarChart, CheckCircle, ArrowRight, Phone, Clock, Zap, Cpu, Wifi, Server, Code, TrendingUp, DollarSign, Clock, Shield, TrendingUp, MessageSquare } from 'lucide-react';
-
-export default function ITServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
-
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react'
+const ItServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const itServices = [
     {
-      category: 'Cloud Infrastructure & Migration',
+      id: 1,
+      title: 'Cloud Infrastructure & Migration',
+      description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services.',
       icon: Cloud,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      services: [
-        {
-          name: 'Cloud Migration & Setup',
-          description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized performance',
-          features: ['Multi-cloud Strategy', 'Hybrid Cloud Solutions', 'Cost Optimization', 'Security Implementation', 'Performance Tuning'],
-          pricing: 'Starting at $10,000',
-          trial: 'Free consultation',
-          timeline: '2-8 weeks',
-          link: 'https://ziontechgroup.com/cloud-migration',
-          popular: true
-        },
-        {
-          name: 'IT Infrastructure Design',
-          description: 'Scalable and secure infrastructure architecture tailored to your business needs',
-          features: ['Network Design', 'Server Configuration', 'Load Balancing', 'Disaster Recovery', 'Scalability Planning'],
-          pricing: 'Starting at $15,000',
-          trial: 'Free assessment',
-          timeline: '3-6 weeks',
-          link: 'https://ziontechgroup.com/it-infrastructure',
-          popular: true
-        },
-        {
-          name: 'Database Management & Optimization',
-          description: 'Comprehensive database administration with performance tuning and security hardening',
-          features: ['Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Monitoring', 'Scalability'],
-          pricing: 'Starting at $5,000/month',
-          trial: 'Free health check',
-          timeline: 'Ongoing',
-          link: 'https://ziontechgroup.com/database-management',
-          popular: false
-        },
-        {
-          name: 'Cloud Cost Optimization',
-          description: 'Reduce cloud costs by up to 40% with intelligent resource management and optimization',
-          features: ['Cost Analysis', 'Resource Optimization', 'Auto-scaling', 'Reserved Instances', 'Cost Monitoring'],
-          pricing: 'Starting at $3,000',
-          trial: 'Free audit',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/cloud-optimization',
-          popular: false
-        }
-      ]
+      category: 'Cloud',
+      features: [
+        'Cloud architecture design',
+        'Multi-cloud strategies',
+        'Cost optimization',
+        'Disaster recovery',
+        'Auto-scaling solutions',
+        'Security compliance'
+      ],
+      price: 'Starting at $2,500/month',
+      marketPrice: '$4000-15000/month',
+      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support']
     },
     {
-      category: 'Cybersecurity & Compliance',
+      id: 2,
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security services including threat detection, compliance, and incident response.',
       icon: Shield,
-      color: 'text-red-400',
-      bgColor: 'bg-red-500/10',
-      services: [
-        {
-          name: 'Enterprise Cybersecurity Suite',
-          description: 'Comprehensive security solutions with 24/7 monitoring and threat detection',
-          features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Penetration Testing'],
-          pricing: 'Starting at $8,000/month',
-          trial: 'Free security audit',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/cybersecurity',
-          popular: true
-        },
-        {
-          name: 'Compliance Management Platform',
-          description: 'Ensure compliance with GDPR, HIPAA, SOX, and other industry regulations',
-          features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support', 'Policy Management'],
-          pricing: 'Starting at $12,000',
-          trial: 'Free compliance check',
-          timeline: '4-8 weeks',
-          link: 'https://ziontechgroup.com/compliance-management',
-          popular: true
-        },
-        {
-          name: 'Security Awareness Training',
-          description: 'Comprehensive employee security training with phishing simulation and assessment',
-          features: ['Phishing Simulation', 'Security Workshops', 'Policy Development', 'Assessment', 'Certification'],
-          pricing: 'Starting at $3,000',
-          trial: 'Free training session',
-          timeline: '1-2 weeks',
-          link: 'https://ziontechgroup.com/security-training',
-          popular: false
-        },
-        {
-          name: 'Zero Trust Security Architecture',
-          description: 'Implement zero trust security model with identity verification and micro-segmentation',
-          features: ['Identity Verification', 'Micro-segmentation', 'Device Management', 'Access Control', 'Continuous Monitoring'],
-          pricing: 'Starting at $15,000',
-          trial: 'Free assessment',
-          timeline: '6-12 weeks',
-          link: 'https://ziontechgroup.com/zero-trust',
-          popular: false
-        }
-      ]
+      category: 'Security',
+      features: [
+        'Threat detection & response',
+        'Vulnerability assessments',
+        'Penetration testing',
+        'Security monitoring',
+        'Compliance management',
+        'Employee training'
+      ],
+      price: 'Starting at $1,800/month',
+      marketPrice: '$3000-12000/month',
+      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team']
     },
     {
-      category: 'IT Support & Management',
+      id: 3,
+      title: 'DevOps & CI/CD',
+      description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code.',
       icon: Settings,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      services: [
-        {
-          name: '24/7 IT Support & Monitoring',
-          description: 'Round-the-clock technical support with proactive monitoring and maintenance',
-          features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance', 'Emergency Response', 'SLA Guarantee'],
-          pricing: 'Starting at $2,000/month',
-          trial: 'Free trial month',
-          timeline: 'Immediate',
-          link: 'https://ziontechgroup.com/it-support',
-          popular: true
-        },
-        {
-          name: 'System Administration Services',
-          description: 'Complete system administration with user management and performance optimization',
-          features: ['User Management', 'System Updates', 'Performance Monitoring', 'Backup Management', 'Patch Management'],
-          pricing: 'Starting at $4,000/month',
-          trial: 'Free assessment',
-          timeline: 'Ongoing',
-          link: 'https://ziontechgroup.com/system-administration',
-          popular: true
-        },
-        {
-          name: 'IT Strategic Consulting',
-          description: 'Strategic IT planning and technology consulting for digital transformation',
-          features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Budget Planning', 'Digital Transformation'],
-          pricing: 'Starting at $200/hour',
-          trial: 'Free consultation',
-          timeline: 'As needed',
-          link: 'https://ziontechgroup.com/it-consulting',
-          popular: false
-        },
-        {
-          name: 'IT Asset Management',
-          description: 'Comprehensive IT asset lifecycle management with tracking and optimization',
-          features: ['Asset Tracking', 'Lifecycle Management', 'License Management', 'Cost Optimization', 'Disposal Services'],
-          pricing: 'Starting at $1,500/month',
-          trial: 'Free inventory',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/asset-management',
-          popular: false
-        }
-      ]
+      category: 'DevOps',
+      features: [
+        'CI/CD pipeline setup',
+        'Infrastructure as Code',
+        'Container orchestration',
+        'Monitoring & logging',
+        'Automated testing',
+        'Deployment automation'
+      ],
+      price: 'Starting at $2,200/month',
+      marketPrice: '$3500-10000/month',
+      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows']
     },
     {
-      category: 'Software Development & Integration',
-      icon: Code,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      services: [
-        {
-          name: 'Custom Software Development',
-          description: 'Tailored software solutions built with modern technologies and best practices',
-          features: ['Web Applications', 'Mobile Apps', 'API Development', 'Integration Services', 'Quality Assurance'],
-          pricing: 'Starting at $15,000',
-          trial: 'Free consultation',
-          timeline: '6-12 weeks',
-          link: 'https://ziontechgroup.com/custom-development',
-          popular: true
-        },
-        {
-          name: 'System Integration & APIs',
-          description: 'Connect and integrate disparate systems with robust API development and management',
-          features: ['API Integration', 'Data Migration', 'Workflow Automation', 'Legacy System Modernization', 'API Management'],
-          pricing: 'Starting at $8,000',
-          trial: 'Free integration assessment',
-          timeline: '3-8 weeks',
-          link: 'https://ziontechgroup.com/system-integration',
-          popular: true
-        },
-        {
-          name: 'DevOps & CI/CD Implementation',
-          description: 'Streamline development and deployment with automated testing and continuous integration',
-          features: ['Automated Testing', 'Continuous Integration', 'Deployment Automation', 'Monitoring', 'Infrastructure as Code'],
-          pricing: 'Starting at $6,000',
-          trial: 'Free DevOps audit',
-          timeline: '2-6 weeks',
-          link: 'https://ziontechgroup.com/devops-cicd',
-          popular: true
-        },
-        {
-          name: 'Legacy System Modernization',
-          description: 'Modernize legacy systems with cloud migration and technology updates',
-          features: ['Legacy Assessment', 'Cloud Migration', 'Technology Updates', 'Data Migration', 'User Training'],
-          pricing: 'Starting at $20,000',
-          trial: 'Free modernization plan',
-          timeline: '8-16 weeks',
-          link: 'https://ziontechgroup.com/legacy-modernization',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'Network & Infrastructure',
-      icon: Wifi,
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10',
-      services: [
-        {
-          name: 'Network Design & Implementation',
-          description: 'Secure and scalable network infrastructure with wireless and wired solutions',
-          features: ['Network Design', 'Wireless Solutions', 'Security Implementation', 'Performance Optimization', 'Monitoring'],
-          pricing: 'Starting at $12,000',
-          trial: 'Free network assessment',
-          timeline: '3-6 weeks',
-          link: 'https://ziontechgroup.com/network-design',
-          popular: true
-        },
-        {
-          name: 'Disaster Recovery & Backup',
-          description: 'Comprehensive disaster recovery solutions with automated backup and recovery testing',
-          features: ['Backup Solutions', 'Disaster Recovery', 'Business Continuity', 'Testing', 'Documentation'],
-          pricing: 'Starting at $5,000',
-          trial: 'Free DR assessment',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/disaster-recovery',
-          popular: false
-        },
-        {
-          name: 'IT Performance Monitoring',
-          description: 'Real-time monitoring and alerting for IT infrastructure and applications',
-          features: ['Real-time Monitoring', 'Performance Metrics', 'Alerting', 'Reporting', 'Capacity Planning'],
-          pricing: 'Starting at $3,000/month',
-          trial: 'Free monitoring setup',
-          timeline: '1-2 weeks',
-          link: 'https://ziontechgroup.com/performance-monitoring',
-          popular: false
-        },
-        {
-name: 'AI-Powered Infrastructure Management',
-          description: 'Intelligent infrastructure management with AI-driven optimization and predictive maintenance',
-          features: ['AI Optimization', 'Predictive Maintenance', 'Automated Scaling', 'Performance Tuning', 'Cost Optimization'],
-          pricing: 'Starting at $5,500/month',
-          trial: 'Free AI assessment',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/ai-infrastructure',
-          popular: true
-        },
-        {
-          name: 'Quantum-Safe Security Implementation',
-          description: 'Next-generation security solutions resistant to quantum computing threats',
-          features: ['Quantum Cryptography', 'Post-Quantum Algorithms', 'Future-Proof Security', 'Migration Planning', 'Compliance Assurance'],
-          pricing: 'Starting at $12,000',
-          trial: 'Free security audit',
-          timeline: '4-8 weeks',
-          link: 'https://ziontechgroup.com/quantum-security',
-          popular: false
-        },
-        {
-          name: 'Edge Computing Infrastructure',
-          description: 'Distributed computing infrastructure for IoT and real-time applications',
-          features: ['Edge Nodes', 'Real-time Processing', 'Low Latency', 'IoT Integration', 'Distributed Analytics'],
-          pricing: 'Starting at $8,000/month',
-          trial: 'Free edge assessment',
-          timeline: '3-6 weeks',
-          link: 'https://ziontechgroup.com/edge-computing',
-          popular: true
-        }
-      ]
-    },
-    {
-      category: 'AI-Powered IT Solutions',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      services: [
-        {
-          name: 'AI Infrastructure Monitoring Pro',
-          description: 'Advanced AI-powered infrastructure monitoring with predictive analytics and automated issue resolution',
-          features: ['Predictive Analytics', 'Automated Issue Resolution', 'Anomaly Detection', 'Performance Optimization', 'Capacity Planning', 'Cost Optimization'],
-          pricing: 'Starting at $4,999/mo',
-          trial: 'Free AI assessment',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/ai-infrastructure-monitoring',
-          popular: true
-        },
-        {
-          name: 'AI Security Operations Center',
-          description: 'Intelligent security operations with AI-powered threat detection, response, and prevention',
-          features: ['AI Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Threat Intelligence', 'Incident Response', 'Compliance Monitoring'],
-          pricing: 'Starting at $6,999/mo',
-          trial: 'Free security audit',
-          timeline: '3-6 weeks',
-          link: 'https://ziontechgroup.com/ai-security-operations',
-          popular: true
-        },
-        {
-          name: 'AI Cloud Cost Optimization',
-          description: 'Intelligent cloud cost optimization with AI-driven resource management and cost prediction',
-          features: ['Cost Prediction', 'Resource Optimization', 'Auto-scaling', 'Reserved Instance Management', 'Cost Allocation', 'Budget Alerts'],
-          pricing: 'Starting at $2,999/mo',
-          trial: 'Free cost analysis',
-          timeline: '2-3 weeks',
-          link: 'https://ziontechgroup.com/ai-cloud-optimization',
-          popular: true
-        },
-        {
-          name: 'AI Data Center Management',
-          description: 'Smart data center management with AI-powered optimization, monitoring, and automation',
-          features: ['Smart Monitoring', 'Predictive Maintenance', 'Energy Optimization', 'Capacity Planning', 'Automated Operations', 'Performance Analytics'],
-          pricing: 'Starting at $8,999/mo',
-          trial: 'Free assessment',
-          timeline: '4-8 weeks',
-          link: 'https://ziontechgroup.com/ai-data-center-management',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'Blockchain & Web3 Solutions',
-      icon: Shield,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      services: [
-        {
-          name: 'Blockchain Integration Services Pro',
-          description: 'Comprehensive blockchain integration with smart contracts, DeFi, and Web3 solutions',
-          features: ['Smart Contract Development', 'DeFi Integration', 'NFT Solutions', 'Cross-chain Interoperability', 'Web3 Development', 'Token Economics'],
-          pricing: 'Starting at $12,999',
-          trial: 'Free consultation',
-          timeline: '8-16 weeks',
-          link: 'https://ziontechgroup.com/blockchain-integration-services',
-          popular: true
-        },
-        {
-          name: 'Smart Contract Security Audit Pro',
-          description: 'Advanced smart contract security auditing with AI-powered vulnerability detection',
-          features: ['AI Vulnerability Detection', 'Code Review', 'Security Testing', 'Gas Optimization', 'Compliance Check', 'Audit Reports'],
-          pricing: 'Starting at $5,999',
-          trial: 'Free security scan',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/smart-contract-security-audit',
-          popular: true
-        },
-        {
-          name: 'Decentralized Infrastructure',
-          description: 'Decentralized infrastructure solutions with distributed computing and storage',
-          features: ['Distributed Computing', 'Decentralized Storage', 'Edge Computing', 'P2P Networks', 'Consensus Mechanisms', 'Token Incentives'],
-          pricing: 'Starting at $9,999/mo',
-          trial: 'Free pilot',
-          timeline: '6-12 weeks',
-          link: 'https://ziontechgroup.com/decentralized-infrastructure',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'Advanced Analytics & BI',
-      icon: BarChart,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      services: [
-        {
-          name: 'AI Business Intelligence Pro',
-          description: 'Advanced AI-powered business intelligence with predictive analytics and automated insights',
-          features: ['Predictive Analytics', 'Automated Insights', 'Natural Language Queries', 'Real-time Dashboards', 'Data Visualization', 'Machine Learning'],
-          pricing: 'Starting at $3,999/mo',
-          trial: 'Free BI assessment',
-          timeline: '3-6 weeks',
-          link: 'https://ziontechgroup.com/ai-business-intelligence',
-          popular: true
-        },
-        {
-          name: 'Data Lake & Warehouse Solutions',
-          description: 'Comprehensive data lake and warehouse solutions with AI-powered data processing',
-          features: ['Data Lake Architecture', 'ETL/ELT Pipelines', 'Data Quality Management', 'Real-time Processing', 'Data Governance', 'AI Data Processing'],
-          pricing: 'Starting at $7,999/mo',
-          trial: 'Free data assessment',
-          timeline: '4-8 weeks',
-          link: 'https://ziontechgroup.com/data-lake-warehouse',
-          popular: true
-        },
-        {
-          name: 'Real-time Analytics Platform',
-          description: 'Real-time analytics platform with streaming data processing and instant insights',
-          features: ['Streaming Analytics', 'Real-time Processing', 'Event-driven Architecture', 'Instant Insights', 'Scalable Processing', 'Data Integration'],
-          pricing: 'Starting at $4,999/mo',
-          trial: 'Free demo',
-          timeline: '2-4 weeks',
-          link: 'https://ziontechgroup.com/real-time-analytics',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'IoT & Edge Computing',
-      icon: Cpu,
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10',
-      services: [
-        {
-          name: 'IoT Platform Development',
-          description: 'Comprehensive IoT platform development with device management and data analytics',
-          features: ['Device Management', 'Data Analytics', 'Edge Computing', 'Protocol Support', 'Security', 'Scalability'],
-          pricing: 'Starting at $15,999',
-          trial: 'Free IoT assessment',
-          timeline: '8-16 weeks',
-          link: 'https://ziontechgroup.com/iot-platform-development',
-          popular: true
-        },
-        {
-          name: 'Edge Computing Solutions',
-          description: 'Edge computing solutions with real-time processing and low-latency applications',
-          features: ['Edge Processing', 'Low Latency', 'Real-time Analytics', 'Edge AI', 'Distributed Computing', '5G Integration'],
-          pricing: 'Starting at $8,999/mo',
-          trial: 'Free edge assessment',
-          timeline: '4-8 weeks',
-          link: 'https://ziontechgroup.com/edge-computing-solutions',
-          popular: true
-        },
-        {
-          name: 'Smart City Solutions',
-          description: 'Comprehensive smart city solutions with IoT integration and data analytics',
-          features: ['Smart Infrastructure', 'Data Analytics', 'Citizen Services', 'Traffic Management', 'Energy Management', 'Public Safety'],
-          pricing: 'Starting at $25,999',
-          trial: 'Free city assessment',
-          timeline: '12-24 weeks',
-          link: 'https://ziontechgroup.com/smart-city-solutions',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'Advanced AI-Powered IT Solutions',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      services: [
-        {
-          name: 'AI Quantum Security Implementation',
-          description: 'Next-generation quantum-resistant security solutions for future-proof cybersecurity',
-          features: ['Quantum Cryptography', 'Post-Quantum Algorithms', 'Future-Proof Security', 'Migration Planning', 'Compliance Assurance', 'Quantum Key Distribution'],
-          pricing: 'Starting at $15,999',
-          trial: 'Free security audit',
-          timeline: '8-16 weeks',
-          link: 'https://ziontechgroup.com/ai-quantum-security',
-          popular: true
-        },
-        {
-          name: 'AI Neural Network Infrastructure',
-          description: 'Advanced neural network infrastructure for AI model training and deployment',
-          features: ['Neural Network Training', 'Model Deployment', 'GPU Clusters', 'Distributed Computing', 'Auto-scaling', 'Performance Optimization'],
-          pricing: 'Starting at $12,999/mo',
-          trial: 'Free infrastructure assessment',
-          timeline: '4-8 weeks',
-          link: 'https://ziontechgroup.com/ai-neural-infrastructure',
-          popular: true
-        },
-        {
-          name: 'AI Edge Computing Platform',
-          description: 'Intelligent edge computing platform with AI-powered decision making at the edge',
-          features: ['Edge AI Processing', 'Real-time Decision Making', 'Low Latency', 'Distributed Intelligence', 'Edge Analytics', 'Autonomous Operations'],
-          pricing: 'Starting at $8,999/mo',
-          trial: 'Free edge assessment',
-          timeline: '6-12 weeks',
-          link: 'https://ziontechgroup.com/ai-edge-computing-platform',
-          popular: true
-        },
-        {
-          name: 'AI Quantum Computing Infrastructure',
-          description: 'Quantum computing infrastructure for complex problem solving and optimization',
-          features: ['Quantum Processors', 'Quantum Algorithms', 'Hybrid Computing', 'Quantum Simulation', 'Optimization Problems', 'Cryptographic Security'],
-          pricing: 'Starting at $25,999/mo',
-          trial: 'Free quantum assessment',
-          timeline: '12-24 weeks',
-          link: 'https://ziontechgroup.com/ai-quantum-infrastructure',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'Specialized Industry IT Solutions',
-      icon: Building,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      services: [
-        {
-          name: 'Healthcare IT Solutions Pro',
-          description: 'HIPAA-compliant healthcare IT solutions with AI-powered patient care and medical data management',
-          features: ['HIPAA Compliance', 'Electronic Health Records', 'Medical Imaging AI', 'Patient Monitoring', 'Telemedicine Platform', 'Medical Data Security'],
-          pricing: 'Starting at $18,999',
-          trial: 'Free healthcare assessment',
-          timeline: '8-16 weeks',
-          link: 'https://ziontechgroup.com/healthcare-it-solutions-pro',
-          popular: true
-        },
-        {
-          name: 'Financial Services IT Pro',
-          description: 'SOX-compliant financial IT solutions with AI-powered fraud detection and risk management',
-          features: ['SOX Compliance', 'Fraud Detection AI', 'Risk Management', 'Financial Data Security', 'Regulatory Reporting', 'Transaction Monitoring'],
-          pricing: 'Starting at $22,999',
-          trial: 'Free financial assessment',
-          timeline: '10-20 weeks',
-          link: 'https://ziontechgroup.com/financial-it-solutions-pro',
-          popular: true
-        },
-        {
-          name: 'Manufacturing IT Solutions Pro',
-          description: 'Industrial IT solutions with AI-powered manufacturing optimization and predictive maintenance',
-          features: ['Industrial IoT', 'Predictive Maintenance', 'Quality Control AI', 'Supply Chain Integration', 'Manufacturing Analytics', 'Safety Monitoring'],
-          pricing: 'Starting at $16,999',
-          trial: 'Free manufacturing assessment',
-          timeline: '8-16 weeks',
-          link: 'https://ziontechgroup.com/manufacturing-it-solutions-pro',
-          popular: true
-        },
-        {
-          name: 'Retail IT Solutions Pro',
-          description: 'E-commerce and retail IT solutions with AI-powered customer experience and inventory management',
-          features: ['E-commerce Platform', 'Customer Analytics', 'Inventory AI', 'Personalization Engine', 'Payment Processing', 'Omnichannel Integration'],
-          pricing: 'Starting at $14,999',
-          trial: 'Free retail assessment',
-          timeline: '6-12 weeks',
-          link: 'https://ziontechgroup.com/retail-it-solutions-pro',
-          popular: true
-        }
-      ]
-    },
-    {
-      category: 'Emerging Technology Solutions',
-      icon: Rocket,
-      color: 'text-pink-400',
-      bgColor: 'bg-pink-500/10',
-      services: [
-        {
-          name: '5G Network Implementation Pro',
-          description: 'Advanced 5G network implementation with AI-powered optimization and edge computing integration',
-          features: ['5G Infrastructure', 'Edge Computing', 'Network Slicing', 'AI Optimization', 'Low Latency', 'High Bandwidth'],
-          pricing: 'Starting at $35,999',
-          trial: 'Free 5G assessment',
-          timeline: '16-32 weeks',
-          link: 'https://ziontechgroup.com/5g-implementation-pro',
-          popular: false
-        },
-        {
-          name: 'AR/VR Infrastructure Pro',
-          description: 'Immersive technology infrastructure for augmented and virtual reality applications',
-          features: ['AR/VR Hardware', 'Spatial Computing', 'Haptic Feedback', 'Motion Tracking', 'Content Management', 'User Analytics'],
-          pricing: 'Starting at $19,999',
-          trial: 'Free AR/VR assessment',
-          timeline: '8-16 weeks',
-          link: 'https://ziontechgroup.com/ar-vr-infrastructure-pro',
-          popular: true
-        },
-        {
-          name: 'Digital Twin Platform Pro',
-          description: 'Digital twin technology for real-time monitoring and simulation of physical assets',
-          features: ['Real-time Monitoring', 'Predictive Simulation', 'Asset Management', 'Performance Analytics', 'Maintenance Optimization', 'Virtual Testing'],
-          pricing: 'Starting at $24,999',
-          trial: 'Free digital twin assessment',
-          timeline: '12-24 weeks',
-          link: 'https://ziontechgroup.com/digital-twin-platform-pro',
-          popular: true
-        },
-        {
-          name: 'Metaverse Infrastructure Pro',
-          description: 'Infrastructure for metaverse applications with AI-powered virtual worlds and social interaction',
-          features: ['Virtual Worlds', 'Avatar Technology', 'Social Interaction', 'Virtual Economy', 'Content Creation', 'User Management'],
-          pricing: 'Starting at $29,999',
-          trial: 'Free metaverse assessment',
-          timeline: '16-32 weeks',
-          link: 'https://ziontechgroup.com/metaverse-infrastructure-pro',
-          popular: false
-        }
-      ]
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Proven Results',
-      description: 'Our clients see 40% improvement in system performance',
-      stat: '40%'
-    },
-    {
-      icon: Clock,
-      title: 'Rapid Response',
-      description: 'Average response time of 15 minutes for critical issues',
-      stat: '15 min'
-    },
-    {
-      icon: DollarSign,
-      title: 'Cost Savings',
-      description: 'Reduce IT costs by up to 60% through optimization',
-      stat: '60%'
-    },
-    {
-      icon: Shield,
-      title: 'Security First',
-      description: 'Zero security breaches with our comprehensive approach',
-      stat: '100%'
-    }
-  ];
-
-  const technologies = [
-    {
-      category: 'Cloud Platforms',
-      icon: Cloud,
-      techs: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud']
-    },
-    {
-      category: 'Security Tools',
-      icon: Shield,
-      techs: ['CrowdStrike', 'Palo Alto', 'Cisco', 'Fortinet', 'Splunk']
-    },
-    {
-      category: 'Databases',
+      id: 4,
+      title: 'Database Management',
+      description: 'Expert database design, optimization, and management for all major database systems.',
       icon: Database,
-      techs: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch']
+      category: 'Database',
+      features: [
+        'Database design & optimization',
+        'Performance tuning',
+        'Backup & recovery',
+        'Data migration',
+        'Security hardening',
+        'Monitoring & maintenance'
+      ],
+      price: 'Starting at $1,200/month',
+      marketPrice: '$2000-8000/month',
+      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support']
     },
     {
-      category: 'Monitoring',
-      icon: BarChart,
-      techs: ['Datadog', 'New Relic', 'Prometheus', 'Grafana', 'Zabbix']
+      id: 5,
+      title: 'IT Infrastructure Management',
+      description: 'Complete infrastructure setup and management including servers, networks, and hardware.',
+      icon: Server,
+      category: 'Infrastructure',
+      features: [
+        'Server setup & configuration',
+        'Network design & implementation',
+        'Hardware procurement',
+        'System administration',
+        'Performance monitoring',
+        'Capacity planning'
+      ],
+      price: 'Starting at $1,500/month',
+      marketPrice: '$2500-10000/month',
+      benefits: ['Reliable infrastructure', 'Proactive monitoring', 'Cost optimization', 'Expert administration']
+    },
+    {
+      id: 6,
+      title: 'Managed IT Services',
+      description: 'Comprehensive IT support and management including helpdesk, maintenance, and monitoring.',
+      icon: Headphones,
+      category: 'Support',
+      features: [
+        '24/7 helpdesk support',
+        'Remote monitoring',
+        'Proactive maintenance',
+        'Software management',
+        'User support',
+        'Incident management'
+      ],
+      price: 'Starting at $800/month',
+      marketPrice: '$1200-5000/month',
+      benefits: ['Reduced IT costs', 'Improved uptime', 'Expert support', 'Proactive maintenance']
+    },
+    {
+      id: 7,
+      title: 'Web Development',
+      description: 'Custom web applications and websites built with modern technologies and best practices.',
+      icon: Globe,
+      category: 'Development',
+      features: [
+        'Custom web applications',
+        'Responsive design',
+        'E-commerce solutions',
+        'API development',
+        'Performance optimization',
+        'Security implementation'
+      ],
+      price: 'Starting at $5,000/project',
+      marketPrice: '$8000-50000/project',
+      benefits: ['Modern technology stack', 'Mobile-responsive design', 'SEO optimization', 'Security best practices']
+    },
+    {
+      id: 8,
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android with modern UI/UX.',
+      icon: Smartphone,
+      category: 'Development',
+      features: [
+        'iOS & Android apps',
+        'Cross-platform development',
+        'UI/UX design',
+        'App store optimization',
+        'Push notifications',
+        'Offline capabilities'
+      ],
+      price: 'Starting at $8,000/project',
+      marketPrice: '$15000-100000/project',
+      benefits: ['Native performance', 'Cross-platform compatibility', 'Modern UI/UX', 'App store optimization']
+    },
+    {
+      id: 9,
+      title: 'Data Analytics & BI',
+      description: 'Business intelligence solutions with data visualization, reporting, and analytics.',
+      icon: BarChart3,
+      category: 'Analytics',
+      features: [
+        'Data visualization',
+        'Business intelligence',
+        'Custom dashboards',
+        'Data warehousing',
+        'Predictive analytics',
+        'Report automation'
+      ],
+      price: 'Starting at $1,800/month',
+      marketPrice: '$3000-15000/month',
+      benefits: ['Data-driven insights', 'Custom dashboards', 'Automated reporting', 'Predictive analytics']
+    },
+    {
+      id: 10,
+      title: 'Network Solutions',
+      description: 'Complete network design, implementation, and management including LAN, WAN, and wireless.',
+      icon: Network,
+      category: 'Networking',
+      features: [
+        'Network design & implementation',
+        'Wireless solutions',
+        'VPN setup',
+        'Network security',
+        'Performance optimization',
+        'Monitoring & maintenance'
+      ],
+      price: 'Starting at $1,000/month',
+      marketPrice: '$1500-6000/month',
+      benefits: ['Reliable connectivity', 'Enhanced security', 'Performance optimization', 'Expert management']
+    },
+    {
+      id: 11,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting to help plan, implement, and optimize your technology infrastructure.',
+      icon: Users,
+      category: 'Consulting',
+      features: [
+        'IT strategy planning',
+        'Technology assessment',
+        'Digital transformation',
+        'Vendor management',
+        'Project management',
+        'Change management'
+      ],
+      price: 'Starting at $200/hour',
+      marketPrice: '$300-500/hour',
+      benefits: ['Strategic guidance', 'Technology expertise', 'Cost optimization', 'Digital transformation']
+    },
+    {
+      id: 12,
+      title: 'Process Automation',
+      description: 'Workflow automation solutions to streamline business processes and improve efficiency.',
+      icon: Zap,
+      category: 'Automation',
+      features: [
+        'Workflow automation',
+        'Process optimization',
+        'Integration solutions',
+        'Document management',
+        'Task automation',
+        'Performance monitoring'
+      ],
+      price: 'Starting at $1,500/month',
+      marketPrice: '$2500-8000/month',
+      benefits: ['Improved efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation']
+    {
+      name: 'Cloud Infrastructure & Migration',
+      href: '/cloud-services',
+      icon: Cloud,
+      description: 'Complete cloud solutions including AWS, Azure, and GCP migration and management',
+      price: 'Starting at $2,500/month',
+      features: ['Cloud architecture design', 'Migration planning & execution', 'Cost optimization', 'Security compliance', '24/7 monitoring', 'Disaster recovery']
+    },
+    {
+      name: 'DevOps & CI/CD Pipeline',
+      href: '/devops',
+      icon: Settings,
+      description: 'Automated development workflows and deployment pipelines for faster delivery',
+      price: 'Starting at $3,000/month',
+      features: ['CI/CD pipeline setup', 'Container orchestration', 'Infrastructure as Code', 'Automated testing', 'Deployment automation', 'Performance monitoring']
+    },
+    {
+      name: 'Database Management & Optimization',
+      href: '/database',
+      icon: Database,
+      description: 'Comprehensive database services including design, optimization, and maintenance',
+      price: 'Starting at $1,800/month',
+      features: ['Database design & architecture', 'Performance optimization', 'Backup & recovery', 'Security hardening', 'Migration services', '24/7 support']
+    },
+    {
+      name: 'Cybersecurity Solutions',
+      href: '/cybersecurity',
+      icon: Shield,
+      description: 'Advanced security solutions to protect your digital assets and ensure compliance',
+      price: 'Starting at $4,000/month',
+      features: ['Security assessment', 'Threat detection', 'Vulnerability management', 'Compliance auditing', 'Incident response', 'Security training']
+    },
+    {
+      name: 'Managed IT Services',
+      href: '/managed-it',
+      icon: Settings,
+      description: 'Complete IT management including helpdesk, monitoring, and maintenance',
+      price: 'Starting at $2,200/month',
+      features: ['24/7 helpdesk support', 'Proactive monitoring', 'Patch management', 'Asset management', 'User training', 'Vendor management']
+    },
+    {
+      name: 'IT Strategy & Consulting',
+      href: '/it-consulting',
+      icon: Globe,
+      description: 'Strategic IT consulting to align technology with business objectives',
+      price: 'Starting at $1,500/month',
+      features: ['Technology roadmap', 'Vendor evaluation', 'Cost analysis', 'Digital transformation', 'Change management', 'Training programs']
+    },
+    {
+      name: 'Data Analytics & Business Intelligence',
+      href: '/data-analytics',
+      icon: Database,
+      description: 'Transform your data into actionable insights with advanced analytics solutions',
+      price: 'Starting at $2,800/month',
+      features: ['Data warehouse design', 'ETL/ELT processes', 'Dashboard development', 'Predictive analytics', 'Data governance', 'Real-time reporting']
+    },
+    {
+      name: 'Mobile Application Development',
+      href: '/mobile-development',
+      icon: Smartphone,
+      description: 'Native and cross-platform mobile applications for iOS and Android',
+      price: 'Starting at $8,000/project',
+      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'API integration', 'App store deployment', 'Maintenance & updates']
+    },
+    {
+      name: 'Web Application Development',
+      href: '/web-development',
+      icon: Globe,
+      description: 'Custom web applications and e-commerce solutions built with modern technologies',
+      price: 'Starting at $6,000/project',
+      features: ['Custom web applications', 'E-commerce solutions', 'API development', 'Responsive design', 'Performance optimization', 'SEO optimization']
+    },
+    {
+      name: 'Process Automation & RPA',
+      href: '/process-automation',
+      icon: Zap,
+      description: 'Automate repetitive business processes to improve efficiency and reduce costs',
+      price: 'Starting at $3,500/month',
+      features: ['Process analysis', 'Automation design', 'RPA implementation', 'Workflow optimization', 'Integration services', 'Training & support']
+    },
+    {
+      name: 'Network Infrastructure & Security',
+      href: '/network-solutions',
+      icon: Globe,
+      description: 'Complete network design, implementation, and security solutions',
+      price: 'Starting at $2,000/month',
+      features: ['Network design & implementation', 'Firewall configuration', 'VPN setup', 'Wireless solutions', 'Network monitoring', 'Security hardening']
+    },
+    {
+      name: 'IT Support & Helpdesk',
+      href: '/it-support',
+      icon: Settings,
+      description: 'Comprehensive IT support services for all your technology needs',
+      price: 'Starting at $1,200/month',
+      features: ['24/7 technical support', 'Remote assistance', 'Hardware maintenance', 'Software installation', 'User training', 'Issue resolution']
+      description: 'Custom web applications, e-commerce platforms, and enterprise solutions',
+      price: '$5,000 - $100,000',
+      features: ['Custom web apps', 'E-commerce platforms', 'API development', 'Performance optimization']
+    },
+    {
+      name: 'Process Automation',
+      href: '/process-automation',
+      icon: Zap,
+      description: 'Workflow automation, RPA implementation, and business process optimization',
+      price: '$2,000 - $25,000',
+      features: ['RPA implementation', 'Workflow automation', 'API integrations', 'Process optimization']
+    },
+    {
+      name: 'Network Infrastructure',
+      href: '/network-infrastructure',
+      icon: Globe,
+      description: 'Network design, implementation, and optimization for enterprise environments',
+      price: '$3,000 - $35,000',
+      features: ['Network design', 'Wireless solutions', 'VPN setup', 'Network security']
+    },
+    {
+      name: 'Disaster Recovery & Backup',
+      href: '/disaster-recovery',
+      icon: Shield,
+      description: 'Comprehensive backup solutions and disaster recovery planning',
+      price: '$1,000 - $15,000',
+      features: ['Backup solutions', 'Disaster recovery planning', 'Business continuity', 'Testing & validation']
     }
-  ];
-
-  const process = [
-    {
-      step: 1,
-      title: 'Assessment & Planning',
-      description: 'Comprehensive analysis of your current IT infrastructure and needs',
-      duration: '1-2 weeks'
-    },
-    {
-      step: 2,
-      title: 'Strategy Development',
-      description: 'Create a detailed IT strategy aligned with your business goals',
-      duration: '1-2 weeks'
-    },
-    {
-      step: 3,
-      title: 'Implementation',
-      description: 'Deploy solutions with minimal disruption to your operations',
-      duration: '2-8 weeks'
-    },
-    {
-      step: 4,
-      title: 'Testing & Optimization',
-      description: 'Thorough testing and performance optimization',
-      duration: '1-2 weeks'
-    },
-    {
-      step: 5,
-      title: 'Support & Monitoring',
-      description: 'Ongoing support, monitoring, and continuous improvement',
-      duration: 'Ongoing'
-    }
-  ];
-
-  const caseStudies = [
-    {
-      company: 'ManufacturingCorp',
-      industry: 'Manufacturing',
-      challenge: 'Outdated IT infrastructure causing production delays',
-      solution: 'Complete infrastructure modernization and cloud migration',
-      results: ['50% faster processing', '99.9% uptime', '40% cost reduction'],
-      image: '/images/case-studies/manufacturing.webp'
-    },
-    {
-      company: 'FinanceFirst Bank',
-      industry: 'Banking',
-      challenge: 'Security vulnerabilities and compliance issues',
-      solution: 'Comprehensive cybersecurity suite and compliance framework',
-      results: ['Zero security incidents', '100% compliance', '60% faster audits'],
-      image: '/images/case-studies/banking.webp'
-    },
-    {
-      company: 'RetailMax Stores',
-      industry: 'Retail',
-      challenge: 'Disconnected systems and poor customer experience',
-      solution: 'System integration and unified platform development',
-      results: ['30% improved efficiency', '25% better customer satisfaction', '200% ROI'],
-      image: '/images/case-studies/retail.webp'
-    }
-  ];
-
+  ]
+  const categories = ['all', 'Cloud', 'Security', 'DevOps', 'Database', 'Infrastructure', 'Support', 'Development', 'Analytics', 'Networking', 'Consulting', 'Automation']
+  const filteredServices = itServices.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
+  const stats = [
+    { icon: <Server className="w-8 h-8 text-cyan-500" />, value: '500+', label: 'Servers Managed' },
+    { icon: <Shield className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Security Uptime' },
+    { icon: <Users className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Clients Served' },
+    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
+  ]
   return (
-
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">
-
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-
-<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-
-              IT Services
+    <React.Fragment>
+      <Helmet>
+        <title>IT Services - Zion Tech Group | Comprehensive Information Technology Solutions</title>
+        <meta name="description" content="Complete IT services including cloud solutions, cybersecurity, infrastructure management, DevOps, and more. Expert IT support and consulting for modern businesses." />
+        <meta name="keywords" content="IT services, cloud solutions, cybersecurity, IT infrastructure, managed IT, IT consulting, DevOps, database management, web development" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Services</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">
-
-              Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.
-              From infrastructure to security, we've got you covered.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth.
+              From cloud migration to cybersecurity, we deliver enterprise-grade technology services.
             </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150+</div>
-                <div className="text-gray-300">IT Services</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">750+</div>
-                <div className="text-gray-300">Enterprise Clients</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime SLA</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300">Support</div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Shield className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">Enterprise Security</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Cloud className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Cloud Solutions</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Settings className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">24/7 Support</span>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/consultation"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+              >
+                Free Consultation
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Why Choose Our IT Services?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Proven expertise and enterprise-grade solutions that deliver measurable business value
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-10 h-10 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* IT Services */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our IT Services
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed to meet your business needs
-            </p>
-          </div>
-          <div className="space-y-16">
-            {itServices.map((category, categoryIndex) => (
-              <div key={categoryIndex}>
-                <div className="flex items-center space-x-3 mb-8">
-                  <category.icon className={`w-8 h-8 ${category.color}`} />
-                  <h3 className="text-2xl font-bold text-white">{category.category}</h3>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                  {category.services.map((service, serviceIndex) => (
-
-<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
-<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">
-
-                      {service.popular && (
-                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                          Popular
+        </section>
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itServices.map((service, index) => (
+                <div
+                  key={index}
+                  to={service.href}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
+                  <service.icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Learn More</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+        {/* Stats Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-4">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group hover:bg-slate-800/70"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                  <div className="space-y-3 mb-6">
+                    <div className="text-cyan-400 font-semibold text-lg">{service.price}</div>
+                    <div className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-gray-400 text-sm">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
+                          {feature}
                         </div>
-                      )}
-
-                      <div className="relative z-10">
-                        <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}</h4>
-                        <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
-                        <div className="space-y-4 mb-6">
-                          <h5 className="text-lg font-semibold text-white flex items-center">
-                            <Zap className="w-4 h-4 mr-2 text-cyan-400" />
-                            Key Features:
-                          </h5>
-                          <ul className="space-y-2">
-                            {service.features.slice(0, 4).map((feature, featureIndex) => (
-                              <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                            {service.features.length > 4 && (
-                              <li className="text-cyan-400 text-sm font-medium">
-                                +{service.features.length - 4} more features
-                              </li>
-                            )}
-                          </ul>
-                        </div>
-
-                        <div className="space-y-3 mb-6">
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Pricing:</span>
-                            <span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Trial:</span>
-                            <span className="text-sm font-medium text-green-400">{service.trial}</span>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Timeline:</span>
-                            <span className="text-sm font-medium text-purple-400">{service.timeline}</span>
-                          </div>
-                        </div>
-
-                        <div className="space-y-3">
-                          <a
-                            href={service.link}
-                            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                          >
-                            Learn More
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                          </a>
-                          <a
-                            href="/contact"
-                            className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-                          >
-                            Get Started
-                          </a>
-                        </div>
-                      </div>
-<div className="space-y-2">
-                        <a
-                          href={service.link}
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >
-                          Learn More
-                        </a>
-                        <a
-                          href="/contact"
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >
-                          Get Started
-                        </a>
-                      </div>
-
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Technologies We Work With
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              We work with the latest and most reliable technologies in the industry
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map((tech, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
-                <div className="space-y-2">
-                  {tech.techs.map((technology, techIndex) => (
-                    <div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">
-                      {technology}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our IT Implementation Process
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              A proven methodology that ensures successful IT implementation
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>
-              {process.map((step, index) => (
-                <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-slate-800/50 p-6 rounded-lg">
-                      <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}</div>
-                      <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                      <p className="text-gray-300 mb-2">{step.description}</p>
-                      <div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
+                      ))}
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div>
-                  <div className="w-1/2"></div>
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                    <span>Get Quote</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Case Studies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Success Stories
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Real results from real clients across various industries
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl font-bold text-white">
-                    {study.company.split(' ').map(word => word[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{study.company}</h3>
-                <p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:</h4>
-                    <p className="text-sm text-gray-400">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:</h4>
-                    <p className="text-sm text-gray-400">{study.solution}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:</h4>
-                    <ul className="space-y-1">
-                      {study.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400">
-                          <CheckCircle className="w-3 h-3 flex-shrink-0" />
-                          <span>{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Ready to Modernize Your IT Infrastructure?
-          </h2>
-<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a
-              href="https://ziontechgroup.com/contact"
-className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
-
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-
-            >
-              <MessageSquare className="w-5 h-5 mr-2" />
-              Get Started Today
-            </a>
-            <a
-              href="tel:+13024640950"
-
-className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call: +1 (302) 464-0950
-            </a>
-          </div>
-          <div className="text-gray-200 text-sm">
-            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+        </section>
+      </div>
+    </React.Fragment>
+  )
 }
+export default ItServicesPage

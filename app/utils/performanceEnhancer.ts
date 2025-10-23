@@ -4,6 +4,7 @@
  * Advanced performance optimization tools for the application
  */
 import React from 'react';
+import { useRef } from 'react';
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -44,7 +45,8 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
-      }
+      }ms`);
+    }
   }
   // Track memory usage
   trackMemory(componentName: string) {
@@ -73,8 +75,8 @@ export class PerformanceMonitor {
         if (entry.duration > 50) { // Tasks longer than 50ms
           }ms`);
         }
-
-
+      });
+    });
     observer.observe({ entryTypes: ['longtask'] });
     this.observers.push(observer);
   }
@@ -117,8 +119,8 @@ export const lazyLoadImages = () => {
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
-
-
+    });
+  });
   images.forEach((img) => imageObserver.observe(img));
 };
 // Preload critical resources
@@ -137,7 +139,7 @@ export const preloadCriticalResources = () => {
       link.crossOrigin = 'anonymous';
     }
     document.head.appendChild(link);
-
+  });
 };
 // Optimize scroll performance
 export const optimizeScrollPerformance = () => {
@@ -171,7 +173,7 @@ export const optimizeScrollPerformance = () => {
           clsValue += layoutEntry.value;
         }
       }
-
+    });
     observer.observe({ entryTypes: ['layout-shift'] });
     return () => {
       observer.disconnect();
@@ -184,7 +186,7 @@ export const optimizeScrollPerformance = () => {
         if (process.env['NODE_ENV'] === 'development') {
           }
       }
-
+    });
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
     return () => observer.disconnect();
   };
@@ -199,7 +201,7 @@ export const optimizeScrollPerformance = () => {
         if (process.env['NODE_ENV'] === 'development') {
           }
       }
-
+    });
     observer.observe({ entryTypes: ['first-input'] });
     return () => observer.disconnect();
   };
@@ -219,7 +221,7 @@ export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   }
-  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
@@ -234,9 +236,9 @@ export const collectPerformanceMetrics = () => {
   const paint = performance.getEntriesByType('paint');
   return {
     navigation: {
-// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-// loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-// totalTime: navigation.loadEventEnd - navigation.fetchStart
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      totalTime: navigation.loadEventEnd - navigation.fetchStart
     },
     paint: {
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,

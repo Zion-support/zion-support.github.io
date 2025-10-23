@@ -1,16 +1,56 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-describe('advanced-componentsx', () => {
-  beforeEach(() => {
-    // Setup before each test
+// Mock advanced components
+const AdvancedButton = ({ onClick, children }: { onClick: () => void; children: React.ReactNode }) => {
+  return <button onClick={onClick} data-testid="advanced-button">{children}</button>;
+};
+
+const AdvancedInput = ({ value, onChange }: { value: string; onChange: (value: string) => void }) => {
+  return (
+    <input
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      data-testid="advanced-input"
+    />
+  );
+};
+
+describe('Advanced Components', () => {
+  it('renders advanced button', () => {
+    const mockOnClick = jest.fn();
+    render(<AdvancedButton onClick={mockOnClick}>Click me</AdvancedButton>);
+    
+    const button = screen.getByTestId('advanced-button');
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent('Click me');
   });
 
-  it('should pass basic test', () => {
-    expect(true).toBe(true);
+  it('handles button click', () => {
+    const mockOnClick = jest.fn();
+    render(<AdvancedButton onClick={mockOnClick}>Click me</AdvancedButton>);
+    
+    const button = screen.getByTestId('advanced-button');
+    button.click();
+    expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
 
-  it('should handle basic functionality', () => {
-    const result = 1 + 1;
-    expect(result).toBe(2);
+  it('renders advanced input', () => {
+    const mockOnChange = jest.fn();
+    render(<AdvancedInput value="test" onChange={mockOnChange} />);
+    
+    const input = screen.getByTestId('advanced-input');
+    expect(input).toBeInTheDocument();
+    expect(input).toHaveValue('test');
+  });
+
+  it('handles input change', () => {
+    const mockOnChange = jest.fn();
+    render(<AdvancedInput value="" onChange={mockOnChange} />);
+    
+    const input = screen.getByTestId('advanced-input');
+    fireEvent.change(input, { target: { value: 'new value' } });
+    
+    expect(mockOnChange).toHaveBeenCalledWith('new value');
   });
 });

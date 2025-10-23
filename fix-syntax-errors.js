@@ -5,83 +5,154 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// List of files with syntax errors
-const filesToFix = [
-  'src/ai-analytics/page.tsx',
-  'src/ai-automation/page.tsx',
-  'src/ai-computer-vision/page.tsx',
-  'src/ai-content-generation/page.tsx',
-  'src/ai-content-studio/page.tsx',
-  'src/ai-crm/page.tsx',
-  'src/ai-customer-insights/page.tsx',
-  'src/ai-customer-support-bot/page.tsx',
-  'src/ai-customer-support/page.tsx',
-  'src/ai-cybersecurity/page.tsx',
-  'src/ai-data-analytics/page.tsx',
-  'src/ai-data-visualization/page.tsx',
-  'src/ai-design-assistant/page.tsx',
-  'src/ai-document-processing/page.tsx',
-  'src/ai-document-processor/page.tsx',
-  'src/ai-ecommerce-optimizer/page.tsx',
-  'src/ai-ecommerce-solutions/page.tsx',
-  'src/ai-edge-computing/page.tsx',
-  'src/ai-email-assistant/page.tsx',
-  'src/ai-email-marketing/page.tsx',
-  'src/ai-fintech/page.tsx',
-  'src/ai-healthcare/page.tsx',
-  'src/ai-hr-assistant/page.tsx',
-  'src/ai-inventory-manager/page.tsx',
-  'src/ai-invoice-generator/page.tsx',
-  'src/ai-lead-generation/page.tsx',
-  'src/ai-lead-scoring/page.tsx',
-  'src/ai-marketing/page.tsx'
-];
-
-// Template for a simple coming soon page
-const createComingSoonPage = (title, description) => `import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const ${title}Page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
-          <p className="text-gray-300 mb-8">${description}</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-};
-
-export default ${title}Page;`;
-
-// Fix each file
-filesToFix.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath);
-  const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-  
-  const description = `Coming Soon - Advanced ${title.toLowerCase()} solutions`;
-  
+function fixSyntaxErrors(filePath) {
   try {
-    fs.writeFileSync(fullPath, createComingSoonPage(title, description));
-    console.log(`Fixed: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has syntax issues
+    if (!content.includes(';') || !content.includes('</')) {
+      return false; // No obvious syntax issues
+    }
+    
+    console.log(`Fixing syntax errors in: ${filePath}`);
+    
+    // Fix common syntax issues
+    let fixedContent = content
+      // Remove trailing semicolons that shouldn't be there
+      .replace(/;\s*$/gm, '')
+      // Fix JSX closing tags that have semicolons
+      .replace(/<\/([^>]+)>;\s*$/gm, '</$1>')
+      // Fix JSX opening tags that have semicolons
+      .replace(/<([^>]+)>;\s*$/gm, '<$1>')
+      // Fix JSX attributes that have semicolons
+      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1="$2"')
+      // Fix JSX expressions that have semicolons
+      .replace(/\{\s*([^}]+)\s*\}\s*;\s*$/gm, '{$1}')
+      // Remove standalone semicolons
+      .replace(/^\s*;\s*$/gm, '')
+      // Fix multiple empty lines
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      // Fix JSX fragments
+      .replace(/<>\s*;\s*$/gm, '<>')
+      .replace(/<\/>\s*;\s*$/gm, '</>')
+      // Fix React.Fragment
+      .replace(/<React\.Fragment>\s*;\s*$/gm, '<React.Fragment>')
+      .replace(/<\/React\.Fragment>\s*;\s*$/gm, '</React.Fragment>')
+      // Fix common JSX syntax issues
+      .replace(/>\s*;\s*</gm, '><')
+      .replace(/>\s*;\s*$/gm, '>')
+      // Fix function declarations
+      .replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\(\s*;\s*$/gm, 'const $1 = () => (')
+      .replace(/const\s+(\w+)\s*=\s*\(\s*;\s*$/gm, 'const $1 = (')
+      // Fix return statements
+      .replace(/return\s*\(\s*;\s*$/gm, 'return (')
+      // Fix JSX elements that are missing closing tags
+      .replace(/<(\w+)([^>]*)>\s*;\s*$/gm, '<$1$2>')
+      // Clean up extra whitespace
+      .replace(/\s+$/gm, '')
+      .replace(/^\s+/gm, '');
+    
+    // Try to fix incomplete JSX structures
+    const lines = fixedContent.split('\n');
+    const fixedLines = [];
+    let inJSX = false;
+    let jsxDepth = 0;
+    
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
+      
+      // Skip lines that are just semicolons or empty
+      if (line.trim() === ';' || line.trim() === '') {
+        continue;
+      }
+      
+      // Skip lines that are just closing braces with semicolons
+      if (line.trim() === '};' || line.trim() === '}') {
+        if (jsxDepth > 0) {
+          jsxDepth--;
+        }
+        fixedLines.push(line.replace(/;+$/, ''));
+        continue;
+      }
+      
+      // Skip lines that are just opening braces with semicolons
+      if (line.trim() === '{;' || line.trim() === '{') {
+        jsxDepth++;
+        fixedLines.push(line.replace(/;+$/, ''));
+        continue;
+      }
+      
+      // Fix lines that end with semicolons inappropriately
+      if (line.includes(';') && !line.includes('//') && !line.includes('*')) {
+        // Check if this is a JSX line
+        if (line.includes('<') && line.includes('>')) {
+          line = line.replace(/;\s*$/, '');
+        } else if (line.includes('return') || line.includes('const') || line.includes('let') || line.includes('var')) {
+          // Keep semicolons for regular JavaScript
+        } else {
+          line = line.replace(/;\s*$/, '');
+        }
+      }
+      
+      fixedLines.push(line);
+    }
+    
+    const finalContent = fixedLines.join('\n');
+    
+    // Only write if content changed
+    if (finalContent !== content) {
+      fs.writeFileSync(filePath, finalContent);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('All files fixed!');
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const files = findTsxFiles(appDir);
+
+console.log(`Found ${files.length} TypeScript files to check`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed syntax errors in ${fixedCount} files`);
+
+// Also check the root App.tsx
+if (fixSyntaxErrors(path.join(__dirname, 'App.tsx'))) {
+  fixedCount++;
+  console.log('Fixed syntax errors in App.tsx');
+}
+
+console.log(`Total files fixed: ${fixedCount}`);

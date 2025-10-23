@@ -1,57 +1,65 @@
-const { withSentry } = require('./withSentry.cjs');
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-async function handler(req, res) {
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'onsite-requests.json');
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
-
-  const {
-    name,
-    email,
-    phone: _phone,
-    company: _company,
-    location,
-    details: _details,
-  } = req.body || {};
-
-  if (!name || !email) {
-    return res.status(400).json({ error: 'Name and email are required' });
-  }
-
-  const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
-  const dir = path.dirname(file);
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-
-  let existing = [];
 
   try {
-    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-    if (!Array.isArray(existing)) existing = [];
-  } catch {
-    // File doesn't exist or is invalid, use empty array
+    const { name, email, company, phone, message, serviceType, preferredDate } = req.body || {};
+
+    if (!name || !email) {
+      return res.status(400).json({ error: 'Name and email are required' });
+    }
+
+    // Ensure data directory exists
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    // Read existing requests
+    let requests = [];
+    try {
+      if (fs.existsSync(file)) {
+        const data = fs.readFileSync(file, 'utf8');
+        requests = JSON.parse(data);
+      }
+    } catch (error) {
+      console.error('Error reading existing requests:', error);
+      requests = [];
+    }
+
+    // Add new request
+    const newRequest = {
+id: Date.now().toString(),
+      name,
+      email,
+      company,
+      phone,
+      message,
+      serviceType,
+      preferredDate,
+      timestamp: new Date().toISOString(),
+      status: 'pending'
+    };
+
+    requests.push(newRequest);
+
+    // Save to file
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+
+    res.status(200).json({ 
+      message: 'Onsite request submitted successfully',
+      requestId: newRequest.id 
+    });
+  } catch (error) {
+    console.error('Onsite request error:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
-
-  const newRequest = {
-    id: Date.now().toString(),
-    name,
-    email,
-    phone: _phone || '',
-    company: _company || '',
-    location: location || '',
-    details: _details || '',
-    timestamp: new Date().toISOString(),
-  };
-
-  existing.push(newRequest);
-
-  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-  res.statusCode = 200;
-  res.json({ success: true });
 }
-
-module.exports = withSentry(handler);

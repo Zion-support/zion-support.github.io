@@ -1,336 +1,151 @@
-'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
+interface SEOOptimizerProps {
+title?: string
+description?: string
+keywords?: string
+canonicalUrl?: string
+ogImage?: string
+twitterCard?: string
+structuredData?: object
+children: React.ReactNode
 }
-
-interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableOpenGraph?: boolean;
-  enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
-  enableStructuredData = true,
-  enableOpenGraph = true,
-  enableTwitterCards = true,
-  enableSchemaMarkup = true,
+const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+title = 'Zion Tech Group - Advanced AI and IT Solutions',
+description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+canonicalUrl,
+ogImage = '/images/og-image.jpg',
+twitterCard = 'summary_large_image',
+structuredData,
+children
 }) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-
-  const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.structuredData) {
-      return null;
-    }
-
-    const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'TechCompany',
-      name: 'Zion Tech Group',
-      description: seoData.description,
-      url: seoData.canonicalUrl,
-      logo: 'https://ziontechgroup.com/logo.webp',
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/zion-tech-group',
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-ZION-TECH',
-        contactType: 'customer service',
-        availableLanguage: 'English',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Tech Innovation Drive',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US',
-      },
-      ...seoData.structuredData,
-    };
-
-    if (seoData.author) {
-      baseStructuredData.author = {
-        '@type': 'Person',
-        name: seoData.author,
-      };
-    }
-
-    if (seoData.publishedTime) {
-      baseStructuredData.datePublished = seoData.publishedTime;
-    }
-
-    if (seoData.modifiedTime) {
-      baseStructuredData.dateModified = seoData.modifiedTime;
-    }
-
-    if (seoData.section) {
-      baseStructuredData.articleSection = seoData.section;
-    }
-
-    if (seoData.tags && seoData.tags.length > 0) {
-      baseStructuredData.keywords = seoData.tags.join(', ');
-    }
-
-    return baseStructuredData;
-  }, [seoData, enableStructuredData]);
-
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.breadcrumbs) {
-      return null;
-    }
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
-        item: breadcrumb.url
-      }))
-    };
-  }, [seoData, enableStructuredData]);
-
-  const generateFAQStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.faqs) {
-      return null;
-    }
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: seoData.faqs.map((faq: any) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    };
-  }, [seoData, enableStructuredData]);
-
-  // Generate Open Graph data
-  const generateOpenGraphData = useCallback(() => {
-    if (!enableOpenGraph) return {};
-
-    return {
-      'og:title': seoData.ogTitle || seoData.title,
-      'og:description': seoData.ogDescription || seoData.description,
-      'og:url': seoData.canonicalUrl,
-      'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.webp',
-      'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US',
-    };
-  }, [seoData, enableOpenGraph]);
-
-  // Generate Twitter Card data
-  const generateTwitterCardData = useCallback(() => {
-    if (!enableTwitterCards) return {};
-
-    return {
-      'twitter:card': 'summary_large_image',
-      'twitter:title': seoData.ogTitle || seoData.title,
-      'twitter:description': seoData.ogDescription || seoData.description,
-      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp',
-      'twitter:site': '@ziontechgroup',
-      'twitter:creator': '@ziontechgroup',
-    };
-  }, [seoData, enableTwitterCards]);
-
-  // Generate meta tags
-  const generateMetaTags = useCallback(() => {
-    const metaTags = [
-      { name: 'description', content: seoData.description },
-      { name: 'keywords', content: seoData.keywords.join(', ') },
-      { name: 'author', content: seoData.author || 'Zion Tech Group' },
-      { name: 'robots', content: seoData.robots || 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3B82F6' },
-      { name: 'msapplication-TileColor', content: '#3B82F6' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' },
-    ];
-    return metaTags;
-  }, [seoData]);
-
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!seoData.breadcrumbs || seoData.breadcrumbs.length === 0) {
-      return null;
-    }
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
-        item: breadcrumb.url
-      }))
-    };
-  }, [seoData.breadcrumbs]);
-
-  const generateFAQStructuredData = useCallback(() => {
-    if (!seoData.faqs || seoData.faqs.length === 0) {
-      return null;
-    }
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: seoData.faqs.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
-    };
-  }, [seoData.faqs]);
-
-  const structuredData = generateStructuredData();
-  const openGraphData = generateOpenGraphData();
-  const twitterCardData = generateTwitterCardData();
-  const metaTags = generateMetaTags();
-
-  useEffect(() => {
-    // Update page title and meta description for better SEO
-    if (typeof document !== 'undefined') {
-      document.title = seoData.title;
-
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', seoData.description);
-
-      // Update canonical URL
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
-    }
-  }, [seoData]);
-
-  const addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data
-    if (structuredDataRef.current) {
-      structuredDataRef.current.remove();
-    }
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
-  };
-
-  useEffect(() => {
-    if (structuredData) {
-      addStructuredData(structuredData);
-    }
-  }, [structuredData]);
-
-  useEffect(() => {
-    // Track page performance
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData) {
-        // Track performance metrics
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-
-        }
-      }
-    }
-  }, []);
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
-      {metaTags.map((tag, index) => (
-        <meta key={index} name={tag.name} content={tag.content} />
-      ))}
-
-      {/* Canonical URL */}
-      {seoData.canonicalUrl && (
-        <link rel="canonical" href={seoData.canonicalUrl} />
-      )}
-
-      {/* Open Graph Tags */}
-      {Object.entries(openGraphData).map(([property, content]) => (
-        <meta key={property} property={property} content={content} />
-      ))}
-
-      {/* Twitter Card Tags */}
-      {Object.entries(twitterCardData).map(([name, content]) => (
-        <meta key={name} name={name} content={content} />
-      ))}
-
-      {/* Additional SEO Tags */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
-      <link rel="manifest" href="/site.webmanifest" />
-
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
-  );
-};
-
-export default AdvancedSEOOptimizer;
+const [seoScore, setSeoScore] = useState(0)
+const [recommendations, setRecommendations] = useState<string[]>([])
+const analyzeSEO = useCallback(() => {
+if (typeof window === 'undefined') return
+let score = 0
+const newRecommendations: string[] = []
+// Check title length
+if (title.length >= 30 && title.length <= 60) {
+score += 20
+} else {
+newRecommendations.push('Title should be between 30-60 characters')
+}
+// Check description length
+if (description.length >= 120 && description.length <= 160) {
+score += 20
+} else {
+newRecommendations.push('Description should be between 120-160 characters')
+}
+// Check for keywords in title
+if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+score += 15
+} else {
+newRecommendations.push('Include primary keyword in title')
+}
+// Check for keywords in description
+if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+score += 15
+} else {
+newRecommendations.push('Include primary keyword in description')
+}
+// Check for heading structure
+const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+if (headings.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add proper heading structure')
+}
+// Check for images with alt text
+const images = document.querySelectorAll('img')
+const imagesWithAlt = document.querySelectorAll('img[alt]')
+if (images.length === imagesWithAlt.length && images.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add alt text to all images')
+}
+// Check for internal links
+const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]')
+if (internalLinks.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add internal links for better SEO')
+}
+setSeoScore(score)
+setRecommendations(newRecommendations)
+}, [title, description, keywords])
+useEffect(() => {
+analyzeSEO()
+}, [analyzeSEO])
+const generateStructuredData = () => {
+const defaultStructuredData = {
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "Zion Tech Group",
+"description": description,
+"url": canonicalUrl || window.location.origin,
+"logo": ogImage,
+"sameAs": [
+"https://twitter.com/ziontechgroup",
+"https://linkedin.com/company/ziontechgroup"
+]
+}
+return structuredData || defaultStructuredData
+}
+return (
+<React.Fragment>
+<Helmet>
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+{/* Open Graph */}
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:type" content="website" />
+{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+{/* Twitter Card */}
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+{/* Structured Data */}
+<script type="application/ld+json">
+{JSON.stringify(generateStructuredData())}
+</script>
+</Helmet>
+{children}
+{process.env.NODE_ENV === 'development' && (
+<div className="seo-debug" style={{
+position: 'fixed',
+top: '10px',
+left: '10px',
+background: 'rgba(0,0,0,0.8)',
+color: 'white',
+padding: '10px',
+borderRadius: '5px',
+fontSize: '12px',
+zIndex: 1000,
+maxWidth: '300px'
+}}>
+<div>SEO Score: {seoScore}/100</div>
+{recommendations.length > 0 && (
+<div>
+<div>Recommendations:</div>
+<ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+{recommendations.map((rec, index) => (
+<li key={index}>{rec}</li>
+))}
+</ul>
+</div>
+)}
+</div>
+)}
+</React.Fragment>
+)
+}
+export default AdvancedSEOOptimizer
+</SEOOptimizerProps>

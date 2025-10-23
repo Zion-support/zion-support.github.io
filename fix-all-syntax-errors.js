@@ -1,125 +1,134 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Get all files with errors
-const getAllFilesWithErrors = () => {
-  const srcDir = path.join(__dirname, 'src');
-  const files = [];
-  
-  const scanDirectory = (dir) => {
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
-    }
-  };
-  
-  scanDirectory(srcDir);
-  return files;
-};
-
-// Template for a simple coming soon page
-const createComingSoonPage = (filePath) => {
-  const relativePath = path.relative(path.join(__dirname, 'src'), filePath);
-  const fileName = path.basename(filePath, '.tsx');
-  
-  // Skip if it's a component or special file
-  if (fileName === 'page' || fileName === 'layout' || fileName === 'loading' || fileName === 'error') {
-    const dirName = path.basename(path.dirname(filePath));
-    const title = dirName.split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
-    
-    return `import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const ${title}Page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced ${title.toLowerCase()} solutions</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-};
-
-export default ${title}Page;`;
-  }
-  
-  return null;
-};
-
-// Check if file has syntax errors by trying to parse it
-const hasSyntaxErrors = (filePath) => {
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check for common syntax error patterns
-    const errorPatterns = [
-      /\/\/ TODO: Add content\s*}/,
-      /\/\/ TODO: Add parameters,\s*\)/,
-      /\/\/ TODO: Add items,\s*]/,
-      /{\s*\/\/ TODO: Add content\s*}/,
-      /{\s*\/\/ TODO: Add parameters,\s*\)/,
-      /{\s*\/\/ TODO: Add items,\s*]/,
-      /^\s*}\s*$/m,
-      /^\s*]\s*$/m,
-      /^\s*\)\s*$/m,
-      /\/\/\s*[^/]/,
-      /<[^>]*\/\/[^>]*>/,
-      /{\s*\/\/[^}]*$/m
-    ];
-    
-    return errorPatterns.some(pattern => pattern.test(content));
-  } catch (error) {
-    return true;
-  }
-};
+    const fullPath = path.join(__dirname, filePath);
+    if (!fs.existsSync(fullPath)) {
+      return;
+    }
 
-// Fix all files
-const fixAllFiles = () => {
-  const files = getAllFilesWithErrors();
-  let fixedCount = 0;
-  
-  for (const filePath of files) {
-    if (hasSyntaxErrors(filePath)) {
-      const newContent = createComingSoonPage(filePath);
-      if (newContent) {
-        try {
-          fs.writeFileSync(filePath, newContent);
-          console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
-          fixedCount++;
-        } catch (error) {
-          console.error(`Error fixing ${filePath}:`, error.message);
+    let content = fs.readFileSync(fullPath, 'utf8');
+    let modified = false;
+
+    // Fix duplicate React imports and "use client" directives
+    const lines = content.split('\n');
+    const cleanedLines = [];
+    let hasUseClient = false;
+    let hasReactImport = false;
+    let hasOtherImports = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      
+      // Skip duplicate "use client" directives
+      if (line === '"use client";' || line === "'use client';") {
+        if (!hasUseClient) {
+          cleanedLines.push('"use client";');
+          hasUseClient = true;
+        }
+        modified = true;
+        continue;
+      }
+      
+      // Skip duplicate React imports
+      if (line.startsWith('import React from "react"') || line.startsWith("import React from 'react'")) {
+        if (!hasReactImport) {
+          cleanedLines.push('import React from "react";');
+          hasReactImport = true;
+        }
+        modified = true;
+        continue;
+      }
+      
+      // Keep other lines
+      cleanedLines.push(lines[i]);
+    }
+
+    // Reconstruct content with proper order
+    if (modified) {
+      const newContent = [];
+      
+      // Add "use client" first if it exists
+      if (hasUseClient) {
+        newContent.push('"use client";');
+      }
+      
+      // Add React import
+      if (hasReactImport) {
+        newContent.push('import React from "react";');
+      }
+      
+      // Add other imports and content
+      let inImportSection = true;
+      for (const line of cleanedLines) {
+        if (line.trim() === '"use client";' || line.trim() === 'import React from "react";') {
+          continue; // Skip as we already added them
+        }
+        
+        if (inImportSection && (line.startsWith('import ') || line.trim() === '')) {
+          newContent.push(line);
+        } else {
+          inImportSection = false;
+          newContent.push(line);
         }
       }
+      
+      content = newContent.join('\n');
+    }
+
+    // Fix malformed JSX closing structures
+    content = content.replace(/<\/div>\s*\);\s*\);/g, '\n    </div>\n  );\n}');
+    content = content.replace(/<\/div>\s*\);\s*}/g, '\n    </div>\n  );\n}');
+    
+    // Fix extra closing div tags
+    const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
+    if (extraDivPattern.test(content)) {
+      content = content.replace(extraDivPattern, '\n    </div>\n  );');
+      modified = true;
+    }
+
+    // Fix incorrect closing tags
+    content = content.replace(/<\s*\/\s*>/g, '</div>');
+    if (content.includes('</>')) {
+      modified = true;
+    }
+
+    // Fix h1/h2/h3 tag mismatches
+    content = content.replace(/<h1([^>]*)>\s*([^<]*)\s*<\/h2>/g, '<h1$1>$2</h1>');
+    content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>');
+    content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>');
+
+    if (modified) {
+      fs.writeFileSync(fullPath, content);
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Get all TypeScript/TSX files in the app directory
+function getAllTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...getAllTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath.replace(__dirname + '/', ''));
     }
   }
   
-  console.log(`Fixed ${fixedCount} files!`);
-};
+  return files;
+}
 
-fixAllFiles();
+// Fix all TSX/TS files
+console.log('Starting comprehensive syntax error fixes...');
+const allFiles = getAllTsxFiles(path.join(__dirname, 'app'));
+allFiles.forEach(fixFile);
+console.log('Comprehensive syntax error fixes completed!');
