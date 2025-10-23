@@ -1,11 +1,10 @@
 "use client";
-import React from "react";
 
 export default function Error() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-6xl font-bold text-white mb-4"}>{Error}</h1>
+        <h1 className="text-6xl font-bold text-white mb-4">Error</h1>
         <p className="text-xl text-gray-300 mb-8">Something went wrong</p>
         <a
           href="/"
@@ -13,6 +12,7 @@ export default function Error() {
         >
           Go Home
         </a>
-    </div></div>
+      </div>
+    </div>
   );
 }
