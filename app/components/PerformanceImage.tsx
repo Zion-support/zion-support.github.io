@@ -1,10 +1,23 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
-const PerformanceImage: React.FC = () => {
+interface PerformanceImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+const PerformanceImage: React.FC<PerformanceImageProps> = ({ src, alt, className }) => {
   return (
-    <div>
-      <h1>PerformanceImage</h1>
+    <div className={className}>
+      <Image
+        src={src}
+        alt={alt}
+        className="w-full h-auto"
+        width={500}
+        height={300}
+      />
     </div>
   );
 };

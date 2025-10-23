@@ -101,8 +101,9 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
-            <ul className="space-y-2">
+          <h1 className="text-lg font-semibold mb-4">AI Services</h1>
+            
+          <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
@@ -119,8 +120,9 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
-            <ul className="space-y-2">
+          <h1 className="text-lg font-semibold mb-4">IT Services</h1>
+            
+          <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
@@ -137,8 +139,9 @@ const Footer: React.FC = () => {
 
           {/* Micro SaaS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
-            <ul className="space-y-2">
+          <h1 className="text-lg font-semibold mb-4">Micro SaaS</h1>
+            
+          <ul className="space-y-2">
               {microSaas.map((service, index) => (
                 <li key={index}>
                   <Link
@@ -155,8 +158,9 @@ const Footer: React.FC = () => {
 
           {/* Company & Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 mb-6">
+          <h1 className="text-lg font-semibold mb-4">Company</h1>
+            
+          <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
