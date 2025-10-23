@@ -1,205 +1,196 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing remaining parsing errors...');
-
-// Function to fix specific parsing errors
-function fixParsingErrors(filePath) {
+// Function to fix specific syntax errors
+function fixSpecificErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
-    // Fix unterminated string literals
-    if (content.includes('"use client"') && !content.includes('"use client";')) {
-      content = content.replace(/"use client"/g, '"use client";');
+
+    // Fix malformed function declarations and return statements
+    if (content.includes('const ') && content.includes('React.FC') && content.includes('return (')) {
+      // Fix indentation issues
+      content = content.replace(/(\s+]\s*;\s*\n\s*)(\s*return\s*\()/g, '$1  $2');
       modified = true;
     }
-    
-    // Fix missing semicolons after imports
-    content = content.replace(/import\s+.*from\s+['"][^'"]+['"]\s*(?!;)/g, (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';';
-      }
-      return match;
-    });
-    
-    // Fix malformed JSX expressions
-    content = content.replace(/\{\s*>\s*\}/g, '{">"}');
-    content = content.replace(/\{\s*<\s*\}/g, '{"<"}');
-    
-    // Fix missing commas in object literals
-    content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n$2');
-    
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
-    }
-    
-    // Fix malformed function declarations
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*\{/g, 'const $1 = () => {');
-    
-    // Fix missing return statements in arrow functions
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*\{([^}]+)\}/g, (match, name, body) => {
-      if (!body.trim().includes('return')) {
-        return `const ${name} = () => {\n  return (\n    ${body.trim()}\n  );\n}`;
-      }
-      return match;
-    });
-    
-    // Fix malformed JSX
-    content = content.replace(/<(\w+)([^>]*)\s*>\s*<\/\1>/g, '<$1$2></$1>');
-    
-    // Fix missing closing tags
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-    
-    // Fix enum syntax errors
-    content = content.replace(/enum\s+(\w+)\s*\{([^}]+)\}/g, (match, name, body) => {
-      const items = body.split(',').map(item => item.trim()).filter(item => item);
-      const fixedItems = items.map(item => {
-        if (!item.includes('=') && !item.includes(',')) {
-          return item + ',';
+
+    // Fix missing function closing braces
+    if (content.includes('const ') && content.includes('React.FC') && !content.includes('export default')) {
+      // Find the last closing brace and add export
+      const lastBraceIndex = content.lastIndexOf('}');
+      if (lastBraceIndex > 0) {
+        const beforeBrace = content.substring(0, lastBraceIndex);
+        const afterBrace = content.substring(lastBraceIndex);
+        
+        // Extract function name
+        const functionMatch = content.match(/const\s+(\w+):\s*React\.FC/);
+        if (functionMatch) {
+          const functionName = functionMatch[1];
+          content = beforeBrace + '};\n\nexport default ' + functionName + ';';
+          modified = true;
         }
-        return item;
-      });
-      return `enum ${name} {\n  ${fixedItems.join('\n  ')}\n}`;
-    });
-    
-    // Fix missing semicolons
-    content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1;\n$2');
-    
-    // Fix malformed object properties
-    content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g, (match, key, value) => {
-      if (!value.trim().endsWith(';') && !value.trim().endsWith(',')) {
-        return `${key}: ${value.trim()},`;
       }
-      return match;
-    });
-    
+    }
+
+    // Fix specific indentation issues
+    content = content.replace(/(\s+]\s*;\s*\n\s*)(\s*return\s*\()/g, '$1  $2');
+    modified = true;
+
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed parsing errors in ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to completely rewrite problematic files with basic structure
-function rewriteProblematicFile(filePath) {
-  try {
-    const fileName = path.basename(filePath, '.tsx');
-    const isPage = filePath.includes('/page.tsx') || filePath.includes('/pages/');
-    const isComponent = filePath.includes('/components/');
-    
-    let content = '';
-    
-    if (isPage) {
-      content = `"use client";
-import React from 'react';
+// List of specific files that need fixing
+const problemFiles = [
+  'app/ai-automated-reporting/page.tsx',
+  'app/ai-automated-testing/page.tsx',
+  'app/ai-automation/page.tsx',
+  'app/ai-autonomous-systems/page.tsx',
+  'app/ai-blockchain-analytics/page.tsx',
+  'app/ai-blockchain-solutions/page.tsx',
+  'app/ai-business-intelligence/page.tsx',
+  'app/ai-chatbot-builder/page.tsx',
+  'app/ai-chatbot-enterprise/page.tsx',
+  'app/ai-climate-solutions-pro/page.tsx',
+  'app/ai-cloud-infrastructure/page.tsx',
+  'app/ai-code-assistant/page.tsx',
+  'app/ai-code-generation/page.tsx',
+  'app/ai-code-security-auditor/page.tsx',
+  'app/ai-computer-vision/page.tsx',
+  'app/ai-content-delivery-network/page.tsx',
+  'app/ai-content-generation/page.tsx',
+  'app/ai-content-studio/page.tsx',
+  'app/ai-content-writer/page.tsx',
+  'app/ai-crm/page.tsx',
+  'app/ai-crm-assistant/page.tsx',
+  'app/ai-customer-service/page.tsx',
+  'app/ai-customer-support/page.tsx',
+  'app/ai-customer-support-bot/page.tsx',
+  'app/ai-customer-support-chatbot/page.tsx',
+  'app/ai-cybersecurity/page.tsx',
+  'app/ai-cybersecurity-monitor/page.tsx',
+  'app/ai-cybersecurity-suite/page.tsx',
+  'app/ai-data-analytics/page.tsx',
+  'app/ai-data-visualization/page.tsx',
+  'app/ai-design-studio/page.tsx',
+  'app/ai-document-processing/page.tsx',
+  'app/ai-document-processor/page.tsx',
+  'app/ai-document-scanner/page.tsx',
+  'app/ai-drug-discovery-pro/page.tsx',
+  'app/ai-ecommerce-optimizer/page.tsx',
+  'app/ai-ecommerce-solutions/page.tsx',
+  'app/ai-edge-computing/page.tsx',
+  'app/ai-education/page.tsx',
+  'app/ai-education-tutor/page.tsx',
+  'app/ai-email-assistant/page.tsx',
+  'app/ai-email-marketing/page.tsx',
+  'app/ai-email-marketing-automation/page.tsx',
+  'app/ai-energy/page.tsx',
+  'app/ai-energy-grid-management-pro/page.tsx',
+  'app/ai-enterprise-solutions/page.tsx',
+  'app/ai-expense-tracker/page.tsx',
+  'app/ai-fashion-design/page.tsx',
+  'app/ai-financial-advisor/page.tsx',
+  'app/ai-financial-analyzer/page.tsx',
+  'app/ai-financial-crime-detection-pro/page.tsx',
+  'app/ai-fintech/page.tsx',
+  'app/ai-fitness-coach/page.tsx',
+  'app/ai-fraud-detection/page.tsx',
+  'app/ai-healthcare/page.tsx',
+  'app/ai-healthcare-solutions/page.tsx',
+  'app/ai-holographic-workspace/page.tsx',
+  'app/ai-hr/page.tsx',
+  'app/ai-hr-assistant/page.tsx',
+  'app/ai-image-recognition/page.tsx',
+  'app/ai-infrastructure/page.tsx',
+  'app/ai-infrastructure-monitoring/page.tsx',
+  'app/ai-insurance/page.tsx',
+  'app/ai-inventory-management/page.tsx',
+  'app/ai-inventory-manager/page.tsx',
+  'app/ai-investment-optimizer/page.tsx',
+  'app/ai-invoice-generator/page.tsx',
+  'app/ai-lead-generation/page.tsx',
+  'app/ai-legal/page.tsx',
+  'app/ai-legal-assistant/page.tsx',
+  'app/ai-legal-research-pro/page.tsx',
+  'app/ai-load-testing/page.tsx',
+  'app/ai-logo-designer/page.tsx',
+  'app/ai-manufacturing/page.tsx',
+  'app/ai-marketing/page.tsx',
+  'app/ai-medical-assistant/page.tsx',
+  'app/ai-ml/page.tsx',
+  'app/ai-ml-platform/page.tsx',
+  'app/ai-mobile-app-builder/page.tsx',
+  'app/ai-mobile-app-development/page.tsx',
+  'app/ai-music-composition/page.tsx',
+  'app/ai-neural-memory-assistant/page.tsx',
+  'app/ai-nlp/page.tsx',
+  'app/ai-ops/page.tsx',
+  'app/ai-password-manager/page.tsx',
+  'app/ai-predictive-analytics/page.tsx',
+  'app/ai-predictive-maintenance/page.tsx',
+  'app/ai-project-management/page.tsx',
+  'app/ai-project-manager/page.tsx',
+  'app/ai-quality-assurance/page.tsx',
+  'app/ai-quantum-computing/page.tsx',
+  'app/ai-quantum-financial-oracle/page.tsx',
+  'app/ai-quantum-optimization/page.tsx',
+  'app/ai-quantum-task-optimizer/page.tsx',
+  'app/ai-real-estate/page.tsx',
+  'app/ai-real-estate-analyzer/page.tsx',
+  'app/ai-recommendation-engine/page.tsx',
+  'app/ai-recruitment-assistant/page.tsx',
+  'app/ai-robotics/page.tsx',
+  'app/ai-sales-automation/page.tsx',
+  'app/ai-scheduler/page.tsx',
+  'app/ai-sentiment-analyzer/page.tsx',
+  'app/ai-seo-optimizer/page.tsx',
+  'app/ai-smart-calendar/page.tsx',
+  'app/ai-social-media-manager/page.tsx',
+  'app/ai-social-media-scheduler/page.tsx',
+  'app/ai-solutions/page.tsx',
+  'app/ai-space-technology/page.tsx',
+  'app/ai-space-technology-pro/page.tsx',
+  'app/ai-stock-portfolio-manager/page.tsx',
+  'app/ai-supply-chain/page.tsx',
+  'app/ai-supply-chain-optimization-pro/page.tsx',
+  'app/ai-supply-chain-optimizer/page.tsx',
+  'app/ai-task-manager/page.tsx',
+  'app/ai-telepathic-interface/page.tsx',
+  'app/ai-time-tracker/page.tsx',
+  'app/ai-transportation/page.tsx',
+  'app/ai-video-editor/page.tsx',
+  'app/ai-video-generation/page.tsx',
+  'app/ai-video-generator/page.tsx',
+  'app/ai-vision/page.tsx',
+  'app/ai-voice-assistant/page.tsx',
+  'app/ai-voice-cloning/page.tsx',
+  'app/ai-voice-cloning-studio/page.tsx',
+  'app/ai-voice-processing/page.tsx',
+  'app/ai-voice-synthesis/page.tsx',
+  'app/ai-website-builder/page.tsx',
+  'app/ai-workflow-automation/page.tsx',
+  'app/ai-writing-assistant/page.tsx'
+];
 
-const ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} = () => {
-  return (
-    <div className="min-h-screen bg-gray-100">
-      <h1>${fileName.charAt(0).toUpperCase() + fileName.slice(1)}</h1>
-      <p>This page is under construction.</p>
-    </div>
-  );
-};
+console.log('Fixing specific problem files...');
+let fixedCount = 0;
 
-export default ${fileName.charAt(0).toUpperCase() + fileName.slice(1)};`;
-    } else if (isComponent) {
-      content = `"use client";
-import React from 'react';
-
-interface ${fileName}Props {
-  className?: string;
-}
-
-const ${fileName}: React.FC<${fileName}Props> = ({ className = '' }) => {
-  return (
-    <div className={className}>
-      <h2>${fileName}</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default ${fileName};`;
-    } else {
-      content = `"use client";
-import React from 'react';
-
-const ${fileName} = () => {
-  return null;
-};
-
-export default ${fileName};`;
+for (const file of problemFiles) {
+  const filePath = path.join(__dirname, file);
+  if (fs.existsSync(filePath)) {
+    if (fixSpecificErrors(filePath)) {
+      fixedCount++;
     }
-    
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`✅ Rewrote ${filePath} with basic structure`);
-    return true;
-  } catch (error) {
-    console.error(`❌ Error rewriting ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Function to recursively fix files
-function fixFilesInDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let totalFixed = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      if (file === 'node_modules' || file === '.git' || file === '.next') {
-        continue;
-      }
-      totalFixed += fixFilesInDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      // Try to fix parsing errors first
-      const fixed = fixParsingErrors(filePath);
-      if (fixed) {
-        totalFixed++;
-      } else {
-        // If still has issues, rewrite with basic structure
-        try {
-          const content = fs.readFileSync(filePath, 'utf8');
-          if (content.includes('Error:') || content.length < 100) {
-            const rewritten = rewriteProblematicFile(filePath);
-            if (rewritten) totalFixed++;
-          }
-        } catch (error) {
-          const rewritten = rewriteProblematicFile(filePath);
-          if (rewritten) totalFixed++;
-        }
-      }
-    }
-  }
-  
-  return totalFixed;
-}
-
-// Main execution
-try {
-  console.log('🔍 Scanning for files to fix...');
-  const totalFixed = fixFilesInDirectory('/workspace');
-  console.log(`✅ Fixed ${totalFixed} files`);
-  console.log('🎉 Parsing error fixing completed!');
-} catch (error) {
-  console.error('❌ Error during fixing process:', error.message);
-  process.exit(1);
-}
+console.log(`Fixed ${fixedCount} files`);
