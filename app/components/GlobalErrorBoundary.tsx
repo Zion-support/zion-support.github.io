@@ -36,7 +36,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
 
-  override render() {
+  render() {
     if (this.state.hasError) {
       return (
         <div className="error-boundary">
