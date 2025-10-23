@@ -32,29 +32,28 @@ const AppPage: React.FC = () => {
   ];
 
   return (
-    <AccessibilityEnhancer>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>App - Zion Tech Group | Advanced AI and IT Solutions</title>
+        <title>Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta
           name="description"
-          content="Professional app solutions powered by advanced AI and cutting-edge technology."
+          content="Pioneering the future with advanced AI, quantum computing, and cutting-edge technology solutions that transform businesses and drive innovation."
         />
         <meta
           name="keywords"
-          content="app, AI solutions, IT services, automation, technology, business solutions"
+          content="AI solutions, quantum computing, IT services, technology, business solutions, innovation"
         />
       </Helmet>
 
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="min-h-screen">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              App
+              Zion Tech Group
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional app solutions powered by advanced AI and cutting-edge
-              technology.
+              Pioneering the future with advanced AI, quantum computing, and cutting-edge technology solutions that transform businesses and drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -129,7 +128,7 @@ const AppPage: React.FC = () => {
           </div>
         </section>
       </main>
-    </AccessibilityEnhancer>
+    </div>
   );
 };
 

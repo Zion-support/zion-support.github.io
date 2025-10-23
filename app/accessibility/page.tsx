@@ -265,6 +265,7 @@ const AccessibilityPage: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
       </div>
     </>
