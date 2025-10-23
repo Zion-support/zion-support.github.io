@@ -68,7 +68,8 @@ const CloudServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Cloud Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {services.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
                 <service.icon className="w-12 h-12 text-cyan-400 mb-4" />
@@ -80,16 +81,17 @@ const CloudServicesPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
         {/* Benefits Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -97,8 +99,8 @@ const CloudServicesPage: React.FC = () => {
                 </div>
                 <p className="text-white font-medium">{benefit}</p>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">

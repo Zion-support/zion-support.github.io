@@ -163,7 +163,8 @@ const AILeadGenerationPage: React.FC = () => {
                 </a>
               </div>
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
                 {stats.map((stat, index) => (
                   <div key={index} className="cyber-card p-6 text-center">
                     <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
@@ -171,8 +172,8 @@ const AILeadGenerationPage: React.FC = () => {
                     </div>
                     <div className="text-gray-300 font-medium">{stat.label}</div>
                   </div>
-                ))}
-              </div>
+                )}
+            </div>
             </div>
           </section>
           {/* Features Section */}
@@ -181,6 +182,7 @@ const AILeadGenerationPage: React.FC = () => {
               Powerful Lead Generation Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
@@ -192,10 +194,10 @@ const AILeadGenerationPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4" />
                         <span>{benefit}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
-              ))}
+              )}
             </div>
           </section>
           {/* Use Cases Section */}
@@ -203,14 +205,15 @@ const AILeadGenerationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Perfect for Every Industry
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {useCases.map((useCase, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
           {/* Pricing Section */}
@@ -218,7 +221,8 @@ const AILeadGenerationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Simple, Transparent Pricing
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
@@ -247,7 +251,7 @@ const AILeadGenerationPage: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <a
                     href="tel:+13024640950"
@@ -260,7 +264,7 @@ const AILeadGenerationPage: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-              ))}
+              )}
             </div>
           </section>
           {/* CTA Section */}

@@ -125,7 +125,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 </a>
               </div>
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
                 {stats.map((stat, index) => (
                   <div key={index} className="cyber-card p-6 text-center">
                     <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
@@ -133,8 +134,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
                     </div>
                     <div className="text-gray-300 font-medium">{stat.label}</div>
                   </div>
-                ))}
-              </div>
+                )}
+            </div>
             </div>
           </section>
 
@@ -143,7 +144,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -155,10 +157,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
-              ))}
+              )}
             </div>
           </section>
           {/* Use Cases Section */}
@@ -166,14 +168,15 @@ const AIWorkflowAutomationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Automate Any Business Process
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {useCases.map((useCase, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
           {/* Pricing Section */}
@@ -181,7 +184,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {pricing.map((plan, index) => (
                 <div
                   key={index}
@@ -205,7 +209,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
@@ -214,7 +218,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 

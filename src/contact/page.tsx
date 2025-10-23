@@ -172,7 +172,7 @@ const ContactPage: React.FC = () => {
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
                       <option key={index} value={service}>{service}</option>
-                    ))}
+                    )}
                   </select>
                 </div>
 
@@ -201,7 +201,7 @@ const ContactPage: React.FC = () => {
                 </button>
               </form>
             )}
-          </div>
+            </div>
 
           {/* Contact Information */}
           <div className="space-y-8">
@@ -269,7 +269,8 @@ const ContactPage: React.FC = () => {
             {/* Achievements */}
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-xl p-8">
               <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
                 {achievements.map((achievement, index) => (
                   <div key={index} className="text-center">
                     <div className="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -277,8 +278,8 @@ const ContactPage: React.FC = () => {
                     </div>
                     <p className="text-sm text-gray-300">{achievement.text}</p>
                   </div>
-                ))}
-              </div>
+                )}
+            </div>
             </div>
 
             {/* Quick Contact */}

@@ -54,7 +54,8 @@ const SitemapPage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-800 rounded-lg p-8">
               <h2 className="text-2xl font-semibold mb-6">All Pages</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
                 {pages.map((page, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg p-4">
                     <a href={page.url}
@@ -69,8 +70,8 @@ const SitemapPage: React.FC = () => {
                       {page.url}
                     </div>
                   </div>
-                ))}
-              </div>
+                )}
+            </div>
               <div className="mt-8 text-center">
                 <a href="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"

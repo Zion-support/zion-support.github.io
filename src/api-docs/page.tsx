@@ -67,7 +67,8 @@ const ApiDocsPage: React.FC = () => {
           {/* API Endpoints */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {apiEndpoints.map((endpoint) => (
                 <div key={endpoint.id} className="bg-gray-800 rounded-lg p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -93,7 +94,7 @@ const ApiDocsPage: React.FC = () => {
                     <pre className="text-sm text-gray-300 whitespace-pre-wrap">{endpoint.example}</pre>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 

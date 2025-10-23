@@ -74,7 +74,7 @@ const ContentCarousel: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Discover Our Solutions</h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">Explore our comprehensive suite of AI-powered solutions designed to transform your business.</p>p>
+          <p className="text-xl text-purple-100 max-w-3xl mx-auto">Explore our comprehensive suite of AI-powered solutions designed to transform your business.</p>
         </div>
         <div className="relative">
 <div className="overflow-hidden rounded-xl">
@@ -91,23 +91,24 @@ const ContentCarousel: React.FC = () => {
                       <h3 className="text-2xl font-bold mb-4">{slide.title}</h3>
                       <p className="text-purple-100 text-lg max-w-2xl mx-auto">{slide.description}</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{slide.features.map((feature, featureIndex) => (</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              
                         <div key={featureIndex} className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-purple-100">{feature}</span>
                         </div>
-                      ))}
-                    </div>
+                      )}
+            </div>
                   </div>
                 </div>
-              ))}
+              )}
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">{/* Header */}</div>
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>
         </div>
         {/* Carousel Container */}
         {/* Carousel */}
@@ -121,23 +122,25 @@ const ContentCarousel: React.FC = () => {
                 {/* Features */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{currentSlideData.features.map((feature, index) => (</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </div>
-                    ))}
-                  </div>
+                    )}
+            </div>
                 </div>
                 {/* Stats */}
                 {currentSlideData.stats && (
-                  <div className="grid grid-cols-3 gap-6">{currentSlideData.stats.map((stat, index) => (</div>
+                  <div className="grid grid-cols-3 gap-6">
+              
                       <div key={index} className="text-center">
                         <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                         <div className="text-gray-400 text-sm">{stat.label}</div>
                       </div>
-                    ))}
-                  </div>
+                    )}
+            </div>
                 )}
                 {/* CTA */}
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -158,30 +161,32 @@ const ContentCarousel: React.FC = () => {
                     <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                       <currentSlideData.icon className="w-16 h-16 text-white" />
                     </div>
-                    <div className="text-4xl font-bold text-white mb-2">{currentSlideData.title}</div>div>
-                    <div className="text-gray-300">Slide {currentSlide + 1} of {slides.length}</div>div>
+                    <div className="text-4xl font-bold text-white mb-2">{currentSlideData.title}</div>
+                    <div className="text-gray-300">Slide {currentSlide + 1} of {slides.length}</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{currentSlideData.features.map((feature, index) => (</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
                 </div>
-              ))}
+              )}
             </div>
             {/* Stats */}
             {currentSlideData.stats && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">{currentSlideData.stats.map((stat, index) => (</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">
+              
                   <div key={index} className="text-center">
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-sm text-gray-400">{stat.label}</div>
                   </div>
-                ))}
-              </div>
+                )}
+            </div>
             )}
-          </div>
+            </div>
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
@@ -207,7 +212,8 @@ const ContentCarousel: React.FC = () => {
           </button>
         </div>
         {/* Slide Indicators */}
-        <div className="flex justify-center mt-8 space-x-2">{slides.map((_, index) => (</div>
+        <div className="flex justify-center mt-8 space-x-2">
+              
             <button
               key={index}
               onClick={() =>setCurrentSlide(index)}</button>
@@ -215,8 +221,8 @@ const ContentCarousel: React.FC = () => {
                 index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
               }`}
             />
-          ))}
-        </div>
+          )}
+            </div>
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">

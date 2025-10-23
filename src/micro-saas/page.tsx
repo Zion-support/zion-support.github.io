@@ -151,6 +151,7 @@ const MicroSAASPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Solution Categories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {categories.map((category, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                 <div className="flex items-center mb-6">
@@ -159,7 +160,8 @@ const MicroSAASPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white">{category.title}</h3>
                 </div>
-                <div className="space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="flex justify-between items-center p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700/70 transition-colors">
                       <div>
@@ -176,18 +178,19 @@ const MicroSAASPage: React.FC = () => {
                         </a>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  )}
+            </div>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
 
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our Micro SAAS Solutions?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -196,7 +199,7 @@ const MicroSAASPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>

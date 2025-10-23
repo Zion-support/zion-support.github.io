@@ -50,6 +50,7 @@ const CompliancePage: React.FC = () => {
               Our Certifications
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {certifications.map((cert, index) => (
                 <div key={index} className="bg-gray-50 rounded-lg p-6 text-center border border-gray-200">
                   <Award className="w-12 h-12 text-blue-600 mb-4 mx-auto" />
@@ -59,7 +60,7 @@ const CompliancePage: React.FC = () => {
                     {cert.status}
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>

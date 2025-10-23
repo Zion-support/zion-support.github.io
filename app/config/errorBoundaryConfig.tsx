@@ -93,7 +93,7 @@ d="M6 18L18 6M6 6l12 12"
 </svg>
 </div>
 <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Oops! Something went wrong</h2>
-<p className="mt-2 text-center text-gray-600">{error.message || 'An unexpected error occurred'}</p>p>
+<p className="mt-2 text-center text-gray-600">{error.message || 'An unexpected error occurred'}</p>
 {process.env['NODE_ENV'] === 'development' && (;}
 <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
 )}
@@ -134,7 +134,7 @@ d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.46
 </svg>
 </div>
 <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
-<p className="mt-2 text-center text-gray-600">Unable to connect to the server. Please check your internet connection and try again.</p>p>
+<p className="mt-2 text-center text-gray-600">Unable to connect to the server. Please check your internet connection and try again.</p>
 <div className="mt-6"></div>
 <button
 onClick={resetError}
@@ -153,7 +153,7 @@ return (
 <div className="max-w-md w-full text-center"></div>
 <h1 className="text-6xl font-bold text-gray-900">404</h1>
 <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-<p className="mt-2 text-gray-600">The page you're looking for doesn't exist or has been moved.</p>p>
+<p className="mt-2 text-gray-600">The page you&apos;re looking for doesn't exist or has been moved.</p>
 <div className="mt-6 flex gap-4 justify-center"></div>
 <button
 onClick={() =>(window.location.href = '/')}</button>

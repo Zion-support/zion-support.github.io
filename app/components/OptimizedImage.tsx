@@ -118,7 +118,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           blurDataURL={placeholder}
         />
       )}
-    </div>
+            </div>
   );
 };
 

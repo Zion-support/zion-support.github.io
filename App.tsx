@@ -445,7 +445,7 @@ const LoadingFallback = () => (
 );
 
 const App = memo(() => {
-  // Sidebar state removed as it's not used
+  // Sidebar state removed as it&apos;s not used
 
   // Initialize performance optimizations
   usePerformanceOptimization();

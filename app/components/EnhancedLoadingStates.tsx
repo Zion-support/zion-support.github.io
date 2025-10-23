@@ -20,7 +20,7 @@ return (
 {text && (
 <p className="mt-2 text-sm text-gray-500">{text}</p>
 )}
-</div>
+            </div>
 )
 }
 export const PageLoader: React.FC = () => (
@@ -52,8 +52,8 @@ export const StatsSkeleton: React.FC = () => (
 <div className="h-8 bg-gray-600 rounded mb-2"></div>
 <div className="h-4 bg-gray-600 rounded w-3/4 mx-auto"></div>
 </div>
-))}
-</div>
+)}
+            </div>
 )
 export const ContentSkeleton: React.FC = () => (
 <div className="space-y-6 animate-pulse">

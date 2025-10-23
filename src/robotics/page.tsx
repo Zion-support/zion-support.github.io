@@ -223,6 +223,7 @@ const RoboticsPage: React.FC = () => {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
                 {roboticsServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
@@ -247,7 +248,7 @@ const RoboticsPage: React.FC = () => {
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
-                          ))}
+                          )}
                         </ul>
                       </div>
                       <div className="mb-4">
@@ -257,8 +258,8 @@ const RoboticsPage: React.FC = () => {
                             <span key={techIndex} className="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
-                          ))}
-                        </div>
+                          )}
+            </div>
                       </div>
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
@@ -268,18 +269,18 @@ const RoboticsPage: React.FC = () => {
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
-                          ))}
+                          )}
                         </ul>
                       </div>
                       <button className="w-full bg-teal-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
                         Get Robotics Consultation
                       </button>
                     </div>
-                  ))}
-              </div>
+                  )}
+            </div>
             </div>
           </section>
-        ))}
+        )}
         {/* Robotics Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -56,12 +56,12 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 
   if (href) {
     return (
-      <a href={href} className={buttonClasses}>{content}</a>a>
+      <a href={href} className={buttonClasses}>{content}</a>
     );
   }
 
   return (
-    <button onClick={onClick} disabled={disabled} className={buttonClasses}>{content}</button>button>
+    <button onClick={onClick} disabled={disabled} className={buttonClasses}>{content}</button>
   );
 };
 

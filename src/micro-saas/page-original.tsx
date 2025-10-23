@@ -3453,6 +3453,7 @@ const MicroSAASPage: React.FC = () => {
             Choose Your Perfect AI Tools
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {microSAASServices.map((service, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-center mb-6">
@@ -3477,7 +3478,7 @@ const MicroSAASPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
+                    )}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
                         +{service.features.length - 4} more features
@@ -3493,7 +3494,7 @@ const MicroSAASPage: React.FC = () => {
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
                 <div className="mb-6">
@@ -3503,8 +3504,8 @@ const MicroSAASPage: React.FC = () => {
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                         {tech}
                       </span>
-                    ))}
-                  </div>
+                    )}
+            </div>
                 </div>
                 <div className="text-center">
                   <a
@@ -3518,8 +3519,8 @@ const MicroSAASPage: React.FC = () => {
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
       {/* CTA Section */}

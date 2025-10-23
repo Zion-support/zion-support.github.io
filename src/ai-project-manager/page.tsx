@@ -87,13 +87,14 @@ const AIProjectManagerPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Powerful AI Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -102,13 +103,14 @@ const AIProjectManagerPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Proven Results
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {benefits.map((benefit, index) => (
                 <div key={index} className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <p className="text-lg text-white font-semibold">{benefit}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -117,7 +119,8 @@ const AIProjectManagerPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Choose Your Plan
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {pricing.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
@@ -138,7 +141,7 @@ const AIProjectManagerPage: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <a
                     href="/contact"
@@ -151,7 +154,7 @@ const AIProjectManagerPage: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 

@@ -152,7 +152,7 @@ const Footer: React.FC = () => {
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </li>
-              ))}
+              )}
             </ul>
             <a href="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
@@ -179,7 +179,7 @@ const Footer: React.FC = () => {
                         {service.name}
                       </a>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
               <div>
@@ -193,7 +193,7 @@ const Footer: React.FC = () => {
                         {service.name}
                       </a>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
             </div>
@@ -221,7 +221,7 @@ const Footer: React.FC = () => {
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
 
@@ -240,7 +240,7 @@ const Footer: React.FC = () => {
                         {link.name}
                       </a>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
               <div>
@@ -254,7 +254,7 @@ const Footer: React.FC = () => {
                         {link.name}
                       </a>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
             </div>
@@ -275,7 +275,7 @@ const Footer: React.FC = () => {
                 >
                   {link.name}
                 </a>
-              ))}
+              )}
             </div>
           </div>
         </div>

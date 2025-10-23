@@ -63,7 +63,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {/* Featured Badge */}
         {featured && (
           <div className="absolute top-4 left-4">
-            <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">⭐ Featured</span>span>
+            <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">⭐ Featured</span>
           </div>
         )}
 
@@ -71,7 +71,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {stats && (
           <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2">
             <div className="text-center">
-              <div className="text-lg font-bold text-white">{formatNumber(stats.views)}</div>div>
+              <div className="text-lg font-bold text-white">{formatNumber(stats.views)}
+            </div>
               <div className="text-xs text-white opacity-90">views</div>
             </div>
           </div>
@@ -79,17 +80,17 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
 
         {/* Read Time Badge */}
         <div className="absolute bottom-4 left-4">
-          <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{readTime}</span>span>
+          <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{readTime}</span>
         </div>
       </div>
       {/* Content */}
       <div className="p-6">
         <div className="mb-3">
-          <span className="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{category}</span>span>
+          <span className="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{category}</span>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{title}</h3>h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{title}</h3>
 
-        <p className="text-gray-600 mb-4 line-clamp-3">{excerpt || description}</p>p>
+        <p className="text-gray-600 mb-4 line-clamp-3">{excerpt || description}</p>
 
         {/* Stats Row */}
         {stats && (

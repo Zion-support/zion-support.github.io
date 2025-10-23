@@ -102,7 +102,8 @@ const QuantumComputingPage: React.FC = () => {
               Cutting-edge quantum computing services designed to solve your most challenging problems
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {quantumServices.map((service) => (
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -115,7 +116,7 @@ const QuantumComputingPage: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
                         {feature}
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
                 <div className="mb-6">
@@ -126,7 +127,7 @@ const QuantumComputingPage: React.FC = () => {
                         <Star className="w-5 h-5 text-yellow-500 mr-2" />
                         {benefit}
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
                 <div className="border-t pt-4">
@@ -136,8 +137,8 @@ const QuantumComputingPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
       {/* CTA Section */}

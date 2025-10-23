@@ -38,7 +38,7 @@ index === breadcrumbItems.length - 1
 <span>{item.name}</span>
 </a>
 </li>
-))}
+)}
 </ol>
 </div>
 </nav>

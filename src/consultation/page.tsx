@@ -151,14 +151,15 @@ const ConsultationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               What You'll Get
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {consultationBenefits.map((benefit, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -167,7 +168,8 @@ const ConsultationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Our Consultation Process
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {consultationProcess.map((step, index) => (
                 <div key={index} className="cyber-card p-6 text-center">
                   <div className="w-16 h-16 bg-cyan-400 text-slate-900 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
@@ -176,7 +178,7 @@ const ConsultationPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -371,7 +373,7 @@ const ConsultationPage: React.FC = () => {
                         value={formData.message}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        placeholder="Any additional information you'd like to share"
+                        placeholder="Any additional information you&apos;d like to share"
                       />
                     </div>
                     <button
@@ -442,21 +444,22 @@ const ConsultationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               What Our Clients Say
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="cyber-card p-6">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
+                    )}
+            </div>
                   <p className="text-gray-300 mb-4">"{testimonial.text}"</p>
                   <div>
                     <div className="font-bold text-white">{testimonial.name}</div>
                     <div className="text-cyan-400 text-sm">{testimonial.company}</div>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </section>
         </main>

@@ -96,13 +96,14 @@ const MachineLearningPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               ML Capabilities
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -111,14 +112,15 @@ const MachineLearningPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Common Use Cases
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {useCases.map((useCase, index) => (
                 <div key={index} className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -127,13 +129,14 @@ const MachineLearningPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Business Impact
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {benefits.map((benefit, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <p className="text-lg text-white font-semibold">{benefit}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 

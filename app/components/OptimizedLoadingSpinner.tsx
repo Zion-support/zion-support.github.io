@@ -58,7 +58,8 @@ key={i}
 className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
 style={{ animationDelay: `${i * 0.1}s` }}
 /></div>
-))}</div>
+)}
+            </div>
 )
 case 'pulse':
 return (
@@ -95,7 +96,8 @@ height: `${12 + i * 4}px`,
 animationDelay: `${i * 0.1}s`,
 }}
 /></div>
-))}</div>
+)}
+            </div>
 )
 case 'spinner':
 default:
@@ -114,9 +116,9 @@ return (</div>
 <div className={containerClasses}></div>
 <div className='text-center'>{renderSpinner}</div>
 {text && (</div>;}
-<p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p>
+<p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>
 )}
-</div>
+            </div>
 )
 }
 )

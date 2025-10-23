@@ -260,7 +260,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
       { href: '#footer', text: 'Skip to footer' }
-    ];
+  ];
 
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';

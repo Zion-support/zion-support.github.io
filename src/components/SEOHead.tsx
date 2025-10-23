@@ -68,7 +68,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           {section && <meta property="article:section" content={section} />}
           {tags.map((tag, index) => (
             <meta key={index} property="article:tag" content={tag} />
-          ))}
+          )}
         </>
       )}
       {/* Additional SEO Meta Tags */}

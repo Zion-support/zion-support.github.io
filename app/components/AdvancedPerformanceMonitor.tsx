@@ -259,11 +259,11 @@ Recommendations:
 <ul className='text-xs text-red-600'>
 {_recommendations.map((rec, index) => (
 <li key={index}>• {rec}</li>
-))}
+)}
 </ul>
 </div>
 )}
-</div>
+            </div>
 )
 }
 return null

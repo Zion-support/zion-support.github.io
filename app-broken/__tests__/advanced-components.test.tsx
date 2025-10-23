@@ -45,7 +45,7 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
             <button>Reload Page</button>
           </div>
         )}
-      </div>
+            </div>
     );
   }
   return <>{children}</>;

@@ -97,7 +97,8 @@ const AIContentGenerationPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Content Generation Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {contentServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6">
                 <div className="text-4xl mb-4">{service.icon}</div>
@@ -109,7 +110,7 @@ const AIContentGenerationPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
-                  ))}
+                  )}
                 </ul>
                 <div className="text-cyan-400 font-bold mb-4">{service.price}</div>
                 <a
@@ -119,15 +120,16 @@ const AIContentGenerationPage: React.FC = () => {
                   Get Started
                 </a>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
         {/* Process Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             How It Works
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -137,8 +139,8 @@ const AIContentGenerationPage: React.FC = () => {
                 <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
                 <p className="text-gray-300 text-sm">{step.description}</p>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
         {/* CTA Section */}
         <section className="text-center">

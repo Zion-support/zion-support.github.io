@@ -132,7 +132,8 @@ const PricingPage: React.FC = () => {
 
           {/* Pricing Plans */}
           <section className="container mx-auto px-4 py-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
@@ -161,7 +162,7 @@ const PricingPage: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <a
                     href={plan.popular ? "mailto:kleber@ziontechgroup.com" : "tel:+13024640950"}
@@ -174,7 +175,7 @@ const PricingPage: React.FC = () => {
                     {plan.popular ? 'Contact Sales' : plan.cta}
                   </a>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -183,14 +184,15 @@ const PricingPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Additional Services
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {addOns.map((addon, index) => (
                 <div key={index} className="cyber-card p-6 text-center">
                   <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3>
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{addon.price}</div>
                   <p className="text-gray-300 text-sm">{addon.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -199,13 +201,14 @@ const PricingPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Frequently Asked Questions
             </h2>
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {faqs.map((faq, index) => (
                 <div key={index} className="cyber-card p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 

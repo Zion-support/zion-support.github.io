@@ -134,6 +134,7 @@ const AnalyticsToolsPage: React.FC = () => {
             Our Analytics Tools
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {analyticsTools.map((tool, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
                 <div className="text-center mb-6">
@@ -152,7 +153,7 @@ const AnalyticsToolsPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
                 <div className="text-center">
@@ -165,8 +166,8 @@ const AnalyticsToolsPage: React.FC = () => {
                   </a>
                 </div>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
       {/* Benefits Section */}
@@ -175,15 +176,16 @@ const AnalyticsToolsPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
             Why Choose Our Analytics Tools?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
       {/* CTA Section */}

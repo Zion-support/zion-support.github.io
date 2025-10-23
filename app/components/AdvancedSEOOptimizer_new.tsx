@@ -114,7 +114,7 @@ return (
 <meta name="twitter:image" content={ogImage} />
 {/* Structured Data */}
 <script type="application/ld+json">
-{JSON.stringify(generateStructuredData())}
+{JSON.stringify(generateStructuredData()}
 </script>
 </Helmet>
 {children}
@@ -138,11 +138,11 @@ maxWidth: '300px'
 <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
 {recommendations.map((rec, index) => (
 <li key={index}>{rec}</li>
-))}
+)}
 </ul>
 </div>
 )}
-</div>
+            </div>
 )}
 </>
 )

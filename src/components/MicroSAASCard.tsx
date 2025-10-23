@@ -39,7 +39,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
           {service.marketPrice && (
             <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
           )}
-        </div>
+            </div>
         
         <div className="text-xs text-gray-400 mb-4">
           <span className="bg-gray-800 px-2 py-1 rounded">{service.category}</span>
@@ -55,7 +55,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                 {feature}
               </li>
-            ))}
+            )}
           </ul>
         </div>
         
@@ -67,7 +67,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
                 <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
                 {benefit}
               </li>
-            ))}
+            )}
           </ul>
         </div>
         
@@ -78,8 +78,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
               <span key={index} className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">
                 {tech}
               </span>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
         
         <div className="pt-4">

@@ -234,14 +234,15 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               Our AI e-commerce solutions deliver measurable improvements
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {industryStats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-purple-600 mb-2">{stat.metric}</div>
                 <div className="text-gray-600">{stat.description}</div>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
       {/* Services Grid */}
@@ -256,6 +257,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {ecommerceServices.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="text-4xl mb-4">{service.icon}</div>
@@ -276,14 +278,14 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
-                  ))}
+                  )}
                 </ul>
                 <div className="space-y-2 mb-6">
                   <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
-                  ))}
-                </div>
+                  )}
+            </div>
                 <a 
                   href="/contact"
                   className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-flex items-center justify-center"
@@ -291,8 +293,8 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                   Boost Sales Now
                 </a>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
       {/* Features Section */}
@@ -306,7 +308,8 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               Advanced AI technology designed specifically for e-commerce success
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {ecommerceFeatures.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
@@ -315,8 +318,8 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
       {/* Success Stories */}

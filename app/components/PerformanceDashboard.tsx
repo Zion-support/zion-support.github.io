@@ -115,7 +115,7 @@ isMonitoring
 ? 'bg-red-600 text-white hover:bg-red-700'
 : 'bg-green-600 text-white hover:bg-green-700'
 }`}
->{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>button>
+>{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>
 </div>
 {alerts.length > 0 && (
 <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
@@ -126,7 +126,7 @@ isMonitoring
 <ul className="space-y-1">
 {alerts.map((alert, index) => (
 <li key={index} className="text-red-300 text-sm">• {alert}</li>
-))}
+)}
 </ul>
 </div>
 )}
@@ -150,18 +150,19 @@ isMonitoring
 <MemoryStick className="w-4 h-4 text-purple-400" />
 <span className="text-gray-300 text-sm">Memory Usage</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}
+            </div>
 </div>
 <div className="bg-white/5 rounded-lg p-4">
 <div className="flex items-center gap-2 mb-2">
 <TrendingUp className="w-4 h-4 text-orange-400" />
 <span className="text-gray-300 text-sm">FPS</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>
+<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>
 </div>
 </div>
 <div className="mt-6 text-center">
-<p className="text-gray-400 text-sm">{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}</p>p>
+<p className="text-gray-400 text-sm">{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}</p>
 </div>
 </div>
 )

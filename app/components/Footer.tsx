@@ -64,8 +64,7 @@ const Footer: React.FC = () => {
               <Brain className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 mb-4">Advanced AI and IT solutions for modern businesses. We help you</p>
-              leverage cutting-edge technology to drive growth and innovation.
+            <pAdvanced AI and IT solutions for modern businesses. We help you leverage cutting-edge technology to drive growth and innovation.
             </p>
             <div className="flex space-x-4">
               <a
@@ -110,7 +109,7 @@ const Footer: React.FC = () => {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
           {/* IT Services */}
@@ -127,7 +126,7 @@ const Footer: React.FC = () => {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
           {/* Micro SaaS */}
@@ -144,7 +143,7 @@ const Footer: React.FC = () => {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
           {/* Company & Support */}
@@ -160,7 +159,7 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
 
             <h3 className="text-lg font-semibold mb-4">Support</h3>
@@ -174,7 +173,7 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
         </div>
@@ -197,7 +196,7 @@ const Footer: React.FC = () => {
         </div>
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm">© 2024 Zion Tech Group. All rights reserved.</div>div>
+          <div className="text-gray-400 text-sm">© 2024 Zion Tech Group. All rights reserved.</div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
               href="/privacy"

@@ -42,7 +42,8 @@ const DevOpsPage: React.FC = () => {
         </section>
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our DevOps Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {services.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
                 <service.icon className="w-12 h-12 text-cyan-400 mb-4" />
@@ -54,11 +55,11 @@ const DevOpsPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
       </main>
       <Footer />

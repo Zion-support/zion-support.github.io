@@ -117,7 +117,7 @@ export const SEO: React.FC<SEOProps> = ({
           <meta property="og:locale:alternate" content={altLocale} />
           <link rel="alternate" hrefLang={altLocale} href={altUrl} />
         </React.Fragment>
-      ))}
+      )}
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={seo.twitterCard} />
       <meta name="twitter:title" content={seo.title} />
@@ -134,7 +134,7 @@ export const SEO: React.FC<SEOProps> = ({
         </>
       )}
       {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script>
+      <script type="application/ld+json">{JSON.stringify(generateStructuredData()}</script>
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -72,7 +72,7 @@ const CaseStudiesPage: React.FC = () => {
     <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
+        <meta name="description" content="Explore our successful AI implementation case studies. See how we&apos;ve helped companies achieve 300%+ ROI with our AI solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
@@ -104,7 +104,8 @@ const CaseStudiesPage: React.FC = () => {
         {/* Case Studies Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {caseStudies.map((study) => (
                 <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
                   <div className="p-8">
@@ -137,8 +138,8 @@ const CaseStudiesPage: React.FC = () => {
                             {Object.values(study.results)[1]}
                           </div>
                           <div className="text-sm text-gray-600">
-                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
-                          </div>
+                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()}
+            </div>
                         </div>
                       </div>
                     </div>
@@ -155,7 +156,7 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>

@@ -193,7 +193,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
@@ -207,10 +208,10 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -227,14 +228,15 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {integrations.map((integration, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <div className="text-6xl mb-4">{integration.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{integration.name}</h3>
                   <p className="text-gray-300 text-sm">{integration.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -251,7 +253,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''}`}>
                   {plan.popular && (
@@ -273,7 +276,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in AI Analytics Dashboard ${plan.name} Plan`}
@@ -286,7 +289,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -303,21 +306,22 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="cyber-card p-6">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
+                    )}
+            </div>
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-blue-400 text-sm">{testimonial.role}</div>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>

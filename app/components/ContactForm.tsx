@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
-        <p>Your message has been sent successfully. We'll get back to you soon.</p>p>
+        <p>Your message has been sent successfully. We&apos;ll get back to you soon.</p>
       </div>
     );
   }
@@ -167,7 +167,7 @@ const ContactForm: React.FC = () => {
                   <option key={service} value={service} className="bg-gray-800">
                     {service}
                   </option>
-                ))}
+                )}
               </select>
             </div>
             <div>
@@ -296,7 +296,7 @@ const ContactForm: React.FC = () => {
         type="submit"
         disabled={isSubmitting}
         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-      >{isSubmitting ? "Sending..." : "Send Message"}</button>button>
+      >{isSubmitting ? "Sending..." : "Send Message"}</button>
     </form>
   );
 };

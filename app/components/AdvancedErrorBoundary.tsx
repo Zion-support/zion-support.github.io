@@ -194,14 +194,13 @@ class AdvancedErrorBoundary extends Component<
                     />
                   </svg>
                 </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>h2>
-                <p className='mt-2 text-sm text-gray-600'>We're sorry, but something unexpected happened. Our team</p>
-                  has been notified.
+                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>
+                <pWe're sorry, but something unexpected happened. Our team has been notified.
                 </p>
               </div>
               {process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>h3>
+                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>
                   <div className='mt-2 text-sm text-red-700'>
                     <p>
                       <strong>Error ID:</strong> {this.state.errorId}
@@ -238,12 +237,12 @@ class AdvancedErrorBoundary extends Component<
                 <button
                   onClick={this.handleReload}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >Reload Page</button>button>
+                >Reload Page</button>
 
                 <button
                   onClick={this.handleGoHome}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >Go to Homepage</button>button>
+                >Go to Homepage</button>
               </div>
               <div className='mt-6 text-center'>
                 <p className='text-xs text-gray-500'>If this problem persists, please contact our support team</p>
@@ -251,7 +250,7 @@ class AdvancedErrorBoundary extends Component<
                   <a
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
-                  >kleber@ziontechgroup.com</a>a>
+                  >kleber@ziontechgroup.com</a>
                 </p>
               </div>
             </div>

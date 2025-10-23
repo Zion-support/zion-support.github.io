@@ -150,7 +150,8 @@ aria-label="Open sidebar"
 {isOpen && (
 <div
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
-onClick={() =>setIsOpen(false)}</div>
+onClick={() =>setIsOpen(false)}
+            </div>
 />
 )}
 {/* Sidebar */}</div>
@@ -208,11 +209,11 @@ location.pathname === item.path
 <item.icon className="w-4 h-4 flex-shrink-0" />
 <span>{item.name}</span>
 </Link>
-))}
-</div>
 )}
-</div>
-))}
+            </div>
+)}
+            </div>
+)}
 </nav>
 </div>
 {/* Contact Info */}

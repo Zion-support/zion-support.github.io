@@ -189,7 +189,8 @@ const AICRMPage: React.FC = () => {
             <p className="text-xl text-gray-300">Everything you need to manage and grow your customer relationships</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -203,11 +204,11 @@ const AICRMPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                       {benefit}
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
 
@@ -219,7 +220,8 @@ const AICRMPage: React.FC = () => {
             <p className="text-xl text-gray-300">Advanced features that set us apart from traditional CRM systems</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {capabilities.map((capability, index) => (
               <div key={index} className="cyber-card p-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -229,8 +231,8 @@ const AICRMPage: React.FC = () => {
                 <p className="text-gray-300 mb-4">{capability.description}</p>
                 <div className="text-cyan-400 font-semibold text-lg">{capability.stats}</div>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
 
@@ -242,22 +244,23 @@ const AICRMPage: React.FC = () => {
             <p className="text-xl text-gray-300">Real results from real businesses</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {testimonials.map((testimonial, index) => (
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
+                  )}
+            </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
 
@@ -269,7 +272,8 @@ const AICRMPage: React.FC = () => {
             <p className="text-xl text-gray-300">Choose the plan that fits your business needs</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                 {plan.popular && (
@@ -293,7 +297,7 @@ const AICRMPage: React.FC = () => {
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
                       {feature}
                     </li>
-                  ))}
+                  )}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                   plan.popular 
@@ -303,8 +307,8 @@ const AICRMPage: React.FC = () => {
                   Get Started
                 </button>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </div>
       </section>
 

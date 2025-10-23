@@ -105,8 +105,7 @@ return (
 <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">Get in</h1>
 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">{' '}Touch</span>
 </h1>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Ready to transform your business? Let's discuss your project and explore</p>
-how our AI and IT solutions can help you achieve your goals.
+<pReady to transform your business? Let's discuss your project and explore how our AI and IT solutions can help you achieve your goals.
 </p>
 </div>
 </section>
@@ -211,7 +210,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-l
 <option key={service} value={service}>
 {service}
 </option>
-))}
+)}
 </select>
 </div>
 </div>
@@ -253,15 +252,14 @@ className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 p
 <div className="space-y-8">
 <div>
 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-<p className="text-lg text-gray-300 mb-8">We're here to help! Reach out to us through any of these channels</p>
-and we'll get back to you as soon as possible.
+<pWe're here to help! Reach out to us through any of these channels and we&apos;ll get back to you as soon as possible.
 </p>
 </div>
 {/* Contact Information */}
 <div className="space-y-8">
 <div>
 <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-<p className="text-gray-300 mb-8">We're here to help you transform your business with cutting-edge AI and technology solutions.</p>p>
+<p className="text-gray-300 mb-8">We're here to help you transform your business with cutting-edge AI and technology solutions.</p>
 </div>
 <div className="space-y-6">
 <div className="flex items-center">
@@ -269,9 +267,9 @@ and we'll get back to you as soon as possible.
 <Phone className="w-6 h-6 text-white" />
 </div>
 <div>
-<h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>h3>
-<p className="text-cyan-400 font-medium mb-1">{info.details}</p>p>
-<p className="text-gray-300 text-sm">{info.description}</p>p>
+<h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
+<p className="text-cyan-400 font-medium mb-1">{info.details}</p>
+<p className="text-gray-300 text-sm">{info.description}</p>
 </div>
 </div>
 <div className="flex items-center">

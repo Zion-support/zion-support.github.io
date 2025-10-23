@@ -166,7 +166,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
       { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
       { rel: 'preconnect', href: 'https://www.google-analytics.com' }
-    ];
+  ];
 
     hints.forEach((hint) => {
       const link = document.createElement('link');

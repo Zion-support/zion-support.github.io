@@ -193,6 +193,7 @@ const SmartAnalyticsPage: React.FC = () => {
             Powerful Analytics Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
@@ -200,8 +201,8 @@ const SmartAnalyticsPage: React.FC = () => {
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
                 <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
 
         {/* Integrations Section */}
@@ -209,15 +210,16 @@ const SmartAnalyticsPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Connect All Your Data Sources
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {integrations.map((integration, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
 
         {/* Pricing Section */}
@@ -225,7 +227,8 @@ const SmartAnalyticsPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Simple, Transparent Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular 
@@ -249,7 +252,7 @@ const SmartAnalyticsPage: React.FC = () => {
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
-                  ))}
+                  )}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
@@ -259,8 +262,8 @@ const SmartAnalyticsPage: React.FC = () => {
                   Get Started
                 </button>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
 
         {/* Testimonials */}
@@ -268,14 +271,15 @@ const SmartAnalyticsPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             What Our Customers Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
+                  )}
+            </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
@@ -283,8 +287,8 @@ const SmartAnalyticsPage: React.FC = () => {
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
                 </div>
               </div>
-            ))}
-          </div>
+            )}
+            </div>
         </section>
 
         {/* CTA Section */}

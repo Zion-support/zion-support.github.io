@@ -101,7 +101,8 @@ const AIFashionDesignPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               AI Fashion Design Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
@@ -109,7 +110,7 @@ const AIFashionDesignPage: React.FC = () => {
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -119,6 +120,7 @@ const AIFashionDesignPage: React.FC = () => {
               Why Choose AI Fashion Designer?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -126,7 +128,7 @@ const AIFashionDesignPage: React.FC = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -135,7 +137,8 @@ const AIFashionDesignPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Simple, Transparent Pricing
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
@@ -158,7 +161,7 @@ const AIFashionDesignPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <a
                     href="/contact"
@@ -171,7 +174,7 @@ const AIFashionDesignPage: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 

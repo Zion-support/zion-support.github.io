@@ -1177,7 +1177,7 @@ ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
 )
 )
 .join('')}
-</div>
+            </div>
 </body>
 </html>`
 if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -1318,32 +1318,25 @@ r: #ff9800; }
 <h1>Test Results</h1>
 <div class="summary"></div>
 <h2>Summary</h2>
-<p>Tota,</p>
-l: ${this.results.length}</p>
-<p>Passe,</p>
-d: ${this.results.filter(r => r.status === 'passed').length}</p>
-<p>Faile,</p>
-d: ${this.results.filter(r => r.status === 'failed').length}</p>
-<p>Skippe,</p>
-d: ${this.results.filter(r => r.status === 'skipped').length}</p>
-<p>Duratio,</p>
-n: ${Date.now() - this.startTime}ms</p>
+<pTota, l: ${this.results.length}</p>
+<pPasse, d: ${this.results.filter(r => r.status === 'passed').length}</p>
+<pFaile, d: ${this.results.filter(r => r.status === 'failed').length}</p>
+<pSkippe, d: ${this.results.filter(r => r.status === 'skipped').length}</p>
+<pDuratio, n: ${Date.now() - this.startTime}ms</p>
 </div>"
 <div class="tests"></div>
 ${/* TODO: Fix JSX expression */}"
 <div class="test ${result.status}"></div>
 <h3>${result.name}</h3>
-<p>Statu,</p>
-s: ${result.status}</p>
-<p>Duratio,</p>
-n: ${result.duration}ms</p>
+<pStatu, s: ${result.status}</p>
+<pDuratio, n: ${result.duration}ms</p>
 ${/* TODO: Fix JSX expression */}`
 r: ${result.error.message}</p>` : ''}
 </div>`
 `
 )
 .join('')}
-</div>
+            </div>
 </body>`
 </html>`
 if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -1516,7 +1509,7 @@ async runVisualRegressionTest(component: ReactElement),
 testName: string,
 ): Promise<{ passed: boolean; diff?: unknown }> {
 // This would typically use a tool like Percy or Chromatic
-// For now, we'll just return a placeholder}
+// For now, we&apos;ll just return a placeholder}
 if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
 this.testResults.push({`}
 async runVisualRegressionTest()
@@ -1524,7 +1517,7 @@ component: ReactElement,
 testName: string
 ): Promise<{ passed: boolean; diff?: unknown }> {}
 // This would typically use a tool like Percy or Chromatic
-// For now, we'll just return a placeholder}
+// For now, we&apos;ll just return a placeholder}
 if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
 this.testResults.push({`})
 name: `Visual: ${testName}`,
@@ -1541,14 +1534,14 @@ return { passed: true }
 // Coverage test
 async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
 // This would typically use Istanbul or similar
-// For now, we'll just return a placeholder
+// For now, we&apos;ll just return a placeholder
 const coverage: CoverageMetrics = {,
 statements: 85,
 // Coverage test
 // Coverage test
 async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {}
 // This would typically use Istanbul or similar
-// For now, we'll just return a placeholder
+// For now, we&apos;ll just return a placeholder
 const coverage: CoverageMetrics = {}
 statements: 85,
 branches: 80,
@@ -1574,7 +1567,7 @@ assertions?: (result: RenderResult) => void
 userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
 }></void>
 // This would typically use Istanbul or similar
-// For now, we'll just return a placeholder
+// For now, we&apos;ll just return a placeholder
 const coverage: CoverageMetrics = {
 statements: 85,
 branches: 80,
@@ -1728,7 +1721,7 @@ async runVisualRegressionTest(component: ReactElement),
 testName: string,
 ): Promise<{ passed: boolean; diff?: unknown }> {
 // This would typically use a tool like Percy or Chromatic;}
-// For now, we'll just return a placeholder}
+// For now, we&apos;ll just return a placeholder}
 if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
 this.testResults.push({`}
 async runVisualRegressionTest()
@@ -1736,7 +1729,7 @@ component: ReactElement,
 testName: string
 ): Promise<{ passed: boolean; diff?: unknown }> {}
 // This would typically use a tool like Percy or Chromatic
-// For now, we'll just return a placeholder}
+// For now, we&apos;ll just return a placeholder}
 if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
 this.testResults.push({`})
 name: `Visual: ${testName}`,
@@ -1753,14 +1746,14 @@ return { passed: true }
 // Coverage test
 async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
 // This would typically use Istanbul or similar
-// For now, we'll just return a placeholder
+// For now, we&apos;ll just return a placeholder
 const coverage: CoverageMetrics = {,
 statements: 85,
 // Coverage test
 // Coverage test;}
 async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {}
 // This would typically use Istanbul or similar
-// For now, we'll just return a placeholder
+// For now, we&apos;ll just return a placeholder
 const coverage: CoverageMetrics = {}
 statements: 85,
 branches: 80,
@@ -1786,7 +1779,7 @@ assertions?: (result: RenderResult) => void;}
 userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
 }></void>
 // This would typically use Istanbul or similar
-// For now, we'll just return a placeholder
+// For now, we&apos;ll just return a placeholder
 const coverage: CoverageMetrics = {
 statements: 85,
 branches: 80,

@@ -29,16 +29,17 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 </div>
 )}
 <div className="mb-4">
-<h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">{title}</h3>h3>
+<h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">{title}</h3>
 <p className="text-gray-300 text-sm">{description}</p>
 </div>
-<div className="space-y-2 mb-6">{features.map((feature, index) => (</div>
+<div className="space-y-2 mb-6">
+              
 <div key={index} className="flex items-center gap-2">
 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
 <span className="text-gray-300 text-sm">{feature}</span>
 </div>
-))}
-</div>
+)}
+            </div>
 {price && (
 <div className="mb-6">
 <div className="text-3xl font-bold text-white mb-1">{price}</div>
@@ -52,7 +53,7 @@ className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 r
 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
 </button>
 )}
-</div>
+            </div>
 )
 }
 export default ServiceCard

@@ -24,11 +24,12 @@ const Navigation: React.FC = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>span>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">{navigationItems.map((item, index) => (</div>
+          <div className="hidden md:flex items-center space-x-8">
+              
               <Link
                 key={index}
                 href={item.href}
@@ -36,8 +37,8 @@ const Navigation: React.FC = () => {
               >
                 {item.name}
               </Link>
-            ))}
-          </div>
+            )}
+            </div>
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
@@ -65,7 +66,8 @@ const Navigation: React.FC = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">{navigationItems.map((item, index) => (</div>
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              
                 <Link
                   key={index}
                   href={item.href}
@@ -74,7 +76,7 @@ const Navigation: React.FC = () => {
                 >
                   {item.name}
                 </Link>
-              ))}
+              )}
               <Link
                 href="/contact"
                 className="block px-3 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
@@ -85,7 +87,7 @@ const Navigation: React.FC = () => {
             </div>
           </div>
         )}
-      </div>
+            </div>
     </nav>
   );
 };

@@ -243,13 +243,14 @@ const ITInfrastructurePage: React.FC = () => {
                 Proven results from our IT infrastructure services
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {infrastructureStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.metric}</div>
                   <div className="text-lg font-semibold text-gray-900 mb-1">{stat.description}</div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -308,6 +309,7 @@ const ITInfrastructurePage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {itServices.map((service, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
                   <div className="text-4xl mb-4">{service.icon}</div>
@@ -330,7 +332,7 @@ const ITInfrastructurePage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
                   <div className="mb-4">
@@ -340,8 +342,8 @@ const ITInfrastructurePage: React.FC = () => {
                         <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                           {tech}
                         </span>
-                      ))}
-                    </div>
+                      )}
+            </div>
                   </div>
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
@@ -351,7 +353,7 @@ const ITInfrastructurePage: React.FC = () => {
                           <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
-                      ))}
+                      )}
                     </ul>
                   </div>
                   <div className="mb-4 p-3 bg-gray-50 rounded-lg">
@@ -372,7 +374,7 @@ const ITInfrastructurePage: React.FC = () => {
                     </a>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>

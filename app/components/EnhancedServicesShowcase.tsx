@@ -58,7 +58,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}
                   </li>
-                ))}
+                )}
               </ul>
               <a
                 href="/services"
@@ -66,8 +66,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
-          ))}
-        </div>
+          )}
+            </div>
         <div className="text-center mt-12">
           <a
             href="/services"

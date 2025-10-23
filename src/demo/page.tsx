@@ -106,14 +106,15 @@ const DemoPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               What to Expect
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {demoFeatures.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </section>
 
@@ -282,21 +283,22 @@ const DemoPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               What Our Clients Say
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="cyber-card p-6">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
+                    )}
+            </div>
                   <p className="text-gray-300 mb-4">"{testimonial.text}"</p>
                   <div>
                     <div className="font-bold text-white">{testimonial.name}</div>
                     <div className="text-cyan-400 text-sm">{testimonial.company}</div>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </section>
         </main>
