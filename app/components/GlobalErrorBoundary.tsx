@@ -1,62 +1,55 @@
 "use client";
 import React from "react";
 
-import React, { Component, ErrorInfo, ReactNode } from "react";
-
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
+interface GlobalErrorBoundaryState {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | undefined;
 }
 
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+interface GlobalErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+class GlobalErrorBoundary extends React.Component<
+  GlobalErrorBoundaryProps,
+  GlobalErrorBoundaryState
+> {
+  constructor(props: GlobalErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, error: undefined };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): GlobalErrorBoundaryState {
     return { hasError: true, error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === "development") {
-      console.error("GlobalErrorBoundary caught an error:", error, errorInfo);
-    }
-
-    // In production, you might want to log to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error("Global error caught:", error, errorInfo);
   }
 
   override render() {
     if (this.state.hasError) {
       return (
-        <div className="error-boundary">
-          <h1>Something went wrong.</h1>
-          <details style={{ whiteSpace: "pre-wrap" }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {this.state.errorInfo?.componentStack}
-          </details>
-        
-    
-    
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              Something went wrong
+            </h2>
+            <p className="text-gray-600 mb-6">
+              We apologize for the inconvenience. Please try refreshing the page.
+            </p>
+            <details className="text-left">
+              <summary className="cursor-pointer text-blue-600 hover:text-blue-800">
+                Error Details
+              </summary>
+              <pre className="mt-2 text-sm text-gray-500 overflow-auto">
+                {this.state.error?.stack}
+              </pre>
+            </details>
           </div>
         </div>
-      </div>
-    </div>
-  );
-}
+      );
+    }
 
     return this.props.children;
   }
