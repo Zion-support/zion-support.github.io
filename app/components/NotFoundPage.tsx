@@ -14,7 +14,7 @@ const NotFoundPage: React.FC = () => {
           The page you are looking for does not exist.
         </p>
         <Link
-          to="/"
+          href="/"
           className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
         >
           Go Home
