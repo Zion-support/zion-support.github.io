@@ -95,4 +95,3 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 export default Page;
 
-export default AccessibilityEnhancer;

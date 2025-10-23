@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 
+
 const AccessibilityUtils: React.FC = () => {
   
   return (
@@ -12,4 +13,3 @@ const AccessibilityUtils: React.FC = () => {
 
 export default Page;
 
-export default AccessibilityUtils;

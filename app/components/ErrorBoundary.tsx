@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 
+
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | undefined;
@@ -65,7 +66,6 @@ class ErrorBoundary extends React.Component<
             </button>
           </div>
         </div>
-      </div>
       );
     }
 
