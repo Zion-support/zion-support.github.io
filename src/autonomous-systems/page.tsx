@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { CheckCircle, Star, BarChart } from 'lucide-react'
-import { Bot, Cpu } from 'lucide-react'
-=======
-import { CheckCircle, Star, BarChart, Check, Bot, Cpu } from 'lucide-react';
-'use client';
-import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [

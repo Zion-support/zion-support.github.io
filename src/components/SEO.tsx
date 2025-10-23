@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-'use client'
-=======
-import { Helmet } from 'lucide-react';
-'use client';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react'
-=======
-import { CheckCircle, Star, Brain, Shield, Zap, Users, Target, Heart, Helmet, Check } from 'lucide-react';
-import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIHealthcarePage: React.FC = () => {
   const aiHealthcareServices = [

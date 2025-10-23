@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React, { useEffect, useCallback, useRef } from 'react'
-import { Helmet } from 'lucide-react'
-=======
-import { Helmet } from 'lucide-react';
-'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 interface SEOData {
   title: string

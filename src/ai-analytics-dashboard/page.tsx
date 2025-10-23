@@ -1,18 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 
-<<<<<<< HEAD
-import { BarChart3 } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone } from 'lucide-react'
-=======
-import { BarChart3, CheckCircle, Star, Phone, BarChart, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)

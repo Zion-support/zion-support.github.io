@@ -139,10 +139,6 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
     </>
   );
 };

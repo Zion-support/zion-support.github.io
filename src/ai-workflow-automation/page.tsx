@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Workflow } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-
-=======
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow, CheckCircle, Phone, Mail, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {

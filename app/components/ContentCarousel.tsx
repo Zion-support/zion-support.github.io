@@ -1,31 +1,4 @@
 'use client'
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
-const ContentCarouselPage: React.FC = () => {
-  const features = [
-=======
-import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
-import { CheckCircle, Star, Zap, TrendingUp, Users, ArrowRight } from 'lucide-react'
-
-interface Slide {
-  icon: React.ComponentType<any>title: string</a>
-  description: string
-  features: string[]
-  stats?: {
-    value: string
-    label: string
-  }[]
-}
-const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const slides: Slide[] = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -61,88 +34,6 @@ const ContentCarousel: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>ContentCarousel</title>
-        <meta name="description" content="Advanced ContentCarousel solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ContentCarousel
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced ContentCarousel solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-=======
-    <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
-            Discover Our Solutions
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI-powered solutions designed to transform your business.
-          </p>
-=======
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Discover Our Solutions</h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">Explore our comprehensive suite of AI-powered solutions designed to transform your business.</p>p>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
         </div>
         <div className="relative">
 <div className="overflow-hidden rounded-xl">
@@ -212,17 +103,6 @@ const ContentCarousel: React.FC = () => {
                   <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></button>
                     <Zap className="w-5 h-5" />
                     Get Started
-<<<<<<< HEAD
-                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"></button>
-                    <ArrowRight className="w-5 h-5" />
-                    Learn More
-=======
-  </
-                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                    <ArrowRight className="w-5 h-5" />
-                    Learn More
-  </
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
                 </div>
               </div>
               {/* Visual Element */}
@@ -284,11 +164,6 @@ const ContentCarousel: React.FC = () => {
         <div className="flex justify-center mt-8 space-x-2">{slides.map((_, index) => (</div>
             <button
               key={index}
-<<<<<<< HEAD
-              onClick={() =></button> setCurrentSlide(index)}
-=======
-              onClick={() =>setCurrentSlide(index)}</button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                 index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
               }`}
@@ -315,41 +190,6 @@ const ContentCarousel: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default ContentCarouselPage;
-=======
-        <div className="text-center mt-12">
-<<<<<<< HEAD
-          <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto"></button>
-            Get Started Today
-=======
-          <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto">Get Started Today</button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </div>

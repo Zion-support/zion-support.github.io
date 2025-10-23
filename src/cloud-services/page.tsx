@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle } from 'lucide-react'
-=======
-import { CheckCircle, Check } from 'lucide-react';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const CloudServicesPage: React.FC = () => {
   const services = [
