@@ -1,8 +1,6 @@
 'use client'
 import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -57,20 +55,18 @@ const SidebarPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Sidebar
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              Sidebar</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Sidebar solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -81,8 +77,7 @@ const SidebarPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -110,8 +105,7 @@ const SidebarPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -129,15 +123,12 @@ const SidebarPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -148,7 +139,6 @@ const SidebarPage: React.FC = () => {
 };
 
 export default SidebarPage;
-=======
 import React, { memo, useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {
@@ -156,11 +146,9 @@ import { Phone, Mail, Brain } from 'lucide-react'
 import { MapPin, Clock } from 'lucide-react'
 
 X,
-=======
 import React, {memo, useState, useEffect} from 'react'
 import {LinkuseLocation} from 'react-router-do m'
 import {X,
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 Menu,
 Home,
 Users,
@@ -173,7 +161,7 @@ BarChart,
 ChevronDown,
 ChevronRight,
 Phone,
-Mail,
+Mail,;
 MapPin,Clock;}
 } from 'lucide-react'
 constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
@@ -193,7 +181,7 @@ consttoggleSection= (section: string) => {constnewExpanded= new Set(expandedSect
 if (newExpanded.has(section)) {;) => {
   
 return (
-$3
+$3;
 )}
 newExpanded.delete(section);}
 } else {newExpanded.add(section);}
@@ -280,19 +268,15 @@ items: [
 ]
 constcontactInfo= {phone: '(30 2) 46 4-095 0',
 email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
 address: '364 E Main St STE 1008 Middletown, DE 19709',
 hours: 'Mon-Fri 9AM-6PM EST'
 }
 return (
 <>
 {/* Mobile Menu Button */}
-<button
-<<<<<<< HEAD
+<button;
 onClick={() =></button> setIsOpen(true)}
-=======
 onClick={() =>setIsOpen(true)}</button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
 aria-label="Open sidebar"
 >
@@ -300,7 +284,7 @@ aria-label="Open sidebar"
 </button>
 {/* Sidebar Overlay */}
 {isOpen && (
-<div
+<div;
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
 onClick={() =>setIsOpen(false)}</div>
 />
@@ -321,12 +305,9 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
 </div>
 </Link>
-<button
-<<<<<<< HEAD
+<button;
 onClick={() =></button> setIsOpen(false)}
-=======
 onClick={() =>setIsOpen(false)}</button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 className="lg:hidden text-gray-400 hover:text-white transition-colors"
 aria-label="Close sidebar"
 >
@@ -338,12 +319,9 @@ aria-label="Close sidebar"
 <nav className="space-y-2 px-4">
 {navigationSections.map((section, sectionIndex) => (;}
 <div key={sectionIndex} className="space-y-1"></div>
-<button
-<<<<<<< HEAD
+<button;
 onClick={() =></button> section.key && toggleSection(section.key)}
-=======
 onClick={() =>section.key && toggleSection(section.key)}</button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
 <span>{section.title}</span>
 {section.key && (
@@ -355,9 +333,8 @@ expandedSections.has(section.key) ?
 {(!section.key || expandedSections.has(section.key)) && (
 <div className="ml-4 space-y-1">
 {section.items.map((item, itemIndex) => (</div>
-<Link
+<Link;
 key={itemIndex}
-=======
 address: '36 4 E Main St STE 1008Middletown, DE19709',
 hours: 'Mon-Fri9AM-6 PM EST'}
 return(<>{/* Mobile MenuButton*/}<
@@ -376,18 +353,13 @@ onClick={() =>setIsOpen(false)}className="lg:hidden text-gray-400hover:text-whit
 onClick={() =></
 onClick={() =>section.key &&toggleSection(section.key)}className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400hover:text-cyan-300transition-colors"><spa n>{section.title}</spa>{section.key && (
 expandedSections.has(section.key)?<ChevronDownclassName="w-4h-4" />:<ChevronRightclassName="w-4h-4" />)}</butto>{(!section.key || expandedSections.has(section.key)) &&(<divclassName="ml-4space-y-1">{section.items.map((itemitemIndex)=>(</di><Linkkey={itemIndex}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 to={item.path}
 onClick={() =>setIsOpen(false)}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
 location.pathname=== item.path ? 'bg-cyan-50 0/20text-cyan-400border border-cyan-40 0/3 0'
  : 'text-gray-300 hover:text-whitehover:bg-slate-800/50';}}`}><item.iconclassName="w-4h-4flex-shrink-0" /><spa n>{item.name}</spa></Lin>))}</di>)}</di>))}</na></di>{/* ContactInfo*/}<divclassName="border-t border-slate-70 0/50p-6"><h3className="text-sm font-semibold text-cyan-400mb-4">ContactInformation</h><divclassName="space-y-3 text-smtext-gray-300"><divclassName="flexitems-centerspace-x-3"><PhoneclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spa n>{contactInfo.phone}</spa></di><divclassName="flexitems-centerspace-x-3"><MailclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="truncate">{contactInfo.email}</spa></di><divclassName="flexitems-centerspace-x-3"><MapPinclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="text-xs">{contactInfo.address}</spa></di><divclassName="flexitems-centerspace-x-3"><ClockclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="text-xs">{contactInfo.hours}</spa></di></di></asid></>)
 }
-<<<<<<< HEAD
 Sidebar.displayName = 'Sidebar'
-export default Sidebar
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
+export default Sidebar;
 Sidebar.displayName= 'Sidebar'
-export defaultSidebar</di></strin>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export defaultSidebar</di></strin>;

@@ -1,23 +1,17 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle } from 'lucide-react'
-=======
+import { CheckCircle } from 'lucide-react';
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, CheckCircle, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
-=======
 import {BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, CheckCircle} from 'lucide-react';;
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 constMicroSAASPage: React.FC= () =>{constcategories= [
     {
@@ -117,7 +111,6 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
     {icon: BarChart,
       title: 'Scalable Solutions',
       description: 'Grow from startup to enterprise with flexible pricing'
-<<<<<<< HEAD
     }
   ]
 
@@ -129,26 +122,23 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Micro SAAS Solutions
-            </span>
+              Micro SAAS Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Choose from 100+ ready-to-use AI-powered applications that solve specific business problems.
             Deploy instantly and start seeing results from day one.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
             >
-              Browse All Solutions
-            </a>
-            <a
+              Browse All Solutions</a>
+            <a;
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              (302) 464-0950
-            </a>
+              (302) 464-0950</a>
           </div>
         </section>
         {/* Categories */}
@@ -172,7 +162,7 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
                       </div>
                       <div className="text-right">
                         <div className={`font-bold ${category.color} text-sm`}>{service.price}</div>
-                        <a
+                        <a;
                           href="/contact"
                           className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
                         >
@@ -213,23 +203,19 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Up to 5 applications
-                </li>
+                  Up to 5 applications</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Basic support
-                </li>
+                  Basic support</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Standard features
-                </li>
+                  Standard features</li>
               </ul>
-              <a
+              <a;
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Get Started
-              </a>
+                Get Started</a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
@@ -237,27 +223,22 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Up to 25 applications
-                </li>
+                  Up to 25 applications</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Priority support
-                </li>
+                  Priority support</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Advanced features
-                </li>
+                  Advanced features</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Custom integrations
-                </li>
+                  Custom integrations</li>
               </ul>
-              <a
+              <a;
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Get Started
-              </a>
+                Get Started</a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
@@ -265,27 +246,22 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Unlimited applications
-                </li>
+                  Unlimited applications</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  24/7 dedicated support
-                </li>
+                  24/7 dedicated support</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Custom development
-                </li>
+                  Custom development</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  On-premise deployment
-                </li>
+                  On-premise deployment</li>
               </ul>
-              <a
+              <a;
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Contact Sales
-              </a>
+                Contact Sales</a>
             </div>
           </div>
         </section>
@@ -297,18 +273,16 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
               Choose from our extensive library of AI-powered applications and start seeing results immediately.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
-                Browse All Solutions
-              </a>
-              <a
+                Browse All Solutions</a>
+              <a;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                (302) 464-0950
-              </a>
+                (302) 464-0950</a>
             </div>
             <div className="mt-8 text-sm text-gray-400">
               <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -320,19 +294,16 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
     </div>
   )
 }
-=======
    }
   ];
 
   return (
   <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Navigation /><mainclassName="container mx-autopx-4py-16pt-24">{/* HeroSection */}
-      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent">Micro SAAS Solutions
-          </spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-4xlmx-auto"></spa></className="text-xl text-gray-300mb-8 max-w-4xlmx-auto">Choose from100+ ready-to-use AI-powered applications that solve specific business problems. 
+      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent">Micro SAAS Solutions</spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-4xlmx-auto"></spa></className="text-xl text-gray-300mb-8 max-w-4xlmx-auto">Choose from100+ ready-to-use AI-powered applications that solve specific business problems. 
             Deploy instantly and start seeing results from day one.
         </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
              className="bg-gradient-to-r from-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semiboldhover:from-cyan-600 hover:to-purple-700transition-all duration-300hover:scale-105"
-            >Browse All Solutions
-          </a><ahref="tel:+13024640950"
+            >Browse All Solutions</a><ahref="tel:+13024640950"
              className="border-2 border-cyan-400text-cyan-400px-8 py-3 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
             >(30 2) 464-0950</a></di></sectio>{/* Categories */}
       <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-white text-centermb-12">SolutionCategories</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{categories.map((categoryindex) => (
@@ -346,36 +317,20 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
       <sectionclassName="mb-16"><divclassName="bg-gradient-to-r from-indigo-90 0/50to-purple-90 0/50rounded-2xlp-8"><h2className="text-3 xl font-bold text-white text-centermb-12">Why Choose Our MicroSAASSolutions?</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{benefits.map((benefitindex) => (
              <divkey={index}className="text-center"><divclassName="w-16h-16bg-cyan-50 0/20rounded-full flex items-center justify-centermx-automb-4"><benefit.iconclassName="w-8 h-8text-cyan-400" /></di><h3className="text-xl font-boldtext-whitemb-2">{benefit.title}</h><pclassName="text-gray-300">{benefit.description}</p></di>))}
           </di></di></sectio>{/* PricingTiers */}
-      <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-white text-centermb-12">SimplePricing</h><divclassName="grid grid-cols-1md:grid-cols-3gap-8"><divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-6"><h3className="text-xl font-boldtext-whitemb-4">Starter</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">$19/month</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Up to5applications
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Basic support
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Standard features
-              </l></u><ahref="/contact"
+      <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-white text-centermb-12">SimplePricing</h><divclassName="grid grid-cols-1md:grid-cols-3gap-8"><divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-6"><h3className="text-xl font-boldtext-whitemb-4">Starter</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">$19/month</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Up to5applications</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Basic support</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Standard features</l></u><ahref="/contact"
                className="block w-full text-center bg-cyan-500text-white py-2 rounded-lg font-semiboldhover:bg-cyan-600transition-colors"
-              >Get Started
-            </a></di><divclassName="bg-slate-80 0/50backdrop-blur-sm rounded-xl p-6 border-2border-cyan-500"><h3className="text-xl font-boldtext-whitemb-4">Professional</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">$99/month</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Up to 25applications
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Priority support
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Advanced features
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Custom integrations
-              </l></u><ahref="/contact"
+              >Get Started</a></di><divclassName="bg-slate-80 0/50backdrop-blur-sm rounded-xl p-6 border-2border-cyan-500"><h3className="text-xl font-boldtext-whitemb-4">Professional</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">$99/month</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Up to 25applications</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Priority support</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Advanced features</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Custom integrations</l></u><ahref="/contact"
                className="block w-full text-center bg-cyan-500text-white py-2 rounded-lg font-semiboldhover:bg-cyan-600transition-colors"
-              >Get Started
-            </a></di><divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-6"><h3className="text-xl font-boldtext-whitemb-4">Enterprise</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">Custom</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Unlimited applications
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />24/7 dedicated support
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Custom development
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />On-premise deployment
-              </l></u><ahref="/contact"
+              >Get Started</a></di><divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-6"><h3className="text-xl font-boldtext-whitemb-4">Enterprise</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">Custom</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Unlimited applications</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />24/7 dedicated support</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Custom development</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />On-premise deployment</l></u><ahref="/contact"
                className="block w-full text-center bg-cyan-500text-white py-2 rounded-lg font-semiboldhover:bg-cyan-600transition-colors"
-              >Contact Sales
-            </a></di></di></sectio>{/* CTASection */}
+              >Contact Sales</a></di></di></sectio>{/* CTASection */}
       <sectionclassName="text-center"><divclassName="bg-gradient-to-r from-cyan-90 0/50to-purple-90 0/50rounded-2xlp-8"><h2className="text-3 xl font-boldtext-whitemb-4">Ready to TransformYourBusiness?</h><spanclassName="text-gray-300mb-8 max-w-2xlmx-auto"></spa></className="text-gray-300mb-8 max-w-2xlmx-auto">Choose from our extensive library of AI-powered applications and start seeing results immediately.
           </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
                className="bg-gradient-to-r from-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semiboldhover:from-cyan-600 hover:to-purple-700transition-all duration-300hover:scale-105"
-              >Browse All Solutions
-            </a><ahref="tel:+13024640950"
+              >Browse All Solutions</a><ahref="tel:+13024640950"
                className="border-2 border-cyan-400text-cyan-400px-8 py-3 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
               >(30 2) 464-0950</a></di><divclassName="mt-8 text-smtext-gray-400"><p>📧 kleber@ziontechgroup.com | 📍 364E Main St STE1008, Middletown DE19709</p></di></di></sectio></mai><Footer /></di>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-export default MicroSAASPage
+export default MicroSAASPage;

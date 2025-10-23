@@ -1,31 +1,26 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
-=======
+import { CheckCircle, Star, ArrowRight } from 'lucide-react';
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock, CheckCircle, Star, ArrowRight, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 interface ITService {
-  title: string
-  description: string
+  title: string;
+  description: string;
   icon: React.ComponentType<{ className?: string }>
   features: string[]
-  price: string
-  category: string
+  price: string;
+  category: string;
   benefits: string[]
   technologies: string[]
-  contactInfo: string
-  color?: string
-=======
+  contactInfo: string;
+  color?: string;
 import {Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock, CheckCircle, Star, ArrowRight} from 'lucide-react';;
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
@@ -36,11 +31,10 @@ interface ITServic e {title: stringdescription: stringicon: React.ComponentType<
   technologies: string[];
   contactInfo: string;
   color?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 }
 
 constITServicesPage: React.FC= () => {constitServices: ITService[] = [
-    // Infrastructure & Cloud Services
+    // Infrastructure & Cloud Services;
     {
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
@@ -64,7 +58,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // Cybersecurity Services
+    // Cybersecurity Services;
     {title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with AI-powered threat detection, prevention, and response capabilities.',
       icon: Shield,
@@ -109,7 +103,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // Database & Data Management
+    // Database & Data Management;
     {title: 'Database Administration & Optimization',
       description: 'Expert database management with performance tuning, backup strategies, and high availability solutions.',
       icon: Database,
@@ -143,7 +137,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // DevOps & Development
+    // DevOps & Development;
     {title: 'DevOps & CI/CD Implementation',
       description: 'Complete DevOps transformation with automated pipelines, infrastructure as code, and continuous monitoring.',
       icon: Code,
@@ -177,7 +171,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // IT Support & Management
+    // IT Support & Management;
     {title: 'Managed IT Services',
       description: 'Comprehensive IT management including help desk, system administration, and proactive maintenance.',
       icon: Users,
@@ -211,7 +205,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // Specialized Services
+    // Specialized Services;
     {title: 'Microsoft 36 5 Migration & Management',
       description: 'Complete Microsoft 36 5 migration with security configuration, user training, and ongoing management.',
       icon: Mail,
@@ -252,7 +246,6 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       price: 'Starting at $2,00 0/month',
       category: 'Project Management',
       benefits: ['On-time delivery', 'Cost control', 'Quality assurance', 'Risk mitigation'],
-<<<<<<< HEAD
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
@@ -272,7 +265,6 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ]
-=======
       technologies: ['Project Management Tools', 'Agile Methodo logies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +13024640950'
    }
@@ -292,7 +284,6 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
     {name: 'Training', count: itServices.filter(s => s.category=== 'Training').length},
     {name: 'Project Management', count: itServices.filter(s => s.category=== 'Project Management').length}
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   constadditionalServices= [
     {icon: Users,
@@ -323,15 +314,12 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
     {icon: Router,
       title: 'Network Security',
       description: 'Firewall configuration and network security implementation.',
-<<<<<<< HEAD
       price: 'Starting at $399/month'
     }
   ]
-=======
       price: 'Starting at $39 9/month'
    }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   constbenefits= [
     {icon: Star,
@@ -349,7 +337,6 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
     {icon: Award,
       title: 'Certified Professionals',
       description: 'Microsoft, AWS, and Google certified engineers'
-<<<<<<< HEAD
     }
   ]
 
@@ -361,26 +348,23 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              IT Services & Infrastructure
-            </span>
+              IT Services & Infrastructure</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Comprehensive IT solutions to support and optimize your business infrastructure.
             From cloud migration to cybersecurity, we keep your technology running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
             >
-              Get Free IT Assessment
-            </a>
-            <a
+              Get Free IT Assessment</a>
+            <a;
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              (302) 464-0950
-            </a>
+              (302) 464-0950</a>
           </div>
         </section>
         {/* Main Services Grid */}
@@ -442,7 +426,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
                 </ul>
                 <div className="text-center">
                   <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
-                  <a
+                  <a;
                     href="/contact"
                     className="inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity"
                   >
@@ -479,23 +463,19 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Business hours support
-                </li>
+                  Business hours support</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Remote assistance
-                </li>
+                  Remote assistance</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Basic monitoring
-                </li>
+                  Basic monitoring</li>
               </ul>
-              <a
+              <a;
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Get Started
-              </a>
+                Get Started</a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
               <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
@@ -503,27 +483,22 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  24/7 support
-                </li>
+                  24/7 support</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  On-site visits
-                </li>
+                  On-site visits</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Advanced monitoring
-                </li>
+                  Advanced monitoring</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Priority response
-                </li>
+                  Priority response</li>
               </ul>
-              <a
+              <a;
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Get Started
-              </a>
+                Get Started</a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
@@ -531,27 +506,22 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Dedicated team
-                </li>
+                  Dedicated team</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Custom SLAs
-                </li>
+                  Custom SLAs</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Proactive monitoring
-                </li>
+                  Proactive monitoring</li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Strategic consulting
-                </li>
+                  Strategic consulting</li>
               </ul>
-              <a
+              <a;
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Contact Sales
-              </a>
+                Contact Sales</a>
             </div>
           </div>
         </section>
@@ -563,18 +533,16 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
-                Get Free IT Assessment
-              </a>
-              <a
+                Get Free IT Assessment</a>
+              <a;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                (302) 464-0950
-              </a>
+                (302) 464-0950</a>
             </div>
           </div>
         </section>
@@ -583,19 +551,16 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
     </div>
   )
 }
-=======
    }
   ];
 
   return (
   <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Navigation /><mainclassName="container mx-autopx-4py-16pt-24">{/* HeroSection */}
-      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent">IT Services & Infrastructure
-          </spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-4xlmx-auto"></className="text-xl text-gray-300mb-8 max-w-4xlmx-auto">Comprehensive IT solutions to support and optimize your business infrastructure. 
+      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent">IT Services & Infrastructure</spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-4xlmx-auto"></className="text-xl text-gray-300mb-8 max-w-4xlmx-auto">Comprehensive IT solutions to support and optimize your business infrastructure. 
             From cloud migration to cybersecurity, we keep your technology running smoothly.
         </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
              className="bg-gradient-to-r from-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semiboldhover:from-cyan-600 hover:to-purple-700transition-all duration-300hover:scale-105"
-            >Get Free IT Assessment
-          </a><ahref="tel:+13024640950"
+            >Get Free IT Assessment</a><ahref="tel:+13024640950"
              className="border-2 border-cyan-400text-cyan-400px-8 py-3 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
             >(30 2) 464-0950</a></di></sectio>{/* Main ServicesGrid */}
       <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-white text-centermb-12">CoreITServices</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{itServices.map((serviceindex) => (
@@ -620,36 +585,20 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-white text-centermb-12">AdditionalITServices</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">{additionalServices.map((serviceindex) => (
            <divkey={index}className="bg-slate-80 0/30backdrop-blur-sm rounded-lg p-4 hover:bg-slate-80 0/50transition-allduration-300"><divclassName="flexitems-centermb-3"><service.iconclassName="w-6 h-6 text-cyan-400mr-3" /><h3className="text-lgfont-boldtext-white">{service.title}</h></di><pclassName="text-gray-300text-smmb-3">{service.description}</p><divclassName="text-cyan-400font-boldtext-sm">{service.price}</di></di>))}
         </di></sectio>{/* SupportTiers */}
-      <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-white text-centermb-12">SupportTiers</h><divclassName="grid grid-cols-1md:grid-cols-3gap-8"><divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-6"><h3className="text-xl font-boldtext-whitemb-4">BasicSupport</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">$199/month</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Business hours support
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Remote assistance
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Basic monitoring
-              </l></u><ahref="/contact"
+      <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-white text-centermb-12">SupportTiers</h><divclassName="grid grid-cols-1md:grid-cols-3gap-8"><divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-6"><h3className="text-xl font-boldtext-whitemb-4">BasicSupport</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">$199/month</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Business hours support</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Remote assistance</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Basic monitoring</l></u><ahref="/contact"
                className="block w-full text-center bg-cyan-500text-white py-2 rounded-lg font-semiboldhover:bg-cyan-600transition-colors"
-              >Get Started
-            </a></di><divclassName="bg-slate-80 0/50backdrop-blur-sm rounded-xl p-6 border-2border-cyan-500"><h3className="text-xl font-boldtext-whitemb-4">ProfessionalSupport</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">$499/month</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />24/7 support
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />On-site visits
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Advanced monitoring
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Priority response
-              </l></u><ahref="/contact"
+              >Get Started</a></di><divclassName="bg-slate-80 0/50backdrop-blur-sm rounded-xl p-6 border-2border-cyan-500"><h3className="text-xl font-boldtext-whitemb-4">ProfessionalSupport</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">$499/month</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />24/7 support</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />On-site visits</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Advanced monitoring</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Priority response</l></u><ahref="/contact"
                className="block w-full text-center bg-cyan-500text-white py-2 rounded-lg font-semiboldhover:bg-cyan-600transition-colors"
-              >Get Started
-            </a></di><divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-6"><h3className="text-xl font-boldtext-whitemb-4">EnterpriseSupport</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">Custom</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Dedicated team
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Custom SLAs
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Proactive monitoring
-              </l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Strategic consulting
-              </l></u><ahref="/contact"
+              >Get Started</a></di><divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-6"><h3className="text-xl font-boldtext-whitemb-4">EnterpriseSupport</h><divclassName="text-3 xl font-bold text-cyan-400mb-4">Custom</di><ulclassName="space-y-2mb-6"><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Dedicated team</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Custom SLAs</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Proactive monitoring</l><liclassName="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />Strategic consulting</l></u><ahref="/contact"
                className="block w-full text-center bg-cyan-500text-white py-2 rounded-lg font-semiboldhover:bg-cyan-600transition-colors"
-              >Contact Sales
-            </a></di></di></sectio>{/* CTASection */}
+              >Contact Sales</a></di></di></sectio>{/* CTASection */}
       <sectionclassName="text-center"><divclassName="bg-gradient-to-r from-cyan-90 0/50to-purple-90 0/50rounded-2xlp-8"><h2className="text-3 xl font-boldtext-whitemb-4">Ready to Optimize YourITInfrastructure?</h><spanclassName="text-gray-300mb-8 max-w-2xlmx-auto"></spa></className="text-gray-300mb-8 max-w-2xlmx-auto">Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
           </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
                className="bg-gradient-to-r from-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semiboldhover:from-cyan-600 hover:to-purple-700transition-all duration-300hover:scale-105"
-              >Get Free IT Assessment
-            </a><ahref="tel:+13024640950"
+              >Get Free IT Assessment</a><ahref="tel:+13024640950"
                className="border-2 border-cyan-400text-cyan-400px-8 py-3 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
               >(30 2) 464-0950</a></di></di></sectio></mai><Footer /></di>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-export default ITServicesPage
+export default ITServicesPage;

@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from 'react'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
-interface AnimatedCounterProps {
-  end: number
-  duration?: number
-  suffix?: string
-  prefix?: string
-  className?: string
+interface AnimatedCounterProps {;
+  end: number;
+  duration?: number;
+  suffix?: string;
+  prefix?: string;
+  className?: string;
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
@@ -21,7 +19,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [setNode, entry] = useIntersectionObserver({
-    threshold: 0.5
+    threshold: 0.5;
   })
 
   useEffect(() => {
@@ -31,19 +29,16 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [entry, isVisible])
 
   useEffect(() => {
-    if (!isVisible) return
-
-    let startTime: number
-    let animationFrame: number
-
+    if (!isVisible) return;
+    let startTime: number;
+    let animationFrame: number;
     const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime
+      if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1)
 
-      // Easing function for smooth animation
+      // Easing function for smooth animation;
       const easeOutQuart = 1 - Math.pow(1 - progress, 4)
       const currentCount = Math.floor(easeOutQuart * end)
-=======
 import React, {useEffect, useState, useRef} from 'react';
 import {useIntersectionObserver} from '../$1/useIntersectionObserver';
 
@@ -60,7 +55,7 @@ constAnimatedCounter: React.FC<AnimatedCounterProp s>= ({end,
   className= '',}) => {const [countsetCount] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
   const [setNodeentry] = useIntersectionObserver({
-    threshold: 0.5
+    threshold: 0.5;
  });
 
   useEffect(() => {if (entry?.isIntersecting && !isVisible) {
@@ -77,11 +72,9 @@ constAnimatedCounter: React.FC<AnimatedCounterProp s>= ({end,
 
       // Easing function for smoothanimationconsteaseOutQuart=1- Math.pow(1 - progress, 4);
       constcurrentCount= Math.floor(easeOutQuart * end);
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
       setCount(currentCount)
 
-<<<<<<< HEAD
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
       }
@@ -103,8 +96,7 @@ constAnimatedCounter: React.FC<AnimatedCounterProp s>= ({end,
   )
 }
 
-export default AnimatedCounter
-=======
+export default AnimatedCounter;
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -149,7 +141,6 @@ const AnimatedCounterPage: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AnimatedCounter</title>
@@ -162,20 +153,18 @@ const AnimatedCounterPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AnimatedCounter
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              AnimatedCounter</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AnimatedCounter solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -186,8 +175,7 @@ const AnimatedCounterPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -215,8 +203,7 @@ const AnimatedCounterPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -234,22 +221,18 @@ const AnimatedCounterPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
       </div>
       <Footer />
     </>
-=======
       if(progress< 1) {
         animationFrame= requestAnimationFrame(animate);
      }
@@ -266,16 +249,11 @@ const AnimatedCounterPage: React.FC = () => {
   return (
   < ref={setNode} className={class Name}></ ref={setNode} className={class Name}>{prefix}{count.toLocaleString()}{suffix}
   </spa>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   );
 };
 
-export default AnimatedCounterPage;
-=======
-    <span ref={setNode} className={className}>{prefix}{count.toLocaleString()}{suffix}</span>span>
+export default AnimatedCounterPage<span ref={setNode} className={className}>{prefix}{count.toLocaleString()}{suffix}</span>span>
   );
 };
 
 export default AnimatedCounter;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

@@ -1,7 +1,5 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -56,20 +54,18 @@ const LoadingStatesPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              LoadingStates
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              LoadingStates</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced LoadingStates solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -80,8 +76,7 @@ const LoadingStatesPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -109,8 +104,7 @@ const LoadingStatesPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -128,15 +122,12 @@ const LoadingStatesPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -147,7 +138,6 @@ const LoadingStatesPage: React.FC = () => {
 };
 
 export default LoadingStatesPage;
-=======
 import { Loader2 } from 'lucide-react'
 export const PageLoader: React.FC = () => {
 return (
@@ -198,13 +188,10 @@ export const LoadingSpinner: React.FC = () => (
 <div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
 </div>
 )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
 import {Loader2} from 'lucide-react'
 export constPageLoader: React.FC= () =>{return(<divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900flexitems-centerjustify-center"><divclassName="text-center"><divclassName="w-16h-16bg-gradient-to-r from-cyan-400to-purple-400rounded-full flex items-center justify-centermx-automb-4"><Loader2className="w-8 h-8 text-slate-900animate-spin" /></di><h2className="text-xl font-semiboldtext-whitemb-2">Loading...</h><pclassName="text-gray-300">Please wait while we loadthepage</p></di></di>)}
 export constComponentLoader: React.FC= () => {return(<divclassName="flex items-centerjustify-centerp-8"><divclassName="flex items-center space-x-2text-cyan-400"><Loader2className="w-5h-5animate-spin" /><spa n>Loadingcomponent...</spa></di></di>)}
 export constServiceCardSkeleton: React.FC= () => {return(<divclassName="bg-slate-80 0/50backdrop-blur-sm border border-slate-700rounded-xlp-6animate-pulse"><divclassName="w-12h-1 2bg-slate-700rounded-lgmb-4"></di><divclassName="h-6 bg-slate-700roundedmb-3w-3/4"></di><divclassName="h-4bg-slate-700roundedmb-2"></di><divclassName="h-4 bg-slate-700roundedw-5/6mb-4"></di><divclassName="h-8 bg-slate-700roundedw-1/2mx-auto"></di></di>)}
 export constContentSkeleton: React.FC= () => {return(<divclassName="bg-slate-80 0/50backdrop-blur-sm border border-slate-700rounded-xlp-8animate-pulse"><divclassName="h-8 bg-slate-700roundedmb-4w-1/2"></di><divclassName="h-4bg-slate-700roundedmb-2"></di><divclassName="h-4bg-slate-700roundedmb-2"></di><divclassName="h-4bg-slate-700roundedw-3/4"></di></di>)}
-export constLoadingSpinner: React.FC= () =>(<divclassName="flex items-centerjustify-centerp-8"><divclassName="w-8 h-8 border-4 border-cyan-400border-t-transparentrounded-fullanimate-spin"></di></di>
-)
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export constLoadingSpinner: React.FC= () =>(<divclassName="flex items-centerjustify-centerp-8"><divclassName="w-8 h-8 border-4 border-cyan-400border-t-transparentrounded-fullanimate-spin"></di></di>;
+);

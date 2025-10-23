@@ -1,35 +1,35 @@
 /**
- * Data Record Manager
- * Manages data records in localStorage with TTL support
+ * Data Record Manager;
+ * Manages data records in localStorage with TTL support;
  */
-export interface DataRecord {
-  id: string
-  timestamp: number
-  data: any
-  category: string
-  type: string
-  version: string
-  ttl?: number
+export interface DataRecord {;
+  id: string;
+  timestamp: number;
+  data: any;
+  category: string;
+  type: string;
+  version: string;
+  ttl?: number;
 }
 
-export interface RecordOptions {
-  ttl?: number
+export interface RecordOptions {;
+  ttl?: number;
 }
 
-export interface RecordQuery {
-  category?: string
-  type?: string
-  maxAge?: number
+export interface RecordQuery {;
+  category?: string;
+  type?: string;
+  maxAge?: number;
 }
 
-export interface RecordStats {
-  total: number
+export interface RecordStats {;
+  total: number;
   byCategory: Record<string, number>
   byType: Record<string, number>
   byAge: {
-    recent: number
-    old: number
-    veryOld: number
+    recent: number;
+    old: number;
+    veryOld: number;
   }
 }
 
@@ -59,7 +59,7 @@ class DataRecordManager {
       // console.warn('Failed to store data record:', error)
     }
 
-    return record
+    return record;
   }
 
   getRecord(id: string): DataRecord | null {
@@ -68,21 +68,21 @@ class DataRecordManager {
       const stored = localStorage.getItem(key)
 
       if (!stored) {
-        return null
+        return null;
       }
 
       const record: DataRecord = JSON.parse(stored)
 
-      // Check TTL
+      // Check TTL;
       if (record.ttl && Date.now() - record.timestamp > record.ttl) {
         this.deleteRecord(id)
-        return null
+        return null;
       }
 
-      return record
+      return record;
     } catch (error) {
       // console.warn('Failed to retrieve data record:', error)
-      return null
+      return null;
     }
   }
 
@@ -94,32 +94,32 @@ class DataRecordManager {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i)
         if (!key || !key.startsWith(this.prefix)) {
-          continue
+          continue;
         }
 
         const stored = localStorage.getItem(key)
         if (!stored) {
-          continue
+          continue;
         }
 
         try {
           const record: DataRecord = JSON.parse(stored)
 
-          // Check TTL
+          // Check TTL;
           if (record.ttl && now - record.timestamp > record.ttl) {
             this.deleteRecord(record.id)
-            continue
+            continue;
           }
 
-          // Apply filters
+          // Apply filters;
           if (query.category && record.category !== query.category) {
-            continue
+            continue;
           }
           if (query.type && record.type !== query.type) {
-            continue
+            continue;
           }
           if (query.maxAge && now - record.timestamp > query.maxAge) {
-            continue
+            continue;
           }
 
           records.push(record)
@@ -131,17 +131,17 @@ class DataRecordManager {
       // console.warn('Failed to query data records:', error)
     }
 
-    return records
+    return records;
   }
 
   deleteRecord(id: string): boolean {
     try {
       const key = id.startsWith(this.prefix) ? id : `${this.prefix}${id}`
       localStorage.removeItem(key)
-      return true
+      return true;
     } catch (error) {
       // console.warn('Failed to delete data record:', error)
-      return false
+      return false;
     }
   }
 
@@ -158,40 +158,37 @@ class DataRecordManager {
     }
 
     const now = Date.now()
-    const oneHour = 60 * 60 * 1000
-    const oneDay = 24 * oneHour
-
+    const oneHour = 60 * 60 * 1000;
+    const oneDay = 24 * oneHour;
     try {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i)
         if (!key || !key.startsWith(this.prefix)) {
-          continue
+          continue;
         }
 
         const stored = localStorage.getItem(key)
         if (!stored) {
-          continue
+          continue;
         }
 
         try {
           const record: DataRecord = JSON.parse(stored)
 
-          // Check TTL
+          // Check TTL;
           if (record.ttl && now - record.timestamp > record.ttl) {
             this.deleteRecord(record.id)
-            continue
+            continue;
           }
 
           stats.total++
 
-          // Count by category
-          stats.byCategory[record.category] = (stats.byCategory[record.category] || 0) + 1
-
-          // Count by type
-          stats.byType[record.type] = (stats.byType[record.type] || 0) + 1
-
-          // Count by age
-          const age = now - record.timestamp
+          // Count by category;
+          stats.byCategory[record.category] = (stats.byCategory[record.category] || 0) + 1;
+          // Count by type;
+          stats.byType[record.type] = (stats.byType[record.type] || 0) + 1;
+          // Count by age;
+          const age = now - record.timestamp;
           if (age < oneHour) {
             stats.byAge.recent++
           } else if (age < oneDay) {
@@ -207,11 +204,11 @@ class DataRecordManager {
       // console.warn('Failed to get data record stats:', error)
     }
 
-    return stats
+    return stats;
   }
 
   clearAll(): number {
-    let cleared = 0
+    let cleared = 0;
     const keysToRemove: string[] = []
 
     try {
@@ -230,7 +227,7 @@ class DataRecordManager {
       // console.warn('Failed to clear data records:', error)
     }
 
-    return cleared
+    return cleared;
   }
 }
 

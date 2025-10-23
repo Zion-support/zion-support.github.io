@@ -1,16 +1,14 @@
 'use client'
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 
-interface SEOOptimizerProps {
-  title?: string
-  description?: string
+interface SEOOptimizerProps {;
+  title?: string;
+  description?: string;
   keywords?: string[]
-  canonicalUrl?: string
-  ogImage?: string
+  canonicalUrl?: string;
+  ogImage?: string;
   structuredData?: Record<string, unknown>
 }
 
@@ -20,22 +18,20 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData;
 }) => {
   useEffect(() => {
-    // Update page title
-    document.title = title
-
-    // Update meta description
+    // Update page title;
+    document.title = title;
+    // Update meta description;
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
     } else {
       const meta = document.createElement('meta')
       meta.name = 'description'
-      meta.content = description
+      meta.content = description;
       document.head.appendChild(meta)
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -67,12 +63,10 @@ const SEOOptimizerPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
     }
   ]
-
-<<<<<<< HEAD
-    // Update keywords
+;
+    // Update keywords;
     const metaKeywords = document.querySelector('meta[name="keywords"]')
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '))
@@ -83,18 +77,18 @@ const SEOOptimizerPage: React.FC = () => {
       document.head.appendChild(meta)
     }
 
-    // Update canonical URL
+    // Update canonical URL;
     let canonicalLink = document.querySelector('link[rel="canonical"]')
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl)
     } else {
       canonicalLink = document.createElement('link')
       canonicalLink.rel = 'canonical'
-      canonicalLink.href = canonicalUrl
+      canonicalLink.href = canonicalUrl;
       document.head.appendChild(canonicalLink)
     }
 
-    // Update Open Graph tags
+    // Update Open Graph tags;
     const updateOGTag = (property: string, content: string) => {
       let ogTag = document.querySelector(`meta[property="${property}"]`)
       if (ogTag) {
@@ -106,7 +100,6 @@ const SEOOptimizerPage: React.FC = () => {
         document.head.appendChild(ogTag)
       }
     }
-=======
 import React, {useEffect} from 'react';
 import Head from 'next/head';
 
@@ -123,7 +116,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
   ogImage= 'https:// ziontechgroup.com/og-image.jpg',
   structuredData}) => {useEffect(() => {
   
-    // Update page title
+    // Update page title;
     do cument.title= title;
 
     // Update metadescriptionconstmetaDescription= do cument.querySelector('meta[name="description"]');
@@ -159,7 +152,6 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
         do cument.head.appendChild(ogTag);
      }
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
     updateOGTag('og:title', title)
     updateOGTag('og:description', description)
@@ -167,8 +159,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
     updateOGTag('og:url', canonicalUrl)
     updateOGTag('og:type', 'website')
 
-<<<<<<< HEAD
-    // Update Twitter Card tags
+    // Update Twitter Card tags;
     const updateTwitterTag = (name: string, content: string) => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`)
       if (twitterTag) {
@@ -180,7 +171,6 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
         document.head.appendChild(twitterTag)
       }
     }
-=======
     // Update Twitter CardtagsconstupdateTwitterTag= (name: string, content: string) => {lettwitterTag=document.querySelector(`meta[name="${name}"]`);
       if (twitterTa g) {twitterTag.setAttribute('content', content);
      } else {twitterTag= do cument.createElement('meta');
@@ -189,15 +179,13 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
         do cument.head.appendChild(twitterTag);
      }
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
     updateTwitterTag('twitter:card', 'summary_large_image')
     updateTwitterTag('twitter:title', title)
     updateTwitterTag('twitter:description', description)
     updateTwitterTag('twitter:image', ogImage)
 
-    // Add structured data
-<<<<<<< HEAD
+    // Add structured data;
     if (structuredData) {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
@@ -205,7 +193,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       document.head.appendChild(script)
     }
 
-    // Add viewport meta tag if not present
+    // Add viewport meta tag if not present;
     let viewport = document.querySelector('meta[name="viewport"]')
     if (!viewport) {
       viewport = document.createElement('meta')
@@ -214,14 +202,13 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       document.head.appendChild(viewport)
     }
 
-    // Add charset if not present
+    // Add charset if not present;
     let charset = document.querySelector('meta[charset]')
     if (!charset) {
       charset = document.createElement('meta')
       charset.setAttribute('charset', 'UTF-8')
       document.head.insertBefore(charset, document.head.firstChild)
     }
-=======
     if (structuredDat a) {constscript= do cument.createElement('script');
       script.type= 'application/ld+json';
       script.textContent= JSON.stringify(structuredData);
@@ -240,12 +227,10 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       charset.setAttribute('charset', 'UTF-8');
       do cument.head.insertBefore(charset, do cument.head.firstChild);
    }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
 
   return (
-<<<<<<< HEAD
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -269,7 +254,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       <meta charSet="UTF-8" />
       {/* Structured Data */}
       {structuredData && (
-        <script
+        <script;
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
@@ -278,8 +263,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
   )
 }
 
-export default SEOOptimizer
-=======
+export default SEOOptimizer;
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -302,19 +286,16 @@ export default SEOOptimizer
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              SEOOptimizer
-            </h1>
+              SEOOptimizer</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              website
-            </p>
+              website</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -325,8 +306,7 @@ export default SEOOptimizer
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -354,8 +334,7 @@ export default SEOOptimizer
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -373,22 +352,18 @@ export default SEOOptimizer
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
       </div>
       <Footer />
     </>
-=======
   <Hea d><titl e>{title}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords.join(',')} /><linkrel="canonical" href={canonicalUrl} />{/* OpenGraph */}
    <metaproperty="og:title" content={title} /><metaproperty="og:description" content={description} /><metaproperty="og:image" content={ogImage} /><metaproperty="og:url" content={canonicalUrl} /><metaproperty="og:type"content="website" />{/* TwitterCard */}
    <metaname="twitter:card"content="summary_large_image" /><metaname="twitter:title" content={title} /><metaname="twitter:description" content={description} /><metaname="twitter:image" content={ogImage} />{/* Additional SEO metatags */}
@@ -398,13 +373,8 @@ export default SEOOptimizer
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}}
         />)}
   </Hea>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   );
 };
 
-<<<<<<< HEAD
 export default SEOOptimizerPage;
-=======
 export default SEOOptimizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

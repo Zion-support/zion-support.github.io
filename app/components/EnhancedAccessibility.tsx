@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -55,20 +54,18 @@ const EnhancedAccessibilityPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              EnhancedAccessibility
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              EnhancedAccessibility</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced EnhancedAccessibility solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -79,8 +76,7 @@ const EnhancedAccessibilityPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -108,8 +104,7 @@ const EnhancedAccessibilityPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -127,15 +122,12 @@ const EnhancedAccessibilityPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -145,18 +137,14 @@ const EnhancedAccessibilityPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedAccessibilityPage;
-=======
 export default EnhancedAccessibility;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
 import React, {useEffect} from 'react'
 constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) => {const [settingssetSettings]=useState<AccessibilitySetting s>({
     highContrast: false,
     reducedMotion: false,
-    fontSize: 'normal',
-    focusVisible: false
+    fontSize: 'normal',;
+    focusVisible: false;
  })
   const {trackEvent} = useAnalytics()
   useEffect(() => {// Add ARIAlandmarksconstaddLandmarks= () => {
@@ -181,28 +169,28 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
     // Enhance focusmanagementconstenhanceFocusManagement= () => {// Add focusindicatorsconststyle= do cument.createElement('style')
       style.textContent= `
         *:focus {
-          outline: 2 px solid #06 b6d4 !important
-          outline-offset:2px !important
+          outline: 2 px solid #06 b6d4 !important;
+          outline-offset:2px !important;
        }
         .sr-only {position: absolutewidth:1pxheight:1pxpadding:0margin: -1 pxoverflow: hiddenclip: rect(0, 0, 0, 0)
           white-space:nowrapborder:0}
-        .sr-only.focus:not-sr-only {position: staticwidth: autoheight: autopadding: inheritmargin: inheritoverflow: visibleclip: auto
-          white-space: normal
+        .sr-only.focus:not-sr-only {position: staticwidth: autoheight: autopadding: inheritmargin: inheritoverflow: visibleclip: auto;
+          white-space: normal;
        }
      `
       do cument.head.appendChild(style)
     }
     // Add keyboard navigationsupportconstaddKeyboardNavigation= () => {consthandleKeyDown= (event: KeyboardEvent) => {
   
-        // Skip to main content with Tab
+        // Skip to main content with Tab;
         if (event.key=== 'Tab' && event.shiftKey && event.target=== do cument.body) {
-          constskipLink= do cument.querySelector('a[href="#main-content"]') as HTMLAnchorElement
+          constskipLink= do cument.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
           if (skipLin k) {
             skipLink.focus()
             event.preventDefault()
          }
         }
-        // Close dropdo wns with Escape
+        // Close dropdo wns with Escape;
         if (event.key=== 'Escape') {const openDropdowns= document.querySelectorAll('[aria-expanded="true"]')
           openDropdo wns.forEach(dropdown=> {
   
@@ -213,7 +201,7 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
       do cument.addEventListener('keydo wn', handleKeyDown)
       return () => do cument.removeEventListener('keydo wn', handleKeyDown)
     }
-    // Initialize accessibility enhancements
+    // Initialize accessibility enhancements;
     addLandmarks()
     addSkipLinks()
     enhanceFocusManagement()
@@ -221,16 +209,16 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
       constheader= do cument.querySelector('header')
       if (header && !header.getAttribute('role')) {header.setAttribute('role', 'banner')
      }
-    // Check for userpreferencesconstprefersReducedMotion= windo w.matchMedia('(prefers-reduced-motion: reduce)').matches
-    constprefersHighContrast= windo w.matchMedia('(prefers-contrast: high)').matches
+    // Check for userpreferencesconstprefersReducedMotion= windo w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    constprefersHighContrast= windo w.matchMedia('(prefers-contrast: high)').matches;
     setSettings(prev=> ({...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      highContrast: prefersHighContrast;
    }))
-    // Apply initial settings
+    // Apply initial settings;
     applyAccessibilitySettings({...settings,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      highContrast: prefersHighContrast;
    })
     // Listen for preferencechangesconstmotionQuery= windo w.matchMedia('(prefers-reduced-motion: reduce)')
     constcontrastQuery= windo w.matchMedia('(prefers-contrast: high)')
@@ -242,28 +230,28 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
     }
     motionQuery.addEventListener('change', handleMotionChange)
     contrastQuery.addEventListener('change', handleContrastChange)
-    // Setup keyboard navigation
+    // Setup keyboard navigation;
     setupKeyboardNavigation()
-    // Setup focus management
+    // Setup focus management;
     setupFocusManagement()
     return () => {motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
    }
   }, [])
- return<>{children}</>constapplyAccessibilitySettings= (newSettings: AccessibilitySettings) => {constroot= do cument.do cumentElement
-    // Apply high contrast
+ return<>{children}</>constapplyAccessibilitySettings= (newSettings: AccessibilitySettings) => {constroot= do cument.do cumentElement;
+    // Apply high contrast;
     if (newSettings.highContrast) {
       root.class Lis t.add('high-contrast')
    } else {root.class Lis t.remove('high-contrast')
    }
-    // Apply reduced motion
+    // Apply reduced motion;
     if (newSettings.reducedMotion) {root.class Lis t.add('reduced-motion')
    } else {root.class Lis t.remove('reduced-motion')
    }
-    // Apply font size
+    // Apply font size;
     root.class Lis t.remove('font-normal', 'font-large', 'font-extra-large')
     root.class Lis t.add(`font-${newSettings.fontSize}`)
-    // Apply focus visible
+    // Apply focus visible;
     if (newSettings.focusVisible) {root.class Lis t.add('focus-visible')
    } else {root.class Lis t.remove('focus-visible')
    }
@@ -305,24 +293,24 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
   constsetupFocusManagement= () => {// Add focusindicatorsconststyle= do cument.createElement('style')
     style.textContent=`
       .focus-visible *:focus {
-        outline:2px solid #3 b82f6
-        outline-offset:2px
+        outline:2px solid #3 b82f6;
+        outline-offset:2px;
      }
       .high-contrast {--tw-bg-opacity:1--tw-text-opacity:1}
-      .reduced-motion * {animation-duration: 0.01 ms !important
-        animation-iteration-count:1!important
-        transition-duration: 0.01 ms !important
+      .reduced-motion * {animation-duration: 0.01 ms !important;
+        animation-iteration-count:1!important;
+        transition-duration: 0.01 ms !important;
      }
-      .font-large {font-size: 1.125 rem
+      .font-large {font-size: 1.125 rem;
      }
-      .font-extra-large {font-size: 1.25 rem
+      .font-extra-large {font-size: 1.25 rem;
      }
     `
     do cument.head.appendChild(style)
-    // Track focus events for analytics
+    // Track focus events for analytics;
     do cument.addEventListener('focusin', (e) => {trackEvent('focus_event', {
         category: 'accessibility',
-        label: (e.target as HTMLElement).tagName
+        label: (e.target as HTMLElement).tagName;
      })
     })
   }
@@ -333,11 +321,10 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
       label: Object.keys(newSettings)[0]
    })
   }
-  // Provide accessibility context
+  // Provide accessibility context;
   useEffect(() => {constcontext={settingsupdateSettings}
-    (windo w as any).accessibilityContext= context
+    (windo w as any).accessibilityContext= context;
   }, [settings])
  return<>{children}</>
 }
-export default EnhancedAccessibility
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export default EnhancedAccessibility;

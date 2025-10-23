@@ -1,15 +1,11 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail } from 'lucide-react'
-=======
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [
@@ -45,7 +41,6 @@ const FuturisticHeroPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
 import {Helmet} from 'react-helmet-async'
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
 constFuturisticHeroPage: React.FC= () =>{constfeatures= [
@@ -76,12 +71,9 @@ constFuturisticHeroPage: React.FC= () =>{constfeatures= [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   ]
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>FuturisticHero</title>
@@ -94,13 +86,11 @@ constFuturisticHeroPage: React.FC= () =>{constfeatures= [
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              FuturisticHero
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              FuturisticHero</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced FuturisticHero solution for modern businesses.
             </p>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -116,17 +106,14 @@ constFuturisticHeroPage: React.FC= () =>{constfeatures= [
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your futuristichero needs and get a customized solution.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
-<<<<<<< HEAD
           </div>
         </section>
 
@@ -136,8 +123,7 @@ constFuturisticHeroPage: React.FC= () =>{constfeatures= [
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -165,8 +151,7 @@ constFuturisticHeroPage: React.FC= () =>{constfeatures= [
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -184,24 +169,18 @@ constFuturisticHeroPage: React.FC= () =>{constfeatures= [
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call Now;
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us
-=======
+                Email Us;
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -212,22 +191,13 @@ constFuturisticHeroPage: React.FC= () =>{constfeatures= [
 };
 
 export default FuturisticHeroPage;
-=======
   )
 }
-export default FuturisticHeroPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
-        <divclassName="gridgrid-cols-1md:grid-cols-2gap-6">{benefits.map((benefitindex) => (
+export default FuturisticHeroPage<divclassName="gridgrid-cols-1md:grid-cols-2gap-6">{benefits.map((benefitindex) => (
            <divkey={index} className="flexitems-startspace-x-3"><CheckCircleclassName="h-6 w-6text-purple-400mt-1flex-shrink-0" /><pclassName="text-gray-300text-lg">{benefit}</p></di>))}
         </di></di></sectio>{/* CTASection */}
     <sectionclassName="py-20px-4sm:px-6lg:px-8"><divclassName="max-w-4 xlmx-autotext-center"><divclassName="bg-gradient-to-r from-purple-600to-blue-600rounded-2 xl p-8md:p-12"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Ready to Get Started?
           </h><spanclassName="text-xl text-purple-100mb-8"></spa></className="text-xl text-purple-100mb-8">Contact our experts to discuss your futuristichero needs and get a customized solution.
-          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"></spa></className="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"><PhoneclassName="mr-2h-5w-5" />Call Now
-
-            <spanclassName="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"></spa></className="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"><MailclassName="mr-2h-5w-5" />Email Us
-
-          </di>)
+          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"></spa></className="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"><PhoneclassName="mr-2h-5w-5" />Call Now<spanclassName="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"></spa></className="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"><MailclassName="mr-2h-5w-5" />Email Us</di>)
 }
-export defaultFuturisticHeroPage</butto></butto></di></di></sectio>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export defaultFuturisticHeroPage</butto></butto></di></di></sectio>;

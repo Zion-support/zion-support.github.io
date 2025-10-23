@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -55,20 +54,18 @@ const SecurityEnhancerPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              SecurityEnhancer
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              SecurityEnhancer</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced SecurityEnhancer solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -79,8 +76,7 @@ const SecurityEnhancerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -108,8 +104,7 @@ const SecurityEnhancerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -127,15 +122,12 @@ const SecurityEnhancerPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -146,7 +138,6 @@ const SecurityEnhancerPage: React.FC = () => {
 };
 
 export default SecurityEnhancerPage;
-=======
 'use client'
 import React, {useEffect} from 'react'
 interface SecurityEnhancerProp s {children: React.ReactNode}
@@ -156,28 +147,24 @@ constSecurityEnhancer: React.FC<SecurityEnhancerProp s>= ({children}) => {useEff
   
 // Add securityheadersconstsecurityHeaders= {
 'X-Content-Type-Options': 'nosniff',
-'X-Frame-Options': 'DENY',
+'X-Frame-Options': 'DENY',;
 'X-XSS-Protection': '1; mode=block',
 'Referrer-Policy': 'strict-origin-when-cross-origin'}
 // Add CSP metatagconstcspMeta= do cument.createElement('meta')
 cspMeta.httpEquiv= 'Content-Security-Policy'
 cspMeta.content= "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self''unsafe-inline';"
 do cument.head.appendChild(cspMeta)
-// Disable right-click context menu
+// Disable right-click context menu;
 do cument.addEventListener('contextmenu', (e) => {e.preventDefault()})
-// Disable F12and other dev tools shortcuts
+// Disable F12and other dev tools shortcuts;
 do cument.addEventListener('keydo wn', (e) => {if (e.key=== 'F1 2' || (e.ctrlKey && e.shiftKey && e.key=== 'I')) {
 e.preventDefault()}
 })
 }
 enhanceSecurity()
-<<<<<<< HEAD
 }, [])
 return <>{children}</>
 }
-export default SecurityEnhancer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
+export default SecurityEnhancer;
 }, [])return<>{children}</>}
-export defaultSecurityEnhancer</SecurityEnhancerProp>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export defaultSecurityEnhancer</SecurityEnhancerProp>;

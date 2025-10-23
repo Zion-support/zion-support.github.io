@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -56,20 +54,17 @@ const SEOHeadPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              SEOHead
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              SEOHead</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Zion Tech Group
-            </p>
+              Zion Tech Group</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -80,8 +75,7 @@ const SEOHeadPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -109,8 +103,7 @@ const SEOHeadPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -128,15 +121,12 @@ const SEOHeadPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -147,21 +137,17 @@ const SEOHeadPage: React.FC = () => {
 };
 
 export default SEOHeadPage;
-=======
 interface SEOHeadProps {
-title?: string
-=======
+title?: string;
 import {Helmet} from 'lucide-react';
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-interface SEOHeadProp s {title?: string
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-description?: string
-keywords?: string
-canonical?: string
-ogImage?: string
-ogType?: string
-twitterCard?: string
+import {Helmet} from 'react-helmet-async';
+interface SEOHeadProp s {title?: string;
+description?: string;
+keywords?: string;
+canonical?: string;
+ogImage?: string;
+ogType?: string;
+twitterCard?: string;
 structuredData?:object;}
 }
 constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -180,9 +166,5 @@ return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname="descri
 {canonicalUrl&&<linkrel="canonical"href={canonicalUrl} />}
 {/* Open GraphMetaTags*/}<metaproperty="og:title" content={fullTitle} /><metaproperty="og:description" content={description} /><metaproperty="og:type" content={ogType} /><metaproperty="og:url" content={canonicalUrl} /><metaproperty="og:image" content={ogImage} /><metaproperty="og:site_name"content="Zion TechGroup" /><metaproperty="og:locale"content="en_US" />{/* Twitter CardMetaTags*/}<metaname="twitter:card" content={twitterCard} /><metaname="twitter:title" content={fullTitle} /><metaname="twitter:description" content={description} /><metaname="twitter:image" content={ogImage} />{/* Additional SEOMetaTags*/}<metaname="theme-color"content="#0f172a" /><metaname="msapplication-TileColor"content="#0f172a" /><metaname="apple-mobile-web-app-capable"content="yes" /><metaname="apple-mobile-web-app-status-bar-style"content="black-translucent" />{/* StructuredData*/}<scripttype="application/ld+json">{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
-<<<<<<< HEAD
-export default SEOHead
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
-export defaultSEOHead</SEOHeadProp>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export default SEOHead;
+export defaultSEOHead</SEOHeadProp>;

@@ -1,19 +1,13 @@
 import React from 'react'
 
-<<<<<<< HEAD
 import { ArrowLeft } from 'lucide-react'
 import { CheckCircle, TrendingUp, Helmet } from 'lucide-react'
-
-<<<<<<< HEAD
-=======
+;
 import { ArrowLeft, CheckCircle, TrendingUp, Helmet, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
-=======
 import {ArrowLeft, CheckCircle, TrendingUp, Helmet} from 'lucide-react';;
 constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     {
       id: 1,
       title: 'E-commerce Platform Transformation',
@@ -77,7 +71,6 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
     }
   ]
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
@@ -89,8 +82,7 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </a>
+              Back to Home</a>
           </div>
         </header>
         {/* Hero Section */}
@@ -98,13 +90,11 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Success Stories
-              </h1>
+                Success Stories</h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-                Real results from real companies using our AI solutions
-              </p>
+                Real results from real companies using our AI solutions</p>
               <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-                Discover how leading companies across industries have transformed their operations
+                Discover how leading companies across industries have transformed their operations;
                 and achieved remarkable ROI with our cutting-edge AI technology.
               </p>
             </div>
@@ -155,8 +145,7 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
                       <a href="/contact"
                         className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
                       >
-                        Learn More
-                      </a>
+                        Learn More</a>
                       <div className="flex items-center text-green-600">
                         <CheckCircle className="w-4 h-4 mr-1" />
                         <span className="text-sm font-semibold">Verified Results</span>
@@ -173,11 +162,9 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Proven Track Record
-              </h2>
+                Proven Track Record</h2>
               <p className="text-xl text-gray-600">
-                Our AI solutions deliver consistent, measurable results
-              </p>
+                Our AI solutions deliver consistent, measurable results</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
@@ -206,20 +193,18 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
               Ready to Create Your Success Story?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Join the companies that have transformed their business with our AI solutions
-            </p>
+              Join the companies that have transformed their business with our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               >
-                Start Your Project
+                Start Your Project;
                 <TrendingUp className="w-4 h-4 ml-2" />
               </a>
               <a href="/services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
-                View Our Services
-              </a>
+                View Our Services</a>
             </div>
           </div>
         </section>
@@ -227,14 +212,10 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
     </>
   )
 }
-export default CaseStudiesPage
-=======
+export default CaseStudiesPage;
   <><Helme t><titl e>Case Studies - ZionTechGroup</titl><metaname="description"content="Explore our successful AI implementation case studies. See how we've helped companies achieve300%+ ROI with our AIsolutions." /></Helme><divclassName="min-h-screen bg-gradient-to-brfrom-slate-50to-blue-50">{/* Header */}
-      <headerclassName="bg-white shadow-smborder-b"><divclassName="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8py-4"><ahref="/"className="inline-flex items-center text-blue-600 hover:text-blue-800transition-colorsduration-200"><ArrowLeftclassName="w-4h-4mr-2" />Back to Home
-          </a></di></heade>{/* HeroSection */}
-      <sectionclassName="py-20bg-gradient-to-r from-blue-900via-purple-900to-indigo-900text-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xlfont-boldmb-6"></className="text-4 xlmd:text-6 xlfont-boldmb-6">Success Stories
-            </h><spanclassName="text-xlmd:text-2 xl mb-8 text-gray-200max-w-3xlmx-auto"></className="text-xlmd:text-2 xl mb-8 text-gray-200max-w-3xlmx-auto">Real results from real companies using our AI solutions
-            </p><spanclassName="text-lg mb-8 text-gray-300max-w-4xlmx-auto"></className="text-lg mb-8 text-gray-300max-w-4xlmx-auto">Discover how leading companies across industries have transformed their operations 
+      <headerclassName="bg-white shadow-smborder-b"><divclassName="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8py-4"><ahref="/"className="inline-flex items-center text-blue-600 hover:text-blue-800transition-colorsduration-200"><ArrowLeftclassName="w-4h-4mr-2" />Back to Home</a></di></heade>{/* HeroSection */}
+      <sectionclassName="py-20bg-gradient-to-r from-blue-900via-purple-900to-indigo-900text-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xlfont-boldmb-6"></className="text-4 xlmd:text-6 xlfont-boldmb-6">Success Stories</h><spanclassName="text-xlmd:text-2 xl mb-8 text-gray-200max-w-3xlmx-auto"></className="text-xlmd:text-2 xl mb-8 text-gray-200max-w-3xlmx-auto">Real results from real companies using our AI solutions</p><spanclassName="text-lg mb-8 text-gray-300max-w-4xlmx-auto"></className="text-lg mb-8 text-gray-300max-w-4xlmx-auto">Discover how leading companies across industries have transformed their operations;
                 and achieved remarkable ROI with our cutting-edge AI technology.
             </p></di></di></sectio>{/* Case StudiesGrid */}
       <sectionclassName="py-16"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="grid grid-cols-1lg:grid-cols-2gap-8">{caseStudies.map((study) => (
@@ -242,22 +223,16 @@ export default CaseStudiesPage
                         </di><divclassName="text-smtext-gray-600">{Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str=>str.toUpperCase())}
                         </di></di></di></di><divclassName="flexitems-centerjustify-between"><ahref="/contact"
                        className="bg-blue-600 hover:bg-blue-700text-white font-semibold py-2 px-4 rounded-lg transition-colorsduration-200"
-                      >Learn More
-                    </a><divclassName="flex items-centertext-green-600"><CheckCircleclassName="w-4h-4mr-1" /><spanclassName="text-smfont-semibold">VerifiedResults</spa></di></di></di></di>))}
+                      >Learn More</a><divclassName="flex items-centertext-green-600"><CheckCircleclassName="w-4h-4mr-1" /><spanclassName="text-smfont-semibold">VerifiedResults</spa></di></di></di></di>))}
           </di></di></sectio>{/* StatsSection */}
-      <sectionclassName="py-16bg-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></spa></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">Proven Track Record
-            </h><spanclassName="text-xltext-gray-600"></spa></className="text-xltext-gray-600">Our AI solutions deliver consistent, measurable results
-            </p></di><divclassName="grid grid-cols-1md:grid-cols-4gap-8"><divclassName="text-center"><divclassName="text-4 xl font-bold text-blue-600mb-2">300%+</di><divclassName="text-gray-600">AverageROI</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-green-600mb-2">150+</di><divclassName="text-gray-600">ProjectsCompleted</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-purple-600mb-2">95%</di><divclassName="text-gray-600">ClientSatisfaction</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-orange-600mb-2">$50M+</di><divclassName="text-gray-600">CostSavingsGenerated</di></di></di></di></sectio>{/* CTASection */}
+      <sectionclassName="py-16bg-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></spa></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">Proven Track Record</h><spanclassName="text-xltext-gray-600"></spa></className="text-xltext-gray-600">Our AI solutions deliver consistent, measurable results</p></di><divclassName="grid grid-cols-1md:grid-cols-4gap-8"><divclassName="text-center"><divclassName="text-4 xl font-bold text-blue-600mb-2">300%+</di><divclassName="text-gray-600">AverageROI</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-green-600mb-2">150+</di><divclassName="text-gray-600">ProjectsCompleted</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-purple-600mb-2">95%</di><divclassName="text-gray-600">ClientSatisfaction</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-orange-600mb-2">$50M+</di><divclassName="text-gray-600">CostSavingsGenerated</di></di></di></di></sectio>{/* CTASection */}
       <sectionclassName="py-16bg-gradient-to-r from-blue-600to-purple-600text-white"><divclassName="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center"><spanclassName="text-3 xlmd:text-4 xlfont-boldmb-4"></spa></className="text-3 xlmd:text-4 xlfont-boldmb-4">Ready to Create Your Success Story?
-          </h><spanclassName="text-xl mb-8text-blue-100"></spa></className="text-xl mb-8text-blue-100">Join the companies that have transformed their business with our AI solutions
-          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
+          </h><spanclassName="text-xl mb-8text-blue-100"></spa></className="text-xl mb-8text-blue-100">Join the companies that have transformed their business with our AI solutions</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
                className="bg-white text-blue-600 hover:bg-gray-100font-semibold py-3 px-8 rounded-lg transition-colorsduration-200inline-flexitems-center"
-              >Start Your Project
+              >Start Your Project;
               <TrendingUpclassName="w-4h-4ml-2" /></a><ahref="/services"
                className="border-2 border-white text-whitehover:bg-whitehover:text-blue-600font-semibold py-3 px-8 rounded-lg transition-colorsduration-200"
-              >View Our Services
-            </a></di></di></sectio></di></>
+              >View Our Services</a></di></di></sectio></di></>
   );
 };
 export default CaseStudiesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

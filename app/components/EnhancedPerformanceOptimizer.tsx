@@ -1,13 +1,11 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 const EnhancedPerformanceOptimizerPage: React.FC = () => {
-<<<<<<< HEAD
   const features = [
     {
       icon: Brain,
@@ -56,20 +54,18 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              EnhancedPerformanceOptimizer
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              EnhancedPerformanceOptimizer</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -80,8 +76,7 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -109,8 +104,7 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -128,15 +122,12 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -147,13 +138,10 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
 };
 
 export default EnhancedPerformanceOptimizerPage;
-=======
 const features = [
-=======
-import {Helmet} from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Helmet} from 'lucide-react';
 constEnhancedPerformanceOptimizerPage: React.FC= () =>{constfeatures= [
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 {
 icon: Brain,
 title: 'AI-Powered Solutions',
@@ -178,7 +166,6 @@ constbenefits= [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ]
-<<<<<<< HEAD
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <Helmet>
@@ -209,16 +196,12 @@ return (
 <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
-<<<<<<< HEAD
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-Key Benefits
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">
+Key Benefits<p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Experience the power of our enhancedperformanceoptimizer solutions for your business.
 </p>
-=======
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our enhancedperformanceoptimizer solutions for your business.</p>p>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
 <div key={index} className="flex items-start space-x-3">
@@ -238,18 +221,13 @@ Experience the power of our enhancedperformanceoptimizer solutions for your busi
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
 <Phone className="mr-2 h-5 w-5" />
-Call Now
-<<<<<<< HEAD
+Call Now;
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
 <Mail className="mr-2 h-5 w-5" />
-Email Us
-=======
-</
+Email Us</
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
 <Mail className="mr-2 h-5 w-5" />
-Email Us
-</
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+Email Us</
 </div>
 </div>
 </div>
@@ -264,31 +242,29 @@ import { useEffect, useCallback } from 'react'
 import { useAnalytics } from './EnhancedAnalytics'
 import { Phone, Mail } from 'lucide-react'
 
-interface PerformanceMetrics {
-lcp: number | null
-fid: number | null
-cls: number | null
-fcp: number | null
-ttfb: number | null
+interface PerformanceMetrics {;
+lcp: number | null;
+fid: number | null;
+cls: number | null;
+fcp: number | null;
+ttfb: number | null;
 }
 const EnhancedPerformanceOptimizer: React.FC = () => {
 const { trackEvent } = useAnalytics()
 const optimizeImages = useCallback(() => {
 const images = document.querySelectorAll('img')
-=======
 return(<divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Helme t><titl e>EnhancedPerformanceOptimizer | ZionTechGroup</titl><metaname="description"content="Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for yourbusiness." /><metaname="keywords"content="EnhancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group,enhancedperformanceoptimizer" /></Helme>{/* FeaturesSection*/}<sectionclassName="py-20px-4sm:px-6lg:px-8"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Why Choose OurEnhancedPerformanceOptimizer?</h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Our enhancedperformanceoptimizer solutions deliver unmatched performance, security, andscalability.</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{features.map((featureindex)=>(<divkey={index}className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300"><divclassName="flex items-center justify-center w-12h-12bg-gradient-to-r from-purple-50 0to-blue-600rounded-lgmb-4"><feature.iconclassName="h-6w-6text-white" /></di><h3className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h><pclassName="text-gray-300">{feature.description}</p></di>))}</di></di></sectio>{/* BenefitsSection*/}<sectionclassName="py-20px-4 sm:px-6lg:px-8bg-white/5"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Key Benefits<spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Experience the power of our enhancedperformanceoptimizer solutions for yourbusiness.</p></di><divclassName="grid grid-cols-1md:grid-cols-2gap-6">{benefits.map((benefitindex)=>(<divkey={index}className="flexitems-startspace-x-3"><CheckCircleclassName="h-6 w-6text-purple-400mt-1flex-shrink-0" /><pclassName="text-gray-300text-lg">{benefit}</p></di>))}</di></di></sectio>{/* CTASection*/}<sectionclassName="py-20px-4sm:px-6lg:px-8"><divclassName="max-w-4 xlmx-autotext-center"><divclassName="bg-gradient-to-r from-purple-600to-blue-600rounded-2 xl p-8md:p-12"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Ready to GetStarted?</h><spanclassName="text-xl text-purple-100mb-8"></spa></className="text-xl text-purple-100mb-8">Contact our experts to discuss your enhancedperformanceoptimizer needs and get a customizedsolution.</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="bg-white text-purple-600px-8 py-3 rounded-lg font-semiboldhover:bg-gray-100transition-all duration-300flexitems-centerjustify-center"></spa></className="bg-white text-purple-600px-8 py-3 rounded-lg font-semiboldhover:bg-gray-100transition-all duration-300flexitems-centerjustify-center"><PhoneclassName="mr-2h-5w-5" />Call Now<spanclassName="border border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-purple-600transition-all duration-300flexitems-centerjustify-center"></spa></className="border border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-purple-600transition-all duration-300flexitems-centerjustify-center"><MailclassName="mr-2h-5w-5" />Email Us</di></di></di></sectio></di>)}</butto></butto></h>
 import {useEffectuseCallback} from 'react'
 import {useAnalytics} from './EnhancedAnalytics'
 interface PerformanceMetric s {lcp: number | null fid: number | null cls: number | null fcp: number | null ttfb: number | null}
 constEnhancedPerformanceOptimizer: React.FC= () => {const { trackEvent} = useAnalytics()
 constoptimizeImages= useCallback(() => {constimages= do cument.querySelectorAll('img')
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 images.forEach((img) => {
-  
-//Addloading="lazy" if not already present
+  ;
+//Addloading="lazy" if not already present;
 if (!img.hasAttribute('loading')) {
 img.setAttribute('loading', 'lazy')}
-//Adddecoding="async" for better performance
+//Adddecoding="async" for better performance;
 if (!img.hasAttribute('decoding')) {img.setAttribute('decoding', 'async')}
 })
 }, [])
@@ -305,7 +281,7 @@ criticalImages.forEach((src) => {
   
 constlink= do cument.createElement('link')
 link.rel= 'preload'
-link.href= src
+link.href= src;
 link.as= 'image'
 do cument.head.appendChild(link)})
 }, [])
@@ -322,10 +298,10 @@ constsetupIntersectionObserver= useCallback(() => {constobserver= new Intersecti
 entries.forEach((entry) => {
   
 if (entry.isIntersecting) {
-constelement= entry.target as HTMLElement
-// Add animation class es when elements come into view
+constelement= entry.target as HTMLElement;
+// Add animation class es when elements come into view;
 element.class Lis t.add('animate-fade-in')
-// Track visibility for analytics
+// Track visibility for analytics;
 trackEvent('element_viewed', {
 category: 'engagement',
 label: element.id || element.class Nam e})
@@ -338,16 +314,16 @@ label: element.id || element.class Nam e})
 sections.forEach((section) => observer.observe(section))
 return () => observer.disconnect()
 }, [trackEvent])
-constoptimizeScrollPerformance= useCallback(() => {letticking= false
+constoptimizeScrollPerformance= useCallback(() => {letticking= false;
 constupdateScrollPosition= () => {
   
-// Throttled scrollhandlingconstscrollY= windo w.scrollY
+// Throttled scrollhandlingconstscrollY= windo w.scrollY;
 // Update navigation based on scrollpositionconstnav= do cument.querySelector('nav')
 if (na v) {
 if (scrollY >50) {
 nav.class Lis t.add('scrolled')} else {nav.class Lis t.remove('scrolled')}
 }
-ticking= false
+ticking= false;
 }
 consthandleScroll= () => {if (!ticking) {
 requestAnimationFrame(updateScrollPosition)
@@ -369,15 +345,15 @@ link.href=`//${domain}`
 do cument.head.appendChild(link)
 })
 }, [])
-consttrackPerformanceMetrics= useCallback(() => {// Track Core Web Vitals
+consttrackPerformanceMetrics= useCallback(() => {// Track Core Web Vitals;
 constmetrics: PerformanceMetrics = {
 lcp: null,
 fid: null,
 cls: null,
 fcp: null,
 ttfb: null}
-// Track page load time
-windo w.addEventListener('load', () => {constloadTime= performance.timing.loadEventEnd - performance.timing.navigationStart
+// Track page load time;
+windo w.addEventListener('load', () => {constloadTime= performance.timing.loadEventEnd - performance.timing.navigationStart;
 trackEvent('page_load_time', {
 category: 'performance',
 value: loadTime})
@@ -413,9 +389,8 @@ optimizeThirdPartyScripts,
 setupIntersectionObserver,
 optimizeScrollPerformance,
 setupResourceHints,
-trackPerformanceMetrics
+trackPerformanceMetrics;
 ])
-return nul l
+return nul l;
 }
-export default EnhancedPerformanceOptimizer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+export default EnhancedPerformanceOptimizer;

@@ -1,7 +1,5 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -56,20 +54,18 @@ const EnhancedLoadingStatesPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              EnhancedLoadingStates
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              EnhancedLoadingStates</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced EnhancedLoadingStates solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -80,8 +76,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -109,8 +104,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -128,15 +122,12 @@ const EnhancedLoadingStatesPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -147,32 +138,28 @@ const EnhancedLoadingStatesPage: React.FC = () => {
 };
 
 export default EnhancedLoadingStatesPage;
-=======
 import { Loader2, Brain, Cloud, Shield, Code } from 'lucide-react'
 import { Brain } from 'lucide-react'
 
 interface LoadingSpinnerProps {
-size?: 'sm' | 'md' | 'lg'
-text?: string
+size?: 'sm' | 'md' | 'lg';
+text?: string;
 }
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 size = 'md',
 text = 'Loading...'
 }) => {
 const sizeClasses = {
-=======
 import {Loader2, Brain, Cloud, Shield, Code} from 'lucide-react'
 interface LoadingSpinnerProp s {size?: 'sm' | 'md' | 'lg'
 text?: string}
 export constLoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
 text= 'Loading...'}) => {constsizeClasses= {
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 sm: 'w-4 h-4',
 md: 'w-8 h-8',
 lg: 'w-12h-1 2'}
 return(<divclassName="flex flex-colitems-centerjustify-centerp-8"><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName="mt-2text-smtext-gray-500">{text}</p>)}</di>)
 }
-<<<<<<< HEAD
 return (
 <div className="flex flex-col items-center justify-center p-8">
 <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
@@ -224,11 +211,8 @@ export const ContentSkeleton: React.FC = () => (
 </div>
 </div>
 )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
 export constPageLoader: React.FC= () =>(<divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900flexitems-centerjustify-center"><divclassName="text-center"><divclassName="w-1 6 h-16bg-gradient-to-r from-blue-500to-purple-600rounded-2 xl flex items-center justify-center mb-4mx-autoanimate-pulse"><BrainclassName="w-8h-8text-white" /></di><h2className="text-xl font-semiboldtext-whitemb-2">ZionTechGroup</h><pclassName="text-gray-300">Loadingamazingcontent...</p></di></di>)
 export constServiceCardSkeleton: React.FC= () =>(<divclassName="bg-white/5 backdrop-blur-sm rounded-2 xlp-8animate-pulse"><divclassName="w-16h-16bg-gray-600rounded-2xlmb-6"></di><divclassName="h-6bg-gray-600roundedmb-4"></di><divclassName="h-4bg-gray-600roundedmb-4"></di><divclassName="space-y-2"><divclassName="h-3 bg-gray-600rounded"></di><divclassName="h-3 bg-gray-600rounded"></di><divclassName="h-3bg-gray-600roundedw-3/4"></di></di></di>)
 export constStatsSkeleton: React.FC= () =>(<divclassName="grid grid-cols-2md:grid-cols-4gap-8">{Array.from({length:4}).map((_index) =>(<divkey={index}className="text-centeranimate-pulse"><divclassName="h-8bg-gray-600roundedmb-2"></di><divclassName="h-4 bg-gray-600roundedw-3/4mx-auto"></di></di>))}</di>)
-export constContentSkeleton: React.FC= () =>(<divclassName="space-y-6animate-pulse"><divclassName="h-8bg-gray-600roundedw-3/4"></di><divclassName="space-y-2"><divclassName="h-4 bg-gray-600rounded"></di><divclassName="h-4 bg-gray-600rounded"></di><divclassName="h-4bg-gray-600roundedw-2/3"></di></di></di>
-)
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export constContentSkeleton: React.FC= () =>(<divclassName="space-y-6animate-pulse"><divclassName="h-8bg-gray-600roundedw-3/4"></di><divclassName="space-y-2"><divclassName="h-4 bg-gray-600rounded"></di><divclassName="h-4 bg-gray-600rounded"></di><divclassName="h-4bg-gray-600roundedw-2/3"></di></di></di>;
+);

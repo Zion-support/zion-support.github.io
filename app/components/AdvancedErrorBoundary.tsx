@@ -1,27 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
 import { Mail } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+interface Props {;
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = { hasError: false }
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -65,7 +62,6 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -79,33 +75,28 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AdvancedErrorBoundary
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              AdvancedErrorBoundary</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AdvancedErrorBoundary solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-=======
-    // Report error to external service
+                Learn More</button>
+    // Report error to external service;
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
       error,
-<<<<<<< HEAD
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
@@ -113,17 +104,17 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo;
     })
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
     }
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
       // console.error('Error caught by boundary:', error, errorInfo)
     }
-    // Log error to external service in production
+    // Log error to external service in production;
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)
     }
@@ -132,12 +123,9 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
-=======
       errorInfo,
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
-=======
 import React, {Component, ErrorInfo, ReactNode} from 'react'
-import {AlertTriangle, RefreshCw, Home, Mail} from 'lucide-react'
+import {AlertTriangle, RefreshCw, Home, Mail} from 'lucide-react';
 interface Prop s {children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) =>void;}
@@ -159,73 +147,66 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo});
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {this.props.onError(errorerrorInfo);
    }
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV=== 'development') {}
-    // Log error to external service in production
+    // Log error to external service in production;
     if (process.env.NODE_ENV=== 'production') {this.logErrorToService(errorerrorInfo);
    }
   }
 
   logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// You can integrate with services like Sentry, LogRocket, etc.
     consterrorData= {
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      url: window.location.href
+      url: window.location.href;
     }
-    // Log the error data for debugging
+    // Log the error data for debugging;
     // console.error('Error data:', errorData)
-=======
-      url: windo w.location.href
+      url: windo w.location.href;
    };
-    // Log the error data for debugging
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-    // Example: Send to your error reporting service
+    // Log the error data for debugging;
+    // Example: Send to your error reporting service;
     // You could send this to yourbackend:
     // fetch('/$1/error-report', {//   method: 'POST',
     //   headers: { 'Content-Type': 'application/json'},
     //   body: JSON.stringify(errorData)
     // })
-    // For now, just log to console
-    // Error data logged
+    // For now, just log to console;
+    // Error data logged;
   }
 
   handleReset= () => {this.setState({
       hasError: false,
       error: undefined,
       errorInfo: undefined,
-      errorId: undefined
-<<<<<<< HEAD
+      errorId: undefined;
     })
   }
 
   handleReportError = () => {
-    const { error, errorId } = this.state
+    const { error, errorId } = this.state;
     const subject = `Error Report - ${errorId}`
     const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     window.open(mailtoLink)
   }
-=======
       url: window.location.href,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
 
-    // Send to error reporting service
+    // Send to error reporting service;
     this.sendErrorReport(errorReport);
   };
 
   private getUserId = (): string | null => {
-    // Try to get user ID from localStorage or other sources
+    // Try to get user ID from localStorage or other sources;
     try {
       return localStorage.getItem('userId') || null;
     } catch {
@@ -234,7 +215,7 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
   };
 
   private getSessionId = (): string => {
-    // Generate or retrieve session ID
+    // Generate or retrieve session ID;
     try {
       let sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
@@ -253,7 +234,7 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
 
   private sendErrorReport = async (errorReport: ErrorReport) => {
     try {
-      // Send to your error reporting service
+      // Send to your error reporting service;
       await fetch('/api/errors', {
         method: 'POST',
         headers: {
@@ -289,26 +270,23 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
   private handleGoHome = () => {
     window.location.href = '/';
   };
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
+      // Custom fallback UI;
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
       }
 
-      // Default error UI
+      // Default error UI;
       return (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
           <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="flex justify-center mb-6">
               <AlertTriangle className="h-20 w-20 text-red-500" />
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
+              Oops! Something went wrong</h1>
             <p className="text-gray-600 mb-6 text-lg">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
@@ -318,20 +296,18 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
                   <strong>Error ID:</strong> {this.state.errorId}
                 </p>
                 <p className="text-xs text-gray-500 mt-1">
-                  Please include this ID when contacting support
-=======
-        <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
+                  Please include this ID when contacting support<div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
           <div className='sm:mx-auto sm:w-full sm:max-w-md'>
             <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
               <div className='text-center'>
                 <div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'>
-                  <svg
+                  <svg;
                     className='h-6 w-6 text-red-600'
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
                   >
-                    <path
+                    <path;
                       strokeLinecap='round'
                       strokeLinejoin='round'
                       strokeWidth={2}
@@ -342,7 +318,6 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
                 <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>h2>
                 <p className='mt-2 text-sm text-gray-600'>We&apos;re sorry, but something unexpected happened. Our team</p>
                   has been notified.
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
                 </p>
               </div>
 
@@ -358,18 +333,15 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
                     </p>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
-                        Stack Trace
-                      </summary>
+                        Stack Trace</summary>
                       <pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</p>pre>
                     </details>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
-                        Component Stack
-                      </summary>
+                        Component Stack</summary>
                       <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</p>pre>
                     </details>
                   </div>
-<<<<<<< HEAD
                   {this.state.errorInfo && (
                     <div>
                       <strong>Stack:</strong>
@@ -382,45 +354,40 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
               </details>
             )}
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
+              <button;
                 onClick={this.handleReset}
                 className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
               ></button>
                 <RefreshCw className="h-4 w-4 mr-2" />
-                Try Again
-              </button>
-              <button
+                Try Again</button>
+              <button;
                 onClick={() =></button> window.location.href = '/'}
                 className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
               >
                 <Home className="h-4 w-4 mr-2" />
-                Go Home
-              </button>
-              <button
+                Go Home</button>
+              <button;
                 onClick={this.handleReportError}
                 className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
               ></button>
                 <Mail className="h-4 w-4 mr-2" />
-                Report Issue
-              </button>
+                Report Issue</button>
             </div>
             <div className="mt-8 pt-6 border-t border-gray-200">
               <p className="text-sm text-gray-500"></p>
                 If this problem persists, please contact our support team at{' '}
-                <a
+                <a;
                   href="mailto:support@ziontechgroup.com"
                   className="text-blue-600 hover:text-blue-800"
                 >
-                  support@ziontechgroup.com
-                </a>
+                  support@ziontechgroup.com</a>
               </p>
             </div>
           </div>
         </div>
       )
     }
-    return this.props.children
-=======
+    return this.props.children;
    });
   };
 
@@ -436,12 +403,10 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
         return thi s.props.fallback;
      }
       return (
-      <divclassName="min-h-screen bg-gray-50flex flex-colitems-centerjustify-centerpx-4"><divclassName="max-w-2 xl w-full bg-white rounded-lg shadow-lgp-8text-center"><divclassName="flexjustify-centermb-6"><AlertTriangleclassName="h-2 0w-20text-red-500" /></di><spanclassName="text-3 xl font-bold text-gray-900mb-4"></spa></className="text-3 xl font-bold text-gray-900mb-4">Oops! Something went wrong
-          </h><spanclassName="text-gray-600mb-6text-lg"></spa></className="text-gray-600mb-6text-lg">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+      <divclassName="min-h-screen bg-gray-50flex flex-colitems-centerjustify-centerpx-4"><divclassName="max-w-2 xl w-full bg-white rounded-lg shadow-lgp-8text-center"><divclassName="flexjustify-centermb-6"><AlertTriangleclassName="h-2 0w-20text-red-500" /></di><spanclassName="text-3 xl font-bold text-gray-900mb-4"></spa></className="text-3 xl font-bold text-gray-900mb-4">Oops! Something went wrong</h><spanclassName="text-gray-600mb-6text-lg"></spa></className="text-gray-600mb-6text-lg">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
           </p>{this.state.errorId && (
             <divclassName="bg-gray-100p-4rounded-lgmb-6"><spanclassName="text-smtext-gray-600"></spa></className="text-smtext-gray-600"><stron g>ErrorID:</stron>{this.state.errorId}
-              </p><spanclassName="text-xs text-gray-500mt-1"></spa></className="text-xs text-gray-500mt-1">Please include this ID when contacting support
-              </p></di>)}
+              </p><spanclassName="text-xs text-gray-500mt-1"></spa></className="text-xs text-gray-500mt-1">Please include this ID when contacting support</p></di>)}
             {process.env.NODE_ENV=== 'development' && this.state.error && (
             <detailsclassName="mb-6text-left"><summaryclassName="cursor-pointer text-sm font-medium text-gray-700mb-2">Error Details (Development)
               </summar><divclassName="bg-gray-100p-3 rounded text-xs font-mono text-gray-800overflow-automax-h-40"><divclassName="mb-2"><stron g>Error:</stron>{this.state.error.message}
@@ -455,40 +420,33 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
               ></
                 onClick={this.handleReset}
                className="flex items-center justify-center px-6 py-3 bg-blue-600text-white rounded-mdhover:bg-blue-700transition-colors"
-              ><RefreshCwclassName="h-4w-4mr-2" />Try Again
-            </butto><
+              ><RefreshCwclassName="h-4w-4mr-2" />Try Again</butto><
                 onClick={() =></
                 onClick={() =>windo w.location.href='/'}
                className="flex items-center justify-center px-6 py-3 bg-gray-600text-white rounded-mdhover:bg-gray-700transition-colors"
               >
-              <HomeclassName="h-4w-4mr-2" />Go Home
-            </butto><
+              <HomeclassName="h-4w-4mr-2" />Go Home</butto><
                 onClick={this.handleReportError}
                className="flex items-center justify-center px-6 py-3 bg-green-600text-white rounded-mdhover:bg-green-700transition-colors"
               ></
                 onClick={this.handleReportError}
                className="flex items-center justify-center px-6 py-3 bg-green-600text-white rounded-mdhover:bg-green-700transition-colors"
-              ><MailclassName="h-4w-4mr-2" />Report Issue
-            </butto></di><divclassName="mt-8 pt-6 border-tborder-gray-200"><spanclassName="text-smtext-gray-500"></spa></className="text-smtext-gray-500">If this problem persists, please contact our support team at{''}
+              ><MailclassName="h-4w-4mr-2" />Report Issue</butto></di><divclassName="mt-8 pt-6 border-tborder-gray-200"><spanclassName="text-smtext-gray-500"></spa></className="text-smtext-gray-500">If this problem persists, please contact our support team at{''}
               <ahref="mailto:support@ziontechgroup.com"
                  className="text-blue-600hover:text-blue-800"
-                >support@ziontechgroup.com
-              </a></p></di></di></di>
+                >support@ziontechgroup.com</a></p></di></di></di>
       );
     }
     return thi s.props.children;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   }
 }
 
-export default AdvancedErrorBoundary
-=======
-                </div>
+export default AdvancedErrorBoundary</div>
               )}
 
               <div className='mt-6 space-y-3'>{this.props.enableRetry &&</div>
                   this.retryCount < this.maxRetries && (
-                    <button
+                    <button;
                       onClick={this.handleRetry}
                       className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     >Try Again ({this.maxRetries - this.retryCount} attempts</button>
@@ -496,12 +454,12 @@ export default AdvancedErrorBoundary
                     </button>
                   )}
 
-                <button
+                <button;
                   onClick={this.handleReload}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >Reload Page</button>button>
 
-                <button
+                <button;
                   onClick={this.handleGoHome}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >Go to Homepage</button>button>
@@ -510,13 +468,12 @@ export default AdvancedErrorBoundary
               <div className='mt-6 text-center'>
                 <p className='text-xs text-gray-500'>If this problem persists, please contact our support team</p>
                   at&nbsp;
-                  <a
+                  <a;
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
                   >kleber@ziontechgroup.com</a>a>
                 </p>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
@@ -527,8 +484,7 @@ export default AdvancedErrorBoundary
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -556,8 +512,7 @@ export default AdvancedErrorBoundary
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -575,15 +530,12 @@ export default AdvancedErrorBoundary
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -594,4 +546,3 @@ export default AdvancedErrorBoundary
 };
 
 export default AdvancedErrorBoundaryPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 'use client'
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Key, Copy } from 'lucide-react'
 import { Code } from 'lucide-react'
-import { Check } from 'lucide-react'
-=======
+import { Check } from 'lucide-react';
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Key, Copy, Code, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
@@ -23,7 +19,6 @@ const ApiDocsPage: React.FC = () => {
     setCopiedCode(id)
     setTimeout(() => setCopiedCode(null), 2000)
   }
-=======
 import React, {useState} from 'react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
@@ -37,7 +32,6 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null),2000);
  };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   constapiEndpoints= [
     {id: 'ai-chat',
@@ -69,7 +63,6 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
   ]
 
   return (
-<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
         <Navigation />
@@ -80,8 +73,7 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
             <div className="relative z-10 py-16 px-4">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"></h1>
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  API Documentation
-                </span>
+                  API Documentation</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Integrate with our powerful AI and IT services through our comprehensive REST API.
@@ -103,7 +95,7 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
                       </span>
                       <code className="text-cyan-400 font-mono">{endpoint.endpoint}</code>
                     </div>
-                    <button
+                    <button;
                       onClick={() =></button> copyToClipboard(endpoint.example, endpoint.id)}
                       className="flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors"
                     >
@@ -128,20 +120,18 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
                 Contact us for API access and integration support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
+                <a;
                   href="tel:+13024640950"
                   className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   <Key className="w-5 h-5" />
-                  +1 302 464 0950
-                </a>
-                <a
+                  +1 302 464 0950</a>
+                <a;
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   <Code className="w-5 h-5" />
-                  kleber@ziontechgroup.com
-                </a>
+                  kleber@ziontechgroup.com</a>
               </div>
             </div>
           </section>
@@ -151,10 +141,8 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
     </>
   )
 }
-=======
   <><divclassName="min-h-screen bg-gradient-to-br from-gray-90 0via-indigo-900to-purple-900"><Navigation /><divclassName="container mx-autopx-4py-8">{/* HeroSection */}
-        <sectionclassName="text-centermb-16relativeoverflow-hidden"><divclassName="absolute inset-0 bg-gradient-to-r from-indigo-60 0/20to-purple-600/20rounded-3xl"></di><divclassName="relative z-10py-16px-4"><spanclassName="text-4 xlmd:text-6 xl font-bold text-whitemb-6leading-tight"></className="text-4 xlmd:text-6 xl font-bold text-whitemb-6leading-tight"><spanclassName="bg-gradient-to-r from-cyan-400via-blue-50 0to-purple-600bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-blue-50 0to-purple-600bg-clip-texttext-transparent">API Documentation
-              </spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-3xlmx-auto"></className="text-xl text-gray-300mb-8 max-w-3xlmx-auto">Integrate with our powerful AI and IT services through our comprehensive REST API.
+        <sectionclassName="text-centermb-16relativeoverflow-hidden"><divclassName="absolute inset-0 bg-gradient-to-r from-indigo-60 0/20to-purple-600/20rounded-3xl"></di><divclassName="relative z-10py-16px-4"><spanclassName="text-4 xlmd:text-6 xl font-bold text-whitemb-6leading-tight"></className="text-4 xlmd:text-6 xl font-bold text-whitemb-6leading-tight"><spanclassName="bg-gradient-to-r from-cyan-400via-blue-50 0to-purple-600bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-blue-50 0to-purple-600bg-clip-texttext-transparent">API Documentation</spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-3xlmx-auto"></className="text-xl text-gray-300mb-8 max-w-3xlmx-auto">Integrate with our powerful AI and IT services through our comprehensive REST API.
             </p></di></sectio>{/* APIEndpoints */}
         <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-whitemb-8text-center">APIEndpoints</h><divclassName="space-y-6">{apiEndpoints.map((endpoint) => (
              <divkey={endpoint.id}className="bg-gray-800rounded-lgp-6"><divclassName="flex items-centerjustify-betweenmb-4"><divclassName="flexitems-centerspace-x-4">< className={`px-3 py-1 rounded text-sm font-semibold ${
@@ -175,10 +163,8 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
                  className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300hover:scale-105"
                 ><KeyclassName="w-5h-5" />+1 3024640950</a><ahref="mailto:kleber@ziontechgroup.com"
                  className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300hover:scale-105"
-                ><CodeclassName="w-5h-5" />kleber@ziontechgroup.com
-              </a></di></di></sectio></di></di><Footer /></>
+                ><CodeclassName="w-5h-5" />kleber@ziontechgroup.com</a></di></di></sectio></di></di><Footer /></>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-export default ApiDocsPage
+export default ApiDocsPage;

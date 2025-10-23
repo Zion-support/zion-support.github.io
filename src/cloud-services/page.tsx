@@ -1,21 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle } from 'lucide-react'
-=======
+import { CheckCircle } from 'lucide-react';
 import { CheckCircle, Check } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
-=======
 import {CheckCircle} from 'lucide-react';
-import React from 'react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 constCloudServicesPage: React.FC= () =>{constservices= [
     {
@@ -38,51 +31,44 @@ constCloudServicesPage: React.FC= () =>{constservices= [
       title: 'Cloud Analytics',
       description: 'Advanced analytics and monitoring for cloud resources',
       features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
-<<<<<<< HEAD
     }
   ]
   const benefits = [
     '99.9% Uptime Guarantee',
     '24/7 Expert Support',
-=======
    }
   ];
   constbenefits= [
     '9 9.9% Uptime Guarantee',
     '2 4/7 Expert Support',
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     'Cost Optimization',
     'Scalable Infrastructure',
     'Enhanced Security',
     'Global CDN'
   ]
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud Services
-          </h1>
+            Cloud Services</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our comprehensive cloud solutions.
             From migration to optimization, we provide end-to-end cloud services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
-              Get Started Today
-            </a>
-            <a
+              Get Started Today</a>
+            <a;
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
-              Learn More
-            </a>
+              Learn More</a>
           </div>
         </section>
         {/* Services Grid */}
@@ -129,18 +115,16 @@ constCloudServicesPage: React.FC= () =>{constservices= [
             Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
-              Call (302) 464-0950
-            </a>
-            <a
+              Call (302) 464-0950</a>
+            <a;
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
-              Get Free Consultation
-            </a>
+              Get Free Consultation</a>
           </div>
         </section>
       </main>
@@ -148,19 +132,14 @@ constCloudServicesPage: React.FC= () =>{constservices= [
     </div>
   )
 }
-export default CloudServicesPage
-=======
-  <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Navigation /><mainclassName="container mx-autopx-4py-16pt-24">{/* HeroSection */}
-      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></spa></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6">Cloud Services
-        </h><spanclassName="text-xl text-gray-300mb-8 max-w-3xlmx-auto"></spa></className="text-xl text-gray-300mb-8 max-w-3xlmx-auto">Transform your business with our comprehensive cloud solutions. 
+export default CloudServicesPage<divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Navigation /><mainclassName="container mx-autopx-4py-16pt-24">{/* HeroSection */}
+      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></spa></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6">Cloud Services</h><spanclassName="text-xl text-gray-300mb-8 max-w-3xlmx-auto"></spa></className="text-xl text-gray-300mb-8 max-w-3xlmx-auto">Transform your business with our comprehensive cloud solutions. 
             From migration to optimization, we provide end-to-end cloud services.
         </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
              className="bg-gradient-to-r from-cyan-500to-blue-600text-white px-8 py-3 rounded-lg font-semiboldhover:from-cyan-600 hover:to-blue-700transition-all"
-            >Get Started Today
-          </a><ahref="/contact"
+            >Get Started Today</a><ahref="/contact"
              className="border border-cyan-400text-cyan-400px-8 py-3 rounded-lg font-semiboldhover:bg-cyan-400hover:text-whitetransition-all"
-            >Learn More
-          </a></di></sectio>{/* ServicesGrid */}
+            >Learn More</a></di></sectio>{/* ServicesGrid */}
       <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-white mb-12text-center">OurCloudServices</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{services.map((serviceindex) => (
            <divkey={index}className="bg-white/10backdrop-blur-md rounded-xl p-6 borderborder-white/20"><service.iconclassName="w-12h-12text-cyan-400mb-4" /><h3className="text-xl font-semiboldtext-whitemb-3">{service.title}</h><pclassName="text-gray-300mb-4">{service.description}</p><ulclassName="space-y-2">{service.features.map((featurefeatureIndex) => (
                  <likey={featureIndex}className="flex items-center text-smtext-gray-300"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />{feature}
@@ -176,9 +155,7 @@ export default CloudServicesPage
              className="bg-gradient-to-r from-cyan-500to-blue-600text-white px-8 py-3 rounded-lg font-semiboldhover:from-cyan-600 hover:to-blue-700transition-all"
             >Call (30 2)464-0950</a><ahref="/contact"
              className="border border-cyan-400text-cyan-400px-8 py-3 rounded-lg font-semiboldhover:bg-cyan-400hover:text-whitetransition-all"
-            >Get Free Consultation
-          </a></di></sectio></mai><Footer /></di>
+            >Get Free Consultation</a></di></sectio></mai><Footer /></di>
   );
 };
 export default CloudServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

@@ -8,7 +8,7 @@ Phone,
 Mail,
 MapPin,
 Clock,
-Send,
+Send,;
 CheckCircle;}
 } from 'lucide-react'
 const ContactPage: React.FC = () => {
@@ -25,7 +25,7 @@ message: ''
 const [isSubmitting, setIsSubmitting] = useState(false)
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-const { name, value } = e.target
+const { name, value } = e.target;
 setFormData(prev => ({
 ...prev,
 [name]: value;}
@@ -36,7 +36,7 @@ e.preventDefault()
 setIsSubmitting(true)
 setSubmitStatus('idle')
 try {
-// Simulate form submission
+// Simulate form submission;
 await new Promise(resolve => setTimeout(resolve, 1000))
 setSubmitStatus('success')
 setFormData({
@@ -132,12 +132,12 @@ Full Name *
 </label>
 <div className="relative">
 <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-<input
+<input;
 type="text"
 name="name"
 value={formData.name}
 onChange={handleInputChange}
-required
+required;
 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
 placeholder="Your full name"
 />
@@ -149,12 +149,12 @@ Email Address *
 </label>
 <div className="relative">
 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-<input
+<input;
 type="email"
 name="email"
 value={formData.email}
 onChange={handleInputChange}
-required
+required;
 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
 placeholder="your@email.com"
 />
@@ -164,11 +164,10 @@ placeholder="your@email.com"
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label className="block text-sm font-medium text-gray-300 mb-2">
-Company
-</
+Company</
 <div className="relative">
 <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-<input
+<input;
 type="text"
 name="company"
 value={formData.company}
@@ -180,11 +179,10 @@ placeholder="Your company"
 </div>
 <div>
 <label className="block text-sm font-medium text-gray-300 mb-2">
-Phone Number
-</
+Phone Number</
 <div className="relative">
 <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-<input
+<input;
 type="tel"
 name="phone"
 value={formData.phone}
@@ -197,11 +195,10 @@ placeholder="+1 (555) 123-4567"
 </div>
 <div>
 <label className="block text-sm font-medium text-gray-300 mb-2">
-Service Interest
-</
+Service Interest</
 <div className="relative">
 <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-<select
+<select;
 name="service"
 value={formData.service}
 onChange={handleInputChange}
@@ -221,18 +218,18 @@ Message *
 </label>
 <div className="relative">
 <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
-<textarea
+<textarea;
 name="message"
 value={formData.message}
 onChange={handleInputChange}
-required
+required;
 rows={6}
 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
 placeholder="Tell us about your project, goals, or any questions you have..."
 />
 </div>
 </div>
-<button
+<button;
 type="submit"
 disabled={isSubmitting}
 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">{isSubmitting ? (</button>
@@ -310,4 +307,4 @@ and we'll get back to you as soon as possible.
 </div>
 )
 }
-export default ContactPage
+export default ContactPage;

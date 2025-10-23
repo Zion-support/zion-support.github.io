@@ -1,17 +1,15 @@
 'use client'
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react'
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
 import { AlertTriangle } from 'lucide-react'
 
-interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean
-  enableLazyLoading?: boolean
-  enablePreloading?: boolean
-  enableCodeSplitting?: boolean
+interface PerformanceOptimizerProps {;
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -22,10 +20,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 }) => {
   const [isOptimizing, setIsOptimizing] = useState(false)
   const [optimizationStatus, setOptimizationStatus] = useState<{
-    images: boolean
-    lazyLoading: boolean
-    preloading: boolean
-    codeSplitting: boolean
+    images: boolean;
+    lazyLoading: boolean;
+    preloading: boolean;
+    codeSplitting: boolean;
   }>({
     images: false,
     lazyLoading: false,
@@ -34,11 +32,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   })
 
   const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) return
-
-    // Optimize images
+    if (!enableImageOptimization) return;
+    // Optimize images;
     const images = document.querySelectorAll('img')
-=======
 import React, {useEffect, useState, useCallback} from 'react';
 import {Settings, Zap, CheckCircle, AlertTriangle} from 'lucide-react';
 
@@ -62,27 +58,24 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
   constoptimizeImages= useCallback(() => {if (!enableImageOptimization) return;
 
     // Optimizeimagesconstimages= do cument.querySelectorAll('img');
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     images.forEach((img) => {
   
       if (img.loading !== 'lazy') {
-<<<<<<< HEAD
         img.loading = 'lazy'
       }
 
-      // Add WebP support detection
+      // Add WebP support detection;
       if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
         const webpSrc = img.src.replace('.jpg', '.webp')
         const webpImg = new Image()
         webpImg.onload = () => {
-          img.src = webpSrc
+          img.src = webpSrc;
         }
-        webpImg.src = webpSrc
-=======
+        webpImg.src = webpSrc;
         img.loading= 'lazy';
      }
       
-      // Add WebP support detection
+      // Add WebP support detection;
       if (!img.src.includes('.webp') && img.src.includes('.jpg')) {constwebpSrc= img.src.replace('.jpg', '.webp');
         constwebpImg= new Image();
         webpImg.onload= () => {
@@ -90,22 +83,18 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
           img.src= webpSrc;
        };
         webpImg.src= webpSrc;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
     })
 
-<<<<<<< HEAD
     setOptimizationStatus(prev => ({ ...prev, images: true }))
   }, [enableImageOptimization])
 
   const enableLazyLoadingOptimization = useCallback(() => {
-    if (!enableLazyLoading) return
-=======
+    if (!enableLazyLoading) return;
     setOptimizationStatus(prev=> ({...prev, images: true}));
   }, [enableImageOptimization]);
 
   constenableLazyLoadingOptimization= useCallback(() => {if (!enableLazyLoading) return;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
     // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver(
       (entries) => {
@@ -113,24 +102,20 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
         entries.forEach((entry) => {
   
           if (entry.isIntersecting) {
-<<<<<<< HEAD
-            const img = entry.target as HTMLImageElement
+            const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
-              img.src = img.dataset.src
+              img.src = img.dataset.src;
               img.removeAttribute('data-src')
               observer.unobserve(img)
             }
-=======
             constimg= entry.target as HTMLImageElementif(img.dataset.src) {
               img.src= img.dataset.src;
               img.removeAttribute('data-src');
               observer.unobserve(img);
            }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
           }
         })
       },
-<<<<<<< HEAD
       { rootMargin: '50px' }
     )
 
@@ -141,9 +126,8 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
   }, [enableLazyLoading])
 
   const enablePreloadingOptimization = useCallback(() => {
-    if (!enablePreloading) return
-
-    // Preload critical resources
+    if (!enablePreloading) return;
+    // Preload critical resources;
     const criticalResources = [
       '/fonts/main.woff2',
       '/css/critical.css',
@@ -152,7 +136,7 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
     criticalResources.forEach((resource) => {
       const link = document.createElement('link')
       link.rel = 'preload'
-      link.href = resource
+      link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'font'
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous'
@@ -164,8 +148,7 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
   }, [enablePreloading])
 
   const enableCodeSplittingOptimization = useCallback(() => {
-    if (!enableCodeSplitting) return
-=======
+    if (!enableCodeSplitting) return;
       {rootMargin: '50 px'}
     );
 
@@ -198,50 +181,44 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
   }, [enablePreloading]);
 
   constenableCodeSplittingOptimization= useCallback(() => {if (!enableCodeSplitting) return;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
     // Dynamic imports for codesplittingconstloadComponent= async (componentName: string) => {
   
       try {
-<<<<<<< HEAD
         const module = await import(`../components/${componentName}.tsx`)
-        return module.default
+        return module.default;
       } catch (error) {
         // console.warn(`Failed to load component: ${componentName}`, error)
-        return null
+        return null;
       }
     }
 
-    // Store the function globally for use in other components
-    (window as any).loadComponent = loadComponent
-
+    // Store the function globally for use in other components;
+    (window as any).loadComponent = loadComponent;
     setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }))
   }, [enableCodeSplitting])
 
   const runOptimizations = useCallback(async () => {
     setIsOptimizing(true)
 
-=======
         constmodule= awaitimport(`../$1/${componentName}.tsx`);
         return modul e.default;
       } catch (error) {return nul l;
      }
     };
 
-    // Store the function globally for use in other components
+    // Store the function globally for use in other components;
     (windo w as any).loadComponent= loadComponentsetOptimizationStatus(prev=> ({...prev, codeSplitting: true}));
   }, [enableCodeSplitting]);
 
   construnOptimizations= useCallback(async () => {setIsOptimizing(true);
     
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     try {
       await Promise.all([
         optimizeImages(),
         enableLazyLoadingOptimization(),
         enablePreloadingOptimization(),
         enableCodeSplittingOptimization(),
-<<<<<<< HEAD
       ])
     } catch (error) {
       // console.error('Optimization failed:', error)
@@ -255,7 +232,6 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
   }, [runOptimizations])
 
   const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -297,10 +273,8 @@ const PerformanceOptimizerPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>PerformanceOptimizer</title>
@@ -313,28 +287,24 @@ const PerformanceOptimizerPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              PerformanceOptimizer
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              PerformanceOptimizer</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced PerformanceOptimizer solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
-=======
     <div className="performance-optimizer">{isOptimizing && (</div>
         <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
           <div className="flex items-center gap-2">
             <Settings className="w-4 h-4 animate-spin" />
             Optimizing performance...
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 
@@ -344,8 +314,7 @@ const PerformanceOptimizerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -367,15 +336,13 @@ const PerformanceOptimizerPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -393,19 +360,15 @@ const PerformanceOptimizerPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
-=======
       <div className="optimization-status">
         <h3 className="text-lg font-semibold mb-4">Performance Optimizations</h3>
         <div className="space-y-2">
@@ -438,18 +401,14 @@ const PerformanceOptimizerPage: React.FC = () => {
             <span>Code Splitting</span>
           </div>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
       </div>
-<<<<<<< HEAD
     </div>
   )
 }
 
-export default PerformanceOptimizer
-=======
+export default PerformanceOptimizer;
       <Footer />
     </>
-=======
       ]);
    } catch (error) {} finally {setIsOptimizing(false);
    }
@@ -482,13 +441,8 @@ export default PerformanceOptimizer
             <CheckCircleclassName="w-4 h-4text-green-500" />)  : (
             <AlertTriangleclassName="w-4 h-4text-yellow-500" />)}
           <spa n>CodeSplitting</spa></di></di></di></di>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   );
 };
 
-<<<<<<< HEAD
 export default PerformanceOptimizerPage;
-=======
 export default PerformanceOptimizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

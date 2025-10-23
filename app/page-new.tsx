@@ -9,17 +9,17 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 
-// Dynamically import heavy components for better performance
+// Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components
+// Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
-    // Preload critical components after initial render
+    // Preload critical components after initial render;
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
@@ -27,7 +27,7 @@ const preloadComponents = () => {
   }
 };
 
-// Loading skeleton component
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
@@ -43,14 +43,14 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     setIsLoaded(true);
-    // Trigger visibility animation
+    // Trigger visibility animation;
     const timer = setTimeout(() => setIsVisible(true), 100);
-    // Preload components
+    // Preload components;
     preloadComponents();
     return () => clearTimeout(timer);
   }, []);
 
-  // Analytics tracking for phone clicks - optimized
+  // Analytics tracking for phone clicks - optimized;
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
@@ -69,7 +69,7 @@ const HomePage: React.FC = () => {
       features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration'],
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
       link: '/ai-project-manager',
-      popular: true
+      popular: true;
     },
     {
       title: 'AI Social Media Manager',
@@ -79,7 +79,7 @@ const HomePage: React.FC = () => {
       features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence'],
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
       link: '/ai-social-media-manager',
-      popular: true
+      popular: true;
     },
     {
       title: 'AI Analytics Dashboard',
@@ -89,7 +89,7 @@ const HomePage: React.FC = () => {
       features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
       link: '/ai-analytics-dashboard',
-      popular: true
+      popular: true;
     },
     {
       title: 'AI Email Marketing',
@@ -99,7 +99,7 @@ const HomePage: React.FC = () => {
       features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns'],
       benefits: ['65% open rate increase', '40% revenue growth', '80% time saved'],
       link: '/ai-email-marketing',
-      popular: true
+      popular: true;
     },
     {
       title: 'AI Customer Support Bot',
@@ -109,7 +109,7 @@ const HomePage: React.FC = () => {
       features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights'],
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically'],
       link: '/ai-customer-support-bot',
-      popular: true
+      popular: true;
     },
     {
       title: 'AI Code Review Assistant',
@@ -119,7 +119,7 @@ const HomePage: React.FC = () => {
       features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration'],
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
-      popular: false
+      popular: false;
     }
   ];
 
@@ -195,7 +195,7 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <SEOOptimizer
+      <SEOOptimizer;
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -235,19 +235,19 @@ const HomePage: React.FC = () => {
           }
         }}
       />
-      <PerformanceOptimizer
+      <PerformanceOptimizer;
         enableImageOptimization={true}
         enableLazyLoading={true}
         enableCodeSplitting={true}
         enablePreloading={true}
       />
-      <AccessibilityEnhancer
+      <AccessibilityEnhancer;
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <SecurityEnhancer
+      <SecurityEnhancer;
         enableCSP={true}
         enableHTTPSRedirect={true}
         enableXSSProtection={true}
@@ -259,7 +259,7 @@ const HomePage: React.FC = () => {
         <Navigation />
         
         {/* Skip to main content for accessibility */}
-        <a
+        <a;
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
         >Skip to main content</a>a>
@@ -271,16 +271,16 @@ const HomePage: React.FC = () => {
 
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
-          <section
+          <section;
             className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
-              isLoaded && isVisible 
+              isLoaded && isVisible;
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
             }`}
             aria-labelledby="hero-heading"
           >
             <div className="max-w-6xl mx-auto">
-              <h1 
+              <h1;
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
                 data-text="Zion Tech Group"
@@ -315,18 +315,17 @@ const HomePage: React.FC = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
+                <a;
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >Get Started Today</a>a>
-                <a
+                <a;
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
-                  +1 302 464 0950
-                </a>
+                  +1 302 464 0950</a>
               </div>
             </div>
           </section>
@@ -372,7 +371,7 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
-                    <a 
+                    <a;
                       href={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
                     >Learn More</a>a>
@@ -409,7 +408,7 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
+                    <a;
                       href="/ai-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >Learn More</a>a>
@@ -446,7 +445,7 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
+                    <a;
                       href="/it-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >Learn More</a>a>
@@ -465,7 +464,7 @@ const HomePage: React.FC = () => {
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
                 <p className="text-gray-300 mb-4">+1 302 464 0950</p>
-                <a 
+                <a;
                   href="tel:+13024640950" 
                   onClick={handlePhoneClick}
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
@@ -476,7 +475,7 @@ const HomePage: React.FC = () => {
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
-                <a 
+                <a;
                   href="mailto:kleber@ziontechgroup.com" 
                   className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
                 >Send Email</a>a>
@@ -486,7 +485,7 @@ const HomePage: React.FC = () => {
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
                 <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-                <a 
+                <a;
                   href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
                   target="_blank"
                   rel="noopener noreferrer"

@@ -1,19 +1,13 @@
-<<<<<<< HEAD
 import React from 'react'
 import { BarChart3 } from 'lucide-react'
 import { CheckCircle, Brain, Target, Database } from 'lucide-react'
-
-=======
+;
 import React from 'react';
-<<<<<<< HEAD
 import { BarChart3, CheckCircle, Brain, Target, Database, BarChart, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [
-=======
 import {BarChart3, CheckCircle, Brain, Database, Target} from 'lucide-react';;
 constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     {
       title: 'Real-Time Business Intelligence Platform',
       description: 'Advanced AI-powered analytics platform providing real-time insights, predictive modeling, and automated reporting for data-driven decision making.',
@@ -164,18 +158,15 @@ constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
       category: 'Supply Chain Analytics',
       technologies: ['Time Series Forecasting', 'Optimization Algorithms', 'Python', 'OR-Tools', 'PostgreSQL', 'React'],
       useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage']
-<<<<<<< HEAD
     }
   ]
   const additionalFeatures = [
     {
       title: 'Advanced Data Processing',
-=======
    }
   ];
   constadditionalFeatures= [
     {title: 'Advanced Data Processing',
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       description: 'Handle massive datasets with real-time processing capabilities',
      icon:<DatabaseclassName="w-8h-8text-blue-600" />},
     {title: 'Machine Learning Models',
@@ -186,7 +177,6 @@ constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
      icon:<BarChart3className="w-8h-8text-green-600" />},
     {title: 'Predictive Insights',
       description: 'AI-powered predictions and recommendations',
-<<<<<<< HEAD
       icon: <Target className="w-8 h-8 text-orange-600" />
     }
   ]
@@ -198,24 +188,20 @@ constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Data Analytics Services
-            </h1>
+              AI Data Analytics Services</h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Transform your data into actionable insights with our advanced AI-powered analytics solutions
-            </p>
+              Transform your data into actionable insights with our advanced AI-powered analytics solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
-              </a>
-              <a
+                📞 +1 302 464 0950</a>
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                ✉️ Get Free Consultation
-              </a>
+                ✉️ Get Free Consultation</a>
             </div>
           </div>
         </div>
@@ -225,11 +211,9 @@ constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Analytics Solutions
-            </h2>
+              Our Analytics Solutions</h2>
             <p className="text-xl text-gray-600">
-              Comprehensive AI-powered analytics platforms for every business need
-            </p>
+              Comprehensive AI-powered analytics platforms for every business need</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsServices.map((service, index) => (
@@ -260,12 +244,11 @@ constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
-                <a
+                <a;
                   href="/contact"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
                 >
-                  Get Started
-                </a>
+                  Get Started</a>
               </div>
             ))}
           </div>
@@ -279,8 +262,7 @@ constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
               Why Choose Our Analytics Solutions?
             </h2>
             <p className="text-xl text-gray-600">
-              Advanced technology and expert implementation for maximum ROI
-            </p>
+              Advanced technology and expert implementation for maximum ROI</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {additionalFeatures.map((feature, index) => (
@@ -302,21 +284,18 @@ constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
             Ready to Transform Your Data into Insights?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Contact us today for a free consultation and custom analytics solution
-          </p>
+            Contact us today for a free consultation and custom analytics solution</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
             >
-              📞 +1 302 464 0950
-            </a>
-            <a
+              📞 +1 302 464 0950</a>
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              ✉️ kleber@ziontechgroup.com
-            </a>
+              ✉️ kleber@ziontechgroup.com</a>
           </div>
           <div className="mt-8 text-sm text-blue-200">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -326,23 +305,17 @@ constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
     </div>
   )
 }
-export default AIDataAnalyticsPage
-=======
+export default AIDataAnalyticsPage;
      icon:<TargetclassName="w-8h-8text-orange-600" />}
   ];
   return (
   <divclassName="min-h-screenbg-gradient-to-brfrom-slate-50to-blue-50">{/* HeroSection */}
-    <sectionclassName="relative overflow-hidden bg-gradient-to-rfrom-blue-600to-indigo-700text-whitepy-20"><divclassName="absolute inset-0bg-blackopacity-20"></di><divclassName="relative max-w-7 xl mx-autopx-4sm:px-6lg:px-8"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xlfont-boldmb-6"></className="text-4 xlmd:text-6 xlfont-boldmb-6">AI Data Analytics Services
-          </h><spanclassName="text-xlmd:text-2 xl mb-8 text-blue-100max-w-3xlmx-auto"></className="text-xlmd:text-2 xl mb-8 text-blue-100max-w-3xlmx-auto">Transform your data into actionable insights with our advanced AI-powered analytics solutions
-          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
+    <sectionclassName="relative overflow-hidden bg-gradient-to-rfrom-blue-600to-indigo-700text-whitepy-20"><divclassName="absolute inset-0bg-blackopacity-20"></di><divclassName="relative max-w-7 xl mx-autopx-4sm:px-6lg:px-8"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xlfont-boldmb-6"></className="text-4 xlmd:text-6 xlfont-boldmb-6">AI Data Analytics Services</h><spanclassName="text-xlmd:text-2 xl mb-8 text-blue-100max-w-3xlmx-auto"></className="text-xlmd:text-2 xl mb-8 text-blue-100max-w-3xlmx-auto">Transform your data into actionable insights with our advanced AI-powered analytics solutions</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
                className="bg-white text-blue-600px-8 py-3 rounded-lg font-semiboldhover:bg-blue-50transition-colorsinline-flexitems-center"
               >📞 +1 3024640950</a><ahref="mailto:kleber@ziontechgroup.com"
                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-blue-600transition-colors"
-              >✉️ Get Free Consultation
-            </a></di></di></di></sectio>{/* ServicesGrid */}
-    <sectionclassName="py-16bg-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">Our Analytics Solutions
-          </h><spanclassName="text-xltext-gray-600"></className="text-xltext-gray-600">Comprehensive AI-powered analytics platforms for every business need
-          </p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{analyticsServices.map((serviceindex) => (
+              >✉️ Get Free Consultation</a></di></di></di></sectio>{/* ServicesGrid */}
+    <sectionclassName="py-16bg-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">Our Analytics Solutions</h><spanclassName="text-xltext-gray-600"></className="text-xltext-gray-600">Comprehensive AI-powered analytics platforms for every business need</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{analyticsServices.map((serviceindex) => (
            <divkey={index}className="bg-white rounded-lg shado w-lg p-6 hover:shado w-xl transition-shado w borderborder-gray-100"><divclassName="text-4xlmb-4">{service.icon}</di><h3className="text-xl font-semibold text-gray-900mb-3">{service.title}</h><pclassName="text-gray-600mb-4">{service.description}</p><divclassName="mb-4"><spanclassName="text-2 xl font-boldtext-blue-600">{service.price}</spa><spanclassName="text-sm text-gray-500ml-2">Market:{service.marketPrice}</spa></di><divclassName="mb-4"><spanclassName="inline-block bg-blue-100text-blue-800text-xs font-semibold px-2py-1rounded"></className="inline-block bg-blue-100text-blue-800text-xs font-semibold px-2py-1rounded">{service.category}
                 </spa></di><ulclassName="space-y-2mb-6">{service.features.slice(0 4).map((featurefeatureIndex) => (
                  <likey={featureIndex}className="flex items-center text-smtext-gray-600"><CheckCircleclassName="w-4 h-4text-green-500mr-2flex-shrink-0" />{feature}
@@ -351,24 +324,19 @@ export default AIDataAnalyticsPage
                  <pkey={benefitIndex}className="text-smtext-green-600">✓{benefit}</p>))}
               </di><ahref="/contact"
                  className="w-full bg-blue-600text-white py-2 px-4 rounded-lg font-semiboldhover:bg-blue-700transition-colors inline-flexitems-centerjustify-center"
-                >Get Started
-              </a></di>))}
+                >Get Started</a></di>))}
         </di></di></sectio>{/* FeaturesSection */}
     <sectionclassName="py-16bg-gray-50"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></spa></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">Why Choose Our Analytics Solutions?
-          </h><spanclassName="text-xltext-gray-600"></spa></className="text-xltext-gray-600">Advanced technology and expert implementation for maximum ROI
-          </p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{additionalFeatures.map((featureindex) => (
+          </h><spanclassName="text-xltext-gray-600"></spa></className="text-xltext-gray-600">Advanced technology and expert implementation for maximum ROI</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{additionalFeatures.map((featureindex) => (
            <divkey={index}className="text-center"><divclassName="flexjustify-centermb-4">{feature.icon}
               </di><h3className="text-lg font-semibold text-gray-900mb-2">{feature.title}</h><pclassName="text-gray-600">{feature.description}</p></di>))}
         </di></di></sectio>{/* ContactSection */}
     <sectionclassName="py-16bg-gradient-to-r from-blue-600to-indigo-600text-white"><divclassName="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center"><spanclassName="text-3 xlmd:text-4 xlfont-boldmb-4"></spa></className="text-3 xlmd:text-4 xlfont-boldmb-4">Ready to Transform Your Data into Insights?
-        </h><spanclassName="text-xl mb-8text-blue-100"></spa></className="text-xl mb-8text-blue-100">Contact us today for a free consultation and custom analytics solution
-        </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
+        </h><spanclassName="text-xl mb-8text-blue-100"></spa></className="text-xl mb-8text-blue-100">Contact us today for a free consultation and custom analytics solution</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
              className="bg-white text-blue-600px-8 py-3 rounded-lg font-semiboldhover:bg-blue-50transition-colorsinline-flexitems-center"
             >📞 +1 3024640950</a><ahref="mailto:kleber@ziontechgroup.com"
              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-blue-600transition-colors"
-            >✉️ kleber@ziontechgroup.com
-          </a></di><divclassName="mt-8 text-smtext-blue-200"><p>📍 364E Main St STE1008, Middletown DE19709</p></di></di></sectio></di>
+            >✉️ kleber@ziontechgroup.com</a></di><divclassName="mt-8 text-smtext-blue-200"><p>📍 364E Main St STE1008, Middletown DE19709</p></di></di></sectio></di>
   );
 };
 export default AIDataAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

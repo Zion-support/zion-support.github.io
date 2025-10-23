@@ -1,21 +1,15 @@
-<<<<<<< HEAD
 'use client'
-import React from 'react'
-=======
+import React from 'react';
 import { CheckCircle, ArrowRight, Check } from 'lucide-react';
 'use client';
 import {CheckCircleArrowRight} from 'lucide-react';
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight } from 'lucide-react'
-=======
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 constAIServicesPage: React.FC= () =>{constservices= [
     {
@@ -57,19 +51,16 @@ constAIServicesPage: React.FC= () =>{constservices= [
     {icon: Users,
       title: 'Customer Experience AI',
       description: 'Enhance customer interactions with AI chatbots, sentiment analysis, and personalized experiences.',
-<<<<<<< HEAD
       features: ['AI Chatbots', 'Sentiment Analysis', 'Personalization', '24/7 Support'],
       price: 'Starting at $600/month',
       color: 'text-green-400'
     }
   ]
-=======
       features: ['AI Chatbots', 'Sentiment Analysis', 'Personalization', '2 4/7 Support'],
       price: 'Starting at $60 0/month',
       color: 'text-green-40 0'
    }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   constbenefits= [
     {icon: Star,
@@ -86,7 +77,6 @@ constAIServicesPage: React.FC= () =>{constservices= [
    },
     {icon: Globe,
       title: 'Global Support',
-<<<<<<< HEAD
       description: '24/7 support across all time zones with dedicated success managers'
     }
   ]
@@ -99,26 +89,23 @@ constAIServicesPage: React.FC= () =>{constservices= [
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Services & Solutions
-            </span>
+              AI Services & Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transform your business with cutting-edge artificial intelligence solutions.
             From machine learning to automation, we deliver AI that drives real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
             >
-              Get Free Consultation
-            </a>
-            <a
+              Get Free Consultation</a>
+            <a;
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              (302) 464-0950
-            </a>
+              (302) 464-0950</a>
           </div>
         </section>
         {/* Services Grid */}
@@ -142,7 +129,7 @@ constAIServicesPage: React.FC= () =>{constservices= [
                 </ul>
                 <div className="text-center">
                   <div className={`text-lg font-bold ${service.color} mb-2`}>{service.price}</div>
-                  <a
+                  <a;
                     href="/contact"
                     className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
                   >
@@ -178,18 +165,16 @@ constAIServicesPage: React.FC= () =>{constservices= [
               Get a free consultation and discover how our AI solutions can revolutionize your operations and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
-                Get Free Consultation
-              </a>
-              <a
+                Get Free Consultation</a>
+              <a;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                (302) 464-0950
-              </a>
+                (302) 464-0950</a>
             </div>
             <div className="mt-8 text-sm text-gray-400">
               <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -201,20 +186,17 @@ constAIServicesPage: React.FC= () =>{constservices= [
     </div>
   )
 }
-=======
       description: '2 4/7 support across all time zones with dedicated success managers'
    }
   ];
 
   return (
   <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Navigation /><mainclassName="container mx-autopx-4py-16pt-24">{/* HeroSection */}
-      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent">AI Services & Solutions
-          </spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-4xlmx-auto"></spa></className="text-xl text-gray-300mb-8 max-w-4xlmx-auto">Transform your business with cutting-edge artificial intelligence solutions. 
+      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent">AI Services & Solutions</spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-4xlmx-auto"></spa></className="text-xl text-gray-300mb-8 max-w-4xlmx-auto">Transform your business with cutting-edge artificial intelligence solutions. 
             From machine learning to automation, we deliver AI that drives real results.
         </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
              className="bg-gradient-to-r from-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semiboldhover:from-cyan-600 hover:to-purple-700transition-all duration-300hover:scale-105"
-            >Get Free Consultation
-          </a><ahref="tel:+13024640950"
+            >Get Free Consultation</a><ahref="tel:+13024640950"
              className="border-2 border-cyan-400text-cyan-400px-8 py-3 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
             >(30 2) 464-0950</a></di></sectio>{/* ServicesGrid */}
       <sectionclassName="mb-16"><h2className="text-3 xl font-bold text-white text-centermb-12">OurAIServices</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{services.map((serviceindex) => (
@@ -231,12 +213,10 @@ constAIServicesPage: React.FC= () =>{constservices= [
       <sectionclassName="text-center"><divclassName="bg-gradient-to-r from-cyan-90 0/50to-purple-90 0/50rounded-2xlp-8"><h2className="text-3 xl font-boldtext-whitemb-4">Ready to Transform Your BusinesswithAI?</h><spanclassName="text-gray-300mb-8 max-w-2xlmx-auto"></spa></className="text-gray-300mb-8 max-w-2xlmx-auto">Get a free consultation and discover how our AI solutions can revolutionize your operations and drive growth.
           </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
                className="bg-gradient-to-r from-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semiboldhover:from-cyan-600 hover:to-purple-700transition-all duration-300hover:scale-105"
-              >Get Free Consultation
-            </a><ahref="tel:+13024640950"
+              >Get Free Consultation</a><ahref="tel:+13024640950"
                className="border-2 border-cyan-400text-cyan-400px-8 py-3 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
               >(30 2) 464-0950</a></di><divclassName="mt-8 text-smtext-gray-400"><p>📧 kleber@ziontechgroup.com | 📍 364E Main St STE1008, Middletown DE19709</p></di></di></sectio></mai><Footer /></di>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-export default AIServicesPage
+export default AIServicesPage;

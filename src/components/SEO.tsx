@@ -1,34 +1,29 @@
-<<<<<<< HEAD
 'use client'
-=======
 import { Helmet } from 'lucide-react';
 'use client';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 /**
- * SEO Component
- * Provides comprehensive SEO meta tags and structured data
+ * SEO Component;
+ * Provides comprehensive SEO meta tags and structured data;
  */
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'lucide-react'
 
-export interface SEOProps {
-  title?: string
-  description?: string
+export interface SEOProps {;
+  title?: string;
+  description?: string;
   keywords?: string[]
-  image?: string
-  url?: string
+  image?: string;
+  url?: string;
   type?: 'website' | 'article' | 'product' | 'profile'
-  author?: string
-  publishDate?: string
-  modifiedDate?: string
-  canonical?: string
-  noIndex?: boolean
+  author?: string;
+  publishDate?: string;
+  modifiedDate?: string;
+  canonical?: string;
+  noIndex?: boolean;
   structuredData?: Record<string, unknown>
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
-  locale?: string
+  locale?: string;
   alternateLocales?: { locale: string; url: string }[]
-=======
 import {Helmet} from 'lucide-react';
 import React from 'react';
 
@@ -47,7 +42,6 @@ export interface SEOProp s {title?: string;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
   alternateLocales?: { locale: stringurl: string}[];
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 }
 const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',
   description:
@@ -63,15 +57,12 @@ const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',
   url: 'https:// ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
-<<<<<<< HEAD
-  twitterCard: 'summary_large_image' as const
+  twitterCard: 'summary_large_image' as const;
 }
 export const SEO: React.FC<SEOProps> = ({
-  title,
-=======
+  title,;
   twitterCard: 'summary_large_image' as const};
 exportconstSEO:React.FC<SEOProp s>= ({title,
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   description,
   keywords,
   image,
@@ -93,13 +84,12 @@ exportconstSEO:React.FC<SEOProp s>= ({title,
     url: url || default SEO.url,
     type,
     twitterCard,
-    locale
-<<<<<<< HEAD
+    locale;
   }
-  // Generate structured data
+  // Generate structured data;
   const generateStructuredData = () => {
     if (structuredData) {
-      return structuredData
+      return structuredData;
     }
     const baseStructuredData: Record<string, unknown> = {
       '@context': 'https://schema.org',
@@ -107,21 +97,21 @@ exportconstSEO:React.FC<SEOProp s>= ({title,
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image: seo.image
+      image: seo.image;
     }
     if (author) {
       baseStructuredData.author = {
         '@type': 'Person',
-        name: author
+        name: author;
       }
     }
     if (publishDate) {
-      baseStructuredData.datePublished = publishDate
+      baseStructuredData.datePublished = publishDate;
     }
     if (modifiedDate) {
-      baseStructuredData.dateModified = modifiedDate
+      baseStructuredData.dateModified = modifiedDate;
     }
-    return baseStructuredData
+    return baseStructuredData;
   }
   return (
     <Helmet>
@@ -171,7 +161,7 @@ exportconstSEO:React.FC<SEOProp s>= ({title,
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       {/* Preload critical resources */}
-      <link
+      <link;
         rel="preload"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         as="style"
@@ -179,8 +169,7 @@ exportconstSEO:React.FC<SEOProp s>= ({title,
     </Helmet>
   )
 }
-export default SEO
-=======
+export default SEO;
   };
   // Generate structureddataconstgenerateStructuredData= () => {if (structuredDat a) {
       return structuredDat a;
@@ -190,11 +179,11 @@ export default SEO
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image : seo.image
+      image : seo.image;
    };
     if (autho r) {baseStructuredData.author= {
         '@type': 'Person',
-        name: author
+        name: author;
      };
     }
     if (publishDat e) {baseStructuredData.datePublished= publishDate;
@@ -233,4 +222,3 @@ export default SEO
   );
 };
 export default SEO;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

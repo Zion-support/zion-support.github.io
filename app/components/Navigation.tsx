@@ -1,27 +1,21 @@
-<<<<<<< HEAD
 'use client'
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server } from 'lucide-react'
 import { Phone, Mail, Zap, Brain, Cloud, ArrowRight } from 'lucide-react'
-import { MapPin, Cpu } from 'lucide-react'
-=======
+import { MapPin, Cpu } from 'lucide-react';
 "use client";
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Brain, Menu, X } from "lucide-react";
 const Navigation: React.FC = () => {
-<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [aiServicesOpen, setAiServicesOpen] = useState(false)
   const [itServicesOpen, setItServicesOpen] = useState(false)
   const [microSaasOpen, setMicroSaasOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-=======
 import React, {useStateuseEffect} from 'react'
 import {Link} from 'react-router-do m'
 import {ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server} from 'lucide-react'
@@ -33,7 +27,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
   const [microSaasOpensetMicroSaasOpen] = useState(false)
   const [isScrolledsetIsScrolled] = useState(false)
 
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   useEffect(() => {
   
     consthandleResize= () => {
@@ -50,7 +43,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
       windo w.removeEventListener('scroll', handleScroll)
    }
   }, [])
-<<<<<<< HEAD
   const toggleMenu = () => setIsOpen(!isOpen)
   const toggleServices = () => setServicesOpen(!servicesOpen)
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen)
@@ -58,7 +50,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)
   const closeAllMenus = () => {
     setServicesOpen(false)
-=======
 
   consttoggleMenu= () => setIsOpen(!isOpen)
   consttoggleServices= () => setServicesOpen(!servicesOpen)
@@ -67,7 +58,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
   consttoggleMicroSaas= () => setMicroSaasOpen(!microSaasOpen)
   
   constcloseAllMenus= () => {setServicesOpen(false)
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     setAiServicesOpen(false)
     setItServicesOpen(false)
     setMicroSaasOpen(false)
@@ -84,7 +74,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
     {name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions'},
     {name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology'}
   ]
-<<<<<<< HEAD
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
@@ -108,7 +97,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
     { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
-=======
 
   constitServices= [
     {name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions'},
@@ -135,9 +123,7 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
     {name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems'},
     {name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI'},
     {name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing'}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-  ]
-=======
+  ];
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
@@ -149,9 +135,7 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
     { name: "Contact", href: "/contact" },
   ];
 
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
   return (
-<<<<<<< HEAD
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">{/* Logo */}</div>
@@ -164,14 +148,12 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
             </Link>
           </div>
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Home
-            </Link>
+              Home</Link>
             {/* AI Services Dropdown */}
             <div className="relative group">
-              <button
+              <button;
                 onClick={toggleAiServices}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               ></button>
@@ -183,15 +165,13 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
                     {aiServices.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
-=======
   <navclassName={`fixed top-0 left-0 right-0 z-5 0 transition-all duration-300${
       isScrolled ? 'bg-slate-90 0/95backdrop-blur-md shado w-lg'  : 'bg-transparent'
   }`}><divclassName="max-w-7 xl mx-autopx-4sm:px-6lg:px-8"><divclassName="flex items-centerjustify-betweenh-16">{/* Logo */}
         <divclassName="flex-shrink-0"><Linkto="/"className="flexitems-centerspace-x-2"><divclassName="w-8 h-8 bg-gradient-to-r from-blue-500to-purple-600rounded-lg flexitems-centerjustify-center"><BrainclassName="w-5h-5text-white" /></di><spanclassName="text-xlfont-boldtext-white">ZionTechGroup</spa></Lin></di>{/* DesktopNavigation */}
-        <divclassName="hiddenlg:flexitems-centerspace-x-8"><Linkto="/"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Home
-          </Lin>{/* AI Services Dropdown */}
+        <divclassName="hiddenlg:flexitems-centerspace-x-8"><Linkto="/"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Home</Lin>{/* AI Services Dropdown */}
           <divclassName="relativegroup"><
                 onClick={toggleAiServices}
                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium"
@@ -201,11 +181,9 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
               ><BrainclassName="w-4h-4" /><spa n>AIServices</spa><ChevronDownclassName={`w-4 h-4 transition-transform duration-300${aiServicesOpen ? 'rotate-18 0':''}`} /></butto>{aiServicesOpen && (
               <divclassName="absolute top-full left-0 mt-2 w-96bg-slate-80 0/95backdrop-blur-md rounded-lg shado w-xl border border-cyan-500/20p-4cyber-card"><divclassName="gridgrid-cols-1gap-2">{aiServices.map((service) => (
                    <Linkkey={service.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                         to={service.href}
                        className="flex items-center space-x-3 p-3 rounded-lghover:bg-cyan-50 0/10transition-colors duration-300group"
                         onClick={closeAllMenus}
-<<<<<<< HEAD
                       >
                         <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
                         <div>
@@ -221,7 +199,7 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
             </div>
             {/* IT Services Dropdown */}
             <div className="relative group">
-              <button
+              <button;
                 onClick={toggleItServices}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               ></button>
@@ -233,9 +211,8 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
                     {itServices.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
-=======
                       ><service.iconclassName="w-5 h-5text-cyan-400group-hover:text-cyan-300" /><di v><divclassName="text-whitefont-medium">{service.name}</di><divclassName="text-xstext-gray-400">{service.description}</di></di><ArrowRightclassName="w-4 h-4 text-gray-400group-hover:text-cyan-400ml-auto" /></Lin>))}
                 </di></di>)}
           </di>{/* IT Services Dropdown */}
@@ -248,11 +225,9 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
               ><CloudclassName="w-4h-4" /><spa n>ITServices</spa><ChevronDownclassName={`w-4 h-4 transition-transform duration-300${itServicesOpen ? 'rotate-18 0':''}`} /></butto>{itServicesOpen && (
               <divclassName="absolute top-full left-0 mt-2 w-80bg-slate-80 0/95backdrop-blur-md rounded-lg shado w-xl border border-cyan-500/20p-4cyber-card"><divclassName="gridgrid-cols-1gap-2">{itServices.map((service) => (
                    <Linkkey={service.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                         to={service.href}
                        className="flex items-center space-x-3 p-3 rounded-lghover:bg-cyan-50 0/10transition-colors duration-300group"
                         onClick={closeAllMenus}
-<<<<<<< HEAD
                       >
                         <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
                         <div>
@@ -268,7 +243,7 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
             </div>
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
-              <button
+              <button;
                 onClick={toggleMicroSaas}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               ></button>
@@ -280,9 +255,8 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
                     {microSaasServices.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
-=======
                       ><service.iconclassName="w-5 h-5text-cyan-400group-hover:text-cyan-300" /><di v><divclassName="text-whitefont-medium">{service.name}</di><divclassName="text-xstext-gray-400">{service.description}</di></di><ArrowRightclassName="w-4 h-4 text-gray-400group-hover:text-cyan-400ml-auto" /></Lin>))}
                 </di></di>)}
           </di>{/* Micro SAAS Dropdown */}
@@ -295,11 +269,9 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
               ><CpuclassName="w-4h-4" /><spa n>MicroSAAS</spa><ChevronDownclassName={`w-4 h-4 transition-transform duration-300${microSaasOpen ? 'rotate-18 0':''}`} /></butto>{microSaasOpen && (
               <divclassName="absolute top-full left-0 mt-2 w-96bg-slate-80 0/95backdrop-blur-md rounded-lg shado w-xl border border-cyan-500/20p-4cyber-card"><divclassName="gridgrid-cols-1gap-2">{microSaasServices.map((service) => (
                    <Linkkey={service.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                         to={service.href}
                        className="flex items-center space-x-3 p-3 rounded-lghover:bg-cyan-50 0/10transition-colors duration-300group"
                         onClick={closeAllMenus}
-<<<<<<< HEAD
                       >
                         <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
                         <div>
@@ -315,7 +287,7 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
             </div>
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
-              <button
+              <button;
                 onClick={toggleServices}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               ></button>
@@ -327,9 +299,8 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
                     {emergingTech.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
-=======
                       ><service.iconclassName="w-5 h-5text-cyan-400group-hover:text-cyan-300" /><di v><divclassName="text-whitefont-medium">{service.name}</di><divclassName="text-xstext-gray-400">{service.description}</di></di><ArrowRightclassName="w-4 h-4 text-gray-400group-hover:text-cyan-400ml-auto" /></Lin>))}
                 </di></di>)}
           </di>{/* Emerging Technologies Dropdown */}
@@ -342,11 +313,9 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
               ><ZapclassName="w-4h-4" /><spa n>EmergingTech</spa><ChevronDownclassName={`w-4 h-4 transition-transform duration-300${servicesOpen ? 'rotate-18 0':''}`} /></butto>{servicesOpen && (
               <divclassName="absolute top-full left-0 mt-2 w-80bg-slate-80 0/95backdrop-blur-md rounded-lg shado w-xl border border-cyan-500/20p-4cyber-card"><divclassName="gridgrid-cols-1gap-2">{emergingTech.map((service) => (
                    <Linkkey={service.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                         to={service.href}
                        className="flex items-center space-x-3 p-3 rounded-lghover:bg-cyan-50 0/10transition-colors duration-300group"
                         onClick={closeAllMenus}
-<<<<<<< HEAD
                       >
                         <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
                         <div>
@@ -361,31 +330,26 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
               )}
             </div>
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
-            </Link>
+              About</Link>
             <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
-            </Link>
+              Services</Link>
             <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing
-            </Link>
+              Pricing</Link>
             <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
-            </Link>
+              Blog</Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact
-            </Link>
+              Contact</Link>
           </div>
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a
+            <a;
               href="tel:+13024640950"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
             >
               <Phone className="w-4 h-4" />
               <span className="text-sm">(302) 464-0950</span>
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
             >
@@ -395,14 +359,13 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
           </div>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <button
+            <button;
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
             ></button>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-=======
           <div className="hidden md:flex items-center space-x-8">{navigationItems.map((item, index) => (</div>
-              <Link
+              <Link;
                 key={index}
                 href={item.href}
                 className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
@@ -414,18 +377,18 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
+            <Link;
               href="/contact"
               className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
             >
-              Get Started
+              Get Started;
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <button;
               onClick={() =>setIsOpen(!isOpen)}</button>
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
@@ -434,21 +397,18 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
               ) : (
                 <Menu className="w-6 h-6" />
               )}
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             </button>
           </div>
         </div>
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Home
-              </Link>
+                Home</Link>
               {/* Mobile AI Services */}
               <div>
-                <button
+                <button;
                   onClick={toggleAiServices}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 ></button>
@@ -461,17 +421,11 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 {aiServicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {aiServices.slice(0, 8).map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
-=======
                       ><service.iconclassName="w-5 h-5text-cyan-400group-hover:text-cyan-300" /><di v><divclassName="text-whitefont-medium">{service.name}</di><divclassName="text-xstext-gray-400">{service.description}</di></di><ArrowRightclassName="w-4 h-4 text-gray-400group-hover:text-cyan-400ml-auto" /></Lin>))}
                 </di></di>)}
-          </di><Linkto="/about"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">About
-          </Lin><Linkto="/services"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Services
-          </Lin><Linkto="/pricing"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Pricing
-          </Lin><Linkto="/blog"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Blog
-          </Lin><Linkto="/contact"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Contact
-          </Lin></di>{/* ContactInfo */}
+          </di><Linkto="/about"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">About</Lin><Linkto="/services"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Services</Lin><Linkto="/pricing"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Pricing</Lin><Linkto="/blog"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Blog</Lin><Linkto="/contact"className="text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium">Contact</Lin></di>{/* ContactInfo */}
         <divclassName="hiddenlg:flexitems-centerspace-x-4"><ahref="tel:+13024640950"
              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300transition-colors duration-300font-medium"
             ><PhoneclassName="w-4h-4" /><spanclassName="text-sm">(302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
@@ -486,8 +440,7 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
             >{isOpen?<XclassName="h-6w-6" />:<MenuclassName="h-6w-6"/>}
           </butto></di></di>{/* MobileNavigation */}
         {isOpen && (
-        <divclassName="lg:hidden mt-4 pb-4 border-t border-cyan-500/20"><divclassName="pt-4space-y-4"><Linkto="/"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium"onClick={closeAllMenus}>Home
-            </Lin>{/* Mobile AIServices */}
+        <divclassName="lg:hidden mt-4 pb-4 border-t border-cyan-500/20"><divclassName="pt-4space-y-4"><Linkto="/"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium"onClick={closeAllMenus}>Home</Lin>{/* Mobile AIServices */}
             <di v><
                   onClick={toggleAiServices}
                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium"
@@ -497,7 +450,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 ><spanclassName="flexitems-centerspace-x-2"></className="flexitems-centerspace-x-2"><BrainclassName="w-4h-4" /><spa n>AIServices</spa></spa><ChevronDownclassName={`w-4 h-4 transition-transform duration-300${aiServicesOpen ? 'rotate-18 0':''}`} /></butto>{aiServicesOpen && (
                 <divclassName="mt-2ml-4space-y-2">{aiServices.slice(0 8).map((service) => (
                    <Linkkey={service.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                         to={service.href}
                        className="block text-sm text-gray-400 hover:text-cyan-400transition-colorsduration-300"
                         onClick={closeAllMenus}
@@ -506,7 +458,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                  <Linkto="/ai-services"
                      className="block text-sm text-cyan-400 hover:text-cyan-300transition-colors duration-300font-medium"
                       onClick={closeAllMenus}
-<<<<<<< HEAD
                     >
                       View All AI Services →
                     </Link>
@@ -515,7 +466,7 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
               </div>
               {/* Mobile IT Services */}
               <div>
-                <button
+                <button;
                   onClick={toggleItServices}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 ></button>
@@ -528,9 +479,8 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 {itServicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {itServices.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
-=======
                     >View All AI Services →
                   </Lin></di>)}
             </di>{/* Mobile ITServices */}
@@ -543,11 +493,9 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 ><spanclassName="flexitems-centerspace-x-2"></className="flexitems-centerspace-x-2"><CloudclassName="w-4h-4" /><spa n>ITServices</spa></spa><ChevronDownclassName={`w-4 h-4 transition-transform duration-300${itServicesOpen ? 'rotate-18 0':''}`} /></butto>{itServicesOpen && (
                 <divclassName="mt-2ml-4space-y-2">{itServices.map((service) => (
                    <Linkkey={service.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                         to={service.href}
                        className="block text-sm text-gray-400 hover:text-cyan-400transition-colorsduration-300"
                         onClick={closeAllMenus}
-<<<<<<< HEAD
                       >
                         {service.name}
                       </Link>
@@ -557,7 +505,7 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
               </div>
               {/* Mobile Micro SAAS */}
               <div>
-                <button
+                <button;
                   onClick={toggleMicroSaas}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 ></button>
@@ -570,9 +518,8 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 {microSaasOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {microSaasServices.slice(0, 6).map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
-=======
                       >{service.name}
                     </Lin>))}
                 </di>)}
@@ -586,7 +533,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 ><spanclassName="flexitems-centerspace-x-2"></className="flexitems-centerspace-x-2"><CpuclassName="w-4h-4" /><spa n>MicroSAAS</spa></spa><ChevronDownclassName={`w-4 h-4 transition-transform duration-300${microSaasOpen ? 'rotate-18 0':''}`} /></butto>{microSaasOpen && (
                 <divclassName="mt-2ml-4space-y-2">{microSaasServices.slice(0 6).map((service) => (
                    <Linkkey={service.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                         to={service.href}
                        className="block text-sm text-gray-400 hover:text-cyan-400transition-colorsduration-300"
                         onClick={closeAllMenus}
@@ -595,7 +541,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                  <Linkto="/micro-saas"
                      className="block text-sm text-cyan-400 hover:text-cyan-300transition-colors duration-300font-medium"
                       onClick={closeAllMenus}
-<<<<<<< HEAD
                     >
                       View All Micro SAAS →
                     </Link>
@@ -603,30 +548,25 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                 )}
               </div>
               <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                About
-              </Link>
+                About</Link>
               <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services
-              </Link>
+                Services</Link>
               <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Pricing
-              </Link>
+                Pricing</Link>
               <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
-              </Link>
+                Blog</Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Contact
-              </Link>
+                Contact</Link>
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20 space-y-2">
-                <a
+                <a;
                   href="tel:+13024640950"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                 >
                   <Phone className="w-4 h-4" />
                   <span>(302) 464-0950</span>
                 </a>
-                <a
+                <a;
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                 >
@@ -638,10 +578,9 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
-=======
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">{navigationItems.map((item, index) => (</div>
-                <Link
+                <Link;
                   key={index}
                   href={item.href}
                   className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
@@ -650,14 +589,12 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
                   {item.name}
                 </Link>
               ))}
-              <Link
+              <Link;
                 href="/contact"
                 className="block px-3 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started
-              </Link>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+                Get Started</Link>
             </div>
           </div>
         )}
@@ -665,15 +602,9 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
     </nav>
   );
 };
-=======
                     >View All Micro SAAS →
                   </Lin></di>)}
-            </di><Linkto="/about"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>About
-            </Lin><Linkto="/services"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>Services
-            </Lin><Linkto="/pricing"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>Pricing
-            </Lin><Linkto="/blog"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>Blog
-            </Lin><Linkto="/contact"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>Contact
-            </Lin>{/* Mobile ContactInfo */}
+            </di><Linkto="/about"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>About</Lin><Linkto="/services"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>Services</Lin><Linkto="/pricing"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>Pricing</Lin><Linkto="/blog"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>Blog</Lin><Linkto="/contact"className="block text-gray-300 hover:text-cyan-400transition-colors duration-300font-medium" onClick={closeAllMenus}>Contact</Lin>{/* Mobile ContactInfo */}
             <divclassName="pt-4 border-t border-cyan-50 0/20space-y-2"><ahref="tel:+13024640950"
                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300transition-colors duration-300font-medium"
                 ><PhoneclassName="w-4h-4" /><spa n>(302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
@@ -682,10 +613,6 @@ constNavigation: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
     </di></na>
   )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-<<<<<<< HEAD
 export default Navigation;
-=======
 export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

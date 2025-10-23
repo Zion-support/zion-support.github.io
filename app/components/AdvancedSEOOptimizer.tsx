@@ -1,8 +1,6 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -56,20 +54,17 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AdvancedSEOOptimizer
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              AdvancedSEOOptimizer</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              website
-            </p>
+              website</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -80,8 +75,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -109,8 +103,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -128,15 +121,12 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -147,20 +137,17 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
 };
 
 export default AdvancedSEOOptimizerPage;
-=======
 interface SEOOptimizerProps {
-title?: string
-=======
+title?: string;
 import {Helmet} from 'lucide-react';
 import React, {useEffect, useState, useCallback} from 'react'
-import {Helmet} from 'react-helmet-async'
-interface SEOOptimizerProp s {title?: string
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-description?: string
-keywords?: string
-canonicalUrl?: string
-ogImage?: string
-twitterCard?: string
+import {Helmet} from 'react-helmet-async';
+interface SEOOptimizerProp s {title?: string;
+description?: string;
+keywords?: string;
+canonicalUrl?: string;
+ogImage?: string;
+twitterCard?: string;
 structuredData?: objectchildren: React.ReactNode}
 constAdvancedSEOOptimizer: React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
 description= 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -174,14 +161,14 @@ const [recommendationssetRecommendations]=useState<string[]>([])
 constanalyzeSEO= useCallback(() => {
   
 if (type ofwindow=== 'undefined') return letscore=0constnewRecommendations: string[] = []
-// Check title length
+// Check title length;
 if (title.length >= 30&&title.length<= 6 0) {
 score +=20} else {newRecommendations.push('Title should be between 3 0-60characters')}
-// Check description length
+// Check description length;
 if (description.length >= 120&&description.length<= 16 0) {score +=20} else {newRecommendations.push('Description should be between 12 0-160characters')}
-// Check for keywords in title
+// Check for keywords in title;
 if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in title')}
-// Check for keywords in description
+// Check for keywords in description;
 if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in description')}
 // Check for headingstructureconstheadings= do cument.querySelectorAll('h1, h2, h3, h4, h5, h6')
 if (headings.length >0) {score +=10} else {newRecommendations.push('Add proper heading structure')}
@@ -196,7 +183,7 @@ setRecommendations(newRecommendations)
 useEffect(() => {analyzeSEO()}, [analyzeSEO])
 constgenerateStructuredData= () => {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || windo w.location.origin,"logo": ogImage,"sameAs": ["https:// twitter.com/ziontechgroup","https:// linkedin.com/$1/ziontechgroup"
 ]}
-return structuredDat a || default StructuredData
+return structuredDat a || default StructuredData;
 }
 return(<><Helme t><titl e>{title}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} />{canonicalUrl&&<linkrel="canonical"href={canonicalUrl} />}
 {/*OpenGraph*/}<metaproperty="og:title" content={title} /><metaproperty="og:description" content={description} /><metaproperty="og:image" content={ogImage} /><metaproperty="og:type"content="website" />{canonicalUrl&&<metaproperty="og:url"content={canonicalUrl} />}
@@ -213,9 +200,5 @@ fontSize: '12 px',
 zIndex:1000,
 maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
 }
-<<<<<<< HEAD
-export default AdvancedSEOOptimizer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
-export defaultAdvancedSEOOptimizer</SEOOptimizerProp>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export default AdvancedSEOOptimizer;
+export defaultAdvancedSEOOptimizer</SEOOptimizerProp>;

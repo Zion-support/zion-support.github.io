@@ -1,25 +1,19 @@
-<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { GitBranch } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
-
-=======
+;
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { GitBranch, CheckCircle, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const DevOpsPage: React.FC = () => {
   const services = [
-=======
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import {GitBranchCheckCircle} from 'lucide-react';;
 constDevOpsPage: React.FC= () =>{constservices= [
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     {
       icon: Code,
       title: 'CI/CD Pipeline',
@@ -40,7 +34,6 @@ constDevOpsPage: React.FC= () =>{constservices= [
       title: 'Security Integration',
       description: 'Security-first DevOps practices and tools',
       features: ['SAST/DAST', 'Dependency Scanning', 'Secrets Management', 'Compliance']
-<<<<<<< HEAD
     }
   ]
   return (
@@ -79,8 +72,7 @@ constDevOpsPage: React.FC= () =>{constservices= [
     </div>
   )
 }
-export default DevOpsPage
-=======
+export default DevOpsPage;
    }
   ];
   return (
@@ -95,4 +87,3 @@ export default DevOpsPage
   );
 };
 export default DevOpsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

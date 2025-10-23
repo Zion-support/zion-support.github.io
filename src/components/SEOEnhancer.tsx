@@ -1,23 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
-import { Helmet } from 'lucide-react'
-=======
 import { Helmet } from 'lucide-react';
-=======
+import { Helmet } from 'lucide-react';
 import {Helmet} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-<<<<<<< HEAD
 interface SEOEnhancerProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  children: React.ReactNode
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  children: React.ReactNode;
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
@@ -25,7 +18,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.jpg",
   url = "https://ziontechgroup.com",
-  children
+  children;
 }) => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -45,7 +38,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "Cloud Services",
       "Automation",
       "Business Intelligence"
-=======
 interface SEOEnhancerProp s {title?: string;
   description?: string;
   keywords?: string;
@@ -74,7 +66,6 @@ constSEOEnhancer: React.FC<SEOEnhancerProp s>= ({title= "Zion Tech Group - Advan
      "Cloud Services",
      "Automation",
      "Business Intelligence"
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     ],
    "contactPoint": {
      "@type":"ContactPoint",
@@ -118,7 +109,6 @@ constSEOEnhancer: React.FC<SEOEnhancerProp s>= ({title= "Zion Tech Group - Advan
     }
   }
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         {/* Primary meta tags */}
@@ -156,8 +146,7 @@ constSEOEnhancer: React.FC<SEOEnhancerProp s>= ({title= "Zion Tech Group - Advan
     </>
   )
 }
-export default SEOEnhancer
-=======
+export default SEOEnhancer;
   <><Helme t>{/* Primary metatags */}
       <titl e>{title}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author"content="Zion TechGroup" /><metaname="robots"content="index,follow" /><metaname="googlebot"content="index,follow" />{/* Open Graph /Facebook */}
      <metaproperty="og:type"content="website" /><metaproperty="og:url" content={url} /><metaproperty="og:title" content={title} /><metaproperty="og:description" content={description} /><metaproperty="og:image" content={image} /><metaproperty="og:image:width"content="1200" /><metaproperty="og:image:height"content="630" /><metaproperty="og:site_name"content="Zion TechGroup" />{/* Twitter */}
@@ -169,4 +158,3 @@ export default SEOEnhancer
   );
 };
 export default SEOEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

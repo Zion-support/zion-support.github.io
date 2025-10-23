@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -34,7 +31,6 @@ const GlobalErrorBoundaryPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
     }
   ]
 
@@ -43,8 +39,7 @@ const GlobalErrorBoundaryPage: React.FC = () => {
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-=======
+    'Gain competitive advantage with advanced technology';
 import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
     }
   ]
@@ -57,18 +52,15 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   ]
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>GlobalErrorBoundary | Zion Tech Group</title>
         <meta name="description" content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="AI, artificial intelligence, GlobalErrorBoundary, AI solutions, intelligent automation" />
       </Helmet>
-<<<<<<< HEAD
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -76,12 +68,10 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              GlobalErrorBoundary
-            </h1>
+              GlobalErrorBoundary</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business.
             </p>
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -105,16 +95,12 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-              Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Key Benefits<p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our globalerrorboundary solutions for your business.
             </p>
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our globalerrorboundary solutions for your business.</p>p>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
               <div key={index} className="flex items-start space-x-3">
@@ -131,27 +117,21 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your globalerrorboundary needs and get a customized solution.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call Now;
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us
-=======
+                Email Us;
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+                Learn More</button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -160,8 +140,7 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -189,8 +168,7 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -208,15 +186,12 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -226,35 +201,23 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
   );
 };
 
-export default GlobalErrorBoundaryPage;
-=======
-        </div>
+export default GlobalErrorBoundaryPage</div>
       </section>
     </div>
   )
 }
-export default GlobalErrorBoundaryPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
-    <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Helme t><titl e>GlobalErrorBoundary | ZionTechGroup</titl><metaname="description"content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for yourbusiness." /><metaname="keywords"content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group,globalerrorboundary" /></Helme>{/* FeaturesSection */}
+export default GlobalErrorBoundaryPage<divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Helme t><titl e>GlobalErrorBoundary | ZionTechGroup</titl><metaname="description"content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for yourbusiness." /><metaname="keywords"content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group,globalerrorboundary" /></Helme>{/* FeaturesSection */}
     <sectionclassName="py-20px-4sm:px-6lg:px-8"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Why Choose Our GlobalErrorBoundary?
           </h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Our globalerrorboundary solutions deliver unmatched performance, security, and scalability.
           </p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{features.map((featureindex) => (
            <divkey={index}className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300"><divclassName="flex items-center justify-center w-12h-12bg-gradient-to-r from-purple-50 0to-blue-600rounded-lgmb-4"><feature.iconclassName="h-6w-6text-white" /></di><h3className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h><pclassName="text-gray-300">{feature.description}</p></di>))}
         </di></di></sectio>{/* BenefitsSection */}
-    <sectionclassName="py-20px-4 sm:px-6lg:px-8bg-white/5"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Key Benefits
-
-          <spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Experience the power of our globalerrorboundary solutions for your business.
+    <sectionclassName="py-20px-4 sm:px-6lg:px-8bg-white/5"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Key Benefits<spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Experience the power of our globalerrorboundary solutions for your business.
           </p></di><divclassName="grid grid-cols-1md:grid-cols-2gap-6">{benefits.map((benefitindex) => (
            <divkey={index}className="flexitems-startspace-x-3"><CheckCircleclassName="h-6 w-6text-purple-400mt-1flex-shrink-0" /><pclassName="text-gray-300text-lg">{benefit}</p></di>))}
         </di></di></sectio>{/* CTASection */}
     <sectionclassName="py-20px-4sm:px-6lg:px-8"><divclassName="max-w-4 xlmx-autotext-center"><divclassName="bg-gradient-to-r from-purple-600to-blue-600rounded-2 xl p-8md:p-12"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Ready to Get Started?
           </h><spanclassName="text-xl text-purple-100mb-8"></spa></className="text-xl text-purple-100mb-8">Contact our experts to discuss your globalerrorboundary needs and get a customized solution.
-          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"></spa></className="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"><PhoneclassName="mr-2h-5w-5" />Call Now
-
-            <spanclassName="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"></spa></className="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"><MailclassName="mr-2h-5w-5" />Email Us
-
-          </di></di></di></sectio></di>)
+          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"></spa></className="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"><PhoneclassName="mr-2h-5w-5" />Call Now<spanclassName="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"></spa></className="bg-gradient-to-r from-emerald-500to-blue-600 hover:from-emerald-600 hover:to-blue-700text-white font-bold py-4 px-8 rounded-lg transition-allduration-300transformhover:scale-105"><MailclassName="mr-2h-5w-5" />Email Us</di></di></di></sectio></di>)
 }
-export defaultGlobalErrorBoundaryPage</butto></butto></h>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export defaultGlobalErrorBoundaryPage</butto></butto></h>;

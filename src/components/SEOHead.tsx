@@ -1,31 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
-import { Helmet } from 'lucide-react'
-=======
 import { Helmet } from 'lucide-react';
-=======
+import { Helmet } from 'lucide-react';
 import {Helmet} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-<<<<<<< HEAD
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
   tags?: string[]
-  noindex?: boolean
-  nofollow?: boolean
-  canonical?: string
+  noindex?: boolean;
+  nofollow?: boolean;
+  canonical?: string;
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -41,12 +34,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical
+  canonical;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const canonicalUrl = canonical || url
+  const canonicalUrl = canonical || url;
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
-=======
 interface SEOHeadProp s {title?: string;
   description?: string;
   keywords?: string;
@@ -76,7 +68,6 @@ constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI a
   nofollow= false,
   canonical}) => {constfullTitle= title.includes('Zion Tech Group') ? title:`${title} | Zion TechGroup`;
   constcanonicalUrl= canonical || urlconstrobotsContent= `${noindex ? 'noindex' :'index'}, ${nofollow ? 'nofollow':'follow'}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   return (
   <Helme t>{/* Basic MetaTags */}
     <titl e>{fullTitle}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author" content={author} /><metaname="robots" content={robotsContent} /><linkrel="canonical" href={canonicalUrl} />{/* Open Graph MetaTags */}
@@ -101,7 +92,7 @@ constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI a
           image: image,
           author: {
             '@type': 'Organization',
-            name : author
+            name : author;
          },
           publisher: {'@type': 'Organization',
             name: 'Zion Tech Group',
@@ -113,19 +104,15 @@ constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI a
           ...(type=== 'article' && {datePublished: publishedTime,
             dateModified: modifiedTime || publishedTimemainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': url
+              '@id': url;
            }
           })
         })}
-<<<<<<< HEAD
       </script>
     </Helmet>
   )
 }
-export default SEOHead
-=======
-    </scrip></Helme>
+export default SEOHead</scrip></Helme>
   );
 };
 export default SEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

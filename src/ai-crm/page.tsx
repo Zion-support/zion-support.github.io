@@ -1,21 +1,15 @@
-<<<<<<< HEAD
 'use client'
-import React from 'react'
-=======
+import React from 'react';
 import { CheckCircle, Star, Check } from 'lucide-react';
 'use client';
 import {CheckCircleStar} from 'lucide-react';
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Star } from 'lucide-react'
-=======
+import { CheckCircle, Star } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 constAICRMPage: React.FC= () =>{constfeatures= [
     {
@@ -38,13 +32,10 @@ constAICRMPage: React.FC= () =>{constfeatures= [
       title: 'Automated Follow-ups',
       description: 'AI schedules and personalizes follow-up communications based on customer engagement patterns.',
       benefits: ['Smart scheduling', 'Personalized content', 'Engagement tracking', 'Response optimization']
-<<<<<<< HEAD
     }
   ]
-=======
    }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   constcapabilities= [
     {title: 'Smart Contact Management',
@@ -65,15 +56,12 @@ constAICRMPage: React.FC= () =>{constfeatures= [
     {title: 'Mobile-First Design',
       description: 'Access your CRM anywhere with our responsive mobile application.',
       icon: Phone,
-<<<<<<< HEAD
       stats: '100% mobile optimized'
     }
   ]
-=======
       stats: '10 0% mobile optimized'
    }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   constpricingPlans= [
     {name: 'Starter',
@@ -88,7 +76,7 @@ constAICRMPage: React.FC= () =>{constfeatures= [
         'Standard support',
         'Basic analytics'
       ],
-      popular: false
+      popular: false;
    },
     {name: 'Professional',
       price: '$9 9',
@@ -104,7 +92,7 @@ constAICRMPage: React.FC= () =>{constfeatures= [
         'Custom fields',
         'Team collaboration tools'
       ],
-      popular: true
+      popular: true;
    },
     {name: 'Enterprise',
       price: '$19 9',
@@ -120,14 +108,11 @@ constAICRMPage: React.FC= () =>{constfeatures= [
         'Custom development',
         'Dedicated account manager'
       ],
-      popular: false
-<<<<<<< HEAD
+      popular: false;
     }
   ]
-=======
    }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   consttestimonials= [
     {name: 'Sarah Johnson',
@@ -144,8 +129,7 @@ constAICRMPage: React.FC= () =>{constfeatures= [
       company: 'ScaleUp Solutions',
       role: 'Marketing Manager',
       content: 'Automated follow-ups and personalized content have dramatically improved our customer engagement.',
-<<<<<<< HEAD
-      rating: 5
+      rating: 5;
     }
   ]
 
@@ -157,18 +141,15 @@ constAICRMPage: React.FC= () =>{constfeatures= [
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI-Powered CRM Platform
-            </h1>
+              AI-Powered CRM Platform</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer relationships with intelligent automation, predictive analytics, and personalized experiences that drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="cyber-button px-8 py-4 text-lg">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="cyber-button-outline px-8 py-4 text-lg">
-                Watch Demo
-              </button>
+                Watch Demo</button>
             </div>
           </div>
           {/* Stats */}
@@ -279,8 +260,7 @@ constAICRMPage: React.FC= () =>{constfeatures= [
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+                      Most Popular</span>
                   </div>
                 )}
                 <div className="text-center mb-6">
@@ -300,12 +280,11 @@ constAICRMPage: React.FC= () =>{constfeatures= [
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                  plan.popular
+                  plan.popular;
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
-                  Get Started
-                </button>
+                  Get Started</button>
               </div>
             ))}
           </div>
@@ -320,11 +299,9 @@ constAICRMPage: React.FC= () =>{constfeatures= [
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cyber-button px-8 py-4 text-lg">
-              Start Free Trial
-            </button>
+              Start Free Trial</button>
             <button className="cyber-button-outline px-8 py-4 text-lg">
-              Contact Sales
-            </button>
+              Contact Sales</button>
           </div>
         </div>
       </section>
@@ -332,17 +309,13 @@ constAICRMPage: React.FC= () =>{constfeatures= [
     </div>
   )
 }
-=======
       rating:5}
   ];
 
   return (
   <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Navigation />{/* HeroSection */}
-    <sectionclassName="pt-20pb-16px-4"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></className="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text">AI-Powered CRM Platform
-          </h><spanclassName="text-xl text-gray-300mb-8 max-w-3xlmx-auto"></className="text-xl text-gray-300mb-8 max-w-3xlmx-auto">Transform your customer relationships with intelligent automation, predictive analytics, and personalized experiences that drive growth.
-          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="cyber-button px-8py-4text-lg"></className="cyber-button px-8py-4text-lg">Start Free Trial
-            </butto><spanclassName="cyber-button-outline px-8py-4text-lg"></className="cyber-button-outline px-8py-4text-lg">Watch Demo
-            </butto></di></di>{/* Stats */}
+    <sectionclassName="pt-20pb-16px-4"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></className="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text">AI-Powered CRM Platform</h><spanclassName="text-xl text-gray-300mb-8 max-w-3xlmx-auto"></className="text-xl text-gray-300mb-8 max-w-3xlmx-auto">Transform your customer relationships with intelligent automation, predictive analytics, and personalized experiences that drive growth.
+          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="cyber-button px-8py-4text-lg"></className="cyber-button px-8py-4text-lg">Start Free Trial</butto><spanclassName="cyber-button-outline px-8py-4text-lg"></className="cyber-button-outline px-8py-4text-lg">Watch Demo</butto></di></di>{/* Stats */}
         <divclassName="grid grid-cols-2 md:grid-cols-4 gap-8mb-16"><divclassName="text-center"><divclassName="text-4 xl font-bold text-cyan-400mb-2">65%</di><divclassName="text-gray-300">HigherConversionRate</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-cyan-400mb-2">40%</di><divclassName="text-gray-300">Increase inEmailOpens</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-cyan-400mb-2">95%</di><divclassName="text-gray-300">DataAccuracy</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-cyan-400mb-2">20h</di><divclassName="text-gray-300">Time SavedPerWeek</di></di></di></di></sectio>{/* FeaturesSection */}
     <sectionclassName="py-16px-4"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><h2className="text-4 xl font-boldtext-whitemb-4">IntelligentCRMFeatures</h><pclassName="text-xltext-gray-300">Everything you need to manage and grow yourcustomerrelationships</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{features.map((featureindex) => (
            <divkey={index}className="cyber-cardp-6"><divclassName="w-1 2 h-12bg-gradient-to-r from-cyan-500to-purple-600rounded-lg flex items-centerjustify-centermb-4"><feature.iconclassName="w-6h-6text-white" /></di><h3className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h><pclassName="text-gray-300mb-4">{feature.description}</p><ulclassName="space-y-2">{feature.benefits.map((benefitidx) => (
@@ -360,29 +333,24 @@ constAICRMPage: React.FC= () =>{constfeatures= [
         </di></di></sectio>{/* PricingSection */}
     <sectionclassName="py-16px-4 bg-slate-800/50"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><h2className="text-4 xl font-boldtext-whitemb-4">Simple,TransparentPricing</h><pclassName="text-xltext-gray-300">Choose the plan that fits yourbusinessneeds</p></di><divclassName="grid grid-cols-1md:grid-cols-3gap-8">{pricingPlans.map((planindex) => (
            <divkey={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-50 0':''}`}>{plan.popular && (
-                <divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><spanclassName="bg-gradient-to-r from-cyan-500to-purple-600text-white px-4 py-2 rounded-fulltext-smfont-semibold"></className="bg-gradient-to-r from-cyan-500to-purple-600text-white px-4 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                  </spa></di>)}
+                <divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><spanclassName="bg-gradient-to-r from-cyan-500to-purple-600text-white px-4 py-2 rounded-fulltext-smfont-semibold"></className="bg-gradient-to-r from-cyan-500to-purple-600text-white px-4 py-2 rounded-fulltext-smfont-semibold">Most Popular</spa></di>)}
               <divclassName="text-centermb-6"><h3className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h><divclassName="text-4 xl font-bold text-cyan-400mb-2">{plan.price}
                   <spanclassName="text-lgtext-gray-400">{plan.period}</spa></di><pclassName="text-gray-300">{plan.description}</p></di><ulclassName="space-y-3mb-8">{plan.features.map((featureidx) => (
                  <likey={idx}className="flex items-centertext-gray-300"><CheckCircleclassName="w-5 h-5 text-cyan-400mr-3" />{feature}
                   </l>))}
               </u>< className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                  plan.popular 
+                  plan.popular;
                     ? 'bg-gradient-to-r from-cyan-50 0 to-purple-600text-whitehover:from-cyan-600 hover:to-purple-70 0' 
                      : 'bg-slate-700text-whitehover:bg-slate-60 0'
               }`}></ className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                  plan.popular 
+                  plan.popular;
                     ? 'bg-gradient-to-r from-cyan-500to-purple-600text-whitehover:from-cyan-600 hover:to-purple-70 0' 
                      : 'bg-slate-700text-whitehover:bg-slate-60 0'
-              }`}>Get Started
-              </butto></di>))}
+              }`}>Get Started</butto></di>))}
         </di></di></sectio>{/* CTASection */}
     <sectionclassName="py-16px-4 bg-gradient-to-r from-purple-60 0/20to-blue-600/20"><divclassName="max-w-4 xlmx-autotext-center"><h2className="text-4 xl font-boldtext-whitemb-6">Ready to TransformYourCRM?</h><spanclassName="text-xl text-gray-300mb-8"></spa></className="text-xl text-gray-300mb-8">Join thousands of businesses using AI-powered CRM to boost sales, improve customer relationships, and drive growth.
-        </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="cyber-button px-8py-4text-lg"></spa></className="cyber-button px-8py-4text-lg">Start Free Trial
-          </butto><spanclassName="cyber-button-outline px-8py-4text-lg"></spa></className="cyber-button-outline px-8py-4text-lg">Contact Sales
-          </butto></di></di></sectio><Footer /></di>
+        </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="cyber-button px-8py-4text-lg"></spa></className="cyber-button px-8py-4text-lg">Start Free Trial</butto><spanclassName="cyber-button-outline px-8py-4text-lg"></spa></className="cyber-button-outline px-8py-4text-lg">Contact Sales</butto></di></di></sectio><Footer /></di>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-export default AICRMPage
+export default AICRMPage;

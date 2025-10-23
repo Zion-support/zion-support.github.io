@@ -97,5 +97,5 @@ const PageBackupPage: React.FC = () => {
       <Footer />
     </>
   )
-}
-export default PageBackupPage
+};
+export default PageBackupPage;

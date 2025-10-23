@@ -1,6 +1,4 @@
 'use client'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -56,20 +54,18 @@ const ErrorBoundaryPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ErrorBoundary
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              ErrorBoundary</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced ErrorBoundary solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -80,8 +76,7 @@ const ErrorBoundaryPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -109,8 +104,7 @@ const ErrorBoundaryPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -128,15 +122,12 @@ const ErrorBoundaryPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -147,26 +138,23 @@ const ErrorBoundaryPage: React.FC = () => {
 };
 
 export default ErrorBoundaryPage;
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
 import { Phone } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-interface Props {
-children: ReactNode
-fallback?: ReactNode
+interface Props {;
+children: ReactNode;
+fallback?: ReactNode;
 }
 interface State {
-hasError: boolean
-=======
+hasError: boolean;
 import React, {Component, ErrorInfo, ReactNode} from 'react'
-import {AlertTriangle, RefreshCw, Home, Phone} from 'lucide-react'
-interface Prop s {children: ReactNode
+import {AlertTriangle, RefreshCw, Home, Phone} from 'lucide-react';
+interface Prop s {children: ReactNode;
 fallback?: ReactNode}
-interface Stat e {hasError: boolean
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-error?: Error
+interface Stat e {hasError: boolean;
+error?: Error;
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
 super(props)
@@ -174,9 +162,9 @@ this.state= { hasError: false}
 }
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 }
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production;
 if (process.env.NODE_ENV=== 'production') {
-// In production, you would send this to an error reporting service
+// In production, you would send this to an error reporting service;
 // Example: errorReportingService.captureException(error, { extra: errorInfo})
 }
 this.setState({errorerrorInfo})
@@ -185,8 +173,7 @@ handleReload= () => {windo w.location.reload()}
 handleGoHome= () => {windo w.location.href= '/'}
 render() {if (this.state.hasError) {
 if (this.props.fallback) {
-<<<<<<< HEAD
-return this.props.fallback
+return this.props.fallback;
 }
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
@@ -201,25 +188,22 @@ return (
 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
 Error Details (Development)
 </summary>
-<<<<<<< HEAD
 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></p>
 {this.state.error.toString()}
-=======
 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">{this.state.error.toString()}</p>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 {this.state.errorInfo?.componentStack}
 </pre>
 </details>
 )}
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button
+<button;
 onClick={this.handleReload}
 className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
 ></button>
 <RefreshCw className="w-4 h-4" />
 <span>Reload Page</span>
 </button>
-<button
+<button;
 onClick={this.handleGoHome}
 className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
 ></button>
@@ -229,16 +213,14 @@ className="flex items-center justify-center space-x-2 border border-cyan-600 tex
 </div>
 <div className="mt-6 pt-6 border-t border-white/20">
 <p className="text-sm text-gray-400 mb-3">Still having trouble? Contact our support team:</p>p>
-<a
+<a;
 href="mailto:kleber@ziontechgroup.com"
 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
 <Phone className="w-4 h-4 mr-2" />
-kleber@ziontechgroup.com
-</a>
+kleber@ziontechgroup.com</a>
 </div>
 </div>
 </div>
-=======
 return thi s.props.fallback}
 return(<divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900flexitems-centerjustify-centerpx-4"><divclassName="max-w-md w-full bg-slate-80 0/50backdrop-blur-sm borderborder-slate-700rounded-xlp-8text-center"><divclassName="w-16h-16bg-red-50 0/20rounded-full flex items-centerjustify-centermx-automb-6"><AlertTriangleclassName="w-8h-8text-red-400" /></di><spanclassName="text-2 xlfont-boldtext-whitemb-4"></ className="text-2 xlfont-boldtext-whitemb-4">Oops! Something wentwrong</h><spanclassName="text-gray-300mb-6"></className="text-gray-300mb-6">We're sorry, but something unexpected happened. Please try refreshing the page or go back to the homepage.</p>{process.env.NODE_ENV=== 'development' && this.state.error &&(<detailsclassName="mb-6text-left"><summaryclassName="text-smtext-gray-400cursor-pointermb-2">Error Details(Development)</summar><reclassName="text-xs text-red-400bg-slate-90 0/50p-3roundedoverflow-auto"></reclassName="text-xs text-red-400bg-slate-900/50p-3roundedoverflow-auto">{this.state.error.toString()}{this.state.errorInfo?.componentStack}</pr></detail>)}<divclassName="flexflex-colsm:flex-rowgap-4justify-center"><
 onClick={this.handleReload}
@@ -251,11 +233,9 @@ onClick={this.handleGoHome}className="flex items-center justify-center space-x-2
 ></
 onClick={this.handleGoHome}className="flex items-center justify-center space-x-2 border border-cyan-600text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colorsduration-200"
 ><HomeclassName="w-4h-4" /><spa n>GoHome</spa></butto></di><divclassName="mt-6 pt-6 border-tborder-white/20"><spanclassName="text-sm text-gray-400mb-3"></spa></className="text-sm text-gray-400mb-3">Still having trouble? Contact oursupportteam:</p><ahref="mailto:kleber@ziontechgroup.com"className="inline-flex items-center text-cyan-400 hover:text-cyan-300transition-colors"><PhoneclassName="w-4h-4mr-2" />kleber@ziontechgroup.com</a></di></di></di>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 )
 }
-return thi s.props.children
+return thi s.props.children;
 }
 }
-export default ErrorBoundary
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+export default ErrorBoundary;

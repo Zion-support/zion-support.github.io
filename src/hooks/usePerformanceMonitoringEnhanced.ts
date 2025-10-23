@@ -10,9 +10,9 @@ export const usePerformanceMonitoring = () => {
       fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error)
     }
   }, [])
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
+  useEffect(() => {;
+    if (typeof window !== 'undefined' && 'performance' in window) {;
+      // Monitor Core Web Vitals;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           reportWebVitals({

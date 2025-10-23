@@ -1,13 +1,10 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
-=======
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -15,14 +12,10 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 
 const EnhancedServicesShowcasePage: React.FC = () => {
   const features = [
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
-=======
 import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe} from 'lucide-react'
 constEnhancedServicesShowcase: React.FC= () =>{constservices= [
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -45,7 +38,6 @@ constEnhancedServicesShowcase: React.FC= () =>{constservices= [
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-=======
       color: 'text-purple-40 0',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       stats: '30 0% ROI'
@@ -71,7 +63,6 @@ constEnhancedServicesShowcase: React.FC= () =>{constservices= [
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
       stats: '9 5% Efficiency'
    }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   ]
 
   const benefits = [
@@ -83,8 +74,6 @@ constEnhancedServicesShowcase: React.FC= () =>{constservices= [
   ]
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>EnhancedServicesShowcase</title>
@@ -97,20 +86,18 @@ constEnhancedServicesShowcase: React.FC= () =>{constservices= [
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              EnhancedServicesShowcase
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              EnhancedServicesShowcase</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced EnhancedServicesShowcase solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -121,8 +108,7 @@ constEnhancedServicesShowcase: React.FC= () =>{constservices= [
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -150,8 +136,7 @@ constEnhancedServicesShowcase: React.FC= () =>{constservices= [
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -169,15 +154,12 @@ constEnhancedServicesShowcase: React.FC= () =>{constservices= [
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -188,19 +170,13 @@ constEnhancedServicesShowcase: React.FC= () =>{constservices= [
 };
 
 export default EnhancedServicesShowcasePage;
-=======
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-<<<<<<< HEAD
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse"></h2>
-            Our Core Services
-          <p className="text-xl text-cyan-400 max-w-3xl mx-auto"></p>
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation
-=======
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Our Core Services</h2>
+            Our Core Services<p className="text-xl text-cyan-400 max-w-3xl mx-auto"></p>
+            Comprehensive AI and IT solutions designed to transform your business and drive innovation<h className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Our Core Services</h2>
           <p className="text-xl text-cyan-400 max-w-3xl mx-auto">Comprehensive AI and IT solutions designed to transform your business and drive innovation</p>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (</div>
@@ -220,7 +196,7 @@ export default EnhancedServicesShowcasePage;
                   </li>
                 ))}
               </ul>
-              <a
+              <a;
                 href="/services"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform">
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -229,7 +205,7 @@ export default EnhancedServicesShowcasePage;
           ))}
         </div>
         <div className="text-center mt-12">
-          <a
+          <a;
             href="/services"
             className="cyber-button inline-flex items-center">View All Services</a>
             <ArrowRight className="w-5 h-5 ml-2" />
@@ -238,21 +214,14 @@ export default EnhancedServicesShowcasePage;
     </section>
   )
 }
-export default EnhancedServicesShowcase
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
-  <sectionclassName="py-16"><divclassName="containermx-autopx-4"><divclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-5 xl font-bold text-white mb-6cyber-textneon-pulse"></spa></className="text-4 xlmd:text-5 xl font-bold text-white mb-6cyber-textneon-pulse">Our Core Services
-
-        <spanclassName="text-xl text-cyan-400max-w-3xlmx-auto"></spa></className="text-xl text-cyan-400max-w-3xlmx-auto">Comprehensive AI and IT solutions designed to transform your business and drive innovation
-
-      </di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{services.map((serviceindex)=>(</di><divkey={index}className="cyber-card hologram-card p-6 grouphover:scale-105transition-allduration-300"><divclassName="flexitems-centermb-4"><service.iconclassName={`w-12h-12${service.color}mr-4`} /><di v></di><h3className="text-xlfont-boldtext-white">{service.title}</h><divclassName="text-sm text-cyan-400font-semibold">{service.stats}</di></di><pclassName="text-gray-300mb-4">{service.description}</p><ulclassName="space-y-2mb-6">{service.features.map((featurefeatureIndex) => (
+export default EnhancedServicesShowcase;
+  <sectionclassName="py-16"><divclassName="containermx-autopx-4"><divclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-5 xl font-bold text-white mb-6cyber-textneon-pulse"></spa></className="text-4 xlmd:text-5 xl font-bold text-white mb-6cyber-textneon-pulse">Our Core Services<spanclassName="text-xl text-cyan-400max-w-3xlmx-auto"></spa></className="text-xl text-cyan-400max-w-3xlmx-auto">Comprehensive AI and IT solutions designed to transform your business and drive innovation</di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{services.map((serviceindex)=>(</di><divkey={index}className="cyber-card hologram-card p-6 grouphover:scale-105transition-allduration-300"><divclassName="flexitems-centermb-4"><service.iconclassName={`w-12h-12${service.color}mr-4`} /><di v></di><h3className="text-xlfont-boldtext-white">{service.title}</h><divclassName="text-sm text-cyan-400font-semibold">{service.stats}</di></di><pclassName="text-gray-300mb-4">{service.description}</p><ulclassName="space-y-2mb-6">{service.features.map((featurefeatureIndex) => (
                <likey={featureIndex}className="flex items-center text-smtext-gray-400"><CheckCircleclassName="w-4 h-4 text-green-400mr-2" />{feature}
                 </l>))}
             </u><ahref="/services"
                className="inline-flex items-center text-cyan-400 hover:text-cyan-300font-mediumgroup-hover:translate-x-1transition-transform">LearnMore<ArrowRightclassName="w-4h-4ml-2" /></a></di>))}
       </di><divclassName="text-centermt-12"><ahref="/services"
-           className="cyber-buttoninline-flexitems-center">View All Services
+           className="cyber-buttoninline-flexitems-center">View All Services;
           <ArrowRightclassName="w-5h-5ml-2" /></a></di></sectio>)
 }
-export defaultEnhancedServicesShowcase</p></h>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+export defaultEnhancedServicesShowcase</p></h>;

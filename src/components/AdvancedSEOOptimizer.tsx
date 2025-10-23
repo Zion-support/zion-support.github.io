@@ -1,55 +1,50 @@
-<<<<<<< HEAD
 'use client'
 import React, { useEffect, useCallback, useRef } from 'react'
-import { Helmet } from 'lucide-react'
-=======
+import { Helmet } from 'lucide-react';
 import { Helmet } from 'lucide-react';
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useCallback, useRef } from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 interface SEOData {
-  title: string
-  description: string
+  title: string;
+  description: string;
   keywords: string[]
-  canonicalUrl: string
-  ogTitle?: string
-  ogDescription?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  twitterTitle?: string
-  twitterDescription?: string
-  twitterImage?: string
+  canonicalUrl: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
   structuredData?: Record<string, unknown>
-  robots?: string
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
+  robots?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
   tags?: string[]
 }
 interface AdvancedSEOOptimizerProps {
-  seoData: SEOData
-  enableStructuredData?: boolean
-  enableOpenGraph?: boolean
-  enableTwitterCards?: boolean
-  enableSchemaMarkup?: boolean
+  seoData: SEOData;
+  enableStructuredData?: boolean;
+  enableOpenGraph?: boolean;
+  enableTwitterCards?: boolean;
+  enableSchemaMarkup?: boolean;
 }
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
-  enableSchemaMarkup = true
+  enableSchemaMarkup = true;
 }) => {
   const _structuredDataRef = useRef<HTMLScriptElement | null>(null)
   const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.structuredData) return null
+    if (!enableStructuredData || !seoData.structuredData) return null;
     const baseStructuredData = {
       '@context': 'https://schema.org',
-=======
 import {Helmet} from 'lucide-react';
 import React, {useEffect, useCallback, useRef} from 'react';
 
@@ -83,7 +78,6 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
   
     if (!enableStructuredData || !seoData.structuredData) returnnullconstbaseStructuredData= {
       '@context': 'https:// schema.org',
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https:// ziontechgroup.com',
@@ -98,22 +92,19 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
         'https:// twitter.com/ziontechgroup',
         'https:// github.com/Zion-Holdings',
       ],
-      ...seoData.structuredData
-<<<<<<< HEAD
+      ...seoData.structuredData;
     }
-    return baseStructuredData
+    return baseStructuredData;
   }, [enableStructuredData, seoData.structuredData])
   const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null
+    if (!enableSchemaMarkup) return null;
     const breadcrumbData = {
       '@context': 'https://schema.org',
-=======
     };
     return baseStructuredDat a;
   }, [enableStructuredData, seoData.structuredData]);
   constgenerateBreadcrumbStructuredData= useCallback(() => {if (!enableSchemaMarkup) returnnullconstbreadcrumbData= {
       '@context': 'https:// schema.org',
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       '@type': 'BreadcrumbList',
       itemListElement: [
         {
@@ -125,24 +116,21 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
         {'@type': 'ListItem',
           position: 2,
           name: seoData.title,
-          item: seoData.canonicalUrl
+          item: seoData.canonicalUrl;
        },
       ]
-<<<<<<< HEAD
     }
-    return breadcrumbData
+    return breadcrumbData;
   }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl])
   const generateFAQStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null
+    if (!enableSchemaMarkup) return null;
     const faqData = {
       '@context': 'https://schema.org',
-=======
     };
     return breadcrumbDat a;
   }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl]);
   constgenerateFAQStructuredData= useCallback(() => {if (!enableSchemaMarkup) returnnullconstfaqData= {
       '@context': 'https:// schema.org',
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       '@type': 'FAQPage',
       mainEntity: [
         {
@@ -161,15 +149,14 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
          }
         },
       ]
-<<<<<<< HEAD
     }
-    return faqData
+    return faqData;
   }, [enableSchemaMarkup])
   const _structuredData = generateStructuredData()
   const _breadcrumbData = generateBreadcrumbStructuredData()
   const _faqData = generateFAQStructuredData()
   useEffect(() => {
-    // Update meta description
+    // Update meta description;
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
       metaDescription.setAttribute('content', seoData.description)
@@ -179,7 +166,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
       document.head.appendChild(newMetaDescription)
       newMetaDescription.setAttribute('content', seoData.description)
     }
-    // Update canonical URL
+    // Update canonical URL;
     const canonicalLink = document.querySelector('link[rel="canonical"]')
     if (canonicalLink) {
       canonicalLink.setAttribute('href', seoData.canonicalUrl)
@@ -196,27 +183,26 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
     script.textContent = JSON.stringify(data)
     script.id = 'structured-data'
     document.head.appendChild(script)
-    _structuredDataRef.current = script
+    _structuredDataRef.current = script;
   }
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
-        page_location: config.canonicalUrl
+        page_location: config.canonicalUrl;
       })
     }
   }
   const _trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       window.addEventListener('load', () => {
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData) {
           (window as any).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
           })
-=======
     };
     return faqDat a;
   }, [enableSchemaMarkup]);
@@ -249,7 +235,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
   const_trackPageView= (config: SEOData) => {if (type of windo w !== 'undefined' && (windo w as any).gtag) {
       (windo w as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
-        page_location: config.canonicalUrl
+        page_location: config.canonicalUrl;
      });
     }
   };
@@ -262,7 +248,6 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
          });
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
         }
       })
     }
@@ -284,7 +269,6 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
       <scripttype="application/ld+json">{JSON.stringify(_breadcrumbData)}
       </scrip>)}
       {enableSchemaMarkup && _faqData && (
-<<<<<<< HEAD
         <script type="application/ld+json">
           {JSON.stringify(_faqData)}
         </script>
@@ -301,8 +285,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
     </Helmet>
   )
 }
-export default AdvancedSEOOptimizer
-=======
+export default AdvancedSEOOptimizer;
       <scripttype="application/ld+json">{JSON.stringify(_faqData)}
       </scrip>)}
       {/* Preconnect to external do mains forperformance */}
@@ -311,4 +294,3 @@ export default AdvancedSEOOptimizer
   );
 };
 export default AdvancedSEOOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

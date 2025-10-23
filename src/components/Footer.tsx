@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Lock, BarChart3, FileText } from 'lucide-react'
 import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react'
-import { MapPin } from 'lucide-react'
-=======
+import { MapPin } from 'lucide-react';
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Lock, BarChart3, FileText, Phone, Mail, MapPin, ArrowRight, Brain, Zap } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const Footer: React.FC = () => {
   const microSaasServices = [
@@ -129,14 +125,12 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-4 h-4 text-cyan-400" />
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                  +1 302 464 0950
-                </a>
+                  +1 302 464 0950</a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-4 h-4 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
+                  kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="w-4 h-4 text-cyan-400" />
@@ -148,8 +142,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
               <Zap className="w-4 h-4 mr-2" />
-              Micro SAAS
-            </h3>
+              Micro SAAS</h3>
             <ul className="space-y-2">
               {microSaasServices.map((service) => (
                 <li key={service.name}>
@@ -172,8 +165,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
               <Brain className="w-4 h-4 mr-2" />
-              AI & IT Services
-            </h3>
+              AI & IT Services</h3>
             <div className="space-y-4">
               <div>
                 <h4 className="text-white font-medium mb-2">AI Services</h4>
@@ -214,12 +206,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
               <Zap className="w-4 h-4 mr-2" />
-              AI Tools
-            </h3>
+              AI Tools</h3>
             <ul className="space-y-2">
               {additionalServices.map((service) => (
                 <li key={service.name}>
-                  <a
+                  <a;
                     href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
@@ -287,7 +278,6 @@ const Footer: React.FC = () => {
     </footer>
   )
 }
-=======
 import {Link} from 'react-router-do m';
 import {Lock, BarChart3, FileText, Phone, Mail, Zap, Brain, ArrowRight} from 'lucide-react';;
 
@@ -392,10 +382,8 @@ constFooter: React.FC= () =>{constmicroSaasServices= [
   return (
   <footerclassName="bg-slate-90 0/95backdrop-blur-md border-tborder-cyan-400/20"><divclassName="container mx-autopx-4py-12"><divclassName="gridgrid-cols-1lg:grid-cols-5gap-8">{/* CompanyInfo */}
         <divclassName="lg:col-span-1"><divclassName="flex items-centerspace-x-2mb-4"><divclassName="w-8 h-8 bg-gradient-to-br from-cyan-400to-purple-600rounded-lg flexitems-centerjustify-center"><BrainclassName="w-5h-5text-white" /></di><spanclassName="text-xl font-boldtext-whiteneon-text">ZionTechGroup</spa></di><spanclassName="text-gray-300mb-6leading-relaxed"></className="text-gray-300mb-6leading-relaxed">Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
-          </p><divclassName="space-y-3"><divclassName="flex items-center space-x-3text-gray-300"><PhoneclassName="w-4 h-4text-cyan-400" /><ahref="tel:+13024640950"className="hover:text-cyan-400transition-colors">+1 3024640950</a></di><divclassName="flex items-center space-x-3text-gray-300"><MailclassName="w-4 h-4text-cyan-400" /><ahref="mailto:kleber@ziontechgroup.com"className="hover:text-cyan-400transition-colors">kleber@ziontechgroup.com
-              </a></di><divclassName="flex items-center space-x-3text-gray-300"><MapPinclassName="w-4 h-4text-cyan-400" /><spa n>364E Main St STE1008,MiddletownDE19709</spa></di></di></di>{/* Micro SAASServices */}
-        <di v><spanclassName="text-cyan-400font-semibold mb-4flexitems-center"></className="text-cyan-400font-semibold mb-4flexitems-center"><ZapclassName="w-4h-4mr-2" />Micro SAAS
-          </h><ulclassName="space-y-2">{microSaasServices.map((service) => (
+          </p><divclassName="space-y-3"><divclassName="flex items-center space-x-3text-gray-300"><PhoneclassName="w-4 h-4text-cyan-400" /><ahref="tel:+13024640950"className="hover:text-cyan-400transition-colors">+1 3024640950</a></di><divclassName="flex items-center space-x-3text-gray-300"><MailclassName="w-4 h-4text-cyan-400" /><ahref="mailto:kleber@ziontechgroup.com"className="hover:text-cyan-400transition-colors">kleber@ziontechgroup.com</a></di><divclassName="flex items-center space-x-3text-gray-300"><MapPinclassName="w-4 h-4text-cyan-400" /><spa n>364E Main St STE1008,MiddletownDE19709</spa></di></di></di>{/* Micro SAASServices */}
+        <di v><spanclassName="text-cyan-400font-semibold mb-4flexitems-center"></className="text-cyan-400font-semibold mb-4flexitems-center"><ZapclassName="w-4h-4mr-2" />Micro SAAS</h><ulclassName="space-y-2">{microSaasServices.map((service) => (
              <likey={service.name}><ahref={service.url}
                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400transition-colors"
                   ><spa n>{service.name}</spa><ArrowRightclassName="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transformduration-300" /></a></l>))}
@@ -403,8 +391,7 @@ constFooter: React.FC= () =>{constmicroSaasServices= [
              className="inline-flex items-center text-cyan-400 hover:text-whitetransition-colorsmt-4"
             >View All Micro SAAS →
           </a></di>{/* AI & ITServices */}
-        <di v><spanclassName="text-cyan-400font-semibold mb-4flexitems-center"></className="text-cyan-400font-semibold mb-4flexitems-center"><BrainclassName="w-4h-4mr-2" />AI & IT Services
-          </h><divclassName="space-y-4"><di v><h4className="text-whitefont-mediummb-2">AIServices</h><ulclassName="space-y-1">{aiServices.slice(0 3).map((service) => (
+        <di v><spanclassName="text-cyan-400font-semibold mb-4flexitems-center"></className="text-cyan-400font-semibold mb-4flexitems-center"><BrainclassName="w-4h-4mr-2" />AI & IT Services</h><divclassName="space-y-4"><di v><h4className="text-whitefont-mediummb-2">AIServices</h><ulclassName="space-y-1">{aiServices.slice(0 3).map((service) => (
                  <likey={service.name}><ahref={service.url}
                        className="text-sm text-gray-300 hover:text-cyan-400transition-colors"
                       >{service.name}
@@ -418,8 +405,7 @@ constFooter: React.FC= () =>{constmicroSaasServices= [
              className="inline-flex items-center text-cyan-400 hover:text-whitetransition-colorsmt-4"
             >View All Services →
           </a></di>{/* Additional AIServices */}
-        <di v><spanclassName="text-cyan-400font-semibold mb-4flexitems-center"></className="text-cyan-400font-semibold mb-4flexitems-center"><ZapclassName="w-4h-4mr-2" />AI Tools
-          </h><ulclassName="space-y-2">{additionalServices.map((service) => (
+        <di v><spanclassName="text-cyan-400font-semibold mb-4flexitems-center"></className="text-cyan-400font-semibold mb-4flexitems-center"><ZapclassName="w-4h-4mr-2" />AI Tools</h><ulclassName="space-y-2">{additionalServices.map((service) => (
              <likey={service.name}><ahref={service.url}
                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400transition-colors"
                   ><spa n>{service.name}</spa><ArrowRightclassName="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transformduration-300" /></a></l>))}
@@ -445,6 +431,5 @@ constFooter: React.FC= () =>{constmicroSaasServices= [
           </di></di></di></di></foote>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-export default Footer
+export default Footer;

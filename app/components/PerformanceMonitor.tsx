@@ -1,12 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-<<<<<<< HEAD
 const PerformanceMonitorPage: React.FC = () => {
   const features = [
     {
@@ -56,20 +54,18 @@ const PerformanceMonitorPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              PerformanceMonitor
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              PerformanceMonitor</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced PerformanceMonitor solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -80,8 +76,7 @@ const PerformanceMonitorPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -109,8 +104,7 @@ const PerformanceMonitorPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -128,15 +122,12 @@ const PerformanceMonitorPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -147,200 +138,169 @@ const PerformanceMonitorPage: React.FC = () => {
 };
 
 export default PerformanceMonitorPage;
-=======
 interface PerformanceMetrics {
-  loadTime: number | null
-  firstContentfulPaint: number | null
-  largestContentfulPaint: number | null
-  firstInputDelay: number | null
-  cumulativeLayoutShift: number | null
-  timeToInteractive: number | null
-  totalBlockingTime: number | null
+  loadTime: number | null;
+  firstContentfulPaint: number | null;
+  largestContentfulPaint: number | null;
+  firstInputDelay: number | null;
+  cumulativeLayoutShift: number | null;
+  timeToInteractive: number | null;
+  totalBlockingTime: number | null;
 }
-=======
 import {useEffectuseState} from 'react'
 
 interface PerformanceMetric s {loadTime: number | null firstContentfulPaint: number | null largestContentfulPaint: number | null firstInputDelay: number | null cumulativeLayoutShift: number | null timeToInteractive: number | null totalBlockingTime: number | null}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-
-interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void
-  enableRealTimeMonitoring?: boolean
+;
+interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void;
+  enableRealTimeMonitoring?: boolean;
   logToConsole?: boolean}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function PerformanceMonitor({
   onMetricsUpdate,
-  enableRealTimeMonitoring = true,
-  logToConsole = true
+  enableRealTimeMonitoring = true,;
+  logToConsole = true;
 }: PerformanceMonitorProps) {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-=======
 export default function PerformanceMonitor({onMetricsUpdate, 
   enableRealTimeMonitoring= true,
   logToConsole= true }: PerformanceMonitorProps) {const [metricssetMetrics]=useState<PerformanceMetric s>({
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     loadTime: null,
     firstContentfulPaint: null,
     largestContentfulPaint: null,
     firstInputDelay: null,
     cumulativeLayoutShift: null,
-    timeToInteractive: null,
-    totalBlockingTime: null
-<<<<<<< HEAD
+    timeToInteractive: null,;
+    totalBlockingTime: null;
   })
   useEffect(() => {
-    if (!enableRealTimeMonitoring || typeof window === 'undefined') return
+    if (!enableRealTimeMonitoring || typeof window === 'undefined') return;
     const measurePerformance = () => {
       const newMetrics: PerformanceMetrics = {
-=======
  })
 
   useEffect(() => {if (!enableRealTimeMonitoring || type ofwindow=== 'undefined') return constmeasurePerformance= () => {
   
       constnewMetrics: PerformanceMetrics = {
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
         loadTime: null,
         firstContentfulPaint: null,
         largestContentfulPaint: null,
         firstInputDelay: null,
         cumulativeLayoutShift: null,
         timeToInteractive: null,
-        totalBlockingTime: null
+        totalBlockingTime: null;
      }
 
-      // Measure page load time
-      if (performance.timing) {consttiming= performance.timing
-        newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart
+      // Measure page load time;
+      if (performance.timing) {consttiming= performance.timing;
+        newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart;
      }
 
-      // Measure Core Web Vitals using Performance Observer
+      // Measure Core Web Vitals using Performance Observer;
       if ('PerformanceObserver' in windo w) {// First Contentful Paint (FCP)
         constfcpObserver= new PerformanceObserver((list) => {
   
           constentries= list.getEntries()
           constfcpEntry= entries.find(entry=> entry.name=== 'first-contentful-paint')
           if (fcpEntr y) {
-            newMetrics.firstContentfulPaint= fcpEntry.startTime
+            newMetrics.firstContentfulPaint= fcpEntry.startTime;
          }
         })
-<<<<<<< HEAD
         fcpObserver.observe({ entryTypes: ['paint'] })
         // Largest Contentful Paint (LCP)
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
-          newMetrics.largestContentfulPaint = lastEntry.startTime
+          newMetrics.largestContentfulPaint = lastEntry.startTime;
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-=======
         fcpObserver.observe({entry Types: ['paint']})
 
         // Largest Contentful Paint (LCP)
         constlcpObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
           constlastEntry= entries[entries.length - 1]
-          newMetrics.largestContentfulPaint= lastEntry.startTime
+          newMetrics.largestContentfulPaint= lastEntry.startTime;
        })
         lcpObserver.observe({entry Types: ['largest-contentful-paint']})
 
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
         // First Input Delay (FID)
         constfidObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
           entries.forEach((entry: any) => {
   
-            newMetrics.firstInputDelay= entry.processingStart - entry.startTime
+            newMetrics.firstInputDelay= entry.processingStart - entry.startTime;
          })
         })
-<<<<<<< HEAD
         fidObserver.observe({ entryTypes: ['first-input'] })
-=======
         fidObserver.observe({entry Types: ['first-input']})
 
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
         // Cumulative Layout Shift (CLS)
         letclsValue=0constclsObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
           entries.forEach((entry: any) => {
   
             if (!entry.hadRecentInput) {
-              clsValue += entry.value
+              clsValue += entry.value;
            }
           })
-          newMetrics.cumulativeLayoutShift= clsValue
+          newMetrics.cumulativeLayoutShift= clsValue;
         })
-<<<<<<< HEAD
         clsObserver.observe({ entryTypes: ['layout-shift'] })
-=======
         clsObserver.observe({entry Types: ['layout-shift']})
 
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-        // Time to Interactive (TTI) - approximation
+        // Time to Interactive (TTI) - approximation;
         constttiObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
           constlongTasks= entries.filter((entry: any) => entry.duration >50)
           if (longTasks.length=== 0) {
             newMetrics.timeToInteractive= performance.now()
          }
         })
-<<<<<<< HEAD
         ttiObserver.observe({ entryTypes: ['longtask'] })
-=======
         ttiObserver.observe({entry Types: ['longtask']})
 
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-        // Total Blocking Time (TBT) - approximation
+        // Total Blocking Time (TBT) - approximation;
         consttbtObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
-          constblockingTime= entries
+          constblockingTime= entries;
             .filter((entry: any) => entry.duration >50)
             .reduce((total, entry: any) => total + (entry.duration -50), 0)
-          newMetrics.totalBlockingTime= blockingTime
+          newMetrics.totalBlockingTime= blockingTime;
        })
         tbtObserver.observe({entry Types: ['longtask']})
       }
 
-      // Update metrics state
-<<<<<<< HEAD
+      // Update metrics state;
       setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }))
-=======
       setMetrics(prevMetrics=> ({...prevMetrics, ...newMetrics}))
       
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-      // Call callback if provided
+      // Call callback if provided;
       if (onMetricsUpdat e) {onMetricsUpdate(newMetrics)
      }
 
-      // Log to console if enabled
-<<<<<<< HEAD
+      // Log to console if enabled;
       if (logToConsole) {
         // console.log('Performance Metrics Updated:', newMetrics)
       }
-=======
       if (logToConsol e) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     }
 
-    // Measure performance after page load
+    // Measure performance after page load;
     if (do cument.readyState=== 'complete') {measurePerformance()
    } else {windo w.addEventListener('load', measurePerformance)
    }
 
-    // Cleanup
+    // Cleanup;
     return () => {windo w.removeEventListener('load', measurePerformance)
    }
   }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole])
-  // Service Worker registration for performance monitoring
+  // Service Worker registration for performance monitoring;
   useEffect(() => {if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-<<<<<<< HEAD
           // console.log('Service Worker registered successfully:', registration)
         })
         .catch((registrationError) => {
           // console.log('Service Worker registration failed:', registrationError)
         })
-=======
   
          })
         .catch((registrationError) => {})
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     }
   }, [])
   // Performance monitoring dashboard (only in development)
@@ -349,7 +309,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
     )
   }
 
-  return nul l
+  return nul l;
 }
 
 // Global performance monitoring utilitiesexportconstperformanceUtils= {// Measure custom performance marksmark: (name: string) => {
@@ -358,34 +318,29 @@ export default function PerformanceMonitor({onMetricsUpdate,
       performance.mark(name)
    }
   },
-<<<<<<< HEAD
-  // Measure time between marks
+  // Measure time between marks;
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (endMark) {
-=======
 
   // Measure time between marksmeasure: (name: string, startMark: string, endMark?: string) => {if (type of windo w !== 'undefined' && 'performance' in windo w) {
       if (endMar k) {
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
         performance.measure(name, startMark, endMark)
      } else {performance.measure(namestartMark)
      }
     }
   },
-<<<<<<< HEAD
-  // Get performance entries
+  // Get performance entries;
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       return type ? performance.getEntriesByType(type) : performance.getEntries()
     }
     return []
   },
-  // Clear performance entries
+  // Clear performance entries;
   clearEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {
-=======
 
   // Get performance entriesgetEntries: (type?: string) => {if (type of windo w !== 'undefined' && 'performance' in windo w) {
       return typ e ? performance.getEntriesByType(type)  : performance.getEntries()
@@ -395,7 +350,6 @@ export default function PerformanceMonitor({onMetricsUpdate,
 
   // Clear performance entriesclearEntries: (type?: string) => {if (type of windo w !== 'undefined' && 'performance' in windo w) {
       if (typ e) {
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
         performance.clearMeasures(type)
         performance.clearMarks(type)
      } else {performance.clearMeasures()
@@ -416,25 +370,19 @@ export default function PerformanceMonitor({onMetricsUpdate,
         first_input_delay: metrics.firstInputDelay,
         cumulative_layout_shift: metrics.cumulativeLayoutShift,
         time_to_interactive: metrics.timeToInteractive,
-        total_blocking_time: metrics.totalBlockingTime
+        total_blocking_time: metrics.totalBlockingTime;
      }
     })
   }
 }
 
-<<<<<<< HEAD
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void
+    gtag: (...args: any[]) => void;
   }
 }
-=======
 export default function PerformanceMonitor({ 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
-=======
-declare global {interface Windo w {
+declare global {interface Windo w {;
     gtag: (...args: any[]) => void;
  }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

@@ -1,22 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-=======
-import { CheckCircle, Phone, TrendingUp, Check } from 'lucide-react';
-=======
-import {CheckCircle, Phone, TrendingUp} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+import { CheckCircle, Phone, TrendingUp, Check } from 'lucide-react';
+import {CheckCircle, Phone, TrendingUp} from 'lucide-react';
+import React from 'react';
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
-=======
+import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 constMachineLearningPage: React.FC= () =>{constfeatures= [
     'Custom ML model development and training',
@@ -29,7 +20,6 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
     'Continuous learning and model updates'
   ]
 
-<<<<<<< HEAD
   const benefits = [
     '40% better prediction accuracy',
     '60% faster insights generation',
@@ -38,7 +28,6 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
     '95% model reliability',
     '80% cost savings on analytics'
   ]
-=======
   constbenefits= [
     '4 0% better prediction accuracy',
     '6 0% faster insights generation',
@@ -47,7 +36,6 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
     '9 5% model reliability',
     '8 0% cost savings on analytics'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   constuseCases= [
     {
@@ -74,7 +62,6 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
     {title: 'Risk Assessment',
       description: 'Evaluate and mitigate business risks with data-driven insights',
       icon: '⚠️'
-<<<<<<< HEAD
     }
   ]
 
@@ -86,36 +73,31 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Machine Learning Solutions
-            </h1>
+              Machine Learning Solutions</h1>
             <p className="text-xl text-cyan-400 mb-8">
-              Custom ML models for predictive analytics and decision-making
-            </p>
+              Custom ML models for predictive analytics and decision-making</p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your business with our advanced machine learning solutions that provide
+              Transform your business with our advanced machine learning solutions that provide;
               intelligent insights, predictions, and automation to drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
-                Get Started
-              </a>
-              <a
+                Get Started</a>
+              <a;
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
-                +1 302 464 0950
-              </a>
+                +1 302 464 0950</a>
             </div>
           </section>
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              ML Capabilities
-            </h2>
+              ML Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -128,8 +110,7 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
           {/* Use Cases Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              Common Use Cases
-            </h2>
+              Common Use Cases</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {useCases.map((useCase, index) => (
                 <div key={index} className="quantum-card p-6 hover:scale-105 transition-all duration-300">
@@ -143,8 +124,7 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              Business Impact
-            </h2>
+              Business Impact</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -163,19 +143,17 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
               Let our experts help you build and deploy machine learning solutions that drive real business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
-                Contact Us
-              </a>
-              <a
+                Contact Us</a>
+              <a;
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
-                +1 302 464 0950
-              </a>
+                +1 302 464 0950</a>
             </div>
           </section>
         </main>
@@ -184,44 +162,35 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
     </>
   )
 }
-=======
    }
   ];
 
   return (
   <><Navigation /><divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><mainclassName="container mx-autopx-4py-16pt-24">{/* HeroSection */}
-        <sectionclassName="text-centermb-16"><spanclassName="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></spa></className="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text">Machine Learning Solutions
-          </h><spanclassName="text-xl text-cyan-400mb-8"></spa></className="text-xl text-cyan-400mb-8">Custom ML models for predictive analytics and decision-making
-          </p><spanclassName="text-lg text-gray-300max-w-4 xlmx-automb-8"></spa></className="text-lg text-gray-300max-w-4 xlmx-automb-8">Transform your business with our advanced machine learning solutions that provide 
+        <sectionclassName="text-centermb-16"><spanclassName="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></spa></className="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text">Machine Learning Solutions</h><spanclassName="text-xl text-cyan-400mb-8"></spa></className="text-xl text-cyan-400mb-8">Custom ML models for predictive analytics and decision-making</p><spanclassName="text-lg text-gray-300max-w-4 xlmx-automb-8"></spa></className="text-lg text-gray-300max-w-4 xlmx-automb-8">Transform your business with our advanced machine learning solutions that provide;
               intelligent insights, predictions, and automation to drive growth and efficiency.
           </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
                className="cyber-button px-8 py-4text-lgfont-semibold"
-              >Get Started
-            </a><ahref="tel:+13024640950"
+              >Get Started</a><ahref="tel:+13024640950"
                className="flex items-center gap-2 border-2 border-cyan-400text-cyan-400px-8 py-4 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
               ><PhoneclassName="w-5h-5" />+1 3024640950</a></di></sectio>{/* FeaturesSection */}
-        <sectionclassName="mb-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text">ML Capabilities
-          </h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">{features.map((featureindex) => (
+        <sectionclassName="mb-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text">ML Capabilities</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">{features.map((featureindex) => (
              <divkey={index}className="cyber-card p-6 hover:scale-105transition-allduration-300"><CheckCircleclassName="w-8 h-8 text-green-400mb-4" /><h3className="text-lg font-semiboldtext-whitemb-2">{feature}</h></di>))}
           </di></sectio>{/* Use CasesSection */}
-        <sectionclassName="mb-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text">Common Use Cases
-          </h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">{useCases.map((useCaseindex) => (
+        <sectionclassName="mb-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text">Common Use Cases</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">{useCases.map((useCaseindex) => (
              <divkey={index}className="quantum-card p-6 hover:scale-105transition-allduration-300"><divclassName="text-4xlmb-4">{useCase.icon}</di><h3className="text-xl font-semiboldtext-whitemb-3">{useCase.title}</h><pclassName="text-gray-300">{useCase.description}</p></di>))}
           </di></sectio>{/* BenefitsSection */}
-        <sectionclassName="mb-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text">Business Impact
-          </h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">{benefits.map((benefitindex) => (
+        <sectionclassName="mb-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text">Business Impact</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">{benefits.map((benefitindex) => (
              <divkey={index}className="cyber-card p-6 text-centerhover:scale-105transition-allduration-300"><TrendingUpclassName="w-12h-1 2text-cyan-400mx-automb-4" /><pclassName="text-lgtext-whitefont-semibold">{benefit}</p></di>))}
           </di></sectio>{/* ContactSection */}
         <sectionclassName="text-center"><spanclassName="text-3 xlmd:text-4 xl font-bold text-whitemb-8neon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-whitemb-8neon-text">Ready to Implement ML?
           </h><spanclassName="text-lg text-gray-300mb-8 max-w-2xlmx-auto"></spa></className="text-lg text-gray-300mb-8 max-w-2xlmx-auto">Let our experts help you build and deploy machine learning solutions that drive real business value.
           </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
                className="cyber-button px-8 py-4text-lgfont-semibold"
-              >Contact Us
-            </a><ahref="tel:+13024640950"
+              >Contact Us</a><ahref="tel:+13024640950"
                className="flex items-center gap-2 border-2 border-cyan-400text-cyan-400px-8 py-4 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
               ><PhoneclassName="w-5h-5" />+1 30 24640950</a></di></sectio></mai><Footer /></di></>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-export default MachineLearningPage
+export default MachineLearningPage;

@@ -9,28 +9,28 @@ import PerformanceOptimizer from './components/PerformanceOptimizer'
 import SEOOptimizer from './components/SEOOptimizer'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import Analytics from './components/Analytics'
-import SecurityEnhancer from './components/SecurityEnhancer'
-// Dynamically import heavy components for better performance
+import SecurityEnhancer from './components/SecurityEnhancer';
+// Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
-// Preload critical components
+// Preload critical components;
 const preloadComponents = (
 if (typeof window !== 'undefined') {
-// Preload critical components after initial render
+// Preload critical components after initial render;
 setTimeout(() => {
 import('./components/ContentPromotionBanner');) => {
 return (
-$3
+$3;
 )
 }
 import('./components/ContentCarousel');}
 }, 100)
 }
 }
-// Loading skeleton component
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
 <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
 <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
@@ -44,13 +44,13 @@ const [isLoaded, setIsLoaded] = useState(false)
 const [isVisible, setIsVisible] = useState(false)
 useEffect(() => {
 setIsLoaded(true)
-// Trigger visibility animation
+// Trigger visibility animation;
 const timer = setTimeout(() => setIsVisible(true), 100)
-// Preload components
+// Preload components;
 preloadComponents()
 return () => clearTimeout(timer);}
 }, [])
-// Analytics tracking for phone clicks - optimized
+// Analytics tracking for phone clicks - optimized;
 const handlePhoneClick = useCallback(() => {
 if (typeof window !== 'undefined' && 'gtag' in window) {
 (window as any).gtag('event', 'phone_click', {
@@ -61,7 +61,7 @@ event_label: 'main_phone_number';}
 }, [])
 return (
 <>
-<SEOOptimizer
+<SEOOptimizer;
 title="Zion Tech Group - Advanced AI and IT Solutions"
 description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
 keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -101,13 +101,13 @@ addressCountry: 'US';}
 }
 }}
 />
-<PerformanceOptimizer
+<PerformanceOptimizer;
 enableImageOptimization={true}
 enableLazyLoading={true}
 enablePreloading={true}
 enableCodeSplitting={true}
 />
-<AccessibilityEnhancer
+<AccessibilityEnhancer;
 enableKeyboardNavigation={true}
 enableScreenReaderSupport={true}
 enableHighContrast={true}
@@ -115,13 +115,13 @@ enableFocusManagement={true}
 enableSkipLinks={true}
 enableARIALabels={true}
 />
-<Analytics
+<Analytics;
 enableGoogleAnalytics={true}
 enablePerformanceMonitoring={true}
 enableErrorTracking={true}
 enableUserBehaviorTracking={true}
 />
-<SecurityEnhancer
+<SecurityEnhancer;
 enableCSP={true}
 enableHTTPSRedirect={true}
 enableXSSProtection={true}
@@ -132,7 +132,7 @@ enableContentTypeSniffingProtection={true}
 {/* Navigation */}</div>
 <Navigation />
 {/* Skip to main content for accessibility */}
-<a
+<a;
 href="#main-content"
 className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">Skip to main content</a>
 {/* Content Promotion Banner */}
@@ -141,16 +141,16 @@ className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-
 </Suspense>
 <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main"></main>
 {/* Hero Section */}
-<section
+<section;
 className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
-isLoaded && isVisible
+isLoaded && isVisible;
 ? 'opacity-100 translate-y-0'
 : 'opacity-0 translate-y-8';}
 }`}
 aria-labelledby="hero-heading"
 >
 <div className="max-w-6xl mx-auto"></div>
-<h1
+<h1;
 id="hero-heading"
 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
 data-text="Zion Tech Group"
@@ -186,13 +186,13 @@ Transform your business with our cutting-edge technology and achieve unprecedent
 </div>
 {/* CTA Buttons */}
 <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-<a
+<a;
 href="tel:+13024640950"
 onClick={handlePhoneClick}
 className="cyber-button w-full sm:w-auto text-center"
 aria-label="Call us at (302) 464-0950"
 >📞 Call: (302) 464-0950</a>
-<a
+<a;
 href="/contact"
 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Consultation</a>
 </div>
@@ -1017,8 +1017,7 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold h
 <p className="text-gray-300 text-sm">Address</p>
 <p className="text-white font-semibold">
 364 E Main St STE 1008<br />
-Middletown, DE 19709
-</
+Middletown, DE 19709</
 </div>
 </div>
 <div className="flex items-center space-x-4"></div>
@@ -1029,8 +1028,7 @@ Middletown, DE 19709
 <p className="text-gray-300 text-sm">Business Hours</p>
 <p className="text-white font-semibold">
 Monday - Friday: 9:00 AM - 6:00 PM EST<br />
-24/7 Emergency Support Available
-</
+24/7 Emergency Support Available</
 </div>
 </div>
 </div>
@@ -1041,35 +1039,32 @@ Monday - Friday: 9:00 AM - 6:00 PM EST<br />
 <form className="space-y-6">
 <div></div>
 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-Full Name
-</
-<input
+Full Name</
+<input;
 type="text"
 id="name"
 name="name"
 className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
 placeholder="Enter your full name"
-required
+required;
 />
 </div>
 <div></div>
 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-Email Address
-</
-<input
+Email Address</
+<input;
 type="email"
 id="email"
 name="email"
 className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
 placeholder="Enter your email"
-required
+required;
 />
 </div>
 <div></div>
 <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-Phone Number
-</
-<input
+Phone Number</
+<input;
 type="tel"
 id="phone"
 name="phone"
@@ -1079,9 +1074,8 @@ placeholder="Enter your phone number"
 </div>
 <div></div>
 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-Service Interest
-</
-<select
+Service Interest</
+<select;
 id="service"
 name="service"
 className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
@@ -1095,9 +1089,8 @@ className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-w
 </div>
 <div></div>
 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-Message
-</
-<textarea
+Message</
+<textarea;
 id="message"
 name="message"
 rows={4}
@@ -1105,7 +1098,7 @@ className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-w
 placeholder="Tell us about your project or requirements"
 ></textarea>
 </div>
-<button
+<button;
 type="submit"
 className="w-full cyber-button text-center py-4">Send Message</button>
 </form>
@@ -1121,4 +1114,4 @@ className="w-full cyber-button text-center py-4">Send Message</button>
 )
 })
 HomePage.displayName = 'HomePage'
-export default HomePage
+export default HomePage;

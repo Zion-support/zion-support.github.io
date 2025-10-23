@@ -1,29 +1,25 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
-=======
+import { CheckCircle, Star, ArrowRight } from 'lucide-react';
 import { CheckCircle, Star, ArrowRight, Check } from 'lucide-react';
 'use client';
 import {CheckCircle, Star, ArrowRight} from 'lucide-react';
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-<<<<<<< HEAD
 interface MicroSAASCardProps {
   service: {
-    title: string
-    description: string
-    icon: string
-    price: string
+    title: string;
+    description: string;
+    icon: string;
+    price: string;
     features: string[]
     benefits: string[]
-    marketPrice?: string
-    category: string
+    marketPrice?: string;
+    category: string;
     technologies: string[]
-    contactInfo: string
-    link?: string
-    popular?: boolean
+    contactInfo: string;
+    link?: string;
+    popular?: boolean;
   }
 }
 
@@ -33,8 +29,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
       {service.popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-            Most Popular
-          </span>
+            Most Popular</span>
         </div>
       )}
 
@@ -86,11 +81,11 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
           </div>
         </div>
         <div className="pt-4">
-          <a
+          <a;
             href={service.link || 'mailto:kleber@ziontechgroup.com'}
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
           >
-            Get Started
+            Get Started;
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
@@ -99,7 +94,6 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
     </div>
   )
 }
-=======
 interface MicroSAASCardProp s {service: {
     title: stringdescription: stringicon: stringprice: stringfeatures: string[];
     benefits: string[];
@@ -112,8 +106,7 @@ interface MicroSAASCardProp s {service: {
 
 constMicroSAASCard: React.FC<MicroSAASCardProp s>= ({service}) => {return (
   <divclassName={`cyber-card p-6 hover:scale-105transition-all duration-300${service.popular ? 'ring-2 ring-cyan-40 0':''}`}>{service.popular && (
-      <divclassName="absolute -top-3left-1/2transform-translate-x-1/2"><spanclassName="bg-gradient-to-r from-cyan-500to-blue-600text-white px-4 py-1rounded-fulltext-smfont-medium"></ className="bg-gradient-to-r from-cyan-500to-blue-600text-white px-4 py-1rounded-fulltext-smfont-medium">Most Popular
-        </spa></di>)}
+      <divclassName="absolute -top-3left-1/2transform-translate-x-1/2"><spanclassName="bg-gradient-to-r from-cyan-500to-blue-600text-white px-4 py-1rounded-fulltext-smfont-medium"></ className="bg-gradient-to-r from-cyan-500to-blue-600text-white px-4 py-1rounded-fulltext-smfont-medium">Most Popular</spa></di>)}
       
     <divclassName="text-centermb-4"><divclassName="text-4xlmb-3">{service.icon}</di><h3className="text-xl font-boldtext-whitemb-2">{service.title}</h><pclassName="text-gray-300text-smmb-4">{service.description}</p><divclassName="flex items-center justify-centerspace-x-2mb-4"><spanclassName="text-2 xl font-boldtext-cyan-400">{service.price}</spa>{service.marketPrice && (
           <spanclassName="text-smtext-gray-500line-through">{service.marketPrice}</spa>)}
@@ -128,10 +121,9 @@ constMicroSAASCard: React.FC<MicroSAASCardProp s>= ({service}) => {return (
             </spa>))}
         </di></di><divclassName="pt-4"><ahref={service.link ||'mailto:kleber@ziontechgroup.com'}
            className="w-full bg-gradient-to-r from-cyan-50 0 to-blue-600text-white py-2 px-4 rounded-lghover:from-cyan-600 hover:to-blue-700transition-all duration-300flex items-center justify-centertext-smfont-medium"
-          >Get Started
+          >Get Started;
           <ArrowRightclassName="w-4h-4ml-2" /></a><pclassName="text-xstext-gray-400mt-2text-center">{service.contactInfo}</p></di></di></di>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-export default MicroSAASCard
+export default MicroSAASCard;

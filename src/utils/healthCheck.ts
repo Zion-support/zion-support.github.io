@@ -1,86 +1,86 @@
 'use client'
 /**
- * Application Health Check Utility
- * Monitors application health and provides diagnostic information
+ * Application Health Check Utility;
+ * Monitors application health and provides diagnostic information;
  */
 import React from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
-export interface HealthStatus {
-  status: 'healthy' | 'degraded' | 'unhealthy'
-  timestamp: number
-  uptime: number
+export interface HealthStatus {;
+  status: 'healthy' | 'degraded' | 'unhealthy';
+  timestamp: number;
+  uptime: number;
   checks: HealthCheck[]
 }
-export interface HealthCheck {
-  name: string
+export interface HealthCheck {;
+  name: string;
   status: 'pass' | 'warn' | 'fail'
-  message?: string
+  message?: string;
   details?: Record<string, unknown>
-  duration?: number
+  duration?: number;
 }
-export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
+export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck;
 class HealthCheckService {
   private checks: Map<string, HealthCheckFunction> = new Map()
   private startTime: number = Date.now()
-  private lastCheckTime: number = 0
-  private cachedStatus?: HealthStatus
-  private cacheTimeout: number = 5000; // 5 seconds
+  private lastCheckTime: number = 0;
+  private cachedStatus?: HealthStatus;
+  private cacheTimeout: number = 5000; // 5 seconds;
   constructor() {
     this.registerDefaultChecks()
   }
   /**
-   * Register default health checks
+   * Register default health checks;
    */
   private registerDefaultChecks(): void {
-    // Memory usage check
+    // Memory usage check;
     this.register('memory', this.checkMemory.bind(this))
-    // Performance check
+    // Performance check;
     this.register('performance', this.checkPerformance.bind(this))
-    // Browser API availability check
+    // Browser API availability check;
     if (typeof window !== 'undefined') {
       this.register('browser-apis', this.checkBrowserAPIs.bind(this))
     }
-    // Local storage check
+    // Local storage check;
     if (typeof window !== 'undefined') {
       this.register('storage', this.checkStorage.bind(this))
     }
   }
   /**
-   * Register a custom health check
+   * Register a custom health check;
    */
   register(name: string, checkFn: HealthCheckFunction): void {
     this.checks.set(name, checkFn)
   }
   /**
-   * Unregister a health check
+   * Unregister a health check;
    */
   unregister(name: string): void {
     this.checks.delete(name)
   }
   /**
-   * Run all health checks
+   * Run all health checks;
    */
   async runChecks(): Promise<HealthStatus> {
     const now = Date.now()
-    // Return cached status if still valid
+    // Return cached status if still valid;
     if (
       this.cachedStatus &&
-      now - this.lastCheckTime < this.cacheTimeout
+      now - this.lastCheckTime < this.cacheTimeout;
     ) {
-      return this.cachedStatus
+      return this.cachedStatus;
     }
     const checks: HealthCheck[] = []
-    // Run all checks
+    // Run all checks;
     for (const [name, checkFn] of this.checks.entries()) {
       try {
         const startTime = performance.now()
         const check = await checkFn()
-        const duration = performance.now() - startTime
+        const duration = performance.now() - startTime;
         checks.push({
           ...check,
           name,
-          duration
+          duration;
         })
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error)
@@ -91,7 +91,7 @@ class HealthCheckService {
         })
       }
     }
-    // Determine overall status
+    // Determine overall status;
     const hasFailures = checks.some((c) => c.status === 'fail')
     const hasWarnings = checks.some((c) => c.status === 'warn')
     let status: 'healthy' | 'degraded' | 'unhealthy'
@@ -106,18 +106,18 @@ class HealthCheckService {
       status,
       timestamp: now,
       uptime: now - this.startTime,
-      checks
+      checks;
     }
-    // Cache the result
-    this.cachedStatus = healthStatus
-    this.lastCheckTime = now
-    // Log unhealthy status
+    // Cache the result;
+    this.cachedStatus = healthStatus;
+    this.lastCheckTime = now;
+    // Log unhealthy status;
     if (status === 'unhealthy') {
       logger.error('Application health check failed', { healthStatus })
     } else if (status === 'degraded') {
       logger.warn('Application health degraded', { healthStatus })
     }
-    return healthStatus
+    return healthStatus;
   }
   /**
    * Get current health status (may return cached)
@@ -126,7 +126,7 @@ class HealthCheckService {
     return this.runChecks()
   }
   /**
-   * Check memory usage
+   * Check memory usage;
    */
   private checkMemory(): HealthCheck {
     if (typeof performance === 'undefined' || !('memory' in performance)) {
@@ -137,7 +137,7 @@ class HealthCheckService {
       }
     }
     try {
-      const memoryInfo = (performance as any).memory
+      const memoryInfo = (performance as any).memory;
       if (!memoryInfo) {
         return {
           name: 'memory',
@@ -145,7 +145,7 @@ class HealthCheckService {
           message: 'Memory API not available'
         }
       }
-      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
+      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100;
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {
@@ -163,7 +163,7 @@ class HealthCheckService {
           used: memoryInfo.usedJSHeapSize,
           total: memoryInfo.totalJSHeapSize,
           limit: memoryInfo.jsHeapSizeLimit,
-          usedPercent
+          usedPercent;
         }
       }
     } catch (error) {
@@ -175,7 +175,7 @@ class HealthCheckService {
     }
   }
   /**
-   * Check performance metrics
+   * Check performance metrics;
    */
   private checkPerformance(): HealthCheck {
     try {
@@ -183,11 +183,11 @@ class HealthCheckService {
       const reportData = JSON.parse(report)
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Performance metrics available`
-      // Check if we have any performance data
+      // Check if we have any performance data;
       if (reportData && Object.keys(reportData).length > 0) {
         const values = Object.values(reportData).filter(v => typeof v === 'number') as number[]
-        const poorCount = values.filter(v => v > 4000).length // LCP > 4s is poor
-        const needsImprovementCount = values.filter(v => v > 2500 && v <= 4000).length
+        const poorCount = values.filter(v => v > 4000).length // LCP > 4s is poor;
+        const needsImprovementCount = values.filter(v => v > 2500 && v <= 4000).length;
         if (poorCount > 0) {
           status = 'warn'
         }
@@ -217,7 +217,7 @@ class HealthCheckService {
     }
   }
   /**
-   * Check browser API availability
+   * Check browser API availability;
    */
   private checkBrowserAPIs(): HealthCheck {
     const requiredAPIs = [
@@ -248,13 +248,13 @@ class HealthCheckService {
     }
   }
   /**
-   * Check storage availability
+   * Check storage availability;
    */
   private checkStorage(): HealthCheck {
     try {
       const testKey = '_health_check_test'
       const testValue = 'test'
-      // Test localStorage
+      // Test localStorage;
       localStorage.setItem(testKey, testValue)
       const retrieved = localStorage.getItem(testKey)
       localStorage.removeItem(testKey)
@@ -266,7 +266,7 @@ class HealthCheckService {
         }
       }
       // Check available space (approximate)
-      const testData = 'x'.repeat(1024 * 1024); // 1MB
+      const testData = 'x'.repeat(1024 * 1024); // 1MB;
       try {
         localStorage.setItem('_size_test', testData)
         localStorage.removeItem('_size_test')
@@ -291,13 +291,13 @@ class HealthCheckService {
     }
   }
   /**
-   * Get application uptime
+   * Get application uptime;
    */
   getUptime(): number {
-    return Date.now() - this.startTime
+    return Date.now() - this.startTime;
   }
   /**
-   * Get formatted uptime string
+   * Get formatted uptime string;
    */
   getFormattedUptime(): string {
     const uptime = this.getUptime()
@@ -316,20 +316,20 @@ class HealthCheckService {
     }
   }
   /**
-   * Clear cached status
+   * Clear cached status;
    */
   clearCache(): void {
-    this.cachedStatus = undefined
-    this.lastCheckTime = 0
+    this.cachedStatus = undefined;
+    this.lastCheckTime = 0;
   }
 }
-// Export singleton instance
-export const healthCheck = new HealthCheckService()
-// Export convenience functions
+// Export singleton instance;
+export const healthCheck = new HealthCheckService();
+// Export convenience functions;
 export const runHealthChecks = () => healthCheck.runChecks()
 export const getHealthStatus = () => healthCheck.getStatus()
 export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) =>
   healthCheck.register(name, checkFn)
 export const getUptime = () => healthCheck.getUptime()
-export const getFormattedUptime = () => healthCheck.getFormattedUptime()
-export default healthCheck
+export const getFormattedUptime = () => healthCheck.getFormattedUptime();
+export default healthCheck;

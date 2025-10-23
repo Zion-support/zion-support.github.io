@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
-import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react'
-=======
+import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react';
 import { CheckCircle, Star, Brain, Shield, Zap, Users, Target, Heart, Helmet, Check } from 'lucide-react';
-=======
 import {CheckCircle, Star, Zap, Brain, Target, Users, Shield, Heart, Helmet} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
     {
@@ -131,7 +125,6 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
       marketPrice: '$3,50 0-1 0,00 0/month',
       category: 'Medical Devices',
       technologies: ['IoT Integration', 'Machine Learning', 'Real-time Processing', 'Device APIs', 'Cloud Computing']
-<<<<<<< HEAD
     }
   ]
   const categories = [...new Set(aiHealthcareServices.map(service => service.category))]
@@ -149,18 +142,14 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI Healthcare Solutions
-              </h1>
+                AI Healthcare Solutions</h1>
               <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
-                Transform healthcare with cutting-edge AI technology that improves patient outcomes, reduces costs, and accelerates medical breakthroughs
-              </p>
+                Transform healthcare with cutting-edge AI technology that improves patient outcomes, reduces costs, and accelerates medical breakthroughs</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
-                  Start Healthcare AI
-                </button>
+                  Start Healthcare AI</button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                  View Case Studies
-                </button>
+                  View Case Studies</button>
               </div>
             </div>
           </div>
@@ -173,8 +162,7 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
                 Why Choose AI Healthcare?
               </h2>
               <p className="text-xl text-gray-600">
-                Revolutionary AI technology that transforms healthcare delivery and improves patient outcomes
-              </p>
+                Revolutionary AI technology that transforms healthcare delivery and improves patient outcomes</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -214,14 +202,12 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions
-                </h2>
+                  {category} Solutions</h2>
                 <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
-                </p>
+                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {aiHealthcareServices
+                {aiHealthcareServices;
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -234,8 +220,7 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market rates
-                        </div>
+                          Save up to 50% vs market rates</div>
                       </div>
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -270,8 +255,7 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
                         </ul>
                       </div>
                       <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                        Get Healthcare Consultation
-                      </button>
+                        Get Healthcare Consultation</button>
                     </div>
                   ))}
               </div>
@@ -283,11 +267,9 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                AI Healthcare Capabilities
-              </h2>
+                AI Healthcare Capabilities</h2>
               <p className="text-xl text-gray-600">
-                Cutting-edge AI technologies that revolutionize healthcare delivery and patient care
-              </p>
+                Cutting-edge AI technologies that revolutionize healthcare delivery and patient care</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
@@ -330,21 +312,18 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
               Ready to Transform Healthcare?
             </h2>
             <p className="text-xl mb-8 text-green-100">
-              Contact our AI healthcare experts for a free consultation and custom healthcare AI strategy
-            </p>
+              Contact our AI healthcare experts for a free consultation and custom healthcare AI strategy</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950
-              </a>
-              <a
+                📞 +1 302 464 0950</a>
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com
-              </a>
+                ✉️ kleber@ziontechgroup.com</a>
             </div>
             <div className="mt-8 text-sm text-green-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -355,29 +334,20 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
     </>
   )
 }
-export default AIHealthcarePage
-=======
+export default AIHealthcarePage;
    }
   ];
   constcategories= [...new Set(aiHealthcareServices.map(service=> service.category))];
   return (
   <><Helme t><titl e>AI Healthcare Solutions - ZionTechGroup</titl><metaname="description"content="Revolutionary AI-powered healthcare solutions including medical imaging, drug discovery, personalized medicine, and clinical decision supportsystems." /><metaname="keywords"content="AI healthcare, medical AI, healthcare automation, medical imaging AI, drug discovery AI,telemedicine" /></Helme><divclassName="min-h-screen bg-gradient-to-brfrom-slate-50to-green-50">{/* HeroSection */}
-      <sectionclassName="relative overflow-hidden bg-gradient-to-r from-green-600to-teal-700text-whitepy-20"><divclassName="absolute inset-0 bg-blackopacity-20"></di><divclassName="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xlfont-boldmb-6"></className="text-4 xlmd:text-6 xlfont-boldmb-6">AI Healthcare Solutions
-            </h><spanclassName="text-xlmd:text-2 xl mb-8 text-green-100max-w-3xlmx-auto"></className="text-xlmd:text-2 xl mb-8 text-green-100max-w-3xlmx-auto">Transform healthcare with cutting-edge AI technology that improves patient outcomes, reduces costs, and accelerates medical breakthroughs
-            </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="bg-white text-green-600px-8 py-3 rounded-lg font-semiboldhover:bg-green-50transition-colors"></className="bg-white text-green-600px-8 py-3 rounded-lg font-semiboldhover:bg-green-50transition-colors">Start Healthcare AI
-              </butto><spanclassName="border-2 border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-green-600transition-colors"></className="border-2 border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-green-600transition-colors">View Case Studies
-              </butto></di></di></di></sectio>{/* KeyBenefits */}
+      <sectionclassName="relative overflow-hidden bg-gradient-to-r from-green-600to-teal-700text-whitepy-20"><divclassName="absolute inset-0 bg-blackopacity-20"></di><divclassName="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xlfont-boldmb-6"></className="text-4 xlmd:text-6 xlfont-boldmb-6">AI Healthcare Solutions</h><spanclassName="text-xlmd:text-2 xl mb-8 text-green-100max-w-3xlmx-auto"></className="text-xlmd:text-2 xl mb-8 text-green-100max-w-3xlmx-auto">Transform healthcare with cutting-edge AI technology that improves patient outcomes, reduces costs, and accelerates medical breakthroughs</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><spanclassName="bg-white text-green-600px-8 py-3 rounded-lg font-semiboldhover:bg-green-50transition-colors"></className="bg-white text-green-600px-8 py-3 rounded-lg font-semiboldhover:bg-green-50transition-colors">Start Healthcare AI</butto><spanclassName="border-2 border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-green-600transition-colors"></className="border-2 border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-green-600transition-colors">View Case Studies</butto></di></di></di></sectio>{/* KeyBenefits */}
       <sectionclassName="py-16bg-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">Why Choose AI Healthcare?
-            </h><spanclassName="text-xltext-gray-600"></className="text-xltext-gray-600">Revolutionary AI technology that transforms healthcare delivery and improves patient outcomes
-            </p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"><divclassName="text-center"><divclassName="bg-green-100w-16h-16rounded-full flex items-center justify-centermx-automb-4"><HeartclassName="w-8 h-8text-green-600" /></di><h3className="text-xl font-semibold text-gray-900mb-2">ImprovedOutcomes</h><pclassName="text-gray-600">AI improves patient outcomes and reduces medicalerrorsby60%</p></di><divclassName="text-center"><divclassName="bg-blue-100w-16h-16rounded-full flex items-center justify-centermx-automb-4"><BrainclassName="w-8 h-8text-blue-600" /></di><h3className="text-xl font-semibold text-gray-900mb-2">ClinicalIntelligence</h><pclassName="text-gray-600">AI provides clinical decision support anddiagnosticassistance</p></di><divclassName="text-center"><divclassName="bg-purple-100w-16h-16rounded-full flex items-center justify-centermx-automb-4"><ShieldclassName="w-8 h-8text-purple-600" /></di><h3className="text-xl font-semibold text-gray-900mb-2">HIPAACompliant</h><pclassName="text-gray-600">Bank-level security and full HIPAA compliance forpatientdata</p></di><divclassName="text-center"><divclassName="bg-orange-100w-16h-16rounded-full flex items-center justify-centermx-automb-4"><ZapclassName="w-8 h-8text-orange-600" /></di><h3className="text-xl font-semibold text-gray-900mb-2">CostReduction</h><pclassName="text-gray-600">Reduce healthcare costs by up to40% throughAIoptimization</p></di></di></di></sectio>{/* Services byCategory */}
+            </h><spanclassName="text-xltext-gray-600"></className="text-xltext-gray-600">Revolutionary AI technology that transforms healthcare delivery and improves patient outcomes</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"><divclassName="text-center"><divclassName="bg-green-100w-16h-16rounded-full flex items-center justify-centermx-automb-4"><HeartclassName="w-8 h-8text-green-600" /></di><h3className="text-xl font-semibold text-gray-900mb-2">ImprovedOutcomes</h><pclassName="text-gray-600">AI improves patient outcomes and reduces medicalerrorsby60%</p></di><divclassName="text-center"><divclassName="bg-blue-100w-16h-16rounded-full flex items-center justify-centermx-automb-4"><BrainclassName="w-8 h-8text-blue-600" /></di><h3className="text-xl font-semibold text-gray-900mb-2">ClinicalIntelligence</h><pclassName="text-gray-600">AI provides clinical decision support anddiagnosticassistance</p></di><divclassName="text-center"><divclassName="bg-purple-100w-16h-16rounded-full flex items-center justify-centermx-automb-4"><ShieldclassName="w-8 h-8text-purple-600" /></di><h3className="text-xl font-semibold text-gray-900mb-2">HIPAACompliant</h><pclassName="text-gray-600">Bank-level security and full HIPAA compliance forpatientdata</p></di><divclassName="text-center"><divclassName="bg-orange-100w-16h-16rounded-full flex items-center justify-centermx-automb-4"><ZapclassName="w-8 h-8text-orange-600" /></di><h3className="text-xl font-semibold text-gray-900mb-2">CostReduction</h><pclassName="text-gray-600">Reduce healthcare costs by up to40% throughAIoptimization</p></di></di></di></sectio>{/* Services byCategory */}
         {categories.map(category=> (
-       <sectionkey={category}className="py-16bg-gray-50"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">{category} Solutions
-              </h><spanclassName="text-xltext-gray-600"></className="text-xltext-gray-600">Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
-              </p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{aiHealthcareServices
+       <sectionkey={category}className="py-16bg-gray-50"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">{category} Solutions</h><spanclassName="text-xltext-gray-600"></className="text-xltext-gray-600">Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{aiHealthcareServices;
                   .filter(service=> service.category=== category)
                   .map((serviceindex) => (
-                 <divkey={index}className="bg-white rounded-lg shado w-lg p-6 hover:shado w-xltransition-shadow"><divclassName="text-4xlmb-4">{service.icon}</di><h3className="text-xl font-semibold text-gray-900mb-3">{service.title}</h><pclassName="text-gray-600mb-4">{service.description}</p><divclassName="mb-4"><divclassName="flex items-centerjustify-betweenmb-2"><spanclassName="text-2 xl font-boldtext-green-600">{service.price}</spa><spanclassName="text-smtext-gray-500">Market:{service.marketPrice}</spa></di><divclassName="text-sm text-green-600font-semibold">Save up to50% vs market rates
-                      </di></di><divclassName="mb-4"><h4className="font-semibold text-gray-900mb-2">KeyFeatures:</h><ulclassName="space-y-1">{service.features.map((featurefeatureIndex) => (
+                 <divkey={index}className="bg-white rounded-lg shado w-lg p-6 hover:shado w-xltransition-shadow"><divclassName="text-4xlmb-4">{service.icon}</di><h3className="text-xl font-semibold text-gray-900mb-3">{service.title}</h><pclassName="text-gray-600mb-4">{service.description}</p><divclassName="mb-4"><divclassName="flex items-centerjustify-betweenmb-2"><spanclassName="text-2 xl font-boldtext-green-600">{service.price}</spa><spanclassName="text-smtext-gray-500">Market:{service.marketPrice}</spa></di><divclassName="text-sm text-green-600font-semibold">Save up to50% vs market rates</di></di><divclassName="mb-4"><h4className="font-semibold text-gray-900mb-2">KeyFeatures:</h><ulclassName="space-y-1">{service.features.map((featurefeatureIndex) => (
                          <likey={featureIndex}className="flex items-center text-smtext-gray-600"><CheckCircleclassName="w-4 h-4text-green-500mr-2flex-shrink-0" />{feature}
                           </l>))}
                       </u></di><divclassName="mb-4"><h4className="font-semibold text-gray-900mb-2">Technologies:</h><divclassName="flexflex-wrapgap-2">{service.technologies.map((techtechIndex) => (
@@ -386,22 +356,16 @@ export default AIHealthcarePage
                       </di></di><divclassName="mb-6"><h4className="font-semibold text-gray-900mb-2">HealthcareBenefits:</h><ulclassName="space-y-1">{service.benefits.map((benefitbenefitIndex) => (
                          <likey={benefitIndex}className="flex items-center text-smtext-gray-600"><StarclassName="w-4 h-4text-yellow-500mr-2flex-shrink-0" />{benefit}
                           </l>))}
-                      </u></di><spanclassName="w-full bg-green-600text-white py-2 px-4 rounded-lg font-semiboldhover:bg-green-700transition-colors"></spa></className="w-full bg-green-600text-white py-2 px-4 rounded-lg font-semiboldhover:bg-green-700transition-colors">Get Healthcare Consultation
-                    </butto></di>))}
+                      </u></di><spanclassName="w-full bg-green-600text-white py-2 px-4 rounded-lg font-semiboldhover:bg-green-700transition-colors"></spa></className="w-full bg-green-600text-white py-2 px-4 rounded-lg font-semiboldhover:bg-green-700transition-colors">Get Healthcare Consultation</butto></di>))}
             </di></di></sectio>))}
         {/* AI HealthcareCapabilities */}
-      <sectionclassName="py-16bg-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></spa></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">AI Healthcare Capabilities
-            </h><spanclassName="text-xltext-gray-600"></spa></className="text-xltext-gray-600">Cutting-edge AI technologies that revolutionize healthcare delivery and patient care
-            </p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8"><divclassName="text-center p-6 bg-gradient-to-br from-green-50to-emerald-100rounded-lg"><HeartclassName="w-12h-1 2text-green-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">MedicalImagingAI</h><pclassName="text-gray-600">Advanced computer vision for medical image analysisanddiagnosis</p></di><divclassName="text-center p-6 bg-gradient-to-br from-blue-50to-indigo-100rounded-lg"><BrainclassName="w-12h-1 2text-blue-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">ClinicalDecisionSupport</h><pclassName="text-gray-600">AI-powered clinical decision support andtreatmentrecommendations</p></di><divclassName="text-center p-6 bg-gradient-to-br from-purple-50to-violet-100rounded-lg"><TargetclassName="w-12h-1 2text-purple-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">PersonalizedMedicine</h><pclassName="text-gray-600">Genomic analysis and personalizedtreatmentrecommendations</p></di><divclassName="text-center p-6 bg-gradient-to-br from-orange-50to-amber-100rounded-lg"><UsersclassName="w-12h-1 2text-orange-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">PopulationHealth</h><pclassName="text-gray-600">AI analytics for population health management anddiseaseprevention</p></di><divclassName="text-center p-6 bg-gradient-to-br from-pink-50to-rose-100rounded-lg"><ShieldclassName="w-12h-1 2text-pink-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">HealthcareSecurity</h><pclassName="text-gray-600">HIPAA-compliant security and privacy protection forpatientdata</p></di><divclassName="text-center p-6 bg-gradient-to-br from-indigo-50to-blue-100rounded-lg"><ZapclassName="w-12h-1 2text-indigo-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">PredictiveAnalytics</h><pclassName="text-gray-600">Predict health outcomes and prevent diseases beforetheyoccur</p></di></di></di></sectio>{/* ContactSection */}
+      <sectionclassName="py-16bg-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></spa></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">AI Healthcare Capabilities</h><spanclassName="text-xltext-gray-600"></spa></className="text-xltext-gray-600">Cutting-edge AI technologies that revolutionize healthcare delivery and patient care</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8"><divclassName="text-center p-6 bg-gradient-to-br from-green-50to-emerald-100rounded-lg"><HeartclassName="w-12h-1 2text-green-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">MedicalImagingAI</h><pclassName="text-gray-600">Advanced computer vision for medical image analysisanddiagnosis</p></di><divclassName="text-center p-6 bg-gradient-to-br from-blue-50to-indigo-100rounded-lg"><BrainclassName="w-12h-1 2text-blue-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">ClinicalDecisionSupport</h><pclassName="text-gray-600">AI-powered clinical decision support andtreatmentrecommendations</p></di><divclassName="text-center p-6 bg-gradient-to-br from-purple-50to-violet-100rounded-lg"><TargetclassName="w-12h-1 2text-purple-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">PersonalizedMedicine</h><pclassName="text-gray-600">Genomic analysis and personalizedtreatmentrecommendations</p></di><divclassName="text-center p-6 bg-gradient-to-br from-orange-50to-amber-100rounded-lg"><UsersclassName="w-12h-1 2text-orange-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">PopulationHealth</h><pclassName="text-gray-600">AI analytics for population health management anddiseaseprevention</p></di><divclassName="text-center p-6 bg-gradient-to-br from-pink-50to-rose-100rounded-lg"><ShieldclassName="w-12h-1 2text-pink-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">HealthcareSecurity</h><pclassName="text-gray-600">HIPAA-compliant security and privacy protection forpatientdata</p></di><divclassName="text-center p-6 bg-gradient-to-br from-indigo-50to-blue-100rounded-lg"><ZapclassName="w-12h-1 2text-indigo-600mx-automb-4" /><h3className="text-xl font-semibold text-gray-900mb-2">PredictiveAnalytics</h><pclassName="text-gray-600">Predict health outcomes and prevent diseases beforetheyoccur</p></di></di></di></sectio>{/* ContactSection */}
       <sectionclassName="py-16bg-gradient-to-r from-green-600to-teal-600text-white"><divclassName="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center"><spanclassName="text-3 xlmd:text-4 xlfont-boldmb-4"></spa></className="text-3 xlmd:text-4 xlfont-boldmb-4">Ready to Transform Healthcare?
-          </h><spanclassName="text-xl mb-8text-green-100"></spa></className="text-xl mb-8text-green-100">Contact our AI healthcare experts for a free consultation and custom healthcare AI strategy
-          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
+          </h><spanclassName="text-xl mb-8text-green-100"></spa></className="text-xl mb-8text-green-100">Contact our AI healthcare experts for a free consultation and custom healthcare AI strategy</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
                className="bg-white text-green-600px-8 py-3 rounded-lg font-semiboldhover:bg-green-50transition-colorsinline-flexitems-center"
               >📞 +1 3024640950</a><ahref="mailto:kleber@ziontechgroup.com"
                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-green-600transition-colors"
-              >✉️ kleber@ziontechgroup.com
-            </a></di><divclassName="mt-8 text-smtext-green-200"><p>📍 364E Main St STE1008, Middletown DE19709</p></di></di></sectio></di></>
+              >✉️ kleber@ziontechgroup.com</a></di><divclassName="mt-8 text-smtext-green-200"><p>📍 364E Main St STE1008, Middletown DE19709</p></di></di></sectio></di></>
   );
 };
 export default AIHealthcarePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

@@ -1,25 +1,19 @@
-<<<<<<< HEAD
 'use client'
 import React, { useState } from 'react'
 import { Send } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
-import { MapPin, Clock } from 'lucide-react'
-=======
+import { MapPin, Clock } from 'lucide-react';
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Send, CheckCircle, Phone, Mail, MapPin, Check, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
-=======
 import React, {useState} from 'react';
 import {Send, CheckCircle, Phone, Mail} from 'lucide-react';;
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',
@@ -28,45 +22,42 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
     phone: '',
     service: '',
     message: ''
-<<<<<<< HEAD
   })
 
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }))
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
+    // Here you would typically send the form data to your backend;
     // // console.log('Form submitted:', formData)
     setIsSubmitted(true)
-    // Reset form after 3 seconds
+    // Reset form after 3 seconds;
     setTimeout(() => {
       setIsSubmitted(false)
-=======
  });
 
   const [isSubmittedsetIsSubmitted] = useState(false);
 
   consthandleInputChange=(e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {const{namevalue} = e.targetsetFormData(prev=> ({...prev,
-      [name]: value
+      [name]: value;
    }));
   };
 
   consthandleSubmit= (e: React.FormEvent) => {e.preventDefault();
-    // Here you would typically send the form data to your backend
+    // Here you would typically send the form data to your backend;
     // setIsSubmitted(true);
-    // Reset form after3seconds
+    // Reset form after3seconds;
     setTimeout(() => {
   
       setIsSubmitted(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       setFormData({
         name: '',
         email: '',
@@ -74,15 +65,12 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
         phone: '',
         service: '',
         message: ''
-<<<<<<< HEAD
       })
     }, 3000)
   }
-=======
      });
     },3000);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   constservices= [
     'AI Services',
@@ -97,7 +85,6 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
     'Other'
   ]
 
-<<<<<<< HEAD
   const achievements = [
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
@@ -113,8 +100,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Contact Us
-            </span>
+              Contact Us</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Ready to transform your business with cutting-edge AI and IT solutions?
@@ -138,11 +124,10 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
-                    <input
+                    <input;
                       type="text"
                       id="name"
                       name="name"
-=======
   constachievements= [
     {icon: Users, text: '10 0+ Happy Clients'},
     {icon: Award, text: '5 0+ Successful Projects'},
@@ -152,8 +137,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
 
   return (
   <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Navigation /><mainclassName="container mx-autopx-4py-16pt-24">{/* HeroSection */}
-      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent">Contact Us
-          </spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-4xlmx-auto"></spa></className="text-xl text-gray-300mb-8 max-w-4xlmx-auto">Ready to transform your business with cutting-edge AI and IT solutions? 
+      <sectionclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-purple-50 0to-pink-500bg-clip-texttext-transparent">Contact Us</spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-4xlmx-auto"></spa></className="text-xl text-gray-300mb-8 max-w-4xlmx-auto">Ready to transform your business with cutting-edge AI and IT solutions? 
             Get in touch with our experts for a free consultation.
         </p></sectio><divclassName="grid grid-cols-1 lg:grid-cols-2gap-12">{/* ContactForm */}
         <divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-8"><h2className="text-2 xl font-boldtext-whitemb-6">Get YourFreeConsultation</h>{isSubmitted ? (
@@ -162,7 +146,6 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                   </labe><inputtype="text"
                      id="name"
                      name="name"
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                       value={formData.name}
                       onChange={handleInputChange}
                      requiredclassName="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
@@ -173,8 +156,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                      name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-<<<<<<< HEAD
-                      required
+                      required;
                       className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="your@email.com"
                     />
@@ -183,31 +165,25 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
-                    </label>
-                    <input
+                      Company</label>
+                    <input;
                       type="text"
                       id="company"
                       name="company"
-=======
                      requiredclassName="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
                      placeholder="your@email.com"
-                    /></di></di><divclassName="grid grid-cols-1md:grid-cols-2gap-6"><di v><labelhtmlFor="company"className="block text-sm font-medium text-gray-300mb-2">Company
-                  </labe><inputtype="text"
+                    /></di></di><divclassName="grid grid-cols-1md:grid-cols-2gap-6"><di v><labelhtmlFor="company"className="block text-sm font-medium text-gray-300mb-2">Company</labe><inputtype="text"
                      id="company"
                      name="company"
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                       value={formData.company}
                       onChange={handleInputChange}
                      className="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
                      placeholder="Your companyname"
-                    /></di><di v><labelhtmlFor="phone"className="block text-sm font-medium text-gray-300mb-2">Phone Number
-                  </labe><inputtype="tel"
+                    /></di><di v><labelhtmlFor="phone"className="block text-sm font-medium text-gray-300mb-2">Phone Number</labe><inputtype="tel"
                      id="phone"
                      name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="(555) 123-4567"
                     />
@@ -215,9 +191,8 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 </div>
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service Interest
-                  </label>
-                  <select
+                    Service Interest</label>
+                  <select;
                     id="service"
                     name="service"
                     value={formData.service}
@@ -234,24 +209,23 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
-                  <textarea
+                  <textarea;
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    required
+                    required;
                     rows={5}
                     className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                     placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
-                <button
+                <button;
                   type="submit"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 flex items-center justify-center"
                 ></button>
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
-                </button>
+                  Send Message</button>
               </form>
             )}
           </div>
@@ -268,8 +242,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
                     <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                      +1 (302) 464-0950
-                    </a>
+                      +1 (302) 464-0950</a>
                     <p className="text-sm text-gray-400 mt-1">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
@@ -280,8 +253,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                      kleber@ziontechgroup.com
-                    </a>
+                      kleber@ziontechgroup.com</a>
                     <p className="text-sm text-gray-400 mt-1">We respond within 24 hours</p>
                   </div>
                 </div>
@@ -294,8 +266,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                     <p className="text-gray-300"></p>
                       364 E Main St STE 1008<br />
                       Middletown, DE 19709<br />
-                      United States
-                    </p>
+                      United States</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -307,8 +278,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                     <p className="text-gray-300"></p>
                       Monday - Friday: 9:00 AM - 6:00 PM EST<br />
                       Saturday: 10:00 AM - 4:00 PM EST<br />
-                      Sunday: Closed
-                    </p>
+                      Sunday: Closed</p>
                   </div>
                 </div>
               </div>
@@ -331,13 +301,12 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center">
               <h3 className="text-xl font-bold text-white mb-4">Need Immediate Assistance?</h3>
               <p className="text-gray-300 mb-6">Call us now for urgent IT support or emergency services.</p>
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: (302) 464-0950
-              </a>
+                Call Now: (302) 464-0950</a>
             </div>
           </div>
         </div>
@@ -346,11 +315,9 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
     </div>
   )
 }
-=======
                      className="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
                      placeholder="(55 5)123-4567"
-                    /></di></di><di v><labelhtmlFor="service"className="block text-sm font-medium text-gray-300mb-2">Service Interest
-                </labe><selectid="service"
+                    /></di></di><di v><labelhtmlFor="service"className="block text-sm font-medium text-gray-300mb-2">Service Interest</labe><selectid="service"
                    name="service"
                     value={formData.service}
                     onChange={handleInputChange}
@@ -371,14 +338,10 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 ></
                  type="submit"
                  className="w-full bg-gradient-to-r from-cyan-50 0 to-purple-600text-white py-3 px-6 rounded-lg font-semiboldhover:from-cyan-600 hover:to-purple-700transition-all duration-300 hover:scale-105flexitems-centerjustify-center"
-                ><SendclassName="w-5h-5mr-2" />Send Message
-              </butto></for>)}
+                ><SendclassName="w-5h-5mr-2" />Send Message</butto></for>)}
         </di>{/* ContactInformation */}
         <divclassName="space-y-8">{/* ContactDetails */}
-          <divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-8"><h2className="text-2 xl font-boldtext-whitemb-6">GetInTouch</h><divclassName="space-y-6"><divclassName="flexitems-startspace-x-4"><divclassName="w-12h-12bg-cyan-50 0/20rounded-lg flex items-centerjustify-centerflex-shrink-0"><PhoneclassName="w-6 h-6text-cyan-400" /></di><di v><h3className="text-lg font-semiboldtext-whitemb-1">Phone</h><ahref="tel:+13024640950"className="text-cyan-400 hover:text-cyan-300transition-colors">+1 (30 2)464-0950</a><pclassName="text-sm text-gray-400mt-1">Mon-Fri9AM-6PMEST</p></di></di><divclassName="flexitems-startspace-x-4"><divclassName="w-12h-12bg-cyan-50 0/20rounded-lg flex items-centerjustify-centerflex-shrink-0"><MailclassName="w-6 h-6text-cyan-400" /></di><di v><h3className="text-lg font-semiboldtext-whitemb-1">Email</h><ahref="mailto:kleber@ziontechgroup.com"className="text-cyan-400 hover:text-cyan-300transition-colors">kleber@ziontechgroup.com
-                  </a><pclassName="text-sm text-gray-400mt-1">We respondwithin24hours</p></di></di><divclassName="flexitems-startspace-x-4"><divclassName="w-12h-12bg-cyan-50 0/20rounded-lg flex items-centerjustify-centerflex-shrink-0"><MapPinclassName="w-6 h-6text-cyan-400" /></di><di v><h3className="text-lg font-semiboldtext-whitemb-1">Address</h><spanclassName="text-gray-300"></spa></className="text-gray-300">364E Main St STE1008<br />Middletown,DE19709<br />United States
-                  </p></di></di><divclassName="flexitems-startspace-x-4"><divclassName="w-12h-12bg-cyan-50 0/20rounded-lg flex items-centerjustify-centerflex-shrink-0"><ClockclassName="w-6 h-6text-cyan-400" /></di><di v><h3className="text-lg font-semiboldtext-whitemb-1">BusinessHours</h><spanclassName="text-gray-300"></spa></className="text-gray-300">Monday - Friday: 9:00AM -6:00PMEST<br />Saturday:10:00AM -4:00PMEST<br />Sunday: Closed
-                  </p></di></di></di></di>{/* Achievements */}
+          <divclassName="bg-slate-80 0/50backdrop-blur-smrounded-xlp-8"><h2className="text-2 xl font-boldtext-whitemb-6">GetInTouch</h><divclassName="space-y-6"><divclassName="flexitems-startspace-x-4"><divclassName="w-12h-12bg-cyan-50 0/20rounded-lg flex items-centerjustify-centerflex-shrink-0"><PhoneclassName="w-6 h-6text-cyan-400" /></di><di v><h3className="text-lg font-semiboldtext-whitemb-1">Phone</h><ahref="tel:+13024640950"className="text-cyan-400 hover:text-cyan-300transition-colors">+1 (30 2)464-0950</a><pclassName="text-sm text-gray-400mt-1">Mon-Fri9AM-6PMEST</p></di></di><divclassName="flexitems-startspace-x-4"><divclassName="w-12h-12bg-cyan-50 0/20rounded-lg flex items-centerjustify-centerflex-shrink-0"><MailclassName="w-6 h-6text-cyan-400" /></di><di v><h3className="text-lg font-semiboldtext-whitemb-1">Email</h><ahref="mailto:kleber@ziontechgroup.com"className="text-cyan-400 hover:text-cyan-300transition-colors">kleber@ziontechgroup.com</a><pclassName="text-sm text-gray-400mt-1">We respondwithin24hours</p></di></di><divclassName="flexitems-startspace-x-4"><divclassName="w-12h-12bg-cyan-50 0/20rounded-lg flex items-centerjustify-centerflex-shrink-0"><MapPinclassName="w-6 h-6text-cyan-400" /></di><di v><h3className="text-lg font-semiboldtext-whitemb-1">Address</h><spanclassName="text-gray-300"></spa></className="text-gray-300">364E Main St STE1008<br />Middletown,DE19709<br />United States</p></di></di><divclassName="flexitems-startspace-x-4"><divclassName="w-12h-12bg-cyan-50 0/20rounded-lg flex items-centerjustify-centerflex-shrink-0"><ClockclassName="w-6 h-6text-cyan-400" /></di><di v><h3className="text-lg font-semiboldtext-whitemb-1">BusinessHours</h><spanclassName="text-gray-300"></spa></className="text-gray-300">Monday - Friday: 9:00AM -6:00PMEST<br />Saturday:10:00AM -4:00PMEST<br />Sunday: Closed</p></di></di></di></di>{/* Achievements */}
           <divclassName="bg-gradient-to-r from-indigo-90 0/50to-purple-900/50rounded-xlp-8"><h3className="text-xl font-boldtext-whitemb-6">WhyChooseUs?</h><divclassName="gridgrid-cols-2gap-4">{achievements.map((achievementindex) => (
                <divkey={index}className="text-center"><divclassName="w-12h-12bg-cyan-50 0/20rounded-full flex items-center justify-centermx-automb-2"><achievement.iconclassName="w-6 h-6text-cyan-400" /></di><pclassName="text-smtext-gray-300">{achievement.text}</p></di>))}
             </di></di>{/* QuickContact */}
@@ -387,6 +350,5 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
               ><PhoneclassName="w-5h-5mr-2" />CallNow: (30 2) 464-0950</a></di></di></di></mai><Footer /></di>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-export default ContactPage
+export default ContactPage;

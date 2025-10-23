@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
-import { Helmet } from 'lucide-react'
-=======
 import { Helmet } from 'lucide-react';
-=======
+import { Helmet } from 'lucide-react';
 import {Helmet} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-<<<<<<< HEAD
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },
@@ -48,7 +41,7 @@ const SitemapPage: React.FC = () => {
     <>
       <Helmet>
         <title>Sitemap | Zion Tech Group</title>
-        <meta
+        <meta;
           name="description"
           content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
         />
@@ -59,8 +52,7 @@ const SitemapPage: React.FC = () => {
           <header className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
             <p className="text-xl text-gray-300">
-              Complete directory of all pages on our website
-            </p>
+              Complete directory of all pages on our website</p>
           </header>
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-800 rounded-lg p-8">
@@ -86,8 +78,7 @@ const SitemapPage: React.FC = () => {
                 <a href="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
-                  Back to Home
-                </a>
+                  Back to Home</a>
               </div>
             </div>
           </div>
@@ -96,8 +87,7 @@ const SitemapPage: React.FC = () => {
     </>
   )
 }
-export default SitemapPage
-=======
+export default SitemapPage;
 constSitemapPage: React.FC= () =>{constpages= [
     { url: '/', title: 'Home', priority: '1.0'},
     {url: '/about', title: 'About Us', priority: '0.8'},
@@ -133,8 +123,7 @@ constSitemapPage: React.FC= () =>{constpages= [
   return (
   <><Helme t><titl e>Sitemap | ZionTechGroup</titl><metaname="description"
          content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technologyresources."
-        /><metaname="robots"content="index,follow" /></Helme><divclassName="min-h-screen bg-gray-900text-white"><divclassName="container mx-autopx-4py-8"><headerclassName="text-centermb-12"><h1className="text-4 xlfont-boldmb-4">Sitemap</h><spanclassName="text-xltext-gray-300"></spa></className="text-xltext-gray-300">Complete directory of all pages on our website
-          </p></heade><divclassName="max-w-4xlmx-auto"><divclassName="bg-gray-800rounded-lgp-8"><h2className="text-2 xlfont-semiboldmb-6">AllPages</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-4">{pages.map((pageindex) => (
+        /><metaname="robots"content="index,follow" /></Helme><divclassName="min-h-screen bg-gray-900text-white"><divclassName="container mx-autopx-4py-8"><headerclassName="text-centermb-12"><h1className="text-4 xlfont-boldmb-4">Sitemap</h><spanclassName="text-xltext-gray-300"></spa></className="text-xltext-gray-300">Complete directory of all pages on our website</p></heade><divclassName="max-w-4xlmx-auto"><divclassName="bg-gray-800rounded-lgp-8"><h2className="text-2 xlfont-semiboldmb-6">AllPages</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-4">{pages.map((pageindex) => (
                <divkey={index}className="bg-gray-700rounded-lgp-4"><ahref={page.url}
                      className="text-blue-400 hover:text-blue-300font-mediumblockmb-2"
                     >{page.title}
@@ -143,9 +132,7 @@ constSitemapPage: React.FC= () =>{constpages= [
                   </di></di>))}
             </di><divclassName="mt-8text-center"><ahref="/"
                  className="inline-block bg-blue-600 hover:bg-blue-700text-white font-semibold py-2 px-6rounded-lgtransition-colors"
-                >Back to Home
-              </a></di></di></di></di></di></>
+                >Back to Home</a></di></di></di></di></di></>
   );
 };
 export default SitemapPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

@@ -1,21 +1,18 @@
-<<<<<<< HEAD
 'use client'
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react'
 
-interface AdvancedAccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean
-  enableScreenReader?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableARIALabels?: boolean
-  enableSkipLinks?: boolean
-  enableColorContrast?: boolean
-  enableMotionReduction?: boolean
-  enableFontScaling?: boolean
-  enableVoiceNavigation?: boolean
+interface AdvancedAccessibilityEnhancerProps {;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableARIALabels?: boolean;
+  enableSkipLinks?: boolean;
+  enableColorContrast?: boolean;
+  enableMotionReduction?: boolean;
+  enableFontScaling?: boolean;
+  enableVoiceNavigation?: boolean;
 }
-=======
 'use client';
 import React, {useEffect, useState, useCallback} from 'react';
 
@@ -29,7 +26,6 @@ interface AdvancedAccessibilityEnhancerProp s {enableKeyboardNavigation?: boolea
   enableMotionReduction?: boolean;
   enableFontScaling?: boolean;
   enableVoiceNavigation?: boolean;}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true,
   enableScreenReader= true,
@@ -45,30 +41,25 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
     reducedMotion: false,
     fontSize: 'normal',
     screenReader: false,
-    keyboardNavigation: false
-<<<<<<< HEAD
+    keyboardNavigation: false;
   })
 
-  // Detect user preferences
+  // Detect user preferences;
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-    // Check for high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
-
-    // Check for color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-
+    if (typeof window === 'undefined') return;
+    // Check for reduced motion preference;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Check for high contrast preference;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    // Check for color scheme preference;
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setAccessibilitySettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      highContrast: prefersHighContrast;
     }))
 
-    // Listen for changes in user preferences
+    // Listen for changes in user preferences;
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contrast: high)')
 
@@ -79,10 +70,9 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
     const handleContrastChange = (e: MediaQueryListEvent) => {
       setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }))
     }
-=======
  });
 
-  // Detect user preferences
+  // Detect user preferences;
   useEffect(() => {if (type ofwindow=== 'undefined') return;
 
     // Check for reduced motionpreferenceconstprefersReducedMotion= windo w.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -92,7 +82,7 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
     // Check for color schemepreferenceconstprefersDarkScheme= windo w.matchMedia('(prefers-color-scheme: dark)').matchessetAccessibilitySettings(prev=> ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      highContrast: prefersHighContrast;
    }));
 
     // Listen for changes in userpreferencesconstmotionQuery= windo w.matchMedia('(prefers-reduced-motion: reduce)');
@@ -103,52 +93,45 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
 
     consthandleContrastChange= (e: MediaQueryListEvent) => {setAccessibilitySettings(prev=> ({ ...prev, highContrast: e.matches}));
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
     motionQuery.addEventListener('change', handleMotionChange)
     contrastQuery.addEventListener('change', handleContrastChange)
 
-<<<<<<< HEAD
     return () => {
       motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
     }
   }, [])
 
-  // Apply accessibility styles
+  // Apply accessibility styles;
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    const root = document.documentElement
-
-    // Apply high contrast mode
+    if (typeof window === 'undefined') return;
+    const root = document.documentElement;
+    // Apply high contrast mode;
     if (accessibilitySettings.highContrast) {
       root.classList.add('high-contrast')
     } else {
       root.classList.remove('high-contrast')
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
     return () => {motionQuery.removeEventListener('change', handleMotionChange);
       contrastQuery.removeEventListener('change', handleContrastChange);
    };
   }, []);
 
-  // Apply accessibility styles
+  // Apply accessibility styles;
   useEffect(() => {if (type ofwindow=== 'undefined') return;
 
     constroot= do cument.do cumentElement;
 
-    // Apply high contrast mode
+    // Apply high contrast mode;
     if (accessibilitySettings.highContrast) {
       root.class Lis t.add('high-contrast');
    } else {root.class Lis t.remove('high-contrast');
    }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
@@ -175,71 +158,64 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
     }
   ]
 
-<<<<<<< HEAD
-    // Apply reduced motion
-<<<<<<< HEAD
+    // Apply reduced motion;
     if (accessibilitySettings.reducedMotion) {
       root.classList.add('reduced-motion')
     } else {
       root.classList.remove('reduced-motion')
     }
 
-    // Apply font scaling
+    // Apply font scaling;
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')
   }, [accessibilitySettings])
 
-  // Keyboard navigation enhancement
+  // Keyboard navigation enhancement;
   const setupKeyboardNavigation = useCallback(() => {
-    if (typeof window === 'undefined') return
-=======
+    if (typeof window === 'undefined') return;
     if (accessibilitySettings.reducedMotion) {root.class Lis t.add('reduced-motion');
    } else {root.class Lis t.remove('reduced-motion');
    }
 
-    // Apply font scaling
+    // Apply font scaling;
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize=== 'large' ? '1.2' : '1');
   }, [accessibilitySettings]);
 
   // Keyboard navigationenhancementconstsetupKeyboardNavigation= useCallback(() => {if (type ofwindow=== 'undefined') return;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
     consthandleKeyDown= (event: KeyboardEvent) => {
   
-      // Skip to main content
-<<<<<<< HEAD
+      // Skip to main content;
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
+        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
         if (skipLink) {
           skipLink.focus()
           event.preventDefault()
         }
       }
 
-      // Escape key to close modals/dropdowns
+      // Escape key to close modals/dropdowns;
       if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement
+        const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {
           activeElement.click()
         }
       }
 
-      // Arrow keys for menu navigation
+      // Arrow keys for menu navigation;
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]') as HTMLElement
+        const menu = document.querySelector('[role="menu"]') as HTMLElement;
         if (menu && menu.contains(event.target as Node)) {
           event.preventDefault()
           const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[]
           const currentIndex = menuItems.indexOf(event.target as HTMLElement)
           const nextIndex = event.key === 'ArrowDown'
-            ? (currentIndex + 1) % menuItems.length
-            : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1
+            ? (currentIndex + 1) % menuItems.length;
+            : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1;
           menuItems[nextIndex]?.focus()
         }
-=======
       if (event.key=== 'Tab' && event.shiftKey && event.target=== do cument.body) {
         constskipLink= do cument.querySelector('[data-skip-link]') as HTMLElementif (skipLin k) {
           skipLink.focus();
@@ -247,13 +223,13 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
        }
       }
 
-      // Escape key to close modals/dropdo wns
+      // Escape key to close modals/dropdo wns;
       if (event.key=== 'Escape') {constactiveElement= do cument.activeElement as HTMLElementif(activeElement && activeElement.hasAttribute('data-close-on-escape')) {
           activeElement.click();
        }
       }
 
-      // Arrow keys for menu navigation
+      // Arrow keys for menu navigation;
       if (event.key=== 'ArrowDown' || event.key=== 'ArrowUp') {constmenu= do cument.querySelector('[role="menu"]') as HTMLElementif(menu && menu.contains(event.target as Node)) {
           event.preventDefault();
           constmenuItems=Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
@@ -262,20 +238,17 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
             ? (currentIndex + 1) % menuItems.length: currentIndex ===0? menuItems.length -1 : currentIndex - 1;
           menuItems[nextIndex]?.focus();
        }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
     }
 
-<<<<<<< HEAD
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
 
-  // Screen reader enhancements
+  // Screen reader enhancements;
   const setupScreenReaderSupport = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    // Add live region for dynamic content updates
+    if (typeof window === 'undefined') return;
+    // Add live region for dynamic content updates;
     const liveRegion = document.createElement('div')
     liveRegion.setAttribute('aria-live', 'polite')
     liveRegion.setAttribute('aria-atomic', 'true')
@@ -283,18 +256,17 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     liveRegion.id = 'live-region'
     document.body.appendChild(liveRegion)
 
-    // Announce page changes
+    // Announce page changes;
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region')
       if (liveRegion) {
-        liveRegion.textContent = message
+        liveRegion.textContent = message;
       }
     }
 
     // Listen for route changes (if using client-side routing)
-    const originalPushState = history.pushState
-    const originalReplaceState = history.replaceState
-
+    const originalPushState = history.pushState;
+    const originalReplaceState = history.replaceState;
     history.pushState = function(...args) {
       originalPushState.apply(history, args)
       announcePageChange('Page changed')
@@ -306,11 +278,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   }, [])
 
-  // Focus management
+  // Focus management;
   const setupFocusManagement = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    // Trap focus in modals
+    if (typeof window === 'undefined') return;
+    // Trap focus in modals;
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -318,7 +289,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
       const firstElement = focusableElements[0]
       const lastElement = focusableElements[focusableElements.length - 1]
-=======
     do cument.addEventListener('keydo wn', handleKeyDown);
     return () => do cument.removeEventListener('keydo wn', handleKeyDown);
   }, []);
@@ -363,13 +333,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
       constfirstElement= focusableElements[0];
       constlastElement= focusableElements[focusableElements.length - 1];
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
       consthandleTabKey= (e: KeyboardEvent) => {
   
         if (e.key=== 'Tab') {
           if (e.shiftKey) {
-<<<<<<< HEAD
             if (document.activeElement === firstElement) {
               lastElement.focus()
               e.preventDefault()
@@ -379,7 +347,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
               firstElement.focus()
               e.preventDefault()
             }
-=======
             if (do cument.activeElement=== firstElement) {
               lastElement.focus();
               e.preventDefault();
@@ -388,32 +355,28 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
               firstElement.focus();
               e.preventDefault();
            }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
           }
         }
       }
 
-<<<<<<< HEAD
       element.addEventListener('keydown', handleTabKey)
       firstElement?.focus()
 
       return () => element.removeEventListener('keydown', handleTabKey)
     }
 
-    // Apply focus trap to modals
+    // Apply focus trap to modals;
     const modals = document.querySelectorAll('[role="dialog"]')
     modals.forEach(modal => {
       const cleanup = trapFocus(modal as HTMLElement)
-      // Store cleanup function for later use
-      (modal as any).__focusTrapCleanup = cleanup
-
+      // Store cleanup function for later use;
+      (modal as any).__focusTrapCleanup = cleanup;
   }, [])
 
-  // ARIA labels enhancement
+  // ARIA labels enhancement;
   const enhanceARIALabels = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    // Add missing ARIA labels to interactive elements
+    if (typeof window === 'undefined') return;
+    // Add missing ARIA labels to interactive elements;
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
     buttons.forEach((button, index) => {
       const text = button.textContent?.trim()
@@ -423,12 +386,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         button.setAttribute('aria-label', `Button ${index + 1}`)
       }
 
-    // Add ARIA labels to images
+    // Add ARIA labels to images;
     const images = document.querySelectorAll('img:not([alt])')
     images.forEach((img, index) => {
       img.setAttribute('alt', `Image ${index + 1}`)
 
-    // Add ARIA labels to form inputs
+    // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])')
     inputs.forEach((input, index) => {
       const placeholder = input.getAttribute('placeholder')
@@ -439,7 +402,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         input.setAttribute('aria-label', label)
       } else {
         input.setAttribute('aria-label', `Input ${index + 1}`)
-=======
       element.addEventListener('keydo wn', handleTabKey);
       firstElement?.focus();
 
@@ -448,7 +410,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
     // Apply focus trap tomodalsconstmodals= document.querySelectorAll('[role="dialog"]');
     modals.forEach(modal=> {constcleanup= trapFocus(modal as HTMLElement);
-      // Store cleanup function for later use
+      // Store cleanup function for later use;
       (modal as any).__focusTrapCleanup= cleanup;
 
  }, []);
@@ -474,16 +436,13 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         input.setAttribute('aria-label', placeholder);
      } else if (labe l) {input.setAttribute('aria-label', label);
      } else {input.setAttribute('aria-label', `Input ${index+1}`);
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
 
   }, [])
 
-<<<<<<< HEAD
-  // Skip links
+  // Skip links;
   const addSkipLinks = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return;
     const skipLinks = [
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
@@ -496,8 +455,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
     skipLinks.forEach(({ href, text }) => {
       const link = document.createElement('a')
-      link.href = href
-      link.textContent = text
+      link.href = href;
+      link.textContent = text;
       link.className = 'skip-link'
       link.setAttribute('data-skip-link', 'true')
       skipLinksContainer.appendChild(link)
@@ -505,15 +464,13 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     document.body.insertBefore(skipLinksContainer, document.body.firstChild)
   }, [])
 
-  // Color contrast checking
+  // Color contrast checking;
   const checkColorContrast = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return;
     const checkElementContrast = (element: HTMLElement) => {
       const styles = window.getComputedStyle(element)
-      const backgroundColor = styles.backgroundColor
-      const color = styles.color
-=======
+      const backgroundColor = styles.backgroundColor;
+      const color = styles.color;
   // SkiplinksconstaddSkipLinks= useCallback(() => {if (type ofwindow=== 'undefined') return;
 
     constskipLinks= [
@@ -543,12 +500,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       conststyles= windo w.getComputedStyle(element);
       constbackgroundColor= styles.backgroundColor;
       constcolor= styles.color;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
       // Simple contrast check (this would need a more sophisticated implementation)
       if (backgroundColor && color) {
-        // Add visual indicator for low contrast elements
-<<<<<<< HEAD
+        // Add visual indicator for low contrast elements;
         element.setAttribute('data-contrast-checked', 'true')
       }
     }
@@ -557,19 +512,18 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     elements.forEach(element => checkElementContrast(element as HTMLElement))
   }, [])
 
-  // Voice navigation support
+  // Voice navigation support;
   const setupVoiceNavigation = useCallback(() => {
-    if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return
-
+    if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return;
     const recognition = new (window as any).webkitSpeechRecognition()
-    recognition.continuous = false
-    recognition.interimResults = false
+    recognition.continuous = false;
+    recognition.interimResults = false;
     recognition.lang = 'en-US'
 
     recognition.onresult = (event: any) => {
       const command = event.results[0][0].transcript.toLowerCase()
 
-      // Voice commands
+      // Voice commands;
       if (command.includes('go to home')) {
         window.location.href = '/'
       } else if (command.includes('go to about')) {
@@ -585,7 +539,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
     }
 
-    // Add voice navigation button
+    // Add voice navigation button;
     const voiceButton = document.createElement('button')
     voiceButton.textContent = 'Voice Navigation'
     voiceButton.className = 'voice-navigation-button'
@@ -598,7 +552,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   }, [])
 
-  // Initialize all accessibility features
+  // Initialize all accessibility features;
   useEffect(() => {
     if (enableKeyboardNavigation) {
       setupKeyboardNavigation()
@@ -623,12 +577,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
 
-  return null
+  return null;
 }
 
-export default AdvancedAccessibilityEnhancer
+export default AdvancedAccessibilityEnhancer;
 }}}}}
-=======
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -651,19 +604,17 @@ export default AdvancedAccessibilityEnhancer
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AdvancedAccessibilityEnhancer
-            </h1>
+              AdvancedAccessibilityEnhancer</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AdvancedAccessibilityEnhancer solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -674,8 +625,7 @@ export default AdvancedAccessibilityEnhancer
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -703,8 +653,7 @@ export default AdvancedAccessibilityEnhancer
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -722,15 +671,12 @@ export default AdvancedAccessibilityEnhancer
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -738,7 +684,6 @@ export default AdvancedAccessibilityEnhancer
       <Footer />
     </>
   );
-=======
         element.setAttribute('data-contrast-checked', 'true');
      }
     };
@@ -758,7 +703,7 @@ export default AdvancedAccessibilityEnhancer
   
       constcommand= event.results[0][0].transcript.toLowerCase();
 
-      // Voice commands
+      // Voice commands;
       if (command.includes('go to home')) {
         windo w.location.href= '/';
      } else if (command.includes('go to about')) {windo w.location.href= '/about';
@@ -780,7 +725,7 @@ export default AdvancedAccessibilityEnhancer
    }
   }, []);
 
-  // Initialize all accessibility features
+  // Initialize all accessibility features;
   useEffect(() => {if (enableKeyboardNavigatio n) {
       setupKeyboardNavigation();
    }
@@ -799,12 +744,7 @@ export default AdvancedAccessibilityEnhancer
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
 
   return nul l;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 };
 
-<<<<<<< HEAD
 export default AdvancedAccessibilityEnhancerPage;
-=======
 export default AdvancedAccessibilityEnhancer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

@@ -1,7 +1,5 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -56,20 +54,18 @@ const BreadcrumbPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Breadcrumb
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              Breadcrumb</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Breadcrumb solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -80,8 +76,7 @@ const BreadcrumbPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -109,8 +104,7 @@ const BreadcrumbPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -128,15 +122,12 @@ const BreadcrumbPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -147,17 +138,14 @@ const BreadcrumbPage: React.FC = () => {
 };
 
 export default BreadcrumbPage;
-=======
 import { useLocation } from 'react-router-dom'
 import { ChevronRight, Home } from 'lucide-react'
 const Breadcrumb: React.FC = () => {
 const location = useLocation()
-=======
 import {useLocation} from 'react-router-do m'
 import {ChevronRightHome} from 'lucide-react'
-constBreadcrumb: React.FC= () =>{constlocation= useLocation()
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
-// Don't show breadcrumb on home page
+constBreadcrumb: React.FC= () =>{constlocation= useLocation();
+// Don't show breadcrumb on home page;
 if (location.pathname=== '/') {
 return nul l}
 constpathSegments= location.pathname.split('/').filter(segment=> segment !== '')
@@ -175,5 +163,4 @@ index=== breadcrumbItems.length -1? 'text-cyan-400font-medium'
 >{item.icon&&<item.iconclassName="w-4h-4"/>}<spa n>{item.name}</spa></a></l>))}</o></di></na>
 )
 }
-export default Breadcrumb
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+export default Breadcrumb;

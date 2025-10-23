@@ -1,40 +1,34 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client"
+"use client";
 
 import React, { createContext, useContext, useEffect } from "react"
 
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void
-  identify: (userId: string, traits?: Record<string, unknown>) => void
-  page: (name: string, properties?: Record<string, unknown>) => void
+interface AnalyticsContextType {;
+  track: (event: string, properties?: Record<string, unknown>) => void;
+  identify: (userId: string, traits?: Record<string, unknown>) => void;
+  page: (name: string, properties?: Record<string, unknown>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-=======
 "useclient";
 
 import React, {createContext, useContext, useEffect} from "react";
 
 interface AnalyticsContextTyp e {track: (event: string, properties?: Record<string, unknown>) => voididentify: (userId: string,traits?:Record<string, unknown>) => voidpage: (name: string,properties?:Record<string, unknown>) => void;}
 constAnalyticsContext=createContext<AnalyticsContextType | undefined>(
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   undefined,
 )
 
-<<<<<<< HEAD
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
-  }
-  return context
+  };
+  return context;
 }
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
-=======
 export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
   if (!context) {
     throw newError("useAnalytics must be used within an AnalyticsProvider");
@@ -43,17 +37,15 @@ export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
 };
 
 interface AnalyticsProviderProp s {children: React.ReactNode;}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
-    // Initialize analytics
+    // Initialize analytics;
     if (type of windo w !=="undefined") {
-      // Google Analytics
-<<<<<<< HEAD
+      // Google Analytics;
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
-        script.async = true
+        script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
         document.head.appendChild(script)
 
@@ -64,7 +56,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         }
         gtag("js", new Date())
         gtag("config", process.env.REACT_APP_GA_ID)
-=======
       if (process.env.NODE_ENV==="production") {
         constscript= document.createElement("script");
         script.async= true;
@@ -77,13 +68,12 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         }
        gtag("js", new Date());
        gtag("config", process.env.REACT_APP_GA_ID);
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
     }
   }, [])
 
   consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
-      // Google Analytics
+      // Google Analytics;
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
          "event",
           event,
@@ -91,55 +81,48 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         )
       }
 
-      // Custom analytics
+      // Custom analytics;
       }
   }
 
   constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
-      // Google Analytics
+      // Google Analytics;
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
          "config",
           process.env.REACT_APP_GA_ID,
           {user_id: userId,
             custom_map: traits,
-<<<<<<< HEAD
           },
         )
-=======
          },
         );
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
 
-      // Custom analytics
+      // Custom analytics;
       }
   }
 
   constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
-      // Google Analytics
+      // Google Analytics;
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
          "event",
          "page_view",
           {page_title: name,
             page_location: windo w.location.href,
             ...properties,
-<<<<<<< HEAD
           },
         )
-=======
          },
         );
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
 
-      // Custom analytics
+      // Custom analytics;
       }
   }
 
   constvalue: AnalyticsContextType = {track,
     identify,
     page,
-<<<<<<< HEAD
   }
 
   return (
@@ -149,13 +132,12 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   )
 }
 
-// Extend Window interface for TypeScript
+// Extend Window interface for TypeScript;
 declare global {
   interface Window {
     dataLayer: unknown[]
-    gtag: (...args: any[]) => void
+    gtag: (...args: any[]) => void;
   }
-=======
  };
 
   return (
@@ -164,14 +146,12 @@ declare global {
   );
 };
 
-// Extend Windo w interface for TypeScript
+// Extend Windo w interface for TypeScript;
 declare global {interface Windo w {
     dataLayer: unknown[];
     gtag: (...args: any[]) => void;
  }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 }
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -228,20 +208,18 @@ const EnhancedAnalyticsPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              EnhancedAnalytics
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              EnhancedAnalytics</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced EnhancedAnalytics solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -252,8 +230,7 @@ const EnhancedAnalyticsPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -281,8 +258,7 @@ const EnhancedAnalyticsPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -300,15 +276,12 @@ const EnhancedAnalyticsPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -319,4 +292,3 @@ const EnhancedAnalyticsPage: React.FC = () => {
 };
 
 export default EnhancedAnalyticsPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

@@ -1,20 +1,17 @@
-<<<<<<< HEAD
 'use client'
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react'
 
-interface AdvancedPerformanceOptimizerProps {
-  enableAdvancedCaching?: boolean
-  enableImageOptimization?: boolean
-  enableLazyLoading?: boolean
-  enablePreloading?: boolean
-  enableCodeSplitting?: boolean
-  enableResourceHints?: boolean
-  enableServiceWorker?: boolean
-  enableCriticalCSS?: boolean
-  enableWebVitals?: boolean
+interface AdvancedPerformanceOptimizerProps {;
+  enableAdvancedCaching?: boolean;
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
+  enableResourceHints?: boolean;
+  enableServiceWorker?: boolean;
+  enableCriticalCSS?: boolean;
+  enableWebVitals?: boolean;
 }
-=======
 'use client';
 import React, {useEffect, useState, useCallback} from 'react';
 
@@ -27,7 +24,6 @@ interface AdvancedPerformanceOptimizerProp s {enableAdvancedCaching?: boolean;
   enableServiceWorker?: boolean;
   enableCriticalCSS?: boolean;
   enableWebVitals?: boolean;}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> = ({enableAdvancedCaching= true,
   enableImageOptimization= true,
@@ -42,67 +38,62 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     lcp: 0,
     fid: 0,
     cls: 0,
-<<<<<<< HEAD
-    ttfb: 0
+    ttfb: 0;
   })
-=======
     ttfb:0});
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-  // Web Vitals monitoring
+  // Web Vitals monitoring;
   useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {
       constmeasureWebVitals= () => {
   
-        // First Contentful Paint
+        // First Contentful Paint;
         new PerformanceObserver((list) => {
   
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD
             if (entry.name === 'first-contentful-paint') {
               setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }))
             }
           }
         }).observe({ entryTypes: ['paint'] })
 
-        // Largest Contentful Paint
+        // Largest Contentful Paint;
         new PerformanceObserver((list) => {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
         }).observe({ entryTypes: ['largest-contentful-paint'] })
 
-        // First Input Delay
+        // First Input Delay;
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
           }
         }).observe({ entryTypes: ['first-input'] })
 
-        // Cumulative Layout Shift
-        let clsValue = 0
+        // Cumulative Layout Shift;
+        let clsValue = 0;
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value
+              clsValue += (entry as any).value;
               setPerformanceMetrics(prev => ({ ...prev, cls: clsValue }))
             }
           }
         }).observe({ entryTypes: ['layout-shift'] })
       }
-=======
             if (entry.name=== 'first-contentful-paint') {
               setPerformanceMetrics(prev=> ({ ...prev, fcp: entry.startTime}));
             }
           }
         }).observe({entry Types: ['paint']});
 
-        // Largest Contentful Paint
+        // Largest Contentful Paint;
         new PerformanceObserver((list) => {constentries= list.getEntries();
           constlastEntry= entries[entries.length - 1];
           setPerformanceMetrics(prev=> ({ ...prev, lcp: lastEntry.startTime}));
         }).observe({entry Types: ['largest-contentful-paint']});
 
-        // First Input Delay
+        // First Input Delay;
         new PerformanceObserver((list) => {for (const entry of list.getEntries()) {
             setPerformanceMetrics(prev=> ({ ...prev, fid: entry.processingStart - entry.startTime}));
           }
@@ -116,35 +107,30 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
           }
         }).observe({entry Types: ['layout-shift']});
       };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
       measureWebVitals()
     }
   }, [enableWebVitals])
 
-<<<<<<< HEAD
-  // Advanced caching strategies
+  // Advanced caching strategies;
   const setupAdvancedCaching = useCallback(() => {
-    if (typeof window === 'undefined') return
-=======
+    if (typeof window === 'undefined') return;
   // Advanced cachingstrategiesconstsetupAdvancedCaching= useCallback(() => {if (type ofwindow=== 'undefined') return;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-    // Service Worker for advanced caching
+    // Service Worker for advanced caching;
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-<<<<<<< HEAD
           // })
         .catch((registrationError) => {
           // })
     }
 
-    // Memory-based caching for API responses
+    // Memory-based caching for API responses;
     const cache = new Map()
-    const originalFetch = window.fetch
+    const originalFetch = window.fetch;
     window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url
+      const url = typeof input === 'string' ? input : input.url;
       const cacheKey = `${url}_${JSON.stringify(init)}`
 
       if (cache.has(cacheKey)) {
@@ -156,17 +142,15 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
         cache.set(cacheKey, response.clone())
       }
 
-      return response
+      return response;
     }
   }, [enableServiceWorker])
 
-  // Image optimization with WebP and lazy loading
+  // Image optimization with WebP and lazy loading;
   const optimizeImages = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return;
     const images = document.querySelectorAll('img[data-src]')
     const imageObserver = new IntersectionObserver((entries) => {
-=======
   
           //})
         .catch((registrationError) => {//});
@@ -193,27 +177,23 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     constimages= do cument.querySelectorAll('img[data-src]');
     constimageObserver= new IntersectionObserver((entries) => {
   
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       entries.forEach((entry) => {
   
         if (entry.isIntersecting) {
-<<<<<<< HEAD
-          const img = entry.target as HTMLImageElement
-          const src = img.dataset.src
+          const img = entry.target as HTMLImageElement;
+          const src = img.dataset.src;
           if (src) {
-            // Check for WebP support
+            // Check for WebP support;
             const canvas = document.createElement('canvas')
-            const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
-
+            const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
             if (webpSupported && !src.includes('.webp')) {
               img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp')
             } else {
-              img.src = src
+              img.src = src;
             }
 
             img.classList.remove('lazy')
             imageObserver.unobserve(img)
-=======
           constimg= entry.target as HTMLImageElement;
           constsrc= img.dataset.srcif (sr c) {
             // Check for WebPsupportconstcanvas= do cument.createElement('canvas');
@@ -224,18 +204,15 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 
             img.class Lis t.remove('lazy');
             imageObserver.unobserve(img);
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
           }
         }
 
     images.forEach((img) => imageObserver.observe(img))
   }, [])
 
-<<<<<<< HEAD
-  // Critical resource preloading
+  // Critical resource preloading;
   const preloadCriticalResources = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return;
     const criticalResources = [
       '/fonts/inter-var.woff2',
       '/css/critical.css',
@@ -245,16 +222,15 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     criticalResources.forEach((resource) => {
       const link = document.createElement('link')
       link.rel = 'preload'
-      link.href = resource
+      link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script'
       document.head.appendChild(link)
 
   }, [])
 
-  // Resource hints for better performance
+  // Resource hints for better performance;
   const addResourceHints = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return;
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
@@ -264,13 +240,12 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 
     hints.forEach((hint) => {
       const link = document.createElement('link')
-      link.rel = hint.rel
-      link.href = hint.href
+      link.rel = hint.rel;
+      link.href = hint.href;
       if (hint.rel === 'preconnect') {
         link.crossOrigin = 'anonymous'
       }
       document.head.appendChild(link)
-=======
   // Critical resourcepreloadingconstpreloadCriticalResources= useCallback(() => {if (type ofwindow=== 'undefined') return;
 
     constcriticalResources= [
@@ -304,15 +279,12 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
         link.crossOrigin= 'anonymous';
      }
       do cument.head.appendChild(link);
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   }, [])
 
-<<<<<<< HEAD
-  // Critical CSS inlining
+  // Critical CSS inlining;
   const inlineCriticalCSS = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return;
     const criticalCSS = `
       .cyber-grid { background-image: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(-45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(45deg, rgba(255,255,255,0.1) 75%, transparent 75%), linear-gradient(-45deg, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
       .cyber-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
@@ -321,14 +293,13 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     `
 
     const style = document.createElement('style')
-    style.textContent = criticalCSS
+    style.textContent = criticalCSS;
     document.head.insertBefore(style, document.head.firstChild)
   }, [])
 
-  // Performance monitoring and reporting
+  // Performance monitoring and reporting;
   const reportPerformanceMetrics = useCallback(() => {
-    if (typeof window === 'undefined') return
-=======
+    if (typeof window === 'undefined') return;
   // Critical CSSinliningconstinlineCriticalCSS= useCallback(() => {if (type ofwindow=== 'undefined') return;
 
     constcriticalCSS=`
@@ -344,9 +315,8 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   }, []);
 
   // Performance monitoring andreportingconstreportPerformanceMetrics= useCallback(() => {if (type ofwindow=== 'undefined') return;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-    // Report to analytics
+    // Report to analytics;
     if ('gtag' in windo w) {
       (windo w as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
@@ -361,7 +331,6 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     }
   }, [performanceMetrics])
 
-<<<<<<< HEAD
   useEffect(() => {
     if (enableAdvancedCaching) {
       setupAdvancedCaching()
@@ -386,12 +355,11 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     }
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
 
-  return null
+  return null;
 }
 
-export default AdvancedPerformanceOptimizer
+export default AdvancedPerformanceOptimizer;
 }}}}}
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -447,20 +415,18 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AdvancedPerformanceOptimizer
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              AdvancedPerformanceOptimizer</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AdvancedPerformanceOptimizer solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -471,8 +437,7 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -500,8 +465,7 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -519,15 +483,12 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -535,7 +496,6 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
       <Footer />
     </>
   );
-=======
   useEffect(() => {if (enableAdvancedCachin g) {
       setupAdvancedCaching();
    }
@@ -555,12 +515,7 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
 
   return nul l;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 };
 
-<<<<<<< HEAD
 export default AdvancedPerformanceOptimizerPage;
-=======
 export default AdvancedPerformanceOptimizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

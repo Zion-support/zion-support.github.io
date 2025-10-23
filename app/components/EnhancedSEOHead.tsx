@@ -1,7 +1,6 @@
 'use client'
 import {Helmet} from 'lucide-react';
 import React from 'react'
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -44,7 +43,6 @@ const EnhancedSEOHeadPage: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>{title}</title>
@@ -57,20 +55,17 @@ const EnhancedSEOHeadPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              EnhancedSEOHead
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+              EnhancedSEOHead</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Zion Tech Group
-            </p>
+              Zion Tech Group</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>
@@ -81,8 +76,7 @@ const EnhancedSEOHeadPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -110,8 +104,7 @@ const EnhancedSEOHeadPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -129,15 +122,12 @@ const EnhancedSEOHeadPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
@@ -148,7 +138,6 @@ const EnhancedSEOHeadPage: React.FC = () => {
 };
 
 export default EnhancedSEOHeadPage;
-=======
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -229,14 +218,13 @@ export default EnhancedSEOHeadPage;
         {JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
-=======
-import {Helmet} from 'react-helmet-async'
-interface SEOHeadProp s {title: stringdescription: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  siteName?: string
+import {Helmet} from 'react-helmet-async';
+interface SEOHeadProp s {title: stringdescription: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  siteName?: string;
   structuredData?: object}
 constEnhancedSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
   description= 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve300% ROI with our cutting-edge AI technology.',
@@ -307,7 +295,7 @@ constEnhancedSEOHead: React.FC= () => {"contactType":"sales",
      "query-input":"requiredname=search_term_string"
     }
   }
-  constfinalStructuredData= structuredData || default StructuredData
+  constfinalStructuredData= structuredData || default StructuredData;
   return (
   <Helme t>{/* Basic MetaTags */}
     <titl e>{title}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author"content="Zion TechGroup" /><metaname="robots"content="index,follow" /><metaname="googlebot"content="index,follow" /><metaname="bingbot"content="index,follow" />{/* CanonicalURL */}
@@ -326,8 +314,6 @@ constEnhancedSEOHead: React.FC= () => {"contactType":"sales",
     <linkrel="icon"type="image/x-icon"href="/favicon.ico" /><linkrel="apple-touch-icon"sizes="180x180"href="/apple-touch-icon.png" /><linkrel="icon"type="image/png"sizes="32x32"href="/favicon-32x32.png" /><linkrel="icon"type="image/png"sizes="16x16"href="/favicon-16x16.png" /><linkrel="manifest"href="/site.webmanifest" />{/* StructuredData */}
     <scripttype="application/ld+json">{JSON.stringify(finalStructuredData)}
     </scrip></Helme>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   )
 }
-export default EnhancedSEOHead
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+export default EnhancedSEOHead;

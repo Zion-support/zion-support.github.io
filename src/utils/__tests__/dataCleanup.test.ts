@@ -1,4 +1,4 @@
-// Mock data cleanup utility functions
+// Mock data cleanup utility functions;
 export const cleanData = (data: any[]): any[] => {
   return data.filter(item => item !== null && item !== undefined)
 }
@@ -6,11 +6,11 @@ export const cleanData = (data: any[]): any[] => {
 export const removeDuplicates = (data: any[], key: string): any[] => {
   const seen = new Set()
   return data.filter(item => {
-    if (seen.has(item[key])) {
-      return false
+    if (seen.has(item[key])) {;
+      return false;
     }
     seen.add(item[key])
-    return true
+    return true;
   })
 }
 

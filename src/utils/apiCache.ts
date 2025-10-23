@@ -1,45 +1,45 @@
 'use client'
 /**
- * API Caching Utility
- * Provides caching, deduplication, and retry logic for API calls
+ * API Caching Utility;
+ * Provides caching, deduplication, and retry logic for API calls;
  */
 import { CacheManager, CacheStorage } from './cacheManager'
-interface ApiCacheConfig {
-  ttl?: number
-  maxRetries?: number
-  retryDelay?: number
-  deduplicate?: boolean
+interface ApiCacheConfig {;
+  ttl?: number;
+  maxRetries?: number;
+  retryDelay?: number;
+  deduplicate?: boolean;
 }
 interface PendingRequest<T> {
   promise: Promise<T>
-  timestamp: number
+  timestamp: number;
 }
 /**
- * API Cache Manager with request deduplication
+ * API Cache Manager with request deduplication;
  */
-export class ApiCache {
-  private cache: CacheManager
+export class ApiCache {;
+  private cache: CacheManager;
   private pendingRequests: Map<string, PendingRequest<unknown>> = new Map()
   private config: Required<ApiCacheConfig>
   constructor(config: ApiCacheConfig = {}) {
     this.cache = new CacheManager({
-      defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
-      storage: CacheStorage.Memory
+      defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes;
+      storage: CacheStorage.Memory;
     })
     this.config = {
       ttl: config.ttl || 5 * 60 * 1000,
       maxRetries: config.maxRetries || 3,
       retryDelay: config.retryDelay || 1000,
-      deduplicate: config.deduplicate ?? true
+      deduplicate: config.deduplicate ?? true;
     }
-    // Auto-cleanup every 5 minutes
+    // Auto-cleanup every 5 minutes;
     setInterval(() => {
-      // Cache cleanup is handled automatically
+      // Cache cleanup is handled automatically;
       this.cleanupPendingRequests()
     }, 5 * 60 * 1000)
   }
   /**
-   * Fetch with caching and deduplication
+   * Fetch with caching and deduplication;
    */
   async fetch<T>(
     url: string,
@@ -48,26 +48,26 @@ export class ApiCache {
   ): Promise<T> {
     const cacheKey = this.getCacheKey(url, options)
     const mergedConfig = { ...this.config, ...cacheConfig }
-    // Check cache first
+    // Check cache first;
     if (this.cache.has(cacheKey)) {
-      return this.cache.get(cacheKey) as T
+      return this.cache.get(cacheKey) as T;
     }
-    // Check if there's a pending request
+    // Check if there's a pending request;
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {
       const pending = this.pendingRequests.get(cacheKey)
       if (pending && Date.now() - pending.timestamp < 30000) {
-        // Reuse pending request if less than 30 seconds old
+        // Reuse pending request if less than 30 seconds old;
         return pending.promise as Promise<T>
       }
     }
-    // Create new request with retry logic
+    // Create new request with retry logic;
     const requestPromise = this.fetchWithRetry<T>(
       url,
       options,
       mergedConfig.maxRetries,
-      mergedConfig.retryDelay
+      mergedConfig.retryDelay;
     )
-    // Store pending request
+    // Store pending request;
     if (mergedConfig.deduplicate) {
       this.pendingRequests.set(cacheKey, {
         promise: requestPromise,
@@ -75,24 +75,24 @@ export class ApiCache {
       })
     }
     try {
-      const data = await requestPromise
-      // Cache successful response
+      const data = await requestPromise;
+      // Cache successful response;
       this.cache.set(cacheKey, data, { ttl: mergedConfig.ttl })
-      return data
+      return data;
     } finally {
-      // Clean up pending request
+      // Clean up pending request;
       this.pendingRequests.delete(cacheKey)
     }
   }
   /**
-   * Fetch with retry logic
+   * Fetch with retry logic;
    */
   private async fetchWithRetry<T>(
     url: string,
     options: RequestInit,
     maxRetries: number,
     retryDelay: number,
-    attempt = 1
+    attempt = 1;
   ): Promise<T> {
     try {
       const response = await fetch(url, options)
@@ -100,23 +100,23 @@ export class ApiCache {
         // Retry on 5xx errors and 429 (rate limit)
         if (
           (response.status >= 500 || response.status === 429) &&
-          attempt < maxRetries
+          attempt < maxRetries;
         ) {
-          await this.delay(retryDelay * attempt); // Exponential backoff
+          await this.delay(retryDelay * attempt); // Exponential backoff;
           return this.fetchWithRetry<T>(
             url,
             options,
             maxRetries,
             retryDelay,
-            attempt + 1
+            attempt + 1;
           )
         }
         throw new Error(`HTTP ${response.status}: ${response.statusText}`)
       }
       const data = await response.json()
-      return data as T
+      return data as T;
     } catch (error) {
-      // Retry on network errors
+      // Retry on network errors;
       if (attempt < maxRetries) {
         await this.delay(retryDelay * attempt)
         return this.fetchWithRetry<T>(
@@ -124,38 +124,38 @@ export class ApiCache {
           options,
           maxRetries,
           retryDelay,
-          attempt + 1
+          attempt + 1;
         )
       }
-      throw error
+      throw error;
     }
   }
   /**
-   * Invalidate cache entries matching a pattern
+   * Invalidate cache entries matching a pattern;
    */
   invalidate(pattern: string | RegExp): number {
-    // Pattern-based invalidation not supported, clear all
+    // Pattern-based invalidation not supported, clear all;
     this.cache.clear()
-    return 0
+    return 0;
   }
   /**
-   * Clear entire cache
+   * Clear entire cache;
    */
   clear(): void {
     this.cache.clear()
     this.pendingRequests.clear()
   }
   /**
-   * Get cache statistics
+   * Get cache statistics;
    */
   getStats() {
     return {
       ...this.cache.getStats(),
-      pendingRequests: this.pendingRequests.size
+      pendingRequests: this.pendingRequests.size;
     }
   }
   /**
-   * Prefetch data
+   * Prefetch data;
    */
   async prefetch<T>(
     url: string,
@@ -165,11 +165,11 @@ export class ApiCache {
     try {
       await this.fetch<T>(url, options, cacheConfig)
     } catch (error) {
-      // Silent fail for prefetch
+      // Silent fail for prefetch;
       }
   }
   /**
-   * Generate cache key from URL and options
+   * Generate cache key from URL and options;
    */
   private getCacheKey(url: string, options: RequestInit): string {
     const method = options.method || 'GET'
@@ -177,17 +177,17 @@ export class ApiCache {
     return `${method}:${url}:${body}`
   }
   /**
-   * Delay helper
+   * Delay helper;
    */
   private delay(ms: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, ms))
   }
   /**
-   * Clean up old pending requests
+   * Clean up old pending requests;
    */
   private cleanupPendingRequests(): void {
     const now = Date.now()
-    const timeout = 60000; // 1 minute
+    const timeout = 60000; // 1 minute;
     for (const [key, pending] of this.pendingRequests.entries()) {
       if (now - pending.timestamp > timeout) {
         this.pendingRequests.delete(key)
@@ -196,16 +196,16 @@ export class ApiCache {
   }
 }
 /**
- * Default API cache instance
+ * Default API cache instance;
  */
-export const defaultApiCache = new ApiCache({
-  ttl: 5 * 60 * 1000, // 5 minutes
+export const defaultApiCache = new ApiCache({;
+  ttl: 5 * 60 * 1000, // 5 minutes;
   maxRetries: 3,
   retryDelay: 1000,
-  deduplicate: true
+  deduplicate: true;
 })
 /**
- * Cached fetch helper
+ * Cached fetch helper;
  */
 export async function cachedFetch<T>(
   url: string,
@@ -214,8 +214,8 @@ export async function cachedFetch<T>(
 ): Promise<T> {
   return defaultApiCache.fetch<T>(url, options, cacheConfig)
 }
-/**
- * Create a cached API client
+/**;
+ * Create a cached API client;
  */
 export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {
   const cache = new ApiCache()
@@ -254,5 +254,5 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
     prefetch: <T>(path: string, options?: RequestInit) =>
       cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
   }
-}
-export default ApiCache
+};
+export default ApiCache;
