@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.href}
+                    href={service.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.href}
+                    href={service.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
               {microSaas.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.href}
+                    href={service.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -175,7 +175,7 @@ const Footer: React.FC = () => {
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -211,19 +211,19 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
-              to="/privacy"
+              href="/privacy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
-              to="/terms"
+              href="/terms"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Terms of Service
             </Link>
             <Link
-              to="/cookies"
+              href="/cookies"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Cookie Policy
