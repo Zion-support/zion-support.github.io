@@ -1,9 +1,4 @@
-<<<<<<< HEAD:app/utils/performanceEnhancer.ts
 'use client';
-=======
-'use client'
-import Navigation from './Navigation'
->>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/performanceEnhancer.ts
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
@@ -50,11 +45,7 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD:app/utils/performanceEnhancer.ts
       console.log(`${componentName} rendered in ${renderTime}ms`);
-=======
-      // // // console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`)
->>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/performanceEnhancer.ts
     }
   }
   // Track memory usage
@@ -82,11 +73,7 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-<<<<<<< HEAD:app/utils/performanceEnhancer.ts
           console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
-=======
-          // // // console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`)
->>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/performanceEnhancer.ts
         }
       });
     });
@@ -172,13 +159,8 @@ export const optimizeScrollPerformance = () => {
   };
   // Track Core Web Vitals
   const trackCLS = () => {
-<<<<<<< HEAD:app/utils/performanceEnhancer.ts
     let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [];
-=======
-    let clsValue = 0
-    const clsEntries: PerformanceEntry[] = []
->>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/performanceEnhancer.ts
+    const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean;
       value: number;
@@ -202,12 +184,7 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD:app/utils/performanceEnhancer.ts
           }
-=======
-          // // // console.log('[Web Vitals] LCP:', entry.startTime)
-        }
->>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/performanceEnhancer.ts
       }
     });
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -222,12 +199,7 @@ export const optimizeScrollPerformance = () => {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD:app/utils/performanceEnhancer.ts
           }
-=======
-          // // // console.log('[Web Vitals] FID:', fid)
-        }
->>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/performanceEnhancer.ts
       }
     });
     observer.observe({ entryTypes: ['first-input'] });
@@ -287,11 +259,5 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-<<<<<<< HEAD:app/utils/performanceEnhancer.ts
     }
 };
-=======
-    // // // console.log('Performance metrics:', metrics)
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/performanceEnhancer.ts
