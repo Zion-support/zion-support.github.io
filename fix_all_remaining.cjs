@@ -1,32 +1,36 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Find all corrupted files and fix them
 const fixAllCorruptedFiles = () => {
   const corruptedFiles = [];
-  
+
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
-    items.forEach(item => {
+    items.forEach((item) => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
         try {
-          const content = fs.readFileSync(fullPath, 'utf8');
+          const content = fs.readFileSync(fullPath, "utf8");
           // Check if file has syntax errors
-          if (content.includes('<<<<<<< HEAD') || 
-              content.includes('=======') || 
-              content.includes('>>>>>>>') ||
-              content.includes('export default function 5g') ||
-              content.includes('export default function 5G') ||
-              content.includes('get') && content.includes('return') && content.includes('()') ||
-              content.includes('SEOHead') ||
-              content.includes('unterminated') ||
-              content.includes('broken') ||
-              content.includes('corrupted')) {
+          if (
+            content.includes("<<<<<<< HEAD") ||
+            content.includes("=======") ||
+            content.includes(">>>>>>>") ||
+            content.includes("export default function 5g") ||
+            content.includes("export default function 5G") ||
+            (content.includes("get") &&
+              content.includes("return") &&
+              content.includes("()")) ||
+            content.includes("SEOHead") ||
+            content.includes("unterminated") ||
+            content.includes("broken") ||
+            content.includes("corrupted")
+          ) {
             corruptedFiles.push(fullPath);
           }
         } catch (error) {
@@ -36,29 +40,29 @@ const fixAllCorruptedFiles = () => {
       }
     });
   };
-  
-  scanDirectory('app');
+
+  scanDirectory("app");
   return corruptedFiles;
 };
 
 // Create a clean page template
 const createCleanPage = (filePath) => {
-  const pathParts = filePath.split('/');
+  const pathParts = filePath.split("/");
   const fileName = pathParts[pathParts.length - 1];
-  const isPage = fileName === 'page.tsx';
-  
+  const isPage = fileName === "page.tsx";
+
   if (isPage) {
     const pageName = pathParts[pathParts.length - 2];
     const title = pageName
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-    
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
     return `import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Layers } from 'lucide-react';
 
-export default function ${title.replace(/\s+/g, '')}Page() {
+export default function ${title.replace(/\s+/g, "")}Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -122,7 +126,7 @@ export default function ${title.replace(/\s+/g, '')}Page() {
 }`;
   } else {
     // For non-page files, create a simple component
-    const componentName = fileName.replace('.tsx', '').replace('.ts', '');
+    const componentName = fileName.replace(".tsx", "").replace(".ts", "");
     return `import React from 'react';
 
 interface ${componentName}Props {
@@ -150,10 +154,10 @@ export default ${componentName};`;
 // Fix all corrupted files
 const fixCorruptedFiles = () => {
   const corruptedFiles = fixAllCorruptedFiles();
-  
+
   console.log(`Found ${corruptedFiles.length} corrupted files to fix...`);
-  
-  corruptedFiles.forEach(filePath => {
+
+  corruptedFiles.forEach((filePath) => {
     try {
       const content = createCleanPage(filePath);
       fs.writeFileSync(filePath, content);
@@ -166,4 +170,4 @@ const fixCorruptedFiles = () => {
 
 // Run the fix
 fixCorruptedFiles();
-console.log('All corrupted files have been fixed!');
+console.log("All corrupted files have been fixed!");

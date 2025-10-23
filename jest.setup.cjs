@@ -1,9 +1,14 @@
-require('@testing-library/jest-dom');
+require("@testing-library/jest-dom");
+
+// Polyfill for TextEncoder/TextDecoder
+const { TextEncoder, TextDecoder } = require("util");
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -11,8 +16,8 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-  }))
+    dispatchEvent: jest.fn(),
+  })),
 });
 
 // Mock IntersectionObserver
@@ -32,15 +37,15 @@ global.ResizeObserver = class ResizeObserver {
 };
 
 // Mock performance
-Object.defineProperty(window, 'performance', {
+Object.defineProperty(window, "performance", {
   writable: true,
   value: {
     now: jest.fn(() => Date.now()),
     mark: jest.fn(),
     measure: jest.fn(),
     getEntriesByType: jest.fn(() => []),
-    getEntriesByName: jest.fn(() => [])
-  }
+    getEntriesByName: jest.fn(() => []),
+  },
 });
 
 // Mock localStorage
@@ -48,7 +53,7 @@ const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
-  clear: jest.fn()
+  clear: jest.fn(),
 };
 global.localStorage = localStorageMock;
 
@@ -57,6 +62,6 @@ const sessionStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
-  clear: jest.fn()
+  clear: jest.fn(),
 };
 global.sessionStorage = sessionStorageMock;
