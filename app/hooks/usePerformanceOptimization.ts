@@ -59,7 +59,7 @@ export function usePerformanceOptimization(
   }, [enablePerformanceMonitoring]);
 
   const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) return;
+    if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll("img");
     images.forEach((img) => {
@@ -71,7 +71,7 @@ export function usePerformanceOptimization(
   }, [enableImageOptimization]);
 
   const optimizeLazyLoading = useCallback(() => {
-    if (!enableLazyLoading) return;
+    if (!enableLazyLoading || typeof window === 'undefined') return;
 
     const lazyElements = document.querySelectorAll("[data-lazy]");
     const observer = new IntersectionObserver((entries) => {
@@ -88,7 +88,7 @@ export function usePerformanceOptimization(
   }, [enableLazyLoading]);
 
   const enableCachingStrategy = useCallback(() => {
-    if (!enableCaching) return;
+    if (!enableCaching || typeof window === 'undefined') return;
 
     // Service worker registration for caching
     if ("serviceWorker" in navigator) {
@@ -104,7 +104,7 @@ export function usePerformanceOptimization(
   }, [enableCaching]);
 
   const prefetchResources = useCallback(() => {
-    if (!enablePrefetching) return;
+    if (!enablePrefetching || typeof window === 'undefined') return;
 
     const links = document.querySelectorAll("a[href]");
     links.forEach((link) => {
