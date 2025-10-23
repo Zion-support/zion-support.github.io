@@ -60,7 +60,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   useEffect(() => {
     if (priority) return;
 
-    const _observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
@@ -80,18 +80,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return () => observer.disconnect();
   }, [priority]);
 
-  const _handleLoad = () => {
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
 
-  const _handleError = () => {
+  const handleError = () => {
     setIsError(true);
     onError?.();
   };
 
   // Generate WebP src if supported
-  const _getOptimizedSrc = (originalSrc: string) => {
+  const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith("data:") || originalSrc.startsWith("blob:")) {
       return originalSrc;
     }
@@ -143,4 +143,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-
+export default OptimizedImage;
