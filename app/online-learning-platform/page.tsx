@@ -1,43 +1,110 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { BookOpen, Users, BarChart, Zap, Shield, CheckCircle } from 'lucide-react'
-const features = [
-{ icon: BookOpen, title: 'Course Management', description: 'Create, organize, and manage educational content with AI-powered course recommendations.' },
-{ icon: Users, title: 'Student Analytics', description: 'Track student progress and engagement with detailed analytics and insights.' },
-{ icon: BarChart, title: 'Performance Tracking', description: 'Monitor learning outcomes and identify areas for improvement.' },
-{ icon: Zap, title: 'AI Tutoring', description: 'Personalized AI tutoring and adaptive learning experiences.' },
-{ icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },
-{ icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
-]
-return (
-<>
-<Helmet>
-<title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
-<meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning." />
-<meta name="keywords" content="online learning platform, e-learning, education technology, course management, student analytics, AI tutoring" />
-</Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
-<section className="py-20 px-4" loading="lazy">
-<div className="max-w-7xl mx-auto" loading="lazy">
-<div className="text-center mb-16" loading="lazy">
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6" loading="lazy">Online Learning Platform</h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" loading="lazy">Create engaging online learning experiences with AI-powered education platform.</p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{features.map((feature, index) => (
-<div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300" loading="lazy">
-<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6" loading="lazy">
-<feature.icon className="w-8 h-8 text-white" loading="lazy" />
-</div>
-<h3 className="text-xl font-bold text-white mb-4" loading="lazy">{feature.title}</h3>
-<p className="text-gray-300" loading="lazy">{feature.description}</p>
-</div>
-))}
-</div>
-</div>
-</section>
-</div>
-</>
-)
-}
-export default OnlineLearningPlatformPage
+"use client";
+import React from "react";
+
+const Onlinelearningplatform = () => {
+  const features = [
+    {
+      icon: "🚀",
+      title: "Professional",
+      description: "Professional online learning platform solutions"
+    },
+    {
+      icon: "⚡",
+      title: "Fast & Reliable",
+      description: "Quick and efficient service delivery"
+    },
+    {
+      icon: "📊",
+      title: "Analytics",
+      description: "Comprehensive analytics and insights"
+    },
+    {
+      icon: "🔧",
+      title: "Customizable",
+      description: "Tailored solutions for your business needs"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Online Learning Platform
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional online learning platform solutions tailored to your business needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="#features"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-lg text-gray-300">
+              Everything you need for success
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Let us help you implement this solution for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Your Project
+            </a>
+            <a
+              href="/about"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Onlinelearningplatform;

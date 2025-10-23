@@ -1,114 +1,110 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
-import SEOOptimizer from '../components/SEOOptimizer'
-      icon: Heart,
-      title: 'HIPAA Compliance',
-      description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
-      benefits: ['Automated compliance', 'Audit trails', 'Risk management']
+"use client";
+import React from "react";
+
+const Healthcareit = () => {
+  const features = [
+    {
+      icon: "🚀",
+      title: "Professional",
+      description: "Professional healthcare it solutions"
     },
     {
-      icon: Zap,
-      title: 'Patient Data Security',
-      description: 'Bank-level security for patient data with encryption, access controls, and monitoring.',
-      benefits: ['Data encryption', 'Access controls', 'Security monitoring']
+      icon: "⚡",
+      title: "Fast & Reliable",
+      description: "Quick and efficient service delivery"
     },
     {
-      icon: Clock,
-      title: '24/7 System Monitoring',
-      description: 'Continuous monitoring of healthcare systems with real-time alerts and notifications.',
-      benefits: ['Always-on monitoring', 'Instant alerts', 'System health']
+      icon: "📊",
+      title: "Analytics",
+      description: "Comprehensive analytics and insights"
     },
     {
-      icon: Users,
-      title: 'Interoperability',
-      description: 'Seamless integration with EHR systems, medical devices, and healthcare applications.',
-      benefits: ['EHR integration', 'Device connectivity', 'Data exchange']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Advanced cybersecurity measures designed specifically for healthcare environments.',
-      benefits: ['Threat detection', 'Incident response', 'Security training']
-    },
-    {
-      icon: BarChart,
-      title: 'Healthcare Analytics',
-      description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
-      benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
+      icon: "🔧",
+      title: "Customizable",
+      description: "Tailored solutions for your business needs"
     }
-  ]
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900" loading="lazy">
-      <SEOOptimizer
-        title="Healthcare IT Solutions - Zion Tech Group"
-        description="Comprehensive healthcare IT solutions including HIPAA compliance, patient data security, and system integration for healthcare organizations."
-        keywords="healthcare IT, HIPAA compliance, patient data security, EHR integration, healthcare analytics, medical technology"
-      />
-      <Navigation />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden" loading="lazy">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center" loading="lazy">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" loading="lazy">Healthcare</h1>
-            <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent" loading="lazy">IT Solutions</span>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Healthcare It
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" loading="lazy">Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.</p>
-            Protect patient data while improving operational efficiency.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional healthcare it solutions tailored to your business needs
           </p>
-              <ArrowRight className="inline-block ml-2 w-5 h-5" loading="lazy" />
-            </button>
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" loading="lazy" aria-label="Action button">Learn More</button>
-</div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="#features"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
         </div>
       </section>
-{/* Features Section */}
-      <section className="py-20 px-4" loading="lazy">
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Comprehensive IT solutions for all aspects of healthcare delivery and management.</p>p>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-lg text-gray-300">
+              Everything you need for success
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{services.map((service, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300" loading="lazy">
-                <div className="text-4xl mb-4" loading="lazy">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{service.title}</h3>
-                <p className="text-gray-300" loading="lazy">{service.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4" loading="lazy">
-        <div className="max-w-7xl mx-auto" loading="lazy">
-          <div className="text-center mb-16" loading="lazy">
-            <h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Why Choose Our Healthcare IT Solutions?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Experience the benefits of modern healthcare technology with our proven solutions.</p>p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" loading="lazy">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center" loading="lazy">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center" loading="lazy">
-                  <CheckCircle className="w-8 h-8 text-white" loading="lazy" />
-                </div>
-                <h3 className="text-lg font-semibold text-white" loading="lazy">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
       {/* CTA Section */}
-<section className="py-20 px-4" loading="lazy">
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors" loading="lazy" aria-label="Action button">View Case Studies</button>
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Let us help you implement this solution for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Your Project
+            </a>
+            <a
+              href="/about"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
           </div>
         </div>
       </section>
-      <Footer />
-</div>
-  )
-}
-  </button>
-  </span>
-  </SEOOptimizer>
+    </div>
+  );
+};
+
+export default Healthcareit;

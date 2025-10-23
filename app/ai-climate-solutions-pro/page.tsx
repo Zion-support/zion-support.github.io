@@ -1,95 +1,110 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const features = [
-{
-icon: Brain,
-title: 'AI-Powered Intelligence',
-description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-{
-icon: BarChart,
-title: 'Advanced Analytics',
-description: 'Comprehensive analytics dashboard with real-time data visualization.',
-benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
-{
-icon: Target,
-title: 'Precision Targeting',
-description: 'Target specific goals and objectives with precision and accuracy.',
-benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
-{
-icon: TrendingUp,
-title: 'Growth Optimization',
-description: 'Optimize your business growth with data-driven strategies.',
-benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-}
-]
-return (
-<>
-<Helmet>
-<title>AI Climate Solutions Pro - Zion Tech Group</title>
-<meta name="description" content="Professional climate solutions powered by advanced AI technology." />
-<meta name="keywords" content="AI climate solutions, artificial intelligence, climate technology, AI solutions, environmental AI" />
-</Helmet>
-<Navigation />
-<main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50" loading="lazy">
-{/* Hero Section */}
-<section className="relative py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
-<div className="max-w-7xl mx-auto" loading="lazy">
-<div className="text-center" loading="lazy">
-<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6" loading="lazy">AI Climate Solutions Pro</h1>
-<p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto" loading="lazy">Transform your business with intelligent solutions powered by cutting-edge AI technology.</p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
-<button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors" loading="lazy" aria-label="Action button">Get Started</button>
-<button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors" loading="lazy" aria-label="Action button">Learn More</button>
-</div>
-</div>
-</div>
-</section>
-{/* Features Section */}
-<section className="py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
-<div className="max-w-7xl mx-auto" loading="lazy">
-<div className="text-center mb-16" loading="lazy">
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" loading="lazy">Powerful AI Features</h2>
-<p className="text-xl text-gray-600 max-w-3xl mx-auto" loading="lazy">Discover how our AI platform can revolutionize your business operations.</p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{features.map((feature, index) => (
-<div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow" loading="lazy">
-<div className="flex items-center mb-4" loading="lazy">
-<feature.icon className="h-8 w-8 text-blue-600 mr-3" loading="lazy" />
-<h3 className="text-xl font-semibold text-gray-900" loading="lazy">{feature.title}</h3>
-</div>
-<p className="text-gray-600 mb-4" loading="lazy">{feature.description}</p>
-<ul className="space-y-2" loading="lazy">
-{feature.benefits.map((benefit, benefitIndex) => (
-<li key={benefitIndex} className="flex items-center text-sm text-gray-600" loading="lazy">
-<CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" loading="lazy" />
-{benefit}
-</li>
-))}
-</ul>
-</div>
-))}
-</div>
-</div>
-</section>
-{/* CTA Section */}
-<section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600" loading="lazy">
-<div className="max-w-4xl mx-auto text-center" loading="lazy">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-6" loading="lazy">Ready to Transform Your Business?</h2>h2>
-<p className="text-xl text-blue-100 mb-8" loading="lazy">Join thousands of businesses already using our AI platform.</p>
-<button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" loading="lazy" aria-label="Action button">Start Your Free Trial</button>
-</div>
-</section>
-</main>
-<Footer />
-</>
-)
-}
-export default AiClimateSolutionsProPage
+"use client";
+import React from "react";
+
+const Aiclimatesolutionspro = () => {
+  const features = [
+    {
+      icon: "🚀",
+      title: "Professional",
+      description: "Professional climate solutions pro solutions"
+    },
+    {
+      icon: "⚡",
+      title: "Fast & Reliable",
+      description: "Quick and efficient service delivery"
+    },
+    {
+      icon: "📊",
+      title: "Analytics",
+      description: "Comprehensive analytics and insights"
+    },
+    {
+      icon: "🔧",
+      title: "Customizable",
+      description: "Tailored solutions for your business needs"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Climate Solutions Pro
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional climate solutions pro solutions tailored to your business needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="#features"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-lg text-gray-300">
+              Everything you need for success
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Let us help you implement this solution for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Your Project
+            </a>
+            <a
+              href="/about"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Aiclimatesolutionspro;

@@ -1,126 +1,110 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const features = [
+"use client";
+import React from "react";
+
+const Ailegalassistant = () => {
+  const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      icon: "🚀",
+      title: "Professional",
+      description: "Professional legal assistant solutions"
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      icon: "⚡",
+      title: "Fast & Reliable",
+      description: "Quick and efficient service delivery"
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      icon: "📊",
+      title: "Analytics",
+      description: "Comprehensive analytics and insights"
     },
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: "🔧",
+      title: "Customizable",
+      description: "Tailored solutions for your business needs"
     }
-  ]
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+  ];
+
   return (
-    <>
-      <Helmet>
-        <title>Ai Legal Assistant - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai legal assistant solution for modern businesses." />
-        <meta name="keywords" content="AI ai legal assistant, artificial intelligence, ai legal assistant, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900" loading="lazy">>{/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden" loading="lazy">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center" loading="lazy">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" loading="lazy">Ai Legal Assistant</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" loading="lazy">Advanced AI-powered ai legal assistant solution for modern businesses.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
-              <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" loading="lazy" aria-label="Action button">Get Started</button>
-              <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" loading="lazy" aria-label="Action button">View Demo</button>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Legal Assistant
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional legal assistant solutions tailored to your business needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="#features"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
           </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20 px-4" loading="lazy">
-          <div className="max-w-7xl mx-auto" loading="lazy">
-            <div className="text-center mb-16" loading="lazy">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" loading="lazy">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Advanced AI technology that drives results</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group" loading="lazy">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" loading="lazy">
-                    <feature.icon className="w-8 h-8 text-white" loading="lazy" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4" loading="lazy">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4" loading="lazy">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2" loading="lazy">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400" loading="lazy">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" loading="lazy" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-lg text-gray-300">
+              Everything you need for success
+            </p>
           </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="py-20 px-4" loading="lazy">
-          <div className="max-w-7xl mx-auto" loading="lazy">
-            <div className="text-center mb-16" loading="lazy">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" loading="lazy">Why Choose Our Solution?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Proven results that drive business growth and efficiency</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group" loading="lazy">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" loading="lazy">
-                    <CheckCircle className="w-8 h-8 text-white" loading="lazy" />
-                  </div>
-                  <p className="text-lg text-white font-medium" loading="lazy">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4" loading="lazy">
-          <div className="max-w-4xl mx-auto text-center" loading="lazy">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" loading="lazy">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" loading="lazy">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8" loading="lazy">Contact our experts to discuss your requirements and get started today.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
-                <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" loading="lazy" aria-label="Action button">Contact Us</button>
-                <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" loading="lazy" aria-label="Action button">Learn More</button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  )
-}
-export default AiLegalAssistantPage
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Let us help you implement this solution for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Your Project
+            </a>
+            <a
+              href="/about"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Ailegalassistant;

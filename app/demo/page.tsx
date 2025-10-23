@@ -1,85 +1,110 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Play, ArrowRight, CheckCircle } from 'lucide-react'
-const demos = [
-{
-title: 'AI Analytics Dashboard',
-description: 'See how our AI analytics can transform your business intelligence',
-duration: '5 min',
-features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
-},
-{
-title: 'AI Customer Support Bot',
-description: 'Experience our intelligent customer support automation',
-duration: '3 min',
-features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis']
-},
-{
-title: 'AI Content Generation',
-description: 'Watch our AI create high-quality content in seconds',
-duration: '4 min',
-features: ['Blog posts', 'Social media content', 'Product descriptions']
-}
-]
-return (
-<>
-<Helmet>
-<title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
-<meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-<meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
-</Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
-<section className="py-20 px-4" loading="lazy">
-<div className="max-w-7xl mx-auto text-center" loading="lazy">
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6" loading="lazy">
-See Our <span className="text-cyan-400" loading="lazy">Solutions</span> in Action
-</
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" loading="lazy">Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.</p>p>
-</div>
-</section>
-<section className="py-16 px-4" loading="lazy">
-<div className="max-w-7xl mx-auto" loading="lazy">
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{demos.map((demo, index) => (</div>
-<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300" loading="lazy">
-<div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4" loading="lazy">
-<Play className="w-8 h-8 text-cyan-400" loading="lazy" />
-</div>
-<h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{demo.title}</h3>
-<p className="text-gray-300 mb-4" loading="lazy">{demo.description}</p>
-<div className="text-sm text-cyan-400 mb-4" loading="lazy">Duration: {demo.duration}</div>
-<ul className="space-y-2 mb-6" loading="lazy">
-{demo.features.map((feature, featureIndex) => (
-<li key={featureIndex} className="flex items-center text-sm text-gray-300" loading="lazy">
-<CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" loading="lazy" />
-{feature}
-</li>
-))}
-</ul>
-<button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center" loading="lazy" aria-label="Action button">
-<Play className="w-4 h-4 mr-2" loading="lazy" />
-Watch Demo
-</
-</div>
-))}
-</div>
-</div>
-</section>
-<section className="py-16 px-4" loading="lazy">
-<div className="max-w-4xl mx-auto text-center" loading="lazy">
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20" loading="lazy">
-<h2 className="text-2xl font-semibold text-white mb-4" loading="lazy">Ready to See More?</h2>
-<p className="text-gray-300 mb-6" loading="lazy">Schedule a personalized demo with our experts to see how our solutions can address your specific business needs.</p>p>
-<a
-href="/contact"
-className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors" loading="lazy">Schedule Demo</a>
-<ArrowRight className="w-4 h-4 ml-2" loading="lazy" />
-</a>
-</div>
-</div>
-</section>
-</div>
-</>
-)
-}
-export default DemoPage
+"use client";
+import React from "react";
+
+const Demo = () => {
+  const features = [
+    {
+      icon: "🚀",
+      title: "Professional",
+      description: "Professional demo solutions"
+    },
+    {
+      icon: "⚡",
+      title: "Fast & Reliable",
+      description: "Quick and efficient service delivery"
+    },
+    {
+      icon: "📊",
+      title: "Analytics",
+      description: "Comprehensive analytics and insights"
+    },
+    {
+      icon: "🔧",
+      title: "Customizable",
+      description: "Tailored solutions for your business needs"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Demo
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional demo solutions tailored to your business needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="#features"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-lg text-gray-300">
+              Everything you need for success
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Let us help you implement this solution for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Your Project
+            </a>
+            <a
+              href="/about"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Demo;
