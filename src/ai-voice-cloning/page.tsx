@@ -1,11 +1,11 @@
-import React from 'react';
-import { Play } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import React from 'react'
+import { Play } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Zap, Music } from 'lucide-react'
 
-const AIVoiceCloningPage: React.FC = () => {
-  const features = [
+constAIVoiceCloningPage: React.FC= () =>{constfeatures= [
     'Voice Cloning',
     'Text-to-Speech',
     'Emotion Control',
@@ -16,53 +16,48 @@ const AIVoiceCloningPage: React.FC = () => {
     'High Quality Audio',
     'Custom Voice Models',
     'Batch Processing'
-  ];
+  ]
 
-  const benefits = [
+  constbenefits= [
     'Natural voice quality',
     'Cost-effective solution',
     'Scalable technology',
     'Custom voices',
     'Multi-language support',
     'Easy integration'
-  ];
+  ]
 
-  const pricingPlans = [
+  constpricingPlans= [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$19 9',
       period: '/month',
-      features: ['5 voice clones', '10 hours/month', 'Basic emotions', 'Email support'],
+      features: ['5 voice clones', '10hours/month', 'Basic emotions', 'Email support'],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$299',
+   },
+    {name: 'Professional',
+      price: '$29 9',
       period: '/month',
-      features: ['Unlimited clones', '50 hours/month', 'Full emotions', 'API access', 'Priority support'],
+      features: ['Unlimited clones', '50hours/month', 'Full emotions', 'API access', 'Priority support'],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$599',
+   },
+    {name: 'Enterprise',
+      price: '$59 9',
       period: '/month',
       features: ['Everything in Pro', 'Unlimited hours', 'Custom training', 'Dedicated support', 'White-label'],
       popular: false
     }
-  ];
+  ]
 
+const Page = () => {
   return (
-    <>
-      <SEOOptimizer
-        title="AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"
-        description="Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at $199/month."
-        keywords={['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voice automation']}
+  <><SEOOptimizertitle="AI Voice Cloning Studio - Create Realistic Voice Clones | ZionTechGroup"
+        description="Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at$199/month."
+        keywords={['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voiceautomation']}
         canonicalUrl="https://ziontechgroup.com/ai-voice-cloning"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -95,7 +90,6 @@ const AIVoiceCloningPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -112,7 +106,6 @@ const AIVoiceCloningPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,7 +122,6 @@ const AIVoiceCloningPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -174,7 +166,6 @@ const AIVoiceCloningPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -201,11 +192,10 @@ const AIVoiceCloningPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIVoiceCloningPage;
+export default Page;

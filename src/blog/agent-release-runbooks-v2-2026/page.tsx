@@ -1,4 +1,7 @@
-import { ListChecks, FileWarning, RefreshCw } from 'lucide-react';
+import { ListChecks, FileWarning, RefreshCw } from 'lucide-react'
+import { Calendar } from 'lucide-react'
+import { Clock } from 'lucide-react'
+
 export default function Page() {
   return (
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
@@ -13,35 +16,7 @@ export default function Page() {
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
             Ship autonomous agents with budgeted actions, KPI
-            canaries, approvals and one‑click rollback.
           </p>
-          <div className='flex items-center gap-6 text-white/70 mt-8'>
-            <div className='flex items-center gap-2'>
-              <Calendar />
-              <span>Jan 30, 2026</span>
-            </div>
-            <div className='flex items-center gap-2'>
-              <Clock />
-              <span>18 min read</span>
-            </div>
-          </div>
-        </div>
-      </header>
-      <section className='py-16'>
-        <div className='max-w-4xl mx-auto px-6 prose prose-lg'>
-          <h2>Release Safety Model</h2>
-          <p>
-            Operational safety hinges on three primitives: hard
-            budgets, lightweight approvals and KPI-linked canaries that trigger
-            automatic rollback when thresholds are breached.
-          </p>
-          <h3>Runbook Outline</h3>
-          <ol>
-            <li>Define budgeted actions and guardrails</li>
-            <li>Attach canaries to product KPIs</li>
-            <li>Stage rollout with blast-radius limits</li>
-            <li>Automate rollback and postmortems</li>
-          </ol>
         </div>
       </section>
       <section className='py-12 bg-white'>
@@ -72,7 +47,7 @@ export default function Page() {
         <div className='max-w-4xl mx-auto px-6'>
           <div className='bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4'>
             <div>
-              <h3 className='text-2xl font-bold flex items-center gap-2'>
+              <h3 className='text-2xl font-bold flex items-center gap-2'></h3>
                 <FileWarning /> Prevent Regressions
               </h3>
               <p className='text-white/90'>
@@ -88,5 +63,5 @@ export default function Page() {
         </div>
       </section>
     </main>
-  );
+  )
 }

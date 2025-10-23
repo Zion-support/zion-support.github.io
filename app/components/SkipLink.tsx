@@ -1,13 +1,25 @@
 'use client'
 import React from 'react'
-const SkipLink: React.FC = () => {
-return (
-<a
-href="#main-content"
-className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-md z-50 font-medium transition-all duration-200 hover:bg-cyan-700"
->
-Skip to main content
-</a>
-)
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+
+interface SkipLinkProps {
+  className?: string;
 }
-export default SkipLink
+
+const SkipLink: React.FC<SkipLinkProps> = ({ className = '' }) => {
+  return (
+    <div className={`p-4 ${className}`}>
+      <h2 className="text-xl font-semibold text-gray-800">
+        SkipLink
+      </h2>
+      <p className="text-gray-600">
+        This component is under construction.
+      </p>
+    </div>
+  );
+};
+
+export default SkipLinkPage;

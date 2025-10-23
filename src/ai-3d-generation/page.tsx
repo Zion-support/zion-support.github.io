@@ -1,12 +1,12 @@
-import React from 'react';
-import { Play } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import React from 'react'
+import { Play } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Camera, Zap } from 'lucide-react'
 
-const AI3DGenerationPage: React.FC = () => {
-  const features = [
-    '3D Model Generation',
+constAI3 DGenerationPage: React.FC= () =>{constfeatures= [
+    '3 D Model Generation',
     'Animation Creation',
     'Texture Mapping',
     'Rendering',
@@ -16,53 +16,48 @@ const AI3DGenerationPage: React.FC = () => {
     'Lighting Setup',
     'Material Library',
     'Scene Composition'
-  ];
+  ]
 
-  const benefits = [
-    'Professional 3D content',
+  constbenefits= [
+    'Professional3D content',
     'Time savings',
-    'No 3D skills needed',
+    'No3D skills needed',
     'High quality output',
     'Cost-effective',
     'Scalable production'
-  ];
+  ]
 
-  const pricingPlans = [
+  constpricingPlans= [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$29 9',
       period: '/month',
       features: ['5 models/month', 'Basic textures', 'Standard quality', 'Email support'],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$499',
+   },
+    {name: 'Professional',
+      price: '$49 9',
       period: '/month',
-      features: ['Unlimited models', 'Premium textures', '4K rendering', 'API access', 'Priority support'],
+      features: ['Unlimited models', 'Premium textures', '4 K rendering', 'API access', 'Priority support'],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$999',
+   },
+    {name: 'Enterprise',
+      price: '$99 9',
       period: '/month',
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'],
       popular: false
     }
-  ];
+  ]
 
+const Page = () => {
   return (
-    <>
-      <SEOOptimizer
-        title="AI 3D Generation Studio - Create 3D Models & Animations with AI | Zion Tech Group"
-        description="Create professional 3D models, animations, and virtual environments with AI 3D Generation Studio. No 3D skills needed, starting at $299/month."
-        keywords={['AI 3D generation', '3D models', '3D animation', 'VR AR content', '3D automation', 'AI 3D']}
+  <><SEOOptimizertitle="AI3D Generation Studio - Create3D Models & Animations with AI | ZionTechGroup"
+        description="Create professional 3 D models, animations, and virtual environments with AI3D Generation Studio. No3D skills needed, starting at$299/month."
+        keywords={['AI3D generation', '3 D models', '3 D animation', 'VR AR content', '3 D automation', 'AI 3D']}
         canonicalUrl="https://ziontechgroup.com/ai-3d-generation"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -95,7 +90,6 @@ const AI3DGenerationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -112,7 +106,6 @@ const AI3DGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,7 +122,6 @@ const AI3DGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -174,7 +166,6 @@ const AI3DGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -201,11 +192,10 @@ const AI3DGenerationPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AI3DGenerationPage;
+export default AI3DGenerationPage

@@ -1,40 +1,25 @@
-"use client";
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-import React, { useEffect } from "react";
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  fontSize: number;
-  reducedMotion: boolean;
+interface EnhancedAccessibilityProps {
+  className?: string;
 }
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  useEffect(() => {
-    // Enhanced accessibility features
-    const settings: AccessibilitySettings = {
-      highContrast: false,
-      fontSize: 16,
-      reducedMotion: false,
-    };
-
-    // Apply accessibility settings only in browser
-    if (typeof window !== 'undefined' && document) {
-      if (settings.highContrast) {
-        document.body.classList.add("high-contrast");
-      }
-
-      if (settings.reducedMotion) {
-        document.body.classList.add("reduced-motion");
-      }
-
-      // Set font size
-      document.documentElement.style.fontSize = `${settings.fontSize}px`;
-    }
-  }, []);
-
-  return <>{children}</>;
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '' }) => {
+  return (
+    <div className={`p-4 ${className}`}>
+      <h2 className="text-xl font-semibold text-gray-800">
+        EnhancedAccessibility
+      </h2>
+      <p className="text-gray-600">
+        This component is under construction.
+      </p>
+    </div>
+  );
 };
 
-export default EnhancedAccessibility;
+export default EnhancedAccessibilityPage;

@@ -1,11 +1,11 @@
-import React from 'react';
-import { Play } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import React from 'react'
+import { Play } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Zap, Video } from 'lucide-react'
 
-const AIVideoGenerationPage: React.FC = () => {
-  const features = [
+constAIVideoGenerationPage: React.FC= () =>{constfeatures= [
     'AI Video Creation',
     'Auto-editing',
     'Voice Synthesis',
@@ -13,56 +13,51 @@ const AIVideoGenerationPage: React.FC = () => {
     'Template Library',
     'Brand Customization',
     'Multi-language Support',
-    'HD/4K Export',
+    'HD/4 K Export',
     'Real-time Preview',
     'Collaboration Tools'
-  ];
+  ]
 
-  const benefits = [
-    '90% time savings',
+  constbenefits= [
+    '9 0% time savings',
     'Professional quality',
     'Unlimited videos',
     'Multi-language support',
     'No technical skills needed',
     'Cost-effective solution'
-  ];
+  ]
 
-  const pricingPlans = [
+  constpricingPlans= [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$19 9',
       period: '/month',
-      features: ['10 videos/month', 'HD quality', 'Basic templates', 'Email support'],
+      features: ['10videos/month', 'HD quality', 'Basic templates', 'Email support'],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399',
+   },
+    {name: 'Professional',
+      price: '$39 9',
       period: '/month',
-      features: ['Unlimited videos', '4K quality', 'Premium templates', 'Voice cloning', 'Priority support'],
+      features: ['Unlimited videos', '4 K quality', 'Premium templates', 'Voice cloning', 'Priority support'],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$799',
+   },
+    {name: 'Enterprise',
+      price: '$79 9',
       period: '/month',
       features: ['Everything in Pro', 'Custom templates', 'API access', 'Dedicated support', 'White-label'],
       popular: false
     }
-  ];
+  ]
 
+const Page = () => {
   return (
-    <>
-      <SEOOptimizer
-        title="AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group"
-        description="Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at $199/month."
-        keywords={['AI video generation', 'video creation', 'AI editing', 'voice synthesis', 'text to video', 'video automation']}
+  <><SEOOptimizertitle="AI Video Generator Pro - Create Professional Videos with AI | ZionTechGroup"
+        description="Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at$199/month."
+        keywords={['AI video generation', 'video creation', 'AI editing', 'voice synthesis', 'text to video', 'videoautomation']}
         canonicalUrl="https://ziontechgroup.com/ai-video-generation"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -95,7 +90,6 @@ const AIVideoGenerationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -112,7 +106,6 @@ const AIVideoGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,7 +122,6 @@ const AIVideoGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -174,7 +166,6 @@ const AIVideoGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -201,11 +192,10 @@ const AIVideoGenerationPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIVideoGenerationPage;
+export default Page;
