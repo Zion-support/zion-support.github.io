@@ -265,7 +265,7 @@ const SupportPage: React.FC = () => {
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Can't find what you're looking for? Our support team is here to
+              Can&apos;t find what you&apos;re looking for? Our support team is here to
               help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

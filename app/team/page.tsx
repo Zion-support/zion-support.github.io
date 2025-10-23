@@ -218,7 +218,7 @@ const TeamPage: React.FC = () => {
               Join Our Team
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who share our
+              We&apos;re always looking for talented individuals who share our
               passion for innovation and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

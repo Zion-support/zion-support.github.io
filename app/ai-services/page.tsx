@@ -227,7 +227,7 @@ const AiServicesPage: React.FC = () => {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our AI services can help you achieve your
+              Let&apos;s discuss how our AI services can help you achieve your
               business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

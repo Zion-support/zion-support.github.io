@@ -38,7 +38,7 @@ const CareersPage: React.FC = () => {
       description:
         "Lead the development of cutting-edge AI solutions and machine learning models.",
       requirements: [
-        "Master's degree in Computer Science or related field",
+        "Master&apos;s degree in Computer Science or related field",
         "5+ years of experience in AI/ML",
         "Proficiency in Python, TensorFlow, PyTorch",
         "Experience with cloud platforms (AWS, GCP, Azure)",
@@ -63,7 +63,7 @@ const CareersPage: React.FC = () => {
       description:
         "Design and implement scalable cloud infrastructure solutions for enterprise clients.",
       requirements: [
-        "Bachelor's degree in Computer Science or related field",
+        "Bachelor&apos;s degree in Computer Science or related field",
         "7+ years of cloud architecture experience",
         "Certifications in AWS, Azure, or GCP",
         "Experience with containerization and orchestration",
@@ -103,7 +103,7 @@ const CareersPage: React.FC = () => {
       icon: Award,
       title: "Growth",
       description:
-        "We invest in our team's growth and development, providing opportunities to learn and advance.",
+        "We invest in our team&apos;s growth and development, providing opportunities to learn and advance.",
     },
   ];
 
@@ -148,7 +148,7 @@ const CareersPage: React.FC = () => {
                 Our Values
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're committed to creating an environment where our team can
+                We&apos;re committed to creating an environment where our team can
                 thrive and make a meaningful impact.
               </p>
             </div>
@@ -265,11 +265,11 @@ const CareersPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Don't See the Right Role?
+              Don&apos;t See the Right Role?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              We're always looking for talented individuals. Send us your resume
-              and let's start a conversation.
+              We&apos;re always looking for talented individuals. Send us your resume
+              and let&apos;s start a conversation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">

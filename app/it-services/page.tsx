@@ -227,7 +227,7 @@ const ItServicesPage: React.FC = () => {
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our IT services can help you build a robust and
+              Let&apos;s discuss how our IT services can help you build a robust and
               scalable technology foundation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -8,7 +8,7 @@ const AboutPage: React.FC = () => {
       icon: Target,
       title: "Innovation",
       description:
-        "We constantly push the boundaries of what's possible with AI and technology.",
+        "We constantly push the boundaries of what&apos;s possible with AI and technology.",
     },
     {
       icon: Users,
@@ -110,7 +110,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Client-Centric</h3>
                 <p className="text-gray-300">
-                  Our clients' success is our success. We build lasting relationships 
+                  Our clients&apos; success is our success. We build lasting relationships 
                   and provide ongoing support for all our solutions.
                 </p>
               </div>
@@ -182,7 +182,7 @@ const AboutPage: React.FC = () => {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can help transform your business with our AI and IT solutions.
+              Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">

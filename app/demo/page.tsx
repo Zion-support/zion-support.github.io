@@ -245,7 +245,7 @@ const DemoPage: React.FC = () => {
                       />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4">&ldquo;{testimonial.content}&rdquo;</p>
                   <div>
                     <div className="font-semibold text-white">
                       {testimonial.name}

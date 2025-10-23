@@ -90,7 +90,7 @@ const ContactPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Ready to transform your business with cutting-edge AI and IT solutions? 
-              Let's discuss how we can help you achieve your goals.
+              Let&apos;s discuss how we can help you achieve your goals.
             </p>
           </div>
         </section>
@@ -258,7 +258,7 @@ const ContactPage: React.FC = () => {
                     Get in touch
                   </h3>
                   <p className="text-gray-300 mb-8">
-                    We're here to help you succeed. Reach out to us through any
+                    We&apos;re here to help you succeed. Reach out to us through any
                     of these channels.
                   </p>
                 </div>
@@ -273,7 +273,7 @@ const ContactPage: React.FC = () => {
                         Email Us
                       </h3>
                       <p className="text-gray-300 mb-2">
-                        Send us an email and we'll respond within 24 hours
+                        Send us an email and we&apos;ll respond within 24 hours
                       </p>
                       <a
                         href="mailto:contact@ziontechgroup.com"
@@ -331,7 +331,7 @@ const ContactPage: React.FC = () => {
                         Business Hours
                       </h3>
                       <p className="text-gray-300 mb-2">
-                        We're available Monday through Friday
+                        We&apos;re available Monday through Friday
                       </p>
                       <p className="text-gray-300">
                         9:00 AM - 6:00 PM PST
