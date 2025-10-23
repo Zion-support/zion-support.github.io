@@ -10,6 +10,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  experimental: {
+    optimizeCss: false,
+    optimizePackageImports: ["lucide-react", "@heroicons/react"],
+  },
   images: {
     domains: [
       "images.unsplash.com",
@@ -23,6 +27,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  generateStaticParams: false,
   async headers() {
     return [
       {
