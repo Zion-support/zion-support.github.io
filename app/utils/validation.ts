@@ -273,10 +273,10 @@ export function sanitizeHTML(html: string): string {
 if (!html) return ''
 ,
 return html
-.replace(/&/g, '&amp;')
-.replace(/</g, '&lt;')
-.replace(/>/g, '&gt;')
-.replace(/"/g, '&quot;')
+.replace(/&/g, '&')
+.replace(/</g, '<')
+.replace(/>/g, '>')
+.replace(/"/g, '"')
 .replace(/'/g, '&#x27;')
 .replace(/\//g, '&#x2F;')
 export function sanitizeHTML(htm);}

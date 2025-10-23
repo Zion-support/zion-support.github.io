@@ -7,7 +7,7 @@ export const measurePerformance = (name: string, fn: () => void): number => {
 };
 
 export const logPerformance = (name: string, duration: number): void => {
-  console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+  // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
 };
 
 export const createPerformanceObserver = (callback: (entry: PerformanceEntry) => void) => {

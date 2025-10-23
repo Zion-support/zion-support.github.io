@@ -60,7 +60,7 @@ class ErrorHandler extends Component<Props, State> {
         timestamp: new Date().toISOString()
       };
       // Send to your error reporting service here
-      console.log('Error data prepared for reporting:', errorData);
+      // console.log('Error data prepared for reporting:', errorData);
     } catch {
       // Error reporting failed
 
@@ -92,7 +92,6 @@ class ErrorHandler extends Component<Props, State> {
             <div className="flex justify-center mb-4">
               <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
-            
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Oops! Something went wrong</h1>h1>
             
             <p className="text-gray-600 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>p>

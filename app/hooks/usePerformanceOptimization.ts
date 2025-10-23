@@ -54,7 +54,7 @@ export function usePerformanceOptimization(
       try {
         observer.observe({ entryTypes: ["measure", "navigation", "resource"] });
       } catch (error) {
-        console.warn('PerformanceObserver not supported:', error);
+        // console.warn('PerformanceObserver not supported:', error);
       }
 
       return () => observer.disconnect();
@@ -99,10 +99,10 @@ export function usePerformanceOptimization(
       navigator.serviceWorker
         .register("/sw.js")
         .then((registration) => {
-          console.log("Service Worker registered:", registration);
+          // console.log("Service Worker registered:", registration);
         })
         .catch((error) => {
-          console.error("Service Worker registration failed:", error);
+          // console.error("Service Worker registration failed:", error);
         });
     }
   }, [enableCaching]);
@@ -129,7 +129,7 @@ export function usePerformanceOptimization(
     prefetchResources();
 
     setIsOptimized(true);
-    console.log("Performance optimizations applied");
+    // console.log("Performance optimizations applied");
   }, [
     optimizeImages,
     optimizeLazyLoading,

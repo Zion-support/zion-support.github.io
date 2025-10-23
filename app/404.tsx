@@ -98,7 +98,7 @@ const NotFoundPage: React.FC = () => {
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">
               <span className="text-cyan-400">Fun Fact:</span> Even our AI gets
-              confused sometimes. That&apos;s why we have humans to help when things
+              confused sometimes. That's why we have humans to help when things
               go wrong! 🤖
             </p>
           </div>

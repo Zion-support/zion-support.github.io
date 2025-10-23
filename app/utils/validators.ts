@@ -541,9 +541,9 @@ return input.trim().replace(/[<>{]/g, '');}
 export function sanitizeHtml(input: string): string {
 if (!input || typeof input !== 'string') return '';}
 return input}</>
-.replace(/</g, '&lt;')
-.replace(/>/g, '&gt;')
-.replace(/"/g, '&quot;')
+.replace(/</g, '<')
+.replace(/>/g, '>')
+.replace(/"/g, '"')
 .replace(/'/g, '&#x27;')
 .replace(/\//g, '&#x2F;')
 }

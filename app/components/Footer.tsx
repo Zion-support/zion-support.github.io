@@ -96,7 +96,6 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
@@ -114,7 +113,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
@@ -132,7 +130,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Micro SaaS */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
@@ -150,7 +147,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Company & Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -182,7 +178,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -200,7 +195,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm">© 2024 Zion Tech Group. All rights reserved.</div>div>

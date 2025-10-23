@@ -195,7 +195,7 @@ class AdvancedErrorBoundary extends Component<
                   </svg>
                 </div>
                 <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>h2>
-                <p className='mt-2 text-sm text-gray-600'>We&apos;re sorry, but something unexpected happened. Our team</p>
+                <p className='mt-2 text-sm text-gray-600'>We're sorry, but something unexpected happened. Our team</p>
                   has been notified.
                 </p>
               </div>

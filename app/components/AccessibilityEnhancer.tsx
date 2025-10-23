@@ -84,7 +84,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         highContrastQuery.removeEventListener('change', handleContrastChange);
       };
     } catch (error) {
-      console.warn('AccessibilityEnhancer error:', error);
+      // console.warn('AccessibilityEnhancer error:', error);
     }
   }, []);
 
@@ -176,7 +176,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         // Cleanup function
       };
     } catch (error) {
-      console.warn('AccessibilityEnhancer second useEffect error:', error);
+      // console.warn('AccessibilityEnhancer second useEffect error:', error);
     }
   }, [
     enableKeyboardNavigation,
@@ -208,7 +208,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       }, 1000);
     } catch (error) {
-      console.warn('Screen reader announcement error:', error);
+      // console.warn('Screen reader announcement error:', error);
     }
   }, []);
 

@@ -451,10 +451,10 @@ export function sanitizeHTML(html: string): string {
 if (!html || typeof html !== 'string') return ''
 ,
 // First escape HTML entities;}
-let clean = html.replace(/&/g, '&amp;');}</>
-clean = clean.replace(/</g, '&lt;')
-clean = clean.replace(/>/g, '&gt;')
-clean = clean.replace(/"/g, '&quot;')
+let clean = html.replace(/&/g, '&');}</>
+clean = clean.replace(/</g, '<')
+clean = clean.replace(/>/g, '>')
+clean = clean.replace(/"/g, '"')
 clean = clean.replace(/'/g, '&#x27;')
 clean = clean.replace(/\//g, '&#x2 F;')
 return clean

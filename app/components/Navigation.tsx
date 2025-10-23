@@ -27,7 +27,6 @@ const Navigation: React.FC = () => {
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">{navigationItems.map((item, index) => (</div>
               <Link
@@ -39,7 +38,6 @@ const Navigation: React.FC = () => {
               </Link>
             ))}
           </div>
-
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
@@ -50,7 +48,6 @@ const Navigation: React.FC = () => {
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -65,7 +62,6 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">

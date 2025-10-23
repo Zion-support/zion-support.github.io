@@ -107,7 +107,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     })
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo)
+    // console.error('Error caught by boundary:', error, errorInfo)
   }
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined })

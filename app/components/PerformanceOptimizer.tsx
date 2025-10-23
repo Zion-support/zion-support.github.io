@@ -111,7 +111,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const module = await import(`../components/${componentName}.tsx`);
         return module.default;
       } catch (error) {
-        console.warn(`Failed to load component: ${componentName}`, error);
+        // console.warn(`Failed to load component: ${componentName}`, error);
         return null;
       }
     };
@@ -133,7 +133,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         enableCodeSplittingOptimization(),
       ]);
     } catch (error) {
-      console.error('Optimization failed:', error);
+      // console.error('Optimization failed:', error);
     } finally {
       setIsOptimizing(false);
     }

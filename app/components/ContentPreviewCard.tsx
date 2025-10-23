@@ -87,7 +87,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         <div className="mb-3">
           <span className="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{category}</span>span>
         </div>
-
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{title}</h3>h3>
 
         <p className="text-gray-600 mb-4 line-clamp-3">{excerpt || description}</p>p>

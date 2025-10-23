@@ -27,7 +27,7 @@ export function useEnhancedPerformance(
 
     // Track component mount
     if (trackAnalytics) {
-      console.log(`Component ${component} mounted`);
+      // console.log(`Component ${component} mounted`);
     }
 
     return () => {
@@ -37,7 +37,7 @@ export function useEnhancedPerformance(
 
         if (duration > 5000) {
           // Long-lived component
-          console.log(
+          // console.log(
             `Long component lifetime: ${component} - ${Math.round(duration)}ms`,
           );
         }
@@ -45,7 +45,7 @@ export function useEnhancedPerformance(
 
       // Track component unmount
       if (trackAnalytics) {
-        console.log(`Component ${component} unmounted`);
+        // console.log(`Component ${component} unmounted`);
       }
     };
   }, [component, trackAnalytics, trackPerformance]);
@@ -56,7 +56,7 @@ export function useEnhancedPerformance(
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-      console.log(
+      // console.log(
         `High render count in ${component}: ${renderCountRef.current}`,
       );
     }
@@ -83,7 +83,7 @@ export function useEnhancedPerformance(
   const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
-        console.error(`Error in ${component}:`, error, context);
+        // console.error(`Error in ${component}:`, error, context);
         // Here you would typically send to an error tracking service
       }
     },
@@ -93,7 +93,7 @@ export function useEnhancedPerformance(
   const trackAnalyticsEvent = useCallback(
     (event: string, data?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        console.log(`Analytics event in ${component}:`, event, data);
+        // console.log(`Analytics event in ${component}:`, event, data);
         // Here you would typically send to an analytics service
       }
     },
