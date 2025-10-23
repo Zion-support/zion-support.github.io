@@ -23,6 +23,10 @@ export default function PartnersPage() {
             >
               View All Services
             </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>

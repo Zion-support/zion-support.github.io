@@ -23,6 +23,10 @@ export default function AiIotAnalyticsPage() {
             >
               View All Services
             </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>

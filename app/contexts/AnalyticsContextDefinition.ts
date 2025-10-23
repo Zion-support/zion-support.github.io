@@ -1,3 +1,4 @@
+"use client";
 // Analytics Context Type Definitions
 export interface AnalyticsEvent {
   name: string;
