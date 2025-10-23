@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Brain, BarChart, TrendingUp, Zap, Shield } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import Navigation from "../components/Navigation";
 
 const AiAnalyticsPage: React.FC = () => {
@@ -81,11 +80,6 @@ const AiAnalyticsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
-      </Helmet>
-
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
