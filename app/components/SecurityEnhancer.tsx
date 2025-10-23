@@ -37,4 +37,3 @@ enhanceSecurity()
 return <>{children}</>
 }
 export default SecurityEnhancer
-</SecurityEnhancerProps>

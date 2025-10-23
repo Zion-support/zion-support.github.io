@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
       icon: Target,
       title: "Innovation",
       description:
-        "We constantly push the boundaries of what's possible with AI and technology.",
+        "We constantly push the boundaries of what&apos;s possible with AI and technology.",
     },
     {
       icon: Users,
@@ -49,7 +49,7 @@ const AboutPage: React.FC = () => {
     <>
       <Head>
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about AI and IT solutions that transform businesses." />
+        <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and team. We&apos;re passionate about AI and IT solutions that transform businesses." />
         <meta property="og:type" content="website" />
       </Head>
 

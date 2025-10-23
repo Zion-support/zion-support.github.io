@@ -270,9 +270,3 @@ const ContactPage: React.FC = () => {
   )
 }
 export default ContactPage
-  </textarea>
-  </label>
-  </label>
-  </label>
-  </span>
-  </HTMLInputElement>

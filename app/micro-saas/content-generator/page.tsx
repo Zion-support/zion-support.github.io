@@ -45,4 +45,3 @@ const MicroSaaSPage: React.FC = () => {
   )
 }
 export default MicroSaaSPage
-  </button>

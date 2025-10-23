@@ -125,11 +125,3 @@ const AiAnalyticsDashboardPage: React.FC = () => {
   )
 }
 export default AiAnalyticsDashboardPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -125,11 +125,3 @@ const AiFintechPage: React.FC = () => {
   )
 }
 export default AiFintechPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

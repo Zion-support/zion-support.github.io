@@ -125,11 +125,3 @@ const AiCybersecurityPage: React.FC = () => {
   )
 }
 export default AiCybersecurityPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

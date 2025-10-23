@@ -125,11 +125,3 @@ const AiQuantumOptimizationPage: React.FC = () => {
   )
 }
 export default AiQuantumOptimizationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

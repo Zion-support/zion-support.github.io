@@ -380,19 +380,3 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
 </>)
 }
 export default WebDevelopmentPage
-</h2>
-</span>
-</h2>
-</h3>
-</h2>
-</li>
-</h4>
-</li>
-</h4>
-</h3>
-</h2>
-</div>
-</>
-)
-}
-export default WebDevelopmentPage

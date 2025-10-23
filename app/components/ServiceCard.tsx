@@ -56,4 +56,3 @@ className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 r
 )
 }
 export default ServiceCard
-</ServiceCardProps>

@@ -99,10 +99,3 @@ const PageFixedPage: React.FC = () => {
   )
 }
 export default PageFixedPage
-  </button>
-  </button>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

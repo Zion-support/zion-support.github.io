@@ -125,11 +125,3 @@ const AiMobileAppBuilderPage: React.FC = () => {
   )
 }
 export default AiMobileAppBuilderPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

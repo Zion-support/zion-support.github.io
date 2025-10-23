@@ -125,11 +125,3 @@ const AiInsurancePage: React.FC = () => {
   )
 }
 export default AiInsurancePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

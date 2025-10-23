@@ -125,11 +125,3 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
   )
 }
 export default AiSocialMediaSchedulerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

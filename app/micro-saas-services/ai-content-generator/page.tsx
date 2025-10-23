@@ -125,11 +125,3 @@ const AiContentGeneratorPage: React.FC = () => {
   )
 }
 export default AiContentGeneratorPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

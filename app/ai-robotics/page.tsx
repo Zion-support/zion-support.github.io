@@ -125,11 +125,3 @@ const AiRoboticsPage: React.FC = () => {
   )
 }
 export default AiRoboticsPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -120,8 +120,3 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
   )
 }
 export default ServiceWorkerRegistrationPage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>

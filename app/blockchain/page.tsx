@@ -229,14 +229,3 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold h
 )
 }
 export default BlockchainPage
-</a>
-</a>
-</p>
-</p>
-</h2>
-</button>
-</p>
-</h2>
-</p>
-</h1>
-</div>

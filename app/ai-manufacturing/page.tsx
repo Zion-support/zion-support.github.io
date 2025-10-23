@@ -125,11 +125,3 @@ const AiManufacturingPage: React.FC = () => {
   )
 }
 export default AiManufacturingPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

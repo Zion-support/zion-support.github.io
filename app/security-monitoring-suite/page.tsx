@@ -144,9 +144,3 @@ Email Us
 )
 }
 export default SecurityMonitoringSuitePage
-</button>
-</button>
-</h2>
-</button>
-</button>
-</h1>

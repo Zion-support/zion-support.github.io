@@ -125,11 +125,3 @@ const AiDocumentScannerPage: React.FC = () => {
   )
 }
 export default AiDocumentScannerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -104,10 +104,3 @@ Email Us
 )
 }
 export default BlockchainIntegrationServicesPage
-</button>
-</button>
-</h2>
-</section>
-</h1>
-</div>
-</div>

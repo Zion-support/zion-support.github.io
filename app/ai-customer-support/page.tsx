@@ -125,11 +125,3 @@ const AiCustomerSupportPage: React.FC = () => {
   )
 }
 export default AiCustomerSupportPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

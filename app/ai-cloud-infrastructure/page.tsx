@@ -94,8 +94,3 @@ return (
 )
 }
 export default AiCloudInfrastructurePage
-</button>
-</h2>
-</button>
-</button>
-</h1>

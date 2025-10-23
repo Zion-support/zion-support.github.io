@@ -99,10 +99,3 @@ const PagePage: React.FC = () => {
   )
 }
 export default PagePage
-  </button>
-  </button>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

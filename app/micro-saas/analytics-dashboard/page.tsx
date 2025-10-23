@@ -181,8 +181,3 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   )
 }
 export default AIAnalyticsDashboardPage
-  </button>
-  </p>
-  </p>
-  </p>
-  </button>

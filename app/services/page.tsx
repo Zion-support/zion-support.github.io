@@ -766,12 +766,3 @@ const ServicesPage: React.FC = () => {
   )
 }
 export default ServicesPage
-  </button>
-  </button>
-  </button>
-  </button>
-  </button>
-  </li>
-  </span>
-  </h1>
-  </div>

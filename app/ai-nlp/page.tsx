@@ -125,11 +125,3 @@ const AiNlpPage: React.FC = () => {
   )
 }
 export default AiNlpPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

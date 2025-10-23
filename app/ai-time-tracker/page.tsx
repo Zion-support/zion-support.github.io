@@ -125,11 +125,3 @@ const AiTimeTrackerPage: React.FC = () => {
   )
 }
 export default AiTimeTrackerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

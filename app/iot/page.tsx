@@ -326,15 +326,3 @@ const IoTPage: React.FC = () => {
   )
 }
 export default IoTPage
-  </a>
-  </a>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </p>
-  </h2>
-  </p>
-  </button>
-  </button>
-  </p>

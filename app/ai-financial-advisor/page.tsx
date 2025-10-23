@@ -125,11 +125,3 @@ const AiFinancialAdvisorPage: React.FC = () => {
   )
 }
 export default AiFinancialAdvisorPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

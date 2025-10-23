@@ -125,11 +125,3 @@ const AIServicesPagePage: React.FC = () => {
   )
 }
 export default AIServicesPagePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

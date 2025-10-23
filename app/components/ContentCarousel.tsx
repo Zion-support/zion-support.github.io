@@ -252,13 +252,3 @@ const ContentCarousel: React.FC = () => {
   )
 }
 export default ContentCarousel
-  </button>
-  </button>
-  </button>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </div>
-  </div>
-  </any>

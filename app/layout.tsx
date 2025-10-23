@@ -121,8 +121,3 @@ const LayoutPage: React.FC = () => {
   )
 }
 export default LayoutPage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>

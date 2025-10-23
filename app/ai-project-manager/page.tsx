@@ -125,11 +125,3 @@ const AiProjectManagerPage: React.FC = () => {
   )
 }
 export default AiProjectManagerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

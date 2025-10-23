@@ -311,9 +311,3 @@ and we'll get back to you as soon as possible.
 )
 }
 export default ContactPage
-</textarea>
-</label>
-</label>
-</label>
-</span>
-</HTMLInputElement>

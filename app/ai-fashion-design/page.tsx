@@ -125,11 +125,3 @@ const AiFashionDesignPage: React.FC = () => {
   )
 }
 export default AiFashionDesignPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

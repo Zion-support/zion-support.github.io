@@ -125,11 +125,3 @@ const AiEcommerceOptimizerPage: React.FC = () => {
   )
 }
 export default AiEcommerceOptimizerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

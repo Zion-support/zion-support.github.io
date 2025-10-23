@@ -125,11 +125,3 @@ const AiQuantumTaskOptimizerPage: React.FC = () => {
   )
 }
 export default AiQuantumTaskOptimizerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -99,10 +99,3 @@ const FuturisticBackgroundPage: React.FC = () => {
   )
 }
 export default FuturisticBackgroundPage
-  </button>
-  </button>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

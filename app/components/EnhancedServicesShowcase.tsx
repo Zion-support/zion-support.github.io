@@ -79,5 +79,3 @@ const EnhancedServicesShowcase: React.FC = () => {
   )
 }
 export default EnhancedServicesShowcase
-  </p>
-  </h2>

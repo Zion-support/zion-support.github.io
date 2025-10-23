@@ -125,11 +125,3 @@ const AiMlPlatformPage: React.FC = () => {
   )
 }
 export default AiMlPlatformPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

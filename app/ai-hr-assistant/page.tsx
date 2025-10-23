@@ -125,11 +125,3 @@ const AiHrAssistantPage: React.FC = () => {
   )
 }
 export default AiHrAssistantPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

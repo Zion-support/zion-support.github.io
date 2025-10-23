@@ -125,11 +125,3 @@ const AiFinancialCrimeDetectionProPage: React.FC = () => {
   )
 }
 export default AiFinancialCrimeDetectionProPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

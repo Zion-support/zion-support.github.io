@@ -125,11 +125,3 @@ const AiContentWriterPage: React.FC = () => {
   )
 }
 export default AiContentWriterPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

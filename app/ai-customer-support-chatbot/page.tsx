@@ -125,11 +125,3 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
   )
 }
 export default AiCustomerSupportChatbotPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

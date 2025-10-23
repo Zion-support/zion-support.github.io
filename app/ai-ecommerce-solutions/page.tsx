@@ -125,11 +125,3 @@ const AiEcommerceSolutionsPage: React.FC = () => {
   )
 }
 export default AiEcommerceSolutionsPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

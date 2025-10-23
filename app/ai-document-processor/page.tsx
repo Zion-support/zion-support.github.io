@@ -125,11 +125,3 @@ const AiDocumentProcessorPage: React.FC = () => {
   )
 }
 export default AiDocumentProcessorPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -125,11 +125,3 @@ const AiQualityAssurancePage: React.FC = () => {
   )
 }
 export default AiQualityAssurancePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

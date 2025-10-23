@@ -118,10 +118,3 @@ Email Us
 )
 }
 export default BackupRecoveryPage
-</button>
-</button>
-</button>
-</button>
-</section>
-</h2>
-</h1>

@@ -125,11 +125,3 @@ const AiEnergyGridManagementProPage: React.FC = () => {
   )
 }
 export default AiEnergyGridManagementProPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

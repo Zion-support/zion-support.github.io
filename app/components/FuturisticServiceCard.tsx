@@ -42,7 +42,3 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   )
 }
 export default FuturisticServiceCardPage
-  </button>
-  </span>
-  </section>
-  </div>

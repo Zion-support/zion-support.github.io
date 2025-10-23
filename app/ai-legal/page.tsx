@@ -125,11 +125,3 @@ const AiLegalPage: React.FC = () => {
   )
 }
 export default AiLegalPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

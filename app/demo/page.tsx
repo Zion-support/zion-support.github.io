@@ -84,5 +84,3 @@ className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text
 )
 }
 export default DemoPage
-</button>
-</h1>

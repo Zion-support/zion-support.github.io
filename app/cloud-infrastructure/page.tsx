@@ -107,12 +107,3 @@ Email Us
 )
 }
 export default CloudInfrastructurePage
-</button>
-</button>
-</section>
-</h2>
-</section>
-</div>
-</h1>
-</div>
-</div>

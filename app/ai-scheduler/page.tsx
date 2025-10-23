@@ -125,11 +125,3 @@ const AiSchedulerPage: React.FC = () => {
   )
 }
 export default AiSchedulerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

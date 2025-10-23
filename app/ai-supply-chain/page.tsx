@@ -125,11 +125,3 @@ const AiSupplyChainPage: React.FC = () => {
   )
 }
 export default AiSupplyChainPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

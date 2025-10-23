@@ -125,11 +125,3 @@ const AiCrmPage: React.FC = () => {
   )
 }
 export default AiCrmPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

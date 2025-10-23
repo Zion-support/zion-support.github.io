@@ -45,4 +45,3 @@ const EmailMarketingSuitePage: React.FC = () => {
   )
 }
 export default EmailMarketingSuitePage
-  </button>

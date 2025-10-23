@@ -167,8 +167,3 @@ isMonitoring
 )
 }
 export default PerformanceDashboard
-</div>
-</h3>
-</div>
-</PerformanceMetrics>
-</PerformanceProps>

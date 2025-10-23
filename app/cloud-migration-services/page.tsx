@@ -120,10 +120,3 @@ Email Us
 )
 }
 export default CloudMigrationServicesPage
-</button>
-</button>
-</h2>
-</button>
-</button>
-</h1>
-</div>

@@ -122,11 +122,3 @@ const AiQuantumComputingPage: React.FC = () => {
   )
 }
 export default AiQuantumComputingPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

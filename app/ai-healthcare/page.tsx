@@ -125,11 +125,3 @@ const AiHealthcarePage: React.FC = () => {
   )
 }
 export default AiHealthcarePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -125,11 +125,3 @@ const AiSmartCalendarPage: React.FC = () => {
   )
 }
 export default AiSmartCalendarPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -94,8 +94,3 @@ return (
 )
 }
 export default AiCodeAssistantPage
-</button>
-</h2>
-</button>
-</button>
-</h1>

@@ -145,8 +145,3 @@ return (
 )
 }
 export default AiAnalyticsPage
-</button>
-</h2>
-</button>
-</button>
-</h1>

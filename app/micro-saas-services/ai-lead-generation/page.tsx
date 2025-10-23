@@ -125,11 +125,3 @@ const AiLeadGenerationPage: React.FC = () => {
   )
 }
 export default AiLeadGenerationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

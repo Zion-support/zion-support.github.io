@@ -125,11 +125,3 @@ const AiAutomationPage: React.FC = () => {
   )
 }
 export default AiAutomationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

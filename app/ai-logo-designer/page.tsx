@@ -125,11 +125,3 @@ const AiLogoDesignerPage: React.FC = () => {
   )
 }
 export default AiLogoDesignerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

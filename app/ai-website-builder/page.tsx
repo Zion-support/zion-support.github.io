@@ -125,11 +125,3 @@ const AiWebsiteBuilderPage: React.FC = () => {
   )
 }
 export default AiWebsiteBuilderPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -144,10 +144,3 @@ Email Us
 )
 }
 export default CloudInfrastructureManagerPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

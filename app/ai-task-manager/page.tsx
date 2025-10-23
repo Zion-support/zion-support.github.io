@@ -125,11 +125,3 @@ const AiTaskManagerPage: React.FC = () => {
   )
 }
 export default AiTaskManagerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

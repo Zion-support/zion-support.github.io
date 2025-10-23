@@ -125,11 +125,3 @@ const AiBusinessIntelligencePage: React.FC = () => {
   )
 }
 export default AiBusinessIntelligencePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

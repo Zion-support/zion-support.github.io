@@ -105,8 +105,3 @@ Email Us
 )
 }
 export default BusinessIntelligencePage
-</button>
-</button>
-</h2>
-</h1>
-</div>

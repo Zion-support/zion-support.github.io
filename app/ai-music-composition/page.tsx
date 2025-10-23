@@ -125,11 +125,3 @@ const AiMusicCompositionPage: React.FC = () => {
   )
 }
 export default AiMusicCompositionPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

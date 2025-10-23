@@ -125,11 +125,3 @@ const AiTransportationPage: React.FC = () => {
   )
 }
 export default AiTransportationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

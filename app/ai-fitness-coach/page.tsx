@@ -125,11 +125,3 @@ const AiFitnessCoachPage: React.FC = () => {
   )
 }
 export default AiFitnessCoachPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

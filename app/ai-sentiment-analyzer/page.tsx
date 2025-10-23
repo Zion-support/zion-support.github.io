@@ -125,11 +125,3 @@ const AiSentimentAnalyzerPage: React.FC = () => {
   )
 }
 export default AiSentimentAnalyzerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

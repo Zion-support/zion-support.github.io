@@ -142,10 +142,3 @@ Email Us
 )
 }
 export default EmailMarketingAutomationPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

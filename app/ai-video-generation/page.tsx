@@ -125,11 +125,3 @@ const AiVideoGenerationPage: React.FC = () => {
   )
 }
 export default AiVideoGenerationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

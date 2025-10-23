@@ -125,11 +125,3 @@ const AiExpenseTrackerPage: React.FC = () => {
   )
 }
 export default AiExpenseTrackerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

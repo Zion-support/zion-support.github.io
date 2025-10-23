@@ -125,11 +125,3 @@ const AiVoiceAssistantPage: React.FC = () => {
   )
 }
 export default AiVoiceAssistantPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

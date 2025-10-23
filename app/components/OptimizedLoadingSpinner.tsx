@@ -122,4 +122,3 @@ return (</div>
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner
-</OptimizedLoadingSpinnerProps>

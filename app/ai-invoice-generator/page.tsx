@@ -125,11 +125,3 @@ const AiInvoiceGeneratorPage: React.FC = () => {
   )
 }
 export default AiInvoiceGeneratorPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

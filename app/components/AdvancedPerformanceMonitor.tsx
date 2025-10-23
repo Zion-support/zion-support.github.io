@@ -269,5 +269,3 @@ Recommendations:
 return null
 }
 export default AdvancedPerformanceMonitor
-</PerformanceMetrics>
-</PerformanceMonitorProps>

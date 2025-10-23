@@ -125,11 +125,3 @@ const AiSeoOptimizerPage: React.FC = () => {
   )
 }
 export default AiSeoOptimizerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

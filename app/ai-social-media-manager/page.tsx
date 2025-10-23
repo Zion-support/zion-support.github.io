@@ -125,11 +125,3 @@ const AiSocialMediaManagerPage: React.FC = () => {
   )
 }
 export default AiSocialMediaManagerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -125,11 +125,3 @@ const AiCodeGenerationPage: React.FC = () => {
   )
 }
 export default AiCodeGenerationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

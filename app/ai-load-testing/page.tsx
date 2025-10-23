@@ -125,11 +125,3 @@ const AiLoadTestingPage: React.FC = () => {
   )
 }
 export default AiLoadTestingPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

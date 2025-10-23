@@ -125,11 +125,3 @@ const AiStockPortfolioManagerPage: React.FC = () => {
   )
 }
 export default AiStockPortfolioManagerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

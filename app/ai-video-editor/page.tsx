@@ -125,11 +125,3 @@ const AiVideoEditorPage: React.FC = () => {
   )
 }
 export default AiVideoEditorPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

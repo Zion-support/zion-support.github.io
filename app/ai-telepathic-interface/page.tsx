@@ -125,11 +125,3 @@ const AiTelepathicInterfacePage: React.FC = () => {
   )
 }
 export default AiTelepathicInterfacePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

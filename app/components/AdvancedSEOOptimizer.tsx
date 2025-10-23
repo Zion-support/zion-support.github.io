@@ -148,4 +148,3 @@ maxWidth: '300px'
 )
 }
 export default AdvancedSEOOptimizer
-</SEOOptimizerProps>

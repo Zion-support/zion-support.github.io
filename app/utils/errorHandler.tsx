@@ -1016,35 +1016,3 @@ getErrorStatistics: () => errorHandler.getErrorStatistics(),
 clearResolvedErrors: () => errorHandler.clearResolvedErrors()}
 }
 export default ErrorHandler;</string>
-</string>
-// React hook for error handling
-export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
-},
-[errorHandler]
-)
-const handleNetworkError = useCallback((erro,
-r: Error, ur)
-l: string, status?: number) => {/* TODO: Fix JSX expression */}
-},
-[errorHandler]
-)
-const handleValidationError = useCallback((fiel,
-d: string, messag)
-e: string, value?: unknown) => {/* TODO: Fix JSX expression */}
-},
-[errorHandler]
-)
-return {/* TODO: Fix JSX expression */}
-}
-}
-export default ErrorHandler
-"`
-</h2>
-</ErrorSeverit>
-</strong>
-</strong>
-</ErrorHandlerConfig>
-</ErrorHandlerConfig>
-</ErrorHandlerConfig>
-</ErrorHandlerConfig>
-</strin>

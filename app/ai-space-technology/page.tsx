@@ -125,11 +125,3 @@ const AiSpaceTechnologyPage: React.FC = () => {
   )
 }
 export default AiSpaceTechnologyPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -125,11 +125,3 @@ const AiWritingAssistantPage: React.FC = () => {
   )
 }
 export default AiWritingAssistantPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

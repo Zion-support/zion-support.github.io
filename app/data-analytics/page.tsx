@@ -143,10 +143,3 @@ Email Us
 )
 }
 export default DataAnalyticsPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

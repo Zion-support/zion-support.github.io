@@ -125,11 +125,3 @@ const AiRecommendationEnginePage: React.FC = () => {
   )
 }
 export default AiRecommendationEnginePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

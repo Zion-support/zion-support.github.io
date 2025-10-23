@@ -142,9 +142,3 @@ Email Us
 )
 }
 export default SecurityMonitoringPage
-</button>
-</button>
-</h2>
-</button>
-</button>
-</h1>

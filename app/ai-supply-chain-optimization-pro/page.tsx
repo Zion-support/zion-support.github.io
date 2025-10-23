@@ -125,11 +125,3 @@ const AiSupplyChainOptimizationProPage: React.FC = () => {
   )
 }
 export default AiSupplyChainOptimizationProPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
