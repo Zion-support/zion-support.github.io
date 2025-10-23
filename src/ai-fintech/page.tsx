@@ -1,3 +1,4 @@
+import { CheckCircle, Star, Brain, Shield, Zap, Target, TrendingUp, DollarSign, Check } from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';

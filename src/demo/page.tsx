@@ -1,3 +1,4 @@
+import { CheckCircle, Star, Phone, Mail, Check, Clock } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';

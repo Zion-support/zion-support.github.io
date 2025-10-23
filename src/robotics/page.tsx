@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Cog } from 'lucide-react';
+import { Cog, CheckCircle, Star, Brain, Shield, Zap, Target, BarChart, Helmet, Check, Bot, Cpu, Settings } from 'lucide-react';
 const RoboticsPage: React.FC = () => {
   const roboticsServices = [
     {

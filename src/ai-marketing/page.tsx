@@ -1,3 +1,4 @@
+import { CheckCircle, Star, Brain, Zap, Users, Target, TrendingUp, BarChart, Helmet, Check } from 'lucide-react';
 import React from 'react';
 
 const AIMarketingPage: React.FC = () => {

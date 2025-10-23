@@ -1,3 +1,4 @@
+import { CheckCircle, Star, BarChart, Check, Bot, Cpu } from 'lucide-react';
 'use client';
 import React from 'react';
 
