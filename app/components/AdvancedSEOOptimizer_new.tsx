@@ -97,8 +97,7 @@ return structuredData || defaultStructuredData
 return (
 <>
 <Helmet>
-<title>{title}</title>
-<meta name="description" content={description} />
+<title>{title}</title><meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
 {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 {/* Open Graph */}
@@ -115,11 +114,7 @@ return (
 {/* Structured Data */}
 <script type="application/ld+json">
 {JSON.stringify(generateStructuredData())}
-</script>
-</Helmet>
-{children}
-{process.env.NODE_ENV === 'development' && (
-<div className="seo-debug" loading="lazy" style={{
+</script></Helmet><div className="seo-debug" loading="lazy" style={{
 position: 'fixed',
 top: '10px',
 left: '10px',
@@ -131,20 +126,12 @@ fontSize: '12px',
 zIndex: 1000,
 maxWidth: '300px'
 }}>
-<div>SEO Score: {seoScore}/100</div>
-{recommendations.length > 0 && (
-<div>
-<div>Recommendations:</div>
-<ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+<div>SEO Score: {seoScore}/100</div><div>
+<div>Recommendations:</div><ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
 {recommendations.map((rec, index) => (
-<li key={index}>{rec}</li>
-))}
-</ul>
-</div>
-)}
-</div>
-)}
-</>
+<li key={index}>{rec}</li></ul></div></div></>
 )
 }
 export default AdvancedSEOOptimizerNew
+
+}

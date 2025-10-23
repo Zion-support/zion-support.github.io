@@ -112,8 +112,8 @@ class EnhancedErrorMonitoring {
           category: 'network'
         })
         throw error
-      }
-    }
+        );
+};
   }
   /**
    * Setup performance error monitoring
@@ -129,8 +129,8 @@ class EnhancedErrorMonitoring {
               startTime: entry.startTime,
               category: 'performance'
             })
-          }
-        }
+            );
+};
       }).observe({ entryTypes: ['longtask'] })
       // Monitor memory leaks
       new PerformanceObserver((list) => {
@@ -142,12 +142,12 @@ class EnhancedErrorMonitoring {
                 memoryUsage: memoryInfo.usedJSHeapSize,
                 category: 'performance'
               })
-            }
-          }
+              );
+};
         }
       }).observe({ entryTypes: ['memory'] })
-    }
-  }
+      );
+};
   /**
    * Setup network status monitoring
    */
@@ -203,8 +203,8 @@ class EnhancedErrorMonitoring {
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
       // console.error('Error captured:', errorReport)
-    }
-  }
+      );
+};
   /**
    * Find similar error in queue
    */
@@ -248,8 +248,8 @@ class EnhancedErrorMonitoring {
       })
     } catch (error) {
       // If sending fails, keep in queue for retry
-      }
-  }
+        );
+};
   /**
    * Flush error queue when back online
    */
@@ -259,8 +259,8 @@ class EnhancedErrorMonitoring {
     this.errorQueue = []
     for (const error of errorsToSend) {
       await this.sendErrorReport(error)
-    }
-  }
+      );
+};
   /**
    * Generate unique session ID
    */
@@ -304,8 +304,8 @@ class EnhancedErrorMonitoring {
       bySeverity,
       byCategory,
       recent: recent.slice(0, 10)
-    }
-  }
+      );
+};
   /**
    * Clear resolved errors
    */
@@ -319,8 +319,8 @@ class EnhancedErrorMonitoring {
     const error = this.errorQueue.find(e => e.id === errorId)
     if (error) {
       error.resolved = true
-    }
-  }
+      );
+};
   /**
    * Get error report for debugging
    */
@@ -345,8 +345,8 @@ ${stats.recent.map(error => `
 - URL: ${error.context.url}
 `).join('\n')}
     `.trim()
-  }
-}
+    );
+};
 // Export singleton instance
 export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance()
 export default enhancedErrorMonitoring

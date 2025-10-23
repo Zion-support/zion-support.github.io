@@ -1,5 +1,9 @@
 import React from 'react';
 
+export default function Page() {
+import { Helmet } from 'lucide-react';
+
+
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -38,8 +42,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
+      <title>{fullTitle}</title><meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={robotsContent} />
@@ -106,8 +109,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             }
           })
         })}
-      </script>
-    </Helmet>
+      </script></Helmet>
   );
 };
-export default SEOHead;

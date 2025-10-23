@@ -51,8 +51,8 @@ export const usePerformanceMonitoring = () => {
           ) => {
             if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
-            }
-          }
+              );
+};
         );
         reportMetric('CLS', clsValue);
       });
@@ -89,8 +89,8 @@ export const usePerformanceMonitoring = () => {
             if (loadTime > 1000) {
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
-            }
-          }
+              );
+};
         });
       });
       resourceObserver.observe({ entryTypes: ['resource'] });

@@ -123,8 +123,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   return (
     <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
+      <title>{title}</title><meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />
       
@@ -151,11 +150,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {structuredData && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)   );
+};
         />
       )}
     </Head>
-  );
-};
+}
 
-
+export default About;

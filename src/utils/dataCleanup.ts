@@ -80,9 +80,8 @@ class DataCleanup {
     for (const record of oldRecords) {
       if (dataRecordManager.deleteRecord(record.id)) {
         cleaned++;
-      }
-    }
-
+        );
+};
     return cleaned;
   }
 
@@ -123,11 +122,10 @@ class DataCleanup {
             localStorageUsed += key.length + value.length;
             if (key.startsWith('data_record_')) {
               localStorageRecords++;
-            }
-          }
-        }
-      }
-
+              );
+};
+          );
+};
       // Estimate localStorage quota (typically 5-10MB)
       const estimatedQuota = 5 * 1024 * 1024; // 5MB estimate
       
@@ -150,11 +148,10 @@ class DataCleanup {
             sessionStorageUsed += key.length + value.length;
             if (key.startsWith('data_record_')) {
               sessionStorageRecords++;
-            }
-          }
-        }
-      }
-
+              );
+};
+          );
+};
       stats.sessionStorage = {
         used: sessionStorageUsed,
         available: Math.max(0, estimatedQuota - sessionStorageUsed),
@@ -206,9 +203,8 @@ class DataCleanup {
     for (const record of recordsToRemove) {
       if (dataRecordManager.deleteRecord(record.id)) {
         cleaned++;
-      }
-    }
-
+        );
+};
     return cleaned;
   }
 
@@ -228,7 +224,6 @@ class DataCleanup {
       storageLimitCleaned,
       totalCleaned: oldRecordsCleaned + storageLimitCleaned,
     };
-  }
-}
-
+    );
+};
 export const dataCleanup = new DataCleanup();

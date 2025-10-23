@@ -20,17 +20,15 @@ class ErrorHandler extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    }
-  }
-
+      );
+};
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
       errorInfo: null
-    }
-  }
-
+      );
+};
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -46,9 +44,8 @@ class ErrorHandler extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       // You can integrate with services like Sentry, LogRocket, etc.
       this.logErrorToService(error, errorInfo)
-    }
-  }
-
+      );
+};
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // Example: Send to monitoring service
     try {
@@ -65,9 +62,8 @@ class ErrorHandler extends Component<Props, State> {
       // Error reporting failed
 
 
-    }
-  }
-
+      );
+};
   handleRetry = () => {
     this.setState({
       hasError: false,
@@ -91,61 +87,29 @@ class ErrorHandler extends Component<Props, State> {
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center" loading="lazy">
             <div className="flex justify-center mb-4" loading="lazy">
               <AlertTriangle className="w-16 h-16 text-red-500" loading="lazy" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-gray-900 mb-4" loading="lazy">Oops! Something went wrong</h1>h1>
-            
-            <p className="text-gray-600 mb-6" loading="lazy">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left" loading="lazy">
+            </div><h1 className="text-2xl font-bold text-gray-900 mb-4" loading="lazy">Oops! Something went wrong</h1><p className="text-gray-600 mb-6" loading="lazy">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p><details className="mb-6 text-left" loading="lazy">
                 <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700" loading="lazy">
                   Error Details (Development)
-                </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto" loading="lazy">
+                </summary><div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto" loading="lazy">
                   <div className="mb-2" loading="lazy">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  {this.state.error.stack && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap" loading="lazy">{this.state.error.stack}</pre>
-                    </div>
-                  )}
-                  {this.state.errorInfo?.componentStack && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap" loading="lazy">{this.state.errorInfo.componentStack}</pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3 justify-center" loading="lazy">
+                    <strong>Error:</strong></div><div>
+                      <strong>Stack:</strong><pre className="whitespace-pre-wrap" loading="lazy">{this.state.error.stack}</pre></div><div>
+                      <strong>Component Stack:</strong><pre className="whitespace-pre-wrap" loading="lazy">{this.state.errorInfo.componentStack}</pre></div></div></details><div className="flex flex-col sm:flex-row gap-3 justify-center" loading="lazy">
               <button
                 onClick={this.handleRetry}
                 className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" loading="lazy"
                aria-label="Action button">
                 <RefreshCw className="w-4 h-4 mr-2" loading="lazy" />
                 Try Again
-              </button>
-              
-              <button
+              </button><button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors" loading="lazy"
                aria-label="Action button">
                 <Home className="w-4 h-4 mr-2" loading="lazy" />
                 Go Home
-              </button>
-            </div>
-          </div>
-        </div>
-      )
-    }
-
-    return this.props.children
-  }
+              </button></div></div></div>
+  );
+};
 }
 
-export default ErrorHandler
+export default About;

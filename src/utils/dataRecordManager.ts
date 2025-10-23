@@ -84,9 +84,8 @@ class DataRecordManager {
     } catch (error) {
       console.warn('Failed to retrieve data record:', error);
       return null;
-    }
-  }
-
+      );
+};
   queryRecords(query: RecordQuery): DataRecord[] {
     const records: DataRecord[] = [];
     const now = Date.now();
@@ -126,8 +125,8 @@ class DataRecordManager {
           records.push(record);
         } catch (parseError) {
           console.warn('Failed to parse data record:', parseError);
-        }
-      }
+          );
+};
     } catch (error) {
       console.warn('Failed to query data records:', error);
     }
@@ -143,9 +142,8 @@ class DataRecordManager {
     } catch (error) {
       console.warn('Failed to delete data record:', error);
       return false;
-    }
-  }
-
+      );
+};
   getStats(): RecordStats {
     const stats: RecordStats = {
       total: 0,
@@ -202,8 +200,8 @@ class DataRecordManager {
           }
         } catch (parseError) {
           console.warn('Failed to parse data record for stats:', parseError);
-        }
-      }
+          );
+};
     } catch (error) {
       console.warn('Failed to get data record stats:', error);
     }
@@ -220,9 +218,8 @@ class DataRecordManager {
         const key = localStorage.key(i);
         if (key && key.startsWith(this.prefix)) {
           keysToRemove.push(key);
-        }
-      }
-
+          );
+};
       keysToRemove.forEach(key => {
         localStorage.removeItem(key);
         cleared++;
@@ -232,7 +229,6 @@ class DataRecordManager {
     }
 
     return cleared;
-  }
-}
-
+    );
+};
 export const dataRecordManager = new DataRecordManager();

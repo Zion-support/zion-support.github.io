@@ -1,4 +1,6 @@
 import React from 'react'
+
+export default function Page() {
 import { cn } from '../lib/utils'
 interface ResponsiveContainerProps {
   children: React.ReactNode;
@@ -30,8 +32,8 @@ const ResponsiveContainer = ({
       'mx-auto px-4 sm:px-6 lg:px-8',
       maxWidthClasses[maxWidth],
       className
-    )}>{children}</div>div>
+    )}>{children}</div>
   );
 };
-
-export default ResponsiveContainer;
+  );
+}

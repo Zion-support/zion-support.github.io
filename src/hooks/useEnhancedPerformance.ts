@@ -40,8 +40,8 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             component,
             Math.round(duration)
           );
-        }
-      }
+          );
+};
       // Track component unmount
       if (trackAnalytics) {
         analytics.trackCustomEvent('Component', 'Unmounted', component);

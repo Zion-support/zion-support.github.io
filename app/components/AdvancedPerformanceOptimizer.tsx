@@ -41,8 +41,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
               setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
+              );
+};
         }).observe({ entryTypes: ['paint'] });
 
         // Largest Contentful Paint
@@ -66,8 +66,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value;
               setPerformanceMetrics(prev => ({ ...prev, cls: clsValue }));
-            }
-          }
+              );
+};
         }).observe({ entryTypes: ['layout-shift'] });
       };
 
@@ -131,10 +131,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
-          }
-        }
-
-
+            );
+};
     images.forEach((img) => imageObserver.observe(img));
   }, []);
 
@@ -210,9 +208,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
           cls: Math.round(performanceMetrics.cls * 1000) / 1000
-        }
-
-    }
+          );
+};
   }, [performanceMetrics]);
 
   useEffect(() => {
@@ -243,3 +240,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 };
 
 
+
+  );
+};
+  );
+};
+}

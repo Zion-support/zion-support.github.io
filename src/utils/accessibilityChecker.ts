@@ -221,8 +221,8 @@ export class AccessibilityChecker {
         element: 'h1',
         fix: 'Use only one h1 per page for the main heading'
       });
-    }
-  }
+      );
+};
   /**
    * Check links for accessibility
    *
@@ -246,97 +246,7 @@ export class AccessibilityChecker {
           message: `Link ${index + 1} has no accessible text`,
           element: `a[href="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '<a href="..." aria-label="Description">...</a>'
-        });
-      }
-      // Check for generic link text
-      if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {
-        this.addIssue({
-          type: 'generic-link-text',
-          severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.AA,
-          wcagCriterion: '2.4.4',
-          message: `Link ${index + 1} has generic text: "${text}"`,
-          element: `a[href="${link.getAttribute('href')}"]`,
-          fix: 'Use descriptive link text that explains the destination',
-          codeExample: 'Use "Read full article" instead of "Read more"'
-        });
-      }
-      // Check for links opening in new window without warning
-      const target = link.getAttribute('target');
-      if (
-        target === '_blank' &&
-        !ariaLabel?.includes('new window') &&
-        !text?.includes('(opens in new window)')
-      ) {
-        this.addIssue({
-          type: 'new-window-no-warning',
-          severity: A11ySeverity.MINOR,
-          wcagLevel: WCAGLevel.AAA,
-          wcagCriterion: '3.2.5',
-          message: `Link ${index + 1} opens in new window without warning`,
-          element: `a[href="${link.getAttribute('href')}"]`,
-          fix: 'Add indication that link opens in new window',
-          codeExample:
-            '<a href="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</a>'
-        });
-      }
-    });
-  }
-  /**
-   * Check buttons for accessibility
-   *
-   * @private
-   * @param element - Root element to check
-   */
-  private checkButtons(element: Element): void {
-    const buttons = element.querySelectorAll('button');
-    buttons.forEach((button, index) => {
-      const text = button.textContent?.trim();
-      const ariaLabel = button.getAttribute('aria-label');
-      const ariaLabelledBy = button.getAttribute('aria-labelledby');
-      // Check for buttons without accessible text
-      if (!text && !ariaLabel && !ariaLabelledBy) {
-        this.addIssue({
-          type: 'button-no-text',
-          severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '4.1.2',
-          message: `Button ${index + 1} has no accessible text`,
-          element: 'button',
-          fix: 'Add text content or aria-label to the button',
-          codeExample: '<button aria-label="Close dialog">×</button>'
-        });
-      }
-    });
-  }
-  /**
-   * Check form elements for accessibility
-   *
-   * @private
-   * @param element - Root element to check
-   */
-  private checkForms(element: Element): void {
-    const inputs = element.querySelectorAll('input, select, textarea');
-    inputs.forEach((input, index) => {
-      const id = input.getAttribute('id');
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      const label = id ? element.querySelector(`label[for="${id}"]`) : null;
-      const type = input.getAttribute('type');
-      // Skip hidden and submit inputs
-      if (type === 'hidden' || type === 'submit' || type === 'button') return;
-      // Check for form controls without labels
-      if (!label && !ariaLabel && !ariaLabelledBy) {
-        this.addIssue({
-          type: 'form-no-label',
-          severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '1.3.1',
-          message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
-          element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
-          fix: 'Associate a label with the form control',
-          codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
+          codeExample: '<a href="..." aria-label="Description">...</a><a href="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</a><button aria-label="Close dialog">×</button><label for="email">Email:</label><input id="email" name="email" />'
         });
       }
     });
@@ -386,119 +296,8 @@ export class AccessibilityChecker {
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
           element: el.tagName.toLowerCase(),
           fix: 'Remove tabindex="-1" or use tabindex="0"',
-          codeExample: '<button tabindex="0">Accessible button</button>'
-        });
-      }
-    });
-    // Check for divs/spans with onclick but no keyboard handler
-    const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
-    clickableNonInteractive.forEach(el => {
-      const role = el.getAttribute('role');
-      const tabindex = el.getAttribute('tabindex');
-      const onKeyDown = el.getAttribute('onkeydown');
-      if (!role || !tabindex || !onKeyDown) {
-        this.addIssue({
-          type: 'click-without-keyboard',
-          severity: A11ySeverity.SERIOUS,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '2.1.1',
-          message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
-          element: el.tagName.toLowerCase(),
-          fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '<button onClick={handleClick}>Click me</button>'
-        });
-      }
-    });
-  }
-  /**
-   * Check ARIA usage
-   *
-   * @private
-   * @param element - Root element to check
-   */
-  private checkARIA(element: Element): void {
-    const elementsWithAria = element.querySelectorAll(
-      '[role], [aria-label], [aria-labelledby], [aria-describedby]'
-    );
-    elementsWithAria.forEach(el => {
-      const role = el.getAttribute('role');
-      // Check for invalid ARIA roles
-      const validRoles = [
-        'alert',
-        'button',
-        'checkbox',
-        'dialog',
-        'link',
-        'navigation',
-        'region',
-        'search',
-        'tabpanel',
-        'banner',
-        'complementary',
-        'contentinfo',
-        'form',
-        'main',
-        'article',
-        'note',
-        'presentation',
-      ];
-      if (role && !validRoles.includes(role)) {
-        this.addIssue({
-          type: 'invalid-aria-role',
-          severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '4.1.2',
-          message: `Invalid ARIA role: "${role}"`,
-          element: el.tagName.toLowerCase(),
-          fix: 'Use a valid ARIA role or remove the role attribute'
-        });
-      }
-      // Check aria-labelledby references
-      const labelledBy = el.getAttribute('aria-labelledby');
-      if (labelledBy) {
-        const referencedElement = document.getElementById(labelledBy);
-        if (!referencedElement) {
-          this.addIssue({
-            type: 'aria-labelledby-missing',
-            severity: A11ySeverity.SERIOUS,
-            wcagLevel: WCAGLevel.A,
-            wcagCriterion: '4.1.2',
-            message: `aria-labelledby references non-existent element: "${labelledBy}"`,
-            element: el.tagName.toLowerCase(),
-            fix: 'Ensure the referenced element exists'
-          });
-        }
-      }
-    });
-  }
-  /**
-   * Check for proper use of landmark regions
-   *
-   * @private
-   * @param element - Root element to check
-   */
-  private checkLandmarks(element: Element): void {
-    const hasMain = element.querySelector('main, [role="main"]');
-    // const _hasNav = element.querySelector('nav, [role="navigation"]');
-    if (!hasMain) {
-      this.addIssue({
-        type: 'missing-main-landmark',
-        severity: A11ySeverity.MODERATE,
-        wcagLevel: WCAGLevel.AA,
-        wcagCriterion: '2.4.1',
-        message: 'Page is missing a main landmark',
-        fix: 'Add a <main> element or role="main"',
-        codeExample: '<main><!-- Main content --></main>'
-      });
-    }
-  }
-  /**
-   * Add an issue to the list
-   *
-   * @private
-   * @param issue - Partial issue object
-   */
-  private addIssue(issue: Omit<A11yIssue, 'id'>): void {
+          codeExample: '<button tabindex="0">Accessible button</button><button onClick={handleClick}>Click me</button><main> element or role="main"',
+        codeExample: '<main><!-- Main content --></main><A11yIssue, 'id'>): void {
     this.issues.push({
       id: this.generateIssueId(),
       ...issue
@@ -575,5 +374,9 @@ export class AccessibilityChecker {
     });
     
     return report;
-  }
-}
+    );
+};
+  );
+};
+  );
+};

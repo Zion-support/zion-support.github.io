@@ -28,3 +28,6 @@ export const usePerformanceMonitoring = () => {
   }, [reportWebVitals]);
   return { reportWebVitals };
 };
+
+
+export default About;

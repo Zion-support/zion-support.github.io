@@ -34,13 +34,7 @@ index === breadcrumbItems.length - 1
 }`}
 >
 {item.icon && <item.icon className="w-4 h-4" loading="lazy" />}
-<span>{item.name}</span>
-</a>
-</li>
-))}
-</ol>
-</div>
-</nav>
-)
+<span>{item.name}</span></a></li></ol></div></nav>
 }
-export default Breadcrumb
+
+export default About;

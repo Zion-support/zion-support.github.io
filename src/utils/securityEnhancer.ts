@@ -124,8 +124,8 @@ class SecurityEnhancer {
               const element = node as Element
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
                 this.metrics.securityViolations++
-                }
-            }
+                  );
+};
           })
         }
       })
@@ -146,8 +146,8 @@ class SecurityEnhancer {
         throw new Error('Request blocked: Origin not allowed')
       }
       return originalFetch(input, init)
-    }
-  }
+      );
+};
   private isAllowedOrigin(url: string): boolean {
     try {
       const urlObj = new URL(url)
@@ -156,8 +156,8 @@ class SecurityEnhancer {
       )
     } catch {
       return false
-    }
-  }
+      );
+};
   private setupSecureHeaders(): void {
     // These would typically be set by the server, but we can add meta tags
     const headers = [
@@ -195,8 +195,8 @@ class SecurityEnhancer {
         return input.length > 0 && input.length < 1000
       default:
         return false
-    }
-  }
+      );
+};
   public generateSecurePassword(length: number = 16): string {
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'
     let password = ''
@@ -214,8 +214,8 @@ class SecurityEnhancer {
       })
   }
   public getMetrics(): SecurityMetrics {
-    return { ...this.metrics }
-  }
+    return { ...this.metrics   );
+};
   public generateSecurityReport(): string {
     const metrics = this.getMetrics()
     return `
@@ -229,8 +229,8 @@ Security Report:
   public cleanup(): void {
     this.eventListeners.forEach(cleanup => cleanup())
     this.eventListeners = []
-  }
-}
+    );
+};
 // Export singleton instance
 export const securityEnhancer = new SecurityEnhancer()
 // Export class for custom instances

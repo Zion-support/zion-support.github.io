@@ -128,91 +128,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         skipLinks.className = "sr-only";
         skipLinks.innerHTML = `
           <a href="#main-content" class="skip-link">Skip to main content</a>
-          <a href="#navigation" class="skip-link">Skip to navigation</a>
-        `;
-        if (document.body && document.body.firstChild) {
-          document.body.insertBefore(skipLinks, document.body.firstChild);
-        }
-
-        return () => {
-          if (skipLinks.parentNode) {
-            skipLinks.parentNode.removeChild(skipLinks);
-          }
-        };
-      }
-
-      // High contrast mode
-      if (enableHighContrast) {
-        document.body.classList.add("high-contrast");
-        return () => document.body.classList.remove("high-contrast");
-      }
-
-      // Focus management
-      if (enableFocusManagement) {
-        const handleFocusIn = (event: FocusEvent) => {
-          const target = event.target as HTMLElement;
-          if (target) {
-            target.classList.add("focused");
-          }
-        };
-
-        const handleFocusOut = (event: FocusEvent) => {
-          const target = event.target as HTMLElement;
-          if (target) {
-            target.classList.remove("focused");
-          }
-        };
-
-        document.addEventListener("focusin", handleFocusIn);
-        document.addEventListener("focusout", handleFocusOut);
-
-        return () => {
-          document.removeEventListener("focusin", handleFocusIn);
-          document.removeEventListener("focusout", handleFocusOut);
-        };
-      }
-
-      return () => {
-        // Cleanup function
-      };
-    } catch (error) {
-      console.warn('AccessibilityEnhancer second useEffect error:', error);
-    }
-  }, [
-    enableKeyboardNavigation,
-    enableScreenReaderSupport,
-    enableHighContrast,
-    enableFocusManagement,
-    handleFocusIn,
-    handleFocusOut,
-  ]);
-
-  // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
-    if (typeof window === 'undefined') return;
-    
-    try {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.textContent = message;
-      
-      if (document.body) {
-        document.body.appendChild(announcement);
-      }
-      
-      setTimeout(() => {
-        if (announcement.parentNode) {
-          announcement.parentNode.removeChild(announcement);
-        }
-      }, 1000);
-    } catch (error) {
-      console.warn('Screen reader announcement error:', error);
-    }
-  }, []);
-
-  return <>{children}</>;
+            <a href="#navigation" class="skip-link">Skip to navigation</a><>{children}</>;
 };
 
 
+
+  );
+};
+}
+
+export default About;

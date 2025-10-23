@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useEffect, ReactNode } from "react";
 
+export default function Page() {
+
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
-  }
-}
-
+    );
+};
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
@@ -47,8 +48,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
           };
         window.gtag("js", new Date());
         window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "");
-      }
-    }
+        );
+};
   }, []);
 
   const trackEvent = (
@@ -80,5 +81,3 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     </AnalyticsContext.Provider>
   );
 };
-
-

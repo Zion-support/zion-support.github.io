@@ -1,4 +1,6 @@
 import React from "react"
+
+export default function Page() {
 import { ArrowRight } from "lucide-react"
 interface NeonButtonProps {
   children?: React.ReactNode;
@@ -48,21 +50,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 
   const content = (
     <div>
-      {icon && <span className="mr-2" loading="lazy">{icon}</span>}
-      {children}
-      {!icon && <ArrowRight className="w-5 h-5 ml-2" loading="lazy" />}
-    </div>
-  );
-
-  if (href) {
-    return (
-      <a href={href} className={buttonClasses}>{content}</a>a>
-    );
-  }
-
-  return (
-    <button onClick={onClick} disabled={disabled} className={buttonClasses} aria-label="Action button">{content}</button>
+      {icon && <span className="mr-2" loading="lazy">{icon}</span><ArrowRight className="w-5 h-5 ml-2" loading="lazy" />}
+    </div><a href={href} className={buttonClasses}>{content}</a><button onClick={onClick} disabled={disabled} className={buttonClasses} aria-label="Action button">{content}</button>
   );
 };
-
-

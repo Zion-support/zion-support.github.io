@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+import { Phone, Mail, CheckCircle } from 'lucide-react';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -119,19 +121,12 @@ const PricingPage: React.FC = () => {
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 Simple, Transparent Pricing
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+              </h1><p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Choose the perfect plan for your business needs
-              </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              </p><p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
                 All plans include our core AI and IT services with no hidden fees. 
                 Scale up or down as your business grows.
-              </p>
-            </div>
-          </section>
-
-          {/* Pricing Plans */}
-          <section className="container mx-auto px-4 py-16">
+              </p></div></section><section className="container mx-auto px-4 py-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -144,26 +139,14 @@ const PricingPage: React.FC = () => {
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         {plan.cta}
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-2">{plan.period}</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-4 mb-8">
+                      </span></div><div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-300 mb-4">{plan.description}</p><div className="flex items-baseline justify-center">
+                      <span className="text-5xl font-bold text-cyan-400">{plan.price}</span><span className="text-gray-400 ml-2">{plan.period}</span></div></div><ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
+                      </li></ul><a
                     href={plan.popular ? "mailto:kleber@ziontechgroup.com" : "tel:+13024640950"}
                     className={`w-full text-center block py-3 px-6 rounded-lg font-medium transition-all ${
                       plan.popular
@@ -173,75 +156,46 @@ const PricingPage: React.FC = () => {
                   >
                     {plan.popular ? 'Contact Sales' : plan.cta}
                   </a>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Add-ons Section */}
-          <section className="container mx-auto px-4 py-16">
+          </div></div></section><section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Additional Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            </h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {addOns.map((addon, index) => (
                 <div key={index} className="cyber-card p-6 text-center">
-                  <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3>
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">{addon.price}</div>
-                  <p className="text-gray-300 text-sm">{addon.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* FAQ Section */}
-          <section className="container mx-auto px-4 py-16">
+                  <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3><div className="text-2xl font-bold text-cyan-400 mb-2">{addon.price}</div><p className="text-gray-300 text-sm">{addon.description}</p></div></div></section><section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Frequently Asked Questions
-            </h2>
-            <div className="max-w-4xl mx-auto space-y-6">
+            </h2><div className="max-w-4xl mx-auto space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="cyber-card p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
+                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3><p className="text-gray-300">{faq.answer}</p></div></div></section><section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              </h2><p className="text-xl text-gray-300 mb-8">
                 Contact us today to discuss your needs and find the perfect plan
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </p><div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
+                  <span>Call (302) 464-0950</span></a><a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'  );
+};
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Get Free Quote</span>
-                </a>
-              </div>
-            </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </>
+                  <span>Get Free Quote</span></a>
+          </div></div></section></main><Footer />
+      </div></>
   );
 };
 
 export default PricingPage;
+  );
+};
+  );
+};
+}

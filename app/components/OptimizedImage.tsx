@@ -90,18 +90,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     <div
       ref={imgRef}
       className="relative overflow-hidden"
-      style={{ width, height }}
-    >{!isLoaded && !isError && (</div>
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
-        </div>
-      )}
-      {isError ? (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Failed to load image</div>
-        </div>
-      ) : (
-        <Image
+      style={{ width, height   );
+};
+    >{!isLoaded && !isError && (</div><div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div></div><div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+          <div className="text-gray-400 text-sm">Failed to load image</div></div><Image
           src={imageSrc}
           alt={alt}
           width={width || 300}
@@ -119,7 +112,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         />
       )}
     </div>
-  );
-};
+}
 
-
+export default About;

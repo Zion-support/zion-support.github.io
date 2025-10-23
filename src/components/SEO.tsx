@@ -4,6 +4,8 @@
  * Provides comprehensive SEO meta tags and structured data
  */
 import React from 'react';
+import { Helmet } from 'lucide-react';
+
 
 export interface SEOProps {
   title?: string;
@@ -96,8 +98,7 @@ export const SEO: React.FC<SEOProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{seo.title}</title>
-      <meta name="description" content={seo.description} />
+      <title>{seo.title}</title><meta name="description" content={seo.description} />
       {seo.keywords && <meta name="keywords" content={seo.keywords.join(', ')} />}
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
@@ -116,10 +117,7 @@ export const SEO: React.FC<SEOProps> = ({
         <React.Fragment key={altLocale}>
           <meta property="og:locale:alternate" content={altLocale} />
           <link rel="alternate" hrefLang={altLocale} href={altUrl} />
-        </React.Fragment>
-      ))}
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={seo.twitterCard} />
+        </React.Fragment><meta name="twitter:card" content={seo.twitterCard} />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
@@ -134,9 +132,7 @@ export const SEO: React.FC<SEOProps> = ({
         </>
       )}
       {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script>
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script><link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
@@ -149,4 +145,4 @@ export const SEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 };
-export default SEO;
+export default About;

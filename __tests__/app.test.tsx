@@ -1,16 +1,12 @@
 import { render, screen } from '@testing-library/react';
+
+export default function Page() {
 import '@testing-library/jest-dom';
 
 // Mock the App component to avoid PerformanceObserver issues
 const MockApp = () => (
   <div role="main">
-    <h1>Test App</h1>
-  </div>
-);
-
-describe('App Component', () => {
-  it('renders without crashing', () => {
-    render(<MockApp />);
+    <h1>Test App</h1></div><MockApp />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
@@ -19,3 +15,4 @@ describe('App Component', () => {
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 });
+}

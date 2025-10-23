@@ -1,5 +1,7 @@
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
+import { Helmet } from 'lucide-react';
+
 
 interface SEOData {
   title: string;
@@ -165,8 +167,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
+      <title>{seoData.title}</title><meta name="description" content={seoData.description} />
       <meta name="keywords" content={seoData.keywords.join(', ')} />
       <link rel="canonical" href={seoData.canonicalUrl} />
       {/* Open Graph Tags */}
@@ -205,20 +206,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {enableSchemaMarkup && _structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(_structuredData)}
-        </script>
-      )}
-      {enableSchemaMarkup && _breadcrumbData && (
-        <script type="application/ld+json">
+        </script><script type="application/ld+json">
           {JSON.stringify(_breadcrumbData)}
-        </script>
-      )}
-      {enableSchemaMarkup && _faqData && (
-        <script type="application/ld+json">
+        </script><script type="application/ld+json">
           {JSON.stringify(_faqData)}
-        </script>
-      )}
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+        </script><link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -229,4 +221,4 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     </Helmet>
   );
 };
-export default AdvancedSEOOptimizer;
+export default About;

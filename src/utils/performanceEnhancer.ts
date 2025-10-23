@@ -46,16 +46,16 @@ export class PerformanceMonitor {
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
       // console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`);
-    }
-  }
+      );
+};
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
-      }
-    }
+        );
+};
   }
   // Get performance metrics
   getMetrics() {
@@ -84,8 +84,8 @@ export class PerformanceMonitor {
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-  }
-}
+    );
+};
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {
   const renderStartTime = useRef<number>(0);
@@ -171,8 +171,8 @@ export const optimizeScrollPerformance = () => {
         if (!layoutEntry.hadRecentInput) {
           clsEntries.push(entry);
           clsValue += layoutEntry.value;
-        }
-      }
+          );
+};
     });
     observer.observe({ entryTypes: ['layout-shift'] });
     return () => {
@@ -185,8 +185,8 @@ export const optimizeScrollPerformance = () => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
           // console.log('[Web Vitals] LCP:', entry.startTime);
-        }
-      }
+          );
+};
     });
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
     return () => observer.disconnect();
@@ -201,8 +201,8 @@ export const optimizeScrollPerformance = () => {
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
           // console.log('[Web Vitals] FID:', fid);
-        }
-      }
+          );
+};
     });
     observer.observe({ entryTypes: ['first-input'] });
     return () => observer.disconnect();
@@ -264,3 +264,5 @@ export const initializePerformanceEnhancements = () => {
     // console.log('Performance metrics:', metrics);
   }
 };
+
+export default About;

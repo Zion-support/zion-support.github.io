@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 
+export default function Page() {
+
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
-  }
-}
-
+    );
+};
 useEffect(() => {
     const initAnalytics = () => {
       if (typeof window !== "undefined" && window.gtag) {
@@ -22,3 +23,5 @@ useEffect(() => {
 };
 
 
+
+}

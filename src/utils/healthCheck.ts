@@ -44,8 +44,8 @@ class HealthCheckService {
     // Local storage check
     if (typeof window !== 'undefined') {
       this.register('storage', this.checkStorage.bind(this))
-    }
-  }
+      );
+};
   /**
    * Register a custom health check
    */
@@ -89,8 +89,8 @@ class HealthCheckService {
           status: 'fail',
           message: error instanceof Error ? error.message : 'Unknown error'
         })
-      }
-    }
+        );
+};
     // Determine overall status
     const hasFailures = checks.some((c) => c.status === 'fail')
     const hasWarnings = checks.some((c) => c.status === 'warn')
@@ -164,16 +164,16 @@ class HealthCheckService {
           total: memoryInfo.totalJSHeapSize,
           limit: memoryInfo.jsHeapSizeLimit,
           usedPercent
-        }
-      }
+          );
+};
     } catch (error) {
       return {
         name: 'memory',
         status: 'warn',
         message: 'Could not check memory usage'
       };
-    }
-  }
+      );
+};
   /**
    * Check performance metrics
    */
@@ -198,25 +198,24 @@ class HealthCheckService {
           message = `Critical performance issues: ${poorCount} poor metrics`
         } else {
           message = `Performance: ${values.length - poorCount - needsImprovementCount} good, ${needsImprovementCount} needs improvement, ${poorCount} poor`
-        }
-      }
-      
+          );
+};
       return {
         name: 'performance',
         status,
         message,
         details: {
           metrics: reportData,
-          summary: { good: 0, needsImprovement: 0, poor: 0 }
-        }
+          summary: { good: 0, needsImprovement: 0, poor: 0   );
+};
       }
     } catch (error) {
       return {
         name: 'performance',
         status: 'warn',
         message: 'Could not check performance'
-      }
-    }
+        );
+};
   }
   /**
    * Check browser API availability
@@ -240,15 +239,15 @@ class HealthCheckService {
         name: 'browser-apis',
         status: 'warn',
         message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
-        details: { missingAPIs }
-      }
+        details: { missingAPIs   );
+};
     }
     return {
       name: 'browser-apis',
       status: 'pass',
       message: 'All required browser APIs available'
-    }
-  }
+      );
+};
   /**
    * Check storage availability
    */
@@ -265,8 +264,8 @@ class HealthCheckService {
           name: 'storage',
           status: 'fail',
           message: 'LocalStorage not working correctly'
-        }
-      }
+          );
+};
       // Check available space (approximate)
       const testData = 'x'.repeat(1024 * 1024); // 1MB
       try {
@@ -277,8 +276,8 @@ class HealthCheckService {
           name: 'storage',
           status: 'warn',
           message: 'LocalStorage space limited'
-        }
-      }
+          );
+};
       return {
         name: 'storage',
         status: 'pass',
@@ -289,8 +288,8 @@ class HealthCheckService {
         name: 'storage',
         status: 'fail',
         message: 'LocalStorage not available'
-      }
-    }
+        );
+};
   }
   /**
    * Get application uptime
@@ -315,16 +314,16 @@ class HealthCheckService {
       return `${minutes}m ${seconds % 60}s`
     } else {
       return `${seconds}s`
-    }
-  }
+      );
+};
   /**
    * Clear cached status
    */
   clearCache(): void {
     this.cachedStatus = undefined
     this.lastCheckTime = 0
-  }
-}
+    );
+};
 // Export singleton instance
 export const healthCheck = new HealthCheckService()
 // Export convenience functions

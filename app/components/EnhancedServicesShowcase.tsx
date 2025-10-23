@@ -1,4 +1,6 @@
 import React from 'react'
+
+export default function Page() {
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
 const services = [
     {
@@ -38,43 +40,26 @@ const services = [
     <section className="py-16" loading="lazy">
       <div className="container mx-auto px-4" loading="lazy">
         <div className="text-center mb-16" loading="lazy">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse" loading="lazy">Our Core Services</h2>
-          <p className="text-xl text-cyan-400 max-w-3xl mx-auto" loading="lazy">Comprehensive AI and IT solutions designed to transform your business and drive innovation</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">
-          {services.map((service, index) => (</div>
-            <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300" loading="lazy">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse" loading="lazy">Our Core Services</h2><p className="text-xl text-cyan-400 max-w-3xl mx-auto" loading="lazy">Comprehensive AI and IT solutions designed to transform your business and drive innovation</p></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">
+          {services.map((service, index) => (</div><div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300" loading="lazy">
               <div className="flex items-center mb-4" loading="lazy">
                 <service.icon className={`w-12 h-12 ${service.color} mr-4`} />
-                <div></div>
-                  <h3 className="text-xl font-bold text-white" loading="lazy">{service.title}</h3>
-                  <div className="text-sm text-cyan-400 font-semibold" loading="lazy">{service.stats}</div>
-              </div>
-              <p className="text-gray-300 mb-4" loading="lazy">{service.description}</p>
-              <ul className="space-y-2 mb-6" loading="lazy">
+                <div></div><h3 className="text-xl font-bold text-white" loading="lazy">{service.title}</h3><div className="text-sm text-cyan-400 font-semibold" loading="lazy">{service.stats}</div></div><p className="text-gray-300 mb-4" loading="lazy">{service.description}</p><ul className="space-y-2 mb-6" loading="lazy">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400" loading="lazy">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" loading="lazy" />
                     {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
+                  </li></ul><a
                 href="/services"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform" loading="lazy">
                 Learn More <ArrowRight className="w-4 h-4 ml-2" loading="lazy" />
               </a>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-12" loading="lazy">
+          </div></div><div className="text-center mt-12" loading="lazy">
           <a
             href="/services"
-            className="cyber-button inline-flex items-center" loading="lazy">View All Services</a>
-            <ArrowRight className="w-5 h-5 ml-2" loading="lazy" />
+            className="cyber-button inline-flex items-center" loading="lazy">View All Services</a><ArrowRight className="w-5 h-5 ml-2" loading="lazy" />
           </a>
-        </div>
-    </section>
-  )
+          </div></section>
+  );
+};
 }
-export default EnhancedServicesShowcase

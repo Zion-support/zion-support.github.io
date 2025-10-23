@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
+
+export default function Page() {
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 interface AnimatedCounterProps {
@@ -62,5 +64,3 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     <span ref={setNode} className={className}>{prefix}{count.toLocaleString()}{suffix}</span>
   );
 };
-
-

@@ -28,8 +28,8 @@ $3
 }
 import('./components/ContentCarousel');}
 }, 100)
-}
-}
+  );
+};
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
 <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
@@ -97,9 +97,10 @@ streetAddress: '364 E Main St STE 1008',
 addressLocality: 'Middletown',
 addressRegion: 'DE',
 postalCode: '19709',
-addressCountry: 'US';}
-}
-}}
+addressCountry: 'US';  );
+};
+  );
+};
 />
 <PerformanceOptimizer
 enableImageOptimization={true}

@@ -1,4 +1,6 @@
 import React from 'react'
+
+export default function Page() {
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import ImageOptimizer from '../app/components/ImageOptimizer'
@@ -92,3 +94,6 @@ describe('ImageOptimizer', () => {
     expect(screen.getByTestId('optimized-image')).toBeInTheDocument();
   });
 });
+  );
+};
+}

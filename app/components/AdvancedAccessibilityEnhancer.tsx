@@ -109,17 +109,15 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
         if (skipLink) {
           skipLink.focus();
           event.preventDefault();
-        }
-      }
-
+          );
+};
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {
           activeElement.click();
-        }
-      }
-
+          );
+};
       // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
         const menu = document.querySelector('[role="menu"]') as HTMLElement;
@@ -131,8 +129,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
             ? (currentIndex + 1) % menuItems.length
             : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1;
           menuItems[nextIndex]?.focus();
-        }
-      }
+          );
+};
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -198,8 +196,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
             if (document.activeElement === lastElement) {
               firstElement.focus();
               e.preventDefault();
-            }
-          }
+              );
+};
         }
       };
 
@@ -367,3 +365,11 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 };
 
 
+
+  );
+};
+  );
+};
+}
+
+export default About;

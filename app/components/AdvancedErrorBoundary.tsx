@@ -1,4 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+export default function Page() {
 import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
@@ -78,9 +80,8 @@ class AdvancedErrorBoundary extends Component<
     // Report error to external service
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
-    }
-  }
-
+      );
+};
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
@@ -192,78 +193,33 @@ class AdvancedErrorBoundary extends Component<
                       strokeWidth={2}
                       d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
                     />
-                  </svg>
-                </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>h2>
-                <p className='mt-2 text-sm text-gray-600'>We&apos;re sorry, but something unexpected happened. Our team</p>
-                  has been notified.
-                </p>
-              </div>
-
-              {process.env.NODE_ENV === 'development' && (
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>h3>
-                  <div className='mt-2 text-sm text-red-700'>
+                  </svg></div><h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2><p className='mt-2 text-sm text-gray-600'>We're sorry, but something unexpected happened. Our team</p></p></div><div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
+                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3><div className='mt-2 text-sm text-red-700'>
                     <p>
-                      <strong>Error ID:</strong> {this.state.errorId}
-                    </p>
-                    <p>
-                      <strong>Message:</strong> {this.state.error?.message}
-                    </p>
-                    <details className='mt-2'>
+                      <strong>Error ID:</strong></p><p>
+                      <strong>Message:</strong></p><details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
                         Stack Trace
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</p>pre>
-                    </details>
-                    <details className='mt-2'>
+                      </summary><pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</p></details><details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
                         Component Stack
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</p>pre>
-                    </details>
-                  </div>
-                </div>
-              )}
-
-              <div className='mt-6 space-y-3'>{this.props.enableRetry &&</div>
-                  this.retryCount < this.maxRetries && (
+                      </summary><pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</p></details></div></div><div className='mt-6 space-y-3'>{this.props.enableRetry &&</div>< this.maxRetries && (
                     <button
                       onClick={this.handleRetry}
                       className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                     aria-label="Action button">Try Again ({this.maxRetries - this.retryCount} attempts</button>
-                      left)
-                    </button>
-                  )}
-
-                <button
+                     aria-label="Action button">Try Again ({this.maxRetries - this.retryCount} attempts</button></button><button
                   onClick={this.handleReload}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                 aria-label="Action button">Reload Page</button>
-
-                <button
+                 aria-label="Action button">Reload Page</button><button
                   onClick={this.handleGoHome}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                 aria-label="Action button">Go to Homepage</button>
-              </div>
-
-              <div className='mt-6 text-center'>
-                <p className='text-xs text-gray-500'>If this problem persists, please contact our support team</p>
-                  at&nbsp;
-                  <a
+                 aria-label="Action button">Go to Homepage</button></div><div className='mt-6 text-center'>
+                <p className='text-xs text-gray-500'>If this problem persists, please contact our support team</p><a
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
-                  >kleber@ziontechgroup.com</a>a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
+                  >kleber@ziontechgroup.com</a></p></div></div></div></div>
+  );
+};
+  );
+};
 }
-
-export default AdvancedErrorBoundary;

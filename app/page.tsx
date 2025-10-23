@@ -28,7 +28,6 @@ export default function HomePage() {
         <title>Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions that transform businesses and drive growth." />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -40,54 +39,41 @@ export default function HomePage() {
               Leading provider of AI and IT solutions that transform businesses and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/services" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Our Services
+              <a
+                href="/about"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+              >
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a href="/contact" className="border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-                Contact Us
+              <a
+                href="/contact"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Get Started
               </a>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Services</h2>
-              <p className="text-xl text-gray-300">Comprehensive solutions for your business needs</p>
-            </div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Our Services
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <feature.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can help you achieve your goals with our AI and IT solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a href="/about" className="border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>
             </div>
           </div>
         </section>

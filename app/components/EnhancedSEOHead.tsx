@@ -87,8 +87,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "@type": "SearchAction",
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
-    }
-  }
+      );
+};
   const finalStructuredData = structuredData || defaultStructuredData
   return (
     <Helmet>

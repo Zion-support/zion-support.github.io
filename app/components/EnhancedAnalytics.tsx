@@ -44,8 +44,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         }
         gtag("js", new Date());
         gtag("config", process.env.REACT_APP_GA_ID);
-      }
-    }
+        );
+};
   }, []);
 
   const track = (event: string, properties?: Record<string, unknown>) => {
@@ -110,15 +110,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  );
-};
+}
 
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag: (...args: any[]) => void;
-  }
-};
-
-export default Page;
+export default About;

@@ -58,8 +58,8 @@ export class ApiCache {
       if (pending && Date.now() - pending.timestamp < 30000) {
         // Reuse pending request if less than 30 seconds old
         return pending.promise as Promise<T>;
-      }
-    }
+        );
+};
     // Create new request with retry logic
     const requestPromise = this.fetchWithRetry<T>(
       url,
@@ -82,8 +82,8 @@ export class ApiCache {
     } finally {
       // Clean up pending request
       this.pendingRequests.delete(cacheKey);
-    }
-  }
+      );
+};
   /**
    * Fetch with retry logic
    */
@@ -128,8 +128,8 @@ export class ApiCache {
         );
       }
       throw error;
-    }
-  }
+      );
+};
   /**
    * Invalidate cache entries matching a pattern
    */
@@ -166,8 +166,8 @@ export class ApiCache {
       await this.fetch<T>(url, options, cacheConfig);
     } catch (error) {
       // Silent fail for prefetch
-      }
-  }
+        );
+};
   /**
    * Generate cache key from URL and options
    */
@@ -191,10 +191,10 @@ export class ApiCache {
     for (const [key, pending] of this.pendingRequests.entries()) {
       if (now - pending.timestamp > timeout) {
         this.pendingRequests.delete(key);
-      }
-    }
-  }
-}
+        );
+};
+    );
+};
 /**
  * Default API cache instance
  */

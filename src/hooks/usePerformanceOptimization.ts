@@ -46,8 +46,8 @@ export const usePerformanceOptimization = () => {
         };
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0;
-        }
-      }
+          );
+};
       metrics.cumulativeLayoutShift = clsValue;
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -108,8 +108,8 @@ export const usePerformanceOptimization = () => {
         }
         if (process.env['NODE_ENV'] === 'development') { 
           if (import.meta.env.DEV) { 
-          } 
-        }
+            );
+};
       }
     }, 1000);
     // Optimize images
@@ -124,3 +124,6 @@ export const usePerformanceOptimization = () => {
     preloadCriticalResources
   };
 };
+
+
+export default About;

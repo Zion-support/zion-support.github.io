@@ -6,8 +6,8 @@ import { useAnalytics } from '../components/AnalyticsProvider';
 declare global {
   interface Window {
     __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
-  }
-}
+    );
+};
 export const useErrorMonitoring = () => {
   const { trackEvent } = useAnalytics();
   const reportError = useCallback(

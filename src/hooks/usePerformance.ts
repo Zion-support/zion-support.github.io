@@ -33,8 +33,8 @@ export const usePerformance = () => {
               !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput
             ) {
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
-            }
-          }
+              );
+};
         });
         observer.observe({ entryTypes: ['layout-shift'] });
       }
@@ -46,8 +46,8 @@ export const usePerformance = () => {
             if (entry.entryType === 'first-input') {
               firstInputDelay =
                 (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
-            }
-          }
+              );
+};
         });
         observer.observe({ entryTypes: ['first-input'] });
       }
@@ -96,3 +96,6 @@ export const usePerformance = () => {
   }, []);
   return { metrics, isMonitoring };
 };
+
+
+export default About;

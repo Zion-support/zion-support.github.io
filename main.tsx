@@ -1,4 +1,6 @@
 import React from "react";
+
+export default function Page() {
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./app/styles/globals.css";
@@ -8,24 +10,6 @@ if (root) {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
       <App />
-    </React.StrictMode>,
+    </React.StrictMode>
   );
-}
-
-// Register service worker for PWA functionality
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/sw.js")
-      .then((registration) => {
-        if (process.env.NODE_ENV === "development") {
-          console.log("SW registered: ", registration);
-        }
-      })
-      .catch((registrationError) => {
-        if (process.env.NODE_ENV === "development") {
-          console.log("SW registration failed: ", registrationError);
-        }
-      });
-  });
-}
+};

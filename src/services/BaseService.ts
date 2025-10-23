@@ -69,8 +69,8 @@ export class BaseService {
       this.cache.delete(key);
     } else {
       this.cache.clear();
-    }
-  }
+      );
+};
   /**
    * Make a GET request
    */
@@ -96,8 +96,8 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
+      );
+};
   /**
    * Make a POST request
    */
@@ -115,8 +115,8 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
+      );
+};
   /**
    * Make a PUT request
    */
@@ -134,8 +134,8 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
+      );
+};
   /**
    * Make a PATCH request
    */
@@ -153,8 +153,8 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
+      );
+};
   /**
    * Make a DELETE request
    */
@@ -172,8 +172,8 @@ export class BaseService {
         endpoint
       });
       throw error;
-    }
-  }
+      );
+};
   /**
    * Handle service error
    */
@@ -183,6 +183,6 @@ export class BaseService {
       ...context
     });
     throw error;
-  }
-}
+    );
+};
 export default BaseService;

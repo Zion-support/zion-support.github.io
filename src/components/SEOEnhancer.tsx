@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'lucide-react';
+
 
 interface SEOEnhancerProps {
   title?: string;
@@ -66,8 +68,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           "price": "1500",
           "priceCurrency": "USD",
           "billingIncrement": "P1M"
-        }
-      }
+          );
+};
     ],
     "serviceArea": {
       "@type": "GeoCircle",
@@ -83,8 +85,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     <>
       <Helmet>
         {/* Primary meta tags */}
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{title}</title><meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
@@ -111,10 +112,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
-      {children}
-    </>
+        </script></Helmet></>
   );
 };
 export default SEOEnhancer;

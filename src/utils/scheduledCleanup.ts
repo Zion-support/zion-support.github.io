@@ -101,9 +101,8 @@ class ScheduledCleanup {
       return false;
     } finally {
       this.stats.isRunning = false;
-    }
-  }
-
+      );
+};
   /**
    * Get cleanup statistics
    */
@@ -149,9 +148,8 @@ class ScheduledCleanup {
 
     if (wasRunning && this.config.enabled) {
       this.start();
-    }
-  }
-
+      );
+};
   /**
    * Get current configuration
    */
@@ -205,9 +203,8 @@ class ScheduledCleanup {
       healthy: issues.length === 0,
       issues,
     };
-  }
-}
-
+    );
+};
 export const scheduledCleanup = new ScheduledCleanup();
 
 // Auto-start if enabled (in browser environment)

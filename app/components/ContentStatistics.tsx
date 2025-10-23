@@ -130,8 +130,8 @@ if (current < target) {
 return {
 ...prev,
 [key]: Math.min(current + increment, target)
-}
-}
+  );
+};
 return prev
 })
 }, 16)
@@ -144,122 +144,50 @@ return (
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
 <div className="max-w-7xl mx-auto" loading="lazy">
 <div className="text-center mb-16" loading="lazy">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4" loading="lazy">Our Impact in Numbers</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">See how we've transformed businesses and delivered exceptional results.</p>
-<div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4" loading="lazy">
-<div className="max-w-7xl mx-auto" loading="lazy">{/* Header */}</div>
-<div className="text-center mb-16" loading="lazy">
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4" loading="lazy">Our Impact in Numbers</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">See how we've transformed businesses and delivered exceptional results.</p><div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto" loading="lazy">{/* Header */}</div><div className="text-center mb-16" loading="lazy">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" loading="lazy">
-Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400" loading="lazy">Impact</span> in Numbers
-</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">See how we've helped businesses transform with our AI and IT solutions.</p>
-</div>
-{/* Statistics Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16" loading="lazy">{statistics.map((stat, index) => (</div>
-<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center" loading="lazy">
+Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400" loading="lazy">Impact</span></h2><p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">See how we've helped businesses transform with our AI and IT solutions.</p></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16" loading="lazy">{statistics.map((stat, index) => (</div><div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center" loading="lazy">
 <div className="flex justify-center mb-4" loading="lazy">
 <div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center" loading="lazy">
 <stat.icon className="h-8 w-8 text-white" loading="lazy" />
-</div>
-</div>
-<div className={`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)}{stat.suffix}</div>
-<div className="text-gray-300" loading="lazy">{stat.label}</div>
-</div>
-))}
-</div>
-{/* Achievements */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{achievements.map((achievement, index) => (</div>
-<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300" loading="lazy">
+</div></div><div className={`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)}{stat.suffix}</div><div className="text-gray-300" loading="lazy">{stat.label}</div></div></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{achievements.map((achievement, index) => (</div><div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300" loading="lazy">
 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4" loading="lazy">
 <achievement.icon className="h-6 w-6 text-white" loading="lazy" />
-</div>
-<h3 className="text-xl font-semibold text-white mb-2" loading="lazy">{achievement.title}</h3>
-<p className="text-gray-300 text-sm" loading="lazy">{achievement.description}</p>
-</div>
-))}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" loading="lazy">{statistics.map((stat, index) => (</div>
-<div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300" loading="lazy">
+</div><h3 className="text-xl font-semibold text-white mb-2" loading="lazy">{achievement.title}</h3><p className="text-gray-300 text-sm" loading="lazy">{achievement.description}</p></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" loading="lazy">{statistics.map((stat, index) => (</div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300" loading="lazy">
 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4" loading="lazy">
 <stat.icon className="w-8 h-8 text-slate-900" loading="lazy" />
-</div>
-<div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}{stat.suffix}</div>
-<div className="text-lg font-semibold text-white mb-2" loading="lazy">{stat.label}</div>
-<div className="text-gray-400 text-sm" loading="lazy">{stat.description}</div>
-</div>
-))}
-</div>
-{/* Features Section */}
-<div className="mb-16" loading="lazy">
+</div><div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}{stat.suffix}</div><div className="text-lg font-semibold text-white mb-2" loading="lazy">{stat.label}</div><div className="text-gray-400 text-sm" loading="lazy">{stat.description}</div></div></div><div className="mb-16" loading="lazy">
 <div className="text-center mb-12" loading="lazy">
-<h3 className="text-2xl font-bold text-white mb-4" loading="lazy">Key Features</h3>
-<p className="text-gray-300 max-w-2xl mx-auto" loading="lazy">Discover the powerful features that make our solutions stand out.</p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{features.map((feature, index) => (
+<h3 className="text-2xl font-bold text-white mb-4" loading="lazy">Key Features</h3><p className="text-gray-300 max-w-2xl mx-auto" loading="lazy">Discover the powerful features that make our solutions stand out.</p></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{features.map((feature, index) => (
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300" loading="lazy">
 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4" loading="lazy">
 <feature.icon className="w-6 h-6 text-white" loading="lazy" />
-</div>
-<h4 className="text-lg font-semibold text-white mb-3" loading="lazy">{feature.title}</h4>
-<p className="text-gray-300 text-sm mb-4" loading="lazy">{feature.description}</p>
-<div className="space-y-2" loading="lazy">{feature.stats.map((stat, statIndex) => (</div>
-<div key={statIndex} className="flex items-center text-gray-300 text-sm" loading="lazy">
+</div><h4 className="text-lg font-semibold text-white mb-3" loading="lazy">{feature.title}</h4><p className="text-gray-300 text-sm mb-4" loading="lazy">{feature.description}</p><div className="space-y-2" loading="lazy">{feature.stats.map((stat, statIndex) => (</div><div key={statIndex} className="flex items-center text-gray-300 text-sm" loading="lazy">
 <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" loading="lazy" />
-<span>{stat}</span>
-</div>
-))}
-</div>
-</div>
-))}
-</div>
-</div>
-{/* Achievements Section */}
-<div className="mb-16" loading="lazy">
+<span>{stat}</span></div></div></div></div></div><div className="mb-16" loading="lazy">
 <div className="text-center mb-12" loading="lazy">
-<h3 className="text-2xl font-bold text-white mb-4" loading="lazy">Our Achievements</h3>
-<p className="text-gray-300 max-w-2xl mx-auto" loading="lazy">Recognition and milestones that showcase our commitment to excellence.</p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8" loading="lazy">{achievements.map((achievement, index) => (</div>
-<div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300" loading="lazy">
+<h3 className="text-2xl font-bold text-white mb-4" loading="lazy">Our Achievements</h3><p className="text-gray-300 max-w-2xl mx-auto" loading="lazy">Recognition and milestones that showcase our commitment to excellence.</p></div><div className="grid grid-cols-1 md:grid-cols-3 gap-8" loading="lazy">{achievements.map((achievement, index) => (</div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300" loading="lazy">
 <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4" loading="lazy">
 <achievement.icon className="w-8 h-8 text-white" loading="lazy" />
-</div>
-<div className="text-3xl font-bold text-white mb-2" loading="lazy">{achievement.value}</div>
-<h4 className="text-lg font-semibold text-white mb-2" loading="lazy">{achievement.title}</h4>
-<p className="text-gray-300 text-sm" loading="lazy">{achievement.description}</p>
-</div>
-))}
-</div>
-</div>
-{/* Benefits Section */}
-<div className="mb-16" loading="lazy">
+</div><div className="text-3xl font-bold text-white mb-2" loading="lazy">{achievement.value}</div><h4 className="text-lg font-semibold text-white mb-2" loading="lazy">{achievement.title}</h4><p className="text-gray-300 text-sm" loading="lazy">{achievement.description}</p></div></div></div><div className="mb-16" loading="lazy">
 <div className="text-center mb-12" loading="lazy">
-<h3 className="text-2xl font-bold text-white mb-4" loading="lazy">Why Choose Us?</h3>
-<p className="text-gray-300 max-w-2xl mx-auto" loading="lazy">Discover the advantages that make our solutions the preferred choice.</p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" loading="lazy">{benefits.map((benefit, index) => (
+<h3 className="text-2xl font-bold text-white mb-4" loading="lazy">Why Choose Us?</h3><p className="text-gray-300 max-w-2xl mx-auto" loading="lazy">Discover the advantages that make our solutions the preferred choice.</p></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" loading="lazy">{benefits.map((benefit, index) => (
 <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover:bg-white/10 transition-all duration-300" loading="lazy">
 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" loading="lazy" />
-<span className="text-gray-300" loading="lazy">{benefit}</span>
-</div>
-))}
-</div>
-</div>
-{/* CTA Section */}
-<div className="text-center" loading="lazy">
+<span className="text-gray-300" loading="lazy">{benefit}</span></div></div></div><div className="text-center" loading="lazy">
 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12" loading="lazy">
-<h3 className="text-3xl font-bold text-white mb-4" loading="lazy">Ready to Get Started?</h3>
-<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" loading="lazy">Join thousands of satisfied customers and transform your business today.</p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+<h3 className="text-3xl font-bold text-white mb-4" loading="lazy">Ready to Get Started?</h3><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" loading="lazy">Join thousands of satisfied customers and transform your business today.</p><div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" loading="lazy" aria-label="Action button">
 <Zap className="w-5 h-5" loading="lazy" />
 Get Started Today
-</button>
-<button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200" loading="lazy" aria-label="Action button">View Case Studies</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-)
+</button><button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200" loading="lazy" aria-label="Action button">View Case Studies</button></div></div></div></div></div>
+  );
+};
+  );
+};
+  );
+};
 }
-export default ContentStatistics
+
+export default About;
