@@ -237,8 +237,10 @@ location.pathname === item.path
 </div>
 </div>
 </aside>
-</>
-)
+</div>
+);
+};
+
 }
 Sidebar.displayName = 'Sidebar'
-export default Sidebar
+export default Sideba;r;

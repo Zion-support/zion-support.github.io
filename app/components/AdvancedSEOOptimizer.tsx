@@ -144,7 +144,9 @@ maxWidth: '300px'
 )}
 </div>
 )}
-</>
-)
+</div>
+);
+};
+
 }
-export default AdvancedSEOOptimizer
+export default AdvancedSEOOptimize;r;

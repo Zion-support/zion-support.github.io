@@ -34,7 +34,7 @@ icon: Lock,
 title: 'Advanced Security',
 description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
 }
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -69,7 +69,9 @@ className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 ho
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default MedicalRecordsManagerPage
+export default MedicalRecordsManagerPag;e;

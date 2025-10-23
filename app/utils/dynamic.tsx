@@ -29,6 +29,8 @@ s: DynamicOptions = {}
 <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
 <LazyComponent {...props} /></LazyComponent>
 </Suspense>
-)
+);
+};
+
 }
-export default dynamic
+export default dynamic;

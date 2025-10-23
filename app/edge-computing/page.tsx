@@ -104,7 +104,7 @@ const EdgeComputingPage: React.FC = () => {
       description: 'Cloud gaming with minimal latency',
       icon: '🎮'
     }
-  ]
+  ];
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -249,6 +249,8 @@ const EdgeComputingPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  )
+  );
+};
+
 }
-export default EdgeComputingPage
+export default EdgeComputingPage;

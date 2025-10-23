@@ -26,7 +26,7 @@ const SitemapPage: React.FC = () => {
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
-  ]
+  ];
     return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>
       <div className="max-w-7xl mx-auto"></div>
@@ -81,6 +81,8 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  );
+};
+
 }
-export default SitemapPage
+export default SitemapPage;

@@ -122,6 +122,8 @@ return (</div>
 </div>
 )
 }
-)
+);
+};
+
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
-export default OptimizedLoadingSpinner
+export default OptimizedLoadingSpinner;

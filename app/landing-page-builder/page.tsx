@@ -15,7 +15,7 @@ const PagePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   return (
           </div>
         </div>
@@ -36,6 +36,8 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  );
+};
+
 }
-export default PagePage
+export default PagePage;

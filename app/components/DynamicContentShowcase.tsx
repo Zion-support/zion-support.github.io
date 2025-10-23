@@ -109,8 +109,8 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
     { icon: TrendingUp, value: '99.9%', label: 'Uptime' },
     { icon: Star, value: '4.9/5', label: 'Rating' },
     { icon: Zap, value: '24/7', label: 'Support' }
-  ]
-  const nextTestimonial = () => {
+  ];
+  const $3 = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
   }
   const prevTestimonial = () => {
@@ -346,6 +346,8 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
         </div>
       </section>
     </div>
-  )
+  );
+};
+
 }
-export default DynamicContentShowcase
+export default DynamicContentShowcase;

@@ -34,7 +34,7 @@ const PagePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   return (
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -122,6 +122,8 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  );
+};
+
 }
-export default PagePage
+export default PagePage;

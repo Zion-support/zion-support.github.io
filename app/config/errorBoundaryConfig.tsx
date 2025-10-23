@@ -212,9 +212,11 @@ message: error.message,
 stack: error.stack,
 name: error.name,
 type: getErrorType(error),
-timestamp: new Date().toISOString(),
+timestamp: new Date().toISOString();
+};
+,
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
 url: typeof window !== 'undefined' ? window.location.href : 'unknown',
 }
 }
-export default getErrorBoundaryConfig
+export default getErrorBoundaryConfig;

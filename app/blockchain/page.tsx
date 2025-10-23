@@ -34,7 +34,7 @@ const benefits = [
 'Easy integration with existing systems',
 'Cost-effective pricing plans',
 'Proven track record of success'
-]
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <Helmet>
@@ -263,6 +263,8 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold h
 </section>
 </div>
 </div>
-)
+);
+};
+
 }
-export default BlockchainPage
+export default BlockchainPage;

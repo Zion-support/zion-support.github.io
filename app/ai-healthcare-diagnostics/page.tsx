@@ -1,7 +1,9 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-export default function AiHealthcareDiagnosticsPage() {
+const PagePage: React.FC = () => {
+
+export default functio;n; AiHealthcareDiagnosticsPage() {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
@@ -32,4 +34,6 @@ export default function AiHealthcareDiagnosticsPage() {
       </div>
     </div>
   );
+};
+;
 }

@@ -31,8 +31,10 @@ const TeamPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-        </React.Fragment>
-  )
+        </div>
+  );
+};
+
 }
 
 export default $1

@@ -55,7 +55,7 @@ const benefits = [
 'Comply with data regulations',
 'Real-time insights and reporting',
 'Custom analytics solutions'
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -157,7 +157,9 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default DataAnalyticsPage
+export default DataAnalyticsPag;e;

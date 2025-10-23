@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server } from 'lucide-react'
 
 const Navigation: React.FC = () => {
@@ -82,7 +82,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
     { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
-  ]
+  ];
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -230,7 +230,7 @@ const Navigation: React.FC = () => {
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -306,7 +306,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

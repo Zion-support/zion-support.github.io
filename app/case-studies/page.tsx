@@ -78,7 +78,7 @@ const CaseStudiesPage: React.FC = () => {
     { icon: <Users className="w-8 h-8 text-green-600" />, value: '98%', label: 'Client Satisfaction' },
     { icon: <TrendingUp className="w-8 h-8 text-purple-600" />, value: '40%', label: 'Average Cost Reduction' },
     { icon: <Shield className="w-8 h-8 text-red-600" />, value: '99.9%', label: 'Uptime Achieved' }
-  ]
+  ];
     return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -239,8 +239,8 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
-export default CaseStudiesPage;
+export default CaseStudiesPag;e;

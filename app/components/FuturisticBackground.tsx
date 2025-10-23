@@ -30,7 +30,7 @@ const FuturisticBackgroundPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
   return (
     <>
       <Helmet>
@@ -118,6 +118,8 @@ const FuturisticBackgroundPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
+  );
+};
+
 }
-export default FuturisticBackgroundPage
+export default FuturisticBackgroundPage;

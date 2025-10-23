@@ -395,6 +395,8 @@ Call +1 302 464 0950
 </main>
 <Footer />
 </div>,
-</>)
+</>);
+};
+
 }
-export default WebDevelopmentPage
+export default WebDevelopmentPage;

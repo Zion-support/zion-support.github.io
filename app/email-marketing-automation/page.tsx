@@ -54,7 +54,7 @@ const benefits = [
 'Improve customer retention',
 'Generate more qualified leads',
 'Save time and resources'
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -156,7 +156,9 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default EmailMarketingAutomationPage
+export default EmailMarketingAutomationPag;e;

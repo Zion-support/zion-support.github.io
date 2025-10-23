@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
+
+const PagePage: React.FC = () => {
     },
     {
       icon: Clock,
@@ -13,7 +15,8 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
     },
     {
     }
-  ]
+  ];
+
   return (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform provides everything you need to build, deploy, and scale
@@ -88,6 +91,8 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
       </section>
       <Footer />
 </div>
-  )
+  );
+};
+
 }
-export default PagePage
+export default PagePag;e;

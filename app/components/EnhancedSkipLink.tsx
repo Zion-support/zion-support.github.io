@@ -16,6 +16,8 @@ main.scrollIntoView({ behavior: 'smooth' })
 >
 Skip to main content
 </a>
-)
+);
+};
+
 }
-export default EnhancedSkipLink
+export default EnhancedSkipLink;

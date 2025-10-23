@@ -176,6 +176,8 @@ isMonitoring
 </p>
 </div>
 </div>
-)
+);
+};
+
 }
-export default PerformanceDashboard
+export default PerformanceDashboard;

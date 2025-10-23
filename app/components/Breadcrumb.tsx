@@ -42,6 +42,8 @@ index === breadcrumbItems.length - 1
 </ol>
 </div>
 </nav>
-)
+);
+};
+
 }
-export default Breadcrumb
+export default Breadcrumb;

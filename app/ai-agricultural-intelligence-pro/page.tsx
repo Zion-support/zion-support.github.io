@@ -46,7 +46,8 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
     'Improve soil health monitoring',
     'Optimize resource allocation',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
+
   return (
     <>
       <Helmet>
@@ -155,8 +156,8 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
-  )
-}
+    </>
+  );
+};
 
-export default $1
+export default AiAgriculturalIntelligenceProPage;

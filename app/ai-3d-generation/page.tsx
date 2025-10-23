@@ -112,8 +112,10 @@ const Ai3dGenerationPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
-  )
+        </div>
+  );
+};
+
 }
 
 export default $1

@@ -56,7 +56,7 @@ const benefits = [
 'Easy-to-use dashboard interface',
 'Scalable for any business size',
 'Expert security team support'
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -158,8 +158,10 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default SecurityMonitoringSuitePage
+export default SecurityMonitoringSuitePag;e;
 </button>

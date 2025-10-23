@@ -34,7 +34,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
       stats: '95% Efficiency'
     }
-  ]
+  ];
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
@@ -81,6 +81,8 @@ const EnhancedServicesShowcase: React.FC = () => {
           </a>
         </div>
     </section>
-  )
+  );
+};
+
 }
-export default EnhancedServicesShowcase
+export default EnhancedServicesShowcase;

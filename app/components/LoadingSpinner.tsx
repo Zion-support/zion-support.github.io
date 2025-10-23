@@ -28,6 +28,8 @@ white: 'text-white'
 </p>
 )}
 </div>
-)
+);
+};
+
 }
-export default LoadingSpinner
+export default LoadingSpinner;

@@ -4,7 +4,7 @@ import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, S
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-export default function APIDocsPage() {
+export default functio;n; APIDocsPage() {
 const [copiedCode, setCopiedCode] = useState<string | null>(null)
 const [searchQuery, setSearchQuery] = useState('')
 const copyToClipboard = (code: string, id: string) => {
@@ -206,12 +206,12 @@ className="flex items-center gap-2 text-gray-400 hover:text-white transition-col
 <React.Fragment>
 <Check className="w-4 h-4" />
 Copied!
-</React.Fragment>
+</div>
 ) : (
 <React.Fragment>
 <Copy className="w-4 h-4" />
 Copy
-</React.Fragment>
+</div>
 )}
 </button>
 </div>
@@ -250,7 +250,9 @@ View SDKs
 </section>
 <Footer />
 </div>
-)
+);
+};
+
 }
 </button>
 </button>

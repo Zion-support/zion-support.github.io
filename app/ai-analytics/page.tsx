@@ -64,7 +64,7 @@ const AiAnalyticsPage: React.FC = () => {
       description: 'Identify and mitigate business risks proactively with advanced analytics.',
       icon: '🛡️'
     }
-  ]
+  ];
   return (
     <React.Fragment>
       <Helmet>
@@ -197,8 +197,8 @@ const AiAnalyticsPage: React.FC = () => {
         </section>
       </main>
       <Footer />
-        </React.Fragment>
-  )
-}
+    </div>
+  );
+};
 
-export default $1
+export default AiAnalyticsPag;e;

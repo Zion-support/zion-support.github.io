@@ -4,7 +4,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, G
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-export default function DocsPage() {
+export default function; DocsPage() {
 const [searchQuery, setSearchQuery] = useState('')
 const docCategories = [
 {
@@ -161,7 +161,9 @@ Join Community
 </section>
 <Footer />
 </div>
-)
+);
+};
+
 }
 </button>
 </button>

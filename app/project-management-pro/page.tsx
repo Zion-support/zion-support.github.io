@@ -55,7 +55,7 @@ const benefits = [
 'Reduce project risks',
 'Increase team productivity',
 'Streamline project workflows'
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -157,7 +157,9 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default ProjectManagementProPage
+export default ProjectManagementProPag;e;

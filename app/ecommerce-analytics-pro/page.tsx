@@ -34,7 +34,7 @@ icon: Target,
 title: 'Conversion Tracking',
 description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
 }
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -69,7 +69,9 @@ className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 ho
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default EcommerceAnalyticsProPage
+export default EcommerceAnalyticsProPag;e;

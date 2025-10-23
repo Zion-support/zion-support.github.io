@@ -58,6 +58,8 @@ Get Started
 </button>
 )}
 </div>
-)
+);
+};
+
 }
-export default ServiceCard
+export default ServiceCard;

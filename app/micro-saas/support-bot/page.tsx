@@ -46,7 +46,9 @@ const SmartSupportBotPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  )
+    </div>
+  );
+};
+
 }
-export default SmartSupportBotPage
+export default SmartSupportBotPag;e;

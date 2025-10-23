@@ -10,7 +10,7 @@ const features = [
 { icon: Zap, title: 'AI Tutoring', description: 'Personalized AI tutoring and adaptive learning experiences.' },
 { icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },
 { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -39,8 +39,10 @@ const features = [
 </div>
 </section>
 </div>
-    </React.Fragment>
-  )
+    </div>
+  );
+};
+
 }
 
 export default $1

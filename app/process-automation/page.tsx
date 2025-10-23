@@ -55,7 +55,7 @@ const benefits = [
 'Enhance employee productivity',
 '24/7 automated operations',
 'Custom automation solutions'
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -157,7 +157,9 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default ProcessAutomationPage
+export default ProcessAutomationPag;e;

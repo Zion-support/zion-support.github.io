@@ -46,7 +46,8 @@ const AiAnalyticsDashboardPage: React.FC = () => {
     'Reduce reporting time by 80%',
     'Gain competitive advantage with insights',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
+
   return (
     <>
       <Helmet>
@@ -155,8 +156,8 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
-  )
-}
+    </>
+  );
+};
 
-export default $1
+export default AiAnalyticsDashboardPage;

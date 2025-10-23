@@ -130,6 +130,8 @@ loading={priority ? 'eager' : 'lazy'}
 onLoad={handleLoad}
 onError={handleError}
 {...props}
->)</img>
+>);
+};
+</img>
 }</img>
-export default Image</img>
+export default Image;</img>

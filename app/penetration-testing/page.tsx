@@ -56,7 +56,7 @@ const benefits = [
 'Validate security controls effectiveness',
 'Expert analysis and reporting',
 'Ongoing security improvement guidance'
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -158,7 +158,9 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default PenetrationTestingPage
+export default PenetrationTestingPag;e;

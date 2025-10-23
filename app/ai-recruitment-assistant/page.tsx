@@ -34,7 +34,7 @@ icon: Zap,
 title: 'Automated Screening',
 description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
 }
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -69,7 +69,9 @@ className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 ho
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default AIRecruitmentAssistantPage
+export default AIRecruitmentAssistantPag;e;

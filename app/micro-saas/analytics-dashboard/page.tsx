@@ -47,7 +47,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ]
+  ];
   return (
     <>
       <Helmet>
@@ -192,6 +192,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
       </div>
     </>
-  )
+  );
+};
+
 }
-export default AIAnalyticsDashboardPage
+export default AIAnalyticsDashboardPage;

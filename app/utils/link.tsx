@@ -83,6 +83,8 @@ aria-label={ariaLabel})
 >)
 {children})
 </a>)
-)
+);
+};
+
 }
-export default Link
+export default Link;

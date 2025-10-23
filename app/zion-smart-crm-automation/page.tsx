@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 
+const PagePage: React.FC = () => {
+
 
   return (
 
@@ -55,7 +57,7 @@ import React from "react";
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

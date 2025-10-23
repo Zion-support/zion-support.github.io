@@ -58,8 +58,8 @@ const ContentCarousel: React.FC = () => {
         { value: '24/7', label: 'Global Support' }
       ]
     }
-  ]
-  const nextSlide = () => {
+  ];
+  const $3 = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
   const prevSlide = () => {
@@ -269,6 +269,8 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  );
+};
+
 }
-export default ContentCarousel
+export default ContentCarousel;

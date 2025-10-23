@@ -1,10 +1,14 @@
 "use client";
 import React from "react";
 
-export default function TestPage() {
+const PagePage: React.FC = () => {
+
+export default functio;n; TestPage() {
     return (
     <div>
       <h1>Test Page</h1>
     </div>
   );
+};
+;
 }

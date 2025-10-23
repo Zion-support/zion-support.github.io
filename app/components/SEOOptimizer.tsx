@@ -44,6 +44,8 @@ const keywordsString = keywords.join(', ')
 </script>
 )}
 </Helmet>
-)
+);
+};
+
 }
-export default SEOOptimizer
+export default SEOOptimizer;

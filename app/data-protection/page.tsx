@@ -20,7 +20,7 @@ const PagePage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
-  ]
+  ];
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -102,6 +102,8 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  );
+};
+
 }
-export default PagePage
+export default PagePage;

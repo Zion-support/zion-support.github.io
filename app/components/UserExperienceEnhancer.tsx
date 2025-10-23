@@ -37,7 +37,9 @@ outline-offset: 2px,;}
 document.head.appendChild(style)
 }
 enhanceUX()
-}, [])
+}, []);
+};
+
 return <>{children}</>
 }
-export default UserExperienceEnhancer
+export default UserExperienceEnhancer;

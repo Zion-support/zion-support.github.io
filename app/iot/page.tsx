@@ -354,6 +354,8 @@ const IoTPage: React.FC = () => {
         </section>
       </div>
     </>
-  )
+  );
+};
+
 }
-export default IoTPage
+export default IoTPage;

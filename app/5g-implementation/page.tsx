@@ -41,7 +41,7 @@ title: 'Performance Analytics',
 description: 'Advanced analytics and reporting for 5G network performance and optimization.',
 benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
 }
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -129,8 +129,10 @@ Learn More
 </div>
 </section>
 </div>
-    </React.Fragment>
-  )
+    </div>
+  );
+};
+
 }
 
 export default $1

@@ -604,6 +604,8 @@ Get Custom IT Strategy
 </div>
 </section>
 </div>
-)
+);
+};
+
 }
-export default ITConsultingPage
+export default ITConsultingPage;

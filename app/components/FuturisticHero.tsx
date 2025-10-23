@@ -34,7 +34,7 @@ const FuturisticHeroPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
     return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -66,6 +66,8 @@ const FuturisticHeroPage: React.FC = () => {
                 Email Us
   </
             </div>
-  )
+  );
+};
+
 }
-export default FuturisticHeroPage
+export default FuturisticHeroPage;

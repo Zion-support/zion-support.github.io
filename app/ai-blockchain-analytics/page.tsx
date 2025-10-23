@@ -30,7 +30,7 @@ title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
-  ]
+  ];
     return (
     <React.Fragment>
       <Helmet>
@@ -167,9 +167,11 @@ Contact Sales
 </section>
       <Footer />
         </div>
-)
+);
+};
+
 }
-export default PagePage
+export default PagePage;
 </button>
 </button>
 </p>

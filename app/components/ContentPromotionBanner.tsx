@@ -53,7 +53,7 @@ const ContentPromotionBanner: React.FC = () => {
       label: 'Rating',
       description: 'Highly rated by clients'
     }
-  ]
+  ];
     return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -193,6 +193,8 @@ const ContentPromotionBanner: React.FC = () => {
         </button>
       </div>
     </div>
-  )
+  );
+};
+
 }
-export default ContentPromotionBanner
+export default ContentPromotionBanner;

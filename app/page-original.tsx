@@ -1452,8 +1452,10 @@ Send Message
 {/* Footer */}
 <Footer />
 </div>
-</>
+</div>
 )
-})
+});
+};
+
 HomePage.displayName = 'HomePage'
-export default HomePage
+export default HomePag;e;

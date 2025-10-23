@@ -58,7 +58,7 @@ role: 'Lead Developer',
 image: '/team/david.jpg',
 bio: 'Full-stack developer with 10+ years experience'
 }
-]
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <Helmet>
@@ -210,6 +210,7 @@ Contact Us
 </section>
 </main>
 </div>
-)
-}
-export default AboutPage
+);
+};
+
+export default AboutPage;

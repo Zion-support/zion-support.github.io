@@ -109,6 +109,8 @@ return () => clearTimeout(timer)
 </div>
 )}
 </div>
-)
+);
+};
+
 }
-export default PerformanceOptimizer
+export default PerformanceOptimizer;

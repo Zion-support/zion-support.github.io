@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 
-export default function AiConversationalAiPage() {
+const PagePage: React.FC = () => {
+
+export default functio;n; AiConversationalAiPage() {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
@@ -32,4 +34,6 @@ export default function AiConversationalAiPage() {
       </div>
     </div>
   );
+};
+;
 }

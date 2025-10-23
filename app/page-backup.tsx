@@ -33,7 +33,7 @@ const PageBackupPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   return (
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -77,6 +77,8 @@ const PageBackupPage: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  );
+};
+
 }
-export default PageBackupPage
+export default PageBackupPage;

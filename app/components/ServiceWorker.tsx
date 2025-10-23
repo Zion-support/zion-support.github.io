@@ -30,7 +30,7 @@ const ServiceWorkerPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
   return (
     <>
       <Helmet>
@@ -118,6 +118,8 @@ const ServiceWorkerPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
+  );
+};
+
 }
-export default ServiceWorkerPage
+export default ServiceWorkerPage;

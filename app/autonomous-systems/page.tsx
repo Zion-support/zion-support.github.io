@@ -20,8 +20,10 @@ const AutonomousSystemsPage: React.FC = () => {
           </div>
         </div>
       </div>
-        </React.Fragment>
-  )
+        </div>
+  );
+};
+
 }
 
 export default $1

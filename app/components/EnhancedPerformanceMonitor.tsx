@@ -13,7 +13,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   return (
         </div>
       </section>
@@ -84,6 +84,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             </div>
           </div>
         </div>
-  )
+  );
+};
+
 }
-export default EnhancedPerformanceMonitorPage
+export default EnhancedPerformanceMonitorPage;

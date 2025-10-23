@@ -36,8 +36,7 @@ const AIAudioProcessorPage: React.FC = () => {
     "Multiple audio format support",
   ];
 
-const PagePage: React.FC = () => {
-    return (
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI API Management - Zion Tech Group</title>
@@ -172,7 +171,7 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -54,7 +54,7 @@ const benefits = [
 'Compliance monitoring and reporting',
 'Expert security team support',
 'Customizable monitoring rules'
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -156,8 +156,10 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default SecurityMonitoringPage
+export default SecurityMonitoringPag;e;
 </button>

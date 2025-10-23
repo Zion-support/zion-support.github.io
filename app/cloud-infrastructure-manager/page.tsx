@@ -56,7 +56,7 @@ const benefits = [
 'Easy deployment and configuration',
 'Multi-cloud support',
 'Expert technical support'
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -158,7 +158,9 @@ Email Us
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default CloudInfrastructureManagerPage
+export default CloudInfrastructureManagerPag;e;

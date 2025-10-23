@@ -22,7 +22,7 @@ description: 'Watch our AI create high-quality content in seconds',
 duration: '4 min',
 features: ['Blog posts', 'Social media content', 'Product descriptions']
 }
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -86,7 +86,9 @@ Schedule Demo
 </div>
 </section>
 </div>
-</>
-)
+</div>
+);
+};
+
 }
-export default DemoPage
+export default DemoPag;e;

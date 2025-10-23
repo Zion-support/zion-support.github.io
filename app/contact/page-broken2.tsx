@@ -91,7 +91,7 @@ title: 'Business Hours',
 details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
 description: 'Eastern Time'
 }
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -324,6 +324,8 @@ We're here to help you transform your business with cutting-edge AI and technolo
 </section>
 </div>
 </div>
-)
+);
+};
+
 }
-export default ContactPage
+export default ContactPage;

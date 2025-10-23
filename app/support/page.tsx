@@ -367,10 +367,10 @@ Email Support
 </div>
 </section>
 </div>
-</React.Fragment>
+</div>
 )
 }
-export default SupportPage
+export default SupportPag;e;
 </button>
 </button>
 </div>
@@ -419,7 +419,9 @@ export default SupportPage
 </section>
 </main>
 <Footer />
-</>
-)
+</div>
+);
+};
+
 }
-export default SupportPage
+export default SupportPag;e;

@@ -46,7 +46,7 @@ const AiApiManagementPage: React.FC = () => {
     'Enhance API performance and reliability',
     'Gain insights into API usage patterns',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -157,8 +157,8 @@ const AiApiManagementPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
-  )
-}
+    </div>
+  );
+};
 
-export default AiApiManagementPage
+export default AiApiManagementPage;

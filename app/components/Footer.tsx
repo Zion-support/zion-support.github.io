@@ -1,9 +1,9 @@
 'use client'
 import React, { memo } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react'
 
-const Footer: React.FC = memo(() => {
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
   
   const aiServices = [
@@ -49,7 +49,7 @@ const Footer: React.FC = memo(() => {
     { name: 'API Reference', url: '/api' },
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Community', url: '/community' }
-  ]
+  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -177,9 +177,10 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-  )
-})
+  );
+};
 
-Footer.displayName = 'Footer'
 
-export default Footer
+Footer.displayName = 'Footer';
+
+export default Footer;

@@ -265,8 +265,10 @@ Recommendations:
 </div>
 )}
 </div>
-)
+);
+};
+
 }
 return null
 }
-export default AdvancedPerformanceMonitor
+export default AdvancedPerformanceMonitor;

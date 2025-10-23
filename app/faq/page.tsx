@@ -44,7 +44,7 @@ answer: "Absolutely! We work with businesses of all sizes, from startups to ente
 question: "What industries do you serve?",
 answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
 }
-]
+];
   return (
     <React.Fragment>
 <Helmet>
@@ -89,8 +89,10 @@ className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg
 </div>
 </section>
 </div>
-    </React.Fragment>
-  )
+    </div>
+  );
+};
+
 }
 
 export default $1

@@ -1,6 +1,8 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
+
+const ErrorBoundaryPage: React.FC = () => {
 interface Props {
 children: ReactNode
 fallback?: ReactNode
@@ -89,9 +91,11 @@ kleber@ziontechgroup.com
 </div>
 </div>
 </div>
-)
+);
+};
+
 }
 return this.props.children
 }
 }
-export default ErrorBoundary
+export default ErrorBoundary;

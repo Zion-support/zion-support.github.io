@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
-export default function PrivacyPage() {
+export default function; PrivacyPage() {
 const lastUpdated = 'January 1, 2024'
 const dataTypes = [
 {
@@ -66,7 +66,7 @@ title: 'Portability',
 description: 'Receive your data in a structured format',
 icon: Database
 }
-]
+];
   return (
     <div className="min-h-screen bg-white"></div>
 <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
@@ -212,5 +212,7 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 </div>
 </div>
 </div>
-)
+);
+};
+
 }

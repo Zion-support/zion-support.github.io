@@ -121,6 +121,8 @@ className="text-gray-400 hover:text-white"
 )}
 </div>
 </div>
-)
+);
+};
+
 }
-export default PerformanceMonitor
+export default PerformanceMonitor;

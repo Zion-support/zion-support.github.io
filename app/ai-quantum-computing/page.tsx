@@ -34,7 +34,7 @@ const AiQuantumComputingPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
   return (
     <>
       <Helmet>
@@ -145,8 +145,10 @@ const AiQuantumComputingPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-        </React.Fragment>
-  )
+        </div>
+  );
+};
+
 }
 
 export default $1

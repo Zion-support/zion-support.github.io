@@ -288,6 +288,8 @@ View Case Studies
 </div>
 </div>
 </div>
-)
+);
+};
+
 }
-export default ContentStatistics
+export default ContentStatistics;

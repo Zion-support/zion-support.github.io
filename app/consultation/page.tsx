@@ -482,10 +482,10 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
       </div>
-    </React.Fragment>
+    </div>
   )
 }
-export default ConsultationPage
+export default ConsultationPag;e;
   </button>
   </button>
   </Link>
@@ -499,6 +499,8 @@ export default ConsultationPage
   </section>
   </div>
   </string>
-  )
+  );
+};
+
 }
-export default ConsultationPage
+export default ConsultationPag;e;

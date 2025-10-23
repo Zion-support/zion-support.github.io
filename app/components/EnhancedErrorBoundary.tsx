@@ -13,7 +13,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -92,7 +92,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>
   )
 }
-export default EnhancedErrorBoundaryPage
+export default EnhancedErrorBoundaryPage;
   </button>
   </button>
   </h2>
@@ -187,9 +187,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      )
+      );
+};
+
     }
     return this.props.children
   }
 }
-export default EnhancedErrorBoundary
+export default EnhancedErrorBoundary;
