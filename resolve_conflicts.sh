@@ -1,53 +1,18 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the main branch version
-# This script will automatically resolve conflicts by keeping the main branch version
-
-echo "Starting conflict resolution process..."
-
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
+# Find all files with merge conflicts and resolve them by accepting our version
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
     echo "Resolving conflicts in: $file"
     
-    # Check if file has conflict markers
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "  Found conflicts in $file"
-        
-        # Create a backup
-        cp "$file" "${file}.backup"
-        
-        # Use git checkout to get the main branch version (ours)
-        git checkout --ours "$file"
-        
-        echo "  Resolved conflicts in $file using main branch version"
-    else
-        echo "  No conflicts found in $file"
-    fi
-}
-
-# Get list of conflicted files
-conflicted_files=$(git diff --name-only --diff-filter=U)
-
-if [ -z "$conflicted_files" ]; then
-    echo "No conflicted files found."
-    exit 0
-fi
-
-echo "Found conflicted files:"
-echo "$conflicted_files"
-echo ""
-
-# Resolve conflicts in each file
-for file in $conflicted_files; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
-    else
-        echo "File $file not found, skipping..."
-    fi
+    # Use git checkout --ours to accept our version
+    git checkout --ours "$file" 2>/dev/null || {
+      # If git checkout fails, manually resolve by removing conflict markers
+      sed -i '/<<<<<<< HEAD/,/>>>>>>> /d' "$file"
+      # Remove any remaining ======= lines
+      sed -i '/^=======$/d' "$file"
+    }
+  fi
 done
 
-echo ""
-echo "Conflict resolution completed!"
-echo "Files resolved:"
-echo "$conflicted_files"
+echo "All merge conflicts resolved!"
