@@ -1,12 +1,18 @@
 // Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextEncoder = TextEncoder;
-(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextDecoder = TextDecoder;
+import { TextEncoder, TextDecoder } from "util";
+
+// Jest types are now provided by @types/jest
+(
+  global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }
+).TextEncoder = TextEncoder;
+(
+  global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }
+).TextDecoder = TextDecoder;
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -35,7 +41,7 @@ global.ResizeObserver = class ResizeObserver {
 };
 
 // Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {
+Object.defineProperty(window, "scrollTo", {
   writable: true,
   value: jest.fn(),
 });

@@ -1,49 +1,53 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // List of corrupted files that need to be fixed
 const corruptedFiles = [
-  'app/5g-edge-computing/page.tsx',
-  'app/5g-implementation/page.tsx',
-  'app/5g-infrastructure/page.tsx',
-  'app/5g-iot-solutions/page.tsx',
-  'app/5g-mobile-applications/page.tsx',
-  'app/5g-network-infrastructure/page.tsx',
-  'app/hooks/useIntersectionObserver.ts',
-  'app/hooks/usePerformance.ts',
-  'app/hooks/usePerformanceMonitor.ts',
-  'app/hooks/usePerformanceOptimization.ts',
-  'app/hooks/useSEO.ts',
-  'app/metadata.ts',
-  'app/types/next.d.ts',
-  'app/utils/accessibilityChecker.ts',
-  'app/utils/accessibilityEnhancer.ts',
-  'app/utils/accessibilityUtils.ts',
-  'app/utils/advancedAnalytics.ts',
-  'app/utils/advancedCaching.ts',
-  'app/utils/analyticsTracker.ts',
-  'app/utils/apiCache.ts',
-  'app/utils/apiClient.ts',
-  'app/utils/dataValidator.ts',
-  'app/utils/formValidation.ts',
-  'app/utils/monitoring.ts',
-  'app/utils/performanceEnhancer.ts',
-  'app/utils/performanceMetrics.ts',
-  'app/utils/performanceMonitoring.ts',
-  'app/utils/performanceOptimizations.ts',
-  'app/utils/performanceOptimizer.ts',
-  'app/utils/securityManager.ts',
-  'app/utils/sitemapGenerator.ts',
-  'app/utils/usePerformanceMonitor.ts',
-  'app/utils/validators.ts'
+  "app/5g-edge-computing/page.tsx",
+  "app/5g-implementation/page.tsx",
+  "app/5g-infrastructure/page.tsx",
+  "app/5g-iot-solutions/page.tsx",
+  "app/5g-mobile-applications/page.tsx",
+  "app/5g-network-infrastructure/page.tsx",
+  "app/hooks/useIntersectionObserver.ts",
+  "app/hooks/usePerformance.ts",
+  "app/hooks/usePerformanceMonitor.ts",
+  "app/hooks/usePerformanceOptimization.ts",
+  "app/hooks/useSEO.ts",
+  "app/metadata.ts",
+  "app/types/next.d.ts",
+  "app/utils/accessibilityChecker.ts",
+  "app/utils/accessibilityEnhancer.ts",
+  "app/utils/accessibilityUtils.ts",
+  "app/utils/advancedAnalytics.ts",
+  "app/utils/advancedCaching.ts",
+  "app/utils/analyticsTracker.ts",
+  "app/utils/apiCache.ts",
+  "app/utils/apiClient.ts",
+  "app/utils/dataValidator.ts",
+  "app/utils/formValidation.ts",
+  "app/utils/monitoring.ts",
+  "app/utils/performanceEnhancer.ts",
+  "app/utils/performanceMetrics.ts",
+  "app/utils/performanceMonitoring.ts",
+  "app/utils/performanceOptimizations.ts",
+  "app/utils/performanceOptimizer.ts",
+  "app/utils/securityManager.ts",
+  "app/utils/sitemapGenerator.ts",
+  "app/utils/usePerformanceMonitor.ts",
+  "app/utils/validators.ts",
 ];
 
 // Template for 5G pages
-const create5GPage = (title, description, icon) => `import { Helmet } from 'react-helmet-async';
+const create5GPage = (
+  title,
+  description,
+  icon,
+) => `import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ${icon} } from 'lucide-react';
 
-export default function ${title.replace(/\s+/g, '')}Page() {
+export default function ${title.replace(/\s+/g, "")}Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -108,17 +112,20 @@ export default function ${title.replace(/\s+/g, '')}Page() {
 
 // Template for utility files
 const createUtilityFile = (name, content) => `// ${name}
-export const ${name.toLowerCase().replace(/\s+/g, '')} = {
+export const ${name.toLowerCase().replace(/\s+/g, "")} = {
   // Utility functions will be implemented here
   init: () => {
     console.log('${name} initialized');
   }
 };
 
-export default ${name.toLowerCase().replace(/\s+/g, '')};`;
+export default ${name.toLowerCase().replace(/\s+/g, "")};`;
 
 // Template for hook files
-const createHookFile = (name, content) => `import { useCallback, useEffect, useRef, useState } from 'react';
+const createHookFile = (
+  name,
+  content,
+) => `import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface ${name}Options {
   // Options will be defined here
@@ -146,45 +153,51 @@ export default ${name};`;
 // 5G page configurations
 const fiveGPages = [
   {
-    file: 'app/5g-edge-computing/page.tsx',
-    title: '5G Edge Computing',
-    description: 'Deploy applications at the network edge with ultra-low latency and high performance.',
-    icon: 'Cpu'
+    file: "app/5g-edge-computing/page.tsx",
+    title: "5G Edge Computing",
+    description:
+      "Deploy applications at the network edge with ultra-low latency and high performance.",
+    icon: "Cpu",
   },
   {
-    file: 'app/5g-implementation/page.tsx',
-    title: '5G Implementation',
-    description: 'Complete 5G network implementation and deployment services for your organization.',
-    icon: 'Settings'
+    file: "app/5g-implementation/page.tsx",
+    title: "5G Implementation",
+    description:
+      "Complete 5G network implementation and deployment services for your organization.",
+    icon: "Settings",
   },
   {
-    file: 'app/5g-infrastructure/page.tsx',
-    title: '5G Infrastructure',
-    description: 'Build robust 5G infrastructure with our comprehensive network solutions.',
-    icon: 'Network'
+    file: "app/5g-infrastructure/page.tsx",
+    title: "5G Infrastructure",
+    description:
+      "Build robust 5G infrastructure with our comprehensive network solutions.",
+    icon: "Network",
   },
   {
-    file: 'app/5g-iot-solutions/page.tsx',
-    title: '5G IoT Solutions',
-    description: 'Connect and manage IoT devices with high-speed 5G connectivity.',
-    icon: 'Wifi'
+    file: "app/5g-iot-solutions/page.tsx",
+    title: "5G IoT Solutions",
+    description:
+      "Connect and manage IoT devices with high-speed 5G connectivity.",
+    icon: "Wifi",
   },
   {
-    file: 'app/5g-mobile-applications/page.tsx',
-    title: '5G Mobile Applications',
-    description: 'Develop next-generation mobile applications leveraging 5G capabilities.',
-    icon: 'Smartphone'
+    file: "app/5g-mobile-applications/page.tsx",
+    title: "5G Mobile Applications",
+    description:
+      "Develop next-generation mobile applications leveraging 5G capabilities.",
+    icon: "Smartphone",
   },
   {
-    file: 'app/5g-network-infrastructure/page.tsx',
-    title: '5G Network Infrastructure',
-    description: 'Design and implement comprehensive 5G network infrastructure solutions.',
-    icon: 'Globe'
-  }
+    file: "app/5g-network-infrastructure/page.tsx",
+    title: "5G Network Infrastructure",
+    description:
+      "Design and implement comprehensive 5G network infrastructure solutions.",
+    icon: "Globe",
+  },
 ];
 
 // Fix 5G pages
-fiveGPages.forEach(page => {
+fiveGPages.forEach((page) => {
   const content = create5GPage(page.title, page.description, page.icon);
   fs.writeFileSync(page.file, content);
   console.log(`Fixed: ${page.file}`);
@@ -192,47 +205,53 @@ fiveGPages.forEach(page => {
 
 // Fix utility files
 const utilityFiles = [
-  'app/utils/accessibilityChecker.ts',
-  'app/utils/accessibilityEnhancer.ts',
-  'app/utils/accessibilityUtils.ts',
-  'app/utils/advancedAnalytics.ts',
-  'app/utils/advancedCaching.ts',
-  'app/utils/analyticsTracker.ts',
-  'app/utils/apiCache.ts',
-  'app/utils/apiClient.ts',
-  'app/utils/dataValidator.ts',
-  'app/utils/formValidation.ts',
-  'app/utils/monitoring.ts',
-  'app/utils/performanceEnhancer.ts',
-  'app/utils/performanceMetrics.ts',
-  'app/utils/performanceMonitoring.ts',
-  'app/utils/performanceOptimizations.ts',
-  'app/utils/performanceOptimizer.ts',
-  'app/utils/securityManager.ts',
-  'app/utils/sitemapGenerator.ts',
-  'app/utils/usePerformanceMonitor.ts',
-  'app/utils/validators.ts'
+  "app/utils/accessibilityChecker.ts",
+  "app/utils/accessibilityEnhancer.ts",
+  "app/utils/accessibilityUtils.ts",
+  "app/utils/advancedAnalytics.ts",
+  "app/utils/advancedCaching.ts",
+  "app/utils/analyticsTracker.ts",
+  "app/utils/apiCache.ts",
+  "app/utils/apiClient.ts",
+  "app/utils/dataValidator.ts",
+  "app/utils/formValidation.ts",
+  "app/utils/monitoring.ts",
+  "app/utils/performanceEnhancer.ts",
+  "app/utils/performanceMetrics.ts",
+  "app/utils/performanceMonitoring.ts",
+  "app/utils/performanceOptimizations.ts",
+  "app/utils/performanceOptimizer.ts",
+  "app/utils/securityManager.ts",
+  "app/utils/sitemapGenerator.ts",
+  "app/utils/usePerformanceMonitor.ts",
+  "app/utils/validators.ts",
 ];
 
-utilityFiles.forEach(file => {
-  const name = path.basename(file, '.ts').replace(/([A-Z])/g, ' $1').trim();
-  const content = createUtilityFile(name, '');
+utilityFiles.forEach((file) => {
+  const name = path
+    .basename(file, ".ts")
+    .replace(/([A-Z])/g, " $1")
+    .trim();
+  const content = createUtilityFile(name, "");
   fs.writeFileSync(file, content);
   console.log(`Fixed: ${file}`);
 });
 
 // Fix hook files
 const hookFiles = [
-  'app/hooks/useIntersectionObserver.ts',
-  'app/hooks/usePerformance.ts',
-  'app/hooks/usePerformanceMonitor.ts',
-  'app/hooks/usePerformanceOptimization.ts',
-  'app/hooks/useSEO.ts'
+  "app/hooks/useIntersectionObserver.ts",
+  "app/hooks/usePerformance.ts",
+  "app/hooks/usePerformanceMonitor.ts",
+  "app/hooks/usePerformanceOptimization.ts",
+  "app/hooks/useSEO.ts",
 ];
 
-hookFiles.forEach(file => {
-  const name = path.basename(file, '.ts').replace(/([A-Z])/g, ' $1').trim();
-  const content = createHookFile(name, '');
+hookFiles.forEach((file) => {
+  const name = path
+    .basename(file, ".ts")
+    .replace(/([A-Z])/g, " $1")
+    .trim();
+  const content = createHookFile(name, "");
   fs.writeFileSync(file, content);
   console.log(`Fixed: ${file}`);
 });
@@ -254,8 +273,8 @@ export const metadata: Metadata = {
 
 export default metadata;`;
 
-fs.writeFileSync('app/metadata.ts', metadataContent);
-console.log('Fixed: app/metadata.ts');
+fs.writeFileSync("app/metadata.ts", metadataContent);
+console.log("Fixed: app/metadata.ts");
 
 // Fix types file
 const typesContent = `declare global {
@@ -266,7 +285,7 @@ const typesContent = `declare global {
 
 export {};`;
 
-fs.writeFileSync('app/types/next.d.ts', typesContent);
-console.log('Fixed: app/types/next.d.ts');
+fs.writeFileSync("app/types/next.d.ts", typesContent);
+console.log("Fixed: app/types/next.d.ts");
 
-console.log('All corrupted files have been fixed!');
+console.log("All corrupted files have been fixed!");
