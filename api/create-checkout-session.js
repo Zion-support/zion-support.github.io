@@ -4,50 +4,37 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({
-        error: 'Internal server error',
-        message: error.message
-      });
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Internal server error' }));
     }
   };
 };
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  const { productId } = req.body;
+  if (!productId) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Product ID is required' }));
+    return;
   }
 
   try {
-    const { 
-      priceId, 
-      quantity = 1, 
-      successUrl, 
-      cancelUrl,
-      customerEmail 
-    } = req.body;
-
-    if (!priceId) {
-      return res.status(400).json({ error: 'Price ID is required' });
-    }
-
-    // Mock checkout session creation
-    // In a real implementation, you would use Stripe or another payment processor
-    const checkoutSession = {
-      id: `cs_${Date.now()}`,
-      url: `https://checkout.example.com/session/${Date.now()}`,
-      payment_status: 'unpaid',
-      amount_total: 10000, // $100.00 in cents
-      currency: 'usd',
-      customer_email: customerEmail || null,
-      success_url: successUrl || `${req.headers.origin}/success`,
-      cancel_url: cancelUrl || `${req.headers.origin}/cancel`
+    const session = {
+      status: 'pending',
+      productId: productId
     };
 
-    res.status(200).json({ 
-      checkoutSession 
-    });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(session));
   } catch (error) {
     console.error('Checkout session creation error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
   }
 });

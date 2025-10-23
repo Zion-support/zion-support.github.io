@@ -4,44 +4,38 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({
-        error: 'Internal server error',
-        message: error.message
-      });
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Internal server error' }));
     }
   };
 };
 
-const handler = async (req, res) => {
+export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  const { amount, currency = 'usd' } = req.body;
+  if (!amount) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Amount is required' }));
+    return;
   }
 
   try {
-    const { amount, currency = 'usd', description } = req.body;
-
-    if (!amount || amount <= 0) {
-      return res.status(400).json({ error: 'Valid amount is required' });
-    }
-
-    // Mock payment intent creation
-    // In a real implementation, you would use Stripe or another payment processor
     const paymentIntent = {
-      id: `pi_${Date.now()}`,
-      amount: Math.round(amount * 100), // Convert to cents
-      currency,
-      description: description || 'Zion Tech Group Service',
       status: 'requires_payment_method',
-      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
+      amount: amount,
+      currency: currency
     };
 
-    res.status(200).json({ 
-      paymentIntent 
-    });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(paymentIntent));
   } catch (error) {
     console.error('Payment intent creation error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
-};
-
-export default withErrorLogging(handler);
+});

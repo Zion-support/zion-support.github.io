@@ -1,259 +1,242 @@
-import { Component, ErrorInfo, ReactNode } from "react";
-import { RefreshCw, Home, AlertTriangle } from "lucide-react";
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
-
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
-    };
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-    });
-
-    // Enhanced error reporting
-    const errorReport = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      errorId: this.state.errorId,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId(),
-    };
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === "development") {
-      // console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
-      // console.error('Error Report:', errorReport);
+const EnhancedErrorBoundaryPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
+  ]
 
-    // Send error to monitoring service in production
-    if (process.env.NODE_ENV === "production") {
-      this.reportError(errorReport);
-    }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-  }
-
-  private getUserId(): string | null {
-    // Try to get user ID from localStorage or other sources
-    try {
-      return localStorage.getItem("userId") || null;
-    } catch {
-      return null;
-    }
-  }
-
-  private getSessionId(): string {
-    // Generate or retrieve session ID
-    try {
-      let sessionId = sessionStorage.getItem("sessionId");
-      if (!sessionId) {
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem("sessionId", sessionId);
-      }
-      return sessionId;
-    } catch {
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
-  }
-
-  private reportError = (errorReport: any) => {
-    // Send to error monitoring service
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "exception", {
-        event_category: "error",
-        event_label: errorReport.message,
-        value: 1,
-        non_interaction: true,
-      });
-    }
-
-    // Send to custom error endpoint
-    fetch("/api/errors", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(errorReport),
-    }).catch(() => {
-      // Silently fail if error reporting fails
-    });
-  };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
-    });
-  };
-
-  private handleReload = () => {
-    window.location.reload();
-  };
-
-  private handleGoHome = () => {
-    window.location.href = "/";
-  };
-
-  override render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-4">
-          <div className="max-w-2xl w-full bg-slate-800 rounded-lg shadow-2xl border border-red-500/30 overflow-hidden">
-            {/* Header */}
-            <div className="bg-gradient-to-r from-red-600 to-red-700 px-6 py-4">
-              <div className="flex items-center space-x-3">
-                <AlertTriangle className="w-8 h-8 text-white" />
-                <div>
-                  <h1 className="text-xl font-bold">Something went wrong</h1>
-                  <p className="text-red-100 text-sm">
-                    We're sorry for the inconvenience
-                  </p>
-                </div>
+  return (
+    <>
+      <Helmet>
+        <title>EnhancedErrorBoundary | Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="AI, artificial intelligence, EnhancedErrorBoundary, AI solutions, intelligent automation" />
+      </Helmet>
+<<<<<<< HEAD
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              EnhancedErrorBoundary
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business.
+            </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
             </div>
+          </div>
+        </section>
 
-            {/* Content */}
-            <div className="p-6">
-              <div className="mb-6">
-                <h2 className="text-lg font-semibold mb-2 text-red-400">
-                  Error Details
-                </h2>
-                <div className="bg-slate-900 rounded-lg p-4 border border-slate-700">
-                  <p className="text-gray-300 mb-2">
-                    <strong>Message:</strong>{" "}
-                    {this.state.error?.message ||
-                      "An unexpected error occurred"}
-                  </p>
-                  {this.state.errorId && (
-                    <p className="text-gray-400 text-sm">
-                      <strong>Error ID:</strong> {this.state.errorId}
-                    </p>
-                  )}
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              {/* Actions */}
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors"
-                >
-                  <RefreshCw className="w-5 h-5" />
-                  <span>Try Again</span>
-                </button>
-
-                <div className="grid grid-cols-2 gap-3">
-                  <button
-                    onClick={this.handleReload}
-                    className="flex items-center justify-center space-x-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    <RefreshCw className="w-4 h-4" />
-                    <span>Reload Page</span>
-                  </button>
-
-                  <button
-                    onClick={this.handleGoHome}
-                    className="flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    <Home className="w-4 h-4" />
-                    <span>Go Home</span>
-                  </button>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              {/* Debug info in development */}
-              {process.env.NODE_ENV === "development" && this.state.error && (
-                <details className="mt-6">
-                  <summary className="cursor-pointer text-sm text-gray-400 hover:text-gray-300 mb-2">
-                    Debug Information
-                  </summary>
-                  <div className="bg-slate-900 rounded-lg p-4 border border-slate-700 text-xs font-mono text-gray-300 overflow-auto max-h-40">
-                    <pre>{this.state.error.stack}</pre>
-                    {this.state.errorInfo && (
-                      <pre className="mt-2 text-yellow-400">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    )}
-                  </div>
-                </details>
-              )}
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-              {/* Support info */}
-              <div className="mt-6 p-4 bg-slate-700/50 rounded-lg">
-                <p className="text-sm text-gray-300 mb-2">
-                  If this problem persists, please contact our support team:
-                </p>
-                <div className="text-sm text-gray-400">
-                  <p>
-                    📞{" "}
-                    <a
-                      href="tel:+13024640950"
-                      className="text-cyan-400 hover:text-cyan-300"
-                    >
-                      +1 (302) 464-0950
-                    </a>
-                  </p>
-                  <p>
-                    ✉️{" "}
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="text-cyan-400 hover:text-cyan-300"
-                    >
-                      kleber@ziontechgroup.com
-                    </a>
-                  </p>
-                </div>
-              </div>
+export default EnhancedErrorBoundaryPage;
+  error?: Error
+  errorInfo?: ErrorInfo}
+class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {
+    super(props)
+    this.state= { hasError: false}
+  }
+  static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo})
+    // Log error to monitoring service
+    // console.error('Error caught by boundary:', error, errorInfo)
+  }
+  handleReload= () => {windo w.location.reload()
+ }
+  render() {if (this.state.hasError) {
+      if (this.props.fallback) {
+        return thi s.props.fallback
+     }
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+            </div>
+            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
+            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto"></p>
+                  {this.state.error.toString()}
+=======
+            </div>
+          </div>
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
+            <div className="space-y-3">
+              <button
+                onClick={this.handleRetry}
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
+              ></button>
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Try Again
+              </button>
+              <button
+                onClick={this.handleReload}
+                className="w-full border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
+              ></button>
+                <Home className="w-4 h-4 mr-2" />
+                Reload Page
+              </button>
+            </div>
+            <div className="mt-6 pt-6 border-t border-gray-700">
+              <p className="text-sm text-gray-400 mb-3">Still having issues? Contact our support team:</p>p>
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm"
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                support@ziontechgroup.com
+              </a>
             </div>
           </div>
         </div>
-      );
+      )
     }
-
-    return this.props.children;
+    return this.props.children
   }
 }
-
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

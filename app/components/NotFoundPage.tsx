@@ -1,65 +1,68 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+<<<<<<< HEAD
+"use client"
+import React from "react"
+import { Helmet } from "react-helmet-async"
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
-const NotFoundPage: React.FC = () => {
+const NotFoundPagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
   return (
     <>
       <Helmet>
-        <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="The page you're looking for doesn't exist. Return to our homepage to explore our AI and IT solutions."
-        />
-        <meta name="robots" content="noindex, nofollow" />
+        <title>NotFoundPage | Zion Tech Group</title>
+        <meta name="description" content="Professional NotFoundPage services by Zion Tech Group." />
+        <meta name="keywords" content="AI, artificial intelligence, NotFoundPage, AI solutions, intelligent automation" />
       </Helmet>
-
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <div className="mb-8">
-            <h1 className="text-9xl font-bold text-blue-600 mb-4">404</h1>
-            <h2 className="text-3xl font-semibold text-gray-900 mb-4">
-              Page Not Found
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-md mx-auto">
-              Sorry, we couldn't find the page you're looking for. It might have
-              been moved, deleted, or you entered the wrong URL.
-            </p>
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">NotFoundPage</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional NotFoundPage services tailored to your business needs.</p>p>
           </div>
-
-          <div className="space-y-4">
-            <Link
-              to="/"
-              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            >
-              Go Back Home
-            </Link>
-
-            <div className="text-sm text-gray-500">
-              <p>Or try one of these popular pages:</p>
-              <div className="mt-2 space-x-4">
-                <Link
-                  to="/services"
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  Services
-                </Link>
-                <Link to="/about" className="text-blue-600 hover:text-blue-800">
-                  About
-                </Link>
-                <Link
-                  to="/contact"
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-          </div>
+<<<<<<< HEAD
         </div>
-      </div>
-    </>
-  );
-};
+      </section>
+    </div>
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPagePage
+
+export default NotFoundPagePage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

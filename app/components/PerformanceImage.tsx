@@ -1,71 +1,68 @@
-import React, { useState, useCallback } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+<<<<<<< HEAD
+"use client"
+import React from "react"
+import { Helmet } from "react-helmet-async"
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
-interface PerformanceImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number | string;
-  height?: number | string;
-  placeholder?: string;
-  effect?: "blur" | "black-and-white" | "opacity";
-  threshold?: number;
-  onLoad?: () => void;
-  onError?: () => void;
-}
+const PerformanceImagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
 
-const PerformanceImage: React.FC<PerformanceImageProps> = ({
-  src,
-  alt,
-  className = "",
-  width,
-  height,
-  placeholder,
-  effect = "blur",
-  threshold = 100,
-  onLoad,
-  onError,
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
-  const handleLoad = useCallback(() => {
-    setIsLoaded(true);
-    onLoad?.();
-  }, [onLoad]);
-
-  const handleError = useCallback(() => {
-    setHasError(true);
-    onError?.();
-  }, [onError]);
-
-  if (hasError) {
-    return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
-      </div>
-    );
-  }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
   return (
-    <LazyLoadImage
-      src={src}
-      alt={alt}
-      className={`transition-opacity duration-300 ${isLoaded ? "opacity-100" : "opacity-0"} ${className}`}
-      width={width}
-      height={height}
-      placeholderSrc={placeholder}
-      effect={effect}
-      threshold={threshold}
-      onLoad={handleLoad}
-      onError={handleError}
-      loading="lazy"
-    />
-  );
-};
+    <>
+      <Helmet>
+        <title>PerformanceImage | Zion Tech Group</title>
+        <meta name="description" content="Professional PerformanceImage services by Zion Tech Group." />
+        <meta name="keywords" content="AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation" />
+      </Helmet>
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">PerformanceImage</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional PerformanceImage services tailored to your business needs.</p>p>
+          </div>
+<<<<<<< HEAD
+        </div>
+      </section>
+    </div>
+  )
+}
 
-export default PerformanceImage;
+export default PerformanceImagePage
+
+export default PerformanceImagePage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

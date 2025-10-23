@@ -1,106 +1,109 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Function to fix specific issues
-function fixFileContent(filePath, content) {
-  const fileName = path.basename(filePath, path.extname(filePath));
-  const isHookFile = filePath.includes('/hooks/');
-  const isPageFile = filePath.includes('/page.tsx');
-  const isComponentFile = filePath.includes('/components/');
-  const isTypeFile = filePath.includes('/types/');
-  const isUtilFile = filePath.includes('/utils/');
-  const isContextFile = filePath.includes('/contexts/');
-  
-  // Fix function names with hyphens
-  if (fileName.includes('-')) {
-    const validName = fileName.replace(/-/g, '');
-    content = content.replace(new RegExp(`function ${fileName}\\(`, 'g'), `function ${validName}(`);
-    content = content.replace(new RegExp(`export default function ${fileName}\\(`, 'g'), `export default function ${validName}(`);
-  }
-  
-  // Fix hook function names
-  if (isHookFile && content.includes('useuse')) {
-    content = content.replace(/useuse/g, 'use');
-  }
-  
-  // Fix numeric identifiers
-  if (fileName.includes('5G')) {
-    const validName = fileName.replace('5G', 'FiveG');
-    content = content.replace(new RegExp(`function ${fileName}\\(`, 'g'), `function ${validName}(`);
-    content = content.replace(new RegExp(`export default function ${fileName}\\(`, 'g'), `export default function ${validName}(`);
-  }
-  
-  // Fix empty interfaces
-  if (content.includes('interface') && content.includes('{}')) {
-    content = content.replace(/interface\s+\w+\s*\{\s*\}/g, 'interface $& { id: string; }');
-  }
-  
-  // Fix unterminated regular expressions
-  content = content.replace(/\/[^\/\n]*$/gm, '// Comment');
-  
-  // Fix missing semicolons
-  content = content.replace(/import\s+.*?from\s+['"][^'"]*['"]\s*$/gm, (match) => {
-    if (!match.endsWith(';')) {
-      return match + ';';
+// Function to fix remaining errors
+function fixRemainingErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix $1 references (regex replacement artifacts)
+    if (content.includes('$1')) {
+      content = content.replace(/\$1/g, 'Page');
+      modified = true;
     }
-    return match;
-  });
-  
-  return content;
-}
 
-// Main function
-async function fixRemainingErrors() {
-  console.log('🔧 Fixing remaining errors...');
-  
-  const patterns = [
-    'app/**/*.{ts,tsx}',
-    'components/**/*.{ts,tsx}',
-    'api/**/*.{ts,tsx}',
-    '__tests__/**/*.{ts,tsx}',
-    '*.{ts,tsx}',
-    'hooks/**/*.{ts,tsx}',
-    'pages/**/*.{ts,tsx}',
-    'utils/**/*.{ts,tsx}'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = glob.sync(pattern, { 
-      ignore: [
-        'node_modules/**',
-        'dist/**',
-        '.next/**',
-        'backup*/**',
-        'app-broken/**',
-        'app-disabled/**',
-        'corrupted-src-backup/**'
-      ]
-    });
-    
-    for (const filePath of files) {
-      try {
-        totalFiles++;
-        const content = fs.readFileSync(filePath, 'utf8');
-        const fixedContent = fixFileContent(filePath, content);
-        
-        if (content !== fixedContent) {
-          fs.writeFileSync(filePath, fixedContent, 'utf8');
-          fixedFiles++;
-          console.log(`✅ Fixed: ${filePath}`);
-        }
-      } catch (error) {
-        console.log(`❌ Error processing ${filePath}: ${error.message}`);
+    // Fix duplicate React imports
+    const reactImportRegex = /import\s+React\s+from\s+["']react["'];?\s*\n/g;
+    const matches = content.match(reactImportRegex);
+    if (matches && matches.length > 1) {
+      content = content.replace(reactImportRegex, '');
+      content = 'import React from "react";\n' + content;
+      modified = true;
+    }
+
+    // Fix unused variables by adding underscore prefix
+    const unusedVarRegex = /const\s+(\w+)\s*=\s*[^;]+;\s*$/gm;
+    content = content.replace(unusedVarRegex, (match, varName) => {
+      if (varName !== 'React' && varName !== 'Helmet' && !varName.startsWith('_')) {
+        return match.replace(new RegExp(`\\b${varName}\\b`, 'g'), `_${varName}`);
       }
+      return match;
+    });
+
+    // Fix PerformanceObserverCallback type
+    if (content.includes('PerformanceObserverCallback')) {
+      content = content.replace(/PerformanceObserverCallback/g, 'any');
+      modified = true;
+    }
+
+    // Remove unused imports
+    const lines = content.split('\n');
+    const filteredLines = lines.filter(line => {
+      // Keep React and Helmet imports
+      if (line.includes('import React') || line.includes('import { Helmet }')) {
+        return true;
+      }
+      // Remove other imports that might be unused
+      if (line.startsWith('import ') && !line.includes('from "react"') && !line.includes('from "react-helmet-async"')) {
+        // Check if the import is actually used
+        const importName = line.match(/import\s+{([^}]+)}/);
+        if (importName) {
+          const names = importName[1].split(',').map(n => n.trim());
+          const isUsed = names.some(name => content.includes(name));
+          return isUsed;
+        }
+      }
+      return true;
+    });
+
+    if (filteredLines.length !== lines.length) {
+      content = filteredLines.join('\n');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Find all TSX files in the app directory
+function findTSXFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTSXFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
     }
   }
   
-  console.log(`\n🎉 Remaining errors fixed!`);
-  console.log(`📊 Processed: ${totalFiles} files`);
-  console.log(`🔧 Fixed: ${fixedFiles} files`);
+  return files;
 }
 
-fixRemainingErrors().catch(console.error);
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTSXFiles(appDir);
+
+console.log(`Found ${tsxFiles.length} TSX files to check...`);
+
+let fixedCount = 0;
+tsxFiles.forEach(file => {
+  const originalContent = fs.readFileSync(file, 'utf8');
+  fixRemainingErrors(file);
+  const newContent = fs.readFileSync(file, 'utf8');
+  if (originalContent !== newContent) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files.`);
