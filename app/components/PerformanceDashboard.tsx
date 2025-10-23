@@ -115,7 +115,7 @@ isMonitoring
 ? 'bg-red-600 text-white hover:bg-red-700'
 : 'bg-green-600 text-white hover:bg-green-700'
 }`}
->{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>button>
+>{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>
 </div>
 {alerts.length > 0 && (
 <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">

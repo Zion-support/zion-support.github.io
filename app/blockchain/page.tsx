@@ -2,7 +2,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react'
-const BlockchainPage: React.FC = () => {
 const features = [
 {
 icon: Shield,
@@ -48,9 +47,9 @@ return (
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with cutting-edge blockchain technology and decentralized solutions.</p>
 Powered by advanced AI and industry expertise.
 </p>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our blockchain solutions deliver unmatched performance, security, and scalability.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our blockchain solutions deliver unmatched performance, security, and scalability.</p>
 </div>
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{features.map((feature, index) => (</div>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{features.map((feature, index) => (
 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
 <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -60,7 +59,7 @@ Powered by advanced AI and industry expertise.
 </div>
 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
 <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Blockchain Solutions?</h2>h2>
-<div className="grid md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
+<div className="grid md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (
 <div key={index} className="flex items-center space-x-3">
 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
 <span className="text-gray-300">{benefit}</span>
@@ -143,7 +142,7 @@ Powered by advanced AI and industry expertise.
 <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
 <div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div>
-<span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{tech}</span>span>
+<span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{tech}</span>
 ))}
 </div>
 </div>

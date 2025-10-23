@@ -37,8 +37,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -503,4 +502,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+

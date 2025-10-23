@@ -119,4 +119,6 @@ declare global {
     dataLayer: unknown[];
     gtag: (...args: any[]) => void;
   }
-}
+};
+
+export default Page;

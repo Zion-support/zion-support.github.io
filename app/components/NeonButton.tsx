@@ -61,8 +61,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   }
 
   return (
-    <button onClick={onClick} disabled={disabled} className={buttonClasses}>{content}</button>button>
+    <button onClick={onClick} disabled={disabled} className={buttonClasses}>{content}</button>
   );
 };
 
-export default NeonButton;
+

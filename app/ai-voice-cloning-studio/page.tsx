@@ -1168,7 +1168,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>span>
+                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>
                   </div>
                 )}
 
@@ -1194,7 +1194,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>{plan.popular ? 'Get Started' : 'Choose Plan'}</button>button>
+                }`}>{plan.popular ? 'Get Started' : 'Choose Plan'}</button>
               </div>
             ))}
           </div>
@@ -1252,7 +1252,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     <span className="text-gray-300">24/7 support</span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">Start Free Trial</button>button>
+                <button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">Start Free Trial</button>
               </div>
             </div>
           </div>

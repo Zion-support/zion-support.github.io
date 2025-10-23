@@ -6,8 +6,7 @@ declare global {
   }
 }
 
-const Analytics: React.FC = () => {
-  useEffect(() => {
+useEffect(() => {
     const initAnalytics = () => {
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("config", "GA_MEASUREMENT_ID", {
@@ -22,4 +21,4 @@ const Analytics: React.FC = () => {
   return null; // Analytics component doesn't render anything
 };
 
-export default Analytics;
+

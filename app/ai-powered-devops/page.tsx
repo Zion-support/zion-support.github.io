@@ -1,8 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-const AiPoweredDevopsPage: React.FC = () => {
-  return (
+return (
     <>
       <SEOHead 
         title="ai-powered-devops - Zion Tech Group"
@@ -18,4 +17,4 @@ const AiPoweredDevopsPage: React.FC = () => {
   );
 };
 
-export default AiPoweredDevopsPage;
+

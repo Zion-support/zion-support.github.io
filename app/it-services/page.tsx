@@ -2,8 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Settings } from 'lucide-react';
 
-const ITServicesPage: React.FC = () => {
-  const itServices = [
+const itServices = [
     {
       title: 'Cloud Infrastructure Management',
       description: 'Complete cloud migration, optimization, and management services for AWS, Azure, and Google Cloud.',
@@ -148,16 +147,16 @@ const ITServicesPage: React.FC = () => {
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, infrastructure, technology consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">>{/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Professional IT Services</h1>h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Comprehensive technology solutions to power your business growth and digital transformation</p>p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Professional IT Services</h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Comprehensive technology solutions to power your business growth and digital transformation</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">Get Free Assessment</button>button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">View Our Portfolio</button>button>
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">Get Free Assessment</button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">View Our Portfolio</button>
               </div>
             </div>
           </div>
@@ -168,7 +167,7 @@ const ITServicesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>h2>
-              <p className="text-xl text-gray-600">Expert solutions delivered by certified professionals with proven track records</p>p>
+              <p className="text-xl text-gray-600">Expert solutions delivered by certified professionals with proven track records</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -209,7 +208,7 @@ const ITServicesPage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category} Services</h2>h2>
-                <p className="text-xl text-gray-600">Professional {category.toLowerCase()} solutions tailored to your business needs</p>p>
+                <p className="text-xl text-gray-600">Professional {category.toLowerCase()} solutions tailored to your business needs</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{itServices</div>
                   .filter(service => service.category === category)
@@ -224,7 +223,7 @@ const ITServicesPage: React.FC = () => {
                           <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">Save up to 40% vs market rates</div>div>
+                        <div className="text-sm text-green-600 font-semibold">Save up to 40% vs market rates</div>
                       </div>
 
                       <div className="mb-4">
@@ -242,7 +241,7 @@ const ITServicesPage: React.FC = () => {
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div>
-                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{tech}</span>span>
+                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{tech}</span>
                           ))}
                         </div>
                       </div>
@@ -259,7 +258,7 @@ const ITServicesPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Get Quote</button>button>
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Get Quote</button>
                     </div>
                   ))}
               </div>
@@ -271,7 +270,7 @@ const ITServicesPage: React.FC = () => {
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your IT Infrastructure?</h2>h2>
-            <p className="text-xl mb-8 text-blue-100">Contact our certified IT experts for a free consultation and custom solution design</p>p>
+            <p className="text-xl mb-8 text-blue-100">Contact our certified IT experts for a free consultation and custom solution design</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
@@ -292,4 +291,4 @@ const ITServicesPage: React.FC = () => {
   );
 };
 
-export default ITServicesPage;
+

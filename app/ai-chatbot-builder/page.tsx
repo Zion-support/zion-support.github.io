@@ -3,8 +3,7 @@ import React from "react";
 import Head from "next/head";
 import { MessageCircle, Bot, Zap, CheckCircle, ArrowRight } from "lucide-react";
 
-const AIChatbotBuilderPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: MessageCircle,
       title: "Intelligent Conversations",
@@ -39,10 +38,10 @@ const AIChatbotBuilderPage: React.FC = () => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>{/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Chatbot Builder</h1>h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Chatbot Builder</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build intelligent chatbots with our AI-powered builder. No coding</p>
               required, advanced features included.
             </p>
@@ -64,9 +63,9 @@ const AIChatbotBuilderPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>h2>
-              <p className="text-lg text-gray-300">Everything you need to build intelligent chatbots</p>p>
+              <p className="text-lg text-gray-300">Everything you need to build intelligent chatbots</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300"
@@ -87,7 +86,7 @@ const AIChatbotBuilderPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Chatbot Builder?</h2>h2>
-              <p className="text-lg text-gray-300">Advanced AI technology for professional chatbot creation</p>p>
+              <p className="text-lg text-gray-300">Advanced AI technology for professional chatbot creation</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
@@ -142,4 +141,4 @@ const AIChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AIChatbotBuilderPage;
+

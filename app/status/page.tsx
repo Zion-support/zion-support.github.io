@@ -161,7 +161,7 @@ Refresh
 {getStatusIcon(service.status)}
 <h3 className="text-lg font-semibold text-white">{service.name}</h3>
 </div>
-<span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>{service.status}</span>span>
+<span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>{service.status}</span>
 </div>
 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
 <div className="space-y-2 text-sm">
@@ -199,12 +199,12 @@ Refresh
 </div>
 </div>
 <div className="flex items-center gap-2"></div>
-<span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>{incident.severity}</span>span>
+<span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>{incident.severity}</span>
 <span className={`px-3 py-1 rounded-full text-sm font-medium ${
 incident.status === 'resolved'
 ? 'bg-green-500/20 text-green-400'
 : 'bg-yellow-500/20 text-yellow-400';}
-}`}>{incident.status}</span>span>
+}`}>{incident.status}</span>
 </div>
 </div>
 <p className="text-gray-300 mb-4">{incident.description}</p>

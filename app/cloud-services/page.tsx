@@ -3,8 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const CloudServicesPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -74,7 +73,7 @@ const CloudServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Cloud Services</span>span>
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Cloud Services</span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -85,7 +84,7 @@ const CloudServicesPage: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More</button>button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More</button>
             </div>
           </div>
         </div>
@@ -96,10 +95,10 @@ const CloudServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Cloud Services?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our cloud solutions deliver unmatched performance, security, and scalability.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our cloud solutions deliver unmatched performance, security, and scalability.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-opacity-20 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -117,7 +116,7 @@ const CloudServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Cloud Services</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our comprehensive cloud solutions for your business.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our comprehensive cloud solutions for your business.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">{services.map((service, index) => (</div>
@@ -143,10 +142,10 @@ const CloudServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover the advantages of partnering with us for your cloud transformation.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover the advantages of partnering with us for your cloud transformation.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
@@ -162,7 +161,7 @@ const CloudServicesPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
-          <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your cloud needs and get a customized solution.</p>p>
+          <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your cloud needs and get a customized solution.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
@@ -199,4 +198,4 @@ const CloudServicesPage: React.FC = () => {
   );
 };
 
-export default CloudServicesPage;
+

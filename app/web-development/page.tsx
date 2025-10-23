@@ -87,7 +87,6 @@ return(<>
 <SEOOptimizer
 title="Web Development Services - Zion Tech Group"
 description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
-const WebDevelopmentPage: React.FC = () => {
 const webServices = [
 {
 title: 'Frontend Development',
@@ -353,7 +352,7 @@ className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all 
 <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
 <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2>h2>
-<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>p>
+<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 <a
 <div className="cyber-card p-12 max-w-4xl mx-auto"></section>

@@ -18,8 +18,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-const ZionAIEmailMarketingProPage: React.FC = () => {
-  const features = [
+const features = [
     {
       title: "AI-Powered Email Content Generation",
       description:
@@ -199,7 +198,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
   return (
     <>
 
-      <div className="min-h-screen pt-16">{/* Hero Section */}</div>
+      <div className="min-h-screen pt-16">>{/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
@@ -208,11 +207,11 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-blue-400 mr-2" />
-                <span className="text-blue-400 text-sm font-medium">#1 AI Email Marketing Platform</span>span>
+                <span className="text-blue-400 text-sm font-medium">#1 AI Email Marketing Platform</span>
               </div>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Zion AI Email Marketing Pro</span>span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Zion AI Email Marketing Pro</span>
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Transform your email marketing with AI-powered content</p>
@@ -240,20 +239,20 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">400%</div>div>
-                  <div className="text-gray-300 text-sm">Increase in Email ROI</div>div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">400%</div>
+                  <div className="text-gray-300 text-sm">Increase in Email ROI</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">35%</div>div>
+                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">35%</div>
                   <div className="text-gray-300 text-sm">Higher Open Rates</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50K+</div>div>
+                  <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50K+</div>
                   <div className="text-gray-300 text-sm">Emails Sent Daily</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">99.9%</div>div>
-                  <div className="text-gray-300 text-sm">Deliverability Rate</div>div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">99.9%</div>
+                  <div className="text-gray-300 text-sm">Deliverability Rate</div>
                 </div>
               </div>
             </div>
@@ -265,7 +264,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">All Types of Email Campaigns</h2>h2>
-              <p className="text-lg text-gray-300">From newsletters to transactional emails, we've got you covered</p>p>
+              <p className="text-lg text-gray-300">From newsletters to transactional emails, we've got you covered</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">{emailTypes.map((type, index) => (</div>
@@ -275,8 +274,8 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                 >
                   <div
                     className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${type.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform`}
-                  >{type.icon}</div>div>
-                  <div className="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">{type.name}</div>div>
+                  >{type.icon}</div>
+                  <div className="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">{type.name}</div>
                 </div>
               ))}
             </div>
@@ -293,14 +292,14 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (
                 <div
                   key={index}
                   className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
                 >
-                  <div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>div>
+                  <div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">{feature.title}</h3>h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li
@@ -347,9 +346,9 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
 
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>h3>
-                    <p className="text-gray-300 text-sm mb-4">{plan.description}</p>p>
+                    <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-blue-400">{plan.price}</span>span>
+                      <span className="text-4xl font-bold text-blue-400">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
@@ -387,7 +386,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Email Marketing Professionals</h2>h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">See how marketers are transforming their email campaigns with AI</p>p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">See how marketers are transforming their email campaigns with AI</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
@@ -402,12 +401,12 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                       />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-6 italic leading-relaxed">"{testimonial.content}"</p>p>
+                  <p className="text-gray-300 mb-6 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">{testimonial.avatar}</div>div>
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">{testimonial.avatar}</div>
                     <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
                 </div>
@@ -456,4 +455,4 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
   );
 };
 
-export default ZionAIEmailMarketingProPage;
+

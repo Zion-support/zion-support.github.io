@@ -19,8 +19,7 @@ interface JobPosition {
   posted: string;
 }
 
-const CareersPage: React.FC = () => {
-  const openPositions: JobPosition[] = [
+const openPositions: JobPosition[] = [
     {
       id: '1',
       title: 'Senior AI Engineer',
@@ -405,4 +404,4 @@ const CareersPage: React.FC = () => {
   );
 };
 
-export default CareersPage;
+

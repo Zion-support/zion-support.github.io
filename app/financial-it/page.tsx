@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
-const FinancialITPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: DollarSign,
       title: 'SOX Compliance',
@@ -107,7 +106,7 @@ const FinancialITPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for financial services industry</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -132,7 +131,7 @@ const FinancialITPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions for all aspects of financial services and banking operations.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions for all aspects of financial services and banking operations.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{services.map((service, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
@@ -149,9 +148,9 @@ const FinancialITPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Financial IT Solutions?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of modern financial technology with our proven solutions.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of modern financial technology with our proven solutions.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{benefits.map((benefit, index) => (</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />

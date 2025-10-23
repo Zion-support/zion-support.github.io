@@ -932,8 +932,8 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                     <h4 className="text-white font-semibold mb-2">Mood History</h4>
                     <div className="space-y-2">{moodHistory.slice(-5).map((entry) => (</div>
                         <div key={entry.id} className="flex items-center justify-between text-sm">
-                          <span className="text-gray-300">{entry.timestamp.toLocaleDateString()}</span>span>
-                          <span className="text-pink-400 capitalize">{entry.mood}</span>span>
+                          <span className="text-gray-300">{entry.timestamp.toLocaleDateString()}</span>
+                          <span className="text-pink-400 capitalize">{entry.mood}</span>
                         </div>
                       ))}
                     </div>
@@ -1002,14 +1002,14 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                       onClick={handleSendMessage}
                       disabled={!userInput.trim()}
                       className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >Send</button>button>
+                    >Send</button>
                   </div>
 
                   {/* Crisis Support Button */}
                   <button
                     onClick={handleCrisisSupport}
                     className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
-                  >Crisis Support</button>button>
+                  >Crisis Support</button>
                 </div>
               </div>
             </div>
@@ -1053,7 +1053,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-pink-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>span>
+                    <span className="bg-gradient-to-r from-pink-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>
                   </div>
                 )}
 
@@ -1079,7 +1079,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                   plan.popular
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>{plan.popular ? 'Get Started' : 'Choose Plan'}</button>button>
+                }`}>{plan.popular ? 'Get Started' : 'Choose Plan'}</button>
               </div>
             ))}
           </div>
@@ -1137,7 +1137,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                     <span className="text-gray-300">Crisis support</span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">Start Free Trial</button>button>
+                <button className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">Start Free Trial</button>
               </div>
             </div>
           </div>

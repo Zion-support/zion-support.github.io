@@ -1014,7 +1014,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                     vulnerabilities.map((vuln, index) => (
                       <div key={index} className="bg-white/5 rounded-lg p-4 border border-white/10">
                         <div className="flex items-center justify-between mb-2">
-                          <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(vuln.severity)}`}>{vuln.severity}</span>span>
+                          <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(vuln.severity)}`}>{vuln.severity}</span>
                           <span className="text-gray-400 text-sm">Line {vuln.line}</span>
                         </div>
                         <h4 className="text-white font-semibold mb-1">{vuln.type}</h4>
@@ -1070,7 +1070,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center space-x-3">
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(issue.severity)}`}>{issue.severity}</span>span>
+                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(issue.severity)}`}>{issue.severity}</span>
                         <span className="text-white font-semibold">{issue.type}</span>
                         <span className="text-gray-400 text-sm">{issue.file}:{issue.line}</span>
                       </div>
@@ -1078,7 +1078,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                         issue.status === 'Fixed'
                           ? 'text-green-400 bg-green-400/10'
                           : 'text-yellow-400 bg-yellow-400/10'
-                      }`}>{issue.status}</span>span>
+                      }`}>{issue.status}</span>
                     </div>
                     <p className="text-gray-300 mb-2">{issue.description}</p>
                     <p className="text-green-400 text-sm">{issue.recommendation}</p>
@@ -1126,7 +1126,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-400 to-orange-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>span>
+                    <span className="bg-gradient-to-r from-red-400 to-orange-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>
                   </div>
                 )}
 
@@ -1152,7 +1152,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   plan.popular
                     ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>{plan.popular ? 'Get Started' : 'Choose Plan'}</button>button>
+                }`}>{plan.popular ? 'Get Started' : 'Choose Plan'}</button>
               </div>
             ))}
           </div>
@@ -1210,7 +1210,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                     <span className="text-gray-300">Expert support</span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">Start Free Scan</button>button>
+                <button className="w-full mt-6 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">Start Free Scan</button>
               </div>
             </div>
           </div>

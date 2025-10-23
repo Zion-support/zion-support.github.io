@@ -3,8 +3,7 @@ import React from "react";
 import Head from "next/head";
 import { Accessibility, Eye, Volume2, MousePointer, CheckCircle, ArrowRight } from "lucide-react";
 
-const AccessibilityPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Eye,
       title: "Visual Accessibility",
@@ -66,18 +65,18 @@ const AccessibilityPage: React.FC = () => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>{/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Accessibility{" "}</h1>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Comprehensive accessibility solutions for inclusive digital</p>
               experiences that work for everyone, regardless of ability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Get Accessibility Audit</button>button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Learn More</button>button>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Get Accessibility Audit</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Learn More</button>
             </div>
           </div>
         </section>
@@ -92,7 +91,7 @@ const AccessibilityPage: React.FC = () => {
                 with diverse needs and abilities.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (
                 <div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 group hover:border-purple-500/50 transition-all duration-300"
@@ -101,7 +100,7 @@ const AccessibilityPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">{feature.description}</p>p>
+                  <p className="text-gray-300 leading-relaxed mb-4">{feature.description}</p>
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, benefitIndex) => (
@@ -153,7 +152,7 @@ const AccessibilityPage: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">Start Your Project</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Contact Us</button>button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Contact Us</button>
             </div>
           </div>
         </section>
@@ -162,4 +161,4 @@ const AccessibilityPage: React.FC = () => {
   );
 };
 
-export default AccessibilityPage;
+

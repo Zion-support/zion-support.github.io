@@ -10,8 +10,7 @@ interface Slide {
     label: string
   }[]
 }
-const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+const [currentSlide, setCurrentSlide] = useState(0)
   const slides: Slide[] = [
     {
       icon: Brain,

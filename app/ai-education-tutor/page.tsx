@@ -8,10 +8,10 @@ import React from "react";
 
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>{/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Education Tutor</h1>h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Education Tutor</h1>
 
                 Get Started
               </a>
@@ -27,7 +27,7 @@ import React from "react";
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>h2>
-              <p className="text-lg text-gray-300">Everything you need for success</p>p>
+              <p className="text-lg text-gray-300">Everything you need for success</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -46,7 +46,7 @@ import React from "react";
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
-            <p className="text-lg text-gray-300 mb-8">Let us help you implement this solution for your business.</p>p>
+            <p className="text-lg text-gray-300 mb-8">Let us help you implement this solution for your business.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">Start Your Project</div>a>
 
                 Learn More

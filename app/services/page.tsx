@@ -15,8 +15,7 @@ import {
   Search,
   Filter
 } from 'lucide-react'
-const ServicesPage: React.FC = () => {
-  const services = [
+const services = [
     // AI Services
     {
       icon: Brain,
@@ -608,7 +607,7 @@ const ServicesPage: React.FC = () => {
         <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." />
         <meta name="keywords" content="services, AI solutions, cloud services, cybersecurity, data analytics, mobile development, database services" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>{/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Our Services</h1>
@@ -684,10 +683,10 @@ const ServicesPage: React.FC = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                      <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">{service.category}</span>span>
+                      <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">{service.category}</span>
                     </div>
                   </div>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -754,7 +753,7 @@ const ServicesPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
-            <p className="text-xl text-gray-300 mb-8">Let's discuss your project and find the perfect solution for your business needs.</p>p>
+            <p className="text-xl text-gray-300 mb-8">Let's discuss your project and find the perfect solution for your business needs.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Free Consultation</button>
               <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">View Portfolio</button>

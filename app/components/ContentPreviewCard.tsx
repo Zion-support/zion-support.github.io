@@ -64,7 +64,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {/* Featured Badge */}
         {featured && (
           <div className="absolute top-4 left-4">
-            <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">⭐ Featured</span>span>
+            <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">⭐ Featured</span>
           </div>
         )}
 
@@ -80,14 +80,14 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
 
         {/* Read Time Badge */}
         <div className="absolute bottom-4 left-4">
-          <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{readTime}</span>span>
+          <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{readTime}</span>
         </div>
       </div>
 
       {/* Content */}
       <div className="p-6">
         <div className="mb-3">
-          <span className="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{category}</span>span>
+          <span className="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{category}</span>
         </div>
 
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{title}</h3>h3>
@@ -133,4 +133,4 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   );
 };
 
-export default ContentPreviewCard;
+

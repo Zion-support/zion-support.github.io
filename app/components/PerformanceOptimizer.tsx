@@ -201,4 +201,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   );
 };
 
-export default PerformanceOptimizer;
+

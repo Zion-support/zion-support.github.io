@@ -5,8 +5,7 @@ import PerformanceMonitor from "./components/PerformanceMonitor";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
-const App: React.FC = () => {
-  return (
+return (
     <>
       <Head>
         <title>Zion Tech Group - AI & IT Solutions</title>
@@ -26,4 +25,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+

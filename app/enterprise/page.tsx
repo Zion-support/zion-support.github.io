@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react'
-const EnterprisePage: React.FC = () => {
 const features = [
 {
 icon: Shield,
@@ -134,7 +133,7 @@ Transform your organization with cutting-edge technology and expert implementati
 <div className="max-w-7xl mx-auto"></div>
 <div className="text-center mb-16"></div>
 <h2 className="text-4xl font-bold text-white mb-4">Enterprise-Grade Features</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale, security, and performance to meet the demands of large organizations.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale, security, and performance to meet the demands of large organizations.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
@@ -155,7 +154,7 @@ Transform your organization with cutting-edge technology and expert implementati
 </div>
 </section>
 <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Solutions</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">End-to-end enterprise solutions that address every aspect of your business operations.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">End-to-end enterprise solutions that address every aspect of your business operations.</p>
 </div>
 </li>
 ))}
@@ -177,7 +176,7 @@ Transform your organization with cutting-edge technology and expert implementati
 <section className="py-20 px-4">
 <div className="max-w-4xl mx-auto text-center"></div>
 <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>h2>
-<p className="text-xl text-gray-300 mb-8">Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>p>
+<p className="text-xl text-gray-300 mb-8">Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Enterprise Sales</button>
 <ArrowRight className="inline-block ml-2 w-5 h-5" />

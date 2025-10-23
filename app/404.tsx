@@ -9,8 +9,7 @@ import {
   AlertTriangle,
   RefreshCw,
 } from "lucide-react";
-const NotFoundPage: React.FC = () => {
-  return (
+return (
     <>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
@@ -113,4 +112,4 @@ const NotFoundPage: React.FC = () => {
   );
 };
 
-export default NotFoundPage;
+

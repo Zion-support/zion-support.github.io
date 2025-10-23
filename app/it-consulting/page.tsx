@@ -74,7 +74,6 @@ Tablet as TabletIcon, Headphones as HeadphonesIcon2,
 Keyboard as KeyboardIcon, Mouse as MouseIcon,
 Webcam as WebcamIcon, Speaker as SpeakerIcon;}
 } from 'lucide-react'
-const ITConsultingPage: React.FC = () => {
 const [selectedCategory, setSelectedCategory] = useState('all')
 const [searchTerm, setSearchTerm] = useState('')
 const itServices = [
@@ -421,8 +420,8 @@ return matchesCategory && matchesSearch;}
 })
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-{/* Hero Section */}</div>
-<section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
+>{/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
 <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>

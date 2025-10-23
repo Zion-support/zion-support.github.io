@@ -3,8 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Shield, FileText, Users, Lock, AlertTriangle, Award } from 'lucide-react';
 
-const CompliancePage: React.FC = () => {
-  const complianceFrameworks = [
+const complianceFrameworks = [
     {
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance for EU data protection',
@@ -84,11 +83,11 @@ const CompliancePage: React.FC = () => {
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Compliance Solutions</h1>h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">Navigate complex regulatory requirements with confidence. Our experts help you achieve and maintain compliance across all major frameworks.</p>p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Compliance Solutions</h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">Navigate complex regulatory requirements with confidence. Our experts help you achieve and maintain compliance across all major frameworks.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Compliance Assessment</button>button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Learn More</button>button>
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Compliance Assessment</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Learn More</button>
             </div>
           </div>
         </div>
@@ -101,7 +100,7 @@ const CompliancePage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Compliance Frameworks We Support</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{complianceFrameworks.map((framework, index) => (</div>
                 <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4 text-blue-600">{framework.icon}</div>div>
+                  <div className="flex justify-center mb-4 text-blue-600">{framework.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{framework.name}</h3>
                   <p className="text-gray-600 mb-4 text-center">{framework.description}</p>
                   <ul className="space-y-2">
@@ -165,7 +164,7 @@ const CompliancePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our Compliance Services?</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-sm p-6">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
@@ -183,13 +182,13 @@ const CompliancePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Achieve Compliance?</h2>
-            <p className="text-xl mb-8 text-blue-100">Let our compliance experts help you navigate regulatory requirements and protect your business.</p>p>
+            <p className="text-xl mb-8 text-blue-100">Let our compliance experts help you navigate regulatory requirements and protect your business.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
                 <Shield className="mr-2 w-5 h-5" />
                 Start Compliance Assessment
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Contact Our Experts</button>button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Contact Our Experts</button>
             </div>
           </div>
         </div>
@@ -198,4 +197,4 @@ const CompliancePage: React.FC = () => {
   );
 };
 
-export default CompliancePage;
+

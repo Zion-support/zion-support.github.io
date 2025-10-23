@@ -3,8 +3,7 @@ import { BarChart3, FileText, MessageSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 // Removed unused imports
 
-const AIServicesPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -1225,7 +1224,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
             <button
               key={category}
               className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300 font-medium"
-            >{category}</button>button>
+            >{category}</button>
           ))}
         </div>
       </div>
@@ -1345,4 +1344,4 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
   );
 };
 
-export default AIServicesPage;
+

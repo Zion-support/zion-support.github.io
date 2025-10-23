@@ -3,8 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, MessageCircle, Calendar, Award, Star, Globe, Heart, Zap } from 'lucide-react';
 
-const CommunityPage: React.FC = () => {
-  const events = [
+const events = [
     {
       id: '1',
       title: 'AI & Machine Learning Workshop',
@@ -114,8 +113,8 @@ const CommunityPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Community</h1>h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">Connect with thousands of technology professionals, share knowledge, and advance your career</p>p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Join Now</button>button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Learn More</button>button>
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Join Now</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Learn More</button>
             </div>
           </div>
         </div>
@@ -159,7 +158,7 @@ const CommunityPage: React.FC = () => {
                         {forum.posts} posts
                       </span>
                     </div>
-                    <button className="text-blue-600 hover:text-blue-800 font-medium">Join Discussion →</button>button>
+                    <button className="text-blue-600 hover:text-blue-800 font-medium">Join Discussion →</button>
                   </div>
                 </div>
               ))}
@@ -178,7 +177,7 @@ const CommunityPage: React.FC = () => {
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div>
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">{event.type}</span>span>
+                        <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">{event.type}</span>
                         <h3 className="text-xl font-semibold text-gray-900">{event.title}</h3>
                       </div>
                       <p className="text-gray-600 mb-3">{event.description}</p>
@@ -202,7 +201,7 @@ const CommunityPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="mt-4 lg:mt-0">
-                      <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Register</button>button>
+                      <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Register</button>
                     </div>
                   </div>
                 </div>
@@ -249,7 +248,7 @@ const CommunityPage: React.FC = () => {
                 <Heart className="mr-2 w-5 h-5" />
                 Join Community
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">View Events</button>button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">View Events</button>
             </div>
           </div>
         </div>
@@ -258,4 +257,4 @@ const CommunityPage: React.FC = () => {
   );
 };
 
-export default CommunityPage;
+

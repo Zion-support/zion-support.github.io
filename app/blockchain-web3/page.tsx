@@ -2,8 +2,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const BlockchainWeb3Page: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Zap,
       title: 'Smart Contracts',
@@ -41,9 +40,9 @@ const BlockchainWeb3Page: React.FC = () => {
             <h1 className="text-5xl font-bold text-white mb-6">
               Blockchain & <span className="text-cyan-400">Web3</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">

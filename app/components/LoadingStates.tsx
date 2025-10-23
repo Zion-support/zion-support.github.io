@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
 import { Loader2 } from 'lucide-react'
-export const PageLoader: React.FC = () => {
-return (
+export return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
 <div className="text-center">
 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">

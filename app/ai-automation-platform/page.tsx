@@ -1,8 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-const AiAutomationPlatformPage: React.FC = () => {
-  return (
+return (
     <>
 <SEOHead 
         title="ai-automation-platform - Zion Tech Group"
@@ -18,4 +17,4 @@ const AiAutomationPlatformPage: React.FC = () => {
   );
 };
 
-export default AiAutomationPlatformPage;
+

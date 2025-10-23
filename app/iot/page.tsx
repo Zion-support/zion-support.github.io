@@ -1,8 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react'
-const IoTPage: React.FC = () => {
-  const iotServices = [
+const iotServices = [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -145,7 +144,7 @@ const IoTPage: React.FC = () => {
         <meta name="keywords" content="IoT services, smart cities, industrial IoT, smart agriculture, connected devices, Internet of Things" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
-        {/* Hero Section */}</div>
+        >{/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-800 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-teal-800/50"></div>
@@ -240,7 +239,7 @@ const IoTPage: React.FC = () => {
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (</div>
-                            <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">{tech}</span>span>
+                            <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">{tech}</span>
                           ))}
                         </div>
                       </div>

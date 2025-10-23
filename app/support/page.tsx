@@ -10,8 +10,7 @@ interface FAQ {
   category: string;
 }
 
-const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
@@ -175,7 +174,7 @@ const SupportPage: React.FC = () => {
                       <span className="font-medium text-gray-900">{faq.question}</span>
                     </div>
                     <div className="flex items-center">
-                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-3">{faq.category}</span>span>
+                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-3">{faq.category}</span>
                       <CheckCircle className={`w-5 h-5 text-gray-400 transition-transform ${
                         expandedFAQ === index ? 'rotate-180' : ''
                       }`} />
@@ -212,7 +211,7 @@ const SupportPage: React.FC = () => {
                 <MessageCircle className="mr-2 w-5 h-5" />
                 Contact Support
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Schedule a Call</button>button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Schedule a Call</button>
             </div>
           </div>
         </div>
@@ -221,4 +220,4 @@ const SupportPage: React.FC = () => {
   );
 };
 
-export default SupportPage;
+

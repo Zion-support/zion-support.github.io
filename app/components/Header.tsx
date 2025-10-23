@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
 import Navigation from './Navigation'
-const Header: React.FC = () => {
-  return (
+return (
     <>
       <Navigation />
       {/* Spacer to prevent content from going under fixed header */}

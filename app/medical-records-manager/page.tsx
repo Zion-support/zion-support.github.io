@@ -2,7 +2,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react'
-const MedicalRecordsManagerPage: React.FC = () => {
 const features = [
 {
 icon: FileText,
@@ -47,9 +46,9 @@ return (
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Medical Records Manager</h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.</p>p>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.</p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (
 <div
 key={index}
 className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">

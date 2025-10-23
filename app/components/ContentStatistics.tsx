@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react'
-const ContentStatistics: React.FC = () => {
 const [counters, setCounters] = useState({
 clients: 0,
 projects: 0,
@@ -153,7 +152,7 @@ return (
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
 </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">See how we've helped businesses transform with our AI and IT solutions.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">See how we've helped businesses transform with our AI and IT solutions.</p>
 </div>
 {/* Statistics Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{statistics.map((stat, index) => (</div>
@@ -163,7 +162,7 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <stat.icon className="h-8 w-8 text-white" />
 </div>
 </div>
-<div className={`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)}{stat.suffix}</div>div>
+<div className={`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)}{stat.suffix}</div>
 <div className="text-gray-300">{stat.label}</div>
 </div>
 ))}
@@ -183,7 +182,7 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
 <stat.icon className="w-8 h-8 text-slate-900" />
 </div>
-<div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}{stat.suffix}</div>div>
+<div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}{stat.suffix}</div>
 <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
 <div className="text-gray-400 text-sm">{stat.description}</div>
 </div>
@@ -193,9 +192,9 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div className="mb-16">
 <div className="text-center mb-12">
 <h3 className="text-2xl font-bold text-white mb-4">Key Features</h3>
-<p className="text-gray-300 max-w-2xl mx-auto">Discover the powerful features that make our solutions stand out.</p>p>
+<p className="text-gray-300 max-w-2xl mx-auto">Discover the powerful features that make our solutions stand out.</p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
 <feature.icon className="w-6 h-6 text-white" />
@@ -217,7 +216,7 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div className="mb-16">
 <div className="text-center mb-12">
 <h3 className="text-2xl font-bold text-white mb-4">Our Achievements</h3>
-<p className="text-gray-300 max-w-2xl mx-auto">Recognition and milestones that showcase our commitment to excellence.</p>p>
+<p className="text-gray-300 max-w-2xl mx-auto">Recognition and milestones that showcase our commitment to excellence.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{achievements.map((achievement, index) => (</div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300">
@@ -235,9 +234,9 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div className="mb-16">
 <div className="text-center mb-12">
 <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
-<p className="text-gray-300 max-w-2xl mx-auto">Discover the advantages that make our solutions the preferred choice.</p>p>
+<p className="text-gray-300 max-w-2xl mx-auto">Discover the advantages that make our solutions the preferred choice.</p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (
 <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
 <span className="text-gray-300">{benefit}</span>
@@ -249,7 +248,7 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div className="text-center">
 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
 <h3 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h3>
-<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers and transform your business today.</p>p>
+<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers and transform your business today.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
 <Zap className="w-5 h-5" />

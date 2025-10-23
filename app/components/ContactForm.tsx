@@ -9,8 +9,7 @@ interface FormData {
   service: string;
 }
 
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
@@ -303,9 +302,9 @@ const ContactForm: React.FC = () => {
         type="submit"
         disabled={isSubmitting}
         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-      >{isSubmitting ? "Sending..." : "Send Message"}</button>button>
+      >{isSubmitting ? "Sending..." : "Send Message"}</button>
     </form>
   );
 };
 
-export default ContactForm;
+

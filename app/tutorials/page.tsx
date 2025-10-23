@@ -12,8 +12,7 @@ import {
   Shield,
 } from "lucide-react";
 
-const TutorialsPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+const [selectedCategory, setSelectedCategory] = useState("all");
 
   const tutorials = [
     {
@@ -86,7 +85,7 @@ const TutorialsPage: React.FC = () => {
   return (
     <>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>{/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div
             className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
@@ -94,15 +93,15 @@ const TutorialsPage: React.FC = () => {
           />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Learn{" "}</h1>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Technology</span>span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Technology</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Master technology skills with our comprehensive tutorials. Learn</p>
               AI development, cloud computing, cybersecurity, and more with
               expert-led courses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Start Learning</button>button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Browse All</button>button>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Start Learning</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Browse All</button>
             </div>
           </div>
         </section>
@@ -148,9 +147,9 @@ const TutorialsPage: React.FC = () => {
 
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">{tutorial.category.toUpperCase()}</span>span>
+                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">{tutorial.category.toUpperCase()}</span>
                       {tutorial.featured && (
-                        <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Featured</span>span>
+                        <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Featured</span>
                       )}
                     </div>
 
@@ -183,7 +182,7 @@ const TutorialsPage: React.FC = () => {
                               ? "bg-yellow-500/20 text-yellow-400"
                               : "bg-red-500/20 text-red-400"
                         }`}
-                      >{tutorial.difficulty}</span>span>
+                      >{tutorial.difficulty}</span>
                       <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
                         <Play className="w-4 h-4 mr-2" />
                         Start Tutorial
@@ -266,7 +265,7 @@ const TutorialsPage: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">Browse All Tutorials</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">View Learning Paths</button>button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">View Learning Paths</button>
             </div>
           </div>
         </section>
@@ -275,4 +274,4 @@ const TutorialsPage: React.FC = () => {
   );
 };
 
-export default TutorialsPage;
+

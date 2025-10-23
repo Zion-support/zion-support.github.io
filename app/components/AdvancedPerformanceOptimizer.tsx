@@ -242,4 +242,4 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   return null;
 };
 
-export default AdvancedPerformanceOptimizer;
+

@@ -12,8 +12,7 @@ interface Partner {
   tier: 'strategic' | 'preferred' | 'certified';
 }
 
-const PartnersPage: React.FC = () => {
-  const partners: Partner[] = [
+const partners: Partner[] = [
     {
       name: 'Microsoft',
       logo: '/images/partners/microsoft.png',
@@ -138,10 +137,10 @@ const PartnersPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">Join our ecosystem of technology leaders and grow your business through strategic partnerships</p>p>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">Join our ecosystem of technology leaders and grow your business through strategic partnerships</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Become a Partner</button>button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">View Partner Program</button>button>
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Become a Partner</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">View Partner Program</button>
             </div>
           </div>
         </div>
@@ -158,7 +157,7 @@ const PartnersPage: React.FC = () => {
                     <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
                       <Building2 className="w-8 h-8 text-gray-600" />
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTierColor(partner.tier)}`}>{partner.tier.toUpperCase()}</span>span>
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTierColor(partner.tier)}`}>{partner.tier.toUpperCase()}</span>
                   </div>
                   
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{partner.name}</h3>
@@ -189,7 +188,7 @@ const PartnersPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Types</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{partnershipTypes.map((type, index) => (</div>
                 <div key={index} className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4 text-blue-600">{type.icon}</div>div>
+                  <div className="flex justify-center mb-4 text-blue-600">{type.icon}</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{type.name}</h3>
                   <p className="text-gray-600 text-sm">{type.description}</p>
                 </div>
@@ -204,9 +203,9 @@ const PartnersPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Benefits</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">{benefit.icon}</div>div>
+                  <div className="flex justify-center mb-4">{benefit.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
@@ -221,13 +220,13 @@ const PartnersPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Partner With Us?</h2>
-            <p className="text-xl mb-8 text-blue-100">Join our partner ecosystem and unlock new opportunities for growth and innovation.</p>p>
+            <p className="text-xl mb-8 text-blue-100">Join our partner ecosystem and unlock new opportunities for growth and innovation.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
                 <Handshake className="mr-2 w-5 h-5" />
                 Become a Partner
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Download Partner Kit</button>button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Download Partner Kit</button>
             </div>
           </div>
         </div>
@@ -236,4 +235,4 @@ const PartnersPage: React.FC = () => {
   );
 };
 
-export default PartnersPage;
+

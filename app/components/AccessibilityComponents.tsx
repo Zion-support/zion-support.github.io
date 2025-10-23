@@ -2,10 +2,9 @@
 import React from "react";
 
 
-const AccessibilityComponents: React.FC = () => {
-  return (
+return (
 
   );
 };
 
-export default AccessibilityComponents;
+

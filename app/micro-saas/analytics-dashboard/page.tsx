@@ -1,8 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react'
-const AIAnalyticsDashboardPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
@@ -57,7 +56,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}</div>
+        >{/* Hero Section */}
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -90,7 +89,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to make data-driven decisions with confidence</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (</div>
+              {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -131,7 +130,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               <div className="space-y-6">
-                {benefits.map((benefit, index) => (</div>
+                {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3"></div>
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300 text-lg">{benefit}</span>

@@ -11,8 +11,7 @@ const ServiceCardSkeleton: React.FC = () => (
   </div>
 );
 
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -119,4 +118,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+

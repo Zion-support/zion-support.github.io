@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Brain, Menu, X } from "lucide-react";
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
     { name: "Home", href: "/" },
@@ -24,7 +23,7 @@ const Navigation: React.FC = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>span>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
 
@@ -94,4 +93,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation;
+

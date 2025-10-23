@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-const ContentNewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
+const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [error, setError] = useState('');
@@ -75,7 +74,7 @@ const ContentNewsletterSignup: React.FC = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >{isSubmitting ? 'Subscribing...' : 'Get Free Content'}</button>button>
+              >{isSubmitting ? 'Subscribing...' : 'Get Free Content'}</button>
             </div>
             
             {error && (
@@ -127,4 +126,4 @@ const ContentNewsletterSignup: React.FC = () => {
   );
 };
 
-export default ContentNewsletterSignup;
+

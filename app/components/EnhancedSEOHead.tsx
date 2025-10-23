@@ -48,8 +48,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "https://github.com/zion-tech-group"
     ]
   }
-const EnhancedSEOHead: React.FC = () => {
-      "contactType": "sales",
+"contactType": "sales",
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [

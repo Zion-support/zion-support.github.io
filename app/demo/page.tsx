@@ -2,7 +2,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Play, ArrowRight, CheckCircle } from 'lucide-react'
-const DemoPage: React.FC = () => {
 const demos = [
 {
 title: 'AI Analytics Dashboard',

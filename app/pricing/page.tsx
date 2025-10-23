@@ -5,8 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
 
-const PricingPage: React.FC = () => {
-  const plans = [
+const plans = [
     {
       name: 'Starter',
       price: '$2,999',
@@ -139,7 +138,7 @@ const PricingPage: React.FC = () => {
                     plan.popular 
                       ? 'bg-blue-600 text-white hover:bg-blue-700' 
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}>{plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}</button>button>
+                  }`}>{plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}</button>
                 </div>
               ))}
             </div>
@@ -206,7 +205,7 @@ const PricingPage: React.FC = () => {
                 <Zap className="mr-2 w-5 h-5" />
                 Start Free Trial
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Contact Sales</button>button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Contact Sales</button>
             </div>
           </div>
         </div>
@@ -215,4 +214,4 @@ const PricingPage: React.FC = () => {
   );
 };
 
-export default PricingPage;
+

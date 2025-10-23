@@ -139,7 +139,7 @@ Download SDK
 </div>
 <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
 <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
-<button className="text-purple-400 hover:text-purple-300 font-medium">Get API Key →</button>button>
+<button className="text-purple-400 hover:text-purple-300 font-medium">Get API Key →</button>
 </div>
 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -147,7 +147,7 @@ Download SDK
 </div>
 <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
 <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
-<button className="text-purple-400 hover:text-purple-300 font-medium">View Examples →</button>button>
+<button className="text-purple-400 hover:text-purple-300 font-medium">View Examples →</button>
 </div>
 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -155,7 +155,7 @@ Download SDK
 </div>
 <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
 <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
-<button className="text-purple-400 hover:text-purple-300 font-medium">Start Building →</button>button>
+<button className="text-purple-400 hover:text-purple-300 font-medium">Start Building →</button>
 </div>
 </div>
 </div>
@@ -183,7 +183,7 @@ Download SDK
 endpoint.method === 'POST'
 ? 'bg-green-500/20 text-green-400'
 : 'bg-blue-500/20 text-blue-400'
-}`}>{endpoint.method}</span>span>
+}`}>{endpoint.method}</span>
 <code className="text-purple-400 font-mono">{endpoint.path}</code>
 </div>
 <button
