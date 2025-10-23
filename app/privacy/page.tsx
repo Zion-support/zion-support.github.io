@@ -2,6 +2,7 @@
 import React from 'react'
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
 export default function PrivacyPage() {
+<<<<<<< HEAD
 const lastUpdated = 'January 1, 2024'
 const dataTypes = [
 {
@@ -214,3 +215,5 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 </div>
 )
 }
+=======
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

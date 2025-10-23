@@ -1,4 +1,5 @@
 export default function PageTsxPage() {
+<<<<<<< HEAD
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
@@ -25,3 +26,5 @@ export default function PageTsxPage() {
     </div>
   );
 }
+=======
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

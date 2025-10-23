@@ -136,8 +136,13 @@ email: 'kleber@ziontechgroup.com',
 address: '364 E Main St STE 1008 Middletown, DE 19709',
 hours: 'Mon-Fri 9AM-6PM EST'
 }
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 {/* Mobile Menu Button */}
 <button
 onClick={() => setIsOpen(true)}
@@ -237,10 +242,8 @@ location.pathname === item.path
 </div>
 </div>
 </aside>
-</React.Fragment>
+</>
 )
 }
 Sidebar.displayName = 'Sidebar'
 export default Sidebar
-</div>
-</string>

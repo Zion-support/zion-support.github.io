@@ -4,8 +4,13 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const CookiesPage: React.FC = () => {
+<<<<<<< HEAD
     return (
     <React.Fragment>
+=======
+  return (
+    <>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
@@ -40,8 +45,15 @@ const CookiesPage: React.FC = () => {
         </main>
         <Footer />
       </div>
+<<<<<<< HEAD
         </React.Fragment>
   )
 }
 
 export default $1
+=======
+    </>
+  )
+}
+export default CookiesPage
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

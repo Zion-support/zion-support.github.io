@@ -56,8 +56,13 @@ const benefits = [
 '24/7 automated operations',
 'Custom automation solutions'
 ]
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
 <meta name="description" content="Professional process automation services by Zion Tech Group. Streamline workflows, reduce costs, and improve efficiency with AI-powered automation." />
@@ -157,14 +162,7 @@ Email Us
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default ProcessAutomationPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

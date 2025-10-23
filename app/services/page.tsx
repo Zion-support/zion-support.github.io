@@ -601,8 +601,13 @@ const ServicesPage: React.FC = () => {
   React.useEffect(() => {
     setCurrentPage(1)
   }, [selectedCategory, searchTerm])
+<<<<<<< HEAD
     return (
     <React.Fragment>
+=======
+  return (
+    <>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." />
@@ -791,16 +796,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 export default ServicesPage
-  </button>
-  </button>
-  </button>
-  </button>
-  </button>
-  </li>
-  </span>
-  </h1>
-  </div>

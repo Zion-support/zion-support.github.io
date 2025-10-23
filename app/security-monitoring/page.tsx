@@ -55,8 +55,13 @@ const benefits = [
 'Expert security team support',
 'Customizable monitoring rules'
 ]
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
 <meta name="description" content="Professional 24/7 security monitoring services by Zion Tech Group. Advanced threat detection, real-time alerts, and comprehensive cybersecurity protection." />
@@ -156,8 +161,11 @@ Email Us
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default SecurityMonitoringPage
+<<<<<<< HEAD
 </button>
+=======
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

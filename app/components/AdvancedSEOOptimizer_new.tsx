@@ -94,8 +94,13 @@ const defaultStructuredData = {
 }
 return structuredData || defaultStructuredData
 }
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>{title}</title>
 <meta name="description" content={description} />
@@ -144,8 +149,7 @@ maxWidth: '300px'
 )}
 </div>
 )}
-</React.Fragment>
+</>
 )
 }
 export default AdvancedSEOOptimizerNew
-</SEOOptimizerProps>

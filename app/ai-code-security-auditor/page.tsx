@@ -690,6 +690,7 @@ interface CodeSecurityAuditorProps {
 }
 
 export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAuditorProps) {
+<<<<<<< HEAD
   const [isScanning, setIsScanning] = useState(false);
   const [scanResults, setScanResults] = useState<any[]>([]);
   const [selectedFile, setSelectedFile] = useState<string | null>(null);
@@ -1269,3 +1270,5 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
     </div>
   );
 }
+=======
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

@@ -11,8 +11,13 @@ const features = [
 { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },
 { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' }
 ]
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>AI Accounting Assistant | Zion Tech Group - Intelligent Financial Management</title>
 <meta name="description" content="Streamline your accounting with AI-powered financial management tools. Automated bookkeeping, tax preparation, and financial analytics." />
@@ -39,8 +44,15 @@ const features = [
 </div>
 </section>
 </div>
+<<<<<<< HEAD
     </React.Fragment>
   )
 }
 
 export default $1
+=======
+</>
+)
+}
+export default AIAccountingAssistantPage
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

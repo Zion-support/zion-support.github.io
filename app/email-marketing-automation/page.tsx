@@ -55,8 +55,13 @@ const benefits = [
 'Generate more qualified leads',
 'Save time and resources'
 ]
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
 <meta name="description" content="Advanced email marketing automation platform by Zion Tech Group. Create, manage, and optimize email campaigns with AI-powered automation." />
@@ -156,14 +161,7 @@ Email Us
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default EmailMarketingAutomationPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

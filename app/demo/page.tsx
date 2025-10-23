@@ -23,8 +23,13 @@ duration: '4 min',
 features: ['Blog posts', 'Social media content', 'Product descriptions']
 }
 ]
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
 <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
@@ -86,9 +91,7 @@ Schedule Demo
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default DemoPage
-</button>
-</h1>

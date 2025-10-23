@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
 import { Brain, Globe, Shield, Zap } from "lucide-react";
 const AiAutomatedReportingPage: React.FC = () => {
   const features = [
@@ -30,15 +30,20 @@ const AiAutomatedReportingPage: React.FC = () => {
     },
   ];
 
+<<<<<<< HEAD
     return (
     <React.Fragment>
       <Helmet>
+=======
+  return (
+    <>
+      <Head>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
         <title>
           Ai Automated Reporting - Zion Tech Group | Advanced AI and IT
           Solutions
         </title>
-
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -124,7 +129,7 @@ const AiAutomatedReportingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

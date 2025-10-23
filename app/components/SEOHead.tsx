@@ -85,4 +85,3 @@ const defaultStructuredData = {
 )
 }
 export default SEOHead
-</SEOHeadProps>

@@ -1,23 +1,10 @@
-'use client';
-
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Calendar, User } from 'lucide-react';
 
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  image: string;
-}
 
+<<<<<<< HEAD
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -287,3 +274,6 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
+=======
+export default function Blog() {
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

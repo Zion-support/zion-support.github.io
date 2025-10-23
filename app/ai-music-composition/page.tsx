@@ -39,7 +39,7 @@ const AiMusicCompositionPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Music Composition - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai music composition solution for modern businesses." />
@@ -148,8 +148,15 @@ const AiMusicCompositionPage: React.FC = () => {
         </section>
       </div>
       <Footer />
+<<<<<<< HEAD
         </React.Fragment>
   )
 }
 
 export default $1
+=======
+    </>
+  )
+}
+export default AiMusicCompositionPage
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

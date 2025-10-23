@@ -59,8 +59,13 @@ event_label: 'main_phone_number';}
 })
 }
 }, [])
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <SEOOptimizer
 title="Zion Tech Group - Advanced AI and IT Solutions"
 description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -1452,38 +1457,8 @@ Send Message
 {/* Footer */}
 <Footer />
 </div>
-</React.Fragment>
+</>
 )
 })
 HomePage.displayName = 'HomePage'
 export default HomePage
-</button>
-</label>
-</label>
-</label>
-</label>
-</label>
-</p>
-</p>
-</a>
-</a>
-</h3>
-</h3>
-</h3>
-</h2>
-</h3>
-</h3>
-</h3>
-</h3>
-</h3>
-</p>
-</h2>
-</a>
-</a>
-</p>
-</a>
-</SecurityEnhancer>
-</Analytics>
-</AccessibilityEnhancer>
-</PerformanceOptimizer>
-</SEOOptimizer>

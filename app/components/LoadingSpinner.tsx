@@ -31,4 +31,3 @@ white: 'text-white'
 )
 }
 export default LoadingSpinner
-</LoadingSpinnerProps>

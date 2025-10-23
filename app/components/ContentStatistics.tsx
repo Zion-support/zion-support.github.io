@@ -291,6 +291,3 @@ View Case Studies
 )
 }
 export default ContentStatistics
-</button>
-</h2>
-</div>

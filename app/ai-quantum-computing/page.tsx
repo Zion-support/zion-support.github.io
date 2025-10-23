@@ -1,9 +1,15 @@
+<<<<<<< HEAD
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+>>>>>>> origin/main
 const AiQuantumComputingPage: React.FC = () => {
   const features = [
     {
@@ -39,7 +45,7 @@ const AiQuantumComputingPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Quantum Computing - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai quantum computing solution for modern businesses." />
@@ -148,8 +154,15 @@ const AiQuantumComputingPage: React.FC = () => {
         </section>
       </div>
       <Footer />
+<<<<<<< HEAD
         </React.Fragment>
   )
 }
 
 export default $1
+=======
+    </>
+  )
+}
+export default AiQuantumComputingPage
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

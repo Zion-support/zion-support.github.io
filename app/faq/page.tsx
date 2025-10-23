@@ -45,8 +45,13 @@ question: "What industries do you serve?",
 answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
 }
 ]
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
 <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
@@ -89,8 +94,15 @@ className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg
 </div>
 </section>
 </div>
+<<<<<<< HEAD
     </React.Fragment>
   )
 }
 
 export default $1
+=======
+</>
+)
+}
+export default FAQPage
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

@@ -1,24 +1,22 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+
 interface PerformanceMetrics {
-lcp?: number
-fid?: number
-cls?: number
-fcp?: number
-ttfb?: number
+  loadTime: number | null
+  firstContentfulPaint: number | null
+  largestContentfulPaint: number | null
+  firstInputDelay: number | null
+  cumulativeLayoutShift: number | null
+  timeToInteractive: number | null
+  totalBlockingTime: number | null
 }
-const PerformanceMonitor: React.FC = () => {
-const [metrics, setMetrics] = useState<PerformanceMetrics>({})
-const [isVisible, setIsVisible] = useState(false)
-useEffect(() => {
-if (typeof window === 'undefined') return
-// Only show in development or when performance monitoring is enabled
-const shouldMonitor = process.env.NODE_ENV === 'development' ||
-localStorage.getItem('performance-monitoring') === 'true'
-if (!shouldMonitor) return
-const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-setMetrics(prev => ({ ...prev, ...newMetrics }))
+
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
+  enableRealTimeMonitoring?: boolean
+  logToConsole?: boolean
 }
+<<<<<<< HEAD
 // Monitor Core Web Vitals
 if ('web-vitals' in window) {
 import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -127,3 +125,7 @@ className="text-gray-400 hover:text-white"
 )
 }
 export default PerformanceMonitor
+=======
+
+export default function PerformanceMonitor({ 
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

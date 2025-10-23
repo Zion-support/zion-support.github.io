@@ -32,7 +32,3 @@ s: DynamicOptions = {}
 )
 }
 export default dynamic
-</unknown>
-</T>
-</Suspense>
-</unknown>

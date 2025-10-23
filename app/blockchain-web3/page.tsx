@@ -30,7 +30,7 @@ const BlockchainWeb3Page: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
@@ -70,8 +70,15 @@ const BlockchainWeb3Page: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
         </React.Fragment>
   )
 }
 
 export default $1
+=======
+    </>
+  )
+}
+export default BlockchainWeb3Page
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

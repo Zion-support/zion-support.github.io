@@ -709,6 +709,7 @@ interface VoiceCloningStudioProps {
 }
 
 export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudioProps) {
+<<<<<<< HEAD
   const [isRecording, setIsRecording] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('default');
@@ -1305,3 +1306,5 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
     </div>
   );
 }
+=======
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

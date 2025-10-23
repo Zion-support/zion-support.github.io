@@ -39,7 +39,7 @@ const AiTaskManagerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Task Manager - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai task manager solution for modern businesses." />
@@ -148,8 +148,15 @@ const AiTaskManagerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
+<<<<<<< HEAD
         </React.Fragment>
   )
 }
 
 export default $1
+=======
+    </>
+  )
+}
+export default AiTaskManagerPage
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

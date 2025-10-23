@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const Ai3dGenerationPage: React.FC = () => {
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -38,8 +44,9 @@ const Ai3dGenerationPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+>>>>>>> origin/main
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai 3d Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai 3d generation solution for modern businesses." />
@@ -147,9 +154,18 @@ const Ai3dGenerationPage: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
         </React.Fragment>
   )
 }
 
 export default $1
+=======
+<<<<<<< HEAD
+    </>
+  );
+};
+
+export default Ai3dGenerationPage;
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

@@ -31,8 +31,13 @@ description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
 ]
+<<<<<<< HEAD
   return (
     <React.Fragment>
+=======
+return (
+<>
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>AI Code Assistant - Zion Tech Group</title>
 <meta name="description" content="Intelligent code assistant powered by advanced AI technology." />
@@ -109,8 +114,15 @@ Start Your Free Trial
 </section>
 </main>
 <Footer />
+<<<<<<< HEAD
     </React.Fragment>
   )
 }
 
 export default $1
+=======
+</>
+)
+}
+export default AiCodeAssistantPage
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

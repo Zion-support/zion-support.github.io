@@ -39,7 +39,7 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Social Media Scheduler - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai social media scheduler solution for modern businesses." />
@@ -148,8 +148,15 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
+<<<<<<< HEAD
         </React.Fragment>
   )
 }
 
 export default $1
+=======
+    </>
+  )
+}
+export default AiSocialMediaSchedulerPage
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

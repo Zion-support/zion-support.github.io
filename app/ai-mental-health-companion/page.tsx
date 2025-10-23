@@ -676,6 +676,7 @@ interface MentalHealthCompanionProps {
 }
 
 export default function MentalHealthCompanion({ className = '' }: MentalHealthCompanionProps) {
+<<<<<<< HEAD
   const [currentMood, setCurrentMood] = useState('neutral');
   const [chatMessages, setChatMessages] = useState<any[]>([]);
   const [userInput, setUserInput] = useState('');
@@ -1195,3 +1196,5 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     </div>
   );
 }
+=======
+>>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

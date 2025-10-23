@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React from "react";
+import { BarChart3, FileText, MessageSquare } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+// Removed unused imports
+=======
 'use client';
 import React, { useState, useEffect } from 'react';
 import {
@@ -20,6 +26,7 @@ import {
   Truck,
 Rocket
 } from 'lucide-react';
+>>>>>>> origin/main
 
 const AIServicesPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);

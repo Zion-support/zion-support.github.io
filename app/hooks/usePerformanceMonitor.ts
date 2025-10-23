@@ -25,7 +25,7 @@ export const usePerformanceMonitor = (
 
   const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
   const frameCountRef = useRef(0);
-  const lastTimeRef = useRef(performance.now());
+  const lastTimeRef = useRef(typeof window !== 'undefined' ? performance.now() : 0);
 
   const measureMemoryUsage = useCallback(() => {
     if (typeof window !== "undefined" && "memory" in performance) {
