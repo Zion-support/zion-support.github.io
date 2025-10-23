@@ -187,8 +187,11 @@ const Footer: React.FC = () => {
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
+<<<<<<< HEAD
+=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
+>>>>>>> e8203bb1cee2dc83b8a75239c674fa7ce0902515
               <Phone className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">+1 (555) 123-4567</span>
             </div>
@@ -199,8 +202,11 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">San Francisco, CA</span>
+<<<<<<< HEAD
+=======
             </div>
           </div>
+>>>>>>> e8203bb1cee2dc83b8a75239c674fa7ce0902515
         </div>
 
         {/* Bottom Bar */}
@@ -234,4 +240,3 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
