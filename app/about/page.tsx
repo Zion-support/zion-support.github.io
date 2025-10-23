@@ -43,8 +43,6 @@ const AboutPage: React.FC = () => {
         "Passionate about creating beautiful, user-centered experiences.",
     },
   ];
-
-const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
