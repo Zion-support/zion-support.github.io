@@ -1,11 +1,19 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Play } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Zap, Heart } from 'lucide-react'
+=======
 import React from 'react';
 import { Play, CheckCircle, Star, Zap, Video, Heart, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const AIFitnessCoachPage: React.FC = () => {
-  const features = [
+constAIFitnessCoachPage: React.FC= () =>{constfeatures= [
     'Personalized Plans',
     'Progress Tracking',
     'Nutrition Analysis',
@@ -16,53 +24,47 @@ const AIFitnessCoachPage: React.FC = () => {
     'Exercise Library',
     'Meal Planning',
     'Wearable Integration'
-  ];
+  ]
 
-  const benefits = [
+  constbenefits= [
     'Better results',
-    '24/7 guidance',
+    '2 4/7 guidance',
     'Personalized approach',
     'Health insights',
     'Motivation support',
     'Cost-effective'
-  ];
+  ]
 
-  const pricingPlans = [
+  constpricingPlans= [
     {
       name: 'Basic',
-      price: '$99',
+      price: '$9 9',
       period: '/month',
       features: ['Basic plans', 'Progress tracking', 'Email support', 'Mobile app'],
       popular: false
-    },
-    {
-      name: 'Premium',
-      price: '$149',
+   },
+    {name: 'Premium',
+      price: '$14 9',
       period: '/month',
       features: ['Personalized plans', 'Nutrition analysis', 'Video workouts', 'Wearable sync', 'Priority support'],
       popular: true
-    },
-    {
-      name: 'Pro',
-      price: '$249',
+   },
+    {name: 'Pro',
+      price: '$24 9',
       period: '/month',
       features: ['Everything in Premium', '1-on-1 coaching', 'Custom programs', 'Advanced analytics', 'Dedicated support'],
       popular: false
     }
-  ];
+  ]
 
   return (
-    <>
-      <SEOOptimizer
-        title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
-        description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get 24/7 guidance, and achieve your health goals starting at $99/month."
-        keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']}
+  <><SEOOptimizertitle="AI Fitness Coach - Personalized Fitness & Nutrition Plans | ZionTechGroup"
+        description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get24/7 guidance, and achieve your health goals starting at$99/month."
+        keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitnessautomation']}
         canonicalUrl="https://ziontechgroup.com/ai-fitness-coach"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -95,7 +97,6 @@ const AIFitnessCoachPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -112,7 +113,6 @@ const AIFitnessCoachPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,7 +129,6 @@ const AIFitnessCoachPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -174,7 +173,6 @@ const AIFitnessCoachPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -201,11 +199,10 @@ const AIFitnessCoachPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIFitnessCoachPage;
+export default AIFitnessCoachPage

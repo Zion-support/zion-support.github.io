@@ -1,12 +1,13 @@
+import React from 'react'
 import React from 'react';
 import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Camera, Zap, Palette } from 'lucide-react'
 
-const AIFashionDesignPage: React.FC = () => {
-  const features = [
+constAIFashionDesignPage: React.FC= () =>{constfeatures= [
     'Design Generation',
     'Trend Analysis',
     'Color Matching',
@@ -15,55 +16,49 @@ const AIFashionDesignPage: React.FC = () => {
     'Style Recommendations',
     'Fabric Suggestions',
     'Pattern Creation',
-    '3D Visualization',
+    '3 D Visualization',
     'Cost Estimation'
-  ];
+  ]
 
-  const benefits = [
+  constbenefits= [
     'Faster design cycles',
     'Trend accuracy',
     'Cost reduction',
     'Market insights',
     'Creative inspiration',
     'Competitive advantage'
-  ];
+  ]
 
-  const pricingPlans = [
+  constpricingPlans= [
     {
       name: 'Starter',
-      price: '$249',
+      price: '$24 9',
       period: '/month',
-      features: ['10 designs/month', 'Basic trends', 'Email support', 'Standard quality'],
+      features: ['10designs/month', 'Basic trends', 'Email support', 'Standard quality'],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$349',
+   },
+    {name: 'Professional',
+      price: '$34 9',
       period: '/month',
-      features: ['Unlimited designs', 'Advanced trends', '3D visualization', 'API access', 'Priority support'],
+      features: ['Unlimited designs', 'Advanced trends', '3 D visualization', 'API access', 'Priority support'],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$699',
+   },
+    {name: 'Enterprise',
+      price: '$69 9',
       period: '/month',
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
       popular: false
     }
-  ];
+  ]
 
   return (
-    <>
-      <SEOOptimizer
-        title="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | Zion Tech Group"
-        description="Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at $249/month."
-        keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashion technology']}
+  <><SEOOptimizertitle="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | ZionTechGroup"
+        description="Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at$249/month."
+        keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashiontechnology']}
         canonicalUrl="https://ziontechgroup.com/ai-fashion-design"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -96,7 +91,6 @@ const AIFashionDesignPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -113,7 +107,6 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -130,7 +123,6 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -175,7 +167,6 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -202,11 +193,10 @@ const AIFashionDesignPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIFashionDesignPage;
+export default AIFashionDesignPage

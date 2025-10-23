@@ -1,48 +1,54 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Lock } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
+=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Lock, CheckCircle, Phone, Mail, Brain, Zap, Shield, Globe, Users, BarChart, Eye, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const AICybersecurityPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI Threat Detection',
       description: 'Advanced AI algorithms that detect and prevent cyber threats in real-time, including zero-day attacks and advanced persistent threats.',
-      benefits: ['Real-time detection', 'Zero-day protection', '99.9% accuracy']
-    },
-    {
-      icon: Shield,
+      benefits: ['Real-time detection', 'Zero-day protection', '9 9.9% accuracy']
+   },
+    {icon: Shield,
       title: 'Automated Response',
       description: 'Intelligent automated response system that instantly contains threats, isolates affected systems, and initiates recovery procedures.',
-      benefits: ['Instant containment', 'Auto-recovery', 'Minimal downtime']
-    },
-    {
-      icon: Eye,
+      benefits: ['Instant containment', 'Auto-recovery', 'Minimal do wntime']
+   },
+    {icon: Eye,
       title: 'Continuous Monitoring',
-      description: '24/7 monitoring of your entire infrastructure with AI-powered analysis of network traffic, user behavior, and system activities.',
-      benefits: ['24/7 surveillance', 'Behavioral analysis', 'Anomaly detection']
-    },
-    {
-      icon: BarChart,
+      description: '2 4/7 monitoring of your entire infrastructure with AI-powered analysis of network traffic, user behavior, and system activities.',
+      benefits: ['2 4/7 surveillance', 'Behavioral analysis', 'Anomaly detection']
+   },
+    {icon: BarChart,
       title: 'Security Analytics',
       description: 'Comprehensive security analytics and reporting with threat intelligence, risk assessment, and compliance monitoring.',
       benefits: ['Threat intelligence', 'Risk scoring', 'Compliance reports']
-    },
-    {
-      icon: Zap,
+   },
+    {icon: Zap,
       title: 'Vulnerability Management',
       description: 'Automated vulnerability scanning, prioritization, and patching with AI-powered risk assessment and remediation guidance.',
       benefits: ['Auto-scanning', 'Risk prioritization', 'Patch management']
-    },
-    {
-      icon: Lock,
+   },
+    {icon: Lock,
       title: 'Zero Trust Architecture',
       description: 'Implement zero trust security model with identity verification, device trust, and least privilege access controls.',
       benefits: ['Identity verification', 'Device trust', 'Least privilege']
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Essential',
@@ -50,23 +56,22 @@ const AICybersecurityPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 50 endpoints',
+        'Up to 50endpoints',
         'Basic threat detection',
         'Email security',
-        '24/7 monitoring',
+        '2 4/7 monitoring',
         'Email support',
         'Basic reporting',
         'Standard compliance'
       ],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$1,999',
+   },
+    {name: 'Professional',
+      price: '$1,99 9',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 500 endpoints',
+        'Up to 500endpoints',
         'Advanced AI detection',
         'All security modules',
         'Real-time response',
@@ -76,10 +81,9 @@ const AICybersecurityPage: React.FC = () => {
         'Incident response'
       ],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$4,999',
+   },
+    {name: 'Enterprise',
+      price: '$4,99 9',
       period: '/month',
       description: 'For large organizations',
       features: [
@@ -95,41 +99,36 @@ const AICybersecurityPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
   const stats = [
     { number: '99.9%', label: 'Threat Detection' },
     { number: '24/7', label: 'Monitoring' },
     { number: '60%', label: 'Faster Response' },
     { number: '100%', label: 'Compliance' }
-  ];
+  ]
   const threats = [
     {
       title: 'Ransomware Protection',
       description: 'Advanced AI detection and prevention of ransomware attacks with automated backup and recovery systems.',
       icon: Shield
-    },
-    {
-      title: 'Phishing Detection',
+   },
+    {title: 'Phishing Detection',
       description: 'AI-powered email security that detects and blocks sophisticated phishing attempts and social engineering attacks.',
       icon: Eye
-    },
-    {
-      title: 'Insider Threat Detection',
+   },
+    {title: 'Insider Threat Detection',
       description: 'Behavioral analysis to identify and prevent insider threats, data exfiltration, and unauthorized access.',
       icon: Users
-    },
-    {
-      title: 'Network Security',
+   },
+    {title: 'Network Security',
       description: 'Comprehensive network monitoring and protection with AI-powered intrusion detection and prevention systems.',
       icon: Globe
     }
-  ];
+  ]
   return (
-    <>
-      <SEOOptimizer
-        title="AI Cybersecurity Solutions - Zion Tech Group"
-        description="Advanced AI-powered cybersecurity with 99.9% threat detection, 24/7 monitoring, and automated response. Protect your business from evolving cyber threats."
-        keywords={['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AI security']}
+  <><SEOOptimizertitle="AI Cybersecurity Solutions - ZionTechGroup"
+        description="Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats."
+        keywords={['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AIsecurity']}
         canonicalUrl="https://ziontechgroup.com/ai-cybersecurity"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -145,7 +144,7 @@ const AICybersecurityPage: React.FC = () => {
                 Protect your business with AI-powered security
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered cybersecurity platform provides advanced threat detection, 
+                Our AI-powered cybersecurity platform provides advanced threat detection,
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -226,35 +225,15 @@ const AICybersecurityPage: React.FC = () => {
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="tel:+13024640950"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
+                    plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
+                }`}
+                >{plan.popular && (
+                  <divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><spanclassName="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold"></className="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold">Most Popular
+                    </spa></di>)}
+                <divclassName="text-centermb-6"><h3className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h><pclassName="text-gray-400mb-4">{plan.description}</p><divclassName="flexitems-baselinejustify-center"><spanclassName="text-4 xl font-boldtext-cyan-400">{plan.price}</spa><spanclassName="text-gray-400ml-1">{plan.period}</spa></di></di><ulclassName="space-y-3mb-8">{plan.features.map((featureidx) => (
+                   <likey={idx}className="flexitems-centerspace-x-3"><CheckCircleclassName="w-5 h-5 text-cyan-400flex-shrink-0" /><spanclassName="text-gray-300">{feature}</spa></l>))}
+                </u><ahref="tel:+13024640950"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
                       plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -298,6 +277,6 @@ const AICybersecurityPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-export default AICybersecurityPage;
+  )
+}
+export default AICybersecurityPage

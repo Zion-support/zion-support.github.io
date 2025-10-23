@@ -1,6 +1,12 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
+
+const EnhancedServicesShowcase: React.FC = () => {
+  const services = [
+=======
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -43,11 +49,7 @@ const EnhancedServicesShowcasePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedServicesShowcase</title>
-        <meta name="description" content="Advanced EnhancedServicesShowcase solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedServicesShowcase, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -145,3 +147,4 @@ const EnhancedServicesShowcasePage: React.FC = () => {
 };
 
 export default EnhancedServicesShowcasePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f

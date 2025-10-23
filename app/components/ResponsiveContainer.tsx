@@ -1,53 +1,37 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
+import { cn } from '../lib/utils'
+interface ResponsiveContainerProps {
+  children: React.ReactNode
+  className?: string
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full'
+}
+=======
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const ResponsiveContainerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+constResponsiveContainer= ({children,
+  class Nam e,
+  maxWidth= '7 xl'}: ResponsiveContainerProps) =>{constmaxWidthClasses= {
+    sm: 'max-w-sm',
+    md: 'max-w-md',
+    lg: 'max-w-lg',
+    xl: 'max-w-xl',
+    '2 xl': 'max-w-2 xl',
+    '3 xl': 'max-w-3 xl',
+    '4 xl': 'max-w-4 xl',
+    '5 xl': 'max-w-5 xl',
+    '6 xl': 'max-w-6 xl',
+    '7 xl': 'max-w-7 xl',
+    full: 'max-w-full'
+  }
 
   return (
     <>
-      <Helmet>
-        <title>ResponsiveContainer</title>
-        <meta name="description" content="Advanced ResponsiveContainer solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ResponsiveContainer, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -145,3 +129,7 @@ const ResponsiveContainerPage: React.FC = () => {
 };
 
 export default ResponsiveContainerPage;
+  );
+};
+
+export default ResponsiveContainer;

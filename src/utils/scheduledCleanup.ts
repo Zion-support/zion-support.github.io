@@ -2,34 +2,33 @@
  * Scheduled Cleanup Manager
  * Manages scheduled cleanup tasks for data maintenance
  */
-
-import { dataCleanup, CleanupConfig } from './dataCleanup';
+import { dataCleanup, CleanupConfig } from './dataCleanup'
 
 export interface CleanupStats {
-  totalRuns: number;
-  successfulRuns: number;
-  failedRuns: number;
-  isRunning: boolean;
-  lastRun?: number;
-  nextRun?: number;
-  averageDuration: number;
+  totalRuns: number
+  successfulRuns: number
+  failedRuns: number
+  isRunning: boolean
+  lastRun?: number
+  nextRun?: number
+  averageDuration: number
 }
 
 export interface ScheduledCleanupConfig {
   interval: number; // milliseconds
-  enabled: boolean;
-  cleanupConfig: CleanupConfig;
+  enabled: boolean
+  cleanupConfig: CleanupConfig
 }
 
 class ScheduledCleanup {
-  private intervalId: NodeJS.Timeout | null = null;
+  private intervalId: NodeJS.Timeout | null = null
   private stats: CleanupStats = {
     totalRuns: 0,
     successfulRuns: 0,
     failedRuns: 0,
     isRunning: false,
     averageDuration: 0,
-  };
+  }
   private config: ScheduledCleanupConfig = {
     interval: 24 * 60 * 60 * 1000, // 24 hours
     enabled: true,
@@ -37,22 +36,22 @@ class ScheduledCleanup {
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
       maxRecords: 1000,
     },
-  };
-  private durations: number[] = [];
+  }
+  private durations: number[] = []
 
   /**
    * Start the scheduled cleanup
    */
   start(): void {
     if (this.intervalId || !this.config.enabled) {
-      return;
+      return
     }
 
     this.intervalId = setInterval(async () => {
-      await this.runCleanup();
-    }, this.config.interval);
+      await this.runCleanup()
+    }, this.config.interval)
 
-    this.stats.isRunning = true;
+    this.stats.isRunning = true
   }
 
   /**
@@ -60,10 +59,10 @@ class ScheduledCleanup {
    */
   stop(): void {
     if (this.intervalId) {
-      clearInterval(this.intervalId);
-      this.intervalId = null;
+      clearInterval(this.intervalId)
+      this.intervalId = null
     }
-    this.stats.isRunning = false;
+    this.stats.isRunning = false
   }
 
   /**
@@ -74,33 +73,33 @@ class ScheduledCleanup {
       return false; // Prevent concurrent runs
     }
 
-    this.stats.isRunning = true;
-    this.stats.totalRuns++;
-    const startTime = Date.now();
+    this.stats.isRunning = true
+    this.stats.totalRuns++
+    const startTime = Date.now()
 
     try {
-      const result = await dataCleanup.performCleanup(this.config.cleanupConfig);
-      const duration = Date.now() - startTime;
-      
-      this.stats.successfulRuns++;
-      this.stats.lastRun = Date.now();
-      this.stats.nextRun = this.stats.lastRun + this.config.interval;
-      
+      const result = await dataCleanup.performCleanup(this.config.cleanupConfig)
+      const duration = Date.now() - startTime
+
+      this.stats.successfulRuns++
+      this.stats.lastRun = Date.now()
+      this.stats.nextRun = this.stats.lastRun + this.config.interval
+
       // Update average duration
-      this.durations.push(duration);
+      this.durations.push(duration)
       if (this.durations.length > 10) {
         this.durations.shift(); // Keep only last 10 durations
       }
-      this.stats.averageDuration = this.durations.reduce((a, b) => a + b, 0) / this.durations.length;
+      this.stats.averageDuration = this.durations.reduce((a, b) => a + b, 0) / this.durations.length
 
-      console.log(`Cleanup completed: ${result.totalCleaned} records cleaned in ${duration}ms`);
-      return true;
+      // console.log(`Cleanup completed: ${result.totalCleaned} records cleaned in ${duration}ms`)
+      return true
     } catch (error) {
-      this.stats.failedRuns++;
-      console.error('Cleanup failed:', error);
-      return false;
+      this.stats.failedRuns++
+      // console.error('Cleanup failed:', error)
+      return false
     } finally {
-      this.stats.isRunning = false;
+      this.stats.isRunning = false
     }
   }
 
@@ -108,7 +107,7 @@ class ScheduledCleanup {
    * Get cleanup statistics
    */
   getStats(): CleanupStats {
-    return { ...this.stats };
+    return { ...this.stats }
   }
 
   /**
@@ -118,9 +117,9 @@ class ScheduledCleanup {
     if (!this.stats.lastRun) {
       return true; // Never run before
     }
-    
-    const timeSinceLastRun = Date.now() - this.stats.lastRun;
-    return timeSinceLastRun >= this.config.interval;
+
+    const timeSinceLastRun = Date.now() - this.stats.lastRun
+    return timeSinceLastRun >= this.config.interval
   }
 
   /**
@@ -130,25 +129,25 @@ class ScheduledCleanup {
     if (!this.stats.lastRun) {
       return 0; // Should run immediately
     }
-    
-    const timeSinceLastRun = Date.now() - this.stats.lastRun;
-    return Math.max(0, this.config.interval - timeSinceLastRun);
+
+    const timeSinceLastRun = Date.now() - this.stats.lastRun
+    return Math.max(0, this.config.interval - timeSinceLastRun)
   }
 
   /**
    * Update configuration
    */
   updateConfig(newConfig: Partial<ScheduledCleanupConfig>): void {
-    const wasRunning = this.stats.isRunning;
-    
+    const wasRunning = this.stats.isRunning
+
     if (wasRunning) {
-      this.stop();
+      this.stop()
     }
 
-    this.config = { ...this.config, ...newConfig };
+    this.config = { ...this.config, ...newConfig }
 
     if (wasRunning && this.config.enabled) {
-      this.start();
+      this.start()
     }
   }
 
@@ -156,7 +155,7 @@ class ScheduledCleanup {
    * Get current configuration
    */
   getConfig(): ScheduledCleanupConfig {
-    return { ...this.config };
+    return { ...this.config }
   }
 
   /**
@@ -169,51 +168,51 @@ class ScheduledCleanup {
       failedRuns: 0,
       isRunning: false,
       averageDuration: 0,
-    };
-    this.durations = [];
+    }
+    this.durations = []
   }
 
   /**
    * Check if cleanup is currently running
    */
   isCurrentlyRunning(): boolean {
-    return this.stats.isRunning;
+    return this.stats.isRunning
   }
 
   /**
    * Get cleanup health status
    */
   getHealthStatus(): {
-    healthy: boolean;
-    issues: string[];
+    healthy: boolean
+    issues: string[]
   } {
-    const issues: string[] = [];
-    
+    const issues: string[] = []
+
     if (this.stats.failedRuns > 0 && this.stats.failedRuns > this.stats.successfulRuns) {
-      issues.push('More failed runs than successful runs');
+      issues.push('More failed runs than successful runs')
     }
-    
+
     if (this.stats.averageDuration > 30000) { // 30 seconds
-      issues.push('Average cleanup duration is very high');
+      issues.push('Average cleanup duration is very high')
     }
-    
+
     if (this.stats.totalRuns > 0 && this.stats.successfulRuns === 0) {
-      issues.push('No successful cleanup runs');
+      issues.push('No successful cleanup runs')
     }
 
     return {
       healthy: issues.length === 0,
       issues,
-    };
+    }
   }
 }
 
-export const scheduledCleanup = new ScheduledCleanup();
+export const scheduledCleanup = new ScheduledCleanup()
 
 // Auto-start if enabled (in browser environment)
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   // Start after a short delay to allow the page to load
   setTimeout(() => {
-    scheduledCleanup.start();
-  }, 5000);
+    scheduledCleanup.start()
+  }, 5000)
 }

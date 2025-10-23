@@ -1,53 +1,41 @@
+<<<<<<< HEAD
+import React, { useEffect } from "react"
+=======
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const AnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
+const Analytics: React.FC = () => {
+  useEffect(() => {
+    const initAnalytics = () => {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("config", "GA_MEASUREMENT_ID", {
+          page_title: document.title,
+          page_location: window.location.href,
+        })
+      }
     }
-  ]
+    initAnalytics()
+  }, [])
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+  return null; // Analytics component doesn't render anything
+}
 
+<<<<<<< HEAD
+export default Analytics
+=======
   return (
     <>
-      <Helmet>
-        <title>Analytics</title>
-        <meta name="description" content="Advanced Analytics solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, Analytics, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -142,6 +130,7 @@ const AnalyticsPage: React.FC = () => {
       <Footer />
     </>
   );
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 };
 
 export default AnalyticsPage;

@@ -1,11 +1,12 @@
+import React from 'react'
 import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
 
-const AIProjectManagerPage: React.FC = () => {
-  const features = [
+constAIProjectManagerPage: React.FC= () =>{constfeatures= [
     'AI-powered project planning and resource allocation',
     'Intelligent timeline prediction and risk assessment',
     'Smart task management with priority optimization',
@@ -14,7 +15,7 @@ const AIProjectManagerPage: React.FC = () => {
     'Automated progress tracking and reporting',
     'Budget optimization and cost forecasting',
     'Integration with popular project management tools'
-  ];
+  ]
 
   const benefits = [
     '40% increase in project delivery speed',
@@ -23,31 +24,29 @@ const AIProjectManagerPage: React.FC = () => {
     '30% cost reduction through optimization',
     '95% team productivity boost',
     '50% faster decision making'
-  ];
+  ]
 
-  const pricing = [
+  constpricing= [
     {
       plan: 'Starter',
-      price: '$199',
+      price: '$19 9',
       period: '/month',
-      features: ['Up to 5 projects', '10 team members', 'Basic AI planning', 'Email support'],
+      features: ['Up to5projects', '10team members', 'Basic AI planning', 'Email support'],
       popular: false
-    },
-    {
-      plan: 'Professional',
-      price: '$399',
+   },
+    {plan: 'Professional',
+      price: '$39 9',
       period: '/month',
-      features: ['Unlimited projects', '50 team members', 'Advanced AI features', 'Priority support', 'Custom integrations'],
+      features: ['Unlimited projects', '50team members', 'Advanced AI features', 'Priority support', 'Custom integrations'],
       popular: true
-    },
-    {
-      plan: 'Enterprise',
+   },
+    {plan: 'Enterprise',
       price: 'Custom',
       period: '',
       features: ['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee'],
       popular: false
     }
-  ];
+  ]
 
   return (
     <>
@@ -63,7 +62,7 @@ const AIProjectManagerPage: React.FC = () => {
               Intelligent project planning with AI-powered resource optimization
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your project management with our advanced AI system that predicts timelines, 
+              Transform your project management with our advanced AI system that predicts timelines,
               optimizes resources, and ensures project success through intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -82,7 +81,6 @@ const AIProjectManagerPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -97,7 +95,6 @@ const AIProjectManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -112,7 +109,6 @@ const AIProjectManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -155,7 +151,6 @@ const AIProjectManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Contact Section */}
           <section className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
@@ -184,7 +179,7 @@ const AIProjectManagerPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIProjectManagerPage;
+export default AIProjectManagerPage

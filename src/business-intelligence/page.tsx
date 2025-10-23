@@ -1,40 +1,43 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
+=======
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Target, TrendingUp, BarChart, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const BusinessIntelligencePage: React.FC = () => {
-  const biServices = [
+constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
     {
       id: 'data-analytics',
       title: 'Advanced Data Analytics',
       description: 'Transform raw data into actionable insights with our comprehensive analytics solutions.',
       features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards', 'Data visualization'],
       benefits: ['Data-driven decisions', 'Improved efficiency', 'Better forecasting', 'Competitive advantage'],
-      marketPrice: '$1,200-3,500/month',
+      marketPrice: '$1,20 0-3,50 0/month',
       category: 'Data Analytics',
       technologies: ['Python', 'R', 'SQL', 'Tableau', 'Power BI']
-    },
-    {
-      id: 'business-intelligence',
+   },
+    {id: 'business-intelligence',
       title: 'Business Intelligence Solutions',
       description: 'Comprehensive BI platforms that provide insights across all business functions.',
       features: ['Executive dashboards', 'KPI tracking', 'Report automation', 'Data integration'],
-      benefits: ['360° business view', 'Faster reporting', 'Improved accuracy', 'Better planning'],
-      marketPrice: '$1,800-4,200/month',
+      benefits: ['36 0° business view', 'Faster reporting', 'Improved accuracy', 'Better planning'],
+      marketPrice: '$1,80 0-4,20 0/month',
       category: 'BI Platforms',
       technologies: ['Microsoft BI', 'QlikView', 'Looker', 'Sisense', 'Domo']
-    },
-    {
-      id: 'data-warehousing',
+   },
+    {id: 'data-warehousing',
       title: 'Data Warehousing & ETL',
       description: 'Centralized data storage and processing solutions for enterprise-scale analytics.',
       features: ['Data warehousing', 'ETL processes', 'Data quality management', 'Scalable architecture'],
       benefits: ['Unified data source', 'Improved data quality', 'Better performance', 'Cost optimization'],
-      marketPrice: '$2,500-6,000/month',
+      marketPrice: '$2,50 0-6,00 0/month',
       category: 'Data Infrastructure',
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -164,6 +167,6 @@ const BusinessIntelligencePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default BusinessIntelligencePage;
+  )
+}
+export default BusinessIntelligencePage

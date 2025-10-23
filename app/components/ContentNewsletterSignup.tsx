@@ -1,35 +1,55 @@
 'use client'
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
+=======
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const ContentNewsletterSignupPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+interface ContentNewsletterSignupProps {
+  title?: string
+  subtitle?: string
+  placeholder?: string
+  buttonText?: string
+  features?: Array<{
+    icon: React.ComponentType<{ class Nam e?: string}>text: string
+  }>
+  onSubscribe?: (email: string) => void
+}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= "Stay Updated with Our LatestInsights",
+  subtitle= "Get exclusive content, industry insights, and early access to new features delivered to yourinbox.",
+  placeholder= "Enter your emailaddress",
+  buttonText= "Subscribe",
+  features= [
+    { icon: Star, text:"Exclusive content"},
+    {icon: Users, text:"Industry insights"},
+    {icon: Globe, text:"Global updates"},
+    {icon: Zap, text:"Early access"}
+  ],
+  onSubscribe
+}) => {const [emailsetEmail] = useState('')
+  const [isSubmittingsetIsSubmitting] = useState(false)
+  const [isSubscribedsetIsSubscribed] = useState(false)
+  const [isLoadingsetIsLoading] = useState(false)
+  consthandleSubmit= async (e: React.FormEvent) => {
+  
+    e.preventDefault()
+    if (!email) return setIsLoadin g(true)
+    try {
+      // Simulate API call
+      await new Promise(resolve=> setTimeout(resolve100 0))
+      if (onSubscrib e) {
+        onSubscribe(email)
+     }
+      setIsSubscribed(true)
+      setEmail('')
+    } catch (error) {
+      // console.error('Subscription error:', error)
+    } finally {
+      setIsSubmitting(false)
     }
   ]
 
@@ -43,11 +63,7 @@ const ContentNewsletterSignupPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ContentNewsletterSignup</title>
-        <meta name="description" content="Advanced ContentNewsletterSignup solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ContentNewsletterSignup, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -68,6 +84,9 @@ const ContentNewsletterSignupPage: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
+        </div>
+      </div>
+    );
             </div>
           </div>
         </section>
@@ -99,15 +118,38 @@ const ContentNewsletterSignupPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
+          {/* Newsletter Form */}
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                  Email Address
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) =>setEmail(e.target.value)}
+                  placeholder={placeholder}
+                 requiredclassName="w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent"
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={isLoading || !email}
+                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"></button>
+                {isLoading ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
+                    Subscribing...
+                  </>
+                ) : (
+                  <>
+                    {buttonText}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </>
+                )}
+              </button>
+              <p className="text-sm text-blue-200 text-center">
+                We respect your privacy. Unsubscribe at any time.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -145,3 +187,19 @@ const ContentNewsletterSignupPage: React.FC = () => {
 };
 
 export default ContentNewsletterSignupPage;
+=======
+            </di><
+               type="submit"
+                disabled={isLoading ||!email}
+               className="w-full bg-white text-purple-600font-bold py-3 px-6 rounded-lghover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300flexitems-centerjustify-center"></
+               type="submit"
+                disabled={isLoading ||!email}
+               className="w-full bg-white text-purple-600font-bold py-3 px-6 rounded-lghover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300flexitems-centerjustify-center">{isLoading ? (
+                <><divclassName="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600mr-2"></di>Subscribing...
+                </>)  : (
+                <>{buttonText}
+                  <ArrowRightclassName="w-5h-5ml-2" /></>)}
+            </butto><spanclassName="text-sm text-blue-200text-center"></spa></className="text-sm text-blue-200text-center">We respect your privacy. Unsubscribe at any time.
+            </p></for></di></di></di></di>)
+}
+export defaultContentNewsletterSignup</labe></butto></ContentNewsletterSignupProp>

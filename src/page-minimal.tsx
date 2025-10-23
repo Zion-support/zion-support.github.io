@@ -1,10 +1,16 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react'
+import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+=======
 import React from 'react';
 import { Phone, CheckCircle, Star, ArrowRight, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
-};
+}
 
 export default function HomePage() {
   return (
@@ -39,12 +45,12 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6"></h1>
               Transform Your Business with
               <span className="block text-blue-200">AI-Powered Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -160,5 +166,5 @@ export default function HomePage() {
         </div>
       </footer>
     </div>
-  );
-};
+  )
+}

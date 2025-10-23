@@ -1,73 +1,70 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+=======
 'use client';
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Users, BarChart, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star } from 'lucide-react'
 
-const AICRMPage: React.FC = () => {
-  const features = [
+constAICRMPage: React.FC= () =>{constfeatures= [
     {
       icon: Brain,
       title: 'AI-Powered Lead Scoring',
       description: 'Automatically score and prioritize leads using machine learning algorithms that analyze behavior patterns.',
       benefits: ['Behavioral analysis', 'Predictive scoring', 'Lead prioritization', 'Conversion optimization']
-    },
-    {
-      icon: Users,
+   },
+    {icon: Users,
       title: 'Intelligent Customer Segmentation',
       description: 'AI automatically segments customers based on behavior, preferences, and value potential.',
       benefits: ['Dynamic segmentation', 'Behavioral insights', 'Personalization', 'Targeted campaigns']
-    },
-    {
-      icon: Target,
+   },
+    {icon: Target,
       title: 'Predictive Sales Forecasting',
       description: 'Accurate sales predictions using AI that analyzes historical data and market trends.',
       benefits: ['Revenue forecasting', 'Pipeline analysis', 'Risk assessment', 'Goal tracking']
-    },
-    {
-      icon: TrendingUp,
+   },
+    {icon: TrendingUp,
       title: 'Automated Follow-ups',
       description: 'AI schedules and personalizes follow-up communications based on customer engagement patterns.',
       benefits: ['Smart scheduling', 'Personalized content', 'Engagement tracking', 'Response optimization']
     }
-  ];
+  ]
 
-  const capabilities = [
-    {
-      title: 'Smart Contact Management',
+  constcapabilities= [
+    {title: 'Smart Contact Management',
       description: 'AI automatically enriches contact data and maintains up-to-date information.',
       icon: Users,
-      stats: '95% data accuracy'
-    },
-    {
-      title: 'Intelligent Email Automation',
+      stats: '9 5% data accuracy'
+   },
+    {title: 'Intelligent Email Automation',
       description: 'Send personalized emails at the perfect time with AI-optimized content.',
       icon: Mail,
-      stats: '40% higher open rates'
-    },
-    {
-      title: 'Advanced Analytics',
+      stats: '4 0% higher open rates'
+   },
+    {title: 'Advanced Analytics',
       description: 'Comprehensive insights into customer behavior and sales performance.',
       icon: BarChart,
       stats: 'Real-time insights'
-    },
-    {
-      title: 'Mobile-First Design',
+   },
+    {title: 'Mobile-First Design',
       description: 'Access your CRM anywhere with our responsive mobile application.',
       icon: Phone,
       stats: '100% mobile optimized'
     }
-  ];
+  ]
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$49',
-      period: '/user/month',
+  constpricingPlans= [
+    {name: 'Starter',
+      price: '$4 9',
+      period: '/$1/month',
       description: 'Perfect for small teams getting started',
       features: [
-        'Up to 1,000 contacts',
+        'Up to 1,000contacts',
         'Basic AI lead scoring',
         'Email automation',
         'Mobile app access',
@@ -75,14 +72,13 @@ const AICRMPage: React.FC = () => {
         'Basic analytics'
       ],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$99',
-      period: '/user/month',
+   },
+    {name: 'Professional',
+      price: '$9 9',
+      period: '/$1/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 contacts',
+        'Up to 1 0,000contacts',
         'Advanced AI features',
         'Custom workflows',
         'Advanced analytics',
@@ -92,54 +88,47 @@ const AICRMPage: React.FC = () => {
         'Team collaboration tools'
       ],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/user/month',
+   },
+    {name: 'Enterprise',
+      price: '$19 9',
+      period: '/$1/month',
       description: 'Comprehensive solution for large organizations',
       features: [
         'Unlimited contacts',
         'Full AI suite',
         'Custom integrations',
         'Advanced reporting',
-        '24/7 dedicated support',
+        '2 4/7 dedicated support',
         'White-label options',
         'Custom development',
         'Dedicated account manager'
       ],
       popular: false
     }
-  ];
+  ]
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
+  consttestimonials= [
+    {name: 'Sarah Johnson',
       company: 'TechStart Inc.',
       role: 'Sales Director',
-      content: 'AI CRM increased our lead conversion by 65% and saved us 20 hours per week on manual tasks.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
+      content: 'AI CRM increased our lead conversion by65% and saved us 20hours per week on manual tasks.',
+      rating:5},
+    {name: 'Michael Chen',
       company: 'GrowthCorp',
       role: 'VP of Sales',
       content: 'The predictive analytics helped us identify high-value prospects we would have missed otherwise.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
+      rating:5},
+    {name: 'Emily Rodriguez',
       company: 'ScaleUp Solutions',
       role: 'Marketing Manager',
       content: 'Automated follow-ups and personalized content have dramatically improved our customer engagement.',
       rating: 5
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -159,7 +148,6 @@ const AICRMPage: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
@@ -181,7 +169,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -189,7 +176,6 @@ const AICRMPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Intelligent CRM Features</h2>
             <p className="text-xl text-gray-300">Everything you need to manage and grow your customer relationships</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6">
@@ -211,7 +197,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -219,7 +204,6 @@ const AICRMPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Capabilities</h2>
             <p className="text-xl text-gray-300">Advanced features that set us apart from traditional CRM systems</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
               <div key={index} className="cyber-card p-6">
@@ -234,7 +218,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -242,7 +225,6 @@ const AICRMPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">What Our Customers Say</h2>
             <p className="text-xl text-gray-300">Real results from real businesses</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="cyber-card p-6">
@@ -261,7 +243,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -269,7 +250,6 @@ const AICRMPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300">Choose the plan that fits your business needs</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
@@ -297,7 +277,7 @@ const AICRMPage: React.FC = () => {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                  plan.popular 
+                  plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
@@ -308,7 +288,6 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -326,10 +305,9 @@ const AICRMPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default AICRMPage;
+export default AICRMPage

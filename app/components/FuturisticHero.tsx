@@ -1,9 +1,14 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
+=======
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [
@@ -39,15 +44,13 @@ const FuturisticHeroPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+<<<<<<< HEAD
+=======
   ]
 
   return (
     <>
-      <Helmet>
-        <title>FuturisticHero</title>
-        <meta name="description" content="Advanced FuturisticHero solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, FuturisticHero, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -145,3 +148,4 @@ const FuturisticHeroPage: React.FC = () => {
 };
 
 export default FuturisticHeroPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f

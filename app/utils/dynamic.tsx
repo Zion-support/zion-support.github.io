@@ -1,6 +1,40 @@
 'use client'
+<<<<<<< HEAD
+import React, { lazy, Suspense, ComponentType } from 'react'
+interface DynamicOptions {
+loading?: () => React.ReactElement;}
+interface DynamicOptions {}
+loading?: () => React.ReactElement
+ssr?: boolean;}
+}
+export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc</T>: () => Promise<{ default: T }>,
+options: DynamicOptions = {}
+): ComponentType<unknown>{
+const LazyComponent = lazy(importFunc)</unknown>;}
+return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>
+): ComponentType<unknown> {}
+const LazyComponent = lazy(importFunc)
+return (props: unknown) => (}
+<Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
+<LazyComponent {...props} />
+'use client'
+import React, { lazy, Suspense, ComponentType } from 'react'
+interface DynamicOptions {/* TODO: Fix JSX expression */}
+}
+export function dynamic<T extends ComponentType<unknown>>(importFun)
+c: () => Promise<{/* TODO: Fix JSX expression */}
+t: T }>,
+option,
+s: DynamicOptions = {}
+): ComponentType<unknown> {/* TODO: Fix JSX expression */}
+<Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
+<LazyComponent {...props} /></LazyComponent>
+</Suspense>
+)
+}
+export default dynamic
+=======
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -43,11 +77,7 @@ const DynamicPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Dynamic</title>
-        <meta name="description" content="Advanced Dynamic solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, Dynamic, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -145,3 +175,4 @@ const DynamicPage: React.FC = () => {
 };
 
 export default DynamicPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f

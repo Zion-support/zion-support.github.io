@@ -1,48 +1,54 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { FileText, FileImage } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
+=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { FileText, FileImage, CheckCircle, Phone, Mail, Star, Brain, Zap, Shield, Users, BarChart, Eye, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const AIDocumentProcessingPage: React.FC = () => {
   const features = [
     {
       icon: Eye,
       title: 'Advanced OCR',
-      description: 'State-of-the-art optical character recognition that extracts text from any document with 99.9% accuracy.',
-      benefits: ['99.9% accuracy', 'Multi-language support', 'Handwriting recognition']
-    },
-    {
-      icon: Brain,
+      description: 'State-of-the-art optical character recognition that extracts text from any do cument with99.9% accuracy.',
+      benefits: ['9 9.9% accuracy', 'Multi-language support', 'Handwriting recognition']
+   },
+    {icon: Brain,
       title: 'AI Data Extraction',
-      description: 'Intelligent data extraction that understands document structure and extracts relevant information automatically.',
+      description: 'Intelligent data extraction that understands do cument structure and extracts relevant information automatically.',
       benefits: ['Smart parsing', 'Context understanding', 'Field mapping']
-    },
-    {
-      icon: Zap,
+   },
+    {icon: Zap,
       title: 'Automated Processing',
-      description: 'Fully automated document processing workflows that handle large volumes of documents without human intervention.',
+      description: 'Fully automated do cument processing workflows that handle large volumes of do cuments without human intervention.',
       benefits: ['Batch processing', 'Real-time processing', 'Error handling']
-    },
-    {
-      icon: BarChart,
+   },
+    {icon: BarChart,
       title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on document processing performance, accuracy rates, and processing times.',
+      description: 'Comprehensive analytics on do cument processing performance, accuracy rates, and processing times.',
       benefits: ['Performance metrics', 'Accuracy tracking', 'Cost analysis']
-    },
-    {
-      icon: Shield,
+   },
+    {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption, audit logs, and compliance with GDPR, HIPAA, and other standards.',
       benefits: ['Data encryption', 'Audit trails', 'Compliance ready']
-    },
-    {
-      icon: Users,
+   },
+    {icon: Users,
       title: 'Team Collaboration',
-      description: 'Collaborative features that allow teams to review, approve, and manage document processing workflows.',
+      description: 'Collaborative features that allow teams to review, approve, and manage do cument processing workflows.',
       benefits: ['Review workflows', 'Approval processes', 'Team management']
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -50,7 +56,7 @@ const AIDocumentProcessingPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 pages/month',
+        'Up to 1,000pages/month',
         'Basic OCR',
         'Standard templates',
         'Email support',
@@ -58,14 +64,13 @@ const AIDocumentProcessingPage: React.FC = () => {
         'Standard security'
       ],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399',
+   },
+    {name: 'Professional',
+      price: '$39 9',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 pages/month',
+        'Up to10,000pages/month',
         'Advanced AI extraction',
         'Custom templates',
         'Priority support',
@@ -74,10 +79,9 @@ const AIDocumentProcessingPage: React.FC = () => {
         'API access'
       ],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$999',
+   },
+    {name: 'Enterprise',
+      price: '$99 9',
       period: '/month',
       description: 'For large organizations',
       features: [
@@ -92,41 +96,36 @@ const AIDocumentProcessingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
   const stats = [
     { number: '99.9%', label: 'Accuracy Rate' },
     { number: '90%', label: 'Time Savings' },
     { number: '50+', label: 'Document Types' },
     { number: '24/7', label: 'Processing' }
-  ];
+  ]
   const useCases = [
     {
       title: 'Invoice Processing',
       description: 'Automatically extract data from invoices, validate information, and integrate with accounting systems.',
       icon: FileText
-    },
-    {
-      title: 'Contract Analysis',
+   },
+    {title: 'Contract Analysis',
       description: 'Analyze contracts to extract key terms, dates, and clauses with AI-powered natural language processing.',
       icon: FileImage
-    },
-    {
-      title: 'Form Processing',
-      description: 'Process application forms, surveys, and other structured documents with intelligent data extraction.',
+   },
+    {title: 'Form Processing',
+      description: 'Process application forms, surveys, and other structured do cuments with intelligent data extraction.',
       icon: Search
-    },
-    {
-      title: 'Medical Records',
+   },
+    {title: 'Medical Records',
       description: 'Extract patient information from medical records while maintaining HIPAA compliance and data security.',
       icon: Shield
     }
-  ];
+  ]
   return (
-    <>
-      <SEOOptimizer
-        title="AI Document Processing Platform - Zion Tech Group"
-        description="Automate document processing with AI-powered OCR and data extraction. 99.9% accuracy, 90% time savings, and 50+ document types supported."
-        keywords={['AI document processing', 'OCR', 'data extraction', 'document automation', 'AI parsing']}
+  <><SEOOptimizertitle="AI Document Processing Platform - ZionTechGroup"
+        description="Automate do cument processing with AI-powered OCR and data extraction. 9 9.9% accuracy,90% time savings, and50+ do cument typessupported."
+        keywords={['AI do cument processing', 'OCR', 'data extraction', 'do cument automation', 'AIparsing']}
         canonicalUrl="https://ziontechgroup.com/ai-document-processing"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -142,7 +141,7 @@ const AIDocumentProcessingPage: React.FC = () => {
                 Automate document processing with 99.9% accuracy
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered document processing platform automatically extracts, analyzes, and processes 
+                Our AI-powered document processing platform automatically extracts, analyzes, and processes
                 documents with advanced OCR and intelligent data extraction capabilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -223,35 +222,15 @@ const AIDocumentProcessingPage: React.FC = () => {
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="tel:+13024640950"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
+                    plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
+                }`}
+                >{plan.popular && (
+                  <divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><spanclassName="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold"></className="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold">Most Popular
+                    </spa></di>)}
+                <divclassName="text-centermb-6"><h3className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h><pclassName="text-gray-400mb-4">{plan.description}</p><divclassName="flexitems-baselinejustify-center"><spanclassName="text-4 xl font-boldtext-cyan-400">{plan.price}</spa><spanclassName="text-gray-400ml-1">{plan.period}</spa></di></di><ulclassName="space-y-3mb-8">{plan.features.map((featureidx) => (
+                   <likey={idx}className="flexitems-centerspace-x-3"><CheckCircleclassName="w-5 h-5 text-cyan-400flex-shrink-0" /><spanclassName="text-gray-300">{feature}</spa></l>))}
+                </u><ahref="tel:+13024640950"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
                       plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -295,6 +274,6 @@ const AIDocumentProcessingPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-export default AIDocumentProcessingPage;
+  )
+}
+export default AIDocumentProcessingPage

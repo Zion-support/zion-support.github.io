@@ -1,142 +1,141 @@
-import React from 'react';
+import React from 'react'
 
+import { Wifi } from 'lucide-react'
+import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react'
+import { Globe, Settings } from 'lucide-react'
+
+<<<<<<< HEAD
+=======
 import { Wifi, CheckCircle, Star, Brain, Zap, Shield, Target, Globe, Settings, Camera, BarChart, Helmet, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
+=======
+import {Wifi, CheckCircle, Star, Zap, Brain, BarChart, Target, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
+constIoTEdgePage: React.FC= () =>{constiotServices= [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
       icon: '📱',
-      price: 'Starting at $3,500/month',
+      price: 'Starting at $3,50 0/month',
       features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Security management'],
-      benefits: ['Reduce management overhead by 70%', 'Improve device reliability', 'Enable remote operations'],
-      marketPrice: '$5,000-15,000/month',
+      benefits: ['Reduce management overhead by70%', 'Improve device reliability', 'Enable remote operations'],
+      marketPrice: '$5,00 0-1 5,00 0/month',
       category: 'Device Management',
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT']
-    },
-    {
-      title: 'Edge Computing Solutions',
+   },
+    {title: 'Edge Computing Solutions',
       description: 'Real-time data processing at the edge with low latency and high performance.',
       icon: '⚡',
-      price: 'Starting at $4,500/month',
+      price: 'Starting at $4,50 0/month',
       features: ['Edge analytics', 'Real-time processing', 'Local data storage', 'Offline capabilities', 'Edge AI'],
-      benefits: ['Reduce latency by 90%', 'Lower bandwidth costs', 'Enable offline operations'],
-      marketPrice: '$7,000-20,000/month',
+      benefits: ['Reduce latency by90%', 'Lower bandwidth costs', 'Enable offline operations'],
+      marketPrice: '$7,00 0-2 0,00 0/month',
       category: 'Edge Computing',
       technologies: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'OpenVINO', 'Edge TPU']
-    },
-    {
-      title: 'Industrial IoT (IIoT) Systems',
+   },
+    {title: 'Industrial IoT (IIoT) Systems',
       description: 'Smart manufacturing and industrial automation with predictive maintenance.',
       icon: '🏭',
-      price: 'Starting at $8,000/month',
+      price: 'Starting at $8,00 0/month',
       features: ['Sensor integration', 'Predictive maintenance', 'Process optimization', 'Quality control', 'Safety monitoring'],
-      benefits: ['Reduce downtime by 50%', 'Improve efficiency by 30%', 'Prevent equipment failures'],
-      marketPrice: '$15,000-40,000/month',
+      benefits: ['Reduce do wntime by50%', 'Improve efficiency by30%', 'Prevent equipment failures'],
+      marketPrice: '$1 5,00 0-4 0,00 0/month',
       category: 'Industrial IoT',
       technologies: ['OPC UA', 'Modbus', 'MQTT', 'Time Series DB', 'Machine Learning']
-    },
-    {
-      title: 'Smart City Solutions',
+   },
+    {title: 'Smart City Solutions',
       description: 'Comprehensive smart city infrastructure with traffic, energy, and environmental monitoring.',
       icon: '🏙️',
-      price: 'Starting at $12,000/month',
+      price: 'Starting at $1 2,00 0/month',
       features: ['Traffic management', 'Energy monitoring', 'Environmental sensors', 'Public safety', 'Citizen services'],
       benefits: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen experience'],
-      marketPrice: '$20,000-60,000/month',
+      marketPrice: '$2 0,00 0-6 0,00 0/month',
       category: 'Smart Cities',
-      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Big Data', 'AI Analytics']
-    },
-    {
-      title: 'IoT Security & Compliance',
+      technologies: ['LoRaWAN', 'NB-IoT', '5 G', 'Big Data', 'AI Analytics']
+   },
+    {title: 'IoT Security & Compliance',
       description: 'Comprehensive security solutions for IoT devices and networks with compliance management.',
       icon: '🔒',
-      price: 'Starting at $2,800/month',
+      price: 'Starting at $2,80 0/month',
       features: ['Device authentication', 'Encryption', 'Vulnerability scanning', 'Compliance monitoring', 'Incident response'],
       benefits: ['Protect against cyber threats', 'Ensure compliance', 'Build trust'],
-      marketPrice: '$4,500-12,000/month',
+      marketPrice: '$4,50 0-1 2,00 0/month',
       category: 'Security',
       technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Compliance Tools']
-    },
-    {
-      title: 'Real-Time Data Analytics',
+   },
+    {title: 'Real-Time Data Analytics',
       description: 'Streaming analytics for IoT data with real-time insights and alerting.',
       icon: '📊',
-      price: 'Starting at $3,200/month',
+      price: 'Starting at $3,20 0/month',
       features: ['Stream processing', 'Real-time dashboards', 'Anomaly detection', 'Predictive analytics', 'Alert systems'],
       benefits: ['Make faster decisions', 'Identify issues early', 'Optimize operations'],
-      marketPrice: '$5,000-15,000/month',
+      marketPrice: '$5,00 0-1 5,00 0/month',
       category: 'Analytics',
       technologies: ['Apache Kafka', 'Apache Flink', 'Apache Spark', 'InfluxDB', 'Grafana']
-    },
-    {
-      title: 'IoT Integration Services',
+   },
+    {title: 'IoT Integration Services',
       description: 'Connect existing systems with IoT devices and cloud platforms seamlessly.',
       icon: '🔗',
-      price: 'Starting at $2,500/month',
+      price: 'Starting at $2,50 0/month',
       features: ['Legacy system integration', 'API development', 'Data transformation', 'Protocol conversion', 'Cloud connectivity'],
       benefits: ['Modernize existing systems', 'Enable new capabilities', 'Reduce integration costs'],
-      marketPrice: '$4,000-10,000/month',
+      marketPrice: '$4,00 0-1 0,00 0/month',
       category: 'Integration',
       technologies: ['REST APIs', 'GraphQL', 'Message Queues', 'ETL Tools', 'Cloud Platforms']
-    },
-    {
-      title: 'Predictive Maintenance Systems',
+   },
+    {title: 'Predictive Maintenance Systems',
       description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
       icon: '🔧',
-      price: 'Starting at $5,500/month',
+      price: 'Starting at $5,50 0/month',
       features: ['Vibration analysis', 'Temperature monitoring', 'Performance tracking', 'Failure prediction', 'Maintenance scheduling'],
-      benefits: ['Prevent unplanned downtime', 'Reduce maintenance costs', 'Extend equipment life'],
-      marketPrice: '$8,000-25,000/month',
+      benefits: ['Prevent unplanned do wntime', 'Reduce maintenance costs', 'Extend equipment life'],
+      marketPrice: '$8,00 0-2 5,00 0/month',
       category: 'Predictive Maintenance',
       technologies: ['Machine Learning', 'Time Series Analysis', 'Vibration Sensors', 'Thermal Cameras', 'AI Models']
-    },
-    {
-      title: 'Environmental Monitoring',
+   },
+    {title: 'Environmental Monitoring',
       description: 'Comprehensive environmental monitoring with air quality, water, and soil sensors.',
       icon: '🌍',
-      price: 'Starting at $2,200/month',
+      price: 'Starting at $2,20 0/month',
       features: ['Air quality monitoring', 'Water quality sensors', 'Soil analysis', 'Weather stations', 'Compliance reporting'],
       benefits: ['Ensure environmental compliance', 'Protect public health', 'Optimize resource usage'],
-      marketPrice: '$3,500-10,000/month',
+      marketPrice: '$3,50 0-1 0,00 0/month',
       category: 'Environmental',
       technologies: ['Environmental Sensors', 'Data Loggers', 'Satellite Data', 'GIS', 'Compliance Systems']
-    },
-    {
-      title: 'Smart Agriculture Solutions',
+   },
+    {title: 'Smart Agriculture Solutions',
       description: 'Precision agriculture with IoT sensors, drones, and AI-powered crop management.',
       icon: '🌾',
-      price: 'Starting at $4,000/month',
+      price: 'Starting at $4,00 0/month',
       features: ['Soil monitoring', 'Crop health analysis', 'Weather tracking', 'Irrigation control', 'Yield optimization'],
-      benefits: ['Increase crop yields by 25%', 'Reduce water usage by 30%', 'Optimize fertilizer use'],
-      marketPrice: '$6,000-18,000/month',
+      benefits: ['Increase crop yield s by25%', 'Reduce water usage by30%', 'Optimize fertilizer use'],
+      marketPrice: '$6,00 0-1 8,00 0/month',
       category: 'Agriculture',
       technologies: ['Soil Sensors', 'Drones', 'Satellite Imagery', 'Machine Learning', 'Precision Agriculture']
-    },
-    {
-      title: 'IoT Device Development',
+   },
+    {title: 'IoT Device Development',
       description: 'Custom IoT device design and development for specific business requirements.',
       icon: '⚙️',
-      price: 'Starting at $15,000/project',
+      price: 'Starting at $1 5,00 0/project',
       features: ['Hardware design', 'Firmware development', 'Prototyping', 'Testing & validation', 'Manufacturing support'],
       benefits: ['Custom solutions', 'Competitive advantage', 'Optimized performance'],
-      marketPrice: '$25,000-100,000/project',
+      marketPrice: '$2 5,00 0-10 0,00 0/project',
       category: 'Device Development',
-      technologies: ['Arduino', 'Raspberry Pi', 'ESP32', 'ARM Cortex', 'Custom PCBs']
-    },
-    {
-      title: 'IoT Data Management',
+      technologies: ['Arduino', 'Raspberry Pi', 'ESP3 2', 'ARM Cortex', 'Custom PCBs']
+   },
+    {title: 'IoT Data Management',
       description: 'Comprehensive data management for IoT with storage, processing, and analytics.',
       icon: '🗄️',
-      price: 'Starting at $2,800/month',
+      price: 'Starting at $2,80 0/month',
       features: ['Data ingestion', 'Storage optimization', 'Data processing', 'Quality management', 'Analytics'],
       benefits: ['Handle massive data volumes', 'Ensure data quality', 'Enable advanced analytics'],
-      marketPrice: '$4,500-12,000/month',
+      marketPrice: '$4,50 0-1 2,00 0/month',
       category: 'Data Management',
       technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
-  ];
-  const categories = [...new Set(iotServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(iotServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -335,13 +334,13 @@ const IoTEdgePage: React.FC = () => {
               Contact our IoT experts for a free consultation and custom connected solution strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               >
@@ -355,6 +354,6 @@ const IoTEdgePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default IoTEdgePage;
+  )
+}
+export default IoTEdgePage

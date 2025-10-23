@@ -1,145 +1,141 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react'
+=======
 'use client';
 import React from 'react';import { CheckCircle, Star, Brain, Zap, Shield, Target, TrendingUp, DollarSign, Bot, Check } from 'lucide-react';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const AIFintechPage: React.FC = () => {
-  const aiFintechServices = [
+constAIFintechPage: React.FC= () =>{constaiFintechServices= [
     {
       title: 'AI Algorithmic Trading Platform',
       description: 'Advanced algorithmic trading system with machine learning for market prediction, risk management, and automated trading strategies.',
       icon: '📈',
-      price: '$4,999/month',
+      price: '$4,99 9/month',
       features: ['Market prediction models', 'Risk assessment', 'Portfolio optimization', 'High-frequency trading', 'Sentiment analysis'],
-      benefits: ['Increase trading profits by 35%', 'Reduce risk exposure by 50%', 'Automate trading decisions'],
-      marketPrice: '$8,000-25,000/month',
+      benefits: ['Increase trading profits by 3 5%', 'Reduce risk exposure by50%', 'Automate trading decisions'],
+      marketPrice: '$8,00 0-2 5,00 0/month',
       category: 'Trading',
       technologies: ['QuantLib', 'Zipline', 'Backtrader', 'TensorFlow', 'PyTorch']
-    },
-    {
-      title: 'AI Fraud Detection & Prevention',
+   },
+    {title: 'AI Fraud Detection & Prevention',
       description: 'Real-time fraud detection system using machine learning to identify suspicious transactions and prevent financial crimes.',
       icon: '🛡️',
-      price: '$2,999/month',
+      price: '$2,99 9/month',
       features: ['Real-time monitoring', 'Pattern recognition', 'Risk scoring', 'Alert systems', 'False positive reduction'],
-      benefits: ['Prevent 99.5% of fraud attempts', 'Reduce false positives by 80%', 'Save millions in losses'],
-      marketPrice: '$5,000-15,000/month',
+      benefits: ['Prevent 9 9.5% of fraud attempts', 'Reduce false positives by80%', 'Save millions in losses'],
+      marketPrice: '$5,00 0-1 5,00 0/month',
       category: 'Security',
       technologies: ['Isolation Forest', 'One-Class SVM', 'Autoencoders', 'XGBoost', 'Real-time Streaming']
-    },
-    {
-      title: 'AI Credit Scoring & Risk Assessment',
+   },
+    {title: 'AI Credit Scoring & Risk Assessment',
       description: 'Intelligent credit scoring system with alternative data analysis and real-time risk assessment for lending decisions.',
       icon: '💳',
-      price: '$1,999/month',
+      price: '$1,99 9/month',
       features: ['Alternative data analysis', 'Real-time scoring', 'Risk modeling', 'Credit decision automation', 'Portfolio management'],
-      benefits: ['Improve approval rates by 25%', 'Reduce default rates by 40%', 'Expand credit access'],
-      marketPrice: '$3,500-10,000/month',
+      benefits: ['Improve approval rates by 2 5%', 'Reduce default rates by40%', 'Expand credit access'],
+      marketPrice: '$3,50 0-1 0,00 0/month',
       category: 'Lending',
       technologies: ['Machine Learning', 'Alternative Data APIs', 'Credit Bureau APIs', 'Python', 'Risk Models']
-    },
-    {
-      title: 'AI Personal Finance Management',
+   },
+    {title: 'AI Personal Finance Management',
       description: 'Intelligent personal finance platform with budgeting, investment advice, and automated financial planning.',
       icon: '💰',
-      price: '$1,499/month',
+      price: '$1,49 9/month',
       features: ['Smart budgeting', 'Investment recommendations', 'Goal tracking', 'Expense categorization', 'Financial planning'],
-      benefits: ['Improve financial health', 'Increase savings by 30%', 'Optimize investment returns'],
-      marketPrice: '$2,500-7,000/month',
+      benefits: ['Improve financial health', 'Increase savings by30%', 'Optimize investment return s'],
+      marketPrice: '$2,50 0-7,00 0/month',
       category: 'Personal Finance',
       technologies: ['Open Banking APIs', 'Machine Learning', 'Mobile Apps', 'Cloud Computing', 'Data Analytics']
-    },
-    {
-      title: 'AI Insurance Underwriting',
+   },
+    {title: 'AI Insurance Underwriting',
       description: 'Automated insurance underwriting with risk assessment, pricing optimization, and claims prediction using AI.',
       icon: '🏥',
-      price: '$2,499/month',
+      price: '$2,49 9/month',
       features: ['Risk assessment', 'Pricing optimization', 'Claims prediction', 'Automated underwriting', 'Fraud detection'],
-      benefits: ['Reduce underwriting time by 70%', 'Improve pricing accuracy', 'Lower claims costs'],
-      marketPrice: '$4,000-12,000/month',
+      benefits: ['Reduce underwriting time by70%', 'Improve pricing accuracy', 'Lower claims costs'],
+      marketPrice: '$4,00 0-1 2,00 0/month',
       category: 'Insurance',
       technologies: ['Machine Learning', 'Actuarial Models', 'Risk APIs', 'Data Analytics', 'Cloud Computing']
-    },
-    {
-      title: 'AI Regulatory Compliance Platform',
+   },
+    {title: 'AI Regulatory Compliance Platform',
       description: 'Automated compliance monitoring and reporting system for financial regulations with real-time risk assessment.',
       icon: '📋',
-      price: '$3,499/month',
+      price: '$3,49 9/month',
       features: ['Regulatory monitoring', 'Compliance reporting', 'Risk assessment', 'Audit trails', 'Alert systems'],
-      benefits: ['Ensure 100% compliance', 'Reduce compliance costs by 60%', 'Automate reporting'],
-      marketPrice: '$6,000-18,000/month',
+      benefits: ['Ensure 10 0% compliance', 'Reduce compliance costs by60%', 'Automate reporting'],
+      marketPrice: '$6,00 0-1 8,00 0/month',
       category: 'Compliance',
       technologies: ['Regulatory APIs', 'NLP', 'Machine Learning', 'Blockchain', 'Cloud Security']
-    },
-    {
-      title: 'AI Payment Processing & Optimization',
+   },
+    {title: 'AI Payment Processing & Optimization',
       description: 'Intelligent payment processing with fraud detection, optimization, and real-time transaction analysis.',
       icon: '💳',
-      price: '$1,799/month',
+      price: '$1,79 9/month',
       features: ['Payment optimization', 'Fraud detection', 'Transaction analysis', 'Fee optimization', 'Settlement automation'],
-      benefits: ['Reduce payment costs by 25%', 'Improve success rates', 'Enhance security'],
-      marketPrice: '$3,000-9,000/month',
+      benefits: ['Reduce payment costs by25%', 'Improve success rates', 'Enhance security'],
+      marketPrice: '$3,00 0-9,00 0/month',
       category: 'Payments',
       technologies: ['Payment APIs', 'Machine Learning', 'Real-time Processing', 'Blockchain', 'Security Protocols']
-    },
-    {
-      title: 'AI Wealth Management Platform',
+   },
+    {title: 'AI Wealth Management Platform',
       description: 'Robo-advisor platform with portfolio optimization, tax-loss harvesting, and personalized investment strategies.',
       icon: '📊',
-      price: '$2,299/month',
+      price: '$2,29 9/month',
       features: ['Portfolio optimization', 'Tax-loss harvesting', 'Rebalancing', 'Risk management', 'Performance tracking'],
-      benefits: ['Improve returns by 20%', 'Reduce fees by 50%', 'Optimize tax efficiency'],
-      marketPrice: '$4,000-12,000/month',
+      benefits: ['Improve return s by20%', 'Reduce fees by50%', 'Optimize tax efficiency'],
+      marketPrice: '$4,00 0-1 2,00 0/month',
       category: 'Wealth Management',
       technologies: ['Portfolio Optimization', 'Tax APIs', 'Market Data APIs', 'Machine Learning', 'Cloud Computing']
-    },
-    {
-      title: 'AI Cryptocurrency Trading Bot',
+   },
+    {title: 'AI Cryptocurrency Trading Bot',
       description: 'Automated cryptocurrency trading with market analysis, arbitrage opportunities, and risk management.',
       icon: '₿',
-      price: '$1,999/month',
+      price: '$1,99 9/month',
       features: ['Market analysis', 'Arbitrage detection', 'Risk management', 'Portfolio rebalancing', 'Performance tracking'],
       benefits: ['Capture arbitrage opportunities', 'Reduce trading risks', 'Automate crypto strategies'],
-      marketPrice: '$3,500-10,000/month',
+      marketPrice: '$3,50 0-1 0,00 0/month',
       category: 'Cryptocurrency',
       technologies: ['Crypto APIs', 'Machine Learning', 'Blockchain', 'Real-time Data', 'Trading Algorithms']
-    },
-    {
-      title: 'AI Financial Planning & Forecasting',
+   },
+    {title: 'AI Financial Planning & Forecasting',
       description: 'Intelligent financial planning with cash flow forecasting, scenario analysis, and automated financial advice.',
       icon: '🔮',
-      price: '$1,799/month',
+      price: '$1,79 9/month',
       features: ['Cash flow forecasting', 'Scenario analysis', 'Financial planning', 'Goal tracking', 'Automated advice'],
-      benefits: ['Improve financial planning', 'Reduce planning time by 80%', 'Optimize financial decisions'],
-      marketPrice: '$3,000-9,000/month',
+      benefits: ['Improve financial planning', 'Reduce planning time by80%', 'Optimize financial decisions'],
+      marketPrice: '$3,00 0-9,00 0/month',
       category: 'Financial Planning',
       technologies: ['Time Series Analysis', 'Machine Learning', 'Financial Models', 'Data Analytics', 'Cloud Computing']
-    },
-    {
-      title: 'AI Anti-Money Laundering (AML)',
+   },
+    {title: 'AI Anti-Money Laundering (AML)',
       description: 'Advanced AML system with transaction monitoring, suspicious activity detection, and regulatory reporting.',
       icon: '🚨',
-      price: '$2,999/month',
+      price: '$2,99 9/month',
       features: ['Transaction monitoring', 'Suspicious activity detection', 'Regulatory reporting', 'Risk scoring', 'Alert management'],
-      benefits: ['Detect 99% of suspicious activities', 'Reduce false positives by 70%', 'Ensure regulatory compliance'],
-      marketPrice: '$5,000-15,000/month',
+      benefits: ['Detect99% of suspicious activities', 'Reduce false positives by70%', 'Ensure regulatory compliance'],
+      marketPrice: '$5,00 0-1 5,00 0/month',
       category: 'AML',
       technologies: ['Graph Analytics', 'Machine Learning', 'Regulatory APIs', 'Real-time Processing', 'Blockchain Analysis']
-    },
-    {
-      title: 'AI Customer Onboarding & KYC',
-      description: 'Automated customer onboarding with identity verification, document processing, and compliance checking.',
+   },
+    {title: 'AI Customer Onboarding & KYC',
+      description: 'Automated customer onboarding with identity verification, do cument processing, and compliance checking.',
       icon: '👤',
-      price: '$1,299/month',
+      price: '$1,29 9/month',
       features: ['Identity verification', 'Document processing', 'Compliance checking', 'Risk assessment', 'Automated workflows'],
-      benefits: ['Reduce onboarding time by 90%', 'Improve accuracy', 'Enhance customer experience'],
-      marketPrice: '$2,500-7,000/month',
+      benefits: ['Reduce onboarding time by90%', 'Improve accuracy', 'Enhance customer experience'],
+      marketPrice: '$2,50 0-7,00 0/month',
       category: 'KYC',
       technologies: ['OCR', 'Facial Recognition', 'Document APIs', 'Machine Learning', 'Identity Verification APIs']
     }
-  ];
-  const categories = [...new Set(aiFintechServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(aiFintechServices.map(service => service.category))]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -334,13 +330,13 @@ const AIFintechPage: React.FC = () => {
               Contact our AI fintech experts for a free consultation and custom financial AI strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
@@ -355,6 +351,6 @@ const AIFintechPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default AIFintechPage;
+  )
+}
+export default AIFintechPage

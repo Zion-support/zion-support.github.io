@@ -1,11 +1,12 @@
+import React from 'react'
 import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
 
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
+constAISocialMediaManagerPage: React.FC= () =>{constfeatures= [
     'AI-powered content creation and curation',
     'Smart scheduling across all platforms',
     'Advanced analytics and performance insights',
@@ -14,7 +15,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     'Competitor analysis and benchmarking',
     'Automated engagement and responses',
     'Multi-platform campaign management'
-  ];
+  ]
 
   const benefits = [
     '200% increase in engagement rates',
@@ -23,7 +24,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     '50% better ROI on campaigns',
     '95% content quality consistency',
     '60% faster content creation'
-  ];
+  ]
 
   const platforms = [
     { name: 'Facebook', icon: '📘', users: '2.9B' },
@@ -32,7 +33,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     { name: 'LinkedIn', icon: '💼', users: '900M' },
     { name: 'TikTok', icon: '🎵', users: '1B' },
     { name: 'YouTube', icon: '📺', users: '2.7B' }
-  ];
+  ]
 
   return (
     <>
@@ -48,7 +49,7 @@ const AISocialMediaManagerPage: React.FC = () => {
               Automate your social media with AI-powered content creation
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your social media presence with our intelligent AI system that creates, 
+              Transform your social media presence with our intelligent AI system that creates,
               schedules, and optimizes content across all platforms automatically.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -67,7 +68,6 @@ const AISocialMediaManagerPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -82,7 +82,6 @@ const AISocialMediaManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Platforms Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -98,7 +97,6 @@ const AISocialMediaManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -113,7 +111,6 @@ const AISocialMediaManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Contact Section */}
           <section className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
@@ -142,7 +139,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AISocialMediaManagerPage;
+export default AISocialMediaManagerPage

@@ -1,3 +1,5 @@
+import React from 'react'
+import { Helmet } from 'lucide-react'
 import React from 'react';
 import { Helmet } from 'lucide-react';
 
@@ -33,7 +35,7 @@ const SitemapPage: React.FC = () => {
     { url: '/guides', title: 'Technical Guides', priority: '0.6' },
     { url: '/privacy', title: 'Privacy Policy', priority: '0.3' },
     { url: '/terms', title: 'Terms of Service', priority: '0.3' },
-  ];
+  ]
   return (
     <>
       <Helmet>
@@ -84,6 +86,6 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-export default SitemapPage;
+  )
+}
+export default SitemapPage

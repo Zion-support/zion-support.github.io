@@ -1,99 +1,94 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+=======
 'use client';
 import React from 'react';
 import { CheckCircle, Star, ArrowRight, Brain, Zap, Shield, Target, Globe, Users, BarChart, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 
-const AIServicesPage: React.FC = () => {
-  const services = [
+constAIServicesPage: React.FC= () =>{constservices= [
     {
       icon: Brain,
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
       features: ['Predictive Analytics', 'Pattern Recognition', 'Custom Model Training', 'Real-time Processing'],
-      price: 'Starting at $2,500/month',
-      color: 'text-purple-400'
-    },
-    {
-      icon: Target,
+      price: 'Starting at $2,50 0/month',
+      color: 'text-purple-40 0'
+   },
+    {icon: Target,
       title: 'AI Marketing Automation',
       description: 'Intelligent marketing campaigns with AI-powered targeting, content generation, and optimization.',
       features: ['Smart Targeting', 'Content Generation', 'Campaign Optimization', 'ROI Tracking'],
-      price: 'Starting at $1,200/month',
-      color: 'text-pink-400'
-    },
-    {
-      icon: Zap,
+      price: 'Starting at $1,20 0/month',
+      color: 'text-pink-40 0'
+   },
+    {icon: Zap,
       title: 'Process Automation',
       description: 'Automate complex business processes with AI decision-making and exception handling.',
       features: ['Workflow Automation', 'Exception Handling', 'Smart Routing', 'Performance Monitoring'],
-      price: 'Starting at $800/month',
-      color: 'text-blue-400'
-    },
-    {
-      icon: Shield,
+      price: 'Starting at $80 0/month',
+      color: 'text-blue-40 0'
+   },
+    {icon: Shield,
       title: 'AI Cybersecurity',
       description: 'Advanced threat detection and response using AI-powered security monitoring.',
       features: ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Compliance Reporting'],
-      price: 'Starting at $1,500/month',
-      color: 'text-red-400'
-    },
-    {
-      icon: BarChart,
+      price: 'Starting at $1,50 0/month',
+      color: 'text-red-40 0'
+   },
+    {icon: BarChart,
       title: 'Data Analytics & Insights',
       description: 'Transform raw data into actionable insights with AI-powered analytics and visualization.',
       features: ['Data Processing', 'Predictive Insights', 'Visualization', 'Automated Reports'],
-      price: 'Starting at $900/month',
-      color: 'text-teal-400'
-    },
-    {
-      icon: Users,
+      price: 'Starting at $90 0/month',
+      color: 'text-teal-40 0'
+   },
+    {icon: Users,
       title: 'Customer Experience AI',
       description: 'Enhance customer interactions with AI chatbots, sentiment analysis, and personalized experiences.',
       features: ['AI Chatbots', 'Sentiment Analysis', 'Personalization', '24/7 Support'],
       price: 'Starting at $600/month',
       color: 'text-green-400'
     }
-  ];
+  ]
 
-  const benefits = [
-    {
-      icon: Star,
+  constbenefits= [
+    {icon: Star,
       title: 'Proven ROI',
-      description: 'Average 300% ROI within 6 months of implementation'
-    },
-    {
-      icon: Zap,
+      description: 'Average300% ROI within6months of implementation'
+   },
+    {icon: Zap,
       title: 'Rapid Deployment',
       description: 'Get your AI solutions up and running in 2-4 weeks'
-    },
-    {
-      icon: Shield,
+   },
+    {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security and compliance for all AI solutions'
-    },
-    {
-      icon: Globe,
+   },
+    {icon: Globe,
       title: 'Global Support',
       description: '24/7 support across all time zones with dedicated success managers'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               AI Services & Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence solutions. 
+            Transform your business with cutting-edge artificial intelligence solutions.
             From machine learning to automation, we deliver AI that drives real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -111,7 +106,6 @@ const AIServicesPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our AI Services</h2>
@@ -144,7 +138,6 @@ const AIServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -162,7 +155,6 @@ const AIServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -190,10 +182,9 @@ const AIServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default AIServicesPage;
+export default AIServicesPage

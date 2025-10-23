@@ -1,6 +1,8 @@
+<<<<<<< HEAD
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
+=======
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -30,6 +32,7 @@ const GlobalErrorBoundaryPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
     }
   ]
 
@@ -39,15 +42,13 @@ const GlobalErrorBoundaryPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+<<<<<<< HEAD
+=======
   ]
 
   return (
     <>
-      <Helmet>
-        <title>GlobalErrorBoundary | Zion Tech Group</title>
-        <meta name="description" content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="AI, artificial intelligence, GlobalErrorBoundary, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -145,3 +146,4 @@ const GlobalErrorBoundaryPage: React.FC = () => {
 };
 
 export default GlobalErrorBoundaryPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f

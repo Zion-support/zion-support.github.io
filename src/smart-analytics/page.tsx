@@ -1,83 +1,80 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { CheckCircle, Star, Phone, BarChart } from 'lucide-react'
+=======
 'use client';
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Zap, Shield, Target, Users, BarChart, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const SmartAnalyticsPage: React.FC = () => {
-  const features = [
+constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
-      benefit: 'Make decisions 10x faster'
-    },
-    {
-      icon: Brain,
+      benefit: 'Make decisions10x faster'
+   },
+    {icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities'
-    },
-    {
-      icon: Target,
+   },
+    {icon: Target,
       title: 'Custom Metrics',
       description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
       benefit: 'Focus on what drives growth'
-    },
-    {
-      icon: Zap,
+   },
+    {icon: Zap,
       title: 'Automated Alerts',
       description: 'Get instant notifications when important metrics change or when action is needed.',
       benefit: 'Never miss critical changes'
-    },
-    {
-      icon: Users,
+   },
+    {icon: Users,
       title: 'Team Collaboration',
       description: 'Share insights and reports with your team with role-based access and collaborative features.',
       benefit: 'Align your entire organization'
-    },
-    {
-      icon: Shield,
+   },
+    {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
     }
-  ];
+  ]
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$199',
+  constpricingPlans= [
+    {name: 'Starter',
+      price: '$19 9',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 5 data sources',
+        'Up to5data sources',
         'Basic dashboards',
         'Standard reports',
         'Email support',
         '1 user account',
-        '30-day data retention'
+        '3 0-day data retention'
       ],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399',
+   },
+    {name: 'Professional',
+      price: '$39 9',
       period: '/month',
       description: 'Ideal for growing teams',
       features: [
-        'Up to 20 data sources',
+        'Up to 2 0 data sources',
         'Advanced dashboards',
         'AI-powered insights',
         'Priority support',
-        'Up to 10 users',
+        'Up to 10users',
         '1-year data retention',
         'Custom metrics',
         'API access'
       ],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$799',
+   },
+    {name: 'Enterprise',
+      price: '$79 9',
       period: '/month',
       description: 'For large organizations',
       features: [
@@ -92,7 +89,7 @@ const SmartAnalyticsPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
 
   const integrations = [
     { name: 'Google Analytics', icon: '📊', description: 'Website traffic and behavior' },
@@ -103,31 +100,26 @@ const SmartAnalyticsPage: React.FC = () => {
     { name: 'Stripe', icon: '💳', description: 'Payment processing' },
     { name: 'Mailchimp', icon: '📧', description: 'Email marketing' },
     { name: 'Slack', icon: '💬', description: 'Team communication' }
-  ];
+  ]
 
-  const testimonials = [
-    {
-      name: 'Alex Thompson',
+  consttestimonials= [
+    {name: 'Alex Thompson',
       company: 'GrowthCo',
       role: 'CEO',
-      content: 'Smart Analytics helped us identify a 30% revenue opportunity we never knew existed. The AI insights are game-changing.',
-      rating: 5
-    },
-    {
-      name: 'Maria Garcia',
+      content: 'Smart Analytics helped us identify a 3 0% revenue opportunity we never knew existed. The AI insights are game-changing.',
+      rating:5},
+    {name: 'Maria Garcia',
       company: 'Digital Marketing Pro',
       role: 'Marketing Director',
-      content: 'We can now track ROI across all channels in real-time. Our marketing efficiency improved by 50% in just 2 months.',
-      rating: 5
-    },
-    {
-      name: 'James Wilson',
+      content: 'We can now track ROI across all channels in real-time. Our marketing efficiency improved by 5 0% in just2months.',
+      rating:5},
+    {name: 'James Wilson',
       company: 'E-commerce Solutions',
       role: 'Operations Manager',
       content: 'The automated alerts saved us from a potential crisis. We caught a 40% drop in conversions within minutes.',
       rating: 5
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -144,8 +136,8 @@ const SmartAnalyticsPage: React.FC = () => {
             AI-Powered Business Intelligence
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics platform. 
-            Get real-time dashboards, predictive analytics, and intelligent recommendations that 
+            Transform your data into actionable insights with our AI-powered analytics platform.
+            Get real-time dashboards, predictive analytics, and intelligent recommendations that
             drive growth and optimize performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -163,7 +155,6 @@ const SmartAnalyticsPage: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -187,7 +178,6 @@ const SmartAnalyticsPage: React.FC = () => {
             <div className="text-gray-300 text-sm">Enterprise-grade protection</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -204,7 +194,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -220,7 +209,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -229,7 +217,7 @@ const SmartAnalyticsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
+                plan.popular
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
@@ -263,7 +251,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -287,14 +274,13 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Unlock Your Data's Potential?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using Smart Analytics to make data-driven decisions 
+            Join thousands of businesses using Smart Analytics to make data-driven decisions
             and accelerate growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -314,7 +300,7 @@ const SmartAnalyticsPage: React.FC = () => {
         </section>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default SmartAnalyticsPage;
+export default SmartAnalyticsPage

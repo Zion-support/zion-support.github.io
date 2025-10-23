@@ -1,53 +1,69 @@
+<<<<<<< HEAD
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Home } from 'lucide-react'
+=======
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const AdvancedErrorBoundaryPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+interface Props {
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+}
+
+interface State {
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+  errorId?: string
+}
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport: ErrorReport = {
+      errorId: this.state.errorId || this.generateErrorId(),
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
-  ]
+  }
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    })
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo)
+    }
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      // console.error('Error caught by boundary:', error, errorInfo)
+    }
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo)
+    }
+  }
 
+<<<<<<< HEAD
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // You can integrate with services like Sentry, LogRocket, etc.
+    const errorData = {
+=======
   return (
     <>
-      <Helmet>
-        <title>AdvancedErrorBoundary</title>
-        <meta name="description" content="Advanced AdvancedErrorBoundary solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, AdvancedErrorBoundary, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -145,3 +161,4 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
 };
 
 export default AdvancedErrorBoundaryPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f

@@ -1,3 +1,5 @@
+import React from 'react'
+import { Helmet } from 'lucide-react'
 import React from 'react';
 import { Star, Helmet } from 'lucide-react';
 
@@ -25,9 +27,9 @@ const EnterpriseTransformationPage: React.FC = () => {
           </div>
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Transformation Results</h2>
-            <p className="text-gray-700 mb-6">
-              This comprehensive case study reveals how a Fortune 500 company achieved <strong>$50M annual savings</strong>, 
-              <strong>95% process automation</strong>, and <strong>300% ROI</strong> through strategic AI transformation. 
+            <p className="text-gray-700 mb-6"></p>
+              This comprehensive case study reveals how a Fortune 500 company achieved <strong>$50M annual savings</strong>,
+              <strong>95% process automation</strong>, and <strong>300% ROI</strong> through strategic AI transformation.
               Learn the exact frameworks, timelines, and implementation strategies that delivered these breakthrough results.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -54,7 +56,7 @@ const EnterpriseTransformationPage: React.FC = () => {
             </ul>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Transformation Strategy</h2>
             <p className="text-gray-700 mb-6">
-              The transformation followed a comprehensive 6-phase approach, each phase building upon the previous to create 
+              The transformation followed a comprehensive 6-phase approach, each phase building upon the previous to create
               exponential value. Here's the proven roadmap:
             </p>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: Foundation & Assessment (Months 1-3)</h3>
@@ -64,7 +66,7 @@ const EnterpriseTransformationPage: React.FC = () => {
               <li>• Data quality assessment and governance framework establishment</li>
               <li>• Executive leadership alignment and change management strategy</li>
             </ul>
-            <p className="text-gray-700 mb-6"><strong>Results:</strong> Identified $15M in immediate optimization opportunities</p>
+            <p className="text-gray-700 mb-6"></p><strong>Results:</strong> Identified $15M in immediate optimization opportunities</p>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Quick Wins & Pilots (Months 4-8)</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• Deployed AI-powered demand forecasting with 40% accuracy improvement</li>
@@ -72,7 +74,7 @@ const EnterpriseTransformationPage: React.FC = () => {
               <li>• Implemented predictive maintenance reducing downtime by 60%</li>
               <li>• Launched customer service chatbots handling 70% of inquiries</li>
             </ul>
-            <p className="text-gray-700 mb-6"><strong>Results:</strong> $8M in cost savings and 45% process automation achieved</p>
+            <p className="text-gray-700 mb-6"></p><strong>Results:</strong> $8M in cost savings and 45% process automation achieved</p>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 Detailed ROI Analysis</h2>
             <p className="text-gray-700 mb-6">
               The transformation delivered measurable value across multiple dimensions. Here's the detailed breakdown:
@@ -87,7 +89,7 @@ const EnterpriseTransformationPage: React.FC = () => {
             </ul>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with Your Transformation</h2>
             <p className="text-gray-700 mb-6">
-              Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations. 
+              Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations.
               Get started with a comprehensive assessment and personalized transformation roadmap.
             </p>
             <div className="bg-indigo-50 p-6 rounded-lg text-center">
@@ -111,6 +113,6 @@ const EnterpriseTransformationPage: React.FC = () => {
       </div>
     </div>
     </>
-  );
+  )
 }
-export default EnterpriseTransformationPage;
+export default EnterpriseTransformationPage

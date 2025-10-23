@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -43,11 +42,7 @@ const SkipLinkPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>SkipLink</title>
-        <meta name="description" content="Advanced SkipLink solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, SkipLink, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -145,3 +140,8 @@ const SkipLinkPage: React.FC = () => {
 };
 
 export default SkipLinkPage;
+=======
+constSkipLink: React.FC= () =>{return(<ahref="#main-content"className="sr-onlyfocus:not-sr-onlyfocus: absolutefocus:top-4 focus:left-4 bg-cyan-600text-white px-4 py-2 rounded-md z-50font-medium transition-all duration-200hover:bg-cyan-700"
+>Skip to maincontent</a>
+)}
+export default SkipLink

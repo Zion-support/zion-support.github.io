@@ -1,62 +1,60 @@
+<<<<<<< HEAD
+import { Phone } from 'lucide-react'
+import { Home } from 'lucide-react'
+=======
+import {Phone} from 'lucide-react';
+=======
 import { Phone, Code } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-export default function NotFound() {
-  const popularPages = [
+export default function NotFound() {constpopularPages= [
     {
       title: 'Home',
       description: 'Return to our homepage',
       href: '/',
       icon: '🏠'
-    },
-    {
-      title: 'AI Services',
+   },
+    {title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
       icon: '🤖'
-    },
-    {
-      title: 'Micro SAAS Solutions',
+   },
+    {title: 'Micro SAAS Solutions',
       description: 'Affordable AI-powered tools for modern businesses',
       href: '/micro-saas',
       icon: '⚡'
-    },
-    {
-      title: 'AI Project Manager',
+   },
+    {title: 'AI Project Manager',
       description: 'Intelligent project planning and management',
       href: '/ai-project-manager',
       icon: '📊'
-    },
-    {
-      title: 'AI Analytics Dashboard',
+   },
+    {title: 'AI Analytics Dashboard',
       description: 'Transform data into actionable insights',
       href: '/ai-analytics-dashboard',
       icon: '📈'
-    },
-    {
-      title: 'Blog & Insights',
+   },
+    {title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
       icon: '📚'
-    },
-    {
-      title: 'Case Studies',
+   },
+    {title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
       icon: '📊'
-    },
-    {
-      title: 'About Us',
+   },
+    {title: 'About Us',
       description: 'Learn about Zion Tech Group and our mission',
       href: '/about',
       icon: '🏢'
-    },
-    {
-      title: 'Contact Us',
+   },
+    {title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
       icon: '📞'
     },
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
@@ -73,14 +71,11 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-lg text-gray-600">
-            The page you're looking for doesn't exist or has been moved. 
+            The page you're looking for doesn't exist or has been moved.
             Don't worry, let's get you back on track!
-          </p>
-        </div>
-        {/* Popular Pages */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {popularPages.map((page, index) => (
-            <a key={index}
+        </p></di>{/* PopularPages */}
+      <divclassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3gap-4mb-8">{popularPages.map((pageindex) => (
+         <akey={index}
               href={page.href}
               className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
             >
@@ -111,5 +106,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
+  )
 }

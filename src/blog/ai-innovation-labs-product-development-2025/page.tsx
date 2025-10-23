@@ -1,3 +1,5 @@
+import React from 'react'
+import { Helmet } from 'lucide-react'
 import React from 'react';
 import { Star, Code, Helmet } from 'lucide-react';
 
@@ -25,9 +27,9 @@ const InnovationLabsPage: React.FC = () => {
           </div>
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Innovation Results</h2>
-            <p className="text-gray-700 mb-6">
-              Discover how AI Innovation Labs are revolutionizing product development with <strong>10x faster time-to-market</strong>, 
-              <strong>85% cost reduction</strong>, and breakthrough innovation acceleration. Learn the proven methodologies 
+            <p className="text-gray-700 mb-6"></p>
+              Discover how AI Innovation Labs are revolutionizing product development with <strong>10x faster time-to-market</strong>,
+              <strong>85% cost reduction</strong>, and breakthrough innovation acceleration. Learn the proven methodologies
               that are transforming how companies build and launch products.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -54,7 +56,7 @@ const InnovationLabsPage: React.FC = () => {
             </ul>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Innovation Methodology</h2>
             <p className="text-gray-700 mb-6">
-              Our AI Innovation Labs follow a systematic approach to product development that leverages 
+              Our AI Innovation Labs follow a systematic approach to product development that leverages
               cutting-edge AI technologies to accelerate every stage of the product lifecycle.
             </p>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: AI-Powered Ideation</h3>
@@ -84,7 +86,7 @@ const InnovationLabsPage: React.FC = () => {
             </ul>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <pre className="text-sm text-gray-800 overflow-x-auto">
+              <pre className="text-sm text-gray-800 overflow-x-auto"></p>
 {`AI Innovation Lab Stack:
 ├── AI/ML Platform
 │   ├── TensorFlow & PyTorch
@@ -106,7 +108,7 @@ const InnovationLabsPage: React.FC = () => {
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with AI Innovation</h2>
             <p className="text-gray-700 mb-6">
-              Ready to revolutionize your product development? Our AI Innovation Labs can help you 
+              Ready to revolutionize your product development? Our AI Innovation Labs can help you
               achieve breakthrough results in product development speed, cost, and innovation.
             </p>
             <div className="bg-blue-50 p-6 rounded-lg text-center">
@@ -130,6 +132,6 @@ const InnovationLabsPage: React.FC = () => {
       </div>
     </div>
     </>
-  );
+  )
 }
-export default InnovationLabsPage;
+export default InnovationLabsPage

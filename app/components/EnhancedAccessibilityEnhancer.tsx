@@ -1,9 +1,14 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+=======
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
@@ -39,15 +44,13 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+<<<<<<< HEAD
+=======
   ]
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedAccessibilityEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedAccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedAccessibilityEnhancer, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -145,3 +148,4 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
 };
 
 export default EnhancedAccessibilityEnhancerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f

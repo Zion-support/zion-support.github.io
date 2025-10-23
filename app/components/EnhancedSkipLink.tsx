@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -43,11 +42,7 @@ const EnhancedSkipLinkPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedSkipLink</title>
-        <meta name="description" content="Advanced EnhancedSkipLink solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedSkipLink, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -145,3 +140,15 @@ const EnhancedSkipLinkPage: React.FC = () => {
 };
 
 export default EnhancedSkipLinkPage;
+e.preventDefault()
+constmain= do cument.querySelector('#main-content')
+if (mai n) {
+main.focus()
+main.scrollIntoView({ behavior: 'smooth'})
+}
+}}
+>
+Skip to maincontent</a>
+)
+}
+export default EnhancedSkipLink
