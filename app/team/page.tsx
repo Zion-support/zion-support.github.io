@@ -1,6 +1,6 @@
+"use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Brain, Globe, Shield, Zap } from "lucide-react";
 
 const teamMembers = [
@@ -94,17 +94,6 @@ const stats = [
 const TeamPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Team - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta
-          name="description"
-          content="Meet our talented team of AI experts, engineers, and innovators at Zion Tech Group."
-        />
-        <meta
-          name="keywords"
-          content="team, AI experts, engineers, technology team, Zion Tech Group"
-        />
-      </Helmet>
 
       {/* Header */}
       <div className="relative overflow-hidden">

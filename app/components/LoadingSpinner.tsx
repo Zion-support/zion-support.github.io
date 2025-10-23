@@ -1,40 +1,29 @@
 "use client";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface LoadingSpinnerProps {
-  size?: "sm" | "md" | "lg" | "xl";
-  className?: string;
-  text?: string;
-  fullScreen?: boolean;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = "md",
-  className = "",
-  text,
-  fullScreen = false,
-}) => {
-  const sizeClasses = {
-    sm: "w-4 h-4",
-    md: "w-8 h-8",
-    lg: "w-12 h-12",
-    xl: "w-16 h-16",
-  };
-
-  const containerClasses = fullScreen
-    ? "fixed inset-0 flex items-center justify-center bg-white/80 backdrop-blur-sm z-50"
-    : `flex items-center justify-center ${className}`;
-
+const LoadingSpinnerPage: React.FC = () => {
   return (
-    <div className={containerClasses} role="status" aria-label="Loading">
-      <div className="flex flex-col items-center space-y-4">
-        <div
-          className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}
-        ></div>
-        {text && <p className="text-gray-600 font-medium">{text}</p>}
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>LoadingSpinner | Zion Tech Group</title>
+        <meta name="description" content="Professional LoadingSpinner services by Zion Tech Group." />
+      </Helmet>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              LoadingSpinner
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Professional LoadingSpinner services tailored to your business needs.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default LoadingSpinner;
+export default LoadingSpinnerPage;

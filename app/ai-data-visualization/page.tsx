@@ -1,201 +1,80 @@
-"use client";
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { BarChart3, PieChart, TrendingUp, Eye } from "lucide-react";
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIDataVisualizationPage: React.FC = () => {
-  const _features = [
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Interactive Dashboards",
-      description:
-        "Create stunning, interactive dashboards that automatically update with real-time data and provide deep insights.",
-      benefits: [
-        "Real-time updates",
-        "Interactive charts",
-        "Custom layouts",
-        "Mobile responsive",
-      ],
-    },
-    {
-      icon: <PieChart className="w-6 h-6" />,
-      title: "AI-Powered Insights",
-      description:
-        "Let AI analyze your data and automatically generate insights, trends, and recommendations.",
-      benefits: [
-        "Automatic insights",
-        "Trend detection",
-        "Anomaly detection",
-        "Predictive analytics",
-      ],
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description:
-        "Perform complex statistical analysis, forecasting, and predictive modeling with built-in AI algorithms.",
-      benefits: [
-        "Statistical analysis",
-        "Forecasting",
-        "Predictive modeling",
-        "Machine learning",
-      ],
-    },
-    {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Visual Storytelling",
-      description:
-        "Transform complex data into compelling visual stories that engage and inform your audience.",
-      benefits: [
-        "Story templates",
-        "Auto-narration",
-        "Export options",
-        "Presentation mode",
-      ],
-    },
-  ];
-
-  const _pricingPlans = [
-    {
-      name: "Starter",
-      price: "$149",
-      period: "/month",
-      description: "Perfect for small teams and individual users",
-      features: [
-        "5 dashboards",
-        "Basic charts",
-        "Standard data sources",
-        "Email support",
-        "1 user",
-        "1GB data storage",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$399",
-      period: "/month",
-      description: "Ideal for growing businesses with moderate data needs",
-      features: [
-        "25 dashboards",
-        "Advanced charts",
-        "All data sources",
-        "Priority support",
-        "10 users",
-        "10GB data storage",
-        "AI insights",
-        "Custom branding",
-        "API access",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$999",
-      period: "/month",
-      description: "For large organizations with complex data requirements",
-      features: [
-        "Unlimited dashboards",
-        "All chart types",
-        "All data sources",
-        "24/7 phone support",
-        "Unlimited users",
-        "Unlimited storage",
-        "Advanced AI features",
-        "White-label options",
-        "Full API access",
-        "Custom integrations",
-        "Dedicated support",
-      ],
-      popular: false,
-    },
-  ];
-
-  const _testimonials = [
-    {
-      name: "Alex Thompson",
-      role: "Data Analyst",
-      company: "Analytics Corp",
-      content:
-        "Zion Tech Group's AI data visualization platform has revolutionized how we present data. The AI insights are incredibly accurate and save us hours of analysis.",
-      rating: 5,
-    },
-    {
-      name: "Sarah Davis",
-      role: "Marketing Director",
-      company: "Growth Marketing",
-      content:
-        "The interactive dashboards have transformed our reporting. Our clients love the real-time updates and the visual storytelling capabilities.",
-      rating: 5,
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "CEO",
-      company: "Data Insights Inc.",
-      content:
-        "The predictive analytics feature helped us identify market trends 3 months ahead of our competitors. It's been a game-changer for our business.",
-      rating: 5,
-    },
-  ];
-
-  const _stats = [
-    { number: "85%", label: "Faster Insights" },
-    { number: "60%", label: "Time Saved" },
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "24/7", label: "Real-time Updates" },
-  ];
-
+const AiDataVisualizationPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>AI Data Visualization - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform complex data into actionable insights with AI-powered visualization tools and interactive dashboards."
-        />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI Data Visualization
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform complex data into clear, actionable insights with
-              AI-powered visualization tools and interactive dashboards.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">
-                Interactive Dashboards
-              </h3>
-              <p className="text-gray-600">
-                Dynamic, interactive dashboards that adapt to your data.
+      <SEOOptimizer
+        title="AiDataVisualization - Zion Tech Group"
+        description="Professional AI and IT ai-data-visualizations for your business transformation."
+        keywords={['AI services', 'IT solutions', 'business transformation']}
+        canonicalUrl="https://ziontechgroup.com/service"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
+        <Navigation />
+        <div className="container mx-auto px-4 py-8">
+          {/* Hero Section */}
+          <section className="text-center mb-16 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
+            <div className="relative z-10 py-16 px-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Service
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Professional AI and IT services designed to transform your business operations.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+                >
+                  Get Started Today
+                </a>
+                <a
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+                >
+                  Contact Us
+                </a>
+              </div>
             </div>
+          </section>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Automated Insights</h3>
-              <p className="text-gray-600">
-                AI-generated insights and pattern recognition in your data.
+          {/* CTA Section */}
+          <section className="text-center py-16">
+            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-gray-300 mb-6 text-lg">
+                Contact us for a free consultation and discover how our services can help your business.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  <Phone className="w-5 h-5" />
+                  +1 302 464 0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  <Mail className="w-5 h-5" />
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
             </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">
-                Real-time Analytics
-              </h3>
-              <p className="text-gray-600">
-                Live data visualization and real-time monitoring capabilities.
-              </p>
-            </div>
-          </div>
+          </section>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
 
-export default AIDataVisualizationPage;
+export default PageComponent;

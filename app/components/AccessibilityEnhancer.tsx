@@ -1,96 +1,29 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
+const AccessibilityEnhancerPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AccessibilityEnhancer | Zion Tech Group</title>
+        <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group." />
+      </Helmet>
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = false,
-  enableFocusManagement = true,
-}) => {
-  useEffect(() => {
-    // Keyboard navigation support
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Handle keyboard navigation
-        if (event.key === "Tab") {
-          // Ensure focus is visible
-          document.body.classList.add("keyboard-navigation");
-        }
-      };
-
-      document.addEventListener("keydown", handleKeyDown);
-      return () => document.removeEventListener("keydown", handleKeyDown);
-    }
-
-    // Add screen reader support
-    if (enableScreenReaderSupport) {
-      // Add skip links
-      const skipLinks = document.createElement("div");
-      skipLinks.className = "sr-only";
-      skipLinks.innerHTML = `
-        <a href="#main-content" class="skip-link">Skip to main content</a>
-        <a href="#navigation" class="skip-link">Skip to navigation</a>
-      `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
-
-      return () => {
-        if (skipLinks.parentNode) {
-          skipLinks.parentNode.removeChild(skipLinks);
-        }
-      };
-    }
-
-    // High contrast mode
-    if (enableHighContrast) {
-      document.body.classList.add("high-contrast");
-      return () => document.body.classList.remove("high-contrast");
-    }
-
-    // Focus management
-    if (enableFocusManagement) {
-      const handleFocusIn = (event: FocusEvent) => {
-        const target = event.target as HTMLElement;
-        if (target) {
-          target.classList.add("focused");
-        }
-      };
-
-      const handleFocusOut = (event: FocusEvent) => {
-        const target = event.target as HTMLElement;
-        if (target) {
-          target.classList.remove("focused");
-        }
-      };
-
-      document.addEventListener("focusin", handleFocusIn);
-      document.addEventListener("focusout", handleFocusOut);
-
-      return () => {
-        document.removeEventListener("focusin", handleFocusIn);
-        document.removeEventListener("focusout", handleFocusOut);
-      };
-    }
-
-    return () => {
-      // Cleanup function
-    };
-  }, [
-    enableKeyboardNavigation,
-    enableScreenReaderSupport,
-    enableHighContrast,
-    enableFocusManagement,
-  ]);
-
-  return <>{children}</>;
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AccessibilityEnhancer
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Professional AccessibilityEnhancer services tailored to your business needs.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 };
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancerPage;

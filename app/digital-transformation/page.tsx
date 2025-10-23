@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import { Brain, Globe, Shield, Zap } from "lucide-react";
 const DigitalTransformationPage: React.FC = () => {
   const features = [
@@ -31,21 +30,7 @@ const DigitalTransformationPage: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>
-          Digital Transformation - Zion Tech Group | Advanced AI and IT
-          Solutions
-        </title>
-        <meta
-          name="description"
-          content="Professional digitaltransformation solutions powered by advanced AI and cutting-edge technology."
-        />
-        <meta
-          name="keywords"
-          content="digitaltransformation, AI solutions, IT services, automation, technology, business solutions"
-        />
-      </Helmet>
+    <>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -131,7 +116,7 @@ const DigitalTransformationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

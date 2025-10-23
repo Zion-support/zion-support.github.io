@@ -1,64 +1,29 @@
 "use client";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const SidebarPage: React.FC = () => {
   return (
-    <div
-      className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
-    >
-      <div className="flex items-center justify-between p-4 border-b">
-        <h2 className="text-lg font-semibold">Menu</h2>
-        <button
-          onClick={onClose}
-          className="text-gray-500 hover:text-gray-700"
-          aria-label="Close sidebar"
-        >
-          ×
-        </button>
-      </div>
-      <nav className="p-4">
-        <ul className="space-y-2">
-          <li>
-            <a
-              href="/"
-              className="block py-2 text-gray-700 hover:text-blue-600"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="/about"
-              className="block py-2 text-gray-700 hover:text-blue-600"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="/services"
-              className="block py-2 text-gray-700 hover:text-blue-600"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="/contact"
-              className="block py-2 text-gray-700 hover:text-blue-600"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Sidebar | Zion Tech Group</title>
+        <meta name="description" content="Professional Sidebar services by Zion Tech Group." />
+      </Helmet>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Sidebar
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Professional Sidebar services tailored to your business needs.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Sidebar;
+export default SidebarPage;

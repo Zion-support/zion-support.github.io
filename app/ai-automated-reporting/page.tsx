@@ -37,14 +37,7 @@ const AiAutomatedReportingPage: React.FC = () => {
           Ai Automated Reporting - Zion Tech Group | Advanced AI and IT
           Solutions
         </title>
-        <meta
-          name="description"
-          content="Professional aiautomatedreporting solutions powered by advanced AI and cutting-edge technology."
-        />
-        <meta
-          name="keywords"
-          content="aiautomatedreporting, AI solutions, IT services, automation, technology, business solutions"
-        />
+
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -60,14 +53,14 @@ const AiAutomatedReportingPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="#features"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Get Started
               </a>
               <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+                href="#contact"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300"
               >
                 View All Services
               </a>
@@ -90,7 +83,7 @@ const AiAutomatedReportingPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center"
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -116,14 +109,14 @@ const AiAutomatedReportingPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="#contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Start Your Project
               </a>
               <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+                href="#features"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300"
               >
                 Learn More
               </a>

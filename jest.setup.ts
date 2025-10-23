@@ -1,5 +1,7 @@
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from "util";
+
+// Jest types are now provided by @types/jest
 (
   global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }
 ).TextEncoder = TextEncoder;
