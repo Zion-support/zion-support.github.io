@@ -1,4 +1,10 @@
+<<<<<<< HEAD:app/utils/monitoring.ts
 'use client';
+=======
+'use client'
+import { Download } from 'lucide-react'
+import Navigation from './Navigation'
+>>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
@@ -83,7 +89,12 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
+<<<<<<< HEAD:app/utils/monitoring.ts
         }
+=======
+        // // // console.error('Error setting up performance observers:', error)
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
     }
   }
   private monitorLongTasks(): void {
@@ -91,7 +102,15 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
+<<<<<<< HEAD:app/utils/monitoring.ts
             }
+=======
+            // // // console.warn('Long task detected:', {
+            //   duration: entry.duration,
+            //   startTime: entry.startTime
+            // })
+          }
+>>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -103,6 +122,7 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
+<<<<<<< HEAD:app/utils/monitoring.ts
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
@@ -112,6 +132,24 @@ class MonitoringService {
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
         }
+=======
+          const entries = list.getEntries()
+          entries.forEach((entry: PerformanceEntry) => {
+            const resourceEntry = entry as PerformanceResourceTiming
+            if (resourceEntry.duration > 1000) {
+              // // // console.warn('Slow resource detected:', {
+              //   name: resourceEntry.name,
+              //   duration: resourceEntry.duration,
+              //   type: resourceEntry.initiatorType
+              // })
+            }
+          })
+        })
+        resourceObserver.observe({ entryTypes: ['resource'] })
+      } catch (_error) {
+        // // // console.error('Error monitoring resources:', _error)
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
     }
   }
   private setupErrorHandling(): void {
@@ -143,7 +181,16 @@ class MonitoringService {
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
+<<<<<<< HEAD:app/utils/monitoring.ts
       }
+=======
+      // // // console.log(`[Performance] ${name}:`, {
+      //   value,
+      //   rating,
+      //   unit: name === 'cls' ? 'score' : 'ms'
+      // })
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {
@@ -158,6 +205,10 @@ class MonitoringService {
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
+<<<<<<< HEAD:app/utils/monitoring.ts
+=======
+    // // // console.error('[Error]', error)
+>>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {
@@ -173,11 +224,19 @@ class MonitoringService {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
+<<<<<<< HEAD:app/utils/monitoring.ts
         this.metrics.memory = {
           used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         }
+=======
+        // // // console.log('[Memory]', {
+        //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+        //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
+        //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
+        // })
+>>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
       }
     }
   }
@@ -185,6 +244,7 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
+<<<<<<< HEAD:app/utils/monitoring.ts
         console.log('Performance metrics:', {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
@@ -195,6 +255,17 @@ class MonitoringService {
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         });
         })
+=======
+        // // // console.log('[Navigation Timing]', {
+        //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
+        //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
+        //   'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
+        //   'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
+        //   'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
+        //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
+        //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
+        // })
+>>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
       }
     }
   }
