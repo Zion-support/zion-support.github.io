@@ -14,12 +14,12 @@ export interface PerformanceMetrics {
   inp?: number;
 }
 export interface ErrorReport {
-  message: string,
+  message: string;
   stack?: string;
   component?: string;
-  timestamp: number,
-  userAgent: string,
-  url: string,
+  timestamp: number;
+  userAgent: string;
+  url: string;
 }
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
@@ -66,7 +66,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-    // Keep HEAD version
+              clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -83,7 +83,7 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-    // Keep HEAD version
+        }
     }
   }
   private monitorLongTasks(): void {
@@ -91,7 +91,7 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-    // Keep HEAD version
+            }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -104,12 +104,14 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-    // Keep HEAD version
+          entries.forEach((entry: PerformanceResourceTiming) => {
+            if (entry.duration > 1000) {
+              }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
-    // Keep HEAD version
+        }
     }
   }
   private setupErrorHandling(): void {
@@ -141,10 +143,10 @@ class MonitoringService {
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-    // Keep HEAD version
+      }
     // Send to analytics (if configured)
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
+    if (typeof gtag === 'function') {
+      gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
       })
@@ -171,7 +173,11 @@ class MonitoringService {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-    // Keep HEAD version
+        this.metrics.memory = {
+          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
+          limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
+        }
       }
     }
   }
@@ -179,7 +185,14 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
-    // Keep HEAD version
+        }ms`,
+          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
+          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
+          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
+          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
+          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
+          'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
+        })
       }
     }
   }

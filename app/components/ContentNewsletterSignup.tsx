@@ -1,77 +1,72 @@
-'use client';
-import React, { useState } from 'react';
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
-
+'use client'
+import React, { useState } from 'react'
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
 interface ContentNewsletterSignupProps {
-  title?: string;
-  subtitle?: string;
-  placeholder?: string;
-  buttonText?: string;
+  title?: string
+  subtitle?: string
+  placeholder?: string
+  buttonText?: string
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>;
-    text: string;
-  }>;
-  onSubscribe?: (email: string) => void;
+    icon: React.ComponentType<{ className?: string }>
+    text: string
+  }>
+  onSubscribe?: (email: string) => void
 }
-
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
   placeholder = "Enter your email address",
-  buttonText = "Subscribe Now",
+  buttonText = "Subscribe",
   features = [
-    {
-      icon: CheckCircle,
-      text: "Weekly industry insights"
-    },
-    {
-      icon: Star,
-      text: "Exclusive content and tips"
-    },
-    {
-      icon: Users,
-      text: "Join 10,000+ subscribers"
-    },
-    {
-      icon: Globe,
-      text: "Global community access"
-    }
+    { icon: Star, text: "Exclusive content" },
+    { icon: Users, text: "Industry insights" },
+    { icon: Globe, text: "Global updates" },
+    { icon: Zap, text: "Early access" }
   ],
   onSubscribe
 }) => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsLoading(true);
-    
+    e.preventDefault()
+    if (!email) return
+    setIsLoading(true)
     try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000))
       if (onSubscribe) {
-        await onSubscribe(email);
-      } else {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        onSubscribe(email)
       }
-      
-      setIsSubscribed(true);
-      setEmail('');
+      setIsSubscribed(true)
+      setEmail('')
     } catch (error) {
-      console.error('Subscription failed:', error);
+      console.error('Subscription error:', error)
     } finally {
-      setIsLoading(false);
+      setIsSubmitting(false)
     }
-  };
-
+  }
   if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4">
+      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-8 h-8 text-white" />
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
+            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Thank You for Subscribing!
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              You'll receive our latest insights and updates soon.
+            </p>
+            <button
+              onClick={() => setIsSubscribed(false)}
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              Subscribe another email
+            </button>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Welcome to Our Community!
@@ -81,28 +76,24 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           </p>
           <button
             onClick={() => setIsSubscribed(false)}
-            className="text-white underline hover:text-blue-200 transition-colors"
-          >
+            className="text-white underline hover:text-blue-200 transition-colors">
             Subscribe another email
-          </button>
+  </
         </div>
       </div>
-    );
+    )
   }
-
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {title}
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               {subtitle}
             </p>
-            
             <div className="space-y-4">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -114,43 +105,38 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               ))}
             </div>
           </div>
-
           {/* Newsletter Form */}
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address
-                </label>
+  </
                 <input
                   type="email"
-                  id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={placeholder}
                   required
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              
               <button
                 type="submit"
                 disabled={isLoading || !email}
-                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
-              >
+                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center">
                 {isLoading ? (
-                  <>
+                  <React.Fragment>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
-                  </>
+                  </React.Fragment>
                 ) : (
-                  <>
+                  <React.Fragment>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </>
+                  </React.Fragment>
                 )}
               </button>
-              
               <p className="text-sm text-blue-200 text-center">
                 We respect your privacy. Unsubscribe at any time.
               </p>
@@ -159,7 +145,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContentNewsletterSignup;
+  )
+}
+export default ContentNewsletterSignup
+  </label>
+  </button>
+  </ContentNewsletterSignupProps>

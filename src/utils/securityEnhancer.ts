@@ -1,27 +1,46 @@
-// SecurityEnhancer utility
-// This file contains utility functions and configurations
-
-
-interface SecurityConfig {enableCSP: boolean;}
-  enableHTTPS: boolean;
+'use client';
+import React from 'react'
+/**
+ * Security Enhancer
+ * Provides comprehensive security utilities and monitoring
+ */
+interface SecurityConfig {
+  enableCSP: boolean;
+  enableHSTS: boolean;
   enableXSSProtection: boolean;
   enableCSRFProtection: boolean;
   enableContentSecurityPolicy: boolean;
+  allowedOrigins: string[];
+  trustedDomains: string[];
 }
-
-class SecurityEnhancer {private config: SecurityConfig;}
-  constructor(config?: SecurityConfig) {this.config = config || {}
+interface SecurityMetrics {
+  blockedRequests: number;
+  suspiciousActivity: number;
+  securityViolations: number;
+  lastScanTime: number;
+}
+class SecurityEnhancer {
+  private config: SecurityConfig;
+  private metrics: SecurityMetrics;
+  private eventListeners: Array<() => void> = [];
+  constructor(config: Partial<SecurityConfig> = {}) {
+    this.config = {
       enableCSP: true,
-      enableHTTPS: true,
+      enableHSTS: true,
       enableXSSProtection: true,
       enableCSRFProtection: true,
-      enableContentSecurityPolicy: true}
-    this.init()
-
-
-
-  private init(): void {// Initialize security enhancements;}
-    this.setupSecurityHeaders();
+      enableContentSecurityPolicy: true,
+      allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
+      trustedDomains: ['zion.app', 'www.zion.app'],
+      ...config
+    };
+    this.metrics = {
+      blockedRequests: 0,
+      suspiciousActivity: 0,
+      securityViolations: 0,
+      lastScanTime: Date.now()
+    }
+    this.initializeSecurity()
   }
   private initializeSecurity(): void {
     if (typeof window === 'undefined') return
@@ -86,14 +105,15 @@ class SecurityEnhancer {private config: SecurityConfig;}
     this.monitorNetworkRequests()
   }
   private monitorConsoleAccess(): void {
-    const originalConsole = {
-      log: console.log.bind(console),
-      warn: console.warn.bind(console),
-      error: console.error.bind(console),
-      info: console.info.bind(console)
-    };
+    const originalConsole = { ...console } as any;
     // Override console methods to detect debugging
-    Object.assign(console, originalConsole);
+    const methods = ['log', 'warn', 'error', 'info'] as const;
+    methods.forEach(method => {
+      (console as any)[method] = (...args: unknown[]) => {
+        this.metrics.suspiciousActivity++;
+        (originalConsole as any)[method](...args);
+      }
+    });
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
@@ -128,12 +148,90 @@ class SecurityEnhancer {private config: SecurityConfig;}
       return originalFetch(input, init)
     }
   }
-
-  public cleanup(): void {// Cleanup security enhancements;}
+  private isAllowedOrigin(url: string): boolean {
+    try {
+      const urlObj = new URL(url)
+      return this.config.allowedOrigins.some(origin => 
+        urlObj.origin === origin || urlObj.hostname.endsWith(origin.replace('https://', ''))
+      )
+    } catch {
+      return false
+    }
+  }
+  private setupSecureHeaders(): void {
+    // These would typically be set by the server, but we can add meta tags
+    const headers = [
+      { name: 'X-Frame-Options', content: 'DENY' },
+      { name: 'X-Content-Type-Options', content: 'nosniff' },
+      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
+      { name: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=()' }
+    ]
+    headers.forEach(header => {
+      const meta = document.createElement('meta')
+      meta.httpEquiv = header.name
+      meta.content = header.content
+      document.head.appendChild(meta)
+    })
+  }
+  public sanitizeInput(input: string): string {
+    return input
+      .replace(/[<>]/g, '') // Remove potential HTML tags
+      .replace(/javascript:/gi, '') // Remove javascript: protocol,
+      .replace(/on\w+=/gi, '') // Remove event handlers
+      .trim()
+  }
+  public validateInput(input: string, type: 'email' | 'url' | 'text'): boolean {
+    switch (type) {
+      case 'email':
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input)
+      case 'url':
+        try {
+          new URL(input)
+          return true
+        } catch {
+          return false
+        }
+      case 'text':
+        return input.length > 0 && input.length < 1000
+      default:
+        return false
+    }
+  }
+  public generateSecurePassword(length: number = 16): string {
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'
+    let password = ''
+    for (let i = 0; i < length; i++) {
+      password += charset.charAt(Math.floor(Math.random() * charset.length))
+    }
+    return password
+  }
+  public hashPassword(password: string): Promise<string> {
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(password))
+      .then(hash => {
+        return Array.from(new Uint8Array(hash))
+          .map(b => b.toString(16).padStart(2, '0'))
+          .join('')
+      })
+  }
+  public getMetrics(): SecurityMetrics {
+    return { ...this.metrics }
+  }
+  public generateSecurityReport(): string {
+    const metrics = this.getMetrics()
+    return `
+Security Report:
+- Blocked Requests: ${metrics.blockedRequests}
+- Suspicious Activity: ${metrics.suspiciousActivity}
+- Security Violations: ${metrics.securityViolations}
+- Last Scan: ${new Date(metrics.lastScanTime).toLocaleString()}
+    `.trim()
+  }
+  public cleanup(): void {
+    this.eventListeners.forEach(cleanup => cleanup())
+    this.eventListeners = []
   }
 }
-
-export default SecurityEnhancer;"
-
-
-
+// Export singleton instance
+export const securityEnhancer = new SecurityEnhancer()
+// Export class for custom instances
+export { SecurityEnhancer, type SecurityConfig, type SecurityMetrics }

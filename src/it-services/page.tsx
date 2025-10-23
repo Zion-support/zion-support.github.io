@@ -1,11 +1,24 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
+import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+interface ITService {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  features: string[];
+  price: string;
+  category: string;
+  benefits: string[];
+  technologies: string[];
+  contactInfo: string;
+  color?: string;
+}
+
 const ITServicesPage: React.FC = () => {
-  const itServices = [
+  const itServices: ITService[] = [
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
@@ -29,7 +42,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-blue-400'
+      color: 'text-cyan-400'
     },
     // Cybersecurity Services
     {
@@ -47,7 +60,7 @@ const ITServicesPage: React.FC = () => {
     {
       title: 'Identity & Access Management',
       description: 'Secure identity management with multi-factor authentication, single sign-on, and privileged access management.',
-      icon: Lock,
+      icon: ShieldCheck,
       features: ['SSO implementation', 'MFA setup', 'Privileged access management', 'Identity governance', 'Access reviews', 'Compliance reporting'],
       price: 'Starting at $1,800/month',
       category: 'Security',
@@ -255,56 +268,6 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-  const services = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration & Management',
-      description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
-      features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
-      price: 'Starting at $1,299/month',
-      color: 'text-blue-400'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity Suite',
-      description: 'Comprehensive security solutions with threat detection and automated response.',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Automated Response', 'Compliance Reporting'],
-      price: 'Starting at $799/month',
-      color: 'text-red-400'
-    },
-    {
-      icon: Settings,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
-      features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Performance Monitoring'],
-      price: 'Starting at $599/month',
-      color: 'text-green-400'
-    },
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
-      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
-      price: 'Starting at $399/month',
-      color: 'text-teal-400'
-    },
-    {
-      icon: Globe,
-      title: 'Network Solutions',
-      description: 'Enterprise networking with high-speed connectivity and advanced security features.',
-      features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Support'],
-      price: 'Starting at $699/month',
-      color: 'text-purple-400'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications with modern UI/UX design.',
-      features: ['iOS & Android Apps', 'Cross-Platform Development', 'UI/UX Design', 'App Store Optimization'],
-      price: 'Starting at $2,500/project',
-      color: 'text-orange-400'
-    }
-  ];
 
   const additionalServices = [
     {
@@ -407,7 +370,9 @@ const ITServicesPage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
-                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-8 h-8" })}
+                  {React.isValidElement(service.icon) ? service.icon : 
+                   typeof service.icon === 'function' ? React.createElement(service.icon as any, { className: "w-8 h-8" }) : 
+                   <div className="w-8 h-8 bg-cyan-400 rounded" />}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
@@ -456,10 +421,10 @@ const ITServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <div className={`text-lg font-bold ${service.color || 'text-cyan-400'} mb-2`}>{service.price}</div>
+                  <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
                   <a
                     href="/contact"
-                    className={`inline-flex items-center text-sm font-medium ${service.color || 'text-cyan-400'} hover:opacity-80 transition-opacity`}
+                    className="inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
@@ -476,7 +441,7 @@ const ITServicesPage: React.FC = () => {
             {additionalServices.map((service, index) => (
               <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
                 <div className="flex items-center mb-3">
-                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-6 h-6 text-cyan-400 mr-3" })}
+                  <service.icon className="w-6 h-6 text-cyan-400 mr-3" />
                   <h3 className="text-lg font-bold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 text-sm mb-3">{service.description}</p>
@@ -595,10 +560,11 @@ const ITServicesPage: React.FC = () => {
               </a>
             </div>
           </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 

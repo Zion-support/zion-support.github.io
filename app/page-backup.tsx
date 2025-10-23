@@ -1,7 +1,6 @@
-'use client';
-import React from 'react';
-'use client';
-
+'use client'
+import React from 'react'
+'use client'
 const PageBackupPage: React.FC = () => {
   const features = [
     {
@@ -24,8 +23,7 @@ const PageBackupPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -35,12 +33,11 @@ const PageBackupPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   return (
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page backup solutions. 
+              Transform your business with our advanced page backup solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             </h2>
@@ -56,7 +53,6 @@ const PageBackupPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -71,17 +67,18 @@ const PageBackupPage: React.FC = () => {
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
-              </button>
+  </
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-              </button>
+  </
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-
-export default PageBackupPage;
+  )
+}
+export default PageBackupPage
+  </button>
+  </button>

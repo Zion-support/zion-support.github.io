@@ -1,55 +1,40 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Internal server error' }));
+    }
+  };
+};
 
-const PROD_DOMAIN = 'https://ziontechgroup.com';
-
-async function handler(req, res) {
+export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-  const { productId, userId } = req.body || {};
-
+  const { productId } = req.body;
   if (!productId) {
-    res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Product ID is required' }));
     return;
   }
 
   try {
-    // Basic checkout session creation logic
-    const sessionData = {
-      productId,
-      userId: userId || null,
-      timestamp: new Date().toISOString(),
-      status: 'pending'
+    const session = {
+      status: 'pending',
+      productId: productId
     };
 
-    // In a real implementation, you would:
-    // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
-    // 2. Store session data in your database
-    // 3. Return the session ID and checkout URL
-
-    res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      success: true,
-      sessionId: `session_${Date.now()}`,
-      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
-      data: sessionData
-    }));
+    res.end(JSON.stringify(session));
   } catch (error) {
     console.error('Checkout session creation error:', error);
-    res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to create checkout session',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
+    res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
   }
-}
-
-export default withErrorLogging(handler);
+});
