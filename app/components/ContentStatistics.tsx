@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
@@ -10,12 +10,12 @@ const ContentStatistics: React.FC = () => {
     years: 0
   });
 
-  const targetCounters = {
+  const targetCounters = useMemo(() => ({
     clients: 500,
     projects: 1000,
     satisfaction: 99,
     years: 10
-  };
+  }), []);
 
   const statistics = [
     {
@@ -108,7 +108,7 @@ const ContentStatistics: React.FC = () => {
     return () => {
       timers.forEach(timer => clearInterval(timer));
     };
-  }, []);
+  }, [targetCounters]);
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
