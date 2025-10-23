@@ -22,6 +22,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [fontSize, setFontSize] = useState(16);
 
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+
     // Check for reduced motion preference
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const handleChange = (e: MediaQueryListEvent) => {
@@ -94,6 +97,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     target.classList.remove('keyboard-focus');
   }, []);
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+
     // Keyboard navigation support
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
@@ -171,6 +177,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
+    if (typeof window === 'undefined') return;
+    
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
