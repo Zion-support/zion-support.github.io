@@ -1,9 +1,8 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const FuturisticBackgroundPage: React.FC = () => {
   const features = [
@@ -40,11 +39,7 @@ const FuturisticBackgroundPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>FuturisticBackground - Zion Tech Group</title>
-        <meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
-        <meta name="keywords" content="AI, artificial intelligence, FuturisticBackground, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">

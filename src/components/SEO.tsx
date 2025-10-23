@@ -3,8 +3,13 @@
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'lucide-react'
+=======
+import React from 'react';
+import { Helmet } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 export interface SEOProps {
   title?: string

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle, Star, Phone, BarChart } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, Phone, Mail, Star, Brain, Zap, Shield, Target, Users, BarChart, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
     {

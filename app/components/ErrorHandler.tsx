@@ -1,7 +1,14 @@
 'use client'
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 import { Home } from 'lucide-react'
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
@@ -41,11 +48,7 @@ const ErrorHandlerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ErrorHandler</title>
-        <meta name="description" content="Advanced ErrorHandler solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ErrorHandler, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

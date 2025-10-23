@@ -2,6 +2,7 @@ import React from 'react'
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
 import { MapPin } from 'lucide-react'
 import React from 'react';
+import { CheckCircle, Phone, Mail, Star, Target, TrendingUp, Clock, BarChart, Helmet, MapPin, Check } from 'lucide-react';
 
 constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
     {

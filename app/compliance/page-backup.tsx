@@ -1,9 +1,13 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const PageBackupPage: React.FC = () => {
   const features = [
     {
@@ -33,10 +37,14 @@ const PageBackupPage: React.FC = () => {
   ]
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Page Backup - Zion Tech Group</title>
         <meta name="description" content="Advanced page backup solutions powered by AI technology." />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">

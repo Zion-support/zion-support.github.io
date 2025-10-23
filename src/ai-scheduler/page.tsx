@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle, Star, Phone, Calendar } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, Phone, Star, Brain, Zap, Shield, Target, Users, Video, Calendar, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 constAISchedulerPage: React.FC= () =>{constfeatures= [
     {

@@ -4,6 +4,10 @@ import { Cog } from 'lucide-react'
 import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react'
 import { Bot, Cpu, Settings } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+import { Cog, CheckCircle, Star, Brain, Zap, Shield, Target, Settings, Camera, Bot, Cpu, BarChart, Helmet, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const RoboticsPage: React.FC = () => {
   const roboticsServices = [
 =======

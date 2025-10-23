@@ -1,8 +1,14 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { ArrowRight } from 'lucide-react'
+=======
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
     }
   ]
@@ -17,11 +23,7 @@ import { ArrowRight } from 'lucide-react'
 
   return (
     <>
-      <Helmet>
-        <title>SystemMonitor</title>
-        <meta name="description" content="Advanced SystemMonitor solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

@@ -2,6 +2,7 @@ import React from 'react'
 import { CheckCircle, Phone, Mail, TrendingUp, Helmet } from 'lucide-react'
 import { MapPin } from 'lucide-react'
 import React from 'react';
+import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Camera, Palette, Video, Music, Calendar, Code, Bot, Helmet, MapPin, Check } from 'lucide-react';
 
 constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
     // AI-Powered Developer Tools

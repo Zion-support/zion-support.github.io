@@ -4,6 +4,10 @@ import { Wifi } from 'lucide-react'
 import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react'
 import { Globe, Settings } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+import { Wifi, CheckCircle, Star, Brain, Zap, Shield, Target, Globe, Settings, Camera, BarChart, Helmet, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
 =======

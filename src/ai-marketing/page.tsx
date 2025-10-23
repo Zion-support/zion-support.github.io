@@ -1,6 +1,7 @@
 import React from 'react'
 import { CheckCircle, Star, Zap, Brain, BarChart, TrendingUp, Target, Users, Helmet } from 'lucide-react'
 import React from 'react';
+import { CheckCircle, Mail, Star, Brain, Zap, Target, TrendingUp, Users, Video, BarChart, Helmet, Check } from 'lucide-react';
 
 constAIMarketingPage: React.FC= () =>{constaiMarketingServices= [
     {

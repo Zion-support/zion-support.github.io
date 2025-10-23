@@ -1,4 +1,11 @@
 'use client'
+<<<<<<< HEAD
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 import React, { useEffect, useState, useCallback } from 'react'
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
@@ -151,11 +158,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return (
     <>
-      <Helmet>
-        <title>PerformanceOptimizer</title>
-        <meta name="description" content="Advanced PerformanceOptimizer solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, PerformanceOptimizer, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 'use client'
 import React, { useEffect, useCallback, useRef } from 'react'
 import { Helmet } from 'lucide-react'
+=======
+'use client';
+import React, { useEffect, useCallback, useRef } from 'react';
+import { Star, Helmet } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 interface SEOData {
   title: string

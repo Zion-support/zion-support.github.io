@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -8,6 +9,18 @@ export const metadata: Metadata = {
   title: "Zion Tech Group - AI and IT Solutions",
   description: "Leading provider of AI and IT solutions for modern businesses. We help companies transform their operations with cutting-edge technology.",
   keywords: "AI solutions, IT services, artificial intelligence, technology consulting, Zion Tech Group",
+=======
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - AI & IT Solutions',
+  description: 'Leading provider of AI and IT solutions for businesses. Transform your operations with cutting-edge technology.',
+  keywords: 'AI, artificial intelligence, IT solutions, business automation, technology consulting',
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 }
 
 export default function RootLayout({
@@ -16,6 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Layout | Zion Tech Group</title>
@@ -100,3 +114,12 @@ export default function RootLayout({
     </div>
   )
 }
+=======
+    <html lang="en">
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  )
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f

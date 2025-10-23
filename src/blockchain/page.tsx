@@ -4,6 +4,10 @@ import { Coins } from 'lucide-react'
 import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react'
 import { Cpu } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+import { Coins, CheckCircle, Star, Brain, Zap, Shield, Target, Code, Cpu, BarChart, Helmet, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
 =======

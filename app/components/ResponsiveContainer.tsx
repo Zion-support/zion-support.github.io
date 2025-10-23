@@ -1,11 +1,17 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { cn } from '../lib/utils'
 interface ResponsiveContainerProps {
   children: React.ReactNode
   className?: string
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full'
 }
+=======
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 constResponsiveContainer= ({children,
   class Nam e,
@@ -25,11 +31,7 @@ constResponsiveContainer= ({children,
 
   return (
     <>
-      <Helmet>
-        <title>ResponsiveContainer</title>
-        <meta name="description" content="Advanced ResponsiveContainer solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ResponsiveContainer, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

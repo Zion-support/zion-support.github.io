@@ -6,8 +6,8 @@ import { Phone, Mail, Zap, Brain, Cloud, ArrowRight } from 'lucide-react'
 import { MapPin, Cpu } from 'lucide-react'
 
 import React, { useState } from "react";
+import { Star, ArrowRight, Brain, Menu, X } from 'lucide-react';
 import Link from "next/link";
-import { ArrowRight, Brain, Menu, X } from "lucide-react";
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)

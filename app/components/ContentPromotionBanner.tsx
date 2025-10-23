@@ -1,7 +1,13 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 import { Zap, ArrowRight } from 'lucide-react'
+=======
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 const ContentPromotionBanner: React.FC = () => {
   const features = [
@@ -41,11 +47,7 @@ const ContentPromotionBanner: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ContentPromotionBanner</title>
-        <meta name="description" content="Advanced ContentPromotionBanner solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ContentPromotionBanner, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
