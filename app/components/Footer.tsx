@@ -1,112 +1,69 @@
-"use client";
-import React from "react";
+'use client'
+import React from 'react'
+import Link from 'next/link'
+import { Phone, Mail, ArrowRight, Brain, Bot, MapPin } from 'lucide-react'
 
-import Link from "next/link";
-import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
-
-const aiServices = [
-    { name: "AI Chatbot Builder", href: "/ai-chatbot-builder" },
-    { name: "AI Content Generator", href: "/ai-content-generator" },
-    { name: "AI Data Visualizer", href: "/ai-data-visualizer" },
-    { name: "AI Document Intelligence", href: "/ai-document-intelligence" },
-    { name: "AI Financial Forecasting", href: "/ai-financial-forecasting" },
-    { name: "AI Fraud Detection", href: "/ai-fraud-detection" },
-  ];
+const Footer: React.FC = () => {
+  const aiServices = [
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
+    { name: 'AI Analytics', href: '/ai-analytics' },
+    { name: 'AI Automation', href: '/ai-automation' },
+    { name: 'AI CRM', href: '/ai-crm' },
+  ]
 
   const itServices = [
-    { name: "Web Development", href: "/web-development" },
-    { name: "Mobile Development", href: "/mobile-development" },
-    { name: "API Development", href: "/api-development" },
-    { name: "Cloud Solutions", href: "/cloud-solutions" },
-    { name: "Cybersecurity", href: "/cybersecurity" },
-    { name: "Data Analytics", href: "/data-analytics" },
-  ];
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'DevOps', href: '/devops' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Data Analytics', href: '/data-analytics' },
+  ]
 
-  const microSaas = [
-    { name: "Analytics Dashboard", href: "/analytics-dashboard" },
-    { name: "Expense Tracker Pro", href: "/expense-tracker-pro" },
-    { name: "Inventory Manager", href: "/inventory-manager" },
-    { name: "Task Manager Pro", href: "/task-manager-pro" },
-    { name: "Social Media Scheduler", href: "/social-media-scheduler" },
-  ];
-
-  const companyLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Our Team", href: "/team" },
-    { name: "Careers", href: "/careers" },
-    { name: "Case Studies", href: "/case-studies" },
-    { name: "Partnerships", href: "/partnerships" },
-  ];
-
-  const supportLinks = [
-    { name: "Help Center", href: "/help" },
-    { name: "Documentation", href: "/docs" },
-    { name: "Tutorials", href: "/tutorials" },
-    { name: "API Documentation", href: "/api-docs" },
-    { name: "Status Page", href: "/status" },
-  ];
-
-  const quickLinks = [
-    { name: "Free Consultation", href: "/consultation" },
-    { name: "Request Demo", href: "/demo" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Contact Us", href: "/contact" },
-    { name: "Support", href: "/support" },
-  ];
+  const company = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
+  ]
 
   return (
-    <footer className="bg-gray-900 text-white" loading="lazy">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" loading="lazy">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8" loading="lazy">{/* Company Info */}</div>
-          <div className="lg:col-span-1" loading="lazy">
-            <div className="flex items-center space-x-2 mb-4" loading="lazy">
-              <Brain className="h-8 w-8 text-blue-400" loading="lazy" />
-              <span className="text-xl font-bold" loading="lazy">Zion Tech Group</span>
+    <footer className="bg-slate-900 border-t border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <Brain className="h-8 w-8 text-emerald-400" />
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 mb-4" loading="lazy">Advanced AI and IT solutions for modern businesses. We help you</p>
-              leverage cutting-edge technology to drive growth and innovation.
+            <p className="text-gray-300 text-sm">
+              Leading provider of AI and IT solutions that transform businesses and drive growth.
             </p>
-            <div className="flex space-x-4" loading="lazy">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors" loading="lazy"
-              >
-                <span className="sr-only" loading="lazy">Facebook</span>
-                <svg
-                  className="h-6 w-6" loading="lazy"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <span className="sr-only">Twitter</span>
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
                 </svg>
               </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors" loading="lazy"
-              >
-                <span className="sr-only" loading="lazy">LinkedIn</span>
-                <svg
-                  className="h-6 w-6" loading="lazy"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <span className="sr-only">LinkedIn</span>
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
                 </svg>
               </a>
             </div>
           </div>
 
           {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">AI Services</h3>
-            <ul className="space-y-2" loading="lazy">
-              {aiServices.map((service, index) => (
-                <li key={index}>
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold">AI Services</h3>
+            <ul className="space-y-2">
+              {aiServices.map((service) => (
+                <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group" loading="lazy"
+                    className="text-gray-300 hover:text-emerald-400 transition-colors text-sm"
                   >
-                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" loading="lazy" />
                     {service.name}
                   </Link>
                 </li>
@@ -115,16 +72,15 @@ const aiServices = [
           </div>
 
           {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">IT Services</h3>
-            <ul className="space-y-2" loading="lazy">
-              {itServices.map((service, index) => (
-                <li key={index}>
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold">IT Services</h3>
+            <ul className="space-y-2">
+              {itServices.map((service) => (
+                <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group" loading="lazy"
+                    className="text-gray-300 hover:text-emerald-400 transition-colors text-sm"
                   >
-                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" loading="lazy" />
                     {service.name}
                   </Link>
                 </li>
@@ -132,49 +88,17 @@ const aiServices = [
             </ul>
           </div>
 
-          {/* Micro SaaS */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">Micro SaaS</h3>
-            <ul className="space-y-2" loading="lazy">
-              {microSaas.map((service, index) => (
-                <li key={index}>
+          {/* Company */}
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold">Company</h3>
+            <ul className="space-y-2">
+              {company.map((item) => (
+                <li key={item.name}>
                   <Link
-                    href={service.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group" loading="lazy"
+                    href={item.href}
+                    className="text-gray-300 hover:text-emerald-400 transition-colors text-sm"
                   >
-                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" loading="lazy" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">Company</h3>
-            <ul className="space-y-2 mb-6" loading="lazy">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors" loading="lazy"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">Support</h3>
-            <ul className="space-y-2" loading="lazy">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors" loading="lazy"
-                  >
-                    {link.name}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -183,50 +107,42 @@ const aiServices = [
         </div>
 
         {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-8 pt-8" loading="lazy">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" loading="lazy">
-            <div className="flex items-center space-x-3" loading="lazy">
-              <Phone className="h-5 w-5 text-blue-400" loading="lazy" />
-              <span className="text-gray-400" loading="lazy">+1 (555) 123-4567</span>
+        <div className="mt-8 pt-8 border-t border-slate-700">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex items-center space-x-2 text-gray-300">
+              <Phone className="h-4 w-4" />
+              <span className="text-sm">+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center space-x-3" loading="lazy">
-              <Mail className="h-5 w-5 text-blue-400" loading="lazy" />
-              <span className="text-gray-400" loading="lazy">contact@ziontechgroup.com</span>
+            <div className="flex items-center space-x-2 text-gray-300">
+              <Mail className="h-4 w-4" />
+              <span className="text-sm">info@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-3" loading="lazy">
-              <MapPin className="h-5 w-5 text-blue-400" loading="lazy" />
-              <span className="text-gray-400" loading="lazy">San Francisco, CA</span>
+            <div className="flex items-center space-x-2 text-gray-300">
+              <MapPin className="h-4 w-4" />
+              <span className="text-sm">San Francisco, CA</span>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" loading="lazy">
-          <div className="text-gray-400 text-sm" loading="lazy">© 2024 Zion Tech Group. All rights reserved.</div>div>
-          <div className="flex space-x-6 mt-4 md:mt-0" loading="lazy">
-            <Link
-              href="/privacy"
-              className="text-gray-400 hover:text-white text-sm transition-colors" loading="lazy"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-gray-400 hover:text-white text-sm transition-colors" loading="lazy"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="/cookies"
-              className="text-gray-400 hover:text-white text-sm transition-colors" loading="lazy"
-            >
-              Cookie Policy
-            </Link>
+        {/* Copyright */}
+        <div className="mt-8 pt-8 border-t border-slate-700">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link href="/privacy" className="text-gray-400 hover:text-emerald-400 text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-400 hover:text-emerald-400 text-sm transition-colors">
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-
+export default Footer

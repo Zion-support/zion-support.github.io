@@ -1,204 +1,126 @@
-'use client';
+'use client'
+import React, { useEffect, useState } from 'react'
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-
-interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
+interface PerformanceMetrics {
+  loadTime: number
+  renderTime: number
+  memoryUsage: number
+  bundleSize: number
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true,
-}) => {
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationStatus, setOptimizationStatus] = useState<{
-    images: boolean;
-    lazyLoading: boolean;
-    preloading: boolean;
-    codeSplitting: boolean;
-  }>({
-    images: false,
-    lazyLoading: false,
-    preloading: false,
-    codeSplitting: false,
-  });
-
-  const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) return;
-
-    // Optimize images
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (img.loading !== 'lazy') {
-        img.loading = 'lazy';
-      }
-      
-      // Add WebP support detection
-      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
-        const webpSrc = img.src.replace('.jpg', '.webp');
-        const webpImg = new Image();
-        webpImg.onload = () => {
-          img.src = webpSrc;
-        };
-        webpImg.src = webpSrc;
-      }
-    });
-
-    setOptimizationStatus(prev => ({ ...prev, images: true }));
-  }, [enableImageOptimization]);
-
-  const enableLazyLoadingOptimization = useCallback(() => {
-    if (!enableLazyLoading) return;
-
-    // Intersection Observer for lazy loading
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
-          }
-        });
-      },
-      { rootMargin: '50px' }
-    );
-
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    lazyImages.forEach((img) => observer.observe(img));
-
-    setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }));
-  }, [enableLazyLoading]);
-
-  const enablePreloadingOptimization = useCallback(() => {
-    if (!enablePreloading) return;
-
-    // Preload critical resources
-    const criticalResources = [
-      '/fonts/main.woff2',
-      '/css/critical.css',
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'font';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
-    });
-
-    setOptimizationStatus(prev => ({ ...prev, preloading: true }));
-  }, [enablePreloading]);
-
-  const enableCodeSplittingOptimization = useCallback(() => {
-    if (!enableCodeSplitting) return;
-
-    // Dynamic imports for code splitting
-    const loadComponent = async (componentName: string) => {
-      try {
-        const module = await import(`../components/${componentName}.tsx`);
-        return module.default;
-      } catch (error) {
-        console.warn(`Failed to load component: ${componentName}`, error);
-        return null;
-      }
-    };
-
-    // Store the function globally for use in other components
-    (window as any).loadComponent = loadComponent;
-
-    setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }));
-  }, [enableCodeSplitting]);
-
-  const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
-    
-    try {
-      await Promise.all([
-        optimizeImages(),
-        enableLazyLoadingOptimization(),
-        enablePreloadingOptimization(),
-        enableCodeSplittingOptimization(),
-      ]);
-    } catch (error) {
-      console.error('Optimization failed:', error);
-    } finally {
-      setIsOptimizing(false);
-    }
-  }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization]);
+const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
+  const [isOptimized, setIsOptimized] = useState(false)
 
   useEffect(() => {
-    runOptimizations();
-  }, [runOptimizations]);
+    // Only run on client side
+    if (typeof window === 'undefined') return
 
-  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean);
+    // Measure performance metrics
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart
+      const renderTime = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+      
+      // Estimate memory usage (if available)
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0
+      
+      // Estimate bundle size (simplified)
+      const bundleSize = document.querySelectorAll('script').length * 50 // Rough estimate
+      
+      setMetrics({
+        loadTime,
+        renderTime,
+        memoryUsage,
+        bundleSize
+      })
+    }
+
+    // Run after page load
+    if (document.readyState === 'complete') {
+      measurePerformance()
+    } else {
+      window.addEventListener('load', measurePerformance)
+    }
+
+    // Optimize images
+    optimizeImages()
+    
+    // Preload critical resources
+    preloadCriticalResources()
+    
+    // Enable service worker
+    enableServiceWorker()
+
+    return () => {
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [])
+
+  const optimizeImages = () => {
+    if (typeof window === 'undefined') return
+    
+    const images = document.querySelectorAll('img')
+    images.forEach((img) => {
+      // Add loading="lazy" for images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy')
+      }
+      
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async')
+      }
+    })
+  }
+
+  const preloadCriticalResources = () => {
+    if (typeof window === 'undefined') return
+    
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link')
+    criticalCSS.rel = 'preload'
+    criticalCSS.href = '/globals.css'
+    criticalCSS.as = 'style'
+    document.head.appendChild(criticalCSS)
+
+    // Preload critical fonts
+    const fontPreload = document.createElement('link')
+    fontPreload.rel = 'preload'
+    fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+    fontPreload.as = 'style'
+    document.head.appendChild(fontPreload)
+  }
+
+  const enableServiceWorker = () => {
+    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return
+    
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => {
+        console.log('Service Worker registered successfully')
+        setIsOptimized(true)
+      })
+      .catch((error) => {
+        console.log('Service Worker registration failed:', error)
+      })
+  }
+
+  if (!metrics) return null
 
   return (
-    <div className="performance-optimizer">{isOptimizing && (</div>
-        <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
-          <div className="flex items-center gap-2">
-            <Settings className="w-4 h-4 animate-spin" />
-            Optimizing performance...
-          </div>
-        </div>
-      )}
-
-      {allOptimizationsComplete && (
-        <div className="fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4" />
-            Performance optimized!
-          </div>
-        </div>
-      )}
-
-      <div className="optimization-status">
-        <h3 className="text-lg font-semibold mb-4">Performance Optimizations</h3>
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">{optimizationStatus.images ? (</div>
-              <CheckCircle className="w-4 h-4 text-green-500" />
-            ) : (
-              <AlertTriangle className="w-4 h-4 text-yellow-500" />
-            )}
-            <span>Image Optimization</span>
-          </div>
-          <div className="flex items-center gap-2">{optimizationStatus.lazyLoading ? (</div>
-              <CheckCircle className="w-4 h-4 text-green-500" />
-            ) : (
-              <AlertTriangle className="w-4 h-4 text-yellow-500" />
-            )}
-            <span>Lazy Loading</span>
-          </div>
-          <div className="flex items-center gap-2">{optimizationStatus.preloading ? (</div>
-              <CheckCircle className="w-4 h-4 text-green-500" />
-            ) : (
-              <AlertTriangle className="w-4 h-4 text-yellow-500" />
-            )}
-            <span>Resource Preloading</span>
-          </div>
-          <div className="flex items-center gap-2">{optimizationStatus.codeSplitting ? (</div>
-              <CheckCircle className="w-4 h-4 text-green-500" />
-            ) : (
-              <AlertTriangle className="w-4 h-4 text-yellow-500" />
-            )}
-            <span>Code Splitting</span>
-          </div>
-        </div>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-sm max-w-xs">
+      <h3 className="font-semibold mb-2">Performance Metrics</h3>
+      <div className="space-y-1">
+        <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
+        <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
+        <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+        <div>Bundle Size: {metrics.bundleSize}KB</div>
+        {isOptimized && (
+          <div className="text-green-400">✓ Optimized</div>
+        )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-
+export default PerformanceOptimizer
