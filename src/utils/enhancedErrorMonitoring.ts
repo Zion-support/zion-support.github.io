@@ -202,7 +202,7 @@ class EnhancedErrorMonitoring {
     }
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      // // console.error('Error captured:', errorReport)
+      // // // console.error('Error captured:', errorReport)
     }
   }
   /**

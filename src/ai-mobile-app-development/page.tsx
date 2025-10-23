@@ -164,16 +164,16 @@ constAIMobileAppDevelopmentPage: React.FC= () =>{constmobileServices= [
     {
       title: 'AI Integration',
       description: 'Seamlessly integrate AI capabilities into your mobile apps',
-     icon:<CodeclassName="w-8h-8text-blue-600" />},
+     icon:<CodeclassName=&quot;w-8h-8text-blue-600&quot; />},
     {title: 'Cross-Platform',
       description: 'Build once, deploy everywhere with cross-platform solutions',
-     icon:<SmartphoneclassName="w-8h-8text-green-600" />},
+     icon:<SmartphoneclassName=&quot;w-8h-8text-green-600&quot; />},
     {title: 'Real-Time Analytics',
       description: 'Get insights into user behavior and app performance',
-     icon:<DatabaseclassName="w-8h-8text-purple-600" />},
+     icon:<DatabaseclassName=&quot;w-8h-8text-purple-600&quot; />},
     {title: 'Cloud Backend',
       description: 'Scalable cloud infrastructure for your mobile apps',
-      icon: <Cloud className="w-8 h-8 text-orange-600" />
+      icon: <Cloud className=&quot;w-8 h-8 text-orange-600&quot; />
     }
   ]
   const developmentProcess = [
@@ -200,33 +200,33 @@ constAIMobileAppDevelopmentPage: React.FC= () =>{constmobileServices= [
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50&quot;></div>
       <Helmet>
         <title>AI Mobile App Development | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered mobile app development services including iOS, Android, and cross-platform solutions. Build intelligent mobile apps with cutting-edge AI technology." />
-        <meta name="keywords" content="mobile app development, AI mobile apps, iOS development, Android development, cross-platform apps, mobile AI integration" />
+        <meta name=&quot;description&quot; content=&quot;Revolutionary AI-powered mobile app development services including iOS, Android, and cross-platform solutions. Build intelligent mobile apps with cutting-edge AI technology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;mobile app development, AI mobile apps, iOS development, Android development, cross-platform apps, mobile AI integration&quot; />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <section className=&quot;relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20&quot;></section>
+        <div className=&quot;absolute inset-0 bg-black opacity-20&quot;></div>
+        <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
+          <div className=&quot;text-center&quot;></div>
+            <h1 className=&quot;text-4xl md:text-6xl font-bold mb-6&quot;>
               AI Mobile App Development
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
+            <p className=&quot;text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto&quot;>
               Build intelligent mobile apps with AI-powered features that engage users and drive business growth
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <a
-                href="tel:+13024640950"
-                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
+                href=&quot;tel:+13024640950&quot;
+                className=&quot;bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center&quot;
               >
                 📞 +1 302 464 0950
               </a>
               <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                className=&quot;border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors&quot;
               >
                 ✉️ Get Free Consultation
               </a>
@@ -235,72 +235,72 @@ constAIMobileAppDevelopmentPage: React.FC= () =>{constmobileServices= [
         </div>
       </section>
       {/* Development Process */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className=&quot;py-16 bg-white&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
+          <div className=&quot;text-center mb-12&quot;></div>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-gray-900 mb-4&quot;>
               Our Development Process
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className=&quot;text-xl text-gray-600&quot;>
               Proven 5-step process for building exceptional AI-powered mobile apps
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-5 gap-8&quot;></div>
             {developmentProcess.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div key={index} className=&quot;text-center&quot;></div>
+                <div className=&quot;w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4&quot;></div>
                   {step.step}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.description}</p>
+                <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>{step.title}</h3>
+                <p className=&quot;text-gray-600 text-sm&quot;>{step.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className=&quot;py-16 bg-gray-50&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
+          <div className=&quot;text-center mb-12&quot;></div>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-gray-900 mb-4&quot;>
               Our Mobile Development Services
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className=&quot;text-xl text-gray-600&quot;>
               Comprehensive AI-powered mobile app development and support services
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
             {mobileServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="mb-4">
-                  <span className="text-2xl font-bold text-indigo-600">{service.price}</span>
-                  <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
+              <div key={index} className=&quot;bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100&quot;></div>
+                <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
+                <h3 className=&quot;text-xl font-semibold text-gray-900 mb-3&quot;>{service.title}</h3>
+                <p className=&quot;text-gray-600 mb-4&quot;>{service.description}</p>
+                <div className=&quot;mb-4&quot;></div>
+                  <span className=&quot;text-2xl font-bold text-indigo-600&quot;>{service.price}</span>
+                  <span className=&quot;text-sm text-gray-500 ml-2&quot;>Market: {service.marketPrice}</span>
                 </div>
-                <div className="mb-4">
-                  <span className="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded">
+                <div className=&quot;mb-4&quot;></div>
+                  <span className=&quot;inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded&quot;>
                     {service.category}
                   </span>
                 </div>
-                <ul className="space-y-2 mb-6">
+                <ul className=&quot;space-y-2 mb-6&quot;>
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-600&quot;>
+                      <CheckCircle className=&quot;w-4 h-4 text-green-500 mr-2 flex-shrink-0&quot; />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className="space-y-2 mb-6">
-                  <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
+                <div className=&quot;space-y-2 mb-6&quot;></div>
+                  <h4 className=&quot;font-semibold text-gray-900&quot;>Key Benefits:</h4>
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
-                    <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
+                    <p key={benefitIndex} className=&quot;text-sm text-green-600&quot;>✓ {benefit}</p>
                   ))}
                 </div>
                 <a
-                  href="/contact"
-                  className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center justify-center"
+                  href=&quot;/contact&quot;
+                  className=&quot;w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center justify-center&quot;
                 >
                   Start Building
                 </a>
@@ -310,86 +310,86 @@ constAIMobileAppDevelopmentPage: React.FC= () =>{constmobileServices= [
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className=&quot;py-16 bg-white&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
+          <div className=&quot;text-center mb-12&quot;></div>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-gray-900 mb-4&quot;>
               Why Choose Our Mobile Development?
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className=&quot;text-xl text-gray-600&quot;>
               Advanced AI technology with expert mobile development expertise
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
             {mobileFeatures.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
+              <div key={index} className=&quot;text-center&quot;></div>
+                <div className=&quot;flex justify-center mb-4&quot;></div>
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>{feature.title}</h3>
+                <p className=&quot;text-gray-600&quot;>{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Success Stories */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className=&quot;py-16 bg-gray-50&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
+          <div className=&quot;text-center mb-12&quot;></div>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-gray-900 mb-4&quot;>
               Success Stories
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className=&quot;text-xl text-gray-600&quot;>
               Real results from our mobile app development clients
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-lg">
-              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"Zion Tech Group built our AI-powered fitness app in just 3 months. The AI features are incredible and user engagement is up 200%!"</p>
-              <div className="font-semibold text-gray-900">David Kim</div>
-              <div className="text-sm text-gray-500">Founder, FitAI</div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;bg-white rounded-lg p-8 shadow-lg&quot;></div>
+              <div className=&quot;text-yellow-400 text-2xl mb-4&quot;>★★★★★</div>
+              <p className=&quot;text-gray-600 mb-4 italic&quot;>&quot;Zion Tech Group built our AI-powered fitness app in just 3 months. The AI features are incredible and user engagement is up 200%!&quot;</p>
+              <div className=&quot;font-semibold text-gray-900&quot;>David Kim</div>
+              <div className=&quot;text-sm text-gray-500&quot;>Founder, FitAI</div>
             </div>
-            <div className="bg-white rounded-lg p-8 shadow-lg">
-              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"Their mobile app development team delivered an amazing e-commerce app with AI recommendations. Sales increased by 150%!"</p>
-              <div className="font-semibold text-gray-900">Lisa Wang</div>
-              <div className="text-sm text-gray-500">CEO, ShopSmart</div>
+            <div className=&quot;bg-white rounded-lg p-8 shadow-lg&quot;></div>
+              <div className=&quot;text-yellow-400 text-2xl mb-4&quot;>★★★★★</div>
+              <p className=&quot;text-gray-600 mb-4 italic&quot;>&quot;Their mobile app development team delivered an amazing e-commerce app with AI recommendations. Sales increased by 150%!&quot;</p>
+              <div className=&quot;font-semibold text-gray-900&quot;>Lisa Wang</div>
+              <div className=&quot;text-sm text-gray-500&quot;>CEO, ShopSmart</div>
             </div>
-            <div className="bg-white rounded-lg p-8 shadow-lg">
-              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"The AI chatbot integration they built for our app reduced support tickets by 80% and improved customer satisfaction significantly."</p>
-              <div className="font-semibold text-gray-900">Robert Johnson</div>
-              <div className="text-sm text-gray-500">CTO, ServicePro</div>
+            <div className=&quot;bg-white rounded-lg p-8 shadow-lg&quot;></div>
+              <div className=&quot;text-yellow-400 text-2xl mb-4&quot;>★★★★★</div>
+              <p className=&quot;text-gray-600 mb-4 italic&quot;>&quot;The AI chatbot integration they built for our app reduced support tickets by 80% and improved customer satisfaction significantly.&quot;</p>
+              <div className=&quot;font-semibold text-gray-900&quot;>Robert Johnson</div>
+              <div className=&quot;text-sm text-gray-500&quot;>CTO, ServicePro</div>
             </div>
           </div>
         </div>
       </section>
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className=&quot;py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;></div>
+          <h2 className=&quot;text-3xl md:text-4xl font-bold mb-4&quot;>
             Ready to Build Your AI Mobile App?
           </h2>
-          <p className="text-xl mb-8 text-indigo-100">
+          <p className=&quot;text-xl mb-8 text-indigo-100&quot;>
             Get a free consultation and discover how AI can transform your mobile app
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             <a
-              href="tel:+13024640950"
-              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
+              href=&quot;tel:+13024640950&quot;
+              className=&quot;bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center&quot;
             >
               📞 +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+              href=&quot;mailto:kleber@ziontechgroup.com&quot;
+              className=&quot;border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors&quot;
             >
               ✉️ kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-8 text-sm text-indigo-200">
+          <div className=&quot;mt-8 text-sm text-indigo-200&quot;></div>
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>

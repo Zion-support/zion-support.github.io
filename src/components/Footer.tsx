@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Lock, BarChart3, FileText } from 'lucide-react'
 import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react'
 import { MapPin } from 'lucide-react'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 const Footer: React.FC = () => {
   const microSaasServices = [
@@ -107,77 +104,77 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+    <footer className=&quot;bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20&quot;>
+      <div className=&quot;container mx-auto px-4 py-12&quot;></div>
+        <div className=&quot;grid grid-cols-1 lg:grid-cols-5 gap-8&quot;></div>
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+          <div className=&quot;lg:col-span-1&quot;></div>
+            <div className=&quot;flex items-center space-x-2 mb-4&quot;></div>
+              <div className=&quot;w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center&quot;></div>
+                <Brain className=&quot;w-5 h-5 text-white&quot; />
               </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className=&quot;text-xl font-bold text-white neon-text&quot;>Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
               Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
             </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+            <div className=&quot;space-y-3&quot;></div>
+              <div className=&quot;flex items-center space-x-3 text-gray-300&quot;></div>
+                <Phone className=&quot;w-4 h-4 text-cyan-400&quot; />
+                <a href=&quot;tel:+13024640950&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+              <div className=&quot;flex items-center space-x-3 text-gray-300&quot;></div>
+                <Mail className=&quot;w-4 h-4 text-cyan-400&quot; />
+                <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-cyan-400" />
+              <div className=&quot;flex items-center space-x-3 text-gray-300&quot;></div>
+                <MapPin className=&quot;w-4 h-4 text-cyan-400&quot; />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>
           {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
-              <Zap className="w-4 h-4 mr-2" />
+          <div></div>
+            <h3 className=&quot;text-cyan-400 font-semibold mb-4 flex items-center&quot;></h3>
+              <Zap className=&quot;w-4 h-4 mr-2&quot; />
               Micro SAAS
             </h3>
-            <ul className="space-y-2">
+            <ul className=&quot;space-y-2&quot;>
               {microSaasServices.map((service) => (
                 <li key={service.name}>
                   <a href={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                    className=&quot;group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
                   >
                     <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className=&quot;w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300&quot; />
                   </a>
                 </li>
               ))}
             </ul>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+            <a href=&quot;/services&quot;
+              className=&quot;inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4&quot;
             >
               View All Micro SAAS →
             </a>
           </div>
           {/* AI & IT Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
-              <Brain className="w-4 h-4 mr-2" />
+          <div></div>
+            <h3 className=&quot;text-cyan-400 font-semibold mb-4 flex items-center&quot;></h3>
+              <Brain className=&quot;w-4 h-4 mr-2&quot; />
               AI & IT Services
             </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">AI Services</h4>
-                <ul className="space-y-1">
+            <div className=&quot;space-y-4&quot;></div>
+              <div></div>
+                <h4 className=&quot;text-white font-medium mb-2&quot;>AI Services</h4>
+                <ul className=&quot;space-y-1&quot;>
                   {aiServices.slice(0, 3).map((service) => (
                     <li key={service.name}>
                       <a href={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                        className=&quot;text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
                       >
                         {service.name}
                       </a>
@@ -185,13 +182,13 @@ const Footer: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">IT Services</h4>
-                <ul className="space-y-1">
+              <div></div>
+                <h4 className=&quot;text-white font-medium mb-2&quot;>IT Services</h4>
+                <ul className=&quot;space-y-1&quot;>
                   {itServices.slice(0, 3).map((service) => (
                     <li key={service.name}>
                       <a href={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                        className=&quot;text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
                       >
                         {service.name}
                       </a>
@@ -200,43 +197,43 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+            <a href=&quot;/services&quot;
+              className=&quot;inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4&quot;
             >
               View All Services →
             </a>
           </div>
           {/* Additional AI Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
-              <Zap className="w-4 h-4 mr-2" />
+          <div></div>
+            <h3 className=&quot;text-cyan-400 font-semibold mb-4 flex items-center&quot;></h3>
+              <Zap className=&quot;w-4 h-4 mr-2&quot; />
               AI Tools
             </h3>
-            <ul className="space-y-2">
+            <ul className=&quot;space-y-2&quot;>
               {additionalServices.map((service) => (
                 <li key={service.name}>
                   <a
                     href={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                    className=&quot;group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
                   >
                     <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className=&quot;w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300&quot; />
                   </a>
                 </li>
               ))}
             </ul>
           </div>
           {/* Company & Support */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">Company</h4>
-                <ul className="space-y-1">
+          <div></div>
+            <h3 className=&quot;text-cyan-400 font-semibold mb-4&quot;>Company</h3>
+            <div className=&quot;grid grid-cols-2 gap-4&quot;></div>
+              <div></div>
+                <h4 className=&quot;text-white font-medium mb-2&quot;>Company</h4>
+                <ul className=&quot;space-y-1&quot;>
                   {companyLinks.slice(0, 4).map((link) => (
                     <li key={link.name}>
                       <a href={link.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                        className=&quot;text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
                       >
                         {link.name}
                       </a>
@@ -244,13 +241,13 @@ const Footer: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">Support</h4>
-                <ul className="space-y-1">
+              <div></div>
+                <h4 className=&quot;text-white font-medium mb-2&quot;>Support</h4>
+                <ul className=&quot;space-y-1&quot;>
                   {supportLinks.slice(0, 4).map((link) => (
                     <li key={link.name}>
                       <a href={link.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                        className=&quot;text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
                       >
                         {link.name}
                       </a>
@@ -262,16 +259,16 @@ const Footer: React.FC = () => {
           </div>
         </div>
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+        <div className=&quot;border-t border-gray-700 mt-8 pt-8&quot;></div>
+          <div className=&quot;flex flex-col md:flex-row justify-between items-center&quot;></div>
+            <div className=&quot;text-gray-400 text-sm mb-4 md:mb-0&quot;></div>
               © 2024 Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6">
+            <div className=&quot;flex space-x-6&quot;></div>
               {legalLinks.map((link) => (
                 <a key={link.name}
                   href={link.url}
-                  className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                  className=&quot;text-sm text-gray-400 hover:text-cyan-400 transition-colors&quot;
                 >
                   {link.name}
                 </a>

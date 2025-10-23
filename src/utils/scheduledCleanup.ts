@@ -92,11 +92,11 @@ class ScheduledCleanup {
       }
       this.stats.averageDuration = this.durations.reduce((a, b) => a + b, 0) / this.durations.length
 
-      // console.log(`Cleanup completed: ${result.totalCleaned} records cleaned in ${duration}ms`)
+      // // console.log(`Cleanup completed: ${result.totalCleaned} records cleaned in ${duration}ms`)
       return true
     } catch (error) {
       this.stats.failedRuns++
-      // console.error('Cleanup failed:', error)
+      // // console.error('Cleanup failed:', error)
       return false
     } finally {
       this.stats.isRunning = false

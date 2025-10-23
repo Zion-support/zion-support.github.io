@@ -5,7 +5,8 @@ interface SitemapEntry {
   priority?: number
 }
 
-export default function sitemap(): SitemapEntry[] {
+export default function sitemap
+sitemap.displayName = "sitemap"(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com'
 
   // Main pages

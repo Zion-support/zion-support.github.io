@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'lucide-react'
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 const SitemapPage: React.FC = () => {
   const pages = [
@@ -43,42 +40,42 @@ const SitemapPage: React.FC = () => {
       <Helmet>
         <title>Sitemap | Zion Tech Group</title>
         <meta
-          name="description"
-          content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
+          name=&quot;description&quot;
+          content=&quot;Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources.&quot;
         />
-        <meta name="robots" content="index, follow" />
+        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
       </Helmet>
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <header className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
-            <p className="text-xl text-gray-300">
+      <div className=&quot;min-h-screen bg-gray-900 text-white&quot;></div>
+        <div className=&quot;container mx-auto px-4 py-8&quot;></div>
+          <header className=&quot;text-center mb-12&quot;>
+            <h1 className=&quot;text-4xl font-bold mb-4&quot;>Sitemap</h1>
+            <p className=&quot;text-xl text-gray-300&quot;>
               Complete directory of all pages on our website
             </p>
           </header>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-800 rounded-lg p-8">
-              <h2 className="text-2xl font-semibold mb-6">All Pages</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className=&quot;max-w-4xl mx-auto&quot;></div>
+            <div className=&quot;bg-gray-800 rounded-lg p-8&quot;></div>
+              <h2 className=&quot;text-2xl font-semibold mb-6&quot;>All Pages</h2>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4&quot;></div>
                 {pages.map((page, index) => (
-                  <div key={index} className="bg-gray-700 rounded-lg p-4">
+                  <div key={index} className=&quot;bg-gray-700 rounded-lg p-4&quot;></div>
                     <a href={page.url}
-                      className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
+                      className=&quot;text-blue-400 hover:text-blue-300 font-medium block mb-2&quot;
                     >
                       {page.title}
                     </a>
-                    <div className="text-sm text-gray-400">
+                    <div className=&quot;text-sm text-gray-400&quot;></div>
                       Priority: {page.priority}
                     </div>
-                    <div className="text-sm text-gray-500">
+                    <div className=&quot;text-sm text-gray-500&quot;></div>
                       {page.url}
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="mt-8 text-center">
-                <a href="/"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
+              <div className=&quot;mt-8 text-center&quot;></div>
+                <a href=&quot;/&quot;
+                  className=&quot;inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors&quot;
                 >
                   Back to Home
                 </a>

@@ -59,18 +59,12 @@ global.fetch = jest.fn()
 const originalConsoleWarn = console.warn
 const originalConsoleInfo = console.info
 console.warn = (...args) => {
-<<<<<<< HEAD
     return
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
   }
   _originalConsoleWarn(...args)
 }
 console.info = (...args) => {
-<<<<<<< HEAD
     return
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
   }
   _originalConsoleInfo(...args)
 }
@@ -84,7 +78,6 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return []
   }
 }
-=======
  }))
 });
 // Mock requestAnimationFrame

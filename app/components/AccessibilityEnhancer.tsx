@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-'use client';
+'use client'
+import Navigation from './Navigation';
 
 import React, { useEffect } from 'react';
 
@@ -8,9 +8,6 @@ interface AccessibilityEnhancerProps {
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
-=======
-'use client'
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
@@ -20,7 +17,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true
 }) => {
   useEffect(() => {
-<<<<<<< HEAD
     // Only run in browser environment
     if (typeof window === 'undefined') return;
 
@@ -29,7 +25,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const mainContent = document.querySelector('main, [role="main"]');
+          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
           if (mainContent) {
             (mainContent as HTMLElement).focus();
             event.preventDefault();
@@ -41,14 +37,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [enableKeyboardNavigation]);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
   useEffect(() => {
     // Add screen reader support
     if (enableScreenReaderSupport) {
       // Add skip links
-<<<<<<< HEAD
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
@@ -94,7 +87,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Add focus management
     if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
       
       const trapFocus = (element: HTMLElement) => {
         const focusableContent = element.querySelectorAll(focusableElements);
@@ -119,7 +112,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role="dialog"]');
+      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
       modals.forEach(trapFocus);
     }
   }, [enableFocusManagement]);
@@ -128,6 +121,3 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
-=======
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

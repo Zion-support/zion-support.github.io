@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-"use client"
-import React from "react"
+&quot;use client&quot;
+import React from &quot;react&quot;
 
 const AccessibilityComponents: React.FC = () => {
   return null
@@ -9,5 +8,3 @@ const AccessibilityComponents: React.FC = () => {
 export default AccessibilityComponents
 
 export default AccessibilityComponentsPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

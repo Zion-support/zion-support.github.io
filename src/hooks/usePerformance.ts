@@ -1,4 +1,5 @@
 'use client'
+import Navigation from './Navigation'
 
 import { analytics } from '../utils/analytics'
 interface PerformanceMetrics {

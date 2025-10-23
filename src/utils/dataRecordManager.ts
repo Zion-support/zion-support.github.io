@@ -56,7 +56,7 @@ class DataRecordManager {
     try {
       localStorage.setItem(id, JSON.stringify(record))
     } catch (error) {
-      // console.warn('Failed to store data record:', error)
+      // // console.warn('Failed to store data record:', error)
     }
 
     return record
@@ -81,7 +81,7 @@ class DataRecordManager {
 
       return record
     } catch (error) {
-      // console.warn('Failed to retrieve data record:', error)
+      // // console.warn('Failed to retrieve data record:', error)
       return null
     }
   }
@@ -124,11 +124,11 @@ class DataRecordManager {
 
           records.push(record)
         } catch (parseError) {
-          // console.warn('Failed to parse data record:', parseError)
+          // // console.warn('Failed to parse data record:', parseError)
         }
       }
     } catch (error) {
-      // console.warn('Failed to query data records:', error)
+      // // console.warn('Failed to query data records:', error)
     }
 
     return records
@@ -140,7 +140,7 @@ class DataRecordManager {
       localStorage.removeItem(key)
       return true
     } catch (error) {
-      // console.warn('Failed to delete data record:', error)
+      // // console.warn('Failed to delete data record:', error)
       return false
     }
   }
@@ -200,11 +200,11 @@ class DataRecordManager {
             stats.byAge.veryOld++
           }
         } catch (parseError) {
-          // console.warn('Failed to parse data record for stats:', parseError)
+          // // console.warn('Failed to parse data record for stats:', parseError)
         }
       }
     } catch (error) {
-      // console.warn('Failed to get data record stats:', error)
+      // // console.warn('Failed to get data record stats:', error)
     }
 
     return stats
@@ -227,7 +227,7 @@ class DataRecordManager {
         cleared++
       })
     } catch (error) {
-      // console.warn('Failed to clear data records:', error)
+      // // console.warn('Failed to clear data records:', error)
     }
 
     return cleared

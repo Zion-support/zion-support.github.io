@@ -1,5 +1,6 @@
 'use client'
-<<<<<<< HEAD
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from './Navigation'
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedAccessibilityEnhancerProps {
@@ -148,10 +149,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
       // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]') as HTMLElement
+        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
           event.preventDefault()
-          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[]
+          const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[]
           const currentIndex = menuItems.indexOf(event.target as HTMLElement)
           const nextIndex = event.key === 'ArrowDown'
             ? (currentIndex + 1) % menuItems.length
@@ -207,7 +208,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
       ) as NodeListOf<HTMLElement>
 
       const firstElement = focusableElements[0]
@@ -237,7 +238,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
 
     // Apply focus trap to modals
-    const modals = document.querySelectorAll('[role="dialog"]')
+    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
     modals.forEach(modal => {
       const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use
@@ -398,9 +399,3 @@ export default AdvancedAccessibilityEnhancer
 };
 
 export default AdvancedAccessibilityEnhancerPage;
-=======
-    }
-  ]
-
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import { Phone } from 'lucide-react'
 import { Home } from 'lucide-react'
-=======
-import {Phone} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
-export default function NotFound() {constpopularPages= [
+export default function NotFound
+NotFound.displayName = "NotFound"() {constpopularPages= [
     {
       title: 'Home',
       description: 'Return to our homepage',
@@ -55,51 +51,51 @@ export default function NotFound() {constpopularPages= [
     },
   ]
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <div className="max-w-2xl w-full text-center">
+    <div className=&quot;min-h-screen bg-gray-50 flex items-center justify-center px-4&quot;></div>
+      <div className=&quot;max-w-2xl w-full text-center&quot;></div>
         {/* Error Code */}
-        <div className="mb-8">
-          <h1 className="text-9xl font-bold text-white/20 mb-4">
+        <div className=&quot;mb-8&quot;></div>
+          <h1 className=&quot;text-9xl font-bold text-white/20 mb-4&quot;>
             404
           </h1>
-          <div className="text-6xl mb-4">🔍</div>
+          <div className=&quot;text-6xl mb-4&quot;>🔍</div>
         </div>
         {/* Error Message */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className=&quot;mb-12&quot;></div>
+          <h2 className=&quot;text-3xl font-bold text-gray-900 mb-4&quot;>
             Page Not Found
           </h2>
-          <p className="text-lg text-gray-600">
-            The page you're looking for doesn't exist or has been moved.
-            Don't worry, let's get you back on track!
+          <p className=&quot;text-lg text-gray-600&quot;>
+            The page you&apos;re looking for doesn&apos;t exist or has been moved.
+            Don&apos;t worry, let's get you back on track!
         </p></di>{/* PopularPages */}
-      <divclassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3gap-4mb-8">{popularPages.map((pageindex) => (
+      <divclassName=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3gap-4mb-8&quot;>{popularPages.map((pageindex) => (
          <akey={index}
               href={page.href}
-              className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
+              className=&quot;block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left&quot;
             >
-              <div className="text-3xl mb-3">{page.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <div className=&quot;text-3xl mb-3&quot;>{page.icon}</div>
+              <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>
                 {page.title}
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className=&quot;text-gray-600 text-sm&quot;>
                 {page.description}
               </p>
             </a>
           ))}
         </div>
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+        <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+          <a href=&quot;/&quot;
+            className=&quot;inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300&quot;
           >
-            <Home className="w-4 h-4 mr-2" />
+            <Home className=&quot;w-4 h-4 mr-2&quot; />
             Go Home
           </a>
-          <a href="/contact"
-            className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300"
+          <a href=&quot;/contact&quot;
+            className=&quot;inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300&quot;
           >
-            <Phone className="w-4 h-4 mr-2" />
+            <Phone className=&quot;w-4 h-4 mr-2&quot; />
             Contact Support
           </a>
         </div>

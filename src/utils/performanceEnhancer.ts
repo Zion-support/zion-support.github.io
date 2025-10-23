@@ -1,4 +1,5 @@
 'use client'
+import Navigation from './Navigation'
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
@@ -45,7 +46,7 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime)
     if (process.env['NODE_ENV'] === 'development') {
-      // // console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`)
+      // // // console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`)
     }
   }
   // Track memory usage
@@ -73,7 +74,7 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-          // // console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`)
+          // // // console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`)
         }
       })
     })
@@ -159,11 +160,8 @@ export const optimizeScrollPerformance = () => {
   }
   // Track Core Web Vitals
   const trackCLS = () => {
-<<<<<<< HEAD
     let clsValue = 0
-    let clsEntries: PerformanceEntry[] = []
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
+    const clsEntries: PerformanceEntry[] = []
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean
       value: number
@@ -187,7 +185,7 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-          // // console.log('[Web Vitals] LCP:', entry.startTime)
+          // // // console.log('[Web Vitals] LCP:', entry.startTime)
         }
       }
     })
@@ -203,7 +201,7 @@ export const optimizeScrollPerformance = () => {
         const fidEntry = entry as FirstInputEntry
         const fid = fidEntry.processingStart - entry.startTime
         if (process.env['NODE_ENV'] === 'development') {
-          // // console.log('[Web Vitals] FID:', fid)
+          // // // console.log('[Web Vitals] FID:', fid)
         }
       }
     })
@@ -264,6 +262,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics()
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-    // // console.log('Performance metrics:', metrics)
+    // // // console.log('Performance metrics:', metrics)
   }
 }
