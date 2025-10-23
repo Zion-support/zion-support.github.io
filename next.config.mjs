@@ -96,7 +96,6 @@ const nextConfig = {
   },
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  generateStaticParams: false,
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "production"
