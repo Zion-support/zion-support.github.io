@@ -54,105 +54,99 @@ const AboutPage: React.FC = () => {
         />
         <meta
           name="keywords"
-          content="about us, AI company, IT solutions, technology team, company values, mission statement"
+          content="about us, AI company, IT solutions, technology team, company mission, Zion Tech Group"
         />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                About{" "}
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Zion Tech
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We're a team of passionate technologists dedicated to
-                transforming businesses through innovative AI and IT solutions.
-              </p>
-            </div>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              About{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Zion Tech Group
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              We are a leading technology company specializing in AI and IT solutions, 
+              dedicated to transforming businesses through innovative technology.
+            </p>
           </div>
         </section>
 
         {/* Mission Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Our Mission
-                </h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  To democratize access to cutting-edge AI and IT solutions,
-                  empowering businesses of all sizes to thrive in the digital
-                  age.
-                </p>
-                <p className="text-lg text-gray-300 mb-8">
-                  We believe technology should be accessible, understandable,
-                  and transformative. Our team works tirelessly to create
-                  solutions that not only meet today's needs but anticipate
-                  tomorrow's challenges.
-                </p>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center">
-                  Learn More
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">
-                  Our Impact
-                </h3>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">
-                      500+
-                    </div>
-                    <div className="text-gray-300">Projects Completed</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">
-                      50+
-                    </div>
-                    <div className="text-gray-300">Team Members</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">
-                      99%
-                    </div>
-                    <div className="text-gray-300">Client Satisfaction</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">
-                      24/7
-                    </div>
-                    <div className="text-gray-300">Support Available</div>
-                  </div>
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our Mission
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                To empower businesses with cutting-edge AI and IT solutions that drive growth, 
+                efficiency, and innovation. We believe technology should be accessible, 
+                powerful, and transformative.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <div className="bg-blue-600/20 p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Target className="w-8 h-8 text-blue-400" />
                 </div>
+                <h3 className="text-xl font-bold text-white mb-4">Innovation First</h3>
+                <p className="text-gray-300">
+                  We constantly explore new technologies and methodologies to deliver 
+                  the most advanced solutions to our clients.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <div className="bg-green-600/20 p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Quality Assurance</h3>
+                <p className="text-gray-300">
+                  Every solution we deliver undergoes rigorous testing and quality 
+                  assurance to ensure reliability and performance.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <div className="bg-purple-600/20 p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Users className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Client-Centric</h3>
+                <p className="text-gray-300">
+                  Our clients' success is our success. We build lasting relationships 
+                  and provide ongoing support for all our solutions.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Values Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Core Values
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our Values
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These principles guide everything we do and shape how we work
-                with our clients and each other.
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                These core values guide everything we do and shape our company culture.
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <value.icon className="w-8 h-8 text-white" />
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                  <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-4 rounded-full w-16 h-16 mb-6 flex items-center justify-center">
+                    <value.icon className="w-8 h-8 text-blue-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">
                     {value.title}
@@ -165,35 +159,27 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Meet Our Team
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The talented individuals behind our innovative solutions and
-                exceptional client experiences.
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                The talented individuals behind our innovative solutions.
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">
-                      {member.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </span>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+                  <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                    <Users className="w-10 h-10 text-blue-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-cyan-400 mb-4">{member.role}</p>
+                  <p className="text-blue-400 mb-4">{member.role}</p>
                   <p className="text-gray-300">{member.description}</p>
                 </div>
               ))}
@@ -202,17 +188,16 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can help transform your business with our AI
-              and IT solutions.
+              Let's discuss how we can help transform your business with our AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
