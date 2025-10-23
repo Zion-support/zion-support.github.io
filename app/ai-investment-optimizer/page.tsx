@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async';
 import {
   TrendingUp,
@@ -701,7 +693,6 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizationResults, setOptimizationResults] = useState<any>(null);</a>
   const totalValue = portfolio.reduce((sum, stock) => sum + stock.value, 0);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
 
 const PagePage: React.FC = () => {
   const features = [
@@ -746,24 +737,6 @@ const PagePage: React.FC = () => {
         <meta name="description" content="AI-powered investment portfolio optimization with advanced analytics, risk assessment, and auto-rebalancing. Maximize returns and minimize risk with our intelligent investment platform." />
         <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
       </Helmet>
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              AI-powered investment portfolio optimization with advanced analytics, risk assessment, and auto-rebalancing. Maximize returns and minimize risk with our intelligent investment platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-=======
 
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
@@ -789,14 +762,11 @@ const PagePage: React.FC = () => {
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
             </div>
-<<<<<<< HEAD
-=======
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -827,37 +797,12 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Portfolio Dashboard</h2>h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Monitor and optimize your investment portfolio with real-time analytics</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-=======
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">{/* Portfolio Overview */}</div>
               <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <div className="flex items-center justify-between mb-6">
@@ -993,29 +938,10 @@ const PagePage: React.FC = () => {
                   )}
                 </button>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-=======
       {/* Features Section */}
       <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -1138,7 +1064,6 @@ const PagePage: React.FC = () => {
                 </div>
                 <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">Start Free Analysis</button>button>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
@@ -1164,10 +1089,5 @@ const PagePage: React.FC = () => {
       <Footer />
     </>
   );
-<<<<<<< HEAD
-};
-
 export default PagePage;
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

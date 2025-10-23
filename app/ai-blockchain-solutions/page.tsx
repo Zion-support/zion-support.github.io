@@ -49,28 +49,7 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced Page solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
             </div>
-=======
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -99,11 +78,9 @@ const PagePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced solutions designed for modern business needs</p>p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">Start Your Free Trial</button>button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -130,7 +107,6 @@ const PagePage: React.FC = () => {
                 </div>
               ))}
             </div>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 group hover:bg-white/10 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -148,12 +124,9 @@ const PagePage: React.FC = () => {
                 </ul>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -191,7 +164,6 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -224,7 +196,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
       <Footer />
     </>
   );

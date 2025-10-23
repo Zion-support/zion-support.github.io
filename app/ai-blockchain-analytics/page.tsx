@@ -49,8 +49,6 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
@@ -70,7 +68,6 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -99,13 +96,9 @@ const PagePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced solutions designed for modern business needs</p>p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">Start Your Free Trial</button>button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
@@ -130,7 +123,6 @@ const PagePage: React.FC = () => {
                 </div>
               ))}
             </div>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 group hover:bg-white/10 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -148,22 +140,9 @@ const PagePage: React.FC = () => {
                 </ul>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
@@ -191,7 +170,6 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -224,7 +202,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
       <Footer />
     </>
   );

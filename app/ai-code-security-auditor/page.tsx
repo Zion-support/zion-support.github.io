@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async';
 import {
   Shield,
@@ -757,7 +749,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       status: 'Open'
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
 
 const PagePage: React.FC = () => {
   const features = [
@@ -802,24 +793,6 @@ const PagePage: React.FC = () => {
         <meta name="description" content="Automated code security analysis with AI Code Security Auditor Pro. Detect vulnerabilities, ensure compliance, and get auto-fix suggestions for your codebase." />
         <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
       </Helmet>
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Automated code security analysis with AI Code Security Auditor Pro. Detect vulnerabilities, ensure compliance, and get auto-fix suggestions for your codebase.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-=======
 
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
@@ -845,7 +818,6 @@ const PagePage: React.FC = () => {
                 <span className="relative z-10">Start Free Scan</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
@@ -883,8 +855,6 @@ const PagePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -900,7 +870,6 @@ const PagePage: React.FC = () => {
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
-=======
       {/* Security Scanner Interface */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -991,15 +960,10 @@ const PagePage: React.FC = () => {
                   )}
                 </div>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
@@ -1011,7 +975,6 @@ const PagePage: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
-=======
       {/* Security Issues Dashboard */}
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -1061,19 +1024,16 @@ const PagePage: React.FC = () => {
                   </div>
                 ))}
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       <Footer />
     </>
   );
 };
 
 export default PagePage;
-=======
 
       {/* Features Section */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
@@ -1204,4 +1164,3 @@ export default PagePage;
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

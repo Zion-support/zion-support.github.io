@@ -1,18 +1,4 @@
 'use client'
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
-const ContentStatisticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
       icon: BarChart,
@@ -146,7 +132,6 @@ const ContentStatisticsPage: React.FC = () => {
 };
 
 export default ContentStatisticsPage;
-=======
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react'
 import { Zap } from 'lucide-react'
@@ -426,4 +411,3 @@ View Case Studies
 )
 }
 export default ContentStatistics
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

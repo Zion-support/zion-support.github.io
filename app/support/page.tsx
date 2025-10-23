@@ -57,11 +57,6 @@ const PagePage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Page
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get help and support for Zion Tech Group solutions. Find answers, contact support, and access our knowledge base.
-            </p>
-=======
             <p className="text-xl md:text-2xl mb-8 text-blue-100">Find answers, get support, and access resources to make the most of our solutions</p>p>
             
             {/* Search Bar */}
@@ -166,19 +161,12 @@ const PagePage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Still Need Help?</h2>
             <p className="text-xl mb-8 text-blue-100">Can't find what you're looking for? Our support team is here to help.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-<<<<<<< HEAD
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-=======
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Schedule a Call</button>button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
@@ -255,8 +243,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default SupportPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

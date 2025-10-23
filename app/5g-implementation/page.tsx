@@ -16,7 +16,7 @@ const PagePage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      description: 'Comprehensive analytics dashboard with real-time network performance monitoring.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
@@ -47,37 +47,13 @@ const PagePage: React.FC = () => {
         <title>
           5G Network Implementation - Zion Tech Group | AI & IT Solutions
         </title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced Page solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-=======
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced Page solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-=======
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">5G Network{" "}</h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Implementation</span>span>
             </h1>
@@ -88,7 +64,6 @@ const PagePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Get Started</button>button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Schedule Demo</button>button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
@@ -97,11 +72,6 @@ const PagePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -137,7 +107,6 @@ const PagePage: React.FC = () => {
                 <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Advanced 5G Features</h2>h2>
               <p className="text-xl text-gray-300">Cutting-edge 5G technology for the next generation of</p>
                 connectivity
@@ -166,7 +135,6 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
                 </div>
               ))}
             </div>
@@ -176,19 +144,6 @@ const PagePage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Implement 5G?</h2>h2>
             <p className="text-xl text-gray-300 mb-8">Contact our experts to discuss your 5G implementation needs and</p>
               get started today.
@@ -198,7 +153,6 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Learn More</button>button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>

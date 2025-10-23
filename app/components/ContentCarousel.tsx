@@ -1,14 +1,7 @@
 'use client'
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 const ContentCarouselPage: React.FC = () => {
   const features = [
-=======
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 import { CheckCircle, Star, Zap, TrendingUp, Users, ArrowRight } from 'lucide-react'
@@ -25,7 +18,6 @@ interface Slide {
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides: Slide[] = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -61,36 +53,6 @@ const ContentCarousel: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>ContentCarousel</title>
-        <meta name="description" content="Advanced ContentCarousel solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ContentCarousel
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced ContentCarousel solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -129,7 +91,6 @@ const ContentCarousel: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
-=======
     <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -304,7 +265,6 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-2xl font-bold">4.9/5</div>
                 <div className="text-gray-400 text-sm">Customer Rating</div>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -315,25 +275,6 @@ const ContentCarousel: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </div>
         </section>
       </div>
       <Footer />
@@ -342,7 +283,6 @@ const ContentCarousel: React.FC = () => {
 };
 
 export default ContentCarouselPage;
-=======
         <div className="text-center mt-12">
 <<<<<<< HEAD
           <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto"></button>
@@ -358,4 +298,3 @@ export default ContentCarouselPage;
   )
 }
 export default ContentCarousel
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

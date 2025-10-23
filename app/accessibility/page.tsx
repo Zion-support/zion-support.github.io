@@ -46,37 +46,19 @@ const PagePage: React.FC = () => {
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Comprehensive accessibility solutions for inclusive digital experiences. WCAG 2.1 AA compliant designs." />
-<<<<<<< HEAD
-        <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-=======
         <meta property="og:type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive accessibility solutions for inclusive digital experiences. WCAG 2.1 AA compliant designs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
+                Learn More
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Contact Support
               </button>
-=======
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Accessibility{" "}</h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>span>
             </h1>
@@ -86,7 +68,6 @@ const PagePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Get Accessibility Audit</button>button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Learn More</button>button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
@@ -95,27 +76,10 @@ const PagePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Comprehensive Accessibility Features</h2>h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our accessibility solutions cover all aspects of digital</p>
                 inclusion, ensuring your applications work seamlessly for users
@@ -145,7 +109,6 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
                 </div>
               ))}
             </div>
@@ -156,18 +119,6 @@ const PagePage: React.FC = () => {
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Compliance Standards</h2>h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">We ensure your applications meet international accessibility</p>
                 standards and guidelines.
@@ -179,7 +130,6 @@ const PagePage: React.FC = () => {
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2">{standard}</h3>h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
                 </div>
               ))}
             </div>
@@ -189,19 +139,10 @@ const PagePage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Make Your App Accessible?</h2>h2>
             <p className="text-xl text-gray-300 mb-8">Let's work together to create inclusive digital experiences that</p>
               work for everyone.
@@ -211,7 +152,6 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">Contact Us</button>button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
@@ -221,8 +161,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default AccessibilityPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

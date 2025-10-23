@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-<<<<<<< HEAD
 
 const PagePage: React.FC = () => {
   const features = [
@@ -146,7 +145,6 @@ const PagePage: React.FC = () => {
 };
 
 export default PagePage;
-=======
 const AiComputerVisionPage: React.FC = () => {
 const features = [
 {
@@ -284,4 +282,3 @@ return (
 )
 }
 export default AiComputerVisionPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

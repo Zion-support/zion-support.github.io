@@ -1,13 +1,4 @@
 'use client'
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
-const DynamicContentShowcasePage: React.FC = () => {
-=======
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Star, Zap, ArrowRight } from 'lucide-react'
@@ -43,7 +34,6 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'AI-Powered Solutions',
       description: 'Advanced artificial intelligence to automate and optimize your business processes',
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
   const features = [
     {
       icon: Brain,
@@ -80,26 +70,6 @@ const DynamicContentShowcase: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>DynamicContentShowcase</title>
-        <meta name="description" content="Advanced DynamicContentShowcase solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, DynamicContentShowcase, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              DynamicContentShowcase
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced DynamicContentShowcase solution for modern businesses.
-            </p>
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -293,7 +263,6 @@ const DynamicContentShowcase: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>h2>
             <p className="text-xl text-gray-300 mb-8">Join thousands of satisfied customers and start your transformation journey today.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
@@ -302,7 +271,6 @@ const DynamicContentShowcase: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -388,7 +356,6 @@ const DynamicContentShowcase: React.FC = () => {
 };
 
 export default DynamicContentShowcasePage;
-=======
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">Schedule Demo</button>
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             </div>
@@ -399,4 +366,3 @@ export default DynamicContentShowcasePage;
   )
 }
 export default DynamicContentShowcase
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
