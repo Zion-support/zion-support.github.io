@@ -10,11 +10,40 @@ export default async function handler(req, res) {
     return;
   }
 
+<<<<<<< HEAD
   const { email } = req.body;
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
+=======
+    if (!email) {
+      res.statusCode = 400;
+      res.json({ error: 'Email is required' });
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      res.statusCode = 400;
+      res.json({ error: 'Invalid email format' });
+      return;
+    }
+    // Save subscription logic here
+    const subscription = {
+      email,
+      subscribedAt: new Date().toISOString(),
+      status: 'active',
+    };
+
+    res.statusCode = 200;
+    res.json({
+      message: 'Successfully subscribed to newsletter',
+      subscription,
+    });
+  } catch {
+    //     res.statusCode = 500;
+    res.json({ error: 'Failed to subscribe to newsletter' });
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51
   }
 
   if (!isValidEmail(email)) {

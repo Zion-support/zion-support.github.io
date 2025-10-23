@@ -31,10 +31,17 @@ export default withErrorLogging(async (req, res) => {
     };
 
     res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
     res.end(JSON.stringify(session));
   } catch (error) {
     console.error('Checkout session creation error:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
+=======
+    res.end(JSON.stringify({ success: true, session: sessionData }));
+  } catch {
+    //     res.statusCode = 500;
+    res.end('Internal Server Error');
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51
   }
 });
