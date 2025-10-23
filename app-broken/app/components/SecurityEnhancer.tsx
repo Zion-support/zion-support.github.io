@@ -19,7 +19,7 @@ const securityHeaders = {
 // Add CSP meta tag
 const cspMeta = document.createElement('meta')
 cspMeta.httpEquiv = 'Content-Security-Policy'
-cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+cspMeta.content = &quot;default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';&quot;
 document.head.appendChild(cspMeta)
 // Disable right-click context menu
 document.addEventListener('contextmenu', (e) => {

@@ -3,10 +3,8 @@ import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
 import { Mail } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+interface AdvancedErrorBoundaryProps {
+  className?: string;
 }
 
 interface State {

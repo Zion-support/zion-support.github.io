@@ -44,6 +44,7 @@ const ApiDocsPage: React.FC = () => {
     }
   ]
 
+const Page = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
@@ -127,4 +128,4 @@ const ApiDocsPage: React.FC = () => {
   )
 }
 
-export default ApiDocsPage
+export default Page;

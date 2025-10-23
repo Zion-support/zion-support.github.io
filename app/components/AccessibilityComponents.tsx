@@ -1,8 +1,8 @@
 "use client"
 import React from "react"
 
-const AccessibilityComponents: React.FC = () => {
-  return null
+interface AccessibilityComponentsProps {
+  className?: string;
 }
 
 export default AccessibilityComponents

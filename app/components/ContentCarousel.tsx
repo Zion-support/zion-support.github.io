@@ -48,6 +48,7 @@ const ContentCarousel: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => {
   return (
     <>
       <Helmet>

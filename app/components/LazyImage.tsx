@@ -15,6 +15,7 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
     'Gain competitive advantage with advanced technology'
   ]
 
+const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
   return (
     <>
       <Helmet>

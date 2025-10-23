@@ -66,6 +66,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="Request a Demo - ZionTechGroup"
         description="Schedule a personalized demo of our AI and IT services. See how we can transform your business withcutting-edgetechnology."
@@ -251,4 +252,4 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
   )
 }
 
-export default DemoPage
+export default Page;

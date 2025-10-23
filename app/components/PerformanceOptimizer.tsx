@@ -6,10 +6,7 @@ import { CheckCircle } from 'lucide-react'
 import { AlertTriangle } from 'lucide-react'
 
 interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean
-  enableLazyLoading?: boolean
-  enablePreloading?: boolean
-  enableCodeSplitting?: boolean
+  className?: string;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({

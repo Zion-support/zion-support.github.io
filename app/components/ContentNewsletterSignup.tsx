@@ -54,6 +54,7 @@ interface ContentNewsletterSignupProps {
     'Gain competitive advantage with advanced technology'
   ]
 
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
   return (
     <>
       <Helmet>
@@ -184,19 +185,3 @@ interface ContentNewsletterSignupProps {
 };
 
 export default ContentNewsletterSignupPage;
-=======
-            </di><
-               type="submit"
-                disabled={isLoading ||!email}
-               className="w-full bg-white text-purple-600font-bold py-3 px-6 rounded-lghover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300flexitems-centerjustify-center"></
-               type="submit"
-                disabled={isLoading ||!email}
-               className="w-full bg-white text-purple-600font-bold py-3 px-6 rounded-lghover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300flexitems-centerjustify-center">{isLoading ? (
-                <><divclassName="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600mr-2"></di>Subscribing...
-                </>)  : (
-                <>{buttonText}
-                  <ArrowRightclassName="w-5h-5ml-2" /></>)}
-            </butto><spanclassName="text-sm text-blue-200text-center"></spa></className="text-sm text-blue-200text-center">We respect your privacy. Unsubscribe at any time.
-            </p></for></di></di></di></di>)
-}
-export defaultContentNewsletterSignup</labe></butto></ContentNewsletterSignupProp>

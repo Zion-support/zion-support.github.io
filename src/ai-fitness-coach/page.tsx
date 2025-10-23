@@ -49,6 +49,7 @@ constAIFitnessCoachPage: React.FC= () =>{constfeatures= [
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="AI Fitness Coach - Personalized Fitness & Nutrition Plans | ZionTechGroup"
         description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get24/7 guidance, and achieve your health goals starting at$99/month."
@@ -197,4 +198,4 @@ constAIFitnessCoachPage: React.FC= () =>{constfeatures= [
   )
 }
 
-export default AIFitnessCoachPage
+export default Page;

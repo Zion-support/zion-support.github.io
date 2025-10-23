@@ -49,6 +49,7 @@ constAIMusicCompositionPage: React.FC= () =>{constfeatures= [
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="AI Music Composer - Generate Royalty-Free Music with AI | ZionTechGroup"
         description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at$99/month."
@@ -197,4 +198,4 @@ constAIMusicCompositionPage: React.FC= () =>{constfeatures= [
   )
 }
 
-export default AIMusicCompositionPage
+export default Page;

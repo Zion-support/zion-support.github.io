@@ -90,107 +90,107 @@ const ContactForm: React.FC = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-white font-medium mb-2">
+        <div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20&quot;></div>
+          <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;></div>
+              <div></div>
+                <label htmlFor=&quot;name&quot; className=&quot;block text-white font-medium mb-2&quot;>
                   Full Name *
                 </label>
                 <input
-                  type="text"
-                  id="name"
-                  name="name"
+                  type=&quot;text&quot;
+                  id=&quot;name&quot;
+                  name=&quot;name&quot;
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
-                  placeholder="John Doe"
+                  className=&quot;w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors&quot;
+                  placeholder=&quot;John Doe&quot;
                 />
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-white font-medium mb-2">
+              <div></div>
+                <label htmlFor=&quot;email&quot; className=&quot;block text-white font-medium mb-2&quot;>
                   Email Address *
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
+                  type=&quot;email&quot;
+                  id=&quot;email&quot;
+                  name=&quot;email&quot;
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
-                  placeholder="john@company.com"
+                  className=&quot;w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors&quot;
+                  placeholder=&quot;john@company.com&quot;
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="company" className="block text-white font-medium mb-2">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;></div>
+              <div></div>
+                <label htmlFor=&quot;company&quot; className=&quot;block text-white font-medium mb-2&quot;>
                   Company
                 </label>
                 <input
-                  type="text"
-                  id="company"
-                  name="company"
+                  type=&quot;text&quot;
+                  id=&quot;company&quot;
+                  name=&quot;company&quot;
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
-                  placeholder="Your Company"
+                  className=&quot;w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors&quot;
+                  placeholder=&quot;Your Company&quot;
                 />
               </div>
 
-              <div>
-                <label htmlFor="phone" className="block text-white font-medium mb-2">
+              <div></div>
+                <label htmlFor=&quot;phone&quot; className=&quot;block text-white font-medium mb-2&quot;>
                   Phone Number
                 </label>
                 <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
+                  type=&quot;tel&quot;
+                  id=&quot;phone&quot;
+                  name=&quot;phone&quot;
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
-                  placeholder="+1 (555) 123-4567"
+                  className=&quot;w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors&quot;
+                  placeholder=&quot;+1 (555) 123-4567&quot;
                 />
               </div>
             </div>
 
-            <div>
-              <label htmlFor="service" className="block text-white font-medium mb-2">
+            <div></div>
+              <label htmlFor=&quot;service&quot; className=&quot;block text-white font-medium mb-2&quot;>
                 Service Interest
               </label>
               <select
-                id="service"
-                name="service"
+                id=&quot;service&quot;
+                name=&quot;service&quot;
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
+                className=&quot;w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors&quot;
               >
-                <option value="">Select a service</option>
+                <option value=&quot;">Select a service</option>
                 {services.map((service) => (
-                  <option key={service} value={service} className="bg-gray-800">
+                  <option key={service} value={service} className=&quot;bg-gray-800&quot;>
                     {service}
                   </option>
                 ))}
               </select>
             </div>
 
-            <div>
-              <label htmlFor="message" className="block text-white font-medium mb-2">
+            <div></div>
+              <label htmlFor=&quot;message&quot; className=&quot;block text-white font-medium mb-2&quot;>
                 Message *
               </label>
               <textarea
-                id="message"
-                name="message"
+                id=&quot;message&quot;
+                name=&quot;message&quot;
                 value={formData.message}
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors resize-none"
-                placeholder="Tell us about your project and how we can help..."
+                className=&quot;w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors resize-none&quot;
+                placeholder=&quot;Tell us about your project and how we can help...&quot;
               />
             </div>
 
@@ -199,30 +199,30 @@ const ContactForm: React.FC = () => {
                 status.type === 'success' ? 'bg-green-500/20 text-green-300' :
                 status.type === 'error' ? 'bg-red-500/20 text-red-300' :
                 'bg-blue-500/20 text-blue-300'
-              }`}>
+              }`}></div>
                 {status.type === 'success' ? (
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className=&quot;w-5 h-5 flex-shrink-0&quot; />
                 ) : status.type === 'error' ? (
-                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <AlertCircle className=&quot;w-5 h-5 flex-shrink-0&quot; />
                 ) : null}
                 <span>{status.message}</span>
               </div>
             )}
 
             <button
-              type="submit"
+              type=&quot;submit&quot;
               disabled={status.type === 'loading'}
-              className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+              className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center&quot;
             >
               {status.type === 'loading' ? (
                 <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                  <div className=&quot;animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2&quot;></div>
                   Sending...
                 </>
               ) : (
                 <>
                   Send Message
-                  <Send className="w-5 h-5 ml-2" />
+                  <Send className=&quot;w-5 h-5 ml-2&quot; />
                 </>
               )}
             </button>

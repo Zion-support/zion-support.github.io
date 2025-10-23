@@ -38,6 +38,7 @@ const ServiceWorkerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {
   return (
     <>
       <Helmet>

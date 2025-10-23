@@ -50,6 +50,7 @@ constAIFashionDesignPage: React.FC= () =>{constfeatures= [
     }
   ]
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | ZionTechGroup"
         description="Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at$249/month."
@@ -198,4 +199,4 @@ constAIFashionDesignPage: React.FC= () =>{constfeatures= [
   )
 }
 
-export default AIFashionDesignPage
+export default Page;

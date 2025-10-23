@@ -68,6 +68,7 @@ const DynamicContentShowcase: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ className = '' }) => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">

@@ -1,65 +1,7 @@
 "use client";
-import React from "react";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
-import Link from "next/link";
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import React from 'react';
 
-const HomePage = () => {
-  const features = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      stats: "40% efficiency boost",
-      link: "/ai-services"
-    },
-    {
-      title: "IT Services",
-      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      stats: "99.9% uptime SLA",
-      link: "/it-services"
-    },
-    {
-      title: "Micro SaaS",
-      description: "Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      stats: "50% faster deployment",
-      link: "/micro-saas"
-    }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "99.9%", label: "Client Satisfaction" },
-    { number: "24/7", label: "Support Available" },
-    { number: "5+", label: "Years Experience" }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CEO, TechCorp",
-      content: "Zion Tech Group transformed our business with their AI solutions. We have seen a 40% increase in efficiency.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO, InnovateLabs",
-      content: "Their IT services are exceptional. The team is professional, knowledgeable, and always available when we need them.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Founder, StartupXYZ",
-      content: "The micro SaaS solutions they provided helped us scale faster than we ever imagined possible.",
-      rating: 5
-    }
-  ];
-
+const Page = () => {
   return (
     <>
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -82,20 +24,6 @@ const HomePage = () => {
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.</p>
             Transform your business with our cutting-edge technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              href="/services" 
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-            >
-              Explore Services
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -184,4 +112,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Page;

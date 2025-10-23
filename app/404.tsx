@@ -1,15 +1,7 @@
 "use client";
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import {
-  Home,
-  ArrowLeft,
-  Search,
-  AlertTriangle,
-  RefreshCw,
-} from "lucide-react";
-const NotFoundPage: React.FC = () => {
+import React from 'react';
+
+const NotFound = () => {
   return (
     <>
       <Head>
@@ -109,8 +101,8 @@ const NotFoundPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default NotFoundPage;
+export default NotFound;

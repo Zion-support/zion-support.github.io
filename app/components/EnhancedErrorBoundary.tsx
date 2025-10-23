@@ -41,6 +41,7 @@ const EnhancedErrorBoundaryPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {
   return (
     <>
       <Helmet>

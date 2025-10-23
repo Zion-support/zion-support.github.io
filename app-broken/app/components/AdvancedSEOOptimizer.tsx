@@ -67,7 +67,7 @@ score += 10
 newRecommendations.push('Add alt text to all images')
 }
 // Check for internal links
-const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]')
+const internalLinks = document.querySelectorAll('a[href^=&quot;/&quot;], a[href^=&quot;./&quot;]')
 if (internalLinks.length > 0) {
 score += 10
 } else {
@@ -81,15 +81,15 @@ analyzeSEO()
 }, [analyzeSEO])
 const generateStructuredData = () => {
 const defaultStructuredData = {
-"@context": "https://schema.org",
-"@type": "Organization",
-"name": "Zion Tech Group",
-"description": description,
-"url": canonicalUrl || window.location.origin,
-"logo": ogImage,
-"sameAs": [
-"https://twitter.com/ziontechgroup",
-"https://linkedin.com/company/ziontechgroup"
+&quot;@context&quot;: &quot;https://schema.org&quot;,
+&quot;@type&quot;: &quot;Organization&quot;,
+&quot;name&quot;: &quot;Zion Tech Group&quot;,
+&quot;description&quot;: description,
+&quot;url&quot;: canonicalUrl || window.location.origin,
+&quot;logo&quot;: ogImage,
+&quot;sameAs&quot;: [
+&quot;https://twitter.com/ziontechgroup&quot;,
+&quot;https://linkedin.com/company/ziontechgroup&quot;
 ]
 }
 return structuredData || defaultStructuredData
@@ -98,28 +98,28 @@ return (
 <>
 <Helmet>
 <title>{title}</title>
-<meta name="description" content={description} />
-<meta name="keywords" content={keywords} />
-{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+<meta name=&quot;description&quot; content={description} />
+<meta name=&quot;keywords&quot; content={keywords} />
+{canonicalUrl && <link rel=&quot;canonical&quot; href={canonicalUrl} />}
 {/* Open Graph */}
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
-<meta property="og:type" content="website" />
-{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+<meta property=&quot;og:title&quot; content={title} />
+<meta property=&quot;og:description&quot; content={description} />
+<meta property=&quot;og:image&quot; content={ogImage} />
+<meta property=&quot;og:type&quot; content=&quot;website&quot; />
+{canonicalUrl && <meta property=&quot;og:url&quot; content={canonicalUrl} />}
 {/* Twitter Card */}
-<meta name="twitter:card" content={twitterCard} />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={ogImage} />
+<meta name=&quot;twitter:card&quot; content={twitterCard} />
+<meta name=&quot;twitter:title&quot; content={title} />
+<meta name=&quot;twitter:description&quot; content={description} />
+<meta name=&quot;twitter:image&quot; content={ogImage} />
 {/* Structured Data */}
-<script type="application/ld+json">
+<script type=&quot;application/ld+json&quot;>
 {JSON.stringify(generateStructuredData())}
 </script>
 </Helmet>
 {children}
 {process.env.NODE_ENV === 'development' && (
-<div className="seo-debug" style={{
+<div className=&quot;seo-debug&quot; style={{
 position: 'fixed',
 top: '10px',
 left: '10px',
@@ -130,10 +130,10 @@ borderRadius: '5px',
 fontSize: '12px',
 zIndex: 1000,
 maxWidth: '300px'
-}}>
+}}></div>
 <div>SEO Score: {seoScore}/100</div>
 {recommendations.length > 0 && (
-<div>
+<div></div>
 <div>Recommendations:</div>
 <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
 {recommendations.map((rec, index) => (

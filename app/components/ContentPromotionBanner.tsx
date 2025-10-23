@@ -39,6 +39,7 @@ const ContentPromotionBanner: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({ className = '' }) => {
   return (
     <>
       <Helmet>

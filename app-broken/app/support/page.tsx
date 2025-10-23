@@ -50,28 +50,28 @@ const SupportPage: React.FC = () => {
 
   const supportChannels = [
     {
-      icon: <Phone className="w-6 h-6" />,
+      icon: <Phone className=&quot;w-6 h-6&quot; />,
       title: 'Phone Support',
       description: 'Call us for immediate assistance',
       contact: '+1 (555) 123-4567',
       hours: 'Mon-Fri 9AM-6PM EST'
     },
     {
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Mail className=&quot;w-6 h-6&quot; />,
       title: 'Email Support',
       description: 'Send us a detailed message',
       contact: 'support@ziontech.com',
       hours: '24/7 response within 24 hours'
     },
     {
-      icon: <MessageCircle className="w-6 h-6" />,
+      icon: <MessageCircle className=&quot;w-6 h-6&quot; />,
       title: 'Live Chat',
       description: 'Chat with our support team',
       contact: 'Available on website',
       hours: 'Mon-Fri 9AM-6PM EST'
     },
     {
-      icon: <BookOpen className="w-6 h-6" />,
+      icon: <BookOpen className=&quot;w-6 h-6&quot; />,
       title: 'Knowledge Base',
       description: 'Self-service documentation',
       contact: 'Browse articles',
@@ -89,34 +89,34 @@ const SupportPage: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=&quot;min-h-screen bg-gray-50&quot;></div>
       <Helmet>
         <title>Support - Zion Tech Group | Help & Support Center</title>
-        <meta name="description" content="Get help and support for Zion Tech Group solutions. Find answers, contact support, and access our knowledge base." />
-        <meta name="keywords" content="support, help, FAQ, contact support, technical support, customer service" />
+        <meta name=&quot;description&quot; content=&quot;Get help and support for Zion Tech Group solutions. Find answers, contact support, and access our knowledge base.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;support, help, FAQ, contact support, technical support, customer service&quot; />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              How Can We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Help?</span>
+      <section className=&quot;bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h1 className=&quot;text-4xl md:text-6xl font-bold mb-6&quot;>
+              How Can We <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Help?</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className=&quot;text-xl md:text-2xl mb-8 text-blue-100&quot;>
               Find answers, get support, and access resources to make the most of our solutions
             </p>
             
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className=&quot;max-w-2xl mx-auto&quot;></div>
+              <div className=&quot;relative&quot;></div>
+                <Search className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
                 <input
-                  type="text"
-                  placeholder="Search for help..."
+                  type=&quot;text&quot;
+                  placeholder=&quot;Search for help...&quot;
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className=&quot;w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
                 />
               </div>
             </div>
@@ -125,20 +125,20 @@ const SupportPage: React.FC = () => {
       </section>
 
       {/* Support Channels */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Get Support</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className=&quot;py-16 bg-white&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-6xl mx-auto&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-center text-gray-900 mb-12&quot;>Get Support</h2>
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-6&quot;></div>
               {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4 text-blue-600">
+                <div key={index} className=&quot;bg-white border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition-shadow&quot;></div>
+                  <div className=&quot;flex justify-center mb-4 text-blue-600&quot;></div>
                     {channel.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{channel.title}</h3>
-                  <p className="text-gray-600 mb-3">{channel.description}</p>
-                  <p className="text-sm font-medium text-blue-600 mb-1">{channel.contact}</p>
-                  <p className="text-xs text-gray-500">{channel.hours}</p>
+                  <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>{channel.title}</h3>
+                  <p className=&quot;text-gray-600 mb-3&quot;>{channel.description}</p>
+                  <p className=&quot;text-sm font-medium text-blue-600 mb-1&quot;>{channel.contact}</p>
+                  <p className=&quot;text-xs text-gray-500&quot;>{channel.hours}</p>
                 </div>
               ))}
             </div>
@@ -147,13 +147,13 @@ const SupportPage: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+      <section className=&quot;py-16 bg-gray-50&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-6xl mx-auto&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-center text-gray-900 mb-12&quot;>Frequently Asked Questions</h2>
             
             {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className=&quot;flex flex-wrap justify-center gap-4 mb-8&quot;></div>
               {categories.map((category) => (
                 <button
                   key={category}
@@ -170,19 +170,19 @@ const SupportPage: React.FC = () => {
             </div>
 
             {/* FAQ List */}
-            <div className="space-y-4">
+            <div className=&quot;space-y-4&quot;></div>
               {filteredFAQs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-sm">
+                <div key={index} className=&quot;bg-white rounded-lg shadow-sm&quot;></div>
                   <button
                     onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                    className=&quot;w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors&quot;
                   >
-                    <div className="flex items-center">
-                      <HelpCircle className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" />
-                      <span className="font-medium text-gray-900">{faq.question}</span>
+                    <div className=&quot;flex items-center&quot;></div>
+                      <HelpCircle className=&quot;w-5 h-5 text-blue-600 mr-3 flex-shrink-0&quot; />
+                      <span className=&quot;font-medium text-gray-900&quot;>{faq.question}</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-3">
+                    <div className=&quot;flex items-center&quot;></div>
+                      <span className=&quot;text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-3&quot;>
                         {faq.category}
                       </span>
                       <CheckCircle className={`w-5 h-5 text-gray-400 transition-transform ${
@@ -191,8 +191,8 @@ const SupportPage: React.FC = () => {
                     </div>
                   </button>
                   {expandedFAQ === index && (
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-600">{faq.answer}</p>
+                    <div className=&quot;px-6 pb-4&quot;></div>
+                      <p className=&quot;text-gray-600&quot;>{faq.answer}</p>
                     </div>
                   )}
                 </div>
@@ -200,10 +200,10 @@ const SupportPage: React.FC = () => {
             </div>
 
             {filteredFAQs.length === 0 && (
-              <div className="text-center py-12">
-                <Search className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">No results found</h3>
-                <p className="text-gray-600">Try adjusting your search terms or category filter.</p>
+              <div className=&quot;text-center py-12&quot;></div>
+                <Search className=&quot;w-12 h-12 text-gray-400 mx-auto mb-4&quot; />
+                <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>No results found</h3>
+                <p className=&quot;text-gray-600&quot;>Try adjusting your search terms or category filter.</p>
               </div>
             )}
           </div>
@@ -211,19 +211,19 @@ const SupportPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Still Need Help?</h2>
-            <p className="text-xl mb-8 text-blue-100">
+      <section className=&quot;py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white&quot;>
+        <div className=&quot;container mx-auto px-4&quot;></div>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h2 className=&quot;text-3xl font-bold mb-6&quot;>Still Need Help?</h2>
+            <p className=&quot;text-xl mb-8 text-blue-100&quot;>
               Can't find what you're looking for? Our support team is here to help.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                <MessageCircle className="mr-2 w-5 h-5" />
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
+                <MessageCircle className=&quot;mr-2 w-5 h-5&quot; />
                 Contact Support
               </button>
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
                 Schedule a Call
               </button>
             </div>

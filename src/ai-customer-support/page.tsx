@@ -184,11 +184,9 @@ const AICustomerSupportPage: React.FC = () => {
             </div>
           </section>
         </div>
-        </main>
-        <Footer />
       </div>
     </>
   )
 }
 
-export default AICustomerSupportPage
+export default Page;
