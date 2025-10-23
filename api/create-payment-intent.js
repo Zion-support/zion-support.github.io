@@ -31,11 +31,19 @@ export default withErrorLogging(async (req, res) => {
       currency: currency
     };
 
+<<<<<<< HEAD
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(paymentIntent));
   } catch (error) {
     console.error('Payment intent creation error:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
+=======
+    res.statusCode = 200;
+    res.json({ paymentIntent });
+  } catch {
+    //     res.statusCode = 500;
+    res.json({ error: 'Failed to create payment intent' });
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51
   }
 });

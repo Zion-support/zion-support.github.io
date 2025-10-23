@@ -30,14 +30,25 @@ export default async function handler(req, res) {
     // Here you would typically save the quote to a database
     console.log('Quote request processed:', quote.id);
 
+<<<<<<< HEAD
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
+=======
+    // In a real application, you would save this to a database
+    //     res.statusCode = 200;
+    res.json({
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51
       success: true,
       message: 'Quote request submitted successfully' 
     }));
   } catch (error) {
+<<<<<<< HEAD
     console.error('Quote submission error:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
+=======
+    //     res.statusCode = 500;
+    res.json({ error: error.message || 'Quote submission failed' });
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51
   }
 }

@@ -4,6 +4,7 @@ const path = require('path');
 // Function to fix duplicate exports and remaining JSX issues
 function fixFile(filePath) {
   try {
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -14,6 +15,17 @@ function fixFile(filePath) {
       const firstExport = exportMatches[0];
       content = content.replace(/export default [^;]+;/g, '');
       content += '\n' + firstExport;
+=======
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
+
+    // Fix duplicate React imports
+    if (content.includes("import React from 'react';\nimport React from 'react';")) {
+      content = content.replace(
+        /import React from 'react';\nimport React from 'react';/g,
+        "import React from 'react';"
+      );
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51
       modified = true;
     }
     
@@ -89,22 +101,46 @@ function fixFile(filePath) {
     while (fixedLines.length > 0 && fixedLines[fixedLines.length - 1].trim() === '') {
       fixedLines.pop();
     }
+<<<<<<< HEAD
     
     const fixedContent = fixedLines.join('\n');
     
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent);
       console.log(`Fixed: ${filePath}`);
+=======
+
+    // Fix Link component href prop
+    if (content.includes('<Link href=')) {
+      content = content.replace(/<Link href=/g, '<Link to=');
+      modified = true;
+    }
+
+    // Fix Next.js imports in sitemap
+    if (content.includes("import { Metadata } from 'next';")) {
+      content = content.replace(/import { Metadata } from 'next';/g, "import React from 'react';");
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51
       return true;
     }
     
     return false;
   } catch (error) {
+<<<<<<< HEAD
     console.error(`Error fixing ${filePath}:`, error.message);
+=======
+
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51
     return false;
   }
 }
 
+<<<<<<< HEAD
 // Get all TypeScript files
 const { execSync } = require('child_process');
 const allFiles = execSync('find app -name "*.tsx" -type f', { encoding: 'utf8' })
@@ -122,3 +158,20 @@ allFiles.forEach(file => {
 });
 
 console.log(`Fixed ${fixedCount} out of ${allFiles.length} files`);
+=======
+// Main execution
+async function main() {
+  // Find all TypeScript/JavaScript files in app directory
+  const _files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+
+  let _fixedCount = 0;
+  files.forEach(file => {
+    if (processFile(file)) {
+      fixedCount++;
+    }
+  });
+
+}
+
+main().catch(console.error);
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51

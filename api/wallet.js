@@ -58,5 +58,20 @@ export default async function handler(req, res) {
 
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
 
+<<<<<<< HEAD
+=======
+        res.statusCode = 200;
+        res.json({ success: true, balance });
+        break;
+      }
+
+      default:
+        res.statusCode = 400;
+        res.json({ error: 'Invalid action' });
+    }
+  } catch {
+    //     res.statusCode = 500;
+    res.json({ error: 'Wallet operation failed' });
+>>>>>>> 40ca7232406b369c6706f4e528a6385ab62c9b51
   }
 }
