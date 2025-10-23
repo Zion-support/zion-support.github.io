@@ -133,18 +133,3 @@ onError={handleError}
 >)</img>
 }</img>
 export default Image</img>
-loading={priority ? 'eager' : 'lazy'})
-onLoad={handleLoad})
-onError={handleError})
-{...props})
-/>)
-)
-}
-export default Image
-/>)
-)
-}
-export default Image
-"`
-</ImageProps>
-</ImageProps>

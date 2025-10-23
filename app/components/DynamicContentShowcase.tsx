@@ -349,13 +349,3 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
   )
 }
 export default DynamicContentShowcase
-  </button>
-  </button>
-  </button>
-  </button>
-  </section>
-  </any>
-    </div>
-  )
-}
-export default DynamicContentShowcase

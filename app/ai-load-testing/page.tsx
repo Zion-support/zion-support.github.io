@@ -39,7 +39,7 @@ const AiLoadTestingPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Load Testing - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai load testing solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiLoadTestingPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiLoadTestingPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

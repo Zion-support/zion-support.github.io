@@ -39,7 +39,7 @@ const AiInfrastructureMonitoringPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Infrastructure Monitoring - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai infrastructure monitoring solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiInfrastructureMonitoringPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiInfrastructureMonitoringPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

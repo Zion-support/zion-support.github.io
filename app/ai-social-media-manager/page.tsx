@@ -39,7 +39,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Social Media Manager - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai social media manager solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiSocialMediaManagerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

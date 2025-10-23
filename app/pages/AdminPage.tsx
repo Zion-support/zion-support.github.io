@@ -42,6 +42,3 @@ const AdminPage: React.FC<AdminPageProps> = ({ className = "" }) => {
 
 <<<<<<< HEAD
 export default AdminPage;
-=======
-export default AdminPage;
->>>>>>> origin/main

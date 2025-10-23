@@ -39,7 +39,7 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai agricultural intelligence pro solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiAgriculturalIntelligenceProPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

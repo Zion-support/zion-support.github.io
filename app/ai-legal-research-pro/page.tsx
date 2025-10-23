@@ -39,7 +39,7 @@ const AiLegalResearchProPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Legal Research Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai legal research pro solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiLegalResearchProPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiLegalResearchProPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

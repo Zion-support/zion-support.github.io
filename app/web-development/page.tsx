@@ -83,7 +83,7 @@ description: 'Thorough testing and deployment with ongoing support',
 icon: Shield,
 }
 ]
-return(<React.Fragment>
+return(<>
 <SEOOptimizer
 title="Web Development Services - Zion Tech Group"
 description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
@@ -395,22 +395,6 @@ Call +1 302 464 0950
 </main>
 <Footer />
 </div>,
-</React.Fragment>)
-}
-export default WebDevelopmentPage
-</h2>
-</span>
-</h2>
-</h3>
-</h2>
-</li>
-</h4>
-</li>
-</h4>
-</h3>
-</h2>
-</div>
-</>
-)
+</>)
 }
 export default WebDevelopmentPage

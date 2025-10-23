@@ -39,7 +39,7 @@ const AiEnergyGridManagementProPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Energy Grid Management Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai energy grid management pro solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiEnergyGridManagementProPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiEnergyGridManagementProPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

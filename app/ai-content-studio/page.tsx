@@ -32,7 +32,7 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>AI Content Studio - Zion Tech Group</title>
 <meta name="description" content="Professional content studio powered by AI technology." />
@@ -166,17 +166,7 @@ Contact Sales
 </div>
 </section>
 <Footer />
-</React.Fragment>
+</>
 )
 }
 export default AiContentStudioPage
-</button>
-</button>
-</p>
-</p>
-</button>
-</h2>
-</button>
-</button>
-</h1>
-</main>

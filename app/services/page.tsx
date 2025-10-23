@@ -602,7 +602,7 @@ const ServicesPage: React.FC = () => {
     setCurrentPage(1)
   }, [selectedCategory, searchTerm])
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." />
@@ -791,16 +791,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 export default ServicesPage
-  </button>
-  </button>
-  </button>
-  </button>
-  </button>
-  </li>
-  </span>
-  </h1>
-  </div>

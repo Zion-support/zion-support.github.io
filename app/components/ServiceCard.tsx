@@ -61,4 +61,3 @@ Get Started
 )
 }
 export default ServiceCard
-</ServiceCardProps>

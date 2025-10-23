@@ -32,7 +32,7 @@ const ServiceWorkerPage: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>ServiceWorker - Zion Tech Group</title>
         <meta name="description" content="Advanced serviceworker solutions powered by AI technology." />
@@ -117,31 +117,7 @@ const ServiceWorkerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default ServiceWorkerPage
-  </button>
-  </button>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
-import { useEffect } from 'react'
-const ServiceWorker: React.FC = () => {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration)
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError)
-        })
-    }
-  }, [])
-  return null
-}
-export default ServiceWorker

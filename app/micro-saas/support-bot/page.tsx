@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { Bot, ArrowRight } from 'lucide-react'
 const SmartSupportBotPage: React.FC = () => {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
         <meta name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." />
@@ -46,8 +46,7 @@ const SmartSupportBotPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 export default SmartSupportBotPage
-  </button>

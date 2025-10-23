@@ -83,7 +83,7 @@ icon: '🛡️'
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>AI Analytics - Zion Tech Group</title>
 <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
@@ -160,12 +160,7 @@ Start Your Free Trial
 </section>
 </main>
 <Footer />
-</React.Fragment>
+</>
 )
 }
 export default AiAnalyticsPage
-</button>
-</h2>
-</button>
-</button>
-</h1>

@@ -139,8 +139,3 @@ Email Us
 )
 }
 export default ARVRPlatformPage
-</button>
-</button>
-</h2>
-</button>
-</span>

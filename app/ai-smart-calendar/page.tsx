@@ -39,7 +39,7 @@ const AiSmartCalendarPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Smart Calendar - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai smart calendar solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiSmartCalendarPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiSmartCalendarPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -39,7 +39,7 @@ const AiManufacturingPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Manufacturing - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai manufacturing solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiManufacturingPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiManufacturingPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

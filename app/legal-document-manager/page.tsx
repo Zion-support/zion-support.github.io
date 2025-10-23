@@ -12,7 +12,7 @@ const features = [
 { icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
 <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently." />
@@ -39,7 +39,7 @@ return (
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default LegalDocumentManagerPage

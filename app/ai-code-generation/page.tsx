@@ -39,7 +39,7 @@ const AiCodeGenerationPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Code Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai code generation solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiCodeGenerationPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiCodeGenerationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

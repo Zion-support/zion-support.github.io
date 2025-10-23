@@ -39,7 +39,7 @@ const AiHrPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Hr - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai hr solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiHrPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiHrPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

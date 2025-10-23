@@ -39,7 +39,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Mobile App Development - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai mobile app development solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiMobileAppDevelopmentPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
