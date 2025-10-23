@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const ApiCachePage: React.FC = () => {
 const features = [
@@ -37,11 +36,7 @@ const benefits = [
 ]
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-<Helmet>
-<title>ApiCache | Zion Tech Group</title>
-<meta name="description" content="Professional ApiCache services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="apiCache, AI solutions, IT services, Zion Tech Group, apicache" />
-</Helmet>
+
 {/* Hero Section */}
 <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
 <div className="max-w-7xl mx-auto"></div>
