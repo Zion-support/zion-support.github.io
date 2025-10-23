@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
@@ -45,14 +44,6 @@ const Footer: React.FC = () => {
     { name: "Tutorials", href: "/tutorials" },
     { name: "API Documentation", href: "/api-docs" },
     { name: "Status Page", href: "/status" },
-  ];
-
-  const quickLinks = [
-    { name: "Free Consultation", href: "/consultation" },
-    { name: "Request Demo", href: "/demo" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Contact Us", href: "/contact" },
-    { name: "Support", href: "/support" },
   ];
 
   return (
@@ -101,10 +92,9 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">AI Services</h1>
-            
-          <ul className="space-y-2">
-              {_aiServices.map((service, index) => (
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
+            <ul className="space-y-2">
+              {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.href}
@@ -120,10 +110,9 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">IT Services</h1>
-            
-          <ul className="space-y-2">
-              {_itServices.map((service, index) => (
+            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
+            <ul className="space-y-2">
+              {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.href}
@@ -139,10 +128,9 @@ const Footer: React.FC = () => {
 
           {/* Micro SaaS */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">Micro SaaS</h1>
-            
-          <ul className="space-y-2">
-              {_microSaas.map((service, index) => (
+            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+            <ul className="space-y-2">
+              {microSaas.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.href}
@@ -158,10 +146,9 @@ const Footer: React.FC = () => {
 
           {/* Company & Support */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">Company</h1>
-            
-          <ul className="space-y-2 mb-6">
-              {_companyLinks.map((link, index) => (
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 mb-6">
+              {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.href}
@@ -175,7 +162,7 @@ const Footer: React.FC = () => {
 
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              {_supportLinks.map((link, index) => (
+              {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.href}
