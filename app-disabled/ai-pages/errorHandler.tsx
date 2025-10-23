@@ -927,11 +927,11 @@ return (
 this.props.fallback || (
 <div style={{ padding: '20px', textAlign: 'center' }}></div>
 <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
-onClick={() =>this.setState({ hasError: false, error: undefined })}
+onClick={() =>this.setState({ hasError: false, error: undefined })}</button>
 <h2>Something went wrong</h2>)
 <p>We're sorry, but something unexpected happened.</p>)
 <button;)
-onClick={() => this.setState({ hasError: false, error: undefined })}
+onClick={() =>this.setState({ hasError: false, error: undefined })}</button>
 style={{;}
 style={{}
 padding: '10px 20px',
@@ -1016,35 +1016,3 @@ getErrorStatistics: () => errorHandler.getErrorStatistics(),
 clearResolvedErrors: () => errorHandler.clearResolvedErrors()}
 }
 export default ErrorHandler;</string>
-</string>
-// React hook for error handling
-export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
-},
-[errorHandler]
-)
-const handleNetworkError = useCallback((erro,
-r: Error, ur)
-l: string, status?: number) => {/* TODO: Fix JSX expression */}
-},
-[errorHandler]
-)
-const handleValidationError = useCallback((fiel,
-d: string, messag)
-e: string, value?: unknown) => {/* TODO: Fix JSX expression */}
-},
-[errorHandler]
-)
-return {/* TODO: Fix JSX expression */}
-}
-}
-export default ErrorHandler
-"`
-</h2>
-</ErrorSeverit>
-</strong>
-</strong>
-</ErrorHandlerConfig>
-</ErrorHandlerConfig>
-</ErrorHandlerConfig>
-</ErrorHandlerConfig>
-</strin>

@@ -1,61 +1,78 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-interface ContentPreviewCardProps {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured?: boolean;
-  stats?: {
-    views: number;
-    engagement: number;
-  };
-  excerpt?: string;
-}
-
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
-  title,
-  description,
-  category,
-  readTime,
-  date,
-  path,
-  image,
-  featured = false,
-  stats,
-  excerpt
-}) => {
-  const formatNumber = (num: number): string => {
-    if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'k';
+const ContentPreviewCardPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    return num.toString();
-  };
+  ]
 
-  const getCategoryColor = (category: string): string => {
-    const colors: { [key: string]: string } = {
-      'Success Story': 'from-green-500 to-emerald-600',
-      'Mega Trends': 'from-blue-500 to-cyan-600',
-      'Architecture': 'from-purple-500 to-pink-600',
-      'AI Agents': 'from-orange-500 to-red-600',
-      'Cost Optimization': 'from-yellow-500 to-orange-600',
-      'Intelligence': 'from-indigo-500 to-purple-600',
-      'Transformation': 'from-teal-500 to-blue-600',
-      'default': 'from-gray-500 to-gray-600'
-    };
-    return colors[category] || colors.default;
-  };
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
   return (
+<<<<<<< HEAD
+    <>
+      <Helmet>
+        <title>ContentPreviewCard</title>
+        <meta name="description" content="Advanced ContentPreviewCard solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, ContentPreviewCard, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              ContentPreviewCard
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced ContentPreviewCard solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+=======
     <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
       featured ? 'ring-2 ring-indigo-200' : ''
-    }`}>
-      {/* Image/Visual Header */}
+    }`}>{/* Image/Visual Header */}</a>
       <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}>
         <div className="text-center text-white">
           <div className="text-6xl mb-2">{image}</div>
@@ -65,9 +82,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {/* Featured Badge */}
         {featured && (
           <div className="absolute top-4 left-4">
-            <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
-              ⭐ Featured
-            </span>
+            <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">⭐ Featured</span>span>
           </div>
         )}
 
@@ -75,37 +90,55 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {stats && (
           <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2">
             <div className="text-center">
-              <div className="text-lg font-bold text-white">
-                {formatNumber(stats.views)}
-              </div>
+              <div className="text-lg font-bold text-white">{formatNumber(stats.views)}</div>div>
               <div className="text-xs text-white opacity-90">views</div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
-        )}
+        </section>
 
+<<<<<<< HEAD
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+=======
         {/* Read Time Badge */}
         <div className="absolute bottom-4 left-4">
-          <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
-            {readTime}
-          </span>
+          <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{readTime}</span>span>
         </div>
       </div>
 
       {/* Content */}
       <div className="p-6">
         <div className="mb-3">
-          <span className="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
-            {category}
-          </span>
+          <span className="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{category}</span>span>
         </div>
 
-        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-          {title}
-        </h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{title}</h3>h3>
 
-        <p className="text-gray-600 mb-4 line-clamp-3">
-          {excerpt || description}
-        </p>
+        <p className="text-gray-600 mb-4 line-clamp-3">{excerpt || description}</p>p>
 
         {/* Stats Row */}
         {stats && (
@@ -124,26 +157,56 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
                 </svg>
                 <span className="text-green-600 font-medium">{stats.engagement}% engagement</span>
               </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
-        )}
+        </section>
 
-        {/* Date and CTA */}
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-500">{date}</span>
-          <Link
-            to={path}
-            className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
-          >
-            Read Article
-            <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </article>
+      <Footer />
+    </>
   );
 };
 
+<<<<<<< HEAD
+export default ContentPreviewCardPage;
+=======
 export default ContentPreviewCard;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

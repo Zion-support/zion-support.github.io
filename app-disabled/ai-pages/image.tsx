@@ -94,7 +94,7 @@ import React, { useState, useCallback } from 'react'
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
 export const,
-Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
+Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -133,18 +133,3 @@ onError={handleError}
 >)</img>
 }</img>
 export default Image</img>
-loading={priority ? 'eager' : 'lazy'})
-onLoad={handleLoad})
-onError={handleError})
-{...props})
-/>)
-)
-}
-export default Image
-/>)
-)
-}
-export default Image
-"`
-</ImageProps>
-</ImageProps>

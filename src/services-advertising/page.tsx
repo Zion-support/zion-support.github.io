@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+import React from 'react'
+import { ArrowLeft } from 'lucide-react'
+import { CheckCircle, Target, ArrowRight } from 'lucide-react'
+
+=======
 import React from 'react';
-import { ArrowLeft } from 'lucide-react';
+<<<<<<< HEAD
+import { ArrowLeft, CheckCircle, ArrowRight, Target, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -28,8 +36,8 @@ export default function ServicesAdvertisingPage() {
               Revolutionize Your Marketing with 300% ROI Guaranteed
             </p>
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
+              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
+              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -337,5 +345,59 @@ export default function ServicesAdvertisingPage() {
         </div>
       </section>
     </div>
+  )
+=======
+import {ArrowLeft, CheckCircle, Target, ArrowRight} from 'lucide-react';;
+export default function ServicesAdvertisingPage() {return (
+    <divclassName="min-h-screenbg-gradient-to-brfrom-slate-50to-blue-50">{/* Header */}
+    <headerclassName="bg-whiteshadow-smborder-b"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8py-4"><ahref="/"className="inline-flex items-center text-blue-600 hover:text-blue-800transition-colorsduration-200"><ArrowLeftclassName="w-4h-4mr-2" />Back to Home
+        </a></di></heade>{/* HeroSection */}
+    <sectionclassName="relative overflow-hidden bg-gradient-to-r from-blue-900via-purple-900to-indigo-900text-whitepy-20"><divclassName="absolute inset-0 bg-blackopacity-20"></di><divclassName="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-center"><divclassName="inline-flex items-center px-4 py-2 rounded-full bg-blue-600text-smfont-semiboldmb-6"><TargetclassName="w-4h-4mr-2" />AI-Powered Advertising Solutions
+          </di><spanclassName="text-4 xlmd:text-6 xlfont-boldmb-6"></className="text-4 xlmd:text-6 xlfont-boldmb-6">AI Advertising Services
+          </h><spanclassName="text-xlmd:text-2 xl mb-8 text-gray-200max-w-3xlmx-auto"></className="text-xlmd:text-2 xl mb-8 text-gray-200max-w-3xlmx-auto">Revolutionize Your Marketing with300% ROI Guaranteed
+          </p><spanclassName="text-lg mb-8 text-gray-300max-w-4xlmx-auto"></className="text-lg mb-8 text-gray-300max-w-4xlmx-auto">Transform your advertising campaigns with our breakthrough AI technology. Achieve 9 5% targeting accuracy, 
+             60% cost reduction, and300% ROI with intelligent automation and predictive analytics. Our proven 
+              methodo logy has helped500+ businesses increase their advertising effectiveness while reducing costs.
+          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
+               className="bg-blue-600 hover:bg-blue-700text-white font-semibold py-3 px-8 rounded-lg transition-colorsduration-200inline-flexitems-center"
+              >Start Free Consultation
+              <ArrowRightclassName="w-4h-4ml-2" /></a><ahref="#services"
+               className="border-2 border-white text-whitehover:bg-whitehover:text-blue-900font-semibold py-3 px-8 rounded-lg transition-colorsduration-200"
+              >View Our Services
+            </a></di></di></di></sectio>{/* KeyMetrics */}
+    <sectionclassName="py-16bg-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">Proven Advertising Results
+          </h><spanclassName="text-xltext-gray-600"></className="text-xltext-gray-600">Our AI-powered advertising delivers measurable business impact
+          </p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"><divclassName="text-center"><divclassName="text-4 xl font-bold text-blue-600mb-2">300%</di><divclassName="text-gray-600">AverageROI</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-green-600mb-2">95%</di><divclassName="text-gray-600">TargetingAccuracy</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-purple-600mb-2">60%</di><divclassName="text-gray-600">CostReduction</di></di><divclassName="text-center"><divclassName="text-4 xl font-bold text-orange-600mb-2">24/7</di><divclassName="text-gray-600">CampaignOptimization</di></di></di></di></sectio>{/* ServicesSection */}
+    <sectionid="services"className="py-16bg-gray-50"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">AI Advertising Solutions
+          </h><spanclassName="text-xltext-gray-600"></className="text-xltext-gray-600">Comprehensive AI-powered advertising services for maximum impact
+          </p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8"><divclassName="bg-white rounded-lg shado w-lg p-6 hover:shado w-xl transition-shado wduration-200"><divclassName="text-blue-600text-4xlmb-4">🎯</di><h3className="text-xlfont-semiboldmb-3">AI-PoweredTargeting</h><spanclassName="text-gray-600mb-4"></className="text-gray-600mb-4">Advanced machine learning algorithms that identify and target your ideal customers with95% accuracy.
+            </p><ulclassName="text-sm text-gray-600space-y-1"><l i>•Behavioralanalysis</l><l i>•Predictivemodeling</l><l i>•Real-timeoptimization</l><l i>• Lookalikeaudiencecreation</l><l i>•Cross-platformtargeting</l></u><divclassName="mt-4 text-sm text-green-600font-semibold">MarketPrice: $2,00 0-5,00 0/month | OurPrice: $1,20 0/month
+            </di></di><divclassName="bg-white rounded-lg shado w-lg p-6 hover:shado w-xl transition-shado wduration-200"><divclassName="text-green-600text-4xlmb-4">📊</di><h3className="text-xlfont-semiboldmb-3">CampaignOptimization</h><spanclassName="text-gray-600mb-4"></className="text-gray-600mb-4">Continuous AI-driven optimization that maximizes performance and minimizes costs across all channels.
+            </p><ulclassName="text-sm text-gray-600space-y-1"><l i>• A/Btestingautomation</l><l i>•Budgetallocation</l><l i>•Performancemonitoring</l><l i>•Bidoptimization</l><l i>• Landingpageoptimization</l></u><divclassName="mt-4 text-sm text-green-600font-semibold">MarketPrice: $3,00 0-7,00 0/month | OurPrice: $1,80 0/month
+            </di></di><divclassName="bg-white rounded-lg shado w-lg p-6 hover:shado w-xl transition-shado wduration-200"><divclassName="text-purple-600text-4xlmb-4">🤖</di><h3className="text-xlfont-semiboldmb-3">CreativeGeneration</h><spanclassName="text-gray-600mb-4"></className="text-gray-600mb-4">AI-generated ad creatives that adapt to audience preferences and platform requirements in real-time.
+            </p><ulclassName="text-sm text-gray-600space-y-1"><l i>• Dynamiccreativeoptimization</l><l i>• Personalizationatscale</l><l i>•Multi-platformadaptation</l><l i>• Videoadgeneration</l><l i>• Brandconsistencymaintenance</l></u><divclassName="mt-4 text-sm text-green-600font-semibold">MarketPrice: $2,50 0-6,00 0/month | OurPrice: $1,50 0/month
+            </di></di><divclassName="bg-white rounded-lg shado w-lg p-6 hover:shado w-xl transition-shado wduration-200"><divclassName="text-orange-600text-4xlmb-4">📱</di><h3className="text-xlfont-semiboldmb-3">SocialMediaAdvertising</h><spanclassName="text-gray-600mb-4"></className="text-gray-600mb-4">Comprehensive social media advertising management across all major platforms with AI optimization.
+            </p><ulclassName="text-sm text-gray-600space-y-1"><l i>• Facebook &Instagramads</l><l i>•LinkedInadvertising</l><l i>• TikTok &Snapchatads</l><l i>•Twitteradvertising</l><l i>•Cross-platformanalytics</l></u><divclassName="mt-4 text-sm text-green-600font-semibold">MarketPrice: $2,00 0-5,00 0/month | OurPrice: $1,20 0/month
+            </di></di><divclassName="bg-white rounded-lg shado w-lg p-6 hover:shado w-xl transition-shado wduration-200"><divclassName="text-red-600text-4xlmb-4">🔍</di><h3className="text-xlfont-semiboldmb-3">SearchEngineMarketing</h><spanclassName="text-gray-600mb-4"></className="text-gray-600mb-4">AI-powered Google Ads and Bing advertising with intelligent keyword optimization and bid management.
+            </p><ulclassName="text-sm text-gray-600space-y-1"><l i>• GoogleAdsmanagement</l><l i>•Bingadvertising</l><l i>• Keyword research&optimization</l><l i>• Adcopygeneration</l><l i>•Performancetracking</l></u><divclassName="mt-4 text-sm text-green-600font-semibold">MarketPrice: $1,50 0-4,00 0/month | OurPrice: $90 0/month
+            </di></di><divclassName="bg-white rounded-lg shado w-lg p-6 hover:shado w-xl transition-shado wduration-200"><divclassName="text-indigo-600text-4xlmb-4">📈</di><h3className="text-xlfont-semiboldmb-3">Analytics&Reporting</h><spanclassName="text-gray-600mb-4"></className="text-gray-600mb-4">Advanced analytics and reporting with AI insights and automated performance recommendations.
+            </p><ulclassName="text-sm text-gray-600space-y-1"><l i>•Real-timedashboards</l><l i>•AI-poweredinsights</l><l i>•Automatedreporting</l><l i>•ROIoptimization</l><l i>•Competitiveanalysis</l></u><divclassName="mt-4 text-sm text-green-600font-semibold">MarketPrice: $1,00 0-3,00 0/month | OurPrice: $60 0/month
+            </di></di></di></di></sectio>{/* PricingSection */}
+    <sectionclassName="py-16bg-white"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4"></className="text-3 xlmd:text-4 xl font-bold text-gray-900mb-4">Transparent Pricing
+          </h><spanclassName="text-xltext-gray-600"></className="text-xltext-gray-600">Choose the plan that fits your advertising needs
+          </p></di><divclassName="grid grid-cols-1md:grid-cols-3gap-8"><divclassName="bg-white border-2 border-gray-200rounded-lg p-8 hover:border-blue-500transition-colorsduration-200"><h3className="text-2 xl font-bold text-gray-900mb-4">Starter</h><divclassName="text-4 xl font-bold text-blue-600mb-2">$1,200<spanclassName="text-lgtext-gray-500">/month</spa></di><divclassName="text-smtext-green-600font-semiboldmb-6">Save40% vsmarketrates</di><ulclassName="space-y-3mb-8"><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>Up to $10 Kadspend</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>AItargetingoptimization</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>Basic reporting&analytics</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>Emailsupport</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>2platformsincluded</spa></l></u><spanclassName="w-full bg-blue-600 hover:bg-blue-700text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200"></className="w-full bg-blue-600 hover:bg-blue-700text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200">Get Started
+            </butto></di><divclassName="bg-blue-600text-white rounded-lgp-8relative"><divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><spanclassName="bg-yellow-400text-yellow-900px-4 py-1 rounded-fulltext-smfont-semibold">MostPopular</spa></di><h3className="text-2 xlfont-boldmb-4">Professional</h><divclassName="text-4 xlfont-boldmb-2">$2,500<spanclassName="text-lgtext-blue-200">/month</spa></di><divclassName="text-smtext-green-300font-semiboldmb-6">Save50% vsmarketrates</di><ulclassName="space-y-3mb-8"><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-300mr-3" /><spa n>Up to $50 Kadspend</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-300mr-3" /><spa n>AdvancedAIoptimization</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-300mr-3" /><spa n>Creativegeneration</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-300mr-3" /><spa n>Prioritysupport</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-300mr-3" /><spa n>Customreporting</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-300mr-3" /><spa n>Allplatformsincluded</spa></l></u><spanclassName="w-full bg-white text-blue-600 hover:bg-gray-100font-semibold py-3 px-6 rounded-lg transition-colorsduration-200"></className="w-full bg-white text-blue-600 hover:bg-gray-100font-semibold py-3 px-6 rounded-lg transition-colorsduration-200">Get Started
+            </butto></di><divclassName="bg-white border-2 border-gray-200rounded-lg p-8 hover:border-blue-500transition-colorsduration-200"><h3className="text-2 xl font-bold text-gray-900mb-4">Enterprise</h><divclassName="text-4 xl font-bold text-blue-600mb-2">$5,000<spanclassName="text-lgtext-gray-500">/month</spa></di><divclassName="text-smtext-green-600font-semiboldmb-6">Save60% vsmarketrates</di><ulclassName="space-y-3mb-8"><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>Unlimitedadspend</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>FullAIsuite</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>Dedicatedaccountmanager</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>24/7support</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>Customintegrations</spa></l><liclassName="flexitems-center"><CheckCircleclassName="w-5 h-5 text-green-500mr-3" /><spa n>White-labeloptions</spa></l></u><spanclassName="w-full bg-blue-600 hover:bg-blue-700text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200"></spa></className="w-full bg-blue-600 hover:bg-blue-700text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200">Contact Sales
+            </butto></di></di></di></sectio>{/* CTASection */}
+    <sectionclassName="py-16bg-gradient-to-r from-blue-600to-purple-600text-white"><divclassName="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center"><spanclassName="text-3 xlmd:text-4 xlfont-boldmb-4"></spa></className="text-3 xlmd:text-4 xlfont-boldmb-4">Ready to Transform Your Advertising?
+        </h><spanclassName="text-xl mb-8text-blue-100"></spa></className="text-xl mb-8text-blue-100">Get a free AI advertising assessment and discover how we can boost your ROI by300%
+        </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
+             className="bg-white text-blue-600 hover:bg-gray-100font-semibold py-3 px-8 rounded-lg transition-colorsduration-200inline-flexitems-center"
+            >Get Free Assessment
+            <ArrowRightclassName="w-4h-4ml-2" /></a><ahref="/case-studies"
+             className="border-2 border-white text-whitehover:bg-whitehover:text-blue-600font-semibold py-3 px-8 rounded-lg transition-colorsduration-200"
+            >View Success Stories
+          </a></di></di></sectio></di>
   );
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 }

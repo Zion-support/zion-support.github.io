@@ -32,7 +32,7 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Loading - Zion Tech Group</title>
 <meta name="description" content="Loading page." />
@@ -44,19 +44,11 @@ return (
 <section className="relative py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-7xl mx-auto">
 <div className="text-center">
-<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-Loading
-</
-<p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-Loading page.
-</p>
+<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Loading</h1>
+<p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Loading page.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-Get Started
-</
-<button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-Learn More
-</
+<button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">Get Started</button>
+<button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">Learn More</button>
 </div>
 </div>
 </div>
@@ -65,15 +57,10 @@ Learn More
 <section className="py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-Our Services
-</
-<p className="text-xl text-gray-600 max-w-3xl mx-auto">
-Discover how our solutions can help transform your business.
-</p>
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+<p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our solutions can help transform your business.</p>p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-{features.map((feature, index) => (
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
 <div className="flex items-center mb-4">
 <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
@@ -96,25 +83,14 @@ Discover how our solutions can help transform your business.
 {/* CTA Section */}
 <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-Ready to Get Started?
-</h2>
-<p className="text-xl text-blue-100 mb-8">
-Contact us today to learn more about our services.
-</p>
-<button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-Contact Us
-</
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
+<p className="text-xl text-blue-100 mb-8">Contact us today to learn more about our services.</p>p>
+<button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">Contact Us</button>
 </div>
 </section>
 </main>
 <Footer />
-</React.Fragment>
+</>
 )
 }
 export default LoadingPage
-</button>
-</h2>
-</button>
-</button>
-</h1>

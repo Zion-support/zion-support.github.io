@@ -255,17 +255,14 @@ const HomePage: React.FC = () => {
       />
       <Analytics />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-        {/* Navigation */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">{/* Navigation */}</div>
         <Navigation />
         
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-        >
-          Skip to main content
-        </a>
+        >Skip to main content</a>a>
 
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
@@ -287,14 +284,9 @@ const HomePage: React.FC = () => {
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
                 data-text="Zion Tech Group"
-              >
-                Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
-                Advanced AI and IT Solutions
-              </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+              >Zion Tech Group</h1>h1>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">Advanced AI and IT Solutions</p>p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.</p>
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               </p>
               
@@ -326,9 +318,7 @@ const HomePage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Get Started Today
-                </a>
+                >Get Started Today</a>a>
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
@@ -343,28 +333,18 @@ const HomePage: React.FC = () => {
 
           {/* Micro SAAS Services Section */}
           <section className="mb-16" aria-labelledby="micro-saas-heading">
-            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              Micro SAAS Solutions
-            </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Powerful, affordable AI-powered tools designed for modern businesses
-            </p>
+            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">Micro SAAS Solutions</h2>h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Powerful, affordable AI-powered tools designed for modern businesses</p>p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {microSAASServices.map((service, index) => (
-                <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {service.popular && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">{microSAASServices.map((service, index) => (</div>
+                <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>{service.popular && (</a>
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
-                        Popular
-                      </div>
+                      <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">Popular</div>div>
                     </div>
                   )}
                   <div className="text-4xl mb-4 text-center">{service.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">{service.description}</p>p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
@@ -395,9 +375,7 @@ const HomePage: React.FC = () => {
                     <a 
                       href={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
-                    >
-                      Learn More
-                    </a>
+                    >Learn More</a>a>
                   </div>
                 </article>
               ))}
@@ -406,23 +384,16 @@ const HomePage: React.FC = () => {
 
           {/* AI Services Section */}
           <section className="mb-16" aria-labelledby="ai-services-heading">
-            <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              AI Services
-            </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Advanced artificial intelligence solutions for enterprise applications
-            </p>
+            <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">AI Services</h2>h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Advanced artificial intelligence solutions for enterprise applications</p>p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {aiServices.map((service, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">{aiServices.map((service, index) => (</div>
                 <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">{service.description}</p>p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
@@ -441,9 +412,7 @@ const HomePage: React.FC = () => {
                     <a 
                       href="/ai-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Learn More
-                    </a>
+                    >Learn More</a>a>
                   </div>
                 </article>
               ))}
@@ -452,23 +421,16 @@ const HomePage: React.FC = () => {
 
           {/* IT Services Section */}
           <section className="mb-16" aria-labelledby="it-services-heading">
-            <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              IT Services
-            </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Comprehensive IT solutions for modern enterprise infrastructure
-            </p>
+            <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">IT Services</h2>h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Comprehensive IT solutions for modern enterprise infrastructure</p>p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {itServices.map((service, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">{itServices.map((service, index) => (</div>
                 <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">{service.description}</p>p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
@@ -487,9 +449,7 @@ const HomePage: React.FC = () => {
                     <a 
                       href="/it-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Learn More
-                    </a>
+                    >Learn More</a>a>
                   </div>
                 </article>
               ))}
@@ -498,9 +458,7 @@ const HomePage: React.FC = () => {
 
           {/* Contact Information */}
           <section className="mb-16" aria-labelledby="contact-heading">
-            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              Get In Touch
-            </h2>
+            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">Get In Touch</h2>h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -511,9 +469,7 @@ const HomePage: React.FC = () => {
                   href="tel:+13024640950" 
                   onClick={handlePhoneClick}
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                >
-                  Call Now
-                </a>
+                >Call Now</a>a>
               </div>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -523,9 +479,7 @@ const HomePage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
                   className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
-                >
-                  Send Email
-                </a>
+                >Send Email</a>a>
               </div>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -537,9 +491,7 @@ const HomePage: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-400 hover:text-green-300 font-medium transition-colors"
-                >
-                  View on Map
-                </a>
+                >View on Map</a>a>
               </div>
             </div>
           </section>
