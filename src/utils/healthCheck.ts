@@ -1,4 +1,4 @@
-'use client';
+'use client'
 /**
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
@@ -7,17 +7,17 @@ import React from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
 export interface HealthStatus {
-  status: 'healthy' | 'degraded' | 'unhealthy';
-  timestamp: number;
-  uptime: number;
-  checks: HealthCheck[];
+  status: 'healthy' | 'degraded' | 'unhealthy'
+  timestamp: number
+  uptime: number
+  checks: HealthCheck[]
 }
 export interface HealthCheck {
-  name: string;
-  status: 'pass' | 'warn' | 'fail';
-  message?: string;
-  details?: Record<string, unknown>;
-  duration?: number;
+  name: string
+  status: 'pass' | 'warn' | 'fail'
+  message?: string
+  details?: Record<string, unknown>
+  duration?: number
 }
 export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
 class HealthCheckService {
@@ -83,7 +83,7 @@ class HealthCheckService {
           duration
         })
       } catch (error) {
-        logger.error(`Health check "${name}" failed`, error as Error);
+        logger.error(`Health check "${name}" failed`, error as Error)
         checks.push({
           name,
           status: 'fail',
@@ -107,7 +107,7 @@ class HealthCheckService {
       timestamp: now,
       uptime: now - this.startTime,
       checks
-    };
+    }
     // Cache the result
     this.cachedStatus = healthStatus
     this.lastCheckTime = now
@@ -134,16 +134,16 @@ class HealthCheckService {
         name: 'memory',
         status: 'pass',
         message: 'Memory API not available'
-      };
+      }
     }
     try {
-      const memoryInfo = (performance as any).memory;
+      const memoryInfo = (performance as any).memory
       if (!memoryInfo) {
         return {
           name: 'memory',
           status: 'pass',
           message: 'Memory API not available'
-        };
+        }
       }
       const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
       let status: 'pass' | 'warn' | 'fail' = 'pass'
@@ -171,7 +171,7 @@ class HealthCheckService {
         name: 'memory',
         status: 'warn',
         message: 'Could not check memory usage'
-      };
+      }
     }
   }
   /**
@@ -183,13 +183,11 @@ class HealthCheckService {
       const reportData = JSON.parse(report)
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Performance metrics available`
-      
       // Check if we have any performance data
       if (reportData && Object.keys(reportData).length > 0) {
         const values = Object.values(reportData).filter(v => typeof v === 'number') as number[]
         const poorCount = values.filter(v => v > 4000).length // LCP > 4s is poor
         const needsImprovementCount = values.filter(v => v > 2500 && v <= 4000).length
-        
         if (poorCount > 0) {
           status = 'warn'
         }
@@ -200,7 +198,7 @@ class HealthCheckService {
           message = `Performance: ${values.length - poorCount - needsImprovementCount} good, ${needsImprovementCount} needs improvement, ${poorCount} poor`
         }
       }
-      
+
       return {
         name: 'performance',
         status,
@@ -270,8 +268,8 @@ class HealthCheckService {
       // Check available space (approximate)
       const testData = 'x'.repeat(1024 * 1024); // 1MB
       try {
-        localStorage.setItem('_size_test', testData);
-        localStorage.removeItem('_size_test');
+        localStorage.setItem('_size_test', testData)
+        localStorage.removeItem('_size_test')
       } catch {
         return {
           name: 'storage',
@@ -283,7 +281,7 @@ class HealthCheckService {
         name: 'storage',
         status: 'pass',
         message: 'Storage working correctly'
-      };
+      }
     } catch {
       return {
         name: 'storage',

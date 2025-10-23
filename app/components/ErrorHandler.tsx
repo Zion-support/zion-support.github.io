@@ -1,9 +1,16 @@
 'use client'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+import { Home } from 'lucide-react'
+=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
@@ -71,67 +78,104 @@ const ErrorHandlerPage: React.FC = () => {
       error,
       errorInfo
     })
+=======
+import React, {Component, ErrorInfo, ReactNode} from 'react'
+import {AlertTriangle, RefreshCw, Home} from 'lucide-react'
 
-    // Log error in development
-    if (process.env.NODE_ENV === 'development') {
-      // Error caught by handler
-    }
+interface Prop s {children: ReactNode
+  fallback?: ReactNode}
 
-    // Send error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
-      // You can integrate with services like Sentry, LogRocket, etc.
-      this.logErrorToService(error, errorInfo)
-    }
+interface Stat e {hasError: booleanerror: Error | null errorInfo: ErrorInfo | null}
+
+class ErrorHandler extends Component<Props, State>{constructor(props: Props) {
+    super(props)
+    this.state= {
+      hasError: false,
+      error: null,
+      errorInfo: null
+   }
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // Example: Send to monitoring service
+  static getDerivedStateFromError(error: Error): State {return {
+      hasError: true,
+      error,
+      errorInfo: null
+   }
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo})
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+    // Log error in development
+    if (process.env.NODE_ENV=== 'development') {// Error caught by handler
+   }
+
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV=== 'production') {// You can integrate with services like Sentry, LogRocket, etc.
+      this.logErrorToService(errorerrorInfo)
+   }
+  }
+
+  logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
     try {
-      // Replace with your actual error reporting service
-      const errorData = {
+      // Replace with your actual error reportingserviceconsterrorData= {
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString()
-      };
+<<<<<<< HEAD
+      }
       // Send to your error reporting service here
-      console.log('Error data prepared for reporting:', errorData);
+      // console.log('Error data prepared for reporting:', errorData)
     } catch {
       // Error reporting failed
-
-
     }
+=======
+     };
+      // Send to your error reporting service here
+      } catch {// Error reporting failed
+
+
+   }
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   }
 
-  handleRetry = () => {
-    this.setState({
+  handleRetry= () => {this.setState({
       hasError: false,
       error: null,
       errorInfo: null
-    })
+   })
   }
 
-  handleGoHome = () => {
-    window.location.href = '/'
-  }
+  handleGoHome= () => {windo w.location.href= '/'
+ }
 
-  render() {
-    if (this.state.hasError) {
+  render() {if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback
-      }
+        return thi s.props.fallback
+     }
 
       return (
+<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="flex justify-center mb-4">
               <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
+<<<<<<< HEAD
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Oops! Something went wrong
+            </h1>
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+            </p>
+=======
             
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Oops! Something went wrong</h1>h1>
             
             <p className="text-gray-600 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>p>
 
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
@@ -144,30 +188,51 @@ const ErrorHandlerPage: React.FC = () => {
                   {this.state.error.stack && (
                     <div>
                       <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
+                      <pre className="whitespace-pre-wrap"></p>{this.state.error.stack}</pre>
                     </div>
                   )}
                   {this.state.errorInfo?.componentStack && (
                     <div>
                       <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                      <pre className="whitespace-pre-wrap"></p>{this.state.errorInfo.componentStack}</pre>
                     </div>
                   )}
                 </div>
               </details>
             )}
+=======
+      <divclassName="min-h-screen flex items-centerjustify-centerbg-gray-50"><divclassName="max-w-md w-full bg-white rounded-lg shadow-lgp-8text-center"><divclassName="flexjustify-centermb-4"><AlertTriangleclassName="w-1 6h-16text-red-500" /></di><spanclassName="text-2 xl font-bold text-gray-900mb-4"></spa></className="text-2 xl font-bold text-gray-900mb-4">Oops! Something went wrong
+          </h><spanclassName="text-gray-600mb-6"></spa></className="text-gray-600mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+          </p>{process.env.NODE_ENV=== 'development' && this.state.error && (
+            <detailsclassName="mb-6text-left"><summaryclassName="cursor-pointer text-sm text-gray-500hover:text-gray-700">Error Details (Development)
+              </summar><divclassName="mt-2 p-4 bg-gray-100rounded text-xsfont-monooverflow-auto"><divclassName="mb-2"><stron g>Error:</stron>{this.state.error.message}
+                </di>{this.state.error.stack && (
+                  <di v><stron g>Stack:</stron><reclassName="whitespace-pre-wrap"></reclassName="whitespace-pre-wrap">{this.state.error.stack}</pr></di>)}
+                  {this.state.errorInfo?.componentStack && (
+                  <di v><stron g>ComponentStack:</stron><reclassName="whitespace-pre-wrap"></reclassName="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pr></di>)}
+              </di></detail>)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
+          <divclassName="flex flex-colsm:flex-rowgap-3justify-center"><
                 onClick={this.handleRetry}
+<<<<<<< HEAD
                 className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
+              ></button>
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
               </button>
+<<<<<<< HEAD
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+              ></button>
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+=======
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
               </button>
             </div>
           </div>
@@ -201,6 +266,27 @@ const ErrorHandlerPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+               className="flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors"
+              ></
+                onClick={this.handleRetry}
+               className="flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors"
+              ><RefreshCwclassName="w-4h-4mr-2" />Try Again
+            </butto><
+                onClick={this.handleGoHome}
+               className="flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors"
+              ></
+                onClick={this.handleGoHome}
+               className="flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors"
+              ><HomeclassName="w-4h-4mr-2" />Go Home
+            </butto></di></di></di>
+      )
+    }
+
+    return thi s.props.children
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 <<<<<<< HEAD
         {/* Benefits Section */}

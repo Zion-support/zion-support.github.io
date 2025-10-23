@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+"use client"
+import React from "react"
+import { Helmet } from "react-helmet-async"
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const NotFoundPagePage: React.FC = () => {
   const features = [
@@ -49,6 +56,8 @@ const NotFoundPagePage: React.FC = () => {
         <meta name="keywords" content="AI, artificial intelligence, NotFoundPage, AI solutions, intelligent automation" />
       </Helmet>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -72,6 +81,7 @@ const NotFoundPagePage: React.FC = () => {
             </div>
 =======
 
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -79,6 +89,15 @@ const NotFoundPagePage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional NotFoundPage services tailored to your business needs.</p>p>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
+<<<<<<< HEAD
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default NotFoundPagePage
+=======
         </section>
 
         {/* Features Section */}
@@ -152,5 +171,18 @@ const NotFoundPagePage: React.FC = () => {
     </>
   );
 };
+=======
+"useclient";
+import {Helmet} from 'lucide-react';
+import React from "react";
+import {Helmet} from"react-helmet-async";
+
+constNotFoundPagePage: React.FC= () =>{return (
+  <divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900"><Helme t><titl e>NotFoundPage | ZionTechGroup</titl><metaname="description"content="Professional NotFoundPage services by Zion TechGroup." /></Helme><sectionclassName="py-20px-4"><divclassName="container mx-automax-w-6xl"><divclassName="text-centermb-16"><spanclassName="text-5 xlmd:text-6 xl font-boldtext-whitemb-6"></spa></className="text-5 xlmd:text-6 xl font-boldtext-whitemb-6">NotFoundPage
+          </h><spanclassName="text-xl text-gray-300max-w-3 xlmx-autoleading-relaxed"></spa></className="text-xl text-gray-300max-w-3 xlmx-autoleading-relaxed">Professional NotFoundPage services tailored to your business needs.
+          </p></di></di></sectio></di>
+  );};
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 export default NotFoundPagePage;
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+import React from "react"
+<<<<<<< HEAD
+import { ArrowRight } from "lucide-react"
+interface NeonButtonProps {
+  children?: React.ReactNode
+  className?: string
+  title?: string
+  description?: string
+  href?: string
+  onClick?: () => void
+  variant?: "primary" | "secondary" | "accent"
+  size?: "sm" | "md" | "lg"
+  icon?: React.ReactNode
+  disabled?: boolean
+}
+
+const NeonButton: React.FC<NeonButtonProps> = ({
+  children,
+=======
+import {ArrowRight} from"lucide-react"
+interface NeonButtonProp s {children?: React.ReactNode;
+  class Nam e?: string;
+  title?: string;
+  description?: string;
+  href?: string;
+  onClick?: () =>voidvariant?:"primary" |"secondary" |"accent";
+  size?:"sm" |"md" |"lg";
+  icon?: React.ReactNode;
+  disabled?: boolean;}
+constNeonButton:React.FC<NeonButtonProp s>= ({children,
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+  href,
+  onClick,
+  variant="primary",
+  size="md",
+  className="",
+  icon,
+<<<<<<< HEAD
+  disabled = false
+}) => {
+  const baseClasses =
+    "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -32,6 +76,7 @@ const NeonButtonPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 <<<<<<< HEAD
   const benefits = [
@@ -151,40 +196,89 @@ export default NeonButtonPage;
     sm: "px-4 py-2 text-sm",
     md: "px-6 py-3 text-base",
     lg: "px-8 py-4 text-lg"
-  };
+  }
+=======
+  disabled= false}) => {constbaseClasses=
+   "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300transformhover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-alloweddisabled: hover:scale-10 0";
 
-  const variantClasses = {
-    primary:
-      "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2xl",
+  constsizeClasses= {
+    sm:"px-4 py-2 text-sm",
+    md:"px-6 py-3 text-base",
+    lg:"px-8 py-4 text-lg"
+ };
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+
+  constvariantClasses= {primary:
+     "bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl",
     secondary:
-      "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2xl",
+     "bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl",
     accent:
+<<<<<<< HEAD
       "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl"
-  };
+  }
 
   const neonEffect =
-    "before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10";
+    "before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10"
 
-  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
+  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`
+=======
+     "bg-gradient-to-r from-cyan-500to-blue-500text-white shado w-lghover:shado w-cyan-50 0/25 hover:shado w-2 xl"
+ };
 
-  const content = (
-    <div>
-      {icon && <span className="mr-2">{icon}</span>}
+  constneonEffect=
+   "before: absolutebefore:inset-0 before:rounded-lgbefore:bg-gradient-to-rbefore:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-smbefore:transition-opacitybefore:duration-300 hover: before:opacity-70 before:-z-1 0";
+
+  constbuttonClasses= `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+
+  constcontent= (
+  <di v>{icon&&<spanclassName="mr-2">{icon}</spa>}
       {children}
+<<<<<<< HEAD
       {!icon && <ArrowRight className="w-5 h-5 ml-2" />}
     </div>
-  );
+  )
 
   if (href) {
     return (
+<<<<<<< HEAD
+      <a href={href} className={buttonClasses}>
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <button onClick={onClick} disabled={disabled} className={buttonClasses}>
+      {content}
+    </button>
+  )
+}
+
+export default NeonButton
+=======
       <a href={href} className={buttonClasses}>{content}</a>a>
     );
   }
 
   return (
     <button onClick={onClick} disabled={disabled} className={buttonClasses}>{content}</button>button>
+=======
+      {!icon&&<ArrowRightclassName="w-5h-5ml-2"/>}
+  </di>);
+
+  if (hre f) {return (
+    <ahref={href} className={buttonClasses}>{content}
+    </a>);
+  }
+
+  return (
+  < onClick={onClick} disabled={disabled} className={buttonClasses}></ onClick={onClick} disabled={disabled} className={buttonClasses}>{content}
+  </butto>
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   );
 };
 
 export default NeonButton;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

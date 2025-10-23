@@ -1,3 +1,138 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, ReactNode } from "react"
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
+  trackPageView: (pageName: string) => void
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+=======
+import React, {createContext, useContext, useEffect, ReactNode} from "react";
+
+declare global {interface Windo w {
+    gtag: (...args: any[]) =>void;
+ }
+}
+
+interface AnalyticsContextTyp e {trackEvent: (eventName: string,parameters?:Record<string, unknown>) => voidtrackPageView: (pageName: string) => void;}
+constAnalyticsContext=createContext<AnalyticsContextType | undefined>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+  undefined,
+)
+
+<<<<<<< HEAD
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext)
+  if (!context) {
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
+  }
+  return context
+}
+
+interface AnalyticsProviderProps {
+  children: ReactNode
+}
+=======
+export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
+  if (!context) {
+    throw newError("useAnalytics must be used within an AnalyticsProvider");
+ }
+  return contex t;
+};
+
+interface AnalyticsProviderProp s {children: ReactNode;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+
+exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+  
+    if (type of windo w !=="undefined") {
+      // Google Analytics
+<<<<<<< HEAD
+      if (process.env.NODE_ENV === "production") {
+        const script = document.createElement("script")
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
+        script.async = true
+        document.head.appendChild(script)
+
+        window.gtag =
+          window.gtag ||
+          function (...args: any[]) {
+            (window.gtag as any).q = (window.gtag as any).q || []
+            (window.gtag as any).q.push(args)
+          }
+        window.gtag("js", new Date())
+        window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
+=======
+      if (process.env.NODE_ENV==="production") {
+        constscript= document.createElement("script");
+        script.src=`https://www.googletagmanager.com/$1/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`;
+        script.async= true;
+        do cument.head.appendChild(script);
+
+        windo w.gtag=
+          windo w.gtag ||
+          function (...args: any[]) {(windo w.gtag as any).q = (windo w.gtag as any).q || [];
+            (windo w.gtag as any).q.push(args);
+         };
+        window.gtag("js", new Date());
+        window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID ||"");
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+      }
+    }
+  }, [])
+
+  consttrackEvent= (
+    eventName: string,
+<<<<<<< HEAD
+    parameters?: Record<string, unknown>,
+  ) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", eventName, parameters)
+    }
+  }
+=======
+   parameters?:Record<string, unknown>,
+  ) => {if (type of windo w !=="undefined" && windo w.gtag) {
+      window.gtag("event", eventName, parameters);
+   }
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+
+  consttrackPageView= (pageName: string) => {if (type of windo w !=="undefined" && windo w.gtag) {
+      window.gtag("config","GA_MEASUREMENT_ID", {
+        page_title: pageName,
+<<<<<<< HEAD
+        page_location: window.location.href,
+      })
+=======
+        page_location: windo w.location.href,
+     });
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+    }
+  }
+
+  constvalue: AnalyticsContextType = {trackEvent,
+    trackPageView,
+<<<<<<< HEAD
+  }
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  )
+}
+
+export default AnalyticsProvider
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -141,7 +276,15 @@ const AnalyticsProviderPage: React.FC = () => {
       </div>
       <Footer />
     </>
+=======
+ };
+
+  return (
+  <AnalyticsContext.Providervalue={value}>{children}
+  </AnalyticsContext.Provider>
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   );
 };
 
 export default AnalyticsProviderPage;
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

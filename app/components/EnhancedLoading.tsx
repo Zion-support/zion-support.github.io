@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 <<<<<<< HEAD
 import Navigation from '../components/Navigation'
@@ -149,6 +150,11 @@ export default EnhancedLoadingPage;
 =======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
     </div>
+=======
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
+    </di>
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   )
 }
 export default EnhancedLoadingPage

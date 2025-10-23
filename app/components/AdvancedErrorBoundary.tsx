@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Home } from 'lucide-react'
+
+interface Props {
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+}
+
+interface State {
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+  errorId?: string
+}
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -74,18 +98,123 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
       error,
+<<<<<<< HEAD
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    }
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    })
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo)
+    }
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      // console.error('Error caught by boundary:', error, errorInfo)
+    }
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo)
+    }
+  }
+
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // You can integrate with services like Sentry, LogRocket, etc.
+    const errorData = {
+=======
       errorInfo,
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+=======
+import React, {Component, ErrorInfo, ReactNode} from 'react'
+import {AlertTriangle, RefreshCw, Home, Mail} from 'lucide-react'
+interface Prop s {children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) =>void;}
+
+interface Stat e {hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;}
+class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {
+    super(props);
+    this.state= { hasError: false};
+  }
+
+  static getDerivedStateFromError(error: Error): State {return {
+      hasError: true,
+      error,
+      errorId:`error_${Date.now()}_${Math.rando m().toString(36).substr(29)}`
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo});
+    // Call custom error handler if provided
+    if (this.props.onError) {this.props.onError(errorerrorInfo);
+   }
+    // Log error to console in development
+    if (process.env.NODE_ENV=== 'development') {}
+    // Log error to external service in production
+    if (process.env.NODE_ENV=== 'production') {this.logErrorToService(errorerrorInfo);
+   }
+  }
+
+  logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// You can integrate with services like Sentry, LogRocket, etc.
+    consterrorData= {
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      url: window.location.href
+    }
+    // Log the error data for debugging
+    // console.error('Error data:', errorData)
+=======
+      url: windo w.location.href
+   };
+    // Log the error data for debugging
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+    // Example: Send to your error reporting service
+    // You could send this to yourbackend:
+    // fetch('/$1/error-report', {//   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json'},
+    //   body: JSON.stringify(errorData)
+    // })
+    // For now, just log to console
+    // Error data logged
+  }
+
+  handleReset= () => {this.setState({
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      errorId: undefined
+<<<<<<< HEAD
+    })
+  }
+
+  handleReportError = () => {
+    const { error, errorId } = this.state
+    const subject = `Error Report - ${errorId}`
+    const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`
+    const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.open(mailtoLink)
+  }
+=======
       url: window.location.href,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
@@ -160,16 +289,37 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
   private handleGoHome = () => {
     window.location.href = '/';
   };
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       // Default error UI
       return (
+<<<<<<< HEAD
+        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
+          <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center">
+            <div className="flex justify-center mb-6">
+              <AlertTriangle className="h-20 w-20 text-red-500" />
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+              Oops! Something went wrong
+            </h1>
+            <p className="text-gray-600 mb-6 text-lg">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+            </p>
+            {this.state.errorId && (
+              <div className="bg-gray-100 p-4 rounded-lg mb-6">
+                <p className="text-sm text-gray-600"></p>
+                  <strong>Error ID:</strong> {this.state.errorId}
+                </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Please include this ID when contacting support
+=======
         <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
           <div className='sm:mx-auto sm:w-full sm:max-w-md'>
             <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
@@ -192,6 +342,7 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
                 <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>h2>
                 <p className='mt-2 text-sm text-gray-600'>We&apos;re sorry, but something unexpected happened. Our team</p>
                   has been notified.
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
                 </p>
               </div>
 
@@ -218,6 +369,120 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
                       <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</p>pre>
                     </details>
                   </div>
+<<<<<<< HEAD
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Stack:</strong>
+                      <pre className="whitespace-pre-wrap mt-1"></p>
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              </details>
+            )}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button
+                onClick={this.handleReset}
+                className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              ></button>
+                <RefreshCw className="h-4 w-4 mr-2" />
+                Try Again
+              </button>
+              <button
+                onClick={() =></button> window.location.href = '/'}
+                className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
+              >
+                <Home className="h-4 w-4 mr-2" />
+                Go Home
+              </button>
+              <button
+                onClick={this.handleReportError}
+                className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+              ></button>
+                <Mail className="h-4 w-4 mr-2" />
+                Report Issue
+              </button>
+            </div>
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <p className="text-sm text-gray-500"></p>
+                If this problem persists, please contact our support team at{' '}
+                <a
+                  href="mailto:support@ziontechgroup.com"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  support@ziontechgroup.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+    return this.props.children
+=======
+   });
+  };
+
+  handleReportError= () => {const{errorerrorId} = this.state;
+    constsubject= `Error Report -${errorId}`;
+    constbody= `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were do ing when thiserroroccurred:`;
+    constmailtoLink= `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    windo w.open(mailtoLink);
+  };
+
+  render() {if (this.state.hasError) {
+      if (this.props.fallback) {
+        return thi s.props.fallback;
+     }
+      return (
+      <divclassName="min-h-screen bg-gray-50flex flex-colitems-centerjustify-centerpx-4"><divclassName="max-w-2 xl w-full bg-white rounded-lg shadow-lgp-8text-center"><divclassName="flexjustify-centermb-6"><AlertTriangleclassName="h-2 0w-20text-red-500" /></di><spanclassName="text-3 xl font-bold text-gray-900mb-4"></spa></className="text-3 xl font-bold text-gray-900mb-4">Oops! Something went wrong
+          </h><spanclassName="text-gray-600mb-6text-lg"></spa></className="text-gray-600mb-6text-lg">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+          </p>{this.state.errorId && (
+            <divclassName="bg-gray-100p-4rounded-lgmb-6"><spanclassName="text-smtext-gray-600"></spa></className="text-smtext-gray-600"><stron g>ErrorID:</stron>{this.state.errorId}
+              </p><spanclassName="text-xs text-gray-500mt-1"></spa></className="text-xs text-gray-500mt-1">Please include this ID when contacting support
+              </p></di>)}
+            {process.env.NODE_ENV=== 'development' && this.state.error && (
+            <detailsclassName="mb-6text-left"><summaryclassName="cursor-pointer text-sm font-medium text-gray-700mb-2">Error Details (Development)
+              </summar><divclassName="bg-gray-100p-3 rounded text-xs font-mono text-gray-800overflow-automax-h-40"><divclassName="mb-2"><stron g>Error:</stron>{this.state.error.message}
+                </di>{this.state.errorInfo && (
+                  <di v><stron g>Stack:</stron><reclassName="whitespace-pre-wrapmt-1"></reclassName="whitespace-pre-wrapmt-1">{this.state.errorInfo.componentStack}
+                    </pr></di>)}
+              </di></detail>)}
+          <divclassName="flex flex-colsm:flex-rowgap-3justify-center"><
+                onClick={this.handleReset}
+               className="flex items-center justify-center px-6 py-3 bg-blue-600text-white rounded-mdhover:bg-blue-700transition-colors"
+              ></
+                onClick={this.handleReset}
+               className="flex items-center justify-center px-6 py-3 bg-blue-600text-white rounded-mdhover:bg-blue-700transition-colors"
+              ><RefreshCwclassName="h-4w-4mr-2" />Try Again
+            </butto><
+                onClick={() =></
+                onClick={() =>windo w.location.href='/'}
+               className="flex items-center justify-center px-6 py-3 bg-gray-600text-white rounded-mdhover:bg-gray-700transition-colors"
+              >
+              <HomeclassName="h-4w-4mr-2" />Go Home
+            </butto><
+                onClick={this.handleReportError}
+               className="flex items-center justify-center px-6 py-3 bg-green-600text-white rounded-mdhover:bg-green-700transition-colors"
+              ></
+                onClick={this.handleReportError}
+               className="flex items-center justify-center px-6 py-3 bg-green-600text-white rounded-mdhover:bg-green-700transition-colors"
+              ><MailclassName="h-4w-4mr-2" />Report Issue
+            </butto></di><divclassName="mt-8 pt-6 border-tborder-gray-200"><spanclassName="text-smtext-gray-500"></spa></className="text-smtext-gray-500">If this problem persists, please contact our support team at{''}
+              <ahref="mailto:support@ziontechgroup.com"
+                 className="text-blue-600hover:text-blue-800"
+                >support@ziontechgroup.com
+              </a></p></di></di></di>
+      );
+    }
+    return thi s.props.children;
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+  }
+}
+
+export default AdvancedErrorBoundary
+=======
                 </div>
               )}
 
@@ -329,3 +594,4 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
 };
 
 export default AdvancedErrorBoundaryPage;
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

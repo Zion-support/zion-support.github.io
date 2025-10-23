@@ -1,5 +1,37 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { cn } from '../lib/utils'
+interface ResponsiveContainerProps {
+  children: React.ReactNode
+  className?: string
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full'
+}
+=======
+import {cn} from '../$1/utils'
+interface ResponsiveContainerProp s {children: React.ReactNode;
+  class Nam e?: string;
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2 xl' | '3 xl' | '4 xl' | '5 xl' | '6 xl' | '7 xl' | 'full';}
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+
+constResponsiveContainer= ({children,
+  class Nam e,
+  maxWidth= '7 xl'}: ResponsiveContainerProps) =>{constmaxWidthClasses= {
+    sm: 'max-w-sm',
+    md: 'max-w-md',
+    lg: 'max-w-lg',
+    xl: 'max-w-xl',
+    '2 xl': 'max-w-2 xl',
+    '3 xl': 'max-w-3 xl',
+    '4 xl': 'max-w-4 xl',
+    '5 xl': 'max-w-5 xl',
+    '6 xl': 'max-w-6 xl',
+    '7 xl': 'max-w-7 xl',
+    full: 'max-w-full'
+<<<<<<< HEAD
+  }
+=======
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -40,6 +72,7 @@ const ResponsiveContainerPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
   return (
 <<<<<<< HEAD
@@ -151,9 +184,30 @@ export default ResponsiveContainerPage;
       'mx-auto px-4 sm:px-6 lg:px-8',
       maxWidthClasses[maxWidth],
       className
+<<<<<<< HEAD
+    )}>
+      {children}
+    </div>
+  )
+}
+
+export default ResponsiveContainer
+=======
     )}>{children}</div>div>
+=======
+ };
+
+  return (
+  <divclassName={cn(
+      'mx-auto px-4 sm:px-6 lg:px-8',
+      maxWidthClasses[maxWidth],
+      class Nam e
+   )}>{children}
+  </di>
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   );
 };
 
 export default ResponsiveContainer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

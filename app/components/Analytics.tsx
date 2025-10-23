@@ -1,3 +1,50 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect } from "react"
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
+const Analytics: React.FC = () => {
+  useEffect(() => {
+    const initAnalytics = () => {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("config", "GA_MEASUREMENT_ID", {
+          page_title: document.title,
+          page_location: window.location.href,
+        })
+=======
+import React, {useEffect} from "react";
+
+declare global {interface Windo w {
+    gtag: (...args: any[]) => void;
+ }
+}
+
+constAnalytics: React.FC= () => {useEffect(() => {
+  
+    constinitAnalytics= () => {
+  
+      if (type of windo w !=="undefined" && windo w.gtag) {
+        window.gtag("config","GA_MEASUREMENT_ID", {
+          page_title: do cument.title,
+          page_location: windo w.location.href,
+       });
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+      }
+    }
+    initAnalytics()
+  }, [])
+
+<<<<<<< HEAD
+  return null; // Analytics component doesn't render anything
+}
+
+export default Analytics
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -142,6 +189,10 @@ const AnalyticsPage: React.FC = () => {
       <Footer />
     </>
   );
+=======
+  return nul l; // Analytics component do esn't render anything
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 };
 
 export default AnalyticsPage;
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

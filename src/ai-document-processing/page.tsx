@@ -1,56 +1,78 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { FileText, FileImage } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
+=======
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { FileText, FileImage, CheckCircle, Phone, Mail, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AIDocumentProcessingPage: React.FC = () => {
   const features = [
+=======
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import {FileText, FileImage, CheckCircle, Phone, Mail} from 'lucide-react';;
+constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     {
       icon: Eye,
       title: 'Advanced OCR',
-      description: 'State-of-the-art optical character recognition that extracts text from any document with 99.9% accuracy.',
-      benefits: ['99.9% accuracy', 'Multi-language support', 'Handwriting recognition']
-    },
-    {
-      icon: Brain,
+      description: 'State-of-the-art optical character recognition that extracts text from any do cument with99.9% accuracy.',
+      benefits: ['9 9.9% accuracy', 'Multi-language support', 'Handwriting recognition']
+   },
+    {icon: Brain,
       title: 'AI Data Extraction',
-      description: 'Intelligent data extraction that understands document structure and extracts relevant information automatically.',
+      description: 'Intelligent data extraction that understands do cument structure and extracts relevant information automatically.',
       benefits: ['Smart parsing', 'Context understanding', 'Field mapping']
-    },
-    {
-      icon: Zap,
+   },
+    {icon: Zap,
       title: 'Automated Processing',
-      description: 'Fully automated document processing workflows that handle large volumes of documents without human intervention.',
+      description: 'Fully automated do cument processing workflows that handle large volumes of do cuments without human intervention.',
       benefits: ['Batch processing', 'Real-time processing', 'Error handling']
-    },
-    {
-      icon: BarChart,
+   },
+    {icon: BarChart,
       title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on document processing performance, accuracy rates, and processing times.',
+      description: 'Comprehensive analytics on do cument processing performance, accuracy rates, and processing times.',
       benefits: ['Performance metrics', 'Accuracy tracking', 'Cost analysis']
-    },
-    {
-      icon: Shield,
+   },
+    {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption, audit logs, and compliance with GDPR, HIPAA, and other standards.',
       benefits: ['Data encryption', 'Audit trails', 'Compliance ready']
-    },
-    {
-      icon: Users,
+   },
+    {icon: Users,
       title: 'Team Collaboration',
-      description: 'Collaborative features that allow teams to review, approve, and manage document processing workflows.',
+      description: 'Collaborative features that allow teams to review, approve, and manage do cument processing workflows.',
       benefits: ['Review workflows', 'Approval processes', 'Team management']
+<<<<<<< HEAD
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
       price: '$149',
+=======
+   }
+  ];
+  constpricingPlans= [
+    {name: 'Starter',
+      price: '$14 9',
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 pages/month',
+        'Up to 1,000pages/month',
         'Basic OCR',
         'Standard templates',
         'Email support',
@@ -58,14 +80,13 @@ const AIDocumentProcessingPage: React.FC = () => {
         'Standard security'
       ],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399',
+   },
+    {name: 'Professional',
+      price: '$39 9',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 pages/month',
+        'Up to10,000pages/month',
         'Advanced AI extraction',
         'Custom templates',
         'Priority support',
@@ -74,10 +95,9 @@ const AIDocumentProcessingPage: React.FC = () => {
         'API access'
       ],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$999',
+   },
+    {name: 'Enterprise',
+      price: '$99 9',
       period: '/month',
       description: 'For large organizations',
       features: [
@@ -91,43 +111,57 @@ const AIDocumentProcessingPage: React.FC = () => {
         'SLA guarantee'
       ],
       popular: false
+<<<<<<< HEAD
     }
-  ];
+  ]
   const stats = [
     { number: '99.9%', label: 'Accuracy Rate' },
     { number: '90%', label: 'Time Savings' },
     { number: '50+', label: 'Document Types' },
     { number: '24/7', label: 'Processing' }
-  ];
+  ]
   const useCases = [
     {
       title: 'Invoice Processing',
+=======
+   }
+  ];
+  conststats= [
+    {number: '9 9.9%', label: 'Accuracy Rate'},
+    {number: '9 0%', label: 'Time Savings'},
+    {number: '5 0+', label: 'Document Types'},
+    {number: '2 4/7', label: 'Processing'}
+  ];
+  constuseCases= [
+    {title: 'Invoice Processing',
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       description: 'Automatically extract data from invoices, validate information, and integrate with accounting systems.',
       icon: FileText
-    },
-    {
-      title: 'Contract Analysis',
+   },
+    {title: 'Contract Analysis',
       description: 'Analyze contracts to extract key terms, dates, and clauses with AI-powered natural language processing.',
       icon: FileImage
-    },
-    {
-      title: 'Form Processing',
-      description: 'Process application forms, surveys, and other structured documents with intelligent data extraction.',
+   },
+    {title: 'Form Processing',
+      description: 'Process application forms, surveys, and other structured do cuments with intelligent data extraction.',
       icon: Search
-    },
-    {
-      title: 'Medical Records',
+   },
+    {title: 'Medical Records',
       description: 'Extract patient information from medical records while maintaining HIPAA compliance and data security.',
       icon: Shield
+<<<<<<< HEAD
     }
+  ]
+=======
+   }
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   return (
-    <>
-      <SEOOptimizer
-        title="AI Document Processing Platform - Zion Tech Group"
-        description="Automate document processing with AI-powered OCR and data extraction. 99.9% accuracy, 90% time savings, and 50+ document types supported."
-        keywords={['AI document processing', 'OCR', 'data extraction', 'document automation', 'AI parsing']}
+  <><SEOOptimizertitle="AI Document Processing Platform - ZionTechGroup"
+        description="Automate do cument processing with AI-powered OCR and data extraction. 9 9.9% accuracy,90% time savings, and50+ do cument typessupported."
+        keywords={['AI do cument processing', 'OCR', 'data extraction', 'do cument automation', 'AIparsing']}
         canonicalUrl="https://ziontechgroup.com/ai-document-processing"
+<<<<<<< HEAD
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -142,7 +176,7 @@ const AIDocumentProcessingPage: React.FC = () => {
                 Automate document processing with 99.9% accuracy
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered document processing platform automatically extracts, analyzes, and processes 
+                Our AI-powered document processing platform automatically extracts, analyzes, and processes
                 documents with advanced OCR and intelligent data extraction capabilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -222,37 +256,48 @@ const AIDocumentProcessingPage: React.FC = () => {
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
+=======
+      /><divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Navigation /><mainclassName="pt-16">{/* HeroSection */}
+        <sectionclassName="container mx-auto px-4 py-16text-center"><divclassName="max-w-4xlmx-auto"><spanclassName="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></className="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text">AI Document Processing Platform
+            </h><spanclassName="text-xlmd:text-2 xl text-cyan-400mb-8"></className="text-xlmd:text-2 xl text-cyan-400mb-8">Automate do cument processing with99.9% accuracy
+            </p><spanclassName="text-lg text-gray-300mb-12max-w-3xlmx-auto"></className="text-lg text-gray-300mb-12max-w-3xlmx-auto">Our AI-powered do cument processing platform automatically extracts, analyzes, and processes 
+                do cuments with advanced OCR and intelligent data extraction capabilities.
+            </p><divclassName="flex flex-colsm:flex-row gap-4 justify-center items-centermb-16"><ahref="tel:+13024640950"
+                 className="cyber-button flexitems-centerspace-x-2"
+                ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
+                 className="cyber-button flexitems-centerspace-x-2"
+                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
+                ><MailclassName="w-5h-5" /><spa n>GetFreeDemo</spa></a></di>{/* Stats */}
+            <divclassName="grid grid-cols-2 md:grid-cols-4 gap-8mb-16">{stats.map((statindex) => (
+               <divkey={index}className="cyber-cardp-6text-center"><divclassName="text-3 xlmd:text-4 xl font-boldtext-cyan-400mb-2neon-text">{stat.number}
+                  </di><divclassName="text-gray-300font-medium">{stat.label}</di></di>))}
+            </di></di></sectio>{/* FeaturesSection */}
+        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Powerful Document Processing Features
+          </h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{features.map((featureindex) => (
+             <divkey={index}className="cyber-card p-6 hover:scale-105transition-allduration-300"><feature.iconclassName="w-12h-12text-cyan-400mb-4" /><h3className="text-xl font-boldtext-whitemb-3">{feature.title}</h><pclassName="text-gray-300mb-4">{feature.description}</p><ulclassName="space-y-2">{feature.benefits.map((benefitidx) => (
+                   <likey={idx}className="flex items-center space-x-2 text-smtext-cyan-400"><CheckCircleclassName="w-4h-4" /><spa n>{benefit}</spa></l>))}
+                </u></di>))}
+          </di></sectio>{/* Use CasesSection */}
+        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Perfect for Every Document Type
+          </h><divclassName="grid grid-cols-1md:grid-cols-2gap-8">{useCases.map((useCaseindex) => (
+             <divkey={index}className="cyber-card p-6 hover:scale-105transition-allduration-300"><useCase.iconclassName="w-12h-12text-cyan-400mb-4" /><h3className="text-xl font-boldtext-whitemb-3">{useCase.title}</h><pclassName="text-gray-300">{useCase.description}</p></di>))}
+          </di></sectio>{/* PricingSection */}
+        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Simple, Transparent Pricing
+          </h><divclassName="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xlmx-auto">{pricingPlans.map((planindex) => (
+             <divkey={index}
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                   className={`cyber-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="tel:+13024640950"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
+                    plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
+                }`}
+                >{plan.popular && (
+                  <divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><spanclassName="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold"></className="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold">Most Popular
+                    </spa></di>)}
+                <divclassName="text-centermb-6"><h3className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h><pclassName="text-gray-400mb-4">{plan.description}</p><divclassName="flexitems-baselinejustify-center"><spanclassName="text-4 xl font-boldtext-cyan-400">{plan.price}</spa><spanclassName="text-gray-400ml-1">{plan.period}</spa></di></di><ulclassName="space-y-3mb-8">{plan.features.map((featureidx) => (
+                   <likey={idx}className="flexitems-centerspace-x-3"><CheckCircleclassName="w-5 h-5 text-cyan-400flex-shrink-0" /><spanclassName="text-gray-300">{feature}</spa></l>))}
+                </u><ahref="tel:+13024640950"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
                       plan.popular
+<<<<<<< HEAD
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
@@ -295,6 +340,25 @@ const AIDocumentProcessingPage: React.FC = () => {
         <Footer />
       </div>
     </>
+  )
+}
+export default AIDocumentProcessingPage
+=======
+                        ? 'bg-cyan-400text-slate-900 hover:bg-cyan-30 0'
+                         : 'bg-slate-700text-whitehover:bg-slate-60 0'
+                  }`}
+                  >Get Started
+                </a></di>))}
+          </di></sectio>{/* CTASection */}
+        <sectionclassName="container mx-auto px-4 py-16text-center"><divclassName="cyber-card p-12max-w-4xlmx-auto"><spanclassName="text-3 xlmd:text-4 xl font-bold text-whitemb-6neon-text"></className="text-3 xlmd:text-4 xl font-bold text-whitemb-6neon-text">Ready to Automate Your Documents?
+            </h><spanclassName="text-xl text-gray-300mb-8"></className="text-xl text-gray-300mb-8">Join 1800+ companies already using our do cument processing platform
+            </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
+                 className="cyber-button flex items-centerjustify-centerspace-x-2"
+                ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
+                 className="cyber-button flex items-centerjustify-centerspace-x-2"
+                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
+                ><MailclassName="w-5h-5" /><spa n>ScheduleDemo</spa></a></di></di></sectio></mai><Footer /></di></>
   );
 };
 export default AIDocumentProcessingPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
