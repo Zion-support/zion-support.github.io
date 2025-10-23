@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function ZionAiEnergyManagerPage() {
@@ -22,9 +23,10 @@ export default function ZionAiEnergyManagerPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

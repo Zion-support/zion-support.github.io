@@ -1,5 +1,5 @@
-import React from "react";
 "use client";
+import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
@@ -59,16 +59,16 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
-          </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
         
-          </div><div className="lg:col-span-1">
+          <div className="lg:col-span-1">
         
-          </div><div className="flex items-center space-x-2 mb-4">
+          <div className="flex items-center space-x-2 mb-4">
               <Brain className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">Zion Tech Group</span>
           
-          </div><p className="text-gray-400 mb-4">
+          <p className="text-gray-400 mb-4">
               Advanced AI and IT solutions for modern businesses. We help you
               leverage cutting-edge technology to drive growth and innovation.
             </p>
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
           <div>
           <h1 className="text-lg font-semibold mb-4">AI Services</h3>
             
-          </div><ul className="space-y-2">
+          <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
           <div>
           <h1 className="text-lg font-semibold mb-4">IT Services</h3>
             
-          </div><ul className="space-y-2">
+          <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
@@ -144,7 +144,7 @@ const Footer: React.FC = () => {
           <div>
           <h1 className="text-lg font-semibold mb-4">Micro SaaS</h3>
             
-          </div><ul className="space-y-2">
+          <ul className="space-y-2">
               {microSaas.map((service, index) => (
                 <li key={index}>
                   <Link

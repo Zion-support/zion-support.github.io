@@ -23,9 +23,6 @@ export default function AccessibilityPagePage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
     </div>
-  );
+  ););
 }

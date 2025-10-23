@@ -31,7 +31,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({
     document.documentElement.style.fontSize = `${settings.fontSize}px`;
   }, []);
 
-  return <>{children}</>;
+  return <>{children}</div>;
 };
 
 export default Page;

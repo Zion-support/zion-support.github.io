@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 
 interface PerformanceMetrics {
@@ -15,17 +16,17 @@ const PerformanceDashboard: React.FC = () => {
   });
 
   useEffect(() => {
-    let _frameCount = 0;
+    let frameCount = 0;
     let lastTime = performance.now();
 
-    const _updateMetrics = () => {
+    const updateMetrics = () => {
       const currentTime = performance.now();
-      const _renderTime = currentTime - lastTime;
+      const renderTime = currentTime - lastTime;
 
-      const _memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
 
-      _frameCount++;
-      const _fps = Math.round(1000 / renderTime);
+      frameCount++;
+      const fps = Math.round(1000 / renderTime);
 
       setMetrics({
         renderTime: Math.round(renderTime * 100) / 100,
@@ -47,13 +48,12 @@ const PerformanceDashboard: React.FC = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-          <h1 className="text-2xl font-bold text-gray-900 mb-6">
-        Performance Dashboard
-      </h2>
+          <h1 className="text-2xl font-bold text-gray-900 mb-6">Performance Dashboard
+      </h1>
         
-          </div><div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-          </div><div className="bg-blue-50 rounded-lg p-4">
+          <div className="bg-blue-50 rounded-lg p-4">
           <h1 className="text-lg font-semibold text-blue-900 mb-2">
             Render Time
           </h3>
@@ -74,7 +74,8 @@ const PerformanceDashboard: React.FC = () => {
           
           </div><p className="text-3xl font-bold text-purple-600">{metrics.fps}</p>
         </div>
-      </div>
+    
+    
     </div>
   );
 };

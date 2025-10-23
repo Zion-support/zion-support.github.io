@@ -23,10 +23,10 @@ export default function AiWorkflowAutomationPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
+    
+    
+    
+    
+    </div>
   );
 }

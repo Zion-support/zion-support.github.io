@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function AiContentGenerationPage() {
@@ -22,10 +23,10 @@ export default function AiContentGenerationPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
+    
+    
+    
+    
+    </div>
   );
 }

@@ -22,9 +22,9 @@ export default function FiveGSolutionsPage() {
               This page is under development. Please check back later for
               updates.
             </p>
-          </div>
-        </div>
-      </div>
-    </>
+    
+    
+    
+    </div>
   );
 }

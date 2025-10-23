@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function ApiDevelopmentAdvancedPage() {
@@ -22,9 +23,10 @@ export default function ApiDevelopmentAdvancedPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

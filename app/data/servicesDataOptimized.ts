@@ -1,3 +1,4 @@
+"use client";
 // Optimized services data with reduced bundle size
 export const servicesDataOptimized = {
   aiServices: [

@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useCallback, useRef, useState } from "react";
 
 export interface PerformanceOptimizationOptions {

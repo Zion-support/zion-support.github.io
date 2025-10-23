@@ -23,9 +23,10 @@ export default function AiContentGeneratorPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

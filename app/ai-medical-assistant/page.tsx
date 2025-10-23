@@ -23,9 +23,10 @@ export default function AiMedicalAssistantPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }
