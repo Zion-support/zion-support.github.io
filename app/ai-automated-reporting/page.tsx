@@ -30,7 +30,7 @@ const AiAutomatedReportingPage: React.FC = () => {
     },
   ];
 
-  return (
+    return (
     <React.Fragment>
       <Helmet>
         <title>

@@ -1173,14 +1173,14 @@ const AIServicesPage: React.FC = () => {
 const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI', 'Agricultural AI', 'Legal AI', '3D AI', 'Mobile AI', 'CDN AI', 'BI AI', 'API AI', 'Security AI'];
 
   if (!isLoaded) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+      return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
       </div>
     );
   }
 
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />

@@ -11,8 +11,8 @@ const features = [
 { icon: BarChart, title: 'Legal Analytics', description: 'Comprehensive analytics on legal matters and case outcomes.' },
 { icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' }
 ]
-return (
-<React.Fragment>
+  return (
+    <React.Fragment>
 <Helmet>
 <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
 <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently." />
@@ -39,7 +39,8 @@ return (
 </div>
 </section>
 </div>
-</React.Fragment>
-)
+    </React.Fragment>
+  )
 }
-export default LegalDocumentManagerPage
+
+export default $1

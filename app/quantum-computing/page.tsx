@@ -35,10 +35,10 @@ const PagePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Page | Zion Tech Group</title>
+        <title>AI API Management - Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>

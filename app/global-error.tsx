@@ -31,8 +31,8 @@ description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
 ]
-return (
-<React.Fragment>
+  return (
+    <React.Fragment>
 <Helmet>
 <title>Global Error - Zion Tech Group</title>
 <meta name="description" content="Global error page." />
@@ -109,12 +109,8 @@ Contact Us
 </section>
 </main>
 <Footer />
-</React.Fragment>
-)
+    </React.Fragment>
+  )
 }
-export default GlobalErrorPage
-</button>
-</h2>
-</button>
-</button>
-</h1>
+
+export default $1

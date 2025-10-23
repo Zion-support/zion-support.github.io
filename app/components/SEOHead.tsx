@@ -48,8 +48,8 @@ const defaultStructuredData = {
 "https://twitter.com/ziontechgroup"
 ]
 }
-return (
-<Helmet>
+  return (
+    <Helmet>
 {/* Basic Meta Tags */}
 <title>{fullTitle}</title>
 <meta name="description" content={description} />

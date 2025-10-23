@@ -148,15 +148,8 @@ const AiInventoryManagerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+        </React.Fragment>
   )
 }
-export default AiInventoryManagerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default $1

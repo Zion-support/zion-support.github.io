@@ -124,7 +124,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
     const timer = setInterval(nextTestimonial, 5000)
     return () => clearInterval(timer)
   }, [])
-  return (
+    return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="py-20 px-4">
@@ -134,7 +134,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
-  return (
+    return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">

@@ -85,8 +85,8 @@ objectFit: 'cover'}
 if (hasError) {</ImageProps>
 return (</ImageProps>;}
 if (hasError) {}
-return (
-<div}
+  return (
+    <div}
 if (hasError) {;}
 return(<div}
 'use client'

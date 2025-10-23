@@ -45,7 +45,7 @@ export default function TermsPage() {
       content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
     }
   ]
-  return (
+    return (
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
         <div className="container mx-auto px-4 text-center"></div>

@@ -831,7 +831,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     setChatMessages(prev => [...prev, crisisMessage]);
   };
 
-  return (
+    return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 ${className}`}>
       <Helmet>
         <title>AI Mental Health Companion Pro - 24/7 Mental Health Support | Zion Tech Group</title>

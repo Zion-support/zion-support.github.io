@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const CookiesPage: React.FC = () => {
-  return (
+    return (
     <React.Fragment>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
@@ -40,7 +40,8 @@ const CookiesPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </React.Fragment>
+        </React.Fragment>
   )
 }
-export default CookiesPage
+
+export default $1

@@ -35,8 +35,8 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ]
-return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <Helmet>
 <title>Cloud Infrastructure | Zion Tech Group</title>
 <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />

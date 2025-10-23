@@ -94,8 +94,8 @@ const defaultStructuredData = {
 }
 return structuredData || defaultStructuredData
 }
-return (
-<React.Fragment>
+  return (
+    <React.Fragment>
 <Helmet>
 <title>{title}</title>
 <meta name="description" content={description} />

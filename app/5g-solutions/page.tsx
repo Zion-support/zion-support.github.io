@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { CheckCircle, Wifi, Zap, Shield, Globe, Smartphone } from "lucide-react";
 
 const FiveGSolutionsPage: React.FC = () => {
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G Solutions | Zion Tech Group</title>

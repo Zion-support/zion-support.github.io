@@ -35,7 +35,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  return (
+    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>EnhancedSEOOptimizer | Zion Tech Group</title>

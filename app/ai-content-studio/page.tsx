@@ -31,8 +31,8 @@ description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
 ]
-return (
-<React.Fragment>
+  return (
+    <React.Fragment>
 <Helmet>
 <title>AI Content Studio - Zion Tech Group</title>
 <meta name="description" content="Professional content studio powered by AI technology." />

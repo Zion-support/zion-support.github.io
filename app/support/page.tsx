@@ -155,8 +155,8 @@ return matchesSearch && matchesCategory
 const toggleFAQ = (index: number) => {
 setExpandedFAQ(expandedFAQ === index ? null : index)
 }
-return (
-<React.Fragment>
+  return (
+    <React.Fragment>
 <Helmet>
 <title>Support | Zion Tech Group</title>
 <meta name="description" content="Get help and support for our AI and IT solutions. Find answers to common questions and contact our support team." />

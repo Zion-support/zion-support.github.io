@@ -828,7 +828,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     ));
   };
 
-  return (
+    return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 ${className}`}>
       <Helmet>
         <title>AI Smart Home Controller Pro - Intelligent Home Automation | Zion Tech Group</title>

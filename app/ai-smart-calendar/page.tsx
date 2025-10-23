@@ -148,15 +148,8 @@ const AiSmartCalendarPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+        </React.Fragment>
   )
 }
-export default AiSmartCalendarPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default $1

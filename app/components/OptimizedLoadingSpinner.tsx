@@ -50,8 +50,8 @@ purple: 'border-purple-600 bg-purple-600',
 )
 const renderSpinner = useMemo(() => {switch (variant) {
 case 'dots':
-return (
-<div className='flex space-x-1' role='status' aria-label='Loading'>
+  return (
+    <div className='flex space-x-1' role='status' aria-label='Loading'>
 {[0, 1, 2].map(i => (</div>
 <div
 key={i}
@@ -61,8 +61,8 @@ style={{ animationDelay: `${i * 0.1}s` }}
 ))}</div>
 )
 case 'pulse':
-return (
-<div
+  return (
+    <div
 className={`${baseClasses} rounded-full animate-pulse`}
 role='status'
 aria-label='Loading'
@@ -84,8 +84,8 @@ style={{ width: '50%' }}
 /></div>
 )
 case 'bars':
-return (
-<div className='flex space-x-1' role='status' aria-label='Loading'>
+  return (
+    <div className='flex space-x-1' role='status' aria-label='Loading'>
 {[0, 1, 2, 3].map(i => (</div>
 <div
 key={i}
@@ -99,8 +99,8 @@ animationDelay: `${i * 0.1}s`,
 )
 case 'spinner':
 default:
-return (
-<div
+  return (
+    <div
 className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
 role='status'
 aria-label='Loading'

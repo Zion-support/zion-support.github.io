@@ -148,15 +148,8 @@ const AiVideoGeneratorPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+        </React.Fragment>
   )
 }
-export default AiVideoGeneratorPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default $1

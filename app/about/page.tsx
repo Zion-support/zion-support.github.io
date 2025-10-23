@@ -79,8 +79,8 @@ image: '/team/david.jpg',
 bio: 'Full-stack developer with 10+ years experience'
 }
 ]
-return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <Helmet>
 <title>About Us - Zion Tech Group</title>
 <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Our mission, values, and expert team." />

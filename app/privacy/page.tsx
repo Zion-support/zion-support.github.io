@@ -67,8 +67,8 @@ description: 'Receive your data in a structured format',
 icon: Database
 }
 ]
-return (
-<div className="min-h-screen bg-white"></div>
+  return (
+    <div className="min-h-screen bg-white"></div>
 <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
 <div className="container mx-auto px-4 text-center"></div>
 <h1 className="text-5xl md:text-6xl font-bold mb-6">

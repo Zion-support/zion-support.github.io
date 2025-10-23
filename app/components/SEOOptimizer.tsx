@@ -16,8 +16,8 @@ canonicalUrl,
 structuredData
 }) => {
 const keywordsString = keywords.join(', ')
-return (
-<Helmet>
+  return (
+    <Helmet>
 <title>{title}</title>
 <meta name="description" content={description} />
 <meta name="keywords" content={keywordsString} />

@@ -30,7 +30,7 @@ const AiAutomatedTestingPage: React.FC = () => {
     },
   ];
 
-  return (
+    return (
     <React.Fragment>
       <Helmet>
         <title>

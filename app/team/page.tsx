@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const TeamPage: React.FC = () => {
-  return (
+    return (
     <React.Fragment>
       <Helmet>
         <title>Our Team - Zion Tech Group</title>
@@ -31,7 +31,8 @@ const TeamPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </React.Fragment>
+        </React.Fragment>
   )
 }
-export default TeamPage
+
+export default $1

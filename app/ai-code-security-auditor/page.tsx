@@ -877,7 +877,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
     }
   };
 
-  return (
+    return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 ${className}`}>
       <Helmet>
         <title>AI Code Security Auditor Pro - Automated Security Analysis | Zion Tech Group</title>

@@ -78,7 +78,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
     { icon: <TrendingUp className="w-8 h-8 text-purple-600" />, value: '40%', label: 'Average Cost Reduction' },
     { icon: <Shield className="w-8 h-8 text-red-600" />, value: '99.9%', label: 'Uptime Achieved' }
   ]
-  return (
+    return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>

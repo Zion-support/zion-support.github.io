@@ -85,8 +85,8 @@ const stats = [
 { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
 { number: '24/7', label: 'Support Available', icon: Clock }
 ]
-return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 <SEOOptimizer
 title="Enterprise Solutions - Zion Tech Group"
 description="Comprehensive enterprise-grade solutions for large-scale business operations."

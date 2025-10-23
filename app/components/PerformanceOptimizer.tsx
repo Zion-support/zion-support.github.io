@@ -66,8 +66,8 @@ runOptimizations()
 }, 1000)
 return () => clearTimeout(timer)
 }, [runOptimizations])
-return (
-<div className="performance-optimizer">
+  return (
+    <div className="performance-optimizer">
 {children}
 {/* Performance Status Indicator (only in development) */}
 {process.env.NODE_ENV === 'development' && (

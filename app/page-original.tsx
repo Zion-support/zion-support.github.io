@@ -59,8 +59,8 @@ event_label: 'main_phone_number';}
 })
 }
 }, [])
-return (
-<React.Fragment>
+  return (
+    <React.Fragment>
 <SEOOptimizer
 title="Zion Tech Group - Advanced AI and IT Solutions"
 description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."

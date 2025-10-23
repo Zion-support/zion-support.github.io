@@ -70,7 +70,8 @@ const BlockchainWeb3Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+        </React.Fragment>
   )
 }
-export default BlockchainWeb3Page
+
+export default $1

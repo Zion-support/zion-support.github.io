@@ -23,8 +23,8 @@ duration: '4 min',
 features: ['Blog posts', 'Social media content', 'Product descriptions']
 }
 ]
-return (
-<React.Fragment>
+  return (
+    <React.Fragment>
 <Helmet>
 <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
 <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />

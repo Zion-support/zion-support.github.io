@@ -70,7 +70,7 @@ const ContentCarousel: React.FC = () => {
     return () => clearInterval(timer)
   }, [])
   const currentSlideData = slides[currentSlide]
-  return (
+    return (
     <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">

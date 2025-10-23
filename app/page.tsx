@@ -51,7 +51,7 @@ const HomePage: React.FC = () => {
       })
     }
   }, [])
-  return (
+    return (
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"

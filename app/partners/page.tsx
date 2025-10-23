@@ -157,7 +157,7 @@ logo: '/api/placeholder/200/100',
   const getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]
   }
-  return (
+    return (
     <React.Fragment>
       <Helmet>
         <title>Partners | Zion Tech Group</title>
@@ -244,7 +244,7 @@ logo: '/api/placeholder/200/100',
     { icon: <Zap className="w-8 h-8 text-purple-500" />, value: '95%', label: 'Success Rate' },
     { icon: <Award className="w-8 h-8 text-orange-500" />, value: '25+', label: 'Awards Won' }
   ]
-  return (
+    return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Partners - Zion Tech Group | Partner Program</title>
@@ -307,8 +307,8 @@ logo: '/api/placeholder/200/100',
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => {
                 const tierInfo = getTierInfo(partner.tier)
-                return (
-                  <div key={index} className={`${tierInfo.bgColor} backdrop-blur-lg rounded-2xl p-6 border ${tierInfo.borderColor} hover:border-purple-400 transition-all duration-300 group`}>
+                  return (
+    <div key={index} className={`${tierInfo.bgColor} backdrop-blur-lg rounded-2xl p-6 border ${tierInfo.borderColor} hover:border-purple-400 transition-all duration-300 group`}>
                     <div className="text-center">
                       <div className="w-20 h-20 bg-white/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
                         <div className="text-2xl font-bold text-white">{partner.name.charAt(0)}</div>

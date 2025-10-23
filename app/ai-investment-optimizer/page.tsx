@@ -810,7 +810,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     return change >= 0 ? TrendingUp : TrendingDown;
   };
 
-  return (
+    return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}>
       <Helmet>
         <title>AI Investment Portfolio Optimizer Pro - Advanced Portfolio Management | Zion Tech Group</title>
@@ -909,8 +909,8 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 <div className="space-y-4">
                   {portfolio.map((stock) => {
                     const ChangeIcon = getChangeIcon(stock.change);
-                    return (
-                      <div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      return (
+    <div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">
                         <div className="flex items-center justify-between mb-2">
                           <div className="flex items-center space-x-3">
                             <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">

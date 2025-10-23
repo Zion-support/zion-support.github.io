@@ -91,7 +91,7 @@ const EnhancedSEOHead: React.FC = () => {
     }
   }
   const finalStructuredData = structuredData || defaultStructuredData
-  return (
+    return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
