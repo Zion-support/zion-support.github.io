@@ -1,133 +1,55 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-// Performance optimization script
+// Simple performance optimizer
 const optimizePerformance = () => {
-  console.log('🚀 Starting performance optimization...');
-  
-  // Check if dist directory exists
-  const distPath = path.join(__dirname, '..', 'dist');
-  if (!fs.existsSync(distPath)) {
-    console.log('❌ Dist directory not found. Please run build first.');
-    return;
+  console.log("Running performance optimizations...");
+
+  // Create public directory if it doesn't exist
+  const publicDir = path.join(__dirname, "../public");
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
   }
-  
-  // Get build stats
-  const stats = getBuildStats(distPath);
-  console.log('📊 Build Statistics:');
-  console.log(`   Total files: ${stats.totalFiles}`);
-  console.log(`   Total size: ${formatBytes(stats.totalSize)}`);
-  console.log(`   JS files: ${stats.jsFiles} (${formatBytes(stats.jsSize)})`);
-  console.log(`   CSS files: ${stats.cssFiles} (${formatBytes(stats.cssSize)})`);
-  console.log(`   Image files: ${stats.imageFiles} (${formatBytes(stats.imageSize)})`);
-  
-  // Generate performance report
-  const report = generatePerformanceReport(stats);
-  const reportPath = path.join(__dirname, '..', 'performance-report.json');
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  console.log('📄 Performance report generated:', reportPath);
-  
-  console.log('✅ Performance optimization completed!');
+
+  // Create robots.txt
+  const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml`;
+
+  fs.writeFileSync(path.join(publicDir, "robots.txt"), robotsTxt);
+  console.log("Created robots.txt");
+
+  // Create .htaccess for better caching
+  const htaccess = `# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Set cache headers
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>`;
+
+  fs.writeFileSync(path.join(publicDir, ".htaccess"), htaccess);
+  console.log("Created .htaccess for caching");
+
+  console.log("Performance optimizations completed");
 };
 
-const getBuildStats = (distPath) => {
-  let totalFiles = 0;
-  let totalSize = 0;
-  let jsFiles = 0;
-  let jsSize = 0;
-  let cssFiles = 0;
-  let cssSize = 0;
-  let imageFiles = 0;
-  let imageSize = 0;
-  
-  const walkDir = (dir) => {
-    const files = fs.readdirSync(dir);
-    
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        walkDir(filePath);
-      } else {
-        totalFiles++;
-        totalSize += stat.size;
-        
-        const ext = path.extname(file).toLowerCase();
-        if (ext === '.js') {
-          jsFiles++;
-          jsSize += stat.size;
-        } else if (ext === '.css') {
-          cssFiles++;
-          cssSize += stat.size;
-        } else if (['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'].includes(ext)) {
-          imageFiles++;
-          imageSize += stat.size;
-        }
-      }
-    });
-  };
-  
-  walkDir(distPath);
-  
-  return {
-    totalFiles,
-    totalSize,
-    jsFiles,
-    jsSize,
-    cssFiles,
-    cssSize,
-    imageFiles,
-    imageSize
-  };
-};
-
-const generatePerformanceReport = (stats) => {
-  const report = {
-    timestamp: new Date().toISOString(),
-    buildStats: stats,
-    recommendations: []
-  };
-  
-  // Add recommendations based on stats
-  if (stats.jsSize > 500 * 1024) { // 500KB
-    report.recommendations.push({
-      type: 'warning',
-      message: 'JavaScript bundle size is large. Consider code splitting or tree shaking.'
-    });
-  }
-  
-  if (stats.cssSize > 100 * 1024) { // 100KB
-    report.recommendations.push({
-      type: 'warning',
-      message: 'CSS bundle size is large. Consider purging unused styles.'
-    });
-  }
-  
-  if (stats.imageSize > 1024 * 1024) { // 1MB
-    report.recommendations.push({
-      type: 'warning',
-      message: 'Image assets are large. Consider optimizing or using WebP format.'
-    });
-  }
-  
-  if (stats.totalSize < 1024 * 1024) { // 1MB
-    report.recommendations.push({
-      type: 'success',
-      message: 'Build size is optimized! Great job!'
-    });
-  }
-  
-  return report;
-};
-
-const formatBytes = (bytes) => {
-  if (bytes === 0) return '0 Bytes';
-  const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-};
-
-// Run optimization
 optimizePerformance();

@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+import React from "react";
+import { Link } from "react-router-dom";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -6,47 +8,45 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  
-  if (!isOpen) return null;
+  const menuItems = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <>
-      {/* Overlay */}
-      <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-        onClick={onClose}
-      />
-      
-      {/* Sidebar */}
-      <div className="fixed inset-y-0 left-0 w-64 bg-slate-900/95 backdrop-blur-sm border-r border-white/10 z-50 transform transition-transform duration-300 ease-in-out">
-        <div className="flex items-center justify-between p-4 border-b border-white/10">
-          <div className="flex items-center space-x-2">
-            <Brain className="w-8 h-8 text-cyan-400" />
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
-          </div>
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={onClose}
+        />
+      )}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="p-4">
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-600 hover:text-gray-800 text-2xl"
           >
-            <X className="w-6 h-6" />
+            ×
           </button>
         </div>
-        
-        <nav className="p-4">
-          <ul className="space-y-2">
-            {navigationItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.path}
-                  onClick={onClose}
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-white/10 rounded-lg transition-colors duration-200"
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <nav className="mt-4">
+          {menuItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              onClick={onClose}
+            >
+              {item.name}
+            </Link>
+          ))}
         </nav>
       </div>
     </>

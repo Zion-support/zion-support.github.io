@@ -1,38 +1,64 @@
-import fs from 'fs';
-import path from 'path';
-import React from 'react';
-export default ${componentName};`;
-// List of pages that need to be fixed;
-const pagesToFix = [
-  'cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog', 
-  'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas';
-];
- `'use client';
-  return (
-    <div>Content</div>
-  );
-        <title>${title} - Zion Tech Group</title>
-                ${title}
-              Professional ${title.toLowerCase()} services by Zion Tech Group.
-            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
-              We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
-              Contact us to learn more about our services.;
-              Contact Us;
-  );
-};
+const fs = require('fs');
+const path = require('path');
 
-// Fix pages;
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join('') + 'Page';
-  const pageDir = path.join('/workspace/app', pageName);
-const pageFile = path.join(pageDir, 'page.tsx');
-  // Create directory if it doesn't exist;
-  if (!fs.existsSync(pageDir)) {
-    fs.mkdirSync(pageDir, { recursive: true });
-  // Overwrite page file with correct template;
-  fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
-  console.log(`Fixed: ${pageFile}`);
-});
-console.log('Page fixes completed!');
+function fixPageFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove Helmet imports
+    content = content.replace(/import.*Helmet.*from.*react-helmet-async.*\n/g, '');
+    
+    // Remove Helmet JSX blocks
+    content = content.replace(/<Helmet>[\s\S]*?<\/Helmet>/g, '');
+    
+    // Fix React.Fragment to empty fragments
+    content = content.replace(/<React\.Fragment>/g, '<>');
+    content = content.replace(/<\/React\.Fragment>/g, '</>');
+    
+    // Remove metadata exports (not needed for client components)
+    content = content.replace(/export const metadata = \{[\s\S]*?\};\n\n/g, '');
+    
+    // Fix JSX structure - remove extra div wrappers
+    content = content.replace(/return \(\s*<div>\s*<div className="min-h-screen/g, 'return (\n    <div className="min-h-screen');
+    
+    // Fix closing tags
+    content = content.replace(/<\/div>\s*<\/div>\s*\);/g, '\n    </div>\n  );');
+    
+    // Fix empty fragment issues
+    content = content.replace(/return \(\s*<>\s*<div className="min-h-screen/g, 'return (\n    <div className="min-h-screen');
+    content = content.replace(/<\/div>\s*<\/>\s*\);/g, '\n    </div>\n  );');
+    
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Find all page.tsx files
+const appDir = path.join(__dirname, 'app');
+const pageFiles = [];
+
+function findPageFiles(dir) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    if (stat.isDirectory()) {
+      findPageFiles(filePath);
+    } else if (file === 'page.tsx') {
+      pageFiles.push(filePath);
+    }
+  }
+}
+
+findPageFiles(appDir);
+
+console.log(`Found ${pageFiles.length} page files to fix`);
+
+pageFiles.forEach(fixPageFile);
+
+console.log('Done fixing all page files');

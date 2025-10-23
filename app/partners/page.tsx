@@ -1,50 +1,35 @@
-import React from 'react';
+"use client";
+import React from "react";
 
-export default function Partners() {
-  
-  
-  const tiers = [
-    {
-      name: "Platinum",
-      color: "from-gray-400 to-gray-600",
-      requirements: "Strategic partnership with significant revenue commitment",
-      benefits: ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
-    },
-    {
-      name: "Gold",
-      color: "from-yellow-400 to-yellow-600",
-      requirements: "Strong partnership with regular collaboration",
-      benefits: ["Priority support", "Training programs", "Marketing support", "Technical resources"]
-    },
-    {
-      name: "Silver",
-      color: "from-gray-300 to-gray-500",
-      requirements: "Partnership with mutual business opportunities",
-      benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
-    }
-  ];
-
+export default function PartnersPage() {
   return (
-    <>
-      <Helmet>
-        <title>Partners - Zion Tech Group | Strategic Partnerships</title>
-        <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
-        <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Our Partners
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Strategic partnerships that drive innovation and deliver exceptional value to our clients.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Partners</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced partners solutions by Zion Tech Group
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

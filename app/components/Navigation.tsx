@@ -1,78 +1,72 @@
-import React, { useState, useCallback } from 'react';
-import { 
-  Menu, 
-  X, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+"use client";
 
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
+import React, { useState } from "react";
+import Link from "next/link";
+import { ArrowRight, Brain, Menu, X } from "lucide-react";
 
-export default function Navigation({ onSidebarToggle }: NavigationProps) {
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
 
-  const toggleMenu = useCallback(() => {
-    setIsOpen(!isOpen);
-  }, [isOpen]);
+  const navigationItems = [
+    { name: "Home", href: "/" },
+    { name: "AI Services", href: "/ai-services" },
+    { name: "IT Services", href: "/it-services" },
+    { name: "Micro SaaS", href: "/micro-saas-solutions" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
 
-  const toggleServices = useCallback(() => {
-    setIsServicesOpen(!isServicesOpen);
-  }, [isServicesOpen]);
-
-  const isActive = useCallback((path: string) => {
-    return location.pathname === path;
-  }, [location.pathname]);
-
-  
-  
-  
-  
   return (
-    <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow-lg border-b border-purple-500/20">
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <Link to="/" className="flex items-center space-x-2">
-              <Brain className="w-8 h-8 text-cyan-400" />
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <Brain className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-gray-900">
+                Zion Tech Group
+              </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            {navigationItems.map((item, index) => (
               <Link
-                key={item.name}
-                to={item.path}
-                className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  isActive(item.path)
-                    ? 'text-cyan-400 bg-purple-800/50'
-                    : 'text-gray-300 hover:text-cyan-400 hover:bg-purple-800/30'
-                }`}
+                key={index}
+                href={item.href}
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
               >
-                {item.icon}
-                <span>{item.name}</span>
+                {item.name}
               </Link>
             ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
+            >
+              Get Started
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 focus:outline-none focus:text-cyan-400"
-              aria-label="Toggle menu"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-purple-600 transition-colors"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -80,26 +74,30 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
-              {navigationItems.map((item) => (
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              {navigationItems.map((item, index) => (
                 <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    isActive(item.path)
-                      ? 'text-cyan-400 bg-purple-800/50'
-                      : 'text-gray-300 hover:text-cyan-400 hover:bg-purple-800/30'
-                  }`}
+                  key={index}
+                  href={item.href}
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
                   onClick={() => setIsOpen(false)}
                 >
-                  {item.icon}
-                  <span>{item.name}</span>
+                  {item.name}
                 </Link>
               ))}
+              <Link
+                href="/contact"
+                className="block px-3 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
+              </Link>
             </div>
           </div>
         )}
       </div>
     </nav>
   );
-}
+};
+
+export default Navigation;
