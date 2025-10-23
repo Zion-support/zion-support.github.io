@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { MessageSquare } from "lucide-react"
+
 interface FormData {
   name: string;
   email: string;
@@ -9,7 +10,8 @@ interface FormData {
   service: string;
 }
 
-const [formData, setFormData] = useState<FormData>({
+export default function ContactForm() {
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
@@ -50,7 +52,7 @@ const [formData, setFormData] = useState<FormData>({
       });
     } catch (error) {
       console.error('Failed to submit contact form:', error);
-    } finally {}
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -302,9 +304,9 @@ const [formData, setFormData] = useState<FormData>({
         type="submit"
         disabled={isSubmitting}
         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-       aria-label="Action button">{isSubmitting ? "Sending..." : "Send Message"}</button>
+       aria-label="Send message">{isSubmitting ? "Sending..." : "Send Message"}</button>
     </form>
   );
-};
+}
 
 

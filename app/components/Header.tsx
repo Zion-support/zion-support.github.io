@@ -1,16 +1,17 @@
 'use client'
 import React from 'react'
 import Navigation from './Navigation'
-export default function Page() {
-return (
+import ErrorBoundary from './ErrorBoundary'
+
+export default function Header() {
+  return (
     <ErrorBoundary>
       <>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" loading="lazy" />
-    </>
+        <Navigation />
+        {/* Spacer to prevent content from going under fixed header */}
+        <div className="h-16 lg:h-20" />
+      </>
+    </ErrorBoundary>
   )
 }
-};
-export default Header
 

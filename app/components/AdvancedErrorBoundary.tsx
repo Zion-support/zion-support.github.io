@@ -194,15 +194,16 @@ class AdvancedErrorBoundary extends Component<
                     />
                   </svg>
                 </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>h2>
-                <p className='mt-2 text-sm text-gray-600'>We&apos;re sorry, but something unexpected happened. Our team</p>
+                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>
+                <p className='mt-2 text-sm text-gray-600'>
+                  We&apos;re sorry, but something unexpected happened. Our team
                   has been notified.
                 </p>
               </div>
 
               {process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>h3>
+                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>
                   <div className='mt-2 text-sm text-red-700'>
                     <p>
                       <strong>Error ID:</strong> {this.state.errorId}
@@ -214,13 +215,13 @@ class AdvancedErrorBoundary extends Component<
                       <summary className='cursor-pointer font-medium'>
                         Stack Trace
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</p>pre>
+                      <pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</pre>
                     </details>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
                         Component Stack
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</p>pre>
+                      <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</pre>
                     </details>
                   </div>
                 </div>

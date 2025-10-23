@@ -54,26 +54,29 @@ const aiServices = [
     { name: "Support", href: "/support" },
   ];
 
+export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white" loading="lazy">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" loading="lazy">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8" loading="lazy">{/* Company Info */}</div>
-          <div className="lg:col-span-1" loading="lazy">
-            <div className="flex items-center space-x-2 mb-4" loading="lazy">
-              <Brain className="h-8 w-8 text-blue-400" loading="lazy" />
-              <span className="text-xl font-bold" loading="lazy">Zion Tech Group</span>
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-4">
+              <Brain className="h-8 w-8 text-blue-400" />
+              <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 mb-4" loading="lazy">Advanced AI and IT solutions for modern businesses. We help you</p>
+            <p className="text-gray-400 mb-4">
+              Advanced AI and IT solutions for modern businesses. We help you
               leverage cutting-edge technology to drive growth and innovation.
             </p>
-            <div className="flex space-x-4" loading="lazy">
+            <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors" loading="lazy"
+                className="text-gray-400 hover:text-white transition-colors"
               >
-                <span className="sr-only" loading="lazy">Facebook</span>
+                <span className="sr-only">Facebook</span>
                 <svg
-                  className="h-6 w-6" loading="lazy"
+                  className="h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -82,11 +85,11 @@ const aiServices = [
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors" loading="lazy"
+                className="text-gray-400 hover:text-white transition-colors"
               >
-                <span className="sr-only" loading="lazy">LinkedIn</span>
+                <span className="sr-only">LinkedIn</span>
                 <svg
-                  className="h-6 w-6" loading="lazy"
+                  className="h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -98,15 +101,14 @@ const aiServices = [
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">AI Services</h3>
-            <ul className="space-y-2" loading="lazy">
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
+            <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     href={service.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group" loading="lazy"
-                  >
-                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" loading="lazy" />
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"                  >
+                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -116,15 +118,14 @@ const aiServices = [
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">IT Services</h3>
-            <ul className="space-y-2" loading="lazy">
+            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
+            <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     href={service.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group" loading="lazy"
-                  >
-                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" loading="lazy" />
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"                  >
+                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -134,15 +135,14 @@ const aiServices = [
 
           {/* Micro SaaS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">Micro SaaS</h3>
-            <ul className="space-y-2" loading="lazy">
+            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+            <ul className="space-y-2">
               {microSaas.map((service, index) => (
                 <li key={index}>
                   <Link
                     href={service.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group" loading="lazy"
-                  >
-                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" loading="lazy" />
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"                  >
+                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -152,28 +152,26 @@ const aiServices = [
 
           {/* Company & Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">Company</h3>
-            <ul className="space-y-2 mb-6" loading="lazy">
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors" loading="lazy"
-                  >
+                    className="text-gray-400 hover:text-white transition-colors"                  >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <h3 className="text-lg font-semibold mb-4" loading="lazy">Support</h3>
-            <ul className="space-y-2" loading="lazy">
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors" loading="lazy"
-                  >
+                    className="text-gray-400 hover:text-white transition-colors"                  >
                     {link.name}
                   </Link>
                 </li>
@@ -183,42 +181,42 @@ const aiServices = [
         </div>
 
         {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-8 pt-8" loading="lazy">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" loading="lazy">
-            <div className="flex items-center space-x-3" loading="lazy">
-              <Phone className="h-5 w-5 text-blue-400" loading="lazy" />
-              <span className="text-gray-400" loading="lazy">+1 (555) 123-4567</span>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3">
+              <Phone className="h-5 w-5 text-blue-400" />
+              <span className="text-gray-400">+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center space-x-3" loading="lazy">
-              <Mail className="h-5 w-5 text-blue-400" loading="lazy" />
-              <span className="text-gray-400" loading="lazy">contact@ziontechgroup.com</span>
+            <div className="flex items-center space-x-3">
+              <Mail className="h-5 w-5 text-blue-400" />
+              <span className="text-gray-400">contact@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-3" loading="lazy">
-              <MapPin className="h-5 w-5 text-blue-400" loading="lazy" />
-              <span className="text-gray-400" loading="lazy">San Francisco, CA</span>
+            <div className="flex items-center space-x-3">
+              <MapPin className="h-5 w-5 text-blue-400" />
+              <span className="text-gray-400">San Francisco, CA</span>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" loading="lazy">
-          <div className="text-gray-400 text-sm" loading="lazy">© 2024 Zion Tech Group. All rights reserved.</div>div>
-          <div className="flex space-x-6 mt-4 md:mt-0" loading="lazy">
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-gray-400 text-sm">© 2024 Zion Tech Group. All rights reserved.</div>
+          <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
               href="/privacy"
-              className="text-gray-400 hover:text-white text-sm transition-colors" loading="lazy"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-gray-400 hover:text-white text-sm transition-colors" loading="lazy"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Terms of Service
             </Link>
             <Link
               href="/cookies"
-              className="text-gray-400 hover:text-white text-sm transition-colors" loading="lazy"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Cookie Policy
             </Link>
@@ -227,6 +225,6 @@ const aiServices = [
       </div>
     </footer>
   );
-};
+}
 
 
