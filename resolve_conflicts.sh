@@ -1,47 +1,53 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by keeping the newer version (after =======)
+# Script to resolve merge conflicts by choosing the main branch version
+# This script will automatically resolve conflicts by keeping the main branch version
 
-echo "Resolving merge conflicts in all files..."
+echo "Starting conflict resolution process..."
 
-# Find all files with merge conflicts
-files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    echo "Resolving conflicts in: $file"
+    
+    # Check if file has conflict markers
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "  Found conflicts in $file"
+        
+        # Create a backup
+        cp "$file" "${file}.backup"
+        
+        # Use git checkout to get the main branch version (ours)
+        git checkout --ours "$file"
+        
+        echo "  Resolved conflicts in $file using main branch version"
+    else
+        echo "  No conflicts found in $file"
+    fi
+}
 
-for file in $files; do
-    echo "Processing: $file"
-    
-    # Create a temporary file
-    temp_file="${file}.tmp"
-    
-    # Process the file to resolve conflicts
-    awk '
-    /<<<<<<< HEAD/ {
-        in_conflict = 1
-        next
-    }
-    /=======/ {
-        if (in_conflict) {
-            in_conflict = 2
-            next
-        }
-    }
-    />>>>>>> / {
-        if (in_conflict == 2) {
-            in_conflict = 0
-            next
-        }
-    }
-    {
-        if (in_conflict == 0) {
-            print
-        } else if (in_conflict == 2) {
-            print
-        }
-    }
-    ' "$file" > "$temp_file"
-    
-    # Replace original file with processed version
-    mv "$temp_file" "$file"
+# Get list of conflicted files
+conflicted_files=$(git diff --name-only --diff-filter=U)
+
+if [ -z "$conflicted_files" ]; then
+    echo "No conflicted files found."
+    exit 0
+fi
+
+echo "Found conflicted files:"
+echo "$conflicted_files"
+echo ""
+
+# Resolve conflicts in each file
+for file in $conflicted_files; do
+    if [ -f "$file" ]; then
+        resolve_conflicts "$file"
+    else
+        echo "File $file not found, skipping..."
+    fi
 done
 
-echo "Merge conflicts resolved in all files."
+echo ""
+echo "Conflict resolution completed!"
+echo "Files resolved:"
+echo "$conflicted_files"

@@ -1,18 +1,39 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
-// Function to fix merge conflicts in a file
+// List of files with merge conflicts
+const filesToFix = [
+  'app/components/AccessibilityComponents.tsx',
+  'app/components/AccessibilityUtils.tsx',
+  'app/components/EnhancedAccessibility.tsx',
+  'app/components/Footer.tsx',
+  'app/components/LazyImage.tsx',
+  'app/components/OptimizedImage.tsx',
+  'app/components/PerformanceDashboard.tsx',
+  'app/components/PerformanceImage.tsx',
+  'app/components/SEOHead.tsx',
+  'app/components/Sidebar.tsx',
+  'app/pages/AdminPage.tsx',
+  'app/pages/ContactPage.tsx'
+];
+
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflicts
-    if (!content.includes('.*?\n    content = content.replace(/=======.*?\n>>>>>>> [^\n]+/g, '');
+    // Remove merge conflict markers and keep the HEAD version (first part)
+    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+\n/g, '$1');
     
     // Clean up any remaining conflict markers
-    content = content.replace(/.*?    
-    // Write the cleaned content back
-    fs.writeFileSync(filePath, content, 'utf8');
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======\n/g, '');
+    content = content.replace(/>>>>>>> [a-f0-9]+\n/g, '');
+    
+    // Clean up extra newlines
+    content = content.replace(/\n{3,}/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed merge conflicts in ${filePath}`);
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -20,29 +41,12 @@ function fixMergeConflicts(filePath) {
   }
 }
 
-// Function to recursively find and fix merge conflicts
-function fixAllMergeConflicts(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixedCount += fixAllMergeConflicts(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
-      if (fixMergeConflicts(filePath)) {
-        fixedCount++;
-      }
-    }
+// Fix all files
+let fixedCount = 0;
+filesToFix.forEach(file => {
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
   }
-  
-  return fixedCount;
-}
+});
 
-// Fix merge conflicts in the app directory
-const appDir = './app';
-const fixedCount = fixAllMergeConflicts(appDir);
-
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console.log(`\nFixed merge conflicts in ${fixedCount}/${filesToFix.length} files`);

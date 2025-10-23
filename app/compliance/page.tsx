@@ -1,171 +1,124 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
+import { CheckCircle, ArrowRight, Shield, FileText, Users, Lock, AlertTriangle, Award } from 'lucide-react';
 
-export default function Compliance() {
+const CompliancePage: React.FC = () => {
   const complianceFrameworks = [
     {
-      name: "SOC 2 Type II",
-      description: "Security, availability, and confidentiality controls for service organizations",
-      status: "Certified",
-      icon: <Shield className="w-8 h-8" />
+      name: 'GDPR',
+      description: 'General Data Protection Regulation compliance for EU data protection',
+      icon: <Shield className="w-8 h-8" />,
+      features: ['Data protection impact assessments', 'Privacy by design', 'Data subject rights', 'Breach notification']
     },
     {
-      name: "ISO 27001",
-      description: "Information security management system certification",
-      status: "Certified",
-      icon: <Lock className="w-8 h-8" />
+      name: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act compliance',
+      icon: <FileText className="w-8 h-8" />,
+      features: ['Protected health information security', 'Administrative safeguards', 'Physical safeguards', 'Technical safeguards']
     },
     {
-      name: "GDPR",
-      description: "General Data Protection Regulation compliance for EU data",
-      status: "Compliant",
-      icon: <Globe className="w-8 h-8" />
+      name: 'SOC 2',
+      description: 'Service Organization Control 2 compliance for security and availability',
+      icon: <Lock className="w-8 h-8" />,
+      features: ['Security controls', 'Availability controls', 'Processing integrity', 'Confidentiality controls']
     },
     {
-      name: "HIPAA",
-      description: "Health Insurance Portability and Accountability Act compliance",
-      status: "Compliant",
-      icon: <FileText className="w-8 h-8" />
-    },
-    {
-      name: "PCI DSS",
-      description: "Payment Card Industry Data Security Standard compliance",
-      status: "Compliant",
-      icon: <Award className="w-8 h-8" />
-    },
-    {
-      name: "CCPA",
-      description: "California Consumer Privacy Act compliance",
-      status: "Compliant",
-      icon: <Users className="w-8 h-8" />
+      name: 'ISO 27001',
+      description: 'Information Security Management System certification',
+      icon: <Award className="w-8 h-8" />,
+      features: ['Risk management', 'Security policies', 'Continuous improvement', 'Management commitment']
     }
   ];
 
   const services = [
     {
-      title: "Compliance Assessment",
-      description: "Comprehensive evaluation of your current compliance posture and gap analysis",
-      features: ["Risk Assessment", "Gap Analysis", "Remediation Planning", "Documentation Review"]
+      title: 'Compliance Assessment',
+      description: 'Comprehensive evaluation of your current compliance posture',
+      features: ['Gap analysis', 'Risk assessment', 'Compliance roadmap', 'Priority recommendations']
     },
     {
-      title: "Policy Development",
-      description: "Custom policies and procedures tailored to your industry and regulatory requirements",
-      features: ["Policy Creation", "Procedure Documentation", "Training Materials", "Implementation Support"]
+      title: 'Policy Development',
+      description: 'Create and implement comprehensive compliance policies and procedures',
+      features: ['Policy templates', 'Custom documentation', 'Training materials', 'Implementation guides']
     },
     {
-      title: "Audit Support",
-      description: "Expert guidance and support throughout the audit process",
-      features: ["Pre-Audit Preparation", "Audit Management", "Evidence Collection", "Remediation Support"]
+      title: 'Audit Support',
+      description: 'Prepare for and support compliance audits and certifications',
+      features: ['Audit preparation', 'Documentation review', 'Remediation support', 'Certification assistance']
     },
     {
-      title: "Ongoing Monitoring",
-      description: "Continuous monitoring and maintenance of compliance programs",
-      features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
+      title: 'Ongoing Monitoring',
+      description: 'Continuous compliance monitoring and maintenance services',
+      features: ['Regular assessments', 'Policy updates', 'Training programs', 'Incident response']
     }
   ];
 
   const benefits = [
-    { icon: <Shield className="w-6 h-6" />, title: 'Risk Mitigation', description: 'Reduce regulatory and security risks with comprehensive compliance programs' },
-    { icon: <CheckCircle className="w-6 h-6" />, title: 'Audit Readiness', description: 'Stay prepared for audits with ongoing monitoring and documentation' },
-    { icon: <Users className="w-6 h-6" />, title: 'Trust & Credibility', description: 'Build customer trust with certified compliance and security measures' },
-    { icon: <Clock className="w-6 h-6" />, title: 'Time Savings', description: 'Streamline compliance processes with expert guidance and automation' }
+    'Reduce compliance risks and potential penalties',
+    'Build trust with customers and partners',
+    'Streamline audit processes and reduce costs',
+    'Stay up-to-date with changing regulations',
+    'Improve data security and privacy practices',
+    'Enhance business reputation and credibility'
+  ];
+
+  const industries = [
+    { name: 'Healthcare', icon: '🏥', description: 'HIPAA, FDA, and medical device compliance' },
+    { name: 'Finance', icon: '🏦', description: 'PCI DSS, SOX, and financial regulations' },
+    { name: 'Technology', icon: '💻', description: 'GDPR, CCPA, and data protection laws' },
+    { name: 'Government', icon: '🏛️', description: 'FISMA, FedRAMP, and federal compliance' },
+    { name: 'Education', icon: '🎓', description: 'FERPA, COPPA, and educational privacy laws' },
+    { name: 'Retail', icon: '🛒', description: 'PCI DSS, consumer protection, and e-commerce laws' }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
-        <meta
-          name="description"
-          content="Ensure regulatory compliance with our comprehensive compliance services. SOC 2, ISO 27001, GDPR, HIPAA, and more. Expert guidance for your compliance journey."
-        />
-        <meta
-          name="keywords"
-          content="compliance services, SOC 2, ISO 27001, GDPR, HIPAA, PCI DSS, regulatory compliance, security compliance, audit support"
-        />
+        <title>Compliance Services | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive compliance services by Zion Tech Group. GDPR, HIPAA, SOC 2, and ISO 27001 compliance solutions for your business." />
+        <meta name="keywords" content="compliance services, GDPR compliance, HIPAA compliance, SOC 2, ISO 27001, regulatory compliance" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Compliance Services
-              </span>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Compliance Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Navigate complex regulatory requirements with confidence. Our compliance experts help you 
-              achieve and maintain certification across multiple frameworks.
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              Navigate complex regulatory requirements with confidence. Our experts help you achieve and maintain compliance across all major frameworks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/consultation"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                Free Assessment
-              </Link>
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Compliance Assessment
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Compliance Frameworks Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Our Compliance Certifications</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We maintain the highest standards of compliance and security across multiple frameworks
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceFrameworks.map((framework, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-cyan-400">
-                      {framework.icon}
-                    </div>
-                    <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full">
-                      {framework.status}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{framework.name}</h3>
-                  <p className="text-gray-300">{framework.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4 bg-gray-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Our Compliance Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive compliance solutions tailored to your industry and regulatory requirements
-              </p>
-            </div>
-
+      {/* Compliance Frameworks */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Compliance Frameworks We Support</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+              {complianceFrameworks.map((framework, index) => (
+                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex justify-center mb-4 text-blue-600">
+                    {framework.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{framework.name}</h3>
+                  <p className="text-gray-600 mb-4 text-center">{framework.description}</p>
                   <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    {framework.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -174,49 +127,93 @@ export default function Compliance() {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Why Choose Our Compliance Services?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Partner with experts who understand the complexities of regulatory compliance
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+      {/* Services Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Compliance Services</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-md p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-800/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Achieve Compliance?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our compliance experts guide you through the certification process and help you maintain ongoing compliance.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Compliance Journey
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+      {/* Industries Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industries We Serve</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {industries.map((industry, index) => (
+                <div key={index} className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+                  <div className="text-3xl mb-3">{industry.icon}</div>
+                  <h3 className="font-semibold text-gray-900 mb-2">{industry.name}</h3>
+                  <p className="text-sm text-gray-600">{industry.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our Compliance Services?</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-sm p-6">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
+                    <p className="text-gray-900 font-medium">{benefit}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Achieve Compliance?</h2>
+            <p className="text-xl mb-8 text-blue-100">
+              Let our compliance experts help you navigate regulatory requirements and protect your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+                <Shield className="mr-2 w-5 h-5" />
+                Start Compliance Assessment
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Contact Our Experts
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default CompliancePage;

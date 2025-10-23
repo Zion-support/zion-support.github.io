@@ -1,35 +1,15 @@
-// Metadata configuration for Zion Tech Group
-
-export const siteMetadata = {
+"use client";
+import { Metadata } from "next";
+export const metadata: Metadata = {
   title: "Zion Tech Group - Advanced AI and IT Solutions",
   description:
-    "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-  keywords:
-    "AI solutions, IT services, digital transformation, business automation, technology consulting",
-  author: "Zion Tech Group",
-  url: "https://ziontechgroup.com",
-  image: "https://ziontechgroup.com/og-image.jpg",
-  twitter: "@ziontechgroup",
-  linkedin: "https://linkedin.com/company/ziontechgroup",
-};
-
-export const defaultMetadata = {
-  title: siteMetadata.title,
-  description: siteMetadata.description,
-  keywords: siteMetadata.keywords,
+    "Leading provider of AI solutions, cloud services, and IT consulting.",
+  keywords: ["AI", "Cloud", "IT Solutions", "Technology"],
+  authors: [{ name: "Zion Tech Group" }],
   openGraph: {
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    url: siteMetadata.url,
-    image: siteMetadata.image,
+    title: "Zion Tech Group",
+    description: "Advanced AI and IT Solutions",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    image: siteMetadata.image,
-  },
 };
-
-export default siteMetadata;
+export default metadata;
