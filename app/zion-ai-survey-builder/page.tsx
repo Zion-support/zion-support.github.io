@@ -8,7 +8,7 @@ export default function ZionAiSurveyBuilderPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-8">Zion AI Survey Builder</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Advanced AI survey building solutions by Zion Tech Group
+            Advanced AI survey builder solutions by Zion Tech Group
           </p>
         </div>
 
