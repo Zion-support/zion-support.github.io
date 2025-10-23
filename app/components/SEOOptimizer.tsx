@@ -1,73 +1,56 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import Head from 'next/head';
 
-interface SEOOptimizerProps {
-  title?: string;
+interface SEOOptimizerProp s {title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: Record<string, unknown>;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
-}) => {
-  useEffect(() => {
+  structuredData?: Record<string, unknown>;}
+constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
+  description= 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+  keywords= ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
+  canonicalUrl= 'https:// ziontechgroup.com',
+  ogImage= 'https:// ziontechgroup.com/og-image.jpg',
+  structuredData}) => {useEffect(() => {
+  
     // Update page title
-    document.title = title;
+    do cument.title= title;
 
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
+    // Update metadescriptionconstmetaDescription= do cument.querySelector('meta[name="description"]');
+    if (metaDescriptio n) {
       metaDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
+   } else {constmeta= do cument.createElement('meta');
+      meta.name= 'description';
+      meta.content= description;
+      do cument.head.appendChild(meta);
+   }
 
-    // Update keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
-    }
+    // UpdatekeywordsconstmetaKeywords= document.querySelector('meta[name="keywords"]');
+    if (metaKeyword s) {metaKeywords.setAttribute('content', keywords.join(', '));
+   } else {constmeta= do cument.createElement('meta');
+      meta.name= 'keywords';
+      meta.content= keywords.join(', ');
+      do cument.head.appendChild(meta);
+   }
 
-    // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalLink) {
-      canonicalLink.setAttribute('href', canonicalUrl);
-    } else {
-      canonicalLink = document.createElement('link');
-      canonicalLink.rel = 'canonical';
-      canonicalLink.href = canonicalUrl;
-      document.head.appendChild(canonicalLink);
-    }
+    // Update canonicalURLletcanonicalLink= document.querySelector('link[rel="canonical"]');
+    if (canonicalLin k) {canonicalLink.setAttribute('href', canonicalUrl);
+   } else {canonicalLink= do cument.createElement('link');
+      canonicalLink.rel= 'canonical';
+      canonicalLink.href= canonicalUrl;
+      do cument.head.appendChild(canonicalLink);
+   }
 
-    // Update Open Graph tags
-    const updateOGTag = (property: string, content: string) => {
-      let ogTag = document.querySelector(`meta[property="${property}"]`);
-      if (ogTag) {
-        ogTag.setAttribute('content', content);
-      } else {
-        ogTag = document.createElement('meta');
+    // Update Open GraphtagsconstupdateOGTag= (property: string, content: string) => {letogTag=document.querySelector(`meta[property="${property}"]`);
+      if (ogTa g) {ogTag.setAttribute('content', content);
+     } else {ogTag= do cument.createElement('meta');
         ogTag.setAttribute('property', property);
         ogTag.setAttribute('content', content);
-        document.head.appendChild(ogTag);
-      }
+        do cument.head.appendChild(ogTag);
+     }
     };
 
     updateOGTag('og:title', title);
@@ -76,17 +59,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateOGTag('og:url', canonicalUrl);
     updateOGTag('og:type', 'website');
 
-    // Update Twitter Card tags
-    const updateTwitterTag = (name: string, content: string) => {
-      let twitterTag = document.querySelector(`meta[name="${name}"]`);
-      if (twitterTag) {
-        twitterTag.setAttribute('content', content);
-      } else {
-        twitterTag = document.createElement('meta');
+    // Update Twitter CardtagsconstupdateTwitterTag= (name: string, content: string) => {lettwitterTag=document.querySelector(`meta[name="${name}"]`);
+      if (twitterTa g) {twitterTag.setAttribute('content', content);
+     } else {twitterTag= do cument.createElement('meta');
         twitterTag.setAttribute('name', name);
         twitterTag.setAttribute('content', content);
-        document.head.appendChild(twitterTag);
-      }
+        do cument.head.appendChild(twitterTag);
+     }
     };
 
     updateTwitterTag('twitter:card', 'summary_large_image');
@@ -95,66 +74,37 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateTwitterTag('twitter:image', ogImage);
 
     // Add structured data
-    if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-    }
+    if (structuredDat a) {constscript= do cument.createElement('script');
+      script.type= 'application/ld+json';
+      script.textContent= JSON.stringify(structuredData);
+      do cument.head.appendChild(script);
+   }
 
-    // Add viewport meta tag if not present
-    let viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {
-      viewport = document.createElement('meta');
+    // Add viewport meta tag if notpresentletviewport= document.querySelector('meta[name="viewport"]');
+    if (!viewport) {viewport= do cument.createElement('meta');
       viewport.setAttribute('name', 'viewport');
       viewport.setAttribute('content', 'width=device-width, initial-scale=1');
-      document.head.appendChild(viewport);
-    }
+      do cument.head.appendChild(viewport);
+   }
 
-    // Add charset if not present
-    let charset = document.querySelector('meta[charset]');
-    if (!charset) {
-      charset = document.createElement('meta');
+    // Add charset if notpresentletcharset= do cument.querySelector('meta[charset]');
+    if (!charset) {charset= do cument.createElement('meta');
       charset.setAttribute('charset', 'UTF-8');
-      document.head.insertBefore(charset, document.head.firstChild);
-    }
+      do cument.head.insertBefore(charset, do cument.head.firstChild);
+   }
 
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 
   return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="UTF-8" />
-      
-      {/* Structured Data */}
+  <Hea d><titl e>{title}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords.join(',')} /><linkrel="canonical" href={canonicalUrl} />{/* OpenGraph */}
+   <metaproperty="og:title" content={title} /><metaproperty="og:description" content={description} /><metaproperty="og:image" content={ogImage} /><metaproperty="og:url" content={canonicalUrl} /><metaproperty="og:type"content="website" />{/* TwitterCard */}
+   <metaname="twitter:card"content="summary_large_image" /><metaname="twitter:title" content={title} /><metaname="twitter:description" content={description} /><metaname="twitter:image" content={ogImage} />{/* Additional SEO metatags */}
+   <metaname="robots"content="index,follow" /><metaname="author"content="Zion TechGroup" /><metaname="viewport"content="width=device-width,initial-scale=1" /><metacharSet="UTF-8" />{/* StructuredData */}
       {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      )}
-    </Head>
+      <scripttype="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}}
+        />)}
+  </Hea>
   );
 };
 

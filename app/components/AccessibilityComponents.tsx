@@ -1,11 +1,9 @@
-"use client";
+"useclient";
 import React from "react";
 
 
-const AccessibilityComponents: React.FC = () => {
-  return (
+constAccessibilityComponents: React.FC= () => {return (
 
-  );
-};
+  );};
 
 export default AccessibilityComponents;

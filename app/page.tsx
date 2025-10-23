@@ -21,7 +21,7 @@ const HomePage = () => {
     },
     {
       title: "Micro SaaS",
-      description: "Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises",
+      description: "Custom software solutions and micro-SaaS applications tailored to your specific business needs and growth objectives",
       icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
       stats: "50% faster deployment",
@@ -30,31 +30,10 @@ const HomePage = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "99.9%", label: "Client Satisfaction" },
-    { number: "24/7", label: "Support Available" },
-    { number: "5+", label: "Years Experience" }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CEO, TechCorp",
-      content: "Zion Tech Group transformed our business with their AI solutions. We've seen a 40% increase in efficiency.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO, InnovateLabs",
-      content: "Their IT services are exceptional. The team is professional, knowledgeable, and always available when we need them.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Founder, StartupXYZ",
-      content: "The micro SaaS solutions they provided helped us scale faster than we ever imagined possible.",
-      rating: 5
-    }
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "10+" },
+    { label: "Team Members", value: "50+" }
   ];
 
   return (
@@ -68,22 +47,21 @@ const HomePage = () => {
               {" "}AI & IT Solutions
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Leading provider of cutting-edge artificial intelligence and information technology solutions 
-            that drive innovation, efficiency, and growth for modern businesses.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We help businesses leverage cutting-edge technology to drive growth, efficiency, and innovation in the digital age.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
-              Get Started Today
+              Get Started
             </Link>
-            <Link 
-              href="/services" 
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+            <Link
+              href="/services"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
-              Explore Services
+              Our Services
             </Link>
           </div>
         </div>
@@ -93,28 +71,29 @@ const HomePage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Core Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive solutions designed to accelerate your digital transformation
+            <h2 className="text-4xl font-bold text-white mb-4">Our Core Services</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-slate-800/70 transition-all duration-300 group">
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"
+              >
+                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-semibold">{feature.stats}</span>
-                  <Link 
+                  <Link
                     href={feature.link}
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-2"
                   >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                    Learn More <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -124,47 +103,15 @@ const HomePage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
-                  {stat.number}
+                  {stat.value}
                 </div>
-                <div className="text-gray-300 font-medium">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Trusted by businesses worldwide for exceptional results
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="text-white font-semibold">{testimonial.name}</div>
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                </div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -174,26 +121,18 @@ const HomePage = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI and IT solutions can drive your success.
+            Let&apos;s discuss how our AI and IT solutions can drive your success.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Project
-            </Link>
-            <Link 
-              href="/demo" 
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-            >
-              Request Demo
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-block"
+          >
+            Start Your Project Today
+          </Link>
         </div>
       </section>
     </div>

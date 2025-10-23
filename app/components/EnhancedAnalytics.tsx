@@ -1,59 +1,46 @@
-"use client";
+"useclient";
 
-import React, { createContext, useContext, useEffect } from "react";
+import React, {createContext, useContext, useEffect} from "react";
 
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-  identify: (userId: string, traits?: Record<string, unknown>) => void;
-  page: (name: string, properties?: Record<string, unknown>) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+interface AnalyticsContextTyp e {track: (event: string, properties?: Record<string, unknown>) => voididentify: (userId: string,traits?:Record<string, unknown>) => voidpage: (name: string,properties?:Record<string, unknown>) => void;}
+constAnalyticsContext=createContext<AnalyticsContextType | undefined>(
   undefined,
 );
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
   if (!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider");
-  }
-  return context;
+    throw newError("useAnalytics must be used within an AnalyticsProvider");
+ }
+  return contex t;
 };
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
+interface AnalyticsProviderProp s {children: React.ReactNode;}
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-}) => {
-  useEffect(() => {
+exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+  
     // Initialize analytics
-    if (typeof window !== "undefined") {
+    if (type of windo w !=="undefined") {
       // Google Analytics
-      if (process.env.NODE_ENV === "production") {
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
-        document.head.appendChild(script);
+      if (process.env.NODE_ENV==="production") {
+        constscript= document.createElement("script");
+        script.async= true;
+        script.src=`https://www.googletagmanager.com/$1/js?id=${process.env.REACT_APP_GA_ID}`;
+        do cument.head.appendChild(script);
 
-        (window as unknown as { dataLayer: unknown[] }).dataLayer =
-          (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
-        function gtag(...args: unknown[]) {
-          (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
+        (windo w as unknown as {dataLayer: unknown[]}).dataLayer=
+          (windo w as unknown as {dataLayer: unknown[]}).dataLayer || [];
+        function gtag(...args: unknown[]) {(windo w as unknown as { dataLayer: unknown[]}).dataLayer.push(args);
         }
-        gtag("js", new Date());
-        gtag("config", process.env.REACT_APP_GA_ID);
+       gtag("js", new Date());
+       gtag("config", process.env.REACT_APP_GA_ID);
       }
     }
   }, []);
 
-  const track = (event: string, properties?: Record<string, unknown>) => {
-    if (typeof window !== "undefined") {
+  consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "event",
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
+         "event",
           event,
           properties,
         );
@@ -63,17 +50,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   };
 
-  const identify = (userId: string, traits?: Record<string, unknown>) => {
-    if (typeof window !== "undefined") {
+  constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "config",
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
+         "config",
           process.env.REACT_APP_GA_ID,
-          {
-            user_id: userId,
+          {user_id: userId,
             custom_map: traits,
-          },
+         },
         );
       }
 
@@ -81,18 +65,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   };
 
-  const page = (name: string, properties?: Record<string, unknown>) => {
-    if (typeof window !== "undefined") {
+  constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "event",
-          "page_view",
-          {
-            page_title: name,
-            page_location: window.location.href,
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
+         "event",
+         "page_view",
+          {page_title: name,
+            page_location: windo w.location.href,
             ...properties,
-          },
+         },
         );
       }
 
@@ -100,23 +81,20 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   };
 
-  const value: AnalyticsContextType = {
-    track,
+  constvalue: AnalyticsContextType = {track,
     identify,
     page,
-  };
+ };
 
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+  <AnalyticsContext.Providervalue={value}>{children}
+  </AnalyticsContext.Provider>
   );
 };
 
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
+// Extend Windo w interface for TypeScript
+declare global {interface Windo w {
     dataLayer: unknown[];
     gtag: (...args: any[]) => void;
-  }
+ }
 }
