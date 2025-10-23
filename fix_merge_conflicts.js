@@ -1,24 +1,52 @@
-<<<<<<< HEAD
-import fs from 'fs;
-import path from 'path;
-import { fileURLToPath } from 'url;
-#!/usr/bin// Fixed regex;
-    const content = fs.readFileSync(filePath, 'utf8'';
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>'';
-  console.error('Error:'';
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'';
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'';
-const appDir = '';
-=======
-#!/usr/bin// Fixed regex
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-    const content = fs.readFileSync(filePath, 'utf8'
-    if (content.includes('') || content.includes('>>>>>>>'
-  console.error('Error:'
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
-const appDir = '
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+// List of files with merge conflicts
+const filesToFix = [
+  'app/components/AccessibilityComponents.tsx',
+  'app/components/AccessibilityUtils.tsx',
+  'app/components/EnhancedAccessibility.tsx',
+  'app/components/Footer.tsx',
+  'app/components/LazyImage.tsx',
+  'app/components/OptimizedImage.tsx',
+  'app/components/PerformanceDashboard.tsx',
+  'app/components/PerformanceImage.tsx',
+  'app/components/SEOHead.tsx',
+  'app/components/Sidebar.tsx',
+  'app/pages/AdminPage.tsx',
+  'app/pages/ContactPage.tsx'
+];
+
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove merge conflict markers and keep the HEAD version (first part)
+    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+\n/g, '$1');
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======\n/g, '');
+    content = content.replace(/>>>>>>> [a-f0-9]+\n/g, '');
+    
+    // Clean up extra newlines
+    content = content.replace(/\n{3,}/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed merge conflicts in ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Fix all files
+let fixedCount = 0;
+filesToFix.forEach(file => {
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`\nFixed merge conflicts in ${fixedCount}/${filesToFix.length} files`);

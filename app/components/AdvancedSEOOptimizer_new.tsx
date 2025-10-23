@@ -1,54 +1,151 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-white">;
-      <Helmet>
-        <title>AdvancedSEOOptimizer_new - Zion Tech Group</title>
-        <meta name="description" content="Professional advancedseooptimizer_new services by Zion Tech Group." />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-            AdvancedSEOOptimizer_new;
-          </h1>;
-          <p className="text-xl text-gray-600 mb-8">;
-            Professional advancedseooptimizer_new solutions tailored to your business needs.;
-          </p>;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">;
-                Expert Solutions;
-              </h3>;
-              <p className="text-blue-700">;
-                Our team of experts delivers cutting-edge advancedseooptimizer_new solutions.;
-              </p>;
-            </div>;
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-green-900 mb-2">;
-                Custom Implementation;
-              </h3>;
-              <p className="text-green-700">;
-                Tailored advancedseooptimizer_new implementations for your specific requirements.;
-              </p>;
-            </div>;
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">;
-                24/7 Support;
-              </h3>;
-              <p className="text-purple-700">;
-                Round-the-clock support for all your advancedseooptimizer_new needs.;
-              </p>;
-            </div>;
-          </div>;
-          <div className="mt-12">;
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
+interface SEOOptimizerProps {
+title?: string
+description?: string
+keywords?: string
+canonicalUrl?: string
+ogImage?: string
+twitterCard?: string
+structuredData?: object
+children: React.ReactNode
 }
+const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
+title = 'Zion Tech Group - Advanced AI and IT Solutions',
+description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+canonicalUrl,
+ogImage = '/images/og-image.jpg',
+twitterCard = 'summary_large_image',
+structuredData,
+children
+}) => {
+const [seoScore, setSeoScore] = useState(0)
+const [recommendations, setRecommendations] = useState<string[]>([])
+const analyzeSEO = useCallback(() => {
+if (typeof window === 'undefined') return
+let score = 0
+const newRecommendations: string[] = []
+// Check title length
+if (title.length >= 30 && title.length <= 60) {
+score += 20
+} else {
+newRecommendations.push('Title should be between 30-60 characters')
+}
+// Check description length
+if (description.length >= 120 && description.length <= 160) {
+score += 20
+} else {
+newRecommendations.push('Description should be between 120-160 characters')
+}
+// Check for keywords in title
+if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+score += 15
+} else {
+newRecommendations.push('Include primary keyword in title')
+}
+// Check for keywords in description
+if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+score += 15
+} else {
+newRecommendations.push('Include primary keyword in description')
+}
+// Check for heading structure
+const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+if (headings.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add proper heading structure')
+}
+// Check for images with alt text
+const images = document.querySelectorAll('img')
+const imagesWithAlt = document.querySelectorAll('img[alt]')
+if (images.length === imagesWithAlt.length && images.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add alt text to all images')
+}
+// Check for internal links
+const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]')
+if (internalLinks.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add internal links for better SEO')
+}
+setSeoScore(score)
+setRecommendations(newRecommendations)
+}, [title, description, keywords])
+useEffect(() => {
+analyzeSEO()
+}, [analyzeSEO])
+const generateStructuredData = () => {
+const defaultStructuredData = {
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "Zion Tech Group",
+"description": description,
+"url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
+"logo": ogImage,
+"sameAs": [
+"https://twitter.com/ziontechgroup",
+"https://linkedin.com/company/ziontechgroup"
+]
+}
+return structuredData || defaultStructuredData
+}
+return (
+<React.Fragment>
+<Helmet>
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+{/* Open Graph */}
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:type" content="website" />
+{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+{/* Twitter Card */}
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+{/* Structured Data */}
+<script type="application/ld+json">
+{JSON.stringify(generateStructuredData())}
+</script>
+</Helmet>
+{children}
+{process.env.NODE_ENV === 'development' && (
+<div className="seo-debug" style={{
+position: 'fixed',
+top: '10px',
+left: '10px',
+background: 'rgba(0,0,0,0.8)',
+color: 'white',
+padding: '10px',
+borderRadius: '5px',
+fontSize: '12px',
+zIndex: 1000,
+maxWidth: '300px'
+}}>
+<div>SEO Score: {seoScore}/100</div>
+{recommendations.length > 0 && (
+<div>
+<div>Recommendations:</div>
+<ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+{recommendations.map((rec, index) => (
+<li key={index}>{rec}</li>
+))}
+</ul>
+</div>
+)}
+</div>
+)}
+</React.Fragment>
+)
+}
+export default AdvancedSEOOptimizerNew
+</SEOOptimizerProps>

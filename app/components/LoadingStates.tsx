@@ -1,54 +1,52 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-white">;
-      <Helmet>
-        <title>LoadingStates - Zion Tech Group</title>
-        <meta name="description" content="Professional loadingstates services by Zion Tech Group." />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-            LoadingStates;
-          </h1>;
-          <p className="text-xl text-gray-600 mb-8">;
-            Professional loadingstates solutions tailored to your business needs.;
-          </p>;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">;
-                Expert Solutions;
-              </h3>;
-              <p className="text-blue-700">;
-                Our team of experts delivers cutting-edge loadingstates solutions.;
-              </p>;
-            </div>;
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-green-900 mb-2">;
-                Custom Implementation;
-              </h3>;
-              <p className="text-green-700">;
-                Tailored loadingstates implementations for your specific requirements.;
-              </p>;
-            </div>;
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">;
-                24/7 Support;
-              </h3>;
-              <p className="text-purple-700">;
-                Round-the-clock support for all your loadingstates needs.;
-              </p>;
-            </div>;
-          </div>;
-          <div className="mt-12">;
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
+'use client'
+import React from 'react'
+import { Loader2 } from 'lucide-react'
+export const PageLoader: React.FC = () => {
+return (
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+<div className="text-center">
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+<Loader2 className="w-8 h-8 text-slate-900 animate-spin" />
+</div>
+<h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
+<p className="text-gray-300">Please wait while we load the page</p>
+</div>
+</div>
+)
 }
+export const ComponentLoader: React.FC = () => {
+return (
+<div className="flex items-center justify-center p-8">
+<div className="flex items-center space-x-2 text-cyan-400">
+<Loader2 className="w-5 h-5 animate-spin" />
+<span>Loading component...</span>
+</div>
+</div>
+)
+}
+export const ServiceCardSkeleton: React.FC = () => {
+return (
+<div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
+<div className="w-12 h-12 bg-slate-700 rounded-lg mb-4"></div>
+<div className="h-6 bg-slate-700 rounded mb-3 w-3/4"></div>
+<div className="h-4 bg-slate-700 rounded mb-2"></div>
+<div className="h-4 bg-slate-700 rounded w-5/6 mb-4"></div>
+<div className="h-8 bg-slate-700 rounded w-1/2 mx-auto"></div>
+</div>
+)
+}
+export const ContentSkeleton: React.FC = () => {
+return (
+<div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
+<div className="h-8 bg-slate-700 rounded mb-4 w-1/2"></div>
+<div className="h-4 bg-slate-700 rounded mb-2"></div>
+<div className="h-4 bg-slate-700 rounded mb-2"></div>
+<div className="h-4 bg-slate-700 rounded w-3/4"></div>
+</div>
+)
+}
+export const LoadingSpinner: React.FC = () => (
+<div className="flex items-center justify-center p-8">
+<div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+</div>
+)
