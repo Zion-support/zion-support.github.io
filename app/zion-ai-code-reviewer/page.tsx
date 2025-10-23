@@ -27,6 +27,6 @@ export default function ZionAiCodeReviewerPage() {
         </div>
       </div>
         </div>
-      </div>
+      
   );
 }

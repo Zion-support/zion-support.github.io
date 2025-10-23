@@ -1,3 +1,4 @@
+"use client";
 import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from "lucide-react";
 export default function ServicesPage() {
   const services = [

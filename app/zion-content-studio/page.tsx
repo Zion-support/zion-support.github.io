@@ -27,6 +27,6 @@ export default function ZionContentStudioPage() {
         </div>
       </div>
         </div>
-      </div>
+      
   );
 }

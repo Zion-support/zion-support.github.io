@@ -27,6 +27,6 @@ export default function AiWorkflowAutomationPage() {
         </div>
       </div>
         </div>
-      </div>
+      
   );
 }
