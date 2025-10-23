@@ -50,12 +50,17 @@ const FuturisticHeroPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+<<<<<<< HEAD:app-broken/app/components/FuturisticHero.tsx
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your futuristichero needs and get a customized solution.
             </p>
+=======
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page needs and get a customized solution.</p>p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/it-infrastructure/page.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 <Phone className="mr-2 h-5 w-5" />
@@ -68,9 +73,13 @@ const FuturisticHeroPage: React.FC = () => {
             </div>
   )
 }
+<<<<<<< HEAD:app-broken/app/components/FuturisticHero.tsx
 export default FuturisticHeroPage
 </button>
 </button>
 </div>
 </div>
 </section>
+=======
+export default PagePage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/it-infrastructure/page.tsx

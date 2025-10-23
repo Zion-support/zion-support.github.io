@@ -48,6 +48,7 @@ const ImageOptimizerPage: React.FC = () => {
         <meta name="description" content="Professional ImageOptimizer services by Zion Tech Group." />
         <meta name="keywords" content="AI, artificial intelligence, ImageOptimizer, AI solutions, intelligent automation" />
       </Helmet>
+<<<<<<< HEAD
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -69,6 +70,14 @@ const ImageOptimizerPage: React.FC = () => {
                 Learn More
               </button>
             </div>
+=======
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">ImageOptimizer</h1>h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional ImageOptimizer services tailored to your business needs.</p>p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 

@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
+<<<<<<< HEAD
 const PerformanceMonitorPage: React.FC = () => {
   const features = [
     {
@@ -145,3 +146,22 @@ const PerformanceMonitorPage: React.FC = () => {
 };
 
 export default PerformanceMonitorPage;
+=======
+interface PerformanceMetrics {
+  loadTime: number | null
+  firstContentfulPaint: number | null
+  largestContentfulPaint: number | null
+  firstInputDelay: number | null
+  cumulativeLayoutShift: number | null
+  timeToInteractive: number | null
+  totalBlockingTime: number | null
+}
+
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
+  enableRealTimeMonitoring?: boolean
+  logToConsole?: boolean
+}
+
+export default function PerformanceMonitor({ 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

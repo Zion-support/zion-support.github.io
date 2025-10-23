@@ -144,4 +144,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AdvancedAccessibilityEnhancerPage;
+=======
+export default AdvancedAccessibilityEnhancer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

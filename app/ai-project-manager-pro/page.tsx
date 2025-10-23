@@ -76,6 +76,7 @@ const PagePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
+<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
@@ -95,6 +96,12 @@ const PagePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+=======
+
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>h3>
+                  <p className="text-gray-300">{feature.description}</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
                 </div>
               ))}
             </div>
@@ -139,7 +146,10 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
     </>
   );
 };

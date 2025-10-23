@@ -144,4 +144,8 @@ const SEOOptimizerPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default SEOOptimizerPage;
+=======
+export default SEOOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

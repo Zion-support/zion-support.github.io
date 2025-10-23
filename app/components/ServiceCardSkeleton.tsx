@@ -40,6 +40,7 @@ const ServiceCardSkeletonPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+<<<<<<< HEAD
 
   return (
     <>
@@ -145,3 +146,8 @@ const ServiceCardSkeletonPage: React.FC = () => {
 };
 
 export default ServiceCardSkeletonPage;
+=======
+  )
+}
+export default ServiceCardSkeletonPage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

@@ -42,6 +42,7 @@ const AnimatedCounterPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AnimatedCounter</title>
@@ -145,3 +146,10 @@ const AnimatedCounterPage: React.FC = () => {
 };
 
 export default AnimatedCounterPage;
+=======
+    <span ref={setNode} className={className}>{prefix}{count.toLocaleString()}{suffix}</span>span>
+  );
+};
+
+export default AnimatedCounter;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

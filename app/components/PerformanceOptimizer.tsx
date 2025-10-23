@@ -42,6 +42,7 @@ const PerformanceOptimizerPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>PerformanceOptimizer</title>
@@ -69,6 +70,13 @@ const PerformanceOptimizerPage: React.FC = () => {
                 Learn More
               </button>
             </div>
+=======
+    <div className="performance-optimizer">{isOptimizing && (</div>
+        <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
+          <div className="flex items-center gap-2">
+            <Settings className="w-4 h-4 animate-spin" />
+            Optimizing performance...
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 
@@ -101,6 +109,7 @@ const PerformanceOptimizerPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -138,10 +147,48 @@ const PerformanceOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+      <div className="optimization-status">
+        <h3 className="text-lg font-semibold mb-4">Performance Optimizations</h3>
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">{optimizationStatus.images ? (</div>
+              <CheckCircle className="w-4 h-4 text-green-500" />
+            ) : (
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+            )}
+            <span>Image Optimization</span>
+          </div>
+          <div className="flex items-center gap-2">{optimizationStatus.lazyLoading ? (</div>
+              <CheckCircle className="w-4 h-4 text-green-500" />
+            ) : (
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+            )}
+            <span>Lazy Loading</span>
+          </div>
+          <div className="flex items-center gap-2">{optimizationStatus.preloading ? (</div>
+              <CheckCircle className="w-4 h-4 text-green-500" />
+            ) : (
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+            )}
+            <span>Resource Preloading</span>
+          </div>
+          <div className="flex items-center gap-2">{optimizationStatus.codeSplitting ? (</div>
+              <CheckCircle className="w-4 h-4 text-green-500" />
+            ) : (
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+            )}
+            <span>Code Splitting</span>
+          </div>
+        </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
       </div>
       <Footer />
     </>
   );
 };
 
+<<<<<<< HEAD
 export default PerformanceOptimizerPage;
+=======
+export default PerformanceOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

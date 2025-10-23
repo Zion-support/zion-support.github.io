@@ -144,4 +144,8 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AdvancedPerformanceOptimizerPage;
+=======
+export default AdvancedPerformanceOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

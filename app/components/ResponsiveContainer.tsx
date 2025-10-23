@@ -42,6 +42,7 @@ const ResponsiveContainerPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>ResponsiveContainer</title>
@@ -145,3 +146,14 @@ const ResponsiveContainerPage: React.FC = () => {
 };
 
 export default ResponsiveContainerPage;
+=======
+    <div className={cn(
+      'mx-auto px-4 sm:px-6 lg:px-8',
+      maxWidthClasses[maxWidth],
+      className
+    )}>{children}</div>div>
+  );
+};
+
+export default ResponsiveContainer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

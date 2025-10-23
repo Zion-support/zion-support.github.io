@@ -32,6 +32,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
+<<<<<<< HEAD
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -145,3 +146,5 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
 };
 
 export default EnhancedLoadingSkeletonPage;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

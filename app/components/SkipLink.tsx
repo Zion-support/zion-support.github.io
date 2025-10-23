@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -145,3 +146,14 @@ const SkipLinkPage: React.FC = () => {
 };
 
 export default SkipLinkPage;
+=======
+const SkipLink: React.FC = () => {
+return (
+<a
+href="#main-content"
+className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-md z-50 font-medium transition-all duration-200 hover:bg-cyan-700"
+>Skip to main content</a>a>
+)
+}
+export default SkipLink
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

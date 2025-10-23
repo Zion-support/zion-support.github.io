@@ -43,6 +43,7 @@ const HeaderPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Header</title>
         <meta name="description" content="Advanced Header solution for modern businesses." />
@@ -145,3 +146,12 @@ const HeaderPage: React.FC = () => {
 };
 
 export default HeaderPage;
+=======
+      <Navigation />
+      {/* Spacer to prevent content from going under fixed header */}
+      <div className="h-16 lg:h-20" />
+    </>
+  )
+}
+export default Header
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
