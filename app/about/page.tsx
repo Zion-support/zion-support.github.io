@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
       icon: Target,
       title: "Innovation",
       description:
-        "We constantly push the boundaries of what's possible with AI and technology.",
+        "We constantly push the boundaries of what&apos;s possible with AI and technology.",
     },
     {
       icon: Users,
@@ -49,7 +49,7 @@ const AboutPage: React.FC = () => {
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about AI and IT solutions that transform businesses." />
+        <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and team. We&apos;re passionate about AI and IT solutions that transform businesses." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -64,7 +64,7 @@ const AboutPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We're passionate about AI and IT solutions that transform businesses
+              We&apos;re passionate about AI and IT solutions that transform businesses
               and create meaningful impact in the digital world.
             </p>
           </div>
@@ -149,7 +149,7 @@ const AboutPage: React.FC = () => {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can help transform your business with our AI and IT solutions.
+              Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">

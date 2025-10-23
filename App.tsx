@@ -11,6 +11,13 @@ import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import LoadingSpinner from "./app/components/LoadingSpinner";
+
+// App Loading Spinner Component
+const AppLoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <LoadingSpinner />
+  </div>
+);
 import SEOOptimizer from "./app/components/SEOOptimizer";
 // Hooks
 import { usePerformanceOptimization } from "./app/hooks/usePerformanceOptimization";
@@ -35,6 +42,8 @@ const AISolutionsPage = lazy(() => import("./app/ai-solutions/page"));
 // IT Services Pages
 const ITServicesPage = lazy(() => import("./app/it-services/page"));
 const ITSolutionsPage = lazy(() => import("./app/it-solutions/page"));
+const ITInfrastructurePage = lazy(() => import("./app/it-infrastructure/page"));
+const ITSupportPage = lazy(() => import("./app/it-support/page"));
 const CloudInfrastructurePage = lazy(
   () => import("./app/cloud-infrastructure/page"),
 );
@@ -43,6 +52,17 @@ const DigitalTransformationPage = lazy(
 );
 const CybersecurityPage = lazy(() => import("./app/cybersecurity/page"));
 const SolutionsPage = lazy(() => import("./app/solutions/page"));
+const BlockchainPage = lazy(() => import("./app/blockchain/page"));
+const QuantumComputingPage = lazy(() => import("./app/quantum-computing/page"));
+const IoTEdgeComputingPage = lazy(() => import("./app/iot-edge-computing/page"));
+const ARVRSolutionsPage = lazy(() => import("./app/ar-vr-solutions/page"));
+const AutonomousSystemsPage = lazy(() => import("./app/autonomous-systems/page"));
+const MicroSaasPage = lazy(() => import("./app/micro-saas/page"));
+const DocsPage = lazy(() => import("./app/docs/page"));
+const ApiDocsPage = lazy(() => import("./app/api-docs/page"));
+const SupportPage = lazy(() => import("./app/support/page"));
+const StatusPage = lazy(() => import("./app/status/page"));
+const ConsultationPage = lazy(() => import("./app/consultation/page"));
 
 // 5G Solutions Pages
 const FiveGSolutionsPage = lazy(() => import("./app/5g-solutions/page"));
@@ -51,6 +71,17 @@ const FiveGSolutionsPage = lazy(() => import("./app/5g-solutions/page"));
 const AIChatbotBuilderPage = lazy(
   () => import("./app/ai-chatbot-builder/page"),
 );
+const AIMarketingPage = lazy(() => import("./app/ai-marketing/page"));
+const AIAutomationPage = lazy(() => import("./app/ai-automation/page"));
+const AIHealthcarePage = lazy(() => import("./app/ai-healthcare/page"));
+const AIFintechPage = lazy(() => import("./app/ai-fintech/page"));
+const AIContentGenerationPage = lazy(() => import("./app/ai-content-generation/page"));
+const AIDataAnalyticsPage = lazy(() => import("./app/ai-data-analytics/page"));
+const AICybersecurityPage = lazy(() => import("./app/ai-cybersecurity/page"));
+const AIWorkflowAutomationPage = lazy(() => import("./app/ai-workflow-automation/page"));
+const AICustomerSupportPage = lazy(() => import("./app/ai-customer-support/page"));
+const AISalesAutomationPage = lazy(() => import("./app/ai-sales-automation/page"));
+const AIDataVisualizationPage = lazy(() => import("./app/ai-data-visualization/page"));
 const AIDocumentProcessorPage = lazy(
   () => import("./app/ai-document-processor/page"),
 );

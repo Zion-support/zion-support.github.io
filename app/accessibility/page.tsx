@@ -172,7 +172,7 @@ const AccessibilityPage: React.FC = () => {
               Ready to Make Your App Accessible?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's work together to create inclusive digital experiences that
+              Let&apos;s work together to create inclusive digital experiences that
               work for everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

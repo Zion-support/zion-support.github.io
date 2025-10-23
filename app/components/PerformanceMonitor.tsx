@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Performance monitoring logic
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && 'PerformanceObserver' in window) {
       // Monitor Core Web Vitals
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
