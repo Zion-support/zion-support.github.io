@@ -54,7 +54,7 @@ const AccessibilityPage: React.FC = () => {
               Accessibility
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We're committed to creating inclusive digital experiences that are
+              We&apos;re committed to creating inclusive digital experiences that are
               accessible to everyone, regardless of ability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -155,7 +155,7 @@ const AccessibilityPage: React.FC = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's work together to create accessible digital experiences that
+              Let&apos;s work together to create accessible digital experiences that
               include everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

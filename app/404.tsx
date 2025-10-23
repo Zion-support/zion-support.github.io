@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import {
   Home,
   ArrowLeft,
@@ -38,8 +38,8 @@ const NotFoundPage: React.FC = () => {
           </h1>
 
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Oops! The page you're looking for seems to have vanished into the
-            digital void. Don't worry, even our AI can't predict everything!
+            Oops! The page you&apos;re looking for seems to have vanished into the
+            digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
           </p>
 
           {/* Search Suggestion */}
@@ -62,7 +62,7 @@ const NotFoundPage: React.FC = () => {
               ].map((item, index) => (
                 <Link
                   key={index}
-                  to={item.path}
+                  href={item.path}
                   className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
                 >
                   {item.name}
@@ -74,7 +74,7 @@ const NotFoundPage: React.FC = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
-              to="/"
+              href="/"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
               <Home className="w-5 h-5 mr-2" />
@@ -92,15 +92,15 @@ const NotFoundPage: React.FC = () => {
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-white mb-3">
-              Still can't find what you need?
+              Still can&apos;t find what you need?
             </h3>
             <p className="text-gray-300 text-sm mb-4">
               Our support team is here to help you navigate our services and
-              find exactly what you're looking for.
+              find exactly what you&apos;re looking for.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
@@ -119,7 +119,7 @@ const NotFoundPage: React.FC = () => {
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">
               <span className="text-cyan-400">Fun Fact:</span> Even our AI gets
-              confused sometimes. That's why we have humans to help when things
+              confused sometimes. That&apos;s why we have humans to help when things
               go wrong! 🤖
             </p>
           </div>

@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Cube, Zap, Download, ArrowRight, CheckCircle } from "lucide-react";
+import { Box, Zap, Download, ArrowRight, CheckCircle } from "lucide-react";
+
+export const dynamic = 'force-dynamic';
 
 const AI3DModelGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: Cube,
+      icon: Box,
       title: "AI-Powered Generation",
       description: "Generate 3D models using advanced AI algorithms and machine learning.",
     },

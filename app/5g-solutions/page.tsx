@@ -3,6 +3,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Wifi, BarChart, CheckCircle, ArrowRight } from "lucide-react";
 
+export const dynamic = 'force-dynamic';
+
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
