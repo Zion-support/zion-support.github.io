@@ -1,31 +1,35 @@
+"use client";
+import React from "react";
 
-import React from 'react';
-
-
-const SupportPage: React.FC = () => {
+export default function SupportPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Support</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Get Help</h2>
-          <p className="text-gray-600 mb-4">We're here to help you with any questions or issues.</p>
-          <div className="space-y-4">
-            <div>
-              <h3 className="font-semibold text-gray-900">Email Support</h3>
-              <p className="text-gray-600">support@ziontechgroup.com</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900">Phone Support</h3>
-              <p className="text-gray-600">+1 (302) 464-0950</p>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Support</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced support solutions by Zion Tech Group
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>
-
     </div>
   );
-};
-
-export default SupportPage;
-
+}

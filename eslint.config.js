@@ -1,147 +1,94 @@
-import globals from 'globals';
-import js from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from "globals";
+import js from "@eslint/js";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
 
 export default [
-  // Ignore disabled directories
+  // Global ignores
   {
     ignores: [
-      'admin-api-disabled/**',
-      'api-disabled/**',
-      'api.disabled/**',
-      'api-backup/**',
-      'components-disabled/**',
-      'components.disabled/**',
-      'components.disabled_full/**',
-      'automation_backup/**',
-      'automation/backups/**',
-      'backup*/**',
-      'corrupted-src-backup/**',
-      'clean-build/**',
-      '*-disabled/**',
-      '*.disabled/**',
-      '*.broken',
-      '*.backup',
-      'temp-files/**',
-      'cache/**',
-      'dist/**',
-      'node_modules/**',
-      'analyze-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'fix-*.js',
-      'comprehensive-*.js',
-      'comprehensive_*.js',
-      'automation-runner.js',
-      'commit-and-push.js',
-      'code-quality-improvements.js',
-      'close-duplicate-prs.js',
-      'cleanup-*.js',
-      'config/meta-tags.js',
-      'contracts/**',
-      'chunk-*.js',
-      'blog/distributed-ai-training-scale-2026.tsx',
-      'data/**',
-      'data_backup/**',
-      'disabled-api/**',
-      'dao/**',
-      'hooks/**',
-      'lib/**',
-      'extension/**',
-      '*.js',
-      '*.jsx',
-      '*.cjs',
-      '*.js.broken',
-      'jest.setup.*',
-      'debug-*.js',
-      '*-fix.js',
-      '*-fix.jsx',
-      '*-merger.js',
-      '*-merge.js',
-      '*-operations.js',
-      '*-processor.js',
-      '*-manager.js',
-      '*-script.js',
-      'improve*.js',
-      'enhanced-*.js',
-      'final-*.js',
-      'focused-*.js',
-      'latest-*.js',
-      'execute-*.js',
-      'fetch-*.js',
-      'git-*.js',
-      'github-*.js',
-      'critical-*.js',
-      'netlify/functions-backup/**',
-      'netlify/functions/**',
-      'middleware/**',
-      'lint-target/**',
-      'src/**',
-      'pages_minimal/**',
-      'services/**',
-      'scripts/**',
-      'public/**',
-      'next-env.d.ts',
-      'performance.config.ts',
-      'security-headers.config.ts',
-      'security.config.ts',
-      'src.corrupted/**',
-      'test-component.tsx',
-      'types/**',
-      'utils/**',
-      'vite-env.d.ts'
+      "dist/**",
+      "node_modules/**",
+      "*.config.js",
+      "*.config.ts"
     ],
   },
   // Base JavaScript configuration
   {
-    files: ['**/*.{js,jsx}'],
+    ...js.configs.recommended,
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021,
+        PerformanceObserverCallback: "readonly",
       },
     },
     rules: {
-      ...js.configs.recommended.rules,
+      "no-unused-vars": "off",
     },
   },
   // TypeScript configuration
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
       parser: tsParser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        ecmaVersion: "latest",
+        sourceType: "module",
         ecmaFeatures: {
           jsx: true,
         },
       },
     },
     plugins: {
-      '@typescript-eslint': tseslint,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      "@typescript-eslint": tseslint,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react-refresh/only-export-components': [
-        'warn',
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+    },
+  },
+  // React configuration
+  {
+    files: ["**/*.{jsx,tsx}"],
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
         { allowConstantExport: true },
       ],
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'warn',
-      'no-console': 'warn',
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+    },
+  },
+  // Test files configuration
+  {
+    files: ["**/*.test.{js,jsx,ts,tsx}", "**/__tests__/**/*.{js,jsx,ts,tsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly",
+        jest: "readonly",
+      },
+    },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
     },
   },
 ];

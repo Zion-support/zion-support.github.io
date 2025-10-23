@@ -1,55 +1,31 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+"use client";
+import React from "react";
 
-const AboutPage: React.FC = () => {
+export default function AboutPage() {
   return (
-    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Our mission is to transform businesses through technology." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                About Zion Tech Group
-              </h1>
-              
-              <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-gray-600 mb-8">
-                  We are a leading technology company specializing in AI and IT solutions for businesses of all sizes.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
-                <p className="text-gray-700 mb-6">
-                  To empower businesses with cutting-edge AI and IT solutions that drive growth, efficiency, and innovation.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
-                <p className="text-gray-700 mb-6">
-                  To be the global leader in AI-powered business solutions, transforming industries through technology.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h2>
-                <p className="text-gray-700 mb-6">
-                  Innovation, integrity, excellence, and customer success are at the core of everything we do.
-                </p>
-              </div>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">About</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced about solutions by Zion Tech Group
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </a>
           </div>
-        </main>
-        
-        <Footer />
+        </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default AboutPage;
+}

@@ -1,44 +1,35 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+"use client";
+import React from "react";
 
-const TeamPage: React.FC = () => {
+export default function TeamPage() {
   return (
-    <>
-      <Helmet>
-        <title>Our Team - Zion Tech Group</title>
-        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Our Team
-              </h1>
-              
-              <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-gray-600 mb-8">
-                  Meet the experts behind our success.
-                </p>
-                
-                <p className="text-gray-700 mb-6">
-                  Coming soon - stay tuned to meet our team!
-                </p>
-              </div>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Team</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced team solutions by Zion Tech Group
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </a>
+    
+    
+    
+    
           </div>
-        </main>
-        
-        <Footer />
+        </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default TeamPage;
+}
