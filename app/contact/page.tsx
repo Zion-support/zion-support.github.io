@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -150,8 +150,11 @@ const ContactPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
+                      Company (Optional)
                     </label>
                     <input
                       type="text"
@@ -161,21 +164,6 @@ const ContactPage: React.FC = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your company name"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
                     />
                   </div>
 
@@ -255,19 +243,10 @@ const ContactPage: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="w-5 h-5 ml-2" />
-                      </>
-                    )}
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
 
                   {submitStatus === 'success' && (
@@ -286,51 +265,69 @@ const ContactPage: React.FC = () => {
 
               {/* Contact Information */}
               <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-6">
-                    Get in Touch
-                  </h2>
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                  <h3 className="text-xl font-bold text-white mb-6">
+                    Get in touch
+                  </h3>
                   <p className="text-gray-300 mb-8">
-                    We're here to help you transform your business with innovative AI and IT solutions. 
-                    Reach out to us through any of the channels below.
+                    We're here to help you succeed. Reach out to us through any
+                    of these channels.
                   </p>
                 </div>
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-blue-600/20 p-3 rounded-lg">
-                      <Mail className="w-6 h-6 text-blue-400" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Email Us</h3>
-                      <p className="text-gray-300 mb-2">Send us an email anytime</p>
-                      <a href="mailto:contact@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        Email Us
+                      </h3>
+                      <p className="text-gray-300 mb-2">
+                        Send us an email and we'll respond within 24 hours
+                      </p>
+                      <a
+                        href="mailto:contact@ziontechgroup.com"
+                        className="text-blue-400 hover:text-blue-300 transition-colors"
+                      >
                         contact@ziontechgroup.com
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="bg-green-600/20 p-3 rounded-lg">
-                      <Phone className="w-6 h-6 text-green-400" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Call Us</h3>
-                      <p className="text-gray-300 mb-2">Speak with our team directly</p>
-                      <a href="tel:+1-555-123-4567" className="text-green-400 hover:text-green-300 transition-colors">
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        Call Us
+                      </h3>
+                      <p className="text-gray-300 mb-2">
+                        Speak with our team directly
+                      </p>
+                      <a
+                        href="tel:+1-555-123-4567"
+                        className="text-green-400 hover:text-green-300 transition-colors"
+                      >
                         +1 (555) 123-4567
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="bg-purple-600/20 p-3 rounded-lg">
-                      <MapPin className="w-6 h-6 text-purple-400" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Visit Us</h3>
-                      <p className="text-gray-300 mb-2">Our headquarters location</p>
-                      <p className="text-purple-400">
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        Visit Us
+                      </h3>
+                      <p className="text-gray-300 mb-2">
+                        Come see us at our headquarters
+                      </p>
+                      <p className="text-gray-300">
                         123 Tech Street<br />
                         San Francisco, CA 94105
                       </p>
@@ -338,15 +335,18 @@ const ContactPage: React.FC = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="bg-orange-600/20 p-3 rounded-lg">
-                      <Clock className="w-6 h-6 text-orange-400" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
-                      <p className="text-gray-300 mb-2">We're available during these times</p>
-                      <p className="text-orange-400">
-                        Mon - Fri: 9:00 AM - 6:00 PM<br />
-                        Sat: 10:00 AM - 4:00 PM
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        Business Hours
+                      </h3>
+                      <p className="text-gray-300 mb-2">
+                        We're available Monday through Friday
+                      </p>
+                      <p className="text-gray-300">
+                        9:00 AM - 6:00 PM PST
                       </p>
                     </div>
                   </div>
