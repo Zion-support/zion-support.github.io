@@ -32,7 +32,6 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-<<<<<<< HEAD
   } catch {
     // console.error('Error reading existing subscribers');
     existing = [];
@@ -67,7 +66,6 @@ export default function handler(req, res) {
       message: 'Successfully subscribed to newsletter',
       id: newSubscriber.id
     }));
-<<<<<<< HEAD
   } catch {
     // console.error('Error saving subscriber');
     res.statusCode = 500;
