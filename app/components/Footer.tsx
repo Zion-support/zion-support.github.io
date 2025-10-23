@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
+
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
+  
   const aiServices = [
     { name: "AI Chatbot Builder", href: "/ai-chatbot-builder" },
     { name: "AI Content Generator", href: "/ai-content-generator" },
@@ -53,6 +55,7 @@ const Footer: React.FC = () => {
     { name: "Contact Us", href: "/contact" },
     { name: "Support", href: "/support" },
   ];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
