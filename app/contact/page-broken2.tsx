@@ -323,9 +323,9 @@ We're here to help you transform your business with cutting-edge AI and technolo
 </div>
 </section>
 </div>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default ContactPage;
+export default ContactPag;

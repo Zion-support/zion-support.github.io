@@ -86,9 +86,9 @@ Schedule Demo
 </div>
 </section>
 </div>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default DemoPag;e;
+export default DemoPa;g;e;

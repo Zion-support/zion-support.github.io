@@ -144,9 +144,9 @@ maxWidth: '300px'
 )}
 </div>
 )}
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default AdvancedSEOOptimize;r;
+export default AdvancedSEOOptimiz;r;

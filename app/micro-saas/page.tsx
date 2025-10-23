@@ -91,7 +91,7 @@ const MicroSAASPage: React.FC = () => {
       popular: false,
       category: 'Support'
     }
-  ]
+  ];
   return (
     <React.Fragment>
       <Helmet>
@@ -1641,4 +1641,4 @@ const MicroSAASPage: React.FC = () => {
   );
 };
 
-export default MicroSAASPage;
+export default MicroSAASPag;

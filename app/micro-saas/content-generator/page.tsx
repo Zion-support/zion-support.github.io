@@ -47,9 +47,9 @@ const MicroSaaSPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
 }
-export default MicroSaaSPag;e;
+export default MicroSaaSPa;g;e;

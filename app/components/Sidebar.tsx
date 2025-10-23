@@ -237,10 +237,10 @@ location.pathname === item.path
 </div>
 </div>
 </aside>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
 Sidebar.displayName = 'Sidebar'
-export default Sideba;r;
+export default Sideb;a;r;

@@ -249,8 +249,8 @@ const HomePage: React.FC = () => {
           </a>
         </section>
       </main>
-    </div>
+    </React.Fragment>
   );
 };
 
-export default HomePage;
+export default HomePag;

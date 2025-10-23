@@ -791,9 +791,9 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
 }
-export default ServicesPag;e;
+export default ServicesPa;g;e;

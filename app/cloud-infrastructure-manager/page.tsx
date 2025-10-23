@@ -158,9 +158,9 @@ Email Us
 </div>
 </section>
 </div>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default CloudInfrastructureManagerPag;e;
+export default CloudInfrastructureManagerPa;g;e;

@@ -156,10 +156,10 @@ Email Us
 </div>
 </section>
 </div>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default SecurityMonitoringPag;e;
+export default SecurityMonitoringPa;g;e;
 </button>

@@ -166,9 +166,9 @@ Contact Sales
 </div>
 </section>
 <Footer />
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default AiContentGenerationPag;e;
+export default AiContentGenerationPa;g;e;

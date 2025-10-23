@@ -158,10 +158,10 @@ Email Us
 </div>
 </section>
 </div>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default SecurityMonitoringSuitePag;e;
+export default SecurityMonitoringSuitePa;g;e;
 </button>

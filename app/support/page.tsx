@@ -370,7 +370,7 @@ Email Support
 </div>
 )
 }
-export default SupportPag;e;
+export default SupportPa;g;e;
 </button>
 </button>
 </div>
@@ -419,9 +419,9 @@ export default SupportPag;e;
 </section>
 </main>
 <Footer />
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default SupportPag;e;
+export default SupportPa;g;e;

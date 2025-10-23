@@ -39,7 +39,7 @@ const features = [
 </div>
 </section>
 </div>
-    </div>
+    </React.Fragment>
   );
 };
 

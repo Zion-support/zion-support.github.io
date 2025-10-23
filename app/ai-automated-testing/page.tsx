@@ -122,8 +122,8 @@ const AiAutomatedTestingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
-export default AiAutomatedTestingPag;e;
+export default AiAutomatedTestingPa;g;e;

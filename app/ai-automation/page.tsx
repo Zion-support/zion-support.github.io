@@ -148,7 +148,7 @@ const AiAutomationPage: React.FC = () => {
         </section>
               </div>
             <Footer />
-            </div>
+            </React.Fragment>
   );
 };
 

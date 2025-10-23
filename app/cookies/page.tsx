@@ -40,7 +40,7 @@ const CookiesPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-        </div>
+        </React.Fragment>
   );
 };
 

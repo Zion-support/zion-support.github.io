@@ -156,9 +156,9 @@ Email Us
 </div>
 </section>
 </div>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default EmailMarketingAutomationPag;e;
+export default EmailMarketingAutomationPa;g;e;

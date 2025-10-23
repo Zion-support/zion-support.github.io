@@ -109,7 +109,7 @@ Contact Us
 </section>
 </main>
 <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 

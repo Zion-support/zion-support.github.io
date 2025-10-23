@@ -166,12 +166,12 @@ Contact Sales
         </div>
 </section>
       <Footer />
-        </div>
-);
+        </React.Fragment>
+  );
 };
 
 }
-export default PagePage;
+export default PagePag;
 </button>
 </button>
 </p>

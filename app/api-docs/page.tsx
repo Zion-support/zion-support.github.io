@@ -4,7 +4,7 @@ import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, S
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-export default functio;n; APIDocsPage() {
+export default functi;o;n; APIDocsPage() {
 const [copiedCode, setCopiedCode] = useState<string | null>(null)
 const [searchQuery, setSearchQuery] = useState('')
 const copyToClipboard = (code: string, id: string) => {
@@ -249,8 +249,8 @@ View SDKs
 </div>
 </section>
 <Footer />
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }

@@ -109,7 +109,7 @@ Start Your Free Trial
 </section>
 </main>
 <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 

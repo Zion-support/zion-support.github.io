@@ -157,9 +157,9 @@ Email Us
 </div>
 </section>
 </div>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default ProjectManagementProPag;e;
+export default ProjectManagementProPa;g;e;

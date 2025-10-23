@@ -129,7 +129,7 @@ Learn More
 </div>
 </section>
 </div>
-    </div>
+    </React.Fragment>
   );
 };
 

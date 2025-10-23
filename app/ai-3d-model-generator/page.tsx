@@ -160,8 +160,8 @@ const AI3DModelGeneratorPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
-export default AI3DModelGeneratorPag;e;
+export default AI3DModelGeneratorPa;g;e;

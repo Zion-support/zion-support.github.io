@@ -89,7 +89,7 @@ className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg
 </div>
 </section>
 </div>
-    </div>
+    </React.Fragment>
   );
 };
 

@@ -198,7 +198,7 @@ const PartnersPage: React.FC = () => {
     { icon: <Users className="w-8 h-8 text-green-500" />, value: '1000+', label: 'Joint Customers' },
     { icon: <Zap className="w-8 h-8 text-purple-500" />, value: '95%', label: 'Success Rate' },
     { icon: <Award className="w-8 h-8 text-orange-500" />, value: '25+', label: 'Awards Won' }
-  ]
+  ];
     return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -422,8 +422,8 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </React.Fragment>
   );
 };
 
-export default PartnersPage;
+export default PartnersPag;

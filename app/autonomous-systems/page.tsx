@@ -20,7 +20,7 @@ const AutonomousSystemsPage: React.FC = () => {
           </div>
         </div>
       </div>
-        </div>
+        </React.Fragment>
   );
 };
 

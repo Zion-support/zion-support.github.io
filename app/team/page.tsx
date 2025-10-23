@@ -31,7 +31,7 @@ const TeamPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-        </div>
+        </React.Fragment>
   );
 };
 

@@ -123,8 +123,8 @@ const AiAutomatedReportingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
-export default AiAutomatedReportingPag;e;
+export default AiAutomatedReportingPa;g;e;

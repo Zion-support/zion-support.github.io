@@ -157,9 +157,9 @@ Email Us
 </div>
 </section>
 </div>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default DataAnalyticsPag;e;
+export default DataAnalyticsPa;g;e;

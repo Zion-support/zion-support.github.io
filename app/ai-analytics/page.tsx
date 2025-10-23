@@ -197,8 +197,8 @@ const AiAnalyticsPage: React.FC = () => {
         </section>
       </main>
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 
-export default AiAnalyticsPag;e;
+export default AiAnalyticsPa;g;e;

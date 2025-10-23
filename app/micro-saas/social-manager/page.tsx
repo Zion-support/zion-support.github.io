@@ -46,9 +46,9 @@ const SocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
 }
-export default SocialMediaManagerPag;e;
+export default SocialMediaManagerPa;g;e;

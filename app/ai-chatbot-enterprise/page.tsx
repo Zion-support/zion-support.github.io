@@ -122,8 +122,8 @@ const AiChatbotEnterprisePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
-export default AiChatbotEnterprisePag;e;
+export default AiChatbotEnterprisePa;g;e;

@@ -67,7 +67,7 @@ const AIAudioProcessorImprovedPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
         {/* Features Section */}
         <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">

@@ -69,9 +69,9 @@ className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 ho
 </div>
 </section>
 </div>
-</div>
-);
+</React.Fragment>
+  );
 };
 
 }
-export default AIRecruitmentAssistantPag;e;
+export default AIRecruitmentAssistantPa;g;e;
