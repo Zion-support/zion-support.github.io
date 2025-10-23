@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">AI Services</h3>
+          <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             
           <ul className="space-y-2">
               {aiServices.map((service, index) => (
@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">IT Services</h3>
+          <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             
           <ul className="space-y-2">
               {itServices.map((service, index) => (
@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
 
           {/* Micro SaaS */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+          <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
             
           <ul className="space-y-2">
               {microSaas.map((service, index) => (
@@ -162,9 +162,8 @@ const Footer: React.FC = () => {
 
           {/* Company & Support */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">Company</h3>
-            
-          </div><ul className="space-y-2 mb-6">
+          <h3 className="text-lg font-semibold mb-4">Company</h3>
+          <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -178,7 +177,7 @@ const Footer: React.FC = () => {
             </ul>
 
             <h3 className="text-lg font-semibold mb-4">Support</h3>
-            </h1><ul className="space-y-2">
+            <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -240,11 +239,8 @@ const Footer: React.FC = () => {
             </Link>
         </div>
       </div>
-      </div>
     </footer>
   );
 };
-
-export default Page;
 
 export default Footer;

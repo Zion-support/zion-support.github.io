@@ -6,15 +6,9 @@ const AccessibilityComponents: React.FC = () => {
   return (
     <div>
       <h1>AccessibilityComponents</h1>
-    
-    
-    
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default Page;
+export default AccessibilityComponents;
 
