@@ -1,5 +1,5 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+"use client";
+import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -24,12 +24,12 @@ class GlobalErrorBoundary extends Component<Props, State> {
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
+    if (process.env.NODE_ENV === "development") {
+      console.error("GlobalErrorBoundary caught an error:", error, errorInfo);
     }
 
     // In production, you might want to log to an error reporting service
@@ -41,7 +41,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
       return (
         <div className="error-boundary">
           <h1>Something went wrong.</h1>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
+          <details style={{ whiteSpace: "pre-wrap" }}>
             {this.state.error && this.state.error.toString()}
             <br />
             {this.state.errorInfo?.componentStack}

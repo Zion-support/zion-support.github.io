@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from "fs";
 
 const blogPageContent = `'use client';
 
@@ -273,5 +273,5 @@ const BlogPage: React.FC = () => {
 export default BlogPage;
 `;
 
-fs.writeFileSync('/workspace/app/blog/page.tsx', blogPageContent);
-console.log('Blog page fixed successfully!');
+fs.writeFileSync("/workspace/app/blog/page.tsx", blogPageContent);
+console.log("Blog page fixed successfully!");

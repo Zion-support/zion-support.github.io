@@ -1,106 +1,150 @@
-'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle, MapPin } from 'lucide-react'
+"use client";
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import {
+  ArrowRight,
+  Calendar,
+  Clock,
+  User,
+  Mail,
+  Phone,
+  Building,
+  CheckCircle,
+  MapPin,
+} from "lucide-react";
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    preferredTime: '',
-    budget: ''
-  })
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    message: "",
+    preferredTime: "",
+    budget: "",
+  });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Consultation form submitted:', formData)
+    e.preventDefault();
+    console.log("Consultation form submitted:", formData);
     // Add form submission logic here
-  }
+  };
 
   const services = [
-    'AI Solutions',
-    'Cloud Infrastructure',
-    'Cybersecurity',
-    'Custom Development',
-    'Data Analytics',
-    'DevOps & Automation',
-    'IT Support',
-    'Other'
-  ]
-
-  const timeSlots = [
-    '9:00 AM - 10:00 AM',
-    '10:00 AM - 11:00 AM',
-    '11:00 AM - 12:00 PM',
-    '1:00 PM - 2:00 PM',
-    '2:00 PM - 3:00 PM',
-    '3:00 PM - 4:00 PM',
-    '4:00 PM - 5:00 PM'
-  ]
-
-  const benefits = [
-    'Free initial consultation',
-    'Customized solution recommendations',
-    'No obligation to proceed',
-    'Expert technical advice',
-    'Detailed project roadmap',
-    'Competitive pricing'
-  ]
-  const consultationTypes = [
-    {
-      title: 'Initial Consultation',
-      duration: '30 minutes',
-      price: 'Free',
-      description: 'Discuss your needs and explore potential solutions',
-      features: ['Needs assessment', 'Solution overview', 'Next steps planning']
-    },
-    {
-      title: 'Technical Deep Dive',
-      duration: '60 minutes',
-      price: '$200',
-      description: 'Detailed technical analysis and architecture review',
-      features: ['Technical analysis', 'Architecture review', 'Implementation roadmap', 'Cost estimation']
-    },
-    {
-      title: 'Strategic Planning',
-      duration: '90 minutes',
-      price: '$500',
-      description: 'Comprehensive IT strategy and digital transformation planning',
-      features: ['Strategic assessment', 'Technology roadmap', 'Budget planning', 'Timeline development', 'Risk analysis']
-    }
+    "AI Solutions",
+    "Cloud Infrastructure",
+    "Cybersecurity",
+    "Custom Development",
+    "Data Analytics",
+    "DevOps & Automation",
+    "IT Support",
+    "Other",
   ];
 
+  const timeSlots = [
+    "9:00 AM - 10:00 AM",
+    "10:00 AM - 11:00 AM",
+    "11:00 AM - 12:00 PM",
+    "1:00 PM - 2:00 PM",
+    "2:00 PM - 3:00 PM",
+    "3:00 PM - 4:00 PM",
+    "4:00 PM - 5:00 PM",
+  ];
+
+  const benefits = [
+    "Free initial consultation",
+    "Customized solution recommendations",
+    "No obligation to proceed",
+    "Expert technical advice",
+    "Detailed project roadmap",
+    "Competitive pricing",
+  ];
+  const consultationTypes = [
+    {
+      title: "Initial Consultation",
+      duration: "30 minutes",
+      price: "Free",
+      description: "Discuss your needs and explore potential solutions",
+      features: [
+        "Needs assessment",
+        "Solution overview",
+        "Next steps planning",
+      ],
+    },
+    {
+      title: "Technical Deep Dive",
+      duration: "60 minutes",
+      price: "$200",
+      description: "Detailed technical analysis and architecture review",
+      features: [
+        "Technical analysis",
+        "Architecture review",
+        "Implementation roadmap",
+        "Cost estimation",
+      ],
+    },
+    {
+      title: "Strategic Planning",
+      duration: "90 minutes",
+      price: "$500",
+      description:
+        "Comprehensive IT strategy and digital transformation planning",
+      features: [
+        "Strategic assessment",
+        "Technology roadmap",
+        "Budget planning",
+        "Timeline development",
+        "Risk analysis",
+      ],
+    },
+  ];
 
   return (
     <>
       <Helmet>
-        <title>Free Consultation - Zion Tech Group | Expert Technology Advice</title>
-        <meta name="description" content="Get expert advice on your technology needs. Schedule a free consultation with our team to discuss AI solutions, cloud infrastructure, and digital transformation." />
-        <meta name="keywords" content="free consultation, technology advice, AI solutions, cloud computing, digital transformation, expert consultation" />
+        <title>
+          Free Consultation - Zion Tech Group | Expert Technology Advice
+        </title>
+        <meta
+          name="description"
+          content="Get expert advice on your technology needs. Schedule a free consultation with our team to discuss AI solutions, cloud infrastructure, and digital transformation."
+        />
+        <meta
+          name="keywords"
+          content="free consultation, technology advice, AI solutions, cloud computing, digital transformation, expert consultation"
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Free <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
+              Free{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Consultation
+              </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get expert advice on your technology needs. Schedule a free consultation with our team to discuss AI solutions, 
-              cloud infrastructure, and digital transformation.
+              Get expert advice on your technology needs. Schedule a free
+              consultation with our team to discuss AI solutions, cloud
+              infrastructure, and digital transformation.
             </p>
           </div>
         </section>
@@ -111,11 +155,16 @@ const ConsultationPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Form */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h2>
+                <h2 className="text-2xl font-bold text-white mb-6">
+                  Schedule Your Consultation
+                </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-gray-300 mb-2"
+                      >
                         Full Name *
                       </label>
                       <input
@@ -130,7 +179,10 @@ const ConsultationPage: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-300 mb-2"
+                      >
                         Email Address *
                       </label>
                       <input
@@ -148,7 +200,10 @@ const ConsultationPage: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label
+                        htmlFor="company"
+                        className="block text-sm font-medium text-gray-300 mb-2"
+                      >
                         Company
                       </label>
                       <input
@@ -162,7 +217,10 @@ const ConsultationPage: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-300 mb-2"
+                      >
                         Phone Number
                       </label>
                       <input
@@ -178,7 +236,10 @@ const ConsultationPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor="service"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
                       Service Interest *
                     </label>
                     <select
@@ -191,7 +252,11 @@ const ConsultationPage: React.FC = () => {
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
-                        <option key={service} value={service} className="bg-gray-800">
+                        <option
+                          key={service}
+                          value={service}
+                          className="bg-gray-800"
+                        >
                           {service}
                         </option>
                       ))}
@@ -199,7 +264,10 @@ const ConsultationPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor="preferredTime"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
                       Preferred Time
                     </label>
                     <select
@@ -219,7 +287,10 @@ const ConsultationPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor="budget"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
                       Project Budget
                     </label>
                     <select
@@ -230,15 +301,26 @@ const ConsultationPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                     >
                       <option value="">Select budget range</option>
-                      <option value="under-10k" className="bg-gray-800">Under $10,000</option>
-                      <option value="10k-50k" className="bg-gray-800">$10,000 - $50,000</option>
-                      <option value="50k-100k" className="bg-gray-800">$50,000 - $100,000</option>
-                      <option value="100k-plus" className="bg-gray-800">$100,000+</option>
+                      <option value="under-10k" className="bg-gray-800">
+                        Under $10,000
+                      </option>
+                      <option value="10k-50k" className="bg-gray-800">
+                        $10,000 - $50,000
+                      </option>
+                      <option value="50k-100k" className="bg-gray-800">
+                        $50,000 - $100,000
+                      </option>
+                      <option value="100k-plus" className="bg-gray-800">
+                        $100,000+
+                      </option>
                     </select>
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
                       Project Details
                     </label>
                     <textarea
@@ -265,7 +347,9 @@ const ConsultationPage: React.FC = () => {
               {/* Benefits & Info */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-2xl font-bold text-white mb-6">Why Choose Our Consultation?</h2>
+                  <h2 className="text-2xl font-bold text-white mb-6">
+                    Why Choose Our Consultation?
+                  </h2>
                   <div className="space-y-4">
                     {benefits.map((benefit, index) => (
                       <div key={index} className="flex items-start">
@@ -277,7 +361,9 @@ const ConsultationPage: React.FC = () => {
                 </div>
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">What to Expect</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    What to Expect
+                  </h3>
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start">
                       <Calendar className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0 mt-1" />
@@ -299,7 +385,9 @@ const ConsultationPage: React.FC = () => {
                 </div>
 
                 <div className="bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    Contact Information
+                  </h3>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-center">
                       <Mail className="w-5 h-5 text-purple-400 mr-3" />
@@ -328,7 +416,8 @@ const ConsultationPage: React.FC = () => {
                 Schedule Your Consultation
               </h2>
               <p className="text-xl text-gray-300">
-                Fill out the form below and we'll get back to you within 24 hours.
+                Fill out the form below and we'll get back to you within 24
+                hours.
               </p>
             </div>
 
@@ -336,7 +425,9 @@ const ConsultationPage: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white font-medium mb-2">Full Name *</label>
+                    <label className="block text-white font-medium mb-2">
+                      Full Name *
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -348,7 +439,9 @@ const ConsultationPage: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">Email Address *</label>
+                    <label className="block text-white font-medium mb-2">
+                      Email Address *
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -363,7 +456,9 @@ const ConsultationPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white font-medium mb-2">Company</label>
+                    <label className="block text-white font-medium mb-2">
+                      Company
+                    </label>
                     <input
                       type="text"
                       name="company"
@@ -374,7 +469,9 @@ const ConsultationPage: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">Phone Number</label>
+                    <label className="block text-white font-medium mb-2">
+                      Phone Number
+                    </label>
                     <input
                       type="tel"
                       name="phone"
@@ -387,7 +484,9 @@ const ConsultationPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-2">Service Interest *</label>
+                  <label className="block text-white font-medium mb-2">
+                    Service Interest *
+                  </label>
                   <select
                     name="service"
                     value={formData.service}
@@ -397,13 +496,17 @@ const ConsultationPage: React.FC = () => {
                   >
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
-                      <option key={index} value={service}>{service}</option>
+                      <option key={index} value={service}>
+                        {service}
+                      </option>
                     ))}
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-2">Message</label>
+                  <label className="block text-white font-medium mb-2">
+                    Message
+                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -435,21 +538,27 @@ const ConsultationPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <Phone className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Call Us
+                </h3>
                 <p className="text-gray-300">+1-302-464-0950</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <Mail className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Email Us
+                </h3>
                 <p className="text-gray-300">consultation@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Visit Us
+                </h3>
                 <p className="text-gray-300">Remote consultations available</p>
               </div>
             </div>
@@ -457,7 +566,7 @@ const ConsultationPage: React.FC = () => {
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ConsultationPage
+export default ConsultationPage;

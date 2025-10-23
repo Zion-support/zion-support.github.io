@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Read the missing pages analysis
-const analysis = JSON.parse(fs.readFileSync('missing_pages_analysis.json', 'utf8'));
+const analysis = JSON.parse(
+  fs.readFileSync("missing_pages_analysis.json", "utf8"),
+);
 
 // Simple template for all pages
 const pageTemplate = (serviceName, servicePath, serviceType) => `'use client';
@@ -204,48 +206,59 @@ function ensureDir(dirPath) {
 // Function to convert path to component name
 function pathToComponentName(path) {
   return path
-    .split('/')
-    .filter(segment => segment)
-    .map(segment => 
+    .split("/")
+    .filter((segment) => segment)
+    .map((segment) =>
       segment
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join('')
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(""),
     )
-    .join('');
+    .join("");
 }
 
 // Function to determine template type
 function getTemplateType(path) {
-  if (path.startsWith('/ai-')) return 'ai';
-  if (path.startsWith('/zion-')) return 'microsaas';
-  if (path.startsWith('/it-') || path.startsWith('/cloud-') || path.startsWith('/api-') || 
-      path.startsWith('/data-') || path.startsWith('/cybersecurity-') || path.startsWith('/devops-') ||
-      path.startsWith('/machine-') || path.startsWith('/enterprise-') || path.startsWith('/disaster-') ||
-      path.startsWith('/compliance-') || path.startsWith('/security-') || path.startsWith('/workflow-')) return 'it';
-  return 'ai'; // default
+  if (path.startsWith("/ai-")) return "ai";
+  if (path.startsWith("/zion-")) return "microsaas";
+  if (
+    path.startsWith("/it-") ||
+    path.startsWith("/cloud-") ||
+    path.startsWith("/api-") ||
+    path.startsWith("/data-") ||
+    path.startsWith("/cybersecurity-") ||
+    path.startsWith("/devops-") ||
+    path.startsWith("/machine-") ||
+    path.startsWith("/enterprise-") ||
+    path.startsWith("/disaster-") ||
+    path.startsWith("/compliance-") ||
+    path.startsWith("/security-") ||
+    path.startsWith("/workflow-")
+  )
+    return "it";
+  return "ai"; // default
 }
 
 // Generate missing pages
 let generatedCount = 0;
-const appDir = path.join(__dirname, 'app');
+const appDir = path.join(__dirname, "app");
 
-analysis.missingPagesList.forEach(pagePath => {
+analysis.missingPagesList.forEach((pagePath) => {
   const componentName = pathToComponentName(pagePath);
   const templateType = getTemplateType(pagePath);
   const pageDir = path.join(appDir, pagePath.substring(1));
-  
+
   // Create directory
   ensureDir(pageDir);
-  
+
   // Generate page content
   const pageContent = pageTemplate(componentName, pagePath, templateType);
-  
+
   // Write page file
-  const pageFile = path.join(pageDir, 'page.tsx');
+  const pageFile = path.join(pageDir, "page.tsx");
   fs.writeFileSync(pageFile, pageContent);
   generatedCount++;
-  
+
   console.log(`Generated: ${pagePath} -> ${pageFile}`);
 });
 

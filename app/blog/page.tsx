@@ -1,59 +1,84 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Calendar, Clock, User, Tag } from 'lucide-react'
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 
 const BlogPage: React.FC = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
-      excerpt: 'Explore the latest AI trends shaping enterprise technology and how businesses can leverage these innovations for competitive advantage.',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-15',
-      readTime: '8 min read',
-      category: 'AI & Machine Learning',      featured: true
+      title: "The Future of AI in Enterprise: 2024 Trends and Predictions",
+      excerpt:
+        "Explore the latest AI trends shaping enterprise technology and how businesses can leverage these innovations for competitive advantage.",
+      author: "Dr. Sarah Chen",
+      date: "2024-01-15",
+      readTime: "8 min read",
+      category: "AI & Machine Learning",
+      featured: true,
     },
     {
       id: 2,
-      title: 'Building Scalable Cloud Infrastructure: Best Practices',
-      excerpt: 'Learn how to design and implement cloud infrastructure that can scale with your business growth and changing needs.',
-      author: 'Michael Rodriguez',
-      date: '2024-01-10',
-      readTime: '6 min read',
-      category: 'Cloud Computing',      featured: false
+      title: "Building Scalable Cloud Infrastructure: Best Practices",
+      excerpt:
+        "Learn how to design and implement cloud infrastructure that can scale with your business growth and changing needs.",
+      author: "Michael Rodriguez",
+      date: "2024-01-10",
+      readTime: "6 min read",
+      category: "Cloud Computing",
+      featured: false,
     },
     {
       id: 3,
-      title: 'Cybersecurity in the Age of AI: Protecting Your Digital Assets',
-      excerpt: 'Discover how AI is both enhancing cybersecurity capabilities and creating new challenges that organizations must address.',
-      author: 'Alex Thompson',
-      date: '2024-01-05',
-      readTime: '7 min read',
-      category: 'Cybersecurity',
-      featured: false
-    }
-  ]
+      title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",
+      excerpt:
+        "Discover how AI is both enhancing cybersecurity capabilities and creating new challenges that organizations must address.",
+      author: "Alex Thompson",
+      date: "2024-01-05",
+      readTime: "7 min read",
+      category: "Cybersecurity",
+      featured: false,
+    },
+  ];
 
-  const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development', 'Business']
+  const categories = [
+    "All",
+    "AI & Machine Learning",
+    "Cloud Computing",
+    "Cybersecurity",
+    "Development",
+    "Business",
+  ];
   return (
     <>
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from our expert team." />
-        <meta name="keywords" content="blog, AI insights, technology trends, cloud computing, cybersecurity, enterprise solutions" />
+        <meta
+          name="description"
+          content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from our expert team."
+        />
+        <meta
+          name="keywords"
+          content="blog, AI insights, technology trends, cloud computing, cybersecurity, enterprise solutions"
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Blog</span>
+              Our{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Blog
+              </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from our expert team.
+              Stay updated with the latest insights on AI, cloud computing,
+              cybersecurity, and technology trends from our expert team.
             </p>
           </div>
         </section>
@@ -67,8 +92,8 @@ const BlogPage: React.FC = () => {
                   key={index}
                   className={`px-6 py-2 rounded-full transition-all duration-300 ${
                     index === 0
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                      ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                      : "bg-white/10 text-gray-300 hover:bg-white/20"
                   }`}
                 >
                   {category}
@@ -86,13 +111,13 @@ const BlogPage: React.FC = () => {
                 <article
                   key={post.id}
                   className={`bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 ${
-                    post.featured ? 'md:col-span-2 lg:col-span-1' : ''
+                    post.featured ? "md:col-span-2 lg:col-span-1" : ""
                   }`}
                 >
                   <div className="h-48 bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
                     <div className="text-6xl text-purple-400">📝</div>
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">
@@ -104,22 +129,24 @@ const BlogPage: React.FC = () => {
                         </span>
                       )}
                     </div>
-                    
+
                     <h2 className="text-xl font-bold text-white mb-3 line-clamp-2">
                       {post.title}
                     </h2>
-                    
+
                     <p className="text-gray-300 mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
-                    
+
                     <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-1">
                           <User className="w-4 h-4" />
                           <span>{post.author}</span>
                         </div>
-                        <div className="flex items-center gap-1">                          <Calendar className="w-4 h-4" />
+                        <div className="flex items-center gap-1">
+                          {" "}
+                          <Calendar className="w-4 h-4" />
                           <span>{post.date}</span>
                         </div>
                       </div>
@@ -128,8 +155,10 @@ const BlogPage: React.FC = () => {
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    
-                    <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">                      Read More
+
+                    <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                      {" "}
+                      Read More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </button>
                   </div>
@@ -157,11 +186,12 @@ const BlogPage: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                 Subscribe
               </button>
-            </div>          </div>
+            </div>{" "}
+          </div>
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default BlogPage
+export default BlogPage;

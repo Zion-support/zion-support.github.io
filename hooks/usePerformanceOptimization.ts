@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from "react";
 
 interface OptimizationConfig {
   enableLazyLoading: boolean;
@@ -17,24 +17,24 @@ export const usePerformanceOptimization = (config: OptimizationConfig) => {
 
   const optimizeImages = useCallback(() => {
     if (!config.enableImageOptimization) return;
-    
-    const images = document.querySelectorAll('img');
+
+    const images = document.querySelectorAll("img");
     images.forEach((img) => {
       if (!img.loading) {
-        img.loading = 'lazy';
+        img.loading = "lazy";
       }
     });
   }, [config.enableImageOptimization]);
 
   const optimizeLazyLoading = useCallback(() => {
     if (!config.enableLazyLoading) return;
-    
-    const lazyElements = document.querySelectorAll('[data-lazy]');
+
+    const lazyElements = document.querySelectorAll("[data-lazy]");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
-          element.classList.add('loaded');
+          element.classList.add("loaded");
           observer.unobserve(element);
         }
       });
@@ -44,13 +44,17 @@ export const usePerformanceOptimization = (config: OptimizationConfig) => {
   }, [config.enableLazyLoading]);
 
   const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    
-    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    
+    const navigation = performance.getEntriesByType(
+      "navigation",
+    )[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType("paint");
+
+    const fcp = paintEntries.find(
+      (entry) => entry.name === "first-contentful-paint",
+    );
+
     setOptimizationMetrics({
       bundleSize: navigation.transferSize || 0,
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
@@ -59,7 +63,7 @@ export const usePerformanceOptimization = (config: OptimizationConfig) => {
   }, []);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const runOptimizations = () => {
       optimizeImages();
@@ -68,14 +72,14 @@ export const usePerformanceOptimization = (config: OptimizationConfig) => {
       setIsOptimized(true);
     };
 
-    if (document.readyState === 'complete') {
+    if (document.readyState === "complete") {
       runOptimizations();
     } else {
-      window.addEventListener('load', runOptimizations);
+      window.addEventListener("load", runOptimizations);
     }
 
     return () => {
-      window.removeEventListener('load', runOptimizations);
+      window.removeEventListener("load", runOptimizations);
     };
   }, [optimizeImages, optimizeLazyLoading, measurePerformance]);
 

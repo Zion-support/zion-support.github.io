@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 // List of hooks files that need fixing
 const hooksFiles = [
-  'app/hooks/useEnhancedPerformance.ts',
-  'app/hooks/usePerformanceMonitor.ts'
+  "app/hooks/useEnhancedPerformance.ts",
+  "app/hooks/usePerformanceMonitor.ts",
 ];
 
 // Function to generate a proper hook file
 function generateHookFile(filePath) {
-  const fileName = path.basename(filePath, '.ts');
+  const fileName = path.basename(filePath, ".ts");
   const hookName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
-  
+
   return `import { useState, useEffect } from 'react';
 
 export function ${fileName}() {
@@ -68,7 +68,7 @@ export function ${fileName}() {
 function fixHookFile(filePath) {
   try {
     const content = generateHookFile(filePath);
-    fs.writeFileSync(filePath, content, 'utf8');
+    fs.writeFileSync(filePath, content, "utf8");
     console.log(`Fixed: ${filePath}`);
     return true;
   } catch (error) {
@@ -78,12 +78,12 @@ function fixHookFile(filePath) {
 }
 
 // Main execution
-console.log('Fixing hooks files...');
+console.log("Fixing hooks files...");
 
 let fixedCount = 0;
 let errorCount = 0;
 
-hooksFiles.forEach(filePath => {
+hooksFiles.forEach((filePath) => {
   if (fs.existsSync(filePath)) {
     if (fixHookFile(filePath)) {
       fixedCount++;

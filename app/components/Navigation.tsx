@@ -1,24 +1,18 @@
-'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Menu, X } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Brain, Menu, X } from "lucide-react";
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas-solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
+    { name: "Home", href: "/" },
+    { name: "AI Services", href: "/ai-services" },
+    { name: "IT Services", href: "/it-services" },
+    { name: "Micro SaaS", href: "/micro-saas-solutions" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
-
-  
-
-  
-
-  
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -30,7 +24,9 @@ const Navigation: React.FC = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+              <span className="text-xl font-bold text-gray-900">
+                Zion Tech Group
+              </span>
             </Link>
           </div>
 
@@ -64,7 +60,11 @@ const Navigation: React.FC = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>

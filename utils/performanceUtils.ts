@@ -12,13 +12,13 @@ export class PerformanceUtils {
       enabled: true,
       monitoring: true,
       optimization: true,
-      ...config
+      ...config,
     };
   }
 
   init(): void {
     if (this.config.enabled) {
-      console.log('Performance utils initialized');
+      console.log("Performance utils initialized");
     }
   }
 
@@ -35,7 +35,7 @@ export class PerformanceUtils {
 
   optimizeImages(): void {
     if (this.config.optimization) {
-      console.log('Optimizing images...');
+      console.log("Optimizing images...");
     }
   }
 }

@@ -1,21 +1,22 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
+const dir = path.join(process.cwd(), "data");
+const file = path.join(dir, "onsite-requests.json");
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+  if (req.method !== "POST") {
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ error: "Method not allowed" }));
     return;
   }
 
   try {
-    const { name, email, company, phone, message, serviceType, preferredDate } = req.body || {};
+    const { name, email, company, phone, message, serviceType, preferredDate } =
+      req.body || {};
 
     if (!name || !email) {
-      return res.status(400).json({ error: 'Name and email are required' });
+      return res.status(400).json({ error: "Name and email are required" });
     }
 
     // Ensure data directory exists
@@ -27,7 +28,7 @@ export default async function handler(req, res) {
     let requests = [];
     try {
       if (fs.existsSync(file)) {
-        const data = fs.readFileSync(file, 'utf8');
+        const data = fs.readFileSync(file, "utf8");
         requests = JSON.parse(data);
       }
     } catch {
@@ -46,7 +47,7 @@ export default async function handler(req, res) {
       serviceType,
       preferredDate,
       timestamp: new Date().toISOString(),
-      status: 'pending'
+      status: "pending",
     };
 
     requests.push(newRequest);
@@ -54,12 +55,12 @@ export default async function handler(req, res) {
     // Save to file
     fs.writeFileSync(file, JSON.stringify(requests, null, 2));
 
-    res.status(200).json({ 
-      message: 'Onsite request submitted successfully',
-      requestId: newRequest.id 
+    res.status(200).json({
+      message: "Onsite request submitted successfully",
+      requestId: newRequest.id,
     });
   } catch (error) {
-    console.error('Onsite request error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error("Onsite request error:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 }

@@ -1,45 +1,51 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Phone, Mail, Brain, Smartphone, Monitor, Cloud } from 'lucide-react';
-import Footer from '../components/Footer';
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import {
+  CheckCircle,
+  Phone,
+  Mail,
+  Brain,
+  Smartphone,
+  Monitor,
+  Cloud,
+} from "lucide-react";
+import Footer from "../components/Footer";
 const BusinessAppsPage: React.FC = () => {
   const features = [
     {
       icon: Smartphone,
-      title: 'Mobile Apps',
-      description: 'Custom mobile applications for iOS and Android platforms'
+      title: "Mobile Apps",
+      description: "Custom mobile applications for iOS and Android platforms",
     },
     {
       icon: Monitor,
-      title: 'Web Applications',
-      description: 'Responsive web applications with modern UI/UX design'
+      title: "Web Applications",
+      description: "Responsive web applications with modern UI/UX design",
     },
     {
       icon: Cloud,
-      title: 'Cloud Integration',
-      description: 'Seamless cloud integration and deployment solutions'
+      title: "Cloud Integration",
+      description: "Seamless cloud integration and deployment solutions",
     },
     {
       icon: Brain,
 
-      title: 'AI-Powered Features',
-      description: 'Advanced AI integration for enhanced functionality'
-
-    }
+      title: "AI-Powered Features",
+      description: "Advanced AI integration for enhanced functionality",
+    },
   ];
 
   const benefits = [
+    "Custom mobile and web applications",
+    "Cross-platform compatibility",
+    "Modern UI/UX design",
+    "Cloud-based deployment",
 
-    'Custom mobile and web applications',
-    'Cross-platform compatibility',
-    'Modern UI/UX design',
-    'Cloud-based deployment',
-
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    "24/7 technical support",
+    "Easy integration with existing systems",
+    "Cost-effective pricing plans",
+    "Proven track record of success",
   ];
 
   return (
@@ -47,8 +53,14 @@ const BusinessAppsPage: React.FC = () => {
       <Helmet>
         <title>Business Apps | Zion Tech Group</title>
 
-        <meta name="description" content="Professional Business Apps development by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="business apps, mobile apps, web apps, AI solutions, IT services, Zion Tech Group" />
+        <meta
+          name="description"
+          content="Professional Business Apps development by Zion Tech Group. Advanced AI and IT solutions for your business."
+        />
+        <meta
+          name="keywords"
+          content="business apps, mobile apps, web apps, AI solutions, IT services, Zion Tech Group"
+        />
       </Helmet>
 
       {/* Hero Section */}
@@ -58,7 +70,7 @@ const BusinessAppsPage: React.FC = () => {
             Business Apps
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced business app solutions. 
+            Transform your business with our advanced business app solutions.
             Powered by cutting-edge AI technology and industry expertise.
           </p>
         </div>
@@ -72,20 +84,25 @@ const BusinessAppsPage: React.FC = () => {
               Why Choose Our Business Apps?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our business app solutions deliver unmatched performance, security, and scalability.
+              Our business app solutions deliver unmatched performance,
+              security, and scalability.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+              >
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
@@ -97,10 +114,11 @@ const BusinessAppsPage: React.FC = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our business app solutions for your business.
+              Experience the power of our business app solutions for your
+              business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
@@ -119,7 +137,8 @@ const BusinessAppsPage: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your business app needs and get a customized solution.
+            Contact our experts to discuss your business app needs and get a
+            customized solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
@@ -130,7 +149,6 @@ const BusinessAppsPage: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
-
           </div>
         </div>
       </section>

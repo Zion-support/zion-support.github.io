@@ -1,6 +1,15 @@
-'use client';
-import React, { useState, useEffect, useCallback } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+"use client";
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Shield,
+  Brain,
+  Globe,
+} from "lucide-react";
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,39 +17,63 @@ const ContentCarousel: React.FC = () => {
   const slides = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      title: "AI-Powered Solutions",
+      description:
+        "Advanced AI technology to transform your business operations and improve efficiency",
+      features: [
+        "Machine Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Predictive Analytics",
+      ],
     },
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
+      title: "High Performance",
+      description:
+        "Lightning-fast processing and real-time analytics for optimal results",
+      features: [
+        "Real-time Processing",
+        "Scalable Architecture",
+        "Optimized Performance",
+        "Low Latency",
+      ],
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
+      title: "Enterprise Security",
+      description:
+        "Bank-level security with encryption and compliance standards",
+      features: [
+        "End-to-End Encryption",
+        "Compliance Standards",
+        "Security Audits",
+        "24/7 Monitoring",
+      ],
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
-    }
+      title: "Global Reach",
+      description:
+        "Worldwide deployment and support for international businesses",
+      features: [
+        "Multi-Region Support",
+        "Local Compliance",
+        "Global CDN",
+        "International Support",
+      ],
+    },
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    "Advanced AI technology integration",
+    "Real-time processing and analytics",
+    "Enterprise-grade security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 technical support",
+    "Easy integration with existing systems",
+    "Cost-effective pricing plans",
+    "Proven track record of success",
   ];
 
   const nextSlide = useCallback(() => {
@@ -60,7 +93,7 @@ const ContentCarousel: React.FC = () => {
     <div className="relative">
       {/* Carousel Container */}
       <div className="relative overflow-hidden rounded-2xl">
-        <div 
+        <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
@@ -74,18 +107,21 @@ const ContentCarousel: React.FC = () => {
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                         <slide.icon className="w-8 h-8 text-white" />
                       </div>
-                      
+
                       <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                         {slide.title}
                       </h2>
-                      
+
                       <p className="text-xl text-gray-300 mb-8">
                         {slide.description}
                       </p>
 
                       <ul className="space-y-3 mb-8">
                         {slide.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-gray-300">
+                          <li
+                            key={featureIndex}
+                            className="flex items-center text-gray-300"
+                          >
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
                           </li>
@@ -105,7 +141,9 @@ const ContentCarousel: React.FC = () => {
                           <div className="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <slide.icon className="w-12 h-12 text-white" />
                           </div>
-                          <p className="text-white/60 text-sm">Interactive Demo</p>
+                          <p className="text-white/60 text-sm">
+                            Interactive Demo
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -137,7 +175,7 @@ const ContentCarousel: React.FC = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? 'bg-purple-500' : 'bg-white/30'
+                index === currentSlide ? "bg-purple-500" : "bg-white/30"
               }`}
             />
           ))}
@@ -149,13 +187,17 @@ const ContentCarousel: React.FC = () => {
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Our solutions deliver unmatched value and performance for your business.
+            Our solutions deliver unmatched value and performance for your
+            business.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+            <div
+              key={index}
+              className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10"
+            >
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
               <span className="text-gray-300">{benefit}</span>
             </div>

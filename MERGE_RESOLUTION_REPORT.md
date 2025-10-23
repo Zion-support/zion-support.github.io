@@ -13,7 +13,7 @@ All merge conflicts have been successfully resolved in the codebase. The followi
 
 **Changes:**
 
-- ✅ Removed all merge conflict markers (`<<<<<<<`, ``, ``)
+- ✅ Removed all merge conflict markers (`<<<<<<<`, `, `)
 - ✅ Consolidated duplicate imports
 - ✅ Fixed logger method signatures:
   - `logger.lifecycle()` now uses correct parameters

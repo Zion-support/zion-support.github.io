@@ -1,5 +1,5 @@
 /* Futuristic Design System */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700;800&display=swap");
 
 /* CSS Variables for Futuristic Theme */
 :root {
@@ -10,25 +10,40 @@
   --neon-orange: #ff6600;
   --neon-cyan: #00ffff;
   --neon-yellow: #ffff00;
-  
+
   --dark-bg: #0a0a0a;
   --darker-bg: #050505;
   --card-bg: rgba(15, 15, 15, 0.8);
   --glass-bg: rgba(255, 255, 255, 0.05);
   --border-glow: rgba(0, 245, 255, 0.3);
-  
+
   --text-primary: #ffffff;
   --text-secondary: #b0b0b0;
   --text-accent: #00f5ff;
-  
-  --gradient-primary: linear-gradient(135deg, #00f5ff 0%, #bf00ff 50%, #ff0080 100%);
-  --gradient-secondary: linear-gradient(135deg, #00ff88 0%, #00f5ff 50%, #bf00ff 100%);
-  --gradient-accent: linear-gradient(135deg, #ff6600 0%, #ff0080 50%, #bf00ff 100%);
-  
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #00f5ff 0%,
+    #bf00ff 50%,
+    #ff0080 100%
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #00ff88 0%,
+    #00f5ff 50%,
+    #bf00ff 100%
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    #ff6600 0%,
+    #ff0080 50%,
+    #bf00ff 100%
+  );
+
   --shadow-neon: 0 0 20px rgba(0, 245, 255, 0.5);
   --shadow-neon-purple: 0 0 20px rgba(191, 0, 255, 0.5);
   --shadow-neon-pink: 0 0 20px rgba(255, 0, 128, 0.5);
-  
+
   --border-radius: 12px;
   --border-radius-lg: 20px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -40,7 +55,7 @@
 }
 
 body {
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   background: var(--dark-bg);
   color: var(--text-primary);
   overflow-x: hidden;
@@ -54,24 +69,45 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(191, 0, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(0, 245, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(191, 0, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(255, 0, 128, 0.1) 0%,
+      transparent 50%
+    ),
     linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 50%, #0a1a1a 100%);
   animation: backgroundShift 20s ease-in-out infinite;
 }
 
 @keyframes backgroundShift {
-  0%, 100% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(-10px) translateY(-10px); }
-  50% { transform: translateX(10px) translateY(-5px); }
-  75% { transform: translateX(-5px) translateY(10px); }
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-10px) translateY(-10px);
+  }
+  50% {
+    transform: translateX(10px) translateY(-5px);
+  }
+  75% {
+    transform: translateX(-5px) translateY(10px);
+  }
 }
 
 /* Neon Glow Effects */
 .neon-glow {
-  box-shadow: 
+  box-shadow:
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor,
@@ -80,15 +116,15 @@ body {
 }
 
 @keyframes neonPulse {
-  from { 
-    box-shadow: 
+  from {
+    box-shadow:
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor;
   }
-  to { 
-    box-shadow: 
+  to {
+    box-shadow:
       0 0 10px currentColor,
       0 0 20px currentColor,
       0 0 30px currentColor,
@@ -102,7 +138,7 @@ body {
   backdrop-filter: blur(20px);
   border: 1px solid var(--border-glow);
   border-radius: var(--border-radius-lg);
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   transition: var(--transition);
@@ -110,7 +146,7 @@ body {
 
 .glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.4),
     var(--shadow-neon),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -123,7 +159,7 @@ body {
   background: transparent;
   border: 2px solid var(--neon-blue);
   color: var(--neon-blue);
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -134,7 +170,7 @@ body {
 }
 
 .btn-futuristic::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -165,8 +201,13 @@ body {
 }
 
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Floating Elements */
@@ -175,8 +216,13 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* Grid Pattern Overlay */
@@ -186,7 +232,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -195,34 +241,53 @@ body {
 }
 
 @keyframes gridMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
 }
 
 /* Neon Border Animation */
 .neon-border {
   position: relative;
   border: 2px solid transparent;
-  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink)) border-box;
+  background: linear-gradient(
+      45deg,
+      var(--neon-blue),
+      var(--neon-purple),
+      var(--neon-pink)
+    )
+    border-box;
   border-radius: var(--border-radius);
 }
 
 .neon-border::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+  background: linear-gradient(
+    45deg,
+    var(--neon-blue),
+    var(--neon-purple),
+    var(--neon-pink)
+  );
   border-radius: var(--border-radius);
   z-index: -1;
   animation: borderRotate 3s linear infinite;
 }
 
 @keyframes borderRotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Holographic Effect */
@@ -244,8 +309,13 @@ body {
 }
 
 @keyframes holographicShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Particle System */
@@ -288,12 +358,12 @@ body {
   .glass-card {
     backdrop-filter: blur(15px);
   }
-  
+
   .btn-futuristic {
     padding: 11px 28px;
     font-size: 15px;
   }
-  
+
   .grid-overlay {
     background-size: 40px 40px;
   }
@@ -304,22 +374,22 @@ body {
     backdrop-filter: blur(10px);
     margin: 0.5rem;
   }
-  
+
   .btn-futuristic {
     padding: 10px 24px;
     font-size: 14px;
   }
-  
+
   .grid-overlay {
     background-size: 25px 25px;
   }
-  
+
   .text-gradient {
     font-size: 1.5rem;
   }
-  
+
   .neon-glow {
-    box-shadow: 
+    box-shadow:
       0 0 3px currentColor,
       0 0 6px currentColor,
       0 0 9px currentColor;
@@ -332,27 +402,27 @@ body {
     margin: 0.25rem;
     padding: 1rem;
   }
-  
+
   .btn-futuristic {
     padding: 8px 20px;
     font-size: 13px;
   }
-  
+
   .grid-overlay {
     background-size: 20px 20px;
   }
-  
+
   .text-gradient {
     font-size: 1.25rem;
   }
-  
+
   .neon-glow {
-    box-shadow: 
+    box-shadow:
       0 0 2px currentColor,
       0 0 4px currentColor,
       0 0 6px currentColor;
   }
-  
+
   .particle {
     width: 1px;
     height: 1px;
@@ -365,22 +435,22 @@ body {
     margin: 0.125rem;
     padding: 0.75rem;
   }
-  
+
   .btn-futuristic {
     padding: 6px 16px;
     font-size: 12px;
   }
-  
+
   .grid-overlay {
     background-size: 15px 15px;
   }
-  
+
   .text-gradient {
     font-size: 1rem;
   }
-  
+
   .neon-glow {
-    box-shadow: 
+    box-shadow:
       0 0 1px currentColor,
       0 0 2px currentColor,
       0 0 3px currentColor;
@@ -524,7 +594,7 @@ body {
 /* Advanced Futuristic Effects */
 .cyber-grid {
   position: relative;
-  background: 
+  background:
     linear-gradient(90deg, transparent 98%, rgba(0, 245, 255, 0.1) 100%),
     linear-gradient(0deg, transparent 98%, rgba(0, 245, 255, 0.1) 100%);
   background-size: 20px 20px;
@@ -532,25 +602,45 @@ body {
 }
 
 @keyframes cyberGridMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 20px 20px; }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
 }
 
 /* Enhanced Cyber Grid with Multiple Layers */
 .cyber-grid-enhanced {
   position: relative;
-  background: 
+  background:
     linear-gradient(90deg, transparent 98%, rgba(0, 245, 255, 0.15) 100%),
     linear-gradient(0deg, transparent 98%, rgba(0, 245, 255, 0.15) 100%),
     linear-gradient(45deg, transparent 98%, rgba(191, 0, 255, 0.05) 100%),
     linear-gradient(-45deg, transparent 98%, rgba(255, 0, 128, 0.05) 100%);
-  background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+  background-size:
+    20px 20px,
+    20px 20px,
+    40px 40px,
+    40px 40px;
   animation: cyberGridMoveEnhanced 15s linear infinite;
 }
 
 @keyframes cyberGridMoveEnhanced {
-  0% { background-position: 0 0, 0 0, 0 0, 0 0; }
-  100% { background-position: 20px 20px, -20px -20px, 40px 40px, -40px -40px; }
+  0% {
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      20px 20px,
+      -20px -20px,
+      40px 40px,
+      -40px -40px;
+  }
 }
 
 /* Quantum Particle System */
@@ -629,13 +719,22 @@ body {
   top: -100%;
   width: 2px;
   height: 200%;
-  background: linear-gradient(to bottom, transparent, var(--neon-green), transparent);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--neon-green),
+    transparent
+  );
   animation: matrixFall 3s linear infinite;
 }
 
 @keyframes matrixFall {
-  0% { top: -100%; }
-  100% { top: 100%; }
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
 }
 
 /* Cyber Glitch Effect */
@@ -645,11 +744,22 @@ body {
 }
 
 @keyframes cyberGlitch {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
 }
 
 /* Neon Scan Line Effect */
@@ -659,7 +769,7 @@ body {
 }
 
 .scan-lines::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -677,29 +787,49 @@ body {
 }
 
 @keyframes scanMove {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
 }
 
 /* Quantum Tunnel Effect */
 .quantum-tunnel {
   position: relative;
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 245, 255, 0.1) 50%, transparent 100%);
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 245, 255, 0.1) 50%,
+    transparent 100%
+  );
   animation: quantumTunnel 4s ease-in-out infinite;
 }
 
 @keyframes quantumTunnel {
-  0%, 100% { 
-    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 245, 255, 0.1) 50%, transparent 100%);
+  0%,
+  100% {
+    background: radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      rgba(0, 245, 255, 0.1) 50%,
+      transparent 100%
+    );
   }
-  50% { 
-    background: radial-gradient(ellipse at center, transparent 0%, rgba(191, 0, 255, 0.15) 30%, transparent 100%);
+  50% {
+    background: radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      rgba(191, 0, 255, 0.15) 30%,
+      transparent 100%
+    );
   }
 }
 
 /* Enhanced Neon Glow with Multiple Colors */
 .neon-glow-multi {
-  box-shadow: 
+  box-shadow:
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor,
@@ -710,8 +840,8 @@ body {
 }
 
 @keyframes neonPulseMulti {
-  from { 
-    box-shadow: 
+  from {
+    box-shadow:
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
@@ -719,8 +849,8 @@ body {
       0 0 35px currentColor,
       0 0 40px currentColor;
   }
-  to { 
-    box-shadow: 
+  to {
+    box-shadow:
       0 0 10px currentColor,
       0 0 20px currentColor,
       0 0 30px currentColor,
@@ -733,7 +863,7 @@ body {
 /* Cyber Circuit Pattern */
 .cyber-circuit {
   position: relative;
-  background-image: 
+  background-image:
     linear-gradient(90deg, transparent 98%, rgba(0, 245, 255, 0.1) 100%),
     linear-gradient(0deg, transparent 98%, rgba(0, 245, 255, 0.1) 100%);
   background-size: 20px 20px;
@@ -741,32 +871,49 @@ body {
 }
 
 .cyber-circuit::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(0, 245, 255, 0.2) 1px, transparent 1px),
-    radial-gradient(circle at 75% 75%, rgba(191, 0, 255, 0.2) 1px, transparent 1px);
+  background-image:
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(0, 245, 255, 0.2) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(191, 0, 255, 0.2) 1px,
+      transparent 1px
+    );
   background-size: 40px 40px;
   animation: circuitNodes 3s linear infinite;
 }
 
 @keyframes circuitPulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.8; }
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 @keyframes circuitNodes {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(20px, 20px); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
 }
 
 .neon-text {
   color: var(--neon-blue);
-  text-shadow: 
+  text-shadow:
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor,
@@ -775,15 +922,15 @@ body {
 }
 
 @keyframes neonTextPulse {
-  from { 
-    text-shadow: 
+  from {
+    text-shadow:
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor;
   }
-  to { 
-    text-shadow: 
+  to {
+    text-shadow:
       0 0 10px currentColor,
       0 0 20px currentColor,
       0 0 30px currentColor,
@@ -793,12 +940,14 @@ body {
 
 .holographic-card {
   position: relative;
-  background: linear-gradient(45deg, 
+  background: linear-gradient(
+    45deg,
     rgba(0, 245, 255, 0.1) 0%,
     rgba(191, 0, 255, 0.1) 25%,
     rgba(255, 0, 128, 0.1) 50%,
     rgba(0, 255, 136, 0.1) 75%,
-    rgba(0, 245, 255, 0.1) 100%);
+    rgba(0, 245, 255, 0.1) 100%
+  );
   background-size: 400% 400%;
   animation: holographicShift 4s ease-in-out infinite;
   border: 1px solid rgba(0, 245, 255, 0.3);
@@ -807,23 +956,31 @@ body {
 }
 
 .holographic-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(255, 255, 255, 0.1), 
-    transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
   animation: holographicSweep 3s ease-in-out infinite;
 }
 
 @keyframes holographicSweep {
-  0% { left: -100%; }
-  50% { left: 100%; }
-  100% { left: 100%; }
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 .cyber-button {
@@ -832,7 +989,7 @@ body {
   background: transparent;
   border: 2px solid var(--neon-blue);
   color: var(--neon-blue);
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -843,16 +1000,18 @@ body {
 }
 
 .cyber-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(0, 245, 255, 0.2), 
-    transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 245, 255, 0.2),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -862,7 +1021,7 @@ body {
 
 .cyber-button:hover {
   color: var(--text-primary);
-  box-shadow: 
+  box-shadow:
     0 0 20px var(--neon-blue),
     inset 0 0 20px rgba(0, 245, 255, 0.1);
   transform: translateY(-2px);
@@ -916,36 +1075,40 @@ body {
 .neon-border-animated {
   position: relative;
   border: 2px solid transparent;
-  background: linear-gradient(45deg, 
-    var(--neon-blue), 
-    var(--neon-purple), 
-    var(--neon-pink), 
-    var(--neon-green)) border-box;
+  background: linear-gradient(
+      45deg,
+      var(--neon-blue),
+      var(--neon-purple),
+      var(--neon-pink),
+      var(--neon-green)
+    )
+    border-box;
   border-radius: var(--border-radius);
   animation: borderGlow 3s ease-in-out infinite;
 }
 
 @keyframes borderGlow {
-  0%, 100% { 
-    box-shadow: 
+  0%,
+  100% {
+    box-shadow:
       0 0 10px var(--neon-blue),
       0 0 20px var(--neon-blue),
       0 0 30px var(--neon-blue);
   }
-  25% { 
-    box-shadow: 
+  25% {
+    box-shadow:
       0 0 10px var(--neon-purple),
       0 0 20px var(--neon-purple),
       0 0 30px var(--neon-purple);
   }
-  50% { 
-    box-shadow: 
+  50% {
+    box-shadow:
       0 0 10px var(--neon-pink),
       0 0 20px var(--neon-pink),
       0 0 30px var(--neon-pink);
   }
-  75% { 
-    box-shadow: 
+  75% {
+    box-shadow:
       0 0 10px var(--neon-green),
       0 0 20px var(--neon-green),
       0 0 30px var(--neon-green);
@@ -978,30 +1141,34 @@ body {
     background-size: 200% 200%;
     padding: 1rem;
   }
-  
+
   .cyber-button {
     padding: 10px 24px;
     font-size: 14px;
   }
-  
+
   .neon-text {
     font-size: 0.9em;
   }
-  
+
   .floating-particles {
     display: none; /* Hide particles on tablets for better performance */
   }
-  
+
   .quantum-particles {
     display: none; /* Hide quantum particles on tablets for better performance */
   }
-  
+
   .matrix-rain {
     display: none; /* Hide matrix rain on tablets for better performance */
   }
-  
+
   .cyber-grid-enhanced {
-    background-size: 15px 15px, 15px 15px, 30px 30px, 30px 30px;
+    background-size:
+      15px 15px,
+      15px 15px,
+      30px 30px,
+      30px 30px;
   }
 }
 
@@ -1009,78 +1176,82 @@ body {
   .cyber-grid {
     background-size: 15px 15px;
   }
-  
+
   .cyber-grid-enhanced {
-    background-size: 10px 10px, 10px 10px, 20px 20px, 20px 20px;
+    background-size:
+      10px 10px,
+      10px 10px,
+      20px 20px,
+      20px 20px;
   }
-  
+
   .holographic-card {
     background-size: 150% 150%;
     padding: 1rem;
     margin: 0.5rem;
   }
-  
+
   .cyber-button {
     padding: 8px 20px;
     font-size: 12px;
   }
-  
+
   .particle {
     width: 1px;
     height: 1px;
   }
-  
+
   .quantum-particle {
     width: 1px;
     height: 1px;
   }
-  
+
   .neon-text {
     font-size: 0.8em;
   }
-  
+
   .holographic {
     font-size: 0.9em;
   }
-  
+
   /* Mobile-specific optimizations */
   .glass-card {
     backdrop-filter: blur(10px);
     margin: 0.5rem;
   }
-  
+
   .neon-border-animated {
     animation-duration: 4s; /* Slower animation on mobile */
   }
-  
+
   .cyber-scrollbar::-webkit-scrollbar {
     width: 4px; /* Thinner scrollbar on mobile */
   }
-  
+
   /* Hide complex animations on mobile for better performance */
   .quantum-particles,
   .matrix-rain,
   .scan-lines {
     display: none;
   }
-  
+
   /* Optimize text sizes for mobile */
   .text-4xl {
     font-size: 2rem;
   }
-  
+
   .text-5xl {
     font-size: 2.5rem;
   }
-  
+
   .text-6xl {
     font-size: 3rem;
   }
-  
+
   .text-7xl {
     font-size: 3.5rem;
   }
-  
+
   /* Improve button spacing on mobile */
   .cyber-button {
     min-height: 44px; /* iOS touch target size */
@@ -1088,16 +1259,16 @@ body {
     align-items: center;
     justify-content: center;
   }
-  
+
   /* Optimize grid layouts for mobile */
   .grid-cols-1 {
     gap: 1rem;
   }
-  
+
   .grid-cols-2 {
     gap: 0.75rem;
   }
-  
+
   .grid-cols-3 {
     gap: 0.5rem;
   }
@@ -1108,90 +1279,94 @@ body {
     background-size: 10px 10px;
     opacity: 0.1; /* Reduce grid opacity on very small screens */
   }
-  
+
   .cyber-grid-enhanced {
-    background-size: 8px 8px, 8px 8px, 16px 16px, 16px 16px;
+    background-size:
+      8px 8px,
+      8px 8px,
+      16px 16px,
+      16px 16px;
     opacity: 0.05;
   }
-  
+
   .holographic-card {
     padding: 0.75rem;
     margin: 0.25rem;
     background-size: 100% 100%; /* Simplify background on very small screens */
   }
-  
+
   .cyber-button {
     padding: 6px 16px;
     font-size: 11px;
     min-height: 40px;
   }
-  
+
   .neon-text {
     font-size: 0.7em;
   }
-  
+
   .holographic {
     font-size: 0.8em;
   }
-  
+
   /* Ultra-mobile optimizations */
   .glass-card {
     backdrop-filter: blur(5px);
   }
-  
+
   .neon-border-animated {
     animation-duration: 6s;
   }
-  
+
   .floating-particles,
   .quantum-particles,
   .matrix-rain,
   .scan-lines {
     display: none;
   }
-  
+
   /* Further reduce text sizes for very small screens */
   .text-4xl {
     font-size: 1.75rem;
   }
-  
+
   .text-5xl {
     font-size: 2rem;
   }
-  
+
   .text-6xl {
     font-size: 2.25rem;
   }
-  
+
   .text-7xl {
     font-size: 2.5rem;
   }
-  
+
   /* Optimize spacing for very small screens */
   .py-16 {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  
+
   .py-20 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
-  
+
   .mb-12 {
     margin-bottom: 2rem;
   }
-  
+
   .mb-16 {
     margin-bottom: 2.5rem;
   }
-  
+
   /* Simplify animations on very small screens */
   .neon-glow,
   .neon-glow-multi {
     animation: none;
   }
-  
+
   .cyber-glitch {
     animation: none;
   }
@@ -1203,36 +1378,36 @@ body {
     padding: 0.5rem;
     margin: 0.25rem;
   }
-  
+
   .cyber-button {
     padding: 6px 12px;
     font-size: 10px;
     min-height: 36px;
   }
-  
+
   .neon-text {
     font-size: 0.6em;
   }
-  
+
   /* Reduce vertical spacing in landscape */
   .py-16 {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  
+
   .py-20 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-  
+
   .mb-12 {
     margin-bottom: 1rem;
   }
-  
+
   .mb-16 {
     margin-bottom: 1.5rem;
   }
-  
+
   /* Hide complex animations in landscape for better performance */
   .quantum-particles,
   .matrix-rain,
@@ -1240,13 +1415,13 @@ body {
   .floating-particles {
     display: none;
   }
-  
+
   /* Optimize grid layouts for landscape */
   .grid-cols-2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
-  
+
   .grid-cols-3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.25rem;
@@ -1258,7 +1433,7 @@ body {
   .cyber-grid {
     background-size: 25px 25px;
   }
-  
+
   .particle {
     width: 1px;
     height: 1px;
@@ -1275,11 +1450,11 @@ body {
   .holographic {
     animation: none !important;
   }
-  
+
   .floating-particles {
     display: none;
   }
-  
+
   .cyber-grid {
     animation: none;
   }
@@ -1304,13 +1479,13 @@ body {
   .cyber-button::before {
     display: none !important;
   }
-  
+
   .holographic-card {
     background: white !important;
     color: black !important;
     border: 1px solid #ccc !important;
   }
-  
+
   .neon-text,
   .holographic {
     color: black !important;

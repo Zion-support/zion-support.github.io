@@ -1,64 +1,72 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, ExternalLink } from "lucide-react";
 
 const PartnersPage: React.FC = () => {
   const partners = [
     {
-      name: 'Microsoft',
-      logo: '/api/placeholder/200/100',
-      description: 'Strategic partnership for Azure cloud solutions and AI services',
-      category: 'Cloud & AI'
+      name: "Microsoft",
+      logo: "/api/placeholder/200/100",
+      description:
+        "Strategic partnership for Azure cloud solutions and AI services",
+      category: "Cloud & AI",
     },
     {
-      name: 'Amazon Web Services',
-      logo: '/api/placeholder/200/100',
-      description: 'Leading cloud infrastructure and machine learning platform provider',
-      category: 'Cloud Computing'
+      name: "Amazon Web Services",
+      logo: "/api/placeholder/200/100",
+      description:
+        "Leading cloud infrastructure and machine learning platform provider",
+      category: "Cloud Computing",
     },
     {
-      name: 'Google Cloud',
-      logo: '/api/placeholder/200/100',
-      description: 'Advanced AI and machine learning solutions for enterprise',
-      category: 'AI & ML'
+      name: "Google Cloud",
+      logo: "/api/placeholder/200/100",
+      description: "Advanced AI and machine learning solutions for enterprise",
+      category: "AI & ML",
     },
     {
-      name: 'IBM',
-      logo: '/api/placeholder/200/100',
-      description: 'Enterprise AI and hybrid cloud solutions',
-      category: 'Enterprise AI'
+      name: "IBM",
+      logo: "/api/placeholder/200/100",
+      description: "Enterprise AI and hybrid cloud solutions",
+      category: "Enterprise AI",
     },
     {
-      name: 'Salesforce',
-      logo: '/api/placeholder/200/100',
-      description: 'CRM and customer experience platform integration',
-      category: 'CRM'
+      name: "Salesforce",
+      logo: "/api/placeholder/200/100",
+      description: "CRM and customer experience platform integration",
+      category: "CRM",
     },
     {
-      name: 'Oracle',
-      logo: '/api/placeholder/200/100',
-      description: 'Database and enterprise application solutions',
-      category: 'Database'
-    }
+      name: "Oracle",
+      logo: "/api/placeholder/200/100",
+      description: "Database and enterprise application solutions",
+      category: "Database",
+    },
   ];
 
   const benefits = [
-    'Access to cutting-edge technology',
-    'Enhanced service capabilities',
-    'Reduced implementation costs',
-    'Faster time to market',
-    'Comprehensive support',
-    'Continuous innovation'
+    "Access to cutting-edge technology",
+    "Enhanced service capabilities",
+    "Reduced implementation costs",
+    "Faster time to market",
+    "Comprehensive support",
+    "Continuous innovation",
   ];
 
   return (
     <>
       <Helmet>
         <title>Partners | Zion Tech Group</title>
-        <meta name="description" content="Our strategic partnerships with leading technology companies enable us to deliver world-class AI and IT solutions." />
-        <meta name="keywords" content="partners, strategic partnerships, technology partners, AI solutions, IT services" />
+        <meta
+          name="description"
+          content="Our strategic partnerships with leading technology companies enable us to deliver world-class AI and IT solutions."
+        />
+        <meta
+          name="keywords"
+          content="partners, strategic partnerships, technology partners, AI solutions, IT services"
+        />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -72,7 +80,8 @@ const PartnersPage: React.FC = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Strategic partnerships with leading technology companies enable us to deliver world-class AI and IT solutions.
+                Strategic partnerships with leading technology companies enable
+                us to deliver world-class AI and IT solutions.
               </p>
             </div>
           </div>
@@ -83,7 +92,10 @@ const PartnersPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {partners.map((partner, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
+                >
                   <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                     <div className="text-center">
                       <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-2">
@@ -92,13 +104,17 @@ const PartnersPage: React.FC = () => {
                       <p className="text-white/60 text-sm">Partner Logo</p>
                     </div>
                   </div>
-                  
+
                   <div className="text-center">
-                    <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {partner.name}
+                    </h3>
                     <span className="inline-block bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium mb-3">
                       {partner.category}
                     </span>
-                    <p className="text-gray-300 text-sm">{partner.description}</p>
+                    <p className="text-gray-300 text-sm">
+                      {partner.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -114,13 +130,17 @@ const PartnersPage: React.FC = () => {
                 Partnership Benefits
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our strategic partnerships provide significant advantages for our clients.
+                Our strategic partnerships provide significant advantages for
+                our clients.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                <div
+                  key={index}
+                  className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10"
+                >
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
@@ -137,7 +157,8 @@ const PartnersPage: React.FC = () => {
                 Become Our Partner
               </h2>
               <p className="text-xl text-purple-100 mb-8">
-                Join our network of technology partners and help us deliver exceptional solutions to clients worldwide.
+                Join our network of technology partners and help us deliver
+                exceptional solutions to clients worldwide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">

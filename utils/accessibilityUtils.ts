@@ -14,13 +14,13 @@ export class AccessibilityUtils {
       highContrast: false,
       fontSize: 16,
       screenReader: false,
-      ...config
+      ...config,
     };
   }
 
   init(): void {
     if (this.config.enabled) {
-      console.log('Accessibility utils initialized');
+      console.log("Accessibility utils initialized");
     }
   }
 

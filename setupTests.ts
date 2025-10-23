@@ -1,9 +1,13 @@
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 // Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextEncoder = TextEncoder;
-(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextDecoder = TextDecoder;
+import { TextEncoder, TextDecoder } from "util";
+(
+  global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }
+).TextEncoder = TextEncoder;
+(
+  global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }
+).TextDecoder = TextDecoder;
 
 // Mock console methods to reduce noise in tests
 const originalError = console.error;
@@ -12,8 +16,8 @@ const originalWarn = console.warn;
 beforeAll(() => {
   console.error = (...args: unknown[]) => {
     if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
+      typeof args[0] === "string" &&
+      args[0].includes("Warning: ReactDOM.render is no longer supported")
     ) {
       return;
     }
@@ -22,9 +26,9 @@ beforeAll(() => {
 
   console.warn = (...args: unknown[]) => {
     if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('componentWillReceiveProps') ||
-        args[0].includes('componentWillMount'))
+      typeof args[0] === "string" &&
+      (args[0].includes("componentWillReceiveProps") ||
+        args[0].includes("componentWillMount"))
     ) {
       return;
     }

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 /**
  * Data Cleanup Utility
  * Provides comprehensive cleanup of old data records from various storage mechanisms
  */
-import { logger } from '../../utils/logger';
+import { logger } from "../../utils/logger";
 
 export interface DataRecord {
   id: string;
@@ -16,7 +16,7 @@ export interface DataRecord {
 
 export interface CleanupConfig {
   maxAge?: number; // Maximum age in milliseconds (default: 7 days)
-  storageTypes?: ('localStorage' | 'sessionStorage' | 'memory')[];
+  storageTypes?: ("localStorage" | "sessionStorage" | "memory")[];
   dryRun?: boolean; // If true, only log what would be deleted
   batchSize?: number; // Number of records to process at once
   preservePatterns?: RegExp[]; // Patterns to preserve even if old
@@ -39,7 +39,10 @@ export interface CleanupStats {
 
 export interface DataCleanupService {
   cleanup(config?: CleanupConfig): Promise<CleanupStats>;
-  cleanupByCategory(category: string, config?: CleanupConfig): Promise<CleanupStats>;
+  cleanupByCategory(
+    category: string,
+    config?: CleanupConfig,
+  ): Promise<CleanupStats>;
   cleanupByAge(maxAge: number, config?: CleanupConfig): Promise<CleanupStats>;
   getStorageStats(): Promise<{
     localStorage: { size: number; records: number };
@@ -52,7 +55,7 @@ export interface DataCleanupService {
 class DataCleanupManager implements DataCleanupService {
   private readonly defaultConfig: Required<CleanupConfig> = {
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-    storageTypes: ['localStorage', 'sessionStorage', 'memory'],
+    storageTypes: ["localStorage", "sessionStorage", "memory"],
     dryRun: false,
     batchSize: 100,
     preservePatterns: [
@@ -61,7 +64,7 @@ class DataCleanupManager implements DataCleanupService {
       /^settings_/, // Preserve settings
       /^preferences_/, // Preserve preferences
     ],
-    categories: []
+    categories: [],
   };
 
   /**
@@ -70,9 +73,9 @@ class DataCleanupManager implements DataCleanupService {
   async cleanup(config: CleanupConfig = {}): Promise<CleanupStats> {
     const startTime = performance.now();
     const mergedConfig = { ...this.defaultConfig, ...config };
-    
-    logger.info('Starting data cleanup', { config: mergedConfig });
-    
+
+    logger.info("Starting data cleanup", { config: mergedConfig });
+
     const stats: CleanupStats = {
       totalRecords: 0,
       deletedRecords: 0,
@@ -81,44 +84,51 @@ class DataCleanupManager implements DataCleanupService {
       storageBreakdown: {
         localStorage: { total: 0, deleted: 0 },
         sessionStorage: { total: 0, deleted: 0 },
-        memory: { total: 0, deleted: 0 }
+        memory: { total: 0, deleted: 0 },
       },
       categories: {},
-      executionTime: 0
+      executionTime: 0,
     };
 
     try {
       // Clean up each storage type
       for (const storageType of mergedConfig.storageTypes) {
-        const storageStats = await this.cleanupStorage(storageType, mergedConfig);
-        
+        const storageStats = await this.cleanupStorage(
+          storageType,
+          mergedConfig,
+        );
+
         stats.totalRecords += storageStats.total;
         stats.deletedRecords += storageStats.deleted;
         stats.preservedRecords += storageStats.preserved;
         stats.errors += storageStats.errors;
         stats.storageBreakdown[storageType] = {
           total: storageStats.total,
-          deleted: storageStats.deleted
+          deleted: storageStats.deleted,
         };
-        
+
         // Merge category stats
-        Object.entries(storageStats.categories).forEach(([category, catStats]) => {
-          if (!stats.categories[category]) {
-            stats.categories[category] = { total: 0, deleted: 0 };
-          }
-          stats.categories[category].total += catStats.total;
-          stats.categories[category].deleted += catStats.deleted;
-        });
+        Object.entries(storageStats.categories).forEach(
+          ([category, catStats]) => {
+            if (!stats.categories[category]) {
+              stats.categories[category] = { total: 0, deleted: 0 };
+            }
+            stats.categories[category].total += catStats.total;
+            stats.categories[category].deleted += catStats.deleted;
+          },
+        );
       }
 
       stats.executionTime = performance.now() - startTime;
-      
-      logger.info('Data cleanup completed', { stats });
+
+      logger.info("Data cleanup completed", { stats });
       // Performance metrics would be recorded here if performance monitoring was available
-      
+
       return stats;
     } catch (error) {
-      logger.error('Data cleanup failed', error as Error, { error: (error as Error).message });
+      logger.error("Data cleanup failed", error as Error, {
+        error: (error as Error).message,
+      });
       stats.executionTime = performance.now() - startTime;
       throw error;
     }
@@ -127,7 +137,10 @@ class DataCleanupManager implements DataCleanupService {
   /**
    * Clean up records by category
    */
-  async cleanupByCategory(category: string, config: CleanupConfig = {}): Promise<CleanupStats> {
+  async cleanupByCategory(
+    category: string,
+    config: CleanupConfig = {},
+  ): Promise<CleanupStats> {
     const categoryConfig = { ...config, categories: [category] };
     return this.cleanup(categoryConfig);
   }
@@ -135,7 +148,10 @@ class DataCleanupManager implements DataCleanupService {
   /**
    * Clean up records by age
    */
-  async cleanupByAge(maxAge: number, config: CleanupConfig = {}): Promise<CleanupStats> {
+  async cleanupByAge(
+    maxAge: number,
+    config: CleanupConfig = {},
+  ): Promise<CleanupStats> {
     const ageConfig = { ...config, maxAge };
     return this.cleanup(ageConfig);
   }
@@ -151,10 +167,10 @@ class DataCleanupManager implements DataCleanupService {
     const stats = {
       localStorage: { size: 0, records: 0 },
       sessionStorage: { size: 0, records: 0 },
-      memory: { size: 0, records: 0 }
+      memory: { size: 0, records: 0 },
     };
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // localStorage stats
       if (window.localStorage) {
         for (let i = 0; i < localStorage.length; i++) {
@@ -211,8 +227,8 @@ class DataCleanupManager implements DataCleanupService {
    * Clean up a specific storage type
    */
   private async cleanupStorage(
-    storageType: 'localStorage' | 'sessionStorage' | 'memory',
-    config: Required<CleanupConfig>
+    storageType: "localStorage" | "sessionStorage" | "memory",
+    config: Required<CleanupConfig>,
   ): Promise<{
     total: number;
     deleted: number;
@@ -225,7 +241,7 @@ class DataCleanupManager implements DataCleanupService {
       deleted: 0,
       preserved: 0,
       errors: 0,
-      categories: {} as Record<string, { total: number; deleted: number }>
+      categories: {} as Record<string, { total: number; deleted: number }>,
     };
 
     try {
@@ -233,11 +249,11 @@ class DataCleanupManager implements DataCleanupService {
       stats.total = records.length;
 
       const oldRecords = this.filterOldRecords(records, config);
-      
+
       // Process in batches
       for (let i = 0; i < oldRecords.length; i += config.batchSize) {
         const batch = oldRecords.slice(i, i + config.batchSize);
-        
+
         for (const record of batch) {
           try {
             // Check if record should be preserved
@@ -247,7 +263,11 @@ class DataCleanupManager implements DataCleanupService {
             }
 
             // Check category filter
-            if (config.categories.length > 0 && record.category && !config.categories.includes(record.category)) {
+            if (
+              config.categories.length > 0 &&
+              record.category &&
+              !config.categories.includes(record.category)
+            ) {
               stats.preserved++;
               continue;
             }
@@ -256,9 +276,9 @@ class DataCleanupManager implements DataCleanupService {
             if (!config.dryRun) {
               await this.deleteRecord(record, storageType);
             }
-            
+
             stats.deleted++;
-            
+
             // Update category stats
             if (record.category) {
               if (!stats.categories[record.category]) {
@@ -267,15 +287,19 @@ class DataCleanupManager implements DataCleanupService {
               stats.categories[record.category].total++;
               stats.categories[record.category].deleted++;
             }
-            
           } catch (error) {
-            logger.error(`Failed to process record ${record.id}`, error as Error);
+            logger.error(
+              `Failed to process record ${record.id}`,
+              error as Error,
+            );
             stats.errors++;
           }
         }
       }
     } catch (error) {
-      logger.error(`Failed to cleanup ${storageType}`, error as Error, { storageType });
+      logger.error(`Failed to cleanup ${storageType}`, error as Error, {
+        storageType,
+      });
       stats.errors++;
     }
 
@@ -285,10 +309,16 @@ class DataCleanupManager implements DataCleanupService {
   /**
    * Get records from a specific storage type
    */
-  private async getRecordsFromStorage(storageType: 'localStorage' | 'sessionStorage' | 'memory'): Promise<DataRecord[]> {
+  private async getRecordsFromStorage(
+    storageType: "localStorage" | "sessionStorage" | "memory",
+  ): Promise<DataRecord[]> {
     const records: DataRecord[] = [];
 
-    if (storageType === 'localStorage' && typeof window !== 'undefined' && window.localStorage) {
+    if (
+      storageType === "localStorage" &&
+      typeof window !== "undefined" &&
+      window.localStorage
+    ) {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key && this.isDataRecord(key)) {
@@ -299,11 +329,17 @@ class DataCleanupManager implements DataCleanupService {
               records.push(record);
             }
           } catch (error) {
-            logger.warn(`Failed to parse localStorage record: ${key}`, { error: (error as Error).message });
+            logger.warn(`Failed to parse localStorage record: ${key}`, {
+              error: (error as Error).message,
+            });
           }
         }
       }
-    } else if (storageType === 'sessionStorage' && typeof window !== 'undefined' && window.sessionStorage) {
+    } else if (
+      storageType === "sessionStorage" &&
+      typeof window !== "undefined" &&
+      window.sessionStorage
+    ) {
       for (let i = 0; i < sessionStorage.length; i++) {
         const key = sessionStorage.key(i);
         if (key && this.isDataRecord(key)) {
@@ -314,11 +350,13 @@ class DataCleanupManager implements DataCleanupService {
               records.push(record);
             }
           } catch (error) {
-            logger.warn(`Failed to parse sessionStorage record: ${key}`, { error: (error as Error).message });
+            logger.warn(`Failed to parse sessionStorage record: ${key}`, {
+              error: (error as Error).message,
+            });
           }
         }
       }
-    } else if (storageType === 'memory') {
+    } else if (storageType === "memory") {
       // Memory records would need to be tracked separately
       // This is a placeholder for memory-based records
       records.push(...this.getMemoryRecords());
@@ -330,9 +368,12 @@ class DataCleanupManager implements DataCleanupService {
   /**
    * Filter records that are old based on configuration
    */
-  private filterOldRecords(records: DataRecord[], config: Required<CleanupConfig>): DataRecord[] {
+  private filterOldRecords(
+    records: DataRecord[],
+    config: Required<CleanupConfig>,
+  ): DataRecord[] {
     const now = Date.now();
-    return records.filter(record => {
+    return records.filter((record) => {
       // Check if record is older than maxAge
       const age = now - record.timestamp;
       if (age > config.maxAge) {
@@ -351,19 +392,33 @@ class DataCleanupManager implements DataCleanupService {
   /**
    * Check if a record should be preserved
    */
-  private shouldPreserve(record: DataRecord, config: Required<CleanupConfig>): boolean {
-    return config.preservePatterns.some(pattern => pattern.test(record.id));
+  private shouldPreserve(
+    record: DataRecord,
+    config: Required<CleanupConfig>,
+  ): boolean {
+    return config.preservePatterns.some((pattern) => pattern.test(record.id));
   }
 
   /**
    * Delete a record from storage
    */
-  private async deleteRecord(record: DataRecord, storageType: 'localStorage' | 'sessionStorage' | 'memory'): Promise<void> {
-    if (storageType === 'localStorage' && typeof window !== 'undefined' && window.localStorage) {
+  private async deleteRecord(
+    record: DataRecord,
+    storageType: "localStorage" | "sessionStorage" | "memory",
+  ): Promise<void> {
+    if (
+      storageType === "localStorage" &&
+      typeof window !== "undefined" &&
+      window.localStorage
+    ) {
       localStorage.removeItem(record.id);
-    } else if (storageType === 'sessionStorage' && typeof window !== 'undefined' && window.sessionStorage) {
+    } else if (
+      storageType === "sessionStorage" &&
+      typeof window !== "undefined" &&
+      window.sessionStorage
+    ) {
       sessionStorage.removeItem(record.id);
-    } else if (storageType === 'memory') {
+    } else if (storageType === "memory") {
       this.deleteMemoryRecord(record.id);
     }
   }
@@ -373,11 +428,13 @@ class DataCleanupManager implements DataCleanupService {
    */
   private isDataRecord(key: string): boolean {
     // Check if key follows data record pattern
-    return key.startsWith('data_') || 
-           key.startsWith('record_') || 
-           key.startsWith('cache_') ||
-           key.startsWith('temp_') ||
-           key.startsWith('session_');
+    return (
+      key.startsWith("data_") ||
+      key.startsWith("record_") ||
+      key.startsWith("cache_") ||
+      key.startsWith("temp_") ||
+      key.startsWith("session_")
+    );
   }
 
   /**
@@ -418,12 +475,14 @@ class DataCleanupManager implements DataCleanupService {
 export const dataCleanup = new DataCleanupManager();
 
 // Export convenience functions
-export const cleanupOldData = (config?: CleanupConfig) => dataCleanup.cleanup(config);
-export const cleanupByCategory = (category: string, config?: CleanupConfig) => 
+export const cleanupOldData = (config?: CleanupConfig) =>
+  dataCleanup.cleanup(config);
+export const cleanupByCategory = (category: string, config?: CleanupConfig) =>
   dataCleanup.cleanupByCategory(category, config);
-export const cleanupByAge = (maxAge: number, config?: CleanupConfig) => 
+export const cleanupByAge = (maxAge: number, config?: CleanupConfig) =>
   dataCleanup.cleanupByAge(maxAge, config);
 export const getStorageStats = () => dataCleanup.getStorageStats();
-export const identifyOldRecords = (config?: CleanupConfig) => dataCleanup.identifyOldRecords(config);
+export const identifyOldRecords = (config?: CleanupConfig) =>
+  dataCleanup.identifyOldRecords(config);
 
 export default dataCleanup;

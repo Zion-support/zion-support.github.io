@@ -1,189 +1,267 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, Globe, Smartphone, Database, BarChart3, Mail, Calendar, FileText, Image, Video, Music, Code, Palette, Search, Lock, Cloud, Wifi, Monitor, Headphones, Camera, Printer, HardDrive, Cpu, MemoryStick, Wrench, Settings, Bell, Heart, ThumbsUp, Share2, Download, Upload, Eye, Edit, Trash2, Plus, Minus, X, Check, AlertCircle, Info, HelpCircle, ExternalLink, Brain, Cpu as CpuIcon, Bot, Target, Layers, BarChart, PieChart, LineChart, Activity, Zap as ZapIcon, Sparkles, Atom, Cpu as CpuIcon2 } from 'lucide-react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import {
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Zap,
+  Shield,
+  Clock,
+  Users,
+  TrendingUp,
+  Globe,
+  Smartphone,
+  Database,
+  BarChart3,
+  Mail,
+  Calendar,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Code,
+  Palette,
+  Search,
+  Lock,
+  Cloud,
+  Wifi,
+  Monitor,
+  Headphones,
+  Camera,
+  Printer,
+  HardDrive,
+  Cpu,
+  MemoryStick,
+  Wrench,
+  Settings,
+  Bell,
+  Heart,
+  ThumbsUp,
+  Share2,
+  Download,
+  Upload,
+  Eye,
+  Edit,
+  Trash2,
+  Plus,
+  Minus,
+  X,
+  Check,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  ExternalLink,
+  Brain,
+  Cpu as CpuIcon,
+  Bot,
+  Target,
+  Layers,
+  BarChart,
+  PieChart,
+  LineChart,
+  Activity,
+  Zap as ZapIcon,
+  Sparkles,
+  Atom,
+  Cpu as CpuIcon2,
+} from "lucide-react";
 
 const biServices = [
   {
     id: 1,
-    name: 'Data Analytics Platform',
-    description: 'Comprehensive data analysis and visualization platform for business insights',
-    price: '$2,999/month',
+    name: "Data Analytics Platform",
+    description:
+      "Comprehensive data analysis and visualization platform for business insights",
+    price: "$2,999/month",
     features: [
-      'Real-time Data Processing',
-      'Interactive Dashboards',
-      'Predictive Analytics',
-      'Custom Report Builder',
-      'Data Integration',
-      'Advanced Visualizations',
-      'Mobile Access',
-      'API Integration'
+      "Real-time Data Processing",
+      "Interactive Dashboards",
+      "Predictive Analytics",
+      "Custom Report Builder",
+      "Data Integration",
+      "Advanced Visualizations",
+      "Mobile Access",
+      "API Integration",
     ],
     icon: <BarChart3 className="w-8 h-8" />,
-    category: 'Analytics',
+    category: "Analytics",
     popular: true,
     rating: 4.9,
-    users: '1,500+',
-    color: 'from-blue-500 to-purple-600',
+    users: "1,500+",
+    color: "from-blue-500 to-purple-600",
     capabilities: [
-      'Process 50TB+ data daily',
-      '99.9% uptime guarantee',
-      'Real-time insights',
-      'Custom dashboard creation'
-    ]
+      "Process 50TB+ data daily",
+      "99.9% uptime guarantee",
+      "Real-time insights",
+      "Custom dashboard creation",
+    ],
   },
   {
     id: 2,
-    name: 'Business Intelligence Suite',
-    description: 'End-to-end BI solution with advanced reporting and data management',
-    price: '$4,499/month',
+    name: "Business Intelligence Suite",
+    description:
+      "End-to-end BI solution with advanced reporting and data management",
+    price: "$4,499/month",
     features: [
-      'Executive Dashboards',
-      'KPI Monitoring',
-      'Trend Analysis',
-      'Automated Reports',
-      'Data Warehousing',
-      'ETL Processes',
-      'Security Controls',
-      'Multi-tenant Support'
+      "Executive Dashboards",
+      "KPI Monitoring",
+      "Trend Analysis",
+      "Automated Reports",
+      "Data Warehousing",
+      "ETL Processes",
+      "Security Controls",
+      "Multi-tenant Support",
     ],
     icon: <Database className="w-8 h-8" />,
-    category: 'Business Intelligence',
+    category: "Business Intelligence",
     popular: true,
     rating: 4.8,
-    users: '2,200+',
-    color: 'from-green-500 to-teal-600',
+    users: "2,200+",
+    color: "from-green-500 to-teal-600",
     capabilities: [
-      '360° business view',
-      'Automated insights',
-      'Scalable architecture',
-      'Enterprise security'
-    ]
+      "360° business view",
+      "Automated insights",
+      "Scalable architecture",
+      "Enterprise security",
+    ],
   },
   {
     id: 3,
-    name: 'Predictive Analytics Engine',
-    description: 'AI-powered predictive modeling for forecasting and trend prediction',
-    price: '$3,599/month',
+    name: "Predictive Analytics Engine",
+    description:
+      "AI-powered predictive modeling for forecasting and trend prediction",
+    price: "$3,599/month",
     features: [
-      'Machine Learning Models',
-      'Forecasting Algorithms',
-      'Risk Assessment',
-      'Scenario Planning',
-      'Model Management',
-      'A/B Testing',
-      'Performance Monitoring',
-      'Custom Algorithms'
+      "Machine Learning Models",
+      "Forecasting Algorithms",
+      "Risk Assessment",
+      "Scenario Planning",
+      "Model Management",
+      "A/B Testing",
+      "Performance Monitoring",
+      "Custom Algorithms",
     ],
     icon: <Brain className="w-8 h-8" />,
-    category: 'Predictive Analytics',
+    category: "Predictive Analytics",
     popular: false,
     rating: 4.7,
-    users: '1,800+',
-    color: 'from-purple-500 to-pink-600',
+    users: "1,800+",
+    color: "from-purple-500 to-pink-600",
     capabilities: [
-      '95% prediction accuracy',
-      'Real-time forecasting',
-      'Custom model training',
-      'Automated insights'
-    ]
+      "95% prediction accuracy",
+      "Real-time forecasting",
+      "Custom model training",
+      "Automated insights",
+    ],
   },
   {
     id: 4,
-    name: 'Data Visualization Studio',
-    description: 'Create stunning interactive visualizations and infographics',
-    price: '$1,999/month',
+    name: "Data Visualization Studio",
+    description: "Create stunning interactive visualizations and infographics",
+    price: "$1,999/month",
     features: [
-      'Interactive Charts',
-      'Custom Visualizations',
-      'Animation Effects',
-      'Export Options',
-      'Template Library',
-      'Collaboration Tools',
-      'Version Control',
-      'Mobile Responsive'
+      "Interactive Charts",
+      "Custom Visualizations",
+      "Animation Effects",
+      "Export Options",
+      "Template Library",
+      "Collaboration Tools",
+      "Version Control",
+      "Mobile Responsive",
     ],
     icon: <PieChart className="w-8 h-8" />,
-    category: 'Visualization',
+    category: "Visualization",
     popular: false,
     rating: 4.6,
-    users: '1,200+',
-    color: 'from-orange-500 to-red-600',
+    users: "1,200+",
+    color: "from-orange-500 to-red-600",
     capabilities: [
-      '50+ chart types',
-      'Real-time updates',
-      'Interactive features',
-      'Professional templates'
-    ]
+      "50+ chart types",
+      "Real-time updates",
+      "Interactive features",
+      "Professional templates",
+    ],
   },
   {
     id: 5,
-    name: 'Data Integration Hub',
-    description: 'Seamlessly connect and integrate data from multiple sources',
-    price: '$2,499/month',
+    name: "Data Integration Hub",
+    description: "Seamlessly connect and integrate data from multiple sources",
+    price: "$2,499/month",
     features: [
-      'API Integration',
-      'Database Connectors',
-      'Cloud Integration',
-      'Real-time Sync',
-      'Data Transformation',
-      'Error Handling',
-      'Monitoring Tools',
-      'Custom Connectors'
+      "API Integration",
+      "Database Connectors",
+      "Cloud Integration",
+      "Real-time Sync",
+      "Data Transformation",
+      "Error Handling",
+      "Monitoring Tools",
+      "Custom Connectors",
     ],
     icon: <Cloud className="w-8 h-8" />,
-    category: 'Integration',
+    category: "Integration",
     popular: false,
     rating: 4.8,
-    users: '1,600+',
-    color: 'from-indigo-500 to-blue-600',
+    users: "1,600+",
+    color: "from-indigo-500 to-blue-600",
     capabilities: [
-      '100+ data sources',
-      'Real-time processing',
-      'Automated mapping',
-      'Error recovery'
-    ]
+      "100+ data sources",
+      "Real-time processing",
+      "Automated mapping",
+      "Error recovery",
+    ],
   },
   {
     id: 6,
-    name: 'Self-Service Analytics',
-    description: 'Empower business users with self-service data exploration tools',
-    price: '$1,799/month',
+    name: "Self-Service Analytics",
+    description:
+      "Empower business users with self-service data exploration tools",
+    price: "$1,799/month",
     features: [
-      'Drag & Drop Interface',
-      'Natural Language Queries',
-      'Data Discovery',
-      'Collaborative Workspace',
-      'Template Library',
-      'User Management',
-      'Access Controls',
-      'Training Resources'
+      "Drag & Drop Interface",
+      "Natural Language Queries",
+      "Data Discovery",
+      "Collaborative Workspace",
+      "Template Library",
+      "User Management",
+      "Access Controls",
+      "Training Resources",
     ],
     icon: <Users className="w-8 h-8" />,
-    category: 'Self-Service',
+    category: "Self-Service",
     popular: true,
     rating: 4.7,
-    users: '2,500+',
-    color: 'from-teal-500 to-cyan-600',
+    users: "2,500+",
+    color: "from-teal-500 to-cyan-600",
     capabilities: [
-      'No-code analytics',
-      'Business user friendly',
-      'Collaborative features',
-      'Guided workflows'
-    ]
-  }
+      "No-code analytics",
+      "Business user friendly",
+      "Collaborative features",
+      "Guided workflows",
+    ],
+  },
 ];
 
-const categories = ['All', 'Analytics', 'Business Intelligence', 'Predictive Analytics', 'Visualization', 'Integration', 'Self-Service'];
+const categories = [
+  "All",
+  "Analytics",
+  "Business Intelligence",
+  "Predictive Analytics",
+  "Visualization",
+  "Integration",
+  "Self-Service",
+];
 
 const BusinessIntelligencePage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const [searchTerm, setSearchTerm] = React.useState("");
 
-  const filteredServices = biServices.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredServices = biServices.filter((service) => {
+    const matchesCategory =
+      selectedCategory === "All" || service.category === selectedCategory;
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -191,8 +269,14 @@ const BusinessIntelligencePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Business Intelligence | Zion Tech Group</title>
-        <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="business intelligence, data analytics, AI solutions, IT services, Zion Tech Group" />
+        <meta
+          name="description"
+          content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business."
+        />
+        <meta
+          name="keywords"
+          content="business intelligence, data analytics, AI solutions, IT services, Zion Tech Group"
+        />
       </Helmet>
 
       {/* Header */}
@@ -204,8 +288,9 @@ const BusinessIntelligencePage: React.FC = () => {
               Business Intelligence Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your data into strategic insights that drive business growth. 
-              Make informed decisions with our comprehensive BI solutions.
+              Transform your data into strategic insights that drive business
+              growth. Make informed decisions with our comprehensive BI
+              solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -247,8 +332,8 @@ const BusinessIntelligencePage: React.FC = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                    ? "bg-blue-600 text-white"
+                    : "bg-white/10 text-gray-300 hover:bg-white/20"
                 }`}
               >
                 {category}
@@ -265,7 +350,9 @@ const BusinessIntelligencePage: React.FC = () => {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 group"
             >
               <div className="flex items-center justify-between mb-6">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
+                <div
+                  className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}
+                >
                   {service.icon}
                 </div>
                 {service.popular && (
@@ -284,7 +371,9 @@ const BusinessIntelligencePage: React.FC = () => {
 
               <div className="space-y-4 mb-6">
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-white">{service.price}</span>
+                  <span className="text-2xl font-bold text-white">
+                    {service.price}
+                  </span>
                   <div className="flex items-center space-x-1">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                     <span className="text-gray-300">{service.rating}</span>
@@ -307,7 +396,10 @@ const BusinessIntelligencePage: React.FC = () => {
                 <h4 className="font-semibold text-white">Key Features:</h4>
                 <ul className="space-y-2">
                   {service.features.slice(0, 4).map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-300">
+                    <li
+                      key={index}
+                      className="flex items-center text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
@@ -347,8 +439,12 @@ const BusinessIntelligencePage: React.FC = () => {
         {filteredServices.length === 0 && (
           <div className="text-center py-12">
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
-            <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              No services found
+            </h3>
+            <p className="text-gray-400">
+              Try adjusting your search or filter criteria
+            </p>
           </div>
         )}
       </div>
@@ -361,8 +457,8 @@ const BusinessIntelligencePage: React.FC = () => {
               Ready to Transform Your Data into Insights?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of businesses who have unlocked the power of their data 
-              with our comprehensive BI solutions.
+              Join hundreds of businesses who have unlocked the power of their
+              data with our comprehensive BI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

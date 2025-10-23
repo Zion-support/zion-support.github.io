@@ -1,10 +1,10 @@
-'use client';
+"use client";
 /**
  * Scheduled Data Cleanup Service
  * Provides automatic cleanup of old data records on a schedule
  */
-import { logger } from '../../utils/logger';
-import { dataCleanup, CleanupConfig, CleanupStats } from './dataCleanup';
+import { logger } from "../../utils/logger";
+import { dataCleanup, CleanupConfig, CleanupStats } from "./dataCleanup";
 
 export interface ScheduleConfig {
   interval?: number; // Cleanup interval in milliseconds (default: 24 hours)
@@ -40,7 +40,7 @@ class ScheduledCleanupService {
       maxExecutionTime: config.maxExecutionTime || 5 * 60 * 1000, // 5 minutes
       retryAttempts: config.retryAttempts || 3,
       retryDelay: config.retryDelay || 30 * 1000, // 30 seconds
-      cleanupConfig: config.cleanupConfig || {}
+      cleanupConfig: config.cleanupConfig || {},
     };
 
     this.stats = {
@@ -52,7 +52,7 @@ class ScheduledCleanupService {
       averageExecutionTime: 0,
       lastCleanupStats: null,
       isRunning: false,
-      errors: []
+      errors: [],
     };
 
     // Start scheduled cleanup if enabled
@@ -66,18 +66,18 @@ class ScheduledCleanupService {
    */
   start(): void {
     if (this.intervalId) {
-      logger.warn('Scheduled cleanup is already running');
+      logger.warn("Scheduled cleanup is already running");
       return;
     }
 
     if (!this.config.enabled) {
-      logger.info('Scheduled cleanup is disabled');
+      logger.info("Scheduled cleanup is disabled");
       return;
     }
 
-    logger.info('Starting scheduled data cleanup', {
+    logger.info("Starting scheduled data cleanup", {
       interval: this.config.interval,
-      nextRun: new Date(Date.now() + this.config.interval).toISOString()
+      nextRun: new Date(Date.now() + this.config.interval).toISOString(),
     });
 
     // Schedule the first run
@@ -96,7 +96,7 @@ class ScheduledCleanupService {
     if (this.intervalId) {
       clearInterval(this.intervalId);
       this.intervalId = null;
-      logger.info('Scheduled cleanup stopped');
+      logger.info("Scheduled cleanup stopped");
     }
   }
 
@@ -105,7 +105,7 @@ class ScheduledCleanupService {
    */
   async runNow(): Promise<CleanupStats> {
     if (this.isRunning) {
-      throw new Error('Cleanup is already running');
+      throw new Error("Cleanup is already running");
     }
 
     return this.runCleanup();
@@ -123,7 +123,7 @@ class ScheduledCleanupService {
    */
   updateConfig(newConfig: Partial<ScheduleConfig>): void {
     const wasRunning = this.intervalId !== null;
-    
+
     if (wasRunning) {
       this.stop();
     }
@@ -134,7 +134,7 @@ class ScheduledCleanupService {
       this.start();
     }
 
-    logger.info('Schedule configuration updated', { config: this.config });
+    logger.info("Schedule configuration updated", { config: this.config });
   }
 
   /**
@@ -162,20 +162,22 @@ class ScheduledCleanupService {
    */
   private async runCleanup(): Promise<CleanupStats> {
     if (this.isRunning) {
-      logger.warn('Cleanup already in progress, skipping');
-      return this.stats.lastCleanupStats || {
-        totalRecords: 0,
-        deletedRecords: 0,
-        preservedRecords: 0,
-        errors: 0,
-        storageBreakdown: {
-          localStorage: { total: 0, deleted: 0 },
-          sessionStorage: { total: 0, deleted: 0 },
-          memory: { total: 0, deleted: 0 }
-        },
-        categories: {},
-        executionTime: 0
-      };
+      logger.warn("Cleanup already in progress, skipping");
+      return (
+        this.stats.lastCleanupStats || {
+          totalRecords: 0,
+          deletedRecords: 0,
+          preservedRecords: 0,
+          errors: 0,
+          storageBreakdown: {
+            localStorage: { total: 0, deleted: 0 },
+            sessionStorage: { total: 0, deleted: 0 },
+            memory: { total: 0, deleted: 0 },
+          },
+          categories: {},
+          executionTime: 0,
+        }
+      );
     }
 
     this.isRunning = true;
@@ -186,29 +188,28 @@ class ScheduledCleanupService {
     let cleanupStats: CleanupStats | null = null;
 
     try {
-      logger.info('Starting scheduled data cleanup');
+      logger.info("Starting scheduled data cleanup");
 
       // Run cleanup with timeout
       cleanupStats = await this.runWithTimeout(
         () => dataCleanup.cleanup(this.config.cleanupConfig),
-        this.config.maxExecutionTime
+        this.config.maxExecutionTime,
       );
 
       const executionTime = performance.now() - startTime;
       this.updateStats(true, executionTime, cleanupStats);
 
-      logger.info('Scheduled cleanup completed successfully', {
+      logger.info("Scheduled cleanup completed successfully", {
         executionTime,
-        stats: cleanupStats
+        stats: cleanupStats,
       });
 
       // Performance metrics would be recorded here if performance monitoring was available
-
     } catch (error) {
       const executionTime = performance.now() - startTime;
       this.updateStats(false, executionTime, null, error as Error);
 
-      logger.error('Scheduled cleanup failed', error as Error);
+      logger.error("Scheduled cleanup failed", error as Error);
       // Performance metrics would be recorded here if performance monitoring was available
 
       // Retry if configured
@@ -231,7 +232,7 @@ class ScheduledCleanupService {
    */
   private async runWithTimeout<T>(
     fn: () => Promise<T>,
-    timeoutMs: number
+    timeoutMs: number,
   ): Promise<T> {
     return new Promise((resolve, reject) => {
       const timeout = setTimeout(() => {
@@ -239,11 +240,11 @@ class ScheduledCleanupService {
       }, timeoutMs);
 
       fn()
-        .then(result => {
+        .then((result) => {
           clearTimeout(timeout);
           resolve(result);
         })
-        .catch(error => {
+        .catch((error) => {
           clearTimeout(timeout);
           reject(error);
         });
@@ -256,18 +257,22 @@ class ScheduledCleanupService {
   private async retryCleanup(): Promise<void> {
     for (let attempt = 1; attempt <= this.config.retryAttempts; attempt++) {
       try {
-        logger.info(`Retrying cleanup (attempt ${attempt}/${this.config.retryAttempts})`);
-        
+        logger.info(
+          `Retrying cleanup (attempt ${attempt}/${this.config.retryAttempts})`,
+        );
+
         await this.delay(this.config.retryDelay);
         await dataCleanup.cleanup(this.config.cleanupConfig);
-        
+
         logger.info(`Cleanup retry successful on attempt ${attempt}`);
         return;
       } catch (error) {
         logger.error(`Cleanup retry ${attempt} failed`, error as Error);
-        
+
         if (attempt === this.config.retryAttempts) {
-          throw new Error(`All ${this.config.retryAttempts} retry attempts failed`);
+          throw new Error(
+            `All ${this.config.retryAttempts} retry attempts failed`,
+          );
         }
       }
     }
@@ -280,7 +285,7 @@ class ScheduledCleanupService {
     success: boolean,
     executionTime: number,
     cleanupStats: CleanupStats | null,
-    error?: Error
+    error?: Error,
   ): void {
     this.stats.lastRun = Date.now();
     this.stats.lastCleanupStats = cleanupStats;
@@ -300,8 +305,9 @@ class ScheduledCleanupService {
 
     // Update average execution time
     const totalRuns = this.stats.successfulRuns + this.stats.failedRuns;
-    this.stats.averageExecutionTime = 
-      (this.stats.averageExecutionTime * (totalRuns - 1) + executionTime) / totalRuns;
+    this.stats.averageExecutionTime =
+      (this.stats.averageExecutionTime * (totalRuns - 1) + executionTime) /
+      totalRuns;
   }
 
   /**
@@ -315,7 +321,7 @@ class ScheduledCleanupService {
    * Delay helper
    */
   private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 }
 
@@ -334,6 +340,7 @@ export const stopScheduledCleanup = () => scheduledCleanup.stop();
 export const runCleanupNow = () => scheduledCleanup.runNow();
 export const getCleanupStats = () => scheduledCleanup.getStats();
 export const isCleanupDue = () => scheduledCleanup.isCleanupDue();
-export const getTimeUntilNextCleanup = () => scheduledCleanup.getTimeUntilNextCleanup();
+export const getTimeUntilNextCleanup = () =>
+  scheduledCleanup.getTimeUntilNextCleanup();
 
 export default scheduledCleanup;

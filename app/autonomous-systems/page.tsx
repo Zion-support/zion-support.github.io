@@ -1,15 +1,17 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 // import { CheckCircle } from 'lucide-react';
-
 
 const AutonomousSystemsPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
-        <meta name="description" content="Develop intelligent autonomous systems with AI-powered robotics and automation solutions for various industries." />
+        <meta
+          name="description"
+          content="Develop intelligent autonomous systems with AI-powered robotics and automation solutions for various industries."
+        />
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
@@ -18,24 +20,37 @@ const AutonomousSystemsPage: React.FC = () => {
               Autonomous Systems
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Develop intelligent autonomous systems with AI-powered robotics and automation solutions for various industries.
+              Develop intelligent autonomous systems with AI-powered robotics
+              and automation solutions for various industries.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Robotic Process Automation</h3>
-              <p className="text-gray-600">Intelligent robots for automated business processes.</p>
+              <h3 className="text-xl font-semibold mb-4">
+                Robotic Process Automation
+              </h3>
+              <p className="text-gray-600">
+                Intelligent robots for automated business processes.
+              </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Autonomous Vehicles</h3>
-              <p className="text-gray-600">AI-powered autonomous vehicle systems and solutions.</p>
+              <h3 className="text-xl font-semibold mb-4">
+                Autonomous Vehicles
+              </h3>
+              <p className="text-gray-600">
+                AI-powered autonomous vehicle systems and solutions.
+              </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Smart Manufacturing</h3>
-              <p className="text-gray-600">Autonomous manufacturing systems and quality control.</p>
+              <h3 className="text-xl font-semibold mb-4">
+                Smart Manufacturing
+              </h3>
+              <p className="text-gray-600">
+                Autonomous manufacturing systems and quality control.
+              </p>
             </div>
           </div>
         </div>
@@ -43,6 +58,5 @@ const AutonomousSystemsPage: React.FC = () => {
     </>
   );
 };
-
 
 export default AutonomousSystemsPage;

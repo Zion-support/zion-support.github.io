@@ -1,9 +1,9 @@
-'use client';
+"use client";
 /**
  * Data Record Manager
  * Manages data records with TTL, categorization, and storage options
  */
-import { logger } from '../../utils/logger';
+import { logger } from "../../utils/logger";
 
 export interface DataRecord {
   id: string;
@@ -45,7 +45,10 @@ export interface DataRecordManager {
     data: unknown,
     category?: string,
     type?: string,
-    options?: { ttl?: number; storage?: 'localStorage' | 'sessionStorage' | 'memory' }
+    options?: {
+      ttl?: number;
+      storage?: "localStorage" | "sessionStorage" | "memory";
+    },
   ): DataRecord;
   getRecord(id: string): DataRecord | null;
   updateRecord(id: string, updates: Partial<DataRecord>): boolean;
@@ -53,13 +56,16 @@ export interface DataRecordManager {
   queryRecords(query: RecordQuery): DataRecord[];
   getStats(): RecordStats;
   exportRecords(query?: RecordQuery): DataRecord[];
-  importRecords(records: DataRecord[], storage?: 'localStorage' | 'sessionStorage' | 'memory'): number;
+  importRecords(
+    records: DataRecord[],
+    storage?: "localStorage" | "sessionStorage" | "memory",
+  ): number;
   cleanup(): { deleted: number; errors: number };
 }
 
 class DataRecordManagerImpl implements DataRecordManager {
-  private readonly prefix = 'data_record_';
-  private readonly version = '1.0.0';
+  private readonly prefix = "data_record_";
+  private readonly version = "1.0.0";
 
   /**
    * Create a new data record
@@ -68,7 +74,10 @@ class DataRecordManagerImpl implements DataRecordManager {
     data: unknown,
     category?: string,
     type?: string,
-    options: { ttl?: number; storage?: 'localStorage' | 'sessionStorage' | 'memory' } = {}
+    options: {
+      ttl?: number;
+      storage?: "localStorage" | "sessionStorage" | "memory";
+    } = {},
   ): DataRecord {
     const id = this.generateId();
     const timestamp = Date.now();
@@ -79,13 +88,13 @@ class DataRecordManagerImpl implements DataRecordManager {
       category,
       type,
       version: this.version,
-      ttl: options.ttl
+      ttl: options.ttl,
     };
 
     // Store the record
-    this.storeRecord(record, options.storage || 'localStorage');
-    
-    logger.debug('Created data record', { id, category, type });
+    this.storeRecord(record, options.storage || "localStorage");
+
+    logger.debug("Created data record", { id, category, type });
     return record;
   }
 
@@ -95,11 +104,11 @@ class DataRecordManagerImpl implements DataRecordManager {
   getRecord(id: string): DataRecord | null {
     try {
       // Try localStorage first
-      const localRecord = this.getRecordFromStorage(id, 'localStorage');
+      const localRecord = this.getRecordFromStorage(id, "localStorage");
       if (localRecord) return localRecord;
 
       // Try sessionStorage
-      const sessionRecord = this.getRecordFromStorage(id, 'sessionStorage');
+      const sessionRecord = this.getRecordFromStorage(id, "sessionStorage");
       if (sessionRecord) return sessionRecord;
 
       // Try memory (placeholder)
@@ -108,7 +117,7 @@ class DataRecordManagerImpl implements DataRecordManager {
 
       return null;
     } catch (error) {
-      logger.error('Failed to get record', error as Error, { id });
+      logger.error("Failed to get record", error as Error, { id });
       return null;
     }
   }
@@ -121,15 +130,20 @@ class DataRecordManagerImpl implements DataRecordManager {
       const record = this.getRecord(id);
       if (!record) return false;
 
-      const updatedRecord = { ...record, ...updates, id, timestamp: record.timestamp };
-      
+      const updatedRecord = {
+        ...record,
+        ...updates,
+        id,
+        timestamp: record.timestamp,
+      };
+
       // Update in storage
       this.storeRecord(updatedRecord, this.getRecordStorage(id));
-      
-      logger.debug('Updated data record', { id, updates });
+
+      logger.debug("Updated data record", { id, updates });
       return true;
     } catch (error) {
-      logger.error('Failed to update record', error as Error, { id });
+      logger.error("Failed to update record", error as Error, { id });
       return false;
     }
   }
@@ -142,18 +156,26 @@ class DataRecordManagerImpl implements DataRecordManager {
       const storage = this.getRecordStorage(id);
       if (!storage) return false;
 
-      if (storage === 'localStorage' && typeof window !== 'undefined' && window.localStorage) {
+      if (
+        storage === "localStorage" &&
+        typeof window !== "undefined" &&
+        window.localStorage
+      ) {
         window.localStorage.removeItem(id);
-      } else if (storage === 'sessionStorage' && typeof window !== 'undefined' && window.sessionStorage) {
+      } else if (
+        storage === "sessionStorage" &&
+        typeof window !== "undefined" &&
+        window.sessionStorage
+      ) {
         window.sessionStorage.removeItem(id);
-      } else if (storage === 'memory') {
+      } else if (storage === "memory") {
         this.deleteRecordFromMemory(id);
       }
 
-      logger.debug('Deleted data record', { id });
+      logger.debug("Deleted data record", { id });
       return true;
     } catch (error) {
-      logger.error('Failed to delete record', error as Error, { id });
+      logger.error("Failed to delete record", error as Error, { id });
       return false;
     }
   }
@@ -213,19 +235,20 @@ class DataRecordManagerImpl implements DataRecordManager {
       byAge: {
         recent: 0,
         old: 0,
-        veryOld: 0
+        veryOld: 0,
       },
       storageBreakdown: {
         localStorage: 0,
         sessionStorage: 0,
-        memory: 0
-      }
+        memory: 0,
+      },
     };
 
     for (const record of records) {
       // Category stats
       if (record.category) {
-        stats.byCategory[record.category] = (stats.byCategory[record.category] || 0) + 1;
+        stats.byCategory[record.category] =
+          (stats.byCategory[record.category] || 0) + 1;
       }
 
       // Type stats
@@ -266,7 +289,10 @@ class DataRecordManagerImpl implements DataRecordManager {
   /**
    * Import records
    */
-  importRecords(records: DataRecord[], storage: 'localStorage' | 'sessionStorage' | 'memory' = 'localStorage'): number {
+  importRecords(
+    records: DataRecord[],
+    storage: "localStorage" | "sessionStorage" | "memory" = "localStorage",
+  ): number {
     let imported = 0;
 
     for (const record of records) {
@@ -274,11 +300,13 @@ class DataRecordManagerImpl implements DataRecordManager {
         this.storeRecord(record, storage);
         imported++;
       } catch (error) {
-        logger.error('Failed to import record', error as Error, { id: record.id });
+        logger.error("Failed to import record", error as Error, {
+          id: record.id,
+        });
       }
     }
 
-    logger.info('Imported records', { imported, total: records.length });
+    logger.info("Imported records", { imported, total: records.length });
     return imported;
   }
 
@@ -305,12 +333,14 @@ class DataRecordManagerImpl implements DataRecordManager {
           }
         }
       } catch (error) {
-        logger.error('Failed to cleanup record', error as Error, { id: record.id });
+        logger.error("Failed to cleanup record", error as Error, {
+          id: record.id,
+        });
         errors++;
       }
     }
 
-    logger.info('Cleanup completed', { deleted, errors });
+    logger.info("Cleanup completed", { deleted, errors });
     return { deleted, errors };
   }
 
@@ -324,12 +354,23 @@ class DataRecordManagerImpl implements DataRecordManager {
   /**
    * Store a record in the specified storage
    */
-  private storeRecord(record: DataRecord, storage: 'localStorage' | 'sessionStorage' | 'memory'): void {
-    if (storage === 'localStorage' && typeof window !== 'undefined' && window.localStorage) {
+  private storeRecord(
+    record: DataRecord,
+    storage: "localStorage" | "sessionStorage" | "memory",
+  ): void {
+    if (
+      storage === "localStorage" &&
+      typeof window !== "undefined" &&
+      window.localStorage
+    ) {
       window.localStorage.setItem(record.id, JSON.stringify(record));
-    } else if (storage === 'sessionStorage' && typeof window !== 'undefined' && window.sessionStorage) {
+    } else if (
+      storage === "sessionStorage" &&
+      typeof window !== "undefined" &&
+      window.sessionStorage
+    ) {
       window.sessionStorage.setItem(record.id, JSON.stringify(record));
-    } else if (storage === 'memory') {
+    } else if (storage === "memory") {
       this.storeRecordInMemory(record);
     }
   }
@@ -337,18 +378,33 @@ class DataRecordManagerImpl implements DataRecordManager {
   /**
    * Get a record from specific storage
    */
-  private getRecordFromStorage(id: string, storage: 'localStorage' | 'sessionStorage'): DataRecord | null {
+  private getRecordFromStorage(
+    id: string,
+    storage: "localStorage" | "sessionStorage",
+  ): DataRecord | null {
     try {
-      if (storage === 'localStorage' && typeof window !== 'undefined' && window.localStorage) {
+      if (
+        storage === "localStorage" &&
+        typeof window !== "undefined" &&
+        window.localStorage
+      ) {
         const value = window.localStorage.getItem(id);
         return value ? JSON.parse(value) : null;
-      } else if (storage === 'sessionStorage' && typeof window !== 'undefined' && window.sessionStorage) {
+      } else if (
+        storage === "sessionStorage" &&
+        typeof window !== "undefined" &&
+        window.sessionStorage
+      ) {
         const value = window.sessionStorage.getItem(id);
         return value ? JSON.parse(value) : null;
       }
       return null;
     } catch (error) {
-      logger.warn('Failed to parse record from storage', { id, storage, error: (error as Error).message });
+      logger.warn("Failed to parse record from storage", {
+        id,
+        storage,
+        error: (error as Error).message,
+      });
       return null;
     }
   }
@@ -366,7 +422,7 @@ class DataRecordManagerImpl implements DataRecordManager {
    */
   private storeRecordInMemory(record: DataRecord): void {
     // Placeholder implementation
-    logger.debug('Storing record in memory', { id: record.id });
+    logger.debug("Storing record in memory", { id: record.id });
   }
 
   /**
@@ -374,7 +430,7 @@ class DataRecordManagerImpl implements DataRecordManager {
    */
   private deleteRecordFromMemory(id: string): void {
     // Placeholder implementation
-    logger.debug('Deleting record from memory', { id });
+    logger.debug("Deleting record from memory", { id });
   }
 
   /**
@@ -384,22 +440,22 @@ class DataRecordManagerImpl implements DataRecordManager {
     const records: DataRecord[] = [];
 
     // Get from localStorage
-    if (typeof window !== 'undefined' && window.localStorage) {
+    if (typeof window !== "undefined" && window.localStorage) {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key && key.startsWith(this.prefix)) {
-          const record = this.getRecordFromStorage(key, 'localStorage');
+          const record = this.getRecordFromStorage(key, "localStorage");
           if (record) records.push(record);
         }
       }
     }
 
     // Get from sessionStorage
-    if (typeof window !== 'undefined' && window.sessionStorage) {
+    if (typeof window !== "undefined" && window.sessionStorage) {
       for (let i = 0; i < sessionStorage.length; i++) {
         const key = sessionStorage.key(i);
         if (key && key.startsWith(this.prefix)) {
-          const record = this.getRecordFromStorage(key, 'sessionStorage');
+          const record = this.getRecordFromStorage(key, "sessionStorage");
           if (record) records.push(record);
         }
       }
@@ -414,13 +470,15 @@ class DataRecordManagerImpl implements DataRecordManager {
   /**
    * Determine which storage contains a record
    */
-  private getRecordStorage(id: string): 'localStorage' | 'sessionStorage' | 'memory' | null {
-    if (typeof window !== 'undefined') {
+  private getRecordStorage(
+    id: string,
+  ): "localStorage" | "sessionStorage" | "memory" | null {
+    if (typeof window !== "undefined") {
       if (window.localStorage && window.localStorage.getItem(id)) {
-        return 'localStorage';
+        return "localStorage";
       }
       if (window.sessionStorage && window.sessionStorage.getItem(id)) {
-        return 'sessionStorage';
+        return "sessionStorage";
       }
     }
     return null; // or 'memory' if implemented

@@ -1,14 +1,14 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'wallets.json');
+const dir = path.join(process.cwd(), "data");
+const file = path.join(dir, "wallets.json");
 
 export default function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== "POST") {
     res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ error: "Method not allowed" }));
     return;
   }
 
@@ -16,8 +16,8 @@ export default function handler(req, res) {
 
   if (!address || !type) {
     res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Address and type are required' }));
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ error: "Address and type are required" }));
     return;
   }
 
@@ -28,7 +28,7 @@ export default function handler(req, res) {
   let existing = [];
   try {
     if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
+      const data = fs.readFileSync(file, "utf8");
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
@@ -38,11 +38,11 @@ export default function handler(req, res) {
   }
 
   // Check if wallet address already exists
-  const existingWallet = existing.find(wallet => wallet.address === address);
+  const existingWallet = existing.find((wallet) => wallet.address === address);
   if (existingWallet) {
     res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Wallet address already exists' }));
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ error: "Wallet address already exists" }));
     return;
   }
 
@@ -50,10 +50,10 @@ export default function handler(req, res) {
     id: Date.now().toString(),
     address,
     type,
-    name: name || '',
-    userId: userId || '',
+    name: name || "",
+    userId: userId || "",
     timestamp: new Date().toISOString(),
-    status: 'active'
+    status: "active",
   };
 
   existing.push(newWallet);
@@ -61,16 +61,18 @@ export default function handler(req, res) {
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Wallet added successfully',
-      id: newWallet.id
-    }));
+    res.setHeader("Content-Type", "application/json");
+    res.end(
+      JSON.stringify({
+        success: true,
+        message: "Wallet added successfully",
+        id: newWallet.id,
+      }),
+    );
   } catch {
     // console.error('Error saving wallet');
     res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ error: "Failed to save wallet" }));
   }
 }
