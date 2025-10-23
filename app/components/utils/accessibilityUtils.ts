@@ -1,0 +1,1 @@
+&quot;use client&quot;
