@@ -82,7 +82,6 @@ const SupportPage: React.FC = () => {
     return matchesSearch && matchesCategory
   })
 
-
   return (
     <>
       <Helmet>

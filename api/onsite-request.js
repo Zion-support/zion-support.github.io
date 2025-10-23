@@ -25,9 +25,14 @@ export default async function handler(req, res) {
 
     // Read existing requests
     let requests = [];
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      requests = JSON.parse(data);
+    try {
+      if (fs.existsSync(file)) {
+        const data = fs.readFileSync(file, 'utf8');
+        requests = JSON.parse(data);
+      }
+    } catch {
+      // console.error('Error reading existing requests');
+      requests = [];
     }
 
     // Add new request
