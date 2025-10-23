@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+import { BarChart3, Bot, CheckCircle, Cpu, Star } from 'lucide-react';
+
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
@@ -86,7 +88,7 @@ const AutonomousSystemsPage: React.FC = () => {
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart className="w-8 h-8 text-green-600" />
+                <BarChart3 className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Learning</h3>
               <p className="text-gray-600">AI systems that improve performance over time through machine learning</p>

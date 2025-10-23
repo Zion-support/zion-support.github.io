@@ -1,4 +1,7 @@
-import React, { Suspense, lazy, useEffect, memo } from "react";
+import React, { Suspense, lazy, useEffect, memo } from "
+import { Helmet } from 'react-helmet-async';
+import { Home } from 'lucide-react';
+react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./app/styles/futuristic.css";

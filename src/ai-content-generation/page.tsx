@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+import { BarChart3, Brain, CheckCircle, Eye, Zap } from 'lucide-react';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -61,7 +63,7 @@ const AIContentGenerationPage: React.FC = () => {
       step: '4',
       title: 'Publish & Monitor',
       description: 'Publish your content and monitor performance with detailed analytics.',
-      icon: <BarChart className="w-6 h-6" />
+      icon: <BarChart3 className="w-6 h-6" />
     }
   ];
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { Coins } from 'lucide-react';
+import { BarChart3, Brain, CheckCircle, Coins, Cpu, Helmet, Shield, Star, Target, Zap } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
     {
@@ -313,7 +314,7 @@ const BlockchainPage: React.FC = () => {
                 <p className="text-gray-600">Comprehensive security audits and vulnerability assessments</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
+                <BarChart3 className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Analytics & Monitoring</h3>
                 <p className="text-gray-600">Real-time blockchain analytics and compliance monitoring</p>
               </div>

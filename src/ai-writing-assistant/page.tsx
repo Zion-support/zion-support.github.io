@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { PenTool, FileText } from 'lucide-react';
+import { CheckCircle, FileText, PenTool, Phone, Star } from 'lucide-react';
 
 const AIWritingAssistantPage: React.FC = () => {
   const features = [

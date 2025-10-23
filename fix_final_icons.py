@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to fix remaining linting errors:
-1. Add missing icon imports
-2. Fix unescaped entities in JSX content only
-3. Fix merge conflict markers
-4. Fix const vs let issues
+Final script to fix remaining missing icon imports.
 """
 
 import os
@@ -15,25 +11,16 @@ import glob
 ICON_MAPPINGS = {
     'BarChart': 'BarChart3',
     'PhoneIcon': 'Phone',
-    'MailIcon': 'Mail',
-    'AlertTriangle': 'AlertTriangle',
-    'Download': 'Download',
-    'Home': 'Home',
-    'Settings': 'Settings'
+    'MailIcon': 'Mail'
 }
 
 def fix_file(file_path):
-    """Fix remaining linting errors in a single file."""
+    """Fix missing icon imports in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
-        
-        # Fix merge conflict markers
-        if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-            print(f"Found merge conflict markers in {file_path}, skipping...")
-            return False
         
         # Find missing icons
         missing_icons = set()
@@ -65,19 +52,6 @@ def fix_file(file_path):
                     # Add at the top
                     new_import = f"import {{ {', '.join(sorted(missing_icons))} }} from 'lucide-react';\n"
                     content = new_import + content
-        
-        # Fix unescaped entities in JSX content only
-        # This is more targeted - only fix quotes in JSX text content
-        def fix_jsx_quotes(match):
-            text = match.group(1)
-            # Only fix if it's not already escaped and not in a code context
-            if '&apos;' not in text and '&quot;' not in text:
-                text = text.replace("'", "&apos;")
-                text = text.replace('"', "&quot;")
-            return f">{text}<"
-        
-        # Fix quotes in JSX text content
-        content = re.sub(r'>([^<]*[\'"][^<]*)<', fix_jsx_quotes, content)
         
         # Fix const vs let issue
         content = re.sub(r'let\s+clsEntries\s*=', 'const clsEntries =', content)

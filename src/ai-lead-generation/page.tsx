@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Building } from 'lucide-react';
+import { Building, CheckCircle, Mail, Phone } from 'lucide-react';;;;;
 const AILeadGenerationPage: React.FC = () => {
   const features = [
     {
@@ -150,7 +150,7 @@ const AILeadGenerationPage: React.FC = () => {
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
-                  <PhoneIcon className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -158,7 +158,7 @@ const AILeadGenerationPage: React.FC = () => {
                   className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <MailIcon className="w-5 h-5" />
+                  <Mail className="w-5 h-5" />
                   <span>Get Free Demo</span>
                 </a>
               </div>
@@ -277,7 +277,7 @@ const AILeadGenerationPage: React.FC = () => {
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
-                  <PhoneIcon className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -285,7 +285,7 @@ const AILeadGenerationPage: React.FC = () => {
                   className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <MailIcon className="w-5 h-5" />
+                  <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
                 </a>
               </div>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Head from "next/head";
-import { ArrowRight, Brain, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, Brain, CheckCircle, Star } from 'lucide-react';
 
 export default function HomePage() {
   const features = [

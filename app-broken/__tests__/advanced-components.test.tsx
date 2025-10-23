@@ -4,6 +4,8 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 // Mock components
 const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
   children: React.ReactNode;
+import { Helmet } from 'lucide-react';
+
   enableRetry?: boolean;
   onError?: any;
 }) => {

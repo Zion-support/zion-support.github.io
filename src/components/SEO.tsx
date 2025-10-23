@@ -4,6 +4,8 @@
  * Provides comprehensive SEO meta tags and structured data
  */
 import React from 'react';
+import { Helmet } from 'lucide-react';
+
 
 export interface SEOProps {
   title?: string;

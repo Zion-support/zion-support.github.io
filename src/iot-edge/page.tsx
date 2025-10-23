@@ -1,6 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { Wifi } from 'lucide-react';
+import { BarChart3, Brain, CheckCircle, Globe, Helmet, Settings, Shield, Star, Target, Wifi, Zap } from 'lucide-react';;
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
@@ -308,7 +309,7 @@ const IoTEdgePage: React.FC = () => {
                 <p className="text-gray-600">Machine learning and AI for intelligent IoT insights</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <BarChart3 className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-Time Analytics</h3>
                 <p className="text-gray-600">Streaming analytics and real-time data processing</p>
               </div>

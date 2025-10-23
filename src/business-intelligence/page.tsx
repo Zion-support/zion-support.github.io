@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+import { BarChart3, CheckCircle, Star, Target, TrendingUp } from 'lucide-react';
+
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -72,7 +74,7 @@ const BusinessIntelligencePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart className="w-8 h-8 text-blue-600" />
+                <BarChart3 className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Data-Driven Decisions</h3>
               <p className="text-gray-600">Make informed decisions based on real-time data and comprehensive analytics</p>

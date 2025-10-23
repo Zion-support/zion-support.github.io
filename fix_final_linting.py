@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
-Script to fix remaining linting errors:
+Final script to fix remaining linting errors:
 1. Add missing icon imports
 2. Fix unescaped entities in JSX content only
-3. Fix merge conflict markers
-4. Fix const vs let issues
+3. Fix const vs let issues
 """
 
 import os
@@ -15,11 +14,7 @@ import glob
 ICON_MAPPINGS = {
     'BarChart': 'BarChart3',
     'PhoneIcon': 'Phone',
-    'MailIcon': 'Mail',
-    'AlertTriangle': 'AlertTriangle',
-    'Download': 'Download',
-    'Home': 'Home',
-    'Settings': 'Settings'
+    'MailIcon': 'Mail'
 }
 
 def fix_file(file_path):
@@ -29,11 +24,6 @@ def fix_file(file_path):
             content = f.read()
         
         original_content = content
-        
-        # Fix merge conflict markers
-        if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-            print(f"Found merge conflict markers in {file_path}, skipping...")
-            return False
         
         # Find missing icons
         missing_icons = set()
@@ -72,8 +62,12 @@ def fix_file(file_path):
             text = match.group(1)
             # Only fix if it's not already escaped and not in a code context
             if '&apos;' not in text and '&quot;' not in text:
-                text = text.replace("'", "&apos;")
-                text = text.replace('"', "&quot;")
+                # Check if this is actually JSX text content, not a JavaScript string
+                # Look for patterns that suggest JSX text content
+                if not (text.strip().startswith("'") and text.strip().endswith("'")) and \
+                   not (text.strip().startswith('"') and text.strip().endswith('"')):
+                    text = text.replace("'", "&apos;")
+                    text = text.replace('"', "&quot;")
             return f">{text}<"
         
         # Fix quotes in JSX text content

@@ -1,6 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Helmet, TrendingUp } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {

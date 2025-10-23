@@ -1,4 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Helmet, Mail, MapPin, Phone, TrendingUp } from 'lucide-react';
+
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [

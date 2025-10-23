@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+import { BarChart3, CheckCircle, Phone, Star } from 'lucide-react';
+
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
@@ -134,7 +136,7 @@ const SmartAnalyticsPage: React.FC = () => {
       <section className="container mx-auto px-4 py-16 pt-24">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
-            <BarChart className="w-10 h-10 text-white" />
+            <BarChart3 className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Smart Analytics

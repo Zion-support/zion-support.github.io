@@ -1,5 +1,7 @@
 'use client';
 import React, { useState } from 'react';
+import { ArrowRight, Mail } from 'lucide-react';
+
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');

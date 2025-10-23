@@ -1,6 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { Server, Lock, Monitor } from 'lucide-react';
+import { BarChart3, CheckCircle, Clock, Helmet, Lock, Monitor, Server, Shield, Star, Zap } from 'lucide-react';
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
     {
@@ -288,7 +289,7 @@ const ITInfrastructurePage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart className="w-8 h-8 text-orange-600" />
+                  <BarChart3 className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Cost Optimization</h3>
                 <p className="text-gray-600">Reduce IT costs by up to 40% while improving performance and reliability</p>

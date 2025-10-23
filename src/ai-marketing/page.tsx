@@ -1,4 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { BarChart3, Brain, CheckCircle, Helmet, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
+
 
 const AIMarketingPage: React.FC = () => {
   const aiMarketingServices = [
@@ -297,7 +300,7 @@ const AIMarketingPage: React.FC = () => {
                 <p className="text-gray-600">Predict customer behavior and optimize campaigns before launch</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <BarChart3 className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-time Optimization</h3>
                 <p className="text-gray-600">Continuously optimize campaigns based on real-time performance data</p>
               </div>

@@ -1,6 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { Cog } from 'lucide-react';
+import { BarChart3, Bot, Brain, CheckCircle, Cog, Cpu, Helmet, Settings, Shield, Star, Target, Zap } from 'lucide-react';;
 const RoboticsPage: React.FC = () => {
   const roboticsServices = [
     {
@@ -313,7 +314,7 @@ const RoboticsPage: React.FC = () => {
                 <p className="text-gray-600">Customer service and assistance robots</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <BarChart3 className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Mobile Robotics</h3>
                 <p className="text-gray-600">Autonomous mobile robots for logistics and transportation</p>
               </div>

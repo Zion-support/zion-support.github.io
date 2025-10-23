@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ArrowLeft, FileText, Lock } from 'lucide-react';
+import { ArrowLeft, Award, CheckCircle, FileText, Lock, Shield, Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

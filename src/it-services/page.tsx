@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react';
+import { ArrowRight, Battery, CheckCircle, Cog, FileText, Headset, Keyboard, Laptop, Lock, Monitor, Mouse, Power, Printer, Rocket, Router, Server, Settings2, ShieldCheck, Smartphone, Speaker, Star, Tablet, Watch, Webcam } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
