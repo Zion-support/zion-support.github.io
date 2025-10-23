@@ -1,58 +1,101 @@
-export default usePerformanceMonitoring;
-// // PerformanceMetrics interface removed as it's not used in this hook;
-  // const { trackPerformance } = useAnalytics();
-      console.log('Performance metric:', name, value);
-      // trackPerformance(name, value);
-    []
+'use client';
+import { useCallback } from 'react';
+import { useAnalytics } from '../components/AnalyticsProvider';
+// PerformanceMetrics interface removed as it's not used in this hook
+export const usePerformanceMonitoring = () => {
+  const { trackEvent } = useAnalytics();
+  const reportMetric = useCallback(
+    (name: string, value: number) => {
+      trackEvent('performance_metric', {
+        metric_name: name,
+        metric_value: value,
+        timestamp: Date.now()
+      });
+    },
+    [trackEvent]
   );
- {};
-      // LCP - Largest Contentful Paint;
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return () => {};
+    }
+    try {
+      // LCP - Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-const lastEntry = entries[entries.length - 1];
+        const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      // FID - First Input Delay;
+      // FID - First Input Delay
+      const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
+        entries.forEach(
+          (entry: PerformanceEntry & { processingStart?: number }) => {
+            const fid =
               (entry.processingStart || entry.startTime) - entry.startTime;
             reportMetric('FID', fid);
+          }
         );
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-      // CLS - Cumulative Layout Shift;
+      // CLS - Cumulative Layout Shift
       let clsValue = 0;
+      const clsObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
+        entries.forEach(
+          (
+            entry: PerformanceEntry & {
               hadRecentInput?: boolean;
               value?: number;
+            }
+          ) => {
+            if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
+            }
+          }
         );
         reportMetric('CLS', clsValue);
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-      // FCP - First Contentful Paint;
+      // FCP - First Contentful Paint
+      const fcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
+        entries.forEach(entry => {
+          if (entry.name === 'first-contentful-paint') {
             reportMetric('FCP', entry.startTime);
+          }
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-      // TTFB - Time to First Byte;
+      // TTFB - Time to First Byte
+      const navigationObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-const navEntry = entry as PerformanceNavigationTiming;
+        entries.forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
+          }
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
-      // Resource timing;
+      // Resource timing
+      const resourceObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-const resourceEntry = entry as PerformanceResourceTiming;
+        entries.forEach((entry) => {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming;
             const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-              // Only track slow resources;
+            if (loadTime > 1000) {
+              // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
+            }
+          }
         });
       });
       resourceObserver.observe({ entryTypes: ['resource'] });
-      // Cleanup;
+      // Cleanup
+      return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
@@ -60,19 +103,36 @@ const resourceEntry = entry as PerformanceResourceTiming;
         navigationObserver.disconnect();
         resourceObserver.disconnect();
       };
-      console.error('Performance monitoring setup failed:', error);
- {};
+    } catch (error) {
+      return () => {};
+    }
   }, [reportMetric]);
-  // Monitor page load performance;
+  // Monitor page load performance
+  useEffect(() => {
+    const handleLoad = () => {
       if (typeof window === 'undefined') return;
+      const navigation = performance.getEntriesByType(
+        'navigation'
       )[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        const metrics = {
+          domContentLoaded:
+            navigation.domContentLoadedEventEnd -
+            navigation.domContentLoadedEventStart,
+          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+          domInteractive: navigation.domInteractive - navigation.fetchStart,
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
         };
+        Object.entries(metrics).forEach(([key, value]) => {
           reportMetric(key.toUpperCase(), value);
         });
+      }
     };
     window.addEventListener('load', handleLoad);
- window.removeEventListener('load', handleLoad);
+    return () => window.removeEventListener('load', handleLoad);
   }, [reportMetric]);
-    reportMetric;
+  return {
+    reportMetric
   };
 };
+export default usePerformanceMonitoring;
