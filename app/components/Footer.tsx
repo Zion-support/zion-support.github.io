@@ -59,17 +59,14 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-        
           <div className="lg:col-span-1">
-        
-          <div className="flex items-center space-x-2 mb-4">
+            <div className="flex items-center space-x-2 mb-4">
               <Brain className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">Zion Tech Group</span>
-          
-          <p className="text-gray-400 mb-4">
+            </div>
+            <p className="text-gray-400 mb-4">
               Advanced AI and IT solutions for modern businesses. We help you
               leverage cutting-edge technology to drive growth and innovation.
             </p>
@@ -162,13 +159,8 @@ const Footer: React.FC = () => {
 
           {/* Company & Support */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 mb-6">
-=======
-          <h3 className="text-lg font-semibold mb-4">Company</h3>
-          <ul className="space-y-2 mb-6">
->>>>>>> ff4a9ef19e17007e5c17ec37bd59b85fe2ab6d30
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -199,15 +191,6 @@ const Footer: React.FC = () => {
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center space-x-3">
-=======
-        
-          </div><div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-          </div><div className="flex items-center space-x-3">
->>>>>>> ff4a9ef19e17007e5c17ec37bd59b85fe2ab6d30
               <Phone className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">+1 (555) 123-4567</span>
         
@@ -218,13 +201,6 @@ const Footer: React.FC = () => {
           </div><div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">San Francisco, CA</span>
-<<<<<<< HEAD
-            </div>
-          </div>
-=======
-        </div>
-      </div>
->>>>>>> ff4a9ef19e17007e5c17ec37bd59b85fe2ab6d30
         </div>
 
         {/* Bottom Bar */}
@@ -258,7 +234,3 @@ const Footer: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-export default Footer;
->>>>>>> ff4a9ef19e17007e5c17ec37bd59b85fe2ab6d30
