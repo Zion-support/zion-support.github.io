@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, memo } from "react";
+import React, { Suspense, lazy, useEffect, memo } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./app/styles/futuristic.css";
@@ -27,7 +27,6 @@ const CareersPage = lazy(() => import("./app/careers/page"));
 const PrivacyPage = lazy(() => import("./app/privacy/page"));
 const TermsPage = lazy(() => import("./app/terms/page"));
 const CookiesPage = lazy(() => import("./app/cookies/page"));
-const AdminPage = lazy(() => import("./app/pages/AdminPage"));
 
 // AI Services Pages
 const AIServicesPage = lazy(() => import("./app/ai-services/page"));
@@ -399,7 +398,7 @@ export const ErrorFallback = ({
         <p className="mt-2 text-sm text-gray-500">{error.message}</p>
         <button
           onClick={resetErrorBoundary}
-          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
         >
           Try again
         </button>
@@ -471,16 +470,12 @@ const App = memo(() => {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gray-50">
-            <Navigation />
-            <Sidebar isOpen={false} onClose={() => {}} />
-
             <main className="flex-1">
               <ErrorBoundary>
                 <PerformanceMonitor />
                 <AccessibilityEnhancer>
-                  <SEOOptimizer />
-
-                  <Suspense fallback={<LoadingFallback />}>
+                  <SEOOptimizer>
+                    <Suspense fallback={<LoadingFallback />}>
                     <ErrorBoundary>
                       <Routes>
                         {/* Main Pages */}
@@ -499,7 +494,6 @@ const App = memo(() => {
                         <Route path="/privacy" element={<PrivacyPage />} />
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
-                        <Route path="/admin" element={<AdminPage />} />
 
                         {/* AI Services */}
                         <Route
@@ -1097,6 +1091,7 @@ const App = memo(() => {
                       </Routes>
                     </ErrorBoundary>
                   </Suspense>
+                  </SEOOptimizer>
                 </AccessibilityEnhancer>
               </ErrorBoundary>
             </main>

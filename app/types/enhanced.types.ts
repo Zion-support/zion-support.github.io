@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 // Enhanced type definitions for better type safety

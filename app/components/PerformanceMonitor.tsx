@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect } from "react";
 
 const PerformanceMonitor: React.FC = () => {
@@ -49,3 +50,4 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+

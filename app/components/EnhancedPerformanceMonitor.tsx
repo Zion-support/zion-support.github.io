@@ -12,3 +12,4 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
 };
 
 export default EnhancedPerformanceMonitor;
+

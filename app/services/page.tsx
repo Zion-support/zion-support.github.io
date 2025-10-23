@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from "lucide-react";
 export default function ServicesPage() {
   const services = [
@@ -78,13 +77,6 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Comprehensive AI and IT services by Zion Tech Group"
-        />
-      </Helmet>
 
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">

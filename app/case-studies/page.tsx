@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   ExternalLink,
@@ -64,17 +63,6 @@ const CaseStudiesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Case Studies - Zion Tech Group | AI & IT Solutions</title>
-        <meta
-          name="description"
-          content="Discover how we've helped businesses transform their operations and achieve remarkable results through innovative technology solutions."
-        />
-        <meta
-          name="keywords"
-          content="case studies, success stories, client results, AI solutions, business transformation"
-        />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

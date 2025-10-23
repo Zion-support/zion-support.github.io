@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
     { name: "Status Page", href: "/status" },
   ];
 
-  const _quickLinks = [
+  const quickLinks = [
     { name: "Free Consultation", href: "/consultation" },
     { name: "Request Demo", href: "/demo" },
     { name: "Pricing", href: "/pricing" },

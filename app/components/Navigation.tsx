@@ -1,6 +1,7 @@
 "use client";
+
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, Brain, Menu, X } from "lucide-react";
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -99,3 +100,4 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
+

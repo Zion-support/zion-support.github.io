@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import {
   Star,
   Users,
@@ -110,17 +109,6 @@ const CareersPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta
-          name="description"
-          content="Join our team of talented professionals and help shape the future of AI and IT solutions. Explore open positions and career opportunities."
-        />
-        <meta
-          name="keywords"
-          content="careers, jobs, employment, AI engineer, cloud architect, technology careers, remote work"
-        />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

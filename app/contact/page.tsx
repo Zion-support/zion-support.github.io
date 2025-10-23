@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useCallback } from "react";
-import { Helmet } from "react-helmet-async";
 import { ArrowRight, Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const ContactPage: React.FC = () => {
@@ -74,17 +73,6 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta
-          name="description"
-          content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts to discuss your project requirements and get started today."
-        />
-        <meta
-          name="keywords"
-          content="contact us, AI solutions, IT services, project consultation, business inquiry"
-        />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

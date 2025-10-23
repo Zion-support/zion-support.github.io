@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   Play,
@@ -96,17 +95,6 @@ const DemoPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Live Demo - Zion Tech Group | See Our Solutions in Action</title>
-        <meta
-          name="description"
-          content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business with real-time demonstrations."
-        />
-        <meta
-          name="keywords"
-          content="live demo, AI demo, cloud demo, security demo, technology demonstration, interactive demo"
-        />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

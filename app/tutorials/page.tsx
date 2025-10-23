@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   Clock,
@@ -86,17 +85,6 @@ const TutorialsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Tutorials - Zion Tech Group | Learn Technology Skills</title>
-        <meta
-          name="description"
-          content="Master technology skills with our comprehensive tutorials. Learn AI development, cloud computing, cybersecurity, and more with expert-led courses."
-        />
-        <meta
-          name="keywords"
-          content="tutorials, technology courses, AI development, cloud computing, cybersecurity, programming, learning"
-        />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

@@ -1,5 +1,7 @@
 "use client";
+
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 interface OptimizedImageProps {
   src: string;
@@ -100,18 +102,21 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <div className="text-gray-400 text-sm">Failed to load image</div>
         </div>
       ) : (
-        <img
+        <Image
           src={imageSrc}
           alt={alt}
-          width={width}
-          height={height}
+          width={width || 300}
+          height={height || 200}
           className={`transition-opacity duration-300 ${
             isLoaded ? "opacity-100" : "opacity-0"
           } ${className}`}
           onLoad={handleLoad}
           onError={handleError}
-          loading={priority ? "eager" : "lazy"}
-          decoding="async"
+          priority={priority}
+          quality={quality}
+          sizes={sizes}
+          placeholder="blur"
+          blurDataURL={placeholder}
         />
       )}
     </div>
