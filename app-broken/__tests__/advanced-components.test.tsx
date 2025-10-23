@@ -28,11 +28,11 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
 
   if (hasError) {
     return (
-      <div data-testid=&quot;error-boundary&quot;></div>
+      <div data-testid="error-boundary">
         <h2>Unexpected Application Error!</h2>
         <p>Oops! Something went wrong</p>
         {error && (
-          <div></div>
+          <div>
             <h3 style={{ fontStyle: 'italic' }}>{error.message}</h3>
             <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>
               {error.stack}
@@ -40,7 +40,7 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
           </div>
         )}
         {enableRetry && (
-          <div></div>
+          <div>
             <button>Try Again</button>
             <button>Reload Page</button>
           </div>
@@ -84,7 +84,7 @@ describe('Advanced Components', () => {
       
       if (hasError) {
         return (
-          <div data-testid=&quot;error-boundary&quot;></div>
+          <div data-testid="error-boundary">
             <h2>Unexpected Application Error!</h2>
             <p>Oops! Something went wrong</p>
           </div>
@@ -103,7 +103,7 @@ describe('Advanced Components', () => {
     const SEOEnhancer = () => (
       <Helmet>
         <title>Test Title</title>
-        <meta name=&quot;description&quot; content=&quot;Test description&quot; />
+        <meta name="description" content="Test description" />
       </Helmet>
     );
     

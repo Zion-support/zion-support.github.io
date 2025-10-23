@@ -1,4 +1,8 @@
 
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
 // Mock OptimizedImage component
 const OptimizedImage = ({ 
   src, 
@@ -25,7 +29,7 @@ const OptimizedImage = ({
 
 describe('OptimizedImage Component', () => {
   it('renders with required props', () => {
-    render(<OptimizedImage src=&quot;test.jpg&quot; alt=&quot;Test image&quot; />);
+    render(<OptimizedImage src="test.jpg" alt="Test image" />);
     
   });
 
@@ -35,7 +39,7 @@ describe('OptimizedImage Component', () => {
   });
 
   it('has lazy loading enabled', () => {
-    render(<OptimizedImage src=&quot;test.jpg&quot; alt=&quot;Test image&quot; />);
+    render(<OptimizedImage src="test.jpg" alt="Test image" />);
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toHaveAttribute('loading', 'lazy');
