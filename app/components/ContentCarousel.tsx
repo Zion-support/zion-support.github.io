@@ -76,7 +76,7 @@ const ContentCarousel: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Discover Our Solutions
-
+          </h2>
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
             Explore our comprehensive suite of AI-powered solutions designed to transform your business.
           </p>

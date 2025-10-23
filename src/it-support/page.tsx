@@ -1,3 +1,4 @@
+import { Phone } from 'lucide-react';
 import React from 'react';
 
 import Navigation from '../components/Navigation';

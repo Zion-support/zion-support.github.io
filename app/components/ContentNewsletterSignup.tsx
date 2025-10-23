@@ -78,7 +78,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             onClick={() => setIsSubscribed(false)}
             className="text-white underline hover:text-blue-200 transition-colors">
             Subscribe another email
-
+          </button>
         </div>
       </div>
     )

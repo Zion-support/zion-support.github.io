@@ -1,3 +1,4 @@
+import { Helmet } from 'lucide-react';
 import React from 'react';
 
 interface SEOHeadProps {

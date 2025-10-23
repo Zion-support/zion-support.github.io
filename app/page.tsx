@@ -160,7 +160,7 @@ const HomePage = () => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
                 <div>
                   <div className="text-white font-semibold">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
@@ -178,7 +178,7 @@ const HomePage = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI and IT solutions can drive your success.
+            Let&apos;s discuss how our AI and IT solutions can drive your success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

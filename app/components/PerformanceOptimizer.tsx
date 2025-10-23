@@ -108,8 +108,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Dynamic imports for code splitting
     const loadComponent = async (componentName: string) => {
       try {
-        const module = await import(`../components/${componentName}.tsx`);
-        return module.default;
+        const componentModule = await import(`../components/${componentName}.tsx`);
+        return componentModule.default;
       } catch (error) {
         console.warn(`Failed to load component: ${componentName}`, error);
         return null;

@@ -1,3 +1,4 @@
+import { CheckCircle, Brain, Zap, Eye, BarChart, Check } from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';

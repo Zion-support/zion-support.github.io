@@ -1,3 +1,4 @@
+import { CheckCircle, Star, Brain, Shield, Zap, Users, Target, Heart, Helmet, Check } from 'lucide-react';
 import React from 'react';
 
 const AIHealthcarePage: React.FC = () => {
