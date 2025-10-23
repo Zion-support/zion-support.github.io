@@ -60,7 +60,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <div className="text-6xl mb-2">{image}</div>
           <div className="text-sm font-medium opacity-90">{category}</div>
         </div>
-        
         {/* Featured Badge */}
         {featured && (
           <div className="absolute top-4 left-4">
@@ -83,7 +82,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{readTime}</span>span>
         </div>
       </div>
-
       {/* Content */}
       <div className="p-6">
         <div className="mb-3">

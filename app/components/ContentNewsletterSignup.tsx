@@ -57,7 +57,6 @@ const ContentNewsletterSignup: React.FC = () => {
         <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">Get exclusive access to our latest AI breakthroughs, enterprise transformation guides, </p>
           and cutting-edge content that's transforming businesses worldwide.
         </p>
-
         <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Join 10,000+ Enterprise Leaders</h3>h3>
           
@@ -77,7 +76,6 @@ const ContentNewsletterSignup: React.FC = () => {
                 className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >{isSubmitting ? 'Subscribing...' : 'Get Free Content'}</button>button>
             </div>
-            
             {error && (
               <p className="text-red-600 text-sm">{error}</p>
             )}
@@ -86,7 +84,6 @@ const ContentNewsletterSignup: React.FC = () => {
           <div className="mt-6 text-sm text-gray-600">
             <p>🔒 We respect your privacy. Unsubscribe at any time.</p>
           </div>
-
           {/* Benefits */}
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="flex items-start space-x-3">
@@ -112,7 +109,6 @@ const ContentNewsletterSignup: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Social Proof */}
         <div className="mt-12 text-center">
           <p className="text-indigo-100 mb-4">Trusted by leading enterprises</p>

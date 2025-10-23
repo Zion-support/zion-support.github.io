@@ -28,14 +28,12 @@ const NotFoundPage: React.FC = () => {
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
-
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>h1>
 
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">Oops! The page you're looking for seems to have vanished into the</p>
             digital void. Don't worry, even our AI can't predict everything!
           </p>
-
           {/* Search Suggestion */}
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
             <div className="flex items-center justify-center mb-4">
@@ -59,7 +57,6 @@ const NotFoundPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
@@ -77,7 +74,6 @@ const NotFoundPage: React.FC = () => {
               Go Back
             </button>
           </div>
-
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-white mb-3">Still can't find what you need?</h3>h3>
@@ -98,7 +94,6 @@ const NotFoundPage: React.FC = () => {
               >Send Email</a>a>
             </div>
           </div>
-
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">

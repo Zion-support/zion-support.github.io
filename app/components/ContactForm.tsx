@@ -86,7 +86,6 @@ const ContactForm: React.FC = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
-
         {/* Contact Form */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -106,7 +105,6 @@ const ContactForm: React.FC = () => {
                   placeholder="John Doe"
                 />
               </div>
-
               <div>
                 <label htmlFor="email" className="block text-white font-medium mb-2">
                   Email Address *
@@ -123,7 +121,6 @@ const ContactForm: React.FC = () => {
                 />
               </div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="company" className="block text-white font-medium mb-2">
@@ -139,7 +136,6 @@ const ContactForm: React.FC = () => {
                   placeholder="Your Company"
                 />
               </div>
-
               <div>
                 <label htmlFor="phone" className="block text-white font-medium mb-2">
                   Phone Number
@@ -155,7 +151,6 @@ const ContactForm: React.FC = () => {
                 />
               </div>
             </div>
-
             <div>
               <label htmlFor="service" className="block text-white font-medium mb-2">
                 Service Interest
@@ -175,7 +170,6 @@ const ContactForm: React.FC = () => {
                 ))}
               </select>
             </div>
-
             <div>
               <label htmlFor="message" className="block text-white font-medium mb-2">
                 Message *
@@ -191,7 +185,6 @@ const ContactForm: React.FC = () => {
                 placeholder="Tell us about your project and how we can help..."
               />
             </div>
-
             {status.message && (
               <div className={`flex items-center space-x-2 p-4 rounded-lg ${
                 status.type === 'success' ? 'bg-green-500/20 text-green-300' :
