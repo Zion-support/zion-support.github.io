@@ -1,4 +1,5 @@
 
+import React, { lazy, Suspense, memo, useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./app/styles/futuristic.css";
@@ -321,7 +322,8 @@ export const ErrorFallback = ({
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
       <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-
+        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
         </svg>
       </div>
       <div className="mt-4 text-center">
@@ -329,7 +331,10 @@ export const ErrorFallback = ({
           Something went wrong
         </h3>
         <p className="mt-2 text-sm text-gray-500">{error.message}</p>
-
+        <button
+          onClick={resetErrorBoundary}
+          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+        >
           Try again
         </button>
       </div>
@@ -353,7 +358,7 @@ const App = memo(() => {
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
       navigator.serviceWorker
         .register("/sw.js")
-
+        .then(() => {
           // Service worker registered successfully
         })
         .catch(() => {
@@ -399,7 +404,38 @@ const App = memo(() => {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gray-50">
-
+            <Navigation />
+            <main className="flex-1">
+              <Suspense fallback={<LoadingFallback />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/solutions" element={<SolutionsPage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
+            <SEOOptimizer />
           </div>
         </Router>
       </HelmetProvider>
