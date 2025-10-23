@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
@@ -29,10 +30,14 @@ const AccessibilityPagePage: React.FC = () => {
         "Scale effortlessly across multiple regions with automatic load balancing.",
     },
   ];
+=======
+import { Helmet } from "react-helmet-async";
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 
   return (
     <React.Fragment>
       <Helmet>
+<<<<<<< HEAD
         <title>
           Accessibility Page - Zion Tech Group | Advanced AI and IT Solutions
         </title>
@@ -43,6 +48,12 @@ const AccessibilityPagePage: React.FC = () => {
         <meta
           name="keywords"
           content="accessibilitypage, AI solutions, IT services, automation, technology, business solutions"
+=======
+        <title>Accessibility Page - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Accessibility Page services and solutions from Zion Tech Group."
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
         />
       </Helmet>
 
@@ -54,8 +65,13 @@ const AccessibilityPagePage: React.FC = () => {
               Accessibility Page
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Professional accessibilitypage solutions powered by advanced AI
               and cutting-edge technology.
+=======
+              Professional Accessibility Page services and solutions for your
+              business needs.
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

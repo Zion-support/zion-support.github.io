@@ -22,7 +22,11 @@ export interface AnalyticsContextType {
 export type AnalyticsAction =
   | {
       type: "TRACK_EVENT";
+<<<<<<< HEAD
       payload: { name: string; properties?: Record<string, unknown> };
+=======
+      payload: { name: string; properties?: Record<string, any> };
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
     }
   | { type: "TRACK_PAGE_VIEW"; payload: { path: string } }
   | { type: "SET_USER"; payload: AnalyticsUser };

@@ -1,5 +1,6 @@
 // Type definitions for Next.js compatibility in Vite
 
+<<<<<<< HEAD
 export interface Metadata {
   title?: string;
   description?: string;
@@ -97,10 +98,17 @@ declare module "next/metadata" {
       yandex?: string;
       yahoo?: string;
       other?: Record<string, string>;
+=======
+declare module "next" {
+  interface NextPageContext {
+    query: {
+      [key: string]: string | string[] | undefined;
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
     };
   }
 }
 
+<<<<<<< HEAD
 // Custom page props
 export interface CustomPageProps {
   params: { [key: string]: string };
@@ -131,3 +139,10 @@ export interface MiddlewareRequest extends Request {
 }
 
 export {};
+=======
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630

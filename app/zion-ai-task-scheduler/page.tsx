@@ -1,8 +1,14 @@
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
 export default function PagePage() {
+=======
+
+export default function ZionaitaskschedulerPage() {
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
         <title>Page - Zion Tech Group</title>
         <meta
           name="description"
@@ -26,6 +32,24 @@ export default function PagePage() {
             <p className="text-gray-300">
               This page is under development. Please check back later for
               updates.
+=======
+        <title>Zion Ai Task Scheduler - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Zion Ai Task Scheduler services and solutions from Zion Tech Group."
+        />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Zion Ai Task Scheduler
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Zion Ai Task Scheduler services and solutions for
+              your business needs.
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
             </p>
           </div>
         </div>

@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Brain, Globe, Shield, Zap } from "lucide-react";
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 const DigitalTransformationPage: React.FC = () => {
   const features = [
     {
@@ -33,6 +39,7 @@ const DigitalTransformationPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
+<<<<<<< HEAD
         <title>
           Digital Transformation - Zion Tech Group | Advanced AI and IT
           Solutions
@@ -71,6 +78,44 @@ const DigitalTransformationPage: React.FC = () => {
               >
                 View All Services
               </a>
+=======
+        <title>Digital Transformation - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Transform your business with our comprehensive digital transformation services."
+        />
+      </Helmet>
+
+      <div className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Digital Transformation
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business for the digital age
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Process Automation
+              </h3>
+              <p className="text-gray-600">
+                Automate your business processes to increase efficiency and
+                reduce manual work.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Technology Integration
+              </h3>
+              <p className="text-gray-600">
+                Integrate new technologies into your existing systems for
+                enhanced capabilities.
+              </p>
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
             </div>
           </div>
         </section>

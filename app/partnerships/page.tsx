@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Brain, Globe, Shield, Zap } from "lucide-react";
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 const PartnershipsPage: React.FC = () => {
   const features = [
     {
@@ -33,6 +39,7 @@ const PartnershipsPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
+<<<<<<< HEAD
         <title>
           Partnerships - Zion Tech Group | Advanced AI and IT Solutions
         </title>
@@ -70,6 +77,44 @@ const PartnershipsPage: React.FC = () => {
               >
                 View All Services
               </a>
+=======
+        <title>Partnerships - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Partner with Zion Tech Group to expand your business and reach new markets."
+        />
+      </Helmet>
+
+      <div className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Partnerships
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Partner with us to grow your business
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Technology Partners
+              </h3>
+              <p className="text-gray-600">
+                Join our technology partner program and access our cutting-edge
+                solutions.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Reseller Program
+              </h3>
+              <p className="text-gray-600">
+                Become a reseller and offer our solutions to your clients with
+                attractive margins.
+              </p>
+>>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
             </div>
           </div>
         </section>
