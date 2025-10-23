@@ -1,5 +1,10 @@
 "use client";
 import React from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+
+// Placeholder components
+const Navigation = () => <nav className="bg-slate-800 p-4"><div className="container mx-auto text-white">Navigation</div></nav>;
+const Footer = () => <footer className="bg-slate-800 p-4"><div className="container mx-auto text-white text-center">Footer</div></footer>;
 
 interface ContentPreviewCardProps {
   className?: string;
@@ -8,11 +13,6 @@ interface ContentPreviewCardProps {
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '' }) => {
   return (
     <>
-      <Helmet>
-        <title>ContentPreviewCard</title>
-        <meta name="description" content="Advanced ContentPreviewCard solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ContentPreviewCard, AI solutions, intelligent automation" />
-      </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
