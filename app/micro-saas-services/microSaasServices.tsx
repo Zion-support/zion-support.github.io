@@ -127,8 +127,3 @@ const MicroSaasServicesPage: React.FC = () => {
   )
 }
 export default MicroSaasServicesPage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>

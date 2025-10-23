@@ -84,6 +84,3 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   )
 }
 export default EnhancedHeroPage
-  </button>
-  </button>
-  </h2>

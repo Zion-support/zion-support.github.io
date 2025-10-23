@@ -65,8 +65,3 @@ const FuturisticHeroPage: React.FC = () => {
   )
 }
 export default FuturisticHeroPage
-  </button>
-  </button>
-  </div>
-  </div>
-  </section>

@@ -281,6 +281,3 @@ Our <span>Impact</span> in Numbers
 )
 }
 export default ContentStatistics
-</button>
-</h2>
-</div>

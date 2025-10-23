@@ -237,5 +237,3 @@ location.pathname === item.path
 }
 Sidebar.displayName = 'Sidebar'
 export default Sidebar
-</div>
-</string>

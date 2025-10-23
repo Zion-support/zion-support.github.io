@@ -115,12 +115,3 @@ Powered by cutting-edge AI technology and industry expertise.
 )
 }
 export default CloudInfrastructurePage
-</button>
-</button>
-</section>
-</h2>
-</section>
-</div>
-</h1>
-</div>
-</div>

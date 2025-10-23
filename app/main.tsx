@@ -126,8 +126,3 @@ const MainPage: React.FC = () => {
   )
 }
 export default MainPage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>

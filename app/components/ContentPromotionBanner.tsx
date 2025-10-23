@@ -184,7 +184,3 @@ const ContentPromotionBanner: React.FC = () => {
   )
 }
 export default ContentPromotionBanner
-  </button>
-  </button>
-  </button>
-  </button>

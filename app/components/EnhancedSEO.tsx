@@ -104,8 +104,3 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   )
 }
 export default EnhancedSEOPage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>

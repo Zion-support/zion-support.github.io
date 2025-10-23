@@ -127,8 +127,3 @@ Get Started
 )
 }
 export default ARVRPlatformPage
-</button>
-</button>
-</h2>
-</button>
-</span>

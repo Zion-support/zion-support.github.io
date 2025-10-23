@@ -55,5 +55,3 @@ import React from 'react'
   )
 }
 export default PagePage
-  </button>
-  </button>

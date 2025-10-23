@@ -268,5 +268,3 @@ return (
 return null
 }
 export default AdvancedPerformanceMonitor
-</PerformanceMetrics>
-</PerformanceMonitorProps>

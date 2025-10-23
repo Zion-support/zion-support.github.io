@@ -112,8 +112,3 @@ Powered by cutting-edge AI technology and industry expertise.
 )
 }
 export default BusinessIntelligencePage
-</button>
-</button>
-</h2>
-</h1>
-</div>

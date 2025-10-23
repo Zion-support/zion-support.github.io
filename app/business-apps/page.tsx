@@ -139,11 +139,3 @@ Powered by cutting-edge AI technology and industry expertise.
 )
 }
 export default BusinessAppsPage
-</button>
-</button>
-</button>
-</button>
-</section>
-</h2>
-</section>
-</h1>

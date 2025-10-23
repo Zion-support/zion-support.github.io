@@ -200,8 +200,3 @@ Contact Enterprise Sales
 )
 }
 export default EnterprisePage
-</button>
-</h2>
-</h2>
-</span>
-</SEOOptimizer>
