@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';
-=======
 import React from 'react';
 import { render, screen, waitFor, act } from '@testing-library/react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 import '@testing-library/jest-dom';
 
 // Mock OptimizedImage component
@@ -55,13 +51,8 @@ describe('OptimizedImage', () => {
     );
     
     const image = screen.getByTestId('optimized-image');
-<<<<<<< HEAD
-    expect(image).toHaveAttribute('width', '100');
-    expect(image).toHaveAttribute('height', '100');
-=======
     expect(image).toHaveAttribute('width', '300');
     expect(image).toHaveAttribute('height', '200');
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
   });
 
   it('handles missing alt text gracefully', () => {
