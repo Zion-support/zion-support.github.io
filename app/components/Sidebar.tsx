@@ -40,7 +40,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {menuItems.map((item) => (
             <Link
               key={item.name}
-              to={item.href}
+              href={item.href}
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
               onClick={onClose}
             >
