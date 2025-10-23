@@ -36,7 +36,7 @@ description: 'Monitor and optimize conversion funnels to increase sales and redu
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
 <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
@@ -48,7 +48,7 @@ return (
 <div className="text-center mb-16">
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 E-commerce Analytics Pro
-</
+</h1>
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.
 </p>
@@ -69,8 +69,7 @@ className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 ho
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default EcommerceAnalyticsProPage
-</h1>

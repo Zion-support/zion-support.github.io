@@ -107,7 +107,7 @@ return (
 <h3 className="text-xl font-semibold text-white flex items-center gap-2">
 <Activity className="w-5 h-5" />
 Performance Dashboard
-</
+</Activity>
 <button
 onClick={toggleMonitoring}
 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
@@ -140,7 +140,7 @@ isMonitoring
 </div>
 <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}>
 {metrics.loadTime.toFixed(0)}ms
-</
+</div>
 </div>
 <div className="bg-white/5 rounded-lg p-4">
 <div className="flex items-center gap-2 mb-2">
@@ -149,7 +149,7 @@ isMonitoring
 </div>
 <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}>
 {metrics.renderTime.toFixed(2)}ms
-</
+</div>
 </div>
 <div className="bg-white/5 rounded-lg p-4">
 <div className="flex items-center gap-2 mb-2">
@@ -179,8 +179,3 @@ isMonitoring
 )
 }
 export default PerformanceDashboard
-</div>
-</h3>
-</div>
-</PerformanceMetrics>
-</PerformanceProps>

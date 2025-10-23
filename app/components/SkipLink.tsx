@@ -1,13 +1,41 @@
 'use client'
 import React from 'react'
-const SkipLink: React.FC = () => {
-return (
-<a
-href="#main-content"
-className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-md z-50 font-medium transition-all duration-200 hover:bg-cyan-700"
->
-Skip to main content
-</a>
-)
+import { Helmet } from 'react-helmet-async'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+
+const SkipLinkPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>SkipLink - Zion Tech Group</title>
+        <meta name="description" content="Advanced skiplink solution for modern businesses." />
+        <meta name="keywords" content="skiplink, artificial intelligence, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              SkipLink
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Advanced skiplink solution powered by cutting-edge AI technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
 }
-export default SkipLink
+
+export default SkipLinkPage

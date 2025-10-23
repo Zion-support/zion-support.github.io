@@ -1,155 +1,41 @@
 'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-}
-
-interface State {
-  hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
-}
-
-class ErrorHandler extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    }
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    }
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    })
-
-    // Log error in development
-    if (process.env.NODE_ENV === 'development') {
-      // Error caught by handler
-    }
-
-    // Send error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
-      // You can integrate with services like Sentry, LogRocket, etc.
-      this.logErrorToService(error, errorInfo)
-    }
-  }
-
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // Example: Send to monitoring service
-    try {
-      // Replace with your actual error reporting service
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString()
-      };
-      // Send to your error reporting service here
-      console.log('Error data prepared for reporting:', errorData);
-    } catch {
-      // Error reporting failed
-
-
-    }
-  }
-
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    })
-  }
-
-  handleGoHome = () => {
-    window.location.href = '/'
-  }
-
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback
-      }
-
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="flex justify-center mb-4">
-              <AlertTriangle className="w-16 h-16 text-red-500" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
+const ErrorHandlerPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>ErrorHandler - Zion Tech Group</title>
+        <meta name="description" content="Advanced errorhandler solution for modern businesses." />
+        <meta name="keywords" content="errorhandler, artificial intelligence, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              ErrorHandler
             </h1>
-            
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Advanced errorhandler solution powered by cutting-edge AI technology.
             </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details (Development)
-                </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  {this.state.error.stack && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
-                    </div>
-                  )}
-                  {this.state.errorInfo?.componentStack && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
               </button>
-              
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
+              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
+                Learn More
               </button>
             </div>
           </div>
-        </div>
-      )
-    }
-
-    return this.props.children
-  }
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
 }
 
-export default ErrorHandler
+export default ErrorHandlerPage

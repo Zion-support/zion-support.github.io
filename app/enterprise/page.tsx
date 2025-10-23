@@ -102,7 +102,7 @@ keywords="enterprise solutions, enterprise software, large-scale solutions, ente
 Enterprise</h1>
 <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
 Solutions
-</
+</span>
 </h1>
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
 Comprehensive enterprise-grade solutions designed for large-scale business operations.
@@ -115,7 +115,7 @@ Get Enterprise Consultation
 </button>
 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
 View Case Studies
-</
+</button>
 </div>
 </div>
 </section>
@@ -141,7 +141,7 @@ View Case Studies
 <div className="text-center mb-16"></div>
 <h2 className="text-4xl font-bold text-white mb-4">
 Enterprise-Grade Features
-</
+</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Built for scale, security, and performance to meet the demands of large organizations.
 </p>
@@ -166,7 +166,7 @@ Built for scale, security, and performance to meet the demands of large organiza
 </section>
 <h2 className="text-4xl font-bold text-white mb-4">
 Comprehensive Solutions
-</
+</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 End-to-end enterprise solutions that address every aspect of your business operations.
 </p>
@@ -203,7 +203,7 @@ Contact Enterprise Sales
 </button>
 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
 Learn More
-</
+</button>
 </div>
 </div>
 </section>
@@ -212,8 +212,3 @@ Learn More
 )
 }
 export default EnterprisePage
-</button>
-</h2>
-</h2>
-</span>
-</SEOOptimizer>

@@ -31,4 +31,3 @@ return (
 )
 }
 export default LoadingSpinner
-</LoadingSpinnerProps>

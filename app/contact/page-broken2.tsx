@@ -93,7 +93,7 @@ description: 'Eastern Time'
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Contact Us - Zion Tech Group | Get in Touch</title>
 <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
@@ -107,7 +107,7 @@ return (
 Get in
 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
 {' '}Touch
-</
+</span>
 </h1>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Ready to transform your business? Let's discuss your project and explore
@@ -171,7 +171,7 @@ placeholder="your@email.com"
 <div>
 <label className="block text-sm font-medium text-gray-300 mb-2">
 Company
-</
+</label>
 <div className="relative">
 <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
 <input
@@ -187,7 +187,7 @@ placeholder="Your company"
 <div>
 <label className="block text-sm font-medium text-gray-300 mb-2">
 Phone Number
-</
+</label>
 <div className="relative">
 <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
 <input
@@ -204,7 +204,7 @@ placeholder="+1 (555) 123-4567"
 <div>
 <label className="block text-sm font-medium text-gray-300 mb-2">
 Service Interest
-</
+</label>
 <div className="relative">
 <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
 <select
@@ -243,15 +243,15 @@ type="submit"
 disabled={isSubmitting}
 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">
 {isSubmitting ? (
-<React.Fragment>
+<>
 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
 <span>Sending...</span>
-</React.Fragment>
+</>
 ) : (
-<React.Fragment>
+<>
 <Send className="w-5 h-5" />
 <span>Send Message</span>
-</React.Fragment>
+</>
 )}
 </button>
 </form>
@@ -327,9 +327,3 @@ We're here to help you transform your business with cutting-edge AI and technolo
 )
 }
 export default ContactPage
-</textarea>
-</label>
-</label>
-</label>
-</span>
-</HTMLInputElement>

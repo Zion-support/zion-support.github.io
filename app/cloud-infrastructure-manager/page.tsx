@@ -58,7 +58,7 @@ const benefits = [
 'Expert technical support'
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
 <meta name="description" content="Comprehensive cloud infrastructure management platform by Zion Tech Group. Manage, monitor, and optimize your cloud resources across multiple providers." />
@@ -71,7 +71,7 @@ return (
 <div className="text-center mb-16">
 <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
 Cloud Infrastructure Manager
-</
+</h1>
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Streamline your cloud operations with our comprehensive infrastructure management platform.
 Monitor, optimize, and scale your cloud resources across multiple providers.
@@ -80,11 +80,11 @@ Monitor, optimize, and scale your cloud resources across multiple providers.
 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
 <Cloud className="mr-2 h-5 w-5" />
 Start Free Trial
-</
+</Cloud>
 <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />
 Call (302) 464-0950
-</
+</Phone>
 </div>
 </div>
 </div>
@@ -95,7 +95,7 @@ Call (302) 464-0950
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 Platform Features
-</
+</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Our cloud infrastructure manager provides everything you need to optimize your cloud operations.
 </p>
@@ -119,7 +119,7 @@ Our cloud infrastructure manager provides everything you need to optimize your c
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 Key Benefits
-</
+</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Optimize your cloud infrastructure with our comprehensive management platform.
 </p>
@@ -148,24 +148,17 @@ Start your free trial today and experience the power of our cloud infrastructure
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />
 Call (302) 464-0950
-</
+</Phone>
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
 <Mail className="mr-2 h-5 w-5" />
 Email Us
-</
+</Mail>
 </div>
 </div>
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default CloudInfrastructureManagerPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

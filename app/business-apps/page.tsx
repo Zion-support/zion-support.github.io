@@ -62,7 +62,7 @@ return (
 <div className="max-w-7xl mx-auto text-center">
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 Business Apps
-</
+</h1>
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Transform your business with our advanced business app solutions.
 Powered by cutting-edge AI technology and industry expertise.
@@ -96,7 +96,7 @@ Our business app solutions deliver unmatched performance, security, and scalabil
 <div className="text-center mb-12">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 Key Benefits
-</
+</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Experience the power of our business app solutions for your business.
 </p>
@@ -124,11 +124,11 @@ Contact our experts to discuss your business app needs and get a customized solu
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />
 Call Now
-</
+</Phone>
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
 <Mail className="mr-2 h-5 w-5" />
 Email Us
-</
+</Mail>
 </div>
 </div>
 <div className="text-center">
@@ -142,11 +142,11 @@ Contact our experts to discuss your business app needs and get a customized solu
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />
 Call Now
-</
+</Phone>
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
 <Mail className="mr-2 h-5 w-5" />
 Email Us
-</
+</Mail>
 </div>
 </div>
 </div>
@@ -154,11 +154,3 @@ Email Us
 )
 }
 export default BusinessAppsPage
-</button>
-</button>
-</button>
-</button>
-</section>
-</h2>
-</section>
-</h1>

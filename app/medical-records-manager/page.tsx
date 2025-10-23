@@ -36,7 +36,7 @@ description: 'End-to-end encryption, secure backups, and multi-factor authentica
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
 <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
@@ -48,7 +48,7 @@ return (
 <div className="text-center mb-16">
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 Medical Records Manager
-</
+</h1>
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.
 </p>
@@ -69,8 +69,7 @@ className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 ho
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default MedicalRecordsManagerPage
-</h1>

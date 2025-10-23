@@ -57,7 +57,7 @@ const benefits = [
 'Custom analytics solutions'
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
 <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
@@ -70,7 +70,7 @@ return (
 <div className="text-center mb-16">
 <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
 Data Analytics Services
-</
+</h1>
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Transform your data into actionable insights with our advanced analytics solutions.
 Make smarter decisions and drive business growth with AI-powered data analysis.
@@ -79,11 +79,11 @@ Make smarter decisions and drive business growth with AI-powered data analysis.
 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
 <BarChart className="mr-2 h-5 w-5" />
 Get Analytics Now
-</
+</BarChart>
 <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />
 Call (302) 464-0950
-</
+</Phone>
 </div>
 </div>
 </div>
@@ -94,7 +94,7 @@ Call (302) 464-0950
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 Our Analytics Solutions
-</
+</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 We provide comprehensive data analytics services to help you unlock the power of your data.
 </p>
@@ -118,7 +118,7 @@ We provide comprehensive data analytics services to help you unlock the power of
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 Key Benefits
-</
+</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Drive business success with our comprehensive data analytics services.
 </p>
@@ -147,24 +147,17 @@ Contact our analytics experts to discuss your data needs and get a customized so
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />
 Call (302) 464-0950
-</
+</Phone>
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
 <Mail className="mr-2 h-5 w-5" />
 Email Us
-</
+</Mail>
 </div>
 </div>
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default DataAnalyticsPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

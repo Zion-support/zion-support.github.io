@@ -83,7 +83,7 @@ icon: '🛡️'
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>AI Analytics - Zion Tech Group</title>
 <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
@@ -97,17 +97,17 @@ return (
 <div className="text-center">
 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
 AI Analytics
-</
+</h1>
 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
 Transform your business with intelligent analytics powered by cutting-edge AI technology.
 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
 Get Started
-</
+</button>
 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
 Learn More
-</
+</button>
 </div>
 </div>
 </div>
@@ -118,7 +118,7 @@ Learn More
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 Powerful AI Analytics Features
-</
+</h2>
 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 Discover how our AI analytics platform can revolutionize your business intelligence.
 </p>
@@ -155,17 +155,12 @@ Join thousands of businesses already using our AI analytics platform.
 </p>
 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
 Start Your Free Trial
-</
+</button>
 </div>
 </section>
 </main>
 <Footer />
-</React.Fragment>
+</>
 )
 }
 export default AiAnalyticsPage
-</button>
-</h2>
-</button>
-</button>
-</h1>

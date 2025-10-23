@@ -1,21 +1,41 @@
 'use client'
 import React from 'react'
-const EnhancedSkipLink: React.FC = () => {
-return (
-<a
-href="#main-content"
-className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-slate-900"
-onClick={(e) => {
-e.preventDefault()
-const main = document.querySelector('#main-content')
-if (main) {
-main.focus()
-main.scrollIntoView({ behavior: 'smooth' })
+import { Helmet } from 'react-helmet-async'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+
+const EnhancedSkipLinkPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>EnhancedSkipLink - Zion Tech Group</title>
+        <meta name="description" content="Advanced enhancedskiplink solution for modern businesses." />
+        <meta name="keywords" content="enhancedskiplink, artificial intelligence, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              EnhancedSkipLink
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Advanced enhancedskiplink solution powered by cutting-edge AI technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
 }
-}}
->
-Skip to main content
-</a>
-)
-}
-export default EnhancedSkipLink
+
+export default EnhancedSkipLinkPage

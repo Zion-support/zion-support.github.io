@@ -1,29 +1,41 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-    }
-  ]
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+
+const SystemMonitorPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>SystemMonitor - Zion Tech Group</title>
+        <meta name="description" content="Advanced systemmonitor solution for modern businesses." />
+        <meta name="keywords" content="systemmonitor, artificial intelligence, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              SystemMonitor
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced systemmonitor solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Advanced systemmonitor solution powered by cutting-edge AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
                 Learn More
-  </
+              </button>
             </div>
-        </div>
-    </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   )
 }
+
 export default SystemMonitorPage
-  </button>

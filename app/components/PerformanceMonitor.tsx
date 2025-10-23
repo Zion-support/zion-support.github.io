@@ -1,53 +1,41 @@
-"use client";
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
-import React, { useEffect } from "react";
+const PerformanceMonitorPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>PerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="Advanced performancemonitor solution for modern businesses." />
+        <meta name="keywords" content="performancemonitor, artificial intelligence, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              PerformanceMonitor
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Advanced performancemonitor solution powered by cutting-edge AI technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
+}
 
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    // Performance monitoring logic
-    if (typeof window !== "undefined" && 'PerformanceObserver' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log(
-            "Performance Entry:",
-            entry.name,
-            (entry as any).value || "N/A",
-          );
-        }
-      });
-
-      try {
-        observer.observe({ entryTypes: ["measure", "navigation", "paint"] });
-      } catch (e) {
-        console.warn("Performance Observer not supported");
-      }
-
-      // Monitor resource loading
-      window.addEventListener("load", () => {
-        const navigation = performance.getEntriesByType(
-          "navigation",
-        )[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          console.log(
-            "Page Load Time:",
-            navigation.loadEventEnd - navigation.loadEventStart,
-          );
-        }
-      });
-
-      return () => {
-        observer.disconnect();
-      };
-    }
-
-    return () => {
-      // Cleanup function
-    };
-  }, []);
-
-  return null;
-};
-
-export default PerformanceMonitor;
-
+export default PerformanceMonitorPage

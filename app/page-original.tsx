@@ -60,7 +60,7 @@ event_label: 'main_phone_number';}
 }
 }, [])
 return (
-<React.Fragment>
+<>
 <SEOOptimizer
 title="Zion Tech Group - Advanced AI and IT Solutions"
 description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -136,7 +136,7 @@ enableContentTypeSniffingProtection={true}
 href="#main-content"
 className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
 Skip to main content
-</
+</Navigation>
 {/* Content Promotion Banner */}
 <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
 <ContentPromotionBanner />
@@ -161,7 +161,7 @@ Zion Tech Group</h1>
 </h1>
 <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
 Advanced AI and IT Solutions
-</
+</p>
 <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
 Transform your business with our cutting-edge technology and achieve unprecedented growth.
@@ -198,12 +198,12 @@ className="cyber-button w-full sm:w-auto text-center"
 aria-label="Call us at (302) 464-0950"
 >
 📞 Call: (302) 464-0950
-</
+</div>
 <a
 href="/contact"
 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
 Get Free Consultation
-</
+</div>
 </div>
 </div>
 </section>
@@ -211,10 +211,10 @@ Get Free Consultation
 <section className="mb-16" aria-labelledby="services-heading">
 <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
 Our Services
-</
+</h2>
 <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
 Comprehensive AI and IT solutions designed to transform your business operations
-</
+</p>
 {/* Primary Services Grid */}
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>
 <Suspense fallback={<ServiceCardSkeleton />}>
@@ -315,7 +315,7 @@ Learn More →
 <div className="mb-12"></div>
 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
 Micro SAAS Solutions
-</
+</h3>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
 <Suspense fallback={<ServiceCardSkeleton />}>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -578,7 +578,7 @@ Learn More →
 <div className="mb-12"></div>
 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
 IT Services & Infrastructure
-</
+</h3>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
@@ -781,7 +781,7 @@ Learn More →
 <div className="mb-12"></div>
 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
 Advanced AI Services
-</
+</h3>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
@@ -945,7 +945,7 @@ Learn More →
 <div className="mb-12"></div>
 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
 Emerging Technologies
-</
+</h3>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
@@ -1005,7 +1005,7 @@ Learn More →
 <div className="mb-12"></div>
 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
 IT Services & Infrastructure
-</
+</h3>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
@@ -1053,7 +1053,7 @@ Learn More →
 <section className="mb-16" aria-labelledby="micro-saas-heading">
 <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
 Micro SAAS Solutions
-</
+</h2>
 <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
 Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
 </p>
@@ -1061,7 +1061,7 @@ Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use app
 <div className="mb-12"></div>
 <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
 Productivity & Business Tools
-</
+</h3>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
@@ -1173,7 +1173,7 @@ Try Free →
 <div className="mb-12"></div>
 <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
 Marketing & Sales Tools
-</
+</h3>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
@@ -1233,7 +1233,7 @@ Try Free →
 <div className="mb-12"></div>
 <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
 Developer Tools
-</
+</h3>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
@@ -1328,7 +1328,7 @@ Get in touch with our experts to discuss your AI and IT needs. We're here to hel
 <p className="text-gray-300 text-sm">Phone</p>
 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
 +1 (302) 464-0950
-</
+</a>
 </div>
 </div>
 <div className="flex items-center space-x-4"></div>
@@ -1339,7 +1339,7 @@ Get in touch with our experts to discuss your AI and IT needs. We're here to hel
 <p className="text-gray-300 text-sm">Email</p>
 <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
 kleber@ziontechgroup.com
-</
+</a>
 </div>
 </div>
 <div className="flex items-center space-x-4"></div>
@@ -1351,7 +1351,7 @@ kleber@ziontechgroup.com
 <p className="text-white font-semibold">
 364 E Main St STE 1008<br />
 Middletown, DE 19709
-</
+</br>
 </div>
 </div>
 <div className="flex items-center space-x-4"></div>
@@ -1363,7 +1363,7 @@ Middletown, DE 19709
 <p className="text-white font-semibold">
 Monday - Friday: 9:00 AM - 6:00 PM EST<br />
 24/7 Emergency Support Available
-</
+</br>
 </div>
 </div>
 </div>
@@ -1375,7 +1375,7 @@ Monday - Friday: 9:00 AM - 6:00 PM EST<br />
 <div></div>
 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
 Full Name
-</
+</label>
 <input
 type="text"
 id="name"
@@ -1388,7 +1388,7 @@ required
 <div></div>
 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
 Email Address
-</
+</label>
 <input
 type="email"
 id="email"
@@ -1401,7 +1401,7 @@ required
 <div></div>
 <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
 Phone Number
-</
+</label>
 <input
 type="tel"
 id="phone"
@@ -1413,7 +1413,7 @@ placeholder="Enter your phone number"
 <div></div>
 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
 Service Interest
-</
+</label>
 <select
 id="service"
 name="service"
@@ -1429,7 +1429,7 @@ className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-w
 <div></div>
 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
 Message
-</
+</label>
 <textarea
 id="message"
 name="message"
@@ -1442,7 +1442,7 @@ placeholder="Tell us about your project or requirements"
 type="submit"
 className="w-full cyber-button text-center py-4">
 Send Message
-</
+</label>
 </form>
 </div>
 </div>
@@ -1452,38 +1452,8 @@ Send Message
 {/* Footer */}
 <Footer />
 </div>
-</React.Fragment>
+</>
 )
 })
 HomePage.displayName = 'HomePage'
 export default HomePage
-</button>
-</label>
-</label>
-</label>
-</label>
-</label>
-</p>
-</p>
-</a>
-</a>
-</h3>
-</h3>
-</h3>
-</h2>
-</h3>
-</h3>
-</h3>
-</h3>
-</h3>
-</p>
-</h2>
-</a>
-</a>
-</p>
-</a>
-</SecurityEnhancer>
-</Analytics>
-</AccessibilityEnhancer>
-</PerformanceOptimizer>
-</SEOOptimizer>

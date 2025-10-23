@@ -58,7 +58,7 @@ const benefits = [
 'Ongoing security improvement guidance'
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
 <meta name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." />
@@ -71,7 +71,7 @@ return (
 <div className="text-center mb-16">
 <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
 Penetration Testing Services
-</
+</h1>
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Identify and fix security vulnerabilities before attackers exploit them.
 Our expert penetration testing services help secure your systems and protect your business.
@@ -80,11 +80,11 @@ Our expert penetration testing services help secure your systems and protect you
 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
 <Shield className="mr-2 h-5 w-5" />
 Schedule Assessment
-</
+</Shield>
 <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />
 Call (302) 464-0950
-</
+</Phone>
 </div>
 </div>
 </div>
@@ -95,7 +95,7 @@ Call (302) 464-0950
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 Our Penetration Testing Approach
-</
+</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 We use industry-standard methodologies and cutting-edge tools to thoroughly assess your security posture.
 </p>
@@ -119,7 +119,7 @@ We use industry-standard methodologies and cutting-edge tools to thoroughly asse
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 Key Benefits
-</
+</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Strengthen your security defenses with our comprehensive penetration testing services.
 </p>
@@ -148,24 +148,17 @@ Contact our security experts to schedule a comprehensive penetration test for yo
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />
 Call (302) 464-0950
-</
+</Phone>
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
 <Mail className="mr-2 h-5 w-5" />
 Email Us
-</
+</Mail>
 </div>
 </div>
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default PenetrationTestingPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

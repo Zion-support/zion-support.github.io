@@ -116,7 +116,7 @@ export const SEO: React.FC<SEOProps> = ({
         <React.Fragment key={altLocale}>
           <meta property="og:locale:alternate" content={altLocale} />
           <link rel="alternate" hrefLang={altLocale} href={altUrl} />
-        </React.Fragment>
+        </>
       ))}
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={seo.twitterCard} />

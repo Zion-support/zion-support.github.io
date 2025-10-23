@@ -1,47 +1,41 @@
-<<<<<<< HEAD
-import React from 'react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-const AdminPage: React.FC = () => {
+const AdminPagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Admin Dashboard
-          </h1>
-          <p className="text-lg text-gray-600 mb-8">
-            Welcome to the admin panel. This page is under construction.
-          </p>
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Coming Soon
-            </h2>
-            <p className="text-gray-600">
-              Admin functionality will be available in a future update.
+    <>
+      <Helmet>
+        <title>AdminPage - Zion Tech Group</title>
+        <meta name="description" content="Advanced adminpage solution for modern businesses." />
+        <meta name="keywords" content="adminpage, artificial intelligence, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              AdminPage
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Advanced adminpage solution powered by cutting-edge AI technology.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
+                Learn More
+              </button>
+            </div>
           </div>
-        </div>
-      </div>
-=======
-"use client";
-import React from "react";
-
-interface AdminPageProps {
-  className?: string;
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
 }
 
-const AdminPage: React.FC<AdminPageProps> = ({ className = "" }) => {
-  return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h1>AdminPage</h1>
-      <p>This is a clean, functional component.</p>
->>>>>>> origin/main
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-export default AdminPage;
-=======
-export default AdminPage;
->>>>>>> origin/main
+export default AdminPagePage

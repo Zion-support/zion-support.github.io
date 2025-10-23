@@ -94,7 +94,7 @@ d="M6 18L18 6M6 6l12 12"
 </div>
 <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
 Oops! Something went wrong
-</
+</h2>
 <p className="mt-2 text-center text-gray-600">
 {error.message || 'An unexpected error occurred'}
 </p>
@@ -106,12 +106,12 @@ Oops! Something went wrong
 onClick={resetError}
 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
 Try Again
-</
+</div>
 <button
 onClick={() => (window.location.href = '/')}
 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
 Go Home
-</
+</div>
 </div>
 </div>
 </div>
@@ -148,7 +148,7 @@ Unable to connect to the server. Please check your internet connection and try a
 onClick={resetError}
 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
 Retry Connection
-</
+</div>
 </div>
 </div>
 </div>
@@ -171,12 +171,12 @@ The page you're looking for doesn't exist or has been moved.
 onClick={() => (window.location.href = '/')}
 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
 Go Home
-</
+</div>
 <button
 onClick={() => window.history.back()}
 className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
 Go Back
-</
+</div>
 </div>
 </div>
 </div>
@@ -218,11 +218,3 @@ url: typeof window !== 'undefined' ? window.location.href : 'unknown',
 }
 }
 export default getErrorBoundaryConfig
-</button>
-</button>
-</button>
-</path>
-</button>
-</button>
-</h2>
-</path>

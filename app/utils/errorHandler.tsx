@@ -1038,13 +1038,3 @@ return {/* TODO: Fix JSX expression */}
 }
 }
 export default ErrorHandler
-"`
-</h2>
-</ErrorSeverit>
-</strong>
-</strong>
-</ErrorHandlerConfig>
-</ErrorHandlerConfig>
-</ErrorHandlerConfig>
-</ErrorHandlerConfig>
-</strin>

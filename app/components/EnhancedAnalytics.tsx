@@ -1,122 +1,41 @@
-"use client";
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
-import React, { createContext, useContext, useEffect } from "react";
-
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-  identify: (userId: string, traits?: Record<string, unknown>) => void;
-  page: (name: string, properties?: Record<string, unknown>) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined,
-);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider");
-  }
-  return context;
-};
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-}) => {
-  useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== "undefined") {
-      // Google Analytics
-      if (process.env.NODE_ENV === "production") {
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
-        document.head.appendChild(script);
-
-        (window as unknown as { dataLayer: unknown[] }).dataLayer =
-          (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
-        function gtag(...args: unknown[]) {
-          (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
-        }
-        gtag("js", new Date());
-        gtag("config", process.env.REACT_APP_GA_ID);
-      }
-    }
-  }, []);
-
-  const track = (event: string, properties?: Record<string, unknown>) => {
-    if (typeof window !== "undefined") {
-      // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "event",
-          event,
-          properties,
-        );
-      }
-
-      // Custom analytics
-      }
-  };
-
-  const identify = (userId: string, traits?: Record<string, unknown>) => {
-    if (typeof window !== "undefined") {
-      // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "config",
-          process.env.REACT_APP_GA_ID,
-          {
-            user_id: userId,
-            custom_map: traits,
-          },
-        );
-      }
-
-      // Custom analytics
-      }
-  };
-
-  const page = (name: string, properties?: Record<string, unknown>) => {
-    if (typeof window !== "undefined") {
-      // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "event",
-          "page_view",
-          {
-            page_title: name,
-            page_location: window.location.href,
-            ...properties,
-          },
-        );
-      }
-
-      // Custom analytics
-      }
-  };
-
-  const value: AnalyticsContextType = {
-    track,
-    identify,
-    page,
-  };
-
+const EnhancedAnalyticsPage: React.FC = () => {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-};
-
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag: (...args: any[]) => void;
-  }
+    <>
+      <Helmet>
+        <title>EnhancedAnalytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced enhancedanalytics solution for modern businesses." />
+        <meta name="keywords" content="enhancedanalytics, artificial intelligence, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              EnhancedAnalytics
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Advanced enhancedanalytics solution powered by cutting-edge AI technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
 }
+
+export default EnhancedAnalyticsPage

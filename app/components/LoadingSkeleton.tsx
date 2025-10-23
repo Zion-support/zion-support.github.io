@@ -1,33 +1,41 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async"
-import { Link } from "react-router-dom"
-import { ArrowRight } from "lucide-react"
-export default function LoadingSkeleton() {
-  return (
-    <div>
-      <Helmet>
-        <title>Loading Skeleton - Zion Tech Group</title>
-      </Helmet>
-      <div className="loading-skeleton-container">
-        <div className="skeleton">
-          <div className="skeleton-line"></div>
-          <div className="skeleton-line"></div>
-          <div className="skeleton-line"></div>
-        </div>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  );
-}
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
->>>>>>> origin/main
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+
+const LoadingSkeletonPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>LoadingSkeleton - Zion Tech Group</title>
+        <meta name="description" content="Advanced loadingskeleton solution for modern businesses." />
+        <meta name="keywords" content="loadingskeleton, artificial intelligence, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              LoadingSkeleton
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Advanced loadingskeleton solution powered by cutting-edge AI technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
+}
+
+export default LoadingSkeletonPage
