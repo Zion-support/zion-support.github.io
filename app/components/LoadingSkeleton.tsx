@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -142,3 +143,5 @@ const LoadingSkeletonPage: React.FC = () => {
 export default LoadingSkeletonPage;
 =======
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -358,3 +359,5 @@ if (process.env.NODE_ENV=== 'development') {return(<divclassName='fixed bottom-4
 return nul l
 }
 export default AdvancedPerformanceMonitor
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

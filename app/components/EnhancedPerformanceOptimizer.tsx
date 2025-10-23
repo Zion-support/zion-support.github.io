@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const EnhancedPerformanceOptimizerPage: React.FC = () => {
+<<<<<<< HEAD
   const features = [
     {
       icon: Brain,
@@ -199,6 +200,8 @@ Key Benefits
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Experience the power of our enhancedperformanceoptimizer solutions for your business.
 </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
 <div key={index} className="flex items-start space-x-3">
@@ -219,9 +222,12 @@ Experience the power of our enhancedperformanceoptimizer solutions for your busi
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
 <Phone className="mr-2 h-5 w-5" />
 Call Now
+<<<<<<< HEAD
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
 <Mail className="mr-2 h-5 w-5" />
 Email Us
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 </div>
 </div>
 </div>

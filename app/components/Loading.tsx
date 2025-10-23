@@ -39,6 +39,7 @@ const LoadingPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+<<<<<<< HEAD
 
   return (
     <>
@@ -140,3 +141,5 @@ const LoadingPage: React.FC = () => {
 };
 
 export default LoadingPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

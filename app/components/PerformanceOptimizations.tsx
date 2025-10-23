@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 import React from 'react'
 import Navigation from './Navigation'
@@ -140,3 +141,5 @@ const PerformanceOptimizationsPage: React.FC = () => {
 };
 
 export default PerformanceOptimizationsPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { cn } from '../lib/utils'
 
 interface ResponsiveContainerProps {
@@ -130,3 +131,8 @@ export default ResponsiveContainerPage;
 };
 
 export default ResponsiveContainer;
+=======
+
+  return (
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

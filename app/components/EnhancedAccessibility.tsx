@@ -139,6 +139,7 @@ const EnhancedAccessibilityPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedAccessibilityPage;
 =======
 import React, {useEffect} from 'react'
@@ -330,3 +331,5 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
  return<>{children}</>
 }
 export default EnhancedAccessibility
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

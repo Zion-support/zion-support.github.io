@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 
 import React, { useEffect, useState, useCallback } from 'react'
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
@@ -170,6 +171,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 Learn More
               </button>
             </div>
+=======
+
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
           </div>
         </section>
 
@@ -202,6 +207,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -249,3 +255,7 @@ export default PerformanceOptimizer
 };
 
 export default PerformanceOptimizerPage;
+=======
+      </div>
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

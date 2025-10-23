@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 'use client'
 import React, { useState } from 'react'
 import { Mail, ArrowRight } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('')

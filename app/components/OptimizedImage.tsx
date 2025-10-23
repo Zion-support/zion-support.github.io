@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
 
@@ -25,6 +26,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                 OptimizedImage
               <br />
               <span className="text-white">Solutions</span>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced OptimizedImage solution for modern businesses.
@@ -39,6 +42,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
       {/* Features Section */}
@@ -74,6 +78,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our optimizedimage solutions for your business.
             </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
           </div>
         </section>
 
@@ -105,12 +111,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
               Join thousands of businesses already using our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
             </div>
           </div>
         </section>
@@ -121,3 +130,43 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
 };
 
 export default OptimizedImagePage;
+<<<<<<< HEAD
+=======
+    <div
+      ref={imgRef}
+      className="relative overflow-hidden"
+      style={{ width, height }}
+    >{!isLoaded && !isError && (</div>
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
+        </div>
+      )}
+      {isError ? (
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+          <div className="text-gray-400 text-sm">Failed to load image</div>
+        </div>
+      ) : (
+        <Image
+          src={imageSrc}
+          alt={alt}
+          width={width || 300}
+          height={height || 200}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? "opacity-100" : "opacity-0"
+          } ${className}`}
+          onLoad={handleLoad}
+          onError={handleError}
+          priority={priority}
+          quality={quality}
+          sizes={sizes}
+          placeholder="blur"
+          blurDataURL={placeholder}
+        />
+      )}
+    </div>
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

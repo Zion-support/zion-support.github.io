@@ -41,6 +41,7 @@ const ContentPreviewCardPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       
       <Navigation />
@@ -63,10 +64,13 @@ const ContentPreviewCardPage: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -92,6 +96,8 @@ const ContentPreviewCardPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
             </div>
           </div>
         </section>
@@ -139,4 +145,7 @@ const ContentPreviewCardPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ContentPreviewCardPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

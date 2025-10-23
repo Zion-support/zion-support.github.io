@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Lock, BarChart3, FileText } from 'lucide-react'
 import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react'
 import { MapPin } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 const Footer: React.FC = () => {
   const microSaasServices = [

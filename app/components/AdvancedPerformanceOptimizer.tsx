@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedPerformanceOptimizerProps {
@@ -247,3 +248,6 @@ export default AdvancedPerformanceOptimizer
 };
 
 export default AdvancedPerformanceOptimizerPage;
+=======
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
