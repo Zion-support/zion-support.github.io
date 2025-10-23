@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { MessageSquare } from "lucide-react"
+
 interface FormData {
   name: string;
   email: string;
@@ -9,7 +10,8 @@ interface FormData {
   service: string;
 }
 
-const [formData, setFormData] = useState<FormData>({
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
@@ -306,5 +308,7 @@ const [formData, setFormData] = useState<FormData>({
     </form>
   );
 };
+
+export default ContactForm;
 
 

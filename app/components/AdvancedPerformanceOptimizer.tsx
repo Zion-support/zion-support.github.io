@@ -83,9 +83,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // })
+          console.log('Service Worker registered:', registration);
+        })
         .catch((registrationError) => {
-          // });
+          console.error('Service Worker registration failed:', registrationError);
+        });
     }
 
     // Memory-based caching for API responses
@@ -211,7 +213,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           fid: Math.round(performanceMetrics.fid),
           cls: Math.round(performanceMetrics.cls * 1000) / 1000
         }
-
+      }
     }
   }, [performanceMetrics]);
 

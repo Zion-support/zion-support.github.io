@@ -61,29 +61,31 @@ class AdvancedErrorBoundary extends Component<
       errorInfo,
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      logger.error(
-        'Error Boundary caught an error',
-        error,
-        { context: 'ErrorBoundary', errorInfo }
-      );
+    // Log error
+    logger.error('Error caught by boundary:', {
+      error: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+    });
+
+    // Report error if enabled
+    if (this.props.enableErrorReporting !== false) {
+      this.reportError(error, errorInfo);
     }
 
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
-    // Report error to external service
-    if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
-    }
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  private async reportError(error: Error, errorInfo: ErrorInfo) {
     const errorReport: ErrorReport = {
-      errorId: this.state.errorId || this.generateErrorId(),
+      errorId: this.state.errorId,
       error,
       errorInfo,
       message: error.message,
@@ -92,45 +94,13 @@ class AdvancedErrorBoundary extends Component<
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      userId: this.getUserId(),
+      userId: null, // You can implement user identification here
       sessionId: this.getSessionId(),
     };
 
-    // Send to error reporting service
-    this.sendErrorReport(errorReport);
-  };
-
-  private getUserId = (): string | null => {
-    // Try to get user ID from localStorage or other sources
     try {
-      return localStorage.getItem('userId') || null;
-    } catch {
-      return null;
-    }
-  };
-
-  private getSessionId = (): string => {
-    // Generate or retrieve session ID
-    try {
-      let sessionId = sessionStorage.getItem('sessionId');
-      if (!sessionId) {
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem('sessionId', sessionId);
-      }
-      return sessionId;
-    } catch {
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
-  };
-
-  private generateErrorId = (): string => {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
-
-  private sendErrorReport = async (errorReport: ErrorReport) => {
-    try {
-      // Send to your error reporting service
-      await fetch('/api/errors', {
+      // Send error report to your error reporting service
+      await fetch('/api/error-report', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -138,24 +108,27 @@ class AdvancedErrorBoundary extends Component<
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      logger.error(
-        'Failed to send error report',
-        reportError as Error,
-        { context: 'ErrorReporting' }
-      );
+      console.error('Failed to report error:', reportError);
     }
-  };
+  }
+
+  private getSessionId(): string {
+    let sessionId = sessionStorage.getItem('sessionId');
+    if (!sessionId) {
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem('sessionId', sessionId);
+    }
+    return sessionId;
+  }
 
   private handleRetry = () => {
-    if (this.retryCount < this.maxRetries) {
-      this.retryCount++;
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: null,
-      });
-    }
+    this.retryCount++;
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+    });
   };
 
   private handleReload = () => {
@@ -194,15 +167,16 @@ class AdvancedErrorBoundary extends Component<
                     />
                   </svg>
                 </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>h2>
-                <p className='mt-2 text-sm text-gray-600'>We&apos;re sorry, but something unexpected happened. Our team</p>
+                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong</h2>
+                <p className='mt-2 text-sm text-gray-600'>
+                  We&apos;re sorry, but something unexpected happened. Our team
                   has been notified.
                 </p>
               </div>
 
               {process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>h3>
+                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>
                   <div className='mt-2 text-sm text-red-700'>
                     <p>
                       <strong>Error ID:</strong> {this.state.errorId}
@@ -214,46 +188,57 @@ class AdvancedErrorBoundary extends Component<
                       <summary className='cursor-pointer font-medium'>
                         Stack Trace
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</p>pre>
+                      <pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</pre>
                     </details>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
                         Component Stack
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</p>pre>
+                      <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</pre>
                     </details>
                   </div>
                 </div>
               )}
 
-              <div className='mt-6 space-y-3'>{this.props.enableRetry &&</div>
+              <div className='mt-6 space-y-3'>
+                {this.props.enableRetry &&
                   this.retryCount < this.maxRetries && (
                     <button
                       onClick={this.handleRetry}
                       className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                     aria-label="Action button">Try Again ({this.maxRetries - this.retryCount} attempts</button>
-                      left)
+                      aria-label="Try Again"
+                    >
+                      Try Again ({this.maxRetries - this.retryCount} attempts left)
                     </button>
                   )}
 
                 <button
                   onClick={this.handleReload}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                 aria-label="Action button">Reload Page</button>
+                  aria-label="Reload Page"
+                >
+                  Reload Page
+                </button>
 
                 <button
                   onClick={this.handleGoHome}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                 aria-label="Action button">Go to Homepage</button>
+                  aria-label="Go to Homepage"
+                >
+                  Go to Homepage
+                </button>
               </div>
 
               <div className='mt-6 text-center'>
-                <p className='text-xs text-gray-500'>If this problem persists, please contact our support team</p>
+                <p className='text-xs text-gray-500'>
+                  If this problem persists, please contact our support team
                   at&nbsp;
                   <a
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
-                  >kleber@ziontechgroup.com</a>a>
+                  >
+                    kleber@ziontechgroup.com
+                  </a>
                 </p>
               </div>
             </div>

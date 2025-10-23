@@ -65,30 +65,5 @@ describe('ImageOptimizer', () => {
     );
     const img = screen.getByRole('img', { hidden: true });
     expect(img).toHaveAttribute('src', 'test-image.jpg?format=webp&quality=80');
-=======
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-
-// Mock ImageOptimizer component
-const ImageOptimizer = ({ src, alt }: { src: string; alt: string }) => {
-  return <img src={src} alt={alt} data-testid="optimized-image" />;
-};
-
-describe('ImageOptimizer', () => {
-  it('renders image with correct src and alt', () => {
-    const testSrc = 'test-image.jpg';
-    const testAlt = 'Test image';
-    
-    render(<ImageOptimizer src={testSrc} alt={testAlt} />);
-    
-    const image = screen.getByTestId('optimized-image');
-    expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', testSrc);
-    expect(image).toHaveAttribute('alt', testAlt);
-  });
-
-  it('renders without crashing', () => {
-    render(<ImageOptimizer src="test.jpg" alt="test" />);
-    expect(screen.getByTestId('optimized-image')).toBeInTheDocument();
   });
 });
