@@ -1,45 +1,49 @@
-'use client';
-import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+"use client";
+import React, { useState, useCallback } from "react";
+import { ArrowRight, Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    budget: "",
+    message: "",
+    urgency: "normal",
+    preferredContact: "email"
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [name]: value
     }));
   }, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+    setSubmitStatus('idle');
+
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        service: "",
+        budget: "",
+        message: "",
+        urgency: "normal",
+        preferredContact: "email"
       });
     } catch (error) {
       setSubmitStatus('error');
@@ -48,57 +52,59 @@ const ContactPage: React.FC = () => {
     }
   }, []);
 
+  React.useEffect(() => {
+    if (submitStatus === 'success') {
+      const timer = setTimeout(() => {
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          service: "",
+          budget: "",
+          message: "",
+          urgency: "normal",
+          preferredContact: "email"
+        });
+        setSubmitStatus('idle');
+      }, 3000);
+    }
+  }, [submitStatus]);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com" />
-        <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support" />
-      </Helmet>
+    <>
 
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Get in
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Touch
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business? Let's discuss your project and explore 
-            how our AI and IT solutions can help you achieve your goals.
-          </p>
-        </div>
-      </section>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Contact{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Us
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Ready to transform your business with cutting-edge AI and IT solutions? 
+              Let's discuss how we can help you achieve your goals.
+            </p>
+          </div>
+        </section>
 
-      {/* Contact Form and Info */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
-              
-              {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                  <span className="text-green-400">Message sent successfully!</span>
-                </div>
-              )}
-
-              {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
-                  <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Contact Form Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                <h2 className="text-2xl font-bold text-white mb-6">
+                  Send us a Message
+                </h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
@@ -108,11 +114,13 @@ const ContactPage: React.FC = () => {
                       id="name"
                       name="name"
                       value={formData.name}
-                      onChange={handleChange}
+                      onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your full name"
                     />
                   </div>
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
@@ -122,27 +130,31 @@ const ContactPage: React.FC = () => {
                       id="email"
                       name="email"
                       value={formData.email}
-                      onChange={handleChange}
+                      onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="your.email@example.com"
                     />
                   </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company Name
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
+                      Company (Optional)
                     </label>
                     <input
                       type="text"
                       id="company"
                       name="company"
                       value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your company name"
                     />
                   </div>
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
@@ -152,131 +164,187 @@ const ContactPage: React.FC = () => {
                       id="phone"
                       name="phone"
                       value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="+1 (555) 123-4567"
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                      Service Interest
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="ai-solutions">AI Solutions</option>
+                      <option value="it-services">IT Services</option>
+                      <option value="cloud-solutions">Cloud Solutions</option>
+                      <option value="cybersecurity">Cybersecurity</option>
+                      <option value="data-analytics">Data Analytics</option>
+                      <option value="custom-development">Custom Development</option>
+                      <option value="consulting">Consulting</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
+                      Project Budget
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    >
+                      <option value="">Select budget range</option>
+                      <option value="under-10k">Under $10,000</option>
+                      <option value="10k-50k">$10,000 - $50,000</option>
+                      <option value="50k-100k">$50,000 - $100,000</option>
+                      <option value="100k-500k">$100,000 - $500,000</option>
+                      <option value="over-500k">Over $500,000</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={4}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                      placeholder="Tell us about your project requirements..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
-                    <option value="">Select a service</option>
-                    <option value="ai-solutions">AI Solutions</option>
-                    <option value="it-services">IT Services</option>
-                    <option value="cloud-migration">Cloud Migration</option>
-                    <option value="cybersecurity">Cybersecurity</option>
-                    <option value="digital-transformation">Digital Transformation</option>
-                  </select>
-                </div>
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </button>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Tell us about your project..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
-                    </>
+                  {submitStatus === 'success' && (
+                    <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-center">
+                      Thank you! Your message has been sent successfully.
+                    </div>
                   )}
-                </button>
-              </form>
-            </div>
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Get in touch</h2>
-                <p className="text-gray-300 mb-8">
-                  We're here to help you succeed. Reach out to us through any of the channels below, 
-                  and we'll get back to you within 24 hours.
-                </p>
+                  {submitStatus === 'error' && (
+                    <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-center">
+                      Sorry, there was an error sending your message. Please try again.
+                    </div>
+                  )}
+                </form>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                    <p className="text-gray-300">+1-302-464-0950</p>
-                    <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
-                  </div>
+              {/* Contact Information */}
+              <div className="space-y-8">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                  <h3 className="text-xl font-bold text-white mb-6">
+                    Get in touch
+                  </h3>
+                  <p className="text-gray-300 mb-8">
+                    We're here to help you succeed. Reach out to us through any
+                    of these channels.
+                  </p>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        Email Us
+                      </h3>
+                      <p className="text-gray-300 mb-2">
+                        Send us an email and we'll respond within 24 hours
+                      </p>
+                      <a
+                        href="mailto:contact@ziontechgroup.com"
+                        className="text-blue-400 hover:text-blue-300 transition-colors"
+                      >
+                        contact@ziontechgroup.com
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                    <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
-                  </div>
-                </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        Call Us
+                      </h3>
+                      <p className="text-gray-300 mb-2">
+                        Speak with our team directly
+                      </p>
+                      <a
+                        href="tel:+1-555-123-4567"
+                        className="text-green-400 hover:text-green-300 transition-colors"
+                      >
+                        +1 (555) 123-4567
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
-                    <p className="text-gray-300">364 E Main St STE 1008</p>
-                    <p className="text-gray-300">Middletown, DE 19709</p>
-                  </div>
-                </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        Visit Us
+                      </h3>
+                      <p className="text-gray-300 mb-2">
+                        Come see us at our headquarters
+                      </p>
+                      <p className="text-gray-300">
+                        123 Tech Street<br />
+                        San Francisco, CA 94105
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
-                    <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
-                    <p className="text-gray-300">Sunday: Closed</p>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        Business Hours
+                      </h3>
+                      <p className="text-gray-300 mb-2">
+                        We're available Monday through Friday
+                      </p>
+                      <p className="text-gray-300">
+                        9:00 AM - 6:00 PM PST
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

@@ -1,30 +1,35 @@
-'use client';
+"use client";
+import React from "react";
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AutonomousSystemsPage: React.FC = () => {
+export default function AutonomousSystemsPage() {
   return (
-    <>
-      <Helmet>
-        <title>Autonomous Systems - Zion Tech Group</title>
-        <meta name="description" content="Advanced autonomous systems solutions for modern businesses." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Autonomous <span className="text-cyan-400">Systems</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced autonomous systems solutions for modern businesses.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Autonomous Systems</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced autonomous systems solutions by Zion Tech Group
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default AutonomousSystemsPage;
+}

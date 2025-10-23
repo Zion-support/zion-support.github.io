@@ -1,21 +1,15 @@
+"use client";
+import React from "react";
+import "@testing-library/jest-dom";
 // Global type definitions for the application
-
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
   }
 }
 
-// Environment variables
-declare namespace NodeJS {
-  interface ProcessEnv {
-    NODE_ENV: 'development' | 'production' | 'test';
-    NEXT_PUBLIC_GA_ID?: string;
-    NEXT_PUBLIC_SITE_URL?: string;
-  }
-}
-
+// Environment variables - removed unused NodeJS namespace
 // Component props interfaces
 export interface BaseComponentProps {
   className?: string;
@@ -28,61 +22,44 @@ export interface PageProps {
 }
 
 // API response types
-export interface ApiResponse<T = any> {
+export interface ApiResponse<T = unknown> {
   success: boolean;
   data?: T;
   error?: string;
   message?: string;
 }
 
-// Form types
-export interface ContactFormData {
-  name: string;
-  email: string;
-  company?: string;
-  message: string;
-  phone?: string;
-}
-
-export interface NewsletterFormData {
-  email: string;
-  name?: string;
-}
-
 // Service types
 export interface Service {
   id: string;
-  title: string;
+  name: string;
   description: string;
-  icon: string;
   features: string[];
+  pricing: {
+    starting: number;
+    currency: string;
+    period: "month" | "year" | "one-time";
+  };
   benefits: string[];
+  icon: string;
+  popular: boolean;
+  new?: boolean;
+  path: string;
 }
 
-export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  slug: string;
-  publishedAt: string;
-  author: string;
-  tags: string[];
-  featuredImage?: string;
-}
-
-// Navigation types
-export interface NavigationItem {
-  label: string;
-  href: string;
-  children?: NavigationItem[];
+// Performance monitoring types
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
 }
 
 // Analytics types
 export interface AnalyticsEvent {
-  action: string;
-  category: string;
-  label?: string;
+  event_category: string;
+  event_label: string;
   value?: number;
 }
 

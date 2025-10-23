@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-
+"use client";
+import React from "react";
+import { useEffect, useRef, useState } from "react";
 interface UseIntersectionObserverOptions {
   threshold?: number | number[];
   root?: Element | null;
@@ -14,22 +15,24 @@ interface UseIntersectionObserverReturn {
 }
 
 export function useIntersectionObserver(
-  options: UseIntersectionObserverOptions = {}
+  options: UseIntersectionObserverOptions = {},
 ): UseIntersectionObserverReturn {
   const {
     threshold = 0,
     root = null,
-    rootMargin = '0%',
+    rootMargin = "0%",
     freezeOnceVisible = false,
   } = options;
 
   const [isIntersecting, setIsIntersecting] = useState(false);
-  const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
+  const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>(
+    undefined,
+  );
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
+    const node = ref.current;
+    if (!node) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -44,17 +47,19 @@ export function useIntersectionObserver(
         threshold,
         root,
         rootMargin,
-      }
+      },
     );
 
-    observer.observe(element);
+    observer.observe(node);
 
     return () => {
       observer.disconnect();
     };
   }, [threshold, root, rootMargin, freezeOnceVisible]);
 
-  return { ref, isIntersecting, entry };
+  return {
+    ref,
+    isIntersecting,
+    entry,
+  };
 }
-
-export default useIntersectionObserver;
