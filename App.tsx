@@ -27,7 +27,6 @@ const CareersPage = lazy(() => import("./app/careers/page"));
 const PrivacyPage = lazy(() => import("./app/privacy/page"));
 const TermsPage = lazy(() => import("./app/terms/page"));
 const CookiesPage = lazy(() => import("./app/cookies/page"));
-const AdminPage = lazy(() => import("./app/pages/AdminPage"));
 
 // AI Services Pages
 const AIServicesPage = lazy(() => import("./app/ai-services/page"));
@@ -475,9 +474,8 @@ const App = memo(() => {
               <ErrorBoundary>
                 <PerformanceMonitor />
                 <AccessibilityEnhancer>
-                  <SEOOptimizer />
-
-                  <Suspense fallback={<LoadingFallback />}>
+                  <SEOOptimizer>
+                    <Suspense fallback={<LoadingFallback />}>
                     <ErrorBoundary>
                       <Routes>
                         {/* Main Pages */}
@@ -496,7 +494,6 @@ const App = memo(() => {
                         <Route path="/privacy" element={<PrivacyPage />} />
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
-                        <Route path="/admin" element={<AdminPage />} />
 
                         {/* AI Services */}
                         <Route
@@ -1094,6 +1091,7 @@ const App = memo(() => {
                       </Routes>
                     </ErrorBoundary>
                   </Suspense>
+                  </SEOOptimizer>
                 </AccessibilityEnhancer>
               </ErrorBoundary>
             </main>

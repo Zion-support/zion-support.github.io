@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect } from "react";
 
 interface AccessibilitySettings {
@@ -35,3 +36,4 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({
 };
 
 export default EnhancedAccessibility;
+
