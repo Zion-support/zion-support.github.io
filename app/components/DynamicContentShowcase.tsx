@@ -68,7 +68,7 @@ const DynamicContentShowcase: React.FC = () => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

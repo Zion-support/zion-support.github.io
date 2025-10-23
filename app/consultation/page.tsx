@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle } from 'lucide-react'
+import { ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle, MapPin } from 'lucide-react'
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,19 +14,6 @@ const ConsultationPage: React.FC = () => {
     budget: ''
   })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Consultation form submitted:', formData)
-    // Add form submission logic here
-  }
 
   const services = [
     'AI Solutions',
@@ -326,8 +313,9 @@ const ConsultationPage: React.FC = () => {
                       <Building className="w-5 h-5 text-purple-400 mr-3" />
                       <span>Available Monday - Friday, 9 AM - 6 PM EST</span>
                     </div>
-                  </div>                </div>
-              ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
