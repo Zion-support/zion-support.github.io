@@ -1,91 +1,55 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require("fs");
+const path = require("path");
 
-console.log('Starting performance optimization...')
+// Simple performance optimizer
+const optimizePerformance = () => {
+  console.log("Running performance optimizations...");
 
-// Optimize images
-const optimizeImages = () => {
-  console.log('Optimizing images...')
-  // This would integrate with sharp or imagemin in a real implementation
-  console.log('✓ Images optimized')
-}
-
-// Generate critical CSS
-const generateCriticalCSS = () => {
-  console.log('Generating critical CSS...')
-  // This would extract critical CSS for above-the-fold content
-  console.log('✓ Critical CSS generated')
-}
-
-// Optimize JavaScript bundles
-const optimizeBundles = () => {
-  console.log('Optimizing JavaScript bundles...')
-  
-  const distPath = path.join(__dirname, '../dist')
-  
-  if (fs.existsSync(distPath)) {
-    const files = fs.readdirSync(distPath)
-    const jsFiles = files.filter(file => file.endsWith('.js'))
-    
-    console.log(`Found ${jsFiles.length} JavaScript files to optimize`)
-    
-    // In a real implementation, this would:
-    // 1. Minify JavaScript further
-    // 2. Remove unused code
-    // 3. Optimize imports
-    // 4. Add compression
-    
-    console.log('✓ JavaScript bundles optimized')
-  } else {
-    console.log('⚠ Dist directory not found, skipping bundle optimization')
+  // Create public directory if it doesn't exist
+  const publicDir = path.join(__dirname, "../public");
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
   }
-}
 
-// Generate performance report
-const generatePerformanceReport = () => {
-  console.log('Generating performance report...')
-  
-  const report = {
-    timestamp: new Date().toISOString(),
-    optimizations: [
-      'Icon imports optimized',
-      'Bundle splitting improved',
-      'Lazy loading implemented',
-      'Service worker added',
-      'PWA manifest created',
-      'SEO enhancements applied',
-      'Error boundaries added',
-      'Performance monitoring enabled'
-    ],
-    recommendations: [
-      'Consider implementing image optimization pipeline',
-      'Add more granular code splitting for large pages',
-      'Implement preloading for critical resources',
-      'Add more comprehensive caching strategies',
-      'Consider implementing CDN for static assets'
-    ]
-  }
-  
-  const reportPath = path.join(__dirname, '../performance-report.json')
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-  
-  console.log('✓ Performance report generated at:', reportPath)
-}
+  // Create robots.txt
+  const robotsTxt = `User-agent: *
+Allow: /
 
-// Main optimization process
-const main = () => {
-  try {
-    optimizeImages()
-    generateCriticalCSS()
-    optimizeBundles()
-    generatePerformanceReport()
-    
-    console.log('Performance optimization completed!')
-    console.log('Performance script created at: /workspace/dist/performance.js')
-  } catch (error) {
-    console.error('Performance optimization failed:', error)
-    process.exit(1)
-  }
-}
+Sitemap: https://ziontechgroup.com/sitemap.xml`;
 
-main()
+  fs.writeFileSync(path.join(publicDir, "robots.txt"), robotsTxt);
+  console.log("Created robots.txt");
+
+  // Create .htaccess for better caching
+  const htaccess = `# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Set cache headers
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>`;
+
+  fs.writeFileSync(path.join(publicDir, ".htaccess"), htaccess);
+  console.log("Created .htaccess for caching");
+
+  console.log("Performance optimizations completed");
+};
+
+optimizePerformance();

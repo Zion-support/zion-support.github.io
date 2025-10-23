@@ -1,145 +1,199 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors in TSX files
-function fixSyntaxErrors(filePath) {
+// Function to fix corrupted syntax
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix corrupted variable declarations
+  fixed = fixed.replace(/const;\s*(\w+)\s*=/g, 'const $1 =');
+  fixed = fixed.replace(/let;\s*(\w+)\s*=/g, 'let $1 =');
+  fixed = fixed.replace(/var;\s*(\w+)\s*=/g, 'var $1 =');
+  
+  // Fix corrupted object properties
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*:/g, '$1$2:');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*:/g, '$1$2:');
+  
+  // Fix corrupted JSX attributes
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*=/g, '$1$2=');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*=/g, '$1$2=');
+  
+  // Fix corrupted JSX elements
+  fixed = fixed.replace(/<(\w+);\s*className\s*=/g, '<$1 className=');
+  fixed = fixed.replace(/<(\w+),\s*className\s*=/g, '<$1 className=');
+  
+  // Fix corrupted function calls
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*\(/g, '$1$2(');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*\(/g, '$1$2(');
+  
+  // Fix corrupted array elements
+  fixed = fixed.replace(/\[\s*(\w+),\s*(\w+)\s*\]/g, '[$1$2]');
+  fixed = fixed.replace(/\[\s*(\w+);\s*(\w+)\s*\]/g, '[$1$2]');
+  
+  // Fix corrupted string concatenation
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*\+/g, '$1$2 +');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*\+/g, '$1$2 +');
+  
+  // Fix corrupted template literals
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*`/g, '$1$2`');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*`/g, '$1$2`');
+  
+  // Fix corrupted return statements
+  fixed = fixed.replace(/return\s*(\w+),\s*(\w+)/g, 'return $1$2');
+  fixed = fixed.replace(/return\s*(\w+);\s*(\w+)/g, 'return $1$2');
+  
+  // Fix corrupted arrow functions
+  fixed = fixed.replace(/=>\s*(\w+),\s*(\w+)/g, '=> $1$2');
+  fixed = fixed.replace(/=>\s*(\w+);\s*(\w+)/g, '=> $1$2');
+  
+  // Fix corrupted destructuring
+  fixed = fixed.replace(/\{\s*(\w+),\s*(\w+)\s*\}/g, '{$1$2}');
+  fixed = fixed.replace(/\{\s*(\w+);\s*(\w+)\s*\}/g, '{$1$2}');
+  
+  // Fix corrupted imports
+  fixed = fixed.replace(/import\s*(\w+),\s*(\w+)\s*from/g, 'import $1$2 from');
+  fixed = fixed.replace(/import\s*(\w+);\s*(\w+)\s*from/g, 'import $1$2 from');
+  
+  // Fix corrupted exports
+  fixed = fixed.replace(/export\s*(\w+),\s*(\w+)/g, 'export $1$2');
+  fixed = fixed.replace(/export\s*(\w+);\s*(\w+)/g, 'export $1$2');
+  
+  // Fix specific patterns that are common
+  fixed = fixed.replace(/titl,\s*e:/g, 'title:');
+  fixed = fixed.replace(/descriptio,\s*n:/g, 'description:');
+  fixed = fixed.replace(/ico,\s*n:/g, 'icon:');
+  fixed = fixed.replace(/colo,\s*r:/g, 'color:');
+  fixed = fixed.replace(/stat,\s*s:/g, 'stats:');
+  fixed = fixed.replace(/lin,\s*k:/g, 'link:');
+  
+  // Fix corrupted JSX closing tags
+  fixed = fixed.replace(/<\/(\w+),\s*(\w+)>/g, '</$1$2>');
+  fixed = fixed.replace(/<\/(\w+);\s*(\w+)>/g, '</$1$2>');
+  
+  // Fix corrupted function parameters
+  fixed = fixed.replace(/\(\s*(\w+),\s*(\w+)\s*\)/g, '($1$2)');
+  fixed = fixed.replace(/\(\s*(\w+);\s*(\w+)\s*\)/g, '($1$2)');
+  
+  // Fix corrupted array destructuring
+  fixed = fixed.replace(/\[\s*(\w+),\s*(\w+)\s*\]/g, '[$1$2]');
+  fixed = fixed.replace(/\[\s*(\w+);\s*(\w+)\s*\]/g, '[$1$2]');
+  
+  // Fix corrupted object destructuring
+  fixed = fixed.replace(/\{\s*(\w+),\s*(\w+)\s*:\s*(\w+)\s*\}/g, '{$1$2: $3}');
+  fixed = fixed.replace(/\{\s*(\w+);\s*(\w+)\s*:\s*(\w+)\s*\}/g, '{$1$2: $3}');
+  
+  // Fix corrupted ternary operators
+  fixed = fixed.replace(/\?\s*(\w+),\s*(\w+)\s*:/g, '? $1$2 :');
+  fixed = fixed.replace(/\?\s*(\w+);\s*(\w+)\s*:/g, '? $1$2 :');
+  
+  // Fix corrupted logical operators
+  fixed = fixed.replace(/&&\s*(\w+),\s*(\w+)/g, '&& $1$2');
+  fixed = fixed.replace(/&&\s*(\w+);\s*(\w+)/g, '&& $1$2');
+  fixed = fixed.replace(/\|\|\s*(\w+),\s*(\w+)/g, '|| $1$2');
+  fixed = fixed.replace(/\|\|\s*(\w+);\s*(\w+)/g, '|| $1$2');
+  
+  return fixed;
+}
+
+// Function to remove console statements
+function removeConsoleStatements(content) {
+  return content.replace(/console\.(log|warn|error|info)\([^)]*\);?\s*/g, '');
+}
+
+// Function to fix prefer-const issues
+function fixPreferConst(content) {
+  return content.replace(/let\s+(\w+)\s*=\s*[^;]+;\s*\/\/\s*never\s+reassigned/g, (match, varName) => {
+    return match.replace(/let/, 'const');
+  });
+}
+
+// Main function to process files
+function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix malformed function names like "5GDataAnalyticsZionTechGroup"
-    const functionNameMatch = content.match(/export default function (\d+[A-Za-z]+)/);
-    if (functionNameMatch) {
-      const malformedName = functionNameMatch[1];
-      const properName = malformedName.replace(/^\d+/, '') + 'Page';
-      content = content.replace(new RegExp(malformedName, 'g'), properName);
+    
+    // Fix syntax errors
+    const contentWithSyntax = fixSyntaxErrors(content);
+    if (contentWithSyntax !== content) {
+      content = contentWithSyntax;
       modified = true;
     }
-
-    // Fix malformed className attributes
-    content = content.replace(/className="([^"]*?)\s+([^"]*?)"/g, (match, part1, part2) => {
-      if (part1.includes('text-') && part2.includes('mb-')) {
-        return `className="${part1} ${part2}"`;
-      }
-      return match;
-    });
-
-    // Fix malformed text content
-    content = content.replace(/text-4 xl font-boldtext-whitemb-6/g, 'text-4xl font-bold text-white mb-6');
-    content = content.replace(/text-lgtext-gray-300mb-8/g, 'text-lg text-gray-300 mb-8');
-
-    // Fix malformed JSX elements
-    content = content.replace(/<title \/>([^<]+)<\/title>/g, '<title>$1</title>');
-    content = content.replace(/<span className="w-5 h-5ml-2" \/>([^<]+)/g, '<h1 className="text-4xl font-bold text-white mb-6">$1</h1>');
-    content = content.replace(/<p className="w-5 h-5ml-2">([^<]+)/g, '<p className="text-lg text-gray-300 mb-8">$1</p>');
-
-    // Fix malformed Link components
-    content = content.replace(/<Link to="([^"]+)" className="([^"]*?)">([^<]+)<\/Link>/g, (match, to, className, text) => {
-      if (className.includes('transformhover:scale-105')) {
-        className = className.replace('transformhover:scale-105', 'transform hover:scale-105');
-      }
-      if (className.includes('from-cyan-500to-purple-500')) {
-        className = className.replace('from-cyan-500to-purple-500', 'from-cyan-500 to-purple-500');
-      }
-      if (className.includes('shadow-lghover:shadow-cyan-500/25')) {
-        className = className.replace('shadow-lghover:shadow-cyan-500/25', 'shadow-lg hover:shadow-cyan-500/25');
-      }
-      return `<Link to="${to}" className="${className}">${text}</Link>`;
-    });
-
-    // Fix missing closing tags and malformed JSX
-    content = content.replace(/<h2 className="w-5 h-5ml-2" \/>([^<]+)/g, '<h2 className="text-3xl font-bold text-white mb-4">$1</h2>');
-    content = content.replace(/<p className="w-5 h-5ml-2">([^<]+)/g, '<p className="text-lg text-gray-300 mb-8">$1</p>');
-
-    // Fix duplicate 'use client' directives
-    content = content.replace(/'use client';\s*'use client';/g, "'use client';");
-
-    // Fix malformed imports
-    content = content.replace(/import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';\s*'use client';/g, 
-      "'use client';\nimport { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Clock, Target } from 'lucide-react';");
-
-    // Fix malformed JSX structure
-    content = content.replace(/<title>([^<]+)<\/title>\s*\{[^}]*\}/g, '<title>$1</title>');
-
-    // Fix incomplete function declarations
-    if (content.includes('export default function') && !content.includes('return (')) {
-      const functionMatch = content.match(/export default function ([^(]+)\(\)\s*\{/);
-      if (functionMatch) {
-        const functionName = functionMatch[1].trim();
-        const basicTemplate = `
-  return (
-    <>
-      <Helmet>
-        <title>${functionName} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${functionName.toLowerCase().replace(/([A-Z])/g, ' $1')} services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${functionName}</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ${functionName.toLowerCase().replace(/([A-Z])/g, ' $1')} services coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}`;
-        
-        content = content.replace(/export default function ([^(]+)\(\)\s*\{[^}]*\}/s, `export default function ${functionName}() {${basicTemplate}`);
-        modified = true;
-      }
+    
+    // Remove console statements
+    const contentWithoutConsole = removeConsoleStatements(content);
+    if (contentWithoutConsole !== content) {
+      content = contentWithoutConsole;
+      modified = true;
     }
-
+    
+    // Fix prefer-const issues
+    const contentWithConst = fixPreferConst(content);
+    if (contentWithConst !== content) {
+      content = contentWithConst;
+      modified = true;
+    }
+    
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and fix TSX files
-function fixAllTSXFiles(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      fixedCount += fixAllTSXFiles(filePath);
-    } else if (file.endsWith('.tsx')) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
-      }
+// Function to recursively find all .tsx files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
     }
   }
-
-  return fixedCount;
+  
+  return files;
 }
 
 // Main execution
-console.log('Starting syntax error fixes...');
+const srcDir = path.join(__dirname, 'src');
 const appDir = path.join(__dirname, 'app');
-const fixedCount = fixAllTSXFiles(appDir);
-console.log(`Fixed ${fixedCount} files.`);
 
-// Also fix the main App.tsx file
-const appTsxPath = path.join(__dirname, 'App.tsx');
-if (fs.existsSync(appTsxPath)) {
-  if (fixSyntaxErrors(appTsxPath)) {
-    console.log('Fixed: App.tsx');
+let totalFixed = 0;
+
+// Process src directory
+if (fs.existsSync(srcDir)) {
+  const srcFiles = findTsxFiles(srcDir);
+  console.log(`Processing ${srcFiles.length} files in src directory...`);
+  
+  for (const file of srcFiles) {
+    if (processFile(file)) {
+      totalFixed++;
+    }
   }
 }
 
-console.log('Syntax error fixes completed.');
+// Process app directory
+if (fs.existsSync(appDir)) {
+  const appFiles = findTsxFiles(appDir);
+  console.log(`Processing ${appFiles.length} files in app directory...`);
+  
+  for (const file of appFiles) {
+    if (processFile(file)) {
+      totalFixed++;
+    }
+  }
+}
+
+console.log(`\nTotal files fixed: ${totalFixed}`);

@@ -1,48 +1,84 @@
-import fs from 'fs';
-import path from 'path';
-// Find all page.tsx files;
-function findPageFiles(dir) {
-  const files = [];
-const items = fs.readdirSync(dir);
-  for (const item, of, items) {
-    const fullPath = path.join(dir, item);
-const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      files.push(...findPageFiles(fullPath));
-    } else if (item = == 'page.tsx') {;
-      files.push(fullPath);
-  return files;
-// Fix JSX errors in a file;
-function fixJSXErrors(filePath) {
-  let content = fs.readFileSync(filePath, 'utf8');
-  let modified = false;
-  // Fix malformed JSX tags like "Page\n  </\n  <br />"
-  const malformedTagRegex = /(\s+Page\s*\n\s*<\/\s*\n\s*<br \/>)/g;
-  if (malformedTagRegex.test(content)) {
-      // Extract the page name from the file path;
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-      return `\n              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">\n                ${pageName}\n              </span>\n              <br />`;
-    });
-    modified = true;
-  // Fix generic "page solutions" text;
-  const pageSolutionsRegex = /Transform your business with our advanced page solutions\./g;
-  if (pageSolutionsRegex.test(content)) {
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
-    content = content.replace(pageSolutionsRegex, `Transform your business with our advanced ${pageName.toLowerCase()} solutions.`);
-    modified = true;
-  if (modified) {
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed JSX errors in: ${filePath}`);
-// Find and fix all page files;
-const pageFiles = findPageFiles('/workspace/app');
-console.log(`Found ${pageFiles.length} page files`);
-let fixedCount = 0;
-for (const file, of, pageFiles) {
+const fs = require('fs');
+const path = require('path');
+
+// Common JSX fixes
+const fixes = [
+  // Fix malformed closing tags
+  { pattern: /  <\//g, replacement: '  </' },
+  { pattern: /  <\/h1>/g, replacement: '  </h1>' },
+  { pattern: /  <\/h2>/g, replacement: '  </h2>' },
+  { pattern: /  <\/p>/g, replacement: '  </p>' },
+  { pattern: /  <\/button>/g, replacement: '  </button>' },
+  { pattern: /  <\/div>/g, replacement: '  </div>' },
+  
+  // Fix React.Fragment issues
+  { pattern: /<React\.Fragment>/g, replacement: '<>' },
+  { pattern: /<\/React\.Fragment>/g, replacement: '</>' },
+  
+  // Fix malformed JSX closing tags
+  { pattern: /  <\/\n/g, replacement: '  </\n' },
+  { pattern: /  <\/\s*\n/g, replacement: '  </\n' },
+  
+  // Fix specific malformed patterns
+  { pattern: /  <\/\s*$/gm, replacement: '  </' },
+  { pattern: /  <\/\s*\n\s*$/gm, replacement: '  </\n' },
+];
+
+function fixFile(filePath) {
   try {
-    fixJSXErrors(file);
-    fixedCount++;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Apply fixes
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    // Fix specific malformed closing tags
+    content = content.replace(/  <\/\s*$/gm, '  </');
+    content = content.replace(/  <\/\s*\n/gm, '  </\n');
+    
+    // Fix unterminated regexp literals
+    content = content.replace(/  <\/\s*$/gm, '  </');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${file}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+function walkDir(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += walkDir(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+  
+  return fixedCount;
+}
+
+// Start fixing
+console.log('Starting JSX fixes...');
+const fixedCount = walkDir('./app');
 console.log(`Fixed ${fixedCount} files`);

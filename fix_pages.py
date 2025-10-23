@@ -4,63 +4,84 @@ import re
 import glob
 
 def fix_page_file(file_path):
-    """Fix common issues in page files"""
+    """Fix common syntax errors in page files"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Remove duplicate default exports
-        content = re.sub(r'export default [^;]+;\s*export default [^;]+;', 'export default function Page() {', content)
+        # Fix common patterns
+        # 1. Fix malformed JSX structure where Helmet is not properly closed
+        content = re.sub(
+            r'(\s*<Helmet>\s*<title>.*?</title>\s*<meta[^>]*/>\s*<meta[^>]*/>\s*</Helmet>\s*<Navigation />\s*<div[^>]*>)\s*{/\* Hero Section \*/}\s*<div>',
+            r'\1',
+            content,
+            flags=re.DOTALL
+        )
         
-        # Fix missing imports
-        if 'Helmet' in content and 'import { Helmet }' not in content:
-            content = re.sub(r'import React from [\'"]react[\'"]', 
-                           'import React from \'react\'\nimport { Helmet } from \'react-helmet-async\'', content)
+        # 2. Fix missing closing tags and malformed structure
+        content = re.sub(
+            r'(\s*<Helmet>\s*<title>.*?</title>\s*<meta[^>]*/>\s*<meta[^>]*/>\s*</Helmet>\s*<Navigation />\s*)\s*<div[^>]*>.*?{/\* Hero Section \*/}\s*<div>',
+            r'\1<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">',
+            content,
+            flags=re.DOTALL
+        )
         
-        if 'Link' in content and 'import { Link }' not in content:
-            content = re.sub(r'import React from [\'"]react[\'"]', 
-                           'import React from \'react\'\nimport { Link } from \'react-router-dom\'', content)
+        # 3. Fix incomplete JSX structure
+        content = re.sub(
+            r'(\s*<Helmet>\s*<title>.*?</title>\s*<meta[^>]*/>\s*<meta[^>]*/>\s*</Helmet>\s*<Navigation />\s*)\s*<div[^>]*>.*?{/\* Hero Section \*/}\s*<div>\s*<section[^>]*>',
+            r'\1<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">\n        <section className="relative py-20 px-4 overflow-hidden">',
+            content,
+            flags=re.DOTALL
+        )
         
-        # Remove duplicate function declarations
-        content = re.sub(r'export default function [^{]+{\s*}\s*export default [^;]+;', 
-                        'export default function Page() {\n  return (\n    <div>Page content</div>\n  )\n}', content)
+        # 4. Fix missing closing tags
+        if '<div className="min-h-screen' in content and '</div>' not in content:
+            content = content.rstrip() + '\n      </div>\n      <Footer />\n    </>\n  );\n};\n\nexport default PagePage;'
         
-        # Fix malformed JSX
-        content = re.sub(r'}\s*export default [^;]+;', '}', content)
+        # 5. Fix malformed title tags
+        content = re.sub(
+            r'<title>\s*([^<]+)\s*</title>',
+            r'<title>\1</title>',
+            content
+        )
         
-        # Remove empty lines and clean up
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        # 6. Fix missing function declaration
+        if 'const PagePage: React.FC = () => {' not in content and 'return (' in content:
+            content = content.replace(
+                'return (',
+                'const PagePage: React.FC = () => {\n  return ('
+            )
         
+        # 7. Fix missing export
+        if 'export default' not in content and 'PagePage' in content:
+            content = content.rstrip() + '\n\nexport default PagePage;'
+        
+        # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed issues in: {file_path}")
+            print(f"Fixed: {file_path}")
             return True
-        return False
+        else:
+            print(f"No changes needed: {file_path}")
+            return False
+            
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Find all page files
-    patterns = [
-        'app/**/page.tsx',
-        'app/**/page.ts'
-    ]
+    # Find all page.tsx files in the app directory
+    page_files = glob.glob('/workspace/app/**/page.tsx', recursive=True)
     
     fixed_count = 0
-    total_files = 0
+    for file_path in page_files:
+        if fix_page_file(file_path):
+            fixed_count += 1
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path):
-                total_files += 1
-                if fix_page_file(file_path):
-                    fixed_count += 1
-    
-    print(f"\nProcessed {total_files} page files, fixed issues in {fixed_count} files")
+    print(f"\nFixed {fixed_count} files out of {len(page_files)} total page files")
 
 if __name__ == "__main__":
     main()
