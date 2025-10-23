@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 
-
 const ServicePageTemplate: React.FC = () => {
   return (
     <div>
@@ -9,6 +8,9 @@ const ServicePageTemplate: React.FC = () => {
     
     
     
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

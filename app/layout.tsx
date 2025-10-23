@@ -1,6 +1,3 @@
-import React from "react";
-
-"use client";
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './styles/futuristic.css'

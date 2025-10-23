@@ -1,6 +1,3 @@
-import React from "react";
-
-"use client";
 import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

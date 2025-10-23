@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 
 interface PerformanceMetrics {
@@ -76,6 +77,9 @@ const PerformanceDashboard: React.FC = () => {
         </div>
     
     
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

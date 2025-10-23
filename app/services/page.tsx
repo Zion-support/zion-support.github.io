@@ -1,6 +1,6 @@
+"use client";
 import React from "react";
 
-"use client";
 import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from "lucide-react";
 export default function ServicesPage() {
   const services = [
@@ -120,8 +120,6 @@ export default function ServicesPage() {
           ))}
         </div>
       </div>
-    
-    
     </div>
   );
 }

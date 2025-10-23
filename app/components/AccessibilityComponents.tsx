@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 
-
 const AccessibilityComponents: React.FC = () => {
   
   return (
@@ -10,6 +9,9 @@ const AccessibilityComponents: React.FC = () => {
     
     
     
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

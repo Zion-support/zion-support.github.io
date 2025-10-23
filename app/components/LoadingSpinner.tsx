@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 
-
 interface LoadingSpinnerProps {
   size?: "sm" | "md" | "lg" | "xl";
   className?: string;
@@ -37,6 +36,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     
     
     
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

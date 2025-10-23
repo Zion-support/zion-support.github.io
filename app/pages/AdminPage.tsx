@@ -14,6 +14,9 @@ const AdminPage: React.FC<AdminPageProps> = ({ className = "" }) => {
     
     
     
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

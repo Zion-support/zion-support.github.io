@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 
-
 const PerformanceImage: React.FC = () => {
   
   return (
@@ -10,6 +9,9 @@ const PerformanceImage: React.FC = () => {
     
     
     
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

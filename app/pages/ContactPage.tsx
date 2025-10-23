@@ -13,6 +13,9 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = "" }) => {
     
     
     
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

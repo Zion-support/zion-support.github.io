@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 
-
 const NotFoundPage: React.FC = () => {
   return (
     <div>
@@ -9,6 +8,9 @@ const NotFoundPage: React.FC = () => {
     
     
     
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
