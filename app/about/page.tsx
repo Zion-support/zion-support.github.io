@@ -2,6 +2,8 @@
 import React from "react";
 import { Target, Users, Award, CheckCircle, ArrowRight } from "lucide-react";
 
+export const dynamic = 'force-dynamic';
+
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -45,6 +47,11 @@ const AboutPage: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>About Us - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and team. We&apos;re passionate about AI and IT solutions that transform businesses." />
+        <meta property="og:type" content="website" />
+      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
