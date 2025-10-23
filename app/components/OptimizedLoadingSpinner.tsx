@@ -112,12 +112,9 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
 }, [fullScreen, className])
 return (</div>
 <div className={containerClasses}></div>
-<div className='text-center'>
-{renderSpinner}
+<div className='text-center'>{renderSpinner}</div>
 {text && (</div>;}
-<p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
-{text}
-</p>
+<p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p>
 )}
 </div>
 )

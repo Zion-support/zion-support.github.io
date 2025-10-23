@@ -74,9 +74,7 @@ return (
 <h1 className="text-5xl md:text-6xl font-bold mb-6">
 Privacy Policy</h1>
 </h1>
-<p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-Your privacy is important to us. Learn how we collect, use, and protect your information.
-</p>
+<p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Your privacy is important to us. Learn how we collect, use, and protect your information.</p>p>
 <div className="flex items-center justify-center text-sm text-blue-200"></div>
 <Calendar className="h-4 w-4 mr-2" />
 Last updated: {lastUpdated}
@@ -89,12 +87,8 @@ Last updated: {lastUpdated}
 {/* Introduction */}</div>
 <section>
 <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
-<p className="text-gray-700 leading-relaxed mb-4">
-At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
-</p>
-<p className="text-gray-700 leading-relaxed">
-By using our services, you agree to the collection and use of information in accordance with this policy.
-</p>
+<p className="text-gray-700 leading-relaxed mb-4">At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>p>
+<p className="text-gray-700 leading-relaxed">By using our services, you agree to the collection and use of information in accordance with this policy.</p>p>
 </section>
 {/* Information We Collect */}
 <section></section>
@@ -141,9 +135,7 @@ By using our services, you agree to the collection and use of information in acc
 <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
 <div></div>
 <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Measures</h3>
-<p className="text-gray-700 mb-4">
-We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
-</p>
+<p className="text-gray-700 mb-4">We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>p>
 <ul className="text-gray-700 space-y-2">
 <li>• Encryption of data in transit and at rest</li>
 <li>• Regular security audits and assessments</li>
@@ -172,9 +164,7 @@ We implement appropriate technical and organizational security measures to prote
 {/* Contact Information */}
 <section className="bg-gray-50 rounded-lg p-8">
 <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
-<p className="text-gray-700 mb-6">
-If you have any questions about this Privacy Policy or our data practices, please contact us:
-</p>
+<p className="text-gray-700 mb-6">If you have any questions about this Privacy Policy or our data practices, please contact us:</p>p>
 <div className="grid md:grid-cols-2 gap-6"></div>
 <div className="flex items-center"></div>
 <Mail className="h-5 w-5 text-blue-600 mr-3" />
@@ -201,9 +191,7 @@ If you have any questions about this Privacy Policy or our data practices, pleas
 <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
 <div></div>
 <h3 className="text-lg font-semibold text-gray-900 mb-2">Policy Updates</h3>
-<p className="text-gray-700">
-We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
-</p>
+<p className="text-gray-700">We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>p>
 </div>
 </div>
 </div>

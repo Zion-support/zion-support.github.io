@@ -44,19 +44,13 @@ return (
 </Helmet>
 <div className="container mx-auto px-4 py-16">
 <div className="text-center mb-16">
-<h1 className="text-5xl font-bold text-white mb-6">
-Blockchain Solutions
-</
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-Transform your business with cutting-edge blockchain technology and decentralized solutions.
+<h1 className="text-5xl font-bold text-white mb-6">Blockchain Solutions</h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with cutting-edge blockchain technology and decentralized solutions.</p>
 Powered by advanced AI and industry expertise.
 </p>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-Our blockchain solutions deliver unmatched performance, security, and scalability.
-</p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our blockchain solutions deliver unmatched performance, security, and scalability.</p>p>
 </div>
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-{features.map((feature, index) => (
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{features.map((feature, index) => (</div>
 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
 <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -65,11 +59,8 @@ Our blockchain solutions deliver unmatched performance, security, and scalabilit
 ))}
 </div>
 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-<h2 className="text-3xl font-bold text-white text-center mb-8">
-Why Choose Our Blockchain Solutions?
-</h2>
-<div className="grid md:grid-cols-2 gap-6">
-{benefits.map((benefit, index) => (
+<h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Blockchain Solutions?</h2>h2>
+<div className="grid md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
 <div key={index} className="flex items-center space-x-3">
 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
 <span className="text-gray-300">{benefit}</span>
@@ -81,12 +72,8 @@ Why Choose Our Blockchain Solutions?
 <section className="py-16 bg-white">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-Why Choose Our Blockchain Services?
-</h2>
-<p className="text-xl text-gray-600">
-Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
-</
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Blockchain Services?</h2>h2>
+<p className="text-xl text-gray-600">Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <div className="text-center">
@@ -125,15 +112,10 @@ Leading blockchain expertise with proven track record in DeFi, NFTs, and enterpr
 <section key={category} className="py-16 bg-gray-50">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-{category} Services
-</
-<p className="text-xl text-gray-600">
-Professional {category.toLowerCase()} solutions powered by blockchain technology
-</
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category} Services</h2>
+<p className="text-xl text-gray-600">Professional {category.toLowerCase()} solutions powered by blockchain technology</p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-{blockchainServices
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{blockchainServices</div>
 .filter(service => service.category === category)
 .map((service, index) => (
 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -145,9 +127,7 @@ Professional {category.toLowerCase()} solutions powered by blockchain technology
 <span className="text-2xl font-bold text-blue-600">{service.price}</span>
 <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
 </div>
-<div className="text-sm text-green-600 font-semibold">
-Save up to 50% vs market rates
-</
+<div className="text-sm text-green-600 font-semibold">Save up to 50% vs market rates</div>
 </div>
 <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -162,11 +142,8 @@ Save up to 50% vs market rates
 </div>
 <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-<div className="flex flex-wrap gap-2">
-{service.technologies.map((tech, techIndex) => (
-<span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-{tech}
-</span>
+<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div>
+<span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{tech}</span>span>
 ))}
 </div>
 </div>
@@ -181,9 +158,7 @@ Save up to 50% vs market rates
 ))}
 </ul>
 </div>
-<button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-Get Blockchain Quote
-</
+<button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Get Blockchain Quote</button>
 </div>
 ))}
 </div>
@@ -194,12 +169,8 @@ Get Blockchain Quote
 <section className="py-16 bg-white">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-Our Blockchain Capabilities
-</
-<p className="text-xl text-gray-600">
-Comprehensive blockchain technologies and methodologies for modern business applications
-</
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Blockchain Capabilities</h2>
+<p className="text-xl text-gray-600">Comprehensive blockchain technologies and methodologies for modern business applications</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
@@ -238,23 +209,15 @@ Comprehensive blockchain technologies and methodologies for modern business appl
 {/* Contact Section */}
 <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 className="text-3xl md:text-4xl font-bold mb-4">
-Ready to Transform with Blockchain?
-</h2>
-<p className="text-xl mb-8 text-blue-100">
-Contact our blockchain experts for a free consultation and custom blockchain strategy development
-</
+<h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform with Blockchain?</h2>h2>
+<p className="text-xl mb-8 text-blue-100">Contact our blockchain experts for a free consultation and custom blockchain strategy development</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <a
 href="tel:+13024640950"
-className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
-📞 +1 302 464 0950
-</
+className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">📞 +1 302 464 0950</a>
 <a
 href="mailto:kleber@ziontechgroup.com"
-className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-✉️ kleber@ziontechgroup.com
-</
+className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">✉️ kleber@ziontechgroup.com</a>
 </div>
 <div className="mt-8 text-sm text-blue-200">
 <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>

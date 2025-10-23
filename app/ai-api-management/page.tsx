@@ -99,21 +99,14 @@ const AIAPIManagementPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI API Management
-            </span>
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">AI API Management</span>span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your API infrastructure with intelligent management, advanced security, and AI-powered optimization.
-          </p>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your API infrastructure with intelligent management, advanced security, and AI-powered optimization.</p>p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center">
-              Get Started
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center">Get Started</button>
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Learn More
-            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More</button>button>
           </div>
         </div>
       </section>
@@ -123,13 +116,10 @@ const AIAPIManagementPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered API management platform provides everything you need to build, secure, and scale your APIs.
-            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered API management platform provides everything you need to build, secure, and scale your APIs.</p>p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-opacity-20 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -155,13 +145,10 @@ const AIAPIManagementPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of AI-powered API management for your business.
-            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of AI-powered API management for your business.</p>p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center mb-4">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
@@ -178,13 +165,10 @@ const AIAPIManagementPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your API management needs.
-            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect plan for your API management needs.</p>p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 ${index === 1 ? 'ring-2 ring-blue-500 scale-105' : ''}`}>
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -206,9 +190,7 @@ const AIAPIManagementPage: React.FC = () => {
                   index === 1 
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700' 
                     : 'bg-white bg-opacity-20 text-white hover:bg-opacity-30'
-                }`}>
-                  Get Started
-                </button>
+                }`}>Get Started</button>button>
               </div>
             ))}
           </div>
@@ -219,16 +201,10 @@ const AIAPIManagementPage: React.FC = () => {
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your APIs?</h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join thousands of developers who trust our AI-powered API management platform.
-          </p>
+          <p className="text-xl text-blue-100 mb-8">Join thousands of developers who trust our AI-powered API management platform.</p>p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Start Free Trial
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
-              Contact Sales
-            </button>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">Start Free Trial</button>button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">Contact Sales</button>button>
           </div>
         </div>
       </section>

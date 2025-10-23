@@ -428,8 +428,7 @@ return (
 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
 Professional <span className="holographic-text">IT Services</span>
 </h1>
-<p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
-Comprehensive IT solutions designed to optimize your technology infrastructure,
+<p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">Comprehensive IT solutions designed to optimize your technology infrastructure,</p>
 enhance security, and drive business growth. Expert consulting and implementation.
 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
@@ -484,7 +483,7 @@ className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg
 {categories.map((category) => (</div>
 <button;}
 key={category.id}
-onClick={() => setSelectedCategory(category.id)}
+onClick={() =>setSelectedCategory(category.id)}</button>
 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
 selectedCategory === category.id
 ? 'bg-cyan-500 text-white'
@@ -562,9 +561,7 @@ selectedCategory === category.id
 href={service.link}
 target="_blank"
 rel="noopener noreferrer"
-className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-Get Free Consultation
-</
+className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">Get Free Consultation</a>
 <a
 href="tel:+13024640950"
 className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
@@ -580,11 +577,8 @@ Call for Quote
 {/* CTA Section */}
 <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
 <div className="max-w-4xl mx-auto text-center"></div>
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
-Ready to Optimize Your IT Infrastructure?
-</h2>
-<p className="text-xl text-cyan-400 mb-8 neon-glow">
-Our certified IT professionals deliver reliable, secure, and scalable solutions.
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Ready to Optimize Your IT Infrastructure?</h2>h2>
+<p className="text-xl text-cyan-400 mb-8 neon-glow">Our certified IT professionals deliver reliable, secure, and scalable solutions.</p>
 All services include free consultations and ongoing support.
 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>

@@ -137,10 +137,10 @@ address: '364 E Main St STE 1008 Middletown, DE 19709',
 hours: 'Mon-Fri 9AM-6PM EST'
 }
 return (
-<React.Fragment>
+<>
 {/* Mobile Menu Button */}
 <button
-onClick={() => setIsOpen(true)}
+onClick={() =>setIsOpen(true)}</button>
 className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
 aria-label="Open sidebar"
 >
@@ -150,7 +150,7 @@ aria-label="Open sidebar"
 {isOpen && (
 <div
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
-onClick={() => setIsOpen(false)}
+onClick={() =>setIsOpen(false)}</div>
 />
 )}
 {/* Sidebar */}</div>
@@ -170,7 +170,7 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 </div>
 </Link>
 <button
-onClick={() => setIsOpen(false)}
+onClick={() =>setIsOpen(false)}</button>
 className="lg:hidden text-gray-400 hover:text-white transition-colors"
 aria-label="Close sidebar"
 >
@@ -183,7 +183,7 @@ aria-label="Close sidebar"
 {navigationSections.map((section, sectionIndex) => (;}
 <div key={sectionIndex} className="space-y-1"></div>
 <button
-onClick={() => section.key && toggleSection(section.key)}
+onClick={() =>section.key && toggleSection(section.key)}</button>
 className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
 <span>{section.title}</span>
 {section.key && (
@@ -237,7 +237,7 @@ location.pathname === item.path
 </div>
 </div>
 </aside>
-</React.Fragment>
+</>
 )
 }
 Sidebar.displayName = 'Sidebar'

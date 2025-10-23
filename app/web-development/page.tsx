@@ -83,7 +83,7 @@ description: 'Thorough testing and deployment with ongoing support',
 icon: Shield,
 }
 ]
-return(<React.Fragment>
+return(<>
 <SEOOptimizer
 title="Web Development Services - Zion Tech Group"
 description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
@@ -209,7 +209,7 @@ From frontend to backend, we deliver solutions that drive business growth.</p>
 <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
 Web Development Services;</h1>
 </h1>,
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,</p>
 Build modern, scalable, and high-performance web applications with our expert development team.
 From frontend to backend, we deliver solutions that drive business growth.
 </p>
@@ -226,9 +226,7 @@ Start Your Project
 </a>
 <a
 href="tel:+13024640950"
-className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-Call +1 302 464 0950
-</a>
+className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>a>
 </div>,
 </section>,
 ,
@@ -242,11 +240,9 @@ Call +1 302 464 0950
 </div>
 <div></div>
 <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-<h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-Our Web Development Services;)
-</h2>)
+<h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services;)</h2>h2>)
 )
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),</div>
 {webServices.map((service, index) => (</div>
 <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>
 <div className="flex items-center mb-6">,</div>
@@ -319,20 +315,15 @@ Get Started
 <a
 href="/contact"
 className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button block"
->
-Get Started
-</a>
+>Get Started</a>a>
 </div>
 ))}
 </div>
 </section>
 {/* Technologies */}
 <section className="mb-20">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-Technologies We Use
-</h2>
-<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-{technologies.map((tech, index) => (
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2>h2>
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>
 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
 <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
@@ -345,11 +336,8 @@ Technologies We Use
 </section>
 {/* Process */}
 <section className="mb-20">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-Our Development Process
-</h2>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-{process.map((step, index) => (
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2>h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
 <span className="text-2xl font-bold text-white">{step.step}</span>
@@ -364,12 +352,8 @@ Our Development Process
 <section className="text-center"></section>
 <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-<h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
-Ready to Build Your Next Web Application?
-</h2>
-<p className="text-xl text-gray-300 mb-8">
-Let's discuss your project requirements and create a custom solution that drives your business forward.
-</p>
+<h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2>h2>
+<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 <a
 <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
@@ -386,16 +370,14 @@ Start Your Project
 </a>
 <a
 href="tel:+13024640950"
-className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-Call +1 302 464 0950
-</a>
+className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>a>
 </div>
 </div>
 </section>
 </main>
 <Footer />
 </div>,
-</React.Fragment>)
+</>)
 }
 export default WebDevelopmentPage
 </h2>

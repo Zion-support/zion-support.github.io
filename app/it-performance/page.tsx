@@ -43,31 +43,24 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced page solutions.</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>p>
           </div>
           </div>
         </div>
       </section>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>p>
           </div>
           </div>
         </div>
       </section>
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page needs and get a customized solution.</p>p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />

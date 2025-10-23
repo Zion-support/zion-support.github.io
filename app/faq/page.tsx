@@ -46,7 +46,7 @@ answer: "We serve a wide range of industries including healthcare, finance, e-co
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
 <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
@@ -58,18 +58,15 @@ return (
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 Frequently Asked <span className="text-cyan-400">Questions</span>
 </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-Find answers to common questions about our AI and IT services, pricing, and implementation.
-</p>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>p>
 </div>
 </section>
 <section className="py-16 px-4">
 <div className="max-w-4xl mx-auto">
-<div className="space-y-4">
-{faqs.map((faq, index) => (
+<div className="space-y-4">{faqs.map((faq, index) => (</div>
 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
 <button
-onClick={() => toggleItem(index)}
+onClick={() =>toggleItem(index)}</button>
 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
 <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
 {openItems.includes(index) ? (
@@ -89,7 +86,7 @@ className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default FAQPage

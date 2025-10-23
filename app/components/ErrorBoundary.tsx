@@ -43,19 +43,14 @@ return (
 <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
 <AlertTriangle className="w-8 h-8 text-red-400" />
 </div>
-<h1 className="text-2xl font-bold text-white mb-4">
-Oops! Something went wrong
-</h1>
-<p className="text-gray-300 mb-6">
-We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
-</p>
+<h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>h1>
+<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>p>
 {process.env.NODE_ENV === 'development' && this.state.error && (
 <details className="mb-6 text-left">
 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
 Error Details (Development)
 </summary>
-<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
-{this.state.error.toString()}
+<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">{this.state.error.toString()}</p>
 {this.state.errorInfo?.componentStack}
 </pre>
 </details>
@@ -77,9 +72,7 @@ className="flex items-center justify-center space-x-2 border border-cyan-600 tex
 </button>
 </div>
 <div className="mt-6 pt-6 border-t border-white/20">
-<p className="text-sm text-gray-400 mb-3">
-Still having trouble? Contact our support team:
-</p>
+<p className="text-sm text-gray-400 mb-3">Still having trouble? Contact our support team:</p>p>
 <a
 href="mailto:kleber@ziontechgroup.com"
 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">

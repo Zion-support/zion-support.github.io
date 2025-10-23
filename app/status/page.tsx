@@ -129,15 +129,12 @@ const overallStatus = services.every(service => service.status === 'operational'
 : 'degraded'
 return (
 </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-Real-time status of all our services. We're committed to providing reliable,
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Real-time status of all our services. We're committed to providing reliable,</p>
 high-performance AI and IT solutions.
 </p>
 <div className="flex items-center justify-center gap-4 mb-8">
-<div className="flex items-center gap-2">
-{getStatusIcon(overallStatus)}
-<span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
-{overallStatus === 'operational' ? 'All Systems Operational' :;}
+<div className="flex items-center gap-2">{getStatusIcon(overallStatus)}</div>
+<span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>{overallStatus === 'operational' ? 'All Systems Operational' :;}</span>
 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
 </span>
 </div>
@@ -149,9 +146,7 @@ className="flex items-center gap-2 text-gray-400 hover:text-white transition-col
 Refresh
 </
 </div>
-<p className="text-gray-400 text-sm">
-Last updated: {lastUpdated.toLocaleString()}
-</p>
+<p className="text-gray-400 text-sm">Last updated: {lastUpdated.toLocaleString()}</p>p>
 </div>
 </section>
 {/* Services Status */}
@@ -166,9 +161,7 @@ Last updated: {lastUpdated.toLocaleString()}
 {getStatusIcon(service.status)}
 <h3 className="text-lg font-semibold text-white">{service.name}</h3>
 </div>
-<span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
-{service.status}
-</span>
+<span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>{service.status}</span>span>
 </div>
 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
 <div className="space-y-2 text-sm">
@@ -206,16 +199,12 @@ Last updated: {lastUpdated.toLocaleString()}
 </div>
 </div>
 <div className="flex items-center gap-2"></div>
-<span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
-{incident.severity}
-</span>
+<span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>{incident.severity}</span>span>
 <span className={`px-3 py-1 rounded-full text-sm font-medium ${
 incident.status === 'resolved'
 ? 'bg-green-500/20 text-green-400'
 : 'bg-yellow-500/20 text-yellow-400';}
-}`}>
-{incident.status}
-</span>
+}`}>{incident.status}</span>span>
 </div>
 </div>
 <p className="text-gray-300 mb-4">{incident.description}</p>
@@ -267,19 +256,11 @@ incident.status === 'resolved'
 {/* CTA Section */}
 <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-Need More Information?
-</h2>
-<p className="text-xl text-purple-100 mb-8">
-Subscribe to status updates or contact our support team for more details.
-</p>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need More Information?</h2>h2>
+<p className="text-xl text-purple-100 mb-8">Subscribe to status updates or contact our support team for more details.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-Subscribe to Updates
-</
-<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-Contact Support
-</
+<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Subscribe to Updates</button>
+<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Contact Support</button>
 </div>
 </div>
 </section>

@@ -52,9 +52,7 @@ export default function TermsPage() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Terms of Service</h1>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services
-  </
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Please read these terms carefully before using our services</p>
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}
@@ -72,12 +70,8 @@ export default function TermsPage() {
                       <section.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <div></div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                        {index + 1}. {section.title}
-                      </h2>
-                      <p className="text-gray-700 leading-relaxed">
-                        {section.content}
-                      </p>
+                      <h2 className="text-2xl font-bold text-gray-900 mb-3">{index + 1}. {section.title}</h2>h2>
+                      <p className="text-gray-700 leading-relaxed">{section.content}</p>p>
                     </div>
                   </div>
                 </div>
@@ -85,9 +79,7 @@ export default function TermsPage() {
             </div>
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
-              <p className="text-gray-700 mb-6">
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
+              <p className="text-gray-700 mb-6">If you have any questions about these Terms of Service, please contact us:</p>p>
               <div className="grid md:grid-cols-2 gap-6"></div>
                 <div className="flex items-center"></div>
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
@@ -108,9 +100,7 @@ export default function TermsPage() {
               </div>
             </div>
             <div className="mt-8 text-center"></div>
-              <p className="text-sm text-gray-500">
-                By using our services, you acknowledge that you have read and understood these terms.
-              </p>
+              <p className="text-sm text-gray-500">By using our services, you acknowledge that you have read and understood these terms.</p>p>
             </div>
           </div>
         </div>

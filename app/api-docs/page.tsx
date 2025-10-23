@@ -112,11 +112,8 @@ keywords="API documentation, REST API, AI API, cloud API, integration, developer
 {/* Hero Section */}
 <section className="py-20 px-4">
 <div className="max-w-7xl mx-auto text-center">
-<h1 className="text-5xl font-bold text-white mb-6">
-API Documentation
-</
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-Complete API documentation for Zion Tech Group's AI and IT solutions.
+<h1 className="text-5xl font-bold text-white mb-6">API Documentation</h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
 Explore endpoints, authentication, and integration guides.
 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -142,9 +139,7 @@ Download SDK
 </div>
 <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
 <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
-<button className="text-purple-400 hover:text-purple-300 font-medium">
-Get API Key →
-</button>
+<button className="text-purple-400 hover:text-purple-300 font-medium">Get API Key →</button>button>
 </div>
 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -152,9 +147,7 @@ Get API Key →
 </div>
 <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
 <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
-<button className="text-purple-400 hover:text-purple-300 font-medium">
-View Examples →
-</button>
+<button className="text-purple-400 hover:text-purple-300 font-medium">View Examples →</button>button>
 </div>
 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -162,9 +155,7 @@ View Examples →
 </div>
 <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
 <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
-<button className="text-purple-400 hover:text-purple-300 font-medium">
-Start Building →
-</button>
+<button className="text-purple-400 hover:text-purple-300 font-medium">Start Building →</button>button>
 </div>
 </div>
 </div>
@@ -173,8 +164,7 @@ Start Building →
 <section className="py-16 px-4">
 <div className="max-w-7xl mx-auto">
 <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
-<div className="space-y-8">
-{filteredEndpoints.map((category, categoryIndex) => (
+<div className="space-y-8">{filteredEndpoints.map((category, categoryIndex) => (</div>
 <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
 <div className="flex items-center gap-4 mb-8">
 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -185,8 +175,7 @@ Start Building →
 <p className="text-gray-300">{category.description}</p>
 </div>
 </div>
-<div className="space-y-6">
-{category.endpoints.map((endpoint, endpointIndex) => (
+<div className="space-y-6">{category.endpoints.map((endpoint, endpointIndex) => (</div>
 <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
 <div className="flex items-center justify-between mb-4">
 <div className="flex items-center gap-4">
@@ -194,24 +183,22 @@ Start Building →
 endpoint.method === 'POST'
 ? 'bg-green-500/20 text-green-400'
 : 'bg-blue-500/20 text-blue-400'
-}`}>
-{endpoint.method}
-</span>
+}`}>{endpoint.method}</span>span>
 <code className="text-purple-400 font-mono">{endpoint.path}</code>
 </div>
 <button
-onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
+onClick={() =>copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}</button>
 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
 {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-<React.Fragment>
+<>
 <Check className="w-4 h-4" />
 Copied!
-</React.Fragment>
+</>
 ) : (
-<React.Fragment>
+<>
 <Copy className="w-4 h-4" />
 Copy
-</React.Fragment>
+</>
 )}
 </button>
 </div>
@@ -232,19 +219,11 @@ Copy
 {/* CTA Section */}
 <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-Ready to Get Started?
-</h2>
-<p className="text-xl text-purple-100 mb-8">
-Start building with our APIs today and create amazing applications.
-</p>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
+<p className="text-xl text-purple-100 mb-8">Start building with our APIs today and create amazing applications.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-Get API Key
-</
-<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-View SDKs
-</
+<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Get API Key</button>
+<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">View SDKs</button>
 </div>
 </div>
 </section>

@@ -5,7 +5,7 @@ const MicroSaaSPage: React.FC = () => {
   const serviceName = 'expense-tracker'
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
         <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />
@@ -22,17 +22,13 @@ const MicroSaaSPage: React.FC = () => {
               {title} </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
-            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.</p>p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                View Demo
-  </
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo</button>
             </div>
           </div>
         </section>
@@ -40,14 +36,12 @@ const MicroSaaSPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!
-              </p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!</p>p>
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 export default MicroSaaSPage

@@ -39,12 +39,8 @@ const EnhancedServicesShowcase: React.FC = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
-            Our Core Services
-  </
-          <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation
-  </
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Our Core Services</h2>
+          <p className="text-xl text-cyan-400 max-w-3xl mx-auto">Comprehensive AI and IT solutions designed to transform your business and drive innovation</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (</div>
@@ -75,8 +71,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="text-center mt-12">
           <a
             href="/services"
-            className="cyber-button inline-flex items-center">
-            View All Services
+            className="cyber-button inline-flex items-center">View All Services</a>
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
         </div>

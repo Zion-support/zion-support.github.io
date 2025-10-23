@@ -34,9 +34,7 @@ const SitemapPage: React.FC = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Sitemap</h1>
           </h1>
-          <p className="text-xl text-gray-600">
-            Navigate through all pages on our website
-  </
+          <p className="text-xl text-gray-600">Navigate through all pages on our website</p>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -45,38 +43,24 @@ const SitemapPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   <a
                     href={page.path}
-                    className="text-blue-600 hover:text-blue-700 transition-colors">
-                    {page.title}
-                  </a>
+                    className="text-blue-600 hover:text-blue-700 transition-colors">{page.title}</a>a>
                 </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {page.description}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {page.path}
-                </p>
+                <p className="text-sm text-gray-600 mb-2">{page.description}</p>p>
+                <p className="text-xs text-gray-500">{page.path}</p>p>
               </div>
             ))}
           </div>
         </div>
         <div className="mt-12 bg-blue-50 rounded-lg p-8"></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Need Help Finding Something?
-          </h2>
-          <p className="text-gray-600 mb-6">
-            If you can't find what you're looking for, feel free to contact us directly.
-          </p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Help Finding Something?</h2>h2>
+          <p className="text-gray-600 mb-6">If you can't find what you're looking for, feel free to contact us directly.</p>p>
           <div className="flex flex-col sm:flex-row gap-4"></div>
             <a
               href="/contact"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
-              Contact Us
-  </
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">Contact Us</a>
             <a
               href="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
-              Call Us: (302) 464-0950
-  </
+              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">Call Us: (302) 464-0950</a>
           </div>
         </div>
       </div>

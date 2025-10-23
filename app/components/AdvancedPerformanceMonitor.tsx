@@ -245,8 +245,7 @@ return (
 <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
 <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
 <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-<div>
-Memory:{' '}
+<div>Memory:{' '}</div>
 {metrics.memory
 ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
 : 'N/A'}

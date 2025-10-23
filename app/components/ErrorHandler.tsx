@@ -93,13 +93,9 @@ class ErrorHandler extends Component<Props, State> {
               <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
             
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Oops! Something went wrong</h1>h1>
             
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-            </p>
+            <p className="text-gray-600 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">

@@ -25,15 +25,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our EnhancedErrorBoundary?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enhancederrorboundary solutions deliver unmatched performance, security, and scalability.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our EnhancedErrorBoundary?</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our enhancederrorboundary solutions deliver unmatched performance, security, and scalability.</p>p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
@@ -49,15 +44,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our enhancederrorboundary solutions for your business.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our enhancederrorboundary solutions for your business.</p>p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
@@ -70,12 +60,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -140,19 +126,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
+            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>h1>
+            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
                   Error Details (Development)
                 </summary>
-                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto">
-                  {this.state.error.toString()}
+                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto">{this.state.error.toString()}</p>
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
@@ -174,9 +155,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </button>
             </div>
             <div className="mt-6 pt-6 border-t border-gray-700">
-              <p className="text-sm text-gray-400 mb-3">
-                Still having issues? Contact our support team:
-              </p>
+              <p className="text-sm text-gray-400 mb-3">Still having issues? Contact our support team:</p>p>
               <a
                 href="mailto:support@ziontechgroup.com"
                 className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm"

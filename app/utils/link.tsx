@@ -61,7 +61,7 @@ import React from 'react'
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
 export const,
-Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
+Link: React.FC<LinkProps>= ({/* TODO: Fix JSX expression */})</a>
 }) => {/* TODO: Fix JSX expression */}
 }
 // Handle internal navigation

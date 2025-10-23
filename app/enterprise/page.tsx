@@ -100,22 +100,16 @@ keywords="enterprise solutions, enterprise software, large-scale solutions, ente
 <div className="relative max-w-7xl mx-auto text-center"></div>
 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
 Enterprise</h1>
-<span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-Solutions
-</
+<span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Solutions</span>
 </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-Comprehensive enterprise-grade solutions designed for large-scale business operations.
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Comprehensive enterprise-grade solutions designed for large-scale business operations.</p>
 Transform your organization with cutting-edge technology and expert implementation.
 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-Get Enterprise Consultation
+<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">Get Enterprise Consultation</button>
 <ArrowRight className="inline-block ml-2 w-5 h-5" />
 </button>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-View Case Studies
-</
+<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Case Studies</button>
 </div>
 </div>
 </section>
@@ -139,12 +133,8 @@ View Case Studies
 <section className="py-20 px-4">
 <div className="max-w-7xl mx-auto"></div>
 <div className="text-center mb-16"></div>
-<h2 className="text-4xl font-bold text-white mb-4">
-Enterprise-Grade Features
-</
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-Built for scale, security, and performance to meet the demands of large organizations.
-</p>
+<h2 className="text-4xl font-bold text-white mb-4">Enterprise-Grade Features</h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale, security, and performance to meet the demands of large organizations.</p>p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
@@ -164,12 +154,8 @@ Built for scale, security, and performance to meet the demands of large organiza
 </div>
 </div>
 </section>
-<h2 className="text-4xl font-bold text-white mb-4">
-Comprehensive Solutions
-</
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-End-to-end enterprise solutions that address every aspect of your business operations.
-</p>
+<h2 className="text-4xl font-bold text-white mb-4">Comprehensive Solutions</h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">End-to-end enterprise solutions that address every aspect of your business operations.</p>p>
 </div>
 </li>
 ))}
@@ -190,20 +176,13 @@ End-to-end enterprise solutions that address every aspect of your business opera
 {/* CTA Section */}
 <section className="py-20 px-4">
 <div className="max-w-4xl mx-auto text-center"></div>
-<h2 className="text-4xl font-bold text-white mb-6">
-Ready to Transform Your Enterprise?
-</h2>
-<p className="text-xl text-gray-300 mb-8">
-Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
-</p>
+<h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>h2>
+<p className="text-xl text-gray-300 mb-8">Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-Contact Enterprise Sales
+<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Enterprise Sales</button>
 <ArrowRight className="inline-block ml-2 w-5 h-5" />
 </button>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-Learn More
-</
+<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
 </div>
 </div>
 </section>

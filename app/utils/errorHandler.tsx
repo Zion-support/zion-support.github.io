@@ -927,11 +927,11 @@ return (
 this.props.fallback || (
 <div style={{ padding: '20px', textAlign: 'center' }}></div>
 <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
-onClick={() =>this.setState({ hasError: false, error: undefined })}
+onClick={() =>this.setState({ hasError: false, error: undefined })}</button>
 <h2>Something went wrong</h2>)
 <p>We're sorry, but something unexpected happened.</p>)
 <button;)
-onClick={() => this.setState({ hasError: false, error: undefined })}
+onClick={() =>this.setState({ hasError: false, error: undefined })}</button>
 style={{;}
 style={{}
 padding: '10px 20px',

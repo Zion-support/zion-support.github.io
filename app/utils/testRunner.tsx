@@ -1163,8 +1163,7 @@ ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
 <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
 <p>Duration: ${Date.now() - this.startTime}ms</p>
 </div>
-<div class="tests">
-${this.results
+<div class="tests">${this.results</div>
 .map(result => `}
 ${this.results}
 .map()
@@ -1319,24 +1318,24 @@ r: #ff9800; }
 <h1>Test Results</h1>
 <div class="summary"></div>
 <h2>Summary</h2>
-<p>Tota,
+<p>Tota,</p>
 l: ${this.results.length}</p>
-<p>Passe,
+<p>Passe,</p>
 d: ${this.results.filter(r => r.status === 'passed').length}</p>
-<p>Faile,
+<p>Faile,</p>
 d: ${this.results.filter(r => r.status === 'failed').length}</p>
-<p>Skippe,
+<p>Skippe,</p>
 d: ${this.results.filter(r => r.status === 'skipped').length}</p>
-<p>Duratio,
+<p>Duratio,</p>
 n: ${Date.now() - this.startTime}ms</p>
 </div>"
 <div class="tests"></div>
 ${/* TODO: Fix JSX expression */}"
 <div class="test ${result.status}"></div>
 <h3>${result.name}</h3>
-<p>Statu,
+<p>Statu,</p>
 s: ${result.status}</p>
-<p>Duratio,
+<p>Duratio,</p>
 n: ${result.duration}ms</p>
 ${/* TODO: Fix JSX expression */}`
 r: ${result.error.message}</p>` : ''}

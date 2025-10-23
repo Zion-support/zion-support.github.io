@@ -47,8 +47,7 @@ export const ServiceCardSkeleton: React.FC = () => (
 </div>
 )
 export const StatsSkeleton: React.FC = () => (
-<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-{Array.from({ length: 4 }).map((_, index) => (
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8">{Array.from({ length: 4 }).map((_, index) => (</div>
 <div key={index} className="text-center animate-pulse">
 <div className="h-8 bg-gray-600 rounded mb-2"></div>
 <div className="h-4 bg-gray-600 rounded w-3/4 mx-auto"></div>

@@ -78,8 +78,7 @@ const CaseStudiesPage: React.FC = () => {
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Header */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Header */}</div>
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
@@ -93,14 +92,9 @@ const CaseStudiesPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Success Stories
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-                Real results from real companies using our AI solutions
-              </p>
-              <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-                Discover how leading companies across industries have transformed their operations 
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Success Stories</h1>h1>
+              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">Real results from real companies using our AI solutions</p>p>
+              <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">Discover how leading companies across industries have transformed their operations </p>
                 and achieved remarkable ROI with our cutting-edge AI technology.
               </p>
             </div>
@@ -110,8 +104,7 @@ const CaseStudiesPage: React.FC = () => {
         {/* Case Studies Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study) => (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{caseStudies.map((study) => (</div>
                 <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
                   <div className="p-8">
                     <div className="flex items-center mb-4">
@@ -143,12 +136,8 @@ const CaseStudiesPage: React.FC = () => {
                           <div className="text-sm text-gray-600">ROI</div>
                         </div>
                         <div className="text-center p-3 bg-blue-50 rounded-lg">
-                          <div className="text-2xl font-bold text-blue-600">
-                            {Object.values(study.results)[1]}
-                          </div>
-                          <div className="text-sm text-gray-600">
-                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
-                          </div>
+                          <div className="text-2xl font-bold text-blue-600">{Object.values(study.results)[1]}</div>div>
+                          <div className="text-sm text-gray-600">{Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</div>div>
                         </div>
                       </div>
                     </div>
@@ -176,12 +165,8 @@ const CaseStudiesPage: React.FC = () => {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Proven Track Record
-              </h2>
-              <p className="text-xl text-gray-600">
-                Our AI solutions deliver consistent, measurable results
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Track Record</h2>h2>
+              <p className="text-xl text-gray-600">Our AI solutions deliver consistent, measurable results</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
@@ -207,12 +192,8 @@ const CaseStudiesPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Create Your Success Story?
-            </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Join the companies that have transformed their business with our AI solutions
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Create Your Success Story?</h2>h2>
+            <p className="text-xl mb-8 text-blue-100">Join the companies that have transformed their business with our AI solutions</p>p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact"

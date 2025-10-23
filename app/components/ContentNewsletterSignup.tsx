@@ -33,12 +33,8 @@ const ContentNewsletterSignup: React.FC = () => {
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-6xl mb-6">🎉</div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Welcome to Our Content Community!
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            You'll receive our latest AI insights, enterprise transformation guides, and breakthrough content directly in your inbox.
-          </p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Welcome to Our Content Community!</h2>h2>
+          <p className="text-xl text-gray-600 mb-8">You'll receive our latest AI insights, enterprise transformation guides, and breakthrough content directly in your inbox.</p>p>
           <div className="bg-white rounded-lg p-6 shadow-lg max-w-md mx-auto">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">What's Next?</h3>
             <ul className="text-left text-gray-600 space-y-2">
@@ -57,18 +53,13 @@ const ContentNewsletterSignup: React.FC = () => {
     <div className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <div className="text-6xl mb-6">📧</div>
-        <h2 className="text-4xl font-bold text-white mb-4">
-          Stay Ahead with AI Insights
-        </h2>
-        <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-          Get exclusive access to our latest AI breakthroughs, enterprise transformation guides, 
+        <h2 className="text-4xl font-bold text-white mb-4">Stay Ahead with AI Insights</h2>h2>
+        <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">Get exclusive access to our latest AI breakthroughs, enterprise transformation guides, </p>
           and cutting-edge content that's transforming businesses worldwide.
         </p>
 
         <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">
-            Join 10,000+ Enterprise Leaders
-          </h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Join 10,000+ Enterprise Leaders</h3>h3>
           
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col sm:flex-row gap-4">
@@ -84,9 +75,7 @@ const ContentNewsletterSignup: React.FC = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? 'Subscribing...' : 'Get Free Content'}
-              </button>
+              >{isSubmitting ? 'Subscribing...' : 'Get Free Content'}</button>button>
             </div>
             
             {error && (

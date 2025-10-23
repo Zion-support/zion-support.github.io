@@ -86,14 +86,11 @@ keywords="documentation, API docs, guides, tutorials, AI solutions, cloud servic
 </div>
 <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
 </div>
-<h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
-{doc.title}
-</h3>
+<h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">{doc.title}</h3>h3>
 <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
 <a
 href={doc.link}
-className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
-Read More
+className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">Read More</a>
 <ArrowRight className="w-4 h-4" />
 </a>
 </div>
@@ -105,8 +102,7 @@ Read More
 <section className="py-16 px-4">
 <div className="max-w-7xl mx-auto">
 <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-{filteredDocs.map((category, index) => (
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{filteredDocs.map((category, index) => (</div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
 <div className="flex items-center gap-4 mb-6">
 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -117,8 +113,7 @@ Read More
 <p className="text-gray-300">{category.description}</p>
 </div>
 </div>
-<div className="space-y-4">
-{category.docs.map((doc, docIndex) => (
+<div className="space-y-4">{category.docs.map((doc, docIndex) => (</div>
 <a
 key={docIndex}
 href={doc.link}
@@ -143,19 +138,11 @@ className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-p
 {/* CTA Section */}
 <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-Need Help?
-</h2>
-<p className="text-xl text-purple-100 mb-8">
-Can't find what you're looking for? Our support team is here to help.
-</p>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need Help?</h2>h2>
+<p className="text-xl text-purple-100 mb-8">Can't find what you're looking for? Our support team is here to help.</p>p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-Contact Support
-</
-<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-Join Community
-</
+<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Contact Support</button>
+<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Join Community</button>
 </div>
 </div>
 </section>

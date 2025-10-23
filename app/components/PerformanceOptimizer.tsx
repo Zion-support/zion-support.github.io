@@ -146,8 +146,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean);
 
   return (
-    <div className="performance-optimizer">
-      {isOptimizing && (
+    <div className="performance-optimizer">{isOptimizing && (</div>
         <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
           <div className="flex items-center gap-2">
             <Settings className="w-4 h-4 animate-spin" />
@@ -168,32 +167,28 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       <div className="optimization-status">
         <h3 className="text-lg font-semibold mb-4">Performance Optimizations</h3>
         <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            {optimizationStatus.images ? (
+          <div className="flex items-center gap-2">{optimizationStatus.images ? (</div>
               <CheckCircle className="w-4 h-4 text-green-500" />
             ) : (
               <AlertTriangle className="w-4 h-4 text-yellow-500" />
             )}
             <span>Image Optimization</span>
           </div>
-          <div className="flex items-center gap-2">
-            {optimizationStatus.lazyLoading ? (
+          <div className="flex items-center gap-2">{optimizationStatus.lazyLoading ? (</div>
               <CheckCircle className="w-4 h-4 text-green-500" />
             ) : (
               <AlertTriangle className="w-4 h-4 text-yellow-500" />
             )}
             <span>Lazy Loading</span>
           </div>
-          <div className="flex items-center gap-2">
-            {optimizationStatus.preloading ? (
+          <div className="flex items-center gap-2">{optimizationStatus.preloading ? (</div>
               <CheckCircle className="w-4 h-4 text-green-500" />
             ) : (
               <AlertTriangle className="w-4 h-4 text-yellow-500" />
             )}
             <span>Resource Preloading</span>
           </div>
-          <div className="flex items-center gap-2">
-            {optimizationStatus.codeSplitting ? (
+          <div className="flex items-center gap-2">{optimizationStatus.codeSplitting ? (</div>
               <CheckCircle className="w-4 h-4 text-green-500" />
             ) : (
               <AlertTriangle className="w-4 h-4 text-yellow-500" />

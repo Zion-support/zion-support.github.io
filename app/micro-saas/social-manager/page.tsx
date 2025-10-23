@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { Share2, ArrowRight } from 'lucide-react'
 const SocialMediaManagerPage: React.FC = () => {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
         <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." />
@@ -20,8 +20,7 @@ const SocialMediaManagerPage: React.FC = () => {
               AI Social Media </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered social media management and automation. Schedule posts, analyze engagement,
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">AI-powered social media management and automation. Schedule posts, analyze engagement,</p>
               and grow your social presence with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -29,9 +28,7 @@ const SocialMediaManagerPage: React.FC = () => {
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                View Demo
-  </
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo</button>
             </div>
           </div>
         </section>
@@ -39,14 +36,12 @@ const SocialMediaManagerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're developing powerful social media management solutions. Stay tuned for updates!
-              </p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">We're developing powerful social media management solutions. Stay tuned for updates!</p>p>
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 export default SocialMediaManagerPage

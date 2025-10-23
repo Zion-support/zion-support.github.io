@@ -241,12 +241,8 @@ const CareersPage: React.FC = () => {
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Join Our Team
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Build the future of technology with us. We're looking for passionate individuals who want to make a difference.
-            </p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">Build the future of technology with us. We're looking for passionate individuals who want to make a difference.</p>p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
@@ -270,12 +266,9 @@ const CareersPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Values</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {companyValues.map((value, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{companyValues.map((value, index) => (</div>
                 <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    {value.icon}
-                  </div>
+                  <div className="flex justify-center mb-4">{value.icon}</div>div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
                 </div>
@@ -290,11 +283,9 @@ const CareersPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Perks & Benefits</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {perks.map((perk, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{perks.map((perk, index) => (</div>
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                  <div className="flex items-center gap-4">
-                    {perk.icon}
+                  <div className="flex items-center gap-4">{perk.icon}</div>
                     <div>
                       <h3 className="font-semibold text-gray-900">{perk.title}</h3>
                       <p className="text-gray-600 text-sm">{perk.description}</p>
@@ -312,8 +303,7 @@ const CareersPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Open Positions</h2>
-            <div className="space-y-6">
-              {openPositions.map((position) => (
+            <div className="space-y-6">{openPositions.map((position) => (</div>
                 <div key={position.id} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div>
@@ -400,9 +390,7 @@ const CareersPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Don't See Your Dream Job?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              We're always looking for talented individuals. Send us your resume and let's start a conversation.
-            </p>
+            <p className="text-xl mb-8 text-blue-100">We're always looking for talented individuals. Send us your resume and let's start a conversation.</p>p>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"

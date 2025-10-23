@@ -94,7 +94,7 @@ import React, { useState, useCallback } from 'react'
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
 export const,
-Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
+Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}

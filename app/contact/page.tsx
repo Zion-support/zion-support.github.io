@@ -56,14 +56,10 @@ const ContactPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Get in
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Touch
-  </
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Get in</h1>
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business? Let's discuss your project and explore
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Ready to transform your business? Let's discuss your project and explore</p>
             how our AI and IT solutions can help you achieve your goals.
           </p>
         </div>
@@ -71,8 +67,7 @@ const ContactPage: React.FC = () => {
       {/* Contact Form and Info */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">{/* Contact Form */}</div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
               {submitStatus === 'success' && (
@@ -201,17 +196,16 @@ const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
-                  {isSubmitting ? (
-                    <React.Fragment>
+                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">{isSubmitting ? (</button>
+                    <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
-                    </React.Fragment>
+                    </>
                   ) : (
-                    <React.Fragment>
+                    <>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
-                    </React.Fragment>
+                    </>
                   )}
                 </button>
               </form>
@@ -220,8 +214,7 @@ const ContactPage: React.FC = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Get in touch</h2>
-                <p className="text-gray-300 mb-8">
-                  We're here to help you succeed. Reach out to us through any of the channels below,
+                <p className="text-gray-300 mb-8">We're here to help you succeed. Reach out to us through any of the channels below,</p>
                   and we'll get back to you within 24 hours.
                 </p>
               </div>
