@@ -39,7 +39,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Email Marketing Automation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai email marketing automation solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiEmailMarketingAutomationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

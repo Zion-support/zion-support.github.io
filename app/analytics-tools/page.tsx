@@ -138,11 +138,3 @@ Email Us
 )
 }
 export default AnalyticsToolsPage
-</button>
-</button>
-</button>
-</button>
-</section>
-</h2>
-</section>
-</h1>

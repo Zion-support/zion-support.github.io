@@ -122,19 +122,16 @@ const CaseStudiesPage: React.FC = () => {
                         <p className="text-gray-500 text-sm">{study.industry}</p>
                       </div>
                     </div>
-
                     <p className="text-gray-600 mb-6">{study.description}</p>
 
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
                       <p className="text-gray-600 text-sm">{study.challenge}</p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
                       <p className="text-gray-600 text-sm">{study.solution}</p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-4">Results:</h4>
                       <div className="grid grid-cols-2 gap-4">
@@ -152,7 +149,6 @@ const CaseStudiesPage: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     <div className="flex items-center justify-between">
                       <Link 
                         to="/contact"

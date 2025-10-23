@@ -246,7 +246,6 @@ const ITServicesPage: React.FC = () => {
                           Save up to 40% vs market rates
                         </div>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
@@ -258,7 +257,6 @@ const ITServicesPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
@@ -269,7 +267,6 @@ const ITServicesPage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
@@ -281,7 +278,6 @@ const ITServicesPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                         Get Quote
                       </button>

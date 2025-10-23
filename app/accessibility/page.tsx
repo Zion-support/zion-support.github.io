@@ -170,7 +170,6 @@ const AccessibilityPage: React.FC = () => {
               Our comprehensive accessibility features ensure everyone can use our AI solutions
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
@@ -183,7 +182,6 @@ const AccessibilityPage: React.FC = () => {
                     <p className="text-gray-300">{feature.description}</p>
                   </div>
                 </div>
-
                 <ul className="space-y-2">
                   {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center space-x-2 text-sm text-gray-300">
@@ -209,7 +207,6 @@ const AccessibilityPage: React.FC = () => {
               We meet and exceed international accessibility standards
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {standards.map((standard, index) => (
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -236,7 +233,6 @@ const AccessibilityPage: React.FC = () => {
               Our solutions work with a wide range of assistive technologies
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {tools.map((tool, index) => (
               <div key={index} className="text-center">
@@ -262,7 +258,6 @@ const AccessibilityPage: React.FC = () => {
               We are committed to creating an inclusive digital experience for all users
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {commitments.map((commitment, index) => (
               <div key={index} className="text-center">
@@ -286,7 +281,6 @@ const AccessibilityPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Need help with accessibility features or have suggestions for improvement? We're here to help.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
               Contact Accessibility Team

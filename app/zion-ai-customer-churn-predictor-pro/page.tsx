@@ -214,19 +214,16 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
                   #1 AI Customer Retention Platform
                 </span>
               </div>
-
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400">
                   Zion AI Customer Churn Predictor Pro
                 </span>
               </h1>
-
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Predict and prevent customer churn with AI-powered analytics.
                 Get 94% accuracy in churn prediction and personalized retention
                 campaigns that increase customer lifetime value.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link
                   to="/contact"
@@ -243,7 +240,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
                   <Target className="w-5 h-5 ml-2" />
                 </Link>
               </div>
-
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
@@ -292,7 +288,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
                 Reduce churn for any business type
               </p>
             </div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {industries.map((industry, index) => (
                 <div
@@ -325,7 +320,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
                 churn with AI intelligence.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -370,7 +364,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
                 base
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -404,7 +397,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li
@@ -444,7 +436,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
                 See how businesses are reducing churn with AI
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -494,7 +485,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
                 lifetime value. Start your free trial today and see the
                 difference AI can make.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -511,7 +501,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
                   <Clock className="w-5 h-5 ml-2" />
                 </Link>
               </div>
-
               <div className="mt-8 text-sm text-gray-400">
                 <p>
                   ✓ 14-day free trial • ✓ No credit card required • ✓ Cancel

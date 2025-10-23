@@ -2,8 +2,10 @@
 import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react'
+
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear()
+  
   const aiServices = [
     { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
     { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
@@ -12,6 +14,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Automation', url: '/ai-services', description: 'Process automation' },
     { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' }
   ]
+  
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/it-services', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/it-services', description: 'Automation pipelines' },
@@ -20,6 +23,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
     { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' }
   ]
+  
   const microSaasServices = [
     { name: 'Business Intelligence', url: '/micro-saas', description: 'Analytics dashboard' },
     { name: 'AI Customer Support', url: '/micro-saas', description: 'Chatbot solutions' },
@@ -28,6 +32,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Lead Generation', url: '/micro-saas', description: 'Sales automation' },
     { name: 'Financial Analytics', url: '/micro-saas', description: 'Financial management' }
   ]
+  
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Case Studies', url: '/case-studies' },
@@ -36,6 +41,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Partners', url: '/partners' },
     { name: 'Support', url: '/support' }
   ]
+  
   const resourcesLinks = [
     { name: 'Pricing', url: '/pricing' },
     { name: 'FAQ', url: '/faq' },
@@ -44,6 +50,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Community', url: '/community' }
   ]
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -73,16 +80,6 @@ const Footer: React.FC = memo(() => {
                 <MapPin className="w-4 h-4 mr-2 mt-0.5" />
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
-                <span>+1 (302) 464-0950</span>
-              </div>
-            </div>
-            <div className="flex items-center text-sm text-gray-300">
-              <Mail className="w-4 h-4 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center text-sm text-gray-300">
-              <MapPin className="w-4 h-4 mr-2" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
             </div>
           </div>
           {/* AI Services */}
@@ -96,10 +93,8 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                     {service.name}
                   </Link>
                 </li>
@@ -107,7 +102,8 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link
                   to="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
                   View All AI Services →
                 </Link>
               </li>
@@ -124,11 +120,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                    to={service.url}
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
                   </Link>
@@ -137,7 +129,8 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link
                   to="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
                   View All IT Services →
                 </Link>
               </li>
@@ -150,11 +143,12 @@ const Footer: React.FC = memo(() => {
               Micro SAAS
             </h3>
             <ul className="space-y-2">
-              {microSaasServices.slice(0, 8).map((service, index) => (
+              {microSaasServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
                     {service.name}
                   </Link>
                 </li>
@@ -162,7 +156,8 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link
                   to="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
                   View All Micro SAAS →
                 </Link>
               </li>
@@ -196,9 +191,6 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
                     {link.name}
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -253,14 +245,13 @@ const Footer: React.FC = memo(() => {
             <div className="flex space-x-6">
               <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
-  </
+              </a>
               <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
-  </
+              </a>
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
-  </
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -268,5 +259,6 @@ const Footer: React.FC = memo(() => {
     </footer>
   )
 })
+
 Footer.displayName = 'Footer'
 export default Footer

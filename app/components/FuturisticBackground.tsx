@@ -32,7 +32,7 @@ const FuturisticBackgroundPage: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>FuturisticBackground - Zion Tech Group</title>
         <meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
@@ -117,14 +117,7 @@ const FuturisticBackgroundPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default FuturisticBackgroundPage
-  </button>
-  </button>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

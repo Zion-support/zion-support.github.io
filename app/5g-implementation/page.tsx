@@ -42,7 +42,7 @@ benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendati
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
 <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
@@ -128,7 +128,7 @@ Learn More
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default FiveGImplementationPage

@@ -39,7 +39,7 @@ const AiHolographicWorkspacePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Holographic Workspace - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai holographic workspace solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiHolographicWorkspacePage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiHolographicWorkspacePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

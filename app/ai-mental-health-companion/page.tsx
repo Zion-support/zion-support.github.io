@@ -850,33 +850,27 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               <Heart className="w-5 h-5 text-pink-400 mr-2" />
               <span className="text-pink-300 font-medium">AI Mental Health Companion Pro</span>
             </div>
-
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
               24/7 Mental Health Support
             </h1>
-
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               Your AI-Powered Mental Health Companion
             </p>
-
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
               Get compassionate, professional mental health support anytime, anywhere.
               Track your mood, engage in therapy sessions, and access crisis support with our advanced AI technology.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/25">
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </button>
-
               <button className="group inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-xl hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
               </button>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
@@ -899,7 +893,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           </div>
         </div>
       </div>
-
       {/* Mental Health Companion Interface */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -911,7 +904,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               Track your mood, chat with your AI companion, and access professional support
             </p>
           </div>
-
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Mood Tracking Section */}
@@ -938,7 +930,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                       </button>
                     ))}
                   </div>
-
                   <div className="bg-white/5 rounded-lg p-4">
                     <h4 className="text-white font-semibold mb-2">Mood History</h4>
                     <div className="space-y-2">
@@ -956,7 +947,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                   </div>
                 </div>
               </div>
-
               {/* Chat Interface */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
@@ -1007,7 +997,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                       </div>
                     )}
                   </div>
-
                   {/* Message Input */}
                   <div className="flex space-x-2">
                     <input
@@ -1026,7 +1015,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                       Send
                     </button>
                   </div>
-
                   {/* Crisis Support Button */}
                   <button
                     onClick={handleCrisisSupport}
@@ -1040,7 +1028,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -1052,7 +1039,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               Comprehensive mental health support powered by advanced AI technology
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105">
@@ -1070,7 +1056,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           </div>
         </div>
       </div>
-
       {/* Pricing Section */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -1082,7 +1067,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               Choose the mental health support plan that's right for you
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>
@@ -1102,7 +1086,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -1124,7 +1107,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           </div>
         </div>
       </div>
-
       {/* Contact Section */}
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -1136,7 +1118,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               Contact our mental health team to learn more about our AI companion
             </p>
           </div>
-
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -1163,7 +1144,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                   </div>
                 </div>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6">Get Started</h3>
                 <div className="space-y-4">

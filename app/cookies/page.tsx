@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const CookiesPage: React.FC = () => {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
@@ -40,7 +40,7 @@ const CookiesPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </React.Fragment>
+    </>
   )
 }
 export default CookiesPage

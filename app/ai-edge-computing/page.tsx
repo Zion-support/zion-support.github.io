@@ -39,7 +39,7 @@ const AiEdgeComputingPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Edge Computing - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai edge computing solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiEdgeComputingPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiEdgeComputingPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -129,7 +129,6 @@ const PricingPage: React.FC = () => {
                       <span className="text-gray-600 ml-2">{plan.period}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
@@ -161,7 +160,6 @@ const PricingPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Add-on Services</h2>
               <p className="text-xl text-gray-600">Enhance your plan with additional services</p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {addOns.map((addOn, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">

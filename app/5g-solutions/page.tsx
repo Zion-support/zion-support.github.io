@@ -28,7 +28,6 @@ const FiveGSolutionsPage: React.FC = () => {
               real-time data processing, and seamless IoT integration.
             </p>
           </div>
-
           {/* Key Features */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center">
@@ -59,7 +58,6 @@ const FiveGSolutionsPage: React.FC = () => {
               Comprehensive 5G implementation services tailored to your business needs
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
               <Globe className="w-10 h-10 text-cyan-400 mb-4" />
@@ -80,7 +78,6 @@ const FiveGSolutionsPage: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
               <Smartphone className="w-10 h-10 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Mobile Applications</h3>
@@ -100,7 +97,6 @@ const FiveGSolutionsPage: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
               <Zap className="w-10 h-10 text-green-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">IoT Integration</h3>

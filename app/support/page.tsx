@@ -106,7 +106,6 @@ const SupportPage: React.FC = () => {
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Find answers, get support, and access resources to make the most of our solutions
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
@@ -168,7 +167,6 @@ const SupportPage: React.FC = () => {
                 </button>
               ))}
             </div>
-
             {/* FAQ List */}
             <div className="space-y-4">
               {filteredFAQs.map((faq, index) => (
@@ -198,7 +196,6 @@ const SupportPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {filteredFAQs.length === 0 && (
               <div className="text-center py-12">
                 <Search className="w-12 h-12 text-gray-400 mx-auto mb-4" />

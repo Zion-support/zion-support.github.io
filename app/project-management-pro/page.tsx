@@ -57,7 +57,7 @@ const benefits = [
 'Streamline project workflows'
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
 <meta name="description" content="Advanced project management platform by Zion Tech Group. Manage projects, teams, and tasks with AI-powered insights and automation." />
@@ -157,14 +157,7 @@ Email Us
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default ProjectManagementProPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

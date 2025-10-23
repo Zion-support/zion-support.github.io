@@ -3,7 +3,7 @@ import React from "react";
 
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
 
       </Helmet>
@@ -15,7 +15,6 @@ import React from "react";
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Ai Supply Chain Optimizer
             </h1>
-
                 Get Started
               </a>
 
@@ -71,7 +70,7 @@ import React from "react";
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

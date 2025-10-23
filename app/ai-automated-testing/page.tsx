@@ -31,7 +31,7 @@ const AiAutomatedTestingPage: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>
           Ai Automated Testing - Zion Tech Group | Advanced AI and IT Solutions
@@ -123,7 +123,7 @@ const AiAutomatedTestingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

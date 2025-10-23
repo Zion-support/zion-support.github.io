@@ -169,7 +169,6 @@ const PartnersPage: React.FC = () => {
                       {partner.tier.toUpperCase()}
                     </span>
                   </div>
-                  
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{partner.name}</h3>
                   <p className="text-gray-600 mb-3">{partner.description}</p>
                   <p className="text-sm text-blue-600 mb-4">{partner.category}</p>

@@ -32,7 +32,7 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>AI CRM Assistant - Zion Tech Group</title>
 <meta name="description" content="Intelligent CRM assistant powered by AI technology." />
@@ -166,7 +166,7 @@ Contact Sales
 </div>
 </section>
 <Footer />
-</React.Fragment>
+</>
 )
 }
 export default AiCrmAssistantPage

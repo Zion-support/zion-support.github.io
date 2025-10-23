@@ -91,5 +91,3 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
   )
 }
 export default PagePage
-  </button>
-  </h2>

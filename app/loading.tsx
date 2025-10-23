@@ -32,7 +32,7 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Loading - Zion Tech Group</title>
 <meta name="description" content="Loading page." />
@@ -109,12 +109,7 @@ Contact Us
 </section>
 </main>
 <Footer />
-</React.Fragment>
+</>
 )
 }
 export default LoadingPage
-</button>
-</h2>
-</button>
-</button>
-</h1>

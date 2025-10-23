@@ -297,7 +297,6 @@ const HomePage: React.FC = () => {
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               </p>
-              
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -321,7 +320,6 @@ const HomePage: React.FC = () => {
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/contact"
@@ -349,7 +347,6 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -365,7 +362,6 @@ const HomePage: React.FC = () => {
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
                     {service.description}
                   </p>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -377,7 +373,6 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -389,7 +384,6 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
                     <a 
@@ -412,7 +406,6 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Advanced artificial intelligence solutions for enterprise applications
             </p>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {aiServices.map((service, index) => (
                 <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
@@ -423,7 +416,6 @@ const HomePage: React.FC = () => {
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
                     {service.description}
                   </p>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
                     <ul className="space-y-1">
@@ -435,7 +427,6 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                     <a 
@@ -458,7 +449,6 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Comprehensive IT solutions for modern enterprise infrastructure
             </p>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {itServices.map((service, index) => (
                 <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -469,7 +459,6 @@ const HomePage: React.FC = () => {
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
                     {service.description}
                   </p>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
                     <ul className="space-y-1">
@@ -481,7 +470,6 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                     <a 
@@ -501,7 +489,6 @@ const HomePage: React.FC = () => {
             <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Get In Touch
             </h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -515,7 +502,6 @@ const HomePage: React.FC = () => {
                   Call Now
                 </a>
               </div>
-              
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
@@ -527,7 +513,6 @@ const HomePage: React.FC = () => {
                   Send Email
                 </a>
               </div>
-              
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>

@@ -218,11 +218,3 @@ url: typeof window !== 'undefined' ? window.location.href : 'unknown',
 }
 }
 export default getErrorBoundaryConfig
-</button>
-</button>
-</button>
-</path>
-</button>
-</button>
-</h2>
-</path>

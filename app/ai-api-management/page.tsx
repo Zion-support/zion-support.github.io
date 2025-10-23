@@ -127,7 +127,6 @@ const AIAPIManagementPage: React.FC = () => {
               Our AI-powered API management platform provides everything you need to build, secure, and scale your APIs.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-opacity-20 transition-all duration-300">
@@ -159,7 +158,6 @@ const AIAPIManagementPage: React.FC = () => {
               Experience the benefits of AI-powered API management for your business.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
@@ -182,7 +180,6 @@ const AIAPIManagementPage: React.FC = () => {
               Choose the perfect plan for your API management needs.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 ${index === 1 ? 'ring-2 ring-blue-500 scale-105' : ''}`}>

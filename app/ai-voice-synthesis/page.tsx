@@ -39,7 +39,7 @@ const AiVoiceSynthesisPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Voice Synthesis - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai voice synthesis solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiVoiceSynthesisPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiVoiceSynthesisPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

@@ -97,7 +97,6 @@ const AIAPIManagerPage: React.FC = () => {
               Everything you need to manage, monitor, and optimize your APIs with AI-powered intelligence.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-opacity-20 transition-all duration-300">
@@ -129,7 +128,6 @@ const AIAPIManagerPage: React.FC = () => {
               Comprehensive API management capabilities powered by artificial intelligence.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {capabilities.map((capability, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
@@ -152,7 +150,6 @@ const AIAPIManagerPage: React.FC = () => {
               Works with your existing tools and cloud providers for a seamless experience.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {integrations.map((integration, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-opacity-20 transition-all duration-300">

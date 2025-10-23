@@ -85,5 +85,3 @@ const PagePage: React.FC = () => {
   )
 }
 export default PagePage
-  </button>
-  </button>

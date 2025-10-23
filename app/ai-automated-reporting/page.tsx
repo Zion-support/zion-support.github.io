@@ -31,7 +31,7 @@ const AiAutomatedReportingPage: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>
           Ai Automated Reporting - Zion Tech Group | Advanced AI and IT
@@ -124,7 +124,7 @@ const AiAutomatedReportingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

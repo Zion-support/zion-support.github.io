@@ -115,7 +115,6 @@ export default function Consultation() {
               <h2 className="text-3xl font-bold text-center mb-8">
                 Schedule Your Free Consultation
               </h2>
-              
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -164,7 +163,6 @@ export default function Consultation() {
                       />
                     </div>
                   </div>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -195,7 +193,6 @@ export default function Consultation() {
                       />
                     </div>
                   </div>
-
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest *
@@ -217,7 +214,6 @@ export default function Consultation() {
                       <option value="other">Other</option>
                     </select>
                   </div>
-
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message *
@@ -233,7 +229,6 @@ export default function Consultation() {
                       placeholder="Tell us about your project or challenges..."
                     />
                   </div>
-
                   <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group"

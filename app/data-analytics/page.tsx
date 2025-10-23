@@ -57,7 +57,7 @@ const benefits = [
 'Custom analytics solutions'
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
 <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
@@ -157,14 +157,7 @@ Email Us
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
 export default DataAnalyticsPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>

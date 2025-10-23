@@ -32,7 +32,7 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<React.Fragment>
+<>
 <Helmet>
 <title>Error - Zion Tech Group</title>
 <meta name="description" content="Error page." />
@@ -109,12 +109,7 @@ Contact Us
 </section>
 </main>
 <Footer />
-</React.Fragment>
+</>
 )
 }
 export default ErrorPage
-</button>
-</h2>
-</button>
-</button>
-</h1>

@@ -64,7 +64,6 @@ const ContentNewsletterSignup: React.FC = () => {
           Get exclusive access to our latest AI breakthroughs, enterprise transformation guides, 
           and cutting-edge content that's transforming businesses worldwide.
         </p>
-
         <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">
             Join 10,000+ Enterprise Leaders
@@ -88,7 +87,6 @@ const ContentNewsletterSignup: React.FC = () => {
                 {isSubmitting ? 'Subscribing...' : 'Get Free Content'}
               </button>
             </div>
-            
             {error && (
               <p className="text-red-600 text-sm">{error}</p>
             )}
@@ -97,7 +95,6 @@ const ContentNewsletterSignup: React.FC = () => {
           <div className="mt-6 text-sm text-gray-600">
             <p>🔒 We respect your privacy. Unsubscribe at any time.</p>
           </div>
-
           {/* Benefits */}
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="flex items-start space-x-3">
@@ -123,7 +120,6 @@ const ContentNewsletterSignup: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Social Proof */}
         <div className="mt-12 text-center">
           <p className="text-indigo-100 mb-4">Trusted by leading enterprises</p>

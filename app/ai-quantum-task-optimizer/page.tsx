@@ -39,7 +39,7 @@ const AiQuantumTaskOptimizerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Quantum Task Optimizer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai quantum task optimizer solution for modern businesses." />
@@ -148,15 +148,7 @@ const AiQuantumTaskOptimizerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default AiQuantumTaskOptimizerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>

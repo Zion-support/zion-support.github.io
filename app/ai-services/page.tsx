@@ -1198,7 +1198,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
       </div>
-
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -1214,7 +1213,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business with our comprehensive suite of cutting-edge AI-powered solutions
             </p>
-
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
@@ -1254,7 +1252,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-wrap justify-center gap-4">
@@ -1268,7 +1265,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
           ))}
         </div>
       </div>
-
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1301,7 +1297,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                     </div>
                   </div>
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                   {service.name}
                 </h3>
@@ -1309,7 +1304,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
                     <Zap className="w-4 h-4 mr-2 text-cyan-400" />
@@ -1329,7 +1323,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                     )}
                   </ul>
                 </div>
-
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-sm text-gray-400">
                     {service.users} users
@@ -1338,7 +1331,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                     {service.category}
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <div className="text-lg font-semibold text-cyan-400 mb-2">
                     {service.pricing}
@@ -1353,7 +1345,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                     ))}
                   </ul>
                 </div>
-
                 <div className="space-y-3">
                   <a
                     href={service.link}
@@ -1370,12 +1361,10 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                   </a>
                 </div>
               </div>
-
             </div>
           ))}
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

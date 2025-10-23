@@ -9,7 +9,6 @@ export default function PageTsxPage() {
             Advanced page.tsx solutions by Zion Tech Group
           </p>
         </div>
-
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <h2 className="text-2xl font-semibold text-white mb-4">

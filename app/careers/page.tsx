@@ -338,7 +338,6 @@ const CareersPage: React.FC = () => {
                       <span>Posted {new Date(position.posted).toLocaleDateString()}</span>
                     </div>
                   </div>
-                  
                   <p className="text-gray-600 mb-4">{position.description}</p>
                   
                   <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -375,7 +374,6 @@ const CareersPage: React.FC = () => {
                       </ul>
                     </div>
                   </div>
-                  
                   <div className="flex items-center justify-between">
                     <div className="text-sm text-gray-500">
                       <span className="font-medium">{position.experience}</span> experience required

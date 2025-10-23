@@ -61,7 +61,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <div className="text-6xl mb-2">{image}</div>
           <div className="text-sm font-medium opacity-90">{category}</div>
         </div>
-        
         {/* Featured Badge */}
         {featured && (
           <div className="absolute top-4 left-4">
@@ -90,7 +89,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           </span>
         </div>
       </div>
-
       {/* Content */}
       <div className="p-6">
         <div className="mb-3">
@@ -98,7 +96,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             {category}
           </span>
         </div>
-
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
           {title}
         </h3>
@@ -106,7 +103,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         <p className="text-gray-600 mb-4 line-clamp-3">
           {excerpt || description}
         </p>
-
         {/* Stats Row */}
         {stats && (
           <div className="flex items-center justify-between mb-4 text-sm">

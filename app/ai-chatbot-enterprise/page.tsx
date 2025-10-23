@@ -31,7 +31,7 @@ const AiChatbotEnterprisePage: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>
           Ai Chatbot Enterprise - Zion Tech Group | Advanced AI and IT Solutions
@@ -123,7 +123,7 @@ const AiChatbotEnterprisePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

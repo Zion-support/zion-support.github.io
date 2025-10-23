@@ -213,19 +213,16 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                   #1 AI Email Marketing Platform
                 </span>
               </div>
-
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
                   Zion AI Email Marketing Pro
                 </span>
               </h1>
-
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Transform your email marketing with AI-powered content
                 generation, advanced segmentation, and intelligent automation
                 that drives real results.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link
                   to="/contact"
@@ -242,7 +239,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                   <Target className="w-5 h-5 ml-2" />
                 </Link>
               </div>
-
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
@@ -289,7 +285,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                 From newsletters to transactional emails, we've got you covered
               </p>
             </div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {emailTypes.map((type, index) => (
                 <div
@@ -322,7 +317,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                 campaigns that convert with AI intelligence.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -367,7 +361,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                 marketing needs
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -401,7 +394,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li
@@ -441,7 +433,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                 See how marketers are transforming their email campaigns with AI
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -490,7 +481,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                 Marketing Pro to maximize their email ROI. Start your free trial
                 today and see the difference AI can make.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -507,7 +497,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                   <Clock className="w-5 h-5 ml-2" />
                 </Link>
               </div>
-
               <div className="mt-8 text-sm text-gray-400">
                 <p>
                   ✓ 14-day free trial • ✓ No credit card required • ✓ Cancel

@@ -157,7 +157,6 @@ const TutorialsPage: React.FC = () => {
                           : "🔒"}
                     </div>
                   </div>
-
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">
@@ -169,7 +168,6 @@ const TutorialsPage: React.FC = () => {
                         </span>
                       )}
                     </div>
-
                     <h3 className="text-xl font-bold text-white mb-3">
                       {tutorial.title}
                     </h3>
@@ -191,7 +189,6 @@ const TutorialsPage: React.FC = () => {
                         <span>{tutorial.rating}</span>
                       </div>
                     </div>
-
                     <div className="flex items-center justify-between">
                       <span
                         className={`px-3 py-1 rounded-full text-sm ${
@@ -228,7 +225,6 @@ const TutorialsPage: React.FC = () => {
                 domains.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
@@ -247,7 +243,6 @@ const TutorialsPage: React.FC = () => {
                   <li>• 5 hands-on projects</li>
                 </ul>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <Database className="w-8 h-8 text-white" />
@@ -265,7 +260,6 @@ const TutorialsPage: React.FC = () => {
                   <li>• 8 practical labs</li>
                 </ul>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <Shield className="w-8 h-8 text-white" />

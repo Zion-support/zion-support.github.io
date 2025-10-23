@@ -46,7 +46,7 @@ const Ai3dGenerationPage: React.FC = () => {
   ]
 >>>>>>> origin/main
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai 3d Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai 3d generation solution for modern businesses." />
@@ -162,7 +162,7 @@ const Ai3dGenerationPage: React.FC = () => {
 export default Ai3dGenerationPage;
 =======
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default Ai3dGenerationPage

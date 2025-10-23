@@ -132,7 +132,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       contrastQuery.removeEventListener('change', handleContrastChange)
     }
   }, [])
-  return <React.Fragment>{children}</React.Fragment>
+  return <>{children}</>
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement
     // Apply high contrast

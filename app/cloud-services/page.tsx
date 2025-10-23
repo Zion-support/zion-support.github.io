@@ -108,7 +108,6 @@ const CloudServicesPage: React.FC = () => {
               Our cloud solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-opacity-20 transition-all duration-300">
@@ -134,7 +133,6 @@ const CloudServicesPage: React.FC = () => {
               Experience the power of our comprehensive cloud solutions for your business.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 hover:bg-opacity-20 transition-all duration-300">
@@ -165,7 +163,6 @@ const CloudServicesPage: React.FC = () => {
               Discover the advantages of partnering with us for your cloud transformation.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
