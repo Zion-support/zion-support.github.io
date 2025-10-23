@@ -82,11 +82,6 @@ const SupportPage: React.FC = () => {
     return matchesSearch && matchesCategory
   })
 
-  const filteredFaqs = faqs.filter(faq => 
-    (selectedCategory === 'all' || faq.category === selectedCategory) &&
-    (faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-     faq.answer.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
 
   return (
     <>
