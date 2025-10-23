@@ -6,7 +6,6 @@ import { Globe, AlertTriangle } from 'lucide-react'
 
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
-=======
 import {Lock, CheckCircle, Star, Eye, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
 constCybersecurityPage: React.FC= () =>{constsecurityServices= [
     {

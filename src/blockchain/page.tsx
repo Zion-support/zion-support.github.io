@@ -6,7 +6,6 @@ import { Cpu } from 'lucide-react'
 
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
-=======
 import {Coins, CheckCircle, Star, Zap, Brain, BarChart, Target, Shield, Helmet} from 'lucide-react';;
 constBlockchainPage: React.FC= () =>{constblockchainServices= [
     {

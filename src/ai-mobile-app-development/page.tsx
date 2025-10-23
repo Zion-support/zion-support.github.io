@@ -5,7 +5,6 @@ import { CheckCircle, Database, Code, Cloud, Helmet } from 'lucide-react'
 
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
-=======
 import {Smartphone, CheckCircle, Database, Code, Cloud, Helmet} from 'lucide-react';;
 constAIMobileAppDevelopmentPage: React.FC= () =>{constmobileServices= [
     {

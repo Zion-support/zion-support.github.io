@@ -6,7 +6,6 @@ import { Cpu, Globe } from 'lucide-react'
 
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
-=======
 import {Wifi, CheckCircle, Star, Zap, BarChart, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
 constIoTEdgeComputingPage: React.FC= () =>{constiotServices= [
     {

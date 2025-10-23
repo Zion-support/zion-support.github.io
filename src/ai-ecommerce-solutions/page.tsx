@@ -5,7 +5,6 @@ import { CheckCircle, Zap, Shield, Users, Helmet } from 'lucide-react'
 
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
-=======
 import {BarChart3, CheckCircle, Zap, Users, Shield, Helmet} from 'lucide-react';;
 constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
     {

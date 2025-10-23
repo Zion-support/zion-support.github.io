@@ -6,7 +6,6 @@ import { Globe } from 'lucide-react'
 
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
-=======
 import {Coins, CheckCircle, Star, Zap, Brain, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
 constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
     {

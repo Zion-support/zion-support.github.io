@@ -5,7 +5,6 @@ import { CheckCircle, TrendingUp, Helmet } from 'lucide-react'
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
-=======
 import {ArrowLeft, CheckCircle, TrendingUp, Helmet} from 'lucide-react';;
 constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
     {

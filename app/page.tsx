@@ -30,37 +30,23 @@ export default function HomePage() {
       title: "Micro SaaS",
       description: "Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises",
       icon: Target,
-<<<<<<< HEAD
       benefits: [
         "Rapid Deployment",
         "Scalable Architecture",
         "Custom Development",
         "Ongoing Maintenance"
       ]
-=======
-      title: 'Precision Solutions',
-      description: 'Tailored solutions designed to meet your specific business requirements.',
-      benefits: ['Custom development', 'Scalable architecture', 'Integration support', '24/7 maintenance']
->>>>>>> cursor/fix-errors-and-merge-to-main-7068
     },
     {
       title: "Business Intelligence",
       description: "Advanced analytics and reporting tools to help you make data-driven decisions and optimize your business performance",
       icon: TrendingUp,
-<<<<<<< HEAD
       benefits: [
         "Data Visualization",
         "Performance Analytics",
         "Custom Dashboards",
         "Real-time Reporting"
       ]
-    }
-  ]
-
-=======
-      title: 'Growth Acceleration',
-      description: 'Proven strategies to accelerate your business growth and market presence.',
-      benefits: ['Market expansion', 'Revenue growth', 'Competitive advantage', 'Strategic planning']
     }
   ]
 
@@ -78,11 +64,9 @@ export default function HomePage() {
     'Gain competitive advantage with advanced technology'
   ]
 
->>>>>>> cursor/fix-errors-and-merge-to-main-7068
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -101,27 +85,6 @@ export default function HomePage() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-=======
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Transform Your Business with
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
-              AI & IT Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            We deliver cutting-edge artificial intelligence and information technology solutions 
-            that drive innovation, efficiency, and growth for modern businesses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
->>>>>>> cursor/fix-errors-and-merge-to-main-7068
               Learn More
             </button>
           </div>
@@ -148,7 +111,6 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Core Services
             </h2>
@@ -168,32 +130,6 @@ export default function HomePage() {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Solutions?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive suite of AI and IT services is designed to address 
-              every aspect of your digital transformation journey.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-emerald-500 mr-2 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-7068
                       {benefit}
                     </li>
                   ))}
@@ -204,8 +140,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
@@ -226,11 +160,9 @@ export default function HomePage() {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-7068
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -249,22 +181,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Let&apos;s discuss how our AI and IT solutions can help you achieve your goals.
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
-            Start Your Journey
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </button>
-        </div>
-      </section>
-
-      <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-7068
     </div>
   )
 }

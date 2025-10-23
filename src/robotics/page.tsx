@@ -6,7 +6,6 @@ import { Bot, Cpu, Settings } from 'lucide-react'
 
 const RoboticsPage: React.FC = () => {
   const roboticsServices = [
-=======
 import {Cog, CheckCircle, Star, Zap, Brain, BarChart, Target, Shield, Helmet} from 'lucide-react';;
 constRoboticsPage: React.FC= () =>{constroboticsServices= [
     {

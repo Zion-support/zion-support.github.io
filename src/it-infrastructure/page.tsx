@@ -6,7 +6,6 @@ import { Clock } from 'lucide-react'
 
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
-=======
 import {Server, Lock, Monitor, CheckCircle, Star, Zap, BarChart, Shield, Helmet} from 'lucide-react';;
 constITInfrastructurePage: React.FC= () =>{constitServices= [
     {
