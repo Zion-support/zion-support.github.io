@@ -3,19 +3,33 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableErrorReporting?: boolean;
 }
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  errorId?: string;
+  retryCount?: number;
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
+  private maxRetries = 3;
+  
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { 
+      hasError: false,
+      retryCount: 0,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
   }
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { 
+      hasError: true, 
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      retryCount: 0
+    };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -57,7 +71,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      retryCount: this.state.retryCount,
+      retryCount: this.state.retryCount || 0,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
@@ -70,7 +84,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          retry_count: this.state.retryCount,
+          retry_count: this.state.retryCount || 0,
         }
       });
     }
@@ -79,8 +93,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-       
-      origin/cursor/fix-errors-and-merge-to-main-6395      // Example: Send to error reporting service
+      console.log('Error report:', errorReport);
+      
+      // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
@@ -96,7 +111,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return localStorage.getItem('userId') || null;
   };
   private getSessionId = (): string => {
-    let _sessionId = sessionStorage.getItem('sessionId');
+    let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
@@ -104,12 +119,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return sessionId;
   };
   private handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
+    if ((this.state.retryCount || 0) < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
         error: undefined,
         errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
+        retryCount: (prevState.retryCount || 0) + 1
       }));
     } else {
       // Max retries reached, reload the page
@@ -134,9 +149,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
-        const _button = document.getElementById('copy-error-details');
+        const button = document.getElementById('copy-error-details');
         if (button) {
-          const _originalText = button.textContent;
+          const originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -155,17 +170,26 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-      const _canRetry = retryCount < this.maxRetries;
+      const canRetry = (retryCount || 0) < this.maxRetries;
 
       return (
         <div className="error-boundary">
           <h2>Something went wrong</h2>
           <p>Error ID: {errorId}</p>
-          {_canRetry && (
+          {canRetry && (
             <button onClick={this.handleRetry}>
               Try again
             </button>
           )}
+          <button onClick={this.handleReload}>
+            Reload Page
+          </button>
+          <button onClick={this.handleGoHome}>
+            Go Home
+          </button>
+          <button id="copy-error-details" onClick={this.copyErrorDetails}>
+            Copy Error Details
+          </button>
         </div>
       );
     }
