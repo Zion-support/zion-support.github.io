@@ -5,15 +5,15 @@ function withSentry(handler) {
       return await handler(req, res);
     } catch (error) {
       // console.error('API Error:', error);
-      
+
       // In production, you would send this to Sentry
-      if (process.env.NODE_ENV === 'production' && process.env.SENTRY_DSN) {
+      if (process.env.NODE_ENV === "production" && process.env.SENTRY_DSN) {
         // Sentry.captureException(error);
       }
-      
+
       if (!res.headersSent) {
         res.statusCode = 500;
-        res.json({ error: 'Internal server error' });
+        res.json({ error: "Internal server error" });
       }
     }
   };

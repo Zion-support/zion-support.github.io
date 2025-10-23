@@ -1,35 +1,29 @@
-'use client'
-import React, { useEffect } from 'react'
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface AccessibilitySettings {
-  highContrast: boolean
-  fontSize: number
-  reducedMotion: boolean
-}
+const EnhancedAccessibilityPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedAccessibility | Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedAccessibility services by Zion Tech Group." />
+      </Helmet>
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Enhanced accessibility features
-    const settings: AccessibilitySettings = {
-      highContrast: false,
-      fontSize: 16,
-      reducedMotion: false
-    }
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              EnhancedAccessibility
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Professional EnhancedAccessibility services tailored to your business needs.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-    // Apply accessibility settings
-    if (settings.highContrast) {
-      document.body.classList.add('high-contrast')
-    }
-
-    if (settings.reducedMotion) {
-      document.body.classList.add('reduced-motion')
-    }
-
-    // Set font size
-    document.documentElement.style.fontSize = `${settings.fontSize}px`
-  }, [])
-
-  return <>{children}</>
-}
-
-export default EnhancedAccessibility
+export default EnhancedAccessibilityPage;

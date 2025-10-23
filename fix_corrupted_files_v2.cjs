@@ -1,12 +1,16 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Template for 5G pages
-const create5GPage = (title, description, icon) => `import { Helmet } from 'react-helmet-async';
+const create5GPage = (
+  title,
+  description,
+  icon,
+) => `import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ${icon} } from 'lucide-react';
 
-export default function ${title.replace(/\s+/g, '').replace(/^5G/, 'G5')}Page() {
+export default function ${title.replace(/\s+/g, "").replace(/^5G/, "G5")}Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -72,48 +76,54 @@ export default function ${title.replace(/\s+/g, '').replace(/^5G/, 'G5')}Page() 
 // 5G page configurations
 const fiveGPages = [
   {
-    file: 'app/5g-edge-computing/page.tsx',
-    title: '5G Edge Computing',
-    description: 'Deploy applications at the network edge with ultra-low latency and high performance.',
-    icon: 'Cpu'
+    file: "app/5g-edge-computing/page.tsx",
+    title: "5G Edge Computing",
+    description:
+      "Deploy applications at the network edge with ultra-low latency and high performance.",
+    icon: "Cpu",
   },
   {
-    file: 'app/5g-implementation/page.tsx',
-    title: '5G Implementation',
-    description: 'Complete 5G network implementation and deployment services for your organization.',
-    icon: 'Settings'
+    file: "app/5g-implementation/page.tsx",
+    title: "5G Implementation",
+    description:
+      "Complete 5G network implementation and deployment services for your organization.",
+    icon: "Settings",
   },
   {
-    file: 'app/5g-infrastructure/page.tsx',
-    title: '5G Infrastructure',
-    description: 'Build robust 5G infrastructure with our comprehensive network solutions.',
-    icon: 'Network'
+    file: "app/5g-infrastructure/page.tsx",
+    title: "5G Infrastructure",
+    description:
+      "Build robust 5G infrastructure with our comprehensive network solutions.",
+    icon: "Network",
   },
   {
-    file: 'app/5g-iot-solutions/page.tsx',
-    title: '5G IoT Solutions',
-    description: 'Connect and manage IoT devices with high-speed 5G connectivity.',
-    icon: 'Wifi'
+    file: "app/5g-iot-solutions/page.tsx",
+    title: "5G IoT Solutions",
+    description:
+      "Connect and manage IoT devices with high-speed 5G connectivity.",
+    icon: "Wifi",
   },
   {
-    file: 'app/5g-mobile-applications/page.tsx',
-    title: '5G Mobile Applications',
-    description: 'Develop next-generation mobile applications leveraging 5G capabilities.',
-    icon: 'Smartphone'
+    file: "app/5g-mobile-applications/page.tsx",
+    title: "5G Mobile Applications",
+    description:
+      "Develop next-generation mobile applications leveraging 5G capabilities.",
+    icon: "Smartphone",
   },
   {
-    file: 'app/5g-network-infrastructure/page.tsx',
-    title: '5G Network Infrastructure',
-    description: 'Design and implement comprehensive 5G network infrastructure solutions.',
-    icon: 'Globe'
-  }
+    file: "app/5g-network-infrastructure/page.tsx",
+    title: "5G Network Infrastructure",
+    description:
+      "Design and implement comprehensive 5G network infrastructure solutions.",
+    icon: "Globe",
+  },
 ];
 
 // Fix 5G pages
-fiveGPages.forEach(page => {
+fiveGPages.forEach((page) => {
   const content = create5GPage(page.title, page.description, page.icon);
   fs.writeFileSync(page.file, content);
   console.log(`Fixed: ${page.file}`);
 });
 
-console.log('All 5G pages have been fixed!');
+console.log("All 5G pages have been fixed!");

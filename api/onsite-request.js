@@ -30,14 +30,14 @@ export default async function handler(req, res) {
         const data = fs.readFileSync(file, 'utf8');
         requests = JSON.parse(data);
       }
-    } catch {
-      // console.error('Error reading existing requests');
+    } catch (error) {
+      console.error('Error reading existing requests:', error);
       requests = [];
     }
 
     // Add new request
     const newRequest = {
-      id: Date.now().toString(),
+id: Date.now().toString(),
       name,
       email,
       company,
