@@ -105,6 +105,7 @@ const Footer: React.FC = () => {
 
 const Footer = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">
@@ -114,6 +115,179 @@ const Footer = () => {
           <p className="text-gray-600">
             This page is under construction. Please check back later.
           </p>
+=======
+    <footer className=&quot;bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20&quot;>
+      <div className=&quot;container mx-auto px-4 py-12&quot;></div>
+        <div className=&quot;grid grid-cols-1 lg:grid-cols-5 gap-8&quot;></div>
+          {/* Company Info */}
+          <div className=&quot;lg:col-span-1&quot;></div>
+            <div className=&quot;flex items-center space-x-2 mb-4&quot;></div>
+              <div className=&quot;w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center&quot;></div>
+                <Brain className=&quot;w-5 h-5 text-white&quot; />
+              </div>
+              <span className=&quot;text-xl font-bold text-white neon-text&quot;>Zion Tech Group</span>
+            </div>
+            <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
+              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
+            </p>
+            <div className=&quot;space-y-3&quot;></div>
+              <div className=&quot;flex items-center space-x-3 text-gray-300&quot;></div>
+                <Phone className=&quot;w-4 h-4 text-cyan-400&quot; />
+                <a href=&quot;tel:+13024640950&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className=&quot;flex items-center space-x-3 text-gray-300&quot;></div>
+                <Mail className=&quot;w-4 h-4 text-cyan-400&quot; />
+                <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className=&quot;flex items-center space-x-3 text-gray-300&quot;></div>
+                <MapPin className=&quot;w-4 h-4 text-cyan-400&quot; />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+          </div>
+          {/* Micro SAAS Services */}
+          <div></div>
+            <h3 className=&quot;text-cyan-400 font-semibold mb-4 flex items-center&quot;></h3>
+              <Zap className=&quot;w-4 h-4 mr-2&quot; />
+              Micro SAAS
+            </h3>
+            <ul className=&quot;space-y-2&quot;>
+              {microSaasServices.map((service) => (
+                <li key={service.name}>
+                  <a href={service.url}
+                    className=&quot;group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
+                  >
+                    <span>{service.name}</span>
+                    <ArrowRight className=&quot;w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300&quot; />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a href=&quot;/services&quot;
+              className=&quot;inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4&quot;
+            >
+              View All Micro SAAS →
+            </a>
+          </div>
+          {/* AI & IT Services */}
+          <div></div>
+            <h3 className=&quot;text-cyan-400 font-semibold mb-4 flex items-center&quot;></h3>
+              <Brain className=&quot;w-4 h-4 mr-2&quot; />
+              AI & IT Services
+            </h3>
+            <div className=&quot;space-y-4&quot;></div>
+              <div></div>
+                <h4 className=&quot;text-white font-medium mb-2&quot;>AI Services</h4>
+                <ul className=&quot;space-y-1&quot;>
+                  {aiServices.slice(0, 3).map((service) => (
+                    <li key={service.name}>
+                      <a href={service.url}
+                        className=&quot;text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
+                      >
+                        {service.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div></div>
+                <h4 className=&quot;text-white font-medium mb-2&quot;>IT Services</h4>
+                <ul className=&quot;space-y-1&quot;>
+                  {itServices.slice(0, 3).map((service) => (
+                    <li key={service.name}>
+                      <a href={service.url}
+                        className=&quot;text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
+                      >
+                        {service.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <a href=&quot;/services&quot;
+              className=&quot;inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4&quot;
+            >
+              View All Services →
+            </a>
+          </div>
+          {/* Additional AI Services */}
+          <div></div>
+            <h3 className=&quot;text-cyan-400 font-semibold mb-4 flex items-center&quot;></h3>
+              <Zap className=&quot;w-4 h-4 mr-2&quot; />
+              AI Tools
+            </h3>
+            <ul className=&quot;space-y-2&quot;>
+              {additionalServices.map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.url}
+                    className=&quot;group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
+                  >
+                    <span>{service.name}</span>
+                    <ArrowRight className=&quot;w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300&quot; />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Company & Support */}
+          <div></div>
+            <h3 className=&quot;text-cyan-400 font-semibold mb-4&quot;>Company</h3>
+            <div className=&quot;grid grid-cols-2 gap-4&quot;></div>
+              <div></div>
+                <h4 className=&quot;text-white font-medium mb-2&quot;>Company</h4>
+                <ul className=&quot;space-y-1&quot;>
+                  {companyLinks.slice(0, 4).map((link) => (
+                    <li key={link.name}>
+                      <a href={link.url}
+                        className=&quot;text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div></div>
+                <h4 className=&quot;text-white font-medium mb-2&quot;>Support</h4>
+                <ul className=&quot;space-y-1&quot;>
+                  {supportLinks.slice(0, 4).map((link) => (
+                    <li key={link.name}>
+                      <a href={link.url}
+                        className=&quot;text-sm text-gray-300 hover:text-cyan-400 transition-colors&quot;
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Bottom Section */}
+        <div className=&quot;border-t border-gray-700 mt-8 pt-8&quot;></div>
+          <div className=&quot;flex flex-col md:flex-row justify-between items-center&quot;></div>
+            <div className=&quot;text-gray-400 text-sm mb-4 md:mb-0&quot;></div>
+              © 2024 Zion Tech Group. All rights reserved.
+            </div>
+            <div className=&quot;flex space-x-6&quot;></div>
+              {legalLinks.map((link) => (
+                <a key={link.name}
+                  href={link.url}
+                  className=&quot;text-sm text-gray-400 hover:text-cyan-400 transition-colors&quot;
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </footer>

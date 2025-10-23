@@ -1,4 +1,5 @@
 'use client'
+import Navigation from './Navigation'
 import React, { useEffect, useCallback, useRef } from 'react'
 import { Helmet } from 'lucide-react'
 
@@ -111,7 +112,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const _faqData = generateFAQStructuredData()
   useEffect(() => {
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]')
+    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
     if (metaDescription) {
       metaDescription.setAttribute('content', seoData.description)
     } else {
@@ -121,7 +122,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       newMetaDescription.setAttribute('content', seoData.description)
     }
     // Update canonical URL
-    const canonicalLink = document.querySelector('link[rel="canonical"]')
+    const canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
     if (canonicalLink) {
       canonicalLink.setAttribute('href', seoData.canonicalUrl)
     } else {
@@ -163,34 +164,34 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }
   return (
   <Helme t>{/* Basic MetaTags */}
-    <titl e>{seoData.title}</titl><metaname="description" content={seoData.description} /><metaname="keywords" content={seoData.keywords.join(',')} /><linkrel="canonical" href={seoData.canonicalUrl} />{/* Open GraphTags */}
+    <titl e>{seoData.title}</titl><metaname=&quot;description&quot; content={seoData.description} /><metaname=&quot;keywords&quot; content={seoData.keywords.join(',')} /><linkrel=&quot;canonical&quot; href={seoData.canonicalUrl} />{/* Open GraphTags */}
       {enableOpenGraph && (
-      <><metaproperty="og:title"content={seoData.title} /><metaproperty="og:image:height"content="630" /><metaproperty="og:site_name"content="Zion TechGroup" /><metaproperty="og:locale"content="en_US" /></>)}
+      <><metaproperty=&quot;og:title&quot;content={seoData.title} /><metaproperty=&quot;og:image:height&quot;content=&quot;630&quot; /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; /></>)}
       {/* Twitter CardTags */}
       {enableTwitterCards && (
-      <><metaname="twitter:card"content="summary_large_image" /><metaname="twitter:title"content={seoData.title} /><metaname="twitter:description" content={seoData.description} /><metaname="twitter:image" content={seoData.ogImage} /><metaname="twitter:site"content="@ziontechgroup" /><metaname="twitter:creator"content="@ziontechgroup" /></>)}
+      <><metaname=&quot;twitter:card&quot;content=&quot;summary_large_image&quot; /><metaname=&quot;twitter:title&quot;content={seoData.title} /><metaname=&quot;twitter:description&quot; content={seoData.description} /><metaname=&quot;twitter:image&quot; content={seoData.ogImage} /><metaname=&quot;twitter:site&quot;content=&quot;@ziontechgroup&quot; /><metaname=&quot;twitter:creator&quot;content=&quot;@ziontechgroup&quot; /></>)}
       {/* Additional SEO MetaTags */}
-   <metaname="robots"content="index, follow, max-snippet:-1, max-image-preview:large,max-video-preview:-1" /><metaname="googlebot"content="index,follow" /><metaname="bingbot"content="index,follow" /><metaname="author"content="Zion TechGroup" /><metaname="publisher"content="Zion TechGroup" /><metaname="copyright"content="Zion TechGroup" /><metaname="language"content="en" /><metaname="revisit-after"content="7days" /><metaname="distribution"content="global" /><metaname="rating"content="general" /><metaname="theme-color"content="#4F46E5" />{/* StructuredData */}
+   <metaname=&quot;robots&quot;content=&quot;index, follow, max-snippet:-1, max-image-preview:large,max-video-preview:-1&quot; /><metaname=&quot;googlebot&quot;content=&quot;index,follow&quot; /><metaname=&quot;bingbot&quot;content=&quot;index,follow&quot; /><metaname=&quot;author&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;publisher&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;copyright&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;language&quot;content=&quot;en&quot; /><metaname=&quot;revisit-after&quot;content=&quot;7days&quot; /><metaname=&quot;distribution&quot;content=&quot;global&quot; /><metaname=&quot;rating&quot;content=&quot;general&quot; /><metaname=&quot;theme-color&quot;content=&quot;#4F46E5&quot; />{/* StructuredData */}
       {enableSchemaMarkup && _structuredData && (
-      <scripttype="application/ld+json">{JSON.stringify(_structuredData)}
+      <scripttype=&quot;application/ld+json&quot;>{JSON.stringify(_structuredData)}
       </scrip>)}
       {enableSchemaMarkup && _breadcrumbData && (
-      <scripttype="application/ld+json">{JSON.stringify(_breadcrumbData)}
+      <scripttype=&quot;application/ld+json&quot;>{JSON.stringify(_breadcrumbData)}
       </scrip>)}
       {enableSchemaMarkup && _faqData && (
-        <script type="application/ld+json">
+        <script type=&quot;application/ld+json&quot;>
           {JSON.stringify(_faqData)}
         </script>
       )}
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https://www.google-analytics.com&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https://www.googletagmanager.com&quot; />
       {/* DNS Prefetch for better performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.googleapis.com&quot; />
+      <link rel=&quot;dns-prefetch&quot; href=&quot;//www.google-analytics.com&quot; />
+      <link rel=&quot;dns-prefetch&quot; href=&quot;//www.googletagmanager.com&quot; />
     </Helmet>
   )
 }

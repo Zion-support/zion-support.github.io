@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect } from &quot;react&quot;
 
 interface AnalyticsProps {
   className?: string;
@@ -7,8 +7,8 @@ interface AnalyticsProps {
 const Analytics: React.FC = () => {
   useEffect(() => {
     const initAnalytics = () => {
-      if (typeof window !== "undefined" && window.gtag) {
-        window.gtag("config", "GA_MEASUREMENT_ID", {
+      if (typeof window !== &quot;undefined&quot; && window.gtag) {
+        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
           page_title: document.title,
           page_location: window.location.href,
         })
@@ -17,7 +17,7 @@ const Analytics: React.FC = () => {
     initAnalytics()
   }, [])
 
-  return null; // Analytics component doesn't render anything
+  return null; // Analytics component doesn&apos;t render anything
 }
 
 export default Analytics

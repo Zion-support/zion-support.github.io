@@ -1,5 +1,5 @@
-"use client"
-import React from "react"
+&quot;use client&quot;
+import React from &quot;react&quot;
 
 interface AccessibilityUtilsProps {
   className?: string;

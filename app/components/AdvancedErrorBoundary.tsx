@@ -38,7 +38,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     }
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo)
+      // // console.error('Error caught by boundary:', error, errorInfo)
     }
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
