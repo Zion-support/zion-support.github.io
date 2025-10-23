@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
     { name: "Status Page", href: "/status" },
   ];
 
-  const _quickLinks = [
+  const quickLinks = [
     { name: "Free Consultation", href: "/consultation" },
     { name: "Request Demo", href: "/demo" },
     { name: "Pricing", href: "/pricing" },
@@ -156,7 +156,11 @@ const Footer: React.FC = () => {
           {/* Company & Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
+<<<<<<< HEAD
             <ul className="space-y-2 mb-6">
+=======
+            <ul className="space-y-2">
+>>>>>>> 516d08636e963cc03ae2bfbc2645b9ab9784f8a2
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -169,7 +173,11 @@ const Footer: React.FC = () => {
               ))}
             </ul>
 
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Support</h3>
+=======
+            <h3 className="text-lg font-semibold mb-4 mt-8">Support</h3>
+>>>>>>> 516d08636e963cc03ae2bfbc2645b9ab9784f8a2
             <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
@@ -182,11 +190,12 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+          </div>
         </div>
-      </div>
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-blue-400" />
@@ -199,6 +208,22 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">San Francisco, CA</span>
+=======
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+              <div className="flex items-center space-x-2">
+                <Phone className="h-5 w-5 text-blue-400" />
+                <span className="text-gray-400">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="h-5 w-5 text-blue-400" />
+                <span className="text-gray-400">info@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="h-5 w-5 text-blue-400" />
+                <span className="text-gray-400">San Francisco, CA</span>
+              </div>
+>>>>>>> 516d08636e963cc03ae2bfbc2645b9ab9784f8a2
             </div>
           </div>
         </div>
@@ -234,4 +259,8 @@ const Footer: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer;
+>>>>>>> 516d08636e963cc03ae2bfbc2645b9ab9784f8a2

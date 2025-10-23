@@ -61,5 +61,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Sidebar;
 
+=======
+export default Sidebar;
+>>>>>>> 516d08636e963cc03ae2bfbc2645b9ab9784f8a2
