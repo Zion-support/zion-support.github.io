@@ -1,4 +1,6 @@
 "use client";
+import React from "react";
+
 export default function ZionAiSurveyBuilderPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -6,7 +8,7 @@ export default function ZionAiSurveyBuilderPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-8">Zion AI Survey Builder</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Advanced Zion AI Survey Builder solutions by Zion Tech Group
+            Advanced AI survey building solutions by Zion Tech Group
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

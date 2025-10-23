@@ -1,4 +1,6 @@
 "use client";
+import React from "react";
+
 export default function ZionAiVideoGeneratorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -6,7 +8,7 @@ export default function ZionAiVideoGeneratorPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-8">Zion AI Video Generator</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Advanced Zion AI Video Generator solutions by Zion Tech Group
+            Advanced AI video generation solutions by Zion Tech Group
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
