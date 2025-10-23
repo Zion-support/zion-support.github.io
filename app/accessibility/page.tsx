@@ -1,15 +1,129 @@
+"use client";
+import React from "react";
+import {
+  Eye,
+  MousePointer,
+  Volume2,
+  Shield,
+  Users,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
 
+const AccessibilityPage: React.FC = () => {
+  const features = [
+    {
+      icon: Eye,
+      title: "Visual Accessibility",
+      description:
+        "Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.",
+      benefits: [
+        "High contrast modes",
+        "Text scaling",
+        "Screen reader support",
+        "Color blind friendly",
+      ],
+    },
+    {
+      icon: MousePointer,
+      title: "Motor Accessibility",
+      description:
+        "Keyboard navigation and alternative input methods for users with motor impairments.",
+      benefits: [
+        "Keyboard navigation",
+        "Voice commands",
+        "Switch control",
+        "Customizable controls",
+      ],
+    },
+    {
+      icon: Volume2,
+      title: "Audio Accessibility",
+      description:
+        "Audio alternatives and visual indicators for users with hearing impairments.",
+      benefits: [
+        "Audio descriptions",
+        "Visual alerts",
+        "Captions",
+        "Sign language support",
+      ],
+    },
+    {
+      icon: Shield,
+      title: "Security & Privacy",
+      description:
+        "Secure accessibility features that protect user data while providing inclusive experiences.",
+      benefits: [
+        "Data protection",
+        "Secure forms",
+        "Privacy controls",
+        "Encrypted communications",
+      ],
+    },
+    {
+      icon: Users,
+      title: "Inclusive Design",
+      description:
+        "Design principles that ensure our solutions work for users of all abilities and backgrounds.",
+      benefits: [
+        "Universal design",
+        "Cultural sensitivity",
+        "Language support",
+        "Age-friendly interfaces",
+      ],
+    },
+    {
+      icon: Globe,
+      title: "Global Standards",
+      description:
+        "Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.",
+      benefits: [
+        "WCAG 2.1 AA",
+        "Section 508",
+        "ADA compliance",
+        "International standards",
+      ],
+    },
+  ];
+
+  const standards = [
+    {
+      name: "WCAG 2.1 AA",
+      description:
+        "Web Content Accessibility Guidelines 2.1 Level AA compliance",
+      status: "Fully Compliant",
+    },
+    {
+      name: "Section 508",
+      description:
+        "US federal accessibility standards for electronic and information technology",
+      status: "Fully Compliant",
+    },
+    {
+      name: "ADA",
+      description:
+        "Americans with Disabilities Act compliance for digital accessibility",
+      status: "Fully Compliant",
+    },
+    {
+      name: "EN 301 549",
+      description:
+        "European accessibility standard for ICT products and services",
+      status: "Fully Compliant",
+    },
+  ];
 
   return (
     <>
-      <Helmet>
-
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-
+          <div
+            className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Accessibility{" "}
@@ -18,7 +132,9 @@
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-
+              Creating inclusive digital experiences that work for everyone. Our
+              accessibility solutions ensure your applications are usable by
+              people of all abilities and comply with international standards.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
@@ -45,7 +161,11 @@
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"
+                >
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -57,7 +177,11 @@
                   </p>
                   {feature.benefits && (
                     <ul className="space-y-2">
-
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li
+                          key={benefitIndex}
+                          className="text-sm text-gray-400 flex items-center"
+                        >
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -83,7 +207,11 @@
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
+              {standards.map((standard, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
+                >
                   <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>

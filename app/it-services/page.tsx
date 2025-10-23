@@ -1,18 +1,139 @@
+"use client";
+import React, { useState } from "react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Cloud,
+  Shield,
+  Code,
+  Database,
+  Users,
+  Zap,
+  Settings,
+} from "lucide-react";
 
+const ItServicesPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const services = [
+    {
+      id: 1,
+      title: "Cloud Infrastructure",
+      description:
+        "Scalable and secure cloud solutions tailored to your business needs.",
+      category: "infrastructure",
+      icon: Cloud,
+      features: [
+        "AWS, Azure, GCP expertise",
+        "Auto-scaling solutions",
+        "Disaster recovery",
+        "24/7 monitoring",
+      ],
+      price: "Starting at $299/month",
+    },
+    {
+      id: 2,
+      title: "Cybersecurity Solutions",
+      description:
+        "Comprehensive security services to protect your digital assets.",
+      category: "security",
+      icon: Shield,
+      features: [
+        "Security audits",
+        "Threat monitoring",
+        "Incident response",
+        "Compliance management",
+      ],
+      price: "Starting at $399/month",
+    },
+    {
+      id: 3,
+      title: "Custom Development",
+      description:
+        "Bespoke software solutions designed for your specific requirements.",
+      category: "development",
+      icon: Code,
+      features: [
+        "Web applications",
+        "Mobile apps",
+        "API development",
+        "System integration",
+      ],
+      price: "Starting at $199/hour",
+    },
+    {
+      id: 4,
+      title: "Database Management",
+      description:
+        "Optimize and maintain your database infrastructure for peak performance.",
+      category: "database",
+      icon: Database,
+      features: [
+        "Performance tuning",
+        "Backup strategies",
+        "Data migration",
+        "Security hardening",
+      ],
+      price: "Starting at $249/month",
+    },
+    {
+      id: 5,
+      title: "IT Support & Maintenance",
+      description:
+        "Comprehensive IT support to keep your systems running smoothly.",
+      category: "support",
+      icon: Users,
+      features: [
+        "24/7 helpdesk",
+        "Remote support",
+        "System updates",
+        "Performance monitoring",
+      ],
+      price: "Starting at $149/month",
+    },
+    {
+      id: 6,
+      title: "DevOps & Automation",
+      description:
+        "Streamline your development and deployment processes with DevOps practices.",
+      category: "devops",
+      icon: Zap,
+      features: [
+        "CI/CD pipelines",
+        "Infrastructure as code",
+        "Monitoring setup",
+        "Automated testing",
+      ],
+      price: "Starting at $349/month",
+    },
+  ];
+
+  const categories = [
+    { id: "all", name: "All Services" },
+    { id: "infrastructure", name: "Infrastructure" },
+    { id: "security", name: "Security" },
+    { id: "development", name: "Development" },
+    { id: "database", name: "Database" },
+    { id: "support", name: "Support" },
+    { id: "devops", name: "DevOps" },
+  ];
+
+  const filteredServices = services.filter(
+    (service) =>
       selectedCategory === "all" || service.category === selectedCategory,
   );
 
   return (
     <>
-      <Helmet>
-        <title>IT Services - Zion Tech Group | Technology Solutions</title>
-
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-
+          <div
+            className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               IT{" "}
@@ -40,7 +161,16 @@
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
-
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                      : "bg-white/10 text-gray-300 hover:bg-white/20"
+                  }`}
+                >
                   {category.name}
                 </button>
               ))}
@@ -52,7 +182,11 @@
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+              {filteredServices.map((service) => (
+                <div
+                  key={service.id}
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"
+                >
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>

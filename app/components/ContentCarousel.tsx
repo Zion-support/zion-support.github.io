@@ -1,181 +1,197 @@
-"use client";
-import React, { useState, useEffect, useCallback } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Shield,
-  Brain,
-  Globe,
-} from "lucide-react";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
+
+interface Slide {
+  icon: React.ComponentType<any>;
+  title: string;
+  description: string;
+  features: string[];
+  stats?: {
+    value: string;
+    label: string;
+  }[];
+}
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
+  const slides: Slide[] = [
     {
       icon: Brain,
-      title: "AI-Powered Solutions",
-      description:
-        "Advanced AI technology to transform your business operations and improve efficiency",
-      features: [
-        "Machine Learning",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-      ],
-    },
-    {
-      icon: Zap,
-      title: "High Performance",
-      description:
-        "Lightning-fast processing and real-time analytics for optimal results",
-      features: [
-        "Real-time Processing",
-        "Scalable Architecture",
-        "Optimized Performance",
-        "Low Latency",
-      ],
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      stats: [
+        { value: '95%', label: 'Accuracy Rate' },
+        { value: '10x', label: 'Faster Processing' },
+        { value: '24/7', label: 'Automation' }
+      ]
     },
     {
       icon: Shield,
-      title: "Enterprise Security",
-      description:
-        "Bank-level security with encryption and compliance standards",
-      features: [
-        "End-to-End Encryption",
-        "Compliance Standards",
-        "Security Audits",
-        "24/7 Monitoring",
-      ],
+      title: 'Cybersecurity Excellence',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance',
+      features: ['Threat Detection', 'Data Encryption', 'Compliance Management', 'Security Audits'],
+      stats: [
+        { value: '99.9%', label: 'Uptime' },
+        { value: 'Zero', label: 'Security Breaches' },
+        { value: '24/7', label: 'Monitoring' }
+      ]
     },
     {
       icon: Globe,
-      title: "Global Reach",
-      description:
-        "Worldwide deployment and support for international businesses",
-      features: [
-        "Multi-Region Support",
-        "Local Compliance",
-        "Global CDN",
-        "International Support",
-      ],
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions for modern business needs',
+      features: ['Cloud Migration', 'Auto Scaling', 'Disaster Recovery', 'Cost Optimization'],
+      stats: [
+        { value: '50%', label: 'Cost Reduction' },
+        { value: '99.9%', label: 'Reliability' },
+        { value: 'Global', label: 'Reach' }
+      ]
     },
+    {
+      icon: Zap,
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation solutions to modernize your business processes',
+      features: ['Process Automation', 'Digital Workflows', 'Integration Services', 'Change Management'],
+      stats: [
+        { value: '75%', label: 'Efficiency Gain' },
+        { value: '90%', label: 'Process Automation' },
+        { value: '360°', label: 'Transformation' }
+      ]
+    }
   ];
 
-  const benefits = [
-    "Advanced AI technology integration",
-    "Real-time processing and analytics",
-    "Enterprise-grade security and compliance",
-    "Scalable and flexible solutions",
-    "24/7 technical support",
-    "Easy integration with existing systems",
-    "Cost-effective pricing plans",
-    "Proven track record of success",
-  ];
-
-  const nextSlide = useCallback(() => {
+  const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  }, [slides.length]);
+  };
 
-  const prevSlide = useCallback(() => {
+  const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  }, [slides.length]);
+  };
 
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  // Auto-advance slides
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
-  }, [nextSlide]);
+  }, []);
+
+  const currentSlideData = slides[currentSlide];
 
   return (
-    <div className="relative">
-      {/* Carousel Container */}
-      <div className="relative overflow-hidden rounded-2xl">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our comprehensive suite of AI and IT solutions designed to transform your business.
+          </p>
+        </div>
 
-          {slides.map((slide, index) => (
-            <div key={index} className="w-full flex-shrink-0">
-              <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8 md:p-12">
-                <div className="max-w-4xl mx-auto">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Content */}
-                    <div>
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                        <slide.icon className="w-8 h-8 text-white" />
+        {/* Carousel Container */}
+        <div className="relative">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div className="space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <currentSlideData.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                      {currentSlideData.title}
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                      {currentSlideData.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white">Key Features:</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {currentSlideData.features.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
                       </div>
+                    ))}
+                  </div>
+                </div>
 
-                      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                        {slide.title}
-                      </h2>
-
-                      <p className="text-xl text-gray-300 mb-8">
-                        {slide.description}
-                      </p>
-
-                      <ul className="space-y-3 mb-8">
-
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-
-                      <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                        Learn More
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </button>
-                    </div>
-
-                    {/* Visual Element */}
-                    <div className="flex justify-center">
-                      <div className="w-80 h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <slide.icon className="w-12 h-12 text-white" />
-                          </div>
-                          <p className="text-white/60 text-sm">
-                            Interactive Demo
-                          </p>
-                        </div>
+                {/* Stats */}
+                {currentSlideData.stats && (
+                  <div className="grid grid-cols-3 gap-6">
+                    {currentSlideData.stats.map((stat, index) => (
+                      <div key={index} className="text-center">
+                        <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                        <div className="text-sm text-gray-400">{stat.label}</div>
                       </div>
-                    </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* CTA Button */}
+                <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center gap-2">
+                  Learn More
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Visual Element */}
+              <div className="relative">
+                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
+                  <div className="text-8xl opacity-50">
+                    {currentSlide === 0 && '🤖'}
+                    {currentSlide === 1 && '🛡️'}
+                    {currentSlide === 2 && '☁️'}
+                    {currentSlide === 3 && '⚡'}
                   </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-          <ChevronLeft className="w-6 h-6" />
-        </button>
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-between mt-8">
+            <button
+              onClick={prevSlide}
+              className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-all duration-300"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
 
-          <ChevronRight className="w-6 h-6" />
-        </button>
-
-        {/* Dots Indicator */}
-        <div className="flex justify-center mt-6 space-x-2">
-
-          ))}
-        </div>
-      </div>
-
-      {/* Benefits Section */}
-      <div className="mt-16">
-        <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Our solutions deliver unmatched value and performance for your
-            business.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-              <span className="text-gray-300">{benefit}</span>
+            {/* Slide Indicators */}
+            <div className="flex space-x-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-purple-500' : 'bg-white/30'
+                  }`}
+                />
+              ))}
             </div>
-          ))}
+
+            <button
+              onClick={nextSlide}
+              className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-all duration-300"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

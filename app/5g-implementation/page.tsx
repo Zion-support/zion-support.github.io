@@ -92,7 +92,11 @@ const FiveGImplementationPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 group hover:border-purple-500/50 transition-all duration-300"
+                >
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -104,7 +108,11 @@ const FiveGImplementationPage: React.FC = () => {
                   </p>
                   {feature.benefits && (
                     <ul className="space-y-2">
-
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li
+                          key={benefitIndex}
+                          className="flex items-start text-sm text-gray-300"
+                        >
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>

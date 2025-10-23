@@ -1,20 +1,139 @@
+"use client";
+import React, { useState } from "react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Brain,
+  Cloud,
+  Code,
+  BarChart,
+  Users,
+  Zap,
+  Shield,
+} from "lucide-react";
 
+const AiServicesPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const services = [
+    {
+      id: 1,
+      title: "AI-Powered Analytics",
+      description:
+        "Transform your data into actionable insights with our advanced AI analytics platform.",
+      category: "analytics",
+      icon: BarChart,
+      features: [
+        "Real-time data processing",
+        "Predictive analytics",
+        "Custom dashboards",
+        "Automated reporting",
+      ],
+      price: "Starting at $299/month",
+    },
+    {
+      id: 2,
+      title: "Intelligent Automation",
+      description:
+        "Streamline your business processes with AI-powered automation solutions.",
+      category: "automation",
+      icon: Zap,
+      features: [
+        "Workflow automation",
+        "Document processing",
+        "Email automation",
+        "Task scheduling",
+      ],
+      price: "Starting at $199/month",
+    },
+    {
+      id: 3,
+      title: "AI Chatbot Solutions",
+      description:
+        "Enhance customer experience with intelligent chatbots and virtual assistants.",
+      category: "chatbots",
+      icon: Users,
+      features: [
+        "Natural language processing",
+        "Multi-channel support",
+        "Custom training",
+        "Analytics dashboard",
+      ],
+      price: "Starting at $149/month",
+    },
+    {
+      id: 4,
+      title: "Machine Learning Models",
+      description:
+        "Custom ML models tailored to your specific business needs and data.",
+      category: "ml",
+      icon: Brain,
+      features: [
+        "Custom model development",
+        "Data preprocessing",
+        "Model training",
+        "Performance optimization",
+      ],
+      price: "Starting at $499/month",
+    },
+    {
+      id: 5,
+      title: "AI Security Solutions",
+      description:
+        "Protect your business with AI-powered cybersecurity and threat detection.",
+      category: "security",
+      icon: Shield,
+      features: [
+        "Threat detection",
+        "Anomaly detection",
+        "Automated response",
+        "Security monitoring",
+      ],
+      price: "Starting at $399/month",
+    },
+    {
+      id: 6,
+      title: "Cloud AI Infrastructure",
+      description:
+        "Scalable cloud infrastructure optimized for AI workloads and applications.",
+      category: "infrastructure",
+      icon: Cloud,
+      features: [
+        "Auto-scaling",
+        "GPU optimization",
+        "Data management",
+        "Monitoring tools",
+      ],
+      price: "Starting at $599/month",
+    },
+  ];
+
+  const categories = [
+    { id: "all", name: "All Services" },
+    { id: "analytics", name: "Analytics" },
+    { id: "automation", name: "Automation" },
+    { id: "chatbots", name: "Chatbots" },
+    { id: "ml", name: "Machine Learning" },
+    { id: "security", name: "Security" },
+    { id: "infrastructure", name: "Infrastructure" },
+  ];
+
+  const filteredServices = services.filter(
+    (service) =>
       selectedCategory === "all" || service.category === selectedCategory,
   );
 
   return (
     <>
-      <Helmet>
-        <title>
-          AI Services - Zion Tech Group | Artificial Intelligence Solutions
-        </title>
-
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-
+          <div
+            className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI{" "}
@@ -42,7 +161,16 @@
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
-
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                      : "bg-white/10 text-gray-300 hover:bg-white/20"
+                  }`}
+                >
                   {category.name}
                 </button>
               ))}
@@ -54,7 +182,11 @@
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+              {filteredServices.map((service) => (
+                <div
+                  key={service.id}
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"
+                >
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>

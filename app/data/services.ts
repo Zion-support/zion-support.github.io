@@ -1,3 +1,4 @@
+"use client";
 export interface Service {
   id: string;
   name: string;
@@ -388,7 +389,6 @@ export const services: Service[] = [
     glow: "shadow-indigo-500/25",
     route: "/ai-image-recognition",
   },
-
 ];
 
 export const getServiceById = (id: string): Service | undefined => {

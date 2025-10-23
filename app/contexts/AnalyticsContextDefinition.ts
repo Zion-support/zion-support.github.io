@@ -1,3 +1,4 @@
+"use client";
 // Analytics Context Type Definitions
 export interface AnalyticsEvent {
   name: string;
@@ -22,7 +23,7 @@ export interface AnalyticsContextType {
 export type AnalyticsAction =
   | {
       type: "TRACK_EVENT";
-
+      payload: { name: string; properties?: Record<string, unknown> };
     }
   | { type: "TRACK_PAGE_VIEW"; payload: { path: string } }
   | { type: "SET_USER"; payload: AnalyticsUser };

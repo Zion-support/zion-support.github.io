@@ -1,4 +1,6 @@
-
+"use client";
+import React from "react";
+import { Target, Users, Award, CheckCircle, ArrowRight } from "lucide-react";
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -44,6 +46,74 @@ const AboutPage: React.FC = () => {
   return (
     <>
 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              About{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Zion Tech Group
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              We are a leading technology company specializing in AI and IT solutions, 
+              dedicated to transforming businesses through innovative technology.
+            </p>
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our Mission
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                To empower businesses with cutting-edge AI and IT solutions that drive growth, 
+                efficiency, and innovation. We believe technology should be accessible, 
+                powerful, and transformative.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <div className="bg-blue-600/20 p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Target className="w-8 h-8 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Innovation First</h3>
+                <p className="text-gray-300">
+                  We constantly explore new technologies and methodologies to deliver 
+                  the most advanced solutions to our clients.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <div className="bg-green-600/20 p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Quality Assurance</h3>
+                <p className="text-gray-300">
+                  Every solution we deliver undergoes rigorous testing and quality 
+                  assurance to ensure reliability and performance.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <div className="bg-purple-600/20 p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Users className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Client-Centric</h3>
+                <p className="text-gray-300">
+                  Our clients' success is our success. We build lasting relationships 
+                  and provide ongoing support for all our solutions.
+                </p>
+              </div>
             </div>
           </div>
         </section>

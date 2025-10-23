@@ -1,3 +1,4 @@
+"use client";
 export interface User {
   id: string;
   email: string;
@@ -63,5 +64,4 @@ export interface ErrorReport {
   resolved: boolean;
   createdAt: string;
 }
-
 export type ErrorSeverity = "low" | "medium" | "high" | "critical";

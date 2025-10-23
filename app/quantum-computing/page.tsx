@@ -1,53 +1,35 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
-const QuantumComputingPage: React.FC = () => {
+
+export default function QuantumComputingPage() {
   return (
-    <>
-      <Helmet>
-        <title>Quantum Computing Solutions - Zion Tech Group</title>
-
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              Quantum Computing Solutions
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore the future of computing with quantum solutions for complex
-              problem solving and optimization.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">
-                Optimization Problems
-              </h3>
-              <p className="text-gray-600">
-                Solve complex optimization challenges with quantum algorithms.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Cryptography</h3>
-              <p className="text-gray-600">
-                Quantum-resistant encryption and security solutions.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Simulation</h3>
-              <p className="text-gray-600">
-                Quantum simulation for scientific and business applications.
-              </p>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Quantum Computing</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced quantum computing solutions by Zion Tech Group
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default QuantumComputingPage;
+}

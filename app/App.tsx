@@ -1,5 +1,17 @@
 
-);
+"use client";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { ErrorBoundary } from "react-error-boundary";
+import PerformanceMonitor from "./components/PerformanceMonitor";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ServicesPage from "./pages/ServicesPage";
+import ContactPage from "./pages/ContactPage";
+import NotFoundPage from "./404";
 
 const App: React.FC = () => {
   return (
