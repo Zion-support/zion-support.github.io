@@ -1,39 +1,29 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+const SidebarPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Sidebar | Zion Tech Group</title>
+        <meta name="description" content="Professional Sidebar services by Zion Tech Group." />
+      </Helmet>
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-
-      </div>
-      <nav className="p-4">
-        <ul className="space-y-2">
-          <li>
-
-              Home
-            </a>
-          </li>
-          <li>
-
-              About
-            </a>
-          </li>
-          <li>
-
-              Services
-            </a>
-          </li>
-          <li>
-
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Sidebar
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Professional Sidebar services tailored to your business needs.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Sidebar;
+export default SidebarPage;

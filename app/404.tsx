@@ -14,10 +14,11 @@ const NotFoundPage: React.FC = () => {
     <>
       <Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
-
+        <meta name="description" content="Page not found. The page you're looking for doesn't exist or has been moved." />
         <meta name="robots" content="noindex, nofollow" />
-
         <meta property="og:type" content="website" />
+        <meta property="og:title" content="404 - Page Not Found | Zion Tech Group" />
+        <meta property="og:description" content="Page not found. The page you're looking for doesn't exist or has been moved." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
@@ -54,7 +55,8 @@ const NotFoundPage: React.FC = () => {
               Try searching for one of these popular pages:
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
-
+              {['/', '/about', '/services', '/contact', '/ai-services', '/it-services'].map((item) => (
+                <Link key={item} to={item} className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
                   {item}
                 </Link>
               ))}
@@ -63,11 +65,11 @@ const NotFoundPage: React.FC = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-
+            <Link to="/" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
               <Home className="w-5 h-5 mr-2" />
               Go Home
             </Link>
-
+            <button onClick={() => window.history.back()} className="inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors">
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </button>
@@ -83,11 +85,11 @@ const NotFoundPage: React.FC = () => {
               find exactly what you're looking for.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-
+              <Link to="/contact" className="inline-flex items-center px-4 py-2 bg-cyan-600 text-white rounded-md hover:bg-cyan-700 transition-colors">
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Contact Support
               </Link>
-
+              <a href="mailto:support@ziontechgroup.com" className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors">
                 Send Email
               </a>
             </div>

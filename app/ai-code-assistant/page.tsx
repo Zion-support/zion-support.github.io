@@ -1,43 +1,29 @@
 "use client";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
-            </div>
-          </div>
-        </section>
+const PagePage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
+      </Helmet>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Professional page services tailored to your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-                Start Your Project
-              </a>
-
-                Learn More
-              </a>
-            </div>
           </div>
-        </section>
-      </div>
-    </React.Fragment>
+        </div>
+      </section>
+    </div>
   );
 };
 
+export default PagePage;

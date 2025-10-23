@@ -1,9 +1,11 @@
+"use client";
+import React from "react";
 
 
   return (
     <React.Fragment>
       <Helmet>
-        <title>
+        <title></Helmet>
 
             </div>
           </div>

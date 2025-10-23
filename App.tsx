@@ -1,4 +1,4 @@
-
+import React, { lazy, Suspense, useEffect, memo } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./app/styles/futuristic.css";
@@ -48,7 +48,7 @@ const SolutionsPage = lazy(() => import("./app/solutions/page"));
 // 5G Solutions Pages
 const FiveGSolutionsPage = lazy(() => import("./app/5g-solutions/page"));
 
-// Additional AI Services
+// AI Tools Pages
 const AIChatbotBuilderPage = lazy(
   () => import("./app/ai-chatbot-builder/page"),
 );
@@ -56,12 +56,10 @@ const AIDocumentProcessorPage = lazy(
   () => import("./app/ai-document-processor/page"),
 );
 const AIFormBuilderPage = lazy(() => import("./app/ai-form-builder/page"));
-const AIVoiceAssistantPage = lazy(
-  () => import("./app/ai-voice-assistant/page"),
-);
-const AIFraudDetectionPage = lazy(
-  () => import("./app/ai-fraud-detection/page"),
-);
+const AIVoiceAssistantPage = lazy(() => import("./app/ai-voice-assistant/page"));
+
+// AI Business Solutions
+const AIFraudDetectionPage = lazy(() => import("./app/ai-fraud-detection/page"));
 const AIImageRecognitionPage = lazy(
   () => import("./app/ai-image-recognition/page"),
 );
@@ -69,9 +67,7 @@ const AILeadScoringPage = lazy(() => import("./app/ai-lead-scoring/page"));
 const AIPredictiveMaintenancePage = lazy(
   () => import("./app/ai-predictive-maintenance/page"),
 );
-const AIPriceOptimizerPage = lazy(
-  () => import("./app/ai-price-optimizer/page"),
-);
+const AIPriceOptimizerPage = lazy(() => import("./app/ai-price-optimizer/page"));
 const AISchedulingAssistantPage = lazy(
   () => import("./app/ai-scheduling-assistant/page"),
 );
@@ -79,9 +75,9 @@ const AICRMOptimizerPage = lazy(() => import("./app/ai-crm-optimizer/page"));
 const AIDataVisualizerPage = lazy(
   () => import("./app/ai-data-visualizer/page"),
 );
-const AIEmailOptimizerPage = lazy(
-  () => import("./app/ai-email-optimizer/page"),
-);
+const AIEmailOptimizerPage = lazy(() => import("./app/ai-email-optimizer/page"));
+
+// Business Solutions
 const SocialMediaSchedulerPage = lazy(
   () => import("./app/social-media-scheduler/page"),
 );
@@ -91,33 +87,52 @@ const ExpenseTrackerProPage = lazy(
 const BlockchainSolutionsPage = lazy(
   () => import("./app/blockchain-solutions/page"),
 );
-const IOTSolutionsPage = lazy(() => import("./app/iot-solutions/page"));
-const DevOpsAutomationPage = lazy(() => import("./app/devops-automation/page"));
+const IoTSolutionsPage = lazy(() => import("./app/iot-solutions/page"));
+const DevOpsAutomationPage = lazy(
+  () => import("./app/devops-automation/page"),
+);
 const DataEngineeringPage = lazy(() => import("./app/data-engineering/page"));
 const APIDevelopmentPage = lazy(() => import("./app/api-development/page"));
 const SecurityAuditPage = lazy(() => import("./app/security-audit/page"));
-const MicroSAASSolutionsPage = lazy(
+
+// Micro SaaS Solutions
+const MicroSaaSSolutionsPage = lazy(
   () => import("./app/micro-saas-solutions/page"),
 );
+
+// AI Content Generation
 const AIContentGeneratorPage = lazy(
   () => import("./app/ai-content-generator/page"),
 );
+
+// Data Analytics
 const DataAnalyticsPage = lazy(() => import("./app/data-analytics/page"));
+
+// Web Development
 const WebDevelopmentPage = lazy(() => import("./app/web-development/page"));
+
+// Mobile Development
 const MobileDevelopmentPage = lazy(
   () => import("./app/mobile-development/page"),
 );
+
+// Database Management
 const DatabaseManagementPage = lazy(
   () => import("./app/database-management/page"),
 );
+
+// Network Infrastructure
 const NetworkInfrastructurePage = lazy(
   () => import("./app/network-infrastructure/page"),
 );
+
+// Help and Support
 const HelpPage = lazy(() => import("./app/help/page"));
 const AccessibilityPage = lazy(() => import("./app/accessibility/page"));
 const APIDocsPage = lazy(() => import("./app/api-docs/page"));
 const PartnershipsPage = lazy(() => import("./app/partnerships/page"));
 
+// Advanced Solutions
 const ServerlessArchitecturePage = lazy(
   () => import("./app/serverless-architecture/page"),
 );
@@ -125,6 +140,7 @@ const ContainerOrchestrationPage = lazy(
   () => import("./app/container-orchestration/page"),
 );
 
+// Pro AI Solutions
 const AIFraudDetectionProPage = lazy(
   () => import("./app/ai-fraud-detection-pro/page"),
 );
@@ -141,15 +157,18 @@ const AIPriceOptimizerProPage = lazy(
   () => import("./app/ai-price-optimizer-pro/page"),
 );
 
+// Pro Business Solutions
 const BlockchainSolutionsProPage = lazy(
   () => import("./app/blockchain-solutions-pro/page"),
 );
 const DevOpsAutomationProPage = lazy(
   () => import("./app/devops-automation-pro/page"),
 );
-const IOTSolutionsProPage = lazy(() => import("./app/iot-solutions-pro/page"));
+const IoTSolutionsProPage = lazy(
+  () => import("./app/iot-solutions-pro/page"),
+);
 
-// Zion AI Services
+// Zion AI Solutions
 const ZionAIChatbotBuilderPage = lazy(
   () => import("./app/zion-ai-chatbot-builder/page"),
 );
@@ -258,6 +277,8 @@ const ZionAIWorkflowAutomatorPage = lazy(
 const ZionAIWorkflowAutomatorProPage = lazy(
   () => import("./app/zion-ai-workflow-automator-pro/page"),
 );
+
+// Zion Business Solutions
 const ZionAPIDevelopmentPage = lazy(
   () => import("./app/zion-api-development/page"),
 );
@@ -273,7 +294,7 @@ const ZionCybersecurityAuditPage = lazy(
 const ZionDevOpsAutomationPage = lazy(
   () => import("./app/zion-devops-automation/page"),
 );
-const ZionIOTSolutionsPage = lazy(
+const ZionIoTSolutionsPage = lazy(
   () => import("./app/zion-iot-solutions/page"),
 );
 const ZionSmartAnalyticsDashboardPage = lazy(
@@ -289,23 +310,27 @@ const ZionSmartInventoryManagerPage = lazy(
   () => import("./app/zion-smart-inventory-manager/page"),
 );
 
-// New AI Services
+// AI Project Management
 const AIProjectManagerProPage = lazy(
   () => import("./app/ai-project-manager-pro/page"),
 );
+
+// AI Customer Feedback
 const AICustomerFeedbackAnalyzerPage = lazy(
   () => import("./app/ai-customer-feedback-analyzer/page"),
 );
+
+// AI Inventory Optimization
 const AIInventoryOptimizerProPage = lazy(
   () => import("./app/ai-inventory-optimizer-pro/page"),
 );
+
+// AI Legal Solutions
 const AILegalDocumentAnalyzerPage = lazy(
   () => import("./app/ai-legal-document-analyzer/page"),
 );
 
-// New IT Solutions
-
-// New AI Medical Services
+// AI Medical Solutions
 const AIMedicalDiagnosisAssistantPage = lazy(
   () => import("./app/ai-medical-diagnosis-assistant/page"),
 );
@@ -321,7 +346,8 @@ export const ErrorFallback = ({
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
       <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-
+        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
         </svg>
       </div>
       <div className="mt-4 text-center">
@@ -329,13 +355,17 @@ export const ErrorFallback = ({
           Something went wrong
         </h3>
         <p className="mt-2 text-sm text-gray-500">{error.message}</p>
-
+        <button
+          onClick={resetErrorBoundary}
+          className="mt-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+        >
           Try again
         </button>
       </div>
     </div>
   </div>
 );
+
 // Loading component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -353,7 +383,7 @@ const App = memo(() => {
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
       navigator.serviceWorker
         .register("/sw.js")
-
+        .then(() => {
           // Service worker registered successfully
         })
         .catch(() => {
@@ -394,12 +424,42 @@ const App = memo(() => {
       preloadCriticalResources();
     }
   }, []);
+
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gray-50">
-
+            <Navigation />
+            <Suspense fallback={<LoadingFallback />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
+                <Route path="/ai-services" element={<AIServicesPage />} />
+                <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                <Route path="/it-services" element={<ITServicesPage />} />
+                <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+              </Routes>
+            </Suspense>
+            <Footer />
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
+            <SEOOptimizer />
           </div>
         </Router>
       </HelmetProvider>
