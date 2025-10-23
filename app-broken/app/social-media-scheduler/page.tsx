@@ -30,7 +30,11 @@ const SocialMediaSchedulerPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD:app/ai-automated-reporting/page.tsx
+    <React.Fragment>
+=======
     <>
+>>>>>>> origin/main:app-broken/app/social-media-scheduler/page.tsx
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

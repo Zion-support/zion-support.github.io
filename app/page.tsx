@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+"use client";
+import React from "react";
+import { Brain, Zap, Shield, Globe } from "lucide-react";
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+
+const AppPage: React.FC = () => {
+=======
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import Link from "next/link";
 
 const HomePage = () => {
+>>>>>>> origin/main
   const features = [
     {
       title: "AI-Powered Solutions",

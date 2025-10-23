@@ -30,7 +30,11 @@ const BlockchainSolutionsPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD:app/ai-chatbot-enterprise/page.tsx
+    <React.Fragment>
+=======
     <>
+>>>>>>> origin/main:app-broken/app/blockchain-solutions/page.tsx
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import {
   Home,
   ArrowLeft,
@@ -12,6 +11,8 @@ import {
 const NotFoundPage: React.FC = () => {
   return (
     <>
+<<<<<<< HEAD:app/404.tsx
+=======
       <Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="Page not found. The page you're looking for doesn't exist or has been moved." />
@@ -20,6 +21,7 @@ const NotFoundPage: React.FC = () => {
         <meta property="og:title" content="404 - Page Not Found | Zion Tech Group" />
         <meta property="og:description" content="Page not found. The page you're looking for doesn't exist or has been moved." />
       </Helmet>
+>>>>>>> origin/main:app-broken/app/404.tsx
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
         <div className="max-w-2xl w-full text-center">
@@ -39,8 +41,8 @@ const NotFoundPage: React.FC = () => {
           </h1>
 
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Oops! The page you're looking for seems to have vanished into the
-            digital void. Don't worry, even our AI can't predict everything!
+            Oops! The page you&apos;re looking for seems to have vanished into the
+            digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
           </p>
 
           {/* Search Suggestion */}
@@ -55,9 +57,24 @@ const NotFoundPage: React.FC = () => {
               Try searching for one of these popular pages:
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
+<<<<<<< HEAD:app/404.tsx
+              {[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Services", path: "/services" },
+                { name: "Contact", path: "/contact" }
+              ].map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.path}
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
+                >
+                  {item.name}
+=======
               {['/', '/about', '/services', '/contact', '/ai-services', '/it-services'].map((item) => (
                 <Link key={item} to={item} className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
                   {item}
+>>>>>>> origin/main:app-broken/app/404.tsx
                 </Link>
               ))}
             </div>
@@ -65,7 +82,14 @@ const NotFoundPage: React.FC = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+<<<<<<< HEAD:app/404.tsx
+            <Link
+              href="/"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+=======
             <Link to="/" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+>>>>>>> origin/main:app-broken/app/404.tsx
               <Home className="w-5 h-5 mr-2" />
               Go Home
             </Link>
@@ -78,14 +102,21 @@ const NotFoundPage: React.FC = () => {
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-white mb-3">
-              Still can't find what you need?
+              Still can&apos;t find what you need?
             </h3>
             <p className="text-gray-300 text-sm mb-4">
               Our support team is here to help you navigate our services and
-              find exactly what you're looking for.
+              find exactly what you&apos;re looking for.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
+<<<<<<< HEAD:app/404.tsx
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+=======
               <Link to="/contact" className="inline-flex items-center px-4 py-2 bg-cyan-600 text-white rounded-md hover:bg-cyan-700 transition-colors">
+>>>>>>> origin/main:app-broken/app/404.tsx
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Contact Support
               </Link>
@@ -99,7 +130,7 @@ const NotFoundPage: React.FC = () => {
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">
               <span className="text-cyan-400">Fun Fact:</span> Even our AI gets
-              confused sometimes. That's why we have humans to help when things
+              confused sometimes. That&apos;s why we have humans to help when things
               go wrong! 🤖
             </p>
           </div>
