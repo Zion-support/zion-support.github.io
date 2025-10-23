@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
+  
   const aiServices = [
     { name: "AI Chatbot Builder", href: "/ai-chatbot-builder" },
     { name: "AI Content Generator", href: "/ai-content-generator" },
@@ -235,4 +236,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

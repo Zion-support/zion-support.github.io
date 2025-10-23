@@ -1,10 +1,21 @@
 "use client";
 import React from "react";
 
-const PerformanceImage: React.FC = () => {
+interface PerformanceImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+const PerformanceImage: React.FC<PerformanceImageProps> = ({ src, alt, className }) => {
   return (
-    <div>
-      <h1>PerformanceImage</h1>
+    <div className={className}>
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="w-full h-auto"
+      />
     </div>
   );
 };
