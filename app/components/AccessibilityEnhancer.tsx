@@ -16,14 +16,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true
 }) => {
   useEffect(() => {
-<<<<<<< HEAD
     // Only run in browser environment
     if (typeof window === "undefined") return;
 
-    // Keyboard navigation support
-=======
     // Add keyboard navigation support
->>>>>>> origin/main
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content

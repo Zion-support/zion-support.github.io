@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import { Brain, Globe, Shield, Zap } from "lucide-react";
 
 const teamMembers = [
   {
@@ -222,18 +220,18 @@ const TeamPage: React.FC = () => {
               passion for innovation and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <a
+                href="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 View Open Positions
-              </Link>
-              <Link
-                to="/about"
+              </a>
+              <a
+                href="/about"
                 className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Learn About Our Culture
-              </Link>
+              </a>
             </div>
           </div>
         </div>
