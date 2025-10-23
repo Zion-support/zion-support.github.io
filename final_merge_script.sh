@@ -68,9 +68,9 @@ success_count=0
 failed_count=0
 
 for pr in "${PR_ARRAY[@]}"; do
-    echo "=========================================="
+    echo ""
     echo "Processing PR #$pr"
-    echo "=========================================="
+    echo ""
     
     if merge_pr_aggressive $pr; then
         echo "✅ Successfully processed PR #$pr"
@@ -86,11 +86,11 @@ for pr in "${PR_ARRAY[@]}"; do
     sleep 1
 done
 
-echo "=========================================="
+echo ""
 echo "Final PR merge process completed!"
 echo "Successfully merged: $success_count PRs"
 echo "Failed to merge: $failed_count PRs"
-echo "=========================================="
+echo ""
 
 # Final status check
 echo "Final git status:"

@@ -55,7 +55,7 @@ def resolve_merge_conflicts_in_content(content):
         if line.startswith(''):
             in_head_section = False
             continue
-        elif line.startswith('>>>>>>>'):
+        elif line.startswith(''):
             in_conflict = False
             in_head_section = False
             continue

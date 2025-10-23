@@ -16,10 +16,10 @@ def fix_merge_conflicts(file_path):
         
         # Remove all merge conflict markers and keep the latest version
         # Pattern to match conflict markers and everything between them
-        conflict_pattern = r'<<<<<<<.*?\n(.*?)\n=======.*?\n(.*?)\n>>>>>>>.*?\n'
+        conflict_pattern = r'<<<<<<<.*?\n(.*?)\n.*?\n(.*?)\n.*?\n'
         
         def resolve_conflict(match):
-            # Keep the second part (after =======) which is usually the latest version
+            # Keep the second part (after ) which is usually the latest version
             return match.group(2)
         
         # Remove all conflict markers
@@ -27,8 +27,8 @@ def fix_merge_conflicts(file_path):
         
         # Remove any remaining conflict markers
         content = re.sub(r'<<<<<<<.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?\n', '', content, flags=re.DOTALL)
         
         # Clean up any double newlines
         content = re.sub(r'\n\n\n+', '\n\n', content)
@@ -72,7 +72,7 @@ def main():
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 
-                if '<<<<<<<' in content or '=======' in content or '>>>>>>>' in content:
+                if '<<<<<<<' in content or '' in content or '' in content:
                     if fix_merge_conflicts(file_path):
                         fixed_count += 1
             except Exception as e:

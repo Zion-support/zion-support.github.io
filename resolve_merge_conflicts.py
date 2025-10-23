@@ -19,7 +19,7 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        if '' not in content:
             return False
         
         # Split content into lines
@@ -29,14 +29,14 @@ def resolve_merge_conflicts(file_path):
         keep_lines = False
         
         for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
+            if line.strip() == '':
                 in_conflict = True
                 keep_lines = True
                 continue
-            elif line.strip() == '=======':
+            elif line.strip() == '':
                 keep_lines = False
                 continue
-            elif line.strip().startswith('>>>>>>> '):
+            elif line.strip().startswith(' '):
                 in_conflict = False
                 keep_lines = False
                 continue
@@ -72,7 +72,7 @@ def find_files_with_conflicts():
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    if '<<<<<<< HEAD' in content:
+                    if '' in content:
                         conflict_files.append(file_path)
             except:
                 continue

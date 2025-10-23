@@ -8,7 +8,7 @@
 
 - Fixed 23+ files with merge conflicts
 - Resolved conflicts in App.tsx, API files, components
-- Cleaned up all conflict markers (<<<<<<, , >>>>>>>)
+- Cleaned up all conflict markers (<<<<<<, , )
 
 ### 2. Syntax Errors Fixed
 

@@ -76,9 +76,9 @@ merge_pr() {
 
 # Process each PR
 for pr in "${PR_ARRAY[@]}"; do
-    echo "=========================================="
+    echo ""
     echo "Processing PR #$pr"
-    echo "=========================================="
+    echo ""
     
     if merge_pr $pr; then
         echo "✅ Successfully processed PR #$pr"
@@ -92,9 +92,9 @@ for pr in "${PR_ARRAY[@]}"; do
     sleep 2
 done
 
-echo "=========================================="
+echo ""
 echo "Remaining PR merge process completed!"
-echo "=========================================="
+echo ""
 
 # Final status check
 echo "Final git status:"

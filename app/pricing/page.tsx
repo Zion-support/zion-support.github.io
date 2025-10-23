@@ -188,8 +188,7 @@ const PricingPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </section>
-      </div>
+        </section>      </div>
     </>
   )
 }

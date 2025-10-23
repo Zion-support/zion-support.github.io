@@ -19,12 +19,10 @@ export default async function handler(req, res) {
     // For now, we'll just return success
     console.log('Newsletter subscription:', email);
     
-    res.status(200).json({ 
-      message: 'Successfully subscribed to newsletter',
+    res.status(200).json({       message: 'Successfully subscribed to newsletter',
       email: email 
     });
   } catch (error) {
     console.error('Newsletter subscription error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+    res.status(500).json({ error: 'Internal server error' });  }
 }

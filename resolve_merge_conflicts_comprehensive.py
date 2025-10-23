@@ -121,7 +121,7 @@ def resolve_file_conflicts(content):
     for line in lines:
         if line.startswith(''):
             continue
-        elif line.startswith('>>>>>>>'):
+        elif line.startswith(''):
             in_conflict = False
             continue
         elif not in_conflict:

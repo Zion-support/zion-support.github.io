@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Zap, Shield, Brain, Globe, Phone, Mail } from 'lucide-react';
-import Footer from '../components/Footer';
-const AnalyticsToolsPage: React.FC = () => {
+import Footer from '../components/Footer';const AnalyticsToolsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -13,8 +12,7 @@ const AnalyticsToolsPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Real-Time Processing',
-      description: 'Lightning-fast data processing and real-time analytics for optimal insights'
-    },
+      description: 'Lightning-fast data processing and real-time analytics for optimal insights'    },
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -58,15 +56,13 @@ const AnalyticsToolsPage: React.FC = () => {
             Transform your business with our advanced analytics tools. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-12">            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Analytics Tools?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -77,8 +73,7 @@ const AnalyticsToolsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -89,8 +84,7 @@ const AnalyticsToolsPage: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-12">            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -104,14 +98,12 @@ const AnalyticsToolsPage: React.FC = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
-          </div>
+            ))}          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-16 px-4">        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -132,8 +124,7 @@ const AnalyticsToolsPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+      <Footer />    </div>
   );
 };
 

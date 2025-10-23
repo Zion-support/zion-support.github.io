@@ -15,7 +15,7 @@ while i < len(lines):
         skip = True
         i += 1
         continue
-    elif line.startswith('>>>>>>>') and in_conflict:
+    elif line.startswith('') and in_conflict:
         in_conflict = False
         skip = False
         i += 1

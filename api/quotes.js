@@ -26,12 +26,10 @@ export default function handler(req, res) {
     // Here you would typically save to a database
     console.log('Quote request received:', quote);
     
-    res.status(200).json({ 
-      message: 'Quote request submitted successfully',
+    res.status(200).json({       message: 'Quote request submitted successfully',
       quoteId: quote.id 
     });
   } catch (error) {
     console.error('Quote request error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+    res.status(500).json({ error: 'Internal server error' });  }
 }

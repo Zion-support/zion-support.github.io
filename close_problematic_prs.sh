@@ -31,9 +31,9 @@ echo "Found ${#PR_ARRAY[@]} open PRs to process"
 
 # Close all PRs that are causing conflicts
 for pr in "${PR_ARRAY[@]}"; do
-    echo "=========================================="
+    echo ""
     echo "Processing PR #$pr"
-    echo "=========================================="
+    echo ""
     
     # Try to merge first
     if gh pr merge $pr --merge --delete-branch; then
@@ -49,9 +49,9 @@ for pr in "${PR_ARRAY[@]}"; do
     sleep 1
 done
 
-echo "=========================================="
+echo ""
 echo "PR cleanup process completed!"
-echo "=========================================="
+echo ""
 
 # Final status check
 echo "Final git status:"

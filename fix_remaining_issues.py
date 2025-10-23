@@ -58,11 +58,11 @@ def fix_merge_conflicts(file_path):
                 in_conflict = True
                 keep_lines = False
                 continue
-            elif line.strip().startswith('======='):
+            elif line.strip().startswith(''):
                 if in_conflict:
                     keep_lines = True
                     continue
-            elif line.strip().startswith('>>>>>>>'):
+            elif line.strip().startswith(''):
                 if in_conflict:
                     in_conflict = False
                     keep_lines = False
