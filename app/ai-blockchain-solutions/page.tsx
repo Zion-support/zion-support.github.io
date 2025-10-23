@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { CheckCircle, ArrowRight } from "lucide-react";
@@ -34,10 +34,9 @@ const PagePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
+      <Head>
         <title>Page | Zion Tech Group</title>
-
-      </Helmet>
+      </Head>
 
       <Navigation />
 

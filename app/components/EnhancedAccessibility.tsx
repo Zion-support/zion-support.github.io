@@ -19,17 +19,19 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({
       reducedMotion: false,
     };
 
-    // Apply accessibility settings
-    if (settings.highContrast) {
-      document.body.classList.add("high-contrast");
-    }
+    // Apply accessibility settings only in browser
+    if (typeof window !== 'undefined' && document) {
+      if (settings.highContrast) {
+        document.body.classList.add("high-contrast");
+      }
 
-    if (settings.reducedMotion) {
-      document.body.classList.add("reduced-motion");
-    }
+      if (settings.reducedMotion) {
+        document.body.classList.add("reduced-motion");
+      }
 
-    // Set font size
-    document.documentElement.style.fontSize = `${settings.fontSize}px`;
+      // Set font size
+      document.documentElement.style.fontSize = `${settings.fontSize}px`;
+    }
   }, []);
 
   return <>{children}</>;

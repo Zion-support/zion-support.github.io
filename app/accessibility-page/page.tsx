@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
 import { Accessibility, Eye, Volume2, MousePointer, CheckCircle, ArrowRight } from "lucide-react";
 
 const AccessibilityPage: React.FC = () => {
@@ -39,12 +39,12 @@ const AccessibilityPage: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
-      <Helmet>
+    <>
+      <Head>
         <title>Accessibility - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
         <meta property="og:type" content="website" />
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -170,7 +170,7 @@ const AccessibilityPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import Head from "next/head";
+import Link from "next/link";
 import {
   Home,
   ArrowLeft,
@@ -12,13 +12,13 @@ import {
 const NotFoundPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
 
         <meta name="robots" content="noindex, nofollow" />
 
         <meta property="og:type" content="website" />
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
         <div className="max-w-2xl w-full text-center">
@@ -62,7 +62,7 @@ const NotFoundPage: React.FC = () => {
               ].map((item, index) => (
                 <Link
                   key={index}
-                  to={item.path}
+                  href={item.path}
                   className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
                 >
                   {item.name}
@@ -74,7 +74,7 @@ const NotFoundPage: React.FC = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
-              to="/"
+              href="/"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
               <Home className="w-5 h-5 mr-2" />
@@ -100,7 +100,7 @@ const NotFoundPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />

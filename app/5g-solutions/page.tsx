@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
 import { Wifi, BarChart, CheckCircle, ArrowRight } from "lucide-react";
 
 const FiveGSolutionsPage: React.FC = () => {
@@ -45,13 +45,13 @@ const FiveGSolutionsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>
           5G Solutions - Zion Tech Group | AI & IT Solutions
         </title>
         <meta name="description" content="Advanced 5G network solutions with ultra-low latency, high-speed connectivity, and IoT integration for modern applications." />
         <meta property="og:type" content="website" />
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

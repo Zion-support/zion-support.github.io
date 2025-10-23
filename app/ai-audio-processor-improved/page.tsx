@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
 import { Volume2, Mic, Music, Headphones, ArrowRight, CheckCircle, Zap } from "lucide-react";
 
 const AIAudioProcessorImprovedPage: React.FC = () => {
@@ -44,14 +44,14 @@ const AIAudioProcessorImprovedPage: React.FC = () => {
   ];
 
   return (
-    <React.Fragment>
-      <Helmet>
+    <>
+      <Head>
         <title>
           AI Audio Processor Improved - Zion Tech Group | Advanced AI and IT Solutions
         </title>
         <meta name="description" content="Professional AI audio processor with advanced features for enhanced audio processing, voice recognition, and real-time analysis." />
         <meta property="og:type" content="website" />
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -183,7 +183,7 @@ const AIAudioProcessorImprovedPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
