@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
 
 export default function AiAudioProcessorImprovedPage() {
   return (
