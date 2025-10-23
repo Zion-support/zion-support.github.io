@@ -1,70 +1,110 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react'
-const MedicalRecordsManagerPage: React.FC = () => {
-const features = [
-{
-icon: FileText,
-title: 'Digital Records Management',
-description: 'Secure, organized digital storage and management of patient medical records with easy access and search capabilities.'
-},
-{
-icon: Shield,
-title: 'HIPAA Compliance',
-description: 'Fully compliant with HIPAA regulations and healthcare data security standards to protect patient privacy.'
-},
-{
-icon: Brain,
-title: 'AI-Powered Insights',
-description: 'AI analysis of medical records to identify patterns, trends, and potential health risks for better patient care.'
-},
-{
-icon: Users,
-title: 'Multi-Provider Access',
-description: 'Secure access for multiple healthcare providers with role-based permissions and audit trails.'
-},
-{
-icon: BarChart,
-title: 'Analytics Dashboard',
-description: 'Comprehensive analytics on patient data, treatment outcomes, and healthcare metrics for informed decision-making.'
-},
-{
-icon: Lock,
-title: 'Advanced Security',
-description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
-}
-]
-return (
-<>
-<Helmet>
-<title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
-<meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
-<meta name="keywords" content="medical records management, HIPAA compliance, healthcare data, patient records, medical software, healthcare analytics" />
-</Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<section className="py-20 px-4">
-<div className="max-w-7xl mx-auto">
-<div className="text-center mb-16">
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Medical Records Manager</h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.</p>p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-<div
-key={index}
-className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-<feature.icon className="w-8 h-8 text-white" />
-</div>
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-<p className="text-gray-300">{feature.description}</p>
-</div>
-))}
-</div>
-</div>
-</section>
-</div>
-</>
-)
-}
-export default MedicalRecordsManagerPage
+"use client";
+import React from "react";
+
+const Medicalrecordsmanager = () => {
+  const features = [
+    {
+      icon: "🚀",
+      title: "Professional",
+      description: "Professional medical records manager solutions"
+    },
+    {
+      icon: "⚡",
+      title: "Fast & Reliable",
+      description: "Quick and efficient service delivery"
+    },
+    {
+      icon: "📊",
+      title: "Analytics",
+      description: "Comprehensive analytics and insights"
+    },
+    {
+      icon: "🔧",
+      title: "Customizable",
+      description: "Tailored solutions for your business needs"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Medical Records Manager
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional medical records manager solutions tailored to your business needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="#features"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-lg text-gray-300">
+              Everything you need for success
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Let us help you implement this solution for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Your Project
+            </a>
+            <a
+              href="/about"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Medicalrecordsmanager;
