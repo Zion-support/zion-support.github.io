@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Brain, Zap, Shield, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
 const AppPage: React.FC = () => {
   const features = [
@@ -33,17 +32,6 @@ const AppPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta
-          name="description"
-          content="Pioneering the future with advanced AI, quantum computing, and cutting-edge technology solutions that transform businesses and drive innovation."
-        />
-        <meta
-          name="keywords"
-          content="AI solutions, quantum computing, IT services, technology, business solutions, innovation"
-        />
-      </Helmet>
 
       <main className="min-h-screen">
         {/* Hero Section */}

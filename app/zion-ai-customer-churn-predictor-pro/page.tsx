@@ -1,6 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import {
   TrendingDown,
   BarChart3,
@@ -200,24 +199,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Zion AI Customer Churn Predictor Pro - AI-Powered Retention Platform |
-          Zion Tech Group
-        </title>
-        <meta
-          name="description"
-          content="Predict and prevent customer churn with AI-powered analytics. 94% accuracy, personalized retention campaigns, and early warning system. Reduce churn by 40%. Start free trial!"
-        />
-        <meta
-          name="keywords"
-          content="customer churn prediction, retention analytics, customer success, churn prevention, customer lifetime value, retention campaigns, AI churn analysis"
-        />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/zion-ai-customer-churn-predictor-pro"
-        />
-      </Helmet>
 
       <div className="min-h-screen pt-16">
         {/* Hero Section */}

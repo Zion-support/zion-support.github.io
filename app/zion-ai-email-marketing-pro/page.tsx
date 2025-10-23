@@ -1,6 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import {
   Mail,
   BarChart3,
@@ -199,24 +198,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Zion AI Email Marketing Pro - AI-Powered Email Marketing Platform |
-          Zion Tech Group
-        </title>
-        <meta
-          name="description"
-          content="Transform your email marketing with AI-powered content generation, advanced segmentation, and automation. Increase ROI by 400%. Start free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="email marketing, AI email marketing, email automation, email segmentation, email analytics, email campaigns, marketing automation"
-        />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/zion-ai-email-marketing-pro"
-        />
-      </Helmet>
 
       <div className="min-h-screen pt-16">
         {/* Hero Section */}

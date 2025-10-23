@@ -1,6 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import {
   Package,
   BarChart3,
@@ -205,24 +204,6 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Zion AI Inventory Optimizer Pro - AI-Powered Inventory Management |
-          Zion Tech Group
-        </title>
-        <meta
-          name="description"
-          content="Optimize your inventory with AI-powered demand forecasting, smart reorder points, and automated purchase orders. Reduce costs by 30%. Start free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="inventory management, demand forecasting, inventory optimization, supply chain, stock management, inventory analytics, AI inventory"
-        />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/zion-ai-inventory-optimizer-pro"
-        />
-      </Helmet>
 
       <div className="min-h-screen pt-16">
         {/* Hero Section */}

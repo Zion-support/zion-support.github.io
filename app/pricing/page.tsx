@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import { CheckCircle, ArrowRight, Star } from "lucide-react";
 
 const PricingPage: React.FC = () => {
@@ -53,17 +52,6 @@ const PricingPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
-        <meta
-          name="description"
-          content="Choose the perfect plan for your business. Our flexible pricing options make it easy to get started with AI and IT solutions."
-        />
-        <meta
-          name="keywords"
-          content="pricing, plans, AI solutions, IT services, business packages, enterprise solutions"
-        />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

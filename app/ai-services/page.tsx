@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   CheckCircle,
@@ -127,19 +126,6 @@ const AiServicesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>
-          AI Services - Zion Tech Group | Artificial Intelligence Solutions
-        </title>
-        <meta
-          name="description"
-          content="Comprehensive AI services including analytics, automation, chatbots, machine learning, and security solutions. Transform your business with cutting-edge AI technology."
-        />
-        <meta
-          name="keywords"
-          content="AI services, artificial intelligence, machine learning, automation, chatbots, analytics, AI solutions"
-        />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

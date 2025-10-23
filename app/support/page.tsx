@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   Phone,
@@ -102,17 +101,6 @@ const SupportPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Support - Zion Tech Group | Help & Support Center</title>
-        <meta
-          name="description"
-          content="Get help and support for our AI and IT solutions. Find answers to common questions, contact our support team, and access resources."
-        />
-        <meta
-          name="keywords"
-          content="support, help, FAQ, contact support, technical support, customer service"
-        />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

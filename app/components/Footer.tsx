@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
