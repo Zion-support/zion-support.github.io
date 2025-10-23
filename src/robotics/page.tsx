@@ -1,6 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Cog } from 'lucide-react';
+import { Cog } from 'lucide-react'
+import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react'
+import { Bot, Cpu, Settings } from 'lucide-react'
+
+<<<<<<< HEAD
+=======
+import { Cog, CheckCircle, Star, Brain, Shield, Zap, Target, BarChart, Helmet, Check, Bot, Cpu, Settings } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const RoboticsPage: React.FC = () => {
   const roboticsServices = [
     {
@@ -135,8 +142,8 @@ const RoboticsPage: React.FC = () => {
       category: 'Training',
       technologies: ['Simulation Software', 'Virtual Reality', 'Hands-on Labs', 'Certification Programs', 'Online Learning']
     }
-  ];
-  const categories = [...new Set(roboticsServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(roboticsServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -335,13 +342,13 @@ const RoboticsPage: React.FC = () => {
               Contact our robotics experts for a free consultation and custom automation strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
               >
@@ -355,6 +362,6 @@ const RoboticsPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default RoboticsPage;
+  )
+}
+export default RoboticsPage

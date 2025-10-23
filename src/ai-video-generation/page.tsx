@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Play } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Zap, Video } from 'lucide-react'
+=======
 import React from 'react';
-import { Play } from 'lucide-react';
+import { Play, CheckCircle, Zap, Video, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIVideoGenerationPage: React.FC = () => {
   const features = [
@@ -16,7 +25,7 @@ const AIVideoGenerationPage: React.FC = () => {
     'HD/4K Export',
     'Real-time Preview',
     'Collaboration Tools'
-  ];
+  ]
 
   const benefits = [
     '90% time savings',
@@ -25,7 +34,7 @@ const AIVideoGenerationPage: React.FC = () => {
     'Multi-language support',
     'No technical skills needed',
     'Cost-effective solution'
-  ];
+  ]
 
   const pricingPlans = [
     {
@@ -49,7 +58,7 @@ const AIVideoGenerationPage: React.FC = () => {
       features: ['Everything in Pro', 'Custom templates', 'API access', 'Dedicated support', 'White-label'],
       popular: false
     }
-  ];
+  ]
 
   return (
     <>
@@ -59,10 +68,8 @@ const AIVideoGenerationPage: React.FC = () => {
         keywords={['AI video generation', 'video creation', 'AI editing', 'voice synthesis', 'text to video', 'video automation']}
         canonicalUrl="https://ziontechgroup.com/ai-video-generation"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -95,7 +102,6 @@ const AIVideoGenerationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -112,7 +118,6 @@ const AIVideoGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,7 +134,6 @@ const AIVideoGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -174,7 +178,6 @@ const AIVideoGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -201,11 +204,10 @@ const AIVideoGenerationPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIVideoGenerationPage;
+export default AIVideoGenerationPage

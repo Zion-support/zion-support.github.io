@@ -1,6 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Lock } from 'lucide-react';
+import { Lock } from 'lucide-react'
+import { CheckCircle, Star, Eye, Shield, Database, Helmet } from 'lucide-react'
+import { Globe, AlertTriangle } from 'lucide-react'
+
+<<<<<<< HEAD
+=======
+import { Lock, CheckCircle, Star, Shield, Database, Eye, Helmet, Check, Globe, AlertTriangle } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
     {
@@ -135,8 +142,8 @@ const CybersecurityPage: React.FC = () => {
       category: 'Incident Response',
       technologies: ['Forensic Tools', 'Incident Management', 'Evidence Collection', 'Recovery Tools']
     }
-  ];
-  const categories = [...new Set(securityServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(securityServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -335,13 +342,13 @@ const CybersecurityPage: React.FC = () => {
               Contact our cybersecurity experts for a free security assessment and custom protection strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
               >
@@ -355,6 +362,6 @@ const CybersecurityPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default CybersecurityPage;
+  )
+}
+export default CybersecurityPage

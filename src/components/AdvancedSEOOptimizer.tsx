@@ -1,33 +1,40 @@
+<<<<<<< HEAD
+'use client'
+import React, { useEffect, useCallback, useRef } from 'react'
+import { Helmet } from 'lucide-react'
+=======
+import { Helmet } from 'lucide-react';
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+  structuredData?: Record<string, unknown>
+  robots?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
 }
 interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableOpenGraph?: boolean;
-  enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;
+  seoData: SEOData
+  enableStructuredData?: boolean
+  enableOpenGraph?: boolean
+  enableTwitterCards?: boolean
+  enableSchemaMarkup?: boolean
 }
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
@@ -36,9 +43,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true
 }) => {
-  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const _structuredDataRef = useRef<HTMLScriptElement | null>(null)
   const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.structuredData) return null;
+    if (!enableStructuredData || !seoData.structuredData) return null
     const baseStructuredData = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -56,11 +63,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         'https://github.com/Zion-Holdings',
       ],
       ...seoData.structuredData
-    };
-    return baseStructuredData;
-  }, [enableStructuredData, seoData.structuredData]);
+    }
+    return baseStructuredData
+  }, [enableStructuredData, seoData.structuredData])
   const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null;
+    if (!enableSchemaMarkup) return null
     const breadcrumbData = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -78,11 +85,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           item: seoData.canonicalUrl
         },
       ]
-    };
-    return breadcrumbData;
-  }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl]);
+    }
+    return breadcrumbData
+  }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl])
   const generateFAQStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null;
+    if (!enableSchemaMarkup) return null
     const faqData = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -104,64 +111,64 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           }
         },
       ]
-    };
-    return faqData;
-  }, [enableSchemaMarkup]);
-  const _structuredData = generateStructuredData();
-  const _breadcrumbData = generateBreadcrumbStructuredData();
-  const _faqData = generateFAQStructuredData();
+    }
+    return faqData
+  }, [enableSchemaMarkup])
+  const _structuredData = generateStructuredData()
+  const _breadcrumbData = generateBreadcrumbStructuredData()
+  const _faqData = generateFAQStructuredData()
   useEffect(() => {
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
+    const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', seoData.description);
+      metaDescription.setAttribute('content', seoData.description)
     } else {
-      const newMetaDescription = document.createElement('meta');
-      newMetaDescription.setAttribute('name', 'description');
-      document.head.appendChild(newMetaDescription);
-      newMetaDescription.setAttribute('content', seoData.description);
+      const newMetaDescription = document.createElement('meta')
+      newMetaDescription.setAttribute('name', 'description')
+      document.head.appendChild(newMetaDescription)
+      newMetaDescription.setAttribute('content', seoData.description)
     }
     // Update canonical URL
-    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    const canonicalLink = document.querySelector('link[rel="canonical"]')
     if (canonicalLink) {
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
+      canonicalLink.setAttribute('href', seoData.canonicalUrl)
     } else {
-      const newCanonicalLink = document.createElement('link');
-      newCanonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(newCanonicalLink);
-      newCanonicalLink.setAttribute('href', seoData.canonicalUrl);
+      const newCanonicalLink = document.createElement('link')
+      newCanonicalLink.setAttribute('rel', 'canonical')
+      document.head.appendChild(newCanonicalLink)
+      newCanonicalLink.setAttribute('href', seoData.canonicalUrl)
     }
-  }, [seoData]);
+  }, [seoData])
   const _addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    document.head.appendChild(script);
-    _structuredDataRef.current = script;
-  };
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(data)
+    script.id = 'structured-data'
+    document.head.appendChild(script)
+    _structuredDataRef.current = script
+  }
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl
-      });
+      })
     }
-  };
+  }
   const _trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       window.addEventListener('load', () => {
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (_perfData) {
           (window as any).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
-          });
+          })
         }
-      });
+      })
     }
-  };
+  }
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -227,6 +234,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
-  );
-};
-export default AdvancedSEOOptimizer;
+  )
+}
+export default AdvancedSEOOptimizer

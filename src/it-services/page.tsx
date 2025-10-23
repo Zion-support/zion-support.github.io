@@ -1,20 +1,29 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+=======
 'use client';
 import React from 'react';
-import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react';
+import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock, CheckCircle, Star, ArrowRight, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 interface ITService {
-  title: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  features: string[];
-  price: string;
-  category: string;
-  benefits: string[];
-  technologies: string[];
-  contactInfo: string;
-  color?: string;
+  title: string
+  description: string
+  icon: React.ComponentType<{ className?: string }>
+  features: string[]
+  price: string
+  category: string
+  benefits: string[]
+  technologies: string[]
+  contactInfo: string
+  color?: string
 }
 
 const ITServicesPage: React.FC = () => {
@@ -252,7 +261,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
 
   const categories = [
     { name: 'All', count: itServices.length },
@@ -267,7 +276,7 @@ const ITServicesPage: React.FC = () => {
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-  ];
+  ]
 
   const additionalServices = [
     {
@@ -306,7 +315,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Firewall configuration and network security implementation.',
       price: 'Starting at $399/month'
     }
-  ];
+  ]
 
   const benefits = [
     {
@@ -329,22 +338,21 @@ const ITServicesPage: React.FC = () => {
       title: 'Certified Professionals',
       description: 'Microsoft, AWS, and Google certified engineers'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               IT Services & Infrastructure
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Comprehensive IT solutions to support and optimize your business infrastructure. 
+            Comprehensive IT solutions to support and optimize your business infrastructure.
             From cloud migration to cybersecurity, we keep your technology running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -362,7 +370,6 @@ const ITServicesPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Main Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
@@ -370,8 +377,8 @@ const ITServicesPage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
-                  {React.isValidElement(service.icon) ? service.icon : 
-                   typeof service.icon === 'function' ? React.createElement(service.icon as any, { className: "w-8 h-8" }) : 
+                  {React.isValidElement(service.icon) ? service.icon :
+                   typeof service.icon === 'function' ? React.createElement(service.icon as any, { className: "w-8 h-8" }) :
                    <div className="w-8 h-8 bg-cyan-400 rounded" />}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
@@ -433,7 +440,6 @@ const ITServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Additional Services */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
@@ -450,7 +456,6 @@ const ITServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Support Tiers */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
@@ -537,7 +542,6 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -562,10 +566,9 @@ const ITServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default ITServicesPage;
+export default ITServicesPage

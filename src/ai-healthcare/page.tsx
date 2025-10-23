@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+import React from 'react'
+import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react'
+=======
+import { CheckCircle, Star, Brain, Shield, Zap, Users, Target, Heart, Helmet, Check } from 'lucide-react';
 import React from 'react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIHealthcarePage: React.FC = () => {
   const aiHealthcareServices = [
@@ -134,8 +140,8 @@ const AIHealthcarePage: React.FC = () => {
       category: 'Medical Devices',
       technologies: ['IoT Integration', 'Machine Learning', 'Real-time Processing', 'Device APIs', 'Cloud Computing']
     }
-  ];
-  const categories = [...new Set(aiHealthcareServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(aiHealthcareServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -334,13 +340,13 @@ const AIHealthcarePage: React.FC = () => {
               Contact our AI healthcare experts for a free consultation and custom healthcare AI strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
@@ -354,6 +360,6 @@ const AIHealthcarePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default AIHealthcarePage;
+  )
+}
+export default AIHealthcarePage

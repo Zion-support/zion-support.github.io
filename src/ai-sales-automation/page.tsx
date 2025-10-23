@@ -1,9 +1,20 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Building } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
+=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Building } from 'lucide-react';
+import { Building, CheckCircle, Phone, Mail, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -30,7 +41,7 @@ const AISalesAutomationPage: React.FC = () => {
       description: 'Never miss an opportunity with intelligent follow-up sequences that adapt to customer behavior.',
       benefits: ['Smart Sequences', 'Behavioral Triggers', 'Multi-channel', 'Timing Optimization']
     }
-  ];
+  ]
 
   const pricing = [
     {
@@ -51,13 +62,13 @@ const AISalesAutomationPage: React.FC = () => {
       description: 'For large sales organizations',
       features: ['Unlimited contacts', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'Custom integrations']
     }
-  ];
+  ]
   const stats = [
     { number: '40%', label: 'Increase in Sales' },
     { number: '60%', label: 'Time Saved' },
     { number: '85%', label: 'Lead Accuracy' },
     { number: '200%', label: 'ROI Improvement' }
-  ];
+  ]
 
   const useCases = [
     {
@@ -80,7 +91,7 @@ const AISalesAutomationPage: React.FC = () => {
       description: 'Qualify leads, schedule showings, and follow up with potential buyers automatically.',
       icon: Home
     }
-  ];
+  ]
 
   return (
     <>
@@ -103,7 +114,7 @@ const AISalesAutomationPage: React.FC = () => {
                 Automate your sales process and boost revenue with intelligent AI
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered sales automation platform helps you identify high-value leads, 
+                Our AI-powered sales automation platform helps you identify high-value leads,
                 optimize your sales process, and close more deals with less effort.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -136,7 +147,6 @@ const AISalesAutomationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -216,7 +226,6 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -249,7 +258,7 @@ const AISalesAutomationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AISalesAutomationPage;
+export default AISalesAutomationPage

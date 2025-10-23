@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+import React from 'react'
+import { BarChart3 } from 'lucide-react'
+import { CheckCircle, Brain, Target, Database } from 'lucide-react'
+
+=======
 import React from 'react';
-import { BarChart3 } from 'lucide-react';
+import { BarChart3, CheckCircle, Brain, Target, Database, BarChart, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [
     {
@@ -158,7 +165,7 @@ const AIDataAnalyticsPage: React.FC = () => {
       technologies: ['Time Series Forecasting', 'Optimization Algorithms', 'Python', 'OR-Tools', 'PostgreSQL', 'React'],
       useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage']
     }
-  ];
+  ]
   const additionalFeatures = [
     {
       title: 'Advanced Data Processing',
@@ -180,7 +187,7 @@ const AIDataAnalyticsPage: React.FC = () => {
       description: 'AI-powered predictions and recommendations',
       icon: <Target className="w-8 h-8 text-orange-600" />
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -195,13 +202,13 @@ const AIDataAnalyticsPage: React.FC = () => {
               Transform your data into actionable insights with our advanced AI-powered analytics solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
@@ -251,7 +258,7 @@ const AIDataAnalyticsPage: React.FC = () => {
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
-                <a 
+                <a
                   href="/contact"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
                 >
@@ -296,13 +303,13 @@ const AIDataAnalyticsPage: React.FC = () => {
             Contact us today for a free consultation and custom analytics solution
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="tel:+13024640950"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
             >
               📞 +1 302 464 0950
             </a>
-            <a 
+            <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
@@ -315,6 +322,6 @@ const AIDataAnalyticsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default AIDataAnalyticsPage;
+  )
+}
+export default AIDataAnalyticsPage

@@ -1,6 +1,14 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { Atom, Lock } from 'lucide-react'
+import { CheckCircle, Star, Brain, Shield } from 'lucide-react'
+
+=======
 'use client';
 import React from 'react';
-import { Atom, Lock } from 'lucide-react';
+import { Atom, Lock, CheckCircle, Star, Brain, Shield, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const QuantumComputingPage: React.FC = () => {
   const quantumServices = [
     {
@@ -33,7 +41,7 @@ const QuantumComputingPage: React.FC = () => {
       category: 'Optimization',
       technologies: ['D-Wave', 'IBM Qiskit', 'Rigetti', 'IonQ', 'Custom Algorithms']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       {/* Hero Section */}
@@ -160,6 +168,6 @@ const QuantumComputingPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default QuantumComputingPage;
+  )
+}
+export default QuantumComputingPage

@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react'
+=======
+import { CheckCircle, Brain, Zap, Eye, BarChart, Check } from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
@@ -37,7 +46,7 @@ const AIContentGenerationPage: React.FC = () => {
       features: ['Product descriptions', 'Review generation', 'Marketing copy', 'SEO optimization'],
       popular: false
     }
-  ];
+  ]
   const processSteps = [
     {
       step: '1',
@@ -63,7 +72,7 @@ const AIContentGenerationPage: React.FC = () => {
       description: 'Publish your content and monitor performance with detailed analytics.',
       icon: <BarChart className="w-6 h-6" />
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -74,7 +83,7 @@ const AIContentGenerationPage: React.FC = () => {
             AI Content Generation
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your content strategy with our AI-powered content generation services. 
+            Transform your content strategy with our AI-powered content generation services.
             Create blog posts, social media content, and marketing copy 10x faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -146,7 +155,7 @@ const AIContentGenerationPage: React.FC = () => {
             Ready to Transform Your Content?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using our AI content generation services to create 
+            Join thousands of businesses using our AI content generation services to create
             engaging, high-quality content at scale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,6 +176,6 @@ const AIContentGenerationPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default AIContentGenerationPage;
+  )
+}
+export default AIContentGenerationPage

@@ -1,13 +1,13 @@
 interface SitemapEntry {
-  url: string;
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  url: string
+  lastModified?: string | Date
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
 }
 
 export default function sitemap(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com'
-  
+
   // Main pages
   const mainPages = [
     '',
@@ -33,7 +33,6 @@ export default function sitemap(): SitemapEntry[] {
     '/system-status',
     '/sitemap'
   ]
-
   // AI Services - Micro SAAS
   const microSaasServices = [
     '/ai-project-manager',
@@ -62,7 +61,6 @@ export default function sitemap(): SitemapEntry[] {
     '/ai-email-assistant',
     '/ai-chatbot-builder'
   ]
-
   // AI Services - Core AI
   const coreAIServices = [
     '/ai-services',
@@ -80,7 +78,6 @@ export default function sitemap(): SitemapEntry[] {
     '/ai-data-analytics',
     '/ai-marketing'
   ]
-
   // IT Services
   const itServices = [
     '/it-services',
@@ -96,7 +93,6 @@ export default function sitemap(): SitemapEntry[] {
     '/database',
     '/networking'
   ]
-
   // Specialized Services
   const specializedServices = [
     '/quantum-computing',
@@ -117,7 +113,6 @@ export default function sitemap(): SitemapEntry[] {
     '/task-manager-pro',
     '/smart-analytics'
   ]
-
   // Blog posts
   const blogPosts = [
     '/blog/agent-release-runbooks-v2-2026',
@@ -149,7 +144,6 @@ export default function sitemap(): SitemapEntry[] {
     '/blog/ai-powered-autonomous-business-processes-2026',
     '/blog/ai-trends-2026-future-enterprise-transformation'
   ]
-
   // Combine all pages
   const allPages = [
     ...mainPages,
@@ -159,7 +153,6 @@ export default function sitemap(): SitemapEntry[] {
     ...specializedServices,
     ...blogPosts
   ]
-
   return allPages.map((page) => ({
     url: `${baseUrl}${page}`,
     lastModified: new Date(),

@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { PenTool, FileText } from 'lucide-react'
+import { CheckCircle, Star, Phone } from 'lucide-react'
+=======
 'use client';
 import React from 'react';
-import { PenTool, FileText } from 'lucide-react';
+import { PenTool, FileText, CheckCircle, Star, Phone, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIWritingAssistantPage: React.FC = () => {
   const features = [
@@ -40,7 +47,7 @@ const AIWritingAssistantPage: React.FC = () => {
       description: 'Get AI insights on content performance, audience engagement, and optimization opportunities.',
       benefit: 'Data-driven content strategy'
     }
-  ];
+  ]
 
   const pricingPlans = [
     {
@@ -92,7 +99,7 @@ const AIWritingAssistantPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
 
   const useCases = [
     {
@@ -119,7 +126,7 @@ const AIWritingAssistantPage: React.FC = () => {
       icon: Mail,
       results: '35% higher open rates'
     }
-  ];
+  ]
 
   const testimonials = [
     {
@@ -143,7 +150,7 @@ const AIWritingAssistantPage: React.FC = () => {
       content: 'We can now deliver client content 3x faster. The AI suggestions help us improve our writing and stay ahead of deadlines.',
       rating: 5
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -160,8 +167,8 @@ const AIWritingAssistantPage: React.FC = () => {
             Create Amazing Content 10x Faster
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your content creation with our AI-powered writing assistant. Generate high-quality 
-            blog posts, marketing copy, emails, and more in minutes, not hours. Boost engagement and 
+            Transform your content creation with our AI-powered writing assistant. Generate high-quality
+            blog posts, marketing copy, emails, and more in minutes, not hours. Boost engagement and
             drive results with intelligent content optimization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -172,7 +179,7 @@ const AIWritingAssistantPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
-            <a 
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
@@ -180,7 +187,6 @@ const AIWritingAssistantPage: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -204,7 +210,6 @@ const AIWritingAssistantPage: React.FC = () => {
             <div className="text-gray-300 text-sm">Maintain your unique brand voice</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -221,7 +226,6 @@ const AIWritingAssistantPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -238,7 +242,6 @@ const AIWritingAssistantPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -247,7 +250,7 @@ const AIWritingAssistantPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
+                plan.popular
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
@@ -281,7 +284,6 @@ const AIWritingAssistantPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -305,14 +307,13 @@ const AIWritingAssistantPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Content Creation?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of content creators, marketers, and businesses using AI Writing Assistant 
+            Join thousands of content creators, marketers, and businesses using AI Writing Assistant
             to create better content faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -323,7 +324,7 @@ const AIWritingAssistantPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
-            <a 
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
@@ -333,7 +334,7 @@ const AIWritingAssistantPage: React.FC = () => {
         </section>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default AIWritingAssistantPage;
+export default AIWritingAssistantPage

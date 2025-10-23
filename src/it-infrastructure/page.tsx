@@ -1,6 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Server, Lock, Monitor } from 'lucide-react';
+import { Server, Lock, Monitor } from 'lucide-react'
+import { CheckCircle, Star, Zap, BarChart, Shield, Helmet } from 'lucide-react'
+import { Clock } from 'lucide-react'
+
+<<<<<<< HEAD
+=======
+import { Server, Lock, Monitor, CheckCircle, Star, Shield, Zap, BarChart, Helmet, Check, Clock } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
     {
@@ -187,7 +194,7 @@ const ITInfrastructurePage: React.FC = () => {
       technologies: ['Microsoft 365', 'Google Workspace', 'Exchange Server', 'Postfix', 'SpamAssassin', 'MDM'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
   const infrastructureStats = [
     { metric: '99.9%', description: 'Uptime Guarantee' },
     { metric: '500+', description: 'Servers Managed' },
@@ -195,7 +202,7 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: '24/7', description: 'Support Available' },
     { metric: '< 1hr', description: 'Response Time' },
     { metric: '100%', description: 'Security Compliance' }
-  ];
+  ]
   return (
     <>
       <Helmet>
@@ -216,13 +223,13 @@ const ITInfrastructurePage: React.FC = () => {
                 Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+                <a
                   href="tel:+13024640950"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
                 >
                   📞 +1 302 464 0950
                 </a>
-                <a 
+                <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
@@ -358,13 +365,13 @@ const ITInfrastructurePage: React.FC = () => {
                     <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
                   </div>
                   <div className="flex gap-2">
-                    <a 
+                    <a
                       href="tel:+13024640950"
                       className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
                     >
                       Call Now
                     </a>
-                    <a 
+                    <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
                     >
@@ -421,13 +428,13 @@ const ITInfrastructurePage: React.FC = () => {
               Contact our IT infrastructure experts for a free assessment and custom solution design
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
@@ -442,6 +449,6 @@ const ITInfrastructurePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default ITInfrastructurePage;
+  )
+}
+export default ITInfrastructurePage

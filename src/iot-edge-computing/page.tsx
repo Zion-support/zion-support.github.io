@@ -1,6 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Wifi } from 'lucide-react';
+import { Wifi } from 'lucide-react'
+import { CheckCircle, Star, Zap, BarChart, Shield, Database, Helmet } from 'lucide-react'
+import { Cpu, Globe } from 'lucide-react'
+
+<<<<<<< HEAD
+=======
+import { Wifi, CheckCircle, Star, Shield, Zap, Database, BarChart, Helmet, Check, Cpu, Globe } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
     {
@@ -135,8 +142,8 @@ const IoTEdgeComputingPage: React.FC = () => {
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']
     }
-  ];
-  const categories = [...new Set(iotServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(iotServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -335,13 +342,13 @@ const IoTEdgeComputingPage: React.FC = () => {
               Contact our IoT experts for a free consultation and custom connected solution strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               >
@@ -355,6 +362,6 @@ const IoTEdgeComputingPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default IoTEdgeComputingPage;
+  )
+}
+export default IoTEdgeComputingPage

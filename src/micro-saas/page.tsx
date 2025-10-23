@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle } from 'lucide-react'
+=======
 'use client';
 import React from 'react';
-import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react';
+import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, CheckCircle, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const MicroSAASPage: React.FC = () => {
   const categories = [
@@ -90,7 +99,7 @@ const MicroSAASPage: React.FC = () => {
         { name: 'AI Data Pipeline', price: '$69/month', description: 'Automated data processing' }
       ]
     }
-  ];
+  ]
 
   const benefits = [
     {
@@ -113,22 +122,21 @@ const MicroSAASPage: React.FC = () => {
       title: 'Scalable Solutions',
       description: 'Grow from startup to enterprise with flexible pricing'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Micro SAAS Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Choose from 100+ ready-to-use AI-powered applications that solve specific business problems. 
+            Choose from 100+ ready-to-use AI-powered applications that solve specific business problems.
             Deploy instantly and start seeing results from day one.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -146,7 +154,6 @@ const MicroSAASPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Categories */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Solution Categories</h2>
@@ -182,7 +189,6 @@ const MicroSAASPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -200,7 +206,6 @@ const MicroSAASPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Tiers */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2>
@@ -287,7 +292,6 @@ const MicroSAASPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -315,10 +319,9 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default MicroSAASPage;
+export default MicroSAASPage

@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react'
+=======
+import { CheckCircle, Star, Brain, Shield, Zap, Target, TrendingUp, DollarSign, Check } from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIFintechPage: React.FC = () => {
   const aiFintechServices = [
@@ -137,8 +146,8 @@ const AIFintechPage: React.FC = () => {
       category: 'KYC',
       technologies: ['OCR', 'Facial Recognition', 'Document APIs', 'Machine Learning', 'Identity Verification APIs']
     }
-  ];
-  const categories = [...new Set(aiFintechServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(aiFintechServices.map(service => service.category))]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -333,13 +342,13 @@ const AIFintechPage: React.FC = () => {
               Contact our AI fintech experts for a free consultation and custom financial AI strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
@@ -354,6 +363,6 @@ const AIFintechPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default AIFintechPage;
+  )
+}
+export default AIFintechPage

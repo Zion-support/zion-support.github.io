@@ -1,6 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import { Smartphone } from 'lucide-react';
+import { Smartphone } from 'lucide-react'
+import { CheckCircle, Database, Code, Cloud, Helmet } from 'lucide-react'
+
+<<<<<<< HEAD
+=======
+import { Smartphone, CheckCircle, Database, Code, Cloud, Helmet, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
     {
@@ -159,7 +165,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       technologies: ['Appium', 'Detox', 'Jest', 'Python', 'Machine Learning', 'APIs'],
       platforms: ['iOS', 'Android', 'Cross-platform']
     }
-  ];
+  ]
   const mobileFeatures = [
     {
       title: 'AI Integration',
@@ -181,7 +187,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       description: 'Scalable cloud infrastructure for your mobile apps',
       icon: <Cloud className="w-8 h-8 text-orange-600" />
     }
-  ];
+  ]
   const developmentProcess = [
     {
       step: '1',
@@ -208,7 +214,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       title: 'Maintenance & Support',
       description: 'Ongoing maintenance, updates, and support'
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
       <Helmet>
@@ -228,13 +234,13 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
               Build intelligent mobile apps with AI-powered features that engage users and drive business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
@@ -308,7 +314,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
-                <a 
+                <a
                   href="/contact"
                   className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center justify-center"
                 >
@@ -386,13 +392,13 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
             Get a free consultation and discover how AI can transform your mobile app
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="tel:+13024640950"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
             >
               📞 +1 302 464 0950
             </a>
-            <a 
+            <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
@@ -405,6 +411,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default AIMobileAppDevelopmentPage;
+  )
+}
+export default AIMobileAppDevelopmentPage

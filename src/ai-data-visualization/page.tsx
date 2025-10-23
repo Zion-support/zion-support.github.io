@@ -1,8 +1,18 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+=======
+import { CheckCircle, Phone, Mail, Check } from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
@@ -30,7 +40,7 @@ const AIDataVisualizationPage: React.FC = () => {
       description: 'Generate automated reports with customizable templates and scheduling options.',
       benefits: ['Auto-generation', 'Custom Templates', 'Scheduled Reports', 'Export Options']
     }
-  ];
+  ]
 
   const pricing = [
     {
@@ -51,13 +61,13 @@ const AIDataVisualizationPage: React.FC = () => {
       description: 'For large organizations',
       features: ['Everything in Professional', 'Unlimited data sources', 'Custom integrations', 'Dedicated support', 'On-premise deployment']
     }
-  ];
+  ]
   const stats = [
     { number: '85%', label: 'Faster Decision Making' },
     { number: '300%', label: 'Data Processing Speed' },
     { number: '50+', label: 'Visualization Types' },
     { number: '99.9%', label: 'Uptime Guarantee' }
-  ];
+  ]
 
   const useCases = [
     {
@@ -80,7 +90,7 @@ const AIDataVisualizationPage: React.FC = () => {
       description: 'Monitor operational efficiency, identify bottlenecks, and optimize business processes.',
       icon: Settings
     }
-  ];
+  ]
 
   return (
     <>
@@ -103,7 +113,7 @@ const AIDataVisualizationPage: React.FC = () => {
                 Transform complex data into stunning, actionable insights
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered data visualization platform automatically transforms your raw data into 
+                Our AI-powered data visualization platform automatically transforms your raw data into
                 interactive dashboards, intelligent reports, and actionable insights that drive business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -136,7 +146,6 @@ const AIDataVisualizationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -216,7 +225,6 @@ const AIDataVisualizationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -249,7 +257,7 @@ const AIDataVisualizationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIDataVisualizationPage;
+export default AIDataVisualizationPage

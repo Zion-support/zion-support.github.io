@@ -1,4 +1,11 @@
-import { ListChecks, FileWarning, RefreshCw } from 'lucide-react';
+<<<<<<< HEAD
+import { ListChecks, FileWarning, RefreshCw } from 'lucide-react'
+import { Calendar } from 'lucide-react'
+import { Clock } from 'lucide-react'
+
+=======
+import { ListChecks, FileWarning, RefreshCw, Calendar } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 export default function Page() {
   return (
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
@@ -72,7 +79,7 @@ export default function Page() {
         <div className='max-w-4xl mx-auto px-6'>
           <div className='bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4'>
             <div>
-              <h3 className='text-2xl font-bold flex items-center gap-2'>
+              <h3 className='text-2xl font-bold flex items-center gap-2'></h3>
                 <FileWarning /> Prevent Regressions
               </h3>
               <p className='text-white/90'>
@@ -88,5 +95,5 @@ export default function Page() {
         </div>
       </section>
     </main>
-  );
+  )
 }

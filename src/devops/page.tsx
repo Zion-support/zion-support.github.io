@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { GitBranch } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+
+=======
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { GitBranch } from 'lucide-react';
+import { GitBranch, CheckCircle, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const DevOpsPage: React.FC = () => {
   const services = [
     {
@@ -28,7 +37,7 @@ const DevOpsPage: React.FC = () => {
       description: 'Security-first DevOps practices and tools',
       features: ['SAST/DAST', 'Dependency Scanning', 'Secrets Management', 'Compliance']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -36,7 +45,7 @@ const DevOpsPage: React.FC = () => {
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">DevOps Services</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Accelerate your development lifecycle with our comprehensive DevOps solutions. 
+            Accelerate your development lifecycle with our comprehensive DevOps solutions.
             From CI/CD to infrastructure automation, we help you deliver faster and more reliably.
           </p>
         </section>
@@ -63,6 +72,6 @@ const DevOpsPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default DevOpsPage;
+  )
+}
+export default DevOpsPage

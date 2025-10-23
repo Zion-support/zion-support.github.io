@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+import React from 'react'
+=======
+import { CheckCircle, Phone, TrendingUp, Check } from 'lucide-react';
 import React from 'react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
 
 const AIProjectManagerPage: React.FC = () => {
   const features = [
@@ -13,7 +19,7 @@ const AIProjectManagerPage: React.FC = () => {
     'Automated progress tracking and reporting',
     'Budget optimization and cost forecasting',
     'Integration with popular project management tools'
-  ];
+  ]
 
   const benefits = [
     '40% increase in project delivery speed',
@@ -22,7 +28,7 @@ const AIProjectManagerPage: React.FC = () => {
     '30% cost reduction through optimization',
     '95% team productivity boost',
     '50% faster decision making'
-  ];
+  ]
 
   const pricing = [
     {
@@ -46,7 +52,7 @@ const AIProjectManagerPage: React.FC = () => {
       features: ['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee'],
       popular: false
     }
-  ];
+  ]
 
   return (
     <>
@@ -62,7 +68,7 @@ const AIProjectManagerPage: React.FC = () => {
               Intelligent project planning with AI-powered resource optimization
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your project management with our advanced AI system that predicts timelines, 
+              Transform your project management with our advanced AI system that predicts timelines,
               optimizes resources, and ensures project success through intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -81,7 +87,6 @@ const AIProjectManagerPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -96,7 +101,6 @@ const AIProjectManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -111,7 +115,6 @@ const AIProjectManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -154,7 +157,6 @@ const AIProjectManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Contact Section */}
           <section className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
@@ -183,7 +185,7 @@ const AIProjectManagerPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIProjectManagerPage;
+export default AIProjectManagerPage

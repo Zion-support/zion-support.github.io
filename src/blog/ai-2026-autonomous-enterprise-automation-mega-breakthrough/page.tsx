@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Star } from 'lucide-react'
+=======
+import { Star } from 'lucide-react';
 import React from 'react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
@@ -80,5 +86,5 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
         </div>
       </div>
     </div>
-  );
+  )
 }

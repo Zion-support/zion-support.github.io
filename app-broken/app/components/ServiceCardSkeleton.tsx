@@ -37,4 +37,8 @@ const ServiceCardSkeletonPage: React.FC = () => {
   ]
   )
 }
+<<<<<<< HEAD:app-broken/app/components/ServiceCardSkeleton.tsx
 export default ServiceCardSkeletonPage
+=======
+export default PagePage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/iot-edge-computing/page.tsx

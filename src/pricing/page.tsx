@@ -1,8 +1,18 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+=======
+import { CheckCircle, Phone, Mail, Check } from 'lucide-react';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const PricingPage: React.FC = () => {
   const pricingPlans = [
@@ -59,7 +69,7 @@ const PricingPage: React.FC = () => {
       popular: false,
       cta: 'Contact Sales'
     }
-  ];
+  ]
 
   const addOns = [
     {
@@ -82,7 +92,7 @@ const PricingPage: React.FC = () => {
       price: '$299/hour',
       description: 'Custom feature development and integrations'
     }
-  ];
+  ]
 
   const faqs = [
     {
@@ -101,7 +111,7 @@ const PricingPage: React.FC = () => {
       question: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to get started.'
     }
-  ];
+  ]
 
   return (
     <>
@@ -124,12 +134,11 @@ const PricingPage: React.FC = () => {
                 Choose the perfect plan for your business needs
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                All plans include our core AI and IT services with no hidden fees. 
+                All plans include our core AI and IT services with no hidden fees.
                 Scale up or down as your business grows.
               </p>
             </div>
           </section>
-
           {/* Pricing Plans */}
           <section className="container mx-auto px-4 py-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -177,7 +186,6 @@ const PricingPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Add-ons Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -193,7 +201,6 @@ const PricingPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* FAQ Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -208,7 +215,6 @@ const PricingPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -241,7 +247,7 @@ const PricingPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default PricingPage;
+export default PricingPage

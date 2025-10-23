@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+import React from 'react'
+import { ArrowLeft } from 'lucide-react'
+import { CheckCircle, Target, ArrowRight } from 'lucide-react'
+
+=======
 import React from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, CheckCircle, ArrowRight, Target, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -28,8 +35,8 @@ export default function ServicesAdvertisingPage() {
               Revolutionize Your Marketing with 300% ROI Guaranteed
             </p>
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
+              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
+              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -337,5 +344,5 @@ export default function ServicesAdvertisingPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

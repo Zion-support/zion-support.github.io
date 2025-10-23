@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { CheckCircle, Star, Phone, BarChart } from 'lucide-react'
+=======
+import { CheckCircle, Star, Phone, BarChart, Check } from 'lucide-react';
 'use client';
 import React from 'react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
@@ -39,7 +46,7 @@ const SmartAnalyticsPage: React.FC = () => {
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
     }
-  ];
+  ]
 
   const pricingPlans = [
     {
@@ -91,7 +98,7 @@ const SmartAnalyticsPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
 
   const integrations = [
     { name: 'Google Analytics', icon: '📊', description: 'Website traffic and behavior' },
@@ -102,7 +109,7 @@ const SmartAnalyticsPage: React.FC = () => {
     { name: 'Stripe', icon: '💳', description: 'Payment processing' },
     { name: 'Mailchimp', icon: '📧', description: 'Email marketing' },
     { name: 'Slack', icon: '💬', description: 'Team communication' }
-  ];
+  ]
 
   const testimonials = [
     {
@@ -126,7 +133,7 @@ const SmartAnalyticsPage: React.FC = () => {
       content: 'The automated alerts saved us from a potential crisis. We caught a 40% drop in conversions within minutes.',
       rating: 5
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -143,8 +150,8 @@ const SmartAnalyticsPage: React.FC = () => {
             AI-Powered Business Intelligence
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics platform. 
-            Get real-time dashboards, predictive analytics, and intelligent recommendations that 
+            Transform your data into actionable insights with our AI-powered analytics platform.
+            Get real-time dashboards, predictive analytics, and intelligent recommendations that
             drive growth and optimize performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -162,7 +169,6 @@ const SmartAnalyticsPage: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -186,7 +192,6 @@ const SmartAnalyticsPage: React.FC = () => {
             <div className="text-gray-300 text-sm">Enterprise-grade protection</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -203,7 +208,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -219,7 +223,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -228,7 +231,7 @@ const SmartAnalyticsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
+                plan.popular
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
@@ -262,7 +265,6 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -286,14 +288,13 @@ const SmartAnalyticsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Unlock Your Data's Potential?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using Smart Analytics to make data-driven decisions 
+            Join thousands of businesses using Smart Analytics to make data-driven decisions
             and accelerate growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -313,7 +314,7 @@ const SmartAnalyticsPage: React.FC = () => {
         </section>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default SmartAnalyticsPage;
+export default SmartAnalyticsPage

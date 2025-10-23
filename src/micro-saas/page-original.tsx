@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+import React from 'react'
+import { CheckCircle, Phone, Mail, TrendingUp, Helmet } from 'lucide-react'
+import { MapPin } from 'lucide-react'
+=======
+import { CheckCircle, Phone, Mail, MapPin, TrendingUp, Helmet, Check } from 'lucide-react';
 import React from 'react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
@@ -1662,7 +1669,7 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
   const saasIdeas = [
     {
       title: 'AI Property Valuation Tool',
@@ -3367,7 +3374,7 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
   const categories = [
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
@@ -3391,7 +3398,7 @@ const MicroSAASPage: React.FC = () => {
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -3548,6 +3555,6 @@ const MicroSAASPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default MicroSAASPage;
+  )
+}
+export default MicroSAASPage

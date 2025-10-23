@@ -1,6 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Coins } from 'lucide-react';
+import { Coins } from 'lucide-react'
+import { CheckCircle, Star, Zap, Brain, Shield, Database, Helmet } from 'lucide-react'
+import { Globe } from 'lucide-react'
+
+<<<<<<< HEAD
+=======
+import { Coins, CheckCircle, Star, Brain, Shield, Zap, Database, Helmet, Check, Globe } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
     {
@@ -135,8 +142,8 @@ const BlockchainWeb3Page: React.FC = () => {
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'Regulatory Analysis', 'Risk Management']
     }
-  ];
-  const categories = [...new Set(blockchainServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(blockchainServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -335,13 +342,13 @@ const BlockchainWeb3Page: React.FC = () => {
               Contact our blockchain experts for a free consultation and custom Web3 strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
@@ -355,6 +362,6 @@ const BlockchainWeb3Page: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default BlockchainWeb3Page;
+  )
+}
+export default BlockchainWeb3Page

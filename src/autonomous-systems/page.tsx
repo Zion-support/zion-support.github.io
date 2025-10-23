@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { CheckCircle, Star, BarChart } from 'lucide-react'
+import { Bot, Cpu } from 'lucide-react'
+=======
+import { CheckCircle, Star, BarChart, Check, Bot, Cpu } from 'lucide-react';
 'use client';
 import React from 'react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
@@ -33,7 +41,7 @@ const AutonomousSystemsPage: React.FC = () => {
       category: 'Monitoring & Alerting',
       technologies: ['AI Analytics', 'Time Series DB', 'Alert Systems', 'Machine Learning']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
       {/* Hero Section */}
@@ -163,6 +171,6 @@ const AutonomousSystemsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default AutonomousSystemsPage;
+  )
+}
+export default AutonomousSystemsPage

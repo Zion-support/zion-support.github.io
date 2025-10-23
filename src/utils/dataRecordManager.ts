@@ -2,40 +2,39 @@
  * Data Record Manager
  * Manages data records in localStorage with TTL support
  */
-
 export interface DataRecord {
-  id: string;
-  timestamp: number;
-  data: any;
-  category: string;
-  type: string;
-  version: string;
-  ttl?: number;
+  id: string
+  timestamp: number
+  data: any
+  category: string
+  type: string
+  version: string
+  ttl?: number
 }
 
 export interface RecordOptions {
-  ttl?: number;
+  ttl?: number
 }
 
 export interface RecordQuery {
-  category?: string;
-  type?: string;
-  maxAge?: number;
+  category?: string
+  type?: string
+  maxAge?: number
 }
 
 export interface RecordStats {
-  total: number;
-  byCategory: Record<string, number>;
-  byType: Record<string, number>;
+  total: number
+  byCategory: Record<string, number>
+  byType: Record<string, number>
   byAge: {
-    recent: number;
-    old: number;
-    veryOld: number;
-  };
+    recent: number
+    old: number
+    veryOld: number
+  }
 }
 
 class DataRecordManager {
-  private readonly prefix = 'data_record_';
+  private readonly prefix = 'data_record_'
 
   createRecord(
     data: any,
@@ -43,7 +42,7 @@ class DataRecordManager {
     type: string,
     options: RecordOptions = {}
   ): DataRecord {
-    const id = `${this.prefix}${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    const id = `${this.prefix}${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     const record: DataRecord = {
       id,
       timestamp: Date.now(),
@@ -52,97 +51,97 @@ class DataRecordManager {
       type,
       version: '1.0.0',
       ttl: options.ttl,
-    };
-
-    try {
-      localStorage.setItem(id, JSON.stringify(record));
-    } catch (error) {
-      console.warn('Failed to store data record:', error);
     }
 
-    return record;
+    try {
+      localStorage.setItem(id, JSON.stringify(record))
+    } catch (error) {
+      // console.warn('Failed to store data record:', error)
+    }
+
+    return record
   }
 
   getRecord(id: string): DataRecord | null {
     try {
-      const key = id.startsWith(this.prefix) ? id : `${this.prefix}${id}`;
-      const stored = localStorage.getItem(key);
-      
+      const key = id.startsWith(this.prefix) ? id : `${this.prefix}${id}`
+      const stored = localStorage.getItem(key)
+
       if (!stored) {
-        return null;
+        return null
       }
 
-      const record: DataRecord = JSON.parse(stored);
-      
+      const record: DataRecord = JSON.parse(stored)
+
       // Check TTL
       if (record.ttl && Date.now() - record.timestamp > record.ttl) {
-        this.deleteRecord(id);
-        return null;
+        this.deleteRecord(id)
+        return null
       }
 
-      return record;
+      return record
     } catch (error) {
-      console.warn('Failed to retrieve data record:', error);
-      return null;
+      // console.warn('Failed to retrieve data record:', error)
+      return null
     }
   }
 
   queryRecords(query: RecordQuery): DataRecord[] {
-    const records: DataRecord[] = [];
-    const now = Date.now();
+    const records: DataRecord[] = []
+    const now = Date.now()
 
     try {
       for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
+        const key = localStorage.key(i)
         if (!key || !key.startsWith(this.prefix)) {
-          continue;
+          continue
         }
 
-        const stored = localStorage.getItem(key);
+        const stored = localStorage.getItem(key)
         if (!stored) {
-          continue;
+          continue
         }
 
         try {
-          const record: DataRecord = JSON.parse(stored);
-          
+          const record: DataRecord = JSON.parse(stored)
+
           // Check TTL
           if (record.ttl && now - record.timestamp > record.ttl) {
-            this.deleteRecord(record.id);
-            continue;
+            this.deleteRecord(record.id)
+            continue
           }
 
           // Apply filters
           if (query.category && record.category !== query.category) {
-            continue;
+            continue
           }
           if (query.type && record.type !== query.type) {
-            continue;
+            continue
           }
           if (query.maxAge && now - record.timestamp > query.maxAge) {
-            continue;
+            continue
           }
 
-          records.push(record);
+          records.push(record)
         } catch (parseError) {
-          console.warn('Failed to parse data record:', parseError);
+          // console.warn('Failed to parse data record:', parseError)
         }
       }
     } catch (error) {
-      console.warn('Failed to query data records:', error);
+      // console.warn('Failed to query data records:', error)
     }
 
-    return records;
+    return records
   }
 
   deleteRecord(id: string): boolean {
     try {
-      const key = id.startsWith(this.prefix) ? id : `${this.prefix}${id}`;
-      localStorage.removeItem(key);
-      return true;
+      const key = id.startsWith(this.prefix) ? id : `${this.prefix}${id}`
+      localStorage.removeItem(key)
+      return true
     } catch (error) {
-      console.warn('Failed to delete data record:', error);
-      return false;
+      // console.warn('Failed to delete data record:', error)
+      return false
     }
   }
 
@@ -156,83 +155,83 @@ class DataRecordManager {
         old: 0,
         veryOld: 0,
       },
-    };
+    }
 
-    const now = Date.now();
-    const oneHour = 60 * 60 * 1000;
-    const oneDay = 24 * oneHour;
+    const now = Date.now()
+    const oneHour = 60 * 60 * 1000
+    const oneDay = 24 * oneHour
 
     try {
       for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
+        const key = localStorage.key(i)
         if (!key || !key.startsWith(this.prefix)) {
-          continue;
+          continue
         }
 
-        const stored = localStorage.getItem(key);
+        const stored = localStorage.getItem(key)
         if (!stored) {
-          continue;
+          continue
         }
 
         try {
-          const record: DataRecord = JSON.parse(stored);
-          
+          const record: DataRecord = JSON.parse(stored)
+
           // Check TTL
           if (record.ttl && now - record.timestamp > record.ttl) {
-            this.deleteRecord(record.id);
-            continue;
+            this.deleteRecord(record.id)
+            continue
           }
 
-          stats.total++;
-          
+          stats.total++
+
           // Count by category
-          stats.byCategory[record.category] = (stats.byCategory[record.category] || 0) + 1;
-          
+          stats.byCategory[record.category] = (stats.byCategory[record.category] || 0) + 1
+
           // Count by type
-          stats.byType[record.type] = (stats.byType[record.type] || 0) + 1;
-          
+          stats.byType[record.type] = (stats.byType[record.type] || 0) + 1
+
           // Count by age
-          const age = now - record.timestamp;
+          const age = now - record.timestamp
           if (age < oneHour) {
-            stats.byAge.recent++;
+            stats.byAge.recent++
           } else if (age < oneDay) {
-            stats.byAge.old++;
+            stats.byAge.old++
           } else {
-            stats.byAge.veryOld++;
+            stats.byAge.veryOld++
           }
         } catch (parseError) {
-          console.warn('Failed to parse data record for stats:', parseError);
+          // console.warn('Failed to parse data record for stats:', parseError)
         }
       }
     } catch (error) {
-      console.warn('Failed to get data record stats:', error);
+      // console.warn('Failed to get data record stats:', error)
     }
 
-    return stats;
+    return stats
   }
 
   clearAll(): number {
-    let cleared = 0;
-    const keysToRemove: string[] = [];
+    let cleared = 0
+    const keysToRemove: string[] = []
 
     try {
       for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
+        const key = localStorage.key(i)
         if (key && key.startsWith(this.prefix)) {
-          keysToRemove.push(key);
+          keysToRemove.push(key)
         }
       }
 
       keysToRemove.forEach(key => {
-        localStorage.removeItem(key);
-        cleared++;
-      });
+        localStorage.removeItem(key)
+        cleared++
+      })
     } catch (error) {
-      console.warn('Failed to clear data records:', error);
+      // console.warn('Failed to clear data records:', error)
     }
 
-    return cleared;
+    return cleared
   }
 }
 
-export const dataRecordManager = new DataRecordManager();
+export const dataRecordManager = new DataRecordManager()

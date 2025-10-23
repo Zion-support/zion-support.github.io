@@ -1,8 +1,19 @@
+<<<<<<< HEAD
+'use client'
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
+import { Clock } from 'lucide-react'
+=======
+import { CheckCircle, Star, Phone, Mail, Check, Clock } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const DemoPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,23 +23,23 @@ const DemoPage: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
+  })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // Handle form submission
-    const subject = `Demo Request from ${formData.name} - ${formData.company}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`;
-    window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
+    const subject = `Demo Request from ${formData.name} - ${formData.company}`
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`
+    window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
 
   const demoFeatures = [
     {
@@ -51,7 +62,7 @@ const DemoPage: React.FC = () => {
       title: 'Team Training',
       description: 'Hands-on training for your team members'
     }
-  ];
+  ]
 
   const testimonials = [
     {
@@ -72,7 +83,7 @@ const DemoPage: React.FC = () => {
       text: 'Clear, concise, and very informative. Highly recommend scheduling a demo.',
       rating: 5
     }
-  ];
+  ]
 
   return (
     <>
@@ -95,12 +106,11 @@ const DemoPage: React.FC = () => {
                 See our AI and IT solutions in action
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Schedule a personalized demonstration of our services tailored to your business needs. 
+                Schedule a personalized demonstration of our services tailored to your business needs.
                 Our experts will show you exactly how we can help transform your operations.
               </p>
             </div>
           </section>
-
           {/* Demo Features */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -116,7 +126,6 @@ const DemoPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Demo Form */}
           <section className="container mx-auto px-4 py-16">
             <div className="max-w-4xl mx-auto">
@@ -226,7 +235,6 @@ const DemoPage: React.FC = () => {
                     </button>
                   </form>
                 </div>
-
                 {/* Contact Info */}
                 <div className="space-y-8">
                   <div className="cyber-card p-8">
@@ -250,7 +258,6 @@ const DemoPage: React.FC = () => {
                       </li>
                     </ul>
                   </div>
-
                   <div className="cyber-card p-8">
                     <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
                     <div className="space-y-4">
@@ -276,7 +283,6 @@ const DemoPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Testimonials */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -303,7 +309,7 @@ const DemoPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default DemoPage;
+export default DemoPage
