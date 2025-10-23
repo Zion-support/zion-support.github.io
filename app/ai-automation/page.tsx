@@ -26,7 +26,6 @@ export default function AiAutomationPage() {
           </div>
         </div>
       </div>
-        </div>
-      </div>
+    </div>
   );
 }
