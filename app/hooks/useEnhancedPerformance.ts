@@ -1,122 +1,110 @@
-/**;
- * Enhanced Performance Hook;
- * Combines performance monitoring, error tracking, and analytics;
- */;
-import { useEffect, useCallback, useRef } from 'react';
-import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics';
-;
-export interface UseEnhancedPerformanceOptions {;
+"use client";
+import { useEffect, useCallback, useRef } from "react";
+
+export interface UseEnhancedPerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
-  trackAnalytics?: boolean;}
+  trackAnalytics?: boolean;
 }
-;
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {;
-  const {;
-    component = 'Unknown',;
-    trackErrors = true,;
-    trackPerformance = true,;
-    trackAnalytics = true,;}
-  } = _options;const _renderCountRef = useRef<number>(0);
-;
-  useEffect(() => {;
+
+export function useEnhancedPerformance(
+  options: UseEnhancedPerformanceOptions = {},
+) {
+  const {
+    component = "Unknown",
+    trackErrors = true,
+    trackPerformance = true,
+    trackAnalytics = true,
+  } = options;
+
+  const mountTimeRef = useRef<number>(0);
+  const renderCountRef = useRef<number>(0);
+
+  useEffect(() => {
     mountTimeRef.current = performance.now();
-    renderCountRef.current = 0;
-;
-    // Track component mount;
-    if (trackAnalytics) {;
-      analytics.trackCustomEvent('Component', 'Mounted', component);}
+    renderCountRef.current += 1;
+
+    // Track component mount
+    if (trackAnalytics) {
+      console.log(`Component ${component} mounted`);
     }
-;
-    return () => {;
-      // Track component unmount duration;
-      if (trackPerformance) {;
-        const _duration = performance.now() - mountTimeRef.current;
-        if (duration > 5000) {;
-          // Long-lived component;
-          analytics.trackCustomEvent(;
-            'Performance',;
-            'Long Component Lifetime',;
-            component,;
-            Math.round(duration);
-          );}
+
+    return () => {
+      // Track component unmount duration
+      if (trackPerformance) {
+        const duration = performance.now() - mountTimeRef.current;
+
+        if (duration > 5000) {
+          // Long-lived component
+          console.log(
+            `Long component lifetime: ${component} - ${Math.round(duration)}ms`,
+          );
         }
       }
-;
-      // Track component unmount;
-      if (trackAnalytics) {;
-        analytics.trackCustomEvent('Component', 'Unmounted', component);}
+
+      // Track component unmount
+      if (trackAnalytics) {
+        console.log(`Component ${component} unmounted`);
       }
     };
   }, [component, trackAnalytics, trackPerformance]);
-;
-  // Track render performance;
-  useEffect(() => {;
+
+  // Track render performance
+  useEffect(() => {
     renderCountRef.current++;
-;
-    if (trackPerformance && renderCountRef.current > 10) {;
-      // Many re-renders detected;
-      analytics.trackCustomEvent(;
-        'Performance',;
-        'High Render Count',;
-        component,;
-        renderCountRef.current;
-      );}
+
+    if (trackPerformance && renderCountRef.current > 10) {
+      // Many re-renders detected
+      console.log(
+        `High render count in ${component}: ${renderCountRef.current}`,
+      );
     }
   });
-;
-  const trackError = useCallback(;
-    (error: Error, context?: Record<string, unknown>) => {;
-      if (trackErrors) {;
-        errorTracker.trackError(error, {;
-          component,;
-          ...context,;}
-        });
+
+  const measurePerformance = useCallback(
+    (name: string, fn: () => void) => {
+      if (trackPerformance) {
+        performance.mark(`${component}-${name}-start`);
+        fn();
+        performance.mark(`${component}-${name}-end`);
+        performance.measure(
+          `${component}-${name}`,
+          `${component}-${name}-start`,
+          `${component}-${name}-end`,
+        );
+      } else {
+        fn();
       }
-    },;
-    [component, trackErrors];
+    },
+    [component, trackPerformance],
   );
-;
-  const trackUserAction = useCallback(;
-    (action: string, metadata?: Record<string, unknown>) => {;
-      if (trackAnalytics) {;
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);}
+
+  const trackError = useCallback(
+    (error: Error, context?: Record<string, unknown>) => {
+      if (trackErrors) {
+        console.error(`Error in ${component}:`, error, context);
+        // Here you would typically send to an error tracking service
       }
-    },;
-    [component, trackAnalytics];
+    },
+    [component, trackErrors],
   );
-;
-  const measureOperation = useCallback(;
-    (operationName: string) => {;}
-      const _markName = `${component}-${operationName}`;
-      const _startTime = performance.now();
-;
-      return {;
-        end: () => {;
-          const _duration = performance.now() - startTime;
-;
-          if (trackPerformance) {;
-            analytics.trackPerformance(;}
-              `${component}-${operationName}`,;
-              duration,;
-              duration > 1000 ? 'slow' : 'fast';
-            );
-          }
-;
-          return duration;
-        },;
-      };
-    },;
-    [component, trackPerformance];
+
+  const trackAnalyticsEvent = useCallback(
+    (event: string, data?: Record<string, unknown>) => {
+      if (trackAnalytics) {
+        console.log(`Analytics event in ${component}:`, event, data);
+        // Here you would typically send to an analytics service
+      }
+    },
+    [component, trackAnalytics],
   );
-;
-  return {;
-    trackError,;
-    trackUserAction,;
-    measureOperation,;}
+
+  return {
+    measurePerformance,
+    trackError,
+    trackAnalytics: trackAnalyticsEvent,
+    renderCount: renderCountRef.current,
+    mountTime: mountTimeRef.current,
   };
 }
-;
-export default useEnhancedPerformance;

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Palette, Camera, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+
 const AIFashionDesignPage: React.FC = () => {
   const features = [
     'Design Generation',
@@ -16,6 +17,7 @@ const AIFashionDesignPage: React.FC = () => {
     '3D Visualization',
     'Cost Estimation'
   ];
+
   const benefits = [
     'Faster design cycles',
     'Trend accuracy',
@@ -24,6 +26,7 @@ const AIFashionDesignPage: React.FC = () => {
     'Creative inspiration',
     'Competitive advantage'
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -47,16 +50,19 @@ const AIFashionDesignPage: React.FC = () => {
       popular: false
     }
   ];
+
   return (
-    <React.Fragment>
+    <>
       <SEOOptimizer
         title="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | Zion Tech Group"
         description="Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at $249/month."
         keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashion technology']}
         canonicalUrl="https://ziontechgroup.com/ai-fashion-design"
       />
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
+        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -66,27 +72,35 @@ const AIFashionDesignPage: React.FC = () => {
                   <Palette className="w-8 h-8 text-white" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white neon-text">
-                  AI Fashion Designer</span>
+                  AI Fashion Designer
+                </h1>
               </div>
               <p className="text-xl text-gray-300 mb-8">
-                AI-powered fashion design and trend prediction for retail businesses</span>
+                AI-powered fashion design and trend prediction for retail businesses
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Free Trial</span>
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                >
+                  Start Free Trial
+                </a>
                 <a
                   href="#demo"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
                   <Camera className="w-5 h-5" />
-                  View Gallery</span>
+                  View Gallery
+                </a>
               </div>
             </div>
           </section>
+
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI Fashion Design Features</span>
+              AI Fashion Design Features
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -98,6 +112,7 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
+
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -114,17 +129,20 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
+
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Simple, Transparent Pricing</span>
+              Simple, Transparent Pricing
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular</span>
+                        Most Popular
+                      </div>
                     </div>
                   )}
                   <div className="text-center mb-6">
@@ -150,11 +168,13 @@ const AIFashionDesignPage: React.FC = () => {
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started</span>
+                    Get Started
+                  </a>
                 </div>
               ))}
             </div>
           </section>
+
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -162,34 +182,30 @@ const AIFashionDesignPage: React.FC = () => {
                 Ready to Revolutionize Fashion Design?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join leading fashion brands using AI design technology</span>
+                Join leading fashion brands using AI design technology
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Your Free Trial</span>
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                >
+                  Start Your Free Trial
+                </a>
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>
             </div>
           </section>
         </main>
+
         <Footer />
       </div>
-    </React.Fragment>
+    </>
   );
 };
-export default AIFashionDesignPage</a>
-  </p>
-  </a>
-  </h2>
-  </h2>
-  </a>
-  </a>
-  </p>
-  </h1>
-  </div>
-  </SEOOptimizer>
+
+export default AIFashionDesignPage;

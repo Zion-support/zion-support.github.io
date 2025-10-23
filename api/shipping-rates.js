@@ -29,11 +29,8 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing rates:', error);
-    }
+  } catch {
+    // console.error('Error reading existing rates:', error);
     existing = [];
   }
 
@@ -63,11 +60,8 @@ export default function handler(req, res) {
       rate: totalRate,
       id: newRate.id
     }));
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving shipping rate:', error);
-    }
+  } catch {
+    // console.error('Error saving shipping rate:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save rate' }));

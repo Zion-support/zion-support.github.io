@@ -32,11 +32,8 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing wallets:', error);
-    }
+  } catch {
+    // console.error('Error reading existing wallets:', error);
     existing = [];
   }
 
@@ -70,11 +67,8 @@ export default function handler(req, res) {
       message: 'Wallet added successfully',
       id: newWallet.id
     }));
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving wallet:', error);
-    }
+  } catch {
+    // console.error('Error saving wallet:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));

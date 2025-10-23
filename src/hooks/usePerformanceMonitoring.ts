@@ -1,152 +1,101 @@
-
-
 'use client';
-// PerformanceMetrics interface removed as it's not used in this hook;
-export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  const { trackPerformance } = useAnalytics();
-  const reportMetric = useCallback()
-    (nam,
-  e: string, valu)
-  e: number) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      trackPerformance(name, value);
+import { useCallback } from 'react';
+import { useAnalytics } from '../components/AnalyticsProvider';
+// PerformanceMetrics interface removed as it's not used in this hook
+export const usePerformanceMonitoring = () => {
+  const { trackEvent } = useAnalytics();
+  const reportMetric = useCallback(
+    (name: string, value: number) => {
+      trackEvent('performance_metric', {
+        metric_name: name,
+        metric_value: value,
+        timestamp: Date.now()
+      });
     },
-//     [trackPerformance]
+    [trackEvent]
   );
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return () => {};
     }
-    try {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      // LCP - Largest Contentful Paint;
-const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+    try {
+      // LCP - Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
       });
-      lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-      // FID - First Input Delay;
-const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      // FID - First Input Delay
+      const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-//         entries.forEach()
-          (entr)
-  y: PerformanceEntry & { processingStart?: number }) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+        entries.forEach(
+          (entry: PerformanceEntry & { processingStart?: number }) => {
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime;
-            reportMetric('FID', fid)
+            reportMetric('FID', fid);
           }
         );
       });
-      fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-// CLS - Cumulative Layout Shift;
-      const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      // CLS - Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-//         entries.forEach()
-//           ()
-            entr,
-  y: PerformanceEntry & {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+        entries.forEach(
+          (
+            entry: PerformanceEntry & {
               hadRecentInput?: boolean;
               value?: number;
             }
-          ) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-            if (!entry.hadRecentInput && entry.value) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+          ) => {
+            if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
             }
           }
         );
         reportMetric('CLS', clsValue);
       });
-      clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
-      // FCP - First Contentful Paint;
-const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      // FCP - First Contentful Paint
+      const fcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach(entry => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
-          if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+        entries.forEach(entry => {
+          if (entry.name === 'first-contentful-paint') {
             reportMetric('FCP', entry.startTime);
           }
         });
       });
-      fcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-      // TTFB - Time to First Byte;
-const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      // TTFB - Time to First Byte
+      const navigationObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-          if (entry.entryType === 'navigation') {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+        entries.forEach((entry) => {
+          if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
           }
         });
       });
-      navigationObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
-      // Resource timing;
-const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+      navigationObserver.observe({ entryTypes: ['navigation'] });
+      // Resource timing
+      const resourceObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-          if (entry.entryType === 'resource') {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+        entries.forEach((entry) => {
+          if (entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming;
             const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-            if (loadTime > 1000) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-              // Only track slow resources;
+            if (loadTime > 1000) {
+              // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
             }
           }
         });
       });
-      resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
-      // Cleanup;
-      return () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+      resourceObserver.observe({ entryTypes: ['resource'] });
+      // Cleanup
+      return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
@@ -154,41 +103,27 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
         navigationObserver.disconnect();
         resourceObserver.disconnect();
       };
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+    } catch (error) {
       return () => {};
     }
   }, [reportMetric]);
-  // Monitor page load performance;
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    const handleLoad = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+  // Monitor page load performance
+  useEffect(() => {
+    const handleLoad = () => {
       if (typeof window === 'undefined') return;
-      const navigation = performance.getEntriesByType()
-//         'navigation'
+      const navigation = performance.getEntriesByType(
+        'navigation'
       )[0] as PerformanceNavigationTiming;
-      if (navigation) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        const metrics = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-
-  domContentLoaded:
-//             navigation.domContentLoadedEventEnd -
-//             navigation.domContentLoadedEventStart,
+      if (navigation) {
+        const metrics = {
+          domContentLoaded:
+            navigation.domContentLoadedEventEnd -
+            navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;
-
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
         };
-        Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+        Object.entries(metrics).forEach(([key, value]) => {
           reportMetric(key.toUpperCase(), value);
         });
       }
@@ -196,13 +131,8 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
     window.addEventListener('load', handleLoad);
     return () => window.removeEventListener('load', handleLoad);
   }, [reportMetric]);
-  return {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//     reportMetric;
+  return {
+    reportMetric
   };
 };
 export default usePerformanceMonitoring;
-
-
-

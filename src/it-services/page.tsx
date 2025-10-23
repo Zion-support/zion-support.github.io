@@ -1,10 +1,24 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
+import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+
+interface ITService {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  features: string[];
+  price: string;
+  category: string;
+  benefits: string[];
+  technologies: string[];
+  contactInfo: string;
+  color?: string;
+}
+
 const ITServicesPage: React.FC = () => {
-  const itServices = [
+  const itServices: ITService[] = [
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
@@ -28,7 +42,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-blue-400'
+      color: 'text-cyan-400'
     },
     // Cybersecurity Services
     {
@@ -46,7 +60,7 @@ const ITServicesPage: React.FC = () => {
     {
       title: 'Identity & Access Management',
       description: 'Secure identity management with multi-factor authentication, single sign-on, and privileged access management.',
-      icon: Lock,
+      icon: ShieldCheck,
       features: ['SSO implementation', 'MFA setup', 'Privileged access management', 'Identity governance', 'Access reviews', 'Compliance reporting'],
       price: 'Starting at $1,800/month',
       category: 'Security',
@@ -239,6 +253,7 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+
   const categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
@@ -253,56 +268,7 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-  const services = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration & Management',
-      description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
-      features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
-      price: 'Starting at $1,299/month',
-      color: 'text-blue-400'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity Suite',
-      description: 'Comprehensive security solutions with threat detection and automated response.',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Automated Response', 'Compliance Reporting'],
-      price: 'Starting at $799/month',
-      color: 'text-red-400'
-    },
-    {
-      icon: Settings,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
-      features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Performance Monitoring'],
-      price: 'Starting at $599/month',
-      color: 'text-green-400'
-    },
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
-      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
-      price: 'Starting at $399/month',
-      color: 'text-teal-400'
-    },
-    {
-      icon: Globe,
-      title: 'Network Solutions',
-      description: 'Enterprise networking with high-speed connectivity and advanced security features.',
-      features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Support'],
-      price: 'Starting at $699/month',
-      color: 'text-purple-400'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications with modern UI/UX design.',
-      features: ['iOS & Android Apps', 'Cross-Platform Development', 'UI/UX Design', 'App Store Optimization'],
-      price: 'Starting at $2,500/project',
-      color: 'text-orange-400'
-    }
-  ];
+
   const additionalServices = [
     {
       icon: Users,
@@ -341,6 +307,7 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $399/month'
     }
   ];
+
   const benefits = [
     {
       icon: Star,
@@ -363,15 +330,18 @@ const ITServicesPage: React.FC = () => {
       description: 'Microsoft, AWS, and Google certified engineers'
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
+      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              IT Services & Infrastructure</span>
+              IT Services & Infrastructure
+            </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Comprehensive IT solutions to support and optimize your business infrastructure. 
@@ -380,14 +350,19 @@ const ITServicesPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
-              Get Free IT Assessment</span>
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+            >
+              Get Free IT Assessment
+            </a>
             <a
               href="tel:+13024640950"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              (302) 464-0950</span>
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              (302) 464-0950
+            </a>
           </div>
         </section>
+
         {/* Main Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
@@ -395,7 +370,9 @@ const ITServicesPage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
-                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-8 h-8" })}
+                  {React.isValidElement(service.icon) ? service.icon : 
+                   typeof service.icon === 'function' ? React.createElement(service.icon as any, { className: "w-8 h-8" }) : 
+                   <div className="w-8 h-8 bg-cyan-400 rounded" />}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
@@ -444,10 +421,10 @@ const ITServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <div className={`text-lg font-bold ${service.color || 'text-cyan-400'} mb-2`}>{service.price}</div>
+                  <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
                   <a
                     href="/contact"
-                    className={`inline-flex items-center text-sm font-medium ${service.color || 'text-cyan-400'} hover:opacity-80 transition-opacity`}
+                    className="inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
@@ -456,6 +433,7 @@ const ITServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
+
         {/* Additional Services */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
@@ -463,7 +441,7 @@ const ITServicesPage: React.FC = () => {
             {additionalServices.map((service, index) => (
               <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
                 <div className="flex items-center mb-3">
-                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-6 h-6 text-cyan-400 mr-3" })}
+                  <service.icon className="w-6 h-6 text-cyan-400 mr-3" />
                   <h3 className="text-lg font-bold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 text-sm mb-3">{service.description}</p>
@@ -472,6 +450,7 @@ const ITServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
+
         {/* Support Tiers */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
@@ -482,18 +461,23 @@ const ITServicesPage: React.FC = () => {
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Business hours support</span>
+                  Business hours support
+                </li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Remote assistance</span>
+                  Remote assistance
+                </li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Basic monitoring</span>
+                  Basic monitoring
+                </li>
               </ul>
               <a
                 href="/contact"
-                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Get Started</span>
+                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
+              >
+                Get Started
+              </a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
               <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
@@ -501,21 +485,27 @@ const ITServicesPage: React.FC = () => {
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  24/7 support</span>
+                  24/7 support
+                </li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  On-site visits</span>
+                  On-site visits
+                </li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Advanced monitoring</span>
+                  Advanced monitoring
+                </li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Priority response</span>
+                  Priority response
+                </li>
               </ul>
               <a
                 href="/contact"
-                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Get Started</span>
+                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
+              >
+                Get Started
+              </a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
@@ -523,24 +513,31 @@ const ITServicesPage: React.FC = () => {
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Dedicated team</span>
+                  Dedicated team
+                </li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Custom SLAs</span>
+                  Custom SLAs
+                </li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Proactive monitoring</span>
+                  Proactive monitoring
+                </li>
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Strategic consulting</span>
+                  Strategic consulting
+                </li>
               </ul>
               <a
                 href="/contact"
-                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Contact Sales</span>
+                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
+              >
+                Contact Sales
+              </a>
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -551,38 +548,24 @@ const ITServicesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
-                Get Free IT Assessment</span>
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+              >
+                Get Free IT Assessment
+              </a>
               <a
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                (302) 464-0950</span>
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                (302) 464-0950
+              </a>
             </div>
           </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
-export default ITServicesPage</a>
-  </a>
-  </a>
-  </li>
-  </li>
-  </li>
-  </li>
-  </a>
-  </li>
-  </li>
-  </li>
-  </li>
-  </a>
-  </li>
-  </li>
-  </li>
-  </any>
-  </any>
-  </a>
-  </a>
-  </span>
+
+export default ITServicesPage;
