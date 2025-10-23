@@ -34,6 +34,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
+export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -52,6 +53,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               </div>
             ))}
+};
           </div>
         </div>
       </section>
@@ -71,3 +73,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   )
 }
 export default PagePage
+

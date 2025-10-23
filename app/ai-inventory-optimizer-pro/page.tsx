@@ -4,6 +4,7 @@ import React from "react";
     },
   ];
 
+export default function Page() {
   return (
 
             </div>
@@ -20,6 +21,7 @@ import React from "react";
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
+};
             </div>
           </div>
         </section>
@@ -36,4 +38,5 @@ import React from "react";
     </>
   );
 };
+
 

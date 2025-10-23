@@ -72,7 +72,7 @@ const features = [
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Advanced 5G Features</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Advanced 5G Features</h2>
               <p className="text-xl text-gray-300">Cutting-edge 5G technology for the next generation of</p>
                 connectivity
               </p>
@@ -109,7 +109,7 @@ const features = [
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Network?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Network?</h2>
             <p className="text-xl text-gray-300 mb-8">Get started with our 5G solutions and experience the future of</p>
               connectivity today.
             </p>

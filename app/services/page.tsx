@@ -670,7 +670,7 @@ const services = [
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-center mb-8">
-              <h2 className="text-3xl font-bold text-white">{selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}</h2>h2>
+              <h2 className="text-3xl font-bold text-white">{selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}</h2>
               <span className="text-gray-300">{filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found</span>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{currentServices.map((service, index) => (</div>
@@ -752,7 +752,7 @@ const services = [
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300 mb-8">Let's discuss your project and find the perfect solution for your business needs.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Free Consultation</button>

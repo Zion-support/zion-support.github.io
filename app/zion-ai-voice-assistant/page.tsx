@@ -2,6 +2,7 @@
 import React from "react";
 
 
+export default function Page() {
   return (
     <>
       <Helmet>
@@ -22,4 +23,6 @@ import React from "react";
     </>
   );
 };
+};
+
 

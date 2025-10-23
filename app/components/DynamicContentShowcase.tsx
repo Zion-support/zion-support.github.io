@@ -280,7 +280,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Key Benefits</h2>h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Key Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover the advantages that make our solutions the preferred choice for businesses worldwide.</p>
           </div>
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -298,7 +298,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">Join thousands of satisfied customers and start your transformation journey today.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">

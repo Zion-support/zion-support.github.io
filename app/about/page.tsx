@@ -3,7 +3,8 @@ import React from "react";
 import Head from "next/head";
 import { Target, Users, Award, ArrowRight, CheckCircle } from "lucide-react";
 
-const values = [
+export default function AboutPage() {
+  const values = [
     {
       icon: Target,
       title: "Innovation",
@@ -75,5 +76,4 @@ const values = [
       </div>
     </>
   );
-};
-
+}

@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+export default function Page() {
 return (
 <a
 href="#main-content"
@@ -7,4 +8,6 @@ className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-
 >Skip to main content</a>a>
 )
 }
+};
 export default SkipLink
+

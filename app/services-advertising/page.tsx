@@ -14,6 +14,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
+export default function Page() {
   return (
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced page solutions.</p>
@@ -24,6 +25,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
+};
           </div>
         </div>
       </section>
@@ -41,3 +43,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   )
 }
 export default PagePage
+

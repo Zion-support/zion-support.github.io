@@ -161,7 +161,7 @@ const features = [
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Analytics?</h2>h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Analytics?</h2>
               <p className="text-xl text-gray-300 mb-8">Join thousands of businesses already using our AI analytics dashboard</p>
                 to make smarter, data-driven decisions.
               </p>

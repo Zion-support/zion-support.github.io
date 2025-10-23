@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Bot, ArrowRight } from 'lucide-react'
+export default function Page() {
 return (
     <>
       <Helmet>
@@ -35,7 +36,7 @@ return (
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">We're developing powerful AI support bot solutions. Stay tuned for updates!</p>p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">We're developing powerful AI support bot solutions. Stay tuned for updates!</p>
             </div>
           </div>
         </section>
@@ -43,4 +44,6 @@ return (
     </>
   )
 }
+};
 export default SmartSupportBotPage
+

@@ -1,6 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+export default function Page() {
 return (
     <>
       <SEOHead 
@@ -16,5 +17,7 @@ return (
     </>
   );
 };
+};
+
 
 

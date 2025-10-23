@@ -576,7 +576,7 @@ Call for Quote
 {/* CTA Section */}
 <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
 <div className="max-w-4xl mx-auto text-center"></div>
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Ready to Optimize Your IT Infrastructure?</h2>h2>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Ready to Optimize Your IT Infrastructure?</h2>
 <p className="text-xl text-cyan-400 mb-8 neon-glow">Our certified IT professionals deliver reliable, secure, and scalable solutions.</p>
 All services include free consultations and ongoing support.
 </p>

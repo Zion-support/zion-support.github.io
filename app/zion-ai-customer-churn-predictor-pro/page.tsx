@@ -264,7 +264,7 @@ const features = [
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Trusted Across Industries</h2>h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Trusted Across Industries</h2>
               <p className="text-lg text-gray-300">Reduce churn for any business type</p>
             </div>
 
@@ -287,7 +287,7 @@ const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Powerful Features for Customer Retention</h2>h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Powerful Features for Customer Retention</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">Everything you need to predict, prevent, and reduce customer</p>
                 churn with AI intelligence.
               </p>
@@ -322,7 +322,7 @@ const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Retention Plan</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Retention Plan</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing options designed to scale with your customer</p>
                 base
               </p>
@@ -386,7 +386,7 @@ const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Customer Success Teams</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Customer Success Teams</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">See how businesses are reducing churn with AI</p>
             </div>
 
@@ -420,7 +420,7 @@ const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Reduce Customer Churn?</h2>h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Reduce Customer Churn?</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">Join thousands of businesses already using Zion AI Customer</p>
                 Churn Predictor Pro to retain more customers and increase
                 lifetime value. Start your free trial today and see the

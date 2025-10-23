@@ -263,7 +263,7 @@ const features = [
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">All Types of Email Campaigns</h2>h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">All Types of Email Campaigns</h2>
               <p className="text-lg text-gray-300">From newsletters to transactional emails, we've got you covered</p>
             </div>
 
@@ -286,7 +286,7 @@ const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Powerful Features for Email Marketing Success</h2>h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Powerful Features for Email Marketing Success</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">Everything you need to create, send, and optimize email</p>
                 campaigns that convert with AI intelligence.
               </p>
@@ -321,7 +321,7 @@ const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Email Marketing Plan</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Email Marketing Plan</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing options designed to scale with your email</p>
                 marketing needs
               </p>
@@ -385,7 +385,7 @@ const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Email Marketing Professionals</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Email Marketing Professionals</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">See how marketers are transforming their email campaigns with AI</p>
             </div>
 
@@ -419,7 +419,7 @@ const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?</h2>h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">Join thousands of businesses already using Zion AI Email</p>
                 Marketing Pro to maximize their email ROI. Start your free trial
                 today and see the difference AI can make.

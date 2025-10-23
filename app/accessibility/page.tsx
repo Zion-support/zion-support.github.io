@@ -85,7 +85,7 @@ const features = [
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Comprehensive Accessibility Features</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Comprehensive Accessibility Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our accessibility solutions cover all aspects of digital</p>
                 inclusion, ensuring your applications work seamlessly for users
                 with diverse needs and abilities.
@@ -124,7 +124,7 @@ const features = [
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Compliance Standards</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Compliance Standards</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">We ensure your applications meet international accessibility</p>
                 standards and guidelines.
               </p>
@@ -144,7 +144,7 @@ const features = [
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Make Your App Accessible?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Make Your App Accessible?</h2>
             <p className="text-xl text-gray-300 mb-8">Let's work together to create inclusive digital experiences that</p>
               work for everyone.
             </p>

@@ -24,12 +24,14 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
+export default function Page() {
   return (
           </div>
         </div>
       </section>
               </div>
             ))}
+};
           </div>
         </div>
       </section>
@@ -41,3 +43,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
 }
 export default PagePage
+

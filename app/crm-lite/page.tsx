@@ -16,6 +16,7 @@ const features = [
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
+export default function Page() {
   return (
           </div>
         </div>
@@ -24,6 +25,7 @@ const features = [
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
+};
           </div>
         </div>
       </section>
@@ -35,3 +37,4 @@ const features = [
       </section>
 }
 export default PagePage
+

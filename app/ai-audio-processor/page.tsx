@@ -67,7 +67,7 @@ const features = [
         <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Audio Processing Features</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Audio Processing Features</h2>
               <p className="text-lg text-gray-300">Everything you need for professional audio processing</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (
@@ -90,7 +90,7 @@ const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Audio Processor?</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Audio Processor?</h2>
               <p className="text-lg text-gray-300">Advanced AI technology for professional audio processing</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -123,7 +123,7 @@ const features = [
         {/* CTA Section */}
         <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Process Audio with AI?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Process Audio with AI?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Start using our AI audio processor to enhance and analyze your</p>
               audio content today.
             </p>

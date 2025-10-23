@@ -239,7 +239,7 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
 </div>
 <div></div>
 <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-<h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services;)</h2>h2>)
+<h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services;)</h2>)
 )
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),</div>
 {webServices.map((service, index) => (</div>
@@ -321,7 +321,7 @@ className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all 
 </section>
 {/* Technologies */}
 <section className="mb-20">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2>
 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>
 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
 <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -335,7 +335,7 @@ className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all 
 </section>
 {/* Process */}
 <section className="mb-20">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -351,7 +351,7 @@ className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all 
 <section className="text-center"></section>
 <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-<h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2>h2>
+<h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2>
 <p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 <a
