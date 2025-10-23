@@ -1,122 +1,97 @@
-import React, { useCallback, useState, useEffect, Suspense } from 'react';
+"use client";
+import React from "react";
+import Head from "next/head";
+import { ArrowRight, Brain, CheckCircle, Star } from "lucide-react";
 
-// Dynamically import heavy components for better performance
-
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = () => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-);
-
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  // Analytics tracking for phone clicks
-  const handlePhoneClick = useCallback(() => {
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as unknown as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number',
-      });
+export default function HomePage() {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI Solutions",
+      description: "Advanced AI-powered solutions for modern businesses"
+    },
+    {
+      icon: CheckCircle,
+      title: "IT Services",
+      description: "Comprehensive IT services and infrastructure solutions"
+    },
+    {
+      icon: Star,
+      title: "Innovation",
+      description: "Cutting-edge technology and innovative approaches"
     }
-  }, []);
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Skip to main content for accessibility */}
-      <a>Skip to main content
-      </a>
+    <>
+      <Head>
+        <title>Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Leading provider of AI and IT solutions that transform businesses and drive growth." />
+      </Head>
 
-      {/* Content Promotion Banner */}
-      <ContentPromotionBanner />
-
-      <main id="main-content" className="container mx-auto px-4 py-16" role="main">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section
-          className={`text-center mb-16 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-          aria-labelledby="hero-heading"
-        >
-          <h1>Zion Tech Group
-          </h1>
-          <p>Advanced AI and IT Solutions
-          </p>
-          <p>Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
-            Transform your business with our cutting-edge technology.
-          </p>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Welcome to Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Leading provider of AI and IT solutions that transform businesses and drive growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/services" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Our Services
+              </a>
+              <a href="/contact" className="border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Us
+              </a>
+            </div>
+          </div>
         </section>
 
-        {/* Services Section */}
-        <section className="grid md:grid-cols-3 gap-8 mb-16" aria-labelledby="services-heading">
-          <h2>Our Services
-          </h2>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3>AI Solutions</h3>
-              <p>Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
-              </p>
-            </article>
-          </Suspense>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3>Digital Transformation</h3>
-              <p>Transform your business processes with cutting-edge technology and expert
-                consultation.
-              </p>
-            </article>
-          </Suspense>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3>Cloud Services</h3>
-              <p>Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-            </article>
-          </Suspense>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Services</h2>
+              <p className="text-xl text-gray-300">Comprehensive solutions for your business needs</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-6">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
-        {/* Content Carousel */}
-        <ContentCarousel />
-
-        {/* Dynamic Content Showcase */}
-        <DynamicContentShowcase />
-
-        {/* Content Statistics */}
-        <ContentStatistics />
-
-        {/* Newsletter Signup */}
-        <ContentNewsletterSignup />
-
-        {/* Call to Action Section */}
-        <section className="text-center" aria-labelledby="cta-heading">
-          <h2>Ready to Get Started?
-          </h2>
-          <a>Contact Us: (302) 600-9898
-          </a>
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how we can help you achieve your goals with our AI and IT solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a href="/about" className="border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Learn More
+              </a>
+            </div>
+          </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </>
   );
-};
-
-export default HomePage;
+}

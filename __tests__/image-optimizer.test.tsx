@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -91,6 +90,5 @@ describe('ImageOptimizer', () => {
   it('renders without crashing', () => {
     render(<ImageOptimizer src="test.jpg" alt="test" />);
     expect(screen.getByTestId('optimized-image')).toBeInTheDocument();
->>>>>>> origin/main
   });
 });
