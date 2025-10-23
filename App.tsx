@@ -81,7 +81,6 @@ const AIDataVisualizerPage = lazy(
 const AIEmailOptimizerPage = lazy(
   () => import("./app/ai-email-optimizer/page"),
 );
-const AIAnalyticsPage = lazy(() => import("./app/ai-analytics/page"));
 const SocialMediaSchedulerPage = lazy(
   () => import("./app/social-media-scheduler/page"),
 );
@@ -421,9 +420,6 @@ const App = memo(() => {
   usePerformanceOptimization();
 
   useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined') return;
-
     // Register service worker
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
       navigator.serviceWorker
@@ -470,16 +466,18 @@ const App = memo(() => {
     }
   }, []);
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <main className="flex-1">
-            <GlobalErrorBoundary>
-            <PerformanceMonitor />
-            <SEOOptimizer />
-            <AccessibilityEnhancer>
-              <Suspense fallback={<LoadingFallback />}>
-                <Routes>
+    <GlobalErrorBoundary>
+      <HelmetProvider>
+        <Router>
+          <div className="min-h-screen bg-gray-50">
+            <main className="flex-1">
+              <ErrorBoundary>
+                <PerformanceMonitor />
+                <AccessibilityEnhancer>
+                  <SEOOptimizer>
+                    <Suspense fallback={<LoadingFallback />}>
+                    <ErrorBoundary>
+                      <Routes>
                         {/* Main Pages */}
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
@@ -588,14 +586,6 @@ const App = memo(() => {
                         <Route
                           path="/ai-email-optimizer"
                           element={<AIEmailOptimizerPage />}
-                        />
-                        <Route
-                          path="/ai-analytics"
-                          element={<AIAnalyticsPage />}
-                        />
-                        <Route
-                          path="/social-media-scheduler"
-                          element={<SocialMediaSchedulerPage />}
                         />
                         <Route
                           path="/social-media-scheduler"
@@ -1098,16 +1088,19 @@ const App = memo(() => {
                             </div>
                           }
                         />
-                </Routes>
-              </Suspense>
-            </AccessibilityEnhancer>
-            </GlobalErrorBoundary>
+                      </Routes>
+                    </ErrorBoundary>
+                  </Suspense>
+                  </SEOOptimizer>
+                </AccessibilityEnhancer>
+              </ErrorBoundary>
             </main>
 
             <Footer />
           </div>
         </Router>
       </HelmetProvider>
+    </GlobalErrorBoundary>
   );
 });
 

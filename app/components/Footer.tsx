@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
 
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
-  
   const aiServices = [
     { name: "AI Chatbot Builder", href: "/ai-chatbot-builder" },
     { name: "AI Content Generator", href: "/ai-content-generator" },
@@ -102,12 +101,13 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
-            <ul className="space-y-2">
+          <h1 className="text-lg font-semibold mb-4">AI Services</h1>
+            
+          <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    href={service.href}
+                    to={service.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -120,12 +120,13 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
-            <ul className="space-y-2">
+          <h1 className="text-lg font-semibold mb-4">IT Services</h1>
+            
+          <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    href={service.href}
+                    to={service.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -138,12 +139,13 @@ const Footer: React.FC = () => {
 
           {/* Micro SaaS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
-            <ul className="space-y-2">
+          <h1 className="text-lg font-semibold mb-4">Micro SaaS</h1>
+            
+          <ul className="space-y-2">
               {microSaas.map((service, index) => (
                 <li key={index}>
                   <Link
-                    href={service.href}
+                    to={service.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -156,12 +158,13 @@ const Footer: React.FC = () => {
 
           {/* Company & Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 mb-6">
+          <h1 className="text-lg font-semibold mb-4">Company</h1>
+            
+          <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    href={link.href}
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -175,7 +178,7 @@ const Footer: React.FC = () => {
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    href={link.href}
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -211,19 +214,19 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
-              href="/privacy"
+              to="/privacy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms"
+              to="/terms"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Terms of Service
             </Link>
             <Link
-              href="/cookies"
+              to="/cookies"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Cookie Policy
