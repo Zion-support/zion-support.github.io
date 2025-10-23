@@ -26,6 +26,7 @@ export default function AiSalesAutomationPage() {
           </div>
         </div>
       </div>
-    </div>
+        </div>
+      </div>
   );
 }

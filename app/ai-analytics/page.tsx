@@ -26,6 +26,7 @@ export default function AiAnalyticsPage() {
           </div>
         </div>
       </div>
-    </div>
+        </div>
+      </div>
   );
 }

@@ -19,9 +19,9 @@ export default function PagePage() {
               This page is under development. Please check back later for
               updates.
             </p>
-          </div>
         </div>
       </div>
-    </div>
+        </div>
+      </div>
   );
 }

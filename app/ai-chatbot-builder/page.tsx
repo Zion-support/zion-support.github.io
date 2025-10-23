@@ -22,6 +22,6 @@ export default function PageTsxPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

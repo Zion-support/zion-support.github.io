@@ -98,4 +98,6 @@ const Navigation: React.FC = () => {
   );
 };
 
+export default Page;
+
 export default Navigation;
