@@ -2,38 +2,29 @@
 
 import React, { createContext, useContext, useEffect } from "react";
 
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-  identify: (userId: string, traits?: Record<string, unknown>) => void;
-  page: (name: string, properties?: Record<string, unknown>) => void;
-}
+interface AnalyticsContextType {track: (event: string, properties?: Record<string, unknown>) => void,identify: (userId: string, traits?: Record<string, unknown>) => void;
+  page: (name: string, properties?: Record<string, unknown>) => void;}
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined,
+  undefined,;
 );
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+export const useAnalytics = () => {,const context = useContext(AnalyticsContext);
   if (!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider");
-  }
+    throw new Error("useAnalytics must be used within an AnalyticsProvider");}
   return context;
 };
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
+interface AnalyticsProviderProps {children: React.ReactNode,}
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children,
-}) => {
-  useEffect(() => {
+}) => {useEffect(() => {
     // Initialize analytics
     if (typeof window !== "undefined") {
       // Google Analytics
       if (process.env.NODE_ENV === "production") {
-        const script = document.createElement("script");
-        script.async = true;
+        const script = document.createElement("script"),script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
         document.head.appendChild(script);
 
@@ -55,7 +46,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "event",
           event,
-          properties,
+          properties,;
         );
       }
 
@@ -73,7 +64,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
           {
             user_id: userId,
             custom_map: traits,
-          },
+          },;
         );
       }
 
@@ -92,7 +83,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
             page_title: name,
             page_location: window.location.href,
             ...properties,
-          },
+          },;
         );
       }
 
@@ -114,11 +105,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 };
 
 // Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag: (...args: any[]) => void;
-  }
+declare global {interface Window {
+    dataLayer: unknown[],gtag: (...args: any[]) => void;}
 };
 
 export default Page;

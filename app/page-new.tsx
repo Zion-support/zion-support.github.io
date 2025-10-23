@@ -9,7 +9,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 
-// Dynamically import heavy components for better performance
+// Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
@@ -17,45 +17,43 @@ const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
+const preloadComponents = () => {if (typeof window !== 'undefined') {
     // Preload critical components after initial render
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+    setTimeout(() => {,import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');}, 100);
   }
 };
 
+export default const preloadComponents = () => {if (typeof window !== 'undefined') {
+    // Preload critical components after initial render
+    setTimeout(() => {,import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');}, 100);
+  }
+};
+;
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsLoaded(true);
-    // Trigger visibility animation
+  useEffect(() => {setIsLoaded(true),// Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer);}, []);
 
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+  const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
-      });
+        event_label: 'main_phone_number',});
     }
   }, []);
 
@@ -119,7 +117,7 @@ const [isLoaded, setIsLoaded] = useState(false);
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
       popular: false
-    }
+    };
   ];
 
   const aiServices = [
@@ -154,7 +152,7 @@ const [isLoaded, setIsLoaded] = useState(false);
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400'
-    }
+    };
   ];
 
   const itServices = [
@@ -189,7 +187,7 @@ const [isLoaded, setIsLoaded] = useState(false);
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
       color: 'text-purple-400'
-    }
+    };
   ];
 
   return (
@@ -264,7 +262,7 @@ const [isLoaded, setIsLoaded] = useState(false);
         >Skip to main content</a>a>
 
         {/* Content Promotion Banner */}
-        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"}>{}</div>}>
           <ContentPromotionBanner />
         </Suspense>
 
@@ -286,8 +284,6 @@ const [isLoaded, setIsLoaded] = useState(false);
               >Zion Tech Group</h1>h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">Advanced AI and IT Solutions</p>p>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.</p>
-                Transform your business with our cutting-edge technology and achieve unprecedented growth.
-              </p>
               
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
@@ -295,22 +291,18 @@ const [isLoaded, setIsLoaded] = useState(false);
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
-                </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Proven Results</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-                </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Enterprise Security</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-                </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Global Reach</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
-                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -326,7 +318,6 @@ const [isLoaded, setIsLoaded] = useState(false);
                   <Phone className="w-5 h-5" />
                   +1 302 464 0950
                 </a>
-              </div>
             </div>
           </section>
 
@@ -335,11 +326,10 @@ const [isLoaded, setIsLoaded] = useState(false);
             <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">Micro SAAS Solutions</h2>h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Powerful, affordable AI-powered tools designed for modern businesses</p>p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">{microSAASServices.map((service, index) => (</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">{microSAASServices.map((service, index) =}>{(}</div>
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>{service.popular && (</a>
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">Popular</div>div>
-                    </div>
+                      <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold"}>{Popular}</div>
                   )}
                   <div className="text-4xl mb-4 text-center">{service.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
@@ -353,8 +343,6 @@ const [isLoaded, setIsLoaded] = useState(false);
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
-                    </ul>
                   </div>
                   
                   <div className="mb-4">
@@ -365,8 +353,6 @@ const [isLoaded, setIsLoaded] = useState(false);
                           <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
                   </div>
                   
                   <div className="text-center">
@@ -374,19 +360,17 @@ const [isLoaded, setIsLoaded] = useState(false);
                     <a 
                       href={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
-                    >Learn More</a>a>
-                  </div>
+                    >Learn More</a>
                 </article>
               ))}
             </div>
-          </section>
 
           {/* AI Services Section */}
           <section className="mb-16" aria-labelledby="ai-services-heading">
             <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">AI Services</h2>h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Advanced artificial intelligence solutions for enterprise applications</p>p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">{aiServices.map((service, index) => (</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">{aiServices.map((service, index) =}>{(}</div>
                 <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
@@ -402,8 +386,6 @@ const [isLoaded, setIsLoaded] = useState(false);
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
-                    </ul>
                   </div>
                   
                   <div className="text-center">
@@ -411,19 +393,17 @@ const [isLoaded, setIsLoaded] = useState(false);
                     <a 
                       href="/ai-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >Learn More</a>a>
-                  </div>
+                    >Learn More</a>
                 </article>
               ))}
             </div>
-          </section>
 
           {/* IT Services Section */}
           <section className="mb-16" aria-labelledby="it-services-heading">
             <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">IT Services</h2>h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Comprehensive IT solutions for modern enterprise infrastructure</p>p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">{itServices.map((service, index) => (</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">{itServices.map((service, index) =}>{(}</div>
                 <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
@@ -439,8 +419,6 @@ const [isLoaded, setIsLoaded] = useState(false);
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
-                    </ul>
                   </div>
                   
                   <div className="text-center">
@@ -448,12 +426,10 @@ const [isLoaded, setIsLoaded] = useState(false);
                     <a 
                       href="/it-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >Learn More</a>a>
-                  </div>
+                    >Learn More</a>
                 </article>
               ))}
             </div>
-          </section>
 
           {/* Contact Information */}
           <section className="mb-16" aria-labelledby="contact-heading">
@@ -468,8 +444,7 @@ const [isLoaded, setIsLoaded] = useState(false);
                   href="tel:+13024640950" 
                   onClick={handlePhoneClick}
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                >Call Now</a>a>
-              </div>
+                >Call Now</a>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
@@ -478,8 +453,7 @@ const [isLoaded, setIsLoaded] = useState(false);
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
                   className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
-                >Send Email</a>a>
-              </div>
+                >Send Email</a>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
@@ -490,16 +464,15 @@ const [isLoaded, setIsLoaded] = useState(false);
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-400 hover:text-green-300 font-medium transition-colors"
-                >View on Map</a>a>
-              </div>
+                >View on Map</a>
             </div>
           </section>
-        </main>
 
         <Footer />
-      </div>
+      </div></div></div></div></div></div></div></div></div></div>
     </>
   );
 };
 
 
+))))))))

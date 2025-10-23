@@ -1,5 +1,7 @@
 'use client'
 import React from 'react'
+
+export default function Page() {
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const features = [
@@ -22,5 +24,10 @@ const features = [
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
+    },
+  ];
+
+  return (
+;
+  );
+}

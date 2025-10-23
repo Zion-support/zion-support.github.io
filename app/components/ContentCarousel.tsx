@@ -1,8 +1,10 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
+
 interface Slide {
-  icon: React.ComponentType<any>title: string</a>
+  icon: React.ComponentType<any>
+  title: string
   description: string
   features: string[]
   stats?: {
@@ -10,7 +12,9 @@ interface Slide {
     label: string
   }[]
 }
-const [currentSlide, setCurrentSlide] = useState(0)
+
+export default function ContentCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0)
   const slides: Slide[] = [
     {
       icon: Brain,
@@ -69,114 +73,101 @@ const [currentSlide, setCurrentSlide] = useState(0)
   }, [])
   const currentSlideData = slides[currentSlide]
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4" loading="lazy">
-      <div className="max-w-7xl mx-auto" loading="lazy">
-        <div className="text-center mb-12" loading="lazy">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" loading="lazy">Discover Our Solutions</h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto" loading="lazy">Explore our comprehensive suite of AI-powered solutions designed to transform your business.</p>p>
-        </div>
-        <div className="relative" loading="lazy">
-<div className="overflow-hidden rounded-xl" loading="lazy">
+    <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4" >
+      <div className="max-w-7xl mx-auto" >
+        <div className="text-center mb-12" >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" >Discover Our Solutions</h2>
+          <p className="text-xl text-purple-100 max-w-3xl mx-auto" >Explore our comprehensive suite of AI-powered solutions designed to transform your business.</p>
+        <div className="relative" >
+<div className="overflow-hidden rounded-xl" >
             <div
-              className="flex transition-transform duration-500 ease-in-out" loading="lazy"
+              className="flex transition-transform duration-500 ease-in-out" 
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >{slides.map((slide, index) => (</div>
-<div key={index} className="w-full flex-shrink-0" loading="lazy">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8" loading="lazy">
-                    <div className="text-center mb-8" loading="lazy">
-                      <div className="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" loading="lazy">
-                        <slide.icon className="h-10 w-10 text-white" loading="lazy" />
+            >{slides.map((slide, index) =}>{(}</div>
+<div key={index} className="w-full flex-shrink-0" >
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8" >
+                    <div className="text-center mb-8" >
+                      <div className="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" >
+                        <slide.icon className="h-10 w-10 text-white"  />
                       </div>
-                      <h3 className="text-2xl font-bold mb-4" loading="lazy">{slide.title}</h3>
-                      <p className="text-purple-100 text-lg max-w-2xl mx-auto" loading="lazy">{slide.description}</p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4" loading="lazy">{slide.features.map((feature, featureIndex) => (</div>
-                        <div key={featureIndex} className="flex items-center" loading="lazy">
-                          <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" loading="lazy" />
-                          <span className="text-purple-100" loading="lazy">{feature}</span>
-                        </div>
+                      <h3 className="text-2xl font-bold mb-4" >{slide.title}</h3>
+                      <p className="text-purple-100 text-lg max-w-2xl mx-auto" >{slide.description}</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4" >{slide.features.map((feature, featureIndex) =}>{(}</div>
+                        <div key={featureIndex} className="flex items-center" >
+                          <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"  />
+                          <span className="text-purple-100" >{feature}</span>
                       ))}
                     </div>
                   </div>
-                </div>
               ))}
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4" loading="lazy">
-      <div className="max-w-7xl mx-auto" loading="lazy">{/* Header */}</div>
-        <div className="text-center mb-16" loading="lazy">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" loading="lazy">
-            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400" loading="lazy">Solutions</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
-        </div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4" >
+      <div className="max-w-7xl mx-auto" >{/* Header */}</div>
+        <div className="text-center mb-16" >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" >
+            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400" >Solutions</span>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto" >Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>
         {/* Carousel Container */}
         {/* Carousel */}
-        <div className="relative" loading="lazy">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden" loading="lazy">
-            <div className="flex items-center justify-between mb-8" loading="lazy">
-              <div className="flex items-center gap-4" loading="lazy">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center" loading="lazy">
-                  <currentSlideData.icon className="w-8 h-8 text-slate-900" loading="lazy" />
+        <div className="relative" >
+          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden" >
+            <div className="flex items-center justify-between mb-8" >
+              <div className="flex items-center gap-4" >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center" >
+                  <currentSlideData.icon className="w-8 h-8 text-slate-900"  />
                 </div>
                 {/* Features */}
-                <div className="space-y-4" loading="lazy">
-                  <h4 className="text-lg font-semibold text-white mb-4" loading="lazy">Key Features:</h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" loading="lazy">{currentSlideData.features.map((feature, index) => (</div>
-                      <div key={index} className="flex items-center space-x-3" loading="lazy">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" loading="lazy" />
-                        <span className="text-gray-300" loading="lazy">{feature}</span>
-                      </div>
+                <div className="space-y-4" >
+                  <h4 className="text-lg font-semibold text-white mb-4" >Key Features:</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" >{currentSlideData.features.map((feature, index) =}>{(}</div>
+                      <div key={index} className="flex items-center space-x-3" >
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />
+                        <span className="text-gray-300" >{feature}</span>
                     ))}
                   </div>
                 </div>
                 {/* Stats */}
                 {currentSlideData.stats && (
-                  <div className="grid grid-cols-3 gap-6" loading="lazy">{currentSlideData.stats.map((stat, index) => (</div>
-                      <div key={index} className="text-center" loading="lazy">
-                        <div className="text-2xl font-bold text-white mb-1" loading="lazy">{stat.value}</div>
-                        <div className="text-gray-400 text-sm" loading="lazy">{stat.label}</div>
-                      </div>
+                  <div className="grid grid-cols-3 gap-6"}>{{currentSlideData.stats.map((stat, index) =}>{(}}</div>
+                      <div key={index} className="text-center" >
+                        <div className="text-2xl font-bold text-white mb-1" >{stat.value}</div>
+                        <div className="text-gray-400 text-sm" >{stat.label}</div>
                     ))}
                   </div>
                 )}
                 {/* CTA */}
-                <div className="flex flex-col sm:flex-row gap-4" loading="lazy">
-                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" loading="lazy" aria-label="Action button">
-                    <Zap className="w-5 h-5" loading="lazy" />
+                <div className="flex flex-col sm:flex-row gap-4" >
+                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"  aria-label="Action button">
+                    <Zap className="w-5 h-5"  />
                     Get Started
   </
-                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300" loading="lazy" aria-label="Action button">
-                    <ArrowRight className="w-5 h-5" loading="lazy" />
+                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"  aria-label="Action button">
+                    <ArrowRight className="w-5 h-5"  />
                     Learn More
   </
                 </div>
-              </div>
               {/* Visual Element */}
-              <div className="relative" loading="lazy">
-                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center" loading="lazy">
-                  <div className="text-center" loading="lazy">
-                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center" loading="lazy">
-                      <currentSlideData.icon className="w-16 h-16 text-white" loading="lazy" />
+              <div className="relative" >
+                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center" >
+                  <div className="text-center" >
+                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center" >
+                      <currentSlideData.icon className="w-16 h-16 text-white"  />
                     </div>
-                    <div className="text-4xl font-bold text-white mb-2" loading="lazy">{currentSlideData.title}</div>div>
-                    <div className="text-gray-300" loading="lazy">Slide {currentSlide + 1} of {slides.length}</div>div>
-                  </div>
+                    <div className="text-4xl font-bold text-white mb-2" >{currentSlideData.title}</div>div>
+                    <div className="text-gray-300" >Slide {currentSlide + 1} of {slides.length}</div>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" loading="lazy">{currentSlideData.features.map((feature, index) => (</div>
-                <div key={index} className="flex items-center gap-3" loading="lazy">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" loading="lazy" />
-                  <span className="text-gray-300" loading="lazy">{feature}</span>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" >{currentSlideData.features.map((feature, index) =}>{(}</div>
+                <div key={index} className="flex items-center gap-3" >
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />
+                  <span className="text-gray-300" >{feature}</span>
               ))}
             </div>
             {/* Stats */}
             {currentSlideData.stats && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700" loading="lazy">{currentSlideData.stats.map((stat, index) => (</div>
-                  <div key={index} className="text-center" loading="lazy">
-                    <div className="text-3xl font-bold text-white mb-1" loading="lazy">{stat.value}</div>
-                    <div className="text-sm text-gray-400" loading="lazy">{stat.label}</div>
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700"}>{{currentSlideData.stats.map((stat, index) =}>{(}}</div>
+                  <div key={index} className="text-center" >
+                    <div className="text-3xl font-bold text-white mb-1" >{stat.value}</div>
+                    <div className="text-sm text-gray-400" >{stat.label}</div>
                 ))}
               </div>
             )}
@@ -184,70 +175,59 @@ const [currentSlide, setCurrentSlide] = useState(0)
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" loading="lazy" aria-label="Action button">
-            <ChevronLeft className="h-6 w-6" loading="lazy" />
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"  aria-label="Action button">
+            <ChevronLeft className="h-6 w-6"  />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" loading="lazy" aria-label="Action button">
-            <ChevronRight className="h-6 w-6" loading="lazy" />
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"  aria-label="Action button">
+            <ChevronRight className="h-6 w-6"  />
           </button>
-        </div>
 {/* Slide Indicators */}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" loading="lazy"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" 
           >
-            <ChevronLeft className="w-6 h-6" loading="lazy" />
+            <ChevronLeft className="w-6 h-6"  />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" loading="lazy"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" 
            aria-label="Action button">
-            <ChevronRight className="w-6 h-6" loading="lazy" />
+            <ChevronRight className="w-6 h-6"  />
           </button>
-        </div>
         {/* Slide Indicators */}
-        <div className="flex justify-center mt-8 space-x-2" loading="lazy">{slides.map((_, index) => (</div>
+        <div className="flex justify-center mt-8 space-x-2" >{slides.map((_, index) =}>{(}</div>
             <button
               key={index}
-              onClick={() = aria-label="Action button">setCurrentSlide(index)}</button>
-              className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-              }`}
-            />
-          ))}
-        </div>
+              onClick={() = aria-label="Action button"}>{setCurrentSlide(index)}}</button>
         {/* Additional Info */}
-        <div className="mt-16 text-center" loading="lazy">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" loading="lazy">
-            <div className="flex items-center justify-center gap-3 text-white" loading="lazy">
-              <Star className="w-6 h-6 text-yellow-400" loading="lazy" />
-              <div className="text-left" loading="lazy">
-                <div className="text-2xl font-bold" loading="lazy">4.9/5</div>
-                <div className="text-gray-400 text-sm" loading="lazy">Customer Rating</div>
-              </div>
+        <div className="mt-16 text-center" >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" >
+            <div className="flex items-center justify-center gap-3 text-white" >
+              <Star className="w-6 h-6 text-yellow-400"  />
+              <div className="text-left" >
+                <div className="text-2xl font-bold" >4.9/5</div>
+                <div className="text-gray-400 text-sm" >Customer Rating</div>
             </div>
-            <div className="flex items-center justify-center gap-3 text-white" loading="lazy">
-              <Users className="w-6 h-6 text-blue-400" loading="lazy" />
-              <div className="text-left" loading="lazy">
-                <div className="text-2xl font-bold" loading="lazy">10,000+</div>
-                <div className="text-gray-400 text-sm" loading="lazy">Happy Customers</div>
-              </div>
+            <div className="flex items-center justify-center gap-3 text-white" >
+              <Users className="w-6 h-6 text-blue-400"  />
+              <div className="text-left" >
+                <div className="text-2xl font-bold" >10,000+</div>
+                <div className="text-gray-400 text-sm" >Happy Customers</div>
             </div>
-            <div className="flex items-center justify-center gap-3 text-white" loading="lazy">
-              <TrendingUp className="w-6 h-6 text-green-400" loading="lazy" />
-              <div className="text-left" loading="lazy">
-                <div className="text-2xl font-bold" loading="lazy">99.9%</div>
-                <div className="text-gray-400 text-sm" loading="lazy">Uptime</div>
-              </div>
+            <div className="flex items-center justify-center gap-3 text-white" >
+              <TrendingUp className="w-6 h-6 text-green-400"  />
+              <div className="text-left" >
+                <div className="text-2xl font-bold" >99.9%</div>
+                <div className="text-gray-400 text-sm" >Uptime</div>
             </div>
           </div>
-        <div className="text-center mt-12" loading="lazy">
-          <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto" loading="lazy" aria-label="Action button">Get Started Today</button>
-            <ArrowRight className="w-5 h-5 ml-2" loading="lazy" />
+        <div className="text-center mt-12" >
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto"  aria-label="Action button">Get Started Today</button>
+            <ArrowRight className="w-5 h-5 ml-2"  />
           </button>
-        </div>
       </div>
-    </div>
+    </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
   )
 }
-export default ContentCarousel
+export default ContentCarousel;
+;))

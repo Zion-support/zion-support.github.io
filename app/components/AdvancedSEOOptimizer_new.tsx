@@ -116,10 +116,9 @@ return (
 <script type="application/ld+json">
 {JSON.stringify(generateStructuredData())}
 </script>
-</Helmet>
 {children}
 {process.env.NODE_ENV === 'development' && (
-<div className="seo-debug" loading="lazy" style={{
+<div className="seo-debug"  style={{
 position: 'fixed',
 top: '10px',
 left: '10px',
@@ -134,12 +133,10 @@ maxWidth: '300px'
 <div>SEO Score: {seoScore}/100</div>
 {recommendations.length > 0 && (
 <div>
-<div>Recommendations:</div>
+<div}>{Recommendations:}</div>
 <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
 {recommendations.map((rec, index) => (
 <li key={index}>{rec}</li>
-))}
-</ul>
 </div>
 )}
 </div>
@@ -147,4 +144,5 @@ maxWidth: '300px'
 </>
 )
 }
-export default AdvancedSEOOptimizerNew
+export default AdvancedSEOOptimizerNew;
+;))

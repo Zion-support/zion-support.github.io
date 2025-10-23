@@ -2,11 +2,8 @@
 
 import React, { useEffect } from "react";
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  fontSize: number;
-  reducedMotion: boolean;
-}
+interface AccessibilitySettings {highContrast: boolean,fontSize: number;
+  reducedMotion: boolean;}
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -20,14 +17,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({
     };
 
     // Apply accessibility settings only in browser
-    if (typeof window !== 'undefined' && document) {
-      if (settings.highContrast) {
-        document.body.classList.add("high-contrast");
-      }
+    if (typeof window !== 'undefined' && document) {if (settings.highContrast) {
+        document.body.classList.add("high-contrast"),}
 
-      if (settings.reducedMotion) {
-        document.body.classList.add("reduced-motion");
-      }
+      if (settings.reducedMotion) {document.body.classList.add("reduced-motion"),}
 
       // Set font size
       document.documentElement.style.fontSize = `${settings.fontSize}px`;

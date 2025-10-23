@@ -49,16 +49,13 @@ class ErrorHandler extends Component<Props, State> {
     }
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // Example: Send to monitoring service
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
     try {
       // Replace with your actual error reporting service
       const errorData = {
         message: error.message,
         stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString()
-      };
+        componentStack: errorInfo.componentStack,,timestamp: new Date().toISOString();};
       // Send to your error reporting service here
       console.log('Error data prepared for reporting:', errorData);
     } catch {
@@ -87,60 +84,54 @@ class ErrorHandler extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50" loading="lazy">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center" loading="lazy">
-            <div className="flex justify-center mb-4" loading="lazy">
-              <AlertTriangle className="w-16 h-16 text-red-500" loading="lazy" />
+        <div className="min-h-screen flex items-center justify-center bg-gray-50" >
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center" >
+            <div className="flex justify-center mb-4" >
+              <AlertTriangle className="w-16 h-16 text-red-500"  />
             </div>
             
-            <h1 className="text-2xl font-bold text-gray-900 mb-4" loading="lazy">Oops! Something went wrong</h1>h1>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4" >Oops! Something went wrong</h1>h1>
             
-            <p className="text-gray-600 mb-6" loading="lazy">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>p>
+            <p className="text-gray-600 mb-6" >We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left" loading="lazy">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700" loading="lazy">
-                  Error Details (Development)
-                </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto" loading="lazy">
-                  <div className="mb-2" loading="lazy">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
+              <details className="mb-6 text-left" >
+                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700"}>{Error Details (Development)}</summary>
+                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto" >
+                  <div className="mb-2" >
+                    <strong>Error:</strong>
                   {this.state.error.stack && (
                     <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap" loading="lazy">{this.state.error.stack}</pre>
-                    </div>
+                      <strong}>{Stack:}</strong>
+                      <pre className="whitespace-pre-wrap" >{this.state.error.stack}</pre>
                   )}
                   {this.state.errorInfo?.componentStack && (
                     <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap" loading="lazy">{this.state.errorInfo.componentStack}</pre>
-                    </div>
+                      <strong}>{Component Stack:}</strong>
+                      <pre className="whitespace-pre-wrap" >{this.state.errorInfo.componentStack}</pre>
                   )}
                 </div>
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center" loading="lazy">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center" >
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" loading="lazy"
+                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" 
                aria-label="Action button">
-                <RefreshCw className="w-4 h-4 mr-2" loading="lazy" />
+                <RefreshCw className="w-4 h-4 mr-2"  />
                 Try Again
               </button>
               
               <button
                 onClick={this.handleGoHome}
-                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors" loading="lazy"
+                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors" 
                aria-label="Action button">
-                <Home className="w-4 h-4 mr-2" loading="lazy" />
+                <Home className="w-4 h-4 mr-2"  />
                 Go Home
               </button>
-            </div>
           </div>
-        </div>
+        </div></div></div></div></div>
       )
     }
 

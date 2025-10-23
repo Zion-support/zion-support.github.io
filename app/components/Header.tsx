@@ -7,10 +7,10 @@ return (
       <>
       <Navigation />
       {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" loading="lazy" />
+      <div className="h-16 lg:h-20"  />
     </>
   )
-}
+};
 };
 export default Header
 

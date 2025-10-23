@@ -3,9 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
+interface OptimizedImageProps {src: string,alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -15,25 +13,20 @@ interface OptimizedImageProps {
   quality?: number;
   loading?: "lazy" | "eager";
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void;}
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
+const OptimizedImage: React.FC<OptimizedImageProps> = ({src,
   alt,
   width,
   height,
   className = "",
   priority = false,
-  placeholder = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+",
+  placeholder = "data:image/svg+xml,base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+",
   sizes = "100vw",
   quality = 85,
   loading = "lazy",
   onLoad,
-  onError,
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
+  onError,}) => {const [isLoaded, setIsLoaded] = useState(false),const [isError, setIsError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLImageElement>(null);
 
@@ -42,10 +35,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) {;
           setIsInView(true);
-          observer.disconnect();
-        }
+          observer.disconnect();}
       },
       {
         threshold: 0.1,
@@ -53,32 +45,24 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       },
     );
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+    if (imgRef.current) {observer.observe(imgRef.current),}
 
     return () => observer.disconnect();
   }, [priority]);
 
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
+  const handleLoad = () => {,setIsLoaded(true);
+    onLoad?.();};
 
-  const handleError = () => {
-    setIsError(true);
-    onError?.();
-  };
+export default const handleLoad = () => {,setIsLoaded(true);
+    onLoad?.();};
+;
+  const handleError = () => {,setIsError(true);
+    onError?.();};
 
   // Generate WebP src if supported
-  const getOptimizedSrc = (originalSrc: string) => {
-    if (originalSrc.startsWith("data:") || originalSrc.startsWith("blob:")) {
-      return originalSrc;
-    }
+  const getOptimizedSrc = (originalSrc: string) => {if (originalSrc.startsWith("data:") || originalSrc.startsWith("blob:")) {,return originalSrc;}
     // For external images, return as-is
-    if (originalSrc.startsWith("http")) {
-      return originalSrc;
-    }
+    if (originalSrc.startsWith("http")) {return originalSrc,}
     // For local images, you could implement WebP conversion here
     return originalSrc;
   };
@@ -93,13 +77,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       style={{ width, height }}
     >{!isLoaded && !isError && (</div>
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
-        </div>
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"}>{}</div>
       )}
       {isError ? (
         <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Failed to load image</div>
-        </div>
+          <div className="text-gray-400 text-sm"}>{Failed to load image}</div>
       ) : (
         <Image
           src={imageSrc}
@@ -118,7 +100,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           blurDataURL={placeholder}
         />
       )}
-    </div>
+    </div></div>
   );
 };
 

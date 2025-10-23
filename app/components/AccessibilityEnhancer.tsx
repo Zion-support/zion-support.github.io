@@ -31,13 +31,11 @@ const AccessibilityEnhancer: React.FC = () => {
     }
 
     // Enhance keyboard navigation
-    const enhanceKeyboardNavigation = () => {
-      // Add skip links
+    const enhanceKeyboardNavigation = () => {// Add skip links
       const skipLink = document.createElement('a')
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'skip-link'
-      skipLink.style.cssText = `
+      skipLink.className = 'skip-link',skipLink.style.cssText = `;
         position: absolute;
         top: -40px;
         left: 6px;
@@ -48,8 +46,7 @@ const AccessibilityEnhancer: React.FC = () => {
         z-index: 1000;
         transition: top 0.3s;
       `
-      document.body.insertBefore(skipLink, document.body.firstChild)
-    }
+      document.body.insertBefore(skipLink, document.body.firstChild)}
 
     // Add ARIA landmarks
     const addARIALandmarks = () => {
@@ -114,31 +111,18 @@ const AccessibilityEnhancer: React.FC = () => {
     // Add CSS for accessibility
     const style = document.createElement('style')
     style.textContent = `
-      .skip-link:focus {
-        top: 6px;
-      }
+      .skip-link:focus {,top: 6px;}
       
-      .high-contrast {
-        filter: contrast(150%);
-      }
+      .high-contrast {filter: contrast(150%),}
       
-      .reduced-motion * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
+      .reduced-motion * {animation-duration: 0.01ms !important,animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;}
       
-      .focus-visible {
-        outline: 2px solid #3b82f6;
-        outline-offset: 2px;
-      }
+      .focus-visible {outline: 2px solid #3b82f6,outline-offset: 2px;}
       
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
+      @media (prefers-reduced-motion: reduce) {* {
+          animation-duration: 0.01ms !important,animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;}
       }
     `
     document.head.appendChild(style)
@@ -182,8 +166,8 @@ const AccessibilityEnhancer: React.FC = () => {
               ? 'bg-blue-600 text-white' 
               : 'bg-gray-200 text-gray-800'
           }`}
-        >
-          {isHighContrast ? 'Disable' : 'Enable'} High Contrast
+        >;
+          {isHighContrast ? &apos,Disable' : 'Enable'} High Contrast
         </button>
         
         <div className="flex items-center space-x-2">
@@ -198,11 +182,9 @@ const AccessibilityEnhancer: React.FC = () => {
           <button
             onClick={increaseFontSize}
             className="px-2 py-1 bg-gray-200 rounded text-sm"
-            disabled={fontSize >= 24}
+            disabled={fontSize}>{= 24}
           >
-            A+
-          </button>
-        </div>
+            A+}</button>
         
         <button
           onClick={resetAccessibility}
@@ -210,8 +192,7 @@ const AccessibilityEnhancer: React.FC = () => {
         >
           Reset
         </button>
-      </div>
-    </div>
+    </div></div></div>
   )
 }
 

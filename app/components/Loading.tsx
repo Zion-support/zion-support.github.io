@@ -1,5 +1,7 @@
 'use client'
 import React from 'react'
+
+export default function Page() {
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const features = [
@@ -22,8 +24,10 @@ const features = [
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
+    },
+  ];
+
+  return (
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -32,7 +36,10 @@ const features = [
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+    'Proven track record of success',
+  ];
 }
 export default LoadingPage
+;
+  );
+}

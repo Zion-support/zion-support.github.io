@@ -22,7 +22,7 @@ const Securityautomation = () => {
       icon: "🔧",
       title: "Customizable",
       description: "Tailored solutions for your business needs"
-    }
+    },
   ];
 
   return (
@@ -49,7 +49,6 @@ const Securityautomation = () => {
             >
               Learn More
             </a>
-          </div>
         </div>
       </section>
 
@@ -63,7 +62,6 @@ const Securityautomation = () => {
             <p className="text-lg text-gray-300">
               Everything you need for success
             </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
@@ -72,11 +70,9 @@ const Securityautomation = () => {
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
             ))}
           </div>
         </div>
-      </section>
 
       {/* CTA Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -100,10 +96,8 @@ const Securityautomation = () => {
             >
               Learn More
             </a>
-          </div>
-        </div>
+        </div></div></div></div></div></div>
       </section>
-    </div>
   );
 };
 

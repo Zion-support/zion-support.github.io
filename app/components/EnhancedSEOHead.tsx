@@ -170,7 +170,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-    </Helmet>
   )
 }
-export default EnhancedSEOHead
+export default EnhancedSEOHead;
+;

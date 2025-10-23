@@ -62,7 +62,7 @@ const PerformanceOptimizer: React.FC = () => {
     
     const images = document.querySelectorAll('img')
     images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
+      // Add  for images below the fold
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy')
       }
@@ -74,8 +74,7 @@ const PerformanceOptimizer: React.FC = () => {
     })
   }
 
-  const preloadCriticalResources = () => {
-    if (typeof window === 'undefined') return
+  const preloadCriticalResources = () => {if (typeof window === 'undefined') return
     
     // Preload critical CSS
     const criticalCSS = document.createElement('link')
@@ -85,12 +84,10 @@ const PerformanceOptimizer: React.FC = () => {
     document.head.appendChild(criticalCSS)
 
     // Preload critical fonts
-    const fontPreload = document.createElement('link')
-    fontPreload.rel = 'preload'
+    const fontPreload = document.createElement('link'),fontPreload.rel = 'preload';
     fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     fontPreload.as = 'style'
-    document.head.appendChild(fontPreload)
-  }
+    document.head.appendChild(fontPreload)}
 
   const enableServiceWorker = () => {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return
@@ -116,11 +113,9 @@ const PerformanceOptimizer: React.FC = () => {
         <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
         <div>Bundle Size: {metrics.bundleSize}KB</div>
         {isOptimized && (
-          <div className="text-green-400">✓ Optimized</div>
-        )}
-      </div>
-    </div>
+          <div className="text-green-400"}>{✓ Optimized}</div>
+    </div></div>
   )
 }
 
-export default PerformanceOptimizer
+export default PerformanceOptimizer;)

@@ -21,7 +21,7 @@ rel?: string
 onClick?: () => void
 'aria-label'?: string;}
 }
-export const Link: React.FC<LinkProps>= ({;}
+export const Link: React.FC<LinkProps>= ({,}
 export const Link: React.FC<LinkProps> = ({}
 href,
 href: string,
@@ -39,16 +39,15 @@ className,
 target,
 rel,
 onClick,
-'aria-label': ariaLabel,;}
+&apos,aria-label': ariaLabel}
 ...props}
 }) => {}
 const handleClick = useCallback((...args) => {}
-if (onClick) {}
+if (onClick) {};
 onClick();}
 }
 // Handle internal navigation
-if (href.startsWith('/') && !href.startsWith('//')) {
-// Handle internal navigation;}
+if (href.startsWith('/') && !href.startsWith('//')) {// Handle internal navigation,}
 if (href.startsWith('/') && !href.startsWith('//')) {}
 e.preventDefault()
 window.location.href = href;}
@@ -69,14 +68,6 @@ if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression
 }
 }
 return (<a></a>
-href={href}
-className={className}
-target={target}
-rel={rel}
-onClick={handleClick}
-aria-label={ariaLabel}
-{...props}
->{children}</a>
 </a>
 aria-label={ariaLabel})
 {...props})
@@ -86,3 +77,4 @@ aria-label={ariaLabel})
 )
 }
 export default Link
+;)
