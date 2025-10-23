@@ -105,7 +105,7 @@ export default function Home() {
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-white/90 mb-8">
-              Let's discuss how our AI and IT solutions can transform your business.
+              Let&apos;s discuss how our AI and IT solutions can transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
