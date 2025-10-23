@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Key, Copy } from 'lucide-react';
+import { Check, Code, Copy, Key } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -84,7 +84,7 @@ const ApiDocsPage: React.FC = () => {
                       className="flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors"
                     >
                       {copiedCode === endpoint.id ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                      <span>{copiedCode === endpoint.id ? 'Copied!' : 'Copy'}</span>
+                      <span>{copiedCode === endpoint.id ? &apos;Copied!' : 'Copy'}</span>
                     </button>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{endpoint.title}</h3>

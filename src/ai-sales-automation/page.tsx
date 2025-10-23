@@ -3,12 +3,12 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Building } from 'lucide-react';
+import { Building, CheckCircle, Mail, Phone } from 'lucide-react';
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
       icon: Target,
-      title: 'Lead Scoring & Qualification',
+      title: &apos;Lead Scoring & Qualification',
       description: 'AI automatically scores and qualifies leads based on behavior, demographics, and engagement patterns.',
       benefits: ['Behavioral Analysis', 'Predictive Scoring', 'Auto-qualification', 'Priority Ranking']
     },

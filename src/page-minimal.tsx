@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle, Phone, Star } from 'lucide-react';
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -118,7 +118,7 @@ export default function HomePage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Let's discuss how our AI solutions can drive your success.
+              Let&apos;s discuss how our AI solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact"

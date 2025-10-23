@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Helmet, TrendingUp } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -137,7 +137,7 @@ const CaseStudiesPage: React.FC = () => {
                             {Object.values(study.results)[1]}
                           </div>
                           <div className="text-sm text-gray-600">
-                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                            {Object.keys(study.results)[1].replace(/([A-Z])/g, &apos; $1').replace(/^./, str => str.toUpperCase())}
                           </div>
                         </div>
                       </div>

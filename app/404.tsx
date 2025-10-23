@@ -3,9 +3,9 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { ArrowRight, BarChart, Brain, CheckCircle, Clock, Database, Globe, Settings, Shield, Star, Target, TrendingUp, Users, Zap } from 'lucide-react'
 
-const 404Page: React.FC = () => {
+const NotFoundPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -144,4 +144,4 @@ const 404Page: React.FC = () => {
   );
 };
 
-export default 404Page;
+export default NotFoundPage;

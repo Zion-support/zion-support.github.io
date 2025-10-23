@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Smartphone } from 'lucide-react';
+import { CheckCircle, Cloud, Code, Database, Helmet, Smartphone } from 'lucide-react';
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
     {

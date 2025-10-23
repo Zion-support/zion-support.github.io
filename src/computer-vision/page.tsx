@@ -1,4 +1,5 @@
 import React from 'react';
+import { Phone } from 'lucide-react'
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -17,7 +18,7 @@ const Page: React.FC = () => {
               This service is currently under development
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              We're working hard to bring you this amazing service. Contact us to learn more about our development timeline.
+              We&apos;re working hard to bring you this amazing service. Contact us to learn more about our development timeline.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

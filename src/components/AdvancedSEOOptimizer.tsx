@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
+import { Helmet } from 'lucide-react'
 
 interface SEOData {
   title: string;
@@ -133,7 +134,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
   const _addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script');
+    const script = document.createElement(&apos;script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     script.id = 'structured-data';

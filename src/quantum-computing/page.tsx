@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Atom, Lock } from 'lucide-react';
+import { Atom, Brain, CheckCircle, Lock, Shield, Star } from 'lucide-react';
 const QuantumComputingPage: React.FC = () => {
   const quantumServices = [
     {
@@ -45,7 +45,7 @@ const QuantumComputingPage: React.FC = () => {
               Quantum Computing Services
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-              Harness the power of quantum mechanics to solve the world's most complex computational problems
+              Harness the power of quantum mechanics to solve the world&apos;s most complex computational problems
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">

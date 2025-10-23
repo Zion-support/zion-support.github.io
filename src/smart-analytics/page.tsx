@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { BarChart, CheckCircle, Phone, Star } from 'lucide-react'
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
@@ -290,7 +291,7 @@ const SmartAnalyticsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Unlock Your Data's Potential?
+            Ready to Unlock Your Data&apos;s Potential?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using Smart Analytics to make data-driven decisions 

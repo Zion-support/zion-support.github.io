@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { CheckCircle, Clock, Mail, Phone, Star } from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -123,7 +124,7 @@ const ConsultationPage: React.FC = () => {
                 Discover how technology can transform your business
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Get a free 30-minute consultation with our technology experts. We'll assess your current setup, 
+                Get a free 30-minute consultation with our technology experts. We&apos;ll assess your current setup, 
                 identify opportunities, and provide actionable recommendations to drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -149,7 +150,7 @@ const ConsultationPage: React.FC = () => {
           {/* Benefits Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              What You'll Get
+              What You&apos;ll Get
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {consultationBenefits.map((benefit, index) => (

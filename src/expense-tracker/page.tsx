@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Receipt } from 'lucide-react';
+import { CheckCircle, Phone, Receipt, Star } from 'lucide-react';
 
 const ExpenseTrackerPage: React.FC = () => {
   const features = [

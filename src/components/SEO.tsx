@@ -4,6 +4,7 @@
  * Provides comprehensive SEO meta tags and structured data
  */
 import React from 'react';
+import { Helmet } from 'lucide-react'
 
 export interface SEOProps {
   title?: string;
@@ -18,14 +19,13 @@ export interface SEOProps {
   canonical?: string;
   noIndex?: boolean;
   structuredData?: Record<string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterCard?: &apos;summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
   alternateLocales?: { locale: string; url: string }[];
 }
 const defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+  description: 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
     'AI',
     'artificial intelligence',
@@ -126,7 +126,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:site" content="@ziontechgroup" />
       {author && <meta name="twitter:creator" content={`@${author}`} />}
       {/* Article Meta Tags */}
-      {type === 'article' && (
+      {type === &apos;article' && (
         <>
           {publishDate && <meta property="article:published_time" content={publishDate} />}
           {modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}

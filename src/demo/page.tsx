@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { CheckCircle, Clock, Mail, Phone, Star } from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';

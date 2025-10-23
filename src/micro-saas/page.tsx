@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react';
+import { Battery, BookOpen, CheckCircle, Cog, Headset, Keyboard, Laptop, Monitor, Mouse, Power, Printer, Router, Server, Settings2, ShieldCheck, Speaker, Tablet, Watch, Webcam, Wifi } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

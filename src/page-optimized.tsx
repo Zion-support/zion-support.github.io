@@ -7,7 +7,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 const EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
-  import('./components/NewestContent2025Banner').catch(() =>
+  import(&apos;./components/NewestContent2025Banner').catch(() =>
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
   )
 );

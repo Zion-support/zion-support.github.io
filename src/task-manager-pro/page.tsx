@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckSquare } from 'lucide-react';
+import { CheckCircle, CheckSquare, Phone, Star } from 'lucide-react';
 
 const TaskManagerProPage: React.FC = () => {
   const features = [

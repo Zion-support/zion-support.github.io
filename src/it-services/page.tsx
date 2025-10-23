@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react';
+import { ArrowRight, Battery, CheckCircle, Cog, FileText, Headset, Keyboard, Laptop, Lock, Monitor, Mouse, Power, Printer, Rocket, Router, Server, Settings2, ShieldCheck, Smartphone, Speaker, Star, Tablet, Watch, Webcam } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -371,7 +371,7 @@ const ITServicesPage: React.FC = () => {
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
                   {React.isValidElement(service.icon) ? service.icon : 
-                   typeof service.icon === 'function' ? React.createElement(service.icon as any, { className: "w-8 h-8" }) : 
+                   typeof service.icon === &apos;function' ? React.createElement(service.icon as any, { className: "w-8 h-8" }) : 
                    <div className="w-8 h-8 bg-cyan-400 rounded" />}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>

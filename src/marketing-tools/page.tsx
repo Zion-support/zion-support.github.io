@@ -1,4 +1,5 @@
 import React from 'react';
+import { CheckCircle, Helmet, Mail, MapPin, Phone } from 'lucide-react'
 
 const MarketingToolsPage: React.FC = () => {
   const marketingTools = [

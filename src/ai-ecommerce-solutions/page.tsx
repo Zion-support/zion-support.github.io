@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BarChart3 } from 'lucide-react';
+import { BarChart3, CheckCircle, Helmet, Shield, Users, Zap } from 'lucide-react';
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
     {
@@ -333,7 +333,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"Zion Tech Group's AI e-commerce platform increased our online sales by 150% in just 6 months. The personalized recommendations are incredible!"</p>
+              <p className="text-gray-600 mb-4 italic">"Zion Tech Group&apos;s AI e-commerce platform increased our online sales by 150% in just 6 months. The personalized recommendations are incredible!"</p>
               <div className="font-semibold text-gray-900">Sarah Johnson</div>
               <div className="text-sm text-gray-500">CEO, Fashion Forward</div>
             </div>

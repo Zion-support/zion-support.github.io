@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'lucide-react'
 
 interface SEOHeadProps {
   title?: string;
@@ -60,7 +61,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Article specific meta tags */}
-      {type === 'article' && (
+      {type === &apos;article' && (
         <>
           {publishedTime && <meta property="article:published_time" content={publishedTime} />}
           {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}

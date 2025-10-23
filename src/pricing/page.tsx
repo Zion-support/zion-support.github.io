@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { CheckCircle, Mail, Phone } from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -171,7 +172,7 @@ const PricingPage: React.FC = () => {
                         : 'bg-gray-700 text-white hover:bg-gray-600'
                     }`}
                   >
-                    {plan.popular ? 'Contact Sales' : plan.cta}
+                    {plan.popular ? &apos;Contact Sales' : plan.cta}
                   </a>
                 </div>
               ))}

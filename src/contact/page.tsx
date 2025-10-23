@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Send } from 'lucide-react';
+import { CheckCircle, Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -90,7 +90,7 @@ const ContactPage: React.FC = () => {
               <div className="text-center py-8">
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Thank You!</h3>
-                <p className="text-gray-300">We'll get back to you within 24 hours.</p>
+                <p className="text-gray-300">We&apos;ll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
