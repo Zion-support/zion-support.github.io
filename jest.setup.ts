@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Jest-DOM matchers
 import '@testing-library/jest-dom'
 // Polyfill fetch and enable fetch mocks
@@ -20,31 +19,12 @@ Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false, // Default to false (light theme)
-=======
-// Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from "util";
-
-// Jest types are now provided by @types/jest
-(
-  global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }
-).TextEncoder = TextEncoder;
-(
-  global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }
-).TextDecoder = TextDecoder;
-
-// Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
->>>>>>> origin/main
     media: query,
     onchange: null,
     addListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-<<<<<<< HEAD
     dispatchEvent: jest.fn()
   }))
 });
@@ -82,30 +62,3 @@ if (typeof performance.getEntriesByType !== 'function') {
 }
 // Ensure all code paths use the mock implementation
 // global.fetch = fetchMock
-=======
-    dispatchEvent: jest.fn(),
-  })),
-});
-
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as unknown as typeof IntersectionObserver;
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock window.scrollTo
-Object.defineProperty(window, "scrollTo", {
-  writable: true,
-  value: jest.fn(),
-});
->>>>>>> origin/main
