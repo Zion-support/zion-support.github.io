@@ -59,13 +59,11 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
 
-=======
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Page</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Advanced page solutions powered by AI technology.</p>p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started</button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/ar-vr-solutions/page.tsx
             </div>
           </div>
         </section>
@@ -80,10 +78,8 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI technology that drives results
 
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/ar-vr-solutions/page.tsx
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -121,10 +117,8 @@ const PagePage: React.FC = () => {
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
 
-=======
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Us</button>
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/ar-vr-solutions/page.tsx
               </div>
             </div>
           </div>
@@ -143,5 +137,3 @@ export default PagePage
 </button>
 </button>
 </h1>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/ar-vr-solutions/page.tsx

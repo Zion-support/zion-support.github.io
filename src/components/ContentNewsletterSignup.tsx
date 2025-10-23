@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState } from 'react'
-import { Mail, ArrowRight } from 'lucide-react'
-=======
 import { Mail, ArrowRight } from 'lucide-react';
 'use client';
-<<<<<<< HEAD
-import React, { useState } from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -35,7 +27,6 @@ const ContentNewsletterSignup: React.FC = () => {
       </section>
     )
   }
-=======
 import {MailArrowRight} from 'lucide-react';
 import React, {useState} from 'react';
 
@@ -57,7 +48,6 @@ constContentNewsletterSignup: React.FC= () =>{const [emailsetEmail] = useState('
   if (isSubmitte d) {return (
     <sectionclassName="mb-16"aria-labelledby="newsletter-heading"><divclassName="bg-gradient-to-r from-green-600to-emerald-600text-white p-8rounded-xltext-center"><divclassName="text-4xlmb-4">✅</di><h2className="text-2 xlfont-boldmb-2">ThankYou!</h><pclassName="text-green-100">You've been successfully subscribed toournewsletter.</p></di></sectio>);
  }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   return (
   <sectionclassName="mb-16"aria-labelledby="newsletter-heading"><divclassName="bg-gradient-to-r from-purple-600to-blue-600text-whitep-8rounded-xl"><divclassName="max-w-2 xlmx-autotext-center"><id="newsletter-heading"className="text-2 xlsm:text-3 xlfont-boldmb-4"></id="newsletter-heading"className="text-2 xlsm:text-3 xlfont-boldmb-4">Stay Updated with AI Innovation
         </h><spanclassName="text-purple-100mb-6"></spa></className="text-purple-100mb-6">Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
@@ -72,29 +62,6 @@ constContentNewsletterSignup: React.FC= () =>{const [emailsetEmail] = useState('
           </di><
              type="submit"
               disabled={isSubmitting}
-<<<<<<< HEAD
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-            ></button>
-              {isSubmitting ? (
-                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
-              ) : (
-                <>
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </>
-              )}
-            </button>
-          </form>
-          <p className="text-xs text-purple-200 mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
-      </div>
-    </section>
-  )
-}
-export default ContentNewsletterSignup
-=======
              className="bg-white text-purple-600px-6 py-3 rounded-lg font-semiboldhover:bg-purple-50transition-colorsdisabled:opacity-50 disabled:cursor-not-allowed flexitems-centerjustify-center"
             ></
              type="submit"
@@ -109,4 +76,3 @@ export default ContentNewsletterSignup
   );
 };
 export default ContentNewsletterSignup;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

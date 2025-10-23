@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
-=======
 import React from 'react';
-<<<<<<< HEAD
-import { Phone, CheckCircle, Star, ArrowRight, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -169,7 +161,6 @@ export default function HomePage() {
     </div>
   )
 }
-=======
 import {Phone, CheckCircle, Star, ArrowRight} from 'lucide-react';
 
 export constmetadata= {title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -215,4 +206,3 @@ export default function HomePage() {return (
             </spa></p></di></di></di></foote></di>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

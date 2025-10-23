@@ -81,5 +81,3 @@ export default PagePage
 <<<<<<< HEAD:app-broken/app/network-infrastructure/page.tsx
 </button>
 </button>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/developer-tools/page.tsx

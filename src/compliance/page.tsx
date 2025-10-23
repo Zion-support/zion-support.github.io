@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { ArrowLeft, FileText, Lock } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Shield, Users } from 'lucide-react'
-import { Award } from 'lucide-react'
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { ArrowLeft, FileText, Lock, CheckCircle, Shield, Users, Check, Award } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const CompliancePage: React.FC = () => {
   const certifications = [
@@ -137,7 +123,6 @@ const CompliancePage: React.FC = () => {
     </>
   )
 }
-=======
 import {ArrowLeft, FileText, Lock, CheckCircle, Users, Shield, Award, Award} from 'lucide-react';;;
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
@@ -174,6 +159,5 @@ constCompliancePage: React.FC= () =>{constcertifications= [
           </a><divclassName="mt-8 text-smtext-blue-200"><p>Compliance team available Monday-Friday,9AM-5PMEST</p></di></di></sectio></di><Footer /></>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 export default CompliancePage

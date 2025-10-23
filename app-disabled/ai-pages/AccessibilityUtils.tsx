@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client"
-import React from "react"
-
-const AccessibilityUtils: React.FC = () => {
-  return null
-}
-
-export default AccessibilityUtils
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -154,7 +143,6 @@ const AccessibilityUtilsPage: React.FC = () => {
     </>
   );
 };
-=======
 "useclient";
 import React from "react";
 
@@ -162,7 +150,5 @@ import React from "react";
 constAccessibilityUtils: React.FC= () => {return (
 
   );};
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 export default AccessibilityUtilsPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

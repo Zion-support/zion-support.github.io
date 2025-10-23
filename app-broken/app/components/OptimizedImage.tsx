@@ -35,7 +35,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 Learn More
               </button>
 
-=======
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Page Optimized</span>
               <br />
               <span className="text-white">Solutions</span>
@@ -48,7 +47,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More</button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/page-optimized.tsx
             </div>
           </div>
         </div>
@@ -64,10 +62,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our optimizedimage solutions deliver unmatched performance, security, and scalability.
             </p>
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Page Optimized?</h2>h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our page optimized solutions deliver unmatched performance, security, and scalability.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/page-optimized.tsx
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -92,10 +88,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our optimizedimage solutions for your business.
             </p>
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our page optimized solutions for your business.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/page-optimized.tsx
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
               <div key={index} className="flex items-start space-x-3">
@@ -117,10 +111,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your optimizedimage needs and get a customized solution.
             </p>
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page optimized needs and get a customized solution.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/page-optimized.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 <Phone className="mr-2 h-5 w-5" />
@@ -144,10 +136,8 @@ export default OptimizedImagePage
 </h2>
 </button>
 </span>
-=======
   </button>
   </button>
   </h2>
   </button>
   </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/page-optimized.tsx

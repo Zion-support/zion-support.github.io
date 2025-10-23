@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client"
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-=======
 "useclient";
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 const PerformanceOptimizationsPage: React.FC = () => {
   const features = [
@@ -152,4 +146,3 @@ const PerformanceOptimizationsPage: React.FC = () => {
 };
 
 export default PerformanceOptimizationsPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

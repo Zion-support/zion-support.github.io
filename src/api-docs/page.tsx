@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Key, Copy } from 'lucide-react'
-import { Code } from 'lucide-react'
-import { Check } from 'lucide-react'
-=======
 'use client';
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Key, Copy, Code, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
@@ -23,7 +8,6 @@ const ApiDocsPage: React.FC = () => {
     setCopiedCode(id)
     setTimeout(() => setCopiedCode(null), 2000)
   }
-=======
 import React, {useState} from 'react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
@@ -37,7 +21,6 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null),2000);
  };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
   constapiEndpoints= [
     {id: 'ai-chat',
@@ -69,89 +52,6 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
   ]
 
   return (
-<<<<<<< HEAD
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
-        <Navigation />
-        <div className="container mx-auto px-4 py-8">
-          {/* Hero Section */}
-          <section className="text-center mb-16 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
-            <div className="relative z-10 py-16 px-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"></h1>
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  API Documentation
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Integrate with our powerful AI and IT services through our comprehensive REST API.
-              </p>
-            </div>
-          </section>
-          {/* API Endpoints */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
-            <div className="space-y-6">
-              {apiEndpoints.map((endpoint) => (
-                <div key={endpoint.id} className="bg-gray-800 rounded-lg p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-4">
-                      <span className={`px-3 py-1 rounded text-sm font-semibold ${
-                        endpoint.method === 'POST' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
-                      }`}>
-                        {endpoint.method}
-                      </span>
-                      <code className="text-cyan-400 font-mono">{endpoint.endpoint}</code>
-                    </div>
-                    <button
-                      onClick={() =></button> copyToClipboard(endpoint.example, endpoint.id)}
-                      className="flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors"
-                    >
-                      {copiedCode === endpoint.id ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                      <span>{copiedCode === endpoint.id ? 'Copied!' : 'Copy'}</span>
-                    </button>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{endpoint.title}</h3>
-                  <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                  <div className="bg-gray-900 rounded p-4 overflow-x-auto">
-                    <pre className="text-sm text-gray-300 whitespace-pre-wrap"></p>{endpoint.example}</pre>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-          {/* CTA Section */}
-          <section className="text-center py-16">
-            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Contact us for API access and integration support.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  <Key className="w-5 h-5" />
-                  +1 302 464 0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  <Code className="w-5 h-5" />
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
   <><divclassName="min-h-screen bg-gradient-to-br from-gray-90 0via-indigo-900to-purple-900"><Navigation /><divclassName="container mx-autopx-4py-8">{/* HeroSection */}
         <sectionclassName="text-centermb-16relativeoverflow-hidden"><divclassName="absolute inset-0 bg-gradient-to-r from-indigo-60 0/20to-purple-600/20rounded-3xl"></di><divclassName="relative z-10py-16px-4"><spanclassName="text-4 xlmd:text-6 xl font-bold text-whitemb-6leading-tight"></className="text-4 xlmd:text-6 xl font-bold text-whitemb-6leading-tight"><spanclassName="bg-gradient-to-r from-cyan-400via-blue-50 0to-purple-600bg-clip-texttext-transparent"></className="bg-gradient-to-r from-cyan-400via-blue-50 0to-purple-600bg-clip-texttext-transparent">API Documentation
               </spa></h><spanclassName="text-xl text-gray-300mb-8 max-w-3xlmx-auto"></className="text-xl text-gray-300mb-8 max-w-3xlmx-auto">Integrate with our powerful AI and IT services through our comprehensive REST API.
@@ -179,6 +79,5 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
               </a></di></di></sectio></di></di><Footer /></>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 export default ApiDocsPage

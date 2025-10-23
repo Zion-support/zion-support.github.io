@@ -1,17 +1,7 @@
 'use client'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-interface ContentNewsletterSignupProps {
-  title?: string
-=======
 import React, {useState} from 'react'
 import {Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap} from 'lucide-react'
 interface ContentNewsletterSignupProp s {title?: string
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   subtitle?: string
   placeholder?: string
   buttonText?: string
@@ -46,12 +36,6 @@ interface ContentNewsletterSignupProp s {title?: string
      }
       setIsSubscribed(true)
       setEmail('')
-<<<<<<< HEAD
-    } catch (error) {
-      // console.error('Subscription error:', error)
-    } finally {
-      setIsSubmitting(false)
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -83,47 +67,9 @@ const ContentNewsletterSignupPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
     }
   ]
 
-<<<<<<< HEAD
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-  return (
-    <>
-      <Helmet>
-        <title>ContentNewsletterSignup</title>
-        <meta name="description" content="Advanced ContentNewsletterSignup solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ContentNewsletterSignup, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ContentNewsletterSignup
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced ContentNewsletterSignup solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-=======
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 py-16 px-4">
@@ -140,23 +86,9 @@ const ContentNewsletterSignupPage: React.FC = () => {
               <li>✅ Invitation to expert webinars</li>
             </ul>
           </div>
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Welcome to Our Community!
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Thank you for subscribing. You'll receive our latest insights and updates soon.
-          </p>
-          <button
-            onClick={() =></button> setIsSubscribed(false)}
-            className="text-white underline hover:text-blue-200 transition-colors">
-            Subscribe another email
-=======
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
         </div>
       </div>
     );
-=======
     } catch (error) {} finally {setIsSubmitting(false)
    }
   }
@@ -178,38 +110,9 @@ const ContentNewsletterSignupPage: React.FC = () => {
             Subscribe another email
 
       </di></di>)
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   }
 
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="text-6xl mb-6">📧</div>
-        <h2 className="text-4xl font-bold text-white mb-4">Stay Ahead with AI Insights</h2>h2>
-        <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">Get exclusive access to our latest AI breakthroughs, enterprise transformation guides, </p>
-          and cutting-edge content that's transforming businesses worldwide.
-        </p>
-
-        <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Join 10,000+ Enterprise Leaders</h3>h3>
-          
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                required
-              />
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >{isSubmitting ? 'Subscribing...' : 'Get Free Content'}</button>button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
@@ -241,16 +144,6 @@ const ContentNewsletterSignupPage: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-          {/* Newsletter Form */}
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  Email Address
-                <input
-                  type="email"
-=======
   <divclassName="py-20px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900"><divclassName="max-w-4xlmx-auto"><divclassName="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20"><divclassName="text-centermb-12"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">{title}
           </h><spanclassName="text-xl text-gray-300max-w-2xlmx-auto"></className="text-xl text-gray-300max-w-2xlmx-auto">{subtitle}
           </p><divclassName="space-y-4">{features.map((featureindex) => (
@@ -259,33 +152,11 @@ const ContentNewsletterSignupPage: React.FC = () => {
         <divclassName="bg-white/10backdrop-blur-sm border border-white/20rounded-2xlp-8"><formonSubmit={handleSubmit}className="space-y-6"><di v><labelhtmlFor="email"className="block text-sm font-mediumtext-whitemb-2">Email Address
 
               <inputtype="email"
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
                   value={email}
                   onChange={(e) =>setEmail(e.target.value)}
                   placeholder={placeholder}
                  requiredclassName="w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent"
                 />
-<<<<<<< HEAD
-              </div>
-              <button
-                type="submit"
-                disabled={isLoading || !email}
-                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"></button>
-                {isLoading ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
-                    Subscribing...
-                  </>
-                ) : (
-                  <>
-                    {buttonText}
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </>
-                )}
-              </button>
-              <p className="text-sm text-blue-200 text-center">
-                We respect your privacy. Unsubscribe at any time.
-=======
         </section>
 
         {/* Benefits Section */}
@@ -295,7 +166,6 @@ const ContentNewsletterSignupPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -332,12 +202,7 @@ const ContentNewsletterSignupPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ContentNewsletterSignupPage;
-=======
 export default ContentNewsletterSignup;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
             </di><
                type="submit"
                 disabled={isLoading ||!email}
@@ -353,4 +218,3 @@ export default ContentNewsletterSignup;
             </p></for></di></di></di></di>)
 }
 export defaultContentNewsletterSignup</labe></butto></ContentNewsletterSignupProp>
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

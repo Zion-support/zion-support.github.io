@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Lock, BarChart3, FileText } from 'lucide-react'
-import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react'
-import { MapPin } from 'lucide-react'
-=======
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Lock, BarChart3, FileText, Phone, Mail, MapPin, ArrowRight, Brain, Zap } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const Footer: React.FC = () => {
   const microSaasServices = [
@@ -287,7 +276,6 @@ const Footer: React.FC = () => {
     </footer>
   )
 }
-=======
 import {Link} from 'react-router-do m';
 import {Lock, BarChart3, FileText, Phone, Mail, Zap, Brain, ArrowRight} from 'lucide-react';;
 
@@ -445,6 +433,5 @@ constFooter: React.FC= () =>{constmicroSaasServices= [
           </di></di></di></di></foote>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 export default Footer

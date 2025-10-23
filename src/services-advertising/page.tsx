@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-import { ArrowLeft } from 'lucide-react'
-import { CheckCircle, Target, ArrowRight } from 'lucide-react'
-
-=======
 import React from 'react';
-<<<<<<< HEAD
-import { ArrowLeft, CheckCircle, ArrowRight, Target, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -346,7 +337,6 @@ export default function ServicesAdvertisingPage() {
       </section>
     </div>
   )
-=======
 import {ArrowLeft, CheckCircle, Target, ArrowRight} from 'lucide-react';;
 export default function ServicesAdvertisingPage() {return (
     <divclassName="min-h-screenbg-gradient-to-brfrom-slate-50to-blue-50">{/* Header */}
@@ -399,5 +389,4 @@ export default function ServicesAdvertisingPage() {return (
             >View Success Stories
           </a></di></di></sectio></di>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 }

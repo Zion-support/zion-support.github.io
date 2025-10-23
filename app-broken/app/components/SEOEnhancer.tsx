@@ -49,7 +49,6 @@ const LayoutPage: React.FC = () => {
         <title>SEOEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEOEnhancer, AI solutions, IT services, Zion Tech Group, seoenhancer" />
->>>>>>>> origin/main:app-broken/app/components/SEOEnhancer.tsx
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -63,7 +62,6 @@ const LayoutPage: React.FC = () => {
 ========
                 SEOEnhancer
 
->>>>>>>> origin/main:app-broken/app/components/SEOEnhancer.tsx
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -72,7 +70,6 @@ const LayoutPage: React.FC = () => {
               Transform your business with our advanced layout solutions.
 ========
               Transform your business with our advanced seoenhancer solutions.
->>>>>>>> origin/main:app-broken/app/components/SEOEnhancer.tsx
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -104,7 +101,6 @@ const LayoutPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our seoenhancer solutions deliver unmatched performance, security, and scalability.
->>>>>>>> origin/main:app-broken/app/components/SEOEnhancer.tsx
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -132,7 +128,6 @@ const LayoutPage: React.FC = () => {
               Experience the power of our layout solutions for your business.
 ========
               Experience the power of our seoenhancer solutions for your business.
->>>>>>>> origin/main:app-broken/app/components/SEOEnhancer.tsx
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -157,7 +152,6 @@ const LayoutPage: React.FC = () => {
               Contact our experts to discuss your layout needs and get a customized solution.
 ========
               Contact our experts to discuss your seoenhancer needs and get a customized solution.
->>>>>>>> origin/main:app-broken/app/components/SEOEnhancer.tsx
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -189,4 +183,3 @@ export default SEOEnhancerPage
 </h2>
 </button>
 </span>
->>>>>>>> origin/main:app-broken/app/components/SEOEnhancer.tsx
