@@ -4,6 +4,13 @@ export interface LogContext {
   userId?: string | undefined;
   sessionId?: string | undefined;
   timestamp?: number | undefined;
+  config?: any;
+  stats?: any;
+  error?: any;
+  storageType?: string;
+  executionTime?: number;
+  interval?: number;
+  nextRun?: any;
 }
 
 export interface LogEntry {
