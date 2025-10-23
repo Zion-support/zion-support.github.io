@@ -24,8 +24,8 @@ describe('OptimizedImage Component', () => {
 
   it('renders with custom className', () => {
     const { container } = render(<OptimizedImage {...defaultProps} className="test-class" />);
-    const wrapper = container.firstChild as HTMLElement;
-    expect(wrapper).toHaveClass('test-class');
+    const img = container.querySelector('img') as HTMLElement;
+    expect(img).toHaveClass('test-class');
   });
 
   it('renders with width and height', () => {
