@@ -42,7 +42,7 @@ export function usePerformanceOptimization(
   const _optimizationRef = useRef<any>({});
 
   useEffect(() => {
-    if (enablePerformanceMonitoring) {
+    if (enablePerformanceMonitoring && typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         setPerformanceMetrics((prev: any) => ({
@@ -51,7 +51,11 @@ export function usePerformanceOptimization(
         }));
       });
 
-      observer.observe({ entryTypes: ["measure", "navigation", "resource"] });
+      try {
+        observer.observe({ entryTypes: ["measure", "navigation", "resource"] });
+      } catch (error) {
+        console.warn('PerformanceObserver not supported:', error);
+      }
 
       return () => observer.disconnect();
     }

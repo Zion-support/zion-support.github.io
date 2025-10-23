@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Head from "next/head";
+import { Helmet } from "react-helmet-async";
 import { Box, Zap, Download, ArrowRight, CheckCircle } from "lucide-react";
 
 const AI3DModelGeneratorPage: React.FC = () => {
@@ -32,12 +32,12 @@ const AI3DModelGeneratorPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Head>
+    <React.Fragment>
+      <Helmet>
         <title>AI 3D Model Generator - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Generate 3D models using AI technology. Create high-quality 3D assets with our advanced AI-powered model generator." />
         <meta property="og:type" content="website" />
-      </Head>
+      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -160,7 +160,7 @@ const AI3DModelGeneratorPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 
