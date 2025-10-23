@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckSquare } from 'lucide-react'
 import { CheckCircle, Star, Phone } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 constTaskManagerProPage: React.FC= () =>{constfeatures= [
     {

@@ -12,6 +12,7 @@ interface EnhancedSEOHeadProps {
 
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>{title}</title>
@@ -118,3 +119,5 @@ export default EnhancedSEOHeadPage;
   )
 }
 export default EnhancedSEOHead
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

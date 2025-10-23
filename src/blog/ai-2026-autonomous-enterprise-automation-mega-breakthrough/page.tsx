@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Star } from 'lucide-react'
 import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 // import {Metadata} from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility

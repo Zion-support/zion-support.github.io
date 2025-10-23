@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 'use client'
 import React, { useEffect, useCallback, useRef } from 'react'
 import { Helmet } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 interface SEOData {
   title: string

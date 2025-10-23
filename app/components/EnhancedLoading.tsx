@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -22,3 +23,5 @@ export default EnhancedLoadingPage;
   )
 }
 export default EnhancedLoadingPage
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

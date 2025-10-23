@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -138,6 +139,8 @@ return (
 Our Impact in Numbers
 <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
 See how we've transformed businesses and delivered exceptional results.
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
 <div className="max-w-7xl mx-auto">{/* Header */}</div>
 <div className="text-center mb-16">
@@ -246,8 +249,11 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <Zap className="w-5 h-5" />
 Get Started Today
 </button>
+<<<<<<< HEAD
 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"></button>
 View Case Studies
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 </div>
 </div>
 </div>

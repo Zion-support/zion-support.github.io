@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 
 interface PerformanceOptimizationsProps {
@@ -18,3 +19,5 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ cla
 };
 
 export default PerformanceOptimizationsPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

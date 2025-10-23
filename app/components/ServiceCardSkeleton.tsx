@@ -40,6 +40,7 @@ const ServiceCardSkeletonPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+<<<<<<< HEAD
 
 const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {
   return (
@@ -51,3 +52,5 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '
 };
 
 export default ServiceCardSkeletonPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

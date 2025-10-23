@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import React from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { CheckCircle, Target, ArrowRight } from 'lucide-react'
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gray-100 py-8">

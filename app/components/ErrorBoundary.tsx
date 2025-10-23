@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -55,6 +56,8 @@ Error Details (Development)
 </summary>
 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></p>
 {this.state.error.toString()}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 {this.state.errorInfo?.componentStack}
 </pre>
 </details>

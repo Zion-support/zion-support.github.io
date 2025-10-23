@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -23,3 +24,5 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '' }) =
 };
 
 export default SecurityEnhancerPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

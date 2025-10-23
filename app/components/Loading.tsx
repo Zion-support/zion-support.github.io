@@ -40,6 +40,7 @@ const LoadingPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+<<<<<<< HEAD
 
 const Loading: React.FC<LoadingProps> = ({ className = '' }) => {
   return (
@@ -51,3 +52,5 @@ const Loading: React.FC<LoadingProps> = ({ className = '' }) => {
 };
 
 export default LoadingPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import React from 'react'
 import { CheckCircle, Phone, Mail, TrendingUp, Helmet } from 'lucide-react'
 import { MapPin } from 'lucide-react'
 import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
     // AI-Powered Developer Tools
