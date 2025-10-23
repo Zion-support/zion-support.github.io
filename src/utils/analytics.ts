@@ -170,8 +170,8 @@ class AnalyticsService {
   private queueEvent(event: AnalyticsEvent): void {
     if (this.queue.length < this.maxQueueSize) {
       this.queue.push(event)
-    }
-  }
+      );
+};
   /**
    * Process queued events;
    */
@@ -180,10 +180,10 @@ class AnalyticsService {
       const event = this.queue.shift()
       if (event) {
         this.trackEvent(event)
-      }
-    }
-  }
-}
+        );
+};
+    );
+};
 // Export singleton instance
 export const analytics = new AnalyticsService();
 // Export convenience functions

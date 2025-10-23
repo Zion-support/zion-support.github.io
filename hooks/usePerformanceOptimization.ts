@@ -1,5 +1,7 @@
 import { useEffect, useCallback, useRef } from 'react';
 
+export default function Page() {
+
 interface PerformanceOptimizationOptions {
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
@@ -40,8 +42,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
               img.removeAttribute('data-src');
               img.classList.add('loaded');
               observerRef.current?.unobserve(img);
-            }
-          }
+              );
+};
         });
       },
       {
@@ -152,17 +154,16 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
             // Long task detected - consider optimization
-          }
-        }
+            );
+};
       });
       
       try {
         observer.observe({ entryTypes: ['longtask'] });
       } catch {
         // Long task observer not supported
-      }
-    }
-
+        );
+};
     // Monitor memory usage
     if ('memory' in performance) {
       const checkMemory = () => {
@@ -237,3 +238,4 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupPerformanceMonitoring,
   };
 };
+}

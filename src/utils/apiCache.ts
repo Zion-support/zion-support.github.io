@@ -166,8 +166,8 @@ export class ApiCache {;
       await this.fetch<T>(url, options, cacheConfig)
     } catch (error) {
       // Silent fail for prefetch
-      }
-  }
+        );
+};
   /**
    * Generate cache key from URL and options;
    */

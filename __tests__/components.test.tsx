@@ -1,12 +1,10 @@
 import { render, screen } from '@testing-library/react';
+
+export default function Page() {
 import '@testing-library/jest-dom';
 
 // Mock components for testing
-const MockComponent = () => <div data-testid="mock-component">Mock Component</div>;
-
-describe('Components', () => {
-  it('renders mock component', () => {
-    render(<MockComponent />);
+const MockComponent = () => <div data-testid="mock-component">Mock Component</div><MockComponent />);
     expect(screen.getByTestId('mock-component')).toBeInTheDocument();
   });
 
@@ -15,3 +13,4 @@ describe('Components', () => {
     expect(screen.getByText('Mock Component')).toBeInTheDocument();
   });
 });
+}

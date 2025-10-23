@@ -235,9 +235,13 @@ focusableElements[nextIndex]?.focus()
     const mediaQuery = window.matchMedia('(prefers-contrast: high)')
     const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
-        document.body.classList.add('high-contrast')
+        if (document.body && document.body.classList) {
+          document.body.classList.add('high-contrast')
+        }
       } else {
-        document.body.classList.remove('high-contrast')
+        if (document.body && document.body.classList) {
+          document.body.classList.remove('high-contrast')
+        }
       }
     }
     mediaQuery.addEventListener('change', handleContrastChange)

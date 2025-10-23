@@ -1,9 +1,8 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const TestRunnerPage: React.FC = () => {
   const features = [
@@ -43,11 +42,15 @@ const TestRunnerPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD:app-broken/app/utils/testRunner.tsx
       <Helmet>
         <title>Test</title>
         <meta name="description" content="Advanced TestRunner solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, TestRunner, AI solutions, intelligent automation" />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f:app/ai-autonomous-systems/page.tsx
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

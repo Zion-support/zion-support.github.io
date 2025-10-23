@@ -1,0 +1,15 @@
+import React from "react";
+
+export default function Page() {
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./app/styles/globals.css";
+
+const root = document.getElementById("root");
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+};
