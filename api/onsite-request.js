@@ -25,19 +25,19 @@ export default async function handler(req, res) {
 
     // Read existing requests
     let requests = [];
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      requests = JSON.parse(data);
+    try {
+      if (fs.existsSync(file)) {
+        const data = fs.readFileSync(file, 'utf8');
+        requests = JSON.parse(data);
+      }
+    } catch (error) {
+      // console.error('Error reading existing requests:', error);
+      requests = [];
     }
-  } catch (error) {
-    // console.error('Error reading existing requests:', error);
-    existing = [];
-  }
- 7d61abb513bd1b3298af51455f9b309f27c40728
 
     // Add new request
     const newRequest = {
-id: Date.now().toString(),
+      id: Date.now().toString(),
       name,
       email,
       company,
@@ -60,5 +60,6 @@ id: Date.now().toString(),
     });
   } catch (error) {
     console.error('Onsite request error:', error);
-    res.status(500).json({ error: 'Internal server error' });  }
+    res.status(500).json({ error: 'Internal server error' });
+  }
 }
