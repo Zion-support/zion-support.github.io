@@ -23,16 +23,16 @@ describe('OptimizedImage Component', () => {
   });
 
   it('renders with custom className', () => {
-    render(<OptimizedImage {...defaultProps} className="test-class" />);
-    const img = screen.getByAltText('Test image');
-    expect(img).toHaveClass('test-class');
+    const { container } = render(<OptimizedImage {...defaultProps} className="test-class" />);
+    const wrapper = container.firstChild as HTMLElement;
+    expect(wrapper).toHaveClass('test-class');
   });
 
   it('renders with width and height', () => {
-    render(<OptimizedImage {...defaultProps} width={300} height={200} />);
-    const img = screen.getByAltText('Test image');
-    expect(img).toHaveAttribute('width', '300');
-    expect(img).toHaveAttribute('height', '200');
+    const { container } = render(<OptimizedImage {...defaultProps} width={300} height={200} />);
+    const wrapper = container.firstChild as HTMLElement;
+    expect(wrapper).toHaveStyle('width: 300px');
+    expect(wrapper).toHaveStyle('height: 200px');
   });
 
   it('shows loading skeleton initially', () => {
