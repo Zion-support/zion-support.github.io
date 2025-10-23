@@ -1,48 +1,55 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const pages = [
-  '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/blog',
-  '/case-studies',
-  '/tutorials',
-  '/support',
-  '/careers',
-  '/pricing',
-  '/demo',
-  '/consultation',
-  '/privacy',
-  '/terms',
-  '/cookies',
-  '/sitemap',
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
-  '/team',
-  '/cybersecurity',
-  '/data-analytics',
-  '/web-development',
-  '/mobile-development',
-  '/cloud-infrastructure',
-  '/cybersecurity-solutions',
-  '/ai-analytics',
-  '/ai-chatbot-builder',
-  '/ai-automation',
-  '/ai-cybersecurity'
-];
+// Simple sitemap generator
+const generateSitemap = () => {
+  const baseUrl = "https://ziontechgroup.com";
+  const pages = [
+    "",
+    "/about",
+    "/services",
+    "/ai-services",
+    "/ai-solutions",
+    "/it-services",
+    "/cloud-infrastructure",
+    "/digital-transformation",
+    "/5g-solutions",
+    "/micro-saas-solutions",
+    "/ai-content-generator",
+    "/data-analytics",
+    "/web-development",
+    "/mobile-development",
+    "/database-management",
+    "/network-infrastructure",
+    "/pricing",
+    "/case-studies",
+    "/blog",
+    "/team",
+    "/careers",
+    "/partnerships",
+    "/contact",
+    "/help",
+    "/api-docs",
+    "/privacy",
+    "/terms",
+    "/cookies",
+  ];
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>https://ziontechgroup.com${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+${pages
+  .map(
+    (page) => `  <url>
+    <loc>${baseUrl}${page}</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`).join('\n')}
+    <priority>${page === "" ? "1.0" : "0.8"}</priority>
+  </url>`,
+  )
+  .join("\n")}
 </urlset>`;
 
-fs.writeFileSync(path.join(__dirname, '../dist/sitemap.xml'), sitemap);
-console.log('Sitemap generated successfully');
+  fs.writeFileSync(path.join(__dirname, "../public/sitemap.xml"), sitemap);
+  console.log("Sitemap generated successfully");
+};
+
+generateSitemap();
