@@ -1,127 +1,147 @@
 'use client'
-import React, { Suspense, lazy } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import ErrorBoundary from './components/ErrorBoundary'
-import PerformanceMonitor from './components/PerformanceMonitor'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
-import LoadingSpinner from './components/LoadingSpinner'
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'))
-const AboutPage = lazy(() => import('./about/page'))
-const ContactPage = lazy(() => import('./contact/page'))
-const ServicesPage = lazy(() => import('./services/page'))
-const PricingPage = lazy(() => import('./pricing/page'))
-const CaseStudiesPage = lazy(() => import('./case-studies/page'))
-const BlogPage = lazy(() => import('./blog/page'))
-const TeamPage = lazy(() => import('./team/page'))
-const CareersPage = lazy(() => import('./careers/page'))
-const PrivacyPage = lazy(() => import('./privacy/page'))
-const TermsPage = lazy(() => import('./terms/page'))
-const CookiesPage = lazy(() => import('./cookies/page'))
-// AI Services
-const AiServicesPage = lazy(() => import('./ai-services/page'))
-const AiMarketingPage = lazy(() => import('./ai-marketing/page'))
-const AiAutomationPage = lazy(() => import('./ai-automation/page'))
-const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'))
-const AiFintechPage = lazy(() => import('./ai-fintech/page'))
-const AiContentGenerationPage = lazy(() => import('./ai-content-generation/page'))
-const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'))
-const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'))
-const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'))
-const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'))
-const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'))
-const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'))
-// IT Services
-const ItServicesPage = lazy(() => import('./it-services/page'))
-const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'))
-const ItSupportPage = lazy(() => import('./it-support/page'))
-const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'))
-const CybersecurityPage = lazy(() => import('./cybersecurity/page'))
-// Emerging Technologies
-const BlockchainPage = lazy(() => import('./blockchain/page'))
-const QuantumComputingPage = lazy(() => import('./quantum-computing/page'))
-const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'))
-const ARVRSolutionsPage = lazy(() => import('./ar-vr-solutions/page'))
-const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'))
-// Micro SaaS
-const MicroSaasPage = lazy(() => import('./micro-saas/page'))
-// Support Pages
-const DocsPage = lazy(() => import('./docs/page'))
-const ApiDocsPage = lazy(() => import('./api-docs/page'))
-const SupportPage = lazy(() => import('./support/page'))
-const StatusPage = lazy(() => import('./status/page'))
-const ConsultationPage = lazy(() => import('./consultation/page'))
-// Loading component
-const AppLoadingSpinner = () => (
-<LoadingSpinner
-size="xl"
-text="Loading Zion Tech Group..."
-fullScreen
-/>
-)
-const App: React.FC = () => {
-return (
-<ErrorBoundary>
-<HelmetProvider>
-<BrowserRouter>
-<div className="App">
-<PerformanceMonitor />
-<AccessibilityEnhancer />
-<Suspense fallback={<AppLoadingSpinner />}>
-<Routes>
-{/* Main Pages */}
-<Route path="/" element={<HomePage />} />
-<Route path="/about" element={<AboutPage />} />
-<Route path="/contact" element={<ContactPage />} />
-<Route path="/services" element={<ServicesPage />} />
-<Route path="/pricing" element={<PricingPage />} />
-<Route path="/case-studies" element={<CaseStudiesPage />} />
-<Route path="/blog" element={<BlogPage />} />
-<Route path="/team" element={<TeamPage />} />
-<Route path="/careers" element={<CareersPage />} />
-<Route path="/privacy" element={<PrivacyPage />} />
-<Route path="/terms" element={<TermsPage />} />
-<Route path="/cookies" element={<CookiesPage />} />
-{/* AI Services */}
-<Route path="/ai-services" element={<AiServicesPage />} />
-<Route path="/ai-marketing" element={<AiMarketingPage />} />
-<Route path="/ai-automation" element={<AiAutomationPage />} />
-<Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-<Route path="/ai-fintech" element={<AiFintechPage />} />
-<Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
-<Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
-<Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
-<Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
-<Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
-<Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
-<Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
-{/* IT Services */}
-<Route path="/it-services" element={<ItServicesPage />} />
-<Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
-<Route path="/it-support" element={<ItSupportPage />} />
-<Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-<Route path="/cybersecurity" element={<CybersecurityPage />} />
-{/* Emerging Technologies */}
-<Route path="/blockchain" element={<BlockchainPage />} />
-<Route path="/quantum-computing" element={<QuantumComputingPage />} />
-<Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
-<Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
-<Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-{/* Micro SaaS */}
-<Route path="/micro-saas" element={<MicroSaasPage />} />
-{/* Support Pages */}
-<Route path="/docs" element={<DocsPage />} />
-<Route path="/api-docs" element={<ApiDocsPage />} />
-<Route path="/support" element={<SupportPage />} />
-<Route path="/status" element={<StatusPage />} />
-<Route path="/consultation" element={<ConsultationPage />} />
-</Routes>
-</Suspense>
-</div>
-</BrowserRouter>
-</HelmetProvider>
-</ErrorBoundary>
-)
-}
-export default App
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+
+const AppPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Zion Tech Group - AI & IT Solutions</title>
+        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
+        <meta name="keywords" content="AI, artificial intelligence, App, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              App
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Leading provider of AI and IT solutions for businesses worldwide.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default AppPage;

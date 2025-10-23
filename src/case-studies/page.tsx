@@ -3,6 +3,10 @@ import React from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { CheckCircle, TrendingUp, Helmet } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+import { ArrowLeft, CheckCircle, TrendingUp, Helmet, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {

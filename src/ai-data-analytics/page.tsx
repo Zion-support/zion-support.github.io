@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React from 'react'
 import { BarChart3 } from 'lucide-react'
 import { CheckCircle, Brain, Target, Database } from 'lucide-react'
 
+=======
+import React from 'react';
+import { BarChart3, CheckCircle, Brain, Target, Database, BarChart, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [
     {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -6,6 +7,14 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { Building } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
+=======
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Building, CheckCircle, Phone, Mail, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {

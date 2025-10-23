@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react'
+=======
+import { CheckCircle, Star, Brain, Shield, Zap, Target, TrendingUp, DollarSign, Check } from 'lucide-react';
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIFintechPage: React.FC = () => {
   const aiFintechServices = [

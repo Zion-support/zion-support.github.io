@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Play } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Camera, Zap } from 'lucide-react'
+=======
+import React from 'react';
+import { Play, Camera, CheckCircle, Zap, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [

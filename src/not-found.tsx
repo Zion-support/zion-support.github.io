@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Phone } from 'lucide-react'
 import { Home } from 'lucide-react'
+=======
+import { Phone } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 export default function NotFound() {
   const popularPages = [

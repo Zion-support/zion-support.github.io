@@ -36,4 +36,8 @@ const LoadingPage: React.FC = () => {
     'Proven track record of success'
   ]
 }
+<<<<<<< HEAD:app-broken/app/components/Loading.tsx
 export default LoadingPage
+=======
+export default PagePage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/performance-optimization/page.tsx

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React, { useState } from 'react'
 import { Send } from 'lucide-react'
@@ -5,6 +6,13 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 import { MapPin, Clock } from 'lucide-react'
+=======
+'use client';
+import React, { useState } from 'react';
+import { Send, CheckCircle, Phone, Mail, MapPin, Check, Clock } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({

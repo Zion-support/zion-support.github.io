@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Play } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Zap, Heart } from 'lucide-react'
+=======
+import React from 'react';
+import { Play, CheckCircle, Zap, Heart, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const AIFitnessCoachPage: React.FC = () => {
   const features = [

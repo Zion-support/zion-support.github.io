@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 'use client'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server } from 'lucide-react'
 import { Phone, Mail, Zap, Brain, Cloud, ArrowRight } from 'lucide-react'
 import { MapPin, Cpu } from 'lucide-react'
+=======
+"use client";
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
+import React, { useState } from "react";
+import Link from "next/link";
+import { ArrowRight, Brain, Menu, X } from "lucide-react";
 const Navigation: React.FC = () => {
+<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [aiServicesOpen, setAiServicesOpen] = useState(false)
@@ -76,22 +84,33 @@ const Navigation: React.FC = () => {
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
     { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
   ]
+=======
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navigationItems = [
+    { name: "Home", href: "/" },
+    { name: "AI Services", href: "/ai-services" },
+    { name: "IT Services", href: "/it-services" },
+    { name: "Micro SaaS", href: "/micro-saas-solutions" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+        <div className="flex justify-between items-center h-16">{/* Logo */}</div>
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>span>
             </Link>
           </div>
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
@@ -264,11 +283,47 @@ const Navigation: React.FC = () => {
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
             ></button>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+=======
+          <div className="hidden md:flex items-center space-x-8">{navigationItems.map((item, index) => (</div>
+              <Link
+                key={index}
+                href={item.href}
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
+            >
+              Get Started
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() =>setIsOpen(!isOpen)}</button>
+              className="text-gray-700 hover:text-purple-600 transition-colors"
+            >
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             </button>
           </div>
         </div>
         {/* Mobile Navigation */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
@@ -405,12 +460,36 @@ const Navigation: React.FC = () => {
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
+=======
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">{navigationItems.map((item, index) => (</div>
+                <Link
+                  key={index}
+                  href={item.href}
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                href="/contact"
+                className="block px-3 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
+              </Link>
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             </div>
           </div>
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+<<<<<<< HEAD
+export default Navigation;
+=======
+export default Navigation;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

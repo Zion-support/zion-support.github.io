@@ -1,251 +1,151 @@
 'use client'
-import React, { useEffect } from 'react'
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    reducedMotion: false,
-    fontSize: 'normal',
-    focusVisible: false
-  })
-  const { trackEvent } = useAnalytics()
-  useEffect(() => {
-    // Add ARIA landmarks
-    const addLandmarks = () => {
-      const main = document.querySelector('main')
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main')
-      }
-      const nav = document.querySelector('nav')
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation')
-      }
-      const footer = document.querySelector('footer')
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo')
-      }
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+
+const EnhancedAccessibilityPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a')
-      skipLink.href = '#main-content'
-      skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50'
-      document.body.insertBefore(skipLink, document.body.firstChild)
-    }
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style')
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important
-          outline-offset: 2px !important
-        }
-        .sr-only {
-          position: absolute
-          width: 1px
-          height: 1px
-          padding: 0
-          margin: -1px
-          overflow: hidden
-          clip: rect(0, 0, 0, 0)
-          white-space: nowrap
-          border: 0
-        }
-        .sr-only.focus:not-sr-only {
-          position: static
-          width: auto
-          height: auto
-          padding: inherit
-          margin: inherit
-          overflow: visible
-          clip: auto
-          white-space: normal
-        }
-      `
-      document.head.appendChild(style)
-    }
-    // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content with Tab
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
-          if (skipLink) {
-            skipLink.focus()
-            event.preventDefault()
-          }
-        }
-        // Close dropdowns with Escape
-        if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]')
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false')
-          })
-        }
-      }
-      document.addEventListener('keydown', handleKeyDown)
-      return () => document.removeEventListener('keydown', handleKeyDown)
-    }
-    // Initialize accessibility enhancements
-    addLandmarks()
-    addSkipLinks()
-    enhanceFocusManagement()
-    const cleanup = addKeyboardNavigation()
-      const header = document.querySelector('header')
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner')
-      }
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
-    setSettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    }))
-    // Apply initial settings
-    applyAccessibilitySettings({
-      ...settings,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    })
-    // Listen for preference changes
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)')
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
-      applyAccessibilitySettings({ ...settings, reducedMotion: e.matches })
-    }
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }))
-      applyAccessibilitySettings({ ...settings, highContrast: e.matches })
-    }
-    motionQuery.addEventListener('change', handleMotionChange)
-    contrastQuery.addEventListener('change', handleContrastChange)
-    // Setup keyboard navigation
-    setupKeyboardNavigation()
-    // Setup focus management
-    setupFocusManagement()
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange)
-      contrastQuery.removeEventListener('change', handleContrastChange)
-    }
-  }, [])
-  return <>{children}</>
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement
-    // Apply high contrast
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast')
-    } else {
-      root.classList.remove('high-contrast')
-    }
-    // Apply reduced motion
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion')
-    } else {
-      root.classList.remove('reduced-motion')
-    }
-    // Apply font size
-    root.classList.remove('font-normal', 'font-large', 'font-extra-large')
-    root.classList.add(`font-${newSettings.fontSize}`)
-    // Apply focus visible
-    if (newSettings.focusVisible) {
-      root.classList.add('focus-visible')
-    } else {
-      root.classList.remove('focus-visible')
-    }
-  }
-  const setupKeyboardNavigation = () => {
-    // Skip to main content functionality
-    const skipLink = document.querySelector('.skip-link')
-    if (skipLink) {
-      skipLink.addEventListener('click', (e) => {
-        e.preventDefault()
-        const main = document.querySelector('main')
-        if (main) {
-          main.focus()
-          main.scrollIntoView()
-        }
-      })
-    }
-    // Trap focus in modals
-    const modals = document.querySelectorAll('[role="dialog"]')
-    modals.forEach(modal => {
-      const focusableElements = modal.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      )
-      const firstElement = focusableElements[0] as HTMLElement
-      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
-              lastElement?.focus()
-              e.preventDefault()
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              firstElement?.focus()
-              e.preventDefault()
-            }
-          }
-        }
-      }
-      modal.addEventListener('keydown', handleKeyDown)
-    })
-  }
-  const setupFocusManagement = () => {
-    // Add focus indicators
-    const style = document.createElement('style')
-    style.textContent = `
-      .focus-visible *:focus {
-        outline: 2px solid #3b82f6
-        outline-offset: 2px
-      }
-      .high-contrast {
-        --tw-bg-opacity: 1
-        --tw-text-opacity: 1
-      }
-      .reduced-motion * {
-        animation-duration: 0.01ms !important
-        animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important
-      }
-      .font-large {
-        font-size: 1.125rem
-      }
-      .font-extra-large {
-        font-size: 1.25rem
-      }
-    `
-    document.head.appendChild(style)
-    // Track focus events for analytics
-    document.addEventListener('focusin', (e) => {
-      trackEvent('focus_event', {
-        category: 'accessibility',
-        label: (e.target as HTMLElement).tagName
-      })
-    })
-  }
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings = { ...settings, ...newSettings }
-    setSettings(updatedSettings)
-    applyAccessibilitySettings(updatedSettings)
-    trackEvent('accessibility_setting_changed', {
-      category: 'accessibility',
-      label: Object.keys(newSettings)[0]
-    })
-  }
-  // Provide accessibility context
-  useEffect(() => {
-    const context = {
-      settings,
-      updateSettings
-    }
-    (window as any).accessibilityContext = context
-  }, [settings])
-  return <>{children}</>
-}
-export default EnhancedAccessibility
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>EnhancedAccessibility</title>
+        <meta name="description" content="Advanced EnhancedAccessibility solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, EnhancedAccessibility, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              EnhancedAccessibility
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced EnhancedAccessibility solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+<<<<<<< HEAD
+export default EnhancedAccessibilityPage;
+=======
+export default EnhancedAccessibility;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

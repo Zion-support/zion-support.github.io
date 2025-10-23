@@ -159,8 +159,13 @@ export const optimizeScrollPerformance = () => {
   }
   // Track Core Web Vitals
   const trackCLS = () => {
+<<<<<<< HEAD
     let clsValue = 0
     let clsEntries: PerformanceEntry[] = []
+=======
+    let clsValue = 0;
+    const clsEntries: PerformanceEntry[] = [];
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean
       value: number

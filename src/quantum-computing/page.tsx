@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Atom, Lock } from 'lucide-react'
 import { CheckCircle, Star, Brain, Shield } from 'lucide-react'
 
+=======
+'use client';
+import React from 'react';
+import { Atom, Lock, CheckCircle, Star, Brain, Shield, Check } from 'lucide-react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const QuantumComputingPage: React.FC = () => {
   const quantumServices = [
     {

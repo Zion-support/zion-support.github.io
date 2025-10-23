@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react'
 import { CheckCircle, Phone, Mail, TrendingUp, Helmet } from 'lucide-react'
 import { MapPin } from 'lucide-react'
+=======
+import { CheckCircle, Phone, Mail, MapPin, TrendingUp, Helmet, Check } from 'lucide-react';
+import React from 'react';
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
