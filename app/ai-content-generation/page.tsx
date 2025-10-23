@@ -171,4 +171,4 @@ Contact Sales
 };
 
 }
-export default AiContentGenerationP;a;g;e;
+export default AiContentGeneration;P;a;g;e;

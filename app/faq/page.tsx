@@ -95,4 +95,4 @@ className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg
 
 }
 
-export default PagePage
+export default PagePage;

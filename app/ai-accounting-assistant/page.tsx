@@ -44,4 +44,4 @@ const AIAccountingAssistantPage: React.FC = () => {
   );
 };
 
-export default AIAccountingAssistantPag;
+export default AIAccountingAssistantPa;g;

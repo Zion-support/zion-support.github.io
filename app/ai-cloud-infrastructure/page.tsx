@@ -115,4 +115,4 @@ Start Your Free Trial
 
 }
 
-export default PagePage
+export default PagePage;

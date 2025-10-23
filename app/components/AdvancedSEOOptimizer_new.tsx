@@ -149,4 +149,4 @@ maxWidth: '300px'
 };
 
 }
-export default AdvancedSEOOptimizer;N;w;
+export default AdvancedSEOOptimize;r;N;w;

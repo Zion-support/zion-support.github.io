@@ -1,13 +1,13 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Lock, Smartphone, FileText, Building, BookOpen, Navigation } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
+import Navigation from 'components/Navigation';
+import Footer from 'components/Footer';
+import PerformanceOptimizer from 'components/PerformanceOptimizer';
+import SEOOptimizer from 'components/SEOOptimizer';
+import AccessibilityEnhancer from 'components/AccessibilityEnhancer';
+import Analytics from 'components/Analytics';
+import SecurityEnhancer from 'components/SecurityEnhancer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));

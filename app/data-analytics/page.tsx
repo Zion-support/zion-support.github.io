@@ -162,4 +162,4 @@ Email Us
 };
 
 }
-export default DataAnalyticsP;a;g;e;
+export default DataAnalytics;P;a;g;e;

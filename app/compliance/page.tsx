@@ -1,108 +1,73 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Shield, FileText, Users, Lock, AlertTriangle, Award } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const CompliancePage: React.FC = () => {
-const features = [
-{
-icon: FileCheck,
-title: 'Compliance Management',
-description: 'Comprehensive compliance management solutions for various industry standards'
-},
-{
-icon: Lock,
-title: 'Security Compliance',
-description: 'Ensure your systems meet the highest security and compliance standards'
-},
-{
-icon: Award,
-title: 'Certification Support',
-description: 'Get support for achieving and maintaining industry certifications'
-},
-{
-icon: Shield,
-title: 'Audit Readiness',
-description: 'Stay audit-ready with continuous compliance monitoring and reporting'
-}
-]
-const benefits = [
-'Advanced compliance technology integration',
-'Real-time compliance monitoring',
-'Enterprise-grade security and compliance',
-'Scalable and flexible compliance solutions',
-'24/7 technical support',
-'Easy integration with existing systems',
-'Cost-effective pricing plans',
-'Proven track record of success'
-];
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with advanced encryption and compliance standards.',
+      benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
+    }
+  ];
+
+  const benefits = [
+    'Increase productivity by 40%',
+    'Reduce operational costs by 30%',
+    'Improve decision making with data insights',
+    'Gain competitive advantage with advanced technology'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<Helmet>
-<title>Compliance | Zion Tech Group</title>
-<meta name="description" content="Professional Compliance services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="compliance, regulatory compliance, IT services, Zion Tech Group, compliance management" />
-</Helmet>
-<div className="container mx-auto px-4 py-16">
-<div className="text-center mb-16">
-<h1 className="text-5xl font-bold text-white mb-6">
-Compliance
-</
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-Ensure your business meets all regulatory and compliance requirements.
-Powered by advanced AI technology and industry expertise.
-</p>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-Our compliance solutions deliver unmatched performance, security, and scalability.
-</p>
-</div>
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-{features.map((feature, index) => (
-<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-<feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-<p className="text-gray-300">{feature.description}</p>
-</div>
-))}
-</div>
-<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-<h2 className="text-3xl font-bold text-white text-center mb-8">
-Why Choose Our Compliance Solutions?
-</h2>
-<div className="grid md:grid-cols-2 gap-6">
-{benefits.map((benefit, index) => (
-<div key={index} className="flex items-center space-x-3">
-<CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-<span className="text-gray-300">{benefit}</span>
-</div>
-))}
-</div>
-</div>
-<div className="text-center">
-<h2 className="text-3xl font-bold text-white mb-6">
-Ready to Get Started?
-</h2>
-<p className="text-xl text-purple-100 mb-8">
-Contact our experts to discuss your compliance needs and get a customized solution.
-</p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-<Phone className="mr-2 h-5 w-5" />
-Call Now
-</
-<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-<Mail className="mr-2 h-5 w-5" />
-Email Us
-</
-</div>
-</div>
-</div>
-</div>
-);
+    <React.Fragment>
+      <Helmet>
+        <title>PagePage - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions, technology" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                PagePage
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Advanced AI-powered solution for modern businesses.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                  Get Started
+                </button>
+                <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </React.Fragment>
+  );
 };
 
-}
-export default CompliancePage;
-</button>
-</button>
-</h1>
+export default PagePage;

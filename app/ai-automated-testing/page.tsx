@@ -126,4 +126,4 @@ const AiAutomatedTestingPage: React.FC = () => {
   );
 };
 
-export default AiAutomatedTestingPage;
+export default AiAutomatedTestingPag;

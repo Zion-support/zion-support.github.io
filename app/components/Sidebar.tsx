@@ -243,4 +243,4 @@ location.pathname === item.path
 
 }
 Sidebar.displayName = 'Sidebar'
-export default Side;b;a;r;
+export default Sid;b;a;r;

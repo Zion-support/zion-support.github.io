@@ -161,5 +161,5 @@ Email Us
 };
 
 }
-export default SecurityMonitoringP;a;g;e;
+export default SecurityMonitoring;P;a;g;e;
 </button>

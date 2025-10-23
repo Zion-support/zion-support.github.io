@@ -74,4 +74,4 @@ className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 ho
 };
 
 }
-export default EcommerceAnalyticsProP;a;g;e;
+export default EcommerceAnalyticsPro;P;a;g;e;

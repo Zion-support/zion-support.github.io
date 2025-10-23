@@ -3,13 +3,13 @@ import React from 'react'
 'use client'
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import PerformanceOptimizer from './components/PerformanceOptimizer'
-import SEOOptimizer from './components/SEOOptimizer'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
-import Analytics from './components/Analytics'
-import SecurityEnhancer from './components/SecurityEnhancer'
+import Navigation from 'components/Navigation'
+import Footer from 'components/Footer'
+import PerformanceOptimizer from 'components/PerformanceOptimizer'
+import SEOOptimizer from 'components/SEOOptimizer'
+import AccessibilityEnhancer from 'components/AccessibilityEnhancer'
+import Analytics from 'components/Analytics'
+import SecurityEnhancer from 'components/SecurityEnhancer'
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
@@ -1458,4 +1458,4 @@ Send Message
 };
 
 HomePage.displayName = 'HomePage'
-export default HomeP;a;g;e;
+export default Home;P;a;g;e;
