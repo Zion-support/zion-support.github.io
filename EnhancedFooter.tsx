@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -170,3 +171,9 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
+=======
+import { Phone, Mail, ArrowRight, MapPin } from 'lucide-react';
+// import React from "react";
+// import { Link } from "react-router-dom"; // Unused import
+// import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"; // Unused import
+>>>>>>> a84aa0ca73271fd79488f8988ac94dcff4d9fb95

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 /**
@@ -151,6 +152,19 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
+=======
+'use client'
+import React from 'react'
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+=======
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
+>>>>>>> a84aa0ca73271fd79488f8988ac94dcff4d9fb95
 
     }
   }, []);
@@ -269,6 +283,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   }
 
   return (
+<<<<<<< HEAD
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
@@ -278,6 +293,31 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             <span className="text-sm text-gray-600">
               {isMonitoring ? 'Monitoring' : 'Stopped'}
             </span>
+=======
+    <>
+      
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              SystemMonitor
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced SystemMonitor solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+>>>>>>> a84aa0ca73271fd79488f8988ac94dcff4d9fb95
           </div>
           {enableExport && (
             <button
