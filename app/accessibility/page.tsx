@@ -42,7 +42,7 @@ const PagePage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Comprehensive accessibility solutions for inclusive digital experiences. WCAG 2.1 AA compliant designs." />
@@ -141,7 +141,7 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

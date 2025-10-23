@@ -42,7 +42,7 @@ const PagePage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about AI and IT solutions that transform businesses." />
@@ -141,7 +141,7 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
