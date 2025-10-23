@@ -1,15 +1,10 @@
 'use client'
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -105,26 +100,6 @@ const ContentStatistics: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
-    <section className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Impact</h2>
-          <p className="text-lg text-gray-600">Numbers that speak for our success and reliability</p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} text-white mb-4`}>
-                {stat.icon}
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-sm text-gray-600">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-=======
     <>
       <Helmet>
         <title>ContentStatistics</title>
@@ -221,15 +196,11 @@ const ContentStatistics: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       </div>
     </section>
   )
 }
 
-<<<<<<< HEAD
-export default ContentStatistics
-=======
 export default ContentStatisticsPage;
 clients: 0,
 projects: 0,
@@ -464,4 +435,3 @@ View Case Studies
 )
 }
 export default ContentStatistics
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

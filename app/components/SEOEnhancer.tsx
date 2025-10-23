@@ -10,15 +10,11 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
   return (
     <>
-<<<<<<< HEAD
-      
-=======
       <Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, SEOEnhancer, AI solutions, intelligent automation&quot; />
       </Helmet>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
@@ -84,19 +80,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
         </div>
       </section>
       {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our SEOEnhancer?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our seoenhancer solutions deliver unmatched performance, security, and scalability.</p>
-=======
       <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>Why Choose Our SEOEnhancer?</h2>
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Our seoenhancer solutions deliver unmatched performance, security, and scalability.</p>p>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>{features.map((feature, index) => (</div>
               <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300&quot;></div>
@@ -146,16 +134,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your seoenhancer needs and get a customized solution.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
-                <Phone className="mr-2 h-5 w-5" />
-=======
       <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
           <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12&quot;></div>
@@ -164,7 +142,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Phone className=&quot;mr-2 h-5 w-5&quot; />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
                 Call Now
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Mail className=&quot;mr-2 h-5 w-5&quot; />

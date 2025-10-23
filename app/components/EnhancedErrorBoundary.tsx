@@ -1,10 +1,7 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -48,15 +45,11 @@ const EnhancedErrorBoundaryPage: React.FC = () => {
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {
   return (
     <>
-<<<<<<< HEAD
-      
-=======
       <Helmet>
         <title>EnhancedErrorBoundary | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedErrorBoundary, AI solutions, intelligent automation&quot; />
       </Helmet>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
@@ -80,16 +73,6 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
-                <Phone className="mr-2 h-5 w-5" />
-=======
       <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
           <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12&quot;></div>
@@ -98,7 +81,6 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Phone className=&quot;mr-2 h-5 w-5&quot; />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
                 Call Now
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Mail className=&quot;mr-2 h-5 w-5&quot; />
@@ -199,15 +181,6 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
         return thi s.props.fallback
      }
       return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
-            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>
-=======
         <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot;></div>
           <div className=&quot;max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center&quot;></div>
             <div className=&quot;w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto&quot;></div>
@@ -215,7 +188,6 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
             </div>
             <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>
             <p className=&quot;text-gray-300 mb-6&quot;>We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className=&quot;mb-6 text-left&quot;>
                 <summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot;>

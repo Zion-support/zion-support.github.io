@@ -1,15 +1,10 @@
 'use client'
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Cloud } from 'lucide-react'
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 
 interface Slide {
   id: number
@@ -74,28 +69,6 @@ const ContentCarousel: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <section className="py-20 px-4 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Solutions</h2>
-          <p className="text-lg text-gray-600">Discover how our technology can transform your business</p>
-        </div>
-
-        <div className="relative">
-          <div className="overflow-hidden rounded-lg">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {slides.map((slide) => (
-                <div key={slide.id} className="w-full flex-shrink-0">
-                  <div className="bg-white rounded-lg shadow-lg p-8">
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                      <div className="flex-shrink-0">
-                        <div className={`p-4 rounded-full bg-gradient-to-r ${slide.color} text-white`}>
-                          {slide.icon}
-=======
     <>
       <Helmet>
         <title>ContentCarousel</title>
@@ -183,7 +156,6 @@ const ContentCarousel: React.FC = () => {
                         <div key={featureIndex} className=&quot;flex items-center&quot;></div>
                           <CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; />
                           <span className=&quot;text-purple-100&quot;>{feature}</span>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
                         </div>
                       </div>
                       <div className="flex-1">
@@ -202,9 +174,6 @@ const ContentCarousel: React.FC = () => {
                   </div>
                 </div>
               ))}
-<<<<<<< HEAD
-            </div>
-=======
     <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4&quot;></div>
       <div className=&quot;max-w-7xl mx-auto&quot;>{/* Header */}</div>
         <div className=&quot;text-center mb-16&quot;></div>
@@ -283,17 +252,10 @@ const ContentCarousel: React.FC = () => {
                 ))}
               </div>
             )}
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
           </div>
 
           <button
             onClick={prevSlide}
-<<<<<<< HEAD
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors"
-            aria-label="Previous slide"
-          >
-            <ArrowRight className="h-6 w-6 text-gray-600 rotate-180" />
-=======
             className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
             <ChevronLeft className=&quot;h-6 w-6&quot; />
           </button>
@@ -307,22 +269,10 @@ const ContentCarousel: React.FC = () => {
             className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
           >
             <ChevronLeft className=&quot;w-6 h-6&quot; />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
           </button>
 
           <button
             onClick={nextSlide}
-<<<<<<< HEAD
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors"
-            aria-label="Next slide"
-          >
-            <ArrowRight className="h-6 w-6 text-gray-600" />
-          </button>
-        </div>
-
-        <div className="flex justify-center mt-8 space-x-2">
-          {slides.map((_, index) => (
-=======
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
           ></button>
             <ChevronRight className=&quot;w-6 h-6&quot; />
@@ -330,7 +280,6 @@ const ContentCarousel: React.FC = () => {
         </div>
         {/* Slide Indicators */}
         <div className=&quot;flex justify-center mt-8 space-x-2&quot;>{slides.map((_, index) => (</div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
@@ -341,10 +290,6 @@ const ContentCarousel: React.FC = () => {
             />
           ))}
         </div>
-<<<<<<< HEAD
-      </div>
-    </section>
-=======
         {/* Additional Info */}
         <div className=&quot;mt-16 text-center&quot;></div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto&quot;></div>
@@ -395,7 +340,6 @@ export default ContentCarouselPage;
         </div>
       </div>
     </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
   )
 }
 

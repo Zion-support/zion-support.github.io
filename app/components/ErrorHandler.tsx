@@ -45,15 +45,11 @@ const ErrorHandlerPage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
-      
-=======
       <Helmet>
         <title>ErrorHandler</title>
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorHandler solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorHandler, AI solutions, intelligent automation&quot; />
       </Helmet>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
@@ -111,17 +107,10 @@ const ErrorHandlerPage: React.FC = () => {
      }
 
       return (
-<<<<<<< HEAD
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="flex justify-center mb-4">
-              <AlertTriangle className="w-16 h-16 text-red-500" />
-=======
         <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50&quot;></div>
           <div className=&quot;max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center&quot;></div>
             <div className=&quot;flex justify-center mb-4&quot;></div>
               <AlertTriangle className=&quot;w-16 h-16 text-red-500&quot; />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
             </div>
             <h1 className=&quot;text-2xl font-bold text-gray-900 mb-4&quot;>
               Oops! Something went wrong
@@ -193,8 +182,6 @@ const ErrorHandlerPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
               ></
                 onClick={this.handleRetry}
@@ -259,4 +246,3 @@ const ErrorHandlerPage: React.FC = () => {
 };
 
 export default ErrorHandlerPage;
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

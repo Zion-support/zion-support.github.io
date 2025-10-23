@@ -1,7 +1,5 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -43,22 +41,9 @@ const ServiceCardSkeletonPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 
 const ServiceCardSkeleton: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse">
-      <div className="h-8 bg-gray-200 rounded mb-4"></div>
-      <div className="h-4 bg-gray-200 rounded mb-2"></div>
-      <div className="h-4 bg-gray-200 rounded mb-2"></div>
-      <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-    </div>
-  )
-}
-
-export default ServiceCardSkeleton
-=======
     <>
       <Helmet>
         <title>ServiceCardSkeleton</title>
@@ -162,4 +147,3 @@ export default ServiceCardSkeleton
 };
 
 export default ServiceCardSkeletonPage;
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

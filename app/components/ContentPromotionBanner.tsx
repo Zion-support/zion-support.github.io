@@ -15,19 +15,6 @@ const ContentPromotionBanner: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <Star className="h-5 w-5 text-yellow-400" />
-            <span className="font-semibold">Limited Time Offer</span>
-          </div>
-          <div className="hidden md:block w-px h-6 bg-white/30"></div>
-          <div className="text-center">
-            <p className="text-sm md:text-base">
-              Get 30% off your first AI solution implementation
-=======
     <>
       <Helmet>
         <title>ContentPromotionBanner</title>
@@ -45,7 +32,6 @@ const ContentPromotionBanner: React.FC = () => {
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced ContentPromotionBanner solution for modern businesses.
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
             </p>
           </div>
           <div className="hidden md:block w-px h-6 bg-white/30"></div>
@@ -54,8 +40,6 @@ const ContentPromotionBanner: React.FC = () => {
             <ArrowRight className="inline-block ml-1 h-4 w-4" />
           </button>
         </div>
-<<<<<<< HEAD
-=======
         {/* Stats Section */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat, index) => (</div>
             <div key={index} className=&quot;text-center&quot;></div>
@@ -226,7 +210,6 @@ const ContentPromotionBanner: React.FC = () => {
           Get Started Now
           <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
         </button>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       </div>
     </div>
   )

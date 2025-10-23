@@ -1,9 +1,6 @@
 import React from &quot;react&quot;
 import { ArrowRight } from &quot;lucide-react&quot;
 interface NeonButtonProps {
-<<<<<<< HEAD
-  className?: string;
-=======
   children?: React.ReactNode
   className?: string
   title?: string
@@ -14,7 +11,6 @@ interface NeonButtonProps {
   size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;
   icon?: React.ReactNode
   disabled?: boolean
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 }
 
 const NeonButton: React.FC<NeonButtonProps> = ({
@@ -40,15 +36,11 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 
   return (
     <>
-<<<<<<< HEAD
-      
-=======
       <Helmet>
         <title>NeonButton</title>
         <meta name=&quot;description&quot; content=&quot;Advanced NeonButton solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, NeonButton, AI solutions, intelligent automation&quot; />
       </Helmet>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}

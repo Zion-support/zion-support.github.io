@@ -109,8 +109,6 @@ declare global {
     gtag: (...args: any[]) => void
   }
 }
-<<<<<<< HEAD
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -254,4 +252,3 @@ const EnhancedAnalyticsPage: React.FC = () => {
 
 export default EnhancedAnalyticsPage;
 =======
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
