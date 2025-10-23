@@ -3,9 +3,9 @@ import React from "react";
 
 
   return (
-    <React.Fragment>
-      <Helmet>
-        <title></Helmet>
+    <>
+      <Head>
+        <title> </title>Head>
 
             </div>
           </div>
@@ -19,7 +19,7 @@ import React from "react";
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

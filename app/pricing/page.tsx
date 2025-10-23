@@ -81,25 +81,23 @@ const PricingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Helmet>
+      <Head>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
         <meta property="og:title" content="Pricing - Zion Tech Group" />
         <meta property="og:description" content="Transparent pricing for AI and IT solutions" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pricing" />
-      </Helmet>
+        </Head>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
+              Transparent <span>Pricing</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
+            <p>Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
             </p>
           </div>
         </div>
@@ -115,18 +113,17 @@ const PricingPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-1">
-                        <Star className="w-4 h-4" />
-                        Most Popular
-                      </span>
+                        <Star>Most Popular
+                      </Star>span>
                     </div>
                   )}
                   
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                    <p className="text-gray-600 mb-6">{plan.description}</p>
+                    <h3>{plan.name}</h3>
+                    <p>{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                      <span className="text-gray-600 ml-2">{plan.period}</span>
+                      <span>{plan.price}</span>
+                      <span>{plan.period}</span>
                     </div>
                   </div>
 
@@ -134,17 +131,12 @@ const PricingPage: React.FC = () => {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-600">{feature}</span>
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
-                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}>
-                    {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                  <button>{plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                   </button>
                 </div>
               ))}
@@ -158,16 +150,16 @@ const PricingPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Add-on Services</h2>
-              <p className="text-xl text-gray-600">Enhance your plan with additional services</p>
+              <h2>Add-on Services</h2>
+              <p>Enhance your plan with additional services</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {addOns.map((addOn, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{addOn.name}</h3>
-                  <p className="text-2xl font-bold text-blue-600 mb-2">{addOn.price}</p>
-                  <p className="text-gray-600 text-sm">{addOn.description}</p>
+                  <h3>{addOn.name}</h3>
+                  <p>{addOn.price}</p>
+                  <p>{addOn.description}</p>
                 </div>
               ))}
             </div>
@@ -179,23 +171,23 @@ const PricingPage: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+            <h2>Frequently Asked Questions</h2>
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Can I change my plan anytime?</h3>
-                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</p>
+                <h3>Can I change my plan anytime?</h3>
+                <p>Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Is there a setup fee?</h3>
-                <p className="text-gray-600">No setup fees for Starter and Professional plans. Enterprise plans may include custom setup costs based on requirements.</p>
+                <h3>Is there a setup fee?</h3>
+                <p>No setup fees for Starter and Professional plans. Enterprise plans may include custom setup costs based on requirements.</p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">What payment methods do you accept?</h3>
-                <p className="text-gray-600">We accept all major credit cards, bank transfers, and can arrange custom billing for Enterprise customers.</p>
+                <h3>What payment methods do you accept?</h3>
+                <p>We accept all major credit cards, bank transfers, and can arrange custom billing for Enterprise customers.</p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Do you offer refunds?</h3>
-                <p className="text-gray-600">We offer a 30-day money-back guarantee for all plans. Enterprise customers have custom terms based on their agreement.</p>
+                <h3>Do you offer refunds?</h3>
+                <p>We offer a 30-day money-back guarantee for all plans. Enterprise customers have custom terms based on their agreement.</p>
               </div>
             </div>
           </div>
@@ -206,17 +198,14 @@ const PricingPage: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Choose your plan and start transforming your business with AI and IT solutions today.
+            <h2>Ready to Get Started?</h2>
+            <p>Choose your plan and start transforming your business with AI and IT solutions today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Zap className="mr-2 w-5 h-5" />
-                Start Free Trial
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Contact Sales
+                <Zap>Start Free Trial
+              </Zap>button>
+              <button>Contact Sales
               </button>
             </div>
           </div>

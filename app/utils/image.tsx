@@ -38,7 +38,7 @@ onError?: () => void;}
 export const Image: React.FC<ImageProps>= ({;}
 export const Image: React.FC<ImageProps> = ({}
 src,
-export const Image: React.FC<ImageProps> = ({,
+export const Image: React.FC<ImageProps>= ({,
 src
 alt,
 width,
@@ -86,15 +86,7 @@ if (hasError) {</ImageProps>
 return (</ImageProps>;}
 if (hasError) {}
 return (
-<div}
-if (hasError) {;}
-return(<div}
-'use client'
-import React, { useState, useCallback } from 'react'
-interface ImageProps {/* TODO: Fix JSX expression */}
-}
-export const,
-Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
+<div>= ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -108,12 +100,12 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 style={imageStyle}
 {...props})
 >)</div>
-<span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
+<span className="text-gray-500 text-sm"><span>Screen reader: </span>Failed to load image</span>)
 </div>)
 ),
 {...props}
 ></div>
-<span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
+<span className="text-gray-500 text-sm"></span><span>Screen reader: </span>Failed to load image</span>
 </div>
 )
 }

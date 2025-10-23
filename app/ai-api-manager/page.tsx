@@ -55,11 +55,10 @@ const AIAPIManagerPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Head>
         <title>AI API Manager | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered API management platform by Zion Tech Group. Intelligent API lifecycle management and optimization." />
-        <meta name="keywords" content="API manager, AI APIs, API lifecycle, API optimization, microservices management" />
-      </Helmet>
+        </Head>
       
       <Navigation />
 
@@ -69,20 +68,16 @@ const AIAPIManagerPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              AI API Manager
+            <span>AI API Manager
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            The most intelligent API management platform that adapts, learns, and optimizes your APIs automatically.
+          <p>The most intelligent API management platform that adapts, learns, and optimizes your APIs automatically.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
               Start Managing
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              View Demo
+              <ArrowRight> </ArrowRight>button>
+            <button>View Demo
             </button>
           </div>
         </div>
@@ -92,9 +87,8 @@ const AIAPIManagerPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Powerful Management Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to manage, monitor, and optimize your APIs with AI-powered intelligence.
+            <h2>Powerful Management Features</h2>
+            <p>Everything you need to manage, monitor, and optimize your APIs with AI-powered intelligence.
             </p>
           </div>
 
@@ -102,16 +96,14 @@ const AIAPIManagerPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-opacity-20 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <feature> </feature>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
+                      <CheckCircle>{benefit}
+                    </CheckCircle>li>
                   ))}
                 </ul>
               </div>
@@ -124,9 +116,8 @@ const AIAPIManagerPage: React.FC = () => {
       <section className="py-20 px-4 bg-white bg-opacity-5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Platform Capabilities</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive API management capabilities powered by artificial intelligence.
+            <h2>Platform Capabilities</h2>
+            <p>Comprehensive API management capabilities powered by artificial intelligence.
             </p>
           </div>
 
@@ -135,7 +126,7 @@ const AIAPIManagerPage: React.FC = () => {
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center mb-4">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
-                  <p className="text-white font-medium">{capability}</p>
+                  <p>{capability}</p>
                 </div>
               </div>
             ))}
@@ -147,9 +138,8 @@ const AIAPIManagerPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Seamless Integrations</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Works with your existing tools and cloud providers for a seamless experience.
+            <h2>Seamless Integrations</h2>
+            <p>Works with your existing tools and cloud providers for a seamless experience.
             </p>
           </div>
 
@@ -157,9 +147,9 @@ const AIAPIManagerPage: React.FC = () => {
             {integrations.map((integration, index) => (
               <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-opacity-20 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-gray-400 to-gray-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold text-sm">{integration.logo}</span>
+                  <span>{integration.logo}</span>
                 </div>
-                <p className="text-white text-sm font-medium">{integration.name}</p>
+                <p>{integration.name}</p>
               </div>
             ))}
           </div>
@@ -169,23 +159,19 @@ const AIAPIManagerPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Manage Your APIs Intelligently?</h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Experience the future of API management with AI-powered automation and optimization.
+          <h2>Ready to Manage Your APIs Intelligently?</h2>
+          <p>Experience the future of API management with AI-powered automation and optimization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Start Free Trial
+            <button>Start Free Trial
             </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-              Schedule Demo
+            <button>Schedule Demo
             </button>
           </div>
         </div>
       </section>
 
-      <Footer />
-    </div>
+      <Footer> </Footer>div>
   );
 };
 

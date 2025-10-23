@@ -51,8 +51,7 @@ purple: 'border-purple-600 bg-purple-600',
 const renderSpinner = useMemo(() => {switch (variant) {
 case 'dots':
 return (
-<div className='flex space-x-1' role='status' aria-label='Loading'>
-{[0, 1, 2].map(i => (</div>
+<div>{[0, 1, 2].map(i => (</div>
 <div
 key={i}
 className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
@@ -85,8 +84,7 @@ style={{ width: '50%' }}
 )
 case 'bars':
 return (
-<div className='flex space-x-1' role='status' aria-label='Loading'>
-{[0, 1, 2, 3].map(i => (</div>
+<div>{[0, 1, 2, 3].map(i => (</div>
 <div
 key={i}
 className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
@@ -112,11 +110,9 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
 }, [fullScreen, className])
 return (</div>
 <div className={containerClasses}></div>
-<div className='text-center'>
-{renderSpinner}
+<div>{renderSpinner}
 {text && (</div>;}
-<p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
-{text}
+<p>{text}
 </p>
 )}
 </div>

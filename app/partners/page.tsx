@@ -125,28 +125,24 @@ const PartnersPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Helmet>
+      <Head>
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Strategic partnerships with leading technology companies. Join our partner ecosystem and grow your business with Zion Tech Group." />
-        <meta name="keywords" content="technology partners, strategic partnerships, partner program, technology alliances, business partnerships" />
-      </Helmet>
+        </Head>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
+              Strategic <span>Partnerships</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Join our ecosystem of technology leaders and grow your business through strategic partnerships
+            <p>Join our ecosystem of technology leaders and grow your business through strategic partnerships
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Become a Partner
+              <button>Become a Partner
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Partner Program
+              <button>View Partner Program
               </button>
             </div>
           </div>
@@ -157,22 +153,20 @@ const PartnersPage: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Partners</h2>
+            <h2>Our Partners</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {partners.map((partner, index) => (
                 <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <Building2 className="w-8 h-8 text-gray-600" />
-                    </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTierColor(partner.tier)}`}>
-                      {partner.tier.toUpperCase()}
+                      <Building2> </Building2>div>
+                    <span>{partner.tier.toUpperCase()}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{partner.name}</h3>
-                  <p className="text-gray-600 mb-3">{partner.description}</p>
-                  <p className="text-sm text-blue-600 mb-4">{partner.category}</p>
+                  <h3>{partner.name}</h3>
+                  <p>{partner.description}</p>
+                  <p>{partner.category}</p>
                   
                   {partner.website && (
                     <a
@@ -182,8 +176,7 @@ const PartnersPage: React.FC = () => {
                       className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
                     >
                       Visit Website
-                      <ExternalLink className="w-4 h-4 ml-1" />
-                    </a>
+                      <ExternalLink> </ExternalLink>a>
                   )}
                 </div>
               ))}
@@ -196,15 +189,14 @@ const PartnersPage: React.FC = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Types</h2>
+            <h2>Partnership Types</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {partnershipTypes.map((type, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4 text-blue-600">
-                    {type.icon}
+                  <div>{type.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{type.name}</h3>
-                  <p className="text-gray-600 text-sm">{type.description}</p>
+                  <h3>{type.name}</h3>
+                  <p>{type.description}</p>
                 </div>
               ))}
             </div>
@@ -216,15 +208,14 @@ const PartnersPage: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Benefits</h2>
+            <h2>Partnership Benefits</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    {benefit.icon}
+                  <div>{benefit.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
+                  <h3>{benefit.title}</h3>
+                  <p>{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -236,17 +227,14 @@ const PartnersPage: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Partner With Us?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Join our partner ecosystem and unlock new opportunities for growth and innovation.
+            <h2>Ready to Partner With Us?</h2>
+            <p>Join our partner ecosystem and unlock new opportunities for growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Handshake className="mr-2 w-5 h-5" />
-                Become a Partner
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Download Partner Kit
+                <Handshake>Become a Partner
+              </Handshake>button>
+              <button>Download Partner Kit
               </button>
             </div>
           </div>

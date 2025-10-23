@@ -99,9 +99,8 @@ const ContactForm: React.FC = () => {
     return (
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
-        <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
-        <p>
-          Your message has been sent successfully. We'll get back to you soon.
+        <h3>Thank you!</h3>
+        <p>Your message has been sent successfully. We'll get back to you soon.
         </p>
       </div>
     );
@@ -111,11 +110,7 @@ const ContactForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Full Name *
+          <label>Full Name *
           </label>
           <input
             type="text"
@@ -170,52 +165,44 @@ const ContactForm: React.FC = () => {
         {/* Contact Information */}
         <div className="space-y-8">
           <div>
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Get in Touch
+            <h2>Get in Touch
             </h2>
-            <p className="text-gray-300 text-lg">
-              Ready to transform your business with AI? Let's discuss your project and how we can help you achieve your goals.
+            <p>Ready to transform your business with AI? Let's discuss your project and how we can help you achieve your goals.
             </p>
           </div>
 
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Phone className="w-6 h-6 text-white" />
-              </div>
+                <Phone> </Phone>div>
               <div>
-                <h3 className="text-white font-semibold mb-1">Phone</h3>
-                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  +1 (302) 464-0950
+                <h3>Phone</h3>
+                <a>+1 (302) 464-0950
                 </a>
-                <p className="text-gray-400 text-sm mt-1">Mon-Fri 9AM-6PM EST</p>
+                <p>Mon-Fri 9AM-6PM EST</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
+                <Mail> </Mail>div>
               <div>
-                <h3 className="text-white font-semibold mb-1">Email</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  kleber@ziontechgroup.com
+                <h3>Email</h3>
+                <a>kleber@ziontechgroup.com
                 </a>
-                <p className="text-gray-400 text-sm mt-1">We'll respond within 24 hours</p>
+                <p>We'll respond within 24 hours</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
+                <MapPin> </MapPin>div>
               <div>
-                <h3 className="text-white font-semibold mb-1">Office</h3>
+                <h3>Office</h3>
                 <p className="text-gray-300">
-                  364 E Main St STE 1008<br />
-                  Middletown, DE 19709
-                </p>
-                <p className="text-gray-400 text-sm mt-1">United States</p>
+                  364 E Main St STE 1008<br>Middletown, DE 19709
+                </br>p>
+                <p>United States</p>
               </div>
             </div>
           </div>
@@ -227,73 +214,30 @@ const ContactForm: React.FC = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-white font-medium mb-2">
-                  Full Name *
+                <label>Full Name *
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
-                  placeholder="John Doe"
-                />
-              </div>
+                <input> </input>div>
 
               <div>
-                <label htmlFor="email" className="block text-white font-medium mb-2">
-                  Email Address *
+                <label>Email Address *
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
-                  placeholder="john@company.com"
-                />
-              </div>
+                <input> </input>div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="company" className="block text-white font-medium mb-2">
-                  Company
+                <label>Company
                 </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
-                  placeholder="Your Company"
-                />
-              </div>
+                <input> </input>div>
 
               <div>
-                <label htmlFor="phone" className="block text-white font-medium mb-2">
-                  Phone Number
+                <label>Phone Number
                 </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
-                  placeholder="+1 (555) 123-4567"
-                />
-              </div>
+                <input> </input>div>
             </div>
 
             <div>
-              <label htmlFor="service" className="block text-white font-medium mb-2">
-                Service Interest
+              <label>Service Interest
               </label>
               <select
                 id="service"
@@ -302,30 +246,18 @@ const ContactForm: React.FC = () => {
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
               >
-                <option value="">Select a service</option>
+                <option>Select a service</option>
                 {services.map((service) => (
-                  <option key={service} value={service} className="bg-gray-800">
-                    {service}
+                  <option>{service}
                   </option>
                 ))}
               </select>
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-white font-medium mb-2">
-                Message *
+              <label>Message *
               </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={5}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors resize-none"
-                placeholder="Tell us about your project and how we can help..."
-              />
-            </div>
+              <textarea> </textarea>div>
 
             {status.message && (
               <div className={`flex items-center space-x-2 p-4 rounded-lg ${
@@ -355,8 +287,7 @@ const ContactForm: React.FC = () => {
               ) : (
                 <>
                   Send Message
-                  <Send className="w-5 h-5 ml-2" />
-                </>
+                  <Send> </Send>>
               )}
             </button>
           </form>
@@ -365,44 +296,16 @@ const ContactForm: React.FC = () => {
 <<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label
-            htmlFor="phone"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Phone Number
+          <label>Phone Number
           </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          />
-        </div>
+          <input> </input>div>
         <div>
-          <label
-            htmlFor="company"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Company
+          <label>Company
           </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          />
-        </div>
+          <input> </input>div>
       </div>
       <div>
-        <label
-          htmlFor="service"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        >
-          Service Interest
+        <label>Service Interest
         </label>
         <select
           id="service"
@@ -411,38 +314,19 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
         >
-          <option value="">Select a service</option>
-          <option value="ai-solutions">AI Solutions</option>
-          <option value="it-services">IT Services</option>
-          <option value="micro-saas">Micro SAAS</option>
-          <option value="consulting">Consulting</option>
-          <option value="other">Other</option>
+          <option>Select a service</option>
+          <option>AI Solutions</option>
+          <option>IT Services</option>
+          <option>Micro SAAS</option>
+          <option>Consulting</option>
+          <option>Other</option>
         </select>
       </div>
       <div>
-        <label
-          htmlFor="message"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        >
-          Message *
+        <label>Message *
         </label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-          rows={5}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          placeholder="Tell us about your project or requirements..."
-        />
-      </div>
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {isSubmitting ? "Sending..." : "Send Message"}
+        <textarea> </textarea>div>
+      <button>{isSubmitting ? "Sending..." : "Send Message"}
       </button>
     </form>
 =======

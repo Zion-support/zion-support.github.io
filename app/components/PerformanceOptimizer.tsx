@@ -150,23 +150,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       {isOptimizing && (
         <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
           <div className="flex items-center gap-2">
-            <Settings className="w-4 h-4 animate-spin" />
-            Optimizing performance...
-          </div>
+            <Settings>Optimizing performance...
+          </Settings>div>
         </div>
       )}
 
       {allOptimizationsComplete && (
         <div className="fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4" />
-            Performance optimized!
-          </div>
+            <CheckCircle>Performance optimized!
+          </CheckCircle>div>
         </div>
       )}
 
       <div className="optimization-status">
-        <h3 className="text-lg font-semibold mb-4">Performance Optimizations</h3>
+        <h3>Performance Optimizations</h3>
         <div className="space-y-2">
           <div className="flex items-center gap-2">
             {optimizationStatus.images ? (

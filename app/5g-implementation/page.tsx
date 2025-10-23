@@ -46,8 +46,7 @@ const FiveGImplementationPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>
-          5G Network Implementation - Zion Tech Group | AI & IT Solutions
+        <title>5G Network Implementation - Zion Tech Group | AI & IT Solutions
         </title>
       </Head>
 
@@ -58,21 +57,17 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               5G Network{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Implementation
+              <span>Implementation
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Complete 5G network implementation services with ultra-low
+            <p>Complete 5G network implementation services with ultra-low
               latency, high-speed connectivity, and advanced features for modern
               applications and IoT ecosystems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Get Started
+              <button>Get Started
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Schedule Demo
+              <button>Schedule Demo
               </button>
             </div>
           </div>
@@ -82,11 +77,9 @@ const FiveGImplementationPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced 5G Features
+              <h2>Advanced 5G Features
               </h2>
-              <p className="text-xl text-gray-300">
-                Cutting-edge 5G technology for the next generation of
+              <p>Cutting-edge 5G technology for the next generation of
                 connectivity
               </p>
             </div>
@@ -97,13 +90,10 @@ const FiveGImplementationPage: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 group hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {feature.title}
+                    <feature> </feature>
+                  <h3>{feature.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    {feature.description}
+                  <p>{feature.description}
                   </p>
                   {feature.benefits && (
                     <ul className="space-y-2">
@@ -112,9 +102,8 @@ const FiveGImplementationPage: React.FC = () => {
                           key={benefitIndex}
                           className="flex items-start text-sm text-gray-300"
                         >
-                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
+                          <CheckCircle>{benefit}
+                        </CheckCircle>li>
                       ))}
                     </ul>
                   )}
@@ -127,20 +116,16 @@ const FiveGImplementationPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Implement 5G?
+            <h2>Ready to Implement 5G?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact our experts to discuss your 5G implementation needs and
+            <p>Contact our experts to discuss your 5G implementation needs and
               get started today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Learn More
+                <ArrowRight> </ArrowRight>button>
+              <button>Learn More
               </button>
             </div>
           </div>

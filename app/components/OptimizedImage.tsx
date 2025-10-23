@@ -99,27 +99,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       )}
       {isError ? (
         <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Failed to load image</div>
+          <div>Failed to load image</div>
         </div>
       ) : (
-        <Image
-          src={imageSrc}
-          alt={alt}
-          width={width || 300}
-          height={height || 200}
-          className={`transition-opacity duration-300 ${
-            isLoaded ? "opacity-100" : "opacity-0"
-          } ${className}`}
-          onLoad={handleLoad}
-          onError={handleError}
-          priority={priority}
-          quality={quality}
-          sizes={sizes}
-          placeholder="blur"
-          blurDataURL={placeholder}
-        />
-      )}
-    </div>
+        <Image>)}
+    </Image>div>
   );
 };
 

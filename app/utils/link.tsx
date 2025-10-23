@@ -32,7 +32,7 @@ rel?: string
 onClick?: () => void
 'aria-label'?: string;}
 }
-export const Link: React.FC<LinkProps> = ({,
+export const Link: React.FC<LinkProps>= ({,
 href
 children,
 className,

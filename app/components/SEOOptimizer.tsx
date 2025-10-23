@@ -149,12 +149,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      )}
-    </Head>
+        <script>)}
+    </script>Head>
   );
 };
 

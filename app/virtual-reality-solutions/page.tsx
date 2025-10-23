@@ -36,25 +36,15 @@ const VirtualRealitySolutionsPage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Virtual Reality Solutions
+            <h1>Virtual Reality Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional virtualrealitysolutions solutions powered by advanced
+            <p>Professional virtualrealitysolutions solutions powered by advanced
               AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Get Started
+              <a>Get Started
               </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                View All Services
+              <a>View All Services
               </a>
             </div>
           </div>
@@ -64,11 +54,9 @@ const VirtualRealitySolutionsPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
+              <h2>Powerful Features
               </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
+              <p>Everything you need for success
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -78,12 +66,10 @@ const VirtualRealitySolutionsPage: React.FC = () => {
                   className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
+                    <feature> </feature>
+                  <h3>{feature.title}
                   </h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p>{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -93,24 +79,14 @@ const VirtualRealitySolutionsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+            <h2>Ready to Get Started?
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
+            <p>Let us help you implement this solution for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Start Your Project
+              <a>Start Your Project
               </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Learn More
+              <a>Learn More
               </a>
             </div>
           </div>

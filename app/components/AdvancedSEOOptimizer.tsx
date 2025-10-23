@@ -95,9 +95,9 @@ const defaultStructuredData = {
 return structuredData || defaultStructuredData
 }
 return (
-<React.Fragment>
-<Helmet>
-<title>{title}</title>
+<>
+<Head>
+        <title>{title}</title>
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
 {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -113,10 +113,9 @@ return (
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
 {/* Structured Data */}
-<script type="application/ld+json">
-{JSON.stringify(generateStructuredData())}
+<script>{JSON.stringify(generateStructuredData())}
 </script>
-</Helmet>
+      </Head>
 {children}
 {process.env.NODE_ENV === 'development' && (
 <div className="seo-debug" style={{
@@ -137,14 +136,14 @@ maxWidth: '300px'
 <div>Recommendations:</div>
 <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
 {recommendations.map((rec, index) => (
-<li key={index}>{rec}</li>
+<li>{rec}</li>
 ))}
 </ul>
 </div>
 )}
 </div>
 )}
-</React.Fragment>
+</>
 )
 }
 export default AdvancedSEOOptimizer

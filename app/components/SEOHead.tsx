@@ -49,8 +49,8 @@ const defaultStructuredData = {
 ]
 }
 return (
-<Helmet>
-{/* Basic Meta Tags */}
+<Head>
+        {/* Basic Meta Tags */}
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
@@ -78,10 +78,9 @@ return (
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 {/* Structured Data */}
-<script type="application/ld+json">
-{JSON.stringify(structuredData || defaultStructuredData)}
+<script>{JSON.stringify(structuredData || defaultStructuredData)}
 </script>
-</Helmet>
+      </Head>
 )
 }
 export default SEOHead

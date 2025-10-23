@@ -63,8 +63,7 @@ const AccessibilityPage: React.FC = () => {
       <Head>
         <title>Accessibility Solutions - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Comprehensive accessibility solutions for inclusive digital experiences. WCAG 2.1 AA compliant designs." />
-        <meta property="og:type" content="website" />
-      </Head>
+        </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -72,20 +71,16 @@ const AccessibilityPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Accessibility{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Solutions
+              <span>Solutions
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive accessibility solutions for inclusive digital
+            <p>Comprehensive accessibility solutions for inclusive digital
               experiences that work for everyone, regardless of ability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Get Accessibility Audit
+              <button>Get Accessibility Audit
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Learn More
+              <button>Learn More
               </button>
             </div>
           </div>
@@ -95,11 +90,9 @@ const AccessibilityPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Accessibility Features
+              <h2>Comprehensive Accessibility Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our accessibility solutions cover all aspects of digital
+              <p>Our accessibility solutions cover all aspects of digital
                 inclusion, ensuring your applications work seamlessly for users
                 with diverse needs and abilities.
               </p>
@@ -111,13 +104,10 @@ const AccessibilityPage: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 group hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {feature.title}
+                    <feature> </feature>
+                  <h3>{feature.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    {feature.description}
+                  <p>{feature.description}
                   </p>
                   {feature.benefits && (
                     <ul className="space-y-2">
@@ -126,9 +116,8 @@ const AccessibilityPage: React.FC = () => {
                           key={benefitIndex}
                           className="flex items-start text-sm text-gray-300"
                         >
-                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
+                          <CheckCircle>{benefit}
+                        </CheckCircle>li>
                       ))}
                     </ul>
                   )}
@@ -142,11 +131,9 @@ const AccessibilityPage: React.FC = () => {
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Compliance Standards
+              <h2>Compliance Standards
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We ensure your applications meet international accessibility
+              <p>We ensure your applications meet international accessibility
                 standards and guidelines.
               </p>
             </div>
@@ -156,8 +143,7 @@ const AccessibilityPage: React.FC = () => {
                   key={index}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    {standard}
+                  <h3>{standard}
                   </h3>
                 </div>
               ))}
@@ -168,20 +154,16 @@ const AccessibilityPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Make Your App Accessible?
+            <h2>Ready to Make Your App Accessible?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's work together to create inclusive digital experiences that
+            <p>Let's work together to create inclusive digital experiences that
               work for everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Contact Us
+                <ArrowRight> </ArrowRight>button>
+              <button>Contact Us
               </button>
             </div>
           </div>

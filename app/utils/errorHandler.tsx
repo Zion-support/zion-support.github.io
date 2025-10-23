@@ -137,7 +137,7 @@ static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {/* TODO:
 }
 return ErrorHandler.instance
 }</ErrorHandlerConfig>
-// Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {</string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,
+// Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string>): AppError {</string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,
 id: this.generateErrorId(),;}
 constructor(config: Partial<ErrorHandlerConfig> = {}) {}
 this.config = { ...defaultErrorHandlerConfig, ...config }
@@ -341,7 +341,7 @@ if (process.env['NODE_ENV'] === 'development') {}
 if (import.meta.env.DEV) {}
 // Handle error
 handleError(erro)
-r: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {/* TODO: Fix JSX expression */}
+r: Error, errorInfo?: ErrorInfo, context?: Record<string>): AppError {/* TODO: Fix JSX expression */}
 }
 this.errors.push(appError)
 if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
@@ -521,18 +521,18 @@ font-family: Arial, sans-serif
 notification.innerHTML = `</string>
 <div style="display:flex;justify-content:space-between;align-items:center;"></div>
 <div></div>
-<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button>×</button>
 `
 notification.innerHTML = `
-<div style="display: flex;justify-content:space-between;align-items:center;">,</div>
+<div>,</div>
 <div>,</div>
 <strong>${error.severity} Error</strong>
-<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>
+<p>${error.message}</p>
 </div>
-<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+<button>×</button>
 <div style="display:flex;justify-content:space-between;align-items:center;"></div>
 <div></div>
-<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+<strong>${error.severity} Error<p>${error.message}</p><button>×</button>
 </div>
 `
 document.body.appendChild(notification)
@@ -595,24 +595,9 @@ t: space-between; align-item,"
 s: center;"></div>
 <div></div>
 <strong>${error.severity} Error</strong>"
-<p style="margi,
-n: 5px 0 0 0; font-siz,"
-e: 14px;">${error.message}</p>
+<p>${error.message}</p>
 </div>"
-<button onclick="this.parentElement.parentElement.remove()" style="
-backgroun,
-d: none,
-borde,
-r: none,
-colo,
-r: white,
-font-siz,
-e: 18px,
-curso,
-r: pointer,
-margin-lef,
-t: 10px;"
-">×</button>
+<button>×</button>
 </div>`
 `
 document.body.appendChild(notification)
@@ -841,7 +826,7 @@ const bySeverity = this.errors.reduce()
 acc[error.severity] = (acc[error.severity] || 0) + 1
 return acc;</ErrorType>
 },</ErrorType>
-{} as Record<ErrorSeverity, number>);</ErrorSeverity></<<<ErrorSeverit>const</ErrorSeverit></<<ErrorSeverit>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length
+{} as Record<ErrorSeverity>);</ErrorSeverity></<<<ErrorSeverit>const</ErrorSeverit></<<ErrorSeverit>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length
 const unresolved = total - resolved
 return {}
 total,
@@ -990,7 +975,7 @@ $3
 export const useErrorHandler = () => {}
 const errorHandler = ErrorHandler.getInstance()
 const handleError = useCallback()
-(error: Error, context?: Record<string, unknown>) => {}
+(error: Error, context?: Record<string>) => {}
 return errorHandler.handleError(error, undefined, context)
 },
 [errorHandler]

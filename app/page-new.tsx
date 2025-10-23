@@ -260,17 +260,12 @@ const HomePage: React.FC = () => {
         <Navigation />
         
         {/* Skip to main content for accessibility */}
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-        >
-          Skip to main content
+        <a>Skip to main content
         </a>
 
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
-          <ContentPromotionBanner />
-        </Suspense>
+          <ContentPromotionBanner> </ContentPromotionBanner>Suspense>
 
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
@@ -283,71 +278,57 @@ const HomePage: React.FC = () => {
             aria-labelledby="hero-heading"
           >
             <div className="max-w-6xl mx-auto">
-              <h1 
-                id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
-                data-text="Zion Tech Group"
-              >
-                Zion Tech Group
+              <h1>Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
-                Advanced AI and IT Solutions
+              <p>Advanced AI and IT Solutions
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+              <p>Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               </p>
               
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">AI-Powered Solutions</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+                  <div>🚀</div>
+                  <h3>AI-Powered Solutions</h3>
+                  <p>Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
                 </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Proven Results</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+                  <div>⚡</div>
+                  <h3>Proven Results</h3>
+                  <p>Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
                 </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Enterprise Security</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
+                  <div>🔒</div>
+                  <h3>Enterprise Security</h3>
+                  <p>Bank-level security and compliance for your critical data and infrastructure</p>
                 </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
-                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Global Reach</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
+                  <div>🌐</div>
+                  <h3>Global Reach</h3>
+                  <p>Serving clients worldwide with 24/7 support and multi-language capabilities</p>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Get Started Today
+                <a>Get Started Today
                 </a>
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
-                </a>
+                  <Phone>+1 302 464 0950
+                </Phone>a>
               </div>
             </div>
           </section>
 
           {/* Micro SAAS Services Section */}
           <section className="mb-16" aria-labelledby="micro-saas-heading">
-            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              Micro SAAS Solutions
+            <h2>Micro SAAS Solutions
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Powerful, affordable AI-powered tools designed for modern businesses
+            <p>Powerful, affordable AI-powered tools designed for modern businesses
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -355,48 +336,40 @@ const HomePage: React.FC = () => {
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
-                        Popular
+                      <div>Popular
                       </div>
                     </div>
                   )}
-                  <div className="text-4xl mb-4 text-center">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
+                  <div>{service.icon}</div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}
                   </p>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                    <h4>Key Features:</h4>
                     <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
+                          <CheckCircle>{feature}
+                        </CheckCircle>li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
+                    <h4>Benefits:</h4>
                     <ul className="space-y-1">
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
-                          <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
+                          <TrendingUp>{benefit}
+                        </TrendingUp>li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
-                    <a 
-                      href={service.link} 
-                      className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
-                    >
-                      Learn More
+                    <div>{service.price}</div>
+                    <a>Learn More
                     </a>
                   </div>
                 </article>
@@ -406,43 +379,34 @@ const HomePage: React.FC = () => {
 
           {/* AI Services Section */}
           <section className="mb-16" aria-labelledby="ai-services-heading">
-            <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              AI Services
+            <h2>AI Services
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Advanced artificial intelligence solutions for enterprise applications
+            <p>Advanced artificial intelligence solutions for enterprise applications
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {aiServices.map((service, index) => (
                 <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
+                    <service> </service>div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}
                   </p>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
+                    <h4>Features:</h4>
                     <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
+                          <CheckCircle>{feature}
+                        </CheckCircle>li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/ai-services" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Learn More
+                    <div>{service.price}</div>
+                    <a>Learn More
                     </a>
                   </div>
                 </article>
@@ -452,43 +416,34 @@ const HomePage: React.FC = () => {
 
           {/* IT Services Section */}
           <section className="mb-16" aria-labelledby="it-services-heading">
-            <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              IT Services
+            <h2>IT Services
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Comprehensive IT solutions for modern enterprise infrastructure
+            <p>Comprehensive IT solutions for modern enterprise infrastructure
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {itServices.map((service, index) => (
                 <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
+                    <service> </service>div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}
                   </p>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
+                    <h4>Features:</h4>
                     <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
+                          <CheckCircle>{feature}
+                        </CheckCircle>li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/it-services" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Learn More
+                    <div>{service.price}</div>
+                    <a>Learn More
                     </a>
                   </div>
                 </article>
@@ -498,55 +453,38 @@ const HomePage: React.FC = () => {
 
           {/* Contact Information */}
           <section className="mb-16" aria-labelledby="contact-heading">
-            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              Get In Touch
+            <h2>Get In Touch
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
-                <p className="text-gray-300 mb-4">+1 302 464 0950</p>
-                <a 
-                  href="tel:+13024640950" 
-                  onClick={handlePhoneClick}
-                  className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                >
-                  Call Now
+                <h3>Phone</h3>
+                <p>+1 302 464 0950</p>
+                <a>Call Now
                 </a>
               </div>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
-                >
-                  Send Email
+                <h3>Email</h3>
+                <p>kleber@ziontechgroup.com</p>
+                <a>Send Email
                 </a>
               </div>
               
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
-                <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-                <a 
-                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-400 hover:text-green-300 font-medium transition-colors"
-                >
-                  View on Map
+                <h3>Address</h3>
+                <p className="text-gray-300 mb-4">364 E Main St STE 1008<br>Middletown, DE 19709</br>p>
+                <a>View on Map
                 </a>
               </div>
             </div>
           </section>
         </main>
 
-        <Footer />
-      </div>
+        <Footer> </Footer>div>
     </>
   );
 };

@@ -92,8 +92,8 @@ const EnhancedSEOHead: React.FC = () => {
   }
   const finalStructuredData = structuredData || defaultStructuredData
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
+    <Head>
+        {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -150,8 +150,7 @@ const EnhancedSEOHead: React.FC = () => {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
+      <script>{JSON.stringify(structuredData)}
       </script>
       <script type="application/ld+json">
         {JSON.stringify(websiteStructuredData)}
@@ -168,10 +167,9 @@ const EnhancedSEOHead: React.FC = () => {
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+      <script>{JSON.stringify(finalStructuredData)}
       </script>
-    </Helmet>
+      </Head>
   )
 }
 export default EnhancedSEOHead

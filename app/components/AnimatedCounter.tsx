@@ -59,8 +59,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [isVisible, end, duration]);
 
   return (
-    <span ref={setNode} className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
+    <span>{prefix}{count.toLocaleString()}{suffix}
     </span>
   );
 };

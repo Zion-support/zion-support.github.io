@@ -879,12 +879,11 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
 
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 ${className}`}>
-      <Helmet>
+      <Head>
         <title>AI Code Security Auditor Pro - Automated Security Analysis | Zion Tech Group</title>
         <meta name="description" content="Automated code security analysis with AI Code Security Auditor Pro. Detect vulnerabilities, ensure compliance, and get auto-fix suggestions for your codebase." />
         <meta name="keywords" content="code security, vulnerability scanning, security audit, code analysis, OWASP, compliance, security testing" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-code-security-auditor" />
-      </Helmet>
+        <link> </link>Head>
 
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
@@ -894,52 +893,48 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-red-500/10 border border-red-400/20 rounded-full px-6 py-3 mb-8">
               <Shield className="w-5 h-5 text-red-400 mr-2" />
-              <span className="text-red-300 font-medium">AI Code Security Auditor Pro</span>
+              <span>AI Code Security Auditor Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent neon-text">
-              Automated Security Analysis
+            <h1>Automated Security Analysis
             </h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Secure Your Code with AI-Powered Analysis
+            <p>Secure Your Code with AI-Powered Analysis
             </p>
 
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Detect vulnerabilities, ensure compliance, and get automated fix suggestions.
+            <p>Detect vulnerabilities, ensure compliance, and get automated fix suggestions.
               Protect your applications with comprehensive security analysis powered by advanced AI.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25">
-                <span className="relative z-10">Start Free Scan</span>
+                <span>Start Free Scan</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </button>
 
               <button className="group inline-flex items-center px-8 py-4 border-2 border-red-400 text-red-400 font-semibold rounded-xl hover:bg-red-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
-              </button>
+                <Play>Watch Demo
+              </Play>button>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
-                <div className="text-gray-400">Detection Rate</div>
+                <div>99.9%</div>
+                <div>Detection Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
-                <div className="text-gray-400">Vulnerability Types</div>
+                <div>50+</div>
+                <div>Vulnerability Types</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">10s</div>
-                <div className="text-gray-400">Scan Time</div>
+                <div>10s</div>
+                <div>Scan Time</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-400">Monitoring</div>
+                <div>24/7</div>
+                <div>Monitoring</div>
               </div>
             </div>
           </div>
@@ -950,11 +945,9 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Security Scanner
+            <h2>Security Scanner
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Upload your code or connect your repository for instant security analysis
+            <p>Upload your code or connect your repository for instant security analysis
             </p>
           </div>
 
@@ -963,36 +956,31 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               {/* Code Input Section */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Code className="w-8 h-8 text-red-400 mr-3" />
-                  Code Analysis
-                </h3>
+                  <Code>Code Analysis
+                </Code>h3>
 
                 <div className="space-y-6">
                   {/* File Upload */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Upload Code Files
+                    <label>Upload Code Files
                     </label>
                     <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-red-400 transition-colors cursor-pointer">
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-gray-400">Click to upload or drag and drop</p>
-                      <p className="text-gray-500 text-sm">JS, TS, Python, Java, C++, etc.</p>
+                      <p>Click to upload or drag and drop</p>
+                      <p>JS, TS, Python, Java, C++, etc.</p>
                     </div>
                   </div>
 
                   {/* Code Input */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Or Paste Code
+                    <label>Or Paste Code
                     </label>
-                    <textarea
-                      value={codeContent}
-                      onChange={(e) => setCodeContent(e.target.value)}
+                    <textarea>setCodeContent(e.target.value)}
                       placeholder="Paste your code here for analysis..."
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/20 resize-none font-mono text-sm"
                       rows={8}
                     />
-                  </div>
+                  </textarea>div>
 
                   {/* Scan Button */}
                   <button
@@ -1002,14 +990,12 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   >
                     {isAnalyzing ? (
                       <>
-                        <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
-                        Analyzing Code...
-                      </>
+                        <RefreshCw>Analyzing Code...
+                      </RefreshCw>>
                     ) : (
                       <>
-                        <Search className="w-5 h-5 mr-2 inline" />
-                        Analyze Code
-                      </>
+                        <Search>Analyze Code
+                      </Search>>
                     )}
                   </button>
                 </div>
@@ -1018,30 +1004,28 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               {/* Results Section */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Shield className="w-8 h-8 text-red-400 mr-3" />
-                  Security Results
-                </h3>
+                  <Shield>Security Results
+                </Shield>h3>
 
                 <div className="space-y-4">
                   {vulnerabilities.length > 0 ? (
                     vulnerabilities.map((vuln, index) => (
                       <div key={index} className="bg-white/5 rounded-lg p-4 border border-white/10">
                         <div className="flex items-center justify-between mb-2">
-                          <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(vuln.severity)}`}>
-                            {vuln.severity}
+                          <span>{vuln.severity}
                           </span>
-                          <span className="text-gray-400 text-sm">Line {vuln.line}</span>
+                          <span>Line {vuln.line}</span>
                         </div>
-                        <h4 className="text-white font-semibold mb-1">{vuln.type}</h4>
-                        <p className="text-gray-300 text-sm mb-2">{vuln.description}</p>
-                        <p className="text-green-400 text-sm">{vuln.recommendation}</p>
+                        <h4>{vuln.type}</h4>
+                        <p>{vuln.description}</p>
+                        <p>{vuln.recommendation}</p>
                       </div>
                     ))
                   ) : (
                     <div className="text-center py-8">
                       <Shield className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                      <p className="text-gray-400">No vulnerabilities detected</p>
-                      <p className="text-gray-500 text-sm">Upload code to start analysis</p>
+                      <p>No vulnerabilities detected</p>
+                      <p>Upload code to start analysis</p>
                     </div>
                   )}
                 </div>
@@ -1055,18 +1039,16 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Security Dashboard
+            <h2>Security Dashboard
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Monitor and manage security issues across your codebase
+            <p>Monitor and manage security issues across your codebase
             </p>
           </div>
 
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-white">Security Issues</h3>
+                <h3>Security Issues</h3>
                 <button
                   onClick={handleStartScan}
                   disabled={isScanning}
@@ -1074,14 +1056,12 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                 >
                   {isScanning ? (
                     <>
-                      <RefreshCw className="w-4 h-4 mr-2 animate-spin inline" />
-                      Scanning...
-                    </>
+                      <RefreshCw>Scanning...
+                    </RefreshCw>>
                   ) : (
                     <>
-                      <Search className="w-4 h-4 mr-2 inline" />
-                      Start Scan
-                    </>
+                      <Search>Start Scan
+                    </Search>>
                   )}
                 </button>
               </div>
@@ -1091,22 +1071,16 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center space-x-3">
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(issue.severity)}`}>
-                          {issue.severity}
+                        <span>{issue.severity}
                         </span>
-                        <span className="text-white font-semibold">{issue.type}</span>
-                        <span className="text-gray-400 text-sm">{issue.file}:{issue.line}</span>
+                        <span>{issue.type}</span>
+                        <span>{issue.file}:{issue.line}</span>
                       </div>
-                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                        issue.status === 'Fixed'
-                          ? 'text-green-400 bg-green-400/10'
-                          : 'text-yellow-400 bg-yellow-400/10'
-                      }`}>
-                        {issue.status}
+                      <span>{issue.status}
                       </span>
                     </div>
-                    <p className="text-gray-300 mb-2">{issue.description}</p>
-                    <p className="text-green-400 text-sm">{issue.recommendation}</p>
+                    <p>{issue.description}</p>
+                    <p>{issue.recommendation}</p>
                   </div>
                 ))}
               </div>
@@ -1119,11 +1093,9 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Security Features
+            <h2>Security Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security analysis tools for modern development
+            <p>Comprehensive security analysis tools for modern development
             </p>
           </div>
 
@@ -1131,14 +1103,12 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-orange-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
+                  <feature> </feature>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-red-400 font-semibold">{feature.price}</span>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                </div>
+                  <span>{feature.price}</span>
+                  <CheckCircle> </CheckCircle>div>
               </div>
             ))}
           </div>
@@ -1149,11 +1119,9 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Security Plans
+            <h2>Security Plans
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security plan that fits your development needs
+            <p>Choose the security plan that fits your development needs
             </p>
           </div>
 
@@ -1162,18 +1130,17 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-400 to-orange-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular
+                    <span>Most Popular
                     </span>
                   </div>
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
+                  <h3>{plan.name}</h3>
+                  <p>{plan.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                    <span>{plan.price}</span>
+                    <span>{plan.period}</span>
                   </div>
                 </div>
 
@@ -1181,17 +1148,12 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 transform hover:scale-105'
-                    : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>
-                  {plan.popular ? 'Get Started' : 'Choose Plan'}
+                <button>{plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>
               </div>
             ))}
@@ -1203,29 +1165,25 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Secure Your Code Today
+            <h2>Secure Your Code Today
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our security experts to discuss your code security needs
+            <p>Contact our security experts to discuss your code security needs
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                <h3>Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <Phone className="w-5 h-5 text-red-400 mr-3" />
-                    <a href="tel:+13024640950" className="text-gray-300 hover:text-red-400 transition-colors">
-                      +1 (302) 464-0950
+                    <a>+1 (302) 464-0950
                     </a>
                   </div>
                   <div className="flex items-center">
                     <Mail className="w-5 h-5 text-red-400 mr-3" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-red-400 transition-colors">
-                      kleber@ziontechgroup.com
+                    <a>kleber@ziontechgroup.com
                     </a>
                   </div>
                   <div className="flex items-start">
@@ -1239,27 +1197,26 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Get Started</h3>
+                <h3>Get Started</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Free security scan</span>
+                    <span>Free security scan</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">No credit card required</span>
+                    <span>No credit card required</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Instant results</span>
+                    <span>Instant results</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Expert support</span>
+                    <span>Expert support</span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Scan
+                <button>Start Free Scan
                 </button>
               </div>
             </div>

@@ -66,22 +66,18 @@ export default function Blog() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights and updates from Zion Tech Group" />
-
-      </Helmet>
+        </Head>
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our Blog
+              <h1>Our Blog
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Insights, trends, and expertise from the Zion Tech Group team
+              <p>Insights, trends, and expertise from the Zion Tech Group team
               </p>
             </div>
           </div>
@@ -92,19 +88,13 @@ export default function Blog() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
               <div className="flex-1 max-w-md">
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                <input>setSearchTerm(e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 />
-              </div>
+              </input>div>
               <div className="flex gap-2 flex-wrap">
                 {categories.map(category => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
+                  <button>setSelectedCategory(category.id)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedCategory === category.id
                         ? 'bg-blue-600 text-white'
@@ -123,49 +113,37 @@ export default function Blog() {
         {featuredPost && (
           <section className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Featured Article</h2>
+              <h2>Featured Article</h2>
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
                 <div className="md:flex">
                   <div className="md:w-1/2">
-                    <img
-                      src={featuredPost.image}
-                      alt={featuredPost.title}
-                      className="w-full h-64 md:h-full object-cover"
-                    />
-                  </div>
+                    <img> </img>div>
                   <div className="md:w-1/2 p-8">
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">
-                        {featuredPost.category}
+                      <span>{featuredPost.category}
                       </span>
-                      <span className="text-gray-500 dark:text-gray-400 text-sm">
-                        {featuredPost.readTime}
+                      <span>{featuredPost.readTime}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                      {featuredPost.title}
+                    <h3>{featuredPost.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6">
-                      {featuredPost.excerpt}
+                    <p>{featuredPost.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                         <div className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
-                          {featuredPost.author}
-                        </div>
+                          <User>{featuredPost.author}
+                        </User>div>
                         <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          {new Date(featuredPost.date).toLocaleDateString()}
-                        </div>
+                          <Calendar>{new Date(featuredPost.date).toLocaleDateString()}
+                        </Calendar>div>
                       </div>
                       <Link
-                        to={`/blog/${featuredPost.id}`}
+                        href={`/blog/${featuredPost.id}`}
                         className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
                       >
                         Read More
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Link>
+                        <ArrowRight> </ArrowRight>Link>
                     </div>
                   </div>
                 </div>
@@ -177,7 +155,7 @@ export default function Blog() {
         {/* Blog Posts Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Latest Articles</h2>
+            <h2>Latest Articles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {regularPosts.map(post => (
                 <article key={post.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
@@ -188,37 +166,30 @@ export default function Blog() {
                   />
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-3">
-                      <span className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium">
-                        {post.category}
+                      <span>{post.category}
                       </span>
-                      <span className="text-gray-500 dark:text-gray-400 text-sm">
-                        {post.readTime}
+                      <span>{post.readTime}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                      {post.title}
+                    <h3>{post.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
-                      {post.excerpt}
+                    <p>{post.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                         <div className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
-                          {post.author}
-                        </div>
+                          <User>{post.author}
+                        </User>div>
                         <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          {new Date(post.date).toLocaleDateString()}
-                        </div>
+                          <Calendar>{new Date(post.date).toLocaleDateString()}
+                        </Calendar>div>
                       </div>
                       <Link
-                        to={`/blog/${post.id}`}
+                        href={`/blog/${post.id}`}
                         className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
                       >
                         Read More
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Link>
+                        <ArrowRight> </ArrowRight>Link>
                     </div>
                   </div>
                 </article>

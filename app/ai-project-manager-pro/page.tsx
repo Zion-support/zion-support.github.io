@@ -13,13 +13,10 @@ import React from "react";
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
+            <div> </div>
+                  <h3>{feature.title}
                   </h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p>{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -35,7 +32,7 @@ import React from "react";
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

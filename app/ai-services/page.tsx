@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React from "react";
 import { BarChart3, FileText, MessageSquare } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
 // Removed unused imports
 =======
 'use client';
@@ -1196,8 +1196,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
 
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
-      </div>
+        <div> </div>
 
       {/* Header */}
       <div className="relative overflow-hidden">
@@ -1206,49 +1205,45 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
           <div className="text-center">
 
             <div className="inline-block mb-6">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
-                AI Services
+              <h1>AI Services
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
             </div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your business with our comprehensive suite of cutting-edge AI-powered solutions
+            <p>Transform your business with our comprehensive suite of cutting-edge AI-powered solutions
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">35+</div>
-                <div className="text-gray-300">AI Services</div>
+                <div>35+</div>
+                <div>AI Services</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">25K+</div>
-                <div className="text-gray-300">Active Users</div>
+                <div>25K+</div>
+                <div>Active Users</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Accuracy Rate</div>
+                <div>99.9%</div>
+                <div>Accuracy Rate</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300">AI Support</div>
+                <div>24/7</div>
+                <div>AI Support</div>
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Services
+            <h1>AI Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
-              Transform your business with our comprehensive suite of AI-powered solutions
+            <p>Transform your business with our comprehensive suite of AI-powered solutions
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-cyan-400 font-semibold">15+ AI Platforms</span>
+                <span>15+ AI Platforms</span>
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-purple-400 font-semibold">25,000+ Companies</span>
+                <span>25,000+ Companies</span>
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
+                <span>99.9% Accuracy</span>
               </div>
             </div>
           </div>
@@ -1259,11 +1254,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-wrap justify-center gap-4">
           {categories.map((category) => (
-            <button
-              key={category}
-              className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300 font-medium"
-            >
-              {category}
+            <button>{category}
             </button>
           ))}
         </div>
@@ -1286,70 +1277,59 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-6">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color} text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <service.icon className="h-8 w-8" />
-                  </div>
+                    <service> </service>div>
                   <div className="flex items-center space-x-2">
                     {service.popular && (
                       <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg">
-                        <Star className="w-3 h-3 mr-1" />
-                        Popular
-                      </span>
+                        <Star>Popular
+                      </Star>span>
                     )}
                     <div className="flex items-center text-yellow-400">
                       <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                      <span>{service.rating}</span>
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                  {service.name}
+                <h3>{service.name}
                 </h3>
 
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
+                <p>{service.description}
                 </p>
 
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                    <Zap className="w-4 h-4 mr-2 text-cyan-400" />
-                    Key Features:
-                  </h4>
+                    <Zap>Key Features:
+                  </Zap>h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        <CheckCircle>{feature}
+                      </CheckCircle>li>
                     ))}
                     {service.features.length > 4 && (
-                      <li className="text-cyan-400 text-sm font-medium">
-                        +{service.features.length - 4} more features
+                      <li>+{service.features.length - 4} more features
                       </li>
                     )}
                   </ul>
                 </div>
 
                 <div className="flex items-center justify-between mb-6">
-                  <div className="text-sm text-gray-400">
-                    {service.users} users
+                  <div>{service.users} users
                   </div>
-                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium">
-                    {service.category}
+                  <div>{service.category}
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <div className="text-lg font-semibold text-cyan-400 mb-2">
-                    {service.pricing}
+                  <div>{service.pricing}
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h4>
+                  <h4>Key Capabilities:</h4>
                   <ul className="space-y-1">
                     {service.capabilities.map((capability, index) => (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {capability}
-                      </li>
+                        <CheckCircle>{capability}
+                      </CheckCircle>li>
                     ))}
                   </ul>
                 </div>
@@ -1360,13 +1340,8 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                     className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                  <a
-                    href="/contact"
-                    className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-                  >
-                    Learn More
+                    <ArrowRight> </ArrowRight>a>
+                  <a>Learn More
                   </a>
                 </div>
               </div>
@@ -1379,24 +1354,14 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business with AI?
+          <h2>Ready to Transform Your Business with AI?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Join 25,000+ companies already using our cutting-edge AI solutions. Start your free trial today!
+          <p>Join 25,000+ companies already using our cutting-edge AI solutions. Start your free trial today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a
-              href="https://ziontechgroup.com/contact"
-              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            >
-              Start Your Free Trial
+            <a>Start Your Free Trial
             </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
-            >
-              Call: +1 (302) 464-0950
+            <a>Call: +1 (302) 464-0950
             </a>
           </div>
           <div className="text-purple-100 text-sm">

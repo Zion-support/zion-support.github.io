@@ -56,34 +56,29 @@ import SEOOptimizer from '../components/SEOOptimizer'
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Healthcare
-            <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-              IT Solutions
-  </
+            <span>IT Solutions
+  </span>h1>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.
+          <p>Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.
             Protect patient data while improving operational efficiency.
           </p>
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-  </
+              <ArrowRight> </ArrowRight>button>
+            <button>Learn More
+  </button>
 </div>
         </div>
       </section>
 {/* Features Section */}
       <section className="py-20 px-4">
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions for all aspects of healthcare delivery and management.
+            <p>Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
+                <div>{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
               </div>
             ))}
           </div>
@@ -93,36 +88,31 @@ import SEOOptimizer from '../components/SEOOptimizer'
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Healthcare IT Solutions?
+            <h2>Why Choose Our Healthcare IT Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of modern healthcare technology with our proven solutions.
+            <p>Experience the benefits of modern healthcare technology with our proven solutions.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  <CheckCircle> </CheckCircle>div>
+                <h3>{benefit}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
-<section className="py-20 px-4">
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
-              View Case Studies
-  </
+<section> </section>button>
+            <button>View Case Studies
+  </button>
           </div>
         </div>
       </section>
-      <Footer />
-</div>
+      <Footer>
+</Footer>div>
   )
 }
   </button>

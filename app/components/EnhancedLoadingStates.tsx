@@ -18,7 +18,7 @@ return (
 <div className="flex flex-col items-center justify-center p-8">
 <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
 {text && (
-<p className="mt-2 text-sm text-gray-500">{text}</p>
+<p>{text}</p>
 )}
 </div>
 )
@@ -27,10 +27,10 @@ export const PageLoader: React.FC = () => (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
 <div className="text-center">
 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto animate-pulse">
-<Brain className="w-8 h-8 text-white" />
-</div>
-<h2 className="text-xl font-semibold text-white mb-2">Zion Tech Group</h2>
-<p className="text-gray-300">Loading amazing content...</p>
+<Brain>
+</Brain>div>
+<h2>Zion Tech Group</h2>
+<p>Loading amazing content...</p>
 </div>
 </div>
 )

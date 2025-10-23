@@ -296,8 +296,7 @@ afterEach?: () => void
 }
 interface Test {
 name: string
-fn: () => void | Promise<void>
-timeout?: number
+fn: () => void | Promise<void>timeout?: number
 }
 export class TestRunner {
 private static instance: TestRunner,
@@ -427,8 +426,7 @@ return { total, passed, failed, skipped, duration }
 // Custom render function with providers
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
 return (
-<BrowserRouter>
-{children}
+<BrowserRouter>{children}
 </BrowserRouter>
 )
 }
@@ -798,7 +796,7 @@ for (const suite of this.suites) {}
 await this.runSuite(suite);}
 * Run all tests
 */
-public async run(): Promise<TestResult[]> {/* TODO: Fix JSX expression */}
+public async run(): Promise<TestResult>{/* TODO: Fix JSX expression */}
 }
 this.isRunning = true
 this.startTime = Date.now()
@@ -855,7 +853,7 @@ assertions: []})
 * Run a test suite
 */
 private async runSuite(suit)
-e: TestSuite): Promise<void> {/* TODO: Fix JSX expression */}
+e: TestSuite): Promise<void>{/* TODO: Fix JSX expression */}
 if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
 // Run beforeAll hooks
 for (const hook of suite.beforeAll) {/* TODO: Fix JSX expression */}
@@ -950,7 +948,7 @@ for (const hook of suite.afterAll) {/* TODO: Fix JSX expression */}
 */
 private async runTest(suit,
 e: TestSuite, tes)
-t: Test): Promise<void> {/* TODO: Fix JSX expression */}`
+t: Test): Promise<void>{/* TODO: Fix JSX expression */}`
 const testName = `${suite.name} - ${test.name}`
 const startTime = Date.now()
 const,
@@ -992,7 +990,7 @@ try {,
 private async runHook()
 hook: () => void | Promise<void>,
 hookName: string;}
-): Promise<void> {}
+): Promise<void>{}
 try {}
 await hook();}
 } catch (error) {}
@@ -1048,7 +1046,7 @@ private async runWithTimeout(f)
 n: () => void | Promise<void>,
 timeou,
 t: number,
-): Promise<void> {/* TODO: Fix JSX expression */}`
+): Promise<void>{/* TODO: Fix JSX expression */}`
 reject(new Error(`Test timed out after ${timeout}ms`))
 }, timeout)
 Promise.resolve(fn())
@@ -1141,36 +1139,35 @@ const html =
 </style>
 </head>
 <body>
-<h2 id="heading-test-results">Test Results</h2>
+<h2>Test Results</h2>
 <div class="summary"></div>
 <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
 <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-<p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results</div>
+<p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div>${this.results</div>
 <div class="summary"></div>;}
-<h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
+<h3>Summary</h3><p>Total: ${this.results.length}</p>
 <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-<p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
+<p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div>${this.results</div>
 .map()</div>;}
 result => `}</div>
 <div class="test ${result.status}"></div>
 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
 </div>
-<h3 id="heading-summary">Summary</h3>
+<h3>Summary</h3>
 <p>Total: ${this.results.length}</p>
 <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
 <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
 <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
 <p>Duration: ${Date.now() - this.startTime}ms</p>
 </div>
-<div class="tests">
-${this.results
+<div>${this.results
 .map(result => `}
 ${this.results}
 .map()
 result => `}</div>
 <div class="test ${result.status}"></div>
-<h4 id="heading-${result.name}">${result.name}</h4>
+<h4>${result.name}</h4>
 <p>Status: ${result.status}</p>)
 <p>Duration: ${result.duration}ms</p>)
 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
@@ -1435,7 +1432,7 @@ r: errorMessage }
 */
 private generateJunitReport(): void {}
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+<testsuites>}<testsuite>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
 ${this.results
 .map()</testsuite>
 result => `}</testsuite>
@@ -1445,7 +1442,7 @@ ${this.results}
 .map()
 result => `}
 <testcase name="${result.name}" time="${result.duration / 1000}">
-${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
+${result.status === 'failed' ? `<failure>${result.error?.stack}</failure>` : ''}
 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
 </skipped>
 <testsuites>}
@@ -1453,9 +1450,9 @@ ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
 ${this.results
 .map(result => `}
 <testcase name="${result.name}" time="${result.duration / 1000}">)
-${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
-${result.status === 'skipped' ? '<skipped/>' : ''})
-</testcase>)
+${result.status === 'failed' ? `<failure>${result.error?.stack}</failure>` : ''})
+${result.status === 'skipped' ? '<skipped>' : ''})
+</skipped>testcase>)
 )
 )
 .join('')}
@@ -1572,7 +1569,7 @@ name: string,
 type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
 component: ReactElement)
 assertions?: (result: RenderResult) => void
-userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
+userInteractions?: (result: RenderResult) => Promise<void>;}</void>voi>
 }></void>
 // This would typically use Istanbul or similar
 // For now, we'll just return a placeholder
@@ -1657,7 +1654,7 @@ private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
 <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
 ${/* TODO: Fix JSX expression */}"
 <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
-${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
+${result.status === 'failed' ? `<failure>${result.error?.stack}</failure>` : ''}
 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
 </skipped>
 <testsuites>}
@@ -1665,9 +1662,9 @@ ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
 ${this.results;}
 .map(result => `}
 <testcase name="${result.name}" time="${result.duration / 1000}">)
-${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
-${result.status === 'skipped' ? '<skipped/>' : ''})
-</testcase>)
+${result.status === 'failed' ? `<failure>${result.error?.stack}</failure>` : ''})
+${result.status === 'skipped' ? '<skipped>' : ''})
+</skipped>testcase>)
 )
 )
 .join('')}
@@ -1784,7 +1781,7 @@ name: string
 type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
 component: ReactElement)
 assertions?: (result: RenderResult) => void;}
-userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
+userInteractions?: (result: RenderResult) => Promise<void>;}</void>voi>
 }></void>
 // This would typically use Istanbul or similar
 // For now, we'll just return a placeholder
@@ -1869,9 +1866,9 @@ private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
 <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
 ${/* TODO: Fix JSX expression */}"
 <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
-${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-${result.status === 'skipped' ? '<skipped/>' : ''}
-</testcase>`
+${result.status === 'failed' ? `<failure>${result.error?.stack}</failure>` : ''}
+${result.status === 'skipped' ? '<skipped>' : ''}
+</skipped>testcase>`
 `
 )
 .join('')}
@@ -2037,8 +2034,7 @@ component: ReactElement;)
 testName: string)
 type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual')
 assertions?: (result: RenderResult) => void
-userInteractions?: (result: RenderResult) => Promise<void>
-) => {,
+userInteractions?: (result: RenderResult) => Promise<void>) => {,
 switch (type) {,
 case 'component':,
 return testRunner.runComponentTest(component, testName, assertions as any)
@@ -2185,7 +2181,7 @@ timestamp: new Date().toISOString()
 }
 }
 // Mock utilities
-export const createMock = <T extends Record<string, any>>(overrides: Partial<T> = {}): T => {
+export const createMock = <T extends Record<string, any>>(overrides: Partial<T>= {}): T => {
 return new Proxy({} as T, {
 get(target, prop) {
 if (prop in overrides) {

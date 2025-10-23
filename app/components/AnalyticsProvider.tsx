@@ -75,9 +75,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <AnalyticsContext>{children}
+    </AnalyticsContext>AnalyticsContext.Provider>
   );
 };
 

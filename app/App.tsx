@@ -11,17 +11,14 @@ const App: React.FC = () => {
       <Head>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
-        <meta property="og:type" content="website" />
-      </Head>
+        </Head>
       
       <div className="App">
         <PerformanceMonitor />
         <Navigation />
-        <main>
-          {/* Main content will be handled by Next.js routing */}
+        <main>{/* Main content will be handled by Next.js routing */}
         </main>
-        <Footer />
-      </div>
+        <Footer> </Footer>div>
     </>
   );
 };
