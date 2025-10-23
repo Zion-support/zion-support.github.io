@@ -1,144 +1,158 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// List of files with syntax errors
-const filesToFix = [
-  'app/ai-data-analytics/page.tsx',
-  'app/ai-fraud-detection/page.tsx', 
-  'app/ai-healthcare/page.tsx',
-  'app/ai-marketing/page.tsx',
-  'app/ai-sales-automation/page.tsx',
-  'app/ai-workflow-automation/page.tsx',
-  'app/components/ErrorBoundary.tsx',
-  'app/components/Footer.tsx',
-  'app/components/PerformanceDashboard.tsx',
-  'app/pages/AdminPage.tsx',
-  'app/zion-ai-code-reviewer/page.tsx',
-  'app/zion-ai-contract-analyzer/page.tsx',
-  'app/zion-ai-data-cleaner/page.tsx',
-  'app/zion-ai-social-media-manager/page.tsx',
-  'app/zion-ai-supply-chain-optimizer/page.tsx',
-  'app/zion-ai-survey-builder/page.tsx',
-  'app/zion-ai-translator-pro/page.tsx',
-  'app/zion-ai-video-generator/page.tsx',
-  'app/zion-analytics-pro/page.tsx',
-  'app/zion-cloud-vault/page.tsx',
-  'app/zion-content-studio/page.tsx',
-  'app/zion-security-shield/page.tsx',
-  'app/5g-solutions/page.tsx'
-];
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-function fixFile(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has syntax issues
+    if (!content.includes(';') || !content.includes('</')) {
+      return false; // No obvious syntax issues
     }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
-    let modified = false;
-
-    // Fix extra closing div tags pattern
-    const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
-    if (extraDivPattern.test(content)) {
-      content = content.replace(extraDivPattern, '\n    </div>\n  );');
-      modified = true;
+    
+    console.log(`Fixing syntax errors in: ${filePath}`);
+    
+    // Fix common syntax issues
+    let fixedContent = content
+      // Remove trailing semicolons that shouldn't be there
+      .replace(/;\s*$/gm, '')
+      // Fix JSX closing tags that have semicolons
+      .replace(/<\/([^>]+)>;\s*$/gm, '</$1>')
+      // Fix JSX opening tags that have semicolons
+      .replace(/<([^>]+)>;\s*$/gm, '<$1>')
+      // Fix JSX attributes that have semicolons
+      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1="$2"')
+      // Fix JSX expressions that have semicolons
+      .replace(/\{\s*([^}]+)\s*\}\s*;\s*$/gm, '{$1}')
+      // Remove standalone semicolons
+      .replace(/^\s*;\s*$/gm, '')
+      // Fix multiple empty lines
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      // Fix JSX fragments
+      .replace(/<>\s*;\s*$/gm, '<>')
+      .replace(/<\/>\s*;\s*$/gm, '</>')
+      // Fix React.Fragment
+      .replace(/<React\.Fragment>\s*;\s*$/gm, '<React.Fragment>')
+      .replace(/<\/React\.Fragment>\s*;\s*$/gm, '</React.Fragment>')
+      // Fix common JSX syntax issues
+      .replace(/>\s*;\s*</gm, '><')
+      .replace(/>\s*;\s*$/gm, '>')
+      // Fix function declarations
+      .replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\(\s*;\s*$/gm, 'const $1 = () => (')
+      .replace(/const\s+(\w+)\s*=\s*\(\s*;\s*$/gm, 'const $1 = (')
+      // Fix return statements
+      .replace(/return\s*\(\s*;\s*$/gm, 'return (')
+      // Fix JSX elements that are missing closing tags
+      .replace(/<(\w+)([^>]*)>\s*;\s*$/gm, '<$1$2>')
+      // Clean up extra whitespace
+      .replace(/\s+$/gm, '')
+      .replace(/^\s+/gm, '');
+    
+    // Try to fix incomplete JSX structures
+    const lines = fixedContent.split('\n');
+    const fixedLines = [];
+    let inJSX = false;
+    let jsxDepth = 0;
+    
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
+      
+      // Skip lines that are just semicolons or empty
+      if (line.trim() === ';' || line.trim() === '') {
+        continue;
+      }
+      
+      // Skip lines that are just closing braces with semicolons
+      if (line.trim() === '};' || line.trim() === '}') {
+        if (jsxDepth > 0) {
+          jsxDepth--;
+        }
+        fixedLines.push(line.replace(/;+$/, ''));
+        continue;
+      }
+      
+      // Skip lines that are just opening braces with semicolons
+      if (line.trim() === '{;' || line.trim() === '{') {
+        jsxDepth++;
+        fixedLines.push(line.replace(/;+$/, ''));
+        continue;
+      }
+      
+      // Fix lines that end with semicolons inappropriately
+      if (line.includes(';') && !line.includes('//') && !line.includes('*')) {
+        // Check if this is a JSX line
+        if (line.includes('<') && line.includes('>')) {
+          line = line.replace(/;\s*$/, '');
+        } else if (line.includes('return') || line.includes('const') || line.includes('let') || line.includes('var')) {
+          // Keep semicolons for regular JavaScript
+        } else {
+          line = line.replace(/;\s*$/, '');
+        }
+      }
+      
+      fixedLines.push(line);
     }
-
-    // Fix missing closing div tags
-    const missingDivPattern = /(\s*<\/div>\s*){1,2}\s*\);\s*}/g;
-    if (missingDivPattern.test(content)) {
-      content = content.replace(missingDivPattern, '\n    </div>\n  );\n}');
-      modified = true;
+    
+    const finalContent = fixedLines.join('\n');
+    
+    // Only write if content changed
+    if (finalContent !== content) {
+      fs.writeFileSync(filePath, finalContent);
+      return true;
     }
-
-    // Fix incorrect closing tags like </>
-    content = content.replace(/<\s*\/\s*>/g, '</div>');
-    if (content.includes('</>')) {
-      modified = true;
-    }
-
-    // Fix h1/h2/h3 tag mismatches
-    content = content.replace(/<h1([^>]*)>\s*([^<]*)\s*<\/h2>/g, '<h1$1>$2</h1>');
-    content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>');
-    content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>');
-
-    // Fix malformed JSX structure in Footer
-    if (filePath.includes('Footer.tsx')) {
-      content = content.replace(
-        /<\/div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">/g,
-        '<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">'
-      );
-      content = content.replace(
-        /<\/div><div className="lg:col-span-1">/g,
-        '<div className="lg:col-span-1">'
-      );
-      content = content.replace(
-        /<\/div><div className="flex items-center space-x-2 mb-4">/g,
-        '<div className="flex items-center space-x-2 mb-4">'
-      );
-      content = content.replace(
-        /<\/div><p className="text-gray-400 mb-4">/g,
-        '<p className="text-gray-400 mb-4">'
-      );
-      content = content.replace(
-        /<\/div><ul className="space-y-2">/g,
-        '<ul className="space-y-2">'
-      );
-      content = content.replace(
-        /<\/div><h1 className="text-lg font-semibold mb-4">AI Services<\/h3>/g,
-        '<h3 className="text-lg font-semibold mb-4">AI Services</h3>'
-      );
-    }
-
-    // Fix malformed JSX structure in PerformanceDashboard
-    if (filePath.includes('PerformanceDashboard.tsx')) {
-      content = content.replace(
-        /<\/div><div className="grid grid-cols-1 md:grid-cols-3 gap-6">/g,
-        '<div className="grid grid-cols-1 md:grid-cols-3 gap-6">'
-      );
-      content = content.replace(
-        /<\/div><div className="bg-blue-50 rounded-lg p-4">/g,
-        '<div className="bg-blue-50 rounded-lg p-4">'
-      );
-      content = content.replace(
-        /<\/div><h1 className="text-lg font-semibold text-blue-900 mb-2">\s*Render Time\s*<\/h3>/g,
-        '<h3 className="text-lg font-semibold text-blue-900 mb-2">Render Time</h3>'
-      );
-    }
-
-    // Fix "use client" directive placement
-    if (content.includes('import React') && content.includes('"use client"') && !content.startsWith('"use client"')) {
-      content = content.replace(/import React[^;]*;\s*"use client";/g, '"use client";\nimport React from "react";');
-      modified = true;
-    }
-
-    // Fix missing React import
-    if (!content.includes('import React') && content.includes('export default function')) {
-      content = content.replace(/^/, '"use client";\nimport React from "react";\n\n');
-      modified = true;
-    }
-
-    // Fix variable name issues
-    content = content.replace(/\b_renderTime\b/g, 'renderTime');
-    content = content.replace(/\b_memoryUsage\b/g, 'memoryUsage');
-    content = content.replace(/\b_fps\b/g, 'fps');
-    content = content.replace(/\b_frameCount\b/g, 'frameCount');
-    content = content.replace(/\b_updateMetrics\b/g, 'updateMetrics');
-
-    if (modified) {
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
-    } else {
-      console.log(`No changes needed: ${filePath}`);
-    }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Fix all files
-console.log('Starting syntax error fixes...');
-filesToFix.forEach(fixFile);
-console.log('Syntax error fixes completed!');
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const files = findTsxFiles(appDir);
+
+console.log(`Found ${files.length} TypeScript files to check`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed syntax errors in ${fixedCount} files`);
+
+// Also check the root App.tsx
+if (fixSyntaxErrors(path.join(__dirname, 'App.tsx'))) {
+  fixedCount++;
+  console.log('Fixed syntax errors in App.tsx');
+}
+
+console.log(`Total files fixed: ${fixedCount}`);
