@@ -1,118 +1,128 @@
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Brain, Globe, Shield, Zap } from "lucide-react";
+import { Brain, TrendingUp, BarChart3, Zap, Shield, Globe } from "lucide-react";
+
 const AiPredictiveModelingPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "Advanced Technology",
-      description:
-        "Cutting-edge solutions powered by the latest technology and AI.",
+      title: "Machine Learning Models",
+      description: "Advanced machine learning models for accurate predictions and data analysis."
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Comprehensive predictive analytics with trend analysis and forecasting capabilities."
+    },
+    {
+      icon: BarChart3,
+      title: "Data Visualization",
+      description: "Advanced data visualization with interactive charts and real-time insights."
     },
     {
       icon: Zap,
-      title: "High Performance",
-      description:
-        "Optimized for speed and efficiency with real-time processing capabilities.",
+      title: "Real-time Processing",
+      description: "Real-time data processing with instant model updates and predictions."
     },
     {
       icon: Shield,
-      title: "Enterprise Security",
-      description:
-        "Bank-level security with end-to-end encryption and compliance standards.",
+      title: "Data Security",
+      description: "Enterprise-grade data security with encryption and compliance standards."
     },
     {
       icon: Globe,
-      title: "Global Scalability",
-      description:
-        "Scale effortlessly across multiple regions with automatic load balancing.",
-    },
+      title: "Scalable Platform",
+      description: "Scalable platform that grows with your data and modeling requirements."
+    }
   ];
 
   return (
     <React.Fragment>
       <Helmet>
-        <title>
-          Ai Predictive Modeling - Zion Tech Group | Advanced AI and IT
-          Solutions
-        </title>
-
+        <title>AI Predictive Modeling - Zion Tech Group | Advanced AI and IT Solutions</title>
+        <meta name="description" content="AI-powered predictive modeling with machine learning, analytics, and data visualization for business intelligence." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        
-          </div><section className="py-20 px-4 sm:px-6 lg:px-8">
-          
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai Predictive Modeling
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Predictive Modeling
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional aipredictivemodeling solutions powered by advanced AI
-              and cutting-edge technology.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI predictive modeling with machine learning and analytics. 
+              Build accurate models, analyze trends, and make data-driven decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
                 Get Started
               </a>
-
+              <a
+                href="/services"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
                 View All Services
               </a>
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          
-        </section><div className="max-w-7xl mx-auto">
-        
-          </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Modeling Features
               </h2>
-          
-          </div><p className="text-lg text-gray-300">
-                Everything you need for success
+              <p className="text-lg text-gray-300">
+                Advanced AI predictive modeling capabilities
               </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-          </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-semibold text-white mb-3">
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center">
                     {feature.title}
                   </h3>
-          
-          </div><p className="text-gray-300">{feature.description}</p>
+                  <p className="text-gray-300 text-center">{feature.description}</p>
                 </div>
               ))}
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Build Predictive Models?
             </h2>
-          
-          </div><p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
+            <p className="text-lg text-gray-300 mb-8">
+              Implement our AI predictive modeling solution to make data-driven decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
                 Start Your Project
               </a>
-
+              <a
+                href="/about"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
                 Learn More
               </a>
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
       </div>
     </React.Fragment>

@@ -1,81 +1,139 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Cube, Zap, Palette, ArrowRight } from "lucide-react";
 
+const Ai3dModelGeneratorPage: React.FC = () => {
+  const features = [
+    {
+      icon: Cube,
+      title: "3D Model Generation",
+      description: "AI-powered 3D model generation from text descriptions and images.",
+      benefits: [
+        "Text-to-3D conversion",
+        "Image-to-3D conversion",
+        "High-quality mesh generation",
+        "Multiple format support",
+      ],
+    },
+    {
+      icon: Zap,
+      title: "Real-time Processing",
+      description: "Fast and efficient 3D model generation with real-time preview.",
+      benefits: [
+        "Real-time preview",
+        "Fast generation",
+        "GPU acceleration",
+        "Batch processing",
+      ],
+    },
+    {
+      icon: Palette,
+      title: "Customization",
+      description: "Advanced customization options for generated 3D models.",
+      benefits: [
+        "Material customization",
+        "Texture mapping",
+        "Color variations",
+        "Size adjustments",
+      ],
+    },
+  ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-
+        <title>AI 3D Model Generator - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Advanced AI-powered 3D model generation for creative and professional applications." />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        
-          </div><section className="py-20 px-4 sm:px-6 lg:px-8">
-          
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai3d Model Generator
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI 3D Model{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Generator
+              </span>
             </h1>
-
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered 3D model generation for creative and professional applications.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                 Get Started
-              </a>
-
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 View All Services
-              </a>
-        </div>
-      </div>
+              </button>
+            </div>
+          </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          
-        </section><div className="max-w-7xl mx-auto">
-        
-          </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
               </h2>
-          
-          </div><p className="text-lg text-gray-300">
+              <p className="text-lg text-gray-300">
                 Everything you need for success
               </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-          </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 group hover:border-purple-500/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-semibold text-white mb-3">
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">
                     {feature.title}
                   </h3>
-          
-          </div><p className="text-gray-300">{feature.description}</p>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    {feature.description}
+                  </p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start text-sm text-gray-300">
+                          <Cube className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Generate 3D Models?
             </h2>
-          
-          </div><p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
+            <p className="text-xl text-gray-300 mb-8">
+              Let us help you create amazing 3D models with AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-                Start Your Project
-              </a>
-
-                Learn More
-              </a>
-        </div>
-      </div>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Contact Us
+              </button>
+            </div>
+          </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
+export default Ai3dModelGeneratorPage;

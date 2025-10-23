@@ -1,15 +1,14 @@
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { MessageCircle, Clock, Users, Shield } from "lucide-react";
+import { MessageCircle, Clock, Users, ArrowRight } from "lucide-react";
 
-const AICustomerSupportPage: React.FC = () => {
-  const _features = [
+const AiCustomerSupportPage: React.FC = () => {
+  const features = [
     {
-      icon: <MessageCircle className="w-6 h-6" />,
+      icon: MessageCircle,
       title: "24/7 AI Chat Support",
-      description:
-        "Provide instant, intelligent customer support with our advanced AI chatbot that understands context and resolves issues automatically.",
+      description: "Provide instant, intelligent customer support with our advanced AI chatbot.",
       benefits: [
         "Instant responses",
         "Context awareness",
@@ -18,10 +17,9 @@ const AICustomerSupportPage: React.FC = () => {
       ],
     },
     {
-      icon: <Clock className="w-6 h-6" />,
+      icon: Clock,
       title: "Response Time Optimization",
-      description:
-        "Reduce average response time from hours to seconds with intelligent routing and automated responses.",
+      description: "Reduce average response time from hours to seconds with intelligent routing.",
       benefits: [
         "90% faster responses",
         "Smart routing",
@@ -30,10 +28,9 @@ const AICustomerSupportPage: React.FC = () => {
       ],
     },
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: Users,
       title: "Human-AI Collaboration",
-      description:
-        "Seamlessly blend AI automation with human expertise for complex issues that require personal touch.",
+      description: "Seamlessly blend AI automation with human expertise for complex issues.",
       benefits: [
         "Smart handoffs",
         "Context preservation",
@@ -41,158 +38,102 @@ const AICustomerSupportPage: React.FC = () => {
         "Quality assurance",
       ],
     },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description:
-        "Bank-level security with end-to-end encryption, GDPR compliance, and SOC 2 certification.",
-      benefits: [
-        "Data encryption",
-        "Compliance ready",
-        "Access controls",
-        "Audit trails",
-      ],
-    },
-  ];
-
-  const _pricingPlans = [
-    {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small businesses with basic support needs",
-      features: [
-        "1,000 conversations/month",
-        "Basic AI chatbot",
-        "Email integration",
-        "Standard analytics",
-        "Email support",
-        "5 team members",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$499",
-      period: "/month",
-      description: "Ideal for growing businesses with moderate support volume",
-      features: [
-        "5,000 conversations/month",
-        "Advanced AI chatbot",
-        "Multi-channel support",
-        "Advanced analytics",
-        "Priority support",
-        "25 team members",
-        "Custom integrations",
-        "Knowledge base",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$1,299",
-      period: "/month",
-      description: "For large organizations with high support volume",
-      features: [
-        "Unlimited conversations",
-        "Premium AI chatbot",
-        "All channels supported",
-        "Custom analytics",
-        "24/7 phone support",
-        "Unlimited team members",
-        "Custom integrations",
-        "Advanced knowledge base",
-        "API access",
-        "White-label options",
-      ],
-      popular: false,
-    },
-  ];
-
-  const _testimonials = [
-    {
-      name: "Jennifer Martinez",
-      role: "Customer Success Manager",
-      company: "E-commerce Plus",
-      content:
-        "Our customer satisfaction increased by 40% after implementing Zion Tech Group's AI support. Response times went from 2 hours to 30 seconds.",
-      rating: 5,
-    },
-    {
-      name: "David Kim",
-      role: "VP of Operations",
-      company: "TechStart Inc.",
-      content:
-        "The AI handles 80% of our support tickets automatically, allowing our team to focus on complex issues. It's been a game-changer.",
-      rating: 5,
-    },
-    {
-      name: "Lisa Thompson",
-      role: "Head of Customer Experience",
-      company: "Global Services",
-      content:
-        "The multilingual support capability helped us expand to 15 new markets without hiring additional support staff.",
-      rating: 5,
-    },
-  ];
-
-  const _stats = [
-    { number: "95%", label: "Customer Satisfaction" },
-    { number: "90%", label: "Faster Response Time" },
-    { number: "80%", label: "Issues Resolved Automatically" },
-    { number: "24/7", label: "Always Available" },
   ];
 
   return (
     <>
-      
-    </><Helmet>
-        <title>AI Customer Support - Zion Tech Group</title>
-
+      <Helmet>
+        <title>AI Customer Support - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Advanced AI-powered customer support solutions for 24/7 intelligent assistance." />
+        <meta property="og:type" content="website" />
       </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        
-          </div><div className="container mx-auto px-4 py-16">
-        
-          </div><div className="text-center mb-16">
-          <h$1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI Customer Support
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Customer{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Support
+              </span>
             </h1>
-          
-          </div><p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Deliver exceptional customer support with AI-powered chatbots,
-              automated responses, and intelligent assistance.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered customer support solutions for 24/7 intelligent assistance.
             </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-          </div><div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">
-                Intelligent Chatbots
-              </h3>
-          
-          </div><p className="text-gray-600">
-                AI-powered chatbots that understand and respond to customer
-                queries.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                View All Services
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-lg text-gray-300">
+                Everything you need for success
               </p>
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Ticket Routing</h3>
-          
-          </div><p className="text-gray-600">
-                Automated ticket classification and routing to appropriate
-                agents.
-              </p>
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h$1 className="text-xl font-semibold mb-4">Sentiment Analysis</h3>
-          
-          </div><p className="text-gray-600">
-                Real-time customer sentiment analysis and response optimization.
-              </p>
-        </div>
-      </div>
-        </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 group hover:border-purple-500/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    {feature.description}
+                  </p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start text-sm text-gray-300">
+                          <MessageCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Customer Support?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let us help you implement advanced AI customer support for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
 };
 
-export default AICustomerSupportPage;
+export default AiCustomerSupportPage;

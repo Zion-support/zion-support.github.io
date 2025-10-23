@@ -1,156 +1,139 @@
 "use client";
 import React from "react";
-import {
-  Cloud,
-  Server,
-  Database,
-  Shield,
-  CheckCircle,
-  Phone,
-  Mail,
-} from "lucide-react";
 import { Helmet } from "react-helmet-async";
-const CloudInfrastructurePage: React.FC = () => {
+import { Cloud, Server, Database, ArrowRight } from "lucide-react";
+
+const AiCloudInfrastructurePage: React.FC = () => {
   const features = [
     {
       icon: Cloud,
       title: "Cloud Migration",
-      description:
-        "Seamless migration to cloud platforms with minimal downtime",
+      description: "Seamless migration to cloud platforms with minimal downtime.",
+      benefits: [
+        "Zero-downtime migration",
+        "Data integrity",
+        "Performance optimization",
+        "Cost reduction",
+      ],
     },
     {
       icon: Server,
       title: "Infrastructure Setup",
-      description: "Complete cloud infrastructure setup and configuration",
+      description: "Complete cloud infrastructure setup and configuration.",
+      benefits: [
+        "Scalable architecture",
+        "High availability",
+        "Load balancing",
+        "Auto-scaling",
+      ],
     },
     {
       icon: Database,
       title: "Database Management",
-      description: "Scalable database solutions and management services",
+      description: "Scalable database solutions and management services.",
+      benefits: [
+        "Database optimization",
+        "Backup and recovery",
+        "Performance monitoring",
+        "Security management",
+      ],
     },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security and compliance standards",
-    },
-  ];
-
-  const benefits = [
-    "Scalable cloud infrastructure",
-    "Cost-effective solutions",
-    "High availability and reliability",
-    "Automated scaling and management",
-    "24/7 technical support",
-    "Easy integration with existing systems",
-    "Cost-effective pricing plans",
-    "Proven track record of success",
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-        <title>Cloud Infrastructure | Zion Tech Group</title>
-
+        <title>AI Cloud Infrastructure - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Advanced AI-powered cloud infrastructure solutions for scalable and secure deployments." />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        
-          </div><section className="relative py-20 px-4">
-          
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cloud Infrastructure
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Cloud{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Infrastructure
+              </span>
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced cloud infrastructure
-              solutions. Powered by cutting-edge AI technology and industry
-              expertise.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered cloud infrastructure solutions for scalable and secure deployments.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                View All Services
+              </button>
+            </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4">
-          
-        </section><div className="max-w-7xl mx-auto">
-        
-          </div><div className="text-center mb-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Cloud Infrastructure?
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
               </h2>
-          
-          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced solutions designed for modern business needs
+              <p className="text-lg text-gray-300">
+                Everything you need for success
               </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-          <h$1 className="text-xl font-semibold text-white mb-2">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 group hover:border-purple-500/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">
                     {feature.title}
                   </h3>
-          
-          </div><p className="text-gray-300">{feature.description}</p>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    {feature.description}
+                  </p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start text-sm text-gray-300">
+                          <Cloud className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
-        </div>
-      </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-16 px-4 bg-white/5">
-          
-        </section><div className="max-w-7xl mx-auto">
-        
-          </div><div className="text-center mb-12">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits
-              </h2>
-          
-          </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of our cloud infrastructure solutions for
-                your business.
-              </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-        
-          </div><div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4">
-          
-        </section><div className="max-w-4xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Build Cloud Infrastructure?
             </h2>
-          
-          </div><p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your cloud infrastructure needs and
-              get a customized solution.
+            <p className="text-xl text-gray-300 mb-8">
+              Let us help you implement advanced AI cloud infrastructure for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Contact Us
               </button>
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
-export default CloudInfrastructurePage;
+export default AiCloudInfrastructurePage;

@@ -1,235 +1,139 @@
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle, FileText, Clock, Users, Shield } from "lucide-react";
+import { FileText, Zap, Palette, ArrowRight } from "lucide-react";
 
-const AIContentGenerationPage: React.FC = () => {
-  const _features = [
+const AiContentGenerationPage: React.FC = () => {
+  const features = [
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "AI-Powered Content Creation",
-      description:
-        "Generate high-quality, engaging content for blogs, articles, social media, and marketing materials using advanced AI algorithms.",
+      icon: FileText,
+      title: "AI Content Creation",
+      description: "Advanced AI-powered content generation for various formats and purposes.",
       benefits: [
-        "SEO-optimized content",
-        "Multiple content types",
-        "Brand voice consistency",
-        "Plagiarism-free content",
+        "Multi-format support",
+        "SEO optimization",
+        "Brand consistency",
+        "Quality assurance",
       ],
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Rapid Content Production",
-      description:
-        "Create content 10x faster than traditional methods while maintaining quality and relevance to your audience.",
+      icon: Zap,
+      title: "Rapid Generation",
+      description: "Fast and efficient content generation with real-time processing.",
       benefits: [
         "Instant generation",
-        "Bulk content creation",
+        "Bulk processing",
         "Template library",
         "Quick iterations",
       ],
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Audience Targeting",
-      description:
-        "Generate content tailored to specific demographics, industries, and customer personas for maximum engagement.",
+      icon: Palette,
+      title: "Creative Enhancement",
+      description: "Advanced creative features for enhanced content quality.",
       benefits: [
-        "Persona-based content",
-        "Industry-specific tone",
-        "Demographic targeting",
-        "Engagement optimization",
+        "Style adaptation",
+        "Tone adjustment",
+        "Visual elements",
+        "Creative suggestions",
       ],
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Quality Assurance",
-      description:
-        "Built-in quality checks ensure your content meets professional standards and brand guidelines.",
-      benefits: [
-        "Grammar checking",
-        "Tone analysis",
-        "Brand compliance",
-        "Quality scoring",
-      ],
-    },
-  ];
-
-  const _pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small businesses and content creators",
-      features: [
-        "1,000 content pieces/month",
-        "Basic AI templates",
-        "Standard quality checks",
-        "Email support",
-        "5 team members",
-        "Basic analytics",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for growing businesses and marketing teams",
-      features: [
-        "10,000 content pieces/month",
-        "Advanced AI templates",
-        "Premium quality checks",
-        "Priority support",
-        "25 team members",
-        "Advanced analytics",
-        "API access",
-        "Custom templates",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "For large organizations with complex content needs",
-      features: [
-        "Unlimited content pieces",
-        "Custom AI models",
-        "White-label solution",
-        "Dedicated support",
-        "Unlimited team members",
-        "Custom analytics",
-        "Full API access",
-        "Custom integrations",
-        "SLA guarantee",
-      ],
-      popular: false,
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AI Content Generation - Zion Tech Group</title>
-
+        <title>AI Content Generation - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Advanced AI-powered content generation solutions for professional content creation." />
+        <meta property="og:type" content="website" />
       </Helmet>
-        
-          </div><div className="container mx-auto px-4 py-20">
-        
-          </div><div className="text-center mb-16">
-          <h$1 className="text-5xl font-bold text-white mb-6">
-            AI Content Generation
-          </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your content strategy with our advanced AI-powered content
-            generation platform. Create engaging, high-quality content at scale
-            for blogs, social media, marketing materials, and more.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-        
-          </div><div className="flex items-center text-green-400">
-              <CheckCircle className="w-5 h-5 mr-2" />
-              <span>10x Faster Content Creation</span>
-        
-          </div><div className="flex items-center text-green-400">
-              <CheckCircle className="w-5 h-5 mr-2" />
-              <span>SEO-Optimized Output</span>
-        
-          </div><div className="flex items-center text-green-400">
-              <CheckCircle className="w-5 h-5 mr-2" />
-              <span>Brand Voice Consistency</span>
-        </div>
-      </div>
-        </div>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Content{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Generation
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered content generation solutions for professional content creation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                View All Services
+              </button>
+            </div>
+          </div>
+        </section>
 
         {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-        
-          </div><div className="text-blue-400 mb-4">{feature.icon}
-          <h$1 className="text-xl font-semibold text-white mb-3">
-                {feature.title}
-              </h3>
-          
-          </div><p className="text-gray-300 mb-4">{feature.description}</p>
-              <ul className="space-y-2">
-
-                    <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-lg text-gray-300">
+                Everything you need for success
+              </p>
             </div>
-          ))}
-        </div>
-
-        {/* Pricing Section */}
-        <div className="mb-20">
-          <h$1 className="text-4xl font-bold text-white text-center mb-12">
-            Choose Your Plan
-          </h2>
-        
-          </div><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                {plan.popular && (
-        
-          </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-400 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 group hover:border-purple-500/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                )}
-                <div className="text-center mb-6">
-          <h$1 className="text-2xl font-bold text-white mb-2">
-                    {plan.name}
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    {feature.title}
                   </h3>
-        
-          </div><div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">
-                      {plan.price}
-                    </span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-          
-          </div><p className="text-gray-300 mt-2">{plan.description}</p>
-            <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                  Get Started
-                </button>
-              </div>
-            ))}
-        </div>
-      </div>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    {feature.description}
+                  </p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start text-sm text-gray-300">
+                          <FileText className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
-        <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-12 border border-white/20">
-          <h$1 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Content Strategy?
-          </h2>
-          
-          </div><p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already using our AI content generation
-            platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-400 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Schedule Demo
-            </button>
-        </div>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Generate Content?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let us help you implement advanced AI content generation for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-        </div>
-      </div>
+    </>
   );
 };
 
-export default AIContentGenerationPage;
+export default AiContentGenerationPage;

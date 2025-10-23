@@ -1,120 +1,140 @@
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Brain, Globe, Shield, Zap } from "lucide-react";
+import { TestTube, Bug, CheckCircle, ArrowRight } from "lucide-react";
+
 const AiAutomatedTestingPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "Advanced Technology",
-      description:
-        "Cutting-edge solutions powered by the latest technology and AI.",
+      icon: TestTube,
+      title: "Automated Test Generation",
+      description: "AI-powered automated test case generation for comprehensive coverage.",
+      benefits: [
+        "Test case generation",
+        "Edge case detection",
+        "Regression testing",
+        "Performance testing",
+      ],
     },
     {
-      icon: Zap,
-      title: "High Performance",
-      description:
-        "Optimized for speed and efficiency with real-time processing capabilities.",
+      icon: Bug,
+      title: "Bug Detection",
+      description: "Advanced bug detection and analysis using AI algorithms.",
+      benefits: [
+        "Automated bug detection",
+        "Root cause analysis",
+        "Priority classification",
+        "Fix suggestions",
+      ],
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description:
-        "Bank-level security with end-to-end encryption and compliance standards.",
-    },
-    {
-      icon: Globe,
-      title: "Global Scalability",
-      description:
-        "Scale effortlessly across multiple regions with automatic load balancing.",
+      icon: CheckCircle,
+      title: "Quality Assurance",
+      description: "Comprehensive quality assurance with automated validation.",
+      benefits: [
+        "Code quality checks",
+        "Security scanning",
+        "Performance validation",
+        "Compliance testing",
+      ],
     },
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>
-          Ai Automated Testing - Zion Tech Group | Advanced AI and IT Solutions
+          AI Automated Testing - Zion Tech Group | Advanced AI and IT Solutions
         </title>
-
+        <meta name="description" content="Advanced AI-powered automated testing solutions for software quality assurance." />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        
-          </div><section className="py-20 px-4 sm:px-6 lg:px-8">
-          
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai Automated Testing
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Automated{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Testing
+              </span>
             </h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional aiautomatedtesting solutions powered by advanced AI
-              and cutting-edge technology.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered automated testing solutions for software quality assurance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                 Get Started
-              </a>
-
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 View All Services
-              </a>
-        </div>
-      </div>
+              </button>
+            </div>
+          </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          
-        </section><div className="max-w-7xl mx-auto">
-        
-          </div><div className="text-center mb-16">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
               </h2>
-          
-          </div><p className="text-lg text-gray-300">
+              <p className="text-lg text-gray-300">
                 Everything you need for success
               </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-          </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 group hover:border-purple-500/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
-          <h$1 className="text-xl font-semibold text-white mb-3">
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">
                     {feature.title}
                   </h3>
-          
-          </div><p className="text-gray-300">{feature.description}</p>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    {feature.description}
+                  </p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start text-sm text-gray-300">
+                          <TestTube className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
-        </div>
-      </div>
+            </div>
+          </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          
-        </section><div className="max-w-7xl mx-auto text-center">
-          <h$1 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Automate Your Testing?
             </h2>
-          
-          </div><p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
+            <p className="text-xl text-gray-300 mb-8">
+              Let us help you implement advanced AI automated testing for your software.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-                Start Your Project
-              </a>
-
-                Learn More
-              </a>
-        </div>
-      </div>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Contact Us
+              </button>
+            </div>
+          </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -1,34 +1,132 @@
+"use client";
+import React from "react";
 import { Helmet } from "react-helmet-async";
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
+import { Heart, Brain, Shield, Zap, Users, BarChart3 } from "lucide-react";
 
+const AiHealthcarePage: React.FC = () => {
+  const features = [
+    {
+      icon: Heart,
+      title: "Patient Monitoring",
+      description: "Real-time patient monitoring with AI-powered health analytics and predictive insights."
+    },
+    {
+      icon: Brain,
+      title: "Medical AI",
+      description: "Advanced AI algorithms for medical diagnosis, treatment recommendations, and clinical decision support."
+    },
+    {
+      icon: Shield,
+      title: "Data Security",
+      description: "HIPAA-compliant data security with end-to-end encryption and secure patient data management."
+    },
+    {
+      icon: Zap,
+      title: "Rapid Processing",
+      description: "High-speed medical data processing with instant analysis and real-time health monitoring."
+    },
+    {
+      icon: Users,
+      title: "Healthcare Teams",
+      description: "Collaborative healthcare platform for medical teams with integrated communication and workflow management."
+    },
+    {
+      icon: BarChart3,
+      title: "Health Analytics",
+      description: "Comprehensive health analytics and reporting for better patient care and medical insights."
+    }
+  ];
+
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>AI Healthcare - Zion Tech Group | Advanced AI and IT Solutions</title>
+        <meta name="description" content="AI-powered healthcare solutions with patient monitoring, medical AI, and HIPAA-compliant data security." />
       </Helmet>
-        
-          </div><div className="container mx-auto px-4 py-20">
-        
-          </div><div className="text-center">
-          <h$1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          
-          </div><p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        <div className="max-w-4xl mx-auto">
-        
-          </div><div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h$1 className="text-2xl font-semibold text-white mb-4">
-              Coming Soon
-            </h2>
-          
-          </div><p className="text-gray-300">
-              This page is under development. Please check back later for
-              updates.
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Healthcare Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform healthcare with AI-powered solutions. 
+              Patient monitoring, medical AI, and secure healthcare data management.
             </p>
-        </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Get Started
+              </a>
+              <a
+                href="/services"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                View All Services
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Healthcare Features
+              </h2>
+              <p className="text-lg text-gray-300">
+                Advanced AI healthcare capabilities
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-center">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Healthcare?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Implement our AI healthcare solutions to improve patient care and outcomes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Start Your Project
+              </a>
+              <a
+                href="/about"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-        </div>
-      </div>
+    </React.Fragment>
   );
-}
+};
+
+export default AiHealthcarePage;
