@@ -65,7 +65,9 @@ export function usePerformanceOptimization(
     images.forEach((img) => {
       if (img.dataset.src && !img.src) {
         img.src = img.dataset.src;
-        img.classList.add("lazy-loaded");
+        if (img.classList) {
+          img.classList.add("lazy-loaded");
+        }
       }
     });
   }, [enableImageOptimization]);
@@ -78,7 +80,9 @@ export function usePerformanceOptimization(
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
-          element.classList.add("lazy-loaded");
+          if (element.classList) {
+            element.classList.add("lazy-loaded");
+          }
           observer.unobserve(element);
         }
       });
