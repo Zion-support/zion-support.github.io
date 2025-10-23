@@ -1,197 +1,150 @@
-'use client';
-import React, { useEffect } from 'react';
+'use client'
+import React from 'react'
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-interface SecurityEnhancerProps {
-  enableCSP?: boolean;
-  enableHTTPSRedirect?: boolean;
-  enableXSSProtection?: boolean;
-  enableClickjackingProtection?: boolean;
-  enableContentTypeSniffingProtection?: boolean;
-}
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
-  enableCSP = true,
-  enableHTTPSRedirect = true,
-  enableXSSProtection = true,
-  enableClickjackingProtection = true,
-  enableContentTypeSniffingProtection = true
-}) => {
-  useEffect(() => {
-    if (enableCSP) {
-      addContentSecurityPolicy();
+const SecurityEnhancerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    
-    if (enableHTTPSRedirect) {
-      enforceHTTPS();
-    }
-    
-    if (enableXSSProtection) {
-      addXSSProtection();
-    }
-    
-    if (enableClickjackingProtection) {
-      addClickjackingProtection();
-    }
-    
-    if (enableContentTypeSniffingProtection) {
-      addContentTypeSniffingProtection();
-    }
-    
-    // Add security headers
-    addSecurityHeaders();
-    
-    // Add security event listeners
-    addSecurityEventListeners();
-  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
+  ]
 
-  const addContentSecurityPolicy = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "img-src 'self' data: https: blob:",
-      "font-src 'self' https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
-      "object-src 'none'",
-      "media-src 'self'",
-      "worker-src 'self'"
-    ].join('; ');
-    document.head.appendChild(meta);
-  };
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
-  const enforceHTTPS = () => {
-    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
-      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
-    }
-  };
+  return (
+    <>
+      <Helmet>
+        <title>SecurityEnhancer</title>
+        <meta name="description" content="Advanced SecurityEnhancer solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, SecurityEnhancer, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              SecurityEnhancer
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced SecurityEnhancer solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
 
-  const addXSSProtection = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-XSS-Protection';
-    meta.content = '1; mode=block';
-    document.head.appendChild(meta);
-  };
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-  const addClickjackingProtection = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Frame-Options';
-    meta.content = 'DENY';
-    document.head.appendChild(meta);
-  };
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-  const addContentTypeSniffingProtection = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Content-Type-Options';
-    meta.content = 'nosniff';
-    document.head.appendChild(meta);
-  };
-
-  const addSecurityHeaders = () => {
-    const headers = [
-      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-      { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
-      { httpEquiv: 'Strict-Transport-Security', content: 'max-age=63072000; includeSubDomains; preload' }
-    ];
-
-    headers.forEach(header => {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = header.httpEquiv;
-      meta.content = header.content;
-      document.head.appendChild(meta);
-    });
-  };
-
-  const addSecurityEventListeners = () => {
-    // Prevent right-click context menu (optional)
-    document.addEventListener('contextmenu', (e) => {
-      // Only prevent on production
-      if (process.env.NODE_ENV === 'production') {
-        e.preventDefault();
-      }
-    });
-
-    // Prevent text selection (optional)
-    document.addEventListener('selectstart', (e) => {
-      // Only prevent on production
-      if (process.env.NODE_ENV === 'production') {
-        e.preventDefault();
-      }
-    });
-
-    // Prevent drag and drop
-    document.addEventListener('dragover', (e) => {
-      e.preventDefault();
-    });
-
-    document.addEventListener('drop', (e) => {
-      e.preventDefault();
-    });
-
-    // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
-    document.addEventListener('keydown', (e) => {
-      if (process.env.NODE_ENV === 'production') {
-        // F12
-        if (e.keyCode === 123) {
-          e.preventDefault();
-        }
-        // Ctrl+Shift+I
-        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
-          e.preventDefault();
-        }
-        // Ctrl+U
-        if (e.ctrlKey && e.keyCode === 85) {
-          e.preventDefault();
-        }
-        // Ctrl+S
-        if (e.ctrlKey && e.keyCode === 83) {
-          e.preventDefault();
-        }
-        // Ctrl+A
-        if (e.ctrlKey && e.keyCode === 65) {
-          e.preventDefault();
-        }
-      }
-    });
-
-    // Monitor for suspicious activity
-    let suspiciousActivity = 0;
-    const resetSuspiciousActivity = () => {
-      suspiciousActivity = 0;
-    };
-
-    // Reset suspicious activity counter every 5 minutes
-    setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
-
-    // Track rapid clicks (potential bot activity)
-    let clickCount = 0;
-    document.addEventListener('click', () => {
-      clickCount++;
-      if (clickCount > 10) { // More than 10 clicks in 5 minutes
-        suspiciousActivity++;
-        if (suspiciousActivity > 3) {
-          // Could implement additional security measures here
-        }
-      }
-    });
-
-    // Track rapid keyboard input
-    let keyCount = 0;
-    document.addEventListener('keydown', () => {
-      keyCount++;
-      if (keyCount > 100) { // More than 100 keystrokes in 5 minutes
-        suspiciousActivity++;
-        if (suspiciousActivity > 3) {
-          }
-      }
-    });
-  };
-
-  return null;
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
 };
 
-export default SecurityEnhancer;
+export default SecurityEnhancerPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
