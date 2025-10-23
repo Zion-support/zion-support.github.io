@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import { Phone } from 'lucide-react'
 import { Home } from 'lucide-react'
 =======
 import {Phone} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 export default function NotFound() {constpopularPages= [
     {

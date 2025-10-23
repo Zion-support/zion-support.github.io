@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -153,3 +154,5 @@ export constServiceCardSkeleton: React.FC= () => {return(<divclassName="bg-slate
 export constContentSkeleton: React.FC= () => {return(<divclassName="bg-slate-80 0/50backdrop-blur-sm border border-slate-700rounded-xlp-8animate-pulse"><divclassName="h-8 bg-slate-700roundedmb-4w-1/2"></di><divclassName="h-4bg-slate-700roundedmb-2"></di><divclassName="h-4bg-slate-700roundedmb-2"></di><divclassName="h-4bg-slate-700roundedw-3/4"></di></di>)}
 export constLoadingSpinner: React.FC= () =>(<divclassName="flex items-centerjustify-centerp-8"><divclassName="w-8 h-8 border-4 border-cyan-400border-t-transparentrounded-fullanimate-spin"></di></di>
 )
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

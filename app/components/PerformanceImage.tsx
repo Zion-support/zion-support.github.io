@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 "use client"
 import React from "react"
 import { Helmet } from "react-helmet-async"
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 const PerformanceImagePage: React.FC = () => {
   const features = [
@@ -51,6 +54,7 @@ const PerformanceImagePage: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">PerformanceImage</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional PerformanceImage services tailored to your business needs.</p>p>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
     </div>
@@ -60,3 +64,5 @@ const PerformanceImagePage: React.FC = () => {
 export default PerformanceImagePage
 
 export default PerformanceImagePage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from "react"
 
 declare global {
@@ -82,3 +83,5 @@ export default AnalyticsProvider
 };
 
 export default AnalyticsProviderPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 
 import React, { createContext, useContext, useEffect } from "react"
@@ -257,3 +258,5 @@ const EnhancedAnalyticsPage: React.FC = () => {
 };
 
 export default EnhancedAnalyticsPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

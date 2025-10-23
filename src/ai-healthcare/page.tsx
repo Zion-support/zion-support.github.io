@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from 'react'
 import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react'
 import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
     {

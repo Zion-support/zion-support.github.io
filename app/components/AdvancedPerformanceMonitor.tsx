@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -370,3 +371,5 @@ if (process.env.NODE_ENV=== 'development') {return(<divclassName='fixed bottom-4
 return nul l
 }
 export default AdvancedPerformanceMonitor
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle, Star, BarChart } from 'lucide-react'
 import { Bot, Cpu } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
     {

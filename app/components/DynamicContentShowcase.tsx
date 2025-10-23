@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -33,6 +34,8 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'AI-Powered Solutions',
       description: 'Advanced artificial intelligence to automate and optimize your business processes',
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
   const features = [
     {
       icon: Brain,
@@ -69,6 +72,7 @@ const DynamicContentShowcase: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -77,6 +81,8 @@ const DynamicContentShowcase: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -87,9 +93,12 @@ const DynamicContentShowcase: React.FC = () => {
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></button>
               <Play className="w-5 h-5" />
               Start Demo
+<<<<<<< HEAD
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"></button>
               <ArrowRight className="w-5 h-5" />
               Learn More
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
           </div>
         </div>
 {/* Features Grid */}
@@ -212,7 +221,10 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="flex justify-center mt-6 space-x-2">{testimonials.map((_, index) => (</div>
                 <button
                   key={index}
+<<<<<<< HEAD
                   onClick={() =></button> setCurrentIndex(index)}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
                   }`}
@@ -254,6 +266,7 @@ const DynamicContentShowcase: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -321,6 +334,8 @@ const DynamicContentShowcase: React.FC = () => {
               </button>
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Schedule Demo
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
             </div>
           </div>
         </div>

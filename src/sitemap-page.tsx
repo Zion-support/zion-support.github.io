@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'lucide-react'
 import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 const SitemapPage: React.FC = () => {
   const pages = [

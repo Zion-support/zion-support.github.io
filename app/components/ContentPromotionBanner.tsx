@@ -1,9 +1,12 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 import { Zap, ArrowRight } from 'lucide-react'
 
 const ContentPromotionBanner: React.FC = () => {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
   const features = [
     {
       icon: Brain,
@@ -40,6 +43,7 @@ const ContentPromotionBanner: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>ContentPromotionBanner</title>
@@ -58,6 +62,8 @@ const ContentPromotionBanner: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced ContentPromotionBanner solution for modern businesses.
             </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
           </div>
         </div>
         {/* Stats Section */}
@@ -98,8 +104,11 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           </div>
           <div className="text-center mt-8">
+<<<<<<< HEAD
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"></button>
               Get Started Today
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
           </div>
         </div>
         {/* Features Grid */}
@@ -155,6 +164,7 @@ const ContentPromotionBanner: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -222,12 +232,17 @@ const ContentPromotionBanner: React.FC = () => {
               </button>
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Schedule Demo
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
             </div>
           </div>
         </div>
       <div className="text-center">
+<<<<<<< HEAD
         <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center"></button>
           Get Started Now
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
           <ArrowRight className="w-5 h-5 ml-2" />
         </button>
       </div>

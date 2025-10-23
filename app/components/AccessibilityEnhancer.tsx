@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useEffect } from 'react';
@@ -7,6 +8,9 @@ interface AccessibilityEnhancerProps {
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
+=======
+'use client'
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
@@ -16,6 +20,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true
 }) => {
   useEffect(() => {
+<<<<<<< HEAD
     // Only run in browser environment
     if (typeof window === 'undefined') return;
 
@@ -36,11 +41,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [enableKeyboardNavigation]);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
   useEffect(() => {
     // Add screen reader support
     if (enableScreenReaderSupport) {
       // Add skip links
+<<<<<<< HEAD
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
@@ -120,3 +128,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
+=======
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

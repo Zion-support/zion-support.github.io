@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
@@ -81,6 +82,11 @@ interface ContentNewsletterSignupProps {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
+=======
+    }
+  ]
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
         </div>
       </div>
     );
@@ -115,6 +121,7 @@ interface ContentNewsletterSignupProps {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           {/* Newsletter Form */}
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -147,6 +154,8 @@ interface ContentNewsletterSignupProps {
               </button>
               <p className="text-sm text-blue-200 text-center">
                 We respect your privacy. Unsubscribe at any time.
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -183,6 +192,7 @@ interface ContentNewsletterSignupProps {
   );
 };
 
+<<<<<<< HEAD
 export default ContentNewsletterSignupPage;
 =======
             </di><
@@ -200,3 +210,5 @@ export default ContentNewsletterSignupPage;
             </p></for></di></di></di></di>)
 }
 export defaultContentNewsletterSignup</labe></butto></ContentNewsletterSignupProp>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

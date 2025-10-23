@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 constPricingPage: React.FC= () =>{constpricingPlans= [
     {

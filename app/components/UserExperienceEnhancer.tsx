@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -145,3 +146,5 @@ const UserExperienceEnhancerPage: React.FC = () => {
 };
 
 export default UserExperienceEnhancerPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

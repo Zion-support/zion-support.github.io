@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 'use client'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data

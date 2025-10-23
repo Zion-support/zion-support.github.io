@@ -1,9 +1,12 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { ArrowRight } from 'lucide-react'
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
     }
   ]
 
@@ -31,6 +34,7 @@ import { ArrowRight } from 'lucide-react'
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               SystemMonitor
             </h1>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced SystemMonitor solution for modern businesses.
             </p>
@@ -119,6 +123,8 @@ import { ArrowRight } from 'lucide-react'
 };
 
 export default SystemMonitorPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
             </div>
         </div>
     </div>

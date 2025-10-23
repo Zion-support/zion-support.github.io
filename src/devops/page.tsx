@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { GitBranch } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 const DevOpsPage: React.FC = () => {
   const services = [
     {

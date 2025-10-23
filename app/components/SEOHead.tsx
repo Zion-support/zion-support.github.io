@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -170,3 +171,5 @@ return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname="descri
 {/* Open GraphMetaTags*/}<metaproperty="og:title" content={fullTitle} /><metaproperty="og:description" content={description} /><metaproperty="og:type" content={ogType} /><metaproperty="og:url" content={canonicalUrl} /><metaproperty="og:image" content={ogImage} /><metaproperty="og:site_name"content="Zion TechGroup" /><metaproperty="og:locale"content="en_US" />{/* Twitter CardMetaTags*/}<metaname="twitter:card" content={twitterCard} /><metaname="twitter:title" content={fullTitle} /><metaname="twitter:description" content={description} /><metaname="twitter:image" content={ogImage} />{/* Additional SEOMetaTags*/}<metaname="theme-color"content="#0f172a" /><metaname="msapplication-TileColor"content="#0f172a" /><metaname="apple-mobile-web-app-capable"content="yes" /><metaname="apple-mobile-web-app-status-bar-style"content="black-translucent" />{/* StructuredData*/}<scripttype="application/ld+json">{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
 export default SEOHead
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

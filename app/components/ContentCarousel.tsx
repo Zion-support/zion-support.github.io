@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -14,6 +15,8 @@ const ContentCarouselPage: React.FC = () => {
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides: Slide[] = [
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -49,6 +52,7 @@ const ContentCarousel: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>ContentCarousel</title>
@@ -116,6 +120,8 @@ const ContentCarousel: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
         </div>
         <div className="relative">
 <div className="overflow-hidden rounded-xl">
@@ -185,9 +191,12 @@ const ContentCarousel: React.FC = () => {
                   <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></button>
                     <Zap className="w-5 h-5" />
                     Get Started
+<<<<<<< HEAD
                   <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"></button>
                     <ArrowRight className="w-5 h-5" />
                     Learn More
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
                 </div>
               </div>
               {/* Visual Element */}
@@ -249,7 +258,10 @@ const ContentCarousel: React.FC = () => {
         <div className="flex justify-center mt-8 space-x-2">{slides.map((_, index) => (</div>
             <button
               key={index}
+<<<<<<< HEAD
               onClick={() =></button> setCurrentSlide(index)}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                 index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
               }`}
@@ -275,6 +287,7 @@ const ContentCarousel: React.FC = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* CTA Section */}
@@ -301,6 +314,8 @@ const ContentCarousel: React.FC = () => {
 };
 
 export default ContentCarouselPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </div>

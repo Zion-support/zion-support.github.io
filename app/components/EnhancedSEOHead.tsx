@@ -43,6 +43,7 @@ const EnhancedSEOHeadPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>{title}</title>
@@ -149,3 +150,5 @@ export default EnhancedSEOHeadPage;
   )
 }
 export default EnhancedSEOHead
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

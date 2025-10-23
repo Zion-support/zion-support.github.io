@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -7,6 +8,8 @@ import {CheckCircle} from 'lucide-react';
 import React from 'react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 constCloudServicesPage: React.FC= () =>{constservices= [
     {

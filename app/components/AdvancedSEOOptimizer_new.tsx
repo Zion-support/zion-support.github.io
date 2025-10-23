@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -227,3 +228,5 @@ zIndex:1000,
 maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
 }
 export default AdvancedSEOOptimizerNew
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

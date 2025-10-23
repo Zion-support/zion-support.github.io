@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from 'react'
 import { CheckCircle, Star, Zap, Brain, BarChart, TrendingUp, Target, Users, Helmet } from 'lucide-react'
 import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 constAIMarketingPage: React.FC= () =>{constaiMarketingServices= [
     {

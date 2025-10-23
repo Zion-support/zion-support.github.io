@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react"
 
 declare global {
@@ -26,3 +27,5 @@ export default Analytics
 };
 
 export default AnalyticsPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

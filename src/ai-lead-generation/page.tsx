@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -6,6 +7,8 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { Building } from 'lucide-react'
 import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react'
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 const AILeadGenerationPage: React.FC = () => {
   const features = [
     {

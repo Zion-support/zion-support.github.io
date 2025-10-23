@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -150,3 +151,5 @@ constSkipLink: React.FC= () =>{return(<ahref="#main-content"className="sr-onlyfo
 >Skip to maincontent</a>
 )}
 export default SkipLink
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

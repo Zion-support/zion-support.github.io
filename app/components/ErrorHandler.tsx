@@ -1,7 +1,10 @@
 'use client'
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 import { Home } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
@@ -39,6 +42,7 @@ const ErrorHandlerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -114,6 +118,8 @@ const ErrorHandlerPage: React.FC = () => {
             <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
@@ -139,12 +145,15 @@ const ErrorHandlerPage: React.FC = () => {
               </details>
             )}
               </button>
+<<<<<<< HEAD
               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               ></button>
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
               </button>
             </div>
           </div>
@@ -199,6 +208,7 @@ const ErrorHandlerPage: React.FC = () => {
   }
 }
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -243,3 +253,5 @@ const ErrorHandlerPage: React.FC = () => {
 };
 
 export default ErrorHandlerPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

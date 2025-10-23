@@ -43,6 +43,7 @@ const HeaderPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Header</title>
         <meta name="description" content="Advanced Header solution for modern businesses." />
@@ -148,3 +149,5 @@ export default HeaderPage;
   )
 }
 export default Header
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

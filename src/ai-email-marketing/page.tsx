@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react'
 import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

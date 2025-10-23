@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react'
 import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',

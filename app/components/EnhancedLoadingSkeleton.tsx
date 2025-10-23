@@ -32,4 +32,8 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
