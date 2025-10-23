@@ -41,6 +41,7 @@ const HomePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+export default function HomePage() {
   return (
     <HelmetProvider>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">

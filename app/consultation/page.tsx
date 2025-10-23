@@ -70,7 +70,8 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -119,7 +120,8 @@ const PagePage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">

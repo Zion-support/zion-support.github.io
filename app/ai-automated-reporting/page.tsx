@@ -73,7 +73,8 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">

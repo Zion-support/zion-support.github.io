@@ -70,7 +70,8 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -99,7 +100,19 @@ const PagePage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">

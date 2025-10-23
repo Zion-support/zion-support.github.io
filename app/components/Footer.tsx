@@ -57,15 +57,13 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">{/* Company Info */}</div>
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <Brain className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 mb-4">
-              Advanced AI and IT solutions for modern businesses. We help you
+            <p className="text-gray-400 mb-4">Advanced AI and IT solutions for modern businesses. We help you</p>
               leverage cutting-edge technology to drive growth and innovation.
             </p>
             <div className="flex space-x-4">
@@ -204,9 +202,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm">
-            © 2024 Zion Tech Group. All rights reserved.
-          </div>
+          <div className="text-gray-400 text-sm">© 2024 Zion Tech Group. All rights reserved.</div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
               href="/privacy"
