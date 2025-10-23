@@ -23,11 +23,11 @@ describe('ImageOptimizer', () => {
   it('renders with correct attributes', () => {
     render(
       <ImageOptimizer
-        src=&quot;test-image.jpg&quot;
-        alt=&quot;Test image&quot;
+        src="test-image.jpg"
+        alt="Test image"
         width={300}
         height={200}
-        className=&quot;custom-class&quot;
+        className="custom-class"
         lazy={false}
       />
     );
@@ -41,11 +41,11 @@ describe('ImageOptimizer', () => {
   it('applies correct attributes', () => {
     render(
       <ImageOptimizer
-        src=&quot;test-image.jpg&quot;
-        alt=&quot;Test image&quot;
+        src="test-image.jpg"
+        alt="Test image"
         width={300}
         height={200}
-        className=&quot;custom-class&quot;
+        className="custom-class"
         lazy={false}
       />
     );
@@ -59,8 +59,8 @@ describe('ImageOptimizer', () => {
   it('generates optimized src with WebP format', () => {
     render(
       <ImageOptimizer
-        src=&quot;test-image.jpg&quot;
-        alt=&quot;Test image&quot;
+        src="test-image.jpg"
+        alt="Test image"
       />
     );
     const img = screen.getByRole('img', { hidden: true });

@@ -1,8 +1,2 @@
-"use client";
-import React from 'react';
-
-const setupTests.ts = () => {
-  return null;
-};
-
-export default setupTests.ts;
+// Jest setup file
+import '@testing-library/jest-dom';

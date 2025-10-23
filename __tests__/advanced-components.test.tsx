@@ -1,23 +1,23 @@
-import { render, screen } from &quot;@testing-library/react&quot;;
+import { render, screen } from "@testing-library/react";
 
 const TestComponent = () => {
   return <div>Test content</div>;
 };
 
-describe(&quot;Advanced Components&quot;, () => {
+describe("Advanced Components", () => {
   // Test implementation
-  it(&quot;should render without errors&quot;, () => {
+  it("should render without errors", () => {
     expect(true).toBe(true);
   });
 
-  it(&quot;should render test content&quot;, () => {
+  it("should render test content", () => {
     render(<TestComponent />);
-    expect(screen.getByText(&quot;Test content&quot;)).toBeInTheDocument();
+    expect(screen.getByText("Test content")).toBeInTheDocument();
   });
 
-  it(&quot;should handle console errors&quot;, () => {
+  it("should handle console errors", () => {
     const consoleSpy = jest
-      .spyOn(console, &quot;error&quot;)
+      .spyOn(console, "error")
       .mockImplementation(() => {});
     // Test implementation
     consoleSpy.mockRestore();

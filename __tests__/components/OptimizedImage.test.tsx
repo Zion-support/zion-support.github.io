@@ -17,8 +17,8 @@ const OptimizedImage = ({
       alt={alt}
       width={width}
       height={height}
-      data-testid=&quot;optimized-image&quot;
-      loading=&quot;lazy&quot;
+      data-testid="optimized-image"
+      loading="lazy"
     />
   );
 };
@@ -30,7 +30,7 @@ describe('OptimizedImage Component', () => {
   });
 
   it('renders with optional dimensions', () => {
-    render(<OptimizedImage src=&quot;test.jpg&quot; alt=&quot;Test image&quot; width={100} height={100} />);
+    render(<OptimizedImage src="test.jpg" alt="Test image" width={100} height={100} />);
     
   });
 

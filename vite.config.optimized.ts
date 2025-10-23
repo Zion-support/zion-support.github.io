@@ -1,8 +1,14 @@
-"use client";
-import React from 'react';
+// Vite configuration for optimization
+import { defineConfig } from 'vite';
 
-const vite.config.optimized.ts = () => {
-  return null;
-};
-
-export default vite.config.optimized.ts;
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        },
+      },
+    },
+  },
+});

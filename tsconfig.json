@@ -30,6 +30,14 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "app-broken/**/*",
+    "app-disabled/**/*",
+    "__tests__/**/*",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "jest.setup.ts",
+    "vite.config.ts",
+    "vite.config.optimized.ts"
   ]
 }

@@ -1,8 +1,10 @@
-"use client";
-import React from 'react';
-
-const jest-dom.d.ts = () => {
-  return null;
-};
-
-export default jest-dom.d.ts;
+// Jest DOM type definitions
+declare global {
+  namespace jest {
+    interface Matchers<R> {
+      toBeInTheDocument(): R;
+      toHaveAttribute(attr: string, value?: string): R;
+      toHaveClass(className: string): R;
+    }
+  }
+}

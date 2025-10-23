@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 // Mock components for testing
-const MockComponent = () => <div data-testid=&quot;mock-component&quot;>Mock Component</div>;
+const MockComponent = () => <div data-testid="mock-component">Mock Component</div>;
 
 describe('Components', () => {
   it('renders mock component', () => {

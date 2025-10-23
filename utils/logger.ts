@@ -1,8 +1,6 @@
-"use client";
-import React from 'react';
-
-const logger.ts = () => {
-  return null;
+// Logger utility
+export const logger = {
+  info: (message: string) => console.log(`[INFO] ${message}`),
+  error: (message: string) => console.error(`[ERROR] ${message}`),
+  warn: (message: string) => console.warn(`[WARN] ${message}`),
 };
-
-export default logger.ts;
