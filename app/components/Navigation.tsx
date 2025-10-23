@@ -8,10 +8,10 @@ const Navigation: React.FC = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
 
