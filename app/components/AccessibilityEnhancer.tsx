@@ -18,6 +18,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     if (typeof window === "undefined") return;
 
+    const cleanupFunctions: (() => void)[] = [];
+
     // Add keyboard navigation enhancements
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
@@ -45,7 +47,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       document.addEventListener("keydown", handleKeyDown);
-      return () => document.removeEventListener("keydown", handleKeyDown);
+      cleanupFunctions.push(() => document.removeEventListener("keydown", handleKeyDown));
     }
 
     // Add screen reader announcements
@@ -59,7 +61,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.body.appendChild(announcement);
         
         setTimeout(() => {
-          document.body.removeChild(announcement);
+          if (document.body.contains(announcement)) {
+            document.body.removeChild(announcement);
+          }
         }, 1000);
       };
 
@@ -80,7 +84,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       });
 
       observer.observe(document.body, { childList: true, subtree: true });
-      return () => observer.disconnect();
+      cleanupFunctions.push(() => observer.disconnect());
     }
 
     // Add high contrast mode detection
@@ -98,7 +102,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       mediaQuery.addEventListener("change", checkHighContrast);
       checkHighContrast();
 
-      return () => mediaQuery.removeEventListener("change", checkHighContrast);
+      cleanupFunctions.push(() => mediaQuery.removeEventListener("change", checkHighContrast));
     }
 
     // Add focus management
@@ -148,11 +152,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         // Apply focus trap to modals
         const modals = document.querySelectorAll('[role="dialog"], [role="modal"]');
-        modals.forEach(modal => trapFocus(modal as HTMLElement));
+        const modalCleanups = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
+        cleanupFunctions.push(...modalCleanups);
       };
 
       manageFocus();
     }
+
+    // Return cleanup function
+    return () => {
+      cleanupFunctions.forEach(cleanup => cleanup());
+    };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
   return <>{children}</>;
