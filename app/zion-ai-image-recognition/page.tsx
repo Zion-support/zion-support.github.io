@@ -23,9 +23,10 @@ export default function ZionAiImageRecognitionPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

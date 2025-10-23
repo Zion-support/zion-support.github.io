@@ -23,9 +23,11 @@ export default function ZionAiSupplyChainOptimizerPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
+    
     </div>
   );
 }

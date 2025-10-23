@@ -23,9 +23,10 @@ export default function AiFraudDetectionProPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

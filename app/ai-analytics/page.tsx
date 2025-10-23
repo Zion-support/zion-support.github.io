@@ -23,9 +23,6 @@ export default function AiAnalyticsPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
     </div>
-  );
+  ););
 }

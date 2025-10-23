@@ -23,9 +23,10 @@ export default function AiMarketingPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

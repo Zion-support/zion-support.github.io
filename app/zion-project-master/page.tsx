@@ -23,9 +23,10 @@ export default function ZionProjectMasterPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

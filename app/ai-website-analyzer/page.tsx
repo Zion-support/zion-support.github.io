@@ -23,9 +23,10 @@ export default function AiWebsiteAnalyzerPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

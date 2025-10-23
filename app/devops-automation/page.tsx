@@ -23,9 +23,10 @@ export default function DevopsAutomationPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

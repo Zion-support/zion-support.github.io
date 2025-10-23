@@ -1,3 +1,5 @@
+import React from "react";
+
 "use client";
 import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from "lucide-react";
 export default function ServicesPage() {
@@ -118,6 +120,8 @@ export default function ServicesPage() {
           ))}
         </div>
       </div>
+    
+    
     </div>
   );
 }

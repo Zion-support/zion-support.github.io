@@ -23,9 +23,10 @@ export default function AiPredictiveMaintenancePage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

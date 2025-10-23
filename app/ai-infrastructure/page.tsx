@@ -23,9 +23,10 @@ export default function AiInfrastructurePage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }
