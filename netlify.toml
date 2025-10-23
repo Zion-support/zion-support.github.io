@@ -1,9 +1,6 @@
-# ==============================================================================
 # IMPORTANT: This is a VITE project, NOT a Next.js project!
-# ==============================================================================
 # Next.js has been removed from dependencies to prevent Netlify auto-detection
 # This project uses Vite for building and React Router for routing
-# ==============================================================================
 
 [build]
   publish = "dist"
@@ -18,12 +15,6 @@
   NODE_OPTIONS = "--max-old-space-size=4096"
   # Reduce memory leak warnings
   NODE_NO_WARNINGS = "1"
-  # Enable build optimizations
-  VITE_BUILD_OPTIMIZE = "true"
-  # Enable compression
-  VITE_COMPRESS = "true"
-  # Enable source maps for debugging
-  VITE_SOURCEMAP = "false"
 
 [[headers]]
   for = "/*"
@@ -35,14 +26,10 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'none';"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    # Performance headers
+    # Performance optimizations
     X-DNS-Prefetch-Control = "on"
-    X-Permitted-Cross-Domain-Policies = "none"
-    # PWA headers
-    X-Web-App-Capable = "yes"
-    X-Web-App-Status-Bar-Style = "black-translucent"
-    # Accessibility headers
-    X-UA-Compatible = "IE=edge"
+    # Cache HTML for shorter time
+    Cache-Control = "public, max-age=3600, s-maxage=86400"
 
 [[headers]]
   for = "/assets/*"
@@ -114,10 +101,49 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# HTML files - shorter cache for better updates
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, s-maxage=86400"
+    Vary = "Accept-Encoding"
+
+# Service worker - no cache
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Pragma = "no-cache"
+    Expires = "0"
+
+# Sitemap and robots - moderate cache
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Cloudinary plugin configuration
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+  [plugins.inputs]
+    cloudName = "ziontechgroup"
+    imagesPath = "public/images"
+    uploadFolder = "zion-website"
+    transformations = "f_auto,q_auto"
+    enableAutoFormat = true
+    enableQuality = true
+    enableResponsive = true
 
 
 # Build optimizations

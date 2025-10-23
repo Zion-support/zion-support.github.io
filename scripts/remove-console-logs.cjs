@@ -1,48 +1,56 @@
-#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+// Simple script to remove console.log statements from built files
+const removeConsoleLogs = () => {
+  const distDir = path.join(__dirname, "../dist");
 
-// Function to remove console statements from a file
-function removeConsoleLogs(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
-    // Remove console.log, console.warn, console.error statements
-    content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);?\s*/g, '');
-    
-    // Remove console statements that span multiple lines
-    content = content.replace(/console\.(log|warn|error|info|debug)\(\s*[\s\S]*?\);\s*/g, '');
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✓ Cleaned console statements from: ${filePath}`);
-      return true;
+  if (!fs.existsSync(distDir)) {
+    console.log("Dist directory not found, skipping console log removal");
+    return;
+  }
+
+  const processFile = (filePath) => {
+    try {
+      let content = fs.readFileSync(filePath, "utf8");
+      const originalContent = content;
+
+      // Remove console.log statements (improved regex)
+      content = content.replace(/console\.log\([^)]*\);?/g, "");
+      content = content.replace(/console\.warn\([^)]*\);?/g, "");
+      content = content.replace(/console\.error\([^)]*\);?/g, "");
+      content = content.replace(/console\.debug\([^)]*\);?/g, "");
+
+      // Clean up any double semicolons or empty statements
+      content = content.replace(/;;+/g, ";");
+      content = content.replace(/;\s*;/g, ";");
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        console.log(`Processed: ${filePath}`);
+      }
+    } catch (error) {
+      console.error(`Error processing ${filePath}:`, error.message);
     }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+  };
 
-// Find all TypeScript and JavaScript files in the app directory
-const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+  const walkDir = (dir) => {
+    const files = fs.readdirSync(dir);
 
-let cleanedCount = 0;
+    files.forEach((file) => {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
 
-console.log('🧹 Removing console statements from production build...\n');
+      if (stat.isDirectory()) {
+        walkDir(filePath);
+      } else if (file.endsWith(".js")) {
+        processFile(filePath);
+      }
+    });
+  };
 
-files.forEach(file => {
-  const fullPath = path.resolve(file);
-  if (removeConsoleLogs(fullPath)) {
-    cleanedCount++;
-  }
-});
+  walkDir(distDir);
+  console.log("Console logs removed from built files");
+};
 
-console.log(`\n✨ Cleaned ${cleanedCount} files`);
-console.log('🎉 Console statement removal complete!');
+removeConsoleLogs();

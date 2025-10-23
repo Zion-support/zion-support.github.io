@@ -17,7 +17,7 @@ export default withErrorLogging(async (req, res) => {
     return;
   }
 
-  const { amount } = req.body;
+  const { amount, currency = 'usd' } = req.body;
   if (!amount) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));
@@ -25,13 +25,16 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
+    const paymentIntent = {
+      status: 'requires_payment_method',
+      amount: amount,
+      currency: currency
+    };
+
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      status: 'pending',
-      message: 'Payment intent created successfully'
-    }));
+    res.end(JSON.stringify(paymentIntent));
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Payment intent creation error:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }

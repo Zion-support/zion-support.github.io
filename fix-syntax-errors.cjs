@@ -1,69 +1,199 @@
+const fs = require('fs');
+const path = require('path');
 
-// Function to fix common syntax errors in a file
-function fixSyntaxErrors(filePath) {
+// Function to fix corrupted syntax
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix corrupted variable declarations
+  fixed = fixed.replace(/const;\s*(\w+)\s*=/g, 'const $1 =');
+  fixed = fixed.replace(/let;\s*(\w+)\s*=/g, 'let $1 =');
+  fixed = fixed.replace(/var;\s*(\w+)\s*=/g, 'var $1 =');
+  
+  // Fix corrupted object properties
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*:/g, '$1$2:');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*:/g, '$1$2:');
+  
+  // Fix corrupted JSX attributes
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*=/g, '$1$2=');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*=/g, '$1$2=');
+  
+  // Fix corrupted JSX elements
+  fixed = fixed.replace(/<(\w+);\s*className\s*=/g, '<$1 className=');
+  fixed = fixed.replace(/<(\w+),\s*className\s*=/g, '<$1 className=');
+  
+  // Fix corrupted function calls
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*\(/g, '$1$2(');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*\(/g, '$1$2(');
+  
+  // Fix corrupted array elements
+  fixed = fixed.replace(/\[\s*(\w+),\s*(\w+)\s*\]/g, '[$1$2]');
+  fixed = fixed.replace(/\[\s*(\w+);\s*(\w+)\s*\]/g, '[$1$2]');
+  
+  // Fix corrupted string concatenation
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*\+/g, '$1$2 +');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*\+/g, '$1$2 +');
+  
+  // Fix corrupted template literals
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*`/g, '$1$2`');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*`/g, '$1$2`');
+  
+  // Fix corrupted return statements
+  fixed = fixed.replace(/return\s*(\w+),\s*(\w+)/g, 'return $1$2');
+  fixed = fixed.replace(/return\s*(\w+);\s*(\w+)/g, 'return $1$2');
+  
+  // Fix corrupted arrow functions
+  fixed = fixed.replace(/=>\s*(\w+),\s*(\w+)/g, '=> $1$2');
+  fixed = fixed.replace(/=>\s*(\w+);\s*(\w+)/g, '=> $1$2');
+  
+  // Fix corrupted destructuring
+  fixed = fixed.replace(/\{\s*(\w+),\s*(\w+)\s*\}/g, '{$1$2}');
+  fixed = fixed.replace(/\{\s*(\w+);\s*(\w+)\s*\}/g, '{$1$2}');
+  
+  // Fix corrupted imports
+  fixed = fixed.replace(/import\s*(\w+),\s*(\w+)\s*from/g, 'import $1$2 from');
+  fixed = fixed.replace(/import\s*(\w+);\s*(\w+)\s*from/g, 'import $1$2 from');
+  
+  // Fix corrupted exports
+  fixed = fixed.replace(/export\s*(\w+),\s*(\w+)/g, 'export $1$2');
+  fixed = fixed.replace(/export\s*(\w+);\s*(\w+)/g, 'export $1$2');
+  
+  // Fix specific patterns that are common
+  fixed = fixed.replace(/titl,\s*e:/g, 'title:');
+  fixed = fixed.replace(/descriptio,\s*n:/g, 'description:');
+  fixed = fixed.replace(/ico,\s*n:/g, 'icon:');
+  fixed = fixed.replace(/colo,\s*r:/g, 'color:');
+  fixed = fixed.replace(/stat,\s*s:/g, 'stats:');
+  fixed = fixed.replace(/lin,\s*k:/g, 'link:');
+  
+  // Fix corrupted JSX closing tags
+  fixed = fixed.replace(/<\/(\w+),\s*(\w+)>/g, '</$1$2>');
+  fixed = fixed.replace(/<\/(\w+);\s*(\w+)>/g, '</$1$2>');
+  
+  // Fix corrupted function parameters
+  fixed = fixed.replace(/\(\s*(\w+),\s*(\w+)\s*\)/g, '($1$2)');
+  fixed = fixed.replace(/\(\s*(\w+);\s*(\w+)\s*\)/g, '($1$2)');
+  
+  // Fix corrupted array destructuring
+  fixed = fixed.replace(/\[\s*(\w+),\s*(\w+)\s*\]/g, '[$1$2]');
+  fixed = fixed.replace(/\[\s*(\w+);\s*(\w+)\s*\]/g, '[$1$2]');
+  
+  // Fix corrupted object destructuring
+  fixed = fixed.replace(/\{\s*(\w+),\s*(\w+)\s*:\s*(\w+)\s*\}/g, '{$1$2: $3}');
+  fixed = fixed.replace(/\{\s*(\w+);\s*(\w+)\s*:\s*(\w+)\s*\}/g, '{$1$2: $3}');
+  
+  // Fix corrupted ternary operators
+  fixed = fixed.replace(/\?\s*(\w+),\s*(\w+)\s*:/g, '? $1$2 :');
+  fixed = fixed.replace(/\?\s*(\w+);\s*(\w+)\s*:/g, '? $1$2 :');
+  
+  // Fix corrupted logical operators
+  fixed = fixed.replace(/&&\s*(\w+),\s*(\w+)/g, '&& $1$2');
+  fixed = fixed.replace(/&&\s*(\w+);\s*(\w+)/g, '&& $1$2');
+  fixed = fixed.replace(/\|\|\s*(\w+),\s*(\w+)/g, '|| $1$2');
+  fixed = fixed.replace(/\|\|\s*(\w+);\s*(\w+)/g, '|| $1$2');
+  
+  return fixed;
+}
+
+// Function to remove console statements
+function removeConsoleStatements(content) {
+  return content.replace(/console\.(log|warn|error|info)\([^)]*\);?\s*/g, '');
+}
+
+// Function to fix prefer-const issues
+function fixPreferConst(content) {
+  return content.replace(/let\s+(\w+)\s*=\s*[^;]+;\s*\/\/\s*never\s+reassigned/g, (match, varName) => {
+    return match.replace(/let/, 'const');
+  });
+}
+
+// Main function to process files
+function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-
-    // Fix missing commas in object literals and arrays
-    // Look for patterns like: key: value\n  key2: value2
-    content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^,\n}]+)\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
+    let modified = false;
     
-    // Fix missing commas in JSX props
-    content = content.replace(/(\w+="[^"]*")\n\s*(\w+=)/g, '$1\n  $2');
-    content = content.replace(/(\w+={[^}]*})\n\s*(\w+=)/g, '$1\n  $2');
+    // Fix syntax errors
+    const contentWithSyntax = fixSyntaxErrors(content);
+    if (contentWithSyntax !== content) {
+      content = contentWithSyntax;
+      modified = true;
+    }
     
-    // Fix incomplete function calls - add missing closing parentheses
-    // Look for patterns like: lazy(() => import("./path/page")\nconst
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*const/g, 'lazy(() => import("$1")),\nconst');
+    // Remove console statements
+    const contentWithoutConsole = removeConsoleStatements(content);
+    if (contentWithoutConsole !== content) {
+      content = contentWithoutConsole;
+      modified = true;
+    }
     
-    // Fix missing closing parentheses in lazy imports
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*([a-zA-Z_$])/g, 'lazy(() => import("$1")),\n$2');
+    // Fix prefer-const issues
+    const contentWithConst = fixPreferConst(content);
+    if (contentWithConst !== content) {
+      content = contentWithConst;
+      modified = true;
+    }
     
-    // Fix missing commas after lazy imports
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*\/\/ /g, 'lazy(() => import("$1")),\n// ');
-    
-    // Fix incomplete JSX elements
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');
-    
-    // Fix missing closing tags in JSX
-    content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');
-    
-    // Fix missing commas in array elements
-    content = content.replace(/([^,\n])\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    
-    // Fix missing closing brackets in objects
-    content = content.replace(/([^}]\n\s*)([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1  $2');
-    
-    // Fix incomplete function declarations
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*\n\s*return\s*\(\s*\n\s*<[^>]*>\s*\n\s*\)\s*;\s*\n\s*}\s*\n\s*([a-zA-Z_$])/g, 
-      'function $1() {\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );\n}\n\n$2');
-    
-    // Fix missing export statements
-    content = content.replace(/}\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '}\n\nexport { $1');
-    
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Remove any remaining orphaned markers
-    content = content.replace(/^<<<<<<<|^
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`  ❌ Error processing ${filePath}:`, error.message);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-
+// Function to recursively find all .tsx files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
     }
-  } else {
-    console.log(`File not found: ${filePath}`);
   }
+  
+  return files;
+}
 
+// Main execution
+const srcDir = path.join(__dirname, 'src');
+const appDir = path.join(__dirname, 'app');
+
+let totalFixed = 0;
+
+// Process src directory
+if (fs.existsSync(srcDir)) {
+  const srcFiles = findTsxFiles(srcDir);
+  console.log(`Processing ${srcFiles.length} files in src directory...`);
+  
+  for (const file of srcFiles) {
+    if (processFile(file)) {
+      totalFixed++;
+    }
+  }
+}
+
+// Process app directory
+if (fs.existsSync(appDir)) {
+  const appFiles = findTsxFiles(appDir);
+  console.log(`Processing ${appFiles.length} files in app directory...`);
+  
+  for (const file of appFiles) {
+    if (processFile(file)) {
+      totalFixed++;
+    }
+  }
+}
+
+console.log(`\nTotal files fixed: ${totalFixed}`);

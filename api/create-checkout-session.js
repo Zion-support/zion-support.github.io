@@ -25,14 +25,15 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    console.log('Creating checkout session for product:', productId);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
+    const session = {
       status: 'pending',
-      message: 'Checkout session created successfully'
-    }));
+      productId: productId
+    };
+
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(session));
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Checkout session creation error:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
   }
