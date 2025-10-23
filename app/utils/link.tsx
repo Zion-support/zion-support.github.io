@@ -58,36 +58,6 @@ return (<a
 }
 return(<a
 import React from 'react'
-<<<<<<< HEAD
-interface LinkProps {/* TODO: Fix JSX expression */}
-}
-export const,
-Link: React.FC<LinkProps>= ({/* TODO: Fix JSX expression */})</a>
-}) => {/* TODO: Fix JSX expression */}
-}
-// Handle internal navigation
-if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
-}
-}
-return (<a></a>
-href={href}
-className={className}
-target={target}
-rel={rel}
-onClick={handleClick}
-aria-label={ariaLabel}
-{...props}
->{children}</a>
-</a>
-aria-label={ariaLabel})
-{...props})
->)
-{children})
-</a>)
-)
-}
-export default Link
-=======
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -228,4 +198,3 @@ const LinkPage: React.FC = () => {
 };
 
 export default LinkPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-280f

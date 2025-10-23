@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-"use client";
-import React from "react";
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
-
-interface ContactPageProps {
-  className?: string;
-}
-
-const ContactPage: React.FC<ContactPageProps> = ({ className = "" }) => {
-  return (
-<<<<<<< HEAD
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'    <div className={`bg-white p-4 rounded-lg ${className}`}>
       <h2>ContactPage</h2>
       <p>This is a clean, functional component.</p>
-    </div>
-=======
-    <>
+    </div>    <>
       
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -116,8 +100,3 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = "" }) => {
       </div>
       <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
-  );
-};
-
-export default ContactPage;

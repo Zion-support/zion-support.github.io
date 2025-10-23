@@ -1,39 +1,8 @@
-<<<<<<< HEAD
-import React, { useEffect } from "react"
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
-
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-  }
-}
-
-const Analytics: React.FC = () => {
-  useEffect(() => {
-    const initAnalytics = () => {
-      if (typeof window !== "undefined" && window.gtag) {
-        window.gtag("config", "GA_MEASUREMENT_ID", {
-          page_title: document.title,
-          page_location: window.location.href,
-        })
-      }
-    }
-    initAnalytics()
-  }, [])
-
-  return null; // Analytics component doesn't render anything
-}
-
-<<<<<<< HEAD
-export default Analytics
-=======
-  return (
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'export default Analytics  return (
     <>
       
       <Navigation />
@@ -130,7 +99,3 @@ export default Analytics
       <Footer />
     </>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
-};
-
-export default AnalyticsPage;

@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-"use client"
-import React from "react"
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const AccessibilityComponents: React.FC = () => {
-  return null
-}
-
-export default AccessibilityComponents
-
-<<<<<<< HEAD
-export default AccessibilityComponentsPage;
-=======
+const AccessibilityComponentsPage: React.FC = () => {
   return (
     <>
       
@@ -118,4 +105,3 @@ export default AccessibilityComponentsPage;
 };
 
 export default AccessibilityComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-280f

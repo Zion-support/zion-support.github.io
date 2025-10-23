@@ -1,12 +1,5 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-const EnhancedServicesShowcase: React.FC = () => {
-  const services = [
-=======
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -147,4 +140,3 @@ const EnhancedServicesShowcasePage: React.FC = () => {
 };
 
 export default EnhancedServicesShowcasePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-280f

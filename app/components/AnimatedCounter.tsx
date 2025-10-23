@@ -1,80 +1,12 @@
-<<<<<<< HEAD
-import React, { useEffect, useState, useRef } from 'react'
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
-
-interface AnimatedCounterProps {
-  end: number
-  duration?: number
-  suffix?: string
-  prefix?: string
-  className?: string
-}
-
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
-  duration = 2000,
-  suffix = '',
-  prefix = '',
-  className = '',
-}) => {
-  const [count, setCount] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
-  const [setNode, entry] = useIntersectionObserver({
-    threshold: 0.5
-  })
-
-  useEffect(() => {
-    if (entry?.isIntersecting && !isVisible) {
-      setIsVisible(true)
-    }
-  }, [entry, isVisible])
-
-  useEffect(() => {
-    if (!isVisible) return
-
-    let startTime: number
-    let animationFrame: number
-
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime
-      const progress = Math.min((currentTime - startTime) / duration, 1)
-
-      // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4)
-      const currentCount = Math.floor(easeOutQuart * end)
-
-      setCount(currentCount)
-
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate)
-      }
-    }
-
-    animationFrame = requestAnimationFrame(animate)
-
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame)
-      }
-    }
-  }, [isVisible, end, duration])
-
-  return (
-<<<<<<< HEAD
-    <span ref={setNode} className={className}>
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'    <span ref={setNode} className={className}>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
   )
-}
-=======
-    <>
+}    <>
       
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -99,10 +31,3 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
-
-export default AnimatedCounter
-  );
-};
-
-export default AnimatedCounterPage;
