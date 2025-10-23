@@ -7,13 +7,10 @@ interface AdminPageProps {
 const AdminPage: React.FC<AdminPageProps> = ({ className = "" }) => {
   return (
     <div className={`bg-white p-4 rounded-lg ${className}`}>
-          <h1>AdminPage</h2>
-          
-          </div><p>This is a clean, functional component.</p>
+      <h1>AdminPage</h1>
+      <p>This is a clean, functional component.</p>
     </div>
   );
 };
-
-export default Page;
 
 export default AdminPage;

@@ -65,7 +65,6 @@ class ErrorBoundary extends React.Component<
             </button>
           </div>
         </div>
-      </div>
       );
     }
 
