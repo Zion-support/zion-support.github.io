@@ -29,8 +29,8 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-  } catch (error) {
-    // console.error('Error reading existing rates:', error);
+  } catch (_error) {
+    // console.error.*_error);
     existing = [];
   }
 
@@ -60,8 +60,8 @@ export default function handler(req, res) {
       rate: totalRate,
       id: newRate.id
     }));
-  } catch (error) {
-    // console.error('Error saving shipping rate:', error);
+  } catch (_error) {
+    // console.error.*_error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
