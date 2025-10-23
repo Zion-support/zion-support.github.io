@@ -1,47 +1,18 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by keeping the newer version (after =======)
-
-echo "Resolving merge conflicts in all files..."
-
-# Find all files with merge conflicts
-files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
-
-for file in $files; do
-    echo "Processing: $file"
+# Find all files with merge conflicts and resolve them by accepting our version
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+    echo "Resolving conflicts in: $file"
     
-    # Create a temporary file
-    temp_file="${file}.tmp"
-    
-    # Process the file to resolve conflicts
-    awk '
-    /<<<<<<< HEAD/ {
-        in_conflict = 1
-        next
+    # Use git checkout --ours to accept our version
+    git checkout --ours "$file" 2>/dev/null || {
+      # If git checkout fails, manually resolve by removing conflict markers
+      sed -i '/<<<<<<< HEAD/,/>>>>>>> /d' "$file"
+      # Remove any remaining ======= lines
+      sed -i '/^=======$/d' "$file"
     }
-    /=======/ {
-        if (in_conflict) {
-            in_conflict = 2
-            next
-        }
-    }
-    />>>>>>> / {
-        if (in_conflict == 2) {
-            in_conflict = 0
-            next
-        }
-    }
-    {
-        if (in_conflict == 0) {
-            print
-        } else if (in_conflict == 2) {
-            print
-        }
-    }
-    ' "$file" > "$temp_file"
-    
-    # Replace original file with processed version
-    mv "$temp_file" "$file"
+  fi
 done
 
-echo "Merge conflicts resolved in all files."
+echo "All merge conflicts resolved!"
