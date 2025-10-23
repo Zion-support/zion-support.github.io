@@ -1,21 +1,37 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableErrorReporting?: boolean;
 }
+
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  errorId?: string;
+  retryCount: number;
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
+  private maxRetries = 3;
+
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { 
+      hasError: false, 
+      retryCount: 0,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
   }
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { 
+      hasError: true, 
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      retryCount: 0
+    };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -79,8 +95,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-       
-      origin/cursor/fix-errors-and-merge-to-main-6395      // Example: Send to error reporting service
+      console.log('Error report:', errorReport);
+      
+      // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
@@ -96,7 +113,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return localStorage.getItem('userId') || null;
   };
   private getSessionId = (): string => {
-    let _sessionId = sessionStorage.getItem('sessionId');
+    let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
@@ -134,9 +151,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
-        const _button = document.getElementById('copy-error-details');
+        const button = document.getElementById('copy-error-details');
         if (button) {
-          const _originalText = button.textContent;
+          const originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -155,17 +172,27 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-      const _canRetry = retryCount < this.maxRetries;
+      const canRetry = retryCount < this.maxRetries;
 
       return (
         <div className="error-boundary">
           <h2>Something went wrong</h2>
           <p>Error ID: {errorId}</p>
-          {_canRetry && (
+          <p>Error: {error?.message}</p>
+          {canRetry && (
             <button onClick={this.handleRetry}>
               Try again
             </button>
           )}
+          <button onClick={this.handleReload}>
+            Reload page
+          </button>
+          <button onClick={this.handleGoHome}>
+            Go home
+          </button>
+          <button id="copy-error-details" onClick={this.copyErrorDetails}>
+            Copy error details
+          </button>
         </div>
       );
     }
