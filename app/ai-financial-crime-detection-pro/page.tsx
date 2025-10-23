@@ -39,7 +39,7 @@ const AiFinancialCrimeDetectionProPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Financial Crime Detection Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai financial crime detection pro solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiFinancialCrimeDetectionProPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiFinancialCrimeDetectionProPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

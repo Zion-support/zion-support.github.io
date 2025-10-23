@@ -52,4 +52,3 @@ const PagePage: React.FC = () => {
   )
 }
 export default PagePage
-  </h2>

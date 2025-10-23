@@ -33,3 +33,5 @@ export default function ItProjectManagementPage() {
     </div>
   );
 }
+
+export default PagePage;

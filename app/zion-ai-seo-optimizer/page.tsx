@@ -33,3 +33,5 @@ export default function ZionAiSeoOptimizerPage() {
     </div>
   );
 }
+
+export default PagePage;

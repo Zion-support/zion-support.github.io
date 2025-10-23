@@ -39,7 +39,7 @@ const AiVideoEditorPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Video Editor - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai video editor solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiVideoEditorPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiVideoEditorPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

@@ -39,7 +39,7 @@ const AiStockPortfolioManagerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Stock Portfolio Manager - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai stock portfolio manager solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiStockPortfolioManagerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiStockPortfolioManagerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

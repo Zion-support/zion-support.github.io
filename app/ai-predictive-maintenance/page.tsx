@@ -39,7 +39,7 @@ const AiPredictiveMaintenancePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Predictive Maintenance - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai predictive maintenance solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiPredictiveMaintenancePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

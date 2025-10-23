@@ -32,7 +32,7 @@ const PageFixedPage: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Page Fixed - Zion Tech Group</title>
         <meta name="description" content="Advanced page fixed solutions powered by AI technology." />
@@ -117,14 +117,8 @@ const PageFixedPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default PageFixedPage
-  </button>
-  </button>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PageFixedPage;

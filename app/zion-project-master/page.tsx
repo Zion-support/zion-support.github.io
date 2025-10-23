@@ -33,3 +33,5 @@ export default function ZionProjectMasterPage() {
     </div>
   );
 }
+
+export default PagePage;

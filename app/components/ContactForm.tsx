@@ -348,12 +348,12 @@ const ContactForm: React.FC = () => {
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
             >
               {status.type === 'loading' ? (
-                <>
+    <>
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                   Sending...
                 </>
               ) : (
-                <>
+    <>
                   Send Message
                   <Send className="w-5 h-5 ml-2" />
                 </>

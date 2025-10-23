@@ -2196,52 +2196,6 @@ return jest.fn()
 })
 }
 "`
-</T>
-</T>
-</T>
-</T>
-</T>
-</T>
-</T>
-</T>
-</void>
-</void>
-</void>
-</void>
-</void>
-</testsuite>
-</testsuites>
-</h4>
-</h3>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</void>
-</TestConfig>
-</TestConfig>
-</TestConfig>
-</void>
-</void>
-</void>
-</void>
 // Assertion utilities
 export const expect = (actual: unknown) => ({
 toBe: (expected: unknown): AssertionResult => ({
@@ -2270,3 +2224,5 @@ actual
 // Export everything
 export * from '@testing-library/react'
 export { customRender as render }
+
+export default TestRunnerPage;

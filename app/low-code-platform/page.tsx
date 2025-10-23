@@ -121,3 +121,6 @@ const LowCodePlatformPage: React.FC = () => {
 };
 
 export default LowCodePlatformPage;
+
+
+export default PagePage;

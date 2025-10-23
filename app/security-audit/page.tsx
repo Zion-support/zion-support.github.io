@@ -121,3 +121,6 @@ const SecurityAuditPage: React.FC = () => {
 };
 
 export default SecurityAuditPage;
+
+
+export default PagePage;

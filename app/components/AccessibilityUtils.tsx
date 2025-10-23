@@ -9,3 +9,6 @@ const AccessibilityUtils: React.FC = () => {
 };
 
 export default AccessibilityUtils;
+
+
+export default AccessibilityUtilsPage;

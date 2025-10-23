@@ -39,7 +39,7 @@ const AiVoiceCloningPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Voice Cloning - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai voice cloning solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiVoiceCloningPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiVoiceCloningPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

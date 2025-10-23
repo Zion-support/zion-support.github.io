@@ -121,3 +121,6 @@ const SocialMediaSchedulerPage: React.FC = () => {
 };
 
 export default SocialMediaSchedulerPage;
+
+
+export default PagePage;

@@ -39,7 +39,7 @@ const AiWebsiteBuilderPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Website Builder - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai website builder solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiWebsiteBuilderPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiWebsiteBuilderPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

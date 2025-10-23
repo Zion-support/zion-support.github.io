@@ -36,6 +36,5 @@ export default function NotFound() {
     </div>
   )
 }
-  </button>
-  </Link>
-  </h1>
+
+export default NotFoundPage;

@@ -45,3 +45,6 @@ export default AdminPage;
 =======
 export default AdminPage;
 >>>>>>> origin/main
+
+
+export default AdminPagePage;

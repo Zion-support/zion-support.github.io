@@ -33,3 +33,5 @@ export default function AiDocumentIntelligencePage() {
     </div>
   );
 }
+
+export default PagePage;

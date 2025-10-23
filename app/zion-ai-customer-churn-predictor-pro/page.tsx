@@ -527,3 +527,6 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
 };
 
 export default ZionAICustomerChurnPredictorProPage;
+
+
+export default PagePage;

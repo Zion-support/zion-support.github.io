@@ -38,3 +38,5 @@ export default function AiHealthcareDiagnosticsPage() {
     </div>
   );
 }
+
+export default PagePage;

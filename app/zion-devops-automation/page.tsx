@@ -55,7 +55,10 @@ import React from "react";
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
+
+
+export default PagePage;

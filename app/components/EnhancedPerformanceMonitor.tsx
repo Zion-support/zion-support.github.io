@@ -87,7 +87,3 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   )
 }
 export default EnhancedPerformanceMonitorPage
-  </button>
-  </button>
-  </section>
-  </h2>

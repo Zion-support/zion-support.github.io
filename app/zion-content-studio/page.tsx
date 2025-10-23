@@ -34,3 +34,5 @@ export default function ZionContentStudioPage() {
     </div>
   );
 }
+
+export default PagePage;

@@ -39,7 +39,7 @@ const AiHealthcarePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Healthcare - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai healthcare solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiHealthcarePage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiHealthcarePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

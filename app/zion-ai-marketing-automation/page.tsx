@@ -33,3 +33,5 @@ export default function ZionAiMarketingAutomationPage() {
     </div>
   );
 }
+
+export default PagePage;

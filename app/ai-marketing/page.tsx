@@ -39,7 +39,7 @@ const AiMarketingPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Marketing - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai marketing solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiMarketingPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiMarketingPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

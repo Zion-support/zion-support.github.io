@@ -33,3 +33,5 @@ export default function CloudCostOptimizationPage() {
     </div>
   );
 }
+
+export default PagePage;

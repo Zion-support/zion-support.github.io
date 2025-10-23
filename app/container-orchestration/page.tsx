@@ -121,3 +121,6 @@ const ContainerOrchestrationPage: React.FC = () => {
 };
 
 export default ContainerOrchestrationPage;
+
+
+export default PagePage;

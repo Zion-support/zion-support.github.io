@@ -140,8 +140,5 @@ const PageOptimizedPage: React.FC = () => {
     </div>
   )
 }
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>
+
+export default PageOptimizedPage;

@@ -19,3 +19,6 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
 };
 
 export default AiPoweredEmailAnalyzerPage;
+
+
+export default PagePage;

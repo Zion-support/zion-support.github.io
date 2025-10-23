@@ -33,3 +33,5 @@ export default function DataVisualizationPage() {
     </div>
   );
 }
+
+export default PagePage;

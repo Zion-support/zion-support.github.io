@@ -34,3 +34,5 @@ export default function ZionCloudVaultPage() {
     </div>
   );
 }
+
+export default PagePage;

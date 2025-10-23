@@ -33,3 +33,5 @@ export default function SecurityAutomationPage() {
     </div>
   );
 }
+
+export default PagePage;

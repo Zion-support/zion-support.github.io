@@ -121,3 +121,6 @@ const PartnershipsPage: React.FC = () => {
 };
 
 export default PartnershipsPage;
+
+
+export default PagePage;

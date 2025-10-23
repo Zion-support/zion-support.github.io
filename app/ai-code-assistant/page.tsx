@@ -32,7 +32,7 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<React.Fragment>
+    <>
 <Helmet>
 <title>AI Code Assistant - Zion Tech Group</title>
 <meta name="description" content="Intelligent code assistant powered by advanced AI technology." />
@@ -109,12 +109,8 @@ Start Your Free Trial
 </section>
 </main>
 <Footer />
-</React.Fragment>
+</>
 )
 }
-export default AiCodeAssistantPage
-</button>
-</h2>
-</button>
-</button>
-</h1>
+
+export default PagePage;

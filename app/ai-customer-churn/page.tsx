@@ -33,3 +33,5 @@ export default function AiCustomerChurnPage() {
     </div>
   );
 }
+
+export default PagePage;

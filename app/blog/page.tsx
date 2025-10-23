@@ -233,3 +233,6 @@ export default function Blog() {
 };
 
 
+
+
+export default PagePage;

@@ -138,7 +138,7 @@ const IoTPage: React.FC = () => {
   ]
   const categories = [...new Set(iotServices.map(service => service.category))]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
@@ -353,19 +353,8 @@ const IoTPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
-export default IoTPage
-  </a>
-  </a>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </p>
-  </h2>
-  </p>
-  </button>
-  </button>
-  </p>
+
+export default PagePage;

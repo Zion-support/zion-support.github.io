@@ -32,7 +32,7 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<React.Fragment>
+    <>
 <Helmet>
 <title>AI Cloud Infrastructure - Zion Tech Group</title>
 <meta name="description" content="Scalable cloud infrastructure enhanced with AI capabilities." />
@@ -109,12 +109,8 @@ Start Your Free Trial
 </section>
 </main>
 <Footer />
-</React.Fragment>
+</>
 )
 }
-export default AiCloudInfrastructurePage
-</button>
-</h2>
-</button>
-</button>
-</h1>
+
+export default PagePage;

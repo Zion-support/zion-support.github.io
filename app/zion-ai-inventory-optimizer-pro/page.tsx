@@ -531,3 +531,6 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
 };
 
 export default ZionAIInventoryOptimizerProPage;
+
+
+export default PagePage;

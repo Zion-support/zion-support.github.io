@@ -33,3 +33,5 @@ export default function AiConversationAnalyticsPage() {
     </div>
   );
 }
+
+export default PagePage;

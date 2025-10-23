@@ -285,3 +285,6 @@ class AdvancedErrorBoundary extends Component<
 }
 
 export default AdvancedErrorBoundary;
+
+
+export default AdvancedErrorBoundaryPage;

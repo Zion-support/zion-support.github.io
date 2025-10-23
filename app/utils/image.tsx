@@ -146,5 +146,5 @@ export default Image
 }
 export default Image
 "`
-</ImageProps>
-</ImageProps>
+
+export default ImagePage;

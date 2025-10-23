@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const AutonomousSystemsPage: React.FC = () => {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Advanced autonomous systems solutions for modern businesses." />
@@ -20,7 +20,7 @@ const AutonomousSystemsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 export default AutonomousSystemsPage

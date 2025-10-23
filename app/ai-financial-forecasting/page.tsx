@@ -33,3 +33,5 @@ export default function AiFinancialForecastingPage() {
     </div>
   );
 }
+
+export default PagePage;

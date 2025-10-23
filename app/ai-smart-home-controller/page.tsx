@@ -1198,3 +1198,5 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     </div>
   );
 }
+
+export default PagePage;

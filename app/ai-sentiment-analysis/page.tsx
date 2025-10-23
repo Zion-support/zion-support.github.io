@@ -33,3 +33,5 @@ export default function AiSentimentAnalysisPage() {
     </div>
   );
 }
+
+export default PagePage;

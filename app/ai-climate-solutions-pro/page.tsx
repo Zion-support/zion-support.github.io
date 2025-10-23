@@ -32,7 +32,7 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<React.Fragment>
+    <>
 <Helmet>
 <title>AI Climate Solutions Pro - Zion Tech Group</title>
 <meta name="description" content="Professional climate solutions powered by advanced AI technology." />
@@ -109,12 +109,8 @@ Start Your Free Trial
 </section>
 </main>
 <Footer />
-</React.Fragment>
+</>
 )
 }
-export default AiClimateSolutionsProPage
-</button>
-</h2>
-</button>
-</button>
-</h1>
+
+export default PagePage;

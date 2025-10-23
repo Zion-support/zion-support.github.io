@@ -121,3 +121,6 @@ const VirtualRealitySolutionsPage: React.FC = () => {
 };
 
 export default VirtualRealitySolutionsPage;
+
+
+export default PagePage;

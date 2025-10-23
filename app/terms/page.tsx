@@ -118,4 +118,5 @@ export default function TermsPage() {
     </div>
   )
 }
-  </p>
+
+export default PagePage;

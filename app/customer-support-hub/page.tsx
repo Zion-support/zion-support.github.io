@@ -121,3 +121,6 @@ const CustomerSupportHubPage: React.FC = () => {
 };
 
 export default CustomerSupportHubPage;
+
+
+export default PagePage;

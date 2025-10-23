@@ -32,7 +32,7 @@ const ServiceWorkerPage: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>ServiceWorker - Zion Tech Group</title>
         <meta name="description" content="Advanced serviceworker solutions powered by AI technology." />
@@ -117,7 +117,7 @@ const ServiceWorkerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 export default ServiceWorkerPage

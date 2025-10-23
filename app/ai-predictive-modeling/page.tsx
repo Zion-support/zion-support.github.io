@@ -33,3 +33,5 @@ export default function AiPredictiveModelingPage() {
     </div>
   );
 }
+
+export default PagePage;

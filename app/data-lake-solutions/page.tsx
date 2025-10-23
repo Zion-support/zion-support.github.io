@@ -121,3 +121,6 @@ const DataLakeSolutionsPage: React.FC = () => {
 };
 
 export default DataLakeSolutionsPage;
+
+
+export default PagePage;

@@ -274,3 +274,5 @@ export default function Consultation() {
     </div>
   );
 }
+
+export default PagePage;

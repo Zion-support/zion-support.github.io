@@ -39,7 +39,7 @@ const AiNeuralMemoryAssistantPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Neural Memory Assistant - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai neural memory assistant solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiNeuralMemoryAssistantPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiNeuralMemoryAssistantPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

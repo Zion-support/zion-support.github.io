@@ -34,3 +34,5 @@ export default function ZionSecurityShieldPage() {
     </div>
   );
 }
+
+export default PagePage;

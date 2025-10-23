@@ -33,3 +33,5 @@ export default function ZionAiFraudDetectorPage() {
     </div>
   );
 }
+
+export default PagePage;

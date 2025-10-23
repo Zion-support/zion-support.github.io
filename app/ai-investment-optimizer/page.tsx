@@ -1190,3 +1190,5 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     </div>
   );
 }
+
+export default PagePage;

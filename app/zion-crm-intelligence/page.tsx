@@ -33,3 +33,5 @@ export default function ZionCrmIntelligencePage() {
     </div>
   );
 }
+
+export default PagePage;

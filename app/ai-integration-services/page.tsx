@@ -33,3 +33,5 @@ export default function AiIntegrationServicesPage() {
     </div>
   );
 }
+
+export default PagePage;

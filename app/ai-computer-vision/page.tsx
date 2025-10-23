@@ -32,7 +32,7 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 }
 ]
 return (
-<React.Fragment>
+    <>
 <Helmet>
 <title>AI Computer Vision - Zion Tech Group</title>
 <meta name="description" content="Advanced computer vision solutions powered by AI technology." />
@@ -166,17 +166,8 @@ Contact Sales
 </div>
 </section>
 <Footer />
-</React.Fragment>
+</>
 )
 }
-export default AiComputerVisionPage
-</button>
-</button>
-</p>
-</p>
-</button>
-</h2>
-</button>
-</button>
-</h1>
-</main>
+
+export default PagePage;

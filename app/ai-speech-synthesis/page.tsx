@@ -33,3 +33,5 @@ export default function AiSpeechSynthesisPage() {
     </div>
   );
 }
+
+export default PagePage;

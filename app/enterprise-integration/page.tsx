@@ -33,3 +33,5 @@ export default function EnterpriseIntegrationPage() {
     </div>
   );
 }
+
+export default PagePage;

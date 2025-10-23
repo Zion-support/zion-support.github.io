@@ -34,7 +34,7 @@ e.preventDefault()
 }
 enhanceSecurity()
 }, [])
-return <React.Fragment>{children}</React.Fragment>
+return <>{children}</>
 }
-export default SecurityEnhancer
-</SecurityEnhancerProps>
+
+export default SecurityEnhancerPage;

@@ -1195,3 +1195,5 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     </div>
   );
 }
+
+export default PagePage;

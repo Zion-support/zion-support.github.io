@@ -32,7 +32,7 @@ const PageBackupPage: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Page Backup - Zion Tech Group</title>
         <meta name="description" content="Advanced page backup solutions powered by AI technology." />
@@ -117,14 +117,8 @@ const PageBackupPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default PageBackupPage
-  </button>
-  </button>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PageBackupPage;

@@ -121,3 +121,6 @@ const EdgeComputingSolutionsPage: React.FC = () => {
 };
 
 export default EdgeComputingSolutionsPage;
+
+
+export default PagePage;

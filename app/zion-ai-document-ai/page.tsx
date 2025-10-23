@@ -33,3 +33,5 @@ export default function ZionAiDocumentAiPage() {
     </div>
   );
 }
+
+export default PagePage;

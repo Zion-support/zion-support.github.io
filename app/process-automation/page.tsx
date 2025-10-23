@@ -57,7 +57,7 @@ const benefits = [
 'Custom automation solutions'
 ]
 return (
-<React.Fragment>
+    <>
 <Helmet>
 <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
 <meta name="description" content="Professional process automation services by Zion Tech Group. Streamline workflows, reduce costs, and improve efficiency with AI-powered automation." />
@@ -157,14 +157,8 @@ Email Us
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
-export default ProcessAutomationPage
-</button>
-</button>
-</h2>
-</h2>
-</button>
-</button>
-</h1>
+
+export default PagePage;

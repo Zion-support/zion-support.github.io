@@ -39,7 +39,7 @@ const AiExpenseTrackerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai expense tracker solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiExpenseTrackerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiExpenseTrackerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

@@ -33,3 +33,5 @@ export default function AiConversationalAiPage() {
     </div>
   );
 }
+
+export default PagePage;

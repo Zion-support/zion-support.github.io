@@ -39,7 +39,7 @@ const AiMobileAppBuilderPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Mobile App Builder - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai mobile app builder solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiMobileAppBuilderPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiMobileAppBuilderPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

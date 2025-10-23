@@ -34,3 +34,5 @@ export default function ZionAnalyticsProPage() {
     </div>
   );
 }
+
+export default PagePage;

@@ -33,3 +33,5 @@ export default function DevopsAdvancedPage() {
     </div>
   );
 }
+
+export default PagePage;

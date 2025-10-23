@@ -33,3 +33,5 @@ export default function CloudMigrationAdvancedPage() {
     </div>
   );
 }
+
+export default PagePage;

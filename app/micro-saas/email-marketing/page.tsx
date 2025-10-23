@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { Mail, ArrowRight } from 'lucide-react'
 const EmailMarketingSuitePage: React.FC = () => {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
         <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />
@@ -46,8 +46,8 @@ const EmailMarketingSuitePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
-export default EmailMarketingSuitePage
-  </button>
+
+export default PagePage;

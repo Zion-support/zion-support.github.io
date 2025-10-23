@@ -33,3 +33,5 @@ export default function MachineLearningOpsPage() {
     </div>
   );
 }
+
+export default PagePage;

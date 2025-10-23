@@ -33,3 +33,5 @@ export default function ZionCustomerInsightsPage() {
     </div>
   );
 }
+
+export default PagePage;

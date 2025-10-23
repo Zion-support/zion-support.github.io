@@ -39,7 +39,7 @@ const AiEcommerceOptimizerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Ecommerce Optimizer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai ecommerce optimizer solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiEcommerceOptimizerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiEcommerceOptimizerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

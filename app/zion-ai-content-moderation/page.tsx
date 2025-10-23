@@ -33,3 +33,5 @@ export default function ZionAiContentModerationPage() {
     </div>
   );
 }
+
+export default PagePage;

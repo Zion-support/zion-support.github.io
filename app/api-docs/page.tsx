@@ -203,15 +203,15 @@ endpoint.method === 'POST'
 onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
 {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-<React.Fragment>
+    <>
 <Check className="w-4 h-4" />
 Copied!
-</React.Fragment>
+</>
 ) : (
-<React.Fragment>
+    <>
 <Copy className="w-4 h-4" />
 Copy
-</React.Fragment>
+</>
 )}
 </button>
 </div>
@@ -252,10 +252,5 @@ View SDKs
 </div>
 )
 }
-</button>
-</button>
-</button>
-</button>
-</h1>
-</SEOOptimizer>
-</string>
+
+export default PagePage;

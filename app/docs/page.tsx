@@ -163,6 +163,5 @@ Join Community
 </div>
 )
 }
-</button>
-</button>
-</SEOOptimizer>
+
+export default PagePage;

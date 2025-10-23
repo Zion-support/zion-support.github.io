@@ -39,7 +39,7 @@ const AiBusinessIntelligencePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Business Intelligence - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai business intelligence solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiBusinessIntelligencePage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiBusinessIntelligencePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

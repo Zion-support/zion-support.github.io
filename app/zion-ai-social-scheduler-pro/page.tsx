@@ -121,3 +121,6 @@ const ZionAiSocialSchedulerProPage: React.FC = () => {
 };
 
 export default ZionAiSocialSchedulerProPage;
+
+
+export default PagePage;

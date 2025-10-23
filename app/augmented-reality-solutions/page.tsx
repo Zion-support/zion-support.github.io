@@ -121,3 +121,6 @@ const AugmentedRealitySolutionsPage: React.FC = () => {
 };
 
 export default AugmentedRealitySolutionsPage;
+
+
+export default PagePage;

@@ -125,6 +125,5 @@ import SEOOptimizer from '../components/SEOOptimizer'
 </div>
   )
 }
-  </button>
-  </span>
-  </SEOOptimizer>
+
+export default PagePage;

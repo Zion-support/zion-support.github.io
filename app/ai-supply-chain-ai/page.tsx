@@ -33,3 +33,5 @@ export default function AiSupplyChainAiPage() {
     </div>
   );
 }
+
+export default PagePage;

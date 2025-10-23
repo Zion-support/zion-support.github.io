@@ -121,3 +121,6 @@ const InventoryManagerPage: React.FC = () => {
 };
 
 export default InventoryManagerPage;
+
+
+export default PagePage;

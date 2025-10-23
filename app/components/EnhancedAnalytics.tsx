@@ -120,3 +120,6 @@ declare global {
     gtag: (...args: any[]) => void;
   }
 }
+
+
+export default EnhancedAnalyticsPage;

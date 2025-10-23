@@ -82,3 +82,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 };
 
 export default AnalyticsProvider;
+
+
+export default AnalyticsProviderPage;

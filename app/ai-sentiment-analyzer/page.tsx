@@ -39,7 +39,7 @@ const AiSentimentAnalyzerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Sentiment Analyzer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai sentiment analyzer solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiSentimentAnalyzerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiSentimentAnalyzerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

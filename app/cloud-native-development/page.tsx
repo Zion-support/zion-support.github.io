@@ -33,3 +33,5 @@ export default function CloudNativeDevelopmentPage() {
     </div>
   );
 }
+
+export default PagePage;

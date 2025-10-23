@@ -33,3 +33,5 @@ export default function ComplianceAutomationPage() {
     </div>
   );
 }
+
+export default PagePage;

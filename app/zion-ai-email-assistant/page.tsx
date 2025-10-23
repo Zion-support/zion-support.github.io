@@ -33,3 +33,5 @@ export default function ZionAiEmailAssistantPage() {
     </div>
   );
 }
+
+export default PagePage;

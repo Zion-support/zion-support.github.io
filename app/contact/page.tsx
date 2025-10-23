@@ -203,15 +203,15 @@ const ContactPage: React.FC = () => {
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
                   {isSubmitting ? (
-                    <React.Fragment>
+    <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
-                    </React.Fragment>
+                    </>
                   ) : (
-                    <React.Fragment>
+    <>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
-                    </React.Fragment>
+                    </>
                   )}
                 </button>
               </form>
@@ -276,10 +276,5 @@ const ContactPage: React.FC = () => {
     </div>
   )
 }
-export default ContactPage
-  </textarea>
-  </label>
-  </label>
-  </label>
-  </span>
-  </HTMLInputElement>
+
+export default PagePage;

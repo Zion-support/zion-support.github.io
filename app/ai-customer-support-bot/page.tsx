@@ -39,7 +39,7 @@ const AiCustomerSupportBotPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Customer Support Bot - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai customer support bot solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiCustomerSupportBotPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiCustomerSupportBotPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

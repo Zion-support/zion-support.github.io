@@ -39,7 +39,7 @@ const AiMlPlatformPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Ml Platform - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai ml platform solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiMlPlatformPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiMlPlatformPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

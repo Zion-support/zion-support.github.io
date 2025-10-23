@@ -34,3 +34,5 @@ export default function ZionAiCodeReviewerPage() {
     </div>
   );
 }
+
+export default PagePage;

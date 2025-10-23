@@ -33,3 +33,5 @@ export default function ZionLeadMagnetPage() {
     </div>
   );
 }
+
+export default PagePage;

@@ -121,3 +121,6 @@ const ExpenseTrackerProPage: React.FC = () => {
 };
 
 export default ExpenseTrackerProPage;
+
+
+export default PagePage;

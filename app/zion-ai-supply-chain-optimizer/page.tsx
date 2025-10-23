@@ -34,3 +34,5 @@ export default function ZionAiSupplyChainOptimizerPage() {
     </div>
   );
 }
+
+export default PagePage;

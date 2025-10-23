@@ -33,3 +33,5 @@ export default function ZionInventorySmartPage() {
     </div>
   );
 }
+
+export default PagePage;

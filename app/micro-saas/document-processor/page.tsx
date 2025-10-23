@@ -5,7 +5,7 @@ const MicroSaaSPage: React.FC = () => {
   const serviceName = 'document-processor'
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
         <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />
@@ -47,8 +47,8 @@ const MicroSaaSPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
-export default MicroSaaSPage
-  </button>
+
+export default PagePage;

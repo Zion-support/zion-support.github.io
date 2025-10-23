@@ -33,3 +33,5 @@ export default function ZionComplianceManagerPage() {
     </div>
   );
 }
+
+export default PagePage;

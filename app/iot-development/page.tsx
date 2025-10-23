@@ -33,3 +33,5 @@ export default function IotDevelopmentPage() {
     </div>
   );
 }
+
+export default PagePage;

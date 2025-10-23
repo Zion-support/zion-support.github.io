@@ -33,3 +33,5 @@ export default function ZionSocialSchedulerPage() {
     </div>
   );
 }
+
+export default PagePage;

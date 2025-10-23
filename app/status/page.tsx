@@ -287,6 +287,5 @@ Contact Support
 </div>
 )
 }
-</button>
-</button>
-</button>
+
+export default PagePage;

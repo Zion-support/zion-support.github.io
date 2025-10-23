@@ -36,7 +36,7 @@ description: 'AI-powered initial screening questions and assessments to filter c
 }
 ]
 return (
-<React.Fragment>
+    <>
 <Helmet>
 <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
 <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant." />
@@ -69,8 +69,8 @@ className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 ho
 </div>
 </section>
 </div>
-</React.Fragment>
+</>
 )
 }
-export default AIRecruitmentAssistantPage
-</h1>
+
+export default PagePage;

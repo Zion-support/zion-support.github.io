@@ -33,3 +33,5 @@ export default function ZionChatAiPage() {
     </div>
   );
 }
+
+export default PagePage;

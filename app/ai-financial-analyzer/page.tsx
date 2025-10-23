@@ -39,7 +39,7 @@ const AiFinancialAnalyzerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Financial Analyzer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai financial analyzer solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiFinancialAnalyzerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiFinancialAnalyzerPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

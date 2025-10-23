@@ -523,3 +523,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
 };
 
 export default ZionAIEmailMarketingProPage;
+
+
+export default PagePage;

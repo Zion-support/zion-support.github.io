@@ -33,3 +33,5 @@ export default function CybersecurityAdvancedPage() {
     </div>
   );
 }
+
+export default PagePage;

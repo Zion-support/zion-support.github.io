@@ -39,7 +39,7 @@ const AiSupplyChainPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Supply Chain - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai supply chain solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiSupplyChainPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiSupplyChainPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

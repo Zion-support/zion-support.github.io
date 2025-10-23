@@ -33,3 +33,5 @@ export default function AiVideoAnalysisPage() {
     </div>
   );
 }
+
+export default PagePage;

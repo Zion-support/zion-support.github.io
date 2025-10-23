@@ -33,3 +33,5 @@ export default function WorkflowAutomationPage() {
     </div>
   );
 }
+
+export default PagePage;

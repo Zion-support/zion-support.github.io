@@ -33,3 +33,5 @@ export default function ZionPerformanceMonitorPage() {
     </div>
   );
 }
+
+export default PagePage;

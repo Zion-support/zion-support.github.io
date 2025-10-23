@@ -19,3 +19,6 @@ const AiAutomationPlatformPage: React.FC = () => {
 };
 
 export default AiAutomationPlatformPage;
+
+
+export default PagePage;

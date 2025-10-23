@@ -157,3 +157,6 @@ const PagePage: React.FC = () => {
 };
 
 export default PagePage;
+
+
+export default PagePage;

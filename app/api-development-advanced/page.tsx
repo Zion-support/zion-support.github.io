@@ -33,3 +33,5 @@ export default function ApiDevelopmentAdvancedPage() {
     </div>
   );
 }
+
+export default PagePage;

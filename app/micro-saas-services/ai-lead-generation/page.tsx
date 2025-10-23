@@ -39,7 +39,7 @@ const AiLeadGenerationPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Lead Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai lead generation solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiLeadGenerationPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiLeadGenerationPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

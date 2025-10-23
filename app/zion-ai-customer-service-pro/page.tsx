@@ -33,3 +33,5 @@ export default function ZionAiCustomerServiceProPage() {
     </div>
   );
 }
+
+export default PagePage;

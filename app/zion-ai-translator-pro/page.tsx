@@ -34,3 +34,5 @@ export default function ZionAiTranslatorProPage() {
     </div>
   );
 }
+
+export default PagePage;

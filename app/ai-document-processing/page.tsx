@@ -39,7 +39,7 @@ const AiDocumentProcessingPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Document Processing - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai document processing solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiDocumentProcessingPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiDocumentProcessingPage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

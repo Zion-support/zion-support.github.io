@@ -33,3 +33,5 @@ export default function ZionInvoiceGeniusPage() {
     </div>
   );
 }
+
+export default PagePage;

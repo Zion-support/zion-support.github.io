@@ -39,7 +39,7 @@ const AiQuantumFinancialOraclePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Quantum Financial Oracle - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai quantum financial oracle solution for modern businesses." />
@@ -148,15 +148,8 @@ const AiQuantumFinancialOraclePage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
-export default AiQuantumFinancialOraclePage
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+export default PagePage;

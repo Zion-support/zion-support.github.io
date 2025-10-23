@@ -33,3 +33,5 @@ export default function ZionWorkflowAutomationPage() {
     </div>
   );
 }
+
+export default PagePage;

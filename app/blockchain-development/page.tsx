@@ -33,3 +33,5 @@ export default function BlockchainDevelopmentPage() {
     </div>
   );
 }
+
+export default PagePage;

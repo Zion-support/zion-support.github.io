@@ -33,3 +33,5 @@ export default function ItSecurityServicesPage() {
     </div>
   );
 }
+
+export default PagePage;
