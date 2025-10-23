@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Script to fix specific syntax errors in the codebase
+Comprehensive script to fix all remaining syntax errors
 """
 import os
 import re
 import glob
 from pathlib import Path
 
-def fix_specific_errors(content):
-    """Fix specific syntax errors"""
+def fix_comprehensive_errors(content):
+    """Fix comprehensive syntax errors"""
     lines = content.split('\n')
     fixed_lines = []
     
@@ -22,8 +22,9 @@ def fix_specific_errors(content):
         # Fix missing opening parenthesis in function calls
         line = re.sub(r'(\w+)\s*\(\s*$', r'\1()', line)
         
-        # Fix spaces in class names
+        # Fix spaces in class names - more comprehensive
         line = re.sub(r'className="([^"]*?)\s+([^"]*?)"', r'className="\1\2"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3"', line)
         
         # Fix spaces in text content
         line = re.sub(r'text-(\w+)\s+(\w+)', r'text-\1\2', line)
@@ -34,6 +35,38 @@ def fix_specific_errors(content):
         # Fix spaces in attribute values
         line = re.sub(r'(\w+)\s+(\w+)\s*=', r'\1\2=', line)
         
+        # Fix missing spaces in className attributes
+        line = re.sub(r'<divclassName=', r'<div className=', line)
+        line = re.sub(r'<spanclassName=', r'<span className=', line)
+        line = re.sub(r'<pclassName=', r'<p className=', line)
+        line = re.sub(r'<h1className=', r'<h1 className=', line)
+        line = re.sub(r'<h2className=', r'<h2 className=', line)
+        line = re.sub(r'<h3className=', r'<h3 className=', line)
+        line = re.sub(r'<h4className=', r'<h4 className=', line)
+        line = re.sub(r'<h5className=', r'<h5 className=', line)
+        line = re.sub(r'<h6className=', r'<h6 className=', line)
+        line = re.sub(r'<aclassName=', r'<a className=', line)
+        line = re.sub(r'<buttonclassName=', r'<button className=', line)
+        line = re.sub(r'<inputclassName=', r'<input className=', line)
+        line = re.sub(r'<formclassName=', r'<form className=', line)
+        line = re.sub(r'<sectionclassName=', r'<section className=', line)
+        line = re.sub(r'<articleclassName=', r'<article className=', line)
+        line = re.sub(r'<headerclassName=', r'<header className=', line)
+        line = re.sub(r'<foot className=', r'<footer className=', line)
+        line = re.sub(r'<mainclassName=', r'<main className=', line)
+        line = re.sub(r'<navclassName=', r'<nav className=', line)
+        line = re.sub(r'<asideclassName=', r'<aside className=', line)
+        
+        # Fix missing spaces in other attributes
+        line = re.sub(r'<divid=', r'<div id=', line)
+        line = re.sub(r'<divonClick=', r'<div onClick=', line)
+        line = re.sub(r'<divonSubmit=', r'<div onSubmit=', line)
+        line = re.sub(r'<divonChange=', r'<div onChange=', line)
+        line = re.sub(r'<divonMouseOver=', r'<div onMouseOver=', line)
+        line = re.sub(r'<divonMouseOut=', r'<div onMouseOut=', line)
+        line = re.sub(r'<divonFocus=', r'<div onFocus=', line)
+        line = re.sub(r'<divonBlur=', r'<div onBlur=', line)
+        
         # Fix missing closing parenthesis
         if line.count('(') > line.count(')'):
             line = line.rstrip() + ')'
@@ -43,6 +76,10 @@ def fix_specific_errors(content):
             not line.strip().endswith((';', '{', '}', ':', ',', '(', ')', '[', ']', '>', '<')) and
             not line.strip().startswith(('import', 'export', 'const', 'let', 'var', 'function', 'class', 'interface', 'type'))):
             line = line.rstrip() + ';'
+        
+        # Fix JSX structure issues
+        if line.strip() == 'return()':
+            line = 'return ('
         
         fixed_lines.append(line)
     
@@ -60,8 +97,8 @@ def fix_file(file_path):
         
         original_content = content
         
-        # Fix specific errors
-        content = fix_specific_errors(content)
+        # Fix comprehensive errors
+        content = fix_comprehensive_errors(content)
         
         # Only write if content changed
         if content != original_content:

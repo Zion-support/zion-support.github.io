@@ -1,38 +1,55 @@
 #!/usr/bin/env python3
 """
-Script to fix specific syntax errors in the codebase
+Comprehensive final script to fix all remaining syntax errors
 """
 import os
 import re
 import glob
 from pathlib import Path
 
-def fix_specific_errors(content):
-    """Fix specific syntax errors"""
+def fix_comprehensive_final_errors(content):
+    """Fix comprehensive final syntax errors"""
     lines = content.split('\n')
     fixed_lines = []
     
     for i, line in enumerate(lines):
-        # Fix function names with spaces
+        # Fix function names with spaces - more aggressive
         line = re.sub(r'export default function (\w+)\s+(\w+)\s*\(', r'export default function \1\2(', line)
+        line = re.sub(r'function (\w+)\s+(\w+)\s*\(', r'function \1\2(', line)
+        
+        # Fix spaces in the middle of className attributes - more comprehensive
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)"', r'className="\1\2"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5"', line)
+        
+        # Fix specific patterns
+        line = re.sub(r'className="m in-h-sc reen', r'className="min-h-screen', line)
+        line = re.sub(r'className="m ax-w-7xl', r'className="max-w-7xl', line)
+        line = re.sub(r'className="t ex t-4xl', r'className="text-4xl', line)
+        line = re.sub(r'className="t ex t-lg', r'className="text-lg', line)
+        line = re.sub(r'className="tex t-4xl', r'className="text-4xl', line)
+        line = re.sub(r'className="tex t-lg', r'className="text-lg', line)
+        
+        # Fix missing spaces in className attributes
+        line = re.sub(r'className="min-h-screenbg-gradient-', r'className="min-h-screen bg-gradient-', line)
+        line = re.sub(r'className="max-w-7xlmx-auto', r'className="max-w-7xl mx-auto', line)
+        line = re.sub(r'className="text-4xlfont-bold', r'className="text-4xl font-bold', line)
+        line = re.sub(r'className="text-lgtext-gray-300', r'className="text-lg text-gray-300', line)
+        
+        # Fix missing spaces in other attributes
+        line = re.sub(r'<metaname=', r'<meta name=', line)
+        line = re.sub(r'<metacontent=', r'<meta content=', line)
+        
+        # Fix missing spaces in text content
+        line = re.sub(r'Profession a l', r'Professional', line)
+        line = re.sub(r'descripti o n', r'description', line)
         
         # Fix missing opening parenthesis after return
         line = re.sub(r'return\s*\(\s*$', r'return (', line)
         
         # Fix missing opening parenthesis in function calls
         line = re.sub(r'(\w+)\s*\(\s*$', r'\1()', line)
-        
-        # Fix spaces in class names
-        line = re.sub(r'className="([^"]*?)\s+([^"]*?)"', r'className="\1\2"', line)
-        
-        # Fix spaces in text content
-        line = re.sub(r'text-(\w+)\s+(\w+)', r'text-\1\2', line)
-        
-        # Fix spaces in other CSS classes
-        line = re.sub(r'(\w+)-(\w+)\s+(\w+)', r'\1-\2\3', line)
-        
-        # Fix spaces in attribute values
-        line = re.sub(r'(\w+)\s+(\w+)\s*=', r'\1\2=', line)
         
         # Fix missing closing parenthesis
         if line.count('(') > line.count(')'):
@@ -43,6 +60,10 @@ def fix_specific_errors(content):
             not line.strip().endswith((';', '{', '}', ':', ',', '(', ')', '[', ']', '>', '<')) and
             not line.strip().startswith(('import', 'export', 'const', 'let', 'var', 'function', 'class', 'interface', 'type'))):
             line = line.rstrip() + ';'
+        
+        # Fix JSX structure issues
+        if line.strip() == 'return()':
+            line = 'return ('
         
         fixed_lines.append(line)
     
@@ -60,8 +81,8 @@ def fix_file(file_path):
         
         original_content = content
         
-        # Fix specific errors
-        content = fix_specific_errors(content)
+        # Fix comprehensive final errors
+        content = fix_comprehensive_final_errors(content)
         
         # Only write if content changed
         if content != original_content:

@@ -1,38 +1,38 @@
 #!/usr/bin/env python3
 """
-Script to fix specific syntax errors in the codebase
+Final comprehensive script to fix all remaining syntax errors
 """
 import os
 import re
 import glob
 from pathlib import Path
 
-def fix_specific_errors(content):
-    """Fix specific syntax errors"""
+def fix_final_comprehensive_errors(content):
+    """Fix final comprehensive syntax errors"""
     lines = content.split('\n')
     fixed_lines = []
     
     for i, line in enumerate(lines):
-        # Fix function names with spaces
-        line = re.sub(r'export default function (\w+)\s+(\w+)\s*\(', r'export default function \1\2(', line)
+        # Fix missing spaces in className attributes
+        line = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', line)
+        line = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])([a-zA-Z])', r'className="\1\2\3 \4', line)
+        line = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])([a-zA-Z])([a-zA-Z])', r'className="\1\2\3\4 \5', line)
+        
+        # Fix specific patterns
+        line = re.sub(r'className="bg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-centermx-auto w-fit"', r'className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"', line)
+        
+        # Fix semicolons in JSX
+        line = re.sub(r'<Link;', r'<Link', line)
+        line = re.sub(r'to="/contact";', r'to="/contact"', line)
+        line = re.sub(r'Contact Us;', r'Contact Us', line)
+        line = re.sub(r'<ArrowRight;', r'<ArrowRight', line)
+        line = re.sub(r'</Link>;', r'</Link>', line)
         
         # Fix missing opening parenthesis after return
         line = re.sub(r'return\s*\(\s*$', r'return (', line)
         
         # Fix missing opening parenthesis in function calls
         line = re.sub(r'(\w+)\s*\(\s*$', r'\1()', line)
-        
-        # Fix spaces in class names
-        line = re.sub(r'className="([^"]*?)\s+([^"]*?)"', r'className="\1\2"', line)
-        
-        # Fix spaces in text content
-        line = re.sub(r'text-(\w+)\s+(\w+)', r'text-\1\2', line)
-        
-        # Fix spaces in other CSS classes
-        line = re.sub(r'(\w+)-(\w+)\s+(\w+)', r'\1-\2\3', line)
-        
-        # Fix spaces in attribute values
-        line = re.sub(r'(\w+)\s+(\w+)\s*=', r'\1\2=', line)
         
         # Fix missing closing parenthesis
         if line.count('(') > line.count(')'):
@@ -43,6 +43,10 @@ def fix_specific_errors(content):
             not line.strip().endswith((';', '{', '}', ':', ',', '(', ')', '[', ']', '>', '<')) and
             not line.strip().startswith(('import', 'export', 'const', 'let', 'var', 'function', 'class', 'interface', 'type'))):
             line = line.rstrip() + ';'
+        
+        # Fix JSX structure issues
+        if line.strip() == 'return()':
+            line = 'return ('
         
         fixed_lines.append(line)
     
@@ -60,8 +64,8 @@ def fix_file(file_path):
         
         original_content = content
         
-        # Fix specific errors
-        content = fix_specific_errors(content)
+        # Fix final comprehensive errors
+        content = fix_final_comprehensive_errors(content)
         
         # Only write if content changed
         if content != original_content:
