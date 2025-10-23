@@ -10,6 +10,4 @@ const AccessibilityComponents: React.FC = () => {
   );
 };
 
-export default Page;
-
 export default AccessibilityComponents;
