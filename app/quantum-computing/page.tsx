@@ -6,10 +6,7 @@ const QuantumComputingPage: React.FC = () => {
     <>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Explore the future of computing with quantum solutions for complex problem solving and optimization."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

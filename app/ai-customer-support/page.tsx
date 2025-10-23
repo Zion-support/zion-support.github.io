@@ -147,10 +147,7 @@ const AICustomerSupportPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Customer Support - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Enhance customer experience with AI-powered support solutions including chatbots and automated assistance."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

@@ -143,14 +143,7 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {statistics.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10"
-            >
-              <div
-                className={`w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4`}
-              >
+
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
               <div className={`text-4xl font-bold ${stat.color} mb-2`}>
@@ -174,11 +167,7 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
-            >
+
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-white" />
               </div>

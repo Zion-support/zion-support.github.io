@@ -59,14 +59,7 @@ const PartnersPage: React.FC = () => {
     <>
       <Helmet>
         <title>Partners | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Our strategic partnerships with leading technology companies enable us to deliver world-class AI and IT solutions."
-        />
-        <meta
-          name="keywords"
-          content="partners, strategic partnerships, technology partners, AI solutions, IT services"
-        />
+
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -91,11 +84,7 @@ const PartnersPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {partners.map((partner, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
-                >
+
                   <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                     <div className="text-center">
                       <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-2">
@@ -136,11 +125,7 @@ const PartnersPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10"
-                >
+
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>

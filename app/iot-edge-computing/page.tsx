@@ -326,10 +326,7 @@ const IoTEdgeComputingPage: React.FC = () => {
     <>
       <Helmet>
         <title>IoT & Edge Computing - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Connect and process data at the edge with IoT solutions and edge computing infrastructure for real-time insights."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

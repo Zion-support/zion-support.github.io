@@ -6,10 +6,7 @@ const ItSupportPage: React.FC = () => {
     <>
       <Helmet>
         <title>IT Support Services - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Get reliable IT support services with 24/7 monitoring, troubleshooting, and technical assistance for your business."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

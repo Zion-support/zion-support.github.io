@@ -1,26 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import {
-  Mail,
-  BarChart3,
-  Target,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Clock,
-  Sparkles,
-  Cpu,
-  Send,
-  Heart,
-  MousePointer,
-  Shield,
-  Zap,
-  TrendingUp,
-} from "lucide-react";
-=======
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 
 const ZionAIEmailMarketingProPage: React.FC = () => {
   const features = [
@@ -203,191 +182,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>
-          Zion AI Email Marketing Pro - AI-Powered Email Marketing Platform |
-          Zion Tech Group
-        </title>
-        <meta
-          name="description"
-          content="Transform your email marketing with AI-powered content generation, advanced segmentation, and automation. Increase ROI by 400%. Start free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="email marketing, AI email marketing, email automation, email segmentation, email analytics, email campaigns, marketing automation"
-        />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/zion-ai-email-marketing-pro"
-        />
-      </Helmet>
 
-      <div className="min-h-screen pt-16">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-
-          <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-                <Sparkles className="w-4 h-4 text-blue-400 mr-2" />
-                <span className="text-blue-400 text-sm font-medium">
-                  #1 AI Email Marketing Platform
-                </span>
-              </div>
-
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-                  Zion AI Email Marketing Pro
-                </span>
-              </h1>
-
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your email marketing with AI-powered content
-                generation, advanced segmentation, and intelligent automation
-                that drives real results.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link
-                  to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center group"
-                >
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  to="/demo"
-                  className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300 flex items-center justify-center"
-                >
-                  Watch Demo
-                  <Target className="w-5 h-5 ml-2" />
-                </Link>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
-                    400%
-                  </div>
-                  <div className="text-gray-300 text-sm">
-                    Increase in Email ROI
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
-                    35%
-                  </div>
-                  <div className="text-gray-300 text-sm">Higher Open Rates</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">
-                    50K+
-                  </div>
-                  <div className="text-gray-300 text-sm">Emails Sent Daily</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
-                    99.9%
-                  </div>
-                  <div className="text-gray-300 text-sm">
-                    Deliverability Rate
-                  </div>
-                </div>
-=======
-        <title>AI Email Marketing Pro - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Revolutionize your email marketing with AI-powered campaigns, personalization, and automation. Boost engagement and conversions."
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI Email Marketing Pro
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Revolutionize your email marketing with AI-powered campaigns,
-              personalization, and automation. Boost engagement and drive
-              conversions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                AI-Powered Personalization
-              </h3>
-              <p className="text-gray-600">
-                Create highly personalized email campaigns that resonate with
-                each recipient using advanced AI algorithms.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Smart Content Generation
-              </h3>
-              <p className="text-gray-600">
-                Generate compelling email content automatically based on your
-                brand voice and campaign objectives.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Predictive Analytics
-              </h3>
-              <p className="text-gray-600">
-                Predict customer behavior and optimize send times for maximum
-                engagement and conversion rates.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Advanced Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Automated A/B Testing
-                </h3>
-                <p className="text-gray-600">
-                  Continuously test and optimize your email campaigns with
-                  AI-driven A/B testing.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Dynamic Segmentation
-                </h3>
-                <p className="text-gray-600">
-                  Automatically segment your audience based on behavior,
-                  preferences, and engagement patterns.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Smart Scheduling
-                </h3>
-                <p className="text-gray-600">
-                  AI determines the optimal send times for each recipient to
-                  maximize open and click rates.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Performance Optimization
-                </h3>
-                <p className="text-gray-600">
-                  Continuously optimize campaign performance based on real-time
-                  data and AI insights.
-                </p>
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
               </div>
             </div>
           </div>
@@ -406,14 +201,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {emailTypes.map((type, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:scale-105 text-center"
-                >
-                  <div
-                    className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${type.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform`}
-                  >
+
                     {type.icon}
                   </div>
                   <div className="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">
@@ -439,11 +227,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
-                >
+
                   <div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
@@ -454,11 +238,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                     {feature.description}
                   </p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li
-                        key={benefitIndex}
-                        className="flex items-center text-sm text-gray-400"
-                      >
+
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -484,15 +264,7 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                    plan.popular
-                      ? "border-blue-500/50 shadow-2xl shadow-blue-500/20"
-                      : "border-white/10 hover:border-blue-500/30"
-                  }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
@@ -518,25 +290,13 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
                   </div>
 
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center text-gray-300"
-                      >
+
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <Link
-                    to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg hover:shadow-blue-500/25"
-                        : "border border-blue-400 text-blue-400 hover:bg-blue-400/10"
-                    }`}
-                  >
                     Get Started
                   </Link>
                 </div>
@@ -558,17 +318,9 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
-                >
+
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current"
-                      />
+
                     ))}
                   </div>
                   <p className="text-gray-300 mb-6 italic leading-relaxed">
@@ -607,17 +359,11 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center group"
-                >
+
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link
-                  to="/demo"
-                  className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300 flex items-center justify-center"
-                >
+
                   Schedule Demo
                   <Clock className="w-5 h-5 ml-2" />
                 </Link>

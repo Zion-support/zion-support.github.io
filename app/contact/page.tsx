@@ -74,6 +74,7 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
         <meta
@@ -337,12 +338,21 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
               </div>
+=======
+
+          </div>
+        </section>
+
+>>>>>>> ff557e59c0f892dc6b5ba2dc5c603355d3eaebf1
             </div>
           </div>
         </section>
       </div>
     </>
   );
+<<<<<<< HEAD
 };
+=======
+>>>>>>> ff557e59c0f892dc6b5ba2dc5c603355d3eaebf1
 
 export default ContactPage;

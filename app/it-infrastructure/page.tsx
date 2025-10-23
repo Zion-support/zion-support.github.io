@@ -269,10 +269,7 @@ const ITInfrastructurePage: React.FC = () => {
     <>
       <Helmet>
         <title>IT Infrastructure Solutions - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Build and maintain robust IT infrastructure with our comprehensive solutions for servers, networks, and cloud systems."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

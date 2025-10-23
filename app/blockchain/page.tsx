@@ -6,10 +6,7 @@ const BlockchainPage: React.FC = () => {
     <>
       <Helmet>
         <title>Blockchain Solutions - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Leverage blockchain technology for secure, transparent, and decentralized solutions for your business needs."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

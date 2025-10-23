@@ -6,10 +6,7 @@ const ARVRSolutionsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AR/VR Solutions - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Immersive experiences with augmented and virtual reality solutions for training, visualization, and customer engagement."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

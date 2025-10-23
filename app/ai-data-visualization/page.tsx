@@ -149,10 +149,7 @@ const AIDataVisualizationPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Data Visualization - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform complex data into actionable insights with AI-powered visualization tools and interactive dashboards."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

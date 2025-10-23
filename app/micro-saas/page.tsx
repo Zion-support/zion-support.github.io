@@ -103,23 +103,13 @@ const MicroSaasPage: React.FC = () => {
         <title>
           Micro SaaS Products - Zion Tech Group | Innovative Software Solutions
         </title>
-        <meta
-          name="description"
-          content="Discover our collection of micro SaaS products designed to solve specific business challenges. AI-powered tools for content, analytics, productivity, and security."
-        />
-        <meta
-          name="keywords"
-          content="micro SaaS, software products, AI tools, business software, productivity tools, analytics software"
-        />
+
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
-            style={{ animationDelay: "1s" }}
-          />
+
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Micro{" "}
@@ -147,16 +137,7 @@ const MicroSaasPage: React.FC = () => {
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
-                      : "bg-white/10 text-gray-300 hover:bg-white/20"
-                  }`}
-                >
+
                   {category.name}
                 </button>
               ))}
@@ -168,11 +149,7 @@ const MicroSaasPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {filteredProducts.map((product) => (
-                <div
-                  key={product.id}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"
-                >
+
                   <div className="flex items-start justify-between mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <product.icon className="w-8 h-8 text-white" />

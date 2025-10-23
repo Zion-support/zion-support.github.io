@@ -6,10 +6,7 @@ const AiCybersecurityPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Cybersecurity Solutions - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Protect your digital assets with AI-powered cybersecurity solutions for threat detection and prevention."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

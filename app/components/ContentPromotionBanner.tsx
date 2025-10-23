@@ -62,11 +62,7 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
-            >
+
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
