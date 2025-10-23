@@ -2,149 +2,180 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const glob = require('glob');
 
-// Get list of files with TypeScript errors
-function getFilesWithErrors() {
-  try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
-    const lines = output.split('\n');
-    const files = new Set();
-    
-    lines.forEach(line => {
-      const match = line.match(/^([^(]+\.tsx)\([0-9]+,[0-9]+\):/);
-      if (match) {
-        files.add(match[1]);
-      }
-    });
-    
-    return Array.from(files);
-  } catch (error) {
-    console.log('Error getting files with errors:', error.message);
-    return [];
-  }
-}
-
-// Common JSX fixes
-function fixJSXContent(content) {
+// Function to fix common JSX syntax errors
+function fixJSXErrors(content) {
   let fixed = content;
   
-  // Fix missing closing tags - common patterns
-  const fixes = [
-    // Fix self-closing tags that should be closed
-    [/(<[^>]+[^/])>(\s*<)/g, '$1></$1>$2'],
-    
-    // Fix malformed JSX expressions
-    [/<([^>]+)>([^<]+)<\/\1>/g, '<$1>$2</$1>'],
-    
-    // Fix missing closing tags for common elements
-    [/<h1([^>]*)>([^<]+)<\/h1>/g, '<h1$1>$2</h1>'],
-    [/<h2([^>]*)>([^<]+)<\/h2>/g, '<h2$1>$2</h2>'],
-    [/<h3([^>]*)>([^<]+)<\/h3>/g, '<h3$1>$2</h3>'],
-    [/<p([^>]*)>([^<]+)<\/p>/g, '<p$1>$2</p>'],
-    [/<div([^>]*)>([^<]+)<\/div>/g, '<div$1>$2</div>'],
-    [/<span([^>]*)>([^<]+)<\/span>/g, '<span$1>$2</span>'],
-    
-    // Fix malformed JSX fragments
-    [/<>([^<]+)<\/>/g, '<>{$1}</>'],
-    
-    // Fix missing closing tags in complex structures
-    [/<section([^>]*)>([^<]+)<\/section>/g, '<section$1>$2</section>'],
-    [/<main([^>]*)>([^<]+)<\/main>/g, '<main$1>$2</main>'],
-    
-    // Fix malformed className attributes
-    [/className="([^"]*)"\s*>/g, 'className="$1">'],
-    
-    // Fix missing closing tags for lists
-    [/<ul([^>]*)>([^<]+)<\/ul>/g, '<ul$1>$2</ul>'],
-    [/<li([^>]*)>([^<]+)<\/li>/g, '<li$1>$2</li>'],
-    
-    // Fix malformed imports
-    [/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2";'],
-    
-    // Fix missing semicolons
-    [/export default ([^;]+)(?!;)/g, 'export default $1;'],
-    
-    // Fix malformed function declarations
-    [/const\s+([^=]+)\s*=\s*\(\)\s*=>\s*{/g, 'const $1 = () => {'],
-    
-    // Fix missing closing braces
-    [/}\s*$/g, '}\n'],
-    
-    // Fix malformed JSX expressions
-    [/{\s*([^}]+)\s*}/g, '{$1}'],
-    
-    // Fix missing closing tags for components
-    [/<([A-Z][a-zA-Z0-9]*)([^>]*)>([^<]+)<\/\1>/g, '<$1$2>$3</$1>'],
-  ];
+  // Fix missing opening tags for common patterns
+  fixed = fixed.replace(/\s*{item}\s*<\/Link>/g, (match) => {
+    return `\n                <Link key={item} to={item} className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                  {item}
+                </Link>`;
+  });
   
-  fixes.forEach(([pattern, replacement]) => {
-    fixed = fixed.replace(pattern, replacement);
+  // Fix missing opening tags for buttons
+  fixed = fixed.replace(/\s*<Home className="w-5 h-5 mr-2" \/>\s*Go Home\s*<\/Link>/g, (match) => {
+    return `\n            <Link to="/" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+              <Home className="w-5 h-5 mr-2" />
+              Go Home
+            </Link>`;
+  });
+  
+  fixed = fixed.replace(/\s*<ArrowLeft className="w-5 h-5 mr-2" \/>\s*Go Back\s*<\/button>/g, (match) => {
+    return `\n            <button onClick={() => window.history.back()} className="inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors">
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Go Back
+            </button>`;
+  });
+  
+  // Fix missing closing tags for sections
+  fixed = fixed.replace(/(<section[^>]*>)([^<]*?)(<div[^>]*>)/g, (match, section, content, div) => {
+    if (!fixed.includes('</section>')) {
+      return match + '</section>';
+    }
+    return match;
+  });
+  
+  // Fix missing closing tags for divs
+  fixed = fixed.replace(/(<div[^>]*>)([^<]*?)(<div[^>]*>)/g, (match, div1, content, div2) => {
+    if (!fixed.includes('</div>')) {
+      return match + '</div>';
+    }
+    return match;
+  });
+  
+  // Fix missing closing tags for ul
+  fixed = fixed.replace(/(<ul[^>]*>)([^<]*?)(<li[^>]*>)/g, (match, ul, content, li) => {
+    if (!fixed.includes('</ul>')) {
+      return match + '</ul>';
+    }
+    return match;
+  });
+  
+  // Fix missing closing tags for React.Fragment
+  fixed = fixed.replace(/(<React\.Fragment>)([^<]*?)(<div[^>]*>)/g, (match, fragment, content, div) => {
+    if (!fixed.includes('</React.Fragment>')) {
+      return match + '</React.Fragment>';
+    }
+    return match;
+  });
+  
+  // Fix missing closing tags for Helmet
+  fixed = fixed.replace(/(<Helmet[^>]*>)([^<]*?)(<title[^>]*>)/g, (match, helmet, content, title) => {
+    if (!fixed.includes('</Helmet>')) {
+      return match + '</Helmet>';
+    }
+    return match;
+  });
+  
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/\s*{([^}]*)}\s*<\/div>/g, (match, content) => {
+    return `\n            <div className="flex flex-wrap gap-2 justify-center">
+              {${content}}
+            </div>`;
+  });
+  
+  // Fix missing opening tags for common patterns
+  fixed = fixed.replace(/\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/React\.Fragment>\s*<\/section>/g, (match) => {
+    return `\n          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  </section>`;
   });
   
   return fixed;
 }
 
-// Fix a single file
-function fixFile(filePath) {
-  try {
-    console.log(`Fixing ${filePath}...`);
-    
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return false;
+// Function to fix specific file patterns
+function fixSpecificFile(filePath, content) {
+  let fixed = content;
+  
+  // Fix 404.tsx specific issues
+  if (filePath.includes('404.tsx')) {
+    // Add missing imports
+    if (!fixed.includes('import { Link }')) {
+      fixed = fixed.replace(/import React from 'react';/, `import React from 'react';
+import { Link } from 'react-router-dom';
+import { Home, ArrowLeft } from 'lucide-react';`);
     }
     
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXContent(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed ${filePath}`);
-      return true;
-    } else {
-      console.log(`No changes needed for ${filePath}`);
-      return false;
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    // Fix the main structure
+    fixed = fixed.replace(/(<div className="min-h-screen[^>]*>)([^<]*?)(<div className="container[^>]*>)/g, (match, outer, content, container) => {
+      return `${outer}
+      <div className="container mx-auto px-4 py-16 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-6">Page Not Found</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            The page you're looking for doesn't exist or has been moved.
+          </p>
+          
+          {/* Quick Links */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Links:</h3>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {['/', '/about', '/services', '/contact'].map((item) => (
+                <Link key={item} to={item} className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                  {item}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link to="/" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+              <Home className="w-5 h-5 mr-2" />
+              Go Home
+            </Link>
+            <button onClick={() => window.history.back()} className="inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors">
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Go Back
+            </button>
+          </div>
+        </div>
+      </div>`;
+    });
   }
+  
+  return fixed;
 }
 
-// Main function
-function main() {
-  console.log('Getting list of files with TypeScript errors...');
-  const files = getFilesWithErrors();
+// Main function to process all files
+function processFiles() {
+  const pattern = 'app/**/*.tsx';
+  const files = glob.sync(pattern, { cwd: process.cwd() });
   
-  console.log(`Found ${files.length} files with errors`);
-  
-  let fixedCount = 0;
-  let errorCount = 0;
+  console.log(`Found ${files.length} files to process...`);
   
   files.forEach(file => {
-    if (fixFile(file)) {
-      fixedCount++;
-    } else {
-      errorCount++;
+    try {
+      const filePath = path.join(process.cwd(), file);
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      // Skip if file is already properly formatted
+      if (content.includes('export default') && content.includes('return (') && content.includes('</div>')) {
+        return;
+      }
+      
+      let fixed = fixJSXErrors(content);
+      fixed = fixSpecificFile(file, fixed);
+      
+      // Only write if content changed
+      if (fixed !== content) {
+        fs.writeFileSync(filePath, fixed, 'utf8');
+        console.log(`Fixed: ${file}`);
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
     }
   });
   
-  console.log(`\nFixed ${fixedCount} files`);
-  console.log(`Errors in ${errorCount} files`);
-  
-  // Run type check again to see if we fixed anything
-  console.log('\nRunning type check again...');
-  try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
-    console.log('Type check passed!');
-  } catch (error) {
-    console.log('Type check still has errors, but we made progress');
-  }
+  console.log('JSX error fixing completed!');
 }
 
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixJSXContent, fixFile };
+// Run the script
+processFiles();

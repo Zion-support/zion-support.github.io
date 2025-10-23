@@ -1,77 +1,121 @@
-'use client';
+"use client";
+import { useCallback, useEffect, useState, useRef } from "react";
+interface UsePerformanceMonitorOptions {
+  enabled?: boolean;
+  threshold?: number;
+  measureMemoryUsage?: boolean;
+}
 
-import { useEffect } from 'react';
+interface PerformanceData {
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
+  renderTime: number;
+}
 
-export const usePerformanceMonitor = () => {
+export const usePerformanceMonitor = (
+  options: UsePerformanceMonitorOptions = {},
+) => {
+  const [metrics, setMetrics] = useState<PerformanceData>({
+    fps: 0,
+    memoryUsage: 0,
+    loadTime: 0,
+    renderTime: 0,
+  });
+
+  const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
+  const frameCountRef = useRef(0);
+  const lastTimeRef = useRef(performance.now());
+
+  const measureMemoryUsage = useCallback(() => {
+    if (typeof window !== "undefined" && "memory" in performance) {
+      const memory = (performance as { memory?: { usedJSHeapSize: number } })
+        .memory;
+      if (memory) {
+        setMetrics((prev) => ({
+          ...prev,
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
+        }));
+      }
+    }
+  }, []);
+
+  const init = useCallback(() => {
+    if (options.enabled !== false) {
+      setIsMonitoringFPS(true);
+      measureMemoryUsage();
+    }
+  }, [options.enabled, measureMemoryUsage]);
+
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (!isMonitoringFPS) return;
 
-    // Monitor page load performance
-    const handleLoad = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      if (navigation) {
-        const metrics = {
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        };
+    const countFrames = () => {
+      frameCountRef.current++;
+      const currentTime = performance.now();
 
-        console.log('Performance Metrics:', metrics);
+      if (currentTime - lastTimeRef.current >= 1000) {
+        const fps = Math.round(
+          (frameCountRef.current * 1000) / (currentTime - lastTimeRef.current),
+        );
+        setMetrics((prev) => ({
+          ...prev,
+          fps,
+        }));
+        frameCountRef.current = 0;
+        lastTimeRef.current = currentTime;
+      }
+      requestAnimationFrame(countFrames);
+    };
 
-        // Send to analytics if available
-        if ('gtag' in window) {
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
-          gtag('event', 'page_performance', {
-            event_category: 'performance',
-            dom_content_loaded: Math.round(metrics.domContentLoaded),
-            load_complete: Math.round(metrics.loadComplete),
-            total_load_time: Math.round(metrics.totalLoadTime),
-          });
+    requestAnimationFrame(countFrames);
+  }, [isMonitoringFPS]);
+
+  useEffect(() => {
+    if (options.measureMemoryUsage) {
+      measureMemoryUsage();
+    }
+  }, [measureMemoryUsage, options.measureMemoryUsage]);
+
+  // Monitor Core Web Vitals
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const monitorWebVitals = () => {
+      if ("performance" in window) {
+        const navigation = performance.getEntriesByType(
+          "navigation",
+        )[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          setMetrics((prev) => ({
+            ...prev,
+            loadTime,
+          }));
         }
       }
     };
 
-    // Monitor resource loading
-    const handleResourceTiming = () => {
-      const resources = performance.getEntriesByType('resource');
-      const slowResources = resources.filter(resource => resource.duration > 1000);
-      
-      if (slowResources.length > 0) {
-        console.warn('Slow loading resources:', slowResources);
-      }
-    };
-
-    // Monitor memory usage
-    const handleMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024),
-        };
-
-        if (memoryUsage.used > memoryUsage.limit * 0.8) {
-          console.warn('High memory usage detected:', memoryUsage);
-        }
-      }
-    };
-
-    // Set up monitoring
-    if (document.readyState === 'complete') {
-      handleLoad();
+    // Run monitoring after page load
+    if (document.readyState === "complete") {
+      monitorWebVitals();
     } else {
-      window.addEventListener('load', handleLoad);
+      window.addEventListener("load", monitorWebVitals);
     }
 
-    // Monitor resources after a delay
-    setTimeout(handleResourceTiming, 2000);
-    setTimeout(handleMemoryUsage, 5000);
-
-    // Cleanup
     return () => {
-      window.removeEventListener('load', handleLoad);
+      window.removeEventListener("load", monitorWebVitals);
     };
   }, []);
+
+  return {
+    metrics,
+    setMetrics,
+    isMonitoringFPS,
+    setIsMonitoringFPS,
+    measureMemoryUsage,
+    init,
+  };
 };
+
+export default usePerformanceMonitor;

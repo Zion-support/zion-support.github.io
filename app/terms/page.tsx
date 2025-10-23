@@ -1,10 +1,8 @@
-'use client';
-import React from 'react';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
 export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024';
-  
+  const lastUpdated = 'January 1, 2024'
   const sections = [
     {
       title: 'Acceptance of Terms',
@@ -46,8 +44,7 @@ export default function TermsPage() {
       icon: Scale,
       content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
@@ -57,14 +54,13 @@ export default function TermsPage() {
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Please read these terms carefully before using our services
-          </p>
+  </
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}
           </div>
         </div>
       </div>
-
       <div className="py-20"></div>
         <div className="container mx-auto px-4"></div>
           <div className="max-w-4xl mx-auto"></div>
@@ -87,7 +83,6 @@ export default function TermsPage() {
                 </div>
               ))}
             </div>
-
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
               <p className="text-gray-700 mb-6">
@@ -112,7 +107,6 @@ export default function TermsPage() {
                 </div>
               </div>
             </div>
-
             <div className="mt-8 text-center"></div>
               <p className="text-sm text-gray-500">
                 By using our services, you acknowledge that you have read and understood these terms.
@@ -122,5 +116,6 @@ export default function TermsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
+  </p>

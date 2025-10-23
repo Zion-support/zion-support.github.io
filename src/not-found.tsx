@@ -1,4 +1,4 @@
-import { Home, Phone } from 'lucide-react';
+
 export default function NotFound() {
   const popularPages = [
     {
@@ -14,22 +14,40 @@ export default function NotFound() {
       icon: '🤖'
     },
     {
+      title: 'Micro SAAS Solutions',
+      description: 'Affordable AI-powered tools for modern businesses',
+      href: '/micro-saas',
+      icon: '⚡'
+    },
+    {
+      title: 'AI Project Manager',
+      description: 'Intelligent project planning and management',
+      href: '/ai-project-manager',
+      icon: '📊'
+    },
+    {
+      title: 'AI Analytics Dashboard',
+      description: 'Transform data into actionable insights',
+      href: '/ai-analytics-dashboard',
+      icon: '📈'
+    },
+    {
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
       icon: '📚'
     },
     {
-      title: 'About Us',
-      description: 'Learn about Zion Tech Group and our mission',
-      href: '/about',
-      icon: '🏢'
-    },
-    {
       title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
       icon: '📊'
+    },
+    {
+      title: 'About Us',
+      description: 'Learn about Zion Tech Group and our mission',
+      href: '/about',
+      icon: '🏢'
     },
     {
       title: 'Contact Us',
@@ -59,11 +77,10 @@ export default function NotFound() {
           </p>
         </div>
         {/* Popular Pages */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {popularPages.map((page, index) => (
-            <Link
-              key={index}
-              to={page.href}
+            <a key={index}
+              href={page.href}
               className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
             >
               <div className="text-3xl mb-3">{page.icon}</div>
@@ -73,25 +90,23 @@ export default function NotFound() {
               <p className="text-gray-600 text-sm">
                 {page.description}
               </p>
-            </Link>
+            </a>
           ))}
         </div>
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            to="/"
+          <a href="/"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
           >
             <Home className="w-4 h-4 mr-2" />
             Go Home
-          </Link>
-          <Link
-            to="/contact"
+          </a>
+          <a href="/contact"
             className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300"
           >
             <Phone className="w-4 h-4 mr-2" />
             Contact Support
-          </Link>
+          </a>
         </div>
       </div>
     </div>

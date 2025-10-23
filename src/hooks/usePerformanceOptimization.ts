@@ -1,161 +1,126 @@
-
-
 'use client';
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-
-  loadTime: number;,
-    firstContentfulPaint: number;,
-    largestContentfulPaint: number;,
-    cumulativeLayoutShift: number;,
-    firstInputDelay: number
+import { useCallback } from 'react';
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
 }
-export const _usePerformanceOptimization = () => {// TODO: Add content;}
-
-}
-  const measurePerformance = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    if (typeof window === 'undefined' || !('performance' in window)) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+export const usePerformanceOptimization = () => {
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
-    const navigation = performance.getEntriesByType()
-//       'navigation'
+    }
+    const navigation = performance.getEntriesByType(
+      'navigation'
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
-    const,
-  metrics: PerformanceMetrics = {const _paintEntries = performance.getEntriesByType('paint');}
-    const,
-  _metrics: PerformanceMetrics = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  loadTim,
-  e: navigation;
-//         ? navigation.loadEventEnd - navigation.loadEventStart;
+    const metrics: PerformanceMetrics = {
+      loadTime: navigation
+        ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
-      firstContentfulPain,
-  t:
+      firstContentfulPaint:
         paintEntries.find(entry => entry.name === 'first-contentful-paint')
-//           ?.startTime || 0,
-
+          ?.startTime || 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
-      firstInputDelay: 0;
-
+      firstInputDelay: 0
     };
-    // Measure LCP;
-const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+    // Measure LCP
+    const lcpObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      if (lastEntry) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+      if (lastEntry) {
         metrics.largestContentfulPaint = lastEntry.startTime;
+      }
     });
-    lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-// Measure CLS;
-    const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
-      for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        const layoutShiftEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    // Measure CLS
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver(list => {
+      for (const entry of list.getEntries()) {
+        const layoutShiftEntry = entry as PerformanceEntry & {
           hadRecentInput?: boolean;
           value?: number;
-        if (!layoutShiftEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+        };
+        if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0;
+        }
+      }
       metrics.cumulativeLayoutShift = clsValue;
-    clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
-// Measure FID;
-    const fidObserver = new PerformanceObserver(list => {const fidEntry = entry as PerformanceEntry & {}
-  // TOD,
-  O: Add content;
-}
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    // Measure FID
+    const fidObserver = new PerformanceObserver(list => {
+      for (const entry of list.getEntries()) {
+        const fidEntry = entry as PerformanceEntry & {
           processingStart?: number;
-        metrics.firstInputDelay =)
+        };
+        metrics.firstInputDelay =
           (fidEntry.processingStart || 0) - entry.startTime;
-    fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-    // Cleanup observers after a delay;
-    setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+      }
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+    // Cleanup observers after a delay
+    setTimeout(() => {
       lcpObserver.disconnect();
       clsObserver.disconnect();
       fidObserver.disconnect();
     }, 10000);
     return metrics;
   }, []);
-  const optimizeImages = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+  const optimizeImages = useCallback(() => {
     const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver(entries => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      entries.forEach(entry => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
-        if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+    const imageObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
+        }
+      });
+    });
     images.forEach(img => imageObserver.observe(img));
-  const preloadCriticalResources = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+  }, []);
+  const preloadCriticalResources = useCallback(() => {
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
-    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+    criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-      if (resource.endsWith('.woff2')) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+      if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
+      }
       document.head.appendChild(link);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    // Measure performance after page load;
-const timer = setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+    });
+  }, []);
+  useEffect(() => {
+    // Measure performance after page load
+    const timer = setTimeout(() => {
       const metrics = measurePerformance();
-      if (metrics) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        // Send metrics to analytics in production;
-        if (process.env['NODE_ENV'] === 'production') {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-          // Track metrics in production;
-if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}
+      if (metrics) {
+        // Send metrics to analytics in production
+        if (process.env['NODE_ENV'] === 'production') {
+          // Track metrics in production
+        }
+        if (process.env['NODE_ENV'] === 'development') { 
+          if (import.meta.env.DEV) { 
+          } 
+        }
+      }
     }, 1000);
-    // Optimize images;
-    // Preload critical resources;
+    // Optimize images
+    optimizeImages();
+    // Preload critical resources
+    preloadCriticalResources();
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
-  return {measurePerformance}
+  return {
+    measurePerformance,
     optimizeImages,
-    preloadCriticalResources;
-
-
-
+    preloadCriticalResources
+  };
+};

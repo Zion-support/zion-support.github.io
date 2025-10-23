@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const LoadingPage: React.FC = () => {
   const features = [
     {
@@ -25,8 +24,7 @@ const LoadingPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -36,8 +34,6 @@ const LoadingPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
-};
-
-export default LoadingPage;
+  ]
+}
+export default LoadingPage

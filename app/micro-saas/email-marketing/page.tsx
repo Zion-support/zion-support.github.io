@@ -1,16 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, ArrowRight } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Mail, ArrowRight } from 'lucide-react'
 const EmailMarketingSuitePage: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
         <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/email-marketing" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center"></div>
@@ -23,7 +21,7 @@ const EmailMarketingSuitePage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered email marketing automation. Create, send, and optimize email campaigns 
+              AI-powered email marketing automation. Create, send, and optimize email campaigns
               with intelligent automation and personalization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -33,11 +31,10 @@ const EmailMarketingSuitePage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
                 View Demo
-              </button>
+  </
             </div>
           </div>
         </section>
-
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -49,8 +46,8 @@ const EmailMarketingSuitePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
-export default EmailMarketingSuitePage;
+    </React.Fragment>
+  )
+}
+export default EmailMarketingSuitePage
+  </button>
