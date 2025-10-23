@@ -236,7 +236,7 @@ export default function HomePage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Let's discuss how our AI and IT solutions can help you achieve your business goals.
+              Let&apos;s discuss how our AI and IT solutions can help you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
