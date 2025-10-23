@@ -66,7 +66,7 @@ const AboutPage = () => {
                 </p>
                 <p className="text-lg text-gray-300 mb-8">
                   Our team of experts combines deep technical knowledge with business acumen to deliver solutions 
-                  that not only meet today's needs but anticipate tomorrow's challenges.
+                  that not only meet today&apos;s needs but anticipate tomorrow&apos;s challenges.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
@@ -120,7 +120,7 @@ const AboutPage = () => {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can help transform your business with our AI and IT solutions.
+              Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">

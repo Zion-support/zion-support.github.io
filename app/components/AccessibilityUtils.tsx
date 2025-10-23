@@ -148,8 +148,8 @@ const AccessibilityUtilsPage: React.FC = () => {
 import React from "react";
 
 
-constAccessibilityUtils: React.FC= () => {return (
+const AccessibilityUtils: React.FC = () => {
+  return null;
+};
 
-  );};
-
-export default AccessibilityUtilsPage;
+export default AccessibilityUtils;

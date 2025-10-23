@@ -13,7 +13,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
-  enableFocusManagement = true;
+  enableFocusManagement = true
 }) => {
   useEffect(() => {
     // Only run in browser environment;

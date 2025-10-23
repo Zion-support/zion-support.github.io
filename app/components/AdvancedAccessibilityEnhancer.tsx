@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState, useCallback } from 'react'
 
-interface AdvancedAccessibilityEnhancerProps {;
+interface AdvancedAccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
@@ -13,10 +13,9 @@ interface AdvancedAccessibilityEnhancerProps {;
   enableFontScaling?: boolean;
   enableVoiceNavigation?: boolean;
 }
-'use client';
-import React, {useEffect, useState, useCallback} from 'react';
 
-interface AdvancedAccessibilityEnhancerProp s {enableKeyboardNavigation?: boolean;
+interface AdvancedAccessibilityEnhancerProps {
+  enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
@@ -25,18 +24,22 @@ interface AdvancedAccessibilityEnhancerProp s {enableKeyboardNavigation?: boolea
   enableColorContrast?: boolean;
   enableMotionReduction?: boolean;
   enableFontScaling?: boolean;
-  enableVoiceNavigation?: boolean;}
+  enableVoiceNavigation?: boolean;
+}
 
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true,
-  enableScreenReader= true,
-  enableHighContrast= true,
-  enableFocusManagement= true,
-  enableARIALabels= true,
-  enableSkipLinks= true,
-  enableColorContrast= true,
-  enableMotionReduction= true,
-  enableFontScaling= true,
-  enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableARIALabels = true,
+  enableSkipLinks = true,
+  enableColorContrast = true,
+  enableMotionReduction = true,
+  enableFontScaling = true,
+  enableVoiceNavigation = true
+}) => {
+  const [accessibilitySettings, setAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',

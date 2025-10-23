@@ -137,9 +137,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
   );
 };
 
-export default AdvancedPerformanceMonitorPage;
-import React, { useEffect, useState, useCallback } from 'react'
-interface PerformanceMetrics {;
+interface PerformanceMetrics {
 fcp: number | null;
 lcp: number | null;
 fid: number | null;
