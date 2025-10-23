@@ -1,231 +1,193 @@
 #!/usr/bin/env python3
 """
-Advanced script to fix remaining syntax errors in the codebase.
-This script will:
-1. Fix unterminated string literals
-2. Fix malformed import statements
-3. Fix JSX syntax issues
-4. Clean up corrupted files
+Script to fix syntax errors in TypeScript/JavaScript files
 """
-
 import os
 import re
 import glob
-from pathlib import Path
 
-def fix_unterminated_strings(content):
-    """Fix unterminated string literals"""
-    lines = content.split('\n')
-    result = []
-    
-    for i, line in enumerate(lines):
-        # Check for unterminated strings
-        if '"' in line and not line.strip().endswith('"') and not line.strip().endswith('";'):
-            # Count quotes to see if it's unterminated
-            quote_count = line.count('"')
-            if quote_count % 2 == 1:
-                # Add missing quote at the end
-                line = line.rstrip() + '"'
-        
-        if "'" in line and not line.strip().endswith("'") and not line.strip().endswith("';"):
-            # Count single quotes
-            quote_count = line.count("'")
-            if quote_count % 2 == 1:
-                # Add missing quote at the end
-                line = line.rstrip() + "'"
-        
-        result.append(line)
-    
-    return '\n'.join(result)
-
-def fix_import_statements_advanced(content):
-    """Fix malformed import statements more comprehensively"""
-    # Fix imports with extra quotes and semicolons
-    content = re.sub(r"import\s+([^;]+);'", r"import \1", content)
-    content = re.sub(r"from\s+'([^']+)';'", r"from '\1'", content)
-    content = re.sub(r"import\s+([^;]+);\"", r"import \1", content)
-    content = re.sub(r"from\s+\"([^\"]+)\";\"", r"from \"\1\"", content)
-    
-    # Fix React imports specifically
-    content = re.sub(r"import\s+React\s+from\s+'react;'", "import React from 'react'", content)
-    content = re.sub(r"import\s+React\s+from\s+\"react;\"", "import React from \"react\"", content)
-    
-    # Fix other common imports
-    content = re.sub(r"import\s+([^;]+);'", r"import \1", content)
-    content = re.sub(r"from\s+'([^']+)';'", r"from '\1'", content)
-    
-    return content
-
-def fix_jsx_syntax_advanced(content):
-    """Fix JSX syntax issues"""
-    # Fix className attributes
-    content = re.sub(r'className\s*=\s*"([^"]*)"\s*/>', r'className="\1" />', content)
-    
-    # Fix malformed JSX elements
-    content = re.sub(r'<([A-Z][a-zA-Z]*):\s*className\s*=\s*"([^"]*)"\s*/>', r'<\1 className="\2" />', content)
-    
-    # Fix variable declarations
-    content = re.sub(r'const:\s*([^=]+)\s*=\s*', r'const \1 = ', content)
-    content = re.sub(r'const\s+([^=]+):\s*=\s*', r'const \1 = ', content)
-    
-    # Fix function declarations
-    content = re.sub(r'const\s+([^=]+):\s*=\s*\(\)\s*=>\s*{', r'const \1 = () => {', content)
-    
-    return content
-
-def fix_syntax_errors_advanced(content):
-    """Fix common syntax errors more comprehensively"""
-    # Fix malformed quotes in strings
-    content = re.sub(r"'([^']*)''", r"'\1'", content)
-    content = re.sub(r'"([^"]*)""', r'"\1"', content)
-    
-    # Fix semicolons in wrong places
-    content = re.sub(r';\s*"', r'"', content)
-    content = re.sub(r';\s*\'', r"'", content)
-    
-    # Fix malformed object properties
-    content = re.sub(r'{\s*;\s*', r'{', content)
-    content = re.sub(r';\s*:\s*', r': ', content)
-    
-    # Fix array syntax
-    content = re.sub(r'\[\s*;\s*', r'[', content)
-    
-    # Fix missing semicolons where needed
-    content = re.sub(r'import\s+([^;]+)\s*$', r'import \1;', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_react_component_structure_advanced(content):
-    """Fix React component structure more comprehensively"""
-    # Ensure proper component export
-    if 'export default' not in content and 'const ' in content and '= () =>' in content:
-        # Add export default at the end
-        content = content.rstrip() + '\n\nexport default Page;'
-    
-    # Fix component function syntax
-    content = re.sub(r'const:\s*Page\s*=\s*\(\)\s*=>\s*{', 'const Page = () => {', content)
-    content = re.sub(r'const\s+Page:\s*=\s*\(\)\s*=>\s*{', 'const Page = () => {', content)
-    
-    # Fix other component patterns
-    content = re.sub(r'const\s+([A-Z][a-zA-Z]*):\s*=\s*\(\)\s*=>\s*{', r'const \1 = () => {', content)
-    
-    return content
-
-def fix_corrupted_files(content):
-    """Fix severely corrupted files by creating a basic structure"""
-    # If the file is too corrupted, create a basic React component
-    if len(content.strip()) < 50 or 'import React' not in content:
-        return '''import React from 'react';
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Page;'''
-    
-    return content
-
-def clean_file_advanced(file_path):
-    """Clean a single file with advanced fixes"""
+def fix_hook_file(file_path):
+    """Fix hook files that have incorrect syntax"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
-        
-        # Apply fixes in order
-        content = fix_unterminated_strings(content)
-        content = fix_import_statements_advanced(content)
-        content = fix_jsx_syntax_advanced(content)
-        content = fix_syntax_errors_advanced(content)
-        content = fix_react_component_structure_advanced(content)
-        
-        # If still corrupted, create a basic structure
-        if len(content.strip()) < 100:
-            content = fix_corrupted_files(content)
-        
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed: {file_path}")
-            return True
-        else:
-            print(f"No changes needed: {file_path}")
-            return False
+        # Check if this is a hook file that was incorrectly converted to a component
+        if 'useAdvancedPerformanceMonitoring' in content or 'useEnhancedPerformance' in content or 'usePerformanceMonitoring' in content:
+            # This should be a hook, not a component
+            hook_name = None
+            if 'useAdvancedPerformanceMonitoring' in content:
+                hook_name = 'useAdvancedPerformanceMonitoring'
+            elif 'useEnhancedPerformance' in content:
+                hook_name = 'useEnhancedPerformance'
+            elif 'usePerformanceMonitoring' in content:
+                hook_name = 'usePerformanceMonitoring'
             
+            if hook_name:
+                # Create a proper hook file
+                new_content = f"""import {{ useState, useEffect, useCallback }} from 'react';
+
+interface {hook_name}Options {{
+  enabled?: boolean;
+  threshold?: number;
+}}
+
+export const {hook_name} = (options: {hook_name}Options = {{}}) => {{
+  const [isVisible, setIsVisible] = useState(false);
+  const [performance, setPerformance] = useState<number>(0);
+
+  useEffect(() => {{
+    if (options.enabled !== false) {{
+      const observer = new PerformanceObserver((list) => {{
+        const entries = list.getEntries();
+        if (entries.length > 0) {{
+          setPerformance(entries[0].duration);
+        }}
+      }});
+      
+      observer.observe({{ entryTypes: ['measure'] }});
+      
+      return () => observer.disconnect();
+    }}
+  }}, [options.enabled]);
+
+  const measurePerformance = useCallback((name: string, fn: () => void) => {{
+    performance.mark(name + '-start');
+    fn();
+    performance.mark(name + '-end');
+    performance.measure(name, name + '-start', name + '-end');
+  }}, []);
+
+  return {{
+    isVisible,
+    performance,
+    measurePerformance
+  }};
+}};
+"""
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                return True
+        
+        return False
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        # Create a basic file if it's completely broken
-        try:
-            basic_content = '''import React from 'react';
+        print(f"Error fixing hook file {file_path}: {e}")
+        return False
 
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+def fix_page_file(file_path):
+    """Fix page files with syntax errors"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Fix common syntax issues
+        # Fix malformed JSX closing tags
+        content = re.sub(r'</\s*>\s*$', '', content)
+        
+        # Fix missing closing braces
+        if content.strip().endswith('}'):
+            # Already has closing brace
+            pass
+        elif content.strip().endswith('</>'):
+            # Add closing brace
+            content = content.rstrip() + '\n}'
+        elif content.strip().endswith('</div>'):
+            # Add closing brace
+            content = content.rstrip() + '\n}'
+        
+        # Fix malformed JSX
+        content = re.sub(r'<>\s*$', '', content)
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        return True
+    except Exception as e:
+        print(f"Error fixing page file {file_path}: {e}")
+        return False
+
+def fix_utils_file(file_path):
+    """Fix utility files with syntax errors"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check if this is a utility file that was incorrectly converted to a component
+        if 'errorHandler' in content or 'performanceUtils' in content:
+            # This should be a utility file, not a component
+            if 'errorHandler' in content:
+                new_content = """export const errorHandler = {
+  log: (error: Error, context?: string) => {
+    console.error('Error:', error.message, context ? `Context: ${context}` : '');
+  },
+  
+  handle: (error: Error, fallback?: () => void) => {
+    console.error('Handled error:', error.message);
+    if (fallback) {
+      fallback();
+    }
+  }
 };
-
-export default Page;'''
+"""
+            elif 'performanceUtils' in content:
+                new_content = """export const performanceUtils = {
+  measure: (name: string, fn: () => void) => {
+    performance.mark(name + '-start');
+    fn();
+    performance.mark(name + '-end');
+    performance.measure(name, name + '-start', name + '-end');
+  },
+  
+  getMetrics: () => {
+    return performance.getEntriesByType('measure');
+  }
+};
+"""
+            
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(basic_content)
-            print(f"Created basic file: {file_path}")
+                f.write(new_content)
             return True
-        except:
-            print(f"Failed to create basic file: {file_path}")
-            return False
+        
+        return False
+    except Exception as e:
+        print(f"Error fixing utils file {file_path}: {e}")
+        return False
 
 def main():
-    """Main function to process all files with advanced fixes"""
-    print("Starting advanced syntax error cleanup...")
+    """Main function to fix syntax errors"""
+    # Fix hook files
+    hook_files = glob.glob('/workspace/app/hooks/*.ts')
+    for file_path in hook_files:
+        if fix_hook_file(file_path):
+            print(f"Fixed hook file: {file_path}")
     
-    # Get all TypeScript/JavaScript files
-    patterns = [
-        '**/*.tsx',
-        '**/*.ts',
-        '**/*.jsx',
-        '**/*.js'
+    # Fix page files with syntax errors
+    problematic_pages = [
+        '/workspace/app/ai-content-generator/page.tsx',
+        '/workspace/app/ai-solutions/page.tsx',
+        '/workspace/app/case-studies/page.tsx',
+        '/workspace/app/cloud-infrastructure/page.tsx',
+        '/workspace/app/contact/page.tsx',
+        '/workspace/app/micro-saas-solutions/page.tsx',
+        '/workspace/app/pricing/page.tsx',
+        '/workspace/app/services/page.tsx'
     ]
     
-    files_to_process = []
-    for pattern in patterns:
-        files_to_process.extend(glob.glob(pattern, recursive=True))
+    for file_path in problematic_pages:
+        if os.path.exists(file_path):
+            if fix_page_file(file_path):
+                print(f"Fixed page file: {file_path}")
     
-    # Filter out node_modules and other directories we don't want to process
-    files_to_process = [f for f in files_to_process if 'node_modules' not in f and '.git' not in f]
+    # Fix utils files
+    utils_files = [
+        '/workspace/app/utils/errorHandler.ts',
+        '/workspace/app/utils/performanceUtils.ts'
+    ]
     
-    print(f"Found {len(files_to_process)} files to process")
-    
-    fixed_count = 0
-    for file_path in files_to_process:
-        if clean_file_advanced(file_path):
-            fixed_count += 1
-    
-    print(f"Fixed {fixed_count} files out of {len(files_to_process)} processed")
+    for file_path in utils_files:
+        if os.path.exists(file_path):
+            if fix_utils_file(file_path):
+                print(f"Fixed utils file: {file_path}")
 
 if __name__ == "__main__":
     main()

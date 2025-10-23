@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, company, phone, message, location } = req.body || {};
+    const { name, email, company, phone, message, serviceType, preferredDate } = req.body || {};
 
     if (!name || !email) {
       return res.status(400).json({ error: 'Name and email are required' });
@@ -32,14 +32,15 @@ export default async function handler(req, res) {
 
     // Add new request
     const newRequest = {
-      id: `onsite_${Date.now()}`,
+id: Date.now().toString(),
       name,
       email,
-      company: company || 'Not provided',
-      phone: phone || 'Not provided',
-      message: message || 'No message provided',
-      location: location || 'Not specified',
-      createdAt: new Date().toISOString(),
+      company,
+      phone,
+      message,
+      serviceType,
+      preferredDate,
+      timestamp: new Date().toISOString(),
       status: 'pending'
     };
 
