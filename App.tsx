@@ -470,7 +470,7 @@ const App = memo(() => {
       <Router>
         <div className="min-h-screen bg-gray-50">
           <main className="flex-1">
-            <GlobalErrorBoundary />
+            <GlobalErrorBoundary>
             <PerformanceMonitor />
             <SEOOptimizer />
             <AccessibilityEnhancer>
@@ -1089,6 +1089,7 @@ const App = memo(() => {
                 </Routes>
               </Suspense>
             </AccessibilityEnhancer>
+            </GlobalErrorBoundary>
             </main>
 
             <Footer />

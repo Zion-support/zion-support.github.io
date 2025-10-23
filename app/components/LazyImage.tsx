@@ -1,14 +1,17 @@
+import Image from "next/image";
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 
 interface LazyImageProps {
+  width?: number;
+  height?: number;
   src: string;
   alt: string;
   className?: string;
   placeholder?: string;
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className, placeholder }) => {
+const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className, placeholder, width = 800, height = 600 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -34,7 +37,9 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className, placeholder 
   return (
     <div ref={imgRef} className={className}>
       {isInView && (
-        <img
+        <Image
+            width={width}
+            height={height}
           src={src}
           alt={alt}
           onLoad={() => setIsLoaded(true)}
