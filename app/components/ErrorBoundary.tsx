@@ -1,10 +1,14 @@
 "use client";
 import React from "react";
 
-const ErrorBoundary: React.FC = () => {
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ children }) => {
   return (
     <div>
-      <h1>ErrorBoundary</h1>
+      {children}
     </div>
   );
 };
