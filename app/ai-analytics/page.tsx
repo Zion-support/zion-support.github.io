@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { Brain, BarChart, TrendingUp, Zap, Shield } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import Navigation from "../components/Navigation";
+import Link from "next/link";
 
 const AiAnalyticsPage: React.FC = () => {
   const features = [
@@ -81,12 +80,35 @@ const AiAnalyticsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
-      </Helmet>
+      {/* Simple Navigation Header */}
+      <nav className="bg-white shadow-lg sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <Brain className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-xl font-bold text-gray-900">
+                  Zion Tech Group
+                </span>
+              </Link>
+            </div>
+            <div className="flex items-center space-x-8">
+              <Link href="/" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+                Home
+              </Link>
+              <Link href="/ai-services" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+                AI Services
+              </Link>
+              <Link href="/contact" className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">

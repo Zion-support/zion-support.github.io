@@ -81,6 +81,7 @@ const AIDataVisualizerPage = lazy(
 const AIEmailOptimizerPage = lazy(
   () => import("./app/ai-email-optimizer/page"),
 );
+const AIAnalyticsPage = lazy(() => import("./app/ai-analytics/page"));
 const SocialMediaSchedulerPage = lazy(
   () => import("./app/social-media-scheduler/page"),
 );
@@ -420,6 +421,9 @@ const App = memo(() => {
   usePerformanceOptimization();
 
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+
     // Register service worker
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
       navigator.serviceWorker
@@ -584,6 +588,14 @@ const App = memo(() => {
                         <Route
                           path="/ai-email-optimizer"
                           element={<AIEmailOptimizerPage />}
+                        />
+                        <Route
+                          path="/ai-analytics"
+                          element={<AIAnalyticsPage />}
+                        />
+                        <Route
+                          path="/social-media-scheduler"
+                          element={<SocialMediaSchedulerPage />}
                         />
                         <Route
                           path="/social-media-scheduler"
