@@ -1,292 +1,151 @@
-import React, { useEffect, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
+interface SEOOptimizerProps {
+title?: string
+description?: string
+keywords?: string
+canonicalUrl?: string
+ogImage?: string
+twitterCard?: string
+structuredData?: object
+children: React.ReactNode
 }
-
-interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableOpenGraph?: boolean;
-  enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
-  enableStructuredData = true,
-  enableOpenGraph = true,
-  enableTwitterCards = true,
-  enableSchemaMarkup = true,
+const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+title = 'Zion Tech Group - Advanced AI and IT Solutions',
+description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+canonicalUrl,
+ogImage = '/images/og-image.jpg',
+twitterCard = 'summary_large_image',
+structuredData,
+children
 }) => {
-  // const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-  const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.structuredData) return null;
-
-    const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      description: seoData.description,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/Zion-Holdings',
-      ],
-      ...seoData.structuredData,
-    };
-
-    return baseStructuredData;
-  }, [seoData, enableStructuredData]);
-
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null;
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://ziontechgroup.com',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: seoData.title,
-          item: seoData.canonicalUrl,
-        },
-      ],
-    };
-  }, [seoData, enableSchemaMarkup]);
-
-  const generateFAQStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null;
-
-    const faqData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Zion Tech Group offers comprehensive AI-powered enterprise solutions, digital transformation services, automation, cloud services, AI consulting, business intelligence, and machine learning solutions.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'You can contact us at kleber@ziontechgroup.com or call +1 302 464 0950. Our office is located at 364 E Main St STE 1008, Middletown DE 19709.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.',
-          },
-        },
-      ],
-    };
-
-    return faqData;
-  }, [enableSchemaMarkup]);
-
-  const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
-
-  useEffect(() => {
-    // Update page title and meta description for better SEO
-    if (typeof document !== 'undefined') {
-      document.title = seoData.title;
-      
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', seoData.description);
-
-      // Update canonical URL
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
-    }
-  }, [seoData]);
-
-  const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    const metaTag = document.createElement('meta');
-    metaTag.setAttribute(attribute, name);
-    metaTag.content = content;
-    document.head.appendChild(metaTag);
-  };
-
-  const _updateCanonicalUrl = (url: string) => {
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    
-    if (canonicalLink) {
-      canonicalLink.href = url;
-    } else {
-      canonicalLink = document.createElement('link');
-      canonicalLink.rel = 'canonical';
-      canonicalLink.href = url;
-      document.head.appendChild(canonicalLink);
-    }
-  };
-
-  const _addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data
-    if (structuredDataRef.current) {
-      structuredDataRef.current.remove();
-    }
-  };
-
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,
-        page_location: config.canonicalUrl,
-      });
-    }
-  };
-
-  const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
-        }
-      });
-    }
-  };
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
-      <meta name="keywords" content={seoData.keywords.join(', ')} />
-      <link rel="canonical" href={seoData.canonicalUrl} />
-      
-      {/* Open Graph Tags */}
-      {enableOpenGraph && (
-        <>
-          <meta property="og:title" content={seoData.title} />
-          <meta property="og:image:height" content="630" />
-          <meta property="og:site_name" content="Zion Tech Group" />
-          <meta property="og:locale" content="en_US" />
-        </>
-      )}
-
-      {/* Twitter Card Tags */}
-      {enableTwitterCards && (
-        <>
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={seoData.title} />
-          <meta name="twitter:description" content={seoData.description} />
-          <meta name="twitter:image" content={seoData.ogImage} />
-          <meta name="twitter:site" content="@ziontechgroup" />
-          <meta name="twitter:creator" content="@ziontechgroup" />
-        </>
-      )}
-
-      {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      <meta name="theme-color" content="#4F46E5" />
-
-      {/* Structured Data */}
-      {enableSchemaMarkup && structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-
-      {enableSchemaMarkup && breadcrumbData && (
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbData)}
-        </script>
-      )}
-
-      {enableSchemaMarkup && faqData && (
-        <script type="application/ld+json">
-          {JSON.stringify(faqData)}
-        </script>
-      )}
-
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-      {/* DNS Prefetch for better performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
-  );
-};
-
-export default AdvancedSEOOptimizer;
+const [seoScore, setSeoScore] = useState(0)
+const [recommendations, setRecommendations] = useState<string[]>([])
+const analyzeSEO = useCallback(() => {
+if (typeof window === 'undefined') return
+let score = 0
+const newRecommendations: string[] = []
+// Check title length
+if (title.length >= 30 && title.length <= 60) {
+score += 20
+} else {
+newRecommendations.push('Title should be between 30-60 characters')
+}
+// Check description length
+if (description.length >= 120 && description.length <= 160) {
+score += 20
+} else {
+newRecommendations.push('Description should be between 120-160 characters')
+}
+// Check for keywords in title
+if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+score += 15
+} else {
+newRecommendations.push('Include primary keyword in title')
+}
+// Check for keywords in description
+if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+score += 15
+} else {
+newRecommendations.push('Include primary keyword in description')
+}
+// Check for heading structure
+const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+if (headings.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add proper heading structure')
+}
+// Check for images with alt text
+const images = document.querySelectorAll('img')
+const imagesWithAlt = document.querySelectorAll('img[alt]')
+if (images.length === imagesWithAlt.length && images.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add alt text to all images')
+}
+// Check for internal links
+const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]')
+if (internalLinks.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add internal links for better SEO')
+}
+setSeoScore(score)
+setRecommendations(newRecommendations)
+}, [title, description, keywords])
+useEffect(() => {
+analyzeSEO()
+}, [analyzeSEO])
+const generateStructuredData = () => {
+const defaultStructuredData = {
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "Zion Tech Group",
+"description": description,
+"url": canonicalUrl || window.location.origin,
+"logo": ogImage,
+"sameAs": [
+"https://twitter.com/ziontechgroup",
+"https://linkedin.com/company/ziontechgroup"
+]
+}
+return structuredData || defaultStructuredData
+}
+return (
+<React.Fragment>
+<Helmet>
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+{/* Open Graph */}
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:type" content="website" />
+{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+{/* Twitter Card */}
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+{/* Structured Data */}
+<script type="application/ld+json">
+{JSON.stringify(generateStructuredData())}
+</script>
+</Helmet>
+{children}
+{process.env.NODE_ENV === 'development' && (
+<div className="seo-debug" style={{
+position: 'fixed',
+top: '10px',
+left: '10px',
+background: 'rgba(0,0,0,0.8)',
+color: 'white',
+padding: '10px',
+borderRadius: '5px',
+fontSize: '12px',
+zIndex: 1000,
+maxWidth: '300px'
+}}>
+<div>SEO Score: {seoScore}/100</div>
+{recommendations.length > 0 && (
+<div>
+<div>Recommendations:</div>
+<ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+{recommendations.map((rec, index) => (
+<li key={index}>{rec}</li>
+))}
+</ul>
+</div>
+)}
+</div>
+)}
+</React.Fragment>
+)
+}
+export default AdvancedSEOOptimizer
+</SEOOptimizerProps>

@@ -1,66 +1,73 @@
-const { withSentry } = require('./withSentry.cjs');
+import fs from 'fs';
+import path from 'path';
 
-async function handler(req, res) {
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'wallets.json');
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-  const { action, amount, currency = 'USD' } = req.body || {};
-
-  if (!action) {
-    res.statusCode = 400;
-    res.json({ error: 'Action is required' });
+  const { address, type, name, userId } = req.body;
+  if (!address || !type) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
   }
+
+<<<<<<< HEAD
+  let wallets = [];
+=======
+let wallets = [];
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+  try {
+    const data = fs.readFileSync(file, 'utf8');
+    wallets = JSON.parse(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+
+  if (wallets.find(wallet => wallet.address === address)) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Wallet address already exists' }));
+    return;
+  }
+
+  const newWallet = {
+    id: Date.now().toString(),
+    address,
+    type,
+    name: name || '',
+    userId: userId || '',
+    status: 'active',
+    createdAt: new Date().toISOString()
+  };
 
   try {
-    switch (action) {
-      case 'create_payment_intent': {
-        if (!amount) {
-          res.statusCode = 400;
-          res.json({ error: 'Amount is required for payment intent' });
-          return;
-        }
+    wallets.push(newWallet);
+    fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
 
-        const timestamp = Date.now();
-        const random = Math.random().toString(36).substr(2, 9);
-        const paymentIntent = {
-          id: 'pi_' + timestamp,
-          amount: Math.round(amount * 100),
-          currency: currency.toLowerCase(),
-          status: 'requires_payment_method',
-          client_secret: 'pi_' + timestamp + '_secret_' + random,
-        };
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Wallet added successfully' 
+<<<<<<< HEAD
 
-        res.statusCode = 200;
-        res.json({ success: true, paymentIntent });
-        break;
-      }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
 
-      case 'get_balance': {
-        const balance = {
-          available: 1000.0,
-          pending: 0.0,
-          currency: currency.toUpperCase(),
-        };
+    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
 
-        res.statusCode = 200;
-        res.json({ success: true, balance });
-        break;
-      }
-
-      default:
-        res.statusCode = 400;
-        res.json({ error: 'Invalid action' });
-    }
-  } catch {
-    //     console.error('Wallet error:', error);
-    res.statusCode = 500;
-    res.json({ error: 'Wallet operation failed' });
+=======
+res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
 }
-
-module.exports = withSentry(handler);

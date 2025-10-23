@@ -27,7 +27,11 @@
       "@/config/*": ["src/config/*"]
     }
   },
-  "include": ["app/case-studies/**/*", "app/guides/**/*", "app/enterprise/**/*"],
+  "include": [
+    "app/case-studies/**/*",
+    "app/guides/**/*",
+    "app/enterprise/**/*"
+  ],
   "exclude": [
     "src/pages/blog-disabled/**/*",
     "app/blog/**/*",

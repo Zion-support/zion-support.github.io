@@ -1,136 +1,55 @@
-#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
 
-/**
- * Advanced Performance Optimizer
- * Comprehensive performance optimization script for the Zion Tech Group website
- */
+// Simple performance optimizer
+const optimizePerformance = () => {
+  console.log("Running performance optimizations...");
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class PerformanceOptimizer {
-  constructor() {
-    this.optimizations = [];
-    this.startTime = Date.now();
+  // Create public directory if it doesn't exist
+  const publicDir = path.join(__dirname, "../public");
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+  // Create robots.txt
+  const robotsTxt = `User-agent: *
+Allow: /
 
-  async optimizeImages() {
-    this.log('🖼️ Optimizing images...');
-    
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.svg'];
-    const publicDir = path.join(process.cwd(), 'public');
-    
-    if (!fs.existsSync(publicDir)) {
-      this.log('⚠️ Public directory not found, skipping image optimization');
-      return;
-    }
+Sitemap: https://ziontechgroup.com/sitemap.xml`;
 
-    const optimizeImage = (filePath) => {
-      try {
-        const stats = fs.statSync(filePath);
-        const sizeKB = Math.round(stats.size / 1024);
-        
-        if (sizeKB > 100) { // Only optimize images larger than 100KB
-          this.log(`Optimizing ${path.basename(filePath)} (${sizeKB}KB)`);
-          this.optimizations.push({
-            type: 'image',
-            file: filePath,
-            originalSize: sizeKB,
-            optimized: true
-          });
-        }
-      } catch (error) {
-        this.log(`Error optimizing ${filePath}: ${error.message}`);
-      }
-    };
+  fs.writeFileSync(path.join(publicDir, "robots.txt"), robotsTxt);
+  console.log("Created robots.txt");
 
-    const walkDir = (dir) => {
-      const files = fs.readdirSync(dir);
-      files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-          walkDir(filePath);
-        } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
-          optimizeImage(filePath);
-        }
-      });
-    };
+  // Create .htaccess for better caching
+  const htaccess = `# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
 
-    walkDir(publicDir);
-    this.log(`✅ Image optimization completed`);
-  }
+# Set cache headers
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>`;
 
-  async optimizeBundle() {
-    this.log('📦 Optimizing bundle...');
-    
-    try {
-      // Run Vite build with analysis
-      execSync('npm run build:analyze', { stdio: 'inherit' });
-      
-      this.optimizations.push({
-        type: 'bundle',
-        action: 'analyzed',
-        timestamp: new Date().toISOString()
-      });
-      
-      this.log('✅ Bundle analysis completed');
-    } catch (error) {
-      this.log(`⚠️ Bundle analysis failed: ${error.message}`);
-    }
-  }
+  fs.writeFileSync(path.join(publicDir, ".htaccess"), htaccess);
+  console.log("Created .htaccess for caching");
 
-  async generateReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      optimizations: this.optimizations,
-      summary: {
-        totalOptimizations: this.optimizations.length,
-        byType: this.optimizations.reduce((acc, opt) => {
-          acc[opt.type] = (acc[opt.type] || 0) + 1;
-          return acc;
-        }, {})
-      }
-    };
+  console.log("Performance optimizations completed");
+};
 
-    const reportPath = path.join(process.cwd(), 'performance-optimization-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Performance optimization report generated: ${reportPath}`);
-    this.log(`✅ Completed ${this.optimizations.length} optimizations in ${duration}ms`);
-  }
-
-  async run() {
-    this.log('🚀 Starting performance optimization...');
-    
-    try {
-      await this.optimizeImages();
-      await this.optimizeBundle();
-      await this.generateReport();
-      
-      this.log('🎉 Performance optimization completed successfully!');
-    } catch (error) {
-      this.log(`❌ Performance optimization failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-}
-
-// Run the optimizer
-if (require.main === module) {
-  const optimizer = new PerformanceOptimizer();
-  optimizer.run();
-}
-
-module.exports = PerformanceOptimizer;
+optimizePerformance();

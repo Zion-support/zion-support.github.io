@@ -1,55 +1,58 @@
-const { isValidEmail } = require('./emailUtils.cjs');
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-async function handler(req, res) {
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'subscribers.json');
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-  const { email, name, source = 'website' } = req.body || {};
-
+  const { email, name } = req.body;
   if (!email) {
-    res.statusCode = 400;
-    res.json({ error: 'Email is required' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
+
+  let subscribers = [];
+  try {
+    const data = fs.readFileSync(file, 'utf8');
+    subscribers = JSON.parse(data);
+  } catch (error) {
+    console.error('Error:', error);
+    console.error('Error reading existing subscribers:', error);
+  }
+
+  if (subscribers.find(sub => sub.email === email)) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email already subscribed' }));
+    return;
+  }
+
+  const newSubscriber = {
+    id: Date.now().toString(),
+    email,
+    name: name || '',
+    status: 'active',
+    subscribedAt: new Date().toISOString()
+  };
 
   try {
-    if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.json({ error: 'Invalid email' });
-      return;
-    }
+    subscribers.push(newSubscriber);
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
 
-    const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
-
-    let existing = [];
-
-    try {
-      existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-      if (!Array.isArray(existing)) existing = [];
-    } catch {
-      // File doesn't exist or is invalid, use empty array
-    }
-
-    existing.push({
-      email,
-      name: name || '',
-      source,
-      subscribedAt: new Date().toISOString(),
-    });
-
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.json({ success: true });
-  } catch (err) {
-    res.statusCode = 500;
-    res.json({ error: err.message || 'Subscription failed' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Successfully subscribed to newsletter' 
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
 }
-
-module.exports = { handler };

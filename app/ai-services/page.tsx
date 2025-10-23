@@ -1,373 +1,1410 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cpu, Sparkles } from 'lucide-react';
+<<<<<<< HEAD
+import React from "react";
+import { BarChart3, FileText, MessageSquare } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+// Removed unused imports
+=======
+'use client';
+import React, { useState, useEffect } from 'react';
+import {
+  Brain,
+  Zap,
+  Target,
+  BarChart,
+  Shield,
+  Users,
+  Globe,
+  Lock,
+  Settings,
+  FileText,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Award,
+  Stethoscope,
+  Truck,
+Rocket
+} from 'lucide-react';
+>>>>>>> origin/main
 
 const AIServicesPage: React.FC = () => {
-  const aiServices = [
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  const services = [
+    // Core AI Services
     {
-      title: 'Machine Learning Model Development',
-      description: 'Custom ML models for predictive analytics, classification, and regression tasks tailored to your business needs.',
-      icon: '🧠',
-      price: 'Starting at $5,000/project',
-      features: ['Custom model development', 'Data preprocessing', 'Model training & validation', 'Performance optimization', 'Deployment & monitoring'],
-      benefits: ['Improve prediction accuracy by 40%', 'Automate decision making', 'Reduce manual analysis time'],
-      marketPrice: '$8,000-25,000/project',
-      category: 'Machine Learning',
-      technologies: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas']
+      id: 1,
+      name: 'AI-Powered Analytics Platform',
+      description: 'Advanced analytics solutions powered by machine learning and artificial intelligence with real-time insights and predictive modeling',
+      icon: BarChart,
+      features: [
+        'Predictive Analytics',
+        'Real-time Data Processing',
+        'Custom Dashboard Creation',
+        'Ad Performance Analysis',
+        'ROI Optimization',
+        'A/B Testing Automation',
+        'Cross-Platform Integration',
+        'Natural Language Queries',
+        'Automated Reporting'
+      ],
+      category: 'Analytics',
+      popular: true,
+      rating: 4.8,
+      users: '2,800+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        '300% increase in conversion rates',
+        'Automated campaign optimization',
+        'Real-time performance tracking',
+        'Predictive customer behavior'
+      ],
+      link: 'https://ziontechgroup.com/ai-analytics-platform'
     },
     {
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text analysis, sentiment analysis, chatbots, and language understanding.',
-      icon: '💬',
-      price: 'Starting at $3,500/project',
-      features: ['Text classification', 'Sentiment analysis', 'Named entity recognition', 'Language translation', 'Chatbot development'],
-      benefits: ['Process text data 100x faster', 'Improve customer service', 'Extract insights from documents'],
-      marketPrice: '$6,000-18,000/project',
-      category: 'NLP',
-      technologies: ['BERT', 'GPT', 'spaCy', 'NLTK', 'Transformers']
+      id: 11,
+      name: 'AI Quantum Computing Platform',
+      description: 'Revolutionary quantum computing solutions for complex optimization problems, cryptography, and scientific simulations',
+      icon: Brain,
+      features: [
+        'Quantum Algorithm Development',
+        'Quantum Machine Learning',
+        'Cryptographic Security',
+        'Optimization Problems',
+        'Quantum Simulation',
+        'Hybrid Classical-Quantum Computing',
+        'Quantum Error Correction',
+        'Quantum Cloud Access'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '1000x faster optimization',
+        'Unbreakable encryption',
+        'Quantum advantage in ML',
+        'Scientific breakthrough potential'
+      ]
     },
     {
-      title: 'Computer Vision Solutions',
-      description: 'Image and video analysis, object detection, facial recognition, and visual content understanding.',
-      icon: '👁️',
-      price: 'Starting at $4,500/project',
-      features: ['Object detection', 'Image classification', 'Facial recognition', 'Video analysis', 'OCR & document scanning'],
-      benefits: ['Automate visual inspections', 'Improve security systems', 'Enhance user experience'],
-      marketPrice: '$7,500-20,000/project',
-      category: 'Computer Vision',
-      technologies: ['OpenCV', 'YOLO', 'ResNet', 'EfficientNet', 'TensorFlow Lite']
+      id: 12,
+      name: 'AI Neural Memory Assistant',
+      description: 'Advanced AI system with persistent memory and contextual understanding for personalized assistance',
+      icon: Brain,
+      features: [
+        'Persistent Memory Storage',
+        'Contextual Understanding',
+        'Personalized Responses',
+        'Learning from Interactions',
+        'Multi-modal Memory',
+        'Emotional Intelligence',
+        'Long-term Relationship Building',
+        'Adaptive Personality'
+      ],
+      category: 'Advanced AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        'Personalized AI experience',
+        'Context-aware responses',
+        'Emotional intelligence',
+        'Long-term memory retention'
+      ]
     },
     {
-      title: 'AI-Powered Chatbots & Virtual Assistants',
-      description: 'Intelligent conversational AI that understands context and provides human-like interactions.',
-      icon: '🤖',
-      price: 'Starting at $2,500/month',
-      features: ['Context-aware conversations', 'Multi-language support', 'Integration with CRM', 'Analytics & reporting', 'Voice capabilities'],
-      benefits: ['Reduce support costs by 60%', 'Provide 24/7 customer service', 'Improve response time'],
-      marketPrice: '$4,000-12,000/month',
-      category: 'Conversational AI',
-      technologies: ['Dialogflow', 'Rasa', 'Microsoft Bot Framework', 'Amazon Lex', 'OpenAI GPT']
+      id: 13,
+      name: 'AI Holographic Workspace',
+      description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
+      icon: Globe,
+      features: [
+        '3D Holographic Interface',
+        'Virtual Collaboration',
+        'AI-Powered Gestures',
+        'Spatial Computing',
+        'Mixed Reality Integration',
+        'Real-time Translation',
+        'Virtual Whiteboarding',
+        'Immersive Presentations'
+      ],
+      category: 'Immersive Technology',
+      popular: false,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Immersive collaboration',
+        '3D data visualization',
+        'Virtual presence',
+        'Next-gen workspace'
+      ]
     },
     {
-      title: 'Predictive Analytics & Forecasting',
-      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
-      icon: '📈',
-      price: 'Starting at $3,000/month',
-      features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],
-      benefits: ['Improve planning accuracy by 50%', 'Reduce inventory costs', 'Optimize resource allocation'],
-      marketPrice: '$5,000-15,000/month',
-      category: 'Predictive Analytics',
-      technologies: ['Prophet', 'ARIMA', 'LSTM', 'XGBoost', 'Time Series DB']
+      id: 14,
+      name: 'AI Climate Solutions Pro',
+      description: 'AI-powered climate monitoring, carbon footprint tracking, and environmental impact optimization',
+      icon: Globe,
+      features: [
+        'Carbon Footprint Analysis',
+        'Climate Risk Assessment',
+        'Sustainability Optimization',
+        'Environmental Monitoring',
+        'Green Energy Management',
+        'Waste Reduction AI',
+        'Eco-friendly Recommendations',
+        'Climate Action Planning'
+      ],
+      category: 'Climate Tech',
+      popular: true,
+      rating: 4.9,
+      users: '800+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $499/mo',
+      capabilities: [
+        '50% carbon footprint reduction',
+        'Real-time environmental monitoring',
+        'Sustainability optimization',
+        'Climate risk mitigation'
+      ]
     },
     {
-      title: 'AI-Powered Recommendation Systems',
-      description: 'Personalized recommendation engines for e-commerce, content, and product suggestions.',
-      icon: '🎯',
-      price: 'Starting at $4,000/project',
-      features: ['Collaborative filtering', 'Content-based filtering', 'Hybrid approaches', 'Real-time recommendations', 'A/B testing'],
-      benefits: ['Increase sales by 25%', 'Improve user engagement', 'Reduce bounce rates'],
-      marketPrice: '$7,000-20,000/project',
-      category: 'Recommendation Systems',
-      technologies: ['Apache Spark', 'Mahout', 'Surprise', 'TensorFlow', 'Redis']
+      id: 15,
+      name: 'AI Drug Discovery Pro',
+      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis',
+      icon: Stethoscope,
+      features: [
+        'Molecular Analysis',
+        'Drug Target Identification',
+        'Compound Screening',
+        'Clinical Trial Optimization',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Personalized Medicine',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: false,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '10x faster drug discovery',
+        '95% accuracy in predictions',
+        'Reduced clinical trial costs',
+        'Personalized treatment options'
+      ]
     },
     {
-      title: 'Automated Document Processing',
-      description: 'AI-powered document extraction, classification, and data entry automation for business processes.',
-      icon: '📄',
-      price: 'Starting at $2,000/month',
-      features: ['Document OCR', 'Data extraction', 'Form processing', 'Document classification', 'Workflow automation'],
-      benefits: ['Process documents 50x faster', 'Eliminate manual data entry', 'Improve accuracy to 99%'],
-      marketPrice: '$3,500-10,000/month',
-      category: 'Document AI',
-      technologies: ['Tesseract', 'AWS Textract', 'Azure Form Recognizer', 'Google Document AI', 'PyPDF2']
+      id: 16,
+      name: 'AI Fashion Design Studio',
+      description: 'AI-powered fashion design with trend analysis, virtual try-on, and sustainable fashion recommendations',
+      icon: FileText,
+      features: [
+        'Trend Analysis',
+        'Virtual Try-On',
+        'Sustainable Fashion AI',
+        'Color Palette Generation',
+        'Pattern Recognition',
+        'Size Optimization',
+        'Fashion Forecasting',
+        'Eco-friendly Materials'
+      ],
+      category: 'Fashion Tech',
+      popular: true,
+      rating: 4.6,
+      users: '1,500+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        'Trend prediction accuracy',
+        'Virtual fitting technology',
+        'Sustainable design optimization',
+        'Personalized fashion recommendations'
+      ]
     },
     {
-      title: 'AI-Powered Business Intelligence',
-      description: 'Intelligent dashboards and analytics that automatically identify patterns and generate insights.',
-      icon: '📊',
-      price: 'Starting at $3,500/month',
-      features: ['Automated insights', 'Anomaly detection', 'Trend analysis', 'Custom dashboards', 'Natural language queries'],
-      benefits: ['Discover hidden patterns', 'Make data-driven decisions', 'Reduce analysis time by 80%'],
-      marketPrice: '$6,000-18,000/month',
-      category: 'Business Intelligence',
-      technologies: ['Tableau', 'Power BI', 'Looker', 'Apache Superset', 'Custom ML Models']
+      id: 17,
+      name: 'AI Music Composition Suite',
+      description: 'AI-powered music creation with composition, arrangement, and production capabilities',
+      icon: FileText,
+      features: [
+        'AI Composition',
+        'Genre Adaptation',
+        'Lyric Generation',
+        'Instrument Arrangement',
+        'Mood-based Creation',
+        'Collaborative Composition',
+        'Mastering & Mixing',
+        'Copyright Protection'
+      ],
+      category: 'Creative AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        'Professional-quality compositions',
+        'Multi-genre versatility',
+        'Collaborative AI creation',
+        'Copyright-safe generation'
+      ]
     },
     {
-      title: 'AI-Powered Fraud Detection',
-      description: 'Advanced fraud detection systems using machine learning to identify suspicious activities in real-time.',
-      icon: '🛡️',
-      price: 'Starting at $5,500/month',
-      features: ['Real-time monitoring', 'Pattern recognition', 'Risk scoring', 'Alert systems', 'False positive reduction'],
-      benefits: ['Prevent 95% of fraud attempts', 'Reduce false positives by 70%', 'Save millions in losses'],
-      marketPrice: '$10,000-30,000/month',
-      category: 'Fraud Detection',
-      technologies: ['Isolation Forest', 'One-Class SVM', 'Autoencoders', 'XGBoost', 'Real-time Streaming']
+      id: 18,
+      name: 'AI Energy Management System',
+      description: 'Smart energy optimization with AI-powered grid management and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Smart Grid Management',
+        'Renewable Energy Optimization',
+        'Demand Response',
+        'Energy Storage AI',
+        'Carbon Footprint Tracking',
+        'Predictive Maintenance',
+        'Cost Optimization',
+        'Grid Stability'
+      ],
+      category: 'Energy Tech',
+      popular: false,
+      rating: 4.8,
+      users: '600+',
+      color: 'from-amber-500 to-yellow-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '30% energy cost reduction',
+        'Grid stability optimization',
+        'Renewable energy integration',
+        'Predictive energy management'
+      ]
     },
     {
-      title: 'AI-Powered Content Generation',
-      description: 'Automated content creation for marketing, social media, blogs, and product descriptions.',
-      icon: '✍️',
-      price: 'Starting at $1,500/month',
-      features: ['Blog post generation', 'Social media content', 'Product descriptions', 'Email campaigns', 'SEO optimization'],
-      benefits: ['Create content 10x faster', 'Maintain brand consistency', 'Improve SEO rankings'],
-      marketPrice: '$2,500-8,000/month',
-      category: 'Content Generation',
-      technologies: ['GPT-3/4', 'Claude', 'Jasper', 'Copy.ai', 'Custom Fine-tuned Models']
+      id: 19,
+      name: 'AI Autonomous Systems Platform',
+      description: 'AI-powered autonomous vehicle and drone management with real-time decision making',
+      icon: Settings,
+      features: [
+        'Autonomous Vehicle AI',
+        'Drone Fleet Management',
+        'Real-time Decision Making',
+        'Path Optimization',
+        'Collision Avoidance',
+        'Weather Adaptation',
+        'Fleet Coordination',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.9,
+      users: '300+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time autonomous decisions',
+        'Fleet optimization',
+        'Weather-adaptive navigation'
+      ]
     },
     {
-      title: 'AI-Powered Process Automation',
-      description: 'Intelligent automation of business processes using AI to make decisions and take actions.',
-      icon: '⚙️',
-      price: 'Starting at $4,500/month',
-      features: ['Workflow automation', 'Decision automation', 'Exception handling', 'Process optimization', 'Integration management'],
-      benefits: ['Reduce process time by 70%', 'Eliminate human errors', 'Improve efficiency'],
-      marketPrice: '$7,500-20,000/month',
-      category: 'Process Automation',
-      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Custom AI Models', 'RPA Tools']
+      id: 20,
+      name: 'AI Blockchain Solutions',
+      description: 'AI-powered blockchain technology with smart contracts, DeFi optimization, and crypto analytics',
+      icon: Shield,
+      features: [
+        'Smart Contract AI',
+        'DeFi Optimization',
+        'Crypto Analytics',
+        'Blockchain Security',
+        'Token Economics',
+        'Yield Farming AI',
+        'Risk Assessment',
+        'Regulatory Compliance'
+      ],
+      category: 'Blockchain AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        'Automated DeFi strategies',
+        'Smart contract optimization',
+        'Crypto market analysis',
+        'Blockchain security enhancement'
+      ]
+    },
+    // New Advanced AI Services
+    {
+      id: 21,
+      name: 'AI Quantum Financial Oracle Pro',
+      description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
+      icon: Brain,
+      features: [
+        'Quantum Risk Modeling',
+        'High-Frequency Trading',
+        'Portfolio Optimization',
+        'Market Prediction',
+        'Risk Assessment',
+        'Algorithmic Trading',
+        'Real-time Analysis',
+        'Quantum Computing Integration'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '300% faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ],
+      link: 'https://ziontechgroup.com/ai-quantum-financial-oracle'
     },
     {
-      title: 'AI-Powered Quality Assurance',
-      description: 'Automated testing and quality assurance using AI to identify bugs and performance issues.',
-      icon: '🔍',
-      price: 'Starting at $3,000/month',
-      features: ['Automated test generation', 'Bug prediction', 'Performance testing', 'Code quality analysis', 'Regression testing'],
-      benefits: ['Reduce testing time by 60%', 'Improve code quality', 'Catch bugs earlier'],
-      marketPrice: '$5,000-15,000/month',
-      category: 'Quality Assurance',
-      technologies: ['Selenium', 'Appium', 'TestNG', 'Custom AI Models', 'CI/CD Integration']
-    }
+      id: 22,
+      name: 'AI Neural Memory Assistant Pro',
+      description: 'Advanced AI system with persistent memory and contextual understanding for personalized assistance',
+      icon: Brain,
+      features: [
+        'Persistent Memory Storage',
+        'Contextual Understanding',
+        'Personalized Responses',
+        'Learning from Interactions',
+        'Multi-modal Memory',
+        'Emotional Intelligence',
+        'Long-term Relationship Building',
+        'Adaptive Personality'
+      ],
+      category: 'Advanced AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        'Personalized AI experience',
+        'Context-aware responses',
+        'Emotional intelligence',
+        'Long-term memory retention'
+      ],
+      link: 'https://ziontechgroup.com/ai-neural-memory-assistant'
+    },
+    {
+      id: 23,
+      name: 'AI Holographic Workspace Pro',
+      description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
+      icon: Globe,
+      features: [
+        '3D Holographic Interface',
+        'Virtual Collaboration',
+        'AI-Powered Gestures',
+        'Spatial Computing',
+        'Mixed Reality Integration',
+        'Real-time Translation',
+        'Virtual Whiteboarding',
+        'Immersive Presentations'
+      ],
+      category: 'Immersive Technology',
+      popular: true,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Immersive collaboration',
+        '3D data visualization',
+        'Virtual presence',
+        'Next-gen workspace'
+      ],
+      link: 'https://ziontechgroup.com/ai-holographic-workspace'
+    },
+    {
+      id: 24,
+      name: 'AI Autonomous Systems Pro',
+      description: 'Self-managing systems with advanced AI decision-making and autonomous operations',
+      icon: Settings,
+      features: [
+        'Autonomous Operations',
+        'Self-Healing Systems',
+        'Predictive Maintenance',
+        'Intelligent Monitoring',
+        'Adaptive Learning',
+        'Risk Management',
+        'Real-time Decision Making',
+        'Fleet Coordination'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.8,
+      users: '300+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time autonomous decisions',
+        'Fleet optimization',
+        'Weather-adaptive navigation'
+      ],
+      link: 'https://ziontechgroup.com/ai-autonomous-systems'
+    },
+    {
+      id: 25,
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'Revolutionary AI-powered agricultural solutions for precision farming and crop optimization',
+      icon: Globe,
+      features: [
+        'Crop Monitoring',
+        'Yield Prediction',
+        'Soil Analysis',
+        'Pest Detection',
+        'Weather Forecasting',
+        'Irrigation Optimization',
+        'Harvest Planning',
+        'Supply Chain Management'
+      ],
+      category: 'Agricultural AI',
+      popular: true,
+      rating: 4.8,
+      users: '450+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '25% increase in crop yield',
+        '40% reduction in water usage',
+        'Early pest detection',
+        'Optimized harvest timing'
+      ],
+      link: 'https://ziontechgroup.com/ai-agricultural-intelligence-pro'
+    },
+    {
+      id: 26,
+      name: 'AI Legal Research Pro',
+      description: 'Advanced AI-powered legal research and case analysis for law firms and legal departments',
+      icon: Scale,
+      features: [
+        'Case Law Research',
+        'Document Analysis',
+        'Precedent Finding',
+        'Legal Writing',
+        'Contract Review',
+        'Compliance Checking',
+        'Litigation Support',
+        'Legal Analytics'
+      ],
+      category: 'Legal AI',
+      popular: true,
+      rating: 4.7,
+      users: '320+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $899/mo',
+      capabilities: [
+        '80% faster research',
+        '95% accuracy in case finding',
+        'Automated document analysis',
+        'Compliance monitoring'
+      ],
+      link: 'https://ziontechgroup.com/ai-legal-research-pro'
+    },
+    {
+      id: 27,
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Real-time fraud detection and financial security monitoring with machine learning algorithms',
+      icon: Shield,
+      features: [
+        'Fraud Detection',
+        'Risk Assessment',
+        'Compliance Monitoring',
+        'Transaction Analysis',
+        'Pattern Recognition',
+        'Real-time Alerts',
+        'AML Detection',
+        'KYC Automation'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,400+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $1,399/mo',
+      capabilities: [
+        '99.9% fraud detection accuracy',
+        'Real-time monitoring',
+        'Automated compliance',
+        'Risk mitigation'
+      ],
+      link: 'https://ziontechgroup.com/ai-financial-crime-detection-pro'
+    },
+    {
+      id: 28,
+      name: 'AI 3D Generation Studio Pro',
+      description: 'AI-powered 3D model generation and animation with photorealistic rendering capabilities',
+      icon: Palette,
+      features: [
+        '3D Model Generation',
+        'Texture Synthesis',
+        'Animation Creation',
+        'Rigging Automation',
+        'Lighting Optimization',
+        'Material Generation',
+        'Scene Composition',
+        'Export Options'
+      ],
+      category: '3D AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $999/mo',
+      capabilities: [
+        '10x faster 3D creation',
+        'Photorealistic quality',
+        'Automated rigging',
+        'Multiple export formats'
+      ],
+      link: 'https://ziontechgroup.com/ai-3d-generation'
+    },
+    {
+      id: 29,
+      name: 'AI Mobile App Builder Pro',
+      description: 'AI-powered mobile app development with automated coding and intelligent design suggestions',
+      icon: Smartphone,
+      features: [
+        'Auto Code Generation',
+        'UI/UX Design',
+        'Cross-platform Development',
+        'API Integration',
+        'Testing Automation',
+        'Performance Optimization',
+        'App Store Optimization',
+        'Analytics Integration'
+      ],
+      category: 'Mobile AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $1,199/mo',
+      capabilities: [
+        'Build apps in hours',
+        'Cross-platform compatibility',
+        'Auto testing',
+        'Performance optimization'
+      ],
+      link: 'https://ziontechgroup.com/ai-mobile-app-builder'
+    },
+    {
+      id: 30,
+      name: 'AI Supply Chain Optimization Pro',
+      description: 'Intelligent supply chain management with predictive analytics and optimization algorithms',
+      icon: Truck,
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Route Planning',
+        'Risk Management',
+        'Supplier Management',
+        'Quality Control',
+        'Cost Optimization',
+        'Performance Analytics'
+      ],
+      category: 'Supply Chain AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,100+',
+      color: 'from-orange-500 to-red-600',
+      pricing: 'Starting at $1,599/mo',
+      capabilities: [
+        '20% cost reduction',
+        '30% inventory optimization',
+        'Real-time tracking',
+        'Predictive analytics'
+      ],
+      link: 'https://ziontechgroup.com/ai-supply-chain-optimization-pro'
+    },
+    {
+      id: 31,
+      name: 'AI Content Delivery Network Pro',
+      description: 'AI-powered content delivery network with intelligent caching and global optimization',
+      icon: Globe,
+      features: [
+        'Intelligent Caching',
+        'Global Optimization',
+        'Performance Analytics',
+        'Security Features',
+        'Auto-scaling',
+        'Edge Computing',
+        'Real-time Monitoring',
+        'Cost Optimization'
+      ],
+      category: 'CDN AI',
+      popular: true,
+      rating: 4.6,
+      users: '3,500+',
+      color: 'from-teal-500 to-cyan-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '50% faster content delivery',
+        'Global edge optimization',
+        'Intelligent caching',
+        'Real-time performance monitoring'
+      ],
+      link: 'https://ziontechgroup.com/ai-content-delivery-network'
+    },
+    {
+      id: 32,
+      name: 'AI Business Intelligence Pro',
+      description: 'Advanced AI-powered business intelligence with predictive analytics and automated insights',
+      icon: BarChart,
+      features: [
+        'Predictive Analytics',
+        'Automated Insights',
+        'Natural Language Queries',
+        'Real-time Dashboards',
+        'Data Visualization',
+        'Machine Learning',
+        'Custom Reports',
+        'Alert System'
+      ],
+      category: 'BI AI',
+      popular: true,
+      rating: 4.8,
+      users: '2,800+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $1,099/mo',
+      capabilities: [
+        '300% increase in conversion rates',
+        'Automated campaign optimization',
+        'Real-time performance tracking',
+        'Predictive customer behavior'
+      ],
+      link: 'https://ziontechgroup.com/ai-business-intelligence'
+    },
+    {
+      id: 33,
+      name: 'AI API Management Pro',
+      description: 'Intelligent API management with AI-powered optimization and security',
+      icon: Code,
+      features: [
+        'API Gateway',
+        'Rate Limiting',
+        'Security Policies',
+        'Analytics',
+        'Auto-scaling',
+        'Load Balancing',
+        'Monitoring',
+        'Documentation Generation'
+      ],
+      category: 'API AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,100+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $899/mo',
+      capabilities: [
+        '99.9% API uptime',
+        'Intelligent rate limiting',
+        'Auto-scaling',
+        'Security optimization'
+      ],
+      link: 'https://ziontechgroup.com/ai-api-management'
+    },
+    {
+      id: 34,
+      name: 'AI Cybersecurity Monitor Pro',
+      description: 'AI-powered security monitoring with threat detection, vulnerability assessment, and incident response',
+      icon: Shield,
+      features: [
+        'Threat Detection',
+        'Vulnerability Scanning',
+        'Incident Response',
+        'Compliance Monitoring',
+        'Security Reports',
+        'Risk Assessment',
+        'Behavioral Analysis',
+        'Automated Response'
+      ],
+      category: 'Security AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,900+',
+      color: 'from-red-500 to-orange-600',
+      pricing: 'Starting at $1,499/mo',
+      capabilities: [
+        '99.9% threat detection accuracy',
+        'Real-time security monitoring',
+        'Automated incident response',
+        'Compliance automation'
+      ],
+      link: 'https://ziontechgroup.com/ai-cybersecurity-monitor'
+    },
+    {
+      id: 35,
+      name: 'AI Energy Grid Management Pro',
+      description: 'Intelligent energy distribution and optimization for smart cities and utilities',
+      icon: Zap,
+      features: [
+        'Grid Optimization',
+        'Demand Forecasting',
+        'Renewable Integration',
+        'Load Balancing',
+        'Energy Trading',
+        'Carbon Tracking',
+        'Smart Meter Analytics',
+        'Grid Stability'
+      ],
+      category: 'Energy AI',
+      popular: false,
+      rating: 4.7,
+      users: '180+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $2,299/mo',
+      capabilities: [
+        '30% energy cost reduction',
+        'Grid stability optimization',
+        'Renewable energy integration',
+        'Predictive energy management'
+      ],
+      link: 'https://ziontechgroup.com/ai-energy-grid-management'
+    },
+    {
+      id: 2,
+      name: 'AI Workflow Automation Suite',
+      description: 'Comprehensive business process automation with intelligent decision-making and self-optimizing workflows',
+      icon: Zap,
+      features: [
+        'Visual Process Designer',
+        'Smart Workflow Engine',
+        'Error Detection & Recovery',
+        'Performance Optimization',
+        'Integration Hub',
+        'Custom Triggers',
+        'Analytics Dashboard',
+        'Compliance Monitoring'
+      ],
+      category: 'Automation',
+      popular: true,
+      rating: 4.9,
+      users: '3,200+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        '80% reduction in manual tasks',
+        '99.9% workflow reliability',
+        'Real-time process monitoring',
+        'Intelligent error handling'
+      ]
+    },
+    {
+      id: 3,
+      name: 'AI Cybersecurity Platform',
+      description: 'Next-generation security solutions with AI-powered threat detection, prevention, and response capabilities',
+      icon: Shield,
+      features: [
+        'Advanced Threat Detection',
+        'Behavioral Anomaly Analysis',
+        'Automated Incident Response',
+        'Security Analytics',
+        'Vulnerability Assessment',
+        'Compliance Monitoring',
+        'Zero Trust Architecture',
+        'Threat Intelligence'
+      ],
+      category: 'Security',
+      popular: true,
+      rating: 4.7,
+      users: '1,500+',
+      color: 'from-red-500 to-orange-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '99.9% threat detection accuracy',
+        'Real-time security monitoring',
+        'Automated incident response',
+        'Compliance automation'
+      ]
+    },
+    {
+      id: 4,
+      name: 'AI Document Intelligence Suite',
+      description: 'Intelligent document processing with advanced OCR, NLP, and automated data extraction capabilities',
+      icon: FileText,
+      features: [
+        'Advanced OCR Processing',
+        'Intelligent Data Extraction',
+        'Document Classification',
+        'Automated Workflows',
+        'Multi-language Support',
+        'Quality Assurance',
+        'Integration APIs',
+        'Compliance Tracking'
+      ],
+      category: 'Document Processing',
+      popular: false,
+      rating: 4.6,
+      users: '1,800+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $149/mo',
+      capabilities: [
+        '95% accuracy in data extraction',
+        '50% faster processing times',
+        'Multi-format support',
+        'Automated validation'
+      ]
+    },
+    {
+      id: 5,
+      name: 'AI Customer Experience Platform',
+      description: 'Comprehensive customer experience management with AI-powered personalization and engagement optimization',
+      icon: Users,
+      features: [
+        'Customer Journey Mapping',
+        'Personalization Engine',
+        'Sentiment Analysis',
+        'Predictive Customer Behavior',
+        'Omnichannel Support',
+        'Real-time Recommendations',
+        'Customer Segmentation',
+        'Engagement Analytics'
+      ],
+      category: 'Customer Experience',
+      popular: true,
+      rating: 4.8,
+      users: '2,100+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $249/mo',
+      capabilities: [
+        '40% increase in customer satisfaction',
+        '60% improvement in engagement',
+        'Real-time personalization',
+        'Predictive customer insights'
+      ]
+    },
+    {
+      id: 6,
+      name: 'AI Content Generation Studio',
+      description: 'Advanced content creation platform with AI-powered writing, editing, and optimization capabilities',
+      icon: FileText,
+      features: [
+        'Multi-format Content Creation',
+        'SEO Optimization',
+        'Brand Voice Training',
+        'Content Templates',
+        'Plagiarism Detection',
+        'Performance Analytics',
+        'Multi-language Support',
+        'Collaboration Tools'
+      ],
+      category: 'Content Creation',
+      popular: true,
+      rating: 4.9,
+      users: '3,500+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $179/mo',
+      capabilities: [
+        '10x faster content creation',
+        'SEO-optimized content',
+        'Brand consistency',
+        'Multi-platform publishing'
+      ]
+    },
+    {
+      id: 7,
+      name: 'AI Predictive Maintenance',
+      description: 'Intelligent maintenance solutions with predictive analytics and automated scheduling for industrial equipment',
+      icon: Settings,
+      features: [
+        'Predictive Analytics',
+        'Equipment Monitoring',
+        'Automated Scheduling',
+        'Failure Prediction',
+        'Maintenance Optimization',
+        'Cost Analysis',
+        'Integration APIs',
+        'Reporting Dashboard'
+      ],
+      category: 'Industrial AI',
+      popular: false,
+      rating: 4.7,
+      users: '900+',
+      color: 'from-orange-500 to-red-600',
+      pricing: 'Starting at $499/mo',
+      capabilities: [
+        '30% reduction in downtime',
+        '25% cost savings',
+        'Predictive maintenance',
+        'Real-time monitoring'
+      ]
+    },
+    {
+      id: 8,
+      name: 'AI Financial Intelligence',
+      description: 'Advanced financial analysis and forecasting with AI-powered risk assessment and investment optimization',
+      icon: BarChart,
+      features: [
+        'Financial Forecasting',
+        'Risk Assessment',
+        'Investment Analysis',
+        'Fraud Detection',
+        'Portfolio Optimization',
+        'Market Analysis',
+        'Compliance Monitoring',
+        'Real-time Alerts'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $349/mo',
+      capabilities: [
+        '95% accuracy in predictions',
+        'Real-time risk monitoring',
+        'Automated compliance',
+        'Investment optimization'
+      ]
+    },
+    {
+      id: 9,
+      name: 'AI Healthcare Diagnostics',
+      description: 'Advanced medical AI with diagnostic assistance, treatment recommendations, and patient monitoring capabilities',
+      icon: Stethoscope,
+      features: [
+        'Medical Image Analysis',
+        'Diagnostic Assistance',
+        'Treatment Recommendations',
+        'Patient Monitoring',
+        'Drug Interaction Analysis',
+        'Clinical Decision Support',
+        'Electronic Health Records',
+        'Compliance Tracking'
+      ],
+      category: 'Healthcare AI',
+      popular: false,
+      rating: 4.9,
+      users: '600+',
+      color: 'from-teal-500 to-cyan-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        '98% diagnostic accuracy',
+        'Faster diagnosis times',
+        'Reduced medical errors',
+        'Improved patient outcomes'
+      ]
+    },
+    {
+      id: 10,
+      name: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation',
+      icon: Truck,
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Logistics Automation',
+        'Supplier Management',
+        'Quality Control',
+        'Cost Optimization',
+        'Risk Assessment',
+        'Performance Analytics'
+      ],
+      category: 'Supply Chain',
+      popular: false,
+      rating: 4.6,
+      users: '800+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '20% cost reduction',
+        '30% inventory optimization',
+        'Real-time tracking',
+        'Predictive analytics'
+]
+    },
+    {
+      id: 11,
+      name: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
+      icon: Brain,
+      features: [
+        'Quantum Risk Modeling',
+        'High-Frequency Trading',
+        'Portfolio Optimization',
+        'Market Prediction',
+        'Risk Assessment',
+        'Algorithmic Trading',
+        'Real-time Analysis',
+        'Quantum Computing Integration'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '300% faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ]
+    },
+    {
+      id: 12,
+      name: 'AI Climate Solutions Pro',
+      description: 'Advanced climate modeling and environmental impact analysis with carbon footprint optimization and sustainability planning',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Carbon Footprint Analysis',
+        'Sustainability Planning',
+        'Environmental Impact Assessment',
+        'Renewable Energy Optimization',
+        'Emission Tracking',
+        'Green Technology Integration',
+        'Compliance Monitoring'
+      ],
+      category: 'Climate Tech',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '50% carbon footprint reduction',
+        'Real-time environmental monitoring',
+        'Sustainability optimization',
+        'Climate risk assessment'
+      ]
+    },
+    {
+      id: 13,
+      name: 'AI Space Technology Pro',
+      description: 'Cutting-edge AI solutions for space exploration, satellite management, and space mission optimization',
+      icon: Rocket,
+      features: [
+        'Satellite Management',
+        'Mission Planning',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Navigation Systems',
+        'Space Mission Analytics'
+      ],
+      category: 'Space Tech',
+      popular: false,
+      rating: 4.9,
+      users: '50+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Real-time space monitoring',
+        'Advanced orbital calculations',
+        'Space debris mitigation'
+      ]
+    },
+    {
+      id: 14,
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary AI-powered drug discovery platform with molecular modeling, clinical trial optimization, and personalized medicine',
+      icon: Stethoscope,
+      features: [
+        'Molecular Modeling',
+        'Drug Design',
+        'Clinical Trial Optimization',
+        'Personalized Medicine',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Biomarker Discovery',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '70% faster drug discovery',
+        '90% accuracy in predictions',
+        'Personalized treatment plans',
+        'Reduced clinical trial costs'
+      ]
+    },
+    {
+      id: 15,
+      name: 'AI Neural Memory Assistant',
+      description: 'Advanced AI system that mimics human memory patterns for enhanced learning, recall, and cognitive assistance',
+      icon: Brain,
+      features: [
+        'Memory Pattern Recognition',
+        'Learning Optimization',
+        'Cognitive Assistance',
+        'Knowledge Retention',
+        'Pattern Recognition',
+        'Adaptive Learning',
+        'Memory Enhancement',
+        'Cognitive Analytics'
+      ],
+      category: 'Cognitive AI',
+      popular: false,
+      rating: 4.7,
+      users: '300+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '40% improved learning speed',
+        '90% better retention rates',
+        'Adaptive memory patterns',
+        'Cognitive enhancement'
+      ]
+}
   ];
 
-  const categories = [...new Set(aiServices.map(service => service.category))];
+const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI', 'Agricultural AI', 'Legal AI', '3D AI', 'Mobile AI', 'CDN AI', 'BI AI', 'API AI', 'Security AI'];
+
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+      </div>
+    );
+  }
 
   return (
-    <>
-      <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including machine learning, NLP, computer vision, and automation solutions for enterprise businesses." />
-        <meta name="keywords" content="AI services, machine learning, artificial intelligence, NLP, computer vision, automation, AI consulting" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Advanced AI Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                  Start AI Journey
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                  View AI Solutions
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our AI Services?
-              </h2>
-              <p className="text-xl text-gray-600">
-                Cutting-edge AI solutions delivered by PhD-level experts with proven industry experience
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Experts</h3>
-                <p className="text-gray-600">PhD-level data scientists and AI researchers</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Deployment</h3>
-                <p className="text-gray-600">Deploy AI solutions in weeks, not months</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3>
-                <p className="text-gray-600">Tailored AI models for your specific use case</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven ROI</h3>
-                <p className="text-gray-600">Average 400% ROI within 12 months</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services by Category */}
-        {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {aiServices
-                  .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
-                      
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
-                        </div>
-                        <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market rates
-                        </div>
-                      </div>
-
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                        <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                        Get AI Consultation
-                      </button>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </section>
-        ))}
-
-        {/* AI Capabilities Showcase */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our AI Capabilities
-              </h2>
-              <p className="text-xl text-gray-600">
-                Cutting-edge AI technologies and methodologies we use to solve complex business problems
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Deep Learning</h3>
-                <p className="text-gray-600">Neural networks, CNNs, RNNs, and transformer models</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <MessageSquare className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Natural Language Processing</h3>
-                <p className="text-gray-600">Text analysis, sentiment, translation, and generation</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <Eye className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Computer Vision</h3>
-                <p className="text-gray-600">Image recognition, object detection, and video analysis</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Machine Learning</h3>
-                <p className="text-gray-600">Supervised, unsupervised, and reinforcement learning</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <Sparkles className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Generative AI</h3>
-                <p className="text-gray-600">Content generation, creative AI, and synthetic data</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3>
-                <p className="text-gray-600">Forecasting, trend analysis, and predictive modeling</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Harness the Power of AI?
-            </h2>
-            <p className="text-xl mb-8 text-purple-100">
-              Contact our AI experts for a free consultation and custom AI strategy development
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
-              >
-                📞 +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-purple-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </section>
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
       </div>
-    </>
+
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
+          <div className="text-center">
+
+            <div className="inline-block mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
+                AI Services
+              </h1>
+              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Transform your business with our comprehensive suite of cutting-edge AI-powered solutions
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">35+</div>
+                <div className="text-gray-300">AI Services</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
+                <div className="text-3xl font-bold text-purple-400 mb-2">25K+</div>
+                <div className="text-gray-300">Active Users</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
+                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Accuracy Rate</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
+                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-gray-300">AI Support</div>
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
+              Transform your business with our comprehensive suite of AI-powered solutions
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="holographic px-6 py-3 rounded-lg">
+                <span className="text-cyan-400 font-semibold">15+ AI Platforms</span>
+              </div>
+              <div className="holographic px-6 py-3 rounded-lg">
+                <span className="text-purple-400 font-semibold">25,000+ Companies</span>
+              </div>
+              <div className="holographic px-6 py-3 rounded-lg">
+                <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Category Filter */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-wrap justify-center gap-4">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300 font-medium"
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Services Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <div
+              key={service.id}
+
+              className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
+                service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20 neon-glow-purple' : ''
+              }`}
+            >
+              {/* Animated Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color} text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <service.icon className="h-8 w-8" />
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    {service.popular && (
+                      <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    )}
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                  {service.name}
+                </h3>
+
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                    <Zap className="w-4 h-4 mr-2 text-cyan-400" />
+                    Key Features:
+                  </h4>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                    {service.features.length > 4 && (
+                      <li className="text-cyan-400 text-sm font-medium">
+                        +{service.features.length - 4} more features
+                      </li>
+                    )}
+                  </ul>
+                </div>
+
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-sm text-gray-400">
+                    {service.users} users
+                  </div>
+                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium">
+                    {service.category}
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <div className="text-lg font-semibold text-cyan-400 mb-2">
+                    {service.pricing}
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h4>
+                  <ul className="space-y-1">
+                    {service.capabilities.map((capability, index) => (
+                      <li key={index} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {capability}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="space-y-3">
+                  <a
+                    href={service.link}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
+                  <a
+                    href="/contact"
+                    className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business with AI?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Join 25,000+ companies already using our cutting-edge AI solutions. Start your free trial today!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <a
+              href="https://ziontechgroup.com/contact"
+              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Your Free Trial
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+            >
+              Call: +1 (302) 464-0950
+            </a>
+          </div>
+          <div className="text-purple-100 text-sm">
+            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
