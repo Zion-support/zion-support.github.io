@@ -1,6 +1,8 @@
-'use client';
-import React from 'react';
-import { Atom, Lock } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Atom, Lock } from 'lucide-react'
+import { CheckCircle, Star, Brain, Shield } from 'lucide-react'
+
 const QuantumComputingPage: React.FC = () => {
   const quantumServices = [
     {
@@ -9,31 +11,29 @@ const QuantumComputingPage: React.FC = () => {
       description: 'Custom quantum algorithms designed to solve your specific computational challenges.',
       features: ['Custom algorithm design', 'Quantum circuit optimization', 'Performance benchmarking', 'Implementation support'],
       benefits: ['Exponential speedup', 'Complex problem solving', 'Competitive advantage', 'Future-proof technology'],
-      marketPrice: '$5,000-15,000/month',
+      marketPrice: '$5,00 0-1 5,00 0/month',
       category: 'Algorithm Development',
       technologies: ['Qiskit', 'Cirq', 'Q#', 'PennyLane', 'Quantum Hardware']
-    },
-    {
-      id: 'quantum-cryptography',
+   },
+    {id: 'quantum-cryptography',
       title: 'Quantum Cryptography Solutions',
       description: 'Ultra-secure communication systems using quantum key distribution and quantum encryption.',
       features: ['Quantum key distribution', 'Quantum encryption', 'Security protocols', 'Implementation support'],
       benefits: ['Unbreakable security', 'Future-proof encryption', 'Regulatory compliance', 'Peace of mind'],
-      marketPrice: '$8,000-20,000/month',
+      marketPrice: '$8,00 0-2 0,00 0/month',
       category: 'Security Solutions',
-      technologies: ['BB84 Protocol', 'Quantum Networks', 'Hardware Integration', 'Security Auditing']
-    },
-    {
-      id: 'quantum-optimization',
+      technologies: ['BB84Protocol', 'Quantum Networks', 'Hardware Integration', 'Security Auditing']
+   },
+    {id: 'quantum-optimization',
       title: 'Quantum Optimization Services',
       description: 'Solve complex optimization problems using quantum annealing and variational algorithms.',
       features: ['Problem modeling', 'Quantum annealing', 'Variational algorithms', 'Performance analysis'],
       benefits: ['Optimal solutions', 'Faster convergence', 'Cost reduction', 'Improved efficiency'],
-      marketPrice: '$3,000-10,000/month',
+      marketPrice: '$3,00 0-1 0,00 0/month',
       category: 'Optimization',
       technologies: ['D-Wave', 'IBM Qiskit', 'Rigetti', 'IonQ', 'Custom Algorithms']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       {/* Hero Section */}
@@ -160,6 +160,6 @@ const QuantumComputingPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default QuantumComputingPage;
+  )
+}
+export default QuantumComputingPage

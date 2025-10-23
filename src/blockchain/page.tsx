@@ -1,142 +1,137 @@
-import React from 'react';
+import React from 'react'
 
-import { Coins } from 'lucide-react';
+import { Coins } from 'lucide-react'
+import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react'
+import { Cpu } from 'lucide-react'
+
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
+=======
+import {Coins, CheckCircle, Star, Zap, Brain, BarChart, Target, Shield, Helmet} from 'lucide-react';;
+constBlockchainPage: React.FC= () =>{constblockchainServices= [
     {
       title: 'Smart Contract Development',
       description: 'Secure, audited smart contracts for DeFi, NFTs, and enterprise blockchain applications.',
       icon: '📜',
-      price: 'Starting at $8,000/project',
+      price: 'Starting at $8,00 0/project',
       features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Testing & deployment', 'Documentation'],
       benefits: ['Automate business processes', 'Reduce transaction costs', 'Ensure transparency'],
-      marketPrice: '$15,000-50,000/project',
+      marketPrice: '$1 5,00 0-5 0,00 0/project',
       category: 'Smart Contracts',
       technologies: ['Solidity', 'Vyper', 'Rust', 'Go', 'JavaScript']
-    },
-    {
-      title: 'DeFi Protocol Development',
+   },
+    {title: 'DeFi Protocol Development',
       description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming.',
       icon: '🏦',
-      price: 'Starting at $25,000/project',
+      price: 'Starting at $2 5,00 0/project',
       features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity pools', 'Governance tokens'],
       benefits: ['Create new revenue streams', 'Access global liquidity', 'Reduce financial barriers'],
-      marketPrice: '$50,000-200,000/project',
+      marketPrice: '$5 0,00 0-20 0,00 0/project',
       category: 'DeFi',
       technologies: ['Ethereum', 'Polygon', 'BSC', 'Avalanche', 'Arbitrum']
-    },
-    {
-      title: 'NFT Marketplace Development',
+   },
+    {title: 'NFT Marketplace Development',
       description: 'Complete NFT marketplace solutions with minting, trading, and auction capabilities.',
       icon: '🎨',
-      price: 'Starting at $15,000/project',
+      price: 'Starting at $1 5,00 0/project',
       features: ['NFT minting', 'Marketplace functionality', 'Auction system', 'Royalty management', 'Mobile app'],
       benefits: ['Monetize digital assets', 'Create new business models', 'Engage communities'],
-      marketPrice: '$30,000-100,000/project',
+      marketPrice: '$3 0,00 0-10 0,00 0/project',
       category: 'NFTs',
       technologies: ['IPFS', 'OpenSea API', 'Web3.js', 'Ethers.js', 'React']
-    },
-    {
-      title: 'Blockchain Integration Services',
+   },
+    {title: 'Blockchain Integration Services',
       description: 'Integrate blockchain technology into existing business systems and applications.',
       icon: '🔗',
-      price: 'Starting at $5,000/month',
+      price: 'Starting at $5,00 0/month',
       features: ['API development', 'System integration', 'Data synchronization', 'Security implementation', 'Maintenance'],
       benefits: ['Modernize legacy systems', 'Improve data integrity', 'Enable new capabilities'],
-      marketPrice: '$8,000-20,000/month',
+      marketPrice: '$8,00 0-2 0,00 0/month',
       category: 'Integration',
       technologies: ['Web3 APIs', 'REST APIs', 'GraphQL', 'Microservices', 'Cloud Integration']
-    },
-    {
-      title: 'Cryptocurrency Wallet Development',
+   },
+    {title: 'Cryptocurrency Wallet Development',
       description: 'Secure multi-chain cryptocurrency wallets with advanced features and security.',
       icon: '👛',
-      price: 'Starting at $12,000/project',
+      price: 'Starting at $1 2,00 0/project',
       features: ['Multi-chain support', 'Hardware wallet integration', 'DeFi integration', 'Security features', 'Mobile & web'],
       benefits: ['Secure asset management', 'Multi-chain compatibility', 'Enhanced user experience'],
-      marketPrice: '$25,000-80,000/project',
+      marketPrice: '$2 5,00 0-8 0,00 0/project',
       category: 'Wallets',
       technologies: ['React Native', 'Flutter', 'Web3.js', 'WalletConnect', 'Hardware Security']
-    },
-    {
-      title: 'Blockchain Security Auditing',
+   },
+    {title: 'Blockchain Security Auditing',
       description: 'Comprehensive security audits for smart contracts and blockchain applications.',
       icon: '🔒',
-      price: 'Starting at $3,000/audit',
+      price: 'Starting at $3,00 0/audit',
       features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checking', 'Remediation'],
       benefits: ['Prevent security breaches', 'Ensure compliance', 'Build user trust'],
-      marketPrice: '$5,000-15,000/audit',
+      marketPrice: '$5,00 0-1 5,00 0/audit',
       category: 'Security',
       technologies: ['Mythril', 'Slither', 'Oyente', 'Echidna', 'Custom Tools']
-    },
-    {
-      title: 'Token Development & ICO/IDO',
+   },
+    {title: 'Token Development & ICO/IDO',
       description: 'Custom token development with ICO/IDO launch support and marketing strategies.',
       icon: '🪙',
-      price: 'Starting at $10,000/project',
+      price: 'Starting at $1 0,00 0/project',
       features: ['Token creation', 'ICO/IDO platform', 'Marketing strategy', 'Legal compliance', 'Community building'],
       benefits: ['Raise capital efficiently', 'Build community', 'Create utility tokens'],
-      marketPrice: '$20,000-100,000/project',
+      marketPrice: '$2 0,00 0-10 0,00 0/project',
       category: 'Tokens',
-      technologies: ['ERC-20', 'ERC-721', 'ERC-1155', 'BEP-20', 'Custom Standards']
-    },
-    {
-      title: 'Enterprise Blockchain Solutions',
+      technologies: ['ERC-2 0', 'ERC-72 1', 'ERC-115 5', 'BEP-2 0', 'Custom Standards']
+   },
+    {title: 'Enterprise Blockchain Solutions',
       description: 'Private blockchain networks for enterprise use cases with custom governance.',
       icon: '🏢',
-      price: 'Starting at $20,000/project',
+      price: 'Starting at $2 0,00 0/project',
       features: ['Private networks', 'Custom governance', 'Consensus mechanisms', 'Integration APIs', 'Management tools'],
       benefits: ['Improve transparency', 'Reduce costs', 'Enhance security'],
-      marketPrice: '$40,000-150,000/project',
+      marketPrice: '$4 0,00 0-15 0,00 0/project',
       category: 'Enterprise',
       technologies: ['Hyperledger', 'Ethereum Private', 'Quorum', 'Corda', 'Custom Blockchains']
-    },
-    {
-      title: 'Cross-Chain Bridge Development',
+   },
+    {title: 'Cross-Chain Bridge Development',
       description: 'Secure cross-chain bridges for asset transfers between different blockchain networks.',
       icon: '🌉',
-      price: 'Starting at $18,000/project',
+      price: 'Starting at $1 8,00 0/project',
       features: ['Multi-chain support', 'Asset locking', 'Minting & burning', 'Security mechanisms', 'Monitoring'],
       benefits: ['Enable interoperability', 'Expand user base', 'Increase liquidity'],
-      marketPrice: '$35,000-120,000/project',
+      marketPrice: '$3 5,00 0-12 0,00 0/project',
       category: 'Interoperability',
-      technologies: ['Cosmos SDK', 'Polkadot', 'LayerZero', 'Wormhole', 'Custom Bridges']
-    },
-    {
-      title: 'DAO Development & Governance',
+      technologies: ['Cosmos SDK', 'Polkado t', 'LayerZero', 'Wormhole', 'Custom Bridges']
+   },
+    {title: 'DAO Development & Governance',
       description: 'Decentralized Autonomous Organizations with voting, treasury, and governance mechanisms.',
       icon: '🗳️',
-      price: 'Starting at $12,000/project',
+      price: 'Starting at $1 2,00 0/project',
       features: ['Voting systems', 'Treasury management', 'Proposal mechanisms', 'Governance tokens', 'Integration'],
       benefits: ['Decentralize decision making', 'Increase transparency', 'Engage communities'],
-      marketPrice: '$25,000-80,000/project',
+      marketPrice: '$2 5,00 0-8 0,00 0/project',
       category: 'DAOs',
       technologies: ['Aragon', 'Snapshot', 'Governor', 'Custom Governance', 'Voting Mechanisms']
-    },
-    {
-      title: 'Blockchain Analytics & Monitoring',
+   },
+    {title: 'Blockchain Analytics & Monitoring',
       description: 'Real-time blockchain analytics, monitoring, and compliance reporting solutions.',
       icon: '📊',
-      price: 'Starting at $2,500/month',
+      price: 'Starting at $2,50 0/month',
       features: ['Transaction monitoring', 'Compliance reporting', 'Risk assessment', 'Analytics dashboards', 'Alerts'],
       benefits: ['Ensure compliance', 'Monitor risks', 'Gain insights'],
-      marketPrice: '$4,000-12,000/month',
+      marketPrice: '$4,00 0-1 2,00 0/month',
       category: 'Analytics',
       technologies: ['The Graph', 'Alchemy', 'Moralis', 'Custom Analytics', 'Compliance Tools']
-    },
-    {
-      title: 'Web3 Application Development',
+   },
+    {title: 'Web3 Application Development',
       description: 'Complete Web3 applications with frontend, backend, and blockchain integration.',
       icon: '🌐',
-      price: 'Starting at $15,000/project',
+      price: 'Starting at $1 5,00 0/project',
       features: ['Frontend development', 'Backend APIs', 'Blockchain integration', 'User authentication', 'Deployment'],
       benefits: ['Create Web3 experiences', 'Engage crypto users', 'Build decentralized apps'],
-      marketPrice: '$30,000-100,000/project',
+      marketPrice: '$3 0,00 0-10 0,00 0/project',
       category: 'Web3 Apps',
       technologies: ['React', 'Next.js', 'Node.js', 'Web3.js', 'Ethers.js']
     }
-  ];
-  const categories = [...new Set(blockchainServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(blockchainServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -335,13 +330,13 @@ const BlockchainPage: React.FC = () => {
               Contact our blockchain experts for a free consultation and custom Web3 strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
               >
@@ -355,6 +350,6 @@ const BlockchainPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default BlockchainPage;
+  )
+}
+export default BlockchainPage

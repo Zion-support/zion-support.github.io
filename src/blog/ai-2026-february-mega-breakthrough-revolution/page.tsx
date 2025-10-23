@@ -1,6 +1,8 @@
+import React from 'react'
+import { Star } from 'lucide-react'
 import React from 'react';
 
-// import { Metadata } from 'next'; // Removed for Vite
+// import {Metadata} from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AI2026FebruaryMegaBreakthroughRevolution() {
   return (
@@ -80,5 +82,5 @@ export default function AI2026FebruaryMegaBreakthroughRevolution() {
         </div>
       </div>
     </div>
-  );
+  )
 }

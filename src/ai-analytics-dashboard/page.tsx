@@ -1,44 +1,56 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+'use client'
+import React, { useState, useEffect } from 'react'
 
-import { BarChart3 } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import { BarChart3 } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Star, Phone } from 'lucide-react'
 
 const AIAnalyticsDashboardPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+    setIsLoaded(true)
+  }, [])
+=======
+'use client';
+import React, {useStateuseEffect} from 'react';
 
-  const features = [
-    {
-      icon: Brain,
+import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';;
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+
+constAIAnalyticsDashboardPage: React.FC= () =>{const [isLoadedsetIsLoaded] = useState(false);
+
+  useEffect(() => {
+  
+    setIsLoaded(true);
+ }, []);
+
+  constfeatures= [
+    {icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent insights and predictions from your data using advanced machine learning',
       benefits: ['Predictive analytics', 'Anomaly detection', 'Trend forecasting', 'Smart recommendations']
-    },
-    {
-      icon: BarChart3,
+   },
+    {icon: BarChart3,
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards',
       benefits: ['Live data updates', 'Custom visualizations', 'Mobile responsive', 'Export capabilities']
-    },
-    {
-      icon: TrendingUp,
+   },
+    {icon: TrendingUp,
       title: 'Advanced Analytics',
       description: 'Deep dive into your data with advanced statistical analysis and reporting tools',
       benefits: ['Cohort analysis', 'Funnel analysis', 'A/B testing', 'Cohort retention']
-    },
-    {
-      icon: Users,
+   },
+    {icon: Users,
       title: 'User Behavior Tracking',
       description: 'Understand user behavior with detailed tracking and segmentation capabilities',
       benefits: ['User journeys', 'Behavioral cohorts', 'Engagement metrics', 'Conversion tracking']
     }
-  ];
+  ]
 
   const integrations = [
     { name: 'Google Analytics', icon: '📊', description: 'Seamless integration with GA4' },
@@ -49,12 +61,11 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     { name: 'Mailchimp', icon: '📧', description: 'Email marketing metrics' },
     { name: 'Stripe', icon: '💳', description: 'Payment and revenue tracking' },
     { name: 'Zapier', icon: '⚡', description: 'Connect 1000+ apps' }
-  ];
+  ]
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$149/month',
+  constpricingPlans= [
+    {name: 'Starter',
+      price: '$14 9/month',
       description: 'Perfect for small businesses and startups',
       features: [
         '5 data sources',
@@ -64,13 +75,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         '1 user account'
       ],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$299/month',
+   },
+    {name: 'Professional',
+      price: '$29 9/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        '20 data sources',
+        '20data sources',
         'Advanced dashboards',
         'AI insights',
         'Custom reports',
@@ -78,10 +88,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         '5 user accounts'
       ],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$599/month',
+   },
+    {name: 'Enterprise',
+      price: '$59 9/month',
       description: 'For large organizations with complex needs',
       features: [
         'Unlimited data sources',
@@ -94,40 +103,32 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
 
-  const testimonials = [
-    {
-      name: 'Robert Johnson',
+  consttestimonials= [
+    {name: 'Robert Johnson',
       role: 'CEO, DataCorp',
-      content: 'AI Analytics Dashboard helped us identify a 30% increase in conversion opportunities. Game changer!',
-      rating: 5
-    },
-    {
-      name: 'Maria Garcia',
+      content: 'AI Analytics Dashboard helped us identify a 3 0% increase in conversion opportunities. Game changer!',
+      rating:5},
+    {name: 'Maria Garcia',
       role: 'Marketing Director, RetailCo',
-      content: 'The AI insights are incredibly accurate. We made data-driven decisions that increased revenue by 45%.',
-      rating: 5
-    },
-    {
-      name: 'James Wilson',
+      content: 'The AI insights are incredibly accurate. We made data-driven decisions that increased revenue by45%.',
+      rating:5},
+    {name: 'James Wilson',
       role: 'CTO, TechStartup',
       content: 'Finally, a dashboard that actually provides actionable insights. Our team productivity increased by 60%.',
       rating: 5
     }
-  ];
+  ]
 
   return (
-    <>
-      <SEOOptimizer
-        title="AI Analytics Dashboard - Intelligent Business Intelligence | Zion Tech Group"
-        description="Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, and intelligent recommendations."
-        keywords={['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'data insights']}
+  <><SEOOptimizertitle="AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup"
+        description="Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations."
+        keywords={['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'datainsights']}
         canonicalUrl="https://ziontechgroup.com/ai-analytics-dashboard"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation />
-        
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-7xl">
@@ -140,7 +141,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 AI Analytics Dashboard
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your data into actionable insights with AI-powered analytics. Get predictive insights, 
+                Transform your data into actionable insights with AI-powered analytics. Get predictive insights,
                 real-time monitoring, and intelligent recommendations that drive business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -158,7 +159,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 </a>
               </div>
             </div>
-
             {/* Key Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
               <div className="quantum-card p-6 text-center energy-pulse">
@@ -180,7 +180,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4" id="features">
           <div className="container mx-auto max-w-7xl">
@@ -192,7 +191,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Leverage cutting-edge AI technology to unlock insights from your data
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -214,7 +212,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="container mx-auto max-w-7xl">
@@ -226,7 +223,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Connect all your data sources in one powerful dashboard
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {integrations.map((integration, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -238,7 +234,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4" id="pricing">
           <div className="container mx-auto max-w-7xl">
@@ -250,7 +245,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Choose the plan that fits your analytics needs
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''}`}>
@@ -290,7 +284,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="container mx-auto max-w-7xl">
@@ -302,7 +295,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Join thousands of businesses already using AI Analytics Dashboard
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="cyber-card p-6">
@@ -321,7 +313,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto max-w-4xl text-center">
@@ -351,11 +342,10 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIAnalyticsDashboardPage;
+export default AIAnalyticsDashboardPage

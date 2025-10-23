@@ -1,8 +1,10 @@
-'use client';
-import React from 'react';
-import { ArrowLeft, FileText, Lock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import { ArrowLeft, FileText, Lock } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Shield, Users } from 'lucide-react'
+import { Award } from 'lucide-react'
 
 const CompliancePage: React.FC = () => {
   const certifications = [
@@ -11,7 +13,7 @@ const CompliancePage: React.FC = () => {
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
-  ];
+  ]
 
   return (
     <>
@@ -30,7 +32,6 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -42,7 +43,6 @@ const CompliancePage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Certifications Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,7 +63,6 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Security Features */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,7 +103,6 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -128,7 +126,7 @@ const CompliancePage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default CompliancePage;
+export default CompliancePage

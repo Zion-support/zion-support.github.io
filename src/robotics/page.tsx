@@ -1,142 +1,137 @@
-import React from 'react';
+import React from 'react'
 
-import { Cog } from 'lucide-react';
+import { Cog } from 'lucide-react'
+import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react'
+import { Bot, Cpu, Settings } from 'lucide-react'
+
 const RoboticsPage: React.FC = () => {
   const roboticsServices = [
+=======
+import {Cog, CheckCircle, Star, Zap, Brain, BarChart, Target, Shield, Helmet} from 'lucide-react';;
+constRoboticsPage: React.FC= () =>{constroboticsServices= [
     {
       title: 'Robotic Process Automation (RPA)',
       description: 'Automate repetitive business processes with intelligent software robots.',
       icon: '🤖',
-      price: 'Starting at $2,500/month',
-      features: ['Process automation', 'Data extraction', 'Workflow optimization', 'Error reduction', '24/7 operation'],
-      benefits: ['Reduce costs by 60%', 'Improve accuracy by 95%', 'Free up human resources'],
-      marketPrice: '$4,000-10,000/month',
+      price: 'Starting at $2,50 0/month',
+      features: ['Process automation', 'Data extraction', 'Workflow optimization', 'Error reduction', '2 4/7 operation'],
+      benefits: ['Reduce costs by60%', 'Improve accuracy by95%', 'Free up human resources'],
+      marketPrice: '$4,00 0-1 0,00 0/month',
       category: 'RPA',
       technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Power Automate', 'Custom Bots']
-    },
-    {
-      title: 'Industrial Robotics Solutions',
+   },
+    {title: 'Industrial Robotics Solutions',
       description: 'Advanced robotic systems for manufacturing, assembly, and material handling.',
       icon: '🏭',
-      price: 'Starting at $15,000/month',
+      price: 'Starting at $1 5,00 0/month',
       features: ['Assembly robots', 'Material handling', 'Quality inspection', 'Welding automation', 'Packaging systems'],
-      benefits: ['Increase production by 40%', 'Improve quality consistency', 'Reduce workplace injuries'],
-      marketPrice: '$25,000-60,000/month',
+      benefits: ['Increase production by40%', 'Improve quality consistency', 'Reduce workplace injuries'],
+      marketPrice: '$2 5,00 0-6 0,00 0/month',
       category: 'Industrial Robotics',
       technologies: ['ABB', 'KUKA', 'Fanuc', 'Yaskawa', 'Custom Solutions']
-    },
-    {
-      title: 'Service Robotics',
+   },
+    {title: 'Service Robotics',
       description: 'Intelligent service robots for customer interaction, cleaning, and assistance.',
       icon: '👥',
-      price: 'Starting at $3,500/month',
+      price: 'Starting at $3,50 0/month',
       features: ['Customer service bots', 'Cleaning robots', 'Delivery systems', 'Security patrols', 'Maintenance robots'],
-      benefits: ['Improve customer experience', 'Reduce operational costs', 'Enable 24/7 service'],
-      marketPrice: '$6,000-15,000/month',
+      benefits: ['Improve customer experience', 'Reduce operational costs', 'Enable24/7 service'],
+      marketPrice: '$6,00 0-1 5,00 0/month',
       category: 'Service Robotics',
       technologies: ['ROS', 'Computer Vision', 'NLP', 'SLAM', 'AI/ML']
-    },
-    {
-      title: 'Autonomous Mobile Robots (AMRs)',
+   },
+    {title: 'Autonomous Mobile Robots (AMRs)',
       description: 'Self-navigating robots for warehouse, hospital, and facility operations.',
       icon: '🚛',
-      price: 'Starting at $5,000/month',
+      price: 'Starting at $5,00 0/month',
       features: ['Autonomous navigation', 'Load transportation', 'Inventory management', 'Path optimization', 'Collision avoidance'],
       benefits: ['Improve logistics efficiency', 'Reduce manual labor', 'Optimize space utilization'],
-      marketPrice: '$8,000-20,000/month',
+      marketPrice: '$8,00 0-2 0,00 0/month',
       category: 'Mobile Robotics',
       technologies: ['SLAM', 'LiDAR', 'Computer Vision', 'Path Planning', 'Fleet Management']
-    },
-    {
-      title: 'Collaborative Robots (Cobots)',
+   },
+    {title: 'Collaborative Robots (Cobots)',
       description: 'Safe human-robot collaboration systems for shared workspaces.',
       icon: '🤝',
-      price: 'Starting at $4,500/month',
+      price: 'Starting at $4,50 0/month',
       features: ['Human-robot collaboration', 'Safety systems', 'Force sensing', 'Easy programming', 'Flexible deployment'],
       benefits: ['Enhance human productivity', 'Improve workplace safety', 'Enable flexible manufacturing'],
-      marketPrice: '$7,000-18,000/month',
+      marketPrice: '$7,00 0-1 8,00 0/month',
       category: 'Collaborative Robotics',
       technologies: ['Universal Robots', 'Rethink Robotics', 'KUKA LBR', 'Safety Standards', 'Force Control']
-    },
-    {
-      title: 'AI-Powered Robotics',
+   },
+    {title: 'AI-Powered Robotics',
       description: 'Intelligent robots with machine learning capabilities for adaptive behavior.',
       icon: '🧠',
-      price: 'Starting at $6,000/month',
+      price: 'Starting at $6,00 0/month',
       features: ['Machine learning', 'Adaptive behavior', 'Computer vision', 'Natural language processing', 'Predictive maintenance'],
       benefits: ['Improve robot intelligence', 'Enable autonomous learning', 'Reduce programming time'],
-      marketPrice: '$10,000-25,000/month',
+      marketPrice: '$1 0,00 0-2 5,00 0/month',
       category: 'AI Robotics',
       technologies: ['TensorFlow', 'PyTorch', 'OpenCV', 'ROS', 'Edge Computing']
-    },
-    {
-      title: 'Robotic Vision Systems',
+   },
+    {title: 'Robotic Vision Systems',
       description: 'Advanced computer vision solutions for quality control and inspection.',
       icon: '👁️',
-      price: 'Starting at $3,200/month',
-      features: ['Quality inspection', 'Object recognition', 'Defect detection', '3D vision', 'Real-time processing'],
+      price: 'Starting at $3,20 0/month',
+      features: ['Quality inspection', 'Object recognition', 'Defect detection', '3 D vision', 'Real-time processing'],
       benefits: ['Improve quality control', 'Reduce inspection time', 'Eliminate human error'],
-      marketPrice: '$5,000-12,000/month',
+      marketPrice: '$5,00 0-1 2,00 0/month',
       category: 'Vision Systems',
-      technologies: ['OpenCV', 'Halcon', 'Cognex', '3D Cameras', 'Deep Learning']
-    },
-    {
-      title: 'Robotic Integration Services',
+      technologies: ['OpenCV', 'Halcon', 'Cognex', '3 D Cameras', 'Deep Learning']
+   },
+    {title: 'Robotic Integration Services',
       description: 'Complete integration of robotic systems into existing workflows and infrastructure.',
       icon: '🔧',
-      price: 'Starting at $8,000/project',
+      price: 'Starting at $8,00 0/project',
       features: ['System integration', 'Workflow optimization', 'Safety implementation', 'Training & support', 'Maintenance'],
       benefits: ['Seamless integration', 'Minimize disruption', 'Ensure safety compliance'],
-      marketPrice: '$15,000-40,000/project',
+      marketPrice: '$1 5,00 0-4 0,00 0/project',
       category: 'Integration',
       technologies: ['PLC Integration', 'SCADA Systems', 'Safety Standards', 'Custom Software', 'API Development']
-    },
-    {
-      title: 'Robotic Maintenance & Support',
+   },
+    {title: 'Robotic Maintenance & Support',
       description: 'Comprehensive maintenance and support services for robotic systems.',
       icon: '🛠️',
-      price: 'Starting at $1,500/month',
-      features: ['Preventive maintenance', 'Remote monitoring', 'Parts replacement', 'Software updates', '24/7 support'],
+      price: 'Starting at $1,50 0/month',
+      features: ['Preventive maintenance', 'Remote monitoring', 'Parts replacement', 'Software updates', '2 4/7 support'],
       benefits: ['Maximize uptime', 'Reduce maintenance costs', 'Extend robot lifespan'],
-      marketPrice: '$2,500-6,000/month',
+      marketPrice: '$2,50 0-6,00 0/month',
       category: 'Maintenance',
       technologies: ['Predictive Analytics', 'Remote Diagnostics', 'Spare Parts', 'Software Updates', 'Technical Support']
-    },
-    {
-      title: 'Robotic Consulting & Strategy',
-      description: 'Strategic guidance for robotic automation adoption and implementation.',
+   },
+    {title: 'Robotic Consulting & Strategy',
+      description: 'Strategic guidance for robotic automation ado ption and implementation.',
       icon: '💡',
-      price: 'Starting at $300/hour',
+      price: 'Starting at $30 0/hour',
       features: ['Automation assessment', 'ROI analysis', 'Technology selection', 'Implementation planning', 'Change management'],
       benefits: ['Make informed decisions', 'Optimize automation investments', 'Minimize implementation risks'],
-      marketPrice: '$500-1,200/hour',
+      marketPrice: '$50 0-1,20 0/hour',
       category: 'Consulting',
       technologies: ['Strategic Planning', 'ROI Analysis', 'Technology Assessment', 'Change Management', 'Best Practices']
-    },
-    {
-      title: 'Custom Robot Development',
+   },
+    {title: 'Custom Robot Development',
       description: 'Bespoke robotic solutions designed for specific business requirements.',
       icon: '⚙️',
-      price: 'Starting at $25,000/project',
+      price: 'Starting at $2 5,00 0/project',
       features: ['Custom design', 'Hardware development', 'Software programming', 'Testing & validation', 'Documentation'],
       benefits: ['Perfect fit for requirements', 'Competitive advantage', 'Optimized performance'],
-      marketPrice: '$50,000-200,000/project',
+      marketPrice: '$5 0,00 0-20 0,00 0/project',
       category: 'Custom Development',
-      technologies: ['Mechanical Design', 'Electronics', 'Software Development', '3D Printing', 'Prototyping']
-    },
-    {
-      title: 'Robotic Training & Education',
+      technologies: ['Mechanical Design', 'Electronics', 'Software Development', '3 D Printing', 'Prototyping']
+   },
+    {title: 'Robotic Training & Education',
       description: 'Comprehensive training programs for robotic systems operation and maintenance.',
       icon: '🎓',
-      price: 'Starting at $2,000/course',
+      price: 'Starting at $2,00 0/course',
       features: ['Operator training', 'Programming courses', 'Maintenance training', 'Safety certification', 'Hands-on practice'],
       benefits: ['Build internal expertise', 'Reduce external dependencies', 'Improve system utilization'],
-      marketPrice: '$3,500-8,000/course',
+      marketPrice: '$3,50 0-8,00 0/course',
       category: 'Training',
       technologies: ['Simulation Software', 'Virtual Reality', 'Hands-on Labs', 'Certification Programs', 'Online Learning']
     }
-  ];
-  const categories = [...new Set(roboticsServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(roboticsServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -335,13 +330,13 @@ const RoboticsPage: React.FC = () => {
               Contact our robotics experts for a free consultation and custom automation strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
               >
@@ -355,6 +350,6 @@ const RoboticsPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default RoboticsPage;
+  )
+}
+export default RoboticsPage

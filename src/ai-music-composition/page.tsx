@@ -1,11 +1,11 @@
-import React from 'react';
-import { Play } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import React from 'react'
+import { Play } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Zap, Music } from 'lucide-react'
 
-const AIMusicCompositionPage: React.FC = () => {
-  const features = [
+constAIMusicCompositionPage: React.FC= () =>{constfeatures= [
     'AI Composition',
     'Multiple Genres',
     'Custom Length',
@@ -16,53 +16,47 @@ const AIMusicCompositionPage: React.FC = () => {
     'Instrument Selection',
     'Tempo Control',
     'Export Options'
-  ];
+  ]
 
-  const benefits = [
+  constbenefits= [
     'Unlimited music',
     'No copyright issues',
     'Custom compositions',
     'Professional quality',
     'Fast generation',
     'Cost-effective'
-  ];
+  ]
 
-  const pricingPlans = [
+  constpricingPlans= [
     {
       name: 'Starter',
-      price: '$99',
+      price: '$9 9',
       period: '/month',
-      features: ['10 tracks/month', 'MP3 export', 'Basic genres', 'Email support'],
+      features: ['10tracks/month', 'MP3 export', 'Basic genres', 'Email support'],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$199',
+   },
+    {name: 'Professional',
+      price: '$19 9',
       period: '/month',
       features: ['Unlimited tracks', 'WAV/MP3 export', 'All genres', 'API access', 'Priority support'],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$399',
+   },
+    {name: 'Enterprise',
+      price: '$39 9',
       period: '/month',
       features: ['Everything in Pro', 'Custom genres', 'White-label', 'Dedicated support', 'Commercial license'],
       popular: false
     }
-  ];
+  ]
 
   return (
-    <>
-      <SEOOptimizer
-        title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"
-        description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at $99/month."
-        keywords={['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AI composer']}
+  <><SEOOptimizertitle="AI Music Composer - Generate Royalty-Free Music with AI | ZionTechGroup"
+        description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at$99/month."
+        keywords={['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AIcomposer']}
         canonicalUrl="https://ziontechgroup.com/ai-music-composition"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -95,7 +89,6 @@ const AIMusicCompositionPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -112,7 +105,6 @@ const AIMusicCompositionPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,7 +121,6 @@ const AIMusicCompositionPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -174,7 +165,6 @@ const AIMusicCompositionPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -201,11 +191,10 @@ const AIMusicCompositionPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIMusicCompositionPage;
+export default AIMusicCompositionPage

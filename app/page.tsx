@@ -1,43 +1,64 @@
-import React, { useCallback, useState, useEffect, Suspense } from 'react';
+"use client";
+import React from "react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import Link from "next/link";
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
 
-// Dynamically import heavy components for better performance
-
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = () => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-);
-
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  // Analytics tracking for phone clicks
-  const handlePhoneClick = useCallback(() => {
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as unknown as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number',
-      });
+const HomePage = () => {
+  const features = [
+    {
+      title: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      stats: "40% efficiency boost",
+      link: "/ai-services"
+    },
+    {
+      title: "IT Services",
+      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      stats: "99.9% uptime SLA",
+      link: "/it-services"
+    },
+    {
+      title: "Micro SaaS",
+      description: "Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      stats: "50% faster deployment",
+      link: "/micro-saas"
     }
-  }, []);
+  ];
+
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "99.9%", label: "Client Satisfaction" },
+    { number: "24/7", label: "Support Available" },
+    { number: "5+", label: "Years Experience" }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions. We have seen a 40% increase in efficiency.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "CTO, InnovateLabs",
+      content: "Their IT services are exceptional. The team is professional, knowledgeable, and always available when we need them.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Founder, StartupXYZ",
+      content: "The micro SaaS solutions they provided helped us scale faster than we ever imagined possible.",
+      rating: 5
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">{/* Skip to main content for accessibility */}</div>
@@ -60,29 +81,72 @@ const HomePage: React.FC = () => {
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.</p>
             Transform your business with our cutting-edge technology.
           </p>
-        </section>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+            <Link 
+              href="/services" 
+              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+            >
+              Explore Services
+            </Link>
+          </div>
+        </div>
+      </section>
 
         {/* Services Section */}
         <section className="grid md:grid-cols-3 gap-8 mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="sr-only">Our Services</h2>
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-              <p className="text-gray-600">Harness the power of artificial intelligence to drive innovation and efficiency in</p>
-                your organization.
-              </p>
-            </article>
-          </Suspense>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300 font-medium">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-              <p className="text-gray-600">Transform your business processes with cutting-edge technology and expert</p>
-                consultation.
-              </p>
-            </article>
-          </Suspense>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Trusted by businesses worldwide for exceptional results
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="text-white font-semibold">{testimonial.name}</div>
+                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
           <Suspense fallback={<ServiceCardSkeleton />}>
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">

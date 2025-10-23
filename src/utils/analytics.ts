@@ -1,9 +1,9 @@
-'use client';
+'use client'
 import React from 'react'
 
 // Declare gtag function for Google Analytics
 declare global {
-  function gtag(...args: any[]): void;
+  function gtag(...args: any[]): void
 }
 
 /**
@@ -11,15 +11,15 @@ declare global {
  * Provides type-safe analytics tracking with error handling
  */
 export interface AnalyticsEvent {
-  action: string;
-  category: string;
-  label?: string;
-  value?: number;
-  metadata?: Record<string, unknown>;
+  action: string
+  category: string
+  label?: string
+  value?: number
+  metadata?: Record<string, unknown>
 }
 export interface AnalyticsUser {
-  id?: string;
-  properties?: Record<string, unknown>;
+  id?: string
+  properties?: Record<string, unknown>
 }
 class AnalyticsService {
   private isInitialized = false
@@ -38,7 +38,7 @@ class AnalyticsService {
       this.processQueue()
       this.isInitialized = true
     } catch (error) {
-      // console.error('Analytics initialization failed:', error)
+      // // console.error('Analytics initialization failed:', error)
     }
   }
   /**
@@ -63,7 +63,7 @@ class AnalyticsService {
       if (process.env['NODE_ENV'] === 'development') {
         }
     } catch (error) {
-      // console.error('Failed to track event:', error)
+      // // console.error('Failed to track event:', error)
     }
   }
   /**
@@ -78,7 +78,7 @@ class AnalyticsService {
         })
       }
     } catch (error) {
-      // console.error('Failed to track page view:', error)
+      // // console.error('Failed to track page view:', error)
     }
   }
   /**
@@ -93,7 +93,7 @@ class AnalyticsService {
         })
       }
     } catch (error) {
-      // console.error('Failed to identify user:', error)
+      // // console.error('Failed to identify user:', error)
     }
   }
   /**
@@ -126,10 +126,10 @@ class AnalyticsService {
           value: Math.round(value),
           event_category: category,
           event_label: label
-        });
+        })
       }
     } catch (error) {
-      // console.error('Failed to track timing:', error)
+      // // console.error('Failed to track timing:', error)
     }
   }
   /**
@@ -145,7 +145,7 @@ class AnalyticsService {
         metadata
       })
     } catch (error) {
-      // console.error('Failed to track performance:', error)
+      // // console.error('Failed to track performance:', error)
     }
   }
   /**

@@ -1,6 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Lock, BarChart3, FileText } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Lock, BarChart3, FileText } from 'lucide-react'
+import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 
 const Footer: React.FC = () => {
   const microSaasServices = [
@@ -16,7 +18,7 @@ const Footer: React.FC = () => {
     { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
     { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
     { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
-  ];
+  ]
 
   const aiServices = [
     { name: 'Machine Learning', url: '/machine-learning', description: 'Custom ML models' },
@@ -31,7 +33,7 @@ const Footer: React.FC = () => {
     { name: 'AI CRM Solutions', url: '/ai-crm', description: 'Intelligent customer management' },
     { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
     { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
-  ];
+  ]
 
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'AWS/Azure/GCP setup' },
@@ -46,7 +48,7 @@ const Footer: React.FC = () => {
     { name: 'Developer Tools', url: '/developer-tools', description: 'Advanced dev tools' },
     { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' },
     { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
-  ];
+  ]
 
   const specializedServices = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms' },
@@ -61,7 +63,7 @@ const Footer: React.FC = () => {
     { name: 'Expense Tracker Pro', url: '/expense-tracker', description: 'AI expense management' },
     { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'AI task management' },
     { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
-  ];
+  ]
 
   const additionalServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
@@ -70,7 +72,7 @@ const Footer: React.FC = () => {
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
     { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
     { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights' }
-  ];
+  ]
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
@@ -81,7 +83,7 @@ const Footer: React.FC = () => {
     { name: 'News', url: '/news' },
     { name: 'Pricing', url: '/pricing' },
     { name: 'Demo', url: '/demo' }
-  ];
+  ]
 
   const supportLinks = [
     { name: 'Contact Us', url: '/contact' },
@@ -90,7 +92,7 @@ const Footer: React.FC = () => {
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Status Page', url: '/status' },
     { name: 'System Health', url: '/system-status' }
-  ];
+  ]
 
   const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
@@ -99,7 +101,7 @@ const Footer: React.FC = () => {
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security', url: '/security' },
     { name: 'Compliance', url: '/compliance' }
-  ];
+  ]
 
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
@@ -135,10 +137,9 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Micro SAAS Services */}
           <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
               <Zap className="w-4 h-4 mr-2" />
               Micro SAAS
             </h3>
@@ -160,10 +161,9 @@ const Footer: React.FC = () => {
               View All Micro SAAS →
             </a>
           </div>
-
           {/* AI & IT Services */}
           <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
               <Brain className="w-4 h-4 mr-2" />
               AI & IT Services
             </h3>
@@ -203,10 +203,9 @@ const Footer: React.FC = () => {
               View All Services →
             </a>
           </div>
-
           {/* Additional AI Services */}
           <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
               <Zap className="w-4 h-4 mr-2" />
               AI Tools
             </h3>
@@ -224,7 +223,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Company & Support */}
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
@@ -260,7 +258,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -281,7 +278,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,36 +1,41 @@
-import React from 'react';
+import React from 'react'
 
-import { Server, Lock, Monitor } from 'lucide-react';
+import { Server, Lock, Monitor } from 'lucide-react'
+import { CheckCircle, Star, Zap, BarChart, Shield, Helmet } from 'lucide-react'
+import { Clock } from 'lucide-react'
+
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
+=======
+import {Server, Lock, Monitor, CheckCircle, Star, Zap, BarChart, Shield, Helmet} from 'lucide-react';;
+constITInfrastructurePage: React.FC= () =>{constitServices= [
     {
       title: 'Cloud Infrastructure Management',
       description: 'Comprehensive cloud infrastructure setup, optimization, and management across AWS, Azure, and Google Cloud platforms.',
       icon: '☁️',
-      price: '$2,999/month',
+      price: '$2,99 9/month',
       features: [
         'Multi-cloud architecture design',
         'Infrastructure as Code (IaC)',
         'Auto-scaling and load balancing',
         'Cost optimization',
         'Security hardening',
-        '24/7 monitoring and support'
+        '2 4/7 monitoring and support'
       ],
       benefits: [
-        'Reduce infrastructure costs by 40%',
-        'Improve system reliability by 99.9%',
+        'Reduce infrastructure costs by 4 0%',
+        'Improve system reliability by 9 9.9%',
         'Scale automatically with demand',
         'Ensure enterprise-grade security'
       ],
-      marketPrice: '$5000-10000/month',
+      marketPrice: '$500 0-1000 0/month',
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'DevOps & CI/CD Pipeline',
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
+   },
+    {title: 'DevOps & CI/CD Pipeline',
       description: 'Complete DevOps transformation with automated deployment pipelines, testing, and continuous integration.',
       icon: '🔄',
-      price: '$1,999/month',
+      price: '$1,99 9/month',
       features: [
         'CI/CD pipeline setup',
         'Automated testing integration',
@@ -40,20 +45,19 @@ const ITInfrastructurePage: React.FC = () => {
         'Deployment automation'
       ],
       benefits: [
-        'Deploy 10x faster',
-        'Reduce deployment errors by 90%',
+        'Deploy 10 x faster',
+        'Reduce deployment errors by 9 0%',
         'Improve team productivity',
         'Ensure consistent deployments'
       ],
-      marketPrice: '$3000-6000/month',
+      marketPrice: '$300 0-600 0/month',
       technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Docker', 'Kubernetes', 'Ansible'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Database Administration & Optimization',
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
+   },
+    {title: 'Database Administration & Optimization',
       description: 'Expert database management, optimization, and migration services for MySQL, PostgreSQL, MongoDB, and more.',
       icon: '🗄️',
-      price: '$1,499/month',
+      price: '$1,49 9/month',
       features: [
         'Database design and optimization',
         'Performance tuning',
@@ -63,20 +67,19 @@ const ITInfrastructurePage: React.FC = () => {
         'Monitoring and alerting'
       ],
       benefits: [
-        'Improve query performance by 300%',
+        'Improve query performance by 30 0%',
         'Ensure data security and compliance',
-        'Reduce downtime to near zero',
+        'Reduce do wntime to near zero',
         'Optimize storage costs'
       ],
-      marketPrice: '$2500-5000/month',
+      marketPrice: '$250 0-500 0/month',
       technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'AWS RDS'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Network Security & Firewall Management',
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
+   },
+    {title: 'Network Security & Firewall Management',
       description: 'Advanced network security solutions with firewall configuration, intrusion detection, and threat monitoring.',
       icon: '🛡️',
-      price: '$2,499/month',
+      price: '$2,49 9/month',
       features: [
         'Firewall configuration and management',
         'Intrusion detection systems',
@@ -86,20 +89,19 @@ const ITInfrastructurePage: React.FC = () => {
         'Threat response and mitigation'
       ],
       benefits: [
-        'Prevent 99% of security breaches',
+        'Prevent 9 9% of security breaches',
         'Ensure compliance with regulations',
-        'Reduce security incidents by 95%',
+        'Reduce security incidents by 9 5%',
         'Protect sensitive data'
       ],
-      marketPrice: '$4000-8000/month',
+      marketPrice: '$400 0-800 0/month',
       technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'pfSense', 'Snort', 'Wireshark'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Server Management & Maintenance',
-      description: 'Comprehensive server administration including Windows, Linux, and virtualized environments.',
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
+   },
+    {title: 'Server Management & Maintenance',
+      description: 'Comprehensive server administration including Windo ws, Linux, and virtualized environments.',
       icon: '🖥️',
-      price: '$1,799/month',
+      price: '$1,79 9/month',
       features: [
         'Server setup and configuration',
         'OS updates and patching',
@@ -109,43 +111,41 @@ const ITInfrastructurePage: React.FC = () => {
         'Security hardening'
       ],
       benefits: [
-        'Ensure 99.9% uptime',
-        'Reduce maintenance costs by 50%',
+        'Ensure 9 9.9% uptime',
+        'Reduce maintenance costs by 5 0%',
         'Improve system performance',
         'Prevent security vulnerabilities'
       ],
-      marketPrice: '$3000-6000/month',
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Ansible', 'Puppet'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'IT Support & Help Desk',
-      description: '24/7 IT support services with remote assistance, ticketing system, and proactive monitoring.',
+      marketPrice: '$300 0-600 0/month',
+      technologies: ['Windo ws Server', 'Linux', 'VMware', 'Hyper-V', 'Ansible', 'Puppet'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
+   },
+    {title: 'IT Support & Help Desk',
+      description: '2 4/7 IT support services with remote assistance, ticketing system, and proactive monitoring.',
       icon: '🎧',
-      price: '$1,299/month',
+      price: '$1,29 9/month',
       features: [
-        '24/7 technical support',
+        '2 4/7 technical support',
         'Remote desktop assistance',
         'Ticketing and issue tracking',
         'Proactive system monitoring',
-        'User training and documentation',
+        'User training and do cumentation',
         'Hardware and software support'
       ],
       benefits: [
-        'Reduce IT downtime by 80%',
+        'Reduce IT do wntime by 8 0%',
         'Improve user satisfaction',
         'Resolve issues faster',
         'Prevent problems proactively'
       ],
-      marketPrice: '$2000-4000/month',
-      technologies: ['ServiceNow', 'Jira', 'TeamViewer', 'SCCM', 'Active Directory', 'Office 365'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Data Backup & Disaster Recovery',
+      marketPrice: '$200 0-400 0/month',
+      technologies: ['ServiceNow', 'Jira', 'TeamViewer', 'SCCM', 'Active Directory', 'Office 36 5'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
+   },
+    {title: 'Data Backup & Disaster Recovery',
       description: 'Comprehensive backup solutions and disaster recovery planning to protect your critical data.',
       icon: '💾',
-      price: '$999/month',
+      price: '$99 9/month',
       features: [
         'Automated backup systems',
         'Disaster recovery planning',
@@ -160,18 +160,17 @@ const ITInfrastructurePage: React.FC = () => {
         'Meet compliance requirements',
         'Reduce recovery time to minutes'
       ],
-      marketPrice: '$1500-3000/month',
+      marketPrice: '$150 0-300 0/month',
       technologies: ['Veeam', 'Acronis', 'AWS Backup', 'Azure Backup', 'Commvault', 'Rubrik'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Email & Communication Systems',
-      description: 'Enterprise email solutions with Microsoft 365, Google Workspace, and custom email server management.',
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
+   },
+    {title: 'Email & Communication Systems',
+      description: 'Enterprise email solutions with Microsoft 36 5, Google Workspace, and custom email server management.',
       icon: '📧',
-      price: '$799/month',
+      price: '$79 9/month',
       features: [
         'Email server setup and management',
-        'Microsoft 365 administration',
+        'Microsoft 36 5 administration',
         'Google Workspace management',
         'Email security and filtering',
         'Mobile device management',
@@ -187,7 +186,7 @@ const ITInfrastructurePage: React.FC = () => {
       technologies: ['Microsoft 365', 'Google Workspace', 'Exchange Server', 'Postfix', 'SpamAssassin', 'MDM'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
   const infrastructureStats = [
     { metric: '99.9%', description: 'Uptime Guarantee' },
     { metric: '500+', description: 'Servers Managed' },
@@ -195,7 +194,7 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: '24/7', description: 'Support Available' },
     { metric: '< 1hr', description: 'Response Time' },
     { metric: '100%', description: 'Security Compliance' }
-  ];
+  ]
   return (
     <>
       <Helmet>
@@ -216,13 +215,13 @@ const ITInfrastructurePage: React.FC = () => {
                 Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+                <a
                   href="tel:+13024640950"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
                 >
                   📞 +1 302 464 0950
                 </a>
-                <a 
+                <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
@@ -358,13 +357,13 @@ const ITInfrastructurePage: React.FC = () => {
                     <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
                   </div>
                   <div className="flex gap-2">
-                    <a 
+                    <a
                       href="tel:+13024640950"
                       className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
                     >
                       Call Now
                     </a>
-                    <a 
+                    <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
                     >
@@ -421,13 +420,13 @@ const ITInfrastructurePage: React.FC = () => {
               Contact our IT infrastructure experts for a free assessment and custom solution design
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
@@ -442,6 +441,6 @@ const ITInfrastructurePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default ITInfrastructurePage;
+  )
+}
+export default ITInfrastructurePage
