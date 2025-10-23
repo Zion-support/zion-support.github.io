@@ -49,5 +49,5 @@ const PerformanceMonitor: React.FC = () => {
   return null;
 };
 
-export default Page;
+export default PerformanceMonitor;
 
