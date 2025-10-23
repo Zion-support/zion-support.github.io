@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
-              {_aiServices.map((service, index) => (
+              {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.href}
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
-              {_itServices.map((service, index) => (
+              {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.href}
@@ -139,7 +139,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
             <ul className="space-y-2">
-              {_microSaas.map((service, index) => (
+              {microSaas.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.href}
@@ -157,7 +157,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 mb-6">
-              {_companyLinks.map((link, index) => (
+              {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.href}
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
 
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              {_supportLinks.map((link, index) => (
+              {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.href}
@@ -187,11 +187,8 @@ const Footer: React.FC = () => {
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
->>>>>>> e8203bb1cee2dc83b8a75239c674fa7ce0902515
               <Phone className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">+1 (555) 123-4567</span>
             </div>
@@ -202,11 +199,8 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">San Francisco, CA</span>
-<<<<<<< HEAD
-=======
             </div>
           </div>
->>>>>>> e8203bb1cee2dc83b8a75239c674fa7ce0902515
         </div>
 
         {/* Bottom Bar */}
@@ -239,4 +233,6 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
+
+export default Footer;
 

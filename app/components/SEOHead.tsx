@@ -9,7 +9,3 @@ const SEOHead: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-export default SEOHead;
->>>>>>> e8203bb1cee2dc83b8a75239c674fa7ce0902515
