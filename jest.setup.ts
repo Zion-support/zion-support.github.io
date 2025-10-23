@@ -1,5 +1,10 @@
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from "util";
+
+// Jest types
+declare global {
+  var jest: any;
+}
 (
   global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }
 ).TextEncoder = TextEncoder;
