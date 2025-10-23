@@ -3,10 +3,6 @@ import React from 'react'
 import { Smartphone } from 'lucide-react'
 import { CheckCircle, Database, Code, Cloud, Helmet } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
-import { Smartphone, CheckCircle, Star, Database, Code, Helmet, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
 =======

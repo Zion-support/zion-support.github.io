@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -7,14 +6,6 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { Workflow } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
-=======
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow, CheckCircle, Phone, Mail, Star, Brain, Globe, Database, Users, Settings, Bot, BarChart, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {

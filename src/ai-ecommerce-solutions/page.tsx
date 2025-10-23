@@ -3,10 +3,6 @@ import React from 'react'
 import { BarChart3 } from 'lucide-react'
 import { CheckCircle, Zap, Shield, Users, Helmet } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
-import { BarChart3, CheckCircle, Mail, Zap, Shield, Users, BarChart, Helmet, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
 =======

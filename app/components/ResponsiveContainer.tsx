@@ -1,17 +1,11 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
 import { cn } from '../lib/utils'
 interface ResponsiveContainerProps {
   children: React.ReactNode
   className?: string
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full'
 }
-=======
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 constResponsiveContainer= ({children,
   class Nam e,

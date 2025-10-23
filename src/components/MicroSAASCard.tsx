@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle, Star, ArrowRight } from 'lucide-react'
-=======
-'use client';
-import React from 'react';
-import { CheckCircle, Star, ArrowRight, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 interface MicroSAASCardProps {
   service: {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react"
 import { ArrowRight } from "lucide-react"
 interface NeonButtonProps {
@@ -13,13 +12,6 @@ interface NeonButtonProps {
   icon?: React.ReactNode
   disabled?: boolean
 }
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 const NeonButton: React.FC<NeonButtonProps> = ({
   children,

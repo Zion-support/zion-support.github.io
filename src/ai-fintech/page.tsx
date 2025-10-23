@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react'
-=======
-'use client';
-import React from 'react';import { CheckCircle, Star, Brain, Zap, Shield, Target, TrendingUp, DollarSign, Bot, Check } from 'lucide-react';
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 constAIFintechPage: React.FC= () =>{constaiFintechServices= [
     {

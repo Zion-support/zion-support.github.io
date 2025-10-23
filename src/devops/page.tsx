@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { GitBranch } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
 
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { GitBranch, CheckCircle, Zap, Shield, Code, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const DevOpsPage: React.FC = () => {
   const services = [
     {

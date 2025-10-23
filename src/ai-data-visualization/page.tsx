@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
-=======
-'use client';
-import React from 'react';import { CheckCircle, Phone, Mail, Star, Brain, TrendingUp, Database, Settings, BarChart, Check } from 'lucide-react';
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
     {

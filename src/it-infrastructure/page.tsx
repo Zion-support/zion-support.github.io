@@ -4,10 +4,6 @@ import { Server, Lock, Monitor } from 'lucide-react'
 import { CheckCircle, Star, Zap, BarChart, Shield, Helmet } from 'lucide-react'
 import { Clock } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
-import { Server, Lock, Monitor, CheckCircle, Star, Zap, Shield, Database, Clock, Code, BarChart, Helmet, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
 =======
