@@ -35,9 +35,5 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({
   return <>{children}</>;
 };
 
-<<<<<<< HEAD
 export default EnhancedAccessibility;
 
-=======
-export default EnhancedAccessibility;
->>>>>>> 516d08636e963cc03ae2bfbc2645b9ab9784f8a2

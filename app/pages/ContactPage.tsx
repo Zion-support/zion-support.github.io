@@ -14,9 +14,5 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = "" }) => {
   );
 };
 
-<<<<<<< HEAD
 export default ContactPage;
 
-=======
-export default ContactPage;
->>>>>>> 516d08636e963cc03ae2bfbc2645b9ab9784f8a2
