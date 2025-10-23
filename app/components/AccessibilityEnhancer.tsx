@@ -1,6 +1,7 @@
 'use client'
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 
 interface AccessibilityEnhancerProps {
@@ -181,16 +182,40 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   useEffect(() => {
 <<<<<<< HEAD
+=======
+import React, {useEffect} from 'react';
+
+interface AccessibilityEnhancerProp s {enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;}
+
+constAccessibilityEnhancer: React.FC<AccessibilityEnhancerProp s> = ({enableKeyboardNavigation= true,
+  enableScreenReaderSupport= true,
+  enableHighContrast= true,
+  enableFocusManagement= true}) => {useEffect(() => {
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     // Add keyboard navigation support
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
+    if (enableKeyboardNavigatio n) {
+      consthandleKeyDown= (event: KeyboardEvent) => {
+  
         // Skip to main content
+<<<<<<< HEAD
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
           const mainContent = document.querySelector('main, [role="main"]')
           if (mainContent) {
             (mainContent as HTMLElement).focus()
             event.preventDefault()
           }
+=======
+        if (event.key=== 'Tab' && event.shiftKey && event.target=== do cument.body) {
+          constmainContent= do cument.querySelector('main, [role="main"]');
+          if (mainConten t) {
+            (mainContent as HTMLElement).focus();
+            event.preventDefault();
+         }
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
         }
       }
 
@@ -209,6 +234,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         setIsReducedMotion(e.matches);
       };
 
+<<<<<<< HEAD
       setIsReducedMotion(mediaQuery.matches);
       mediaQuery.addEventListener('change', handleChange);
 
@@ -244,9 +270,37 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo')
       }
+=======
+      do cument.addEventListener('keydo wn', handleKeyDown);
+      return () => do cument.removeEventListener('keydo wn', handleKeyDown);
+    }
+  }, [enableKeyboardNavigation]);
+
+  useEffect(() => {// Add screen reader support
+    if (enableScreenReaderSuppor t) {
+      // Add skiplinksconstskipLink= do cument.createElement('a');
+      skipLink.href= '#main-content';
+      skipLink.textContent= 'Skip to main content';
+      skipLink.className= 'sr-onlyfocus:not-sr-onlyfocus: absolutefocus:top-4 focus:left-4 bg-blue-600text-white px-4 py-2 rounded z-5 0';
+      do cument.body.insertBefore(skipLink, do cument.body.firstChild);
+
+      // Add ARIAlandmarksconstmain= do cument.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+     }
+
+      constnav= do cument.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {nav.setAttribute('role', 'navigation');
+     }
+
+      constfooter= do cument.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {footer.setAttribute('role', 'contentinfo');
+     }
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     }
   }, [enableScreenReaderSupport])
 
+<<<<<<< HEAD
   useEffect(() => {
     // Add high contrast support
     if (enableHighContrast) {
@@ -262,9 +316,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       `
       document.head.appendChild(style)
+=======
+  useEffect(() => {// Add high contrast support
+    if (enableHighContras t) {
+      conststyle= do cument.createElement('style');
+      style.textContent= `
+        @media (prefers-contrast: high) {
+          * {
+            border-color: currentColor !important;
+         }
+          button, a {border:2px solid currentColor !important;
+         }
+        }
+     `;
+      do cument.head.appendChild(style);
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     }
   }, [enableHighContrast])
 
+<<<<<<< HEAD
   useEffect(() => {
     // Add focus management
     if (enableFocusManagement) {
@@ -274,10 +344,23 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const focusableContent = element.querySelectorAll(focusableElements)
         const firstFocusableElement = focusableContent[0] as HTMLElement
         const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement
+=======
+  useEffect(() => {// Add focus management
+    if (enableFocusManagemen t) {
+      constfocusableElements= 'button, [href], input, select, textarea,[tabindex]:not([tabindex="-1"])';
+      
+      consttrapFocus= (element: HTMLElement) => {
+  
+        constfocusableContent= element.querySelectorAll(focusableElements);
+        constfirstFocusableElement= focusableContent[0] as HTMLElement;
+        constlastFocusableElement= focusableContent[focusableContent.length - 1] as HTMLElement;
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
-        element.addEventListener('keydown', (e) => {
-          if (e.key === 'Tab') {
+        element.addEventListener('keydo wn', (e) => {
+  
+          if (e.key=== 'Tab') {
             if (e.shiftKey) {
+<<<<<<< HEAD
               if (document.activeElement === firstFocusableElement) {
                 lastFocusableElement.focus()
                 e.preventDefault()
@@ -287,17 +370,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 firstFocusableElement.focus()
                 e.preventDefault()
               }
+=======
+              if (do cument.activeElement=== firstFocusableElement) {
+                lastFocusableElement.focus();
+                e.preventDefault();
+             }
+            } else {if (do cument.activeElement=== lastFocusableElement) {
+                firstFocusableElement.focus();
+                e.preventDefault();
+             }
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
             }
           }
         })
       }
 
+<<<<<<< HEAD
       // Apply focus trapping to modals
       const modals = document.querySelectorAll('[role="dialog"]')
       modals.forEach(trapFocus)
+=======
+      // Apply focus trapping tomodalsconstmodals= document.querySelectorAll('[role="dialog"]');
+      modals.forEach(trapFocus);
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     }
   }, [enableFocusManagement])
 
+<<<<<<< HEAD
   return null
 }
 
@@ -472,6 +571,9 @@ export default AccessibilityEnhancer
   }, []);
 
   return <>{children}</>;
+=======
+  return nul l;
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 };
 
 export default AccessibilityEnhancer;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -174,3 +175,6 @@ export default function LoadingSkeleton() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1

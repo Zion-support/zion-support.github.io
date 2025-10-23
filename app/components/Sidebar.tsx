@@ -1,5 +1,7 @@
 'use client'
+import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react'
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -154,6 +156,11 @@ import { Phone, Mail, Brain } from 'lucide-react'
 import { MapPin, Clock } from 'lucide-react'
 
 X,
+=======
+import React, {memo, useState, useEffect} from 'react'
+import {LinkuseLocation} from 'react-router-do m'
+import {X,
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 Menu,
 Home,
 Users,
@@ -167,122 +174,113 @@ ChevronDown,
 ChevronRight,
 Phone,
 Mail,
-MapPin,
-Clock;}
+MapPin,Clock;}
 } from 'lucide-react'
-const Sidebar: React.FC = () => {
-const [isOpen, setIsOpen] = useState(false)
-const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']))
-const location = useLocation()
+constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
+const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
+constlocation= useLocation()
 useEffect(() => {
-const handleResize = () => {
-if (window.innerWidth >= 1024) {
-setIsOpen(false)
+  
+consthandleResize= () => {
+  
+if (windo w.innerWidth >=1024) {
+setIsOpen(false)}
 }
-}
-window.addEventListener('resize', handleResize)
-return () => window.removeEventListener('resize', handleResize)
+windo w.addEventListener('resize', handleResize)
+return () => windo w.removeEventListener('resize', handleResize)
 }, [])
-const toggleSection = (section: string) => {
-const newExpanded = new Set(expandedSections)
+consttoggleSection= (section: string) => {constnewExpanded= new Set(expandedSections)
 if (newExpanded.has(section)) {;) => {
+  
 return (
 $3
-)
-}
+)}
 newExpanded.delete(section);}
-} else {
-newExpanded.add(section);}
+} else {newExpanded.add(section);}
 }
 setExpandedSections(newExpanded)
 }
-const navigationSections = [
-{
-title: 'Main',
+constnavigationSections= [
+{title: 'Main',
 items: [
-{ name: 'Home', path: '/', icon: Home },
-{ name: 'About', path: '/about', icon: Users },
-{ name: 'Services', path: '/services', icon: Settings },
-{ name: 'Contact', path: '/contact', icon: Phone },
-{ name: 'Blog', path: '/blog', icon: BarChart },
-{ name: 'Case Studies', path: '/case-studies', icon: BarChart },
+{ name: 'Home', path: '/', icon: Home},
+{name: 'About', path: '/about', icon: Users},
+{name: 'Services', path: '/services', icon: Settings},
+{name: 'Contact', path: '/contact', icon: Phone},
+{name: 'Blog', path: '/blog', icon: BarChart},
+{name: 'Case Studies', path: '/case-studies', icon: BarChart},
 ]
 },
-{
-title: 'AI Services',
+{title: 'AI Services',
 key: 'ai-services',
 items: [
-{ name: 'AI Services Overview', path: '/ai-services', icon: Brain },
-{ name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart },
-{ name: 'Document Processing', path: '/ai-services/document-processing', icon: Settings },
-{ name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users },
-{ name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings },
-{ name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings },
-{ name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings },
-{ name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield },
-{ name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings },
-{ name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart },
-{ name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings },
-{ name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield },
-{ name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
+{ name: 'AI Services Overview', path: '/ai-services', icon: Brain},
+{name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart},
+{name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings},
+{name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users},
+{name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings},
+{name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings},
+{name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings},
+{name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield},
+{name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings},
+{name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart},
+{name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings},
+{name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield},
+{name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings},
 ]
 },
-{
-title: 'Micro SaaS',
+{title: 'Micro SaaS',
 key: 'micro-saas',
 items: [
-{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },
-{ name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart },
-{ name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users },
-{ name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings },
-{ name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail },
-{ name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings },
-{ name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart },
-{ name: 'Document Processor', path: '/micro-saas/document-processor', icon: Settings },
-{ name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings },
-{ name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock },
-{ name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
-{ name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
-{ name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
+{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
+{name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart},
+{name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users},
+{name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings},
+{name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail},
+{name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings},
+{name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart},
+{name: 'Document Processor', path: '/micro-saas/do cument-processor', icon: Settings},
+{name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings},
+{name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock},
+{name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart},
+{name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart},
+{name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings},
 ]
 },
-{
-title: 'IT Services',
+{title: 'IT Services',
 key: 'it-services',
 items: [
-{ name: 'IT Services Overview', path: '/it-services', icon: Code },
-{ name: 'IT Consulting', path: '/it-consulting', icon: Users },
-{ name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings },
-{ name: 'IT Support', path: '/it-support', icon: Users },
-{ name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud },
-{ name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud },
-{ name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
-{ name: 'Database Management', path: '/database-management', icon: Settings },
-{ name: 'Managed IT', path: '/managed-it', icon: Settings },
+{ name: 'IT Services Overview', path: '/it-services', icon: Code},
+{name: 'IT Consulting', path: '/it-consulting', icon: Users},
+{name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings},
+{name: 'IT Support', path: '/it-support', icon: Users},
+{name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud},
+{name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud},
+{name: 'Cybersecurity', path: '/cybersecurity', icon: Shield},
+{name: 'Database Management', path: '/database-management', icon: Settings},
+{name: 'Managed IT', path: '/managed-it', icon: Settings},
 ]
 },
-{
-title: 'Company',
+{title: 'Company',
 items: [
-{ name: 'Team', path: '/team', icon: Users },
-{ name: 'Careers', path: '/careers', icon: Users },
-{ name: 'Consultation', path: '/consultation', icon: Phone },
-{ name: 'Pricing', path: '/pricing', icon: BarChart },
+{ name: 'Team', path: '/team', icon: Users},
+{name: 'Careers', path: '/careers', icon: Users},
+{name: 'Consultation', path: '/consultation', icon: Phone},
+{name: 'Pricing', path: '/pricing', icon: BarChart},
 ]
 },
-{
-title: 'Resources',
+{title: 'Resources',
 items: [
-{ name: 'Documentation', path: '/docs', icon: Settings },
-{ name: 'API Docs', path: '/api-docs', icon: Code },
-{ name: 'Support', path: '/support', icon: Users },
-{ name: 'Status', path: '/status', icon: Settings },
+{ name: 'Documentation', path: '/do cs', icon: Settings},
+{name: 'API Docs', path: '/api-do cs', icon: Code},
+{name: 'Support', path: '/support', icon: Users},
+{name: 'Status', path: '/status', icon: Settings},
 ]
 }
 ]
-const contactInfo = {
-phone: '(302) 464-0950',
+constcontactInfo= {phone: '(30 2) 46 4-095 0',
 email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
 address: '364 E Main St STE 1008 Middletown, DE 19709',
 hours: 'Mon-Fri 9AM-6PM EST'
 }
@@ -359,49 +357,37 @@ expandedSections.has(section.key) ?
 {section.items.map((item, itemIndex) => (</div>
 <Link
 key={itemIndex}
-to={item.path}
-onClick={() => setIsOpen(false)}
-className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
-location.pathname === item.path
-? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-: 'text-gray-300 hover:text-white hover:bg-slate-800/50';}
-}`}
->
-<item.icon className="w-4 h-4 flex-shrink-0" />
-<span>{item.name}</span>
-</Link>
-))}
-</div>
+=======
+address: '36 4 E Main St STE 1008Middletown, DE19709',
+hours: 'Mon-Fri9AM-6 PM EST'}
+return(<>{/* Mobile MenuButton*/}<
+onClick={() =></
+onClick={() =>setIsOpen(true)}
+className="lg:hidden fixed top-4 left-4 z-50bg-slate-80 0/90backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-40 0/20 hover:bg-slate-700/90transition-all"
+aria-label="Opensidebar"><MenuclassName="w-6h-6" /></butto>{/* SidebarOverlay */}
+{isOpen &&(<divclassName="fixed inset-0bg-black/50backdrop-blur-smz-40lg:hidden";}
+onClick={() =>setIsOpen(false)}
+/>
 )}
-</div>
-))}
-</nav>
-</div>
-{/* Contact Info */}
-<div className="border-t border-slate-700/50 p-6">
-<h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
-<div className="space-y-3 text-sm text-gray-300">
-<div className="flex items-center space-x-3">
-<Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-<span>{contactInfo.phone}</span>
-</div>
-<div className="flex items-center space-x-3">
-<Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-<span className="truncate">{contactInfo.email}</span>
-</div>
-<div className="flex items-center space-x-3">
-<MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-<span className="text-xs">{contactInfo.address}</span>
-</div>
-<div className="flex items-center space-x-3">
-<Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-<span className="text-xs">{contactInfo.hours}</span>
-</div>
-</div>
-</aside>
-</>
-)
+{/*Sidebar*/}</di><asideclassName={`fixed top-0 left-0 h-full w-8 0 bg-slate-90 0/9 5 backdrop-blur-lg border-r border-cyan-40 0/20z-50transform transition-transform duration-300${
+isOpen ? 'translate-x-0'  : '-translate-x-full'} lg:translate-x-0 lg:staticlg:z-auto`}><divclassName="flexflex-colh-full">{/*Header*/}</di><divclassName="flex items-center justify-between p-6 border-b border-slate-700/50"><Linkto="/"className="flexitems-centerspace-x-3" onClick={() =>setIsOpen(false)}><divclassName="w-1 0 h-10bg-gradient-to-r from-cyan-400to-purple-400rounded-lg flexitems-centerjustify-center"><BrainclassName="w-6h-6text-white" /></di><di v></di><h2className="text-xl font-boldtext-whitecyber-text">ZionTechGroup</h><pclassName="text-xstext-cyan-400">AI &ITSolutions</p></di></Lin><
+onClick={() =></
+onClick={() =>setIsOpen(false)}className="lg:hidden text-gray-400hover:text-whitetransition-colors"aria-label="Closesidebar"><XclassName="w-6h-6" /></butto></di>{/* Navigation*/}<divclassName="flex-1overflow-y-autopy-6"></di><navclassName="space-y-2px-4">{navigationSections.map((sectionsectionIndex)=>(;}<divkey={sectionIndex}className="space-y-1"></di><
+onClick={() =></
+onClick={() =>section.key &&toggleSection(section.key)}className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400hover:text-cyan-300transition-colors"><spa n>{section.title}</spa>{section.key && (
+expandedSections.has(section.key)?<ChevronDownclassName="w-4h-4" />:<ChevronRightclassName="w-4h-4" />)}</butto>{(!section.key || expandedSections.has(section.key)) &&(<divclassName="ml-4space-y-1">{section.items.map((itemitemIndex)=>(</di><Linkkey={itemIndex}
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+to={item.path}
+onClick={() =>setIsOpen(false)}
+className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
+location.pathname=== item.path ? 'bg-cyan-50 0/20text-cyan-400border border-cyan-40 0/3 0'
+ : 'text-gray-300 hover:text-whitehover:bg-slate-800/50';}}`}><item.iconclassName="w-4h-4flex-shrink-0" /><spa n>{item.name}</spa></Lin>))}</di>)}</di>))}</na></di>{/* ContactInfo*/}<divclassName="border-t border-slate-70 0/50p-6"><h3className="text-sm font-semibold text-cyan-400mb-4">ContactInformation</h><divclassName="space-y-3 text-smtext-gray-300"><divclassName="flexitems-centerspace-x-3"><PhoneclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spa n>{contactInfo.phone}</spa></di><divclassName="flexitems-centerspace-x-3"><MailclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="truncate">{contactInfo.email}</spa></di><divclassName="flexitems-centerspace-x-3"><MapPinclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="text-xs">{contactInfo.address}</spa></di><divclassName="flexitems-centerspace-x-3"><ClockclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="text-xs">{contactInfo.hours}</spa></di></di></asid></>)
 }
+<<<<<<< HEAD
 Sidebar.displayName = 'Sidebar'
 export default Sidebar
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+=======
+Sidebar.displayName= 'Sidebar'
+export defaultSidebar</di></strin>
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1

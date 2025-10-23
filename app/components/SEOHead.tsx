@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -149,87 +150,39 @@ export default SEOHeadPage;
 =======
 interface SEOHeadProps {
 title?: string
+=======
+import {Helmet} from 'lucide-react';
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+interface SEOHeadProp s {title?: string
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 description?: string
 keywords?: string
 canonical?: string
 ogImage?: string
 ogType?: string
 twitterCard?: string
-structuredData?: object;}
+structuredData?:object;}
 }
-const SEOHead: React.FC<SEOHeadProps> = ({
-title = 'Zion Tech Group - Advanced AI & IT Solutions',
-description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
-keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
+constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI & IT Solutions',
+description= 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
+keywords= 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
 canonical,
-ogImage = '/og-image.jpg',
-ogType = 'website',
-twitterCard = 'summary_large_image',
-structuredData
-}) => {
-const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
-const defaultStructuredData = {
-"@context": "https://schema.org",
-"@type": "Organization",
-"name": "Zion Tech Group",
-"url": "https://ziontechgroup.com",
-"logo": "https://ziontechgroup.com/logo.png",
-"description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
-"address": {
-"@type": "PostalAddress",
-"streetAddress": "364 E Main St STE 1008",
-"addressLocality": "Middletown",
-"addressRegion": "DE",
-"postalCode": "19709",
-"addressCountry": "US"
-},
-"contactPoint": {
-"@type": "ContactPoint",
-"telephone": "+1-302-464-0950",
-"contactType": "customer service",
-"email": "kleber@ziontechgroup.com"
-},
-"sameAs": [
-"https://www.linkedin.com/company/zion-tech-group",
-"https://twitter.com/ziontechgroup"
+ogImage= '/og-image.jpg',
+ogType= 'website',
+twitterCard= 'summary_large_image',
+structuredData}) => {constfullTitle= title.includes('Zion Tech Group') ? title:`${title} | Zion TechGroup`
+constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.location.href: '')
+const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","url":"https:// ziontechgroup.com","logo":"https:// ziontechgroup.com/logo.png","description":"Advanced AI and IT Solutions company providing cutting-edge technology services","address": {"@type":"PostalAddress","streetAddress":"364E Main St STE1008","addressLocality":"Middletown","addressRegion":"DE","postalCode":"1970 9","addressCountry":"US"},"contactPoint": {"@type":"ContactPoint","telephone":"+1-30 2-46 4-095 0","contactType":"customer service","email":"kleber@ziontechgroup.com"},"sameAs": ["https:// www.linkedin.com/$1/zion-tech-group","https:// twitter.com/ziontechgroup"
 ]
 }
-return (
-<Helmet>
-{/* Basic Meta Tags */}
-<title>{fullTitle}</title>
-<meta name="description" content={description} />
-<meta name="keywords" content={keywords} />
-<meta name="author" content="Zion Tech Group" />
-<meta name="robots" content="index, follow" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-{/* Canonical URL */}
-{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-{/* Open Graph Meta Tags */}
-<meta property="og:title" content={fullTitle} />
-<meta property="og:description" content={description} />
-<meta property="og:type" content={ogType} />
-<meta property="og:url" content={canonicalUrl} />
-<meta property="og:image" content={ogImage} />
-<meta property="og:site_name" content="Zion Tech Group" />
-<meta property="og:locale" content="en_US" />
-{/* Twitter Card Meta Tags */}
-<meta name="twitter:card" content={twitterCard} />
-<meta name="twitter:title" content={fullTitle} />
-<meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={ogImage} />
-{/* Additional SEO Meta Tags */}
-<meta name="theme-color" content="#0f172a" />
-<meta name="msapplication-TileColor" content="#0f172a" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-{/* Structured Data */}
-<script type="application/ld+json">
-{JSON.stringify(structuredData || defaultStructuredData)}
-</script>
-</Helmet>
-)
+return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author"content="Zion TechGroup" /><metaname="robots"content="index,follow" /><metaname="viewport"content="width=device-width,initial-scale=1.0" />{/* CanonicalURL */}
+{canonicalUrl&&<linkrel="canonical"href={canonicalUrl} />}
+{/* Open GraphMetaTags*/}<metaproperty="og:title" content={fullTitle} /><metaproperty="og:description" content={description} /><metaproperty="og:type" content={ogType} /><metaproperty="og:url" content={canonicalUrl} /><metaproperty="og:image" content={ogImage} /><metaproperty="og:site_name"content="Zion TechGroup" /><metaproperty="og:locale"content="en_US" />{/* Twitter CardMetaTags*/}<metaname="twitter:card" content={twitterCard} /><metaname="twitter:title" content={fullTitle} /><metaname="twitter:description" content={description} /><metaname="twitter:image" content={ogImage} />{/* Additional SEOMetaTags*/}<metaname="theme-color"content="#0f172a" /><metaname="msapplication-TileColor"content="#0f172a" /><metaname="apple-mobile-web-app-capable"content="yes" /><metaname="apple-mobile-web-app-status-bar-style"content="black-translucent" />{/* StructuredData*/}<scripttype="application/ld+json">{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
+<<<<<<< HEAD
 export default SEOHead
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+=======
+export defaultSEOHead</SEOHeadProp>
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client"
 import React from "react"
 
@@ -153,6 +154,15 @@ const AccessibilityComponentsPage: React.FC = () => {
     </>
   );
 };
+=======
+"useclient";
+import React from "react";
+
+
+constAccessibilityComponents: React.FC= () => {return (
+
+  );};
+>>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 export default AccessibilityComponentsPage;
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
