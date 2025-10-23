@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
-  
   const aiServices = [
     { name: "AI Chatbot Builder", href: "/ai-chatbot-builder" },
     { name: "AI Content Generator", href: "/ai-content-generator" },
@@ -46,14 +44,6 @@ const Footer: React.FC = () => {
     { name: "Tutorials", href: "/tutorials" },
     { name: "API Documentation", href: "/api-docs" },
     { name: "Status Page", href: "/status" },
-  ];
-
-  const quickLinks = [
-    { name: "Free Consultation", href: "/consultation" },
-    { name: "Request Demo", href: "/demo" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Contact Us", href: "/contact" },
-    { name: "Support", href: "/support" },
   ];
 
   return (
