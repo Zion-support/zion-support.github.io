@@ -2,123 +2,135 @@
 * Security Headers Configuration
 * Comprehensive security headers for production applications
 */
+
 export interface SecurityHeadersConfig {
-contentSecurityPolicy?: string
-strictTransportSecurity?: string
-xFrameOptions?: string
-xContentTypeOptions?: string
-referrerPolicy?: string
-permissionsPolicy?: string
+  contentSecurityPolicy?: string;
+  strictTransportSecurity?: string;
+  xFrameOptions?: string;
+  xContentTypeOptions?: string;
+  referrerPolicy?: string;
+  permissionsPolicy?: string;
 }
+
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
-// Content Security Policy
-contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
-}
-// Content Security Policy
-contentSecurityPolicy: [
-"default-src 'self'",
-"script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
-"style-src 'self' 'unsafe-inline'",
-"img-src 'self' data: https: blob:",
-"font-src 'self' data: ",
-"connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
-"frame-ancestors 'none'",
-"base-uri 'self'",
-"form-action 'self'",
-'upgrade-insecure-requests'].join('; '),
-// HTTP Strict Transport Security (HSTS)
-strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload'
-// Prevent clickjacking
-xFrameOptions: 'DENY'
-// Prevent MIME type sniffing
-xContentTypeOptions: 'nosniff'
-// Referrer Policy
-referrerPolicy: 'strict-origin-when-cross-origin'
-// Permissions Policy (formerly Feature Policy),
-permissionsPolicy: [,
-'camera=()',
-'microphone=()',
-'geolocation=()',
-'payment=()',
-'usb=()',
-'interest-cohort=()',
-'accelerometer=()',
-'gyroscope=()',
-'magnetometer=()'].join(', ')}
-}
-/**
-* Get security headers as key-value pairs
-*/
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
-export function getSecurityHeaders()
-customConfig?: Partial<SecurityHeadersConfig>
-): Record<string, string> {}
-const config = { ...defaultSecurityHeaders, ...customConfig }
-const headers: Record<string, string> = {}
-'X-XSS-Protection': '1; mode=block',
-'X-DNS-Prefetch-Control': 'on'}
-}
-if (config.contentSecurityPolicy) {}
-headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
-}
-if (config.strictTransportSecurity) {}
-headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
-}
-if (config.xFrameOptions) {}
-headers['X-Frame-Options'] = config.xFrameOptions;}
-}
-if (config.xContentTypeOptions) {}
-headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
-}
-if (config.referrerPolicy) {}
-headers['Referrer-Policy'] = config.referrerPolicy;}
-}
-if (config.permissionsPolicy) {}
-headers['Permissions-Policy'] = config.permissionsPolicy;}
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
-}
-export const,
-defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
-}
-/**
-* Get security headers as key-value pairs
-*/
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
-): Record<string, string> {/* TODO: Fix JSX expression */}
-const config = { ...defaultSecurityHeaders, ...customConfig }
-const,
-headers: Record<string, string> = {/* TODO: Fix JSX expression */}
-}
-if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
-}
-if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
-}
-if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
-}
-if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
-}
-if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
-}
-if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
-}
-return headers
-}
-/**
-* Get security headers in Next.js format
-*/
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
-): Array<{ key: string; value: string }> {
-export function getNextSecurityHeaders()
-customConfig?: Partial<SecurityHeadersConfig>;}
-): Array<{ key: string; value: string }> {}
-const headers = getSecurityHeaders(customConfig)
-return Object.entries(headers).map(([key, value]) => ({}
-key,
-value}
-}))
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
-): Array<{/* TODO: Fix JSX expression */}
-e: string }> {/* TODO: Fix JSX expression */}
-}))
-}
-export default defaultSecurityHeaders
+  // Content Security Policy
+  contentSecurityPolicy: [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https: blob:",
+    "font-src 'self' data:",
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
+    "frame-ancestors 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    'upgrade-insecure-requests'
+  ].join('; '),
+  
+  // HTTP Strict Transport Security (HSTS)
+  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
+  
+  // Prevent clickjacking
+  xFrameOptions: 'DENY',
+  
+  // Prevent MIME type sniffing
+  xContentTypeOptions: 'nosniff',
+  
+  // Referrer Policy
+  referrerPolicy: 'strict-origin-when-cross-origin',
+  
+  // Permissions Policy (formerly Feature Policy)
+  permissionsPolicy: [
+    'camera=()',
+    'microphone=()',
+    'geolocation=()',
+    'payment=()',
+    'usb=()',
+    'interest-cohort=()',
+    'accelerometer=()',
+    'gyroscope=()',
+    'magnetometer=()',
+    'ambient-light-sensor=()',
+    'autoplay=()',
+    'battery=()',
+    'bluetooth=()',
+    'display-capture=()',
+    'encrypted-media=()',
+    'fullscreen=()',
+    'midi=()',
+    'notifications=()',
+    'persistent-storage=()',
+    'picture-in-picture=()',
+    'publickey-credentials-get=()',
+    'screen-wake-lock=()',
+    'sync-xhr=()',
+    'web-share=()',
+    'xr-spatial-tracking=()'
+  ].join(', ')
+};
+
+export const generateSecurityHeaders = (config: Partial<SecurityHeadersConfig> = {}): SecurityHeadersConfig => {
+  return {
+    ...defaultSecurityHeaders,
+    ...config
+  };
+};
+
+export const getSecurityHeadersAsObject = (config: Partial<SecurityHeadersConfig> = {}): Record<string, string> => {
+  const headers = generateSecurityHeaders(config);
+  const result: Record<string, string> = {};
+  
+  if (headers.contentSecurityPolicy) {
+    result['Content-Security-Policy'] = headers.contentSecurityPolicy;
+  }
+  
+  if (headers.strictTransportSecurity) {
+    result['Strict-Transport-Security'] = headers.strictTransportSecurity;
+  }
+  
+  if (headers.xFrameOptions) {
+    result['X-Frame-Options'] = headers.xFrameOptions;
+  }
+  
+  if (headers.xContentTypeOptions) {
+    result['X-Content-Type-Options'] = headers.xContentTypeOptions;
+  }
+  
+  if (headers.referrerPolicy) {
+    result['Referrer-Policy'] = headers.referrerPolicy;
+  }
+  
+  if (headers.permissionsPolicy) {
+    result['Permissions-Policy'] = headers.permissionsPolicy;
+  }
+  
+  return result;
+};
+
+export const getSecurityHeadersAsArray = (config: Partial<SecurityHeadersConfig> = {}): Array<{ key: string; value: string }> => {
+  const headers = getSecurityHeadersAsObject(config);
+  return Object.entries(headers).map(([key, value]) => ({ key, value }));
+};
+
+// Next.js specific security headers
+export const getNextJSSecurityHeaders = () => {
+  return {
+    'X-DNS-Prefetch-Control': 'on',
+    'X-XSS-Protection': '1; mode=block',
+    'X-Permitted-Cross-Domain-Policies': 'none',
+    'Referrer-Policy': 'origin-when-cross-origin',
+    'X-Download-Options': 'noopen',
+    'X-Content-Type-Options': 'nosniff',
+    'Origin-Agent-Cluster': '?1',
+    'X-DNS-Prefetch-Control': 'off',
+    'Cross-Origin-Embedder-Policy': 'unsafe-none',
+    'Cross-Origin-Opener-Policy': 'same-origin',
+    'Cross-Origin-Resource-Policy': 'same-origin',
+    'X-Frame-Options': 'SAMEORIGIN',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+  };
+};
+
+export default defaultSecurityHeaders;
