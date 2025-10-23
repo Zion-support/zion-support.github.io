@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, Brain, Menu, X } from "lucide-react";
 
 const Navigation: React.FC = () => {
@@ -22,7 +22,7 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
@@ -37,7 +37,7 @@ const Navigation: React.FC = () => {
             {navigationItems.map((item, index) => (
               <Link
                 key={index}
-                to={item.href}
+                href={item.href}
                 className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
               >
                 {item.name}
@@ -48,7 +48,7 @@ const Navigation: React.FC = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
             >
               Get Started
@@ -78,7 +78,7 @@ const Navigation: React.FC = () => {
               {navigationItems.map((item, index) => (
                 <Link
                   key={index}
-                  to={item.href}
+                  href={item.href}
                   className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
                   onClick={() => setIsOpen(false)}
                 >
@@ -86,7 +86,7 @@ const Navigation: React.FC = () => {
                 </Link>
               ))}
               <Link
-                to="/contact"
+                href="/contact"
                 className="block px-3 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
