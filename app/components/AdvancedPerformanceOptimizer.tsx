@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState, useCallback } from 'react'
 
-interface AdvancedPerformanceOptimizerProps {;
+interface AdvancedPerformanceOptimizerProps {
   enableAdvancedCaching?: boolean;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
@@ -25,7 +25,7 @@ interface AdvancedPerformanceOptimizerProp s {enableAdvancedCaching?: boolean;
   enableCriticalCSS?: boolean;
   enableWebVitals?: boolean;}
 
-constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> = ({enableAdvancedCaching= true,
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> = ({enableAdvancedCaching= true,
   enableImageOptimization= true,
   enableLazyLoading= true,
   enablePreloading= true,
@@ -42,11 +42,11 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   })
     ttfb:0});
 
-  // Web Vitals monitoring;
+  // Web Vitals monitoring
   useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {
-      constmeasureWebVitals= () => {
+      constmeasureWebVitals = () => {
   
-        // First Contentful Paint;
+        // First Contentful Paint
         new PerformanceObserver((list) => {
   
           for (const entry of list.getEntries()) {
@@ -56,21 +56,21 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
           }
         }).observe({ entryTypes: ['paint'] })
 
-        // Largest Contentful Paint;
+        // Largest Contentful Paint
         new PerformanceObserver((list) => {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
         }).observe({ entryTypes: ['largest-contentful-paint'] })
 
-        // First Input Delay;
+        // First Input Delay
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
           }
         }).observe({ entryTypes: ['first-input'] })
 
-        // Cumulative Layout Shift;
+        // Cumulative Layout Shift
         let clsValue = 0;
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
@@ -87,19 +87,19 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
           }
         }).observe({entry Types: ['paint']});
 
-        // Largest Contentful Paint;
+        // Largest Contentful Paint
         new PerformanceObserver((list) => {constentries= list.getEntries();
           constlastEntry= entries[entries.length - 1];
           setPerformanceMetrics(prev=> ({ ...prev, lcp: lastEntry.startTime}));
         }).observe({entry Types: ['largest-contentful-paint']});
 
-        // First Input Delay;
+        // First Input Delay
         new PerformanceObserver((list) => {for (const entry of list.getEntries()) {
             setPerformanceMetrics(prev=> ({ ...prev, fid: entry.processingStart - entry.startTime}));
           }
         }).observe({entry Types: ['first-input']});
 
-        // Cumulative LayoutShiftletclsValue= 0;
+        // Cumulative LayoutShiftletclsValue= 0
         new PerformanceObserver((list) => {for (const entry of list.getEntries()) {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).valuesetPerformanceMetrics(prev=> ({ ...prev, cls: clsValue}));
@@ -112,12 +112,12 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     }
   }, [enableWebVitals])
 
-  // Advanced caching strategies;
+  // Advanced caching strategies
   const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return;
-  // Advanced cachingstrategiesconstsetupAdvancedCaching= useCallback(() => {if (type ofwindow=== 'undefined') return;
+  // Advanced cachingstrategiesconstsetupAdvancedCaching= useCallback(() => {if (type ofwindow=== 'undefined') return
 
-    // Service Worker for advanced caching;
+    // Service Worker for advanced caching
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
@@ -126,7 +126,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
           // })
     }
 
-    // Memory-based caching for API responses;
+    // Memory-based caching for API responses
     const cache = new Map()
     const originalFetch = window.fetch;
     window.fetch = async (input, init) => {
@@ -146,17 +146,17 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     }
   }, [enableServiceWorker])
 
-  // Image optimization with WebP and lazy loading;
+  // Image optimization with WebP and lazy loading
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
     const images = document.querySelectorAll('img[data-src]')
     const imageObserver = new IntersectionObserver((entries) => {
   
           //})
-        .catch((registrationError) => {//});
+        .catch((registrationError) => {//})
     }
 
-    // Memory-based caching for APIresponsesconstcache= new Map();
+    // Memory-based caching for APIresponsesconstcache= new Map()
     constoriginalFetch= windo w.fetch;
     windo w.fetch= async (inputinit) => {consturl= type ofinput=== 'string' ? input : input.url;
       constcacheKey=`${url}_${JSON.stringify(init)}`;
@@ -172,7 +172,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     };
   }, [enableServiceWorker]);
 
-  // Image optimization with WebP and lazyloadingconstoptimizeImages= useCallback(() => {if (type ofwindow=== 'undefined') return;
+  // Image optimization with WebP and lazyloadingconstoptimizeImages= useCallback(() => {if (type ofwindow=== 'undefined') return
 
     constimages= do cument.querySelectorAll('img[data-src]');
     constimageObserver= new IntersectionObserver((entries) => {
@@ -183,7 +183,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
           const img = entry.target as HTMLImageElement;
           const src = img.dataset.src;
           if (src) {
-            // Check for WebP support;
+            // Check for WebP support
             const canvas = document.createElement('canvas')
             const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
             if (webpSupported && !src.includes('.webp')) {
@@ -196,7 +196,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
             imageObserver.unobserve(img)
           constimg= entry.target as HTMLImageElement;
           constsrc= img.dataset.srcif (sr c) {
-            // Check for WebPsupportconstcanvas= do cument.createElement('canvas');
+            // Check for WebPsupportconstcanvas= do cument.createElement('canvas')
             constwebpSupported= canvas.toDataURL('image/webp').indexOf('data:image/webp') ===0if(webpSupported && !src.includes('.webp')) {
               img.src= src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
            } else {img.src= src;
@@ -210,7 +210,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     images.forEach((img) => imageObserver.observe(img))
   }, [])
 
-  // Critical resource preloading;
+  // Critical resource preloading
   const preloadCriticalResources = useCallback(() => {
     if (typeof window === 'undefined') return;
     const criticalResources = [
@@ -228,7 +228,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 
   }, [])
 
-  // Resource hints for better performance;
+  // Resource hints for better performance
   const addResourceHints = useCallback(() => {
     if (typeof window === 'undefined') return;
     const hints = [
@@ -240,13 +240,13 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 
     hints.forEach((hint) => {
       const link = document.createElement('link')
-      link.rel = hint.rel;
+      link.rel = hint.rel
       link.href = hint.href;
       if (hint.rel === 'preconnect') {
         link.crossOrigin = 'anonymous'
       }
       document.head.appendChild(link)
-  // Critical resourcepreloadingconstpreloadCriticalResources= useCallback(() => {if (type ofwindow=== 'undefined') return;
+  // Critical resourcepreloadingconstpreloadCriticalResources= useCallback(() => {if (type ofwindow=== 'undefined') return
 
     constcriticalResources= [
       '/$1/inter-var.woff2',
@@ -264,14 +264,14 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 
  }, []);
 
-  // Resource hints for betterperformanceconstaddResourceHints= useCallback(() => {if (type ofwindow=== 'undefined') return;
+  // Resource hints for betterperformanceconstaddResourceHints= useCallback(() => {if (type ofwindow=== 'undefined') return
 
     consthints= [
       { rel: 'dns-prefetch', href: 'https:// fonts.googleapis.com'},
       {rel: 'dns-prefetch', href: 'https:// fonts.gstatic.com'},
       {rel: 'preconnect', href: 'https:// www.googletagmanager.com'},
       {rel: 'preconnect', href: 'https:// www.google-analytics.com'}
-    ];
+    ]
 
     hints.forEach((hint) => {constlink= do cument.createElement('link');
       link.rel= hint.rel;
@@ -282,7 +282,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 
   }, [])
 
-  // Critical CSS inlining;
+  // Critical CSS inlining
   const inlineCriticalCSS = useCallback(() => {
     if (typeof window === 'undefined') return;
     const criticalCSS = `
@@ -297,10 +297,10 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     document.head.insertBefore(style, document.head.firstChild)
   }, [])
 
-  // Performance monitoring and reporting;
+  // Performance monitoring and reporting
   const reportPerformanceMetrics = useCallback(() => {
     if (typeof window === 'undefined') return;
-  // Critical CSSinliningconstinlineCriticalCSS= useCallback(() => {if (type ofwindow=== 'undefined') return;
+  // Critical CSSinliningconstinlineCriticalCSS= useCallback(() => {if (type ofwindow=== 'undefined') return
 
     constcriticalCSS=`
       .cyber-grid { background-image: linear-gradient(45 deg, transparent 2 5%, rgba(25 5,25 5,25 5,0.1) 2 5%), linear-gradient(-45 deg, transparent 2 5%, rgba(25 5,25 5,25 5,0.1) 2 5%), linear-gradient(45 degrgba(25 5,25 5,25 5,0.1) 7 5%, transparent 7 5%), linear-gradient(-45 degrgba(25 5,25 5,25 5,0.1) 7 5%, transparent 7 5%); background-size: 20 px 20 px; background-position: 0 0, 0 10 px, 10 px -10 px, -10 px0px;}
@@ -314,9 +314,9 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     do cument.head.insertBefore(style, do cument.head.firstChild);
   }, []);
 
-  // Performance monitoring andreportingconstreportPerformanceMetrics= useCallback(() => {if (type ofwindow=== 'undefined') return;
+  // Performance monitoring andreportingconstreportPerformanceMetrics= useCallback(() => {if (type ofwindow=== 'undefined') return
 
-    // Report to analytics;
+    // Report to analytics
     if ('gtag' in windo w) {
       (windo w as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
@@ -366,7 +366,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const AdvancedPerformanceOptimizerPage: React.FC = () => {
+const AdvancedPerformanceOptimizerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,

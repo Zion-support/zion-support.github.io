@@ -3,7 +3,7 @@ import React from "react";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import Link from "next/link";
 
-const HomePage = () => {
+const HomePage  = () => {
   const features = [
     {
       title: "AI-Powered Solutions",
@@ -151,7 +151,7 @@ const HomePage = () => {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from our satisfied clients
+              Don&apos;t just take our word for it - hear from our satisfied clients
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -165,7 +165,7 @@ const HomePage = () => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
@@ -183,7 +183,7 @@ const HomePage = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI and IT solutions can accelerate your growth
+            Let&apos;s discuss how our AI and IT solutions can accelerate your growth
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

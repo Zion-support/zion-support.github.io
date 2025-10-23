@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ServiceCardPage: React.FC = () => {
+const ServiceCardPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -141,7 +141,7 @@ export default ServiceCardPage;
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
 
-interface ServiceCardProps {;
+interface ServiceCardProps {
 title: string;
 description: string;
 features: string[]
@@ -150,7 +150,7 @@ interface ServiceCardProp s {title: stringdescription: stringfeatures: string[];
 price?: string;
 popular?: boolean;
 onSelect?: () =>void;
-class Nam e?: string}constServiceCard:React.FC<ServiceCardProp s>= ({title,
+class Nam e?: string}const ServiceCard:React.FC<ServiceCardProp s>= ({title,
 description,
 features,
 price,

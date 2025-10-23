@@ -4,7 +4,7 @@
  */
 import { dataCleanup, CleanupConfig } from './dataCleanup'
 
-export interface CleanupStats {;
+export interface CleanupStats {
   totalRuns: number;
   successfulRuns: number;
   failedRuns: number;
@@ -14,8 +14,8 @@ export interface CleanupStats {;
   averageDuration: number;
 }
 
-export interface ScheduledCleanupConfig {;
-  interval: number; // milliseconds;
+export interface ScheduledCleanupConfig {
+  interval: number; // milliseconds
   enabled: boolean;
   cleanupConfig: CleanupConfig;
 }
@@ -30,10 +30,10 @@ class ScheduledCleanup {
     averageDuration: 0,
   }
   private config: ScheduledCleanupConfig = {
-    interval: 24 * 60 * 60 * 1000, // 24 hours;
+    interval: 24 * 60 * 60 * 1000, // 24 hours
     enabled: true,
     cleanupConfig: {
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days;
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
       maxRecords: 1000,
     },
   }
@@ -70,7 +70,7 @@ class ScheduledCleanup {
    */
   async runCleanup(): Promise<boolean> {
     if (this.stats.isRunning) {
-      return false; // Prevent concurrent runs;
+      return false; // Prevent concurrent runs
     }
 
     this.stats.isRunning = true;
@@ -83,18 +83,18 @@ class ScheduledCleanup {
       this.stats.successfulRuns++
       this.stats.lastRun = Date.now()
       this.stats.nextRun = this.stats.lastRun + this.config.interval;
-      // Update average duration;
+      // Update average duration
       this.durations.push(duration)
       if (this.durations.length > 10) {
-        this.durations.shift(); // Keep only last 10 durations;
+        this.durations.shift(); // Keep only last 10 durations
       }
       this.stats.averageDuration = this.durations.reduce((a, b) => a + b, 0) / this.durations.length;
       // console.log(`Cleanup completed: ${result.totalCleaned} records cleaned in ${duration}ms`)
-      return true;
+      return true
     } catch (error) {
       this.stats.failedRuns++
       // console.error('Cleanup failed:', error)
-      return false;
+      return false
     } finally {
       this.stats.isRunning = false;
     }
@@ -112,7 +112,7 @@ class ScheduledCleanup {
    */
   isCleanupDue(): boolean {
     if (!this.stats.lastRun) {
-      return true; // Never run before;
+      return true; // Never run before
     }
 
     const timeSinceLastRun = Date.now() - this.stats.lastRun;
@@ -124,7 +124,7 @@ class ScheduledCleanup {
    */
   getTimeUntilNextCleanup(): number {
     if (!this.stats.lastRun) {
-      return 0; // Should run immediately;
+      return 0; // Should run immediately
     }
 
     const timeSinceLastRun = Date.now() - this.stats.lastRun;
@@ -188,7 +188,7 @@ class ScheduledCleanup {
       issues.push('More failed runs than successful runs')
     }
 
-    if (this.stats.averageDuration > 30000) { // 30 seconds;
+    if (this.stats.averageDuration > 30000) { // 30 seconds
       issues.push('Average cleanup duration is very high')
     }
 
@@ -206,8 +206,8 @@ class ScheduledCleanup {
 export const scheduledCleanup = new ScheduledCleanup()
 
 // Auto-start if enabled (in browser environment)
-if (typeof window !== 'undefined' && typeof document !== 'undefined') {;
-  // Start after a short delay to allow the page to load;
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  // Start after a short delay to allow the page to load
   setTimeout(() => {
     scheduledCleanup.start()
   }, 5000)

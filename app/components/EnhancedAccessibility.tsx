@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const EnhancedAccessibilityPage: React.FC = () => {
+const EnhancedAccessibilityPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -140,14 +140,14 @@ const EnhancedAccessibilityPage: React.FC = () => {
 export default EnhancedAccessibilityPage;
 export default EnhancedAccessibility;
 import React, {useEffect} from 'react'
-constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) => {const [settingssetSettings]=useState<AccessibilitySetting s>({
+const EnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) => {const [settingssetSettings]=useState<AccessibilitySetting s>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',;
     focusVisible: false;
  })
   const {trackEvent} = useAnalytics()
-  useEffect(() => {// Add ARIAlandmarksconstaddLandmarks= () => {
+  useEffect(() => {// Add ARIAlandmarksconstaddLandmarks = () => {
   
       constmain= do cument.querySelector('main')
       if (main && !main.getAttribute('role')) {
@@ -160,16 +160,16 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
       if (footer && !footer.getAttribute('role')) {footer.setAttribute('role', 'contentinfo')
      }
     }
-    // Add skiplinksconstaddSkipLinks= () => {constskipLink= do cument.createElement('a')
+    // Add skiplinksconstaddSkipLinks = () => {constskipLink= do cument.createElement('a')
       skipLink.href= '#main-content'
       skipLink.textContent= 'Skip to main content'
       skipLink.className= 'sr-onlyfocus:not-sr-onlyfocus: absolutefocus:top-4 focus:left-4 bg-cyan-600text-white px-4 py-2 rounded-lg font-semibold z-5 0'
       do cument.body.insertBefore(skipLink, do cument.body.firstChild)
    }
-    // Enhance focusmanagementconstenhanceFocusManagement= () => {// Add focusindicatorsconststyle= do cument.createElement('style')
+    // Enhance focusmanagementconstenhanceFocusManagement = () => {// Add focusindicatorsconststyle= do cument.createElement('style')
       style.textContent= `
         *:focus {
-          outline: 2 px solid #06 b6d4 !important;
+          outline: 2 px solid #06 b6d4 !important
           outline-offset:2px !important;
        }
         .sr-only {position: absolutewidth:1pxheight:1pxpadding:0margin: -1 pxoverflow: hiddenclip: rect(0, 0, 0, 0)
@@ -180,9 +180,9 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
      `
       do cument.head.appendChild(style)
     }
-    // Add keyboard navigationsupportconstaddKeyboardNavigation= () => {consthandleKeyDown= (event: KeyboardEvent) => {
+    // Add keyboard navigationsupportconstaddKeyboardNavigation = () => {consthandleKeyDown= (event: KeyboardEvent) => {
   
-        // Skip to main content with Tab;
+        // Skip to main content with Tab
         if (event.key=== 'Tab' && event.shiftKey && event.target=== do cument.body) {
           constskipLink= do cument.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
           if (skipLin k) {
@@ -190,7 +190,7 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
             event.preventDefault()
          }
         }
-        // Close dropdo wns with Escape;
+        // Close dropdo wns with Escape
         if (event.key=== 'Escape') {const openDropdowns= document.querySelectorAll('[aria-expanded="true"]')
           openDropdo wns.forEach(dropdown=> {
   
@@ -201,7 +201,7 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
       do cument.addEventListener('keydo wn', handleKeyDown)
       return () => do cument.removeEventListener('keydo wn', handleKeyDown)
     }
-    // Initialize accessibility enhancements;
+    // Initialize accessibility enhancements
     addLandmarks()
     addSkipLinks()
     enhanceFocusManagement()
@@ -209,13 +209,13 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
       constheader= do cument.querySelector('header')
       if (header && !header.getAttribute('role')) {header.setAttribute('role', 'banner')
      }
-    // Check for userpreferencesconstprefersReducedMotion= windo w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Check for userpreferencesconstprefersReducedMotion= windo w.matchMedia('(prefers-reduced-motion: reduce)').matches
     constprefersHighContrast= windo w.matchMedia('(prefers-contrast: high)').matches;
     setSettings(prev=> ({...prev,
       reducedMotion: prefersReducedMotion,
       highContrast: prefersHighContrast;
    }))
-    // Apply initial settings;
+    // Apply initial settings
     applyAccessibilitySettings({...settings,
       reducedMotion: prefersReducedMotion,
       highContrast: prefersHighContrast;
@@ -230,33 +230,33 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
     }
     motionQuery.addEventListener('change', handleMotionChange)
     contrastQuery.addEventListener('change', handleContrastChange)
-    // Setup keyboard navigation;
+    // Setup keyboard navigation
     setupKeyboardNavigation()
-    // Setup focus management;
+    // Setup focus management
     setupFocusManagement()
     return () => {motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
    }
   }, [])
  return<>{children}</>constapplyAccessibilitySettings= (newSettings: AccessibilitySettings) => {constroot= do cument.do cumentElement;
-    // Apply high contrast;
+    // Apply high contrast
     if (newSettings.highContrast) {
       root.class Lis t.add('high-contrast')
    } else {root.class Lis t.remove('high-contrast')
    }
-    // Apply reduced motion;
+    // Apply reduced motion
     if (newSettings.reducedMotion) {root.class Lis t.add('reduced-motion')
    } else {root.class Lis t.remove('reduced-motion')
    }
-    // Apply font size;
+    // Apply font size
     root.class Lis t.remove('font-normal', 'font-large', 'font-extra-large')
     root.class Lis t.add(`font-${newSettings.fontSize}`)
-    // Apply focus visible;
+    // Apply focus visible
     if (newSettings.focusVisible) {root.class Lis t.add('focus-visible')
    } else {root.class Lis t.remove('focus-visible')
    }
   }
-  constsetupKeyboardNavigation= () => {// Skip to main contentfunctionalityconstskipLink= do cument.querySelector('.skip-link')
+  constsetupKeyboardNavigation = () => {// Skip to main contentfunctionalityconstskipLink= do cument.querySelector('.skip-link')
     if (skipLin k) {
       skipLink.addEventListener('click', (e) => {
   
@@ -290,10 +290,10 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
       modal.addEventListener('keydo wn', handleKeyDown)
     })
   }
-  constsetupFocusManagement= () => {// Add focusindicatorsconststyle= do cument.createElement('style')
+  constsetupFocusManagement = () => {// Add focusindicatorsconststyle= do cument.createElement('style')
     style.textContent=`
       .focus-visible *:focus {
-        outline:2px solid #3 b82f6;
+        outline:2px solid #3 b82f6
         outline-offset:2px;
      }
       .high-contrast {--tw-bg-opacity:1--tw-text-opacity:1}
@@ -307,7 +307,7 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
      }
     `
     do cument.head.appendChild(style)
-    // Track focus events for analytics;
+    // Track focus events for analytics
     do cument.addEventListener('focusin', (e) => {trackEvent('focus_event', {
         category: 'accessibility',
         label: (e.target as HTMLElement).tagName;
@@ -321,7 +321,7 @@ constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) 
       label: Object.keys(newSettings)[0]
    })
   }
-  // Provide accessibility context;
+  // Provide accessibility context
   useEffect(() => {constcontext={settingsupdateSettings}
     (windo w as any).accessibilityContext= context;
   }, [settings])

@@ -4,10 +4,10 @@ import { ArrowLeft } from 'lucide-react'
 import { CheckCircle, TrendingUp, Helmet } from 'lucide-react'
 ;
 import { ArrowLeft, CheckCircle, TrendingUp, Helmet, Check } from 'lucide-react';
-const CaseStudiesPage: React.FC = () => {
+const CaseStudiesPage: React.FC  = () => {
   const caseStudies = [
-import {ArrowLeft, CheckCircle, TrendingUp, Helmet} from 'lucide-react';;
-constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
+import {ArrowLeft, CheckCircle, TrendingUp, Helmet} from 'lucide-react';
+const CaseStudiesPage: React.FC = () => {constcaseStudies= [
     {
       id: 1,
       title: 'E-commerce Platform Transformation',

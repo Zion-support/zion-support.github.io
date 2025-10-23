@@ -3,17 +3,17 @@ import React from 'react'
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
-const EnhancedServicesShowcase: React.FC = () => {
+const EnhancedServicesShowcase: React.FC  = () => {
   const services = [
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const EnhancedServicesShowcasePage: React.FC = () => {
+const EnhancedServicesShowcasePage: React.FC  = () => {
   const features = [
 import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe} from 'lucide-react'
-constEnhancedServicesShowcase: React.FC= () =>{constservices= [
+const EnhancedServicesShowcase: React.FC = () => {constservices= [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',

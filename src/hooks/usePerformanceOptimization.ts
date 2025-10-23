@@ -1,13 +1,13 @@
 'use client'
 import { useCallback } from 'react'
-interface PerformanceMetrics {;
+interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-export const usePerformanceOptimization = () => {
+export const usePerformanceOptimization  = () => {
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {;
       return null;
@@ -27,7 +27,7 @@ export const usePerformanceOptimization = () => {
       cumulativeLayoutShift: 0,
       firstInputDelay: 0;
     }
-    // Measure LCP;
+    // Measure LCP
     const lcpObserver = new PerformanceObserver(list => {
       const entries = list.getEntries()
       const lastEntry = entries[entries.length - 1]
@@ -36,7 +36,7 @@ export const usePerformanceOptimization = () => {
       }
     })
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-    // Measure CLS;
+    // Measure CLS
     let clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
@@ -51,7 +51,7 @@ export const usePerformanceOptimization = () => {
       metrics.cumulativeLayoutShift = clsValue;
     })
     clsObserver.observe({ entryTypes: ['layout-shift'] })
-    // Measure FID;
+    // Measure FID
     const fidObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as PerformanceEntry & {
@@ -62,7 +62,7 @@ export const usePerformanceOptimization = () => {
       }
     })
     fidObserver.observe({ entryTypes: ['first-input'] })
-    // Cleanup observers after a delay;
+    // Cleanup observers after a delay
     setTimeout(() => {
       lcpObserver.disconnect()
       clsObserver.disconnect()
@@ -98,13 +98,13 @@ export const usePerformanceOptimization = () => {
     })
   }, [])
   useEffect(() => {
-    // Measure performance after page load;
+    // Measure performance after page load
     const timer = setTimeout(() => {
       const metrics = measurePerformance()
       if (metrics) {
-        // Send metrics to analytics in production;
+        // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {
-          // Track metrics in production;
+          // Track metrics in production
         }
         if (process.env['NODE_ENV'] === 'development') {
           if (import.meta.env.DEV) {
@@ -112,9 +112,9 @@ export const usePerformanceOptimization = () => {
         }
       }
     }, 1000)
-    // Optimize images;
+    // Optimize images
     optimizeImages()
-    // Preload critical resources;
+    // Preload critical resources
     preloadCriticalResources()
     return () => clearTimeout(timer)
   }, [measurePerformance, optimizeImages, preloadCriticalResources])

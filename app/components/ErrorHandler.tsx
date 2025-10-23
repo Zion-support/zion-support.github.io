@@ -8,7 +8,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ErrorHandlerPage: React.FC = () => {
+const ErrorHandlerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -97,17 +97,17 @@ class ErrorHandler extends Component<Props, State>{constructor(props: Props) {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo})
 
-    // Log error in development;
-    if (process.env.NODE_ENV=== 'development') {// Error caught by handler;
+    // Log error in development
+    if (process.env.NODE_ENV=== 'development') {// Error caught by handler
    }
 
-    // Send error to monitoring service in production;
+    // Send error to monitoring service in production
     if (process.env.NODE_ENV=== 'production') {// You can integrate with services like Sentry, LogRocket, etc.
       this.logErrorToService(errorerrorInfo)
    }
   }
 
-  logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service;
+  logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
     try {
       // Replace with your actual error reportingserviceconsterrorData= {
         message: error.message,
@@ -115,25 +115,25 @@ class ErrorHandler extends Component<Props, State>{constructor(props: Props) {
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString()
       }
-      // Send to your error reporting service here;
+      // Send to your error reporting service here
       // console.log('Error data prepared for reporting:', errorData)
     } catch {
-      // Error reporting failed;
+      // Error reporting failed
     }
      };
-      // Send to your error reporting service here;
-      } catch {// Error reporting failed;
+      // Send to your error reporting service here
+      } catch {// Error reporting failed
    }
   }
 
-  handleRetry= () => {this.setState({
+  handleRetry = () => {this.setState({
       hasError: false,
       error: null,
       errorInfo: null;
    })
   }
 
-  handleGoHome= () => {windo w.location.href= '/'
+  handleGoHome = () => {windo w.location.href= '/'
  }
 
   render() {if (this.state.hasError) {

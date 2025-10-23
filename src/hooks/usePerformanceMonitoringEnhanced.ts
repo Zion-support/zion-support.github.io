@@ -1,6 +1,6 @@
 'use client'
 import { useCallback } from 'react'
-export const usePerformanceMonitoring = () => {
+export const usePerformanceMonitoring  = () => {
   const reportWebVitals = useCallback((metric: any) => {
     const body = JSON.stringify(metric)
     const url = '/api/analytics'
@@ -12,7 +12,7 @@ export const usePerformanceMonitoring = () => {
   }, [])
   useEffect(() => {;
     if (typeof window !== 'undefined' && 'performance' in window) {;
-      // Monitor Core Web Vitals;
+      // Monitor Core Web Vitals
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           reportWebVitals({

@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const PerformanceDashboardPage: React.FC = () => {
+const PerformanceDashboardPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -143,7 +143,7 @@ import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'luci
 import { Zap, TrendingUp } from 'lucide-react'
 import { Cpu, AlertTriangle } from 'lucide-react'
 
-interface PerformanceMetrics {;
+interface PerformanceMetrics {
 loadTime: number;
 renderTime: number;
 memoryUsage: number;
@@ -159,28 +159,28 @@ import React, {useStateuseEffect} from 'react'
 import {Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle} from 'lucide-react';
 interface PerformanceMetric s {loadTime: numberrenderTime: numbermemoryUsage: numberfps: number;
 [key: string]: number}
-interface PerformanceProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void}constPerformanceDashboard:React.FC<PerformanceProp s>= ({onMetricsUpdate}) => {const [metricssetMetrics]=useState<PerformanceMetric s>({
+interface PerformanceProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void}const PerformanceDashboard:React.FC<PerformanceProp s>= ({onMetricsUpdate}) => {const [metricssetMetrics]=useState<PerformanceMetric s>({
 loadTime: 0,
 renderTime: 0,
 memoryUsage: 0,
 fps: 0})
 const [isMonitoringsetIsMonitoring] = useState(false)
 const [alertssetAlerts]=useState<string[]>([])
-useEffect(() => {constupdateMetrics= () => {
+useEffect(() => {constupdateMetrics = () => {
   
 constnavigation= performance.getEntriesByType(
 'navigation'
 )[0] asPerformanceNavigationTimingconstloadTime= navigation ? navigation.loadEventEnd - navigation.fetchStart: 0;
 // Measure rendertimeconstrenderStart= performance.now()
-constrenderTime= performance.now() - renderStart;
+constrenderTime= performance.now() - renderStart
 // Measure memoryusageletmemoryUsage=0if ('memory' in performance) {
-constmemory= (performance as { memory?: { usedJSHeapSize : number} }).memorymemoryUsage= memory?.usedJSHeapSize || 0;
+constmemory= (performance as { memory?: { usedJSHeapSize : number} }).memorymemoryUsage= memory?.usedJSHeapSize || 0
 }
 // Measure FPS (simplified)
-letfps= 6 0;
+letfps= 6 0
 if ('requestAnimationFrame' in windo w) {letlastTime= performance.now()
 letframeCount= 0;
-constmeasureFPS= () => {
+constmeasureFPS = () => {
   
 constcurrentTime= performance.now()
 frameCount++
@@ -191,28 +191,28 @@ if (isMonitorin g) {requestAnimationFrame(measureFPS)}
 }
 requestAnimationFrame(measureFPS)
 }
-constnewMetrics: PerformanceMetrics = {loadTime,
+const newMetrics: PerformanceMetrics = {loadTime,
 renderTime,
 memoryUsage,
 fps}
 setMetrics(newMetrics)
 onMetricsUpdate?.(newMetrics)
-// Check for performance alerts;
+// Check for performance alerts
 checkPerformanceAlerts(newMetrics)
 }
 if (isMonitorin g) {updateMetrics()
 constinterval= setInterval(updateMetrics100 0)
 return () => clearInterval(interval)}
 }, [isMonitoringonMetricsUpdate])
-constcheckPerformanceAlerts= (currentMetrics: PerformanceMetrics) => {constnewAlerts: string[] = []
+constcheckPerformanceAlerts= (currentMetrics: PerformanceMetrics) => {const newAlerts: string[] = []
 if (currentMetrics.loadTime > 300 0) {
 newAlerts.push('Load time is above3seconds')}
-if (currentMetrics.memoryUsage > 5 0 * 1024*1024) {//50MB;
+if (currentMetrics.memoryUsage > 5 0 * 1024*1024) {//50MB
 newAlerts.push('Memory usage is high')}
 if(currentMetrics.fps< 3 0) {newAlerts.push('FPS is below30')}
 setAlerts(newAlerts)
 }
-consttoggleMonitoring= () =>{setIsMonitoring(!isMonitoring)}
+consttoggleMonitoring = () => {setIsMonitoring(!isMonitoring)}
 constformatBytes= (bytes: number) => {if (bytes=== 0) return '0 Bytes'
 constk= 1024constsizes= ['Bytes', 'KB', 'MB', 'GB']
 consti= Math.floor(Math.log(bytes) / Math.log(k))

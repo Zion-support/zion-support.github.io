@@ -12,13 +12,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { FileText, FileImage, CheckCircle, Phone, Mail, Check } from 'lucide-react';
-const AIDocumentProcessingPage: React.FC = () => {
+const AIDocumentProcessingPage: React.FC  = () => {
   const features = [
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
-import {FileText, FileImage, CheckCircle, Phone, Mail} from 'lucide-react';;
-constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
+import {FileText, FileImage, CheckCircle, Phone, Mail} from 'lucide-react';
+const AIDocumentProcessingPage: React.FC = () => {constfeatures= [
     {
       icon: Eye,
       title: 'Advanced OCR',
@@ -158,7 +158,7 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Automate document processing with 99.9% accuracy</p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered document processing platform automatically extracts, analyzes, and processes;
+                Our AI-powered document processing platform automatically extracts, analyzes, and processes
                 documents with advanced OCR and intelligent data extraction capabilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -171,8 +171,7 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  className="cyber-button flex items-center space-x-2" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Free Demo</span>
@@ -241,8 +240,7 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
             </p><divclassName="flex flex-colsm:flex-row gap-4 justify-center items-centermb-16"><ahref="tel:+13024640950"
                  className="cyber-button flexitems-centerspace-x-2"
                 ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flexitems-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
+                 className="cyber-button flexitems-centerspace-x-2" style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
                 ><MailclassName="w-5h-5" /><spa n>GetFreeDemo</spa></a></di>{/* Stats */}
             <divclassName="grid grid-cols-2 md:grid-cols-4 gap-8mb-16">{stats.map((statindex) => (
                <divkey={index}className="cyber-cardp-6text-center"><divclassName="text-3 xlmd:text-4 xl font-boldtext-cyan-400mb-2neon-text">{stat.number}
@@ -295,8 +293,7 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  className="cyber-button flex items-center justify-center space-x-2" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
@@ -320,8 +317,7 @@ export default AIDocumentProcessingPage;
             </h><spanclassName="text-xl text-gray-300mb-8"></className="text-xl text-gray-300mb-8">Join 1800+ companies already using our do cument processing platform</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
                  className="cyber-button flex items-centerjustify-centerspace-x-2"
                 ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
+                 className="cyber-button flex items-centerjustify-centerspace-x-2" style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
                 ><MailclassName="w-5h-5" /><spa n>ScheduleDemo</spa></a></di></di></sectio></mai><Footer /></di></>
   );
 };

@@ -11,7 +11,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const AIAnalyticsDashboardPage: React.FC  = () => {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
@@ -20,12 +20,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 'use client';
 import React, {useStateuseEffect} from 'react';
 
-import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';;
+import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
 
-constAIAnalyticsDashboardPage: React.FC= () =>{const [isLoadedsetIsLoaded] = useState(false);
+const AIAnalyticsDashboardPage: React.FC = () => {const [isLoadedsetIsLoaded] = useState(false);
 
   useEffect(() => {
   
@@ -164,7 +164,7 @@ constAIAnalyticsDashboardPage: React.FC= () =>{const [isLoadedsetIsLoaded] = use
                 real-time monitoring, and intelligent recommendations that drive business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a;
+                <a
                   href="#pricing"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
@@ -362,7 +362,7 @@ export default AIAnalyticsDashboardPage;
                  className="border-2 border-blue-400text-blue-400px-8 py-4 rounded-lg font-semiboldhover:bg-blue-400 hover:text-slate-900transition-allduration-300"
                 >Watch Demo</a></di></di>{/* KeyStats */}
           <divclassName="grid grid-cols-1 md:grid-cols-4 gap-6mb-16"><divclassName="quantum-card p-6text-centerenergy-pulse"><divclassName="text-3 xl font-bold text-blue-400mb-2">45%</di><divclassName="text-gray-300">RevenueIncrease</di></di><divclassName="quantum-card p-6text-centerenergy-pulse"><divclassName="text-3 xl font-bold text-purple-400mb-2">60%</di><divclassName="text-gray-300">ProductivityBoost</di></di><divclassName="quantum-card p-6text-centerenergy-pulse"><divclassName="text-3 xl font-bold text-cyan-400mb-2">30%</di><divclassName="text-gray-300">ConversionLift</di></di><divclassName="quantum-card p-6text-centerenergy-pulse"><divclassName="text-3 xl font-bold text-green-400mb-2">85%</di><divclassName="text-gray-300">AccuracyRate</di></di></di></di></sectio>{/* FeaturesSection */}
-      <sectionclassName="py-20px-4"id="features"><divclassName="container mx-automax-w-7xl"><divclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text"></spa></className="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text">Powerful AI Features</h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Leverage cutting-edge AI technology to unlock insights from your data</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{features.map((featureindex) => (
+      <sectionclassName="py-20px-4" id="features"><divclassName="container mx-automax-w-7xl"><divclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text"></spa></className="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text">Powerful AI Features</h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Leverage cutting-edge AI technology to unlock insights from your data</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{features.map((featureindex) => (
              <divkey={index}className="cyber-card p-6 hover:scale-105transition-allduration-300"><divclassName="w-1 6 h-16bg-gradient-to-br from-blue-500to-purple-600rounded-xl flex items-centerjustify-centermb-6"><feature.iconclassName="w-8h-8text-white" /></di><h3className="text-xl font-boldtext-whitemb-4">{feature.title}</h><pclassName="text-gray-300mb-4">{feature.description}</p><ulclassName="space-y-2">{feature.benefits.map((benefitbenefitIndex) => (
                    <likey={benefitIndex}className="flex items-center text-smtext-blue-400"><CheckCircleclassName="w-4 h-4mr-2flex-shrink-0" />{benefit}
                     </l>))}
@@ -371,7 +371,7 @@ export default AIAnalyticsDashboardPage;
       <sectionclassName="py-20px-4 bg-slate-800/50"><divclassName="container mx-automax-w-7xl"><divclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text"></spa></className="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text">Seamless Integrations</h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Connect all your data sources in one powerful dashboard</p></di><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{integrations.map((integrationindex) => (
              <divkey={index}className="cyber-card p-6 text-centerhover:scale-105transition-allduration-300"><divclassName="text-6xlmb-4">{integration.icon}</di><h3className="text-xl font-boldtext-whitemb-2">{integration.name}</h><pclassName="text-gray-300text-sm">{integration.description}</p></di>))}
           </di></di></sectio>{/* PricingSection */}
-      <sectionclassName="py-20px-4"id="pricing"><divclassName="container mx-automax-w-7xl"><divclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text"></spa></className="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text">Simple, Transparent Pricing</h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Choose the plan that fits your analytics needs</p></di><divclassName="grid grid-cols-1md:grid-cols-3gap-8">{pricingPlans.map((planindex) => (
+      <sectionclassName="py-20px-4" id="pricing"><divclassName="container mx-automax-w-7xl"><divclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text"></spa></className="text-4 xlmd:text-5 xl font-bold text-whitemb-6neon-text">Simple, Transparent Pricing</h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Choose the plan that fits your analytics needs</p></di><divclassName="grid grid-cols-1md:grid-cols-3gap-8">{pricingPlans.map((planindex) => (
              <divkey={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400scale-10 5':''}`}>{plan.popular && (
                   <divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><divclassName="bg-blue-400text-slate-900px-4 py-2 rounded-fulltext-smfont-semibold">Most Popular</di></di>)}
                 <divclassName="text-centermb-8"><h3className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h><pclassName="text-gray-300mb-4">{plan.description}</p><divclassName="text-4 xl font-bold text-blue-400mb-2">{plan.price}</di><divclassName="text-gray-400">permonth</di></di><ulclassName="space-y-4mb-8">{plan.features.map((featurefeatureIndex) => (

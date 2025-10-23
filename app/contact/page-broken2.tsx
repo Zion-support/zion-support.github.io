@@ -11,7 +11,7 @@ Clock,
 Send,;
 CheckCircle;}
 } from 'lucide-react'
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC  = () => {
 const [formData, setFormData] = useState({
 name: '',
 email: '',
@@ -36,7 +36,7 @@ e.preventDefault()
 setIsSubmitting(true)
 setSubmitStatus('idle')
 try {
-// Simulate form submission;
+// Simulate form submission
 await new Promise(resolve => setTimeout(resolve, 1000))
 setSubmitStatus('success')
 setFormData({
@@ -138,8 +138,7 @@ name="name"
 value={formData.name}
 onChange={handleInputChange}
 required;
-className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-placeholder="Your full name"
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500" placeholder="Your full name"
 />
 </div>
 </div>
@@ -155,8 +154,7 @@ name="email"
 value={formData.email}
 onChange={handleInputChange}
 required;
-className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-placeholder="your@email.com"
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500" placeholder="your@email.com"
 />
 </div>
 </div>
@@ -172,8 +170,7 @@ type="text"
 name="company"
 value={formData.company}
 onChange={handleInputChange}
-className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-placeholder="Your company"
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500" placeholder="Your company"
 />
 </div>
 </div>
@@ -187,8 +184,7 @@ type="tel"
 name="phone"
 value={formData.phone}
 onChange={handleInputChange}
-className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-placeholder="+1 (555) 123-4567"
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500" placeholder="+1 (555) 123-4567"
 />
 </div>
 </div>
@@ -224,8 +220,7 @@ value={formData.message}
 onChange={handleInputChange}
 required;
 rows={6}
-className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
-placeholder="Tell us about your project, goals, or any questions you have..."
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none" placeholder="Tell us about your project, goals, or any questions you have..."
 />
 </div>
 </div>

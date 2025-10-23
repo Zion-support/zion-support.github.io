@@ -5,13 +5,13 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const FuturisticBackgroundPage: React.FC = () => {
+const FuturisticBackgroundPage: React.FC  = () => {
   const features = [
 import {Helmet} from 'react-helmet-async'
 import Navigation from '../$1/Navigation'
 import Footer from '../$1/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Helmet} from 'lucide-react';
-constFuturisticBackgroundPage: React.FC= () =>{constfeatures= [
+const FuturisticBackgroundPage: React.FC = () => {constfeatures= [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',

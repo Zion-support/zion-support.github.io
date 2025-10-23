@@ -12,13 +12,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Lock, CheckCircle, Phone, Mail, Check } from 'lucide-react';
-const AICybersecurityPage: React.FC = () => {
+const AICybersecurityPage: React.FC  = () => {
   const features = [
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
-import {Lock, CheckCircle, Phone, Mail} from 'lucide-react';;
-constAICybersecurityPage: React.FC= () =>{constfeatures= [
+import {Lock, CheckCircle, Phone, Mail} from 'lucide-react';
+const AICybersecurityPage: React.FC = () => {constfeatures= [
     {
       icon: Brain,
       title: 'AI Threat Detection',
@@ -165,7 +165,7 @@ constAICybersecurityPage: React.FC= () =>{constfeatures= [
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a;
+                <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
@@ -174,8 +174,7 @@ constAICybersecurityPage: React.FC= () =>{constfeatures= [
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  className="cyber-button flex items-center space-x-2" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Security Audit</span>
@@ -244,8 +243,7 @@ constAICybersecurityPage: React.FC= () =>{constfeatures= [
             </p><divclassName="flex flex-colsm:flex-row gap-4 justify-center items-centermb-16"><ahref="tel:+13024640950"
                  className="cyber-button flexitems-centerspace-x-2"
                 ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flexitems-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
+                 className="cyber-button flexitems-centerspace-x-2" style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
                 ><MailclassName="w-5h-5" /><spa n>GetSecurityAudit</spa></a></di>{/* Stats */}
             <divclassName="grid grid-cols-2 md:grid-cols-4 gap-8mb-16">{stats.map((statindex) => (
                <divkey={index}className="cyber-cardp-6text-center"><divclassName="text-3 xlmd:text-4 xl font-boldtext-cyan-400mb-2neon-text">{stat.number}
@@ -298,8 +296,7 @@ constAICybersecurityPage: React.FC= () =>{constfeatures= [
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  className="cyber-button flex items-center justify-center space-x-2" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Security Audit</span>
@@ -323,8 +320,7 @@ export default AICybersecurityPage;
             </h><spanclassName="text-xl text-gray-300mb-8"></className="text-xl text-gray-300mb-8">Join 3000+ companies already protected by our AI cybersecurity platform</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
                  className="cyber-button flex items-centerjustify-centerspace-x-2"
                 ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
+                 className="cyber-button flex items-centerjustify-centerspace-x-2" style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
                 ><MailclassName="w-5h-5" /><spa n>GetSecurityAudit</spa></a></di></di></sectio></mai><Footer /></di></>
   );
 };

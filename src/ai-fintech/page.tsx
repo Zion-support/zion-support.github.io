@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constAIFintechPage: React.FC= () =>{constaiFintechServices= [
+const AIFintechPage: React.FC = () => {constaiFintechServices= [
     {
       title: 'AI Algorithmic Trading Platform',
       description: 'Advanced algorithmic trading system with machine learning for market prediction, risk management, and automated trading strategies.',

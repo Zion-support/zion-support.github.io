@@ -46,12 +46,12 @@ const handleClick = useCallback((...args) => {}
 if (onClick) {}
 onClick();}
 }
-// Handle internal navigation;
+// Handle internal navigation
 if (href.startsWith('/') && !href.startsWith('//')) {
-// Handle internal navigation;}
+// Handle internal navigation}
 if (href.startsWith('/') && !href.startsWith('//')) {}
 e.preventDefault()
-window.location.href = href;}
+window.location.href = href}
 }
 }</LinkProps>
 return (<a;
@@ -64,7 +64,7 @@ export const,
 Link: React.FC<LinkProps>= ({/* TODO: Fix JSX expression */})</a>
 }) => {/* TODO: Fix JSX expression */};
 };
-// Handle internal navigation;
+// Handle internal navigation
 if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
 }
 }
@@ -85,4 +85,4 @@ aria-label={ariaLabel})
 </a>)
 )
 }
-export default Link;
+export default Link

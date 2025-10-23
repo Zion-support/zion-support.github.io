@@ -34,7 +34,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical;
+  canonical
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || url;
@@ -53,7 +53,7 @@ interface SEOHeadProp s {title?: string;
   noindex?: boolean;
   nofollow?: boolean;
   canonical?: string;}
-constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
+const SEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
   description= 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords= 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence',
   image= 'https:// ziontechgroup.com/og-image.jpg',
@@ -66,7 +66,7 @@ constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI a
   tags= [],
   noindex= false,
   nofollow= false,
-  canonical}) => {constfullTitle= title.includes('Zion Tech Group') ? title:`${title} | Zion TechGroup`;
+  canonical}) => {constfullTitle= title.includes('Zion Tech Group') ? title:`${title} | Zion TechGroup`
   constcanonicalUrl= canonical || urlconstrobotsContent= `${noindex ? 'noindex' :'index'}, ${nofollow ? 'nofollow':'follow'}`;
   return (
   <Helme t>{/* Basic MetaTags */}
@@ -92,7 +92,7 @@ constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI a
           image: image,
           author: {
             '@type': 'Organization',
-            name : author;
+            name : author
          },
           publisher: {'@type': 'Organization',
             name: 'Zion Tech Group',
@@ -104,7 +104,7 @@ constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI a
           ...(type=== 'article' && {datePublished: publishedTime,
             dateModified: modifiedTime || publishedTimemainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': url;
+              '@id': url
            }
           })
         })}

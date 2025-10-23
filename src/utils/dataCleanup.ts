@@ -4,7 +4,7 @@
  */
 import { dataRecordManager, DataRecord } from './dataRecordManager'
 
-export interface CleanupConfig {;
+export interface CleanupConfig {
   maxAge?: number;
   maxRecords?: number;
   categories?: string[]
@@ -39,7 +39,7 @@ class DataCleanup {
     const { maxAge = 7 * 24 * 60 * 60 * 1000, categories, types } = config;
     const query: any = { maxAge }
     if (categories) {
-      // If categories are specified, we need to check each one;
+      // If categories are specified, we need to check each one
       const allRecords: DataRecord[] = []
       for (const category of categories) {
         const records = dataRecordManager.queryRecords({ ...query, category })
@@ -48,7 +48,7 @@ class DataCleanup {
       return allRecords;
     }
     if (types) {
-      // If types are specified, we need to check each one;
+      // If types are specified, we need to check each one
       const allRecords: DataRecord[] = []
       for (const type of types) {
         const records = dataRecordManager.queryRecords({ ...query, type })
@@ -57,8 +57,8 @@ class DataCleanup {
       return allRecords;
     }
 
-    // For the test case, we need to get all records and filter by age manually;
-    // since the test is setting up localStorage directly;
+    // For the test case, we need to get all records and filter by age manually
+    // since the test is setting up localStorage directly
     const allRecords = dataRecordManager.queryRecords({})
     const now = Date.now()
 
@@ -108,7 +108,7 @@ class DataCleanup {
     }
 
     try {
-      // Calculate localStorage usage;
+      // Calculate localStorage usage
       let localStorageUsed = 0;
       let localStorageRecords = 0;
       for (let i = 0; i < localStorage.length; i++) {
@@ -125,7 +125,7 @@ class DataCleanup {
       }
 
       // Estimate localStorage quota (typically 5-10MB)
-      const estimatedQuota = 5 * 1024 * 1024; // 5MB estimate;
+      const estimatedQuota = 5 * 1024 * 1024 // 5MB estimate
       stats.localStorage = {
         used: localStorageUsed,
         available: Math.max(0, estimatedQuota - localStorageUsed),
@@ -133,7 +133,7 @@ class DataCleanup {
         records: localStorageRecords,
       }
 
-      // Calculate sessionStorage usage;
+      // Calculate sessionStorage usage
       let sessionStorageUsed = 0;
       let sessionStorageRecords = 0;
       for (let i = 0; i < sessionStorage.length; i++) {
@@ -158,14 +158,14 @@ class DataCleanup {
 
       // Calculate memory usage (if available)
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as any).memory
         stats.memory = {
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,
           percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100,
         }
       } else {
-        // Fallback estimation;
+        // Fallback estimation
         stats.memory = {
           used: localStorageUsed + sessionStorageUsed,
           total: estimatedQuota * 2,
@@ -176,7 +176,7 @@ class DataCleanup {
       // console.warn('Failed to get storage stats:', error)
     }
 
-    return stats;
+    return stats
   }
 
   /**
@@ -193,7 +193,7 @@ class DataCleanup {
     const allRecords = dataRecordManager.queryRecords({})
     allRecords.sort((a, b) => a.timestamp - b.timestamp)
 
-    // Remove oldest records until we're under the limit;
+    // Remove oldest records until we're under the limit
     const recordsToRemove = allRecords.slice(0, stats.total - maxRecords)
     let cleaned = 0;
     for (const record of recordsToRemove) {

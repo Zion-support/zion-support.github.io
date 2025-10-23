@@ -11,7 +11,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Key, Copy, Code, Check } from 'lucide-react';
 
-const ApiDocsPage: React.FC = () => {
+const ApiDocsPage: React.FC  = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
 
   const copyToClipboard = (code: string, id: string) => {
@@ -22,9 +22,9 @@ const ApiDocsPage: React.FC = () => {
 import React, {useState} from 'react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
-import {Key, Copy, Code} from 'lucide-react';;
+import {Key, Copy, Code} from 'lucide-react';
 
-constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<string | null>(null);
+const ApiDocsPage: React.FC = () => {const [copiedCodesetCopiedCode]=useState<string | null>(null);
   
   constcopyToClipboard= (code: string, id: string) => {
   
@@ -95,7 +95,7 @@ constApiDocsPage: React.FC= () =>{const [copiedCodesetCopiedCode]=useState<strin
                       </span>
                       <code className="text-cyan-400 font-mono">{endpoint.endpoint}</code>
                     </div>
-                    <button;
+                    <button
                       onClick={() =></button> copyToClipboard(endpoint.example, endpoint.id)}
                       className="flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors"
                     >

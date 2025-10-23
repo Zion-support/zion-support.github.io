@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const EnhancedPerformanceOptimizerPage: React.FC = () => {
+const EnhancedPerformanceOptimizerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -141,7 +141,7 @@ export default EnhancedPerformanceOptimizerPage;
 const features = [
 import {Helmet} from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Helmet} from 'lucide-react';
-constEnhancedPerformanceOptimizerPage: React.FC= () =>{constfeatures= [
+const EnhancedPerformanceOptimizerPage: React.FC = () => {constfeatures= [
 {
 icon: Brain,
 title: 'AI-Powered Solutions',
@@ -242,14 +242,14 @@ import { useEffect, useCallback } from 'react'
 import { useAnalytics } from './EnhancedAnalytics'
 import { Phone, Mail } from 'lucide-react'
 
-interface PerformanceMetrics {;
+interface PerformanceMetrics {
 lcp: number | null;
 fid: number | null;
 cls: number | null;
 fcp: number | null;
 ttfb: number | null;
 }
-const EnhancedPerformanceOptimizer: React.FC = () => {
+const EnhancedPerformanceOptimizer: React.FC  = () => {
 const { trackEvent } = useAnalytics()
 const optimizeImages = useCallback(() => {
 const images = document.querySelectorAll('img')
@@ -257,20 +257,20 @@ return(<divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-90
 import {useEffectuseCallback} from 'react'
 import {useAnalytics} from './EnhancedAnalytics'
 interface PerformanceMetric s {lcp: number | null fid: number | null cls: number | null fcp: number | null ttfb: number | null}
-constEnhancedPerformanceOptimizer: React.FC= () => {const { trackEvent} = useAnalytics()
+const EnhancedPerformanceOptimizer: React.FC = () => {const { trackEvent} = useAnalytics()
 constoptimizeImages= useCallback(() => {constimages= do cument.querySelectorAll('img')
 images.forEach((img) => {
   ;
-//Addloading="lazy" if not already present;
+//Addloading="lazy" if not already present
 if (!img.hasAttribute('loading')) {
 img.setAttribute('loading', 'lazy')}
-//Adddecoding="async" for better performance;
+//Adddecoding="async" for better performance
 if (!img.hasAttribute('decoding')) {img.setAttribute('decoding', 'async')}
 })
 }, [])
 constpreloadCriticalResources= useCallback(() => {// Preload criticalfontsconstfontLink= do cument.createElement('link')
 fontLink.rel= 'preload'
-fontLink.href= 'https:// fonts.googleapis.com/css2?family=Inter:wght@30 0;40 0;50 0;60 0;70 0;80 0&display=swap'
+fontLink.href= 'https:// fonts.googleapis.com/css2?family=Inter:wght@30 040 0;50 0;60 0;70 0;80 0&display=swap'
 fontLink.as= 'style'
 do cument.head.appendChild(fontLink)
 // Preload criticalimagesconstcriticalImages= [
@@ -281,7 +281,7 @@ criticalImages.forEach((src) => {
   
 constlink= do cument.createElement('link')
 link.rel= 'preload'
-link.href= src;
+link.href= src
 link.as= 'image'
 do cument.head.appendChild(link)})
 }, [])
@@ -298,10 +298,10 @@ constsetupIntersectionObserver= useCallback(() => {constobserver= new Intersecti
 entries.forEach((entry) => {
   
 if (entry.isIntersecting) {
-constelement= entry.target as HTMLElement;
-// Add animation class es when elements come into view;
+constelement= entry.target as HTMLElement
+// Add animation class es when elements come into view
 element.class Lis t.add('animate-fade-in')
-// Track visibility for analytics;
+// Track visibility for analytics
 trackEvent('element_viewed', {
 category: 'engagement',
 label: element.id || element.class Nam e})
@@ -314,18 +314,18 @@ label: element.id || element.class Nam e})
 sections.forEach((section) => observer.observe(section))
 return () => observer.disconnect()
 }, [trackEvent])
-constoptimizeScrollPerformance= useCallback(() => {letticking= false;
-constupdateScrollPosition= () => {
+constoptimizeScrollPerformance= useCallback(() => {letticking= false
+constupdateScrollPosition = () => {
   
-// Throttled scrollhandlingconstscrollY= windo w.scrollY;
+// Throttled scrollhandlingconstscrollY= windo w.scrollY
 // Update navigation based on scrollpositionconstnav= do cument.querySelector('nav')
 if (na v) {
 if (scrollY >50) {
 nav.class Lis t.add('scrolled')} else {nav.class Lis t.remove('scrolled')}
 }
-ticking= false;
+ticking= false
 }
-consthandleScroll= () => {if (!ticking) {
+consthandleScroll = () => {if (!ticking) {
 requestAnimationFrame(updateScrollPosition)
 ticking= true}
 }
@@ -345,14 +345,14 @@ link.href=`//${domain}`
 do cument.head.appendChild(link)
 })
 }, [])
-consttrackPerformanceMetrics= useCallback(() => {// Track Core Web Vitals;
-constmetrics: PerformanceMetrics = {
+consttrackPerformanceMetrics= useCallback(() => {// Track Core Web Vitals
+const metrics: PerformanceMetrics = {
 lcp: null,
 fid: null,
 cls: null,
 fcp: null,
 ttfb: null}
-// Track page load time;
+// Track page load time
 windo w.addEventListener('load', () => {constloadTime= performance.timing.loadEventEnd - performance.timing.navigationStart;
 trackEvent('page_load_time', {
 category: 'performance',
@@ -389,7 +389,7 @@ optimizeThirdPartyScripts,
 setupIntersectionObserver,
 optimizeScrollPerformance,
 setupResourceHints,
-trackPerformanceMetrics;
+trackPerformanceMetrics
 ])
 return nul l;
 }

@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const DynamicContentShowcasePage: React.FC = () => {
+const DynamicContentShowcasePage: React.FC  = () => {
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Star, Zap, ArrowRight } from 'lucide-react'
@@ -34,15 +34,15 @@ interface Feature {
   description: string;
   benefits: string[]
 }
-const DynamicContentShowcase: React.FC = () => {
+const DynamicContentShowcase: React.FC  = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
   const features: Feature[] = [
 interface Testimonia l {id: numbername: stringcompany: stringrole: stringcontent: stringrating: numberavatar: string}
 interface Featur e{icon:React.ComponentType<an y>title: stringdescription: stringbenefits: string[]}
-constDynamicContentShowcase: React.FC= () => {const [currentIndexsetCurrentIndex] = useState(0)
+const DynamicContentShowcase: React.FC = () => {const [currentIndexsetCurrentIndex] = useState(0)
   const [isPlayingsetIsPlaying] = useState(true)
-  constfeatures: Feature[] = [
+  const features: Feature[] = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -408,7 +408,7 @@ export default DynamicContentShowcase;
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  consttestimonials: Testimonial[] = [
+  const testimonials: Testimonial[] = [
     {name: 'Sarah Johnson',
       role: 'CTO',
       content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by300%.',
@@ -440,11 +440,11 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
     {icon: Star, value: '4.9/5', label: 'Rating'},
     {icon: Zap, value: '2 4/7', label: 'Support'}
   ]
-  constnextTestimonial= () => {setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+  constnextTestimonial = () => {setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
  }
-  constprevTestimonial= () => {setCurrentTestimonial((prev) => (prev -1+ testimonials.length) % testimonials.length)
+  constprevTestimonial = () => {setCurrentTestimonial((prev) => (prev -1+ testimonials.length) % testimonials.length)
  }
-  consttogglePlayPause= () => {setIsPlaying(!isPlaying)
+  consttogglePlayPause = () => {setIsPlaying(!isPlaying)
  }
   constcurrentTestimonial= testimonials[currentIndex]
   useEffect(() => {consttimer= setInterval(nextTestimonial500 0)

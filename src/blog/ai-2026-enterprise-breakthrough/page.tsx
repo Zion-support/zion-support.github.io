@@ -4,8 +4,8 @@ import { Star } from 'lucide-react';
 import {Star} from 'lucide-react';
 import React from 'react';
 
-// import {Metadata} from 'next'; // Removed for Vite;
-// Metadata removed for Vite compatibility;
+// import {Metadata} from 'next' // Removed for Vite
+// Metadata removed for Vite compatibility
 export default function AI2026EnterpriseBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

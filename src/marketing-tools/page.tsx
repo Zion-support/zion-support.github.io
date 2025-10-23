@@ -5,7 +5,7 @@ import { CheckCircle, Phone, Mail, MapPin, Helmet, Check } from 'lucide-react';
 import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
 import React from 'react';
 
-constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
+const MarketingToolsPage: React.FC = () => {constmarketingTools= [
     {
       title: 'AI Content Generator',
       price: '$19 9/month',

@@ -9,7 +9,7 @@ import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constAIProjectManagerPage: React.FC= () =>{constfeatures= [
+const AIProjectManagerPage: React.FC = () => {constfeatures= [
     'AI-powered project planning and resource allocation',
     'Intelligent timeline prediction and risk assessment',
     'Smart task management with priority optimization',

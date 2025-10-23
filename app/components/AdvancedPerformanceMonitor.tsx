@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const AdvancedPerformanceMonitorPage: React.FC = () => {
+const AdvancedPerformanceMonitorPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -139,7 +139,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
 
 export default AdvancedPerformanceMonitorPage;
 import React, { useEffect, useState, useCallback } from 'react'
-interface PerformanceMetrics {;
+interface PerformanceMetrics {
 fcp: number | null;
 lcp: number | null;
 fid: number | null;
@@ -159,7 +159,7 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>({
 import React, {useEffect, useState, useCallback} from 'react'
 interface PerformanceMetric s {fcp: number | null lcp: number | null fid: number | null cls: number | null ttfb: number | null memory: number | null};
 interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void;
-enableRealTimeMonitoring?: boolean}constAdvancedPerformanceMonitor:React.FC<PerformanceMonitorProp s>= ({onMetricsUpdate,
+enableRealTimeMonitoring?: boolean}const AdvancedPerformanceMonitor:React.FC<PerformanceMonitorProp s>= ({onMetricsUpdate,
 enableRealTimeMonitoring= true,}) => {const [metricssetMetrics]=useState<PerformanceMetric s>({
 fcp: null,
 lcp: null,
@@ -170,7 +170,7 @@ memory: null,})
 constmeasureWebVitals= useCallback(() => {if (type ofwindow=== 'undefined' || !('performance' in windo w)) return i f (type ofPerformanceObserver=== 'undefined') return constobserver s: PerformanceObserver[] = []
 // Measure First Contentful Paint (FCP)
 constfcpEntries= performance.getEntriesByName('first-contentful-paint') || []
-constfcp= fcpEntries.length >0? fcpEntries[0].startTime: null;
+constfcp= fcpEntries.length >0? fcpEntries[0].startTime: null
 // Measure Largest Contentful Paint (LCP)
 if ('PerformanceObserver' in windo w) {
 try {
@@ -193,7 +193,7 @@ entries.forEach(entry=> {
   
 if (
 entry.entryType=== 'first-input' &&
-'processingStart' in entry && 'startTime' in entry;
+'processingStart' in entry && 'startTime' in entry
 ) {
 constfidEntry= entry as PerformanceEventTiming;
 setMetrics(prev=> ({
@@ -215,7 +215,7 @@ entries.forEach(entry=> {
   
 if (
 entry.entryType=== 'layout-shift' &&
-'hadRecentInput' in entry && 'value' in entry;
+'hadRecentInput' in entry && 'value' in entry
 ) {
 constclsEntry= entry as LayoutShift;
 if (!clsEntry.hadRecentInput) {
@@ -231,16 +231,16 @@ observers.push(clsObserver)
 }
 // Measure Time to First Byte (TTFB)
 try {constnavigationEntries= performance.getEntriesByType?.('navigation') || []
-constnavigationEntry= navigationEntries[0] asPerformanceNavigationTimingconstttfb= navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart: null;
+constnavigationEntry= navigationEntries[0] asPerformanceNavigationTimingconstttfb= navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart: null
 // Measure MemoryUsageconstmemory=
 (performance as Performance & { memory?: { usedJSHeapSize : number} })
-.memory?.usedJSHeapSize || null;
+.memory?.usedJSHeapSize || null
 setMetrics(prev=> ({...prev,
 fcp,
 ttfb,
 memory,}))
 } catch (error) {// eslint-disable-next-line no-console}
-// Cleanup observers;
+// Cleanup observers
 return () => {observers.forEach(observer=> {
   
 try {
@@ -252,7 +252,7 @@ constmeasureResourceTiming= useCallback(() => {if (type ofwindow=== 'undefined' 
 constslowResources= resources.filter(
 (resource: PerformanceResourceTiming) => resource.duration > 1000)
 if (slowResources.length > 0) {
-// eslint-disable-next-line no-console;
+// eslint-disable-next-line no-console
 // console.log(
 'Slow resources detected:',
 slowResources.map((r: PerformanceResourceTiming) => ({
@@ -263,8 +263,8 @@ size: r.transferSize,}))
 )
 }
 }, [])
-constmeasureCoreWebVitals= useCallback(() => {if (type ofwindow=== 'undefined') return;
-// Use web-vitals library if available;
+constmeasureCoreWebVitals= useCallback(() => {if (type ofwindow=== 'undefined') return
+// Use web-vitals library if available
 try {
 import('web-vitals')
 .then(webVitals=> {
@@ -307,7 +307,7 @@ measureCoreWebVitals,
 useEffect(() => {if (onMetricsUpdat e) {
 onMetricsUpdate(metrics)}
 }, [metricsonMetricsUpdate])
-// PerformancerecommendationsconstgetPerformanceRecommendations= useCallback(() => {constrecommendations: string[] = []
+// PerformancerecommendationsconstgetPerformanceRecommendations= useCallback(() => {const recommendations: string[] = []
 if (metrics.fcp && metrics.fcp >1800) {
 recommendations.push(
 'First Contentful Paint is slow. Consider optimizing critical rendering path.'
@@ -333,7 +333,7 @@ recommendations.push(
 'Time to First Byte is slow. Optimize server response time.'
 )
 }
-return recommendations;
+return recommendations
 }, [metrics])
 const _recommendations = getPerformanceRecommendations()
 if (process.env.NODE_ENV === 'development') {

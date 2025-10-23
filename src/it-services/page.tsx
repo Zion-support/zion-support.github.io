@@ -21,7 +21,7 @@ interface ITService {
   technologies: string[]
   contactInfo: string;
   color?: string;
-import {Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock, CheckCircle, Star, ArrowRight} from 'lucide-react';;
+import {Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock, CheckCircle, Star, ArrowRight} from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
@@ -33,8 +33,8 @@ interface ITServic e {title: stringdescription: stringicon: React.ComponentType<
   color?: string;
 }
 
-constITServicesPage: React.FC= () => {constitServices: ITService[] = [
-    // Infrastructure & Cloud Services;
+const ITServicesPage: React.FC = () => {const itServices: ITService[] = [
+    // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
@@ -58,7 +58,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // Cybersecurity Services;
+    // Cybersecurity Services
     {title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with AI-powered threat detection, prevention, and response capabilities.',
       icon: Shield,
@@ -103,7 +103,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // Database & Data Management;
+    // Database & Data Management
     {title: 'Database Administration & Optimization',
       description: 'Expert database management with performance tuning, backup strategies, and high availability solutions.',
       icon: Database,
@@ -137,7 +137,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // DevOps & Development;
+    // DevOps & Development
     {title: 'DevOps & CI/CD Implementation',
       description: 'Complete DevOps transformation with automated pipelines, infrastructure as code, and continuous monitoring.',
       icon: Code,
@@ -171,7 +171,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // IT Support & Management;
+    // IT Support & Management
     {title: 'Managed IT Services',
       description: 'Comprehensive IT management including help desk, system administration, and proactive maintenance.',
       icon: Users,
@@ -205,7 +205,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       color: 'text-cyan-40 0'
    },
-    // Specialized Services;
+    // Specialized Services
     {title: 'Microsoft 36 5 Migration & Management',
       description: 'Complete Microsoft 36 5 migration with security configuration, user training, and ongoing management.',
       icon: Mail,

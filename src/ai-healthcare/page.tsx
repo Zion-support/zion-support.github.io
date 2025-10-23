@@ -4,7 +4,7 @@ import { CheckCircle, Star, Brain, Shield, Zap, Users, Target, Heart, Helmet, Ch
 import {CheckCircle, Star, Zap, Brain, Target, Users, Shield, Heart, Helmet} from 'lucide-react';
 import React from 'react';
 
-constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
+const AIHealthcarePage: React.FC = () => {constaiHealthcareServices= [
     {
       title: 'AI Medical Image Analysis',
       description: 'Advanced AI-powered medical imaging analysis for radiology, pathology, and diagnostic imaging with 9 9.5% accuracy.',

@@ -7,7 +7,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const FuturisticHeroPage: React.FC = () => {
+const FuturisticHeroPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -43,7 +43,7 @@ const FuturisticHeroPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
 import {Helmet} from 'react-helmet-async'
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
-constFuturisticHeroPage: React.FC= () =>{constfeatures= [
+const FuturisticHeroPage: React.FC = () => {constfeatures= [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',

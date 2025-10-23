@@ -5,10 +5,10 @@ import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 
 import { Globe, Settings } from 'lucide-react'
 ;
 import { Wifi, CheckCircle, Star, Brain, Shield, Zap, Target, BarChart, Helmet, Check, Globe, Settings } from 'lucide-react';
-const IoTEdgePage: React.FC = () => {
+const IoTEdgePage: React.FC  = () => {
   const iotServices = [
-import {Wifi, CheckCircle, Star, Zap, Brain, BarChart, Target, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
-constIoTEdgePage: React.FC= () =>{constiotServices= [
+import {Wifi, CheckCircle, Star, Zap, Brain, BarChart, Target, Shield, Helmet, Globe, Globe} from 'lucide-react';
+const IoTEdgePage: React.FC = () => {constiotServices= [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',

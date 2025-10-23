@@ -6,7 +6,7 @@ import { CheckCircle, Star, Phone, Calendar, Check } from 'lucide-react';
 import {CheckCircle, Phone, Star, Calendar} from 'lucide-react';
 import React from 'react';
 
-constAISchedulerPage: React.FC= () =>{constfeatures= [
+const AISchedulerPage: React.FC = () => {constfeatures= [
     {
       icon: Calendar,
       title: 'Smart Scheduling',

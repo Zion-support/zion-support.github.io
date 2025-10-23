@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, ReactNode } from "react"
 
 declare global {
-  interface Window {;
+  interface Window {
     gtag: (...args: any[]) => void;
   }
 }
@@ -24,7 +24,7 @@ constAnalyticsContext=createContext<AnalyticsContextType | undefined>(
   undefined,
 )
 
-export const useAnalytics = () => {
+export const useAnalytics  = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
@@ -35,7 +35,7 @@ export const useAnalytics = () => {
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
-export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
+export constuseAnalytics = () => {constcontext= useContext(AnalyticsContext);
   if (!context) {
     throw newError("useAnalytics must be used within an AnalyticsProvider");
  }
@@ -44,14 +44,14 @@ export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
 
 interface AnalyticsProviderProp s {children: ReactNode;}
 
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+exportconst AnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
     if (type of windo w !=="undefined") {
-      // Google Analytics;
+      // Google Analytics
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true;
+        script.async = true
         document.head.appendChild(script)
 
         window.gtag =
@@ -64,7 +64,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
       if (process.env.NODE_ENV==="production") {
         constscript= document.createElement("script");
-        script.src=`https://www.googletagmanager.com/$1/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`;
+        script.src=`https://www.googletagmanager.com/$1/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
         script.async= true;
         do cument.head.appendChild(script);
 
@@ -103,7 +103,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     }
   }
 
-  constvalue: AnalyticsContextType = {trackEvent,
+  const value: AnalyticsContextType = {trackEvent,
     trackPageView,
   }
 
@@ -122,7 +122,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const AnalyticsProviderPage: React.FC = () => {
+const AnalyticsProviderPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,

@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const EnhancedSEOHeadPage: React.FC = () => {
+const EnhancedSEOHeadPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -218,7 +218,7 @@ export default EnhancedSEOHeadPage;
         {JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
-import {Helmet} from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async'
 interface SEOHeadProp s {title: stringdescription: string;
   keywords?: string;
   image?: string;
@@ -226,7 +226,7 @@ interface SEOHeadProp s {title: stringdescription: string;
   type?: string;
   siteName?: string;
   structuredData?: object}
-constEnhancedSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
+const EnhancedSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
   description= 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve300% ROI with our cutting-edge AI technology.',
   keywords= 'AI solutions, artificial intelligence, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting',
   image= 'https:// ziontechgroup.com/og-image.jpg',
@@ -259,7 +259,7 @@ constEnhancedSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advan
      "https:// github.com/zion-tech-group"
     ]
   }
-constEnhancedSEOHead: React.FC= () => {"contactType":"sales",
+const EnhancedSEOHead: React.FC = () => {"contactType":"sales",
      "email":"kleber@ziontechgroup.com"
    },
    "sameAs": [
@@ -295,7 +295,7 @@ constEnhancedSEOHead: React.FC= () => {"contactType":"sales",
      "query-input":"requiredname=search_term_string"
     }
   }
-  constfinalStructuredData= structuredData || default StructuredData;
+  constfinalStructuredData= structuredData || default StructuredData
   return (
   <Helme t>{/* Basic MetaTags */}
     <titl e>{title}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author"content="Zion TechGroup" /><metaname="robots"content="index,follow" /><metaname="googlebot"content="index,follow" /><metaname="bingbot"content="index,follow" />{/* CanonicalURL */}
@@ -316,4 +316,4 @@ constEnhancedSEOHead: React.FC= () => {"contactType":"sales",
     </scrip></Helme>
   )
 }
-export default EnhancedSEOHead;
+export default EnhancedSEOHead

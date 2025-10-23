@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ContentStatisticsPage: React.FC = () => {
+const ContentStatisticsPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -142,11 +142,11 @@ import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react'
 import { Zap } from 'lucide-react'
 
-const ContentStatistics: React.FC = () => {
+const ContentStatistics: React.FC  = () => {
 const [counters, setCounters] = useState({
 import React, {useStateuseEffect} from 'react'
 import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket} from 'lucide-react'
-constContentStatistics: React.FC= () =>{const [counterssetCounters] = useState({
+const ContentStatistics: React.FC = () => {const [counterssetCounters] = useState({
 clients: 0,
 projects: 0,
 satisfaction: 0,
@@ -233,11 +233,11 @@ title: 'Growth Rate',
 description: 'Year-over-year business growth',
 value: '30 0%'}
 ];
-useEffect(() => {constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps;
+useEffect(() => {constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps
 consttimers= Object.keys(targetCounters).map((key) => {
   
 consttarget= targetCounters[key as keyof type of targetCounters]
-constduration=2000; // 2secondsconstincrement= target / (duration /16); //60fps;
+constduration=2000; // 2secondsconstincrement= target / (duration /16) //60fps
 return setInterva l(() => {
   
 setCounters(prev=> {

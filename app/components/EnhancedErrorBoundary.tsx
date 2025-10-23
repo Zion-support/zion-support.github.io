@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const EnhancedErrorBoundaryPage: React.FC = () => {
+const EnhancedErrorBoundaryPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -214,7 +214,7 @@ import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
 import { Phone, Mail } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-interface Props {;
+interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
@@ -247,16 +247,16 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
   static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo})
-    // Log error to monitoring service;
+    // Log error to monitoring service
     // console.error('Error caught by boundary:', error, errorInfo)
     }
-  handleRetry= () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined})
+  handleRetry = () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined})
   }
-  handleReload= () => {windo w.location.reload()
+  handleReload = () => {windo w.location.reload()
  }
   render() {if (this.state.hasError) {
       if (this.props.fallback) {
-        return thi s.props.fallback;
+        return thi s.props.fallback
      }
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">

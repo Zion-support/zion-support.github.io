@@ -11,7 +11,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constAIServicesPage: React.FC= () =>{constservices= [
+const AIServicesPage: React.FC = () => {constservices= [
     {
       icon: Brain,
       title: 'Machine Learning Solutions',

@@ -5,10 +5,10 @@ import { CheckCircle, Star, Zap, BarChart, Shield, Helmet } from 'lucide-react'
 import { Clock } from 'lucide-react'
 ;
 import { Server, Lock, Monitor, CheckCircle, Star, Shield, Zap, BarChart, Helmet, Check, Clock } from 'lucide-react';
-const ITInfrastructurePage: React.FC = () => {
+const ITInfrastructurePage: React.FC  = () => {
   const itServices = [
-import {Server, Lock, Monitor, CheckCircle, Star, Zap, BarChart, Shield, Helmet} from 'lucide-react';;
-constITInfrastructurePage: React.FC= () =>{constitServices= [
+import {Server, Lock, Monitor, CheckCircle, Star, Zap, BarChart, Shield, Helmet} from 'lucide-react';
+const ITInfrastructurePage: React.FC = () => {constitServices= [
     {
       title: 'Cloud Infrastructure Management',
       description: 'Comprehensive cloud infrastructure setup, optimization, and management across AWS, Azure, and Google Cloud platforms.',
@@ -426,7 +426,7 @@ constITInfrastructurePage: React.FC= () =>{constitServices= [
     </>
   )
 }
-export default ITInfrastructurePage;
+export default ITInfrastructurePage
       marketPrice: '$120 0-250 0/month',
       technologies: ['Microsoft 36 5', 'Google Workspace', 'Exchange Server', 'Postfix', 'SpamAssassin', 'MDM'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +13024640950'
@@ -475,6 +475,6 @@ export default ITInfrastructurePage;
               >📞 +1 3024640950</a><ahref="mailto:kleber@ziontechgroup.com"
                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semiboldhover:bg-whitehover:text-blue-600transition-colors"
               >✉️ kleber@ziontechgroup.com</a></di><divclassName="text-smtext-blue-200"><p>📍 364E Main St STE1008,MiddletownDE19709</p><pclassName="mt-2">🌐https://ziontechgroup.com</p></di></di></sectio></di></>
-  );
+  )
 };
 export default ITInfrastructurePage;

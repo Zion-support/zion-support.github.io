@@ -7,8 +7,8 @@ interface SitemapEntry {
 
 export default function sitemap(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com'
-;
-  // Main pages;
+
+  // Main pages
   const mainPages = [
     '',
     '/about',
@@ -33,7 +33,7 @@ export default function sitemap(): SitemapEntry[] {
     '/system-status',
     '/sitemap'
   ]
-  // AI Services - Micro SAAS;
+  // AI Services - Micro SAAS
   const microSaasServices = [
     '/ai-project-manager',
     '/ai-social-media-manager',
@@ -61,7 +61,7 @@ export default function sitemap(): SitemapEntry[] {
     '/ai-email-assistant',
     '/ai-chatbot-builder'
   ]
-  // AI Services - Core AI;
+  // AI Services - Core AI
   const coreAIServices = [
     '/ai-services',
     '/machine-learning',
@@ -78,7 +78,7 @@ export default function sitemap(): SitemapEntry[] {
     '/ai-data-analytics',
     '/ai-marketing'
   ]
-  // IT Services;
+  // IT Services
   const itServices = [
     '/it-services',
     '/cloud-services',
@@ -93,7 +93,7 @@ export default function sitemap(): SitemapEntry[] {
     '/database',
     '/networking'
   ]
-  // Specialized Services;
+  // Specialized Services
   const specializedServices = [
     '/quantum-computing',
     '/autonomous-systems',
@@ -113,7 +113,7 @@ export default function sitemap(): SitemapEntry[] {
     '/task-manager-pro',
     '/smart-analytics'
   ]
-  // Blog posts;
+  // Blog posts
   const blogPosts = [
     '/blog/agent-release-runbooks-v2-2026',
     '/blog/ai-2025-2026-mega-trends-breakthrough',
@@ -144,7 +144,7 @@ export default function sitemap(): SitemapEntry[] {
     '/blog/ai-powered-autonomous-business-processes-2026',
     '/blog/ai-trends-2026-future-enterprise-transformation'
   ]
-  // Combine all pages;
+  // Combine all pages
   const allPages = [
     ...mainPages,
     ...microSaasServices,

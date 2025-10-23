@@ -5,7 +5,7 @@ import PerformanceMonitor from "./components/PerformanceMonitor";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
-const App: React.FC = () => {
+const App: React.FC  = () => {
   return (
     <>
       <Head>

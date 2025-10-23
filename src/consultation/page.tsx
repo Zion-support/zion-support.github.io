@@ -17,7 +17,7 @@ import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
 
-constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
+const ConsultationPage: React.FC = () => {const [formDatasetFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -41,7 +41,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission;
+    // Handle form submission
     const subject = `Free Consultation Request from ${formData.name} - ${formData.company}`
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nIndustry: ${formData.industry}\nCompany Size: ${formData.companySize}\nCurrent Challenges: ${formData.currentChallenges}\nGoals: ${formData.goals}\nTimeline: ${formData.timeline}\nBudget: ${formData.budget}\nMessage: ${formData.message}`
     window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
@@ -54,7 +54,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
   };
 
   consthandleSubmit= (e: React.FormEvent) => {e.preventDefault();
-    // Handle formsubmissionconstsubject= `Free Consultation Request from${formData.name} -${formData.company}`;
+    // Handle formsubmissionconstsubject= `Free Consultation Request from${formData.name} -${formData.company}`
     constbody= `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nIndustry: ${formData.industry}\nCompanySize: ${formData.companySize}\nCurrentChallenges: ${formData.currentChallenges}\nGoals: ${formData.goals}\nTimeline: ${formData.timeline}\nBudget: ${formData.budget}\nMessage:${formData.message}`;
     windo w.location.href= `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
@@ -140,7 +140,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 identify opportunities, and provide actionable recommendations to drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a;
+                <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
@@ -149,8 +149,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  className="cyber-button flex items-center space-x-2" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
                   <span>Schedule Now</span>
@@ -213,8 +212,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
             </p><divclassName="flex flex-colsm:flex-row gap-4justify-centeritems-center"><ahref="tel:+13024640950"
                  className="cyber-button flexitems-centerspace-x-2"
                 ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flexitems-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
+                 className="cyber-button flexitems-centerspace-x-2" style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
                 ><MailclassName="w-5h-5" /><spa n>ScheduleNow</spa></a></di></di></sectio>{/* BenefitsSection */}
         <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">What You'll Get</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">{consultationBenefits.map((benefitindex) => (
              <divkey={index}className="cyber-card p-6 text-centerhover:scale-105transition-allduration-300"><benefit.iconclassName="w-12h-1 2text-cyan-400mx-automb-4" /><h3className="text-xl font-boldtext-whitemb-3">{benefit.title}</h><pclassName="text-gray-300">{benefit.description}</p></di>))}
@@ -230,31 +228,27 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
                          name="name"
                           requiredvalue={formData.name}
                           onChange={handleInputChange}
-                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                         placeholder="Enter your fullname"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Enter your fullname"
                         /></di><di v><labelhtmlFor="email"className="block text-sm font-medium text-gray-300mb-2">Email Address *
                       </labe><inputtype="email"
                          id="email"
                          name="email"
                           requiredvalue={formData.email}
                           onChange={handleInputChange}
-                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                         placeholder="Enter youremail"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Enter youremail"
                         /></di></di><divclassName="grid grid-cols-1md:grid-cols-2gap-4"><di v><labelhtmlFor="company"className="block text-sm font-medium text-gray-300mb-2">Company Name *
                       </labe><inputtype="text"
                          id="company"
                          name="company"
                           requiredvalue={formData.company}
                           onChange={handleInputChange}
-                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                         placeholder="Enter your companyname"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Enter your companyname"
                         /></di><di v><labelhtmlFor="phone"className="block text-sm font-medium text-gray-300mb-2">Phone Number</labe><inputtype="tel"
                          id="phone"
                          name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                         placeholder="Enter your phonenumber"
+                         className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Enter your phonenumber"
                         /></di></di><divclassName="grid grid-cols-1md:grid-cols-2gap-4"><di v><labelhtmlFor="industry"className="block text-sm font-medium text-gray-300mb-2">Industry</labe><selectid="industry"
                          name="industry"
                           value={formData.industry}
@@ -270,15 +264,13 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
                         rows={3}
                         value={formData.currentChallenges}
                         onChange={handleInputChange}
-                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                       placeholder="Describe your current technologychallenges"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Describe your current technologychallenges"
                       /></di><di v><labelhtmlFor="goals"className="block text-sm font-medium text-gray-300mb-2">Business Goals</labe><textareaid="goals"
                        name="goals"
                         rows={3}
                         value={formData.goals}
                         onChange={handleInputChange}
-                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                       placeholder="What are your main businessobjectives?"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="What are your main businessobjectives?"
                       /></di><divclassName="grid grid-cols-1md:grid-cols-2gap-4"><di v><labelhtmlFor="timeline"className="block text-sm font-medium text-gray-300mb-2">Implementation Timeline</labe><selectid="timeline"
                          name="timeline"
                           value={formData.timeline}
@@ -294,8 +286,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
                         rows={4}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        placeholder="Any additional information you'd like to share"
+                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400" placeholder="Any additional information you'd like to share"
                       />
                     </div>
                     <button;
@@ -382,8 +373,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     </>
   )
 }
-                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                       placeholder="Any additional information you'd like toshare"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Any additional information you'd like toshare"
                       /></di><
                      type="submit"
                      className="w-full cyber-button py-3px-6text-center"

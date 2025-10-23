@@ -5,9 +5,9 @@ import { CheckCircle, Star, Phone } from 'lucide-react';
 'use client';
 import React from 'react';
 import { Receipt, CheckCircle, Star, Phone, Check } from 'lucide-react';
-import {Receipt, CheckCircle, Phone, Star} from 'lucide-react';;
+import {Receipt, CheckCircle, Phone, Star} from 'lucide-react';
 
-constExpenseTrackerPage: React.FC= () =>{constfeatures= [
+const ExpenseTrackerPage: React.FC = () => {constfeatures= [
     {
       icon: Receipt,
       title: 'Smart Receipt Scanning',

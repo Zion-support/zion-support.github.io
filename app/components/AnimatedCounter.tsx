@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
-interface AnimatedCounterProps {;
+interface AnimatedCounterProps {
   end: number;
   duration?: number;
   suffix?: string;
@@ -36,7 +36,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1)
 
-      // Easing function for smooth animation;
+      // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4)
       const currentCount = Math.floor(easeOutQuart * end)
 import React, {useEffect, useState, useRef} from 'react';
@@ -48,7 +48,7 @@ interface AnimatedCounterProp s {end: number;
   prefix?: string;
   class Nam e?: string;}
 
-constAnimatedCounter: React.FC<AnimatedCounterProp s>= ({end,
+const AnimatedCounter: React.FC<AnimatedCounterProp s>= ({end,
   duration=2000,
   suffix= '',
   prefix= '',
@@ -70,7 +70,7 @@ constAnimatedCounter: React.FC<AnimatedCounterProp s>= ({end,
       if (!startTime) startTime= currentTime;
       constprogress= Math.min((currentTime - startTime) / duration, 1);
 
-      // Easing function for smoothanimationconsteaseOutQuart=1- Math.pow(1 - progress, 4);
+      // Easing function for smoothanimationconsteaseOutQuart=1- Math.pow(1 - progress, 4)
       constcurrentCount= Math.floor(easeOutQuart * end);
 
       setCount(currentCount)
@@ -104,7 +104,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const AnimatedCounterPage: React.FC = () => {
+const AnimatedCounterPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,

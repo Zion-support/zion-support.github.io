@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const HeaderPage: React.FC = () => {
+const HeaderPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -143,7 +143,7 @@ export default HeaderPage;
       <div className="h-16 lg:h-20" />
     </>
 import Navigation from './Navigation'
-constHeader: React.FC= () =>{return (
+const Header: React.FC = () => {return (
   <><Navigation />{/* Spacer to prevent content from going under fixedheader */}
     <divclassName="h-16lg:h-20" /></di></>
   )

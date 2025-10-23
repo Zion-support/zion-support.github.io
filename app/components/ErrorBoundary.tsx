@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ErrorBoundaryPage: React.FC = () => {
+const ErrorBoundaryPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -143,7 +143,7 @@ import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
 import { Phone } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-interface Props {;
+interface Props {
 children: ReactNode;
 fallback?: ReactNode;
 }
@@ -162,18 +162,18 @@ this.state= { hasError: false}
 }
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 }
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production;
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production
 if (process.env.NODE_ENV=== 'production') {
-// In production, you would send this to an error reporting service;
+// In production, you would send this to an error reporting service
 // Example: errorReportingService.captureException(error, { extra: errorInfo})
 }
 this.setState({errorerrorInfo})
 }
-handleReload= () => {windo w.location.reload()}
-handleGoHome= () => {windo w.location.href= '/'}
+handleReload = () => {windo w.location.reload()}
+handleGoHome = () => {windo w.location.href= '/'}
 render() {if (this.state.hasError) {
 if (this.props.fallback) {
-return this.props.fallback;
+return this.props.fallback
 }
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">

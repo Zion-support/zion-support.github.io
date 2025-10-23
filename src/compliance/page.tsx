@@ -11,7 +11,7 @@ import { ArrowLeft, FileText, Lock, CheckCircle, Shield, Users, Check, Award } f
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const CompliancePage: React.FC = () => {
+const CompliancePage: React.FC  = () => {
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -128,11 +128,11 @@ const CompliancePage: React.FC = () => {
     </>
   )
 }
-import {ArrowLeft, FileText, Lock, CheckCircle, Users, Shield, Award, Award} from 'lucide-react';;;
+import {ArrowLeft, FileText, Lock, CheckCircle, Users, Shield, Award, Award} from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constCompliancePage: React.FC= () =>{constcertifications= [
+const CompliancePage: React.FC = () => {constcertifications= [
     { name: 'SOC2Type II', status: 'Certified'},
     {name: 'ISO27001', status: 'Certified'},
     {name: 'GDPR', status: 'Compliant'},

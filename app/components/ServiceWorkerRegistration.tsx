@@ -7,7 +7,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ServiceWorkerRegistrationPage: React.FC = () => {
+const ServiceWorkerRegistrationPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -42,7 +42,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
 import {Helmet} from 'react-helmet-async'
-constServiceWorkerRegistrationPage: React.FC= () =>{constfeatures= [
+const ServiceWorkerRegistrationPage: React.FC = () => {constfeatures= [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',

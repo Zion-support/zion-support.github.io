@@ -9,7 +9,7 @@ import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constAISocialMediaManagerPage: React.FC= () =>{constfeatures= [
+const AISocialMediaManagerPage: React.FC = () => {constfeatures= [
     'AI-powered content creation and curation',
     'Smart scheduling across all platforms',
     'Advanced analytics and performance insights',

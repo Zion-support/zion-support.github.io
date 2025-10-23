@@ -5,7 +5,7 @@
  */
 import React from 'react'
 import { performanceConfig } from '../../performance.config'
-export interface PerformanceMetrics {;
+export interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
   cls?: number;
@@ -13,7 +13,7 @@ export interface PerformanceMetrics {;
   ttfb?: number;
   inp?: number;
 }
-export interface ErrorReport {;
+export interface ErrorReport {
   message: string;
   stack?: string;
   component?: string;
@@ -31,19 +31,19 @@ class MonitoringService {
     }
   }
   private initializeMonitoring(): void {
-    // Monitor Web Vitals;
+    // Monitor Web Vitals
     this.monitorWebVitals()
-    // Monitor Long Tasks;
+    // Monitor Long Tasks
     this.monitorLongTasks()
-    // Monitor Resource Loading;
+    // Monitor Resource Loading
     this.monitorResourceTiming()
-    // Global Error Handler;
+    // Global Error Handler
     this.setupErrorHandling()
   }
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
-        // Largest Contentful Paint;
+        // Largest Contentful Paint
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
@@ -51,7 +51,7 @@ class MonitoringService {
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-        // First Input Delay;
+        // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
@@ -60,7 +60,7 @@ class MonitoringService {
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })
-        // Cumulative Layout Shift;
+        // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries()
@@ -73,7 +73,7 @@ class MonitoringService {
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
-        // First Contentful Paint;
+        // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries()
           entries.forEach(entry => {
@@ -94,13 +94,13 @@ class MonitoringService {
           for (const entry of list.getEntries()) {
             // // console.warn('Long task detected:', {
             //   duration: entry.duration,
-            //   startTime: entry.startTime;
+            //   startTime: entry.startTime
             // })
           }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
-        // Long task API might not be available;
+        // Long task API might not be available
       }
     }
   }
@@ -115,7 +115,7 @@ class MonitoringService {
               // // console.warn('Slow resource detected:', {
               //   name: resourceEntry.name,
               //   duration: resourceEntry.duration,
-              //   type: resourceEntry.initiatorType;
+              //   type: resourceEntry.initiatorType
               // })
             }
           })
@@ -127,7 +127,7 @@ class MonitoringService {
     }
   }
   private setupErrorHandling(): void {
-    // Global error handler;
+    // Global error handler
     window.addEventListener('error', (event) => {
       this.logError({
         message: event.message,
@@ -137,7 +137,7 @@ class MonitoringService {
         url: window.location.href;
       })
     })
-    // Unhandled promise rejection handler;
+    // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
@@ -148,7 +148,7 @@ class MonitoringService {
     })
   }
   private reportMetric(name: string, value: number): void {
-    // Sample rate;
+    // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return;
     }
@@ -171,7 +171,7 @@ class MonitoringService {
   }
   public logError(error: ErrorReport): void {
     this.errors.push(error)
-    // Keep only last 50 errors;
+    // Keep only last 50 errors
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
@@ -189,7 +189,7 @@ class MonitoringService {
   }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
         // // console.log('[Memory]', {
         //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
@@ -201,7 +201,7 @@ class MonitoringService {
   }
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
         // // console.log('[Navigation Timing]', {
         //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
@@ -216,6 +216,6 @@ class MonitoringService {
     }
   }
 }
-// Singleton instance;
+// Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring;

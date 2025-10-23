@@ -5,10 +5,10 @@ import { CheckCircle, Star, Zap, Brain, Shield, Database, Helmet } from 'lucide-
 import { Globe } from 'lucide-react'
 ;
 import { Coins, CheckCircle, Star, Brain, Shield, Zap, Database, Helmet, Check, Globe } from 'lucide-react';
-const BlockchainWeb3Page: React.FC = () => {
+const BlockchainWeb3Page: React.FC  = () => {
   const blockchainServices = [
-import {Coins, CheckCircle, Star, Zap, Brain, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
-constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
+import {Coins, CheckCircle, Star, Zap, Brain, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';
+constBlockchainWeb3 Page: React.FC = () => {constblockchainServices= [
     {
       title: 'Smart Contract Development',
       description: 'Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain applications.',

@@ -4,7 +4,7 @@ import { CheckCircle, Star, Brain, Zap, Users, Target, TrendingUp, BarChart, Hel
 import {CheckCircle, Star, Zap, Brain, BarChart, Target, Users, TrendingUp, Helmet} from 'lucide-react';
 import React from 'react';
 
-constAIMarketingPage: React.FC= () =>{constaiMarketingServices= [
+const AIMarketingPage: React.FC = () => {constaiMarketingServices= [
     {
       title: 'AI-Powered Ad Campaign Optimization',
       description: 'Intelligent ad campaign management with real-time optimization, audience targeting, and budget allocation across all platforms.',

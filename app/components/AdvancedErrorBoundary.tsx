@@ -3,7 +3,7 @@ import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
 import { Mail } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-interface Props {;
+interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -26,7 +26,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const AdvancedErrorBoundaryPage: React.FC = () => {
+const AdvancedErrorBoundaryPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -87,9 +87,9 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More</button>
-    // Report error to external service;
+    // Report error to external service
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo)
     }
   }
 
@@ -106,15 +106,15 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
       error,
       errorInfo;
     })
-    // Call custom error handler if provided;
+    // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
     }
-    // Log error to console in development;
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // console.error('Error caught by boundary:', error, errorInfo)
     }
-    // Log error to external service in production;
+    // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)
     }
@@ -125,7 +125,7 @@ const AdvancedErrorBoundaryPage: React.FC = () => {
     const errorData = {
       errorInfo,
 import React, {Component, ErrorInfo, ReactNode} from 'react'
-import {AlertTriangle, RefreshCw, Home, Mail} from 'lucide-react';
+import {AlertTriangle, RefreshCw, Home, Mail} from 'lucide-react'
 interface Prop s {children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) =>void;}
@@ -147,12 +147,12 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo});
-    // Call custom error handler if provided;
+    // Call custom error handler if provided
     if (this.props.onError) {this.props.onError(errorerrorInfo);
    }
-    // Log error to console in development;
+    // Log error to console in development
     if (process.env.NODE_ENV=== 'development') {}
-    // Log error to external service in production;
+    // Log error to external service in production
     if (process.env.NODE_ENV=== 'production') {this.logErrorToService(errorerrorInfo);
    }
   }
@@ -164,24 +164,24 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href;
+      url: window.location.href
     }
-    // Log the error data for debugging;
+    // Log the error data for debugging
     // console.error('Error data:', errorData)
-      url: windo w.location.href;
+      url: windo w.location.href
    };
-    // Log the error data for debugging;
-    // Example: Send to your error reporting service;
+    // Log the error data for debugging
+    // Example: Send to your error reporting service
     // You could send this to yourbackend:
     // fetch('/$1/error-report', {//   method: 'POST',
     //   headers: { 'Content-Type': 'application/json'},
     //   body: JSON.stringify(errorData)
     // })
-    // For now, just log to console;
-    // Error data logged;
+    // For now, just log to console
+    // Error data logged
   }
 
-  handleReset= () => {this.setState({
+  handleReset = () => {this.setState({
       hasError: false,
       error: undefined,
       errorInfo: undefined,
@@ -189,7 +189,7 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
     })
   }
 
-  handleReportError = () => {
+  handleReportError  = () => {
     const { error, errorId } = this.state;
     const subject = `Error Report - ${errorId}`
     const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`
@@ -201,12 +201,12 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
       sessionId: this.getSessionId(),
     };
 
-    // Send to error reporting service;
+    // Send to error reporting service
     this.sendErrorReport(errorReport);
   };
 
   private getUserId = (): string | null => {
-    // Try to get user ID from localStorage or other sources;
+    // Try to get user ID from localStorage or other sources
     try {
       return localStorage.getItem('userId') || null;
     } catch {
@@ -215,7 +215,7 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
   };
 
   private getSessionId = (): string => {
-    // Generate or retrieve session ID;
+    // Generate or retrieve session ID
     try {
       let sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
@@ -234,7 +234,7 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
 
   private sendErrorReport = async (errorReport: ErrorReport) => {
     try {
-      // Send to your error reporting service;
+      // Send to your error reporting service
       await fetch('/api/errors', {
         method: 'POST',
         headers: {
@@ -251,7 +251,7 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
     }
   };
 
-  private handleRetry = () => {
+  private handleRetry  = () => {
     if (this.retryCount < this.maxRetries) {
       this.retryCount++;
       this.setState({
@@ -263,22 +263,22 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
     }
   };
 
-  private handleReload = () => {
+  private handleReload  = () => {
     window.location.reload();
   };
 
-  private handleGoHome = () => {
+  private handleGoHome  = () => {
     window.location.href = '/';
   };
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI;
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-      // Default error UI;
+      // Default error UI
       return (
         <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
           <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -391,7 +391,7 @@ class AdvancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
    });
   };
 
-  handleReportError= () => {const{errorerrorId} = this.state;
+  handleReportError = () => {const{errorerrorId} = this.state;
     constsubject= `Error Report -${errorId}`;
     constbody= `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were do ing when thiserroroccurred:`;
     constmailtoLink= `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

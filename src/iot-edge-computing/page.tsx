@@ -5,10 +5,10 @@ import { CheckCircle, Star, Zap, BarChart, Shield, Database, Helmet } from 'luci
 import { Cpu, Globe } from 'lucide-react'
 ;
 import { Wifi, CheckCircle, Star, Shield, Zap, Database, BarChart, Helmet, Check, Cpu, Globe } from 'lucide-react';
-const IoTEdgeComputingPage: React.FC = () => {
+const IoTEdgeComputingPage: React.FC  = () => {
   const iotServices = [
-import {Wifi, CheckCircle, Star, Zap, BarChart, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
-constIoTEdgeComputingPage: React.FC= () =>{constiotServices= [
+import {Wifi, CheckCircle, Star, Zap, BarChart, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';
+const IoTEdgeComputingPage: React.FC = () => {constiotServices= [
     {
       title: 'IoT Sensor Network Design',
       description: 'Comprehensive IoT sensor networks with real-time data collection and edge processing capabilities.',

@@ -11,7 +11,7 @@ import { CheckCircle, Star } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constAICRMPage: React.FC= () =>{constfeatures= [
+const AICRMPage: React.FC = () => {constfeatures= [
     {
       icon: Brain,
       title: 'AI-Powered Lead Scoring',

@@ -4,7 +4,7 @@ import { Helmet } from 'lucide-react';
 import {Helmet} from 'lucide-react';
 import React from 'react';
 
-const EnterpriseTransformationPage: React.FC = () => {
+const EnterpriseTransformationPage: React.FC  = () => {
   return (
     <>
       <Helmet>
@@ -111,7 +111,7 @@ const EnterpriseTransformationPage: React.FC = () => {
   )
 }
 export default EnterpriseTransformationPage;
-constEnterpriseTransformationPage: React.FC= () =>{return (
+const EnterpriseTransformationPage: React.FC = () => {return (
   <><Helme t><titl e>AI EnterpriseTransformation: $50 M Annual Savings Blueprint | ZionTechGroup</titl><metaname="description"content="Discover how Fortune 50 0 companies achieve $50 M annual savings,95% process automation, and300% ROI through comprehensive AI transformationstrategies." /><metaproperty="og:url"content="/$1/ai-enterprise-transformation-2025.jpg" /></Helme><divclassName="min-h-screenbg-gray-50"><divclassName="max-w-4 xl mx-autopx-4py-8"><divclassName="bg-white rounded-lg shadow-lgp-8"><divclassName="text-centermb-8"><spanclassName="inline-block bg-green-100text-green-800px-4 py-2 rounded-full text-smfont-mediummb-4"></className="inline-block bg-green-100text-green-800px-4 py-2 rounded-full text-smfont-mediummb-4">💰 Success Story</spa><spanclassName="text-4 xl font-bold text-gray-900mb-4"></spa></className="text-4 xl font-bold text-gray-900mb-4">AI EnterpriseTransformation: $50 M Annual Savings Blueprint</h><spanclassName="text-gray-600text-lg"></spa></className="text-gray-600text-lg">January28, 2025· 50min read · Enterprise AI</p></di><divclassName="prosemax-w-none"><h2className="text-2 xl font-bold text-gray-900mb-6">🎯TransformationResults</h><spanclassName="text-gray-700mb-6"></spa></className="text-gray-700mb-6">This comprehensive case study reveals how a Fortune 500companyachieved<stron g>$50 Mannualsavings</stron>, 
             <stron g>9 5%processautomation</stron>,and<stron g>300%ROI</stron>through strategic AI transformation. 
               Learn the exact frameworks, timelines, and implementation strategies that delivered these breakthrough results.

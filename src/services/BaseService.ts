@@ -5,7 +5,7 @@
  */
 import { apiClient } from '../utils/apiClient'
 import { logger } from '../utils/logger'
-export interface ServiceOptions {;
+export interface ServiceOptions {
   baseUrl?: string;
   timeout?: number;
   retries?: number;
@@ -26,7 +26,7 @@ export class BaseService {;
       timeout: 30000,
       retries: 3,
       cache: false,
-      cacheDuration: 300000, // 5 minutes;
+      cacheDuration: 300000, // 5 minutes
       ...options;
     }
   }

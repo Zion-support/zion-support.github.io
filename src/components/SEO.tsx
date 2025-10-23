@@ -8,7 +8,7 @@ import { Helmet } from 'lucide-react';
 import React from 'react'
 import { Helmet } from 'lucide-react'
 
-export interface SEOProps {;
+export interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string[]
@@ -57,12 +57,12 @@ const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',
   url: 'https:// ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
-  twitterCard: 'summary_large_image' as const;
+  twitterCard: 'summary_large_image' as const
 }
 export const SEO: React.FC<SEOProps> = ({
   title,;
   twitterCard: 'summary_large_image' as const};
-exportconstSEO:React.FC<SEOProp s>= ({title,
+exportconst SEO:React.FC<SEOProp s>= ({title,
   description,
   keywords,
   image,
@@ -86,8 +86,8 @@ exportconstSEO:React.FC<SEOProp s>= ({title,
     twitterCard,
     locale;
   }
-  // Generate structured data;
-  const generateStructuredData = () => {
+  // Generate structured data
+  const generateStructuredData  = () => {
     if (structuredData) {
       return structuredData;
     }
@@ -97,7 +97,7 @@ exportconstSEO:React.FC<SEOProp s>= ({title,
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image: seo.image;
+      image: seo.image
     }
     if (author) {
       baseStructuredData.author = {
@@ -161,9 +161,9 @@ exportconstSEO:React.FC<SEOProp s>= ({title,
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       {/* Preload critical resources */}
-      <link;
+      <link
         rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400500;600;700&display=swap"
         as="style"
       />
     </Helmet>
@@ -171,15 +171,15 @@ exportconstSEO:React.FC<SEOProp s>= ({title,
 }
 export default SEO;
   };
-  // Generate structureddataconstgenerateStructuredData= () => {if (structuredDat a) {
-      return structuredDat a;
+  // Generate structureddataconstgenerateStructuredData = () => {if (structuredDat a) {
+      return structuredDat a
    }
-   constbaseStructuredData:Record<string, unknown>= {'@context': 'https:// schema.org',
+   const baseStructuredData:Record<string, unknown>= {'@context': 'https:// schema.org',
       '@type': type=== 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image : seo.image;
+      image : seo.image
    };
     if (autho r) {baseStructuredData.author= {
         '@type': 'Person',
@@ -216,7 +216,7 @@ export default SEO;
     <linkrel="preconnect"href="https://fonts.googleapis.com" /><linkrel="preconnect"href="https://fonts.gstatic.com"crossOrigin="anonymous" />{/* DNSPrefetch */}
     <linkrel="dns-prefetch"href="https://www.google-analytics.com" />{/* Preload criticalresources */}
     <linkrel="preload"
-       href="https:// fonts.googleapis.com/css2?family=Inter:wght@40 0;50 0;60 0;700&display=swap"
+       href="https:// fonts.googleapis.com/css2?family=Inter:wght@40 050 0;60 0;700&display=swap"
        as="style"
       /></Helme>
   );

@@ -5,7 +5,7 @@ import { CheckCircle, Phone, Mail, MapPin, Helmet, Check } from 'lucide-react';
 import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
 import React from 'react';
 
-constAnalyticsToolsPage: React.FC= () =>{constanalyticsTools= [
+const AnalyticsToolsPage: React.FC = () => {constanalyticsTools= [
     {
       title: 'AI Business Intelligence',
       price: '$39 9/month',

@@ -32,7 +32,7 @@ class SecurityEnhancer {
       enableContentSecurityPolicy: true,
       allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
       trustedDomains: ['zion.app', 'www.zion.app'],
-      ...config;
+      ...config
     }
     this.metrics = {
       blockedRequests: 0,
@@ -62,7 +62,7 @@ class SecurityEnhancer {
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'"
-    ].join('; ')
+    ].join(' ')
     const meta = document.createElement('meta')
     meta.httpEquiv = 'Content-Security-Policy'
     meta.content = csp;
@@ -77,10 +77,10 @@ class SecurityEnhancer {
   }
   private setupCSRFProtection(): void {
     if (!this.config.enableCSRFProtection) return;
-    // Generate CSRF token;
+    // Generate CSRF token
     const token = this.generateCSRFToken()
     document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`
-    // Add token to all forms;
+    // Add token to all forms
     this.addCSRFTokenToForms(token)
   }
   private generateCSRFToken(): string {
@@ -99,14 +99,14 @@ class SecurityEnhancer {
     })
   }
   private monitorSuspiciousActivity(): void {
-    // Monitor for suspicious patterns;
+    // Monitor for suspicious patterns
     this.monitorConsoleAccess()
     this.monitorDOMManipulation()
     this.monitorNetworkRequests()
   }
   private monitorConsoleAccess(): void {
     const originalConsole = { ...console } as any;
-    // Override console methods to detect debugging;
+    // Override console methods to detect debugging
     const methods = ['log', 'warn', 'error', 'info'] as const;
     methods.forEach(method => {
       (console as any)[method] = (...args: unknown[]) => {
@@ -140,7 +140,7 @@ class SecurityEnhancer {
     const originalFetch = window.fetch;
     window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString()
-      // Check if request is to allowed origins;
+      // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
         throw new Error('Request blocked: Origin not allowed')
@@ -155,11 +155,11 @@ class SecurityEnhancer {
         urlObj.origin === origin || urlObj.hostname.endsWith(origin.replace('https://', ''))
       )
     } catch {
-      return false;
+      return false
     }
   }
   private setupSecureHeaders(): void {
-    // These would typically be set by the server, but we can add meta tags;
+    // These would typically be set by the server, but we can add meta tags
     const headers = [
       { name: 'X-Frame-Options', content: 'DENY' },
       { name: 'X-Content-Type-Options', content: 'nosniff' },
@@ -175,9 +175,9 @@ class SecurityEnhancer {
   }
   public sanitizeInput(input: string): string {
     return input;
-      .replace(/[<>]/g, '') // Remove potential HTML tags;
+      .replace(/[<>]/g, '') // Remove potential HTML tags
       .replace(/javascript:/gi, '') // Remove javascript: protocol,
-      .replace(/on\w+=/gi, '') // Remove event handlers;
+      .replace(/on\w+=/gi, '') // Remove event handlers
       .trim()
   }
   public validateInput(input: string, type: 'email' | 'url' | 'text'): boolean {
@@ -231,7 +231,7 @@ Security Report:
     this.eventListeners = []
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const securityEnhancer = new SecurityEnhancer();
-// Export class for custom instances;
+// Export class for custom instances
 export { SecurityEnhancer, type SecurityConfig, type SecurityMetrics }

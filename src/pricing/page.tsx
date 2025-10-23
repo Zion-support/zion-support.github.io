@@ -15,7 +15,7 @@ import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
 
-constPricingPage: React.FC= () =>{constpricingPlans= [
+const PricingPage: React.FC = () => {constpricingPlans= [
     {
       name: 'Starter',
       price: '$29 9',
@@ -139,7 +139,7 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
           <section className="container mx-auto px-4 py-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <div;
+                <div
                   key={index}
       /><divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900"><Navigation /><mainclassName="pt-16">{/* HeroSection */}
         <sectionclassName="container mx-auto px-4 py-16text-center"><divclassName="max-w-4xlmx-auto"><spanclassName="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></className="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text">Simple, Transparent Pricing</h><spanclassName="text-xlmd:text-2 xl text-cyan-400mb-8"></className="text-xlmd:text-2 xl text-cyan-400mb-8">Choose the perfect plan for your business needs</p><spanclassName="text-lg text-gray-300mb-12max-w-3xlmx-auto"></className="text-lg text-gray-300mb-12max-w-3xlmx-auto">All plans include our core AI and IT services with no hidden fees. 
@@ -214,8 +214,7 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  className="cyber-button flex items-center justify-center space-x-2" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Free Quote</span>
@@ -244,8 +243,7 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
             </h><spanclassName="text-xl text-gray-300mb-8"></className="text-xl text-gray-300mb-8">Contact us today to discuss your needs and find the perfect plan</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
                  className="cyber-button flex items-centerjustify-centerspace-x-2"
                 ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
+                 className="cyber-button flex items-centerjustify-centerspace-x-2" style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
                 ><MailclassName="w-5h-5" /><spa n>GetFreeQuote</spa></a></di></di></sectio></mai><Footer /></di></>
   );
 };

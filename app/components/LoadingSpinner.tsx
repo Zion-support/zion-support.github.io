@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const LoadingSpinnerPage: React.FC = () => {
+const LoadingSpinnerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -143,7 +143,7 @@ size?: 'sm' | 'md' | 'lg'
 interface LoadingSpinnerProp s {size?: 'sm' | 'md' | 'lg'
 color?: 'primary' | 'secondary' | 'white'
 text?: string}
-constLoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
+const LoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
 color= 'primary',
 text}) => {constsizeClasses= {
 sm: 'w-4 h-4',

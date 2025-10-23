@@ -9,12 +9,12 @@ import { Play, CheckCircle, Zap, Music, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import {Play, CheckCircle, Zap, Music} from 'lucide-react';;
+import {Play, CheckCircle, Zap, Music} from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
 
-constAIVoiceCloningPage: React.FC= () =>{constfeatures= [
+const AIVoiceCloningPage: React.FC = () => {constfeatures= [
     'Voice Cloning',
     'Text-to-Speech',
     'Emotion Control',
@@ -82,7 +82,7 @@ constAIVoiceCloningPage: React.FC= () =>{constfeatures= [
               <p className="text-xl text-gray-300 mb-8">
                 Create realistic voice clones for content, presentations, and customer service with cutting-edge AI technology</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a;
+                <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >

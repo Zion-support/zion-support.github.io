@@ -1,14 +1,14 @@
 'use client'
 import { useCallback } from 'react'
 import { useAnalytics } from '../components/AnalyticsProvider';
-// ErrorInfo interface removed as it's not used in this hook;
-// Global type definitions for browser events;
+// ErrorInfo interface removed as it's not used in this hook
+// Global type definitions for browser events
 declare global {
   interface Window {
     __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
   }
 }
-export const useErrorMonitoring = () => {
+export const useErrorMonitoring  = () => {
   const { trackEvent } = useAnalytics()
   const reportError = useCallback(
     (error: Error, context?: string) => {
@@ -21,14 +21,14 @@ export const useErrorMonitoring = () => {
     [trackEvent]
   )
   useEffect(() => {;
-    // Global error handler;
+    // Global error handler
     const handleError = (event: unknown) => {
       const errorEvent = event as { message: string; error?: Error }
       const error = new Error(errorEvent.message)
       error.stack = errorEvent.error?.stack;
       reportError(error, 'global_error')
     }
-    // Unhandled promise rejection handler;
+    // Unhandled promise rejection handler
     const handleUnhandledRejection = (event: unknown) => {
       const rejectionEvent = event as { reason: unknown }
       const error =
@@ -43,16 +43,16 @@ export const useErrorMonitoring = () => {
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown'
       reportError(error, `react_error_boundary: ${componentStack}`)
     }
-    // Add event listeners;
+    // Add event listeners
     window.addEventListener('error', handleError)
     window.addEventListener('unhandledrejection', handleUnhandledRejection)
-    // Expose React error handler globally for error boundaries;
+    // Expose React error handler globally for error boundaries
     (
       window as Window & {
         __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
       }
     ).__REACT_ERROR_HANDLER__ = handleReactError;
-    // Cleanup;
+    // Cleanup
     return () => {
       window.removeEventListener('error', handleError)
       window.removeEventListener('unhandledrejection', handleUnhandledRejection)

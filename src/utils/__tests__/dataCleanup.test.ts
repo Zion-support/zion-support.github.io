@@ -1,4 +1,4 @@
-// Mock data cleanup utility functions;
+// Mock data cleanup utility functions
 export const cleanData = (data: any[]): any[] => {
   return data.filter(item => item !== null && item !== undefined)
 }

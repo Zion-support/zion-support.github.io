@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 
-interface SEOOptimizerProps {;
+interface SEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string[]
@@ -18,12 +18,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData;
+  structuredData
 }) => {
   useEffect(() => {
-    // Update page title;
+    // Update page title
     document.title = title;
-    // Update meta description;
+    // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
@@ -38,7 +38,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const SEOOptimizerPage: React.FC = () => {
+const SEOOptimizerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -66,7 +66,7 @@ const SEOOptimizerPage: React.FC = () => {
     }
   ]
 ;
-    // Update keywords;
+    // Update keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]')
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '))
@@ -77,7 +77,7 @@ const SEOOptimizerPage: React.FC = () => {
       document.head.appendChild(meta)
     }
 
-    // Update canonical URL;
+    // Update canonical URL
     let canonicalLink = document.querySelector('link[rel="canonical"]')
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl)
@@ -88,7 +88,7 @@ const SEOOptimizerPage: React.FC = () => {
       document.head.appendChild(canonicalLink)
     }
 
-    // Update Open Graph tags;
+    // Update Open Graph tags
     const updateOGTag = (property: string, content: string) => {
       let ogTag = document.querySelector(`meta[property="${property}"]`)
       if (ogTag) {
@@ -109,17 +109,17 @@ interface SEOOptimizerProp s {title?: string;
   canonicalUrl?: string;
   ogImage?: string;
   structuredData?: Record<string, unknown>;}
-constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
+const SEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
   description= 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords= ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl= 'https:// ziontechgroup.com',
   ogImage= 'https:// ziontechgroup.com/og-image.jpg',
   structuredData}) => {useEffect(() => {
   
-    // Update page title;
+    // Update page title
     do cument.title= title;
 
-    // Update metadescriptionconstmetaDescription= do cument.querySelector('meta[name="description"]');
+    // Update metadescriptionconstmetaDescription= do cument.querySelector('meta[name="description"]')
     if (metaDescriptio n) {
       metaDescription.setAttribute('content', description);
    } else {constmeta= do cument.createElement('meta');
@@ -128,7 +128,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       do cument.head.appendChild(meta);
    }
 
-    // UpdatekeywordsconstmetaKeywords= document.querySelector('meta[name="keywords"]');
+    // UpdatekeywordsconstmetaKeywords= document.querySelector('meta[name="keywords"]')
     if (metaKeyword s) {metaKeywords.setAttribute('content', keywords.join(', '));
    } else {constmeta= do cument.createElement('meta');
       meta.name= 'keywords';
@@ -136,7 +136,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       do cument.head.appendChild(meta);
    }
 
-    // Update canonicalURLletcanonicalLink= document.querySelector('link[rel="canonical"]');
+    // Update canonicalURLletcanonicalLink= document.querySelector('link[rel="canonical"]')
     if (canonicalLin k) {canonicalLink.setAttribute('href', canonicalUrl);
    } else {canonicalLink= do cument.createElement('link');
       canonicalLink.rel= 'canonical';
@@ -144,7 +144,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       do cument.head.appendChild(canonicalLink);
    }
 
-    // Update Open GraphtagsconstupdateOGTag= (property: string, content: string) => {letogTag=document.querySelector(`meta[property="${property}"]`);
+    // Update Open GraphtagsconstupdateOGTag= (property: string, content: string) => {letogTag=document.querySelector(`meta[property="${property}"]`)
       if (ogTa g) {ogTag.setAttribute('content', content);
      } else {ogTag= do cument.createElement('meta');
         ogTag.setAttribute('property', property);
@@ -159,7 +159,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
     updateOGTag('og:url', canonicalUrl)
     updateOGTag('og:type', 'website')
 
-    // Update Twitter Card tags;
+    // Update Twitter Card tags
     const updateTwitterTag = (name: string, content: string) => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`)
       if (twitterTag) {
@@ -171,7 +171,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
         document.head.appendChild(twitterTag)
       }
     }
-    // Update Twitter CardtagsconstupdateTwitterTag= (name: string, content: string) => {lettwitterTag=document.querySelector(`meta[name="${name}"]`);
+    // Update Twitter CardtagsconstupdateTwitterTag= (name: string, content: string) => {lettwitterTag=document.querySelector(`meta[name="${name}"]`)
       if (twitterTa g) {twitterTag.setAttribute('content', content);
      } else {twitterTag= do cument.createElement('meta');
         twitterTag.setAttribute('name', name);
@@ -185,7 +185,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
     updateTwitterTag('twitter:description', description)
     updateTwitterTag('twitter:image', ogImage)
 
-    // Add structured data;
+    // Add structured data
     if (structuredData) {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
@@ -193,7 +193,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       document.head.appendChild(script)
     }
 
-    // Add viewport meta tag if not present;
+    // Add viewport meta tag if not present
     let viewport = document.querySelector('meta[name="viewport"]')
     if (!viewport) {
       viewport = document.createElement('meta')
@@ -202,7 +202,7 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       document.head.appendChild(viewport)
     }
 
-    // Add charset if not present;
+    // Add charset if not present
     let charset = document.querySelector('meta[charset]')
     if (!charset) {
       charset = document.createElement('meta')
@@ -215,14 +215,14 @@ constSEOOptimizer:React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Adva
       do cument.head.appendChild(script);
    }
 
-    // Add viewport meta tag if notpresentletviewport= document.querySelector('meta[name="viewport"]');
+    // Add viewport meta tag if notpresentletviewport= document.querySelector('meta[name="viewport"]')
     if (!viewport) {viewport= do cument.createElement('meta');
       viewport.setAttribute('name', 'viewport');
       viewport.setAttribute('content', 'width=device-width, initial-scale=1');
       do cument.head.appendChild(viewport);
    }
 
-    // Add charset if notpresentletcharset= do cument.querySelector('meta[charset]');
+    // Add charset if notpresentletcharset= do cument.querySelector('meta[charset]')
     if (!charset) {charset= do cument.createElement('meta');
       charset.setAttribute('charset', 'UTF-8');
       do cument.head.insertBefore(charset, do cument.head.firstChild);

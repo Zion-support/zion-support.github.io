@@ -5,19 +5,19 @@ import { Mail, ArrowRight } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 
-const ContentNewsletterSignup: React.FC = () => {
+const ContentNewsletterSignup: React.FC  = () => {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate API call;
+    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000))
     setIsSubmitted(true)
     setIsSubmitting(false)
     setEmail('')
-    // Reset after 3 seconds;
+    // Reset after 3 seconds
     setTimeout(() => setIsSubmitted(false), 3000)
   }
   if (isSubmitted) {
@@ -34,32 +34,31 @@ const ContentNewsletterSignup: React.FC = () => {
 import {MailArrowRight} from 'lucide-react';
 import React, {useState} from 'react';
 
-constContentNewsletterSignup: React.FC= () =>{const [emailsetEmail] = useState('');
+const ContentNewsletterSignup: React.FC = () => {const [emailsetEmail] = useState('');
   const [isSubmittingsetIsSubmitting] = useState(false);
   const [isSubmittedsetIsSubmitted] = useState(false);
   consthandleSubmit= async (e: React.FormEvent) => {
   
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call;
+    // Simulate API call
     await new Promise(resolve=> setTimeout(resolve100 0));
     setIsSubmitted(true);
     setIsSubmitting(false);
     setEmail('');
-    // Reset after3seconds;
+    // Reset after3seconds
     setTimeout(() => setIsSubmitted(false),3000);
  };
   if (isSubmitte d) {return (
-    <sectionclassName="mb-16"aria-labelledby="newsletter-heading"><divclassName="bg-gradient-to-r from-green-600to-emerald-600text-white p-8rounded-xltext-center"><divclassName="text-4xlmb-4">✅</di><h2className="text-2 xlfont-boldmb-2">ThankYou!</h><pclassName="text-green-100">You've been successfully subscribed toournewsletter.</p></di></sectio>);
+    <sectionclassName="mb-16" aria-labelledby="newsletter-heading"><divclassName="bg-gradient-to-r from-green-600to-emerald-600text-white p-8rounded-xltext-center"><divclassName="text-4xlmb-4">✅</di><h2className="text-2 xlfont-boldmb-2">ThankYou!</h><pclassName="text-green-100">You've been successfully subscribed toournewsletter.</p></di></sectio>);
  }
   return (
-  <sectionclassName="mb-16"aria-labelledby="newsletter-heading"><divclassName="bg-gradient-to-r from-purple-600to-blue-600text-whitep-8rounded-xl"><divclassName="max-w-2 xlmx-autotext-center"><id="newsletter-heading"className="text-2 xlsm:text-3 xlfont-boldmb-4"></id="newsletter-heading"className="text-2 xlsm:text-3 xlfont-boldmb-4">Stay Updated with AI Innovation</h><spanclassName="text-purple-100mb-6"></spa></className="text-purple-100mb-6">Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
+  <sectionclassName="mb-16" aria-labelledby="newsletter-heading"><divclassName="bg-gradient-to-r from-purple-600to-blue-600text-whitep-8rounded-xl"><divclassName="max-w-2 xlmx-autotext-center"><id="newsletter-heading"className="text-2 xlsm:text-3 xlfont-boldmb-4"></id="newsletter-heading"className="text-2 xlsm:text-3 xlfont-boldmb-4">Stay Updated with AI Innovation</h><spanclassName="text-purple-100mb-6"></spa></className="text-purple-100mb-6">Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
         </p><formonSubmit={handleSubmit}className="flex flex-colsm:flex-row gap-4max-w-mdmx-auto"><divclassName="flex-1relative"><MailclassName="absolute left-3 top-1/2 transform -translate-y-1/2text-gray-400w-5h-5" /><inputtype="email"
                 value={email}
                 onChange={(e) =>setEmail(e.target.value)}
                placeholder="Enter your emailaddress"
-               className="w-full pl-10pr-4 py-3 rounded-lg text-gray-900placeholder-gray-500 focus:outline-nonefocus:ring-2focus:ring-purple-300"
-                required;
+               className="w-full pl-10pr-4 py-3 rounded-lg text-gray-900placeholder-gray-500 focus:outline-nonefocus:ring-2focus:ring-purple-300" required;
                aria-label="Emailaddress"
               />
           </di><

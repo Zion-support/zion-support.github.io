@@ -9,7 +9,7 @@ import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constMachineLearningPage: React.FC= () =>{constfeatures= [
+const MachineLearningPage: React.FC = () => {constfeatures= [
     'Custom ML model development and training',
     'Predictive analytics and forecasting',
     'Data preprocessing and feature engineering',

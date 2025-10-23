@@ -3,7 +3,7 @@
 * Centralized configuration for error handling across the application;
 */
 import React from 'react'
-export interface ErrorBoundaryConfig {;
+export interface ErrorBoundaryConfig {
 /**;
 * Whether to log errors to console;
 */
@@ -79,8 +79,7 @@ return (
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
 <svg;
-className="w-6 h-6 text-red-600"
-fill="none"
+className="w-6 h-6 text-red-600" fill="none"
 stroke="currentColor"
 viewBox="0 0 24 24"
 >
@@ -119,8 +118,7 @@ return (
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
 <svg;
-className="w-6 h-6 text-yellow-600"
-fill="none"
+className="w-6 h-6 text-yellow-600" fill="none"
 stroke="currentColor"
 viewBox="0 0 24 24"
 >

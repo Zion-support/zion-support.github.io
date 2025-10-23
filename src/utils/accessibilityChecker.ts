@@ -97,7 +97,7 @@ export class AccessibilityChecker {
    */
   public checkElement(element: Element): A11yCheckResult {
     this.issues = []
-    // Run all checks;
+    // Run all checks
     this.checkImages(element)
     this.checkHeadings(element)
     this.checkLinks(element)
@@ -144,7 +144,7 @@ export class AccessibilityChecker {
     images.forEach((img, index) => {
       const alt = img.getAttribute('alt')
       const role = img.getAttribute('role')
-      // Check for missing alt attribute;
+      // Check for missing alt attribute
       if (alt === null && role !== 'presentation') {
         this.addIssue({
           type: 'missing-alt-text',
@@ -157,7 +157,7 @@ export class AccessibilityChecker {
           codeExample: '<img src="..." alt="Description of image" />'
         })
       }
-      // Check for empty alt on decorative images without role;
+      // Check for empty alt on decorative images without role
       if (alt === '' && role !== 'presentation') {
         this.addIssue({
           type: 'empty-alt-without-role',
@@ -184,7 +184,7 @@ export class AccessibilityChecker {
     let previousLevel = 0;
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1))
-      // Check for skipped heading levels;
+      // Check for skipped heading levels
       if (level > previousLevel + 1 && previousLevel !== 0) {
         this.addIssue({
           type: 'skipped-heading-level',
@@ -197,7 +197,7 @@ export class AccessibilityChecker {
           codeExample: `Use h${previousLevel + 1} instead of h${level}`
         })
       }
-      // Check for empty headings;
+      // Check for empty headings
       if (!heading.textContent?.trim()) {
         this.addIssue({
           type: 'empty-heading',
@@ -211,7 +211,7 @@ export class AccessibilityChecker {
       }
       previousLevel = level;
     })
-    // Check for multiple h1s;
+    // Check for multiple h1s
     const h1Count = element.querySelectorAll('h1').length;
     if (h1Count > 1) {
       this.addIssue({
@@ -238,7 +238,7 @@ export class AccessibilityChecker {
       const ariaLabel = link.getAttribute('aria-label')
       const ariaLabelledBy = link.getAttribute('aria-labelledby')
       const title = link.getAttribute('title')
-      // Check for links without accessible text;
+      // Check for links without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {
         this.addIssue({
           type: 'link-no-text',
@@ -251,7 +251,7 @@ export class AccessibilityChecker {
           codeExample: '<a href="..." aria-label="Description">...</a>'
         })
       }
-      // Check for generic link text;
+      // Check for generic link text
       if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {
         this.addIssue({
           type: 'generic-link-text',
@@ -264,7 +264,7 @@ export class AccessibilityChecker {
           codeExample: 'Use "Read full article" instead of "Read more"'
         })
       }
-      // Check for links opening in new window without warning;
+      // Check for links opening in new window without warning
       const target = link.getAttribute('target')
       if (
         target === '_blank' &&
@@ -297,7 +297,7 @@ export class AccessibilityChecker {
       const text = button.textContent?.trim()
       const ariaLabel = button.getAttribute('aria-label')
       const ariaLabelledBy = button.getAttribute('aria-labelledby')
-      // Check for buttons without accessible text;
+      // Check for buttons without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy) {
         this.addIssue({
           type: 'button-no-text',
@@ -326,9 +326,9 @@ export class AccessibilityChecker {
       const ariaLabelledBy = input.getAttribute('aria-labelledby')
       const label = id ? element.querySelector(`label[for="${id}"]`) : null;
       const type = input.getAttribute('type')
-      // Skip hidden and submit inputs;
+      // Skip hidden and submit inputs
       if (type === 'hidden' || type === 'submit' || type === 'button') return;
-      // Check for form controls without labels;
+      // Check for form controls without labels
       if (!label && !ariaLabel && !ariaLabelledBy) {
         this.addIssue({
           type: 'form-no-label',
@@ -350,8 +350,8 @@ export class AccessibilityChecker {
    * @param element - Root element to check;
    */
   private checkColors(element: Element): void {
-    // This is a simplified check - full color contrast checking requires;
-    // computing actual rendered colors which is complex;
+    // This is a simplified check - full color contrast checking requires
+    // computing actual rendered colors which is complex
     const elementsWithColor = element.querySelectorAll('[style*="color"]')
     elementsWithColor.forEach(el => {
       const style = el.getAttribute('style')
@@ -392,7 +392,7 @@ export class AccessibilityChecker {
         })
       }
     })
-    // Check for divs/spans with onclick but no keyboard handler;
+    // Check for divs/spans with onclick but no keyboard handler
     const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)')
     clickableNonInteractive.forEach(el => {
       const role = el.getAttribute('role')
@@ -424,7 +424,7 @@ export class AccessibilityChecker {
     )
     elementsWithAria.forEach(el => {
       const role = el.getAttribute('role')
-      // Check for invalid ARIA roles;
+      // Check for invalid ARIA roles
       const validRoles = [
         'alert',
         'button',
@@ -455,7 +455,7 @@ export class AccessibilityChecker {
           fix: 'Use a valid ARIA role or remove the role attribute'
         })
       }
-      // Check aria-labelledby references;
+      // Check aria-labelledby references
       const labelledBy = el.getAttribute('aria-labelledby')
       if (labelledBy) {
         const referencedElement = document.getElementById(labelledBy)
@@ -495,7 +495,7 @@ export class AccessibilityChecker {
     }
   }
   /**
-   * Add an issue to the list;
+   * Add an issue to the list
    *
    * @private;
    * @param issue - Partial issue object;
@@ -532,7 +532,7 @@ export class AccessibilityChecker {
     const totalPenalty = this.issues.reduce((sum, issue) => {
       return sum + severityWeights[issue.severity]
     }, 0)
-    // Score decreases with more/severe issues;
+    // Score decreases with more/severe issues
     const score = Math.max(0, 100 - totalPenalty)
     return Math.round(score)
   }

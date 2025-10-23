@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 ;
-// Declare gtag function for Google Analytics;
+// Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: any[]): void;
 }
@@ -10,14 +10,14 @@ declare global {
  * Enhanced Analytics Utility;
  * Provides type-safe analytics tracking with error handling;
  */
-export interface AnalyticsEvent {;
+export interface AnalyticsEvent {
   action: string;
   category: string;
   label?: string;
   value?: number;
   metadata?: Record<string, unknown>
 }
-export interface AnalyticsUser {;
+export interface AnalyticsUser {
   id?: string;
   properties?: Record<string, unknown>
 }
@@ -32,9 +32,9 @@ class AnalyticsService {
   initialize(): void {
     if (this.isInitialized) return;
     try {
-      // Check if we're in a browser environment;
+      // Check if we're in a browser environment
       if (typeof window === 'undefined') return;
-      // Process queued events;
+      // Process queued events
       this.processQueue()
       this.isInitialized = true;
     } catch (error) {
@@ -42,7 +42,7 @@ class AnalyticsService {
     }
   }
   /**
-   * Track a custom event;
+   * Track a custom event
    */
   trackEvent(event: AnalyticsEvent): void {
     try {
@@ -50,7 +50,7 @@ class AnalyticsService {
         this.queueEvent(event)
         return;
       }
-      // Send to Google Analytics if available;
+      // Send to Google Analytics if available
       if (this.hasGtag()) {
         (window as any).gtag('event', event.action, {
           event_category: event.category,
@@ -59,7 +59,7 @@ class AnalyticsService {
           ...event.metadata;
         })
       }
-      // Log in development;
+      // Log in development
       if (process.env['NODE_ENV'] === 'development') {
         }
     } catch (error) {
@@ -67,7 +67,7 @@ class AnalyticsService {
     }
   }
   /**
-   * Track page view;
+   * Track page view
    */
   trackPageView(path: string, title?: string): void {
     try {
@@ -82,7 +82,7 @@ class AnalyticsService {
     }
   }
   /**
-   * Track user properties;
+   * Track user properties
    */
   identifyUser(user: AnalyticsUser): void {
     try {
@@ -97,7 +97,7 @@ class AnalyticsService {
     }
   }
   /**
-   * Track error events;
+   * Track error events
    */
   trackError(error: Error, metadata?: Record<string, unknown>): void {
     this.trackEvent({
@@ -133,7 +133,7 @@ class AnalyticsService {
     }
   }
   /**
-   * Track performance metrics;
+   * Track performance metrics
    */
   trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
     try {
@@ -149,7 +149,7 @@ class AnalyticsService {
     }
   }
   /**
-   * Check if gtag is available;
+   * Check if gtag is available
    */
   private hasGtag(): boolean {
     return (
@@ -161,7 +161,7 @@ class AnalyticsService {
    * Get Google Analytics ID;
    */
   private getGtagId(): string {
-    // Return the tracking ID from environment or config;
+    // Return the tracking ID from environment or config
     return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'
   }
   /**
@@ -184,9 +184,9 @@ class AnalyticsService {
     }
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const analytics = new AnalyticsService();
-// Export convenience functions;
+// Export convenience functions
 export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
 export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title)
@@ -201,7 +201,7 @@ export const trackTiming = (
   label?: string;
 ) => analytics.trackTiming(category, variable, value, label)
 export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user);
-// Initialize on import;
+// Initialize on import
 if (typeof window !== 'undefined') {
   analytics.initialize()
 }

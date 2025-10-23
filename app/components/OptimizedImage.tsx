@@ -23,7 +23,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const OptimizedImagePage: React.FC = () => {
+const OptimizedImagePage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -197,8 +197,7 @@ const OptimizedImagePage: React.FC = () => {
 
 export default OptimizedImagePage<div;
       ref={imgRef}
-      className="relative overflow-hidden"
-      style={{ width, height }}
+      className="relative overflow-hidden" style={{ width, height }}
     >{!isLoaded && !isError && (</div>
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
           <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>

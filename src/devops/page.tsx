@@ -8,12 +8,12 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { GitBranch, CheckCircle, Check } from 'lucide-react';
-const DevOpsPage: React.FC = () => {
+const DevOpsPage: React.FC  = () => {
   const services = [
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
-import {GitBranchCheckCircle} from 'lucide-react';;
-constDevOpsPage: React.FC= () =>{constservices= [
+import {GitBranchCheckCircle} from 'lucide-react';
+const DevOpsPage: React.FC = () => {constservices= [
     {
       icon: Code,
       title: 'CI/CD Pipeline',

@@ -104,7 +104,7 @@ interface MicroSAASCardProp s {service: {
  };
 }
 
-constMicroSAASCard: React.FC<MicroSAASCardProp s>= ({service}) => {return (
+const MicroSAASCard: React.FC<MicroSAASCardProp s>= ({service}) => {return (
   <divclassName={`cyber-card p-6 hover:scale-105transition-all duration-300${service.popular ? 'ring-2 ring-cyan-40 0':''}`}>{service.popular && (
       <divclassName="absolute -top-3left-1/2transform-translate-x-1/2"><spanclassName="bg-gradient-to-r from-cyan-500to-blue-600text-white px-4 py-1rounded-fulltext-smfont-medium"></ className="bg-gradient-to-r from-cyan-500to-blue-600text-white px-4 py-1rounded-fulltext-smfont-medium">Most Popular</spa></di>)}
       

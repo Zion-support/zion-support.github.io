@@ -1,6 +1,6 @@
 'use client'
 import React, { lazy, Suspense, ComponentType } from 'react'
-interface DynamicOptions {;
+interface DynamicOptions {
 loading?: () => React.ReactElement;}
 interface DynamicOptions {}
 loading?: () => React.ReactElement;

@@ -5,9 +5,9 @@ import { CheckCircle, Star, Phone } from 'lucide-react';
 'use client';
 import React from 'react';
 import { PenTool, FileText, CheckCircle, Star, Phone, Check } from 'lucide-react';
-import {PenTool, FileText, CheckCircle, Phone, Star} from 'lucide-react';;
+import {PenTool, FileText, CheckCircle, Phone, Star} from 'lucide-react';
 
-constAIWritingAssistantPage: React.FC= () =>{constfeatures= [
+const AIWritingAssistantPage: React.FC = () => {constfeatures= [
     {
       icon: PenTool,
       title: 'AI Content Generation',

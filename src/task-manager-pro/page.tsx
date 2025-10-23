@@ -5,9 +5,9 @@ import { CheckCircle, Star, Phone } from 'lucide-react';
 'use client';
 import React from 'react';
 import { CheckSquare, CheckCircle, Star, Phone, Check } from 'lucide-react';
-import {CheckSquare, CheckCircle, Phone, Star} from 'lucide-react';;
+import {CheckSquare, CheckCircle, Phone, Star} from 'lucide-react';
 
-constTaskManagerProPage: React.FC= () =>{constfeatures= [
+const TaskManagerProPage: React.FC = () => {constfeatures= [
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',

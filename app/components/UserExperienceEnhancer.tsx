@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const UserExperienceEnhancerPage: React.FC = () => {
+const UserExperienceEnhancerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -141,13 +141,13 @@ export default UserExperienceEnhancerPage;
 'use client'
 import React, {useEffectuseState} from 'react'
 interface UserExperienceEnhancerProp s {children: React.ReactNode}
-constUserExperienceEnhancer: React.FC<UserExperienceEnhancerProp s>= ({children}) => {const [loadingStatessetLoadingStates]=useState<Record<string,boolean>>({})
-useEffect(() => {// UX enhancementlogicconstenhanceUX= () => {
-  ;
-// Add smooth scrolling;
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProp s>= ({children}) => {const [loadingStatessetLoadingStates]=useState<Record<string,boolean>>({})
+useEffect(() => {// UX enhancementlogicconstenhanceUX = () => {
+  
+// Add smooth scrolling
 do cument.do cumentElement.style.scrollBehavior= 'smooth'
 // Add loading states for interactiveelementsconstinteractiveElements= do cument.querySelectorAll('button, a, input')
-interactiveElements.forEach((elementindex) => {;) => {
+interactiveElements.forEach((elementindex) => {) => {
   
 return (
 $3;
@@ -161,7 +161,7 @@ setLoadingStates(prev=> ({...prev, [index]: false}))
 })
 // Add focusindicatorsconststyle= do cument.createElement('style')
 style.textContent= `
-*:focus {outline:2px solid #06 b6d4outline-offset:2px,;}
+*:focus {outline:2px solid #06 b6d4outline-offset:2px,}
 }`
 do cument.head.appendChild(style)
 }

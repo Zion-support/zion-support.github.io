@@ -5,10 +5,10 @@ import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 
 import { Bot, Cpu, Settings } from 'lucide-react'
 ;
 import { Cog, CheckCircle, Star, Brain, Shield, Zap, Target, BarChart, Helmet, Check, Bot, Cpu, Settings } from 'lucide-react';
-const RoboticsPage: React.FC = () => {
+const RoboticsPage: React.FC  = () => {
   const roboticsServices = [
-import {Cog, CheckCircle, Star, Zap, Brain, BarChart, Target, Shield, Helmet} from 'lucide-react';;
-constRoboticsPage: React.FC= () =>{constroboticsServices= [
+import {Cog, CheckCircle, Star, Zap, Brain, BarChart, Target, Shield, Helmet} from 'lucide-react';
+const RoboticsPage: React.FC = () => {constroboticsServices= [
     {
       title: 'Robotic Process Automation (RPA)',
       description: 'Automate repetitive business processes with intelligent software robots.',

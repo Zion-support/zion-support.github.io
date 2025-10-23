@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const SkipLinkPage: React.FC = () => {
+const SkipLinkPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -138,7 +138,7 @@ const SkipLinkPage: React.FC = () => {
 };
 
 export default SkipLinkPage;
-const SkipLink: React.FC = () => {
+const SkipLink: React.FC  = () => {
 return (
 <a;
 href="#main-content"
@@ -147,7 +147,7 @@ className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-
 )
 }
 export default SkipLink;
-constSkipLink: React.FC= () =>{return(<ahref="#main-content"className="sr-onlyfocus:not-sr-onlyfocus: absolutefocus:top-4 focus:left-4 bg-cyan-600text-white px-4 py-2 rounded-md z-50font-medium transition-all duration-200hover:bg-cyan-700"
+const SkipLink: React.FC = () => {return(<ahref="#main-content"className="sr-onlyfocus:not-sr-onlyfocus: absolutefocus:top-4 focus:left-4 bg-cyan-600text-white px-4 py-2 rounded-md z-50font-medium transition-all duration-200hover:bg-cyan-700"
 >Skip to maincontent</a>
 )}
 export default SkipLink;

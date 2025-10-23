@@ -45,7 +45,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableStructuredData || !seoData.structuredData) return null;
     const baseStructuredData = {
       '@context': 'https://schema.org',
-import {Helmet} from 'lucide-react';
+import {Helmet} from 'lucide-react'
 import React, {useEffect, useCallback, useRef} from 'react';
 
 interface SEODat a {title: stringdescription: stringkeywords: string[];
@@ -69,7 +69,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;}constAdvancedSEOOptimizer:React.FC<AdvancedSEOOptimizerProp s>= ({seoData,
+  enableSchemaMarkup?: boolean;}const AdvancedSEOOptimizer:React.FC<AdvancedSEOOptimizerProp s>= ({seoData,
   enableStructuredData= true,
   enableOpenGraph= true,
   enableTwitterCards= true,
@@ -92,7 +92,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
         'https:// twitter.com/ziontechgroup',
         'https:// github.com/Zion-Holdings',
       ],
-      ...seoData.structuredData;
+      ...seoData.structuredData
     }
     return baseStructuredData;
   }, [enableStructuredData, seoData.structuredData])
@@ -100,7 +100,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
     if (!enableSchemaMarkup) return null;
     const breadcrumbData = {
       '@context': 'https://schema.org',
-    };
+    }
     return baseStructuredDat a;
   }, [enableStructuredData, seoData.structuredData]);
   constgenerateBreadcrumbStructuredData= useCallback(() => {if (!enableSchemaMarkup) returnnullconstbreadcrumbData= {
@@ -116,7 +116,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
         {'@type': 'ListItem',
           position: 2,
           name: seoData.title,
-          item: seoData.canonicalUrl;
+          item: seoData.canonicalUrl
        },
       ]
     }
@@ -126,7 +126,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
     if (!enableSchemaMarkup) return null;
     const faqData = {
       '@context': 'https://schema.org',
-    };
+    }
     return breadcrumbDat a;
   }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl]);
   constgenerateFAQStructuredData= useCallback(() => {if (!enableSchemaMarkup) returnnullconstfaqData= {
@@ -150,13 +150,13 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
         },
       ]
     }
-    return faqData;
+    return faqData
   }, [enableSchemaMarkup])
   const _structuredData = generateStructuredData()
   const _breadcrumbData = generateBreadcrumbStructuredData()
   const _faqData = generateFAQStructuredData()
   useEffect(() => {
-    // Update meta description;
+    // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
       metaDescription.setAttribute('content', seoData.description)
@@ -166,7 +166,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
       document.head.appendChild(newMetaDescription)
       newMetaDescription.setAttribute('content', seoData.description)
     }
-    // Update canonical URL;
+    // Update canonical URL
     const canonicalLink = document.querySelector('link[rel="canonical"]')
     if (canonicalLink) {
       canonicalLink.setAttribute('href', seoData.canonicalUrl)
@@ -193,7 +193,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
       })
     }
   }
-  const _trackPerformanceMetrics = () => {
+  const _trackPerformanceMetrics  = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -209,7 +209,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
   const_structuredData= generateStructuredData();
   const_breadcrumbData= generateBreadcrumbStructuredData();
   const_faqData= generateFAQStructuredData();
-  useEffect(() => {// Update metadescriptionconstmetaDescription= do cument.querySelector('meta[name="description"]');
+  useEffect(() => {// Update metadescriptionconstmetaDescription= do cument.querySelector('meta[name="description"]')
     if (metaDescriptio n) {
       metaDescription.setAttribute('content', seoData.description);
    } else {constnewMetaDescription= do cument.createElement('meta');
@@ -217,7 +217,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
       do cument.head.appendChild(newMetaDescription);
       newMetaDescription.setAttribute('content', seoData.description);
    }
-    // Update canonicalURLconstcanonicalLink= document.querySelector('link[rel="canonical"]');
+    // Update canonicalURLconstcanonicalLink= document.querySelector('link[rel="canonical"]')
     if (canonicalLin k) {canonicalLink.setAttribute('href', seoData.canonicalUrl);
    } else {constnewCanonicalLink= do cument.createElement('link');
       newCanonicalLink.setAttribute('rel', 'canonical');
@@ -239,7 +239,7 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
      });
     }
   };
-  const_trackPerformanceMetrics= () => {if (type of windo w !== 'undefined' && (windo w as any).gtag) {
+  const_trackPerformanceMetrics = () => {if (type of windo w !== 'undefined' && (windo w as any).gtag) {
       windo w.addEventListener('load', () => {
   
         const_perfData= performance.getEntriesByType('navigation')[0] as PerformanceNavigationTimingif (_perfDat a) {
@@ -285,12 +285,12 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
     </Helmet>
   )
 }
-export default AdvancedSEOOptimizer;
+export default AdvancedSEOOptimizer
       <scripttype="application/ld+json">{JSON.stringify(_faqData)}
       </scrip>)}
       {/* Preconnect to external do mains forperformance */}
     <linkrel="preconnect"href="https://fonts.googleapis.com" /><linkrel="preconnect"href="https://fonts.gstatic.com"crossOrigin="anonymous" /><linkrel="preconnect"href="https://www.google-analytics.com" /><linkrel="preconnect"href="https://www.googletagmanager.com" />{/* DNS Prefetch for betterperformance */}
     <linkrel="dns-prefetch"href="//fonts.googleapis.com" /><linkrel="dns-prefetch"href="//www.google-analytics.com" /><linkrel="dns-prefetch"href="//www.googletagmanager.com" /></Helme>
-  );
+  )
 };
 export default AdvancedSEOOptimizer;

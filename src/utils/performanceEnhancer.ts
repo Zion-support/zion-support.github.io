@@ -5,7 +5,7 @@
  */
 import React from 'react'
 import { useRef } from 'react';
-// Debounce function for performance optimization;
+// Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,;
   wait: number;
@@ -16,7 +16,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
     timeout = setTimeout(() => func(...args), wait)
   }
 }
-// Throttle function for performance optimization;
+// Throttle function for performance optimization
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,;
   limit: number;
@@ -30,7 +30,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
     }
   }
 }
-// Performance monitoring utilities;
+// Performance monitoring utilities
 export class PerformanceMonitor {;
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map()
@@ -41,14 +41,14 @@ export class PerformanceMonitor {;
     }
     return PerformanceMonitor.instance;
   }
-  // Track component render time;
+  // Track component render time
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime)
     if (process.env['NODE_ENV'] === 'development') {
       // // console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`)
     }
   }
-  // Track memory usage;
+  // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
@@ -57,22 +57,22 @@ export class PerformanceMonitor {;
       }
     }
   }
-  // Get performance metrics;
+  // Get performance metrics
   getMetrics() {
     return Object.fromEntries(this.metrics)
   }
-  // Clear metrics;
+  // Clear metrics
   clearMetrics() {
     this.metrics.clear()
   }
-  // Monitor long tasks;
+  // Monitor long tasks
   startLongTaskMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
     }
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
-        if (entry.duration > 50) { // Tasks longer than 50ms;
+        if (entry.duration > 50) { // Tasks longer than 50ms
           // // console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`)
         }
       })
@@ -80,13 +80,13 @@ export class PerformanceMonitor {;
     observer.observe({ entryTypes: ['longtask'] })
     this.observers.push(observer)
   }
-  // Cleanup observers;
+  // Cleanup observers
   cleanup() {
     this.observers.forEach(observer => observer.disconnect())
     this.observers = []
   }
 }
-// React hook for performance monitoring;
+// React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {
   const renderStartTime = useRef<number>(0)
   const monitor = PerformanceMonitor.getInstance()
@@ -107,8 +107,8 @@ export const usePerformanceMonitor = (componentName: string) => {
     }
   }
 }
-// Image lazy loading utility;
-export const lazyLoadImages = () => {;
+// Image lazy loading utility
+export const lazyLoadImages  = () => {;
   if (typeof window === 'undefined') return;
   const images = document.querySelectorAll('img[data-src]')
   const imageObserver = new IntersectionObserver((entries) => {
@@ -123,8 +123,8 @@ export const lazyLoadImages = () => {;
   })
   images.forEach((img) => imageObserver.observe(img))
 }
-// Preload critical resources;
-export const preloadCriticalResources = () => {;
+// Preload critical resources
+export const preloadCriticalResources  = () => {;
   if (typeof window === 'undefined') return;
   const criticalResources = [
     '/fonts/inter-var.woff2',
@@ -141,24 +141,24 @@ export const preloadCriticalResources = () => {;
     document.head.appendChild(link)
   })
 }
-// Optimize scroll performance;
-export const optimizeScrollPerformance = () => {;
+// Optimize scroll performance
+export const optimizeScrollPerformance  = () => {;
   if (typeof window === 'undefined') return;
   let ticking = false;
-  const updateScrollPosition = () => {
-    // Update scroll position indicators;
+  const updateScrollPosition  = () => {
+    // Update scroll position indicators
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`)
     ticking = false;
   }
-  const requestTick = () => {
+  const requestTick  = () => {
     if (!ticking) {
       requestAnimationFrame(updateScrollPosition)
       ticking = true;
     }
   }
-  // Track Core Web Vitals;
-  const trackCLS = () => {
+  // Track Core Web Vitals
+  const trackCLS  = () => {
     let clsValue = 0;
     let clsEntries: PerformanceEntry[] = []
     let clsValue = 0;
@@ -182,7 +182,7 @@ export const optimizeScrollPerformance = () => {;
       return clsValue;
     }
   }
-  const trackLCP = () => {
+  const trackLCP  = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
@@ -193,9 +193,9 @@ export const optimizeScrollPerformance = () => {;
     observer.observe({ entryTypes: ['largest-contentful-paint'] })
     return () => observer.disconnect()
   }
-  const trackFID = () => {
+  const trackFID  = () => {
     interface FirstInputEntry extends PerformanceEntry {
-      processingStart: number;
+      processingStart: number
     }
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -210,7 +210,7 @@ export const optimizeScrollPerformance = () => {;
     return () => observer.disconnect()
   }
   window.addEventListener('scroll', requestTick, { passive: true })
-  // Start tracking;
+  // Start tracking
   const cleanupCLS = trackCLS()
   const cleanupLCP = trackLCP()
   const cleanupFID = trackFID()
@@ -220,8 +220,8 @@ export const optimizeScrollPerformance = () => {;
     cleanupFID()
   }
 }
-// Memory usage monitoring;
-export const getMemoryUsage = () => {
+// Memory usage monitoring
+export const getMemoryUsage  = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {;
     return null;
   }
@@ -233,8 +233,8 @@ export const getMemoryUsage = () => {
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
   }
 }
-// Performance metrics collection;
-export const collectPerformanceMetrics = () => {;
+// Performance metrics collection
+export const collectPerformanceMetrics  = () => {;
   if (typeof window === 'undefined') return null;
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint')
@@ -251,16 +251,16 @@ export const collectPerformanceMetrics = () => {;
     memory: getMemoryUsage()
   }
 }
-// Initialize performance enhancements;
-export const initializePerformanceEnhancements = () => {;
+// Initialize performance enhancements
+export const initializePerformanceEnhancements  = () => {;
   if (typeof window === 'undefined') return;
-  // Initialize lazy loading;
+  // Initialize lazy loading
   lazyLoadImages()
-  // Preload critical resources;
+  // Preload critical resources
   preloadCriticalResources()
-  // Optimize scroll performance;
+  // Optimize scroll performance
   optimizeScrollPerformance()
-  // Collect performance metrics;
+  // Collect performance metrics
   const metrics = collectPerformanceMetrics()
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // // console.log('Performance metrics:', metrics)

@@ -9,17 +9,17 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 
-// Dynamically import heavy components for better performance;
+// Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components;
-const preloadComponents = () => {
+// Preload critical components
+const preloadComponents  = () => {
   if (typeof window !== 'undefined') {
-    // Preload critical components after initial render;
+    // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
@@ -27,7 +27,7 @@ const preloadComponents = () => {
   }
 };
 
-// Loading skeleton component;
+// Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
@@ -37,20 +37,20 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC  = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
-    // Trigger visibility animation;
+    // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
-    // Preload components;
+    // Preload components
     preloadComponents();
     return () => clearTimeout(timer);
   }, []);
 
-  // Analytics tracking for phone clicks - optimized;
+  // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
@@ -235,7 +235,7 @@ const HomePage: React.FC = () => {
           }
         }}
       />
-      <PerformanceOptimizer;
+      <PerformanceOptimizer
         enableImageOptimization={true}
         enableLazyLoading={true}
         enableCodeSplitting={true}
@@ -282,8 +282,7 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1;
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
-                data-text="Zion Tech Group"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Zion Tech Group"
               >Zion Tech Group</h1>h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">Advanced AI and IT Solutions</p>p>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.</p>
@@ -499,7 +498,7 @@ const HomePage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  )
 };
 
 export default HomePage;

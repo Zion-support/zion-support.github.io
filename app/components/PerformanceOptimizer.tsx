@@ -5,7 +5,7 @@ import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
 import { AlertTriangle } from 'lucide-react'
 
-interface PerformanceOptimizerProps {;
+interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
@@ -33,7 +33,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization) return;
-    // Optimize images;
+    // Optimize images
     const images = document.querySelectorAll('img')
 import React, {useEffect, useState, useCallback} from 'react';
 import {Settings, Zap, CheckCircle, AlertTriangle} from 'lucide-react';
@@ -43,7 +43,7 @@ interface PerformanceOptimizerProp s {enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;}
 
-constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOptimization= true,
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOptimization= true,
   enableLazyLoading= true,
   enablePreloading= true,
   enableCodeSplitting= true,}) => {const [isOptimizingsetIsOptimizing] = useState(false);
@@ -57,28 +57,28 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
 
   constoptimizeImages= useCallback(() => {if (!enableImageOptimization) return;
 
-    // Optimizeimagesconstimages= do cument.querySelectorAll('img');
+    // Optimizeimagesconstimages= do cument.querySelectorAll('img')
     images.forEach((img) => {
   
       if (img.loading !== 'lazy') {
         img.loading = 'lazy'
       }
 
-      // Add WebP support detection;
+      // Add WebP support detection
       if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
         const webpSrc = img.src.replace('.jpg', '.webp')
         const webpImg = new Image()
-        webpImg.onload = () => {
+        webpImg.onload  = () => {
           img.src = webpSrc;
         }
         webpImg.src = webpSrc;
         img.loading= 'lazy';
      }
       
-      // Add WebP support detection;
+      // Add WebP support detection
       if (!img.src.includes('.webp') && img.src.includes('.jpg')) {constwebpSrc= img.src.replace('.jpg', '.webp');
         constwebpImg= new Image();
-        webpImg.onload= () => {
+        webpImg.onload = () => {
   
           img.src= webpSrc;
        };
@@ -102,7 +102,7 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
         entries.forEach((entry) => {
   
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+            const img = entry.target as HTMLImageElement
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src')
@@ -127,7 +127,7 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
 
   const enablePreloadingOptimization = useCallback(() => {
     if (!enablePreloading) return;
-    // Preload critical resources;
+    // Preload critical resources
     const criticalResources = [
       '/fonts/main.woff2',
       '/css/critical.css',
@@ -163,7 +163,7 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
     // Preload criticalresourcesconstcriticalResources= [
       '/$1/main.woff2',
       '/$1/critical.css',
-    ];
+    ]
 
     criticalResources.forEach((resource) => {
   
@@ -186,14 +186,14 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
   
       try {
         const module = await import(`../components/${componentName}.tsx`)
-        return module.default;
+        return module.default
       } catch (error) {
         // console.warn(`Failed to load component: ${componentName}`, error)
-        return null;
+        return null
       }
     }
 
-    // Store the function globally for use in other components;
+    // Store the function globally for use in other components
     (window as any).loadComponent = loadComponent;
     setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }))
   }, [enableCodeSplitting])
@@ -207,7 +207,7 @@ constPerformanceOptimizer: React.FC<PerformanceOptimizerProp s>= ({enableImageOp
      }
     };
 
-    // Store the function globally for use in other components;
+    // Store the function globally for use in other components
     (windo w as any).loadComponent= loadComponentsetOptimizationStatus(prev=> ({...prev, codeSplitting: true}));
   }, [enableCodeSplitting]);
 
@@ -238,7 +238,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const PerformanceOptimizerPage: React.FC = () => {
+const PerformanceOptimizerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -287,7 +287,7 @@ const PerformanceOptimizerPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               PerformanceOptimizer</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced PerformanceOptimizer solution for modern businesses.

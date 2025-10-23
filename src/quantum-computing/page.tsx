@@ -6,10 +6,10 @@ import { CheckCircle, Star, Brain, Shield } from 'lucide-react'
 'use client';
 import React from 'react';
 import { Atom, Lock, CheckCircle, Star, Brain, Shield, Check } from 'lucide-react';
-const QuantumComputingPage: React.FC = () => {
+const QuantumComputingPage: React.FC  = () => {
   const quantumServices = [
-import {Atom, Lock, CheckCircle, Star, Brain, Shield} from 'lucide-react';;
-constQuantumComputingPage: React.FC= () =>{constquantumServices= [
+import {Atom, Lock, CheckCircle, Star, Brain, Shield} from 'lucide-react';
+const QuantumComputingPage: React.FC = () => {constquantumServices= [
     {
       id: 'quantum-algorithms',
       title: 'Quantum Algorithm Development',

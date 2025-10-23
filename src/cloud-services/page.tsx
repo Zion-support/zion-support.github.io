@@ -10,7 +10,7 @@ import {CheckCircle} from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constCloudServicesPage: React.FC= () =>{constservices= [
+const CloudServicesPage: React.FC = () => {constservices= [
     {
       icon: Cloud,
       title: 'Cloud Migration',

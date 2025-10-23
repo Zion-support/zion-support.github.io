@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
+const AIContentGenerationPage: React.FC = () => {constcontentServices= [
     {
       title: 'AI Blog Content Generator Pro',
       description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',

@@ -4,10 +4,10 @@ import { BarChart3 } from 'lucide-react'
 import { CheckCircle, Zap, Shield, Users, Helmet } from 'lucide-react'
 ;
 import { BarChart3, CheckCircle, Shield, Zap, Users, BarChart, Helmet, Check } from 'lucide-react';
-const AIEcommerceSolutionsPage: React.FC = () => {
+const AIEcommerceSolutionsPage: React.FC  = () => {
   const ecommerceServices = [
-import {BarChart3, CheckCircle, Zap, Users, Shield, Helmet} from 'lucide-react';;
-constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
+import {BarChart3, CheckCircle, Zap, Users, Shield, Helmet} from 'lucide-react';
+const AIEcommerceSolutionsPage: React.FC = () => {constecommerceServices= [
     {
       title: 'AI-Powered E-commerce Platform',
       description: 'Complete e-commerce solution with AI-driven personalization, inventory management, and automated customer service.',

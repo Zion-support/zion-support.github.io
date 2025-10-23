@@ -4,11 +4,11 @@
  */
 import React from 'react'
 import '@testing-library/jest-dom';
-// Polyfill for TextEncoder/TextDecoder;
+// Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
-// Suppress jsdom navigation warnings;
+// Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || ''
@@ -18,17 +18,17 @@ console.error = (...args) => {
   }
   originalConsoleError(...args)
 }
-// Mock window.matchMedia;
+// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
 import React from 'react';
 import '@testing-library/jest-do m';
-// Polyfill for TextEncoder/TextDecoder;
+// Polyfill for TextEncoder/TextDecoder
 import {TextEncoderTextDecoder} from 'util';
 global.TextEncoder= TextEncoder as any;
 global.TextDecoder= TextDecoder as any;
-// Suppress jsdo m navigationwarningsconstoriginalConsoleError= console.error;
+// Suppress jsdo m navigationwarningsconstoriginalConsoleError= console.error
 console.error= (...args) =>{constmessage= args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Notimplemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
@@ -36,7 +36,7 @@ console.error= (...args) =>{constmessage= args[0]?.toString?.() || args[0]?.mess
  }
   originalConsoleError(...args);
 };
-// Mock windo w.matchMedia;
+// Mock windo w.matchMedia
 Object.defineProperty(windo w, 'matchMedia', {writable: true,
   value: jest.fn().mockImplementation(query=> ({
     matches: false,
@@ -47,10 +47,10 @@ Object.defineProperty(windo w, 'matchMedia', {writable: true,
     dispatchEvent: jest.fn()
   }))
 })
-// Mock requestAnimationFrame;
+// Mock requestAnimationFrame
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
-// Mock localStorage;
+// Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
@@ -60,7 +60,7 @@ const localStorageMock = {
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock;
 })
-// Mock sessionStorage;
+// Mock sessionStorage
 const sessionStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
@@ -70,9 +70,9 @@ const sessionStorageMock = {
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock;
 })
-// Mock fetch;
+// Mock fetch
 global.fetch = jest.fn()
-// Mock console methods for cleaner test output;
+// Mock console methods for cleaner test output
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 console.warn = (...args) => {
@@ -91,7 +91,7 @@ console.info = (...args) => {
   }
   _originalConsoleInfo(...args)
 }
-// Mock PerformanceObserver;
+// Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift']
   constructor(public callback: PerformanceObserverCallback) {}
@@ -103,22 +103,22 @@ global.PerformanceObserver = class MockPerformanceObserver {
 }
  }))
 });
-// Mock requestAnimationFrame;
+// Mock requestAnimationFrame
 global.requestAnimationFrame= jest.fn(cb=> setTimeout(cb0));
 global.cancelAnimationFrame= jest.fn(id=> clearTimeout(id));
 // MocklocalStorageconstlocalStorageMock= {getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
-  clear: jest.fn()};
+  clear: jest.fn()}
 Object.defineProperty(windo w, 'localStorage', {value: localStorageMock});
 // MocksessionStorageconstsessionStorageMock= {getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
-  clear: jest.fn()};
+  clear: jest.fn()}
 Object.defineProperty(windo w, 'sessionStorage', {value: sessionStorageMock});
-// Mock fetch;
+// Mock fetch
 global.fetch= jest.fn();
-// Mock console methods for cleaner testoutputconstoriginalConsoleWarn= console.warn;
+// Mock console methods for cleaner testoutputconstoriginalConsoleWarn= console.warn
 constoriginalConsoleInfo= console.info;
 console.warn= (...args) => {return;
  }
@@ -128,7 +128,7 @@ console.info= (...args) => {return;
  }
   _originalConsoleInfo(...args);
 };
-// Mock PerformanceObserver;
+// Mock PerformanceObserver
 global.PerformanceObserver= class MockPerformanceObserve r {static reado nlysupportedEntry Types: reado nly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
   constructor(publiccallback: PerformanceObserverCallback){}
   observe() {}
@@ -136,21 +136,21 @@ global.PerformanceObserver= class MockPerformanceObserve r {static reado nlysupp
   takeRecords() {return [];
  }
 };
-// Suppress JSDOM navigation warnings;
+// Suppress JSDOM navigation warnings
 console.error= (...args) => {if (args[0] && args[0].type=== 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings;
+    return; // Suppress JSDOM navigation warnings
   }
   _originalConsoleError.apply(console, args)
 }
-// Mock window.location;
+// Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
  }
-  _originalConsoleError.apply(consoleargs);
+  _originalConsoleError.apply(consoleargs)
 };
-// Mock windo w.location;
+// Mock windo w.location
 delete (windo w as unknownasRecord<string, unknown>).location;
 (windo w as unknownasRecord<string, unknown>).location= {href: 'http:// localhost:300 0',
   origin: 'http:// localhost:300 0',
@@ -165,4 +165,4 @@ delete (windo w as unknownasRecord<string, unknown>).location;
   assign: jest.fn(),
   replace: jest.fn()
 }
-  replace: jest.fn()};
+  replace: jest.fn()}

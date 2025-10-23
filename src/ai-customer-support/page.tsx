@@ -12,13 +12,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, CheckCircle, Phone, Mail, Check } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
+const AICustomerSupportPage: React.FC  = () => {
   const features = [
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
-import {MessageCircle, CheckCircle, Phone, Mail} from 'lucide-react';;
-constAICustomerSupportPage: React.FC= () =>{constfeatures= [
+import {MessageCircle, CheckCircle, Phone, Mail} from 'lucide-react';
+const AICustomerSupportPage: React.FC = () => {constfeatures= [
     {
       icon: MessageCircle,
       title: '2 4/7 AI Chat Support',
@@ -99,7 +99,7 @@ constAICustomerSupportPage: React.FC= () =>{constfeatures= [
               smart ticket routing, and predictive analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
+              <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"
               >
@@ -191,8 +191,7 @@ constAICustomerSupportPage: React.FC= () =>{constfeatures= [
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  className="cyber-button flex items-center justify-center space-x-2" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
@@ -239,8 +238,7 @@ constAICustomerSupportPage: React.FC= () =>{constfeatures= [
             </h><spanclassName="text-xl text-gray-300mb-8"></className="text-xl text-gray-300mb-8">Join500+ companies already using our AI customer support solutions</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
                  className="cyber-button flex items-centerjustify-centerspace-x-2"
                 ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
+                 className="cyber-button flex items-centerjustify-centerspace-x-2" style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
                 ><MailclassName="w-5h-5" /><spa n>ScheduleDemo</spa></a></di></di></sectio></di></mai><Footer /></di></>
   );
 };

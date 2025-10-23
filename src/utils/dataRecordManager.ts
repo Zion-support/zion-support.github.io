@@ -2,7 +2,7 @@
  * Data Record Manager;
  * Manages data records in localStorage with TTL support;
  */
-export interface DataRecord {;
+export interface DataRecord {
   id: string;
   timestamp: number;
   data: any;
@@ -12,17 +12,17 @@ export interface DataRecord {;
   ttl?: number;
 }
 
-export interface RecordOptions {;
+export interface RecordOptions {
   ttl?: number;
 }
 
-export interface RecordQuery {;
+export interface RecordQuery {
   category?: string;
   type?: string;
   maxAge?: number;
 }
 
-export interface RecordStats {;
+export interface RecordStats {
   total: number;
   byCategory: Record<string, number>
   byType: Record<string, number>
@@ -59,7 +59,7 @@ class DataRecordManager {
       // console.warn('Failed to store data record:', error)
     }
 
-    return record;
+    return record
   }
 
   getRecord(id: string): DataRecord | null {
@@ -73,7 +73,7 @@ class DataRecordManager {
 
       const record: DataRecord = JSON.parse(stored)
 
-      // Check TTL;
+      // Check TTL
       if (record.ttl && Date.now() - record.timestamp > record.ttl) {
         this.deleteRecord(id)
         return null;
@@ -82,7 +82,7 @@ class DataRecordManager {
       return record;
     } catch (error) {
       // console.warn('Failed to retrieve data record:', error)
-      return null;
+      return null
     }
   }
 
@@ -105,13 +105,13 @@ class DataRecordManager {
         try {
           const record: DataRecord = JSON.parse(stored)
 
-          // Check TTL;
+          // Check TTL
           if (record.ttl && now - record.timestamp > record.ttl) {
             this.deleteRecord(record.id)
             continue;
           }
 
-          // Apply filters;
+          // Apply filters
           if (query.category && record.category !== query.category) {
             continue;
           }
@@ -131,7 +131,7 @@ class DataRecordManager {
       // console.warn('Failed to query data records:', error)
     }
 
-    return records;
+    return records
   }
 
   deleteRecord(id: string): boolean {
@@ -141,7 +141,7 @@ class DataRecordManager {
       return true;
     } catch (error) {
       // console.warn('Failed to delete data record:', error)
-      return false;
+      return false
     }
   }
 
@@ -175,7 +175,7 @@ class DataRecordManager {
         try {
           const record: DataRecord = JSON.parse(stored)
 
-          // Check TTL;
+          // Check TTL
           if (record.ttl && now - record.timestamp > record.ttl) {
             this.deleteRecord(record.id)
             continue;
@@ -183,11 +183,11 @@ class DataRecordManager {
 
           stats.total++
 
-          // Count by category;
+          // Count by category
           stats.byCategory[record.category] = (stats.byCategory[record.category] || 0) + 1;
-          // Count by type;
+          // Count by type
           stats.byType[record.type] = (stats.byType[record.type] || 0) + 1;
-          // Count by age;
+          // Count by age
           const age = now - record.timestamp;
           if (age < oneHour) {
             stats.byAge.recent++
@@ -204,7 +204,7 @@ class DataRecordManager {
       // console.warn('Failed to get data record stats:', error)
     }
 
-    return stats;
+    return stats
   }
 
   clearAll(): number {
@@ -227,7 +227,7 @@ class DataRecordManager {
       // console.warn('Failed to clear data records:', error)
     }
 
-    return cleared;
+    return cleared
   }
 }
 

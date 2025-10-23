@@ -6,13 +6,13 @@
 import React from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
-export interface HealthStatus {;
+export interface HealthStatus {
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: number;
   uptime: number;
   checks: HealthCheck[]
 }
-export interface HealthCheck {;
+export interface HealthCheck {
   name: string;
   status: 'pass' | 'warn' | 'fail'
   message?: string;
@@ -25,7 +25,7 @@ class HealthCheckService {
   private startTime: number = Date.now()
   private lastCheckTime: number = 0;
   private cachedStatus?: HealthStatus;
-  private cacheTimeout: number = 5000; // 5 seconds;
+  private cacheTimeout: number = 5000; // 5 seconds
   constructor() {
     this.registerDefaultChecks()
   }
@@ -33,15 +33,15 @@ class HealthCheckService {
    * Register default health checks;
    */
   private registerDefaultChecks(): void {
-    // Memory usage check;
+    // Memory usage check
     this.register('memory', this.checkMemory.bind(this))
-    // Performance check;
+    // Performance check
     this.register('performance', this.checkPerformance.bind(this))
-    // Browser API availability check;
+    // Browser API availability check
     if (typeof window !== 'undefined') {
       this.register('browser-apis', this.checkBrowserAPIs.bind(this))
     }
-    // Local storage check;
+    // Local storage check
     if (typeof window !== 'undefined') {
       this.register('storage', this.checkStorage.bind(this))
     }
@@ -63,7 +63,7 @@ class HealthCheckService {
    */
   async runChecks(): Promise<HealthStatus> {
     const now = Date.now()
-    // Return cached status if still valid;
+    // Return cached status if still valid
     if (
       this.cachedStatus &&
       now - this.lastCheckTime < this.cacheTimeout;
@@ -71,7 +71,7 @@ class HealthCheckService {
       return this.cachedStatus;
     }
     const checks: HealthCheck[] = []
-    // Run all checks;
+    // Run all checks
     for (const [name, checkFn] of this.checks.entries()) {
       try {
         const startTime = performance.now()
@@ -91,7 +91,7 @@ class HealthCheckService {
         })
       }
     }
-    // Determine overall status;
+    // Determine overall status
     const hasFailures = checks.some((c) => c.status === 'fail')
     const hasWarnings = checks.some((c) => c.status === 'warn')
     let status: 'healthy' | 'degraded' | 'unhealthy'
@@ -108,10 +108,10 @@ class HealthCheckService {
       uptime: now - this.startTime,
       checks;
     }
-    // Cache the result;
+    // Cache the result
     this.cachedStatus = healthStatus;
     this.lastCheckTime = now;
-    // Log unhealthy status;
+    // Log unhealthy status
     if (status === 'unhealthy') {
       logger.error('Application health check failed', { healthStatus })
     } else if (status === 'degraded') {
@@ -183,10 +183,10 @@ class HealthCheckService {
       const reportData = JSON.parse(report)
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Performance metrics available`
-      // Check if we have any performance data;
+      // Check if we have any performance data
       if (reportData && Object.keys(reportData).length > 0) {
         const values = Object.values(reportData).filter(v => typeof v === 'number') as number[]
-        const poorCount = values.filter(v => v > 4000).length // LCP > 4s is poor;
+        const poorCount = values.filter(v => v > 4000).length // LCP > 4s is poor
         const needsImprovementCount = values.filter(v => v > 2500 && v <= 4000).length;
         if (poorCount > 0) {
           status = 'warn'
@@ -254,7 +254,7 @@ class HealthCheckService {
     try {
       const testKey = '_health_check_test'
       const testValue = 'test'
-      // Test localStorage;
+      // Test localStorage
       localStorage.setItem(testKey, testValue)
       const retrieved = localStorage.getItem(testKey)
       localStorage.removeItem(testKey)
@@ -266,7 +266,7 @@ class HealthCheckService {
         }
       }
       // Check available space (approximate)
-      const testData = 'x'.repeat(1024 * 1024); // 1MB;
+      const testData = 'x'.repeat(1024 * 1024) // 1MB
       try {
         localStorage.setItem('_size_test', testData)
         localStorage.removeItem('_size_test')
@@ -323,9 +323,9 @@ class HealthCheckService {
     this.lastCheckTime = 0;
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const healthCheck = new HealthCheckService();
-// Export convenience functions;
+// Export convenience functions
 export const runHealthChecks = () => healthCheck.runChecks()
 export const getHealthStatus = () => healthCheck.getStatus()
 export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) =>

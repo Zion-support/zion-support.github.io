@@ -1,7 +1,7 @@
 "use client";
 import React from "react"
 
-const AccessibilityUtils: React.FC = () => {;
+const AccessibilityUtils: React.FC  = () => {;
   return null;
 }
 
@@ -13,7 +13,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const AccessibilityUtilsPage: React.FC = () => {
+const AccessibilityUtilsPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -148,8 +148,19 @@ const AccessibilityUtilsPage: React.FC = () => {
 import React from "react";
 
 
-constAccessibilityUtils: React.FC= () => {return (
+const AccessibilityUtils: React.FC  = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Accessibility Utils
+        </h1>
+        <p className="text-gray-300 text-center">
+          Accessibility utilities and tools for enhanced user experience.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-  );};
-
-export default AccessibilityUtilsPage;
+export default AccessibilityUtils;

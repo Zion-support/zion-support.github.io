@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect } from "react"
 
-interface AnalyticsContextType {;
+interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, unknown>) => void;
   identify: (userId: string, traits?: Record<string, unknown>) => void;
   page: (name: string, properties?: Record<string, unknown>) => void;
@@ -18,7 +18,7 @@ constAnalyticsContext=createContext<AnalyticsContextType | undefined>(
   undefined,
 )
 
-export const useAnalytics = () => {
+export const useAnalytics  = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
@@ -29,7 +29,7 @@ export const useAnalytics = () => {
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
-export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
+export constuseAnalytics = () => {constcontext= useContext(AnalyticsContext);
   if (!context) {
     throw newError("useAnalytics must be used within an AnalyticsProvider");
  }
@@ -38,11 +38,11 @@ export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
 
 interface AnalyticsProviderProp s {children: React.ReactNode;}
 
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+exportconst AnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
-    // Initialize analytics;
+    // Initialize analytics
     if (type of windo w !=="undefined") {
-      // Google Analytics;
+      // Google Analytics
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
         script.async = true;
@@ -57,9 +57,9 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         gtag("js", new Date())
         gtag("config", process.env.REACT_APP_GA_ID)
       if (process.env.NODE_ENV==="production") {
-        constscript= document.createElement("script");
+        constscript= document.createElement("script")
         script.async= true;
-        script.src=`https://www.googletagmanager.com/$1/js?id=${process.env.REACT_APP_GA_ID}`;
+        script.src=`https://www.googletagmanager.com/$1/js?id=${process.env.REACT_APP_GA_ID}`
         do cument.head.appendChild(script);
 
         (windo w as unknown as {dataLayer: unknown[]}).dataLayer=
@@ -73,7 +73,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   }, [])
 
   consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
-      // Google Analytics;
+      // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
          "event",
           event,
@@ -81,12 +81,12 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         )
       }
 
-      // Custom analytics;
+      // Custom analytics
       }
   }
 
   constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
-      // Google Analytics;
+      // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
          "config",
           process.env.REACT_APP_GA_ID,
@@ -98,12 +98,12 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         );
       }
 
-      // Custom analytics;
+      // Custom analytics
       }
   }
 
   constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
-      // Google Analytics;
+      // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
          "event",
          "page_view",
@@ -116,11 +116,11 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         );
       }
 
-      // Custom analytics;
+      // Custom analytics
       }
   }
 
-  constvalue: AnalyticsContextType = {track,
+  const value: AnalyticsContextType = {track,
     identify,
     page,
   }
@@ -132,7 +132,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   )
 }
 
-// Extend Window interface for TypeScript;
+// Extend Window interface for TypeScript
 declare global {
   interface Window {
     dataLayer: unknown[]
@@ -146,7 +146,7 @@ declare global {
   );
 };
 
-// Extend Windo w interface for TypeScript;
+// Extend Windo w interface for TypeScript
 declare global {interface Windo w {
     dataLayer: unknown[];
     gtag: (...args: any[]) => void;
@@ -159,7 +159,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const EnhancedAnalyticsPage: React.FC = () => {
+const EnhancedAnalyticsPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,

@@ -7,7 +7,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const EnhancedAccessibilityEnhancerPage: React.FC = () => {
+const EnhancedAccessibilityEnhancerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -43,7 +43,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
 import {Helmet} from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Helmet} from 'lucide-react';
-constEnhancedAccessibilityEnhancerPage: React.FC= () =>{constfeatures= [
+const EnhancedAccessibilityEnhancerPage: React.FC = () => {constfeatures= [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',

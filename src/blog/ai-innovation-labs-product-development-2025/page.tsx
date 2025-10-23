@@ -4,7 +4,7 @@ import { Helmet } from 'lucide-react';
 import {Helmet} from 'lucide-react';
 import React from 'react';
 
-const InnovationLabsPage: React.FC = () => {
+const InnovationLabsPage: React.FC  = () => {
   return (
     <>
       <Helmet>
@@ -86,7 +86,7 @@ const InnovationLabsPage: React.FC = () => {
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
               <pre className="text-sm text-gray-800 overflow-x-auto"></p>
 {`AI Innovation Lab Stack:
-constInnovationLabsPage: React.FC= () =>{return (
+const InnovationLabsPage: React.FC = () => {return (
   <><Helme t><titl e>AI InnovationLabs: Product Development Revolution 2025| ZionTechGroup</titl><metaname="description"content="Discover how AI Innovation Labs are revolutionizing product development with10x faster time-to-market,85% cost reduction, and breakthrough innovationacceleration." /><metaproperty="og:url"content="/$1/ai-innovation-labs-2025.jpg" /></Helme><divclassName="min-h-screenbg-gray-50"><divclassName="max-w-4 xl mx-autopx-4py-8"><divclassName="bg-white rounded-lg shadow-lgp-8"><divclassName="text-centermb-8"><spanclassName="inline-block bg-blue-100text-blue-800px-4 py-2 rounded-full text-smfont-mediummb-4"></className="inline-block bg-blue-100text-blue-800px-4 py-2 rounded-full text-smfont-mediummb-4">🚀 Innovation Lab</spa><spanclassName="text-4 xl font-bold text-gray-900mb-4"></spa></className="text-4 xl font-bold text-gray-900mb-4">AI InnovationLabs: Product DevelopmentRevolution2025</h><spanclassName="text-gray-600text-lg"></spa></className="text-gray-600text-lg">January28, 2025· 45min read · AI Innovation</p></di><divclassName="prosemax-w-none"><h2className="text-2 xl font-bold text-gray-900mb-6">🎯InnovationResults</h><spanclassName="text-gray-700mb-6"></spa></className="text-gray-700mb-6">Discover how AI Innovation Labs are revolutionizing product developmentwith<stron g>10 xfastertime-to-market</stron>, 
             <stron g>8 5%costreduction</stron>, and breakthrough innovation acceleration. Learn the proven methodo logies;
               that are transforming how companies build and launch products.

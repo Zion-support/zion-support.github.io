@@ -321,7 +321,7 @@ export default function ServicesAdvertisingPage() {
       </section>
     </div>
   )
-import {ArrowLeft, CheckCircle, Target, ArrowRight} from 'lucide-react';;
+import {ArrowLeft, CheckCircle, Target, ArrowRight} from 'lucide-react';
 export default function ServicesAdvertisingPage() {return (
     <divclassName="min-h-screenbg-gradient-to-brfrom-slate-50to-blue-50">{/* Header */};
     <headerclassName="bg-whiteshadow-smborder-b"><divclassName="max-w-7 xl mx-auto px-4sm:px-6lg:px-8py-4"><ahref="/"className="inline-flex items-center text-blue-600 hover:text-blue-800transition-colorsduration-200"><ArrowLeftclassName="w-4h-4mr-2" />Back to Home</a></di></heade>{/* HeroSection */}

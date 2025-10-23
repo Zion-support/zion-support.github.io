@@ -4,7 +4,7 @@
  * Provides caching, deduplication, and retry logic for API calls;
  */
 import { CacheManager, CacheStorage } from './cacheManager'
-interface ApiCacheConfig {;
+interface ApiCacheConfig {
   ttl?: number;
   maxRetries?: number;
   retryDelay?: number;
@@ -23,7 +23,7 @@ export class ApiCache {;
   private config: Required<ApiCacheConfig>
   constructor(config: ApiCacheConfig = {}) {
     this.cache = new CacheManager({
-      defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes;
+      defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
       storage: CacheStorage.Memory;
     })
     this.config = {
@@ -32,9 +32,9 @@ export class ApiCache {;
       retryDelay: config.retryDelay || 1000,
       deduplicate: config.deduplicate ?? true;
     }
-    // Auto-cleanup every 5 minutes;
+    // Auto-cleanup every 5 minutes
     setInterval(() => {
-      // Cache cleanup is handled automatically;
+      // Cache cleanup is handled automatically
       this.cleanupPendingRequests()
     }, 5 * 60 * 1000)
   }
@@ -48,26 +48,26 @@ export class ApiCache {;
   ): Promise<T> {
     const cacheKey = this.getCacheKey(url, options)
     const mergedConfig = { ...this.config, ...cacheConfig }
-    // Check cache first;
+    // Check cache first
     if (this.cache.has(cacheKey)) {
       return this.cache.get(cacheKey) as T;
     }
-    // Check if there's a pending request;
+    // Check if there's a pending request
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {
       const pending = this.pendingRequests.get(cacheKey)
       if (pending && Date.now() - pending.timestamp < 30000) {
-        // Reuse pending request if less than 30 seconds old;
+        // Reuse pending request if less than 30 seconds old
         return pending.promise as Promise<T>
       }
     }
-    // Create new request with retry logic;
+    // Create new request with retry logic
     const requestPromise = this.fetchWithRetry<T>(
       url,
       options,
       mergedConfig.maxRetries,
       mergedConfig.retryDelay;
     )
-    // Store pending request;
+    // Store pending request
     if (mergedConfig.deduplicate) {
       this.pendingRequests.set(cacheKey, {
         promise: requestPromise,
@@ -76,11 +76,11 @@ export class ApiCache {;
     }
     try {
       const data = await requestPromise;
-      // Cache successful response;
+      // Cache successful response
       this.cache.set(cacheKey, data, { ttl: mergedConfig.ttl })
       return data;
     } finally {
-      // Clean up pending request;
+      // Clean up pending request
       this.pendingRequests.delete(cacheKey)
     }
   }
@@ -100,9 +100,9 @@ export class ApiCache {;
         // Retry on 5xx errors and 429 (rate limit)
         if (
           (response.status >= 500 || response.status === 429) &&
-          attempt < maxRetries;
+          attempt < maxRetries
         ) {
-          await this.delay(retryDelay * attempt); // Exponential backoff;
+          await this.delay(retryDelay * attempt); // Exponential backoff
           return this.fetchWithRetry<T>(
             url,
             options,
@@ -116,7 +116,7 @@ export class ApiCache {;
       const data = await response.json()
       return data as T;
     } catch (error) {
-      // Retry on network errors;
+      // Retry on network errors
       if (attempt < maxRetries) {
         await this.delay(retryDelay * attempt)
         return this.fetchWithRetry<T>(
@@ -134,7 +134,7 @@ export class ApiCache {;
    * Invalidate cache entries matching a pattern;
    */
   invalidate(pattern: string | RegExp): number {
-    // Pattern-based invalidation not supported, clear all;
+    // Pattern-based invalidation not supported, clear all
     this.cache.clear()
     return 0;
   }
@@ -165,7 +165,7 @@ export class ApiCache {;
     try {
       await this.fetch<T>(url, options, cacheConfig)
     } catch (error) {
-      // Silent fail for prefetch;
+      // Silent fail for prefetch
       }
   }
   /**
@@ -187,7 +187,7 @@ export class ApiCache {;
    */
   private cleanupPendingRequests(): void {
     const now = Date.now()
-    const timeout = 60000; // 1 minute;
+    const timeout = 60000; // 1 minute
     for (const [key, pending] of this.pendingRequests.entries()) {
       if (now - pending.timestamp > timeout) {
         this.pendingRequests.delete(key)
@@ -199,7 +199,7 @@ export class ApiCache {;
  * Default API cache instance;
  */
 export const defaultApiCache = new ApiCache({;
-  ttl: 5 * 60 * 1000, // 5 minutes;
+  ttl: 5 * 60 * 1000, // 5 minutes
   maxRetries: 3,
   retryDelay: 1000,
   deduplicate: true;

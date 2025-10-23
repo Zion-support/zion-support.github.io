@@ -3,13 +3,13 @@ import React from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 import { Zap, ArrowRight } from 'lucide-react'
 
-const ContentPromotionBanner: React.FC = () => {
+const ContentPromotionBanner: React.FC  = () => {
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ContentPromotionBannerPage: React.FC = () => {
+const ContentPromotionBannerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -271,7 +271,7 @@ export default ContentPromotionBannerPage;
 }
 export default ContentPromotionBanner;
 import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp} from 'lucide-react'
-constContentPromotionBanner: React.FC= () =>{constfeatures= [
+const ContentPromotionBanner: React.FC = () => {constfeatures= [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',

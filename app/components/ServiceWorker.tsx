@@ -5,13 +5,13 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ServiceWorkerPage: React.FC = () => {
+const ServiceWorkerPage: React.FC  = () => {
   const features = [
 import {Helmet} from 'react-helmet-async'
 import Navigation from '../$1/Navigation'
 import Footer from '../$1/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Helmet} from 'lucide-react';
-constServiceWorkerPage: React.FC= () =>{constfeatures= [
+const ServiceWorkerPage: React.FC = () => {constfeatures= [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -181,7 +181,7 @@ export default ServiceWorkerPage</button>
 </button>
 </h1>
 import { useEffect } from 'react'
-const ServiceWorker: React.FC = () => {
+const ServiceWorker: React.FC  = () => {
   useEffect(() => {
   <><Helme t><titl e>ServiceWorker - ZionTechGroup</titl><metaname="description"content="Advanced serviceworker solutions powered by AItechnology." /></Helme><Navigation /><divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900">{/* HeroSection */};
       <sectionclassName="relativepy-20px-4overflow-hidden"><divclassName="absolute inset-0 bg-[radial-gradient(circle_at_2 0%_8 0%,rgba(14 7,5 1,23 4,0.3)_0%,transparent_50%)]animate-pulse" /><divclassName="absolute inset-0 bg-[radial-gradient(circle_at_8 0%_2 0%,rgba(5 9,13 0,24 6,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1 s'}} /><divclassName="relative max-w-7 xlmx-autotext-center"><spanclassName="text-5 xlmd:text-7 xl font-bold text-whitemb-6leading-tight"></spa></className="text-5 xlmd:text-7 xl font-bold text-whitemb-6leading-tight">ServiceWorker<spanclassName="text-xl text-gray-300mb-8 max-w-3 xlmx-autoleading-relaxed"></spa></className="text-xl text-gray-300mb-8 max-w-3 xlmx-autoleading-relaxed">Advanced serviceworker solutions powered by AI technology.
@@ -200,7 +200,7 @@ const ServiceWorker: React.FC = () => {
 }
 export defaultServiceWorkerPage</butto></butto></p></h></butto></butto></h>
 import {useEffect} from 'react'
-constServiceWorker: React.FC= () => {useEffect(() => {
+const ServiceWorker: React.FC = () => {useEffect(() => {
   ;
     if ('serviceWorker' in navigator) {;
       navigator.serviceWorker;
@@ -216,6 +216,6 @@ constServiceWorker: React.FC= () => {useEffect(() => {
         .catch((registrationError) => {})
     }
   }, [])
-  return nul l;
+  return nul l
 }
 export default ServiceWorker;

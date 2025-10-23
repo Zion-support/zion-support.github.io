@@ -1,6 +1,6 @@
 import React from "react"
 import { ArrowRight } from "lucide-react"
-interface NeonButtonProps {;
+interface NeonButtonProps {
   children?: React.ReactNode;
   className?: string;
   title?: string;
@@ -25,7 +25,7 @@ interface NeonButtonProp s {children?: React.ReactNode;
   size?:"sm" |"md" |"lg";
   icon?: React.ReactNode;
   disabled?: boolean;}
-constNeonButton:React.FC<NeonButtonProp s>= ({children,
+const NeonButton:React.FC<NeonButtonProp s>= ({children,
   href,
   onClick,
   variant="primary",
@@ -43,7 +43,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const NeonButtonPage: React.FC = () => {
+const NeonButtonPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,

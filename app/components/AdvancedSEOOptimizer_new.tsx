@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const AdvancedSEOOptimizer_newPage: React.FC = () => {
+const AdvancedSEOOptimizer_newPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -149,7 +149,7 @@ canonicalUrl?: string;
 ogImage?: string;
 twitterCard?: string;
 structuredData?: objectchildren: React.ReactNode}
-constAdvancedSEOOptimizerNew: React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
+const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
 description= 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
 keywords= 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
 canonicalUrl,
@@ -160,15 +160,15 @@ children}) => {const [seoScoresetSeoScore] = useState(0)
 const [recommendationssetRecommendations]=useState<string[]>([])
 constanalyzeSEO= useCallback(() => {
   
-if (type ofwindow=== 'undefined') return letscore=0constnewRecommendations: string[] = []
-// Check title length;
+if (type ofwindow=== 'undefined') return letscore=0const newRecommendations: string[] = []
+// Check title length
 if (title.length >= 30&&title.length<= 6 0) {
 score +=20} else {newRecommendations.push('Title should be between 3 0-60characters')}
-// Check description length;
+// Check description length
 if (description.length >= 120&&description.length<= 16 0) {score +=20} else {newRecommendations.push('Description should be between 12 0-160characters')}
-// Check for keywords in title;
+// Check for keywords in title
 if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in title')}
-// Check for keywords in description;
+// Check for keywords in description
 if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in description')}
 // Check for headingstructureconstheadings= do cument.querySelectorAll('h1, h2, h3, h4, h5, h6')
 if (headings.length >0) {score +=10} else {newRecommendations.push('Add proper heading structure')}
@@ -181,9 +181,9 @@ setSeoScore(score)
 setRecommendations(newRecommendations)
 }, [title, description, keywords])
 useEffect(() => {analyzeSEO()}, [analyzeSEO])
-constgenerateStructuredData= () => {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || (type of windo w !== 'undefined' ? windo w.location.origin: ''),"logo": ogImage,"sameAs" : ["https:// twitter.com/ziontechgroup","https:// linkedin.com/$1/ziontechgroup"
+constgenerateStructuredData = () => {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || (type of windo w !== 'undefined' ? windo w.location.origin: ''),"logo": ogImage,"sameAs" : ["https:// twitter.com/ziontechgroup","https:// linkedin.com/$1/ziontechgroup"
 ]}
-return structuredDat a || default StructuredData;
+return structuredDat a || default StructuredData
 }
 return(<><Helme t><titl e>{title}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} />{canonicalUrl&&<linkrel="canonical"href={canonicalUrl} />}
 {/*OpenGraph*/}<metaproperty="og:title" content={title} /><metaproperty="og:description" content={description} /><metaproperty="og:image" content={ogImage} /><metaproperty="og:type"content="website" />{canonicalUrl&&<metaproperty="og:url"content={canonicalUrl} />}

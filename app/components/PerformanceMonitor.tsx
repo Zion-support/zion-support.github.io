@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const PerformanceMonitorPage: React.FC = () => {
+const PerformanceMonitorPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -174,13 +174,13 @@ export default function PerformanceMonitor({onMetricsUpdate,
   })
   useEffect(() => {
     if (!enableRealTimeMonitoring || typeof window === 'undefined') return;
-    const measurePerformance = () => {
+    const measurePerformance  = () => {
       const newMetrics: PerformanceMetrics = {
  })
 
-  useEffect(() => {if (!enableRealTimeMonitoring || type ofwindow=== 'undefined') return constmeasurePerformance= () => {
+  useEffect(() => {if (!enableRealTimeMonitoring || type ofwindow=== 'undefined') return constmeasurePerformance = () => {
   
-      constnewMetrics: PerformanceMetrics = {
+      const newMetrics: PerformanceMetrics = {
         loadTime: null,
         firstContentfulPaint: null,
         largestContentfulPaint: null,
@@ -190,19 +190,19 @@ export default function PerformanceMonitor({onMetricsUpdate,
         totalBlockingTime: null;
      }
 
-      // Measure page load time;
+      // Measure page load time
       if (performance.timing) {consttiming= performance.timing;
         newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart;
      }
 
-      // Measure Core Web Vitals using Performance Observer;
+      // Measure Core Web Vitals using Performance Observer
       if ('PerformanceObserver' in windo w) {// First Contentful Paint (FCP)
         constfcpObserver= new PerformanceObserver((list) => {
   
           constentries= list.getEntries()
           constfcpEntry= entries.find(entry=> entry.name=== 'first-contentful-paint')
           if (fcpEntr y) {
-            newMetrics.firstContentfulPaint= fcpEntry.startTime;
+            newMetrics.firstContentfulPaint= fcpEntry.startTime
          }
         })
         fcpObserver.observe({ entryTypes: ['paint'] })
@@ -210,7 +210,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
-          newMetrics.largestContentfulPaint = lastEntry.startTime;
+          newMetrics.largestContentfulPaint = lastEntry.startTime
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         fcpObserver.observe({entry Types: ['paint']})
@@ -218,7 +218,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
         // Largest Contentful Paint (LCP)
         constlcpObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
           constlastEntry= entries[entries.length - 1]
-          newMetrics.largestContentfulPaint= lastEntry.startTime;
+          newMetrics.largestContentfulPaint= lastEntry.startTime
        })
         lcpObserver.observe({entry Types: ['largest-contentful-paint']})
 
@@ -226,7 +226,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
         constfidObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
           entries.forEach((entry: any) => {
   
-            newMetrics.firstInputDelay= entry.processingStart - entry.startTime;
+            newMetrics.firstInputDelay= entry.processingStart - entry.startTime
          })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })
@@ -237,7 +237,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
           entries.forEach((entry: any) => {
   
             if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+              clsValue += entry.value
            }
           })
           newMetrics.cumulativeLayoutShift= clsValue;
@@ -245,7 +245,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         clsObserver.observe({entry Types: ['layout-shift']})
 
-        // Time to Interactive (TTI) - approximation;
+        // Time to Interactive (TTI) - approximation
         constttiObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
           constlongTasks= entries.filter((entry: any) => entry.duration >50)
           if (longTasks.length=== 0) {
@@ -255,7 +255,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
         ttiObserver.observe({ entryTypes: ['longtask'] })
         ttiObserver.observe({entry Types: ['longtask']})
 
-        // Total Blocking Time (TBT) - approximation;
+        // Total Blocking Time (TBT) - approximation
         consttbtObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
           constblockingTime= entries;
             .filter((entry: any) => entry.duration >50)
@@ -265,31 +265,31 @@ export default function PerformanceMonitor({onMetricsUpdate,
         tbtObserver.observe({entry Types: ['longtask']})
       }
 
-      // Update metrics state;
+      // Update metrics state
       setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }))
       setMetrics(prevMetrics=> ({...prevMetrics, ...newMetrics}))
       
-      // Call callback if provided;
+      // Call callback if provided
       if (onMetricsUpdat e) {onMetricsUpdate(newMetrics)
      }
 
-      // Log to console if enabled;
+      // Log to console if enabled
       if (logToConsole) {
         // console.log('Performance Metrics Updated:', newMetrics)
       }
       if (logToConsol e) {}
     }
 
-    // Measure performance after page load;
+    // Measure performance after page load
     if (do cument.readyState=== 'complete') {measurePerformance()
    } else {windo w.addEventListener('load', measurePerformance)
    }
 
-    // Cleanup;
+    // Cleanup
     return () => {windo w.removeEventListener('load', measurePerformance)
    }
   }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole])
-  // Service Worker registration for performance monitoring;
+  // Service Worker registration for performance monitoring
   useEffect(() => {if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
@@ -309,7 +309,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
     )
   }
 
-  return nul l;
+  return nul l
 }
 
 // Global performance monitoring utilitiesexportconstperformanceUtils= {// Measure custom performance marksmark: (name: string) => {
@@ -318,7 +318,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
       performance.mark(name)
    }
   },
-  // Measure time between marks;
+  // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (endMark) {
@@ -330,14 +330,14 @@ export default function PerformanceMonitor({onMetricsUpdate,
      }
     }
   },
-  // Get performance entries;
+  // Get performance entries
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       return type ? performance.getEntriesByType(type) : performance.getEntries()
     }
     return []
   },
-  // Clear performance entries;
+  // Clear performance entries
   clearEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {
@@ -370,7 +370,7 @@ export default function PerformanceMonitor({onMetricsUpdate,
         first_input_delay: metrics.firstInputDelay,
         cumulative_layout_shift: metrics.cumulativeLayoutShift,
         time_to_interactive: metrics.timeToInteractive,
-        total_blocking_time: metrics.totalBlockingTime;
+        total_blocking_time: metrics.totalBlockingTime
      }
     })
   }

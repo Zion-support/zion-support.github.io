@@ -4,10 +4,10 @@ import { CheckCircle, Brain, Target, Database } from 'lucide-react'
 ;
 import React from 'react';
 import { BarChart3, CheckCircle, Brain, Target, Database, BarChart, Check } from 'lucide-react';
-const AIDataAnalyticsPage: React.FC = () => {
+const AIDataAnalyticsPage: React.FC  = () => {
   const analyticsServices = [
-import {BarChart3, CheckCircle, Brain, Database, Target} from 'lucide-react';;
-constAIDataAnalyticsPage: React.FC= () =>{constanalyticsServices= [
+import {BarChart3, CheckCircle, Brain, Database, Target} from 'lucide-react';
+const AIDataAnalyticsPage: React.FC = () => {constanalyticsServices= [
     {
       title: 'Real-Time Business Intelligence Platform',
       description: 'Advanced AI-powered analytics platform providing real-time insights, predictive modeling, and automated reporting for data-driven decision making.',

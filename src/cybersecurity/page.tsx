@@ -5,10 +5,10 @@ import { CheckCircle, Star, Eye, Shield, Database, Helmet } from 'lucide-react'
 import { Globe, AlertTriangle } from 'lucide-react'
 ;
 import { Lock, CheckCircle, Star, Shield, Database, Eye, Helmet, Check, Globe, AlertTriangle } from 'lucide-react';
-const CybersecurityPage: React.FC = () => {
+const CybersecurityPage: React.FC  = () => {
   const securityServices = [
-import {Lock, CheckCircle, Star, Eye, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
-constCybersecurityPage: React.FC= () =>{constsecurityServices= [
+import {Lock, CheckCircle, Star, Eye, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';
+const CybersecurityPage: React.FC = () => {constsecurityServices= [
     {
       title: 'Advanced Threat Detection',
       description: 'AI-powered threat detection and response systems that identify and neutralize cyber threats in real-time.',

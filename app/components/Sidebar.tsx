@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const SidebarPage: React.FC = () => {
+const SidebarPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -164,12 +164,12 @@ Phone,
 Mail,;
 MapPin,Clock;}
 } from 'lucide-react'
-constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
+const Sidebar: React.FC = () => {const [isOpensetIsOpen] = useState(false)
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
 constlocation= useLocation()
 useEffect(() => {
   
-consthandleResize= () => {
+consthandleResize = () => {
   
 if (windo w.innerWidth >=1024) {
 setIsOpen(false)}
@@ -277,8 +277,7 @@ return (
 <button;
 onClick={() =></button> setIsOpen(true)}
 onClick={() =>setIsOpen(true)}</button>
-className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
-aria-label="Open sidebar"
+className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all" aria-label="Open sidebar"
 >
 <Menu className="w-6 h-6" />
 </button>
@@ -308,8 +307,7 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 <button;
 onClick={() =></button> setIsOpen(false)}
 onClick={() =>setIsOpen(false)}</button>
-className="lg:hidden text-gray-400 hover:text-white transition-colors"
-aria-label="Close sidebar"
+className="lg:hidden text-gray-400 hover:text-white transition-colors" aria-label="Close sidebar"
 >
 <X className="w-6 h-6" />
 </button>
@@ -340,8 +338,7 @@ hours: 'Mon-Fri9AM-6 PM EST'}
 return(<>{/* Mobile MenuButton*/}<
 onClick={() =></
 onClick={() =>setIsOpen(true)}
-className="lg:hidden fixed top-4 left-4 z-50bg-slate-80 0/90backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-40 0/20 hover:bg-slate-700/90transition-all"
-aria-label="Opensidebar"><MenuclassName="w-6h-6" /></butto>{/* SidebarOverlay */}
+className="lg:hidden fixed top-4 left-4 z-50bg-slate-80 0/90backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-40 0/20 hover:bg-slate-700/90transition-all" aria-label="Opensidebar"><MenuclassName="w-6h-6" /></butto>{/* SidebarOverlay */}
 {isOpen &&(<divclassName="fixed inset-0bg-black/50backdrop-blur-smz-40lg:hidden";}
 onClick={() =>setIsOpen(false)}
 />
@@ -349,7 +346,7 @@ onClick={() =>setIsOpen(false)}
 {/*Sidebar*/}</di><asideclassName={`fixed top-0 left-0 h-full w-8 0 bg-slate-90 0/9 5 backdrop-blur-lg border-r border-cyan-40 0/20z-50transform transition-transform duration-300${
 isOpen ? 'translate-x-0'  : '-translate-x-full'} lg:translate-x-0 lg:staticlg:z-auto`}><divclassName="flexflex-colh-full">{/*Header*/}</di><divclassName="flex items-center justify-between p-6 border-b border-slate-700/50"><Linkto="/"className="flexitems-centerspace-x-3" onClick={() =>setIsOpen(false)}><divclassName="w-1 0 h-10bg-gradient-to-r from-cyan-400to-purple-400rounded-lg flexitems-centerjustify-center"><BrainclassName="w-6h-6text-white" /></di><di v></di><h2className="text-xl font-boldtext-whitecyber-text">ZionTechGroup</h><pclassName="text-xstext-cyan-400">AI &ITSolutions</p></di></Lin><
 onClick={() =></
-onClick={() =>setIsOpen(false)}className="lg:hidden text-gray-400hover:text-whitetransition-colors"aria-label="Closesidebar"><XclassName="w-6h-6" /></butto></di>{/* Navigation*/}<divclassName="flex-1overflow-y-autopy-6"></di><navclassName="space-y-2px-4">{navigationSections.map((sectionsectionIndex)=>(;}<divkey={sectionIndex}className="space-y-1"></di><
+onClick={() =>setIsOpen(false)}className="lg:hidden text-gray-400hover:text-whitetransition-colors" aria-label="Closesidebar"><XclassName="w-6h-6" /></butto></di>{/* Navigation*/}<divclassName="flex-1overflow-y-autopy-6"></di><navclassName="space-y-2px-4">{navigationSections.map((sectionsectionIndex)=>(;}<divkey={sectionIndex}className="space-y-1"></di><
 onClick={() =></
 onClick={() =>section.key &&toggleSection(section.key)}className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400hover:text-cyan-300transition-colors"><spa n>{section.title}</spa>{section.key && (
 expandedSections.has(section.key)?<ChevronDownclassName="w-4h-4" />:<ChevronRightclassName="w-4h-4" />)}</butto>{(!section.key || expandedSections.has(section.key)) &&(<divclassName="ml-4space-y-1">{section.items.map((itemitemIndex)=>(</di><Linkkey={itemIndex}

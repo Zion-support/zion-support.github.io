@@ -5,8 +5,8 @@ import { CheckCircle, Phone, Mail, MapPin, TrendingUp, Helmet, Check } from 'luc
 import {CheckCircle, Phone, Mail, TrendingUp, Helmet} from 'lucide-react';
 import React from 'react';
 
-constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
-    // AI-Powered Developer Tools;
+const MicroSAASPage: React.FC = () => {constmicroSAASServices= [
+    // AI-Powered Developer Tools
     {
       title: 'AI Code Review Assistant Pro',
       description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
@@ -19,7 +19,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950',
       link: 'https:// ziontechgroup.com/ai-code-review',
-      popular: true;
+      popular: true
    },
     {title: 'AI Test Generation Suite',
       description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
@@ -43,7 +43,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Marketing & SEO Tools;
+    // AI Marketing & SEO Tools
     {title: 'AI SEO Optimizer Pro',
       description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
       icon: '🎯',
@@ -88,7 +88,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Business Intelligence & Analytics;
+    // AI Business Intelligence & Analytics
     {title: 'AI Analytics Dashboard Pro',
       description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
       icon: '📊',
@@ -122,7 +122,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Finance & Accounting Tools;
+    // AI Finance & Accounting Tools
     {title: 'AI Invoice Generator Pro',
       description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
       icon: '💰',
@@ -156,7 +156,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Healthcare & Wellness;
+    // AI Healthcare & Wellness
     {title: 'AI Health Monitoring Platform',
       description: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
       icon: '🏥',
@@ -190,7 +190,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Education & Learning;
+    // AI Education & Learning
     {title: 'AI Language Learning Platform',
       description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
       icon: '🌍',
@@ -224,7 +224,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI E-commerce & Retail;
+    // AI E-commerce & Retail
     {title: 'AI Inventory Optimizer Pro',
       description: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
       icon: '📦',
@@ -258,7 +258,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Legal & Compliance;
+    // AI Legal & Compliance
     {title: 'AI Legal Document Analyzer',
       description: 'Intelligent legal do cument review with contract analysis, risk assessment, and compliance checking.',
       icon: '⚖️',
@@ -270,7 +270,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Real Estate & Property Management;
+    // AI Real Estate & Property Management
     {title: 'AI Property Valuation Engine',
       description: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
       icon: '🏠',
@@ -282,7 +282,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI HR & Recruitment;
+    // AI HR & Recruitment
     {title: 'AI Resume Parser & Matcher',
       description: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
       icon: '👥',
@@ -316,7 +316,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Finance & Accounting;
+    // AI Finance & Accounting
     {title: 'AI Expense Tracker & Categorizer',
       description: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
       icon: '💰',
@@ -350,7 +350,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Project Management;
+    // AI Project Management
     {title: 'AI Project Manager Assistant',
       description: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
       icon: '📋',
@@ -373,7 +373,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Customer Service;
+    // AI Customer Service
     {title: 'AI Live Chat Assistant',
       description: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human hando ff.',
       icon: '💬',
@@ -396,7 +396,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Sales & CRM;
+    // AI Sales & CRM
     {title: 'AI Lead Scoring Engine',
       description: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
       icon: '🎯',
@@ -419,7 +419,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Healthcare & Wellness;
+    // AI Healthcare & Wellness
     {title: 'AI Symptom Checker Pro',
       description: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and do ctor recommendations.',
       icon: '🏥',
@@ -442,7 +442,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Security & Compliance;
+    // AI Security & Compliance
     {title: 'AI Security Monitoring System',
       description: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
       icon: '🛡️',
@@ -465,7 +465,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Productivity & Automation;
+    // AI Productivity & Automation
     {title: 'AI Meeting Assistant Pro',
       description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
       icon: '🎤',
@@ -499,7 +499,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Analytics & Reporting;
+    // AI Analytics & Reporting
     {title: 'AI Business Intelligence Suite',
       description: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
       icon: '📊',
@@ -522,7 +522,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Development & DevOps;
+    // AI Development & DevOps
     {title: 'AI Code Quality Monitor',
       description: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
       icon: '🔍',
@@ -545,7 +545,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Communication & Collaboration;
+    // AI Communication & Collaboration
     {title: 'AI Team Collaboration Hub',
       description: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
       icon: '👥',
@@ -568,7 +568,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Marketing & Advertising;
+    // AI Marketing & Advertising
     {title: 'AI Ad Campaign Optimizer',
       description: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.',
       icon: '📢',
@@ -591,7 +591,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI E-commerce & Retail;
+    // AI E-commerce & Retail
     {title: 'AI Customer Behavior Analyzer',
       description: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
       icon: '🛒',
@@ -614,7 +614,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Education & Training;
+    // AI Education & Training
     {title: 'AI Corporate Training Platform',
       description: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
       icon: '🎓',
@@ -637,7 +637,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Legal & Compliance;
+    // AI Legal & Compliance
     {title: 'AI Contract Management System',
       description: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
       icon: '📋',
@@ -660,7 +660,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Real Estate & Property;
+    // AI Real Estate & Property
     {title: 'AI Property Management Suite',
       description: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
       icon: '🏢',
@@ -683,7 +683,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Agriculture & Environment;
+    // AI Agriculture & Environment
     {title: 'AI Crop Monitoring System',
       description: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
       icon: '🌾',
@@ -706,7 +706,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Transportation & Logistics;
+    // AI Transportation & Logistics
     {title: 'AI Fleet Management System',
       description: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
       icon: '🚛',
@@ -729,7 +729,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Entertainment & Media;
+    // AI Entertainment & Media
     {title: 'AI Content Moderation Platform',
       description: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
       icon: '🎬',
@@ -752,7 +752,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Gaming & Entertainment;
+    // AI Gaming & Entertainment
     {title: 'AI Game Development Platform',
       description: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
       icon: '🎮',
@@ -775,7 +775,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Research & Development;
+    // AI Research & Development
     {title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
       icon: '🔬',
@@ -798,7 +798,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Energy & Utilities;
+    // AI Energy & Utilities
     {title: 'AI Energy Management System',
       description: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
       icon: '⚡',
@@ -821,7 +821,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Manufacturing & Industrial;
+    // AI Manufacturing & Industrial
     {title: 'AI Quality Control System',
       description: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
       icon: '🏭',
@@ -844,7 +844,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Insurance & Risk Management;
+    // AI Insurance & Risk Management
     {title: 'AI Risk Assessment Platform',
       description: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
       icon: '🛡️',
@@ -867,7 +867,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Government & Public Sector;
+    // AI Government & Public Sector
     {title: 'AI Citizen Services Platform',
       description: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
       icon: '🏛️',
@@ -890,7 +890,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Non-Profit & Social Impact;
+    // AI Non-Profit & Social Impact
     {title: 'AI Donor Management System',
       description: 'Intelligent do nor engagement with personalized outreach, impact tracking, and fundraising optimization.',
       icon: '❤️',
@@ -913,7 +913,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Travel & Hospitality;
+    // AI Travel & Hospitality
     {title: 'AI Travel Planning Assistant',
       description: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
       icon: '✈️',
@@ -936,7 +936,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Sports & Fitness;
+    // AI Sports & Fitness
     {title: 'AI Sports Performance Analyzer',
       description: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
       icon: '⚽',
@@ -959,7 +959,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Beauty & Fashion;
+    // AI Beauty & Fashion
     {title: 'AI Virtual Try-On Platform',
       description: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
       icon: '👗',
@@ -982,7 +982,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Home & Lifestyle;
+    // AI Home & Lifestyle
     {title: 'AI Smart Home Controller',
       description: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
       icon: '🏠',
@@ -1005,7 +1005,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Pets & Animals;
+    // AI Pets & Animals
     {title: 'AI Pet Health Monitor',
       description: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
       icon: '🐕',
@@ -1028,7 +1028,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Education & Learning;
+    // AI Education & Learning
     {title: 'AI Tutoring Platform',
       description: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
       icon: '🎓',
@@ -1051,7 +1051,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Music & Audio;
+    // AI Music & Audio
     {title: 'AI Music Composition Tool',
       description: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
       icon: '🎵',
@@ -1074,7 +1074,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Art & Design;
+    // AI Art & Design
     {title: 'AI Design Assistant Pro',
       description: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
       icon: '🎨',
@@ -1097,7 +1097,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Dating & Relationships;
+    // AI Dating & Relationships
     {title: 'AI Dating Assistant',
       description: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
       icon: '💕',
@@ -1120,7 +1120,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Parenting & Family;
+    // AI Parenting & Family
     {title: 'AI Parenting Assistant',
       description: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
       icon: '👶',
@@ -1143,7 +1143,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Senior Care & Aging;
+    // AI Senior Care & Aging
     {title: 'AI Senior Care Monitor',
       description: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
       icon: '👴',
@@ -1166,7 +1166,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Accessibility & Inclusion;
+    // AI Accessibility & Inclusion
     {title: 'AI Accessibility Assistant',
       description: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
       icon: '♿',
@@ -1189,7 +1189,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Emergency & Crisis Management;
+    // AI Emergency & Crisis Management
     {title: 'AI Emergency Response System',
       description: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
       icon: '🚨',
@@ -1212,7 +1212,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Space & Astronomy;
+    // AI Space & Astronomy
     {title: 'AI Space Mission Planner',
       description: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
       icon: '🚀',
@@ -1235,7 +1235,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Ocean & Marine;
+    // AI Ocean & Marine
     {title: 'AI Marine Life Tracker',
       description: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
       icon: '🐋',
@@ -1258,7 +1258,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Archaeology & History;
+    // AI Archaeology & History
     {title: 'AI Archaeological Site Analyzer',
       description: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
       icon: '🏛️',
@@ -1281,7 +1281,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Psychology & Mental Health;
+    // AI Psychology & Mental Health
     {title: 'AI Mental Health Tracker',
       description: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
       icon: '🧘',
@@ -1304,7 +1304,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Philosophy & Ethics;
+    // AI Philosophy & Ethics
     {title: 'AI Ethical Decision Maker',
       description: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
       icon: '⚖️',
@@ -1327,7 +1327,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Spirituality & Religion;
+    // AI Spirituality & Religion
     {title: 'AI Spiritual Guidance Platform',
       description: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
       icon: '🙏',
@@ -1350,7 +1350,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Future & Innovation;
+    // AI Future & Innovation
     {title: 'AI Innovation Predictor',
       description: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
       icon: '🔮',
@@ -1373,7 +1373,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Consciousness & AI Ethics;
+    // AI Consciousness & AI Ethics
     {title: 'AI Consciousness Monitor',
       description: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
       icon: '🤖',
@@ -1396,7 +1396,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Time & Space;
+    // AI Time & Space
     {title: 'AI Time Management Master',
       description: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
       icon: '⏰',
@@ -1419,7 +1419,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Quantum & Advanced Physics;
+    // AI Quantum & Advanced Physics
     {title: 'AI Quantum Simulator Pro',
       description: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
       icon: '⚛️',
@@ -1442,7 +1442,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Multiverse & Parallel Realities;
+    // AI Multiverse & Parallel Realities
     {title: 'AI Multiverse Explorer',
       description: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
       icon: '🌌',
@@ -1465,7 +1465,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Transcendence & Enlightenment;
+    // AI Transcendence & Enlightenment
     {title: 'AI Enlightenment Assistant',
       description: 'Intelligent enlightenment guidance with consciousness expansion, wisdo m integration, and transcendence support.',
       icon: '🧘‍♂️',
@@ -1488,7 +1488,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Universal Consciousness;
+    // AI Universal Consciousness
     {title: 'AI Universal Consciousness Connector',
       description: 'Intelligent universal consciousness connection with collective intelligence, universal wisdo m, and cosmic awareness.',
       icon: '🌌',
@@ -1511,7 +1511,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Infinite Possibilities;
+    // AI Infinite Possibilities
     {title: 'AI Infinite Possibility Generator',
       description: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
       icon: '♾️',
@@ -1564,7 +1564,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Agriculture & Food Tech;
+    // AI Agriculture & Food Tech
     {title: 'AI Crop Monitoring System',
       description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
       icon: '🌾',
@@ -1587,7 +1587,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Transportation & Logistics;
+    // AI Transportation & Logistics
     {title: 'AI Route Optimization Pro',
       description: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
       icon: '🚛',
@@ -1610,7 +1610,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Energy & Sustainability;
+    // AI Energy & Sustainability
     {title: 'AI Energy Management System',
       description: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
       icon: '⚡',
@@ -1633,7 +1633,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Entertainment & Media;
+    // AI Entertainment & Media
     {title: 'AI Content Moderation Suite',
       description: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
       icon: '🛡️',
@@ -1656,7 +1656,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Security & Surveillance;
+    // AI Security & Surveillance
     {title: 'AI Security Camera System',
       description: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
       icon: '📹',
@@ -1679,7 +1679,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Research & Development;
+    // AI Research & Development
     {title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
       icon: '🔬',
@@ -1713,7 +1713,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Real Estate & Property;
+    // AI Real Estate & Property
     {title: 'AI Real Estate Analyzer Pro',
       description: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
       icon: '🏠',
@@ -1736,7 +1736,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI HR & Recruitment;
+    // AI HR & Recruitment
     {title: 'AI HR Recruitment Suite',
       description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
       icon: '👥',
@@ -1759,7 +1759,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Project Management;
+    // AI Project Management
     {title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
       icon: '📋',
@@ -1782,7 +1782,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Supply Chain & Logistics;
+    // AI Supply Chain & Logistics
     {title: 'AI Supply Chain Optimizer',
       description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
       icon: '🚚',
@@ -1805,7 +1805,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Agriculture & Food Tech;
+    // AI Agriculture & Food Tech
     {title: 'AI Precision Agriculture Platform',
       description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
       icon: '🌾',
@@ -1828,7 +1828,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Energy & Sustainability;
+    // AI Energy & Sustainability
     {title: 'AI Energy Management System',
       description: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
       icon: '⚡',
@@ -1851,7 +1851,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Gaming & Entertainment;
+    // AI Gaming & Entertainment
     {title: 'AI Game Development Suite',
       description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
       icon: '🎮',
@@ -1874,7 +1874,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Transportation & Mobility;
+    // AI Transportation & Mobility
     {title: 'AI Fleet Management System',
       description: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
       icon: '🚛',
@@ -1897,7 +1897,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Research & Development;
+    // AI Research & Development
     {title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
       icon: '🔬',
@@ -1920,7 +1920,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Personal Productivity;
+    // AI Personal Productivity
     {title: 'AI Personal Assistant Pro',
       description: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
       icon: '👤',
@@ -2113,7 +2113,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       category: 'Customer Intelligence',
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
    },
-    // NEW INNOVATIVE MICRO SAAS SERVICES;
+    // NEW INNOVATIVE MICRO SAAS SERVICES
     {title: 'AI-Powered Meeting Transcriber',
       description: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
       icon: '🎙️',
@@ -2724,8 +2724,8 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
    },
-    // NEW COMPREHENSIVE MICRO SAAS SERVICES;
-    // AI Productivity & Time Management;
+    // NEW COMPREHENSIVE MICRO SAAS SERVICES
+    // AI Productivity & Time Management
     {title: 'AI Time Tracking & Productivity Analyzer',
       description: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
       icon: '⏰',
@@ -2759,7 +2759,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI HR & Recruitment;
+    // AI HR & Recruitment
     {title: 'AI Resume Parser & Candidate Matcher',
       description: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
       icon: '👔',
@@ -2793,7 +2793,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Customer Service & Support;
+    // AI Customer Service & Support
     {title: 'AI Customer Support Ticket Router',
       description: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
       icon: '🎫',
@@ -2827,7 +2827,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Sales & CRM;
+    // AI Sales & CRM
     {title: 'AI Sales Pipeline Optimizer',
       description: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
       icon: '📈',
@@ -2861,7 +2861,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Project Management;
+    // AI Project Management
     {title: 'AI Project Risk Predictor',
       description: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
       icon: '⚠️',
@@ -2895,7 +2895,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Security & Compliance;
+    // AI Security & Compliance
     {title: 'AI Security Threat Detector',
       description: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
       icon: '🔒',
@@ -2929,7 +2929,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Quality Assurance & Testing;
+    // AI Quality Assurance & Testing
     {title: 'AI Automated Testing Suite',
       description: 'Comprehensive automated testing with test generation, execution, and maintenance.',
       icon: '🧪',
@@ -2963,7 +2963,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Content & Media;
+    // AI Content & Media
     {title: 'AI Video Content Generator',
       description: 'Intelligent video creation with script generation, editing, and optimization for social media.',
       icon: '🎬',
@@ -2997,7 +2997,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Research & Development;
+    // AI Research & Development
     {title: 'AI Research Assistant Pro',
       description: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
       icon: '🔬',
@@ -3031,7 +3031,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Personal & Lifestyle;
+    // AI Personal & Lifestyle
     {title: 'AI Personal Finance Manager',
       description: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
       icon: '💰',
@@ -3065,7 +3065,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950'
    },
-    // AI Gaming & Entertainment;
+    // AI Gaming & Entertainment
     {title: 'AI Game Development Assistant',
       description: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
       icon: '🎮',

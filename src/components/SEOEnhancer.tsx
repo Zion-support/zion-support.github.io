@@ -18,7 +18,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.jpg",
   url = "https://ziontechgroup.com",
-  children;
+  children
 }) => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -38,12 +38,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "Cloud Services",
       "Automation",
       "Business Intelligence"
-interface SEOEnhancerProp s {title?: string;
+interface SEOEnhancerProp s {title?: string
   description?: string;
   keywords?: string;
   image?: string;
   url?: stringchildren: React.ReactNode;}
-constSEOEnhancer: React.FC<SEOEnhancerProp s>= ({title= "Zion Tech Group - Advanced AI and ITSolutions",
+const SEOEnhancer: React.FC<SEOEnhancerProp s>= ({title= "Zion Tech Group - Advanced AI and ITSolutions",
   description= "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edgetechnology.",
   keywords= "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion TechGroup",
   image= "https://ziontechgroup.com/og-image.jpg",
@@ -146,7 +146,7 @@ constSEOEnhancer: React.FC<SEOEnhancerProp s>= ({title= "Zion Tech Group - Advan
     </>
   )
 }
-export default SEOEnhancer;
+export default SEOEnhancer
   <><Helme t>{/* Primary metatags */}
       <titl e>{title}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author"content="Zion TechGroup" /><metaname="robots"content="index,follow" /><metaname="googlebot"content="index,follow" />{/* Open Graph /Facebook */}
      <metaproperty="og:type"content="website" /><metaproperty="og:url" content={url} /><metaproperty="og:title" content={title} /><metaproperty="og:description" content={description} /><metaproperty="og:image" content={image} /><metaproperty="og:image:width"content="1200" /><metaproperty="og:image:height"content="630" /><metaproperty="og:site_name"content="Zion TechGroup" />{/* Twitter */}

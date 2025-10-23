@@ -6,7 +6,7 @@ import { CheckCircle, Star, Phone, BarChart, Check } from 'lucide-react';
 import {CheckCircle, Phone, Star, BarChart} from 'lucide-react';
 import React from 'react';
 
-constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
+const SmartAnalyticsPage: React.FC = () => {constfeatures= [
     {
       icon: BarChart,
       title: 'Real-time Dashboards',

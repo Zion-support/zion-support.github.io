@@ -11,11 +11,11 @@ import { Send, CheckCircle, Phone, Mail, MapPin, Check, Clock } from 'lucide-rea
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, {useState} from 'react';
-import {Send, CheckCircle, Phone, Mail} from 'lucide-react';;
+import {Send, CheckCircle, Phone, Mail} from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
+const ContactPage: React.FC = () => {const [formDatasetFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -36,10 +36,10 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend;
+    // Here you would typically send the form data to your backend
     // // console.log('Form submitted:', formData)
     setIsSubmitted(true)
-    // Reset form after 3 seconds;
+    // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false)
  });
@@ -52,9 +52,9 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
   };
 
   consthandleSubmit= (e: React.FormEvent) => {e.preventDefault();
-    // Here you would typically send the form data to your backend;
-    // setIsSubmitted(true);
-    // Reset form after3seconds;
+    // Here you would typically send the form data to your backend
+    // setIsSubmitted(true)
+    // Reset form after3seconds
     setTimeout(() => {
   
       setIsSubmitted(false);
@@ -148,8 +148,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                      name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                     requiredclassName="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
-                     placeholder="Your fullname"
+                     requiredclassName="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20" placeholder="Your fullname"
                     /></di><di v><labelhtmlFor="email"className="block text-sm font-medium text-gray-300mb-2">Email Address *
                   </labe><inputtype="email"
                      id="email"
@@ -157,8 +156,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                       value={formData.email}
                       onChange={handleInputChange}
                       required;
-                      className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="your@email.com"
+                      className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20" placeholder="your@email.com"
                     />
                   </div>
                 </div>
@@ -170,22 +168,19 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                       type="text"
                       id="company"
                       name="company"
-                     requiredclassName="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
-                     placeholder="your@email.com"
+                     requiredclassName="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20" placeholder="your@email.com"
                     /></di></di><divclassName="grid grid-cols-1md:grid-cols-2gap-6"><di v><labelhtmlFor="company"className="block text-sm font-medium text-gray-300mb-2">Company</labe><inputtype="text"
                      id="company"
                      name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                     className="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
-                     placeholder="Your companyname"
+                     className="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20" placeholder="Your companyname"
                     /></di><di v><labelhtmlFor="phone"className="block text-sm font-medium text-gray-300mb-2">Phone Number</labe><inputtype="tel"
                      id="phone"
                      name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="(555) 123-4567"
+                      className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20" placeholder="(555) 123-4567"
                     />
                   </div>
                 </div>
@@ -216,8 +211,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                     onChange={handleInputChange}
                     required;
                     rows={5}
-                    className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
-                    placeholder="Tell us about your project and how we can help..."
+                    className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20" placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
                 <button;
@@ -315,8 +309,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
     </div>
   )
 }
-                     className="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
-                     placeholder="(55 5)123-4567"
+                     className="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20" placeholder="(55 5)123-4567"
                     /></di></di><di v><labelhtmlFor="service"className="block text-sm font-medium text-gray-300mb-2">Service Interest</labe><selectid="service"
                    name="service"
                     value={formData.service}
@@ -330,8 +323,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
                     value={formData.message}
                     onChange={handleInputChange}
                     requiredrows={5}
-                   className="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
-                   placeholder="Tell us about your project and how we canhelp..."
+                   className="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20" placeholder="Tell us about your project and how we canhelp..."
                   /></di><
                  type="submit"
                  className="w-full bg-gradient-to-r from-cyan-50 0 to-purple-600text-white py-3 px-6 rounded-lg font-semiboldhover:from-cyan-600 hover:to-purple-700transition-all duration-300 hover:scale-105flexitems-centerjustify-center"

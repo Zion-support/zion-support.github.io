@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const OptimizedLoadingSpinnerPage: React.FC = () => {
+const OptimizedLoadingSpinnerPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -150,7 +150,7 @@ class Nam e?: string;
 color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
 fullScreen?:boolean;}
 }
-constOptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProp s>= memo(
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProp s>= memo(
 ({size= 'md',
 variant= 'spinner',
 text= 'Loading...',

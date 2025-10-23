@@ -7,7 +7,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Phone } from 'lucide-react'
 
-const AIEmailMarketingPage: React.FC = () => {
+const AIEmailMarketingPage: React.FC  = () => {
   return (
     <>
       <Navigation />
@@ -44,7 +44,7 @@ const AIEmailMarketingPage: React.FC = () => {
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-constAIEmailMarketingPage: React.FC= () =>{return (
+const AIEmailMarketingPage: React.FC = () => {return (
   <><Navigation /><divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><mainclassName="container mx-autopx-4py-16pt-24"><sectionclassName="text-centermb-16"><spanclassName="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></spa></className="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text">AI Email Marketing</h><spanclassName="text-xl text-cyan-400mb-8"></spa></className="text-xl text-cyan-400mb-8">Transform your email marketing with AI-powered content generation</p><spanclassName="text-lg text-gray-300max-w-4 xlmx-automb-8"></spa></className="text-lg text-gray-300max-w-4 xlmx-automb-8">Coming soon - Advanced AI email marketing automation platform.
           </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
                className="cyber-button px-8 py-4text-lgfont-semibold"

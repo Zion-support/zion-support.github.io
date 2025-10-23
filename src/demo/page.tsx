@@ -17,7 +17,7 @@ import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
 
-constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
+const DemoPage: React.FC = () => {const [formDatasetFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -36,7 +36,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission;
+    // Handle form submission
     const subject = `Demo Request from ${formData.name} - ${formData.company}`
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`
     window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
@@ -49,7 +49,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
   };
 
   consthandleSubmit= (e: React.FormEvent) => {e.preventDefault();
-    // Handle formsubmissionconstsubject= `Demo Request from${formData.name} -${formData.company}`;
+    // Handle formsubmissionconstsubject= `Demo Request from${formData.name} -${formData.company}`
     constbody= `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage:${formData.message}`;
     windo w.location.href= `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
@@ -141,7 +141,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
                       </label>
-                      <input;
+                      <input
                         type="text"
                         id="name"
                         name="name"
@@ -161,31 +161,27 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
                        name="name"
                         requiredvalue={formData.name}
                         onChange={handleInputChange}
-                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                       placeholder="Enter your fullname"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Enter your fullname"
                       /></di><di v><labelhtmlFor="email"className="block text-sm font-medium text-gray-300mb-2">Email Address *
                     </labe><inputtype="email"
                        id="email"
                        name="email"
                         requiredvalue={formData.email}
                         onChange={handleInputChange}
-                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                       placeholder="Enter youremail"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Enter youremail"
                       /></di><di v><labelhtmlFor="company"className="block text-sm font-medium text-gray-300mb-2">Company Name *
                     </labe><inputtype="text"
                        id="company"
                        name="company"
                         requiredvalue={formData.company}
                         onChange={handleInputChange}
-                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                       placeholder="Enter your companyname"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Enter your companyname"
                       /></di><di v><labelhtmlFor="phone"className="block text-sm font-medium text-gray-300mb-2">Phone Number</labe><inputtype="tel"
                        id="phone"
                        name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                       placeholder="Enter your phonenumber"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Enter your phonenumber"
                       /></di><di v><labelhtmlFor="service"className="block text-sm font-medium text-gray-300mb-2">Service of Interest</labe><selectid="service"
                        name="service"
                         value={formData.service}
@@ -196,8 +192,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
                         rows={4}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                        placeholder="Tell us about your specific needs or questions"
+                        className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400" placeholder="Tell us about your specific needs or questions"
                       />
                     </div>
                     <button;
@@ -280,8 +275,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     </>
   )
 }
-                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400"
-                       placeholder="Tell us about your specific needs orquestions"
+                       className="w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400" placeholder="Tell us about your specific needs orquestions"
                       /></di><
                      type="submit"
                      className="w-full cyber-button py-3px-6text-center"

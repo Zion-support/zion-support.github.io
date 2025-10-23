@@ -7,7 +7,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Lock, BarChart3, FileText, Phone, Mail, MapPin, ArrowRight, Brain, Zap } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer: React.FC  = () => {
   const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
@@ -279,9 +279,9 @@ const Footer: React.FC = () => {
   )
 }
 import {Link} from 'react-router-do m';
-import {Lock, BarChart3, FileText, Phone, Mail, Zap, Brain, ArrowRight} from 'lucide-react';;
+import {Lock, BarChart3, FileText, Phone, Mail, Zap, Brain, ArrowRight} from 'lucide-react';
 
-constFooter: React.FC= () =>{constmicroSaasServices= [
+const Footer: React.FC = () => {constmicroSaasServices= [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning'},
     {name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media'},
     {name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics'},

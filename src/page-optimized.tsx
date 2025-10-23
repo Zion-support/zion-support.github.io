@@ -3,9 +3,9 @@ import React, { lazy, Suspense } from 'react'
 import SEOOptimizer from './components/SEOOptimizer'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import PerformanceMonitor from './components/PerformanceMonitor';
-// Fallback component;
+// Fallback component
 const EmptyComponent = () => null;
-// Lazy load heavy components - these may not exist, so make them optional;
+// Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
@@ -68,12 +68,12 @@ import React, {lazySuspense} from 'react';
 import SEOOptimizer from './$1/SEOOptimizer';
 import AccessibilityEnhancer from './$1/AccessibilityEnhancer';
 import PerformanceMonitor from './$1/PerformanceMonitor';
-// FallbackcomponentconstEmptyComponent= () =>null;
+// FallbackcomponentconstEmptyComponent= () =>null
 // Lazy load heavy components - these may not exist, so make themoptionalconstUnifiedBanner= lazy(() =>
   import('./$1/NewestContent2025 Banner').catch(() =>
     import('./$1/EmptyComponent').catch(() => ({default: EmptyComponent}))
   )
-);
+)
 constContentPromotion= lazy(() =>
   import('./$1/UltimateBusinessIntelligence2025 Banner').catch(() => ({default: EmptyComponent;
  }))

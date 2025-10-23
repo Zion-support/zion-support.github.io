@@ -1,14 +1,14 @@
 import React, { useEffect } from "react"
 
 declare global {
-  interface Window {;
+  interface Window {
     gtag: (...args: any[]) => void;
   }
 }
 
-const Analytics: React.FC = () => {
+const Analytics: React.FC  = () => {
   useEffect(() => {
-    const initAnalytics = () => {
+    const initAnalytics  = () => {
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("config", "GA_MEASUREMENT_ID", {
           page_title: document.title,
@@ -21,9 +21,9 @@ declare global {interface Windo w {
  }
 }
 
-constAnalytics: React.FC= () => {useEffect(() => {
+const Analytics: React.FC = () => {useEffect(() => {
   
-    constinitAnalytics= () => {
+    constinitAnalytics = () => {
   
       if (type of windo w !=="undefined" && windo w.gtag) {
         window.gtag("config","GA_MEASUREMENT_ID", {
@@ -35,7 +35,7 @@ constAnalytics: React.FC= () => {useEffect(() => {
     initAnalytics()
   }, [])
 
-  return null; // Analytics component doesn't render anything;
+  return null; // Analytics component doesn't render anything
 }
 
 export default Analytics;
@@ -46,7 +46,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const AnalyticsPage: React.FC = () => {
+const AnalyticsPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -176,7 +176,7 @@ const AnalyticsPage: React.FC = () => {
       <Footer />
     </>
   );
-  return nul l; // Analytics component do esn't render anything;
+  return nul l; // Analytics component do esn't render anything
 };
 
 export default AnalyticsPage;
