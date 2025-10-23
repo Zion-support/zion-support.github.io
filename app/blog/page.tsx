@@ -65,40 +65,41 @@ export default function Blog() {
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
   return (
-    <>
+    <ErrorBoundary>
+      <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights and updates from Zion Tech Group" />
 
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">>{/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Blog</h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Insights, trends, and expertise from the Zion Tech Group team</p>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900" loading="lazy">>{/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20" loading="lazy">
+          <div className="max-w-7xl mx-auto px-4" loading="lazy">
+            <div className="text-center" loading="lazy">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6" loading="lazy">Our Blog</h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" loading="lazy">Insights, trends, and expertise from the Zion Tech Group team</p>
             </div>
           </div>
         </section>
 
         {/* Search and Filter */}
-        <section className="py-8 bg-white dark:bg-gray-800">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-              <div className="flex-1 max-w-md">
+        <section className="py-8 bg-white dark:bg-gray-800" loading="lazy">
+          <div className="max-w-7xl mx-auto px-4" loading="lazy">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between" loading="lazy">
+              <div className="flex-1 max-w-md" loading="lazy">
                 <input
                   type="text"
                   placeholder="Search articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white" loading="lazy"
                 />
               </div>
-              <div className="flex gap-2 flex-wrap">{categories.map(category => (</div>
+              <div className="flex gap-2 flex-wrap" loading="lazy">{categories.map(category => (</div>
                   <button
                     key={category.id}
-                    onClick={() =>setSelectedCategory(category.id)}</button>
+                    onClick={() = aria-label="Action button">setSelectedCategory(category.id)}</button>
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedCategory === category.id
                         ? 'bg-blue-600 text-white'
@@ -115,42 +116,42 @@ export default function Blog() {
 
         {/* Featured Post */}
         {featuredPost && (
-          <section className="py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Featured Article</h2>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                <div className="md:flex">
-                  <div className="md:w-1/2">
+          <section className="py-16 px-4" loading="lazy">
+            <div className="max-w-7xl mx-auto" loading="lazy">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8" loading="lazy">Featured Article</h2>
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden" loading="lazy">
+                <div className="md:flex" loading="lazy">
+                  <div className="md:w-1/2" loading="lazy">
                     <img
                       src={featuredPost.image}
                       alt={featuredPost.title}
-                      className="w-full h-64 md:h-full object-cover"
+                      className="w-full h-64 md:h-full object-cover" loading="lazy"
                     />
                   </div>
-                  <div className="md:w-1/2 p-8">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">{featuredPost.category}</span>
-                      <span className="text-gray-500 dark:text-gray-400 text-sm">{featuredPost.readTime}</span>
+                  <div className="md:w-1/2 p-8" loading="lazy">
+                    <div className="flex items-center gap-4 mb-4" loading="lazy">
+                      <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium" loading="lazy">{featuredPost.category}</span>
+                      <span className="text-gray-500 dark:text-gray-400 text-sm" loading="lazy">{featuredPost.readTime}</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{featuredPost.title}</h3>h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6">{featuredPost.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-                        <div className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" loading="lazy">{featuredPost.title}</h3>h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-6" loading="lazy">{featuredPost.excerpt}</p>
+                    <div className="flex items-center justify-between" loading="lazy">
+                      <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400" loading="lazy">
+                        <div className="flex items-center gap-1" loading="lazy">
+                          <User className="w-4 h-4" loading="lazy" />
                           {featuredPost.author}
                         </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
+                        <div className="flex items-center gap-1" loading="lazy">
+                          <Calendar className="w-4 h-4" loading="lazy" />
                           {new Date(featuredPost.date).toLocaleDateString()}
                         </div>
                       </div>
                       <Link
                         to={`/blog/${featuredPost.id}`}
-                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium" loading="lazy"
                       >
                         Read More
-                        <ArrowRight className="ml-2 w-4 h-4" />
+                        <ArrowRight className="ml-2 w-4 h-4" loading="lazy" />
                       </Link>
                     </div>
                   </div>
@@ -161,40 +162,40 @@ export default function Blog() {
         )}
 
         {/* Blog Posts Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Latest Articles</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{regularPosts.map(post => (</div>
-                <article key={post.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <section className="py-16 px-4" loading="lazy">
+          <div className="max-w-7xl mx-auto" loading="lazy">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8" loading="lazy">Latest Articles</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{regularPosts.map(post => (</div>
+                <article key={post.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow" loading="lazy">
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-cover" loading="lazy"
                   />
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 mb-3">
-                      <span className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium">{post.category}</span>
-                      <span className="text-gray-500 dark:text-gray-400 text-sm">{post.readTime}</span>
+                  <div className="p-6" loading="lazy">
+                    <div className="flex items-center gap-4 mb-3" loading="lazy">
+                      <span className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium" loading="lazy">{post.category}</span>
+                      <span className="text-gray-500 dark:text-gray-400 text-sm" loading="lazy">{post.readTime}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{post.title}</h3>h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-                        <div className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3" loading="lazy">{post.title}</h3>h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4" loading="lazy">{post.excerpt}</p>
+                    <div className="flex items-center justify-between" loading="lazy">
+                      <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400" loading="lazy">
+                        <div className="flex items-center gap-1" loading="lazy">
+                          <User className="w-4 h-4" loading="lazy" />
                           {post.author}
                         </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
+                        <div className="flex items-center gap-1" loading="lazy">
+                          <Calendar className="w-4 h-4" loading="lazy" />
                           {new Date(post.date).toLocaleDateString()}
                         </div>
                       </div>
                       <Link
                         to={`/blog/${post.id}`}
-                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium" loading="lazy"
                       >
                         Read More
-                        <ArrowRight className="ml-2 w-4 h-4" />
+                        <ArrowRight className="ml-2 w-4 h-4" loading="lazy" />
                       </Link>
                     </div>
                   </div>
@@ -206,6 +207,7 @@ export default function Blog() {
         </section>
       </div>
     </>
+    </ErrorBoundary>
   );
 };
 

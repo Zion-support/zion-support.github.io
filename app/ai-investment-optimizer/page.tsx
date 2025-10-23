@@ -819,54 +819,54 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="relative py-20 overflow-hidden" loading="lazy">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" loading="lazy"></div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-blue-500/10 border border-blue-400/20 rounded-full px-6 py-3 mb-8">
-              <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
-              <span className="text-blue-300 font-medium">AI Investment Portfolio Optimizer Pro</span>
+        <div className="container mx-auto px-4 relative z-10" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <div className="inline-flex items-center bg-blue-500/10 border border-blue-400/20 rounded-full px-6 py-3 mb-8" loading="lazy">
+              <TrendingUp className="w-5 h-5 text-blue-400 mr-2" loading="lazy" />
+              <span className="text-blue-300 font-medium" loading="lazy">AI Investment Portfolio Optimizer Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">Advanced Portfolio Management</h1>h1>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text" loading="lazy">Advanced Portfolio Management</h1>h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Maximize Returns with AI-Powered Investment Optimization</p>p>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light" loading="lazy">Maximize Returns with AI-Powered Investment Optimization</p>p>
 
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">Optimize your investment portfolio with advanced AI analytics, risk assessment,</p>
+            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed" loading="lazy">Optimize your investment portfolio with advanced AI analytics, risk assessment,</p>
               and automated rebalancing. Make smarter investment decisions and achieve better returns.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" loading="lazy">
+              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25" loading="lazy" aria-label="Action button">
+                <span className="relative z-10" loading="lazy">Start Free Trial</span>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity" loading="lazy"></div>
               </button>
 
-              <button className="group inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              <button className="group inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105" loading="lazy" aria-label="Action button">
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" loading="lazy" />
                 Watch Demo
               </button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">15.2%</div>
-                <div className="text-gray-400">Average Return</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto" loading="lazy">
+              <div className="text-center" loading="lazy">
+                <div className="text-3xl font-bold text-blue-400 mb-2" loading="lazy">15.2%</div>
+                <div className="text-gray-400" loading="lazy">Average Return</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">23%</div>
-                <div className="text-gray-400">Risk Reduction</div>
+              <div className="text-center" loading="lazy">
+                <div className="text-3xl font-bold text-purple-400 mb-2" loading="lazy">23%</div>
+                <div className="text-gray-400" loading="lazy">Risk Reduction</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">$2.3M</div>
-                <div className="text-gray-400">Assets Managed</div>
+              <div className="text-center" loading="lazy">
+                <div className="text-3xl font-bold text-cyan-400 mb-2" loading="lazy">$2.3M</div>
+                <div className="text-gray-400" loading="lazy">Assets Managed</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">98%</div>
-                <div className="text-gray-400">Accuracy Rate</div>
+              <div className="text-center" loading="lazy">
+                <div className="text-3xl font-bold text-yellow-400 mb-2" loading="lazy">98%</div>
+                <div className="text-gray-400" loading="lazy">Accuracy Rate</div>
               </div>
             </div>
           </div>
@@ -874,50 +874,50 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </div>
 
       {/* Portfolio Dashboard */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Portfolio Dashboard</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Monitor and optimize your investment portfolio with real-time analytics</p>p>
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text" loading="lazy">Portfolio Dashboard</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Monitor and optimize your investment portfolio with real-time analytics</p>p>
           </div>
 
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">{/* Portfolio Overview */}</div>
-              <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-white flex items-center">
-                    <PieChart className="w-8 h-8 text-blue-400 mr-3" />
+          <div className="max-w-7xl mx-auto" loading="lazy">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" loading="lazy">{/* Portfolio Overview */}</div>
+              <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8" loading="lazy">
+                <div className="flex items-center justify-between mb-6" loading="lazy">
+                  <h3 className="text-2xl font-bold text-white flex items-center" loading="lazy">
+                    <PieChart className="w-8 h-8 text-blue-400 mr-3" loading="lazy" />
                     Portfolio Holdings
                   </h3>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold text-white">${totalValue.toLocaleString()}</div>
-                    <div className="text-gray-400">Total Value</div>
+                  <div className="text-right" loading="lazy">
+                    <div className="text-3xl font-bold text-white" loading="lazy">${totalValue.toLocaleString()}</div>
+                    <div className="text-gray-400" loading="lazy">Total Value</div>
                   </div>
                 </div>
 
-                <div className="space-y-4">{portfolio.map((stock) => {</div>
+                <div className="space-y-4" loading="lazy">{portfolio.map((stock) => {</div>
                     const ChangeIcon = getChangeIcon(stock.change);
                     return (
-                      <div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center space-x-3">
-                            <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">
-                              <span className="text-white font-bold text-sm">{stock.symbol.slice(0, 2)}</span>
+                      <div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10" loading="lazy">
+                        <div className="flex items-center justify-between mb-2" loading="lazy">
+                          <div className="flex items-center space-x-3" loading="lazy">
+                            <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center" loading="lazy">
+                              <span className="text-white font-bold text-sm" loading="lazy">{stock.symbol.slice(0, 2)}</span>
                             </div>
                             <div>
-                              <h4 className="text-white font-semibold">{stock.symbol}</h4>
-                              <p className="text-gray-400 text-sm">{stock.name}</p>
+                              <h4 className="text-white font-semibold" loading="lazy">{stock.symbol}</h4>
+                              <p className="text-gray-400 text-sm" loading="lazy">{stock.name}</p>
                             </div>
                           </div>
-                          <div className="text-right">
-                            <div className="text-white font-semibold">${stock.value.toLocaleString()}</div>
+                          <div className="text-right" loading="lazy">
+                            <div className="text-white font-semibold" loading="lazy">${stock.value.toLocaleString()}</div>
                             <div className={`flex items-center ${getChangeColor(stock.change)}`}>
-                              <ChangeIcon className="w-4 h-4 mr-1" />
-                              <span className="text-sm">{stock.change > 0 ? '+' : ''}{stock.change}%</span>
+                              <ChangeIcon className="w-4 h-4 mr-1" loading="lazy" />
+                              <span className="text-sm" loading="lazy">{stock.change > 0 ? '+' : ''}{stock.change}%</span>
                             </div>
                           </div>
                         </div>
-                        <div className="flex items-center justify-between text-sm text-gray-400">
+                        <div className="flex items-center justify-between text-sm text-gray-400" loading="lazy">
                           <span>{stock.shares} shares @ ${stock.price}</span>
                           <span>{stock.allocation}% allocation</span>
                         </div>
@@ -928,48 +928,48 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
               </div>
 
               {/* Optimization Panel */}
-              <div className="space-y-8">{/* Risk Profile */}</div>
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <Shield className="w-6 h-6 text-blue-400 mr-2" />
+              <div className="space-y-8" loading="lazy">{/* Risk Profile */}</div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6" loading="lazy">
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center" loading="lazy">
+                    <Shield className="w-6 h-6 text-blue-400 mr-2" loading="lazy" />
                     Risk Profile
                   </h3>
-                  <div className="space-y-4">
+                  <div className="space-y-4" loading="lazy">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Risk Tolerance</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-2" loading="lazy">Risk Tolerance</label>
                       <select
                         value={riskProfile}
                         onChange={(e) => setRiskProfile(e.target.value)}
-                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400" loading="lazy"
                       >
-                        <option value="conservative" className="bg-slate-800">Conservative</option>
-                        <option value="moderate" className="bg-slate-800">Moderate</option>
-                        <option value="aggressive" className="bg-slate-800">Aggressive</option>
+                        <option value="conservative" className="bg-slate-800" loading="lazy">Conservative</option>
+                        <option value="moderate" className="bg-slate-800" loading="lazy">Moderate</option>
+                        <option value="aggressive" className="bg-slate-800" loading="lazy">Aggressive</option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Investment Goal</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-2" loading="lazy">Investment Goal</label>
                       <select
                         value={investmentGoal}
                         onChange={(e) => setInvestmentGoal(e.target.value)}
-                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400" loading="lazy"
                       >
-                        <option value="income" className="bg-slate-800">Income</option>
-                        <option value="growth" className="bg-slate-800">Growth</option>
-                        <option value="balanced" className="bg-slate-800">Balanced</option>
+                        <option value="income" className="bg-slate-800" loading="lazy">Income</option>
+                        <option value="growth" className="bg-slate-800" loading="lazy">Growth</option>
+                        <option value="balanced" className="bg-slate-800" loading="lazy">Balanced</option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Time Horizon</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-2" loading="lazy">Time Horizon</label>
                       <select
                         value={timeHorizon}
                         onChange={(e) => setTimeHorizon(e.target.value)}
-                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400" loading="lazy"
                       >
-                        <option value="1-3 years" className="bg-slate-800">1-3 years</option>
-                        <option value="3-5 years" className="bg-slate-800">3-5 years</option>
-                        <option value="5-10 years" className="bg-slate-800">5-10 years</option>
-                        <option value="10+ years" className="bg-slate-800">10+ years</option>
+                        <option value="1-3 years" className="bg-slate-800" loading="lazy">1-3 years</option>
+                        <option value="3-5 years" className="bg-slate-800" loading="lazy">3-5 years</option>
+                        <option value="5-10 years" className="bg-slate-800" loading="lazy">5-10 years</option>
+                        <option value="10+ years" className="bg-slate-800" loading="lazy">10+ years</option>
                       </select>
                     </div>
                   </div>
@@ -977,23 +977,23 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
 
                 {/* Optimization Results */}
                 {optimizationResults && (
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                      <Target className="w-6 h-6 text-blue-400 mr-2" />
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6" loading="lazy">
+                    <h3 className="text-xl font-bold text-white mb-4 flex items-center" loading="lazy">
+                      <Target className="w-6 h-6 text-blue-400 mr-2" loading="lazy" />
                       Optimization Results
                     </h3>
-                    <div className="space-y-4">
-                      <div className="flex justify-between">
-                        <span className="text-gray-300">Expected Return</span>
-                        <span className="text-green-400 font-semibold">{optimizationResults.expectedReturn}%</span>
+                    <div className="space-y-4" loading="lazy">
+                      <div className="flex justify-between" loading="lazy">
+                        <span className="text-gray-300" loading="lazy">Expected Return</span>
+                        <span className="text-green-400 font-semibold" loading="lazy">{optimizationResults.expectedReturn}%</span>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-300">Risk Level</span>
-                        <span className="text-yellow-400 font-semibold">{optimizationResults.riskLevel}</span>
+                      <div className="flex justify-between" loading="lazy">
+                        <span className="text-gray-300" loading="lazy">Risk Level</span>
+                        <span className="text-yellow-400 font-semibold" loading="lazy">{optimizationResults.riskLevel}</span>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-300">Sharpe Ratio</span>
-                        <span className="text-blue-400 font-semibold">{optimizationResults.sharpeRatio}</span>
+                      <div className="flex justify-between" loading="lazy">
+                        <span className="text-gray-300" loading="lazy">Sharpe Ratio</span>
+                        <span className="text-blue-400 font-semibold" loading="lazy">{optimizationResults.sharpeRatio}</span>
                       </div>
                     </div>
                   </div>
@@ -1003,15 +1003,15 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 <button
                   onClick={handleOptimizePortfolio}
                   disabled={isOptimizing}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                >{isOptimizing ? (</button>
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" loading="lazy"
+                 aria-label="Action button">{isOptimizing ? (</button>
                     <>
-                      <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
+                      <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" loading="lazy" />
                       Optimizing...
                     </>
                   ) : (
                     <>
-                      <Zap className="w-5 h-5 mr-2 inline" />
+                      <Zap className="w-5 h-5 mr-2 inline" loading="lazy" />
                       Optimize Portfolio
                     </>
                   )}
@@ -1023,23 +1023,23 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </div>
 
       {/* Features Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Investment Features</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI-powered tools for intelligent portfolio management</p>p>
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text" loading="lazy">Investment Features</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Advanced AI-powered tools for intelligent portfolio management</p>p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" loading="lazy">{features.map((feature, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105" loading="lazy">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4" loading="lazy">
+                  <feature.icon className="w-6 h-6 text-white" loading="lazy" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-blue-400 font-semibold">{feature.price}</span>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                <h3 className="text-xl font-bold text-white mb-2" loading="lazy">{feature.title}</h3>
+                <p className="text-gray-400 mb-4" loading="lazy">{feature.description}</p>
+                <div className="flex items-center justify-between" loading="lazy">
+                  <span className="text-blue-400 font-semibold" loading="lazy">{feature.price}</span>
+                  <CheckCircle className="w-5 h-5 text-green-400" loading="lazy" />
                 </div>
               </div>
             ))}
@@ -1048,34 +1048,34 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </div>
 
       {/* Pricing Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Investment Plans</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the investment optimization plan that fits your portfolio size</p>p>
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text" loading="lazy">Investment Plans</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Choose the investment optimization plan that fits your portfolio size</p>p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" loading="lazy">{pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2" loading="lazy">
+                    <span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full" loading="lazy">Most Popular</span>
                   </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                <div className="text-center mb-8" loading="lazy">
+                  <h3 className="text-2xl font-bold text-white mb-2" loading="lazy">{plan.name}</h3>
+                  <p className="text-gray-400 mb-4" loading="lazy">{plan.description}</p>
+                  <div className="flex items-baseline justify-center" loading="lazy">
+                    <span className="text-5xl font-bold text-white" loading="lazy">{plan.price}</span>
+                    <span className="text-gray-400 ml-2" loading="lazy">{plan.period}</span>
                   </div>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8" loading="lazy">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                    <li key={featureIndex} className="flex items-center" loading="lazy">
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" loading="lazy" />
+                      <span className="text-gray-300" loading="lazy">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -1084,7 +1084,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>{plan.popular ? 'Get Started' : 'Choose Plan'}</button>
+                }`} aria-label="Action button">{plan.popular ? 'Get Started' : 'Choose Plan'}</button>
               </div>
             ))}
           </div>
@@ -1092,29 +1092,29 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       </div>
 
       {/* Contact Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Start Optimizing Today</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our investment experts to discuss your portfolio optimization needs</p>p>
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text" loading="lazy">Start Optimizing Today</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Contact our investment experts to discuss your portfolio optimization needs</p>p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-blue-400 mr-3" />
-                    <a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors">+1 (302) 464-0950</a>a>
+          <div className="max-w-4xl mx-auto" loading="lazy">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8" loading="lazy">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8" loading="lazy">
+                <h3 className="text-2xl font-bold text-white mb-6" loading="lazy">Contact Information</h3>
+                <div className="space-y-4" loading="lazy">
+                  <div className="flex items-center" loading="lazy">
+                    <Phone className="w-5 h-5 text-blue-400 mr-3" loading="lazy" />
+                    <a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors" loading="lazy">+1 (302) 464-0950</a>a>
                   </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-blue-400 mr-3" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors">kleber@ziontechgroup.com</a>a>
+                  <div className="flex items-center" loading="lazy">
+                    <Mail className="w-5 h-5 text-blue-400 mr-3" loading="lazy" />
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors" loading="lazy">kleber@ziontechgroup.com</a>a>
                   </div>
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
+                  <div className="flex items-start" loading="lazy">
+                    <MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" loading="lazy" />
+                    <div className="text-gray-300" loading="lazy">
                       <div>364 E Main St STE 1008</div>
                       <div>Middletown, DE 19709</div>
                     </div>
@@ -1122,27 +1122,27 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 </div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Get Started</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Free portfolio analysis</span>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8" loading="lazy">
+                <h3 className="text-2xl font-bold text-white mb-6" loading="lazy">Get Started</h3>
+                <div className="space-y-4" loading="lazy">
+                  <div className="flex items-center" loading="lazy">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">Free portfolio analysis</span>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">No minimum investment</span>
+                  <div className="flex items-center" loading="lazy">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">No minimum investment</span>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">30-day money back guarantee</span>
+                  <div className="flex items-center" loading="lazy">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">30-day money back guarantee</span>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Expert support</span>
+                  <div className="flex items-center" loading="lazy">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">Expert support</span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">Start Free Analysis</button>
+                <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" loading="lazy" aria-label="Action button">Start Free Analysis</button>
               </div>
             </div>
           </div>

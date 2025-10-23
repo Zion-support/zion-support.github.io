@@ -42,7 +42,7 @@ import SEOOptimizer from '../components/SEOOptimizer'
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900" loading="lazy">
       <SEOOptimizer
         title="Healthcare IT Solutions - Zion Tech Group"
         description="Comprehensive healthcare IT solutions including HIPAA compliance, patient data security, and system integration for healthcare organizations."
@@ -50,58 +50,58 @@ import SEOOptimizer from '../components/SEOOptimizer'
       />
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Healthcare</h1>
-            <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">IT Solutions</span>
+      <section className="relative py-20 px-4 overflow-hidden" loading="lazy">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center" loading="lazy">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" loading="lazy">Healthcare</h1>
+            <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent" loading="lazy">IT Solutions</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.</p>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" loading="lazy">Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.</p>
             Protect patient data while improving operational efficiency.
           </p>
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              <ArrowRight className="inline-block ml-2 w-5 h-5" loading="lazy" />
             </button>
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
+            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" loading="lazy" aria-label="Action button">Learn More</button>
 </div>
         </div>
       </section>
 {/* Features Section */}
-      <section className="py-20 px-4">
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions for all aspects of healthcare delivery and management.</p>p>
+      <section className="py-20 px-4" loading="lazy">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Comprehensive IT solutions for all aspects of healthcare delivery and management.</p>p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{services.map((service, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{services.map((service, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300" loading="lazy">
+                <div className="text-4xl mb-4" loading="lazy">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{service.title}</h3>
+                <p className="text-gray-300" loading="lazy">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Healthcare IT Solutions?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of modern healthcare technology with our proven solutions.</p>p>
+      <section className="py-20 px-4" loading="lazy">
+        <div className="max-w-7xl mx-auto" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Why Choose Our Healthcare IT Solutions?</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Experience the benefits of modern healthcare technology with our proven solutions.</p>p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" loading="lazy">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center" loading="lazy">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center" loading="lazy">
+                  <CheckCircle className="w-8 h-8 text-white" loading="lazy" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                <h3 className="text-lg font-semibold text-white" loading="lazy">{benefit}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
-<section className="py-20 px-4">
+<section className="py-20 px-4" loading="lazy">
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">View Case Studies</button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors" loading="lazy" aria-label="Action button">View Case Studies</button>
           </div>
         </div>
       </section>

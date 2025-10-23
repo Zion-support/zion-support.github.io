@@ -31,43 +31,43 @@ const features = [
   return (
     <>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>{/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Zion Cybersecurity Audit</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Professional zioncybersecurityaudit solutions powered by advanced</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">>{/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
+          <div className="max-w-7xl mx-auto text-center" loading="lazy">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" loading="lazy">Zion Cybersecurity Audit</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" loading="lazy">Professional zioncybersecurityaudit solutions powered by advanced</p>
               AI and cutting-edge technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300" loading="lazy"
               >Get Started</a>a>
               <a
                 href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300" loading="lazy"
               >View All Services</a>a>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
-              <p className="text-lg text-gray-300">Everything you need for success</p>
+        <section className="py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
+          <div className="max-w-7xl mx-auto" loading="lazy">
+            <div className="text-center mb-16" loading="lazy">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" loading="lazy">Powerful Features</h2>
+              <p className="text-lg text-gray-300" loading="lazy">Everything you need for success</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center"
+                  className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center" loading="lazy"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4" loading="lazy">
+                    <feature.icon className="w-8 h-8 text-white" loading="lazy" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{feature.title}</h3>h3>
+                  <p className="text-gray-300" loading="lazy">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -75,18 +75,18 @@ const features = [
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-lg text-gray-300 mb-8">Let us help you implement this solution for your business.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <section className="py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
+          <div className="max-w-7xl mx-auto text-center" loading="lazy">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" loading="lazy">Ready to Get Started?</h2>
+            <p className="text-lg text-gray-300 mb-8" loading="lazy">Let us help you implement this solution for your business.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300" loading="lazy"
               >Start Your Project</a>a>
               <a
                 href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300" loading="lazy"
               >Learn More</a>a>
             </div>
           </div>

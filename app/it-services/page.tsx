@@ -147,56 +147,56 @@ const itServices = [
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, infrastructure, technology consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">>{/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Professional IT Services</h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Comprehensive technology solutions to power your business growth and digital transformation</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">Get Free Assessment</button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">View Our Portfolio</button>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50" loading="lazy">>{/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20" loading="lazy">
+          <div className="absolute inset-0 bg-black opacity-20" loading="lazy"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" loading="lazy">
+            <div className="text-center" loading="lazy">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6" loading="lazy">Professional IT Services</h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto" loading="lazy">Comprehensive technology solutions to power your business growth and digital transformation</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors" loading="lazy" aria-label="Action button">Get Free Assessment</button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" loading="lazy" aria-label="Action button">View Our Portfolio</button>
               </div>
             </div>
           </div>
         </section>
 
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>
-              <p className="text-xl text-gray-600">Expert solutions delivered by certified professionals with proven track records</p>
+        <section className="py-16 bg-white" loading="lazy">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" loading="lazy">
+            <div className="text-center mb-12" loading="lazy">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" loading="lazy">Why Choose Our IT Services?</h2>
+              <p className="text-xl text-gray-600" loading="lazy">Expert solutions delivered by certified professionals with proven track records</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Server className="w-8 h-8 text-blue-600" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">
+              <div className="text-center" loading="lazy">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" loading="lazy">
+                  <Server className="w-8 h-8 text-blue-600" loading="lazy" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Certified Experts</h3>
-                <p className="text-gray-600">AWS, Microsoft, Cisco, and other industry certifications</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" loading="lazy">Certified Experts</h3>
+                <p className="text-gray-600" loading="lazy">AWS, Microsoft, Cisco, and other industry certifications</p>
               </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-green-600" />
+              <div className="text-center" loading="lazy">
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" loading="lazy">
+                  <Shield className="w-8 h-8 text-green-600" loading="lazy" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
-                <p className="text-gray-600">Bank-level security with compliance and monitoring</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" loading="lazy">Enterprise Security</h3>
+                <p className="text-gray-600" loading="lazy">Bank-level security with compliance and monitoring</p>
               </div>
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Cloud className="w-8 h-8 text-purple-600" />
+              <div className="text-center" loading="lazy">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" loading="lazy">
+                  <Cloud className="w-8 h-8 text-purple-600" loading="lazy" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud-First Approach</h3>
-                <p className="text-gray-600">Modern, scalable solutions built for the cloud</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" loading="lazy">Cloud-First Approach</h3>
+                <p className="text-gray-600" loading="lazy">Modern, scalable solutions built for the cloud</p>
               </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Settings className="w-8 h-8 text-orange-600" />
+              <div className="text-center" loading="lazy">
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" loading="lazy">
+                  <Settings className="w-8 h-8 text-orange-600" loading="lazy" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock monitoring and support services</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" loading="lazy">24/7 Support</h3>
+                <p className="text-gray-600" loading="lazy">Round-the-clock monitoring and support services</p>
               </div>
             </div>
           </div>
@@ -204,61 +204,61 @@ const itServices = [
 
         {/* Services by Category */}
         {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category} Services</h2>
-                <p className="text-xl text-gray-600">Professional {category.toLowerCase()} solutions tailored to your business needs</p>
+          <section key={category} className="py-16 bg-gray-50" loading="lazy">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" loading="lazy">
+              <div className="text-center mb-12" loading="lazy">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" loading="lazy">{category} Services</h2>
+                <p className="text-xl text-gray-600" loading="lazy">Professional {category.toLowerCase()} solutions tailored to your business needs</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{itServices</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{itServices</div>
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow" loading="lazy">
+                      <div className="text-4xl mb-4" loading="lazy">{service.icon}</div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3" loading="lazy">{service.title}</h3>
+                      <p className="text-gray-600 mb-4" loading="lazy">{service.description}</p>
                       
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                      <div className="mb-4" loading="lazy">
+                        <div className="flex items-center justify-between mb-2" loading="lazy">
+                          <span className="text-2xl font-bold text-blue-600" loading="lazy">{service.price}</span>
+                          <span className="text-sm text-gray-500" loading="lazy">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">Save up to 40% vs market rates</div>
+                        <div className="text-sm text-green-600 font-semibold" loading="lazy">Save up to 40% vs market rates</div>
                       </div>
 
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
+                      <div className="mb-4" loading="lazy">
+                        <h4 className="font-semibold text-gray-900 mb-2" loading="lazy">Key Features:</h4>
+                        <ul className="space-y-1" loading="lazy">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-600" loading="lazy">
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" loading="lazy" />
                               {feature}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div>
-                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{tech}</span>
+                      <div className="mb-4" loading="lazy">
+                        <h4 className="font-semibold text-gray-900 mb-2" loading="lazy">Technologies:</h4>
+                        <div className="flex flex-wrap gap-2" loading="lazy">{service.technologies.map((tech, techIndex) => (</div>
+                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded" loading="lazy">{tech}</span>
                           ))}
                         </div>
                       </div>
 
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                        <ul className="space-y-1">
+                      <div className="mb-6" loading="lazy">
+                        <h4 className="font-semibold text-gray-900 mb-2" loading="lazy">Business Benefits:</h4>
+                        <ul className="space-y-1" loading="lazy">
                           {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600" loading="lazy">
+                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" loading="lazy" />
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Get Quote</button>
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors" loading="lazy" aria-label="Action button">Get Quote</button>
                     </div>
                   ))}
               </div>
@@ -267,21 +267,21 @@ const itServices = [
         ))}
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your IT Infrastructure?</h2>
-            <p className="text-xl mb-8 text-blue-100">Contact our certified IT experts for a free consultation and custom solution design</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white" loading="lazy">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" loading="lazy">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" loading="lazy">Ready to Transform Your IT Infrastructure?</h2>
+            <p className="text-xl mb-8 text-blue-100" loading="lazy">Contact our certified IT experts for a free consultation and custom solution design</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center" loading="lazy"
               >📞 +1 302 464 0950</a>a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" loading="lazy"
               >✉️ kleber@ziontechgroup.com</a>a>
             </div>
-            <div className="mt-8 text-sm text-blue-200">
+            <div className="mt-8 text-sm text-blue-200" loading="lazy">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

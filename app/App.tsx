@@ -7,14 +7,18 @@ import Footer from "./components/Footer";
 
 export default function Page() {
 return (
-    <>
+    <ErrorBoundary>
+      <>
       <Head>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+        <meta property="og:description" content="Advanced AI and IT solutions for modern businesses" />
+        <meta property="og:image" content="/og-image.jpg" />
       </Head>
       
-      <div className="App">
+      <div className="App" loading="lazy">
         <PerformanceMonitor />
         <Navigation />
         <main>
@@ -23,6 +27,7 @@ return (
         <Footer />
       </div>
     </>
+    </ErrorBoundary>
   );
 };
 };

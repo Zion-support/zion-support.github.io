@@ -62,7 +62,7 @@ doc.description.toLowerCase().includes(searchQuery.toLowerCase())
 )
 })).filter(category => category.docs.length > 0)
 return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
 <SEOOptimizer
 title="Documentation - Zion Tech Group"
 description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."
@@ -74,24 +74,24 @@ keywords="documentation, API docs, guides, tutorials, AI solutions, cloud servic
 </div>
 </section>
 {/* Popular Docs */}
-<section className="py-16 px-4"></section>
-<div className="max-w-7xl mx-auto"></div>
-<h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+<section className="py-16 px-4" loading="lazy"></section>
+<div className="max-w-7xl mx-auto" loading="lazy"></div>
+<h2 className="text-3xl font-bold text-white mb-8 text-center" loading="lazy">Popular Documentation</h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" loading="lazy"></div>
 {popularDocs.map((doc, index) => (;}
-<div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"></div>
-<div className="flex items-center gap-3 mb-4"></div>
-<div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
-<BookOpen className="w-5 h-5 text-white" />
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group" loading="lazy"></div>
+<div className="flex items-center gap-3 mb-4" loading="lazy"></div>
+<div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center" loading="lazy"></div>
+<BookOpen className="w-5 h-5 text-white" loading="lazy" />
 </div>
-<span className="text-purple-400 text-sm font-medium">{doc.category}</span>
+<span className="text-purple-400 text-sm font-medium" loading="lazy">{doc.category}</span>
 </div>
-<h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">{doc.title}</h3>h3>
-<p className="text-gray-300 text-sm mb-4">{doc.description}</p>
+<h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors" loading="lazy">{doc.title}</h3>h3>
+<p className="text-gray-300 text-sm mb-4" loading="lazy">{doc.description}</p>
 <a
 href={doc.link}
-className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">Read More</a>
-<ArrowRight className="w-4 h-4" />
+className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm" loading="lazy">Read More</a>
+<ArrowRight className="w-4 h-4" loading="lazy" />
 </a>
 </div>
 ))}
@@ -99,33 +99,33 @@ className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 
 </div>
 </section>
 {/* Documentation Categories */}
-<section className="py-16 px-4">
-<div className="max-w-7xl mx-auto">
-<h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{filteredDocs.map((category, index) => (</div>
-<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-<div className="flex items-center gap-4 mb-6">
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-<BookOpen className="w-6 h-6 text-white" />
+<section className="py-16 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto" loading="lazy">
+<h2 className="text-3xl font-bold text-white mb-12 text-center" loading="lazy">Browse by Category</h2>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8" loading="lazy">{filteredDocs.map((category, index) => (</div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10" loading="lazy">
+<div className="flex items-center gap-4 mb-6" loading="lazy">
+<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center" loading="lazy">
+<BookOpen className="w-6 h-6 text-white" loading="lazy" />
 </div>
 <div>
-<h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
-<p className="text-gray-300">{category.description}</p>
+<h3 className="text-2xl font-bold text-white mb-2" loading="lazy">{category.title}</h3>
+<p className="text-gray-300" loading="lazy">{category.description}</p>
 </div>
 </div>
-<div className="space-y-4">{category.docs.map((doc, docIndex) => (</div>
+<div className="space-y-4" loading="lazy">{category.docs.map((doc, docIndex) => (</div>
 <a
 key={docIndex}
 href={doc.link}
-className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
-<div className="flex items-center justify-between">
+className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group" loading="lazy">
+<div className="flex items-center justify-between" loading="lazy">
 <div>
-<h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+<h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors" loading="lazy">
 {doc.title}
 </h4>
-<p className="text-gray-300 text-sm">{doc.description}</p>
+<p className="text-gray-300 text-sm" loading="lazy">{doc.description}</p>
 </div>
-<ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
+<ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" loading="lazy" />
 </div>
 </a>
 ))}
@@ -136,13 +136,13 @@ className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-p
 </div>
 </section>
 {/* CTA Section */}
-<section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-<div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need Help?</h2>h2>
-<p className="text-xl text-purple-100 mb-8">Can't find what you're looking for? Our support team is here to help.</p>p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Contact Support</button>
-<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Join Community</button>
+<section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700" loading="lazy">
+<div className="max-w-4xl mx-auto text-center" loading="lazy">
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6" loading="lazy">Need Help?</h2>h2>
+<p className="text-xl text-purple-100 mb-8" loading="lazy">Can't find what you're looking for? Our support team is here to help.</p>p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors" loading="lazy" aria-label="Action button">Contact Support</button>
+<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors" loading="lazy" aria-label="Action button">Join Community</button>
 </div>
 </div>
 </section>

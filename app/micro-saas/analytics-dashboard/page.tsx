@@ -55,102 +55,102 @@ const features = [
         <meta name="keywords" content="AI analytics dashboard, business intelligence, data visualization, real-time analytics, predictive insights, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
         >{/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-                <BarChart className="w-4 h-4" />
+        <section className="pt-24 pb-16 px-4" loading="lazy">
+          <div className="max-w-7xl mx-auto" loading="lazy"></div>
+            <div className="text-center mb-16" loading="lazy"></div>
+              <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6" loading="lazy"></div>
+                <BarChart className="w-4 h-4" loading="lazy" />
                 <span>AI Analytics Dashboard</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text" loading="lazy">
                 Real-time Business </h1>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400" loading="lazy"> Intelligence</span>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your data into actionable insights with our AI-powered analytics dashboard.</p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8" loading="lazy">Transform your data into actionable insights with our AI-powered analytics dashboard.</p>
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy"></div>
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2" loading="lazy" aria-label="Action button">
                   <span>Start Free Trial</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5" loading="lazy" />
                 </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo</button>
+                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all" loading="lazy" aria-label="Action button">View Demo</button>
               </div>
             </div>
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to make data-driven decisions with confidence</p>
+        <section className="py-16 px-4" loading="lazy">
+          <div className="max-w-7xl mx-auto" loading="lazy"></div>
+            <div className="text-center mb-16" loading="lazy"></div>
+              <h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Powerful Analytics Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Everything you need to make data-driven decisions with confidence</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">
               {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
-                    <feature.icon className="w-6 h-6 text-white" />
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group" loading="lazy"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" loading="lazy"></div>
+                    <feature.icon className="w-6 h-6 text-white" loading="lazy" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{feature.title}</h3>
+                  <p className="text-gray-300" loading="lazy">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
         {/* Metrics Section */}
-        <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale and reliability</p>
+        <section className="py-16 px-4 bg-slate-800/30" loading="lazy">
+          <div className="max-w-7xl mx-auto" loading="lazy"></div>
+            <div className="text-center mb-16" loading="lazy"></div>
+              <h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Platform Performance</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Built for scale and reliability</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8" loading="lazy">
               {metrics.map((metric, index) => (</div>
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                    <metric.icon className="w-8 h-8 text-white" />
+                <div key={index} className="text-center" loading="lazy"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4" loading="lazy"></div>
+                    <metric.icon className="w-8 h-8 text-white" loading="lazy" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                  <div className="text-gray-300">{metric.label}</div>
+                  <div className="text-3xl font-bold text-white mb-2" loading="lazy">{metric.value}</div>
+                  <div className="text-gray-300" loading="lazy">{metric.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the difference with our AI-powered analytics platform</p>
+        <section className="py-16 px-4" loading="lazy">
+          <div className="max-w-7xl mx-auto" loading="lazy"></div>
+            <div className="text-center mb-16" loading="lazy"></div>
+              <h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Why Choose Our Dashboard</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Experience the difference with our AI-powered analytics platform</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8" loading="lazy"></div>
+              <div className="space-y-6" loading="lazy">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3"></div>
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-300 text-lg">{benefit}</span>
+                  <div key={index} className="flex items-start space-x-3" loading="lazy"></div>
+                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" loading="lazy" />
+                    <span className="text-gray-300 text-lg" loading="lazy">{benefit}</span>
                   </div>
                 ))}
               </div>
-              <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"></div>
-                <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
-                <div className="space-y-4"></div>
-                  <div className="flex items-center space-x-3"></div>
-                    <Star className="w-5 h-5 text-yellow-400" />
-                    <span className="text-gray-300">"Increased revenue by 40% with better insights"</span>
+              <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30" loading="lazy"></div>
+                <h3 className="text-2xl font-bold text-white mb-4" loading="lazy">Success Stories</h3>
+                <div className="space-y-4" loading="lazy"></div>
+                  <div className="flex items-center space-x-3" loading="lazy"></div>
+                    <Star className="w-5 h-5 text-yellow-400" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">"Increased revenue by 40% with better insights"</span>
                   </div>
-                  <div className="flex items-center space-x-3"></div>
-                    <Star className="w-5 h-5 text-yellow-400" />
-                    <span className="text-gray-300">"Reduced reporting time by 80%"</span>
+                  <div className="flex items-center space-x-3" loading="lazy"></div>
+                    <Star className="w-5 h-5 text-yellow-400" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">"Reduced reporting time by 80%"</span>
                   </div>
-                  <div className="flex items-center space-x-3"></div>
-                    <Star className="w-5 h-5 text-yellow-400" />
-                    <span className="text-gray-300">"Improved decision making speed by 3x"</span>
+                  <div className="flex items-center space-x-3" loading="lazy"></div>
+                    <Star className="w-5 h-5 text-yellow-400" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">"Improved decision making speed by 3x"</span>
                   </div>
                 </div>
               </div>
@@ -158,19 +158,19 @@ const features = [
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Analytics?</h2>
-              <p className="text-xl text-gray-300 mb-8">Join thousands of businesses already using our AI analytics dashboard</p>
+        <section className="py-16 px-4" loading="lazy">
+          <div className="max-w-4xl mx-auto text-center" loading="lazy"></div>
+            <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30" loading="lazy"></div>
+              <h2 className="text-4xl font-bold text-white mb-6" loading="lazy">Ready to Transform Your Analytics?</h2>
+              <p className="text-xl text-gray-300 mb-8" loading="lazy">Join thousands of businesses already using our AI analytics dashboard</p>
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy"></div>
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2" loading="lazy" aria-label="Action button">
                   <span>Start Free Trial</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5" loading="lazy" />
                 </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">Schedule Demo</button>
+                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all" loading="lazy" aria-label="Action button">Schedule Demo</button>
               </div>
             </div>
           </div>

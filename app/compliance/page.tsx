@@ -7,25 +7,25 @@ const complianceFrameworks = [
     {
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance for EU data protection',
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8" loading="lazy" />,
       features: ['Data protection impact assessments', 'Privacy by design', 'Data subject rights', 'Breach notification']
     },
     {
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act compliance',
-      icon: <FileText className="w-8 h-8" />,
+      icon: <FileText className="w-8 h-8" loading="lazy" />,
       features: ['Protected health information security', 'Administrative safeguards', 'Physical safeguards', 'Technical safeguards']
     },
     {
       name: 'SOC 2',
       description: 'Service Organization Control 2 compliance for security and availability',
-      icon: <Lock className="w-8 h-8" />,
+      icon: <Lock className="w-8 h-8" loading="lazy" />,
       features: ['Security controls', 'Availability controls', 'Processing integrity', 'Confidentiality controls']
     },
     {
       name: 'ISO 27001',
       description: 'Information Security Management System certification',
-      icon: <Award className="w-8 h-8" />,
+      icon: <Award className="w-8 h-8" loading="lazy" />,
       features: ['Risk management', 'Security policies', 'Continuous improvement', 'Management commitment']
     }
   ];
@@ -72,7 +72,7 @@ const complianceFrameworks = [
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50" loading="lazy">
       <Helmet>
         <title>Compliance Services | Zion Tech Group</title>
         <meta name="description" content="Comprehensive compliance services by Zion Tech Group. GDPR, HIPAA, SOC 2, and ISO 27001 compliance solutions for your business." />
@@ -80,33 +80,33 @@ const complianceFrameworks = [
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Compliance Solutions</h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">Navigate complex regulatory requirements with confidence. Our experts help you achieve and maintain compliance across all major frameworks.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Compliance Assessment</button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Learn More</button>
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-4xl mx-auto text-center" loading="lazy">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6" loading="lazy">Compliance Solutions</h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100" loading="lazy">Navigate complex regulatory requirements with confidence. Our experts help you achieve and maintain compliance across all major frameworks.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" loading="lazy" aria-label="Action button">Get Compliance Assessment</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" loading="lazy" aria-label="Action button">Learn More</button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Compliance Frameworks */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Compliance Frameworks We Support</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{complianceFrameworks.map((framework, index) => (</div>
-                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4 text-blue-600">{framework.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{framework.name}</h3>
-                  <p className="text-gray-600 mb-4 text-center">{framework.description}</p>
-                  <ul className="space-y-2">
+      <section className="py-16 bg-white" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-6xl mx-auto" loading="lazy">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12" loading="lazy">Compliance Frameworks We Support</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{complianceFrameworks.map((framework, index) => (</div>
+                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow" loading="lazy">
+                  <div className="flex justify-center mb-4 text-blue-600" loading="lazy">{framework.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center" loading="lazy">{framework.name}</h3>
+                  <p className="text-gray-600 mb-4 text-center" loading="lazy">{framework.description}</p>
+                  <ul className="space-y-2" loading="lazy">
                     {framework.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600" loading="lazy">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" loading="lazy" />
                         {feature}
                       </li>
                     ))}
@@ -119,18 +119,18 @@ const complianceFrameworks = [
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Compliance Services</h2>
-            <div className="grid md:grid-cols-2 gap-8">{services.map((service, index) => (</div>
-                <div key={index} className="bg-white rounded-lg shadow-md p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  <ul className="space-y-3">
+      <section className="py-16 bg-gray-50" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-6xl mx-auto" loading="lazy">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12" loading="lazy">Our Compliance Services</h2>
+            <div className="grid md:grid-cols-2 gap-8" loading="lazy">{services.map((service, index) => (</div>
+                <div key={index} className="bg-white rounded-lg shadow-md p-8" loading="lazy">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4" loading="lazy">{service.title}</h3>
+                  <p className="text-gray-600 mb-6" loading="lazy">{service.description}</p>
+                  <ul className="space-y-3" loading="lazy">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-600" loading="lazy">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" loading="lazy" />
                         {feature}
                       </li>
                     ))}
@@ -143,15 +143,15 @@ const complianceFrameworks = [
       </section>
 
       {/* Industries Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industries We Serve</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{industries.map((industry, index) => (</div>
-                <div key={index} className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                  <div className="text-3xl mb-3">{industry.icon}</div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{industry.name}</h3>
-                  <p className="text-sm text-gray-600">{industry.description}</p>
+      <section className="py-16 bg-white" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-6xl mx-auto" loading="lazy">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12" loading="lazy">Industries We Serve</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" loading="lazy">{industries.map((industry, index) => (</div>
+                <div key={index} className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors" loading="lazy">
+                  <div className="text-3xl mb-3" loading="lazy">{industry.icon}</div>
+                  <h3 className="font-semibold text-gray-900 mb-2" loading="lazy">{industry.name}</h3>
+                  <p className="text-sm text-gray-600" loading="lazy">{industry.description}</p>
                 </div>
               ))}
             </div>
@@ -160,15 +160,15 @@ const complianceFrameworks = [
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our Compliance Services?</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-sm p-6">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
-                    <p className="text-gray-900 font-medium">{benefit}</p>
+      <section className="py-16 bg-gray-50" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-6xl mx-auto" loading="lazy">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12" loading="lazy">Why Choose Our Compliance Services?</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{benefits.map((benefit, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-sm p-6" loading="lazy">
+                  <div className="flex items-center mb-4" loading="lazy">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" loading="lazy" />
+                    <p className="text-gray-900 font-medium" loading="lazy">{benefit}</p>
                   </div>
                 </div>
               ))}
@@ -178,17 +178,17 @@ const complianceFrameworks = [
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Achieve Compliance?</h2>
-            <p className="text-xl mb-8 text-blue-100">Let our compliance experts help you navigate regulatory requirements and protect your business.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Shield className="mr-2 w-5 h-5" />
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-4xl mx-auto text-center" loading="lazy">
+            <h2 className="text-3xl font-bold mb-6" loading="lazy">Ready to Achieve Compliance?</h2>
+            <p className="text-xl mb-8 text-blue-100" loading="lazy">Let our compliance experts help you navigate regulatory requirements and protect your business.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center" loading="lazy" aria-label="Action button">
+                <Shield className="mr-2 w-5 h-5" loading="lazy" />
                 Start Compliance Assessment
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Contact Our Experts</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" loading="lazy" aria-label="Action button">Contact Our Experts</button>
             </div>
           </div>
         </div>

@@ -36,45 +36,48 @@ const features = [
         <title>AI Chatbot Builder - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Build intelligent chatbots with our AI-powered chatbot builder. No coding required, advanced features included." />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+        <meta property="og:description" content="Advanced AI and IT solutions for modern businesses" />
+        <meta property="og:image" content="/og-image.jpg" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>{/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Chatbot Builder</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build intelligent chatbots with our AI-powered builder. No coding</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">>{/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
+          <div className="max-w-7xl mx-auto text-center" loading="lazy">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" loading="lazy">AI Chatbot Builder</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" loading="lazy">Build intelligent chatbots with our AI-powered builder. No coding</p>
               required, advanced features included.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
               <a
                 href="#features"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300" loading="lazy"
               >Get Started</a>a>
               <a
                 href="#contact"
-                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300" loading="lazy"
               >View Demo</a>a>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
-              <p className="text-lg text-gray-300">Everything you need to build intelligent chatbots</p>
+        <section id="features" className="py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
+          <div className="max-w-7xl mx-auto" loading="lazy">
+            <div className="text-center mb-16" loading="lazy">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" loading="lazy">Powerful Features</h2>
+              <p className="text-lg text-gray-300" loading="lazy">Everything you need to build intelligent chatbots</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300" loading="lazy"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4" loading="lazy">
+                    <feature.icon className="w-8 h-8 text-white" loading="lazy" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{feature.title}</h3>h3>
+                  <p className="text-gray-300" loading="lazy">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -82,27 +85,27 @@ const features = [
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Chatbot Builder?</h2>
-              <p className="text-lg text-gray-300">Advanced AI technology for professional chatbot creation</p>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5" loading="lazy">
+          <div className="max-w-7xl mx-auto" loading="lazy">
+            <div className="text-center mb-16" loading="lazy">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" loading="lazy">Why Choose Our Chatbot Builder?</h2>
+              <p className="text-lg text-gray-300" loading="lazy">Advanced AI technology for professional chatbot creation</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3>h3>
-                <ul className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8" loading="lazy">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8" loading="lazy">
+                <h3 className="text-2xl font-bold text-white mb-6" loading="lazy">Key Benefits</h3>h3>
+                <ul className="space-y-3" loading="lazy">
                   {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    <li key={index} className="flex items-center text-gray-300" loading="lazy">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" loading="lazy" />
                       {benefit}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Use Cases</h3>h3>
-                <ul className="space-y-3 text-gray-300">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8" loading="lazy">
+                <h3 className="text-2xl font-bold text-white mb-6" loading="lazy">Use Cases</h3>h3>
+                <ul className="space-y-3 text-gray-300" loading="lazy">
                   <li>• Customer support automation</li>
                   <li>• Lead generation and qualification</li>
                   <li>• E-commerce assistance</li>
@@ -116,22 +119,22 @@ const features = [
         </section>
 
         {/* CTA Section */}
-        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Build Your Chatbot?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Start building intelligent chatbots today with our AI-powered</p>
+        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
+          <div className="max-w-7xl mx-auto text-center" loading="lazy">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" loading="lazy">Ready to Build Your Chatbot?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" loading="lazy">Start building intelligent chatbots today with our AI-powered</p>
               builder platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
               <a
                 href="#contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center" loading="lazy"
               >Start Building</a>
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" loading="lazy" />
               </a>
               <a
                 href="#features"
-                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300" loading="lazy"
               >Learn More</a>a>
             </div>
           </div>

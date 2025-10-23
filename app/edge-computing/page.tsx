@@ -105,7 +105,7 @@ const features = [
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" loading="lazy">
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and global edge infrastructure." />
@@ -113,42 +113,42 @@ const features = [
       </Helmet>
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Edge Computing</h1>
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Solutions</span>
+      <section className="relative py-20 px-4 overflow-hidden" loading="lazy">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center" loading="lazy">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" loading="lazy">Edge Computing</h1>
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent" loading="lazy">Solutions</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Bring computing power closer to your data and users with our advanced edge computing solutions.</p>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" loading="lazy">Bring computing power closer to your data and users with our advanced edge computing solutions.</p>
             Ultra-low latency, real-time processing, and global edge infrastructure.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">Get Started Today</button>
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25" loading="lazy" aria-label="Action button">Get Started Today</button>
+              <ArrowRight className="inline-block ml-2 w-5 h-5" loading="lazy" />
             </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo</button>
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" loading="lazy" aria-label="Action button">View Demo</button>
           </div>
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced edge computing capabilities designed for modern applications and IoT solutions</p>
+      <section className="py-20 px-4" loading="lazy">
+        <div className="max-w-7xl mx-auto" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Edge Computing Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Advanced edge computing capabilities designed for modern applications and IoT solutions</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group" loading="lazy">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                  <feature.icon className="w-6 h-6 text-white" loading="lazy" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
+                <h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{feature.title}</h3>
+                <p className="text-gray-300 mb-4" loading="lazy">{feature.description}</p>
+                <ul className="space-y-2" loading="lazy">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400" loading="lazy">
+                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" loading="lazy" />
                       {benefit}
                     </li>
                   ))}
@@ -159,65 +159,65 @@ const features = [
         </div>
       </section>
       {/* Services Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive edge computing solutions for all your business needs</p>
+      <section className="py-20 px-4" loading="lazy">
+        <div className="max-w-7xl mx-auto" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Edge Computing Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Comprehensive edge computing solutions for all your business needs</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{services.map((service, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{services.map((service, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300" loading="lazy">
+                <div className="text-4xl mb-4" loading="lazy">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{service.title}</h3>
+                <p className="text-gray-300" loading="lazy">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Use Cases Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Edge computing solutions for various industries and applications</p>
+      <section className="py-20 px-4" loading="lazy">
+        <div className="max-w-7xl mx-auto" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Use Cases</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Edge computing solutions for various industries and applications</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{useCases.map((useCase, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group" loading="lazy">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform" loading="lazy">{useCase.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{useCase.title}</h3>
+                <p className="text-gray-300" loading="lazy">{useCase.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of edge computing with our proven solutions</p>
+      <section className="py-20 px-4" loading="lazy">
+        <div className="max-w-7xl mx-auto" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Why Choose Edge Computing?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Experience the benefits of edge computing with our proven solutions</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" loading="lazy">{benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center" loading="lazy">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center" loading="lazy">
+                  <CheckCircle className="w-8 h-8 text-white" loading="lazy" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                <h3 className="text-lg font-semibold text-white" loading="lazy">{benefit}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
-          <p className="text-xl text-gray-300 mb-8">Transform your applications with ultra-low latency edge computing solutions</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial</button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
+      <section className="py-20 px-4" loading="lazy">
+        <div className="max-w-4xl mx-auto text-center" loading="lazy">
+          <h2 className="text-4xl font-bold text-white mb-6" loading="lazy">Ready to Deploy Edge Computing?</h2>
+          <p className="text-xl text-gray-300 mb-8" loading="lazy">Transform your applications with ultra-low latency edge computing solutions</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" loading="lazy" aria-label="Action button">Start Free Trial</button>
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" loading="lazy" aria-label="Action button">Contact Sales</button>
           </div>
         </div>
       </section>

@@ -65,22 +65,22 @@ const partners: Partner[] = [
 
   const benefits = [
     {
-      icon: <Handshake className="w-8 h-8 text-blue-600" />,
+      icon: <Handshake className="w-8 h-8 text-blue-600" loading="lazy" />,
       title: 'Strategic Partnerships',
       description: 'Long-term relationships with industry leaders'
     },
     {
-      icon: <Award className="w-8 h-8 text-green-600" />,
+      icon: <Award className="w-8 h-8 text-green-600" loading="lazy" />,
       title: 'Certified Solutions',
       description: 'Validated and certified technology integrations'
     },
     {
-      icon: <Users className="w-8 h-8 text-purple-600" />,
+      icon: <Users className="w-8 h-8 text-purple-600" loading="lazy" />,
       title: 'Expert Support',
       description: 'Dedicated support from partner specialists'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-orange-600" />,
+      icon: <TrendingUp className="w-8 h-8 text-orange-600" loading="lazy" />,
       title: 'Growth Opportunities',
       description: 'Joint go-to-market and co-selling programs'
     }
@@ -90,22 +90,22 @@ const partners: Partner[] = [
     {
       name: 'Technology Partners',
       description: 'Integration and technical collaboration',
-      icon: <Zap className="w-6 h-6" />
+      icon: <Zap className="w-6 h-6" loading="lazy" />
     },
     {
       name: 'Channel Partners',
       description: 'Reseller and distribution partnerships',
-      icon: <Building2 className="w-6 h-6" />
+      icon: <Building2 className="w-6 h-6" loading="lazy" />
     },
     {
       name: 'Strategic Partners',
       description: 'Long-term strategic alliances',
-      icon: <Handshake className="w-6 h-6" />
+      icon: <Handshake className="w-6 h-6" loading="lazy" />
     },
     {
       name: 'Solution Partners',
       description: 'Joint solution development',
-      icon: <Award className="w-6 h-6" />
+      icon: <Award className="w-6 h-6" loading="lazy" />
     }
   ];
 
@@ -123,7 +123,7 @@ const partners: Partner[] = [
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50" loading="lazy">
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Strategic partnerships with leading technology companies. Join our partner ecosystem and grow your business with Zion Tech Group." />
@@ -131,47 +131,47 @@ const partners: Partner[] = [
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-4xl mx-auto text-center" loading="lazy">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6" loading="lazy">
+              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400" loading="lazy">Partnerships</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">Join our ecosystem of technology leaders and grow your business through strategic partnerships</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Become a Partner</button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">View Partner Program</button>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100" loading="lazy">Join our ecosystem of technology leaders and grow your business through strategic partnerships</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" loading="lazy" aria-label="Action button">Become a Partner</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" loading="lazy" aria-label="Action button">View Partner Program</button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Partners Grid */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Partners</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{partners.map((partner, index) => (</div>
-                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <Building2 className="w-8 h-8 text-gray-600" />
+      <section className="py-20 bg-white" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-6xl mx-auto" loading="lazy">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12" loading="lazy">Our Partners</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{partners.map((partner, index) => (</div>
+                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow" loading="lazy">
+                  <div className="flex items-center justify-between mb-4" loading="lazy">
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center" loading="lazy">
+                      <Building2 className="w-8 h-8 text-gray-600" loading="lazy" />
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTierColor(partner.tier)}`}>{partner.tier.toUpperCase()}</span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{partner.name}</h3>
-                  <p className="text-gray-600 mb-3">{partner.description}</p>
-                  <p className="text-sm text-blue-600 mb-4">{partner.category}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2" loading="lazy">{partner.name}</h3>
+                  <p className="text-gray-600 mb-3" loading="lazy">{partner.description}</p>
+                  <p className="text-sm text-blue-600 mb-4" loading="lazy">{partner.category}</p>
                   
                   {partner.website && (
                     <a
                       href={partner.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium" loading="lazy"
                     >Visit Website</a>
-                      <ExternalLink className="w-4 h-4 ml-1" />
+                      <ExternalLink className="w-4 h-4 ml-1" loading="lazy" />
                     </a>
                   )}
                 </div>
@@ -182,15 +182,15 @@ const partners: Partner[] = [
       </section>
 
       {/* Partnership Types */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Types</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{partnershipTypes.map((type, index) => (</div>
-                <div key={index} className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4 text-blue-600">{type.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{type.name}</h3>
-                  <p className="text-gray-600 text-sm">{type.description}</p>
+      <section className="py-20 bg-gray-50" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-6xl mx-auto" loading="lazy">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12" loading="lazy">Partnership Types</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" loading="lazy">{partnershipTypes.map((type, index) => (</div>
+                <div key={index} className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow" loading="lazy">
+                  <div className="flex justify-center mb-4 text-blue-600" loading="lazy">{type.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2" loading="lazy">{type.name}</h3>
+                  <p className="text-gray-600 text-sm" loading="lazy">{type.description}</p>
                 </div>
               ))}
             </div>
@@ -199,15 +199,15 @@ const partners: Partner[] = [
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Benefits</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
+      <section className="py-20 bg-white" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-6xl mx-auto" loading="lazy">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12" loading="lazy">Partnership Benefits</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{benefits.map((benefit, index) => (
+                <div key={index} className="text-center" loading="lazy">
+                  <div className="flex justify-center mb-4" loading="lazy">{benefit.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3" loading="lazy">{benefit.title}</h3>
+                  <p className="text-gray-600" loading="lazy">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -216,17 +216,17 @@ const partners: Partner[] = [
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Partner With Us?</h2>
-            <p className="text-xl mb-8 text-blue-100">Join our partner ecosystem and unlock new opportunities for growth and innovation.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Handshake className="mr-2 w-5 h-5" />
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="max-w-4xl mx-auto text-center" loading="lazy">
+            <h2 className="text-3xl font-bold mb-6" loading="lazy">Ready to Partner With Us?</h2>
+            <p className="text-xl mb-8 text-blue-100" loading="lazy">Join our partner ecosystem and unlock new opportunities for growth and innovation.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center" loading="lazy" aria-label="Action button">
+                <Handshake className="mr-2 w-5 h-5" loading="lazy" />
                 Become a Partner
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Download Partner Kit</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" loading="lazy" aria-label="Action button">Download Partner Kit</button>
             </div>
           </div>
         </div>

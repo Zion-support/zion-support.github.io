@@ -209,7 +209,7 @@ const [formData, setFormData] = useState<FormData>({
               type="submit"
               disabled={status.type === 'loading'}
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
-            >{status.type === 'loading' ? (</button>
+             aria-label="Action button">{status.type === 'loading' ? (</button>
                 <>
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                   Sending...
@@ -302,7 +302,7 @@ const [formData, setFormData] = useState<FormData>({
         type="submit"
         disabled={isSubmitting}
         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-      >{isSubmitting ? "Sending..." : "Send Message"}</button>
+       aria-label="Action button">{isSubmitting ? "Sending..." : "Send Message"}</button>
     </form>
   );
 };

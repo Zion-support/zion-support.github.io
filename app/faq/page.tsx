@@ -51,32 +51,32 @@ return (
 <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
 <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
 </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<section className="py-20 px-4">
-<div className="max-w-7xl mx-auto text-center">
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-Frequently Asked <span className="text-cyan-400">Questions</span>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
+<section className="py-20 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto text-center" loading="lazy">
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6" loading="lazy">
+Frequently Asked <span className="text-cyan-400" loading="lazy">Questions</span>
 </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>p>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" loading="lazy">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>p>
 </div>
 </section>
-<section className="py-16 px-4">
-<div className="max-w-4xl mx-auto">
-<div className="space-y-4">{faqs.map((faq, index) => (</div>
-<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
+<section className="py-16 px-4" loading="lazy">
+<div className="max-w-4xl mx-auto" loading="lazy">
+<div className="space-y-4" loading="lazy">{faqs.map((faq, index) => (</div>
+<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20" loading="lazy">
 <button
-onClick={() =>toggleItem(index)}</button>
-className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
-<h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+onClick={() = aria-label="Action button">toggleItem(index)}</button>
+className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors" loading="lazy">
+<h3 className="text-lg font-semibold text-white pr-4" loading="lazy">{faq.question}</h3>
 {openItems.includes(index) ? (
-<ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+<ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" loading="lazy" />
 ) : (
-<ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+<ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" loading="lazy" />
 )}
 </button>
 {openItems.includes(index) && (
-<div className="px-6 pb-4">
-<p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+<div className="px-6 pb-4" loading="lazy">
+<p className="text-gray-300 leading-relaxed" loading="lazy">{faq.answer}</p>
 </div>
 )}
 </div>

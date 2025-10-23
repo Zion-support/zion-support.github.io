@@ -29,35 +29,35 @@ return (
 <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
 <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
 </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<section className="py-20 px-4">
-<div className="max-w-7xl mx-auto text-center">
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-See Our <span className="text-cyan-400">Solutions</span> in Action
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
+<section className="py-20 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto text-center" loading="lazy">
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6" loading="lazy">
+See Our <span className="text-cyan-400" loading="lazy">Solutions</span> in Action
 </
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.</p>p>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" loading="lazy">Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.</p>p>
 </div>
 </section>
-<section className="py-16 px-4">
-<div className="max-w-7xl mx-auto">
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{demos.map((demo, index) => (</div>
-<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-<div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">
-<Play className="w-8 h-8 text-cyan-400" />
+<section className="py-16 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto" loading="lazy">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">{demos.map((demo, index) => (</div>
+<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300" loading="lazy">
+<div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4" loading="lazy">
+<Play className="w-8 h-8 text-cyan-400" loading="lazy" />
 </div>
-<h3 className="text-xl font-semibold text-white mb-3">{demo.title}</h3>
-<p className="text-gray-300 mb-4">{demo.description}</p>
-<div className="text-sm text-cyan-400 mb-4">Duration: {demo.duration}</div>
-<ul className="space-y-2 mb-6">
+<h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{demo.title}</h3>
+<p className="text-gray-300 mb-4" loading="lazy">{demo.description}</p>
+<div className="text-sm text-cyan-400 mb-4" loading="lazy">Duration: {demo.duration}</div>
+<ul className="space-y-2 mb-6" loading="lazy">
 {demo.features.map((feature, featureIndex) => (
-<li key={featureIndex} className="flex items-center text-sm text-gray-300">
-<CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+<li key={featureIndex} className="flex items-center text-sm text-gray-300" loading="lazy">
+<CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" loading="lazy" />
 {feature}
 </li>
 ))}
 </ul>
-<button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-<Play className="w-4 h-4 mr-2" />
+<button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center" loading="lazy" aria-label="Action button">
+<Play className="w-4 h-4 mr-2" loading="lazy" />
 Watch Demo
 </
 </div>
@@ -65,15 +65,15 @@ Watch Demo
 </div>
 </div>
 </section>
-<section className="py-16 px-4">
-<div className="max-w-4xl mx-auto text-center">
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
-<h2 className="text-2xl font-semibold text-white mb-4">Ready to See More?</h2>
-<p className="text-gray-300 mb-6">Schedule a personalized demo with our experts to see how our solutions can address your specific business needs.</p>p>
+<section className="py-16 px-4" loading="lazy">
+<div className="max-w-4xl mx-auto text-center" loading="lazy">
+<div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20" loading="lazy">
+<h2 className="text-2xl font-semibold text-white mb-4" loading="lazy">Ready to See More?</h2>
+<p className="text-gray-300 mb-6" loading="lazy">Schedule a personalized demo with our experts to see how our solutions can address your specific business needs.</p>p>
 <a
 href="/contact"
-className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">Schedule Demo</a>
-<ArrowRight className="w-4 h-4 ml-2" />
+className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors" loading="lazy">Schedule Demo</a>
+<ArrowRight className="w-4 h-4 ml-2" loading="lazy" />
 </a>
 </div>
 </div>

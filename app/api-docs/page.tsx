@@ -102,7 +102,7 @@ endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
 )
 })).filter(category => category.endpoints.length > 0)
 return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
 <SEOOptimizer
 title="API Documentation - Zion Tech Group"
 description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
@@ -110,101 +110,101 @@ keywords="API documentation, REST API, AI API, cloud API, integration, developer
 />
 <Navigation />
 {/* Hero Section */}
-<section className="py-20 px-4">
-<div className="max-w-7xl mx-auto text-center">
-<h1 className="text-5xl font-bold text-white mb-6">API Documentation</h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
+<section className="py-20 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto text-center" loading="lazy">
+<h1 className="text-5xl font-bold text-white mb-6" loading="lazy">API Documentation</h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" loading="lazy">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
 Explore endpoints, authentication, and integration guides.
 </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-<Code className="mr-2 h-5 w-5" />
+<div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+<button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center" loading="lazy" aria-label="Action button">
+<Code className="mr-2 h-5 w-5" loading="lazy" />
 Get Started
 </
-<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-<Download className="mr-2 h-5 w-5" />
+<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" loading="lazy" aria-label="Action button">
+<Download className="mr-2 h-5 w-5" loading="lazy" />
 Download SDK
 </
 </div>
 </div>
 </section>
 {/* Quick Start */}
-<section className="py-16 px-4">
-<div className="max-w-7xl mx-auto">
-<h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
-<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-<Key className="w-6 h-6 text-white" />
+<section className="py-16 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto" loading="lazy">
+<h2 className="text-3xl font-bold text-white mb-8 text-center" loading="lazy">Quick Start</h2>
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-8" loading="lazy">
+<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10" loading="lazy">
+<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4" loading="lazy">
+<Key className="w-6 h-6 text-white" loading="lazy" />
 </div>
-<h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
-<p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
-<button className="text-purple-400 hover:text-purple-300 font-medium">Get API Key →</button>
+<h3 className="text-xl font-semibold text-white mb-3" loading="lazy">1. Get API Key</h3>
+<p className="text-gray-300 mb-4" loading="lazy">Sign up and get your API key from the dashboard</p>
+<button className="text-purple-400 hover:text-purple-300 font-medium" loading="lazy" aria-label="Action button">Get API Key →</button>
 </div>
-<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-<Code className="w-6 h-6 text-white" />
+<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10" loading="lazy">
+<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4" loading="lazy">
+<Code className="w-6 h-6 text-white" loading="lazy" />
 </div>
-<h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
-<p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
-<button className="text-purple-400 hover:text-purple-300 font-medium">View Examples →</button>
+<h3 className="text-xl font-semibold text-white mb-3" loading="lazy">2. Make Request</h3>
+<p className="text-gray-300 mb-4" loading="lazy">Use our REST API with your preferred language</p>
+<button className="text-purple-400 hover:text-purple-300 font-medium" loading="lazy" aria-label="Action button">View Examples →</button>
 </div>
-<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-<Zap className="w-6 h-6 text-white" />
+<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10" loading="lazy">
+<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4" loading="lazy">
+<Zap className="w-6 h-6 text-white" loading="lazy" />
 </div>
-<h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
-<p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
-<button className="text-purple-400 hover:text-purple-300 font-medium">Start Building →</button>
+<h3 className="text-xl font-semibold text-white mb-3" loading="lazy">3. Integrate</h3>
+<p className="text-gray-300 mb-4" loading="lazy">Build amazing applications with our APIs</p>
+<button className="text-purple-400 hover:text-purple-300 font-medium" loading="lazy" aria-label="Action button">Start Building →</button>
 </div>
 </div>
 </div>
 </section>
 {/* API Endpoints */}
-<section className="py-16 px-4">
-<div className="max-w-7xl mx-auto">
-<h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
-<div className="space-y-8">{filteredEndpoints.map((category, categoryIndex) => (</div>
-<div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-<div className="flex items-center gap-4 mb-8">
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-<category.icon className="w-6 h-6 text-white" />
+<section className="py-16 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto" loading="lazy">
+<h2 className="text-3xl font-bold text-white mb-12 text-center" loading="lazy">API Endpoints</h2>
+<div className="space-y-8" loading="lazy">{filteredEndpoints.map((category, categoryIndex) => (</div>
+<div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10" loading="lazy">
+<div className="flex items-center gap-4 mb-8" loading="lazy">
+<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center" loading="lazy">
+<category.icon className="w-6 h-6 text-white" loading="lazy" />
 </div>
 <div>
-<h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
-<p className="text-gray-300">{category.description}</p>
+<h3 className="text-2xl font-bold text-white mb-2" loading="lazy">{category.title}</h3>
+<p className="text-gray-300" loading="lazy">{category.description}</p>
 </div>
 </div>
-<div className="space-y-6">{category.endpoints.map((endpoint, endpointIndex) => (</div>
-<div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
-<div className="flex items-center justify-between mb-4">
-<div className="flex items-center gap-4">
+<div className="space-y-6" loading="lazy">{category.endpoints.map((endpoint, endpointIndex) => (</div>
+<div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10" loading="lazy">
+<div className="flex items-center justify-between mb-4" loading="lazy">
+<div className="flex items-center gap-4" loading="lazy">
 <span className={`px-3 py-1 rounded-full text-sm font-medium ${
 endpoint.method === 'POST'
 ? 'bg-green-500/20 text-green-400'
 : 'bg-blue-500/20 text-blue-400'
 }`}>{endpoint.method}</span>
-<code className="text-purple-400 font-mono">{endpoint.path}</code>
+<code className="text-purple-400 font-mono" loading="lazy">{endpoint.path}</code>
 </div>
 <button
-onClick={() =>copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}</button>
-className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+onClick={() = aria-label="Action button">copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}</button>
+className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors" loading="lazy">
 {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
 <>
-<Check className="w-4 h-4" />
+<Check className="w-4 h-4" loading="lazy" />
 Copied!
 </>
 ) : (
 <>
-<Copy className="w-4 h-4" />
+<Copy className="w-4 h-4" loading="lazy" />
 Copy
 </>
 )}
 </button>
 </div>
-<p className="text-gray-300 mb-4">{endpoint.description}</p>
-<div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
-<pre className="text-gray-300 text-sm">
+<p className="text-gray-300 mb-4" loading="lazy">{endpoint.description}</p>
+<div className="bg-slate-900 rounded-lg p-4 overflow-x-auto" loading="lazy">
+<pre className="text-gray-300 text-sm" loading="lazy">
 <code>{endpoint.code}</code>
 </pre>
 </div>
@@ -217,13 +217,13 @@ Copy
 </div>
 </section>
 {/* CTA Section */}
-<section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-<div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
-<p className="text-xl text-purple-100 mb-8">Start building with our APIs today and create amazing applications.</p>p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Get API Key</button>
-<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">View SDKs</button>
+<section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700" loading="lazy">
+<div className="max-w-4xl mx-auto text-center" loading="lazy">
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6" loading="lazy">Ready to Get Started?</h2>h2>
+<p className="text-xl text-purple-100 mb-8" loading="lazy">Start building with our APIs today and create amazing applications.</p>p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors" loading="lazy" aria-label="Action button">Get API Key</button>
+<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors" loading="lazy" aria-label="Action button">View SDKs</button>
 </div>
 </div>
 </section>

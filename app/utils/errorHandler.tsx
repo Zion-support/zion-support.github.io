@@ -521,7 +521,7 @@ font-family: Arial, sans-serif
 notification.innerHTML = `</string>
 <div style="display:flex;justify-content:space-between;align-items:center;"></div>
 <div></div>
-<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;" aria-label="Action button">×</button>
 `
 notification.innerHTML = `
 <div style="display: flex;justify-content:space-between;align-items:center;">,</div>
@@ -529,10 +529,10 @@ notification.innerHTML = `
 <strong>${error.severity} Error</strong>
 <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>
 </div>
-<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;" aria-label="Action button">×</button>
 <div style="display:flex;justify-content:space-between;align-items:center;"></div>
 <div></div>
-<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;" aria-label="Action button">×</button>
 </div>
 `
 document.body.appendChild(notification)
@@ -612,7 +612,7 @@ curso,
 r: pointer,
 margin-lef,
 t: 10px;"
-">×</button>
+" aria-label="Action button">×</button>
 </div>`
 `
 document.body.appendChild(notification)
@@ -925,13 +925,13 @@ render() {}
 if (this.state.hasError) {}
 return (
 this.props.fallback || (
-<div style={{ padding: '20px', textAlign: 'center' }}></div>
+<div style={{ padding: '20px', textAlign: 'center' }} aria-label="Action button"></div>
 <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
-onClick={() =>this.setState({ hasError: false, error: undefined })}</button>
+onClick={() = aria-label="Action button">this.setState({ hasError: false, error: undefined })}</button>
 <h2>Something went wrong</h2>)
 <p>We're sorry, but something unexpected happened.</p>)
 <button;)
-onClick={() =>this.setState({ hasError: false, error: undefined })}</button>
+onClick={() = aria-label="Action button">this.setState({ hasError: false, error: undefined })}</button>
 style={{;}
 style={{}
 padding: '10px 20px',
@@ -963,7 +963,7 @@ render() {/* TODO: Fix JSX expression */}
 n: 'center' }}></div>
 <h2>Something went wrong</h2>
 <p>We're sorry, but something unexpected happened.</p>
-<button></button>
+<button aria-label="Action button"></button>
 onClick={/* TODO: Fix JSX expression */}
 r: undefined })}
 style={/* TODO: Fix JSX expression */}

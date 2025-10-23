@@ -89,13 +89,13 @@ affectedServices: ['Database', 'API Services']
 const getStatusIcon = (status: string) => {
 switch (status) {
 case 'operational':
-return <CheckCircle className="w-5 h-5 text-green-400" />
+return <CheckCircle className="w-5 h-5 text-green-400" loading="lazy" />
 case 'degraded':
-return <AlertTriangle className="w-5 h-5 text-yellow-400" />
+return <AlertTriangle className="w-5 h-5 text-yellow-400" loading="lazy" />
 case 'outage':
-return <XCircle className="w-5 h-5 text-red-400" />
+return <XCircle className="w-5 h-5 text-red-400" loading="lazy" />
 default:
-return <Clock className="w-5 h-5 text-gray-400" />
+return <Clock className="w-5 h-5 text-gray-400" loading="lazy" />
 }
 }
 const getStatusColor = (status: string) => {
@@ -129,11 +129,11 @@ const overallStatus = services.every(service => service.status === 'operational'
 : 'degraded'
 return (
 </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Real-time status of all our services. We're committed to providing reliable,</p>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" loading="lazy">Real-time status of all our services. We're committed to providing reliable,</p>
 high-performance AI and IT solutions.
 </p>
-<div className="flex items-center justify-center gap-4 mb-8">
-<div className="flex items-center gap-2">{getStatusIcon(overallStatus)}</div>
+<div className="flex items-center justify-center gap-4 mb-8" loading="lazy">
+<div className="flex items-center gap-2" loading="lazy">{getStatusIcon(overallStatus)}</div>
 <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>{overallStatus === 'operational' ? 'All Systems Operational' :;}</span>
 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
 </span>
@@ -141,41 +141,41 @@ overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
 <button
 onClick={refreshStatus}
 disabled={isRefreshing}
-className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
+className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50" loading="lazy" aria-label="Action button">
 <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
 Refresh
 </
 </div>
-<p className="text-gray-400 text-sm">Last updated: {lastUpdated.toLocaleString()}</p>p>
+<p className="text-gray-400 text-sm" loading="lazy">Last updated: {lastUpdated.toLocaleString()}</p>p>
 </div>
 </section>
 {/* Services Status */}
-<section className="py-16 px-4"></section>
-<div className="max-w-7xl mx-auto"></div>
-<h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+<section className="py-16 px-4" loading="lazy"></section>
+<div className="max-w-7xl mx-auto" loading="lazy"></div>
+<h2 className="text-3xl font-bold text-white mb-12 text-center" loading="lazy">Service Status</h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" loading="lazy"></div>
 {services.map((service, index) => (;}
-<div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"></div>
-<div className="flex items-center justify-between mb-4"></div>
-<div className="flex items-center gap-3"></div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300" loading="lazy"></div>
+<div className="flex items-center justify-between mb-4" loading="lazy"></div>
+<div className="flex items-center gap-3" loading="lazy"></div>
 {getStatusIcon(service.status)}
-<h3 className="text-lg font-semibold text-white">{service.name}</h3>
+<h3 className="text-lg font-semibold text-white" loading="lazy">{service.name}</h3>
 </div>
 <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>{service.status}</span>
 </div>
-<p className="text-gray-300 text-sm mb-4">{service.description}</p>
-<div className="space-y-2 text-sm">
-<div className="flex justify-between">
-<span className="text-gray-400">Uptime:</span>
-<span className="text-white">{service.uptime}</span>
+<p className="text-gray-300 text-sm mb-4" loading="lazy">{service.description}</p>
+<div className="space-y-2 text-sm" loading="lazy">
+<div className="flex justify-between" loading="lazy">
+<span className="text-gray-400" loading="lazy">Uptime:</span>
+<span className="text-white" loading="lazy">{service.uptime}</span>
 </div>
-<div className="flex justify-between">
-<span className="text-gray-400">Response Time:</span>
-<span className="text-white">{service.responseTime}</span>
+<div className="flex justify-between" loading="lazy">
+<span className="text-gray-400" loading="lazy">Response Time:</span>
+<span className="text-white" loading="lazy">{service.responseTime}</span>
 </div>
-<div className="flex justify-between">
-<span className="text-gray-400">Last Incident:</span>
-<span className="text-white">{service.lastIncident}</span>
+<div className="flex justify-between" loading="lazy">
+<span className="text-gray-400" loading="lazy">Last Incident:</span>
+<span className="text-white" loading="lazy">{service.lastIncident}</span>
 </div>
 </div>
 </div>
@@ -184,21 +184,21 @@ Refresh
 </div>
 </section>
 {/* Recent Incidents */}
-<section className="py-16 px-4"></section>
-<div className="max-w-7xl mx-auto"></div>
-<h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
-<div className="space-y-6"></div>
+<section className="py-16 px-4" loading="lazy"></section>
+<div className="max-w-7xl mx-auto" loading="lazy"></div>
+<h2 className="text-3xl font-bold text-white mb-12 text-center" loading="lazy">Recent Incidents</h2>
+<div className="space-y-6" loading="lazy"></div>
 {incidents.map((incident) => (;}
-<div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
-<div className="flex items-start justify-between mb-4"></div>
+<div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10" loading="lazy"></div>
+<div className="flex items-start justify-between mb-4" loading="lazy"></div>
 <div></div>
-<h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
-<div className="flex items-center gap-4 text-sm text-gray-400"></div>
+<h3 className="text-xl font-semibold text-white mb-2" loading="lazy">{incident.title}</h3>
+<div className="flex items-center gap-4 text-sm text-gray-400" loading="lazy"></div>
 <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
 <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>
 </div>
 </div>
-<div className="flex items-center gap-2"></div>
+<div className="flex items-center gap-2" loading="lazy"></div>
 <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>{incident.severity}</span>
 <span className={`px-3 py-1 rounded-full text-sm font-medium ${
 incident.status === 'resolved'
@@ -207,10 +207,10 @@ incident.status === 'resolved'
 }`}>{incident.status}</span>
 </div>
 </div>
-<p className="text-gray-300 mb-4">{incident.description}</p>
+<p className="text-gray-300 mb-4" loading="lazy">{incident.description}</p>
 <div>
-<span className="text-gray-400 text-sm">Affected Services: </span>
-<span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
+<span className="text-gray-400 text-sm" loading="lazy">Affected Services: </span>
+<span className="text-white text-sm" loading="lazy">{incident.affectedServices.join(', ')}</span>
 </div>
 </div>
 ))}
@@ -218,49 +218,49 @@ incident.status === 'resolved'
 </div>
 </section>
 {/* Performance Metrics */}
-<section className="py-16 px-4">
-<div className="max-w-7xl mx-auto">
-<h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-<TrendingUp className="w-6 h-6 text-white" />
+<section className="py-16 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto" loading="lazy">
+<h2 className="text-3xl font-bold text-white mb-12 text-center" loading="lazy">Performance Metrics</h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" loading="lazy">
+<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" loading="lazy">
+<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4" loading="lazy">
+<TrendingUp className="w-6 h-6 text-white" loading="lazy" />
 </div>
-<div className="text-3xl font-bold text-white mb-2">99.9%</div>
-<div className="text-gray-400">Overall Uptime</div>
+<div className="text-3xl font-bold text-white mb-2" loading="lazy">99.9%</div>
+<div className="text-gray-400" loading="lazy">Overall Uptime</div>
 </div>
-<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-<div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-<Zap className="w-6 h-6 text-white" />
+<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" loading="lazy">
+<div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4" loading="lazy">
+<Zap className="w-6 h-6 text-white" loading="lazy" />
 </div>
-<div className="text-3xl font-bold text-white mb-2">45ms</div>
-<div className="text-gray-400">Avg Response Time</div>
+<div className="text-3xl font-bold text-white mb-2" loading="lazy">45ms</div>
+<div className="text-gray-400" loading="lazy">Avg Response Time</div>
 </div>
-<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-<Users className="w-6 h-6 text-white" />
+<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" loading="lazy">
+<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" loading="lazy">
+<Users className="w-6 h-6 text-white" loading="lazy" />
 </div>
-<div className="text-3xl font-bold text-white mb-2">50K+</div>
-<div className="text-gray-400">Active Users</div>
+<div className="text-3xl font-bold text-white mb-2" loading="lazy">50K+</div>
+<div className="text-gray-400" loading="lazy">Active Users</div>
 </div>
-<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-<div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-<Activity className="w-6 h-6 text-white" />
+<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" loading="lazy">
+<div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4" loading="lazy">
+<Activity className="w-6 h-6 text-white" loading="lazy" />
 </div>
-<div className="text-3xl font-bold text-white mb-2">1.2M</div>
-<div className="text-gray-400">Requests Today</div>
+<div className="text-3xl font-bold text-white mb-2" loading="lazy">1.2M</div>
+<div className="text-gray-400" loading="lazy">Requests Today</div>
 </div>
 </div>
 </div>
 </section>
 {/* CTA Section */}
-<section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-<div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need More Information?</h2>h2>
-<p className="text-xl text-purple-100 mb-8">Subscribe to status updates or contact our support team for more details.</p>p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Subscribe to Updates</button>
-<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Contact Support</button>
+<section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700" loading="lazy">
+<div className="max-w-4xl mx-auto text-center" loading="lazy">
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6" loading="lazy">Need More Information?</h2>h2>
+<p className="text-xl text-purple-100 mb-8" loading="lazy">Subscribe to status updates or contact our support team for more details.</p>p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
+<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors" loading="lazy" aria-label="Action button">Subscribe to Updates</button>
+<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors" loading="lazy" aria-label="Action button">Contact Support</button>
 </div>
 </div>
 </section>

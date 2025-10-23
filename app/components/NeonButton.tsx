@@ -48,9 +48,9 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 
   const content = (
     <div>
-      {icon && <span className="mr-2">{icon}</span>}
+      {icon && <span className="mr-2" loading="lazy">{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-5 h-5 ml-2" />}
+      {!icon && <ArrowRight className="w-5 h-5 ml-2" loading="lazy" />}
     </div>
   );
 
@@ -61,7 +61,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   }
 
   return (
-    <button onClick={onClick} disabled={disabled} className={buttonClasses}>{content}</button>
+    <button onClick={onClick} disabled={disabled} className={buttonClasses} aria-label="Action button">{content}</button>
   );
 };
 

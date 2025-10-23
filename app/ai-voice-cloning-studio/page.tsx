@@ -869,54 +869,54 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="relative py-20 overflow-hidden" loading="lazy">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" loading="lazy"></div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-6 py-3 mb-8">
-              <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
-              <span className="text-purple-300 font-medium">AI Voice Cloning Studio Pro</span>
+        <div className="container mx-auto px-4 relative z-10" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-6 py-3 mb-8" loading="lazy">
+              <Sparkles className="w-5 h-5 text-purple-400 mr-2" loading="lazy" />
+              <span className="text-purple-300 font-medium" loading="lazy">AI Voice Cloning Studio Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text">Professional Voice Synthesis</h1>h1>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text" loading="lazy">Professional Voice Synthesis</h1>h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Clone Any Voice with AI Precision</p>p>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light" loading="lazy">Clone Any Voice with AI Precision</p>p>
 
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">Create realistic voice clones with just 30 seconds of audio. Perfect for content creators,</p>
+            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed" loading="lazy">Create realistic voice clones with just 30 seconds of audio. Perfect for content creators,</p>
               businesses, and developers. Support for 50+ languages with emotion control and real-time processing.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" loading="lazy">
+              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25" loading="lazy" aria-label="Action button">
+                <span className="relative z-10" loading="lazy">Start Free Trial</span>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity" loading="lazy"></div>
               </button>
 
-              <button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              <button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105" loading="lazy" aria-label="Action button">
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" loading="lazy" />
                 Watch Demo
               </button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-400">Languages</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto" loading="lazy">
+              <div className="text-center" loading="lazy">
+                <div className="text-3xl font-bold text-purple-400 mb-2" loading="lazy">50+</div>
+                <div className="text-gray-400" loading="lazy">Languages</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-                <div className="text-gray-400">Accuracy</div>
+              <div className="text-center" loading="lazy">
+                <div className="text-3xl font-bold text-pink-400 mb-2" loading="lazy">99.9%</div>
+                <div className="text-gray-400" loading="lazy">Accuracy</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">30s</div>
-                <div className="text-gray-400">Sample Time</div>
+              <div className="text-center" loading="lazy">
+                <div className="text-3xl font-bold text-cyan-400 mb-2" loading="lazy">30s</div>
+                <div className="text-gray-400" loading="lazy">Sample Time</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-                <div className="text-gray-400">Processing</div>
+              <div className="text-center" loading="lazy">
+                <div className="text-3xl font-bold text-yellow-400 mb-2" loading="lazy">24/7</div>
+                <div className="text-gray-400" loading="lazy">Processing</div>
               </div>
             </div>
           </div>
@@ -924,47 +924,47 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Voice Cloning Interface */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Try Voice Cloning Now</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of AI voice cloning with our interactive demo</p>p>
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text" loading="lazy">Try Voice Cloning Now</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Experience the power of AI voice cloning with our interactive demo</p>p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">{/* Voice Input Section */}</div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Mic className="w-8 h-8 text-purple-400 mr-3" />
+          <div className="max-w-6xl mx-auto" loading="lazy">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12" loading="lazy">{/* Voice Input Section */}</div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8" loading="lazy">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center" loading="lazy">
+                  <Mic className="w-8 h-8 text-purple-400 mr-3" loading="lazy" />
                   Voice Input
                 </h3>
 
-                <div className="space-y-6">{/* Text Input */}</div>
+                <div className="space-y-6" loading="lazy">{/* Text Input */}</div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2" loading="lazy">
                       Text to Convert
                     </label>
                     <textarea
                       value={textToSpeak}
                       onChange={(e) => setTextToSpeak(e.target.value)}
                       placeholder="Enter the text you want to convert to speech..."
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 resize-none"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 resize-none" loading="lazy"
                       rows={4}
                     />
                   </div>
 
                   {/* Voice Selection */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2" loading="lazy">
                       Select Voice
                     </label>
                     <select
                       value={currentVoice}
                       onChange={(e) => setCurrentVoice(e.target.value)}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20" loading="lazy"
                     >
                       {voices.map((voice) => (
-                        <option key={voice.id} value={voice.id} className="bg-slate-800">
+                        <option key={voice.id} value={voice.id} className="bg-slate-800" loading="lazy">
                           {voice.name} ({voice.gender}, {voice.accent})
                         </option>
                       ))}
@@ -972,9 +972,9 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   </div>
 
                   {/* Voice Settings */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4" loading="lazy">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2" loading="lazy">
                         Pitch: {voiceSettings.pitch}
                       </label>
                       <input
@@ -983,11 +983,11 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         max="10"
                         value={voiceSettings.pitch}
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, pitch: parseInt(e.target.value) }))}
-                        className="w-full"
+                        className="w-full" loading="lazy"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2" loading="lazy">
                         Speed: {voiceSettings.speed}x
                       </label>
                       <input
@@ -997,39 +997,39 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         step="0.1"
                         value={voiceSettings.speed}
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, speed: parseFloat(e.target.value) }))}
-                        className="w-full"
+                        className="w-full" loading="lazy"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4" loading="lazy">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2" loading="lazy">
                         Emotion
                       </label>
                       <select
                         value={voiceSettings.emotion}
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, emotion: e.target.value }))}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20" loading="lazy"
                       >
                         {emotions.map((emotion) => (
-                          <option key={emotion} value={emotion} className="bg-slate-800 capitalize">
+                          <option key={emotion} value={emotion} className="bg-slate-800 capitalize" loading="lazy">
                             {emotion}
                           </option>
                         ))}
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2" loading="lazy">
                         Language
                       </label>
                       <select
                         value={voiceSettings.language}
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, language: e.target.value }))}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20" loading="lazy"
                       >
                         {languages.map((lang) => (
-                          <option key={lang.code} value={lang.code} className="bg-slate-800">
+                          <option key={lang.code} value={lang.code} className="bg-slate-800" loading="lazy">
                             {lang.name}
                           </option>
                         ))}
@@ -1041,15 +1041,15 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   <button
                     onClick={handleGenerateVoice}
                     disabled={!textToSpeak.trim() || isGenerating}
-                    className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >{isGenerating ? (</button>
+                    className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" loading="lazy"
+                   aria-label="Action button">{isGenerating ? (</button>
                       <>
-                        <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
+                        <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" loading="lazy" />
                         Generating Voice...
                       </>
                     ) : (
                       <>
-                        <Zap className="w-5 h-5 mr-2 inline" />
+                        <Zap className="w-5 h-5 mr-2 inline" loading="lazy" />
                         Generate Voice
                       </>
                     )}
@@ -1058,57 +1058,57 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
               </div>
 
               {/* Audio Output Section */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Volume2 className="w-8 h-8 text-purple-400 mr-3" />
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8" loading="lazy">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center" loading="lazy">
+                  <Volume2 className="w-8 h-8 text-purple-400 mr-3" loading="lazy" />
                   Generated Audio
                 </h3>
 
-                <div className="space-y-6">{/* Audio Player */}</div>
-                  <div className="bg-white/5 rounded-lg p-6 text-center">{generatedAudio ? (</div>
-                      <div className="space-y-4">
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto">
-                          <Play className="w-8 h-8 text-white" />
+                <div className="space-y-6" loading="lazy">{/* Audio Player */}</div>
+                  <div className="bg-white/5 rounded-lg p-6 text-center" loading="lazy">{generatedAudio ? (</div>
+                      <div className="space-y-4" loading="lazy">
+                        <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto" loading="lazy">
+                          <Play className="w-8 h-8 text-white" loading="lazy" />
                         </div>
-                        <p className="text-gray-300">Audio Generated Successfully!</p>
-                        <div className="flex justify-center space-x-4">
+                        <p className="text-gray-300" loading="lazy">Audio Generated Successfully!</p>
+                        <div className="flex justify-center space-x-4" loading="lazy">
                           <button
                             onClick={handlePlayAudio}
-                            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors"
-                          >
-                            {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors" loading="lazy"
+                           aria-label="Action button">
+                            {isPlaying ? <Pause className="w-5 h-5" loading="lazy" /> : <Play className="w-5 h-5" loading="lazy" />}
                           </button>
-                          <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors">
-                            <Download className="w-5 h-5" />
+                          <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors" loading="lazy" aria-label="Action button">
+                            <Download className="w-5 h-5" loading="lazy" />
                           </button>
                         </div>
                       </div>
                     ) : (
-                      <div className="space-y-4">
-                        <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto">
-                          <FileAudio className="w-8 h-8 text-gray-400" />
+                      <div className="space-y-4" loading="lazy">
+                        <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto" loading="lazy">
+                          <FileAudio className="w-8 h-8 text-gray-400" loading="lazy" />
                         </div>
-                        <p className="text-gray-400">Generate audio to hear the result</p>
+                        <p className="text-gray-400" loading="lazy">Generate audio to hear the result</p>
                       </div>
                     )}
                   </div>
 
                   {/* Recording Section */}
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-semibold text-white">Record Your Voice</h4>
-                    <p className="text-gray-400 text-sm">Record 30 seconds of your voice to create a custom voice clone</p>p>
+                  <div className="space-y-4" loading="lazy">
+                    <h4 className="text-lg font-semibold text-white" loading="lazy">Record Your Voice</h4>
+                    <p className="text-gray-400 text-sm" loading="lazy">Record 30 seconds of your voice to create a custom voice clone</p>p>
                     <button
                       onClick={handleStartRecording}
                       disabled={isRecording}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                    >{isRecording ? (</button>
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" loading="lazy"
+                     aria-label="Action button">{isRecording ? (</button>
                         <>
-                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 inline"></div>
+                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 inline" loading="lazy"></div>
                           Recording... (30s)
                         </>
                       ) : (
                         <>
-                          <Mic className="w-5 h-5 mr-2 inline" />
+                          <Mic className="w-5 h-5 mr-2 inline" loading="lazy" />
                           Start Recording
                         </>
                       )}
@@ -1116,13 +1116,13 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   </div>
 
                   {/* Upload Section */}
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-semibold text-white">Upload Audio File</h4>
-                    <p className="text-gray-400 text-sm">Upload an audio file (MP3, WAV, M4A) to create a voice clone</p>p>
-                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer">
-                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-gray-400">Click to upload or drag and drop</p>
-                      <p className="text-gray-500 text-sm">MP3, WAV, M4A up to 10MB</p>
+                  <div className="space-y-4" loading="lazy">
+                    <h4 className="text-lg font-semibold text-white" loading="lazy">Upload Audio File</h4>
+                    <p className="text-gray-400 text-sm" loading="lazy">Upload an audio file (MP3, WAV, M4A) to create a voice clone</p>p>
+                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer" loading="lazy">
+                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" loading="lazy" />
+                      <p className="text-gray-400" loading="lazy">Click to upload or drag and drop</p>
+                      <p className="text-gray-500 text-sm" loading="lazy">MP3, WAV, M4A up to 10MB</p>
                     </div>
                   </div>
                 </div>
@@ -1133,23 +1133,23 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Features Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Powerful Features</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to create professional voice content</p>p>
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text" loading="lazy">Powerful Features</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Everything you need to create professional voice content</p>p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" loading="lazy">{features.map((feature, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105" loading="lazy">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4" loading="lazy">
+                  <feature.icon className="w-6 h-6 text-white" loading="lazy" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-purple-400 font-semibold">{feature.price}</span>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                <h3 className="text-xl font-bold text-white mb-2" loading="lazy">{feature.title}</h3>
+                <p className="text-gray-400 mb-4" loading="lazy">{feature.description}</p>
+                <div className="flex items-center justify-between" loading="lazy">
+                  <span className="text-purple-400 font-semibold" loading="lazy">{feature.price}</span>
+                  <CheckCircle className="w-5 h-5 text-green-400" loading="lazy" />
                 </div>
               </div>
             ))}
@@ -1158,34 +1158,34 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Pricing Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Simple Pricing</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the plan that fits your needs. All plans include our core voice cloning features.</p>p>
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text" loading="lazy">Simple Pricing</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Choose the plan that fits your needs. All plans include our core voice cloning features.</p>p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" loading="lazy">{pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2" loading="lazy">
+                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full" loading="lazy">Most Popular</span>
                   </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                <div className="text-center mb-8" loading="lazy">
+                  <h3 className="text-2xl font-bold text-white mb-2" loading="lazy">{plan.name}</h3>
+                  <p className="text-gray-400 mb-4" loading="lazy">{plan.description}</p>
+                  <div className="flex items-baseline justify-center" loading="lazy">
+                    <span className="text-5xl font-bold text-white" loading="lazy">{plan.price}</span>
+                    <span className="text-gray-400 ml-2" loading="lazy">{plan.period}</span>
                   </div>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8" loading="lazy">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                    <li key={featureIndex} className="flex items-center" loading="lazy">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" loading="lazy" />
+                      <span className="text-gray-300" loading="lazy">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -1194,7 +1194,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>{plan.popular ? 'Get Started' : 'Choose Plan'}</button>
+                }`} aria-label="Action button">{plan.popular ? 'Get Started' : 'Choose Plan'}</button>
               </div>
             ))}
           </div>
@@ -1202,29 +1202,29 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Contact Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Ready to Get Started?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our team to discuss your voice cloning needs and get a custom quote.</p>p>
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
+        <div className="container mx-auto px-4" loading="lazy">
+          <div className="text-center mb-16" loading="lazy">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text" loading="lazy">Ready to Get Started?</h2>h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Contact our team to discuss your voice cloning needs and get a custom quote.</p>p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-purple-400 mr-3" />
-                    <a href="tel:+13024640950" className="text-gray-300 hover:text-purple-400 transition-colors">+1 (302) 464-0950</a>a>
+          <div className="max-w-4xl mx-auto" loading="lazy">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8" loading="lazy">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8" loading="lazy">
+                <h3 className="text-2xl font-bold text-white mb-6" loading="lazy">Contact Information</h3>
+                <div className="space-y-4" loading="lazy">
+                  <div className="flex items-center" loading="lazy">
+                    <Phone className="w-5 h-5 text-purple-400 mr-3" loading="lazy" />
+                    <a href="tel:+13024640950" className="text-gray-300 hover:text-purple-400 transition-colors" loading="lazy">+1 (302) 464-0950</a>a>
                   </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-purple-400 mr-3" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors">kleber@ziontechgroup.com</a>a>
+                  <div className="flex items-center" loading="lazy">
+                    <Mail className="w-5 h-5 text-purple-400 mr-3" loading="lazy" />
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors" loading="lazy">kleber@ziontechgroup.com</a>a>
                   </div>
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
+                  <div className="flex items-start" loading="lazy">
+                    <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" loading="lazy" />
+                    <div className="text-gray-300" loading="lazy">
                       <div>364 E Main St STE 1008</div>
                       <div>Middletown, DE 19709</div>
                     </div>
@@ -1232,27 +1232,27 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                 </div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Quick Start</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Free 14-day trial</span>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8" loading="lazy">
+                <h3 className="text-2xl font-bold text-white mb-6" loading="lazy">Quick Start</h3>
+                <div className="space-y-4" loading="lazy">
+                  <div className="flex items-center" loading="lazy">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">Free 14-day trial</span>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">No credit card required</span>
+                  <div className="flex items-center" loading="lazy">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">No credit card required</span>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Cancel anytime</span>
+                  <div className="flex items-center" loading="lazy">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">Cancel anytime</span>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">24/7 support</span>
+                  <div className="flex items-center" loading="lazy">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" loading="lazy" />
+                    <span className="text-gray-300" loading="lazy">24/7 support</span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">Start Free Trial</button>
+                <button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105" loading="lazy" aria-label="Action button">Start Free Trial</button>
               </div>
             </div>
           </div>

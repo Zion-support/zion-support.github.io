@@ -4,7 +4,8 @@ import React from "react";
 
 export default function Page() {
   return (
-    <>
+    <ErrorBoundary>
+      <>
       <Helmet>
         <title></Helmet>
 
@@ -21,6 +22,7 @@ export default function Page() {
         </section>
       </div>
     </>
+    </ErrorBoundary>
   );
 };
 };

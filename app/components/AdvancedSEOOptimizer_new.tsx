@@ -119,7 +119,7 @@ return (
 </Helmet>
 {children}
 {process.env.NODE_ENV === 'development' && (
-<div className="seo-debug" style={{
+<div className="seo-debug" loading="lazy" style={{
 position: 'fixed',
 top: '10px',
 left: '10px',

@@ -85,7 +85,7 @@ const stats = [
 { number: '24/7', label: 'Support Available', icon: Clock }
 ]
 return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy"></div>
 <SEOOptimizer
 title="Enterprise Solutions - Zion Tech Group"
 description="Comprehensive enterprise-grade solutions for large-scale business operations."
@@ -93,57 +93,57 @@ keywords="enterprise solutions, enterprise software, large-scale solutions, ente
 />
 <Navigation />
 {/* Hero Section */}
-<section className="relative py-20 px-4 overflow-hidden">
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-<div className="relative max-w-7xl mx-auto text-center"></div>
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+<section className="relative py-20 px-4 overflow-hidden" loading="lazy">
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" /></div>
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" loading="lazy" style={{ animationDelay: '1s' }} /></div>
+<div className="relative max-w-7xl mx-auto text-center" loading="lazy"></div>
+<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" loading="lazy">
 Enterprise</h1>
-<span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Solutions</span>
+<span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent" loading="lazy">Solutions</span>
 </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Comprehensive enterprise-grade solutions designed for large-scale business operations.</p>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" loading="lazy">Comprehensive enterprise-grade solutions designed for large-scale business operations.</p>
 Transform your organization with cutting-edge technology and expert implementation.
 </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">Get Enterprise Consultation</button>
-<ArrowRight className="inline-block ml-2 w-5 h-5" />
+<div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy"></div>
+<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25" loading="lazy" aria-label="Action button">Get Enterprise Consultation</button>
+<ArrowRight className="inline-block ml-2 w-5 h-5" loading="lazy" />
 </button>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Case Studies</button>
+<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" loading="lazy" aria-label="Action button">View Case Studies</button>
 </div>
 </div>
 </section>
 {/* Stats Section */}
-<section className="py-20 px-4"></section>
-<div className="max-w-7xl mx-auto"></div>
-<div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+<section className="py-20 px-4" loading="lazy"></section>
+<div className="max-w-7xl mx-auto" loading="lazy"></div>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8" loading="lazy"></div>
 {stats.map((stat, index) => (;}
-<div key={index} className="text-center"></div>
-<div className="flex justify-center mb-4"></div>
-<stat.icon className="w-12 h-12 text-purple-400" />
+<div key={index} className="text-center" loading="lazy"></div>
+<div className="flex justify-center mb-4" loading="lazy"></div>
+<stat.icon className="w-12 h-12 text-purple-400" loading="lazy" />
 </div>
-<div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-<div className="text-gray-300 text-sm">{stat.label}</div>
+<div className="text-3xl font-bold text-white mb-2" loading="lazy">{stat.number}</div>
+<div className="text-gray-300 text-sm" loading="lazy">{stat.label}</div>
 </div>
 ))}
 </div>
 </div>
 </section>
 {/* Features Section */}
-<section className="py-20 px-4">
-<div className="max-w-7xl mx-auto"></div>
-<div className="text-center mb-16"></div>
-<h2 className="text-4xl font-bold text-white mb-4">Enterprise-Grade Features</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale, security, and performance to meet the demands of large organizations.</p>
+<section className="py-20 px-4" loading="lazy">
+<div className="max-w-7xl mx-auto" loading="lazy"></div>
+<div className="text-center mb-16" loading="lazy"></div>
+<h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Enterprise-Grade Features</h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Built for scale, security, and performance to meet the demands of large organizations.</p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-<h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" loading="lazy">
+<feature.icon className="w-8 h-8 text-purple-400 mr-3" loading="lazy" />
+<h3 className="text-xl font-semibold text-white" loading="lazy">{feature.title}</h3>
 </div>
-<p className="text-gray-300 mb-4">{feature.description}</p>
-<ul className="space-y-2">
+<p className="text-gray-300 mb-4" loading="lazy">{feature.description}</p>
+<ul className="space-y-2" loading="lazy">
 {feature.benefits.map((benefit, idx) => (
-<li key={idx} className="flex items-center text-sm text-gray-400">
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+<li key={idx} className="flex items-center text-sm text-gray-400" loading="lazy">
+<CheckCircle className="w-4 h-4 text-green-400 mr-2" loading="lazy" />
 {benefit}
 </li>
 ))}
@@ -153,8 +153,8 @@ Transform your organization with cutting-edge technology and expert implementati
 </div>
 </div>
 </section>
-<h2 className="text-4xl font-bold text-white mb-4">Comprehensive Solutions</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">End-to-end enterprise solutions that address every aspect of your business operations.</p>
+<h2 className="text-4xl font-bold text-white mb-4" loading="lazy">Comprehensive Solutions</h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">End-to-end enterprise solutions that address every aspect of your business operations.</p>
 </div>
 </li>
 ))}
@@ -165,7 +165,7 @@ Transform your organization with cutting-edge technology and expert implementati
 </div>
 </section>
 {/* Benefits Section */}
-<section className="py-20 px-4">
+<section className="py-20 px-4" loading="lazy">
 </button>
 </div>
 </div>
@@ -173,15 +173,15 @@ Transform your organization with cutting-edge technology and expert implementati
 </div>
 </section>
 {/* CTA Section */}
-<section className="py-20 px-4">
-<div className="max-w-4xl mx-auto text-center"></div>
-<h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>h2>
-<p className="text-xl text-gray-300 mb-8">Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Enterprise Sales</button>
-<ArrowRight className="inline-block ml-2 w-5 h-5" />
+<section className="py-20 px-4" loading="lazy">
+<div className="max-w-4xl mx-auto text-center" loading="lazy"></div>
+<h2 className="text-4xl font-bold text-white mb-6" loading="lazy">Ready to Transform Your Enterprise?</h2>h2>
+<p className="text-xl text-gray-300 mb-8" loading="lazy">Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy"></div>
+<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" loading="lazy" aria-label="Action button">Contact Enterprise Sales</button>
+<ArrowRight className="inline-block ml-2 w-5 h-5" loading="lazy" />
 </button>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
+<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" loading="lazy" aria-label="Action button">Learn More</button>
 </div>
 </div>
 </section>
