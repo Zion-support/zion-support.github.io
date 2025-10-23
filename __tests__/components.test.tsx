@@ -1,16 +1,17 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-describe('componentsx', () => {
-  beforeEach(() => {
-    // Setup before each test
+// Mock components for testing
+const MockComponent = () => <div data-testid="mock-component">Mock Component</div>;
+
+describe('Components', () => {
+  it('renders mock component', () => {
+    render(<MockComponent />);
+    expect(screen.getByTestId('mock-component')).toBeInTheDocument();
   });
 
-  it('should pass basic test', () => {
-    expect(true).toBe(true);
-  });
-
-  it('should handle basic functionality', () => {
-    const result = 1 + 1;
-    expect(result).toBe(2);
+  it('displays correct text', () => {
+    render(<MockComponent />);
+    expect(screen.getByText('Mock Component')).toBeInTheDocument();
   });
 });

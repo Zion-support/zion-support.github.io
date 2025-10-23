@@ -1,91 +1,181 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { resolve } from "path";
 
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
-
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
+  plugins: [
+    react({
+      // Enable React Fast Refresh
+      fastRefresh: true,
+      // Enable JSX runtime
+      jsxRuntime: "automatic",
+    }),
+  ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
+      "@": resolve(__dirname, "./app"),
+      "@/components": resolve(__dirname, "./app/components"),
+      "@/pages": resolve(__dirname, "./app"),
+      "@/utils": resolve(__dirname, "./utils"),
+      "@/types": resolve(__dirname, "./types"),
+      "@/hooks": resolve(__dirname, "./hooks"),
+      "@/config": resolve(__dirname, "./config"),
+      "@/data": resolve(__dirname, "./data"),
+      "@/content": resolve(__dirname, "./content"),
     },
   },
   build: {
-    target: 'esnext',
-    minify: 'terser',
+    outDir: "dist",
     sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          analytics: ['web-vitals'],
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/\.(css)$/.test(assetInfo.name)) {
-            return `assets/css/[name]-[hash].${ext}`;
-          }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
-            return `assets/images/[name]-[hash].${ext}`;
-          }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
-            return `assets/fonts/[name]-[hash].${ext}`;
-          }
-          return `assets/[name]-[hash].${ext}`;
-        },
-      },
+    minify: "esbuild",
+    target: "es2020",
+    cssCodeSplit: true,
+    modulePreload: {
+      polyfill: false,
     },
+    // Performance optimizations
+    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
+    assetsInlineLimit: 2048, // Reduced for better caching
+    // Enable compression
+    reportCompressedSize: true,
+    // Optimize for production
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.warn'],
-        passes: 3,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 3, // More passes for better optimization
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
         unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        sequences: true,
+        side_effects: false,
+        unused: true,
       },
       mangle: {
-        safari10: true,
+        safari10: true, // Better Safari compatibility
+        toplevel: true,
         properties: {
-          regex: /^_/,
-        },
+          regex: /^_/
+        }
       },
       format: {
         comments: false,
+        ascii_only: true
+      }
+    },
+    // Enhanced build optimizations
+    rollupOptions: {
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false,
+      },
+      output: {
+        manualChunks: (id) => {
+          // Core React libraries
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'react-vendor'
+          }
+          // Router
+          if (id.includes('react-router')) {
+            return 'router'
+          }
+          // UI libraries
+          if (id.includes('framer-motion')) {
+            return 'animations'
+          }
+          if (id.includes('lucide-react')) {
+            return 'icons'
+          }
+          // SEO and meta
+          if (id.includes('react-helmet')) {
+            return 'seo'
+          }
+          // Charts and data visualization
+          if (id.includes('recharts')) {
+            return 'charts'
+          }
+          // Utility libraries
+          if (id.includes('clsx') || id.includes('tailwind-merge')) {
+            return 'utils'
+          }
+          // Performance monitoring
+          if (id.includes('web-vitals')) {
+            return 'performance'
+          }
+          // Error handling
+          if (id.includes('react-error-boundary')) {
+            return 'error-handling'
+          }
+          // AI service pages - split into smaller chunks
+          if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/ai-')[1]?.split('/')[0];
+            return `ai-${serviceName || 'services'}`
+          }
+          // Zion service pages
+          if (id.includes('/zion-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/zion-')[1]?.split('/')[0];
+            return `zion-${serviceName || 'services'}`
+          }
+          // 5G service pages
+          if (id.includes('/5g-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/5g-')[1]?.split('/')[0];
+            return `5g-${serviceName || 'services'}`
+          }
+          // Other service pages
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+            return 'pages'
+          }
+          // Default chunk for other modules
+          return 'vendor'
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    // Enable tree shaking
+    treeshake: true,
   },
   server: {
     port: 3000,
+    open: true,
     host: true,
+    // Enable HMR
+    hmr: {
+      overlay: true,
+    },
   },
   preview: {
     port: 4173,
+    open: true,
     host: true,
   },
+  // Optimize dependencies
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom'],
+    include: [
+      "react",
+      "react-dom",
+      "react-router-dom",
+      "react-helmet-async",
+      "framer-motion",
+      "lucide-react",
+    ],
   },
+  // CSS optimization
   css: {
-    postcss: './postcss.config.js',
+    devSourcemap: true,
   },
 });

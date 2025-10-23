@@ -1,111 +1,87 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, ReactNode } from "react"
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
+  trackPageView: (pageName: string) => void
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined,
+)
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext)
+  if (!context) {
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
+  }
+  return context
+}
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
-  trackingId?: string;
+  children: ReactNode
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
-  children, 
-  trackingId = 'G-XXXXXXXXXX' 
-}) => {
-  useEffect(() => {
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
+exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+  
+    if (type of windo w !=="undefined") {
+      // Google Analytics
+      if (process.env.NODE_ENV === "production") {
+        const script = document.createElement("script")
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
+        script.async = true
+        document.head.appendChild(script)
 
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
+        window.gtag =
+          window.gtag ||
+          function (...args: any[]) {
+            (window.gtag as any).q = (window.gtag as any).q || []
+            (window.gtag as any).q.push(args)
+          }
+        window.gtag("js", new Date())
+        window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
       }
-      window.gtag = gtag;
+    }
+  }, [])
 
-      gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
+  consttrackEvent= (
+    eventName: string,
+    parameters?: Record<string, unknown>,
+  ) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", eventName, parameters)
+    }
+  }
+
+  consttrackPageView= (pageName: string) => {if (type of windo w !=="undefined" && windo w.gtag) {
+      window.gtag("config","GA_MEASUREMENT_ID", {
+        page_title: pageName,
         page_location: window.location.href,
-      });
+      })
     }
-  }, [trackingId]);
+  }
 
-  const track = (event: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', event, properties);
-    }
-    
-    // Also log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', event, properties);
-    }
-  };
-
-  const page = (name: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', trackingId, {
-        page_title: name,
-        page_location: window.location.href,
-        ...properties,
-      });
-    }
-    
-    // Also log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Page:', name, properties);
-    }
-  };
-
-  const identify = (userId: string, traits?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', trackingId, {
-        user_id: userId,
-        ...traits,
-      });
-    }
-    
-    // Also log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Identify:', userId, traits);
-    }
-  };
-
-  const value: AnalyticsContextType = {
-    track,
-    page,
-    identify,
-  };
+  constvalue: AnalyticsContextType = {trackEvent,
+    trackPageView,
+  }
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+  )
+}
+
+export default AnalyticsProvider
   );
 };
 
-export const useAnalytics = (): AnalyticsContextType => {
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-// Declare global gtag function
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}
+export default AnalyticsProviderPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

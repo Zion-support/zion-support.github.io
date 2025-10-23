@@ -1,260 +1,150 @@
-'use client';
+'use client'
+import React from 'react'
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { logger } from '../utils/logger';
-
-interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
-  language: string;
-  notifications: boolean;
-  analytics: boolean;
-}
-
-export const UserExperienceEnhancer: React.FC = () => {
-  const [preferences, setPreferences] = useState<UserPreferences>({
-    theme: 'auto',
-    language: 'en',
-    notifications: true,
-    analytics: true,
-  });
-
-  const [isLoading, setIsLoading] = useState(true);
-  const [showWelcome, setShowWelcome] = useState(false);
-
-  // Load user preferences
-  useEffect(() => {
-    const savedPreferences = localStorage.getItem('user-preferences');
-    if (savedPreferences) {
-      try {
-        const parsed = JSON.parse(savedPreferences);
-        setPreferences(parsed);
-      } catch (error) {
-        logger.error('Failed to parse user preferences', error);
-      }
+const UserExperienceEnhancerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
+  ]
 
-    // Check if first visit
-    const isFirstVisit = !localStorage.getItem('has-visited');
-    if (isFirstVisit) {
-      setShowWelcome(true);
-      localStorage.setItem('has-visited', 'true');
-    }
-
-    setIsLoading(false);
-  }, []);
-
-  // Apply theme
-  const applyTheme = useCallback((theme: 'light' | 'dark' | 'auto') => {
-    const root = document.documentElement;
-    
-    if (theme === 'auto') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.classList.toggle('dark', prefersDark);
-    } else {
-      root.classList.toggle('dark', theme === 'dark');
-    }
-
-    // Update meta theme-color
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', theme === 'dark' ? '#0f172a' : '#ffffff');
-    }
-  }, []);
-
-  // Apply preferences
-  useEffect(() => {
-    if (isLoading) return;
-
-    applyTheme(preferences.theme);
-    
-    // Store preferences
-    localStorage.setItem('user-preferences', JSON.stringify(preferences));
-    
-    logger.info('User preferences applied', preferences);
-  }, [preferences, isLoading, applyTheme]);
-
-  // Handle theme change
-  const handleThemeChange = useCallback((theme: 'light' | 'dark' | 'auto') => {
-    setPreferences(prev => ({ ...prev, theme }));
-    applyTheme(theme);
-  }, [applyTheme]);
-
-  // Handle language change
-  const handleLanguageChange = useCallback((language: string) => {
-    setPreferences(prev => ({ ...prev, language }));
-    // In a real app, you would implement i18n here
-    logger.info('Language changed', { language });
-  }, []);
-
-  // Handle notification preference
-  const handleNotificationChange = useCallback((notifications: boolean) => {
-    setPreferences(prev => ({ ...prev, notifications }));
-    
-    if (notifications && 'Notification' in window) {
-      Notification.requestPermission().then(permission => {
-        if (permission === 'granted') {
-          logger.info('Notification permission granted');
-        }
-      });
-    }
-  }, []);
-
-  // Show notification
-  const showNotification = useCallback((title: string, body: string) => {
-    if (!preferences.notifications || !('Notification' in window)) return;
-    
-    if (Notification.permission === 'granted') {
-      new Notification(title, { body, icon: '/logo.png' });
-    }
-  }, [preferences.notifications]);
-
-  // Track user interactions
-  const trackInteraction = useCallback((action: string, element: string) => {
-    if (!preferences.analytics) return;
-    
-    logger.info('User interaction tracked', { action, element });
-    
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', action, {
-        event_category: 'User Interaction',
-        event_label: element,
-      });
-    }
-  }, [preferences.analytics]);
-
-  // Add click tracking to interactive elements
-  useEffect(() => {
-    const handleClick = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-      const element = target.tagName.toLowerCase();
-      const text = target.textContent?.slice(0, 50) || '';
-      
-      trackInteraction('click', `${element}: ${text}`);
-    };
-
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
-  }, [trackInteraction]);
-
-  // Show welcome message for new users
-  useEffect(() => {
-    if (showWelcome) {
-      setTimeout(() => {
-        showNotification(
-          'Welcome to Zion Tech Group!',
-          'Discover our advanced AI and IT solutions.'
-        );
-        setShowWelcome(false);
-      }, 2000);
-    }
-  }, [showWelcome, showNotification]);
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Ctrl/Cmd + K for search
-      if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
-        event.preventDefault();
-        const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
-        if (searchInput) {
-          searchInput.focus();
-        }
-      }
-
-      // Ctrl/Cmd + D for theme toggle
-      if ((event.ctrlKey || event.metaKey) && event.key === 'd') {
-        event.preventDefault();
-        const currentTheme = preferences.theme;
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        handleThemeChange(newTheme);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [preferences.theme, handleThemeChange]);
-
-  if (isLoading) return null;
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
   return (
     <>
-      {/* Theme Toggle Button */}
-      <button
-        onClick={() => {
-          const newTheme = preferences.theme === 'dark' ? 'light' : 'dark';
-          handleThemeChange(newTheme);
-          trackInteraction('theme_toggle', newTheme);
-        }}
-        className="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors z-40"
-        aria-label={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
-        title={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
-      >
-        {preferences.theme === 'dark' ? '☀️' : '🌙'}
-      </button>
-
-      {/* User Preferences Panel */}
-      <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
-        <h3 className="text-sm font-bold mb-3">Preferences</h3>
-        
-        <div className="space-y-2 text-sm">
-          <div>
-            <label className="block text-xs text-gray-300 mb-1">Theme</label>
-            <select
-              value={preferences.theme}
-              onChange={(e) => handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}
-              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"
-            >
-              <option value="auto">Auto</option>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
+      <Helmet>
+        <title>UserExperienceEnhancer</title>
+        <meta name="description" content="Advanced UserExperienceEnhancer solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, UserExperienceEnhancer, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              UserExperienceEnhancer
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced UserExperienceEnhancer solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
           </div>
+        </section>
 
-          <div>
-            <label className="block text-xs text-gray-300 mb-1">Language</label>
-            <select
-              value={preferences.language}
-              onChange={(e) => handleLanguageChange(e.target.value)}
-              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"
-            >
-              <option value="en">English</option>
-              <option value="es">Español</option>
-              <option value="fr">Français</option>
-              <option value="de">Deutsch</option>
-            </select>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
 
-          <div className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              id="notifications"
-              checked={preferences.notifications}
-              onChange={(e) => handleNotificationChange(e.target.checked)}
-              className="rounded"
-            />
-            <label htmlFor="notifications" className="text-xs">Notifications</label>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
 
-          <div className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              id="analytics"
-              checked={preferences.analytics}
-              onChange={(e) => setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}
-              className="rounded"
-            />
-            <label htmlFor="analytics" className="text-xs">Analytics</label>
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
           </div>
-        </div>
-
-        <div className="mt-3 pt-2 border-t border-gray-700">
-          <p className="text-xs text-gray-400">
-            Shortcuts: Ctrl+K (search), Ctrl+D (theme)
-          </p>
-        </div>
+        </section>
       </div>
+      <Footer />
     </>
   );
 };
 
-export default UserExperienceEnhancer;
+export default UserExperienceEnhancerPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

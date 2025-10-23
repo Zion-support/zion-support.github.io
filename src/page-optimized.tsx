@@ -1,40 +1,33 @@
-'use client';
-import React, { lazy } from 'react';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-
+'use client'
+import React, { lazy, Suspense } from 'react'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import PerformanceMonitor from './components/PerformanceMonitor'
 // Fallback component
-const EmptyComponent = () => null;
-
+const EmptyComponent = () => null
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
   )
-);
-
+)
 const ContentPromotion = lazy(() =>
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-    return { default: EmptyComponent } as { default: React.ComponentType };
-  })
-);
-
-const ContentShowcase = lazy(() =>
-  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
+  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({
     default: EmptyComponent
   }))
-);
+)
+const ContentShowcase = lazy(() =>
+  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
+    default: () => <div />
+  }))
+)
 
 export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
-      <AccessibilityEnhancer>
-        <div />
-      </AccessibilityEnhancer>
+      <AccessibilityEnhancer />
       <PerformanceMonitor />
-      
       {/* Main Content */}
       <main className="relative">
         {/* Hero Section */}
@@ -42,7 +35,7 @@ export default function OptimizedHomePage() {
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"></h1>
                 AI Enterprise Transformation
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                   That Delivers Results
@@ -72,5 +65,5 @@ export default function OptimizedHomePage() {
         </section>
       </main>
     </div>
-  );
+  )
 }

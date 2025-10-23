@@ -1,274 +1,150 @@
-'use client';
+'use client'
+import React from 'react'
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-import React, { useEffect, useCallback, useState } from 'react';
-import { logger } from '../utils/logger';
-
-interface SecurityMetrics {
-  cspViolations: number;
-  xssAttempts: number;
-  csrfAttempts: number;
-  suspiciousActivity: number;
-}
-
-export const SecurityEnhancer: React.FC = () => {
-  const [metrics, setMetrics] = useState<SecurityMetrics>({
-    cspViolations: 0,
-    xssAttempts: 0,
-    csrfAttempts: 0,
-    suspiciousActivity: 0,
-  });
-
-  const [isSecure, setIsSecure] = useState(true);
-  const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
-
-  // Content Security Policy monitoring
-  const monitorCSP = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    // Monitor CSP violations
-    const originalConsoleError = console.error;
-    console.error = (...args) => {
-      const message = args.join(' ');
-      if (message.includes('Content Security Policy') || message.includes('CSP')) {
-        setMetrics(prev => ({ ...prev, cspViolations: prev.cspViolations + 1 }));
-        logger.warn('CSP violation detected', { message });
-      }
-      originalConsoleError.apply(console, args);
-    };
-
-    // Monitor for XSS attempts
-    const checkForXSS = () => {
-      const scripts = document.querySelectorAll('script');
-      scripts.forEach(script => {
-        if (script.src && !script.src.startsWith(window.location.origin)) {
-          setMetrics(prev => ({ ...prev, xssAttempts: prev.xssAttempts + 1 }));
-          logger.warn('Potential XSS attempt detected', { src: script.src });
-        }
-      });
-    };
-
-    checkForXSS();
-
-    // Monitor form submissions for CSRF
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      form.addEventListener('submit', (e) => {
-        const formData = new FormData(form as HTMLFormElement);
-        const token = formData.get('csrf_token');
-        
-        if (!token) {
-          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
-          logger.warn('Potential CSRF attempt detected', { form: form.id });
-        }
-      });
-    });
-
-  }, []);
-
-  // Input sanitization
-  const sanitizeInput = useCallback((input: string): string => {
-    return input
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+\s*=/gi, '');
-  }, []);
-
-  // Validate URLs
-  const validateURL = useCallback((url: string): boolean => {
-    try {
-      const urlObj = new URL(url);
-      const allowedProtocols = ['http:', 'https:'];
-      const allowedHosts = ['ziontechgroup.com', 'www.ziontechgroup.com'];
-      
-      return allowedProtocols.includes(urlObj.protocol) && 
-             allowedHosts.includes(urlObj.hostname);
-    } catch {
-      return false;
+const SecurityEnhancerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }, []);
+  ]
 
-  // Monitor suspicious activity
-  const monitorSuspiciousActivity = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    // Monitor for suspicious patterns
-    const suspiciousPatterns = [
-      /eval\s*\(/gi,
-      /Function\s*\(/gi,
-      /setTimeout\s*\(\s*["']/gi,
-      /setInterval\s*\(\s*["']/gi,
-      /document\.write/gi,
-      /innerHTML\s*=/gi,
-    ];
-
-    const checkSuspiciousCode = () => {
-      const scripts = document.querySelectorAll('script');
-      scripts.forEach(script => {
-        const content = script.textContent || '';
-        suspiciousPatterns.forEach(pattern => {
-          if (pattern.test(content)) {
-            setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-            logger.warn('Suspicious code pattern detected', { 
-              pattern: pattern.toString(),
-              script: script.id || 'inline'
-            });
-          }
-        });
-      });
-    };
-
-    checkSuspiciousCode();
-
-    // Monitor for unusual network requests
-    const originalFetch = window.fetch;
-    window.fetch = async (...args) => {
-      const url = args[0] as string;
-      
-      if (typeof url === 'string' && !validateURL(url)) {
-        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-        logger.warn('Suspicious network request blocked', { url });
-        throw new Error('Suspicious network request blocked');
-      }
-      
-      return originalFetch.apply(window, args);
-    };
-
-  }, [validateURL]);
-
-  // Security headers validation
-  const validateSecurityHeaders = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    const warnings: string[] = [];
-
-    // Check for HTTPS
-    if (location.protocol !== 'https:') {
-      warnings.push('Site is not served over HTTPS');
-      setIsSecure(false);
-    }
-
-    // Check for security headers (if available)
-    const headers = (window as any).securityHeaders;
-    if (headers) {
-      if (!headers['x-frame-options']) {
-        warnings.push('X-Frame-Options header missing');
-      }
-      if (!headers['x-content-type-options']) {
-        warnings.push('X-Content-Type-Options header missing');
-      }
-      if (!headers['x-xss-protection']) {
-        warnings.push('X-XSS-Protection header missing');
-      }
-    }
-
-    setSecurityWarnings(warnings);
-    
-    if (warnings.length > 0) {
-      logger.warn('Security warnings detected', { warnings });
-    }
-  }, []);
-
-  // Rate limiting
-  const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
-    const now = Date.now();
-    const windowStart = now - windowMs;
-    
-    const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
-      .filter((timestamp: number) => timestamp > windowStart);
-    
-    if (requests.length >= limit) {
-      logger.warn('Rate limit exceeded', { key, limit, windowMs });
-      return false;
-    }
-    
-    requests.push(now);
-    localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
-    return true;
-  }, []);
-
-  // Initialize security monitoring
-  useEffect(() => {
-    monitorCSP();
-    monitorSuspiciousActivity();
-    validateSecurityHeaders();
-
-    // Set up periodic security checks
-    const interval = setInterval(() => {
-      validateSecurityHeaders();
-    }, 30000); // Check every 30 seconds
-
-    return () => clearInterval(interval);
-  }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
-
-  // Security event handlers
-  const handleSecurityEvent = useCallback((event: string, data: any) => {
-    logger.info('Security event', { event, data });
-    
-    // Rate limit security events
-    if (!rateLimit('security_events', 10, 60000)) {
-      return;
-    }
-
-    // Send to security monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'security_event', {
-        event_category: 'Security',
-        event_label: event,
-        custom_map: data,
-      });
-    }
-  }, [rateLimit]);
-
-  // Expose security utilities globally for debugging
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      (window as any).securityUtils = {
-        sanitizeInput,
-        validateURL,
-        rateLimit,
-        metrics,
-        isSecure,
-        warnings: securityWarnings,
-      };
-    }
-  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
   return (
     <>
-      {/* Security Status Indicator */}
-      {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
-          ⚠️ Security Warning: This site is not served over HTTPS
-        </div>
-      )}
-
-      {/* Security Warnings */}
-      {securityWarnings.length > 0 && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
-          <h4 className="font-bold mb-2">Security Warnings</h4>
-          <ul className="text-sm space-y-1">
-            {securityWarnings.map((warning, index) => (
-              <li key={index}>• {warning}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Security Metrics (Development Only) */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
-          <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}</div>
-            <div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}</div>
-            <div>Suspicious Activity: {metrics.suspiciousActivity}</div>
+      <Helmet>
+        <title>SecurityEnhancer</title>
+        <meta name="description" content="Advanced SecurityEnhancer solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, SecurityEnhancer, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              SecurityEnhancer
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced SecurityEnhancer solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
     </>
   );
 };
 
-export default SecurityEnhancer;
+export default SecurityEnhancerPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
