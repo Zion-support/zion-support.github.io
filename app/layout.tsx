@@ -1,31 +1,13 @@
-import type { Metadata, Viewport } from 'next'
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './styles/futuristic.css'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group | Advanced AI and IT Solutions',
-  description: 'Pioneering the future with advanced AI, quantum computing, and cutting-edge technology solutions that transform businesses and drive innovation.',
-  keywords: 'AI solutions, quantum computing, IT services, technology, business solutions, innovation',
-  authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Zion Tech Group | Advanced AI and IT Solutions',
-    description: 'Pioneering the future with advanced AI, quantum computing, and cutting-edge technology solutions that transform businesses and drive innovation.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group | Advanced AI and IT Solutions',
-    description: 'Pioneering the future with advanced AI, quantum computing, and cutting-edge technology solutions that transform businesses and drive innovation.',
-  },
-}
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
+  title: 'Zion Tech Group - AI & IT Solutions',
+  description: 'Leading provider of AI and IT solutions for businesses. Transform your operations with cutting-edge technology.',
+  keywords: 'AI, artificial intelligence, IT solutions, business automation, technology consulting',
 }
 
 export default function RootLayout({

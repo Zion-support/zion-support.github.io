@@ -32,7 +32,7 @@ export function useIntersectionObserver(
 
   useEffect(() => {
     const node = ref.current;
-    if (!node) return;
+    if (!node || typeof window === 'undefined') return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
