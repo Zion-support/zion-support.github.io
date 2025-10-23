@@ -1,99 +1,144 @@
 #!/usr/bin/env node
-import fs from "fs"
-import { glob } from "glob"
-// Common unused imports that need to be removed
-const unusedImports = []
-  "Cloud",
-  "Code",
-  "Monitor",
-  "BarChart",
-  "Star",
-  "Settings",
-  "Users",
-  "DollarSign",
-  "TrendingUp",
-  "Shield",
-  "Target",
-  "Mail",
-  "Phone",
-  "Clock",
-  "PieChart",
-  "Activity",
-  "Award",
-  "BookOpen",
-  "Briefcase",
-  "Building",
-  "Calendar",
-  "Camera",
-  "Command",
-  "CreditCard",
-  "FileText",
-  "Gift",
-  "Heart",
-  "Home",
-  "Image",
-  "Laptop",
-  "Lock",
-  "MessageCircle",
-  "Palette",
-  "Play",
-  "Search",
-  "ShoppingCart",
-  "Smartphone",
-  "Tablet",
-  "Terminal",
-  "Truck",
-  "Wifi",
-  "Cpu",
-  "Database",
-  "Server",
-  "Layers"]
-function fixUnusedImports(filePath) {}
-}let content = fs.readFileSync(filePath, "utf8")
-  let modified = false
-  // Fix 'use client' directive placement
-  if ()
-    content.includes("'use client';") &&
-    !content.startsWith("'use client';")
-  ) {}
-    content = content.replace(/'use client';\s*\n/, "")
-    content = "'use client';\n" + content
-    modified = true
-  }
-  // Remove unused imports
-  const lucideImportMatch = content.match()
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/,
-  )
-  if (lucideImportMatch) {}
-    const existingIcons = lucideImportMatch[1].split(",").map((i) => i.trim())
-    const usedIcons = existingIcons.filter((icon) => {}
-}// Check if the icon is actually used in the file
-      const iconRegex = new RegExp(`\\b${icon}\\b`, "g")
-      const matches = content.match(iconRegex)
-      return matches && matches.length > 1; // More than just the import
-    })
-    if (usedIcons.length !== existingIcons.length) {}
-      if (usedIcons.length > 0) {}
-        content = content.replace()
-          lucideImportMatch[0],
-          `import { ${usedIcons.join(", ")} } from 'lucide-react';`,
-        )
-      } else {}
-        content = content.replace(lucideImportMatch[0] + "\n", "")
-      }
-      modified = true
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+// Get all TypeScript/JavaScript files
+const getFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules') && !item.includes('dist')) {
+      files = files.concat(getFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
   }
-  if (modified) {}
-    fs.writeFileSync(filePath, content)
-    console.log(`Fixed: ${filePath}`)
+  
+  return files;
+};
+
+// Remove unused imports from a file
+const removeUnusedImports = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Common unused imports to remove
+    const unusedImports = [
+      'Download', 'Share', 'Star', 'Clock', 'Users', 'Award', 'ArrowRight', 'Sparkles',
+      'Eye', 'DollarSign', 'Zap', 'Mail', 'MapPin', 'Shield', 'Globe', 'Target',
+      'PieChart', 'Activity', 'AlertCircle', 'CheckCircle', 'MessageSquare', 'Phone',
+      'TrendingUp', 'Database', 'Settings', 'AlertTriangle', 'Headphones', 'Bot',
+      'BarChart', 'Calendar', 'Brain', 'Cpu', 'Search', 'Link', 'useState', 'useEffect',
+      'Helmet', 'Check', 'Arrow', 'PhoneIcon', 'MailIcon', 'Location', 'Cube', 'Mic',
+      'Truck', 'HardDrive', 'FileCheck', 'Cloud', 'Code', 'Wrench', 'Hammer', 'Paintbrush',
+      'Scissors', 'Calculator', 'Clock3', 'Compass', 'TrendingDown', 'Lightning',
+      'Crosshair', 'Security', 'People', 'StarIcon', 'Palette', 'Camera', 'Music',
+      'Video', 'Gamepad2', 'ShoppingCart', 'CreditCard', 'Factory', 'Car', 'Plane',
+      'Ship', 'Train', 'Home', 'Heart', 'Stethoscope', 'GraduationCap', 'Briefcase'
+    ];
+    
+    // Remove unused imports from lucide-react
+    const lucideImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?/g);
+    if (lucideImports) {
+      lucideImports.forEach(importLine => {
+        const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          const usedImports = imports.filter(imp => {
+            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
+            return content.includes(cleanImp) && !unusedImports.includes(cleanImp);
+          });
+          
+          if (usedImports.length === 0) {
+            content = content.replace(importLine, '');
+          } else if (usedImports.length < imports.length) {
+            const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
+            content = content.replace(importLine, newImport);
+          }
+        }
+      });
+    }
+    
+    // Remove unused React imports
+    const reactImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]react['"];?/g);
+    if (reactImports) {
+      reactImports.forEach(importLine => {
+        const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]react['"];?/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          const usedImports = imports.filter(imp => {
+            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
+            return content.includes(cleanImp) && !unusedImports.includes(cleanImp);
+          });
+          
+          if (usedImports.length === 0) {
+            content = content.replace(importLine, '');
+          } else if (usedImports.length < imports.length) {
+            const newImport = `import { ${usedImports.join(', ')} } from 'react';`;
+            content = content.replace(importLine, newImport);
+          }
+        }
+      });
+    }
+    
+    // Remove unused react-helmet-async imports
+    const helmetImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]react-helmet-async['"];?/g);
+    if (helmetImports) {
+      helmetImports.forEach(importLine => {
+        const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]react-helmet-async['"];?/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          const usedImports = imports.filter(imp => {
+            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
+            return content.includes(cleanImp) && !unusedImports.includes(cleanImp);
+          });
+          
+          if (usedImports.length === 0) {
+            content = content.replace(importLine, '');
+          } else if (usedImports.length < imports.length) {
+            const newImport = `import { ${usedImports.join(', ')} } from 'react-helmet-async';`;
+            content = content.replace(importLine, newImport);
+          }
+        }
+      });
+    }
+    
+    // Clean up multiple empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed unused imports in: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-}
+};
+
 // Main execution
-async function main() {}
-}const pageFiles = await glob("app/**/page.tsx")
-  console.log(`Found ${pageFiles.length} page files to fix...`)
-  pageFiles.forEach(fixUnusedImports)
-  console.log("Unused imports fix completed!")
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const srcDir = path.join(__dirname, 'src');
+const appDir = path.join(__dirname, 'app');
+
+console.log('Fixing unused imports...');
+
+// Process src directory
+if (fs.existsSync(srcDir)) {
+  const srcFiles = getFiles(srcDir);
+  srcFiles.forEach(removeUnusedImports);
 }
-main().catch(console.error)
+
+// Process app directory
+if (fs.existsSync(appDir)) {
+  const appFiles = getFiles(appDir);
+  appFiles.forEach(removeUnusedImports);
+}
+
+console.log('Unused imports cleanup completed!');

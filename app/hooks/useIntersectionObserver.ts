@@ -1,22 +1,65 @@
-import { useEffect, useRef } from 'react'
-export function useIntersectionObserver()
-  callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
-) {}
-}const ref = useRef<HTMLElement>(null)
-  useEffect(() => {}
-}const element = ref.current
-    if (!element) return
-    const observer = new IntersectionObserver(callback, {}
-      threshold: 0.1,
-      rootMargin: '50px',
-      ...options
-    })
-    observer.observe(element)
-    return () => {}
-}observer.unobserve(element)
-    }
-  }, [callback, options])
-  return ref
+"use client";
+import React from "react";
+import { useEffect, useRef, useState } from "react";
+interface UseIntersectionObserverOptions {
+  threshold?: number | number[];
+  root?: Element | null;
+  rootMargin?: string;
+  freezeOnceVisible?: boolean;
 }
-export default useIntersectionObserver
+
+interface UseIntersectionObserverReturn {
+  ref: React.RefObject<HTMLElement>;
+  isIntersecting: boolean;
+  entry: IntersectionObserverEntry | undefined;
+}
+
+export function useIntersectionObserver(
+  options: UseIntersectionObserverOptions = {},
+): UseIntersectionObserverReturn {
+  const {
+    threshold = 0,
+    root = null,
+    rootMargin = "0%",
+    freezeOnceVisible = false,
+  } = options;
+
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>(
+    undefined,
+  );
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+        setEntry(entry);
+
+        if (entry.isIntersecting && freezeOnceVisible) {
+          observer.disconnect();
+        }
+      },
+      {
+        threshold,
+        root,
+        rootMargin,
+      },
+    );
+
+    observer.observe(node);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [threshold, root, rootMargin, freezeOnceVisible]);
+
+  return {
+    ref,
+    isIntersecting,
+    entry,
+  };
+}

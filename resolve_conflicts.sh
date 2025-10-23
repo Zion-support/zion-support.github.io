@@ -1,85 +1,53 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-# Resolve merge conflicts by accepting the main branch version for most files
-# and keeping the current branch version for specific files
+# Script to resolve merge conflicts by choosing the main branch version
+# This script will automatically resolve conflicts by keeping the main branch version
 
-echo "Resolving merge conflicts..."
+echo "Starting conflict resolution process..."
 
-# List of files with conflicts
-conflict_files=(
-  "app/components/EnhancedErrorBoundary.tsx"
-  "app/components/LazyWrapper.tsx"
-  "app/components/StructuredData.tsx"
-  "app/docs/page.tsx"
-  "app/hooks/useAdvancedPerformanceMonitoring.ts"
-  "app/pages/AISolutionsPage.tsx"
-  "components/AccessibilityComponents.tsx"
-  "components/utils/accessibilityUtils.ts"
-  "fix-syntax-errors.js"
-  "jest.setup.ts"
-  "pages/AboutPage.tsx"
-  "pages/ITServicesPage.tsx"
-  "pages/MicroSAASPage.tsx"
-  "pages/ServiceDetailPage.tsx"
-  "pages/ServicesPage.tsx"
-)
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    echo "Resolving conflicts in: $file"
+    
+    # Check if file has conflict markers
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "  Found conflicts in $file"
+        
+        # Create a backup
+        cp "$file" "${file}.backup"
+        
+        # Use git checkout to get the main branch version (ours)
+        git checkout --ours "$file"
+        
+        echo "  Resolved conflicts in $file using main branch version"
+    else
+        echo "  No conflicts found in $file"
+    fi
+}
 
-# For most files, accept the main branch version (theirs)
-for file in "${conflict_files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Resolving conflicts in $file..."
-    # Accept the main branch version
-    git checkout --theirs "$file"
-    git add "$file"
-  fi
+# Get list of conflicted files
+conflicted_files=$(git diff --name-only --diff-filter=U)
+
+if [ -z "$conflicted_files" ]; then
+    echo "No conflicted files found."
+    exit 0
+fi
+
+echo "Found conflicted files:"
+echo "$conflicted_files"
+echo ""
+
+# Resolve conflicts in each file
+for file in $conflicted_files; do
+    if [ -f "$file" ]; then
+        resolve_conflicts "$file"
+    else
+        echo "File $file not found, skipping..."
+    fi
 done
 
-echo "All conflicts resolved!"
-=======
-# Script to resolve merge conflicts by keeping the newer version (after =======)
-
-echo "Resolving merge conflicts in all files..."
-
-# Find all files with merge conflicts
-files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
-
-for file in $files; do
-    echo "Processing: $file"
-    
-    # Create a temporary file
-    temp_file="${file}.tmp"
-    
-    # Process the file to resolve conflicts
-    awk '
-    /<<<<<<< HEAD/ {
-        in_conflict = 1
-        next
-    }
-    /=======/ {
-        if (in_conflict) {
-            in_conflict = 2
-            next
-        }
-    }
-    />>>>>>> / {
-        if (in_conflict == 2) {
-            in_conflict = 0
-            next
-        }
-    }
-    {
-        if (in_conflict == 0) {
-            print
-        } else if (in_conflict == 2) {
-            print
-        }
-    }
-    ' "$file" > "$temp_file"
-    
-    # Replace original file with processed version
-    mv "$temp_file" "$file"
-done
-
-echo "Merge conflicts resolved in all files."
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
+echo ""
+echo "Conflict resolution completed!"
+echo "Files resolved:"
+echo "$conflicted_files"

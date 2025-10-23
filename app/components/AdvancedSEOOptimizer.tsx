@@ -1,290 +1,151 @@
 'use client'
-import React, { useState, useEffect, useCallback } from 'react'
-import { Search, Eye } from 'lucide-react'
-interface SEOSettings {}
-  metaTags: boolean
-  structuredData: boolean
-  sitemap: boolean
-  robotsTxt: boolean
-  canonicalUrls: boolean
-  altTexts: boolean
+import React, { useEffect, useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
+interface SEOOptimizerProps {
+title?: string
+description?: string
+keywords?: string
+canonicalUrl?: string
+ogImage?: string
+twitterCard?: string
+structuredData?: object
+children: React.ReactNode
 }
-interface SEOMetrics {}
-  titleLength: number | null
-  descriptionLength: number | null
-  headingStructure: string | null
-  imageAltTexts: number | null
-  internalLinks: number | null
-  externalLinks: number | null
+const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+title = 'Zion Tech Group - Advanced AI and IT Solutions',
+description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+canonicalUrl,
+ogImage = '/images/og-image.jpg',
+twitterCard = 'summary_large_image',
+structuredData,
+children
+}) => {
+const [seoScore, setSeoScore] = useState(0)
+const [recommendations, setRecommendations] = useState<string[]>([])
+const analyzeSEO = useCallback(() => {
+if (typeof window === 'undefined') return
+let score = 0
+const newRecommendations: string[] = []
+// Check title length
+if (title.length >= 30 && title.length <= 60) {
+score += 20
+} else {
+newRecommendations.push('Title should be between 30-60 characters')
 }
-const AdvancedSEOOptimizer: React.FC = () => {}
-}const [settings, setSettings] = useState<SEOSettings>({}
-    metaTags: false,
-    structuredData: false,
-    sitemap: false,
-    robotsTxt: false,
-    canonicalUrls: false,
-    altTexts: false
-  })
-  const [metrics, setMetrics] = useState<SEOMetrics>({}
-    titleLength: null,
-    descriptionLength: null,
-    headingStructure: null,
-    imageAltTexts: null,
-    internalLinks: null,
-    externalLinks: null
-  })
-  const [isVisible, setIsVisible] = useState(false)
-  const [isOptimizing, setIsOptimizing] = useState(false)
-  const analyzeSEO = useCallback(() => {}
-}if (typeof window === 'undefined') return
-    // Analyze title length
-    const title = document.title
-    setMetrics(prev => ({ ...prev, titleLength: title.length }))
-    // Analyze meta description
-    const metaDescription = document.querySelector('meta[name="description"]')
-    const descriptionLength = metaDescription ? metaDescription.getAttribute('content')?.length || 0 : 0
-    setMetrics(prev => ({ ...prev, descriptionLength }))
-    // Analyze heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
-    const headingStructure = Array.from(headings).map(h => h.tagName).join(' > ')
-    setMetrics(prev => ({ ...prev, headingStructure }))
-    // Count images with alt text
-    const images = document.querySelectorAll('img')
-    const imagesWithAlt = Array.from(images).filter(img => img.getAttribute('alt'))
-    setMetrics(prev => ({ ...prev, imageAltTexts: imagesWithAlt.length }))
-    // Count internal and external links
-    const links = document.querySelectorAll('a[href]')
-    let internalLinks = 0
-    let externalLinks = 0
-    links.forEach(link => {}
-}const href = link.getAttribute('href')
-      if (href) {}
-        if (href.startsWith('/') || href.includes(window.location.hostname)) {}
-          internalLinks++
-        } else if (href.startsWith('http')) {}
-          externalLinks++
-        }
-      }
-    })
-    setMetrics(prev => ({}
-      ...prev,
-      internalLinks,
-      externalLinks
-    }))
-  }, [])
-  useEffect(() => {}
-}analyzeSEO()
-  }, [analyzeSEO])
-  const optimizeSEO = useCallback(async () => {}
-}setIsOptimizing(true)
-    // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    // Apply optimizations based on settings
-    if (settings.metaTags) {}
-      // Optimizing meta tags...
-    }
-    if (settings.structuredData) {}
-      // Adding structured data...
-    }
-    if (settings.sitemap) {}
-      // Generating sitemap...
-    }
-    if (settings.robotsTxt) {}
-      // Updating robots.txt...
-    }
-    if (settings.canonicalUrls) {}
-      // Setting canonical URLs...
-    }
-    if (settings.altTexts) {}
-      // Adding alt texts to images...
-    }
-    setIsOptimizing(false)
-    // Re-analyze SEO after optimization
-    setTimeout(analyzeSEO, 1000)
-  }, [settings, analyzeSEO])
-  const toggleSetting = (key: keyof SEOSettings) => {}
-}setSettings(prev => ({}
-      ...prev,
-      [key]: !prev[key]
-    }))
-  }
-  const seoFeatures = []
-    {}
-      key: 'metaTags' as keyof SEOSettings,
-      title: 'Meta Tags',
-      description: 'Optimize title, description, and other meta tags',
-      impact: 'High'
-    },
-    {}
-      key: 'structuredData' as keyof SEOSettings,
-      title: 'Structured Data',
-      description: 'Add JSON-LD structured data for better search results',
-      impact: 'High'
-    },
-    {}
-      key: 'sitemap' as keyof SEOSettings,
-      title: 'Sitemap',
-      description: 'Generate and submit XML sitemap to search engines',
-      impact: 'Medium'
-    },
-    {}
-      key: 'robotsTxt' as keyof SEOSettings,
-      title: 'Robots.txt',
-      description: 'Create robots.txt file for search engine crawlers',
-      impact: 'Medium'
-    },
-    {}
-      key: 'canonicalUrls' as keyof SEOSettings,
-      title: 'Canonical URLs',
-      description: 'Set canonical URLs to prevent duplicate content issues',
-      impact: 'High'
-    },
-    {}
-      key: 'altTexts' as keyof SEOSettings,
-      title: 'Alt Texts',
-      description: 'Add descriptive alt texts to all images',
-      impact: 'Medium'
-    }
-  ]
-  const getImpactColor = (impact: string) => {}
-}switch (impact) {}
-      case 'High': return 'text-red-400'
-      case 'Medium': return 'text-yellow-400'
-      case 'Low': return 'text-green-400'
-      default: return 'text-gray-400'
-    }
-  }
-  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {}
-}if (value === null) return 'text-gray-400'
-    if (value <= thresholds.good) return 'text-green-400'
-    if (value <= thresholds.poor) return 'text-yellow-400'
-    return 'text-red-400'
-  }
-  if (!isVisible) {}
-    return ()
-      <button
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
-        aria-label="Open SEO optimizer"
-      >
-        <Search className="w-6 h-6" />
-      </button>
-    )
-  }
-  return ()
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
-          <Search className="w-5 h-5 mr-2" />
-          SEO Optimizer
-        </h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-          aria-label="Close SEO optimizer"
-        >
-          ×
-        </button>
-      </div>
-      {/* SEO Metrics */}
-      <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-          <Eye className="w-4 h-4 mr-2" />
-          SEO Analysis
-        </h4>
-        <div className="space-y-2 text-xs">
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Title Length:</span>
-            <span className={getScoreColor(metrics.titleLength, { good: 60, poor: 70 })}>
-              {metrics.titleLength ? `${metrics.titleLength}/60` : 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Description Length:</span>
-            <span className={getScoreColor(metrics.descriptionLength, { good: 160, poor: 200 })}>
-              {metrics.descriptionLength ? `${metrics.descriptionLength}/160` : 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Images with Alt:</span>
-            <span className="text-gray-900 dark:text-white">
-              {metrics.imageAltTexts || 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Internal Links:</span>
-            <span className="text-gray-900 dark:text-white">
-              {metrics.internalLinks || 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">External Links:</span>
-            <span className="text-gray-900 dark:text-white">
-              {metrics.externalLinks || 'N/A'}
-            </span>
-          </div>
-        </div>
-      </div>
-      {/* SEO Settings */}
-      <div className="space-y-4">
-        <h4 className="text-sm font-semibold text-gray-900 dark:text-white">
-          SEO Features
-        </h4>
-        {seoFeatures.map((feature) => ()
-          <div key={feature.key} className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-900 dark:text-white">
-                  {feature.title}
-                </span>
-                <span className={`text-xs ${getImpactColor(feature.impact)}`}>
-                  {feature.impact} Impact
-                </span>
-              </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                {feature.description}
-              </p>
-            </div>
-            <button
-              onClick={() => toggleSetting(feature.key)}
-              className={`ml-3 relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${}
-                settings[feature.key]
-                  ? 'bg-green-600'
-                  : 'bg-gray-200 dark:bg-gray-700'
-              }`}
-              aria-label={`Toggle ${feature.title}`}
-            >
-              <span
-                className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${}
-                  settings[feature.key] ? 'translate-x-5' : 'translate-x-1'
-                }`}
-              />
-            </button>
-          </div>
-        ))}
-      </div>
-      {/* Optimize Button */}
-      <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-        <button
-          onClick={optimizeSEO}
-          disabled={isOptimizing}
-          className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-        >
-          {isOptimizing ? ()
-            <div>
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-              Optimizing...
+// Check description length
+if (description.length >= 120 && description.length <= 160) {
+score += 20
+} else {
+newRecommendations.push('Description should be between 120-160 characters')
+}
+// Check for keywords in title
+if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+score += 15
+} else {
+newRecommendations.push('Include primary keyword in title')
+}
+// Check for keywords in description
+if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+score += 15
+} else {
+newRecommendations.push('Include primary keyword in description')
+}
+// Check for heading structure
+const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+if (headings.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add proper heading structure')
+}
+// Check for images with alt text
+const images = document.querySelectorAll('img')
+const imagesWithAlt = document.querySelectorAll('img[alt]')
+if (images.length === imagesWithAlt.length && images.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add alt text to all images')
+}
+// Check for internal links
+const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]')
+if (internalLinks.length > 0) {
+score += 10
+} else {
+newRecommendations.push('Add internal links for better SEO')
+}
+setSeoScore(score)
+setRecommendations(newRecommendations)
+}, [title, description, keywords])
+useEffect(() => {
+analyzeSEO()
+}, [analyzeSEO])
+const generateStructuredData = () => {
+const defaultStructuredData = {
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "Zion Tech Group",
+"description": description,
+"url": canonicalUrl || window.location.origin,
+"logo": ogImage,
+"sameAs": [
+"https://twitter.com/ziontechgroup",
+"https://linkedin.com/company/ziontechgroup"
+]
+}
+return structuredData || defaultStructuredData
+}
+return (
+<React.Fragment>
+<Helmet>
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+{/* Open Graph */}
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:type" content="website" />
+{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+{/* Twitter Card */}
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+{/* Structured Data */}
+<script type="application/ld+json">
+{JSON.stringify(generateStructuredData())}
+</script>
+</Helmet>
+{children}
+{process.env.NODE_ENV === 'development' && (
+<div className="seo-debug" style={{
+position: 'fixed',
+top: '10px',
+left: '10px',
+background: 'rgba(0,0,0,0.8)',
+color: 'white',
+padding: '10px',
+borderRadius: '5px',
+fontSize: '12px',
+zIndex: 1000,
+maxWidth: '300px'
+}}>
+<div>SEO Score: {seoScore}/100</div>
+{recommendations.length > 0 && (
+<div>
+<div>Recommendations:</div>
+<ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+{recommendations.map((rec, index) => (
+<li key={index}>{rec}</li>
+))}
+</ul>
 </div>
-          ) : ()
-            <div>
-              <Search className="w-4 h-4 mr-2" />
-              Optimize SEO
+)}
 </div>
-          )}
-        </button>
-      </div>
-    </div>
-  )
+)}
+</React.Fragment>
+)
 }
 export default AdvancedSEOOptimizer
+</SEOOptimizerProps>

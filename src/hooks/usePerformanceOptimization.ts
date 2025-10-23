@@ -1,75 +1,126 @@
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-      return null
-    )[0] as PerformanceNavigationTiming
-    const paintEntries = performance.getEntriesByType('paint')
+'use client';
+import { useCallback } from 'react';
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+}
+export const usePerformanceOptimization = () => {
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) {
+      return null;
+    }
+    const navigation = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    const metrics: PerformanceMetrics = {
       loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
+        : 0,
       firstContentfulPaint:
- entry.name = == 'first-contentful-paint')
+        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+          ?.startTime || 0,
+      largestContentfulPaint: 0,
+      cumulativeLayoutShift: 0,
       firstInputDelay: 0
-    }
+    };
     // Measure LCP
-      const entries = list.getEntries()
-const lastEntry = entries[entries.length - 1]
-        metrics.largestContentfulPaint = lastEntry.startTime
-    })
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+    const lcpObserver = new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      if (lastEntry) {
+        metrics.largestContentfulPaint = lastEntry.startTime;
+      }
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
-    let clsValue = 0
-          hadRecentInput?: boolean
-          value?: number
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver(list => {
+      for (const entry of list.getEntries()) {
+        const layoutShiftEntry = entry as PerformanceEntry & {
+          hadRecentInput?: boolean;
+          value?: number;
+        };
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value || 0;
         }
-          clsValue += layoutShiftEntry.value || 0
-      metrics.cumulativeLayoutShift = clsValue
-    })
-    clsObserver.observe({ entryTypes: ['layout-shift'] })
+      }
+      metrics.cumulativeLayoutShift = clsValue;
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
     // Measure FID
-          processingStart?: number
-        }
-          (fidEntry.processingStart || 0) - entry.startTime
-    })
-    fidObserver.observe({ entryTypes: ['first-input'] })
+    const fidObserver = new PerformanceObserver(list => {
+      for (const entry of list.getEntries()) {
+        const fidEntry = entry as PerformanceEntry & {
+          processingStart?: number;
+        };
+        metrics.firstInputDelay =
+          (fidEntry.processingStart || 0) - entry.startTime;
+      }
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
     // Cleanup observers after a delay
-      lcpObserver.disconnect()
-      clsObserver.disconnect()
-      fidObserver.disconnect()
-    }, 10000)
-    return metrics
-  }, [])
-    const images = document.querySelectorAll('img[data-src]')
-const img = entry.target as HTMLImageElement
-          img.src = img.dataset.src || ''
-          img.classList.remove('lazy')
-          imageObserver.unobserve(img)
-      })
-    })
- imageObserver.observe(img))
-  }, [])
-    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css']
-const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-        link.crossOrigin = 'anonymous'
-      document.head.appendChild(link)
-    })
-  }, [])
+    setTimeout(() => {
+      lcpObserver.disconnect();
+      clsObserver.disconnect();
+      fidObserver.disconnect();
+    }, 10000);
+    return metrics;
+  }, []);
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    images.forEach(img => imageObserver.observe(img));
+  }, []);
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+  }, []);
+  useEffect(() => {
     // Measure performance after page load
-      const metrics = measurePerformance()
+    const timer = setTimeout(() => {
+      const metrics = measurePerformance();
+      if (metrics) {
         // Send metrics to analytics in production
+        if (process.env['NODE_ENV'] === 'production') {
           // Track metrics in production
-            console.log('Performance metrics:', metrics)
-    }, 1000)
+        }
+        if (process.env['NODE_ENV'] === 'development') { 
+          if (import.meta.env.DEV) { 
+          } 
+        }
+      }
+    }, 1000);
     // Optimize images
-    optimizeImages()
+    optimizeImages();
     // Preload critical resources
-    preloadCriticalResources()
- clearTimeout(timer)
-  }, [measurePerformance, optimizeImages, preloadCriticalResources])
+    preloadCriticalResources();
+    return () => clearTimeout(timer);
+  }, [measurePerformance, optimizeImages, preloadCriticalResources]);
+  return {
+    measurePerformance,
+    optimizeImages,
     preloadCriticalResources
-  }
-}
+  };
+};

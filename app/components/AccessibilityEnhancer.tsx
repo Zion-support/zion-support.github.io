@@ -1,58 +1,50 @@
+'use client';
+
 import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true
+}) => {
   useEffect(() => {
-    // Skip to main content functionality
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
-    // Focus management for modals and dropdowns
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        // Close any open modals or dropdowns
-        const openElements = document.querySelectorAll('[aria-expanded="true"]');
-        openElements.forEach(element => {
-          if (element instanceof HTMLElement) {
-            element.setAttribute('aria-expanded', 'false');
-            element.blur();
+    // Add keyboard navigation support
+    if (enableKeyboardNavigation) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Skip to main content
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+          const mainContent = document.querySelector('main, [role="main"]');
+          if (mainContent) {
+            (mainContent as HTMLElement).focus();
+            event.preventDefault();
           }
-        });
-      }
-    };
-
-    // Add keyboard navigation for custom elements
-    const addKeyboardNavigation = () => {
-      const customButtons = document.querySelectorAll('[role="button"]:not(button)');
-      customButtons.forEach(button => {
-        button.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            (button as HTMLElement).click();
-          }
-        });
-      });
-    };
-
-    // Improve focus indicators
-    const improveFocusIndicators = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #3b82f6 !important;
-          outline-offset: 2px !important;
         }
-        .focus\:ring-2:focus {
-          box-shadow: 0 0 0 2px #3b82f6 !important;
-        }
-      `;
-      document.head.appendChild(style);
-    };
+      };
 
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [enableKeyboardNavigation]);
+
+  useEffect(() => {
+    // Add screen reader support
+    if (enableScreenReaderSupport) {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+
+      // Add ARIA landmarks
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
@@ -67,34 +59,59 @@ const AccessibilityEnhancer: React.FC = () => {
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
-    };
+    }
+  }, [enableScreenReaderSupport]);
 
-    // Initialize accessibility enhancements
-    improveFocusIndicators();
-    addKeyboardNavigation();
-    addAriaLandmarks();
+  useEffect(() => {
+    // Add high contrast support
+    if (enableHighContrast) {
+      const style = document.createElement('style');
+      style.textContent = `
+        @media (prefers-contrast: high) {
+          * {
+            border-color: currentColor !important;
+          }
+          button, a {
+            border: 2px solid currentColor !important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, [enableHighContrast]);
 
-    // Re-run on navigation changes
-    const observer = new MutationObserver(() => {
-      addKeyboardNavigation();
-      addAriaLandmarks();
-    });
+  useEffect(() => {
+    // Add focus management
+    if (enableFocusManagement) {
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      
+      const trapFocus = (element: HTMLElement) => {
+        const focusableContent = element.querySelectorAll(focusableElements);
+        const firstFocusableElement = focusableContent[0] as HTMLElement;
+        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
+        element.addEventListener('keydown', (e) => {
+          if (e.key === 'Tab') {
+            if (e.shiftKey) {
+              if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastFocusableElement) {
+                firstFocusableElement.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        });
+      };
 
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      observer.disconnect();
-      if (skipLink.parentNode) {
-        skipLink.parentNode.removeChild(skipLink);
-      }
-    };
-  }, []);
+      // Apply focus trapping to modals
+      const modals = document.querySelectorAll('[role="dialog"]');
+      modals.forEach(trapFocus);
+    }
+  }, [enableFocusManagement]);
 
   return null;
 };

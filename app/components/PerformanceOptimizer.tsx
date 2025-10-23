@@ -1,186 +1,209 @@
-import React, { useEffect, useCallback } from 'react'
-interface PerformanceOptimizerProps {}
-  children: React.ReactNode
+'use client';
+
+import React, { useEffect, useState, useCallback } from 'react';
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+
+interface PerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
 }
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {}
-}// Preload critical resources
-  const preloadCriticalResources = useCallback(() => {}
-}// Preload critical fonts
-    const fontLinks = []
-      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
-    ]
-    fontLinks.forEach(href => {}
-}const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = href
-      link.as = 'style'
-      link.crossOrigin = 'anonymous'
-      document.head.appendChild(link)
-    })
-    // Preload critical images
-    const criticalImages = []
-      '/images/hero-bg.jpg',
-      '/images/logo.svg',
-      '/images/og-image.jpg'
-    ]
-    criticalImages.forEach(src => {}
-}const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = src
-      link.as = 'image'
-      document.head.appendChild(link)
-    })
-  }, [])
-  // Optimize images
-  const optimizeImages = useCallback(() => {}
-}const images = document.querySelectorAll('img')
-    images.forEach(img => {}
-}// Add loading="lazy" to non-critical images
-      if (!img.hasAttribute('loading')) {}
-        img.setAttribute('loading', 'lazy')
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+}) => {
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [optimizationStatus, setOptimizationStatus] = useState<{
+    images: boolean;
+    lazyLoading: boolean;
+    preloading: boolean;
+    codeSplitting: boolean;
+  }>({
+    images: false,
+    lazyLoading: false,
+    preloading: false,
+    codeSplitting: false,
+  });
+
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
+
+    // Optimize images
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (img.loading !== 'lazy') {
+        img.loading = 'lazy';
       }
-      // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {}
-        img.setAttribute('decoding', 'async')
+      
+      // Add WebP support detection
+      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
+        const webpSrc = img.src.replace('.jpg', '.webp');
+        const webpImg = new Image();
+        webpImg.onload = () => {
+          img.src = webpSrc;
+        };
+        webpImg.src = webpSrc;
       }
-    })
-  }, [])
-  // Optimize third-party scripts
-  const optimizeThirdPartyScripts = useCallback(() => {}
-}// Defer non-critical scripts
-    const scripts = document.querySelectorAll('script[src]')
-    scripts.forEach(script => {}
-}if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {}
-        script.setAttribute('defer', 'true')
-      }
-    })
-  }, [])
-  // Add performance monitoring
-  const addPerformanceMonitoring = useCallback(() => {}
-}// Monitor Core Web Vitals
-    if ('web-vitals' in window) {}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
-}getCLS(console.log)
-        getFID(console.log)
-        getFCP(console.log)
-        getLCP(console.log)
-        getTTFB(console.log)
-      })
-    }
-    // Monitor resource loading
-    if ('PerformanceObserver' in window) {}
-      const observer = new PerformanceObserver((list) => {}
-}list.getEntries().forEach((entry) => {}
-}if (entry.entryType === 'navigation') {}
-            console.log('Navigation timing:', entry)
-          } else if (entry.entryType === 'resource') {}
-            console.log('Resource timing:', entry)
+    });
+
+    setOptimizationStatus(prev => ({ ...prev, images: true }));
+  }, [enableImageOptimization]);
+
+  const enableLazyLoadingOptimization = useCallback(() => {
+    if (!enableLazyLoading) return;
+
+    // Intersection Observer for lazy loading
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
           }
-        })
-      })
-      observer.observe({ entryTypes: ['navigation', 'resource'] })
+        });
+      },
+      { rootMargin: '50px' }
+    );
+
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach((img) => observer.observe(img));
+
+    setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }));
+  }, [enableLazyLoading]);
+
+  const enablePreloadingOptimization = useCallback(() => {
+    if (!enablePreloading) return;
+
+    // Preload critical resources
+    const criticalResources = [
+      '/fonts/main.woff2',
+      '/css/critical.css',
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+
+    setOptimizationStatus(prev => ({ ...prev, preloading: true }));
+  }, [enablePreloading]);
+
+  const enableCodeSplittingOptimization = useCallback(() => {
+    if (!enableCodeSplitting) return;
+
+    // Dynamic imports for code splitting
+    const loadComponent = async (componentName: string) => {
+      try {
+        const module = await import(`../components/${componentName}.tsx`);
+        return module.default;
+      } catch (error) {
+        console.warn(`Failed to load component: ${componentName}`, error);
+        return null;
+      }
+    };
+
+    // Store the function globally for use in other components
+    (window as any).loadComponent = loadComponent;
+
+    setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }));
+  }, [enableCodeSplitting]);
+
+  const runOptimizations = useCallback(async () => {
+    setIsOptimizing(true);
+    
+    try {
+      await Promise.all([
+        optimizeImages(),
+        enableLazyLoadingOptimization(),
+        enablePreloadingOptimization(),
+        enableCodeSplittingOptimization(),
+      ]);
+    } catch (error) {
+      console.error('Optimization failed:', error);
+    } finally {
+      setIsOptimizing(false);
     }
-  }, [])
-  // Optimize scroll performance
-  const optimizeScrollPerformance = useCallback(() => {}
-}let ticking = false
-    const updateScrollPosition = () => {}
-}// Throttle scroll events for better performance
-      if (!ticking) {}
-        requestAnimationFrame(() => {}
-}// Add scroll-based optimizations here
-          ticking = false
-        })
-        ticking = true
-      }
-    }
-    window.addEventListener('scroll', updateScrollPosition, { passive: true })
-    return () => {}
-}window.removeEventListener('scroll', updateScrollPosition)
-    }
-  }, [])
-  // Add intersection observer for lazy loading
-  const addIntersectionObserver = useCallback(() => {}
-}if ('IntersectionObserver' in window) {}
-      const observer = new IntersectionObserver((entries) => {}
-}entries.forEach(entry => {}
-}if (entry.isIntersecting) {}
-            const element = entry.target as HTMLElement
-            element.classList.add('animate-in')
-            observer.unobserve(element)
-          }
-        })
-      }, {}
-        rootMargin: '50px 0px',
-        threshold: 0.1
-      })
-      // Observe elements with lazy-load class
-      const lazyElements = document.querySelectorAll('.lazy-load')
-      lazyElements.forEach(el => observer.observe(el))
-      return () => observer.disconnect()
-    }
-  }, [])
-  useEffect(() => {}
-}// Run optimizations after component mounts
-    preloadCriticalResources()
-    optimizeImages()
-    optimizeThirdPartyScripts()
-    addPerformanceMonitoring()
-    const scrollCleanup = optimizeScrollPerformance()
-    const observerCleanup = addIntersectionObserver()
-    return () => {}
-}scrollCleanup?.()
-      observerCleanup?.()
-    }
-  }, []
-    preloadCriticalResources,
-    optimizeImages,
-    optimizeThirdPartyScripts,
-    addPerformanceMonitoring,
-    optimizeScrollPerformance,
-    addIntersectionObserver
-  ])
-  // Add performance CSS
-  useEffect(() => {}
-}const style = document.createElement('style')
-    style.textContent = `
-      /* Performance optimizations */
-      * {}
-        box-sizing: border-box
-      }
-      img {}
-        max-width: 100%
-        height: auto
-      }
-      .lazy-load {}
-        opacity: 0
-        transform: translateY(20px)
-        transition: opacity 0.6s ease, transform 0.6s ease
-      }
-      .lazy-load.animate-in {}
-        opacity: 1
-        transform: translateY(0)
-      }
-      /* Reduce motion for users who prefer it */
-      @media (prefers-reduced-motion: reduce) {}
-        * {}
-          animation-duration: 0.01ms !important
-          animation-iteration-count: 1 !important
-          transition-duration: 0.01ms !important
-        }
-      }
-      /* Optimize for mobile */
-      @media (max-width: 768px) {}
-        .lazy-load {}
-          transform: translateY(10px)
-        }
-      }
-    `
-    document.head.appendChild(style)
-    return () => {}
-}document.head.removeChild(style)
-    }
-  }, [])
-  return <>{children}</>
-}
-export default PerformanceOptimizer
+  }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization]);
+
+  useEffect(() => {
+    runOptimizations();
+  }, [runOptimizations]);
+
+  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean);
+
+  return (
+    <div className="performance-optimizer">
+      {isOptimizing && (
+        <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
+          <div className="flex items-center gap-2">
+            <Settings className="w-4 h-4 animate-spin" />
+            Optimizing performance...
+          </div>
+        </div>
+      )}
+
+      {allOptimizationsComplete && (
+        <div className="fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4" />
+            Performance optimized!
+          </div>
+        </div>
+      )}
+
+      <div className="optimization-status">
+        <h3 className="text-lg font-semibold mb-4">Performance Optimizations</h3>
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            {optimizationStatus.images ? (
+              <CheckCircle className="w-4 h-4 text-green-500" />
+            ) : (
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+            )}
+            <span>Image Optimization</span>
+          </div>
+          <div className="flex items-center gap-2">
+            {optimizationStatus.lazyLoading ? (
+              <CheckCircle className="w-4 h-4 text-green-500" />
+            ) : (
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+            )}
+            <span>Lazy Loading</span>
+          </div>
+          <div className="flex items-center gap-2">
+            {optimizationStatus.preloading ? (
+              <CheckCircle className="w-4 h-4 text-green-500" />
+            ) : (
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+            )}
+            <span>Resource Preloading</span>
+          </div>
+          <div className="flex items-center gap-2">
+            {optimizationStatus.codeSplitting ? (
+              <CheckCircle className="w-4 h-4 text-green-500" />
+            ) : (
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+            )}
+            <span>Code Splitting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PerformanceOptimizer;

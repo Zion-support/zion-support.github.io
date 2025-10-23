@@ -1,21 +1,33 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const DatabasePage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
-        title="database - Zion Tech Group"
-        description="Zion Tech Group database service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">database</h1>
-          <p className="text-gray-300">Coming soon...</p>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+            </div>
+          </div>
         </div>
-      </div>
-    </>
-  );
-};
-
-export default DatabasePage;
+      </section>
+          </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+  </
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our page solutions for your business.
+            </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+export default PagePage
+  </h2>

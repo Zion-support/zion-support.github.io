@@ -1,21 +1,38 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const CrmLitePage: React.FC = () => {
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+const PagePage: React.FC = () => {
+  const features = [
+    {
+    }
+  ]
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
   return (
-    <>
-      <SEOHead 
-        title="crm-lite - Zion Tech Group"
-        description="Zion Tech Group crm-lite service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">crm-lite</h1>
-          <p className="text-gray-300">Coming soon...</p>
+          </div>
         </div>
-      </div>
-    </>
-  );
-};
-
-export default CrmLitePage;
+      </section>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+          </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+}
+export default PagePage

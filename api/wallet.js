@@ -1,12 +1,14 @@
-// API endpoint for wallet operations
 import fs from 'fs';
 import path from 'path';
 
-const file = path.join(process.cwd(), 'data', 'wallets.json');
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'wallets.json');
 
-export default function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ _error: "Method not allowed" });
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
   const { address, type, name, userId } = req.body;
@@ -16,7 +18,11 @@ export default function handler(req, res) {
     return;
   }
 
+<<<<<<< HEAD
   let wallets = [];
+=======
+let wallets = [];
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   try {
     const data = fs.readFileSync(file, 'utf8');
     wallets = JSON.parse(data);
@@ -48,10 +54,20 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true,
       message: 'Wallet added successfully' 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
+
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+
+=======
+res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
 }
