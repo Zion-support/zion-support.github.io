@@ -10,6 +10,4 @@ const LazyImage: React.FC = () => {
   );
 };
 
-export default Page;
-
 export default LazyImage;

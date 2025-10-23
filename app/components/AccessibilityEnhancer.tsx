@@ -93,6 +93,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return <>{children}</>;
 };
 
-export default Page;
-
 export default AccessibilityEnhancer;

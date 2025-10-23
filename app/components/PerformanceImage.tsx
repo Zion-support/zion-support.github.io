@@ -10,6 +10,4 @@ const PerformanceImage: React.FC = () => {
   );
 };
 
-export default Page;
-
 export default PerformanceImage;
