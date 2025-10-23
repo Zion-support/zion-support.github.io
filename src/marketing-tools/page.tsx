@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 
 const MarketingToolsPage: React.FC = () => {
   const marketingTools = [
@@ -50,7 +52,7 @@ const MarketingToolsPage: React.FC = () => {
       icon: '📈',
       category: 'Analytics'
     }
-  ];
+  ]
   const benefits = [
     {
       icon: TrendingUp,
@@ -72,7 +74,7 @@ const MarketingToolsPage: React.FC = () => {
       title: 'Data-Driven',
       description: 'Make informed decisions with comprehensive analytics and insights'
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -212,6 +214,6 @@ const MarketingToolsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default MarketingToolsPage;
+  )
+}
+export default MarketingToolsPage

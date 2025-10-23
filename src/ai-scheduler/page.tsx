@@ -1,5 +1,6 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
+import { CheckCircle, Star, Phone, Calendar } from 'lucide-react'
 
 const AISchedulerPage: React.FC = () => {
   const features = [
@@ -39,7 +40,7 @@ const AISchedulerPage: React.FC = () => {
       description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
       benefit: '100% secure scheduling'
     }
-  ];
+  ]
 
   const pricingPlans = [
     {
@@ -91,7 +92,7 @@ const AISchedulerPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
 
   const integrations = [
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
@@ -102,7 +103,7 @@ const AISchedulerPage: React.FC = () => {
     { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
-  ];
+  ]
 
   const testimonials = [
     {
@@ -126,7 +127,7 @@ const AISchedulerPage: React.FC = () => {
       content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
       rating: 5
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -143,8 +144,8 @@ const AISchedulerPage: React.FC = () => {
             Intelligent Meeting & Event Scheduling
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
-            the best meeting times, coordinate complex team schedules, and optimize your calendar 
+            Never miss another meeting with our AI-powered scheduling assistant. Automatically find
+            the best meeting times, coordinate complex team schedules, and optimize your calendar
             for maximum productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -155,7 +156,7 @@ const AISchedulerPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
-            <a 
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
@@ -163,7 +164,6 @@ const AISchedulerPage: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -187,7 +187,6 @@ const AISchedulerPage: React.FC = () => {
             <div className="text-gray-300 text-sm">Scheduling guaranteed</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -204,7 +203,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -220,7 +218,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -229,7 +226,7 @@ const AISchedulerPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
+                plan.popular
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
@@ -263,7 +260,6 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -287,14 +283,13 @@ const AISchedulerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Master Your Schedule?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
+            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches
             and maximize productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -305,7 +300,7 @@ const AISchedulerPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
-            <a 
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
@@ -315,7 +310,7 @@ const AISchedulerPage: React.FC = () => {
         </section>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default AISchedulerPage;
+export default AISchedulerPage

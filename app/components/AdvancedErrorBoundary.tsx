@@ -1,21 +1,24 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Home } from 'lucide-react'
+
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+  errorId?: string
 }
 class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -23,25 +26,25 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    });
+    })
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // console.error('Error caught by boundary:', error, errorInfo)
     }
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
+      this.logErrorToService(error, errorInfo)
     }
   }
 
@@ -55,9 +58,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    };
+    }
     // Log the error data for debugging
-    console.error('Error data:', errorData);
+    // console.error('Error data:', errorData)
     // Example: Send to your error reporting service
     // You could send this to your backend:
     // fetch('/api/error-report', {
@@ -67,7 +70,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     // })
     // For now, just log to console
     // Error data logged
-  };
+  }
 
   handleReset = () => {
     this.setState({
@@ -75,21 +78,21 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       error: undefined,
       errorInfo: undefined,
       errorId: undefined
-    });
-  };
+    })
+  }
 
   handleReportError = () => {
-    const { error, errorId } = this.state;
-    const subject = `Error Report - ${errorId}`;
-    const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`;
-    const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink);
-  };
+    const { error, errorId } = this.state
+    const subject = `Error Report - ${errorId}`
+    const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`
+    const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.open(mailtoLink)
+  }
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
       return (
         <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
@@ -105,7 +108,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             </p>
             {this.state.errorId && (
               <div className="bg-gray-100 p-4 rounded-lg mb-6">
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600"></p>
                   <strong>Error ID:</strong> {this.state.errorId}
                 </p>
                 <p className="text-xs text-gray-500 mt-1">
@@ -125,7 +128,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                   {this.state.errorInfo && (
                     <div>
                       <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
+                      <pre className="whitespace-pre-wrap mt-1"></p>
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
@@ -137,12 +140,12 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleReset}
                 className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              >
+              ></button>
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
               <button
-                onClick={() => window.location.href = '/'}
+                onClick={() =></button> window.location.href = '/'}
                 className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
               >
                 <Home className="h-4 w-4 mr-2" />
@@ -151,13 +154,13 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleReportError}
                 className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
-              >
+              ></button>
                 <Mail className="h-4 w-4 mr-2" />
                 Report Issue
               </button>
             </div>
             <div className="mt-8 pt-6 border-t border-gray-200">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500"></p>
                 If this problem persists, please contact our support team at{' '}
                 <a
                   href="mailto:support@ziontechgroup.com"
@@ -169,10 +172,10 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default AdvancedErrorBoundary;
+export default AdvancedErrorBoundary

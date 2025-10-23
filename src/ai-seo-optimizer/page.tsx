@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Phone } from 'lucide-react'
 
 const Page: React.FC = () => {
   return (
@@ -39,7 +40,7 @@ const Page: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

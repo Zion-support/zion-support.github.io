@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react'
+import { Zap } from 'lucide-react'
+
 const ContentStatistics: React.FC = () => {
 const [counters, setCounters] = useState({
 clients: 0,
@@ -145,16 +147,15 @@ return (
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
 Our Impact in Numbers
-
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
 See how we've transformed businesses and delivered exceptional results.
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
 <div className="max-w-7xl mx-auto">
 {/* Header */}
 <div className="text-center mb-16">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
 </h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -276,13 +277,12 @@ Discover the advantages that make our solutions the preferred choice.
 Join thousands of satisfied customers and transform your business today.
 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"></button>
 <Zap className="w-5 h-5" />
 Get Started Today
 </button>
-<button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+<button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"></button>
 View Case Studies
-
 </div>
 </div>
 </div>

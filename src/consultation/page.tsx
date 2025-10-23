@@ -1,8 +1,10 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
+import { Clock } from 'lucide-react'
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -17,23 +19,23 @@ const ConsultationPage: React.FC = () => {
     timeline: '',
     budget: '',
     message: ''
-  });
+  })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // Handle form submission
-    const subject = `Free Consultation Request from ${formData.name} - ${formData.company}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nIndustry: ${formData.industry}\nCompany Size: ${formData.companySize}\nCurrent Challenges: ${formData.currentChallenges}\nGoals: ${formData.goals}\nTimeline: ${formData.timeline}\nBudget: ${formData.budget}\nMessage: ${formData.message}`;
-    window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
+    const subject = `Free Consultation Request from ${formData.name} - ${formData.company}`
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nIndustry: ${formData.industry}\nCompany Size: ${formData.companySize}\nCurrent Challenges: ${formData.currentChallenges}\nGoals: ${formData.goals}\nTimeline: ${formData.timeline}\nBudget: ${formData.budget}\nMessage: ${formData.message}`
+    window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
 
   const consultationBenefits = [
     {
@@ -56,7 +58,7 @@ const ConsultationPage: React.FC = () => {
       title: 'Growth Strategy',
       description: 'Develop a roadmap for scaling your technology infrastructure'
     }
-  ];
+  ]
 
   const consultationProcess = [
     {
@@ -79,7 +81,7 @@ const ConsultationPage: React.FC = () => {
       title: 'Implementation Plan',
       description: 'Provide detailed steps and timeline for your transformation'
     }
-  ];
+  ]
 
   const testimonials = [
     {
@@ -100,7 +102,7 @@ const ConsultationPage: React.FC = () => {
       text: 'The consultation was worth every minute. Clear recommendations and actionable insights.',
       rating: 5
     }
-  ];
+  ]
 
   return (
     <>
@@ -123,7 +125,7 @@ const ConsultationPage: React.FC = () => {
                 Discover how technology can transform your business
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Get a free 30-minute consultation with our technology experts. We'll assess your current setup, 
+                Get a free 30-minute consultation with our technology experts. We'll assess your current setup,
                 identify opportunities, and provide actionable recommendations to drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -145,7 +147,6 @@ const ConsultationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -161,7 +162,6 @@ const ConsultationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Process Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -179,7 +179,6 @@ const ConsultationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Consultation Form */}
           <section className="container mx-auto px-4 py-16">
             <div className="max-w-4xl mx-auto">
@@ -382,7 +381,6 @@ const ConsultationPage: React.FC = () => {
                     </button>
                   </form>
                 </div>
-
                 {/* Benefits Sidebar */}
                 <div className="space-y-8">
                   <div className="cyber-card p-8">
@@ -410,7 +408,6 @@ const ConsultationPage: React.FC = () => {
                       </li>
                     </ul>
                   </div>
-
                   <div className="cyber-card p-8">
                     <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
                     <div className="space-y-4">
@@ -436,7 +433,6 @@ const ConsultationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Testimonials */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -463,7 +459,7 @@ const ConsultationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ConsultationPage;
+export default ConsultationPage

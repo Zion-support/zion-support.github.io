@@ -1,12 +1,13 @@
-import React from 'react';
+import React from 'react'
+import { Helmet } from 'lucide-react'
 
 interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  children: React.ReactNode;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  children: React.ReactNode
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
@@ -28,7 +29,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "industry": "Technology",
     "services": [
       "AI Solutions",
-      "Quantum Computing", 
+      "Quantum Computing",
       "Autonomous Systems",
       "Digital Transformation",
       "Cloud Services",
@@ -78,7 +79,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       },
       "geoRadius": "1000000"
     }
-  };
+  }
   return (
     <>
       <Helmet>
@@ -115,6 +116,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       </Helmet>
       {children}
     </>
-  );
-};
-export default SEOEnhancer;
+  )
+}
+export default SEOEnhancer

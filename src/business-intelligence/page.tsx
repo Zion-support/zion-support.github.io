@@ -1,5 +1,6 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
+import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -33,7 +34,7 @@ const BusinessIntelligencePage: React.FC = () => {
       category: 'Data Infrastructure',
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -163,6 +164,6 @@ const BusinessIntelligencePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default BusinessIntelligencePage;
+  )
+}
+export default BusinessIntelligencePage

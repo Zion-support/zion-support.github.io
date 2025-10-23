@@ -1,8 +1,9 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 
 const AIServicesPage: React.FC = () => {
   const services = [
@@ -54,7 +55,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $600/month',
       color: 'text-green-400'
     }
-  ];
+  ]
 
   const benefits = [
     {
@@ -77,22 +78,21 @@ const AIServicesPage: React.FC = () => {
       title: 'Global Support',
       description: '24/7 support across all time zones with dedicated success managers'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               AI Services & Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence solutions. 
+            Transform your business with cutting-edge artificial intelligence solutions.
             From machine learning to automation, we deliver AI that drives real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -110,7 +110,6 @@ const AIServicesPage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our AI Services</h2>
@@ -143,7 +142,6 @@ const AIServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -161,7 +159,6 @@ const AIServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -189,10 +186,9 @@ const AIServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default AIServicesPage;
+export default AIServicesPage

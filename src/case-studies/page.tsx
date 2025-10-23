@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react'
+import { CheckCircle, TrendingUp, Helmet } from 'lucide-react'
+
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -67,7 +69,7 @@ const CaseStudiesPage: React.FC = () => {
       image: '🏭',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
-  ];
+  ]
   return (
     <>
       <Helmet>
@@ -95,7 +97,7 @@ const CaseStudiesPage: React.FC = () => {
                 Real results from real companies using our AI solutions
               </p>
               <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-                Discover how leading companies across industries have transformed their operations 
+                Discover how leading companies across industries have transformed their operations
                 and achieved remarkable ROI with our cutting-edge AI technology.
               </p>
             </div>
@@ -216,6 +218,6 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default CaseStudiesPage;
+  )
+}
+export default CaseStudiesPage

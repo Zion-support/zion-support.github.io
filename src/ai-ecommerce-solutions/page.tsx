@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { BarChart3 } from 'lucide-react';
+import { BarChart3 } from 'lucide-react'
+import { CheckCircle, Zap, Shield, Users, Helmet } from 'lucide-react'
+
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
     {
@@ -159,7 +161,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
       technologies: ['Python', 'TensorFlow', 'React', 'PostgreSQL', 'D3.js', 'Machine Learning'],
       useCases: ['E-commerce', 'Retail', 'Marketplace', 'Subscription Business']
     }
-  ];
+  ]
   const ecommerceFeatures = [
     {
       title: 'AI Personalization',
@@ -181,13 +183,13 @@ const AIEcommerceSolutionsPage: React.FC = () => {
       description: 'Bank-level security for all transactions',
       icon: <Shield className="w-8 h-8 text-red-600" />
     }
-  ];
+  ]
   const industryStats = [
     { metric: '45%', description: 'Average Conversion Increase' },
     { metric: '60%', description: 'Cart Abandonment Reduction' },
     { metric: '35%', description: 'Average Order Value Boost' },
     { metric: '95%', description: 'Fraud Detection Accuracy' }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       <Helmet>
@@ -207,13 +209,13 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               Transform your online business with AI-powered e-commerce solutions that boost sales, reduce costs, and enhance customer experience
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
@@ -284,7 +286,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
-                <a 
+                <a
                   href="/contact"
                   className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-flex items-center justify-center"
                 >
@@ -362,13 +364,13 @@ const AIEcommerceSolutionsPage: React.FC = () => {
             Get a free e-commerce audit and discover how AI can boost your online sales
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
             >
               📞 +1 302 464 0950
             </a>
-            <a 
+            <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
@@ -381,6 +383,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default AIEcommerceSolutionsPage;
+  )
+}
+export default AIEcommerceSolutionsPage

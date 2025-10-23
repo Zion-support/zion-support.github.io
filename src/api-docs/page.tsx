@@ -1,17 +1,19 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Key, Copy } from 'lucide-react';
+'use client'
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Key, Copy } from 'lucide-react'
+import { Code } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  
+  const [copiedCode, setCopiedCode] = useState<string | null>(null)
+
   const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
+    navigator.clipboard.writeText(code)
+    setCopiedCode(id)
+    setTimeout(() => setCopiedCode(null), 2000)
+  }
 
   const apiEndpoints = [
     {
@@ -42,7 +44,7 @@ const ApiDocsPage: React.FC = () => {
     "analysis_type": "trend_analysis"
   }'`
     }
-  ];
+  ]
 
   return (
     <>
@@ -53,7 +55,7 @@ const ApiDocsPage: React.FC = () => {
           <section className="text-center mb-16 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
             <div className="relative z-10 py-16 px-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"></h1>
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   API Documentation
                 </span>
@@ -63,7 +65,6 @@ const ApiDocsPage: React.FC = () => {
               </p>
             </div>
           </section>
-
           {/* API Endpoints */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
@@ -80,7 +81,7 @@ const ApiDocsPage: React.FC = () => {
                       <code className="text-cyan-400 font-mono">{endpoint.endpoint}</code>
                     </div>
                     <button
-                      onClick={() => copyToClipboard(endpoint.example, endpoint.id)}
+                      onClick={() =></button> copyToClipboard(endpoint.example, endpoint.id)}
                       className="flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors"
                     >
                       {copiedCode === endpoint.id ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -90,13 +91,12 @@ const ApiDocsPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">{endpoint.title}</h3>
                   <p className="text-gray-300 mb-4">{endpoint.description}</p>
                   <div className="bg-gray-900 rounded p-4 overflow-x-auto">
-                    <pre className="text-sm text-gray-300 whitespace-pre-wrap">{endpoint.example}</pre>
+                    <pre className="text-sm text-gray-300 whitespace-pre-wrap"></p>{endpoint.example}</pre>
                   </div>
                 </div>
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center py-16">
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -126,7 +126,7 @@ const ApiDocsPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default ApiDocsPage;
+export default ApiDocsPage

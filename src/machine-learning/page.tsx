@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
 
 const MachineLearningPage: React.FC = () => {
   const features = [
@@ -13,7 +14,7 @@ const MachineLearningPage: React.FC = () => {
     'A/B testing and performance monitoring',
     'Integration with existing systems',
     'Continuous learning and model updates'
-  ];
+  ]
 
   const benefits = [
     '40% better prediction accuracy',
@@ -22,7 +23,7 @@ const MachineLearningPage: React.FC = () => {
     '30% improvement in decision making',
     '95% model reliability',
     '80% cost savings on analytics'
-  ];
+  ]
 
   const useCases = [
     {
@@ -55,7 +56,7 @@ const MachineLearningPage: React.FC = () => {
       description: 'Evaluate and mitigate business risks with data-driven insights',
       icon: '⚠️'
     }
-  ];
+  ]
 
   return (
     <>
@@ -71,7 +72,7 @@ const MachineLearningPage: React.FC = () => {
               Custom ML models for predictive analytics and decision-making
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your business with our advanced machine learning solutions that provide 
+              Transform your business with our advanced machine learning solutions that provide
               intelligent insights, predictions, and automation to drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -90,7 +91,6 @@ const MachineLearningPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -105,7 +105,6 @@ const MachineLearningPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Use Cases Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -121,7 +120,6 @@ const MachineLearningPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
@@ -136,7 +134,6 @@ const MachineLearningPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Contact Section */}
           <section className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
@@ -165,7 +162,7 @@ const MachineLearningPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default MachineLearningPage;
+export default MachineLearningPage

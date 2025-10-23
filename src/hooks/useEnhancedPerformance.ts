@@ -1,16 +1,16 @@
-'use client';
+'use client'
 /**
  * Enhanced Performance Hook
  * Combines performance monitoring, error tracking, and analytics
  */
-import { useCallback, useRef } from 'react';
-import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics';
+import { useCallback, useRef } from 'react'
+import { errorTracker } from '../utils/enhancedErrorTracking'
+import { analytics } from '../utils/enhancedAnalytics'
 export interface UseEnhancedPerformanceOptions {
-  component?: string;
-  trackErrors?: boolean;
-  trackPerformance?: boolean;
-  trackAnalytics?: boolean;
+  component?: string
+  trackErrors?: boolean
+  trackPerformance?: boolean
+  trackAnalytics?: boolean
 }
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
   const {
@@ -18,20 +18,20 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true
-  } = _options;
-  const mountTimeRef = useRef<number>(0);
-  const renderCountRef = useRef<number>(0);
+  } = _options
+  const mountTimeRef = useRef<number>(0)
+  const renderCountRef = useRef<number>(0)
   useEffect(() => {
-    mountTimeRef.current = performance.now();
-    renderCountRef.current = 0;
+    mountTimeRef.current = performance.now()
+    renderCountRef.current = 0
     // Track component mount
     if (trackAnalytics) {
-      analytics.trackCustomEvent('Component', 'Mounted', component);
+      analytics.trackCustomEvent('Component', 'Mounted', component)
     }
     return () => {
       // Track component unmount duration
       if (trackPerformance) {
-        const duration = performance.now() - mountTimeRef.current;
+        const duration = performance.now() - mountTimeRef.current
         if (duration > 5000) {
           // Long-lived component
           analytics.trackCustomEvent(
@@ -39,18 +39,18 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             'Long Component Lifetime',
             component,
             Math.round(duration)
-          );
+          )
         }
       }
       // Track component unmount
       if (trackAnalytics) {
-        analytics.trackCustomEvent('Component', 'Unmounted', component);
+        analytics.trackCustomEvent('Component', 'Unmounted', component)
       }
-    };
-  }, [component, trackAnalytics, trackPerformance]);
+    }
+  }, [component, trackAnalytics, trackPerformance])
   // Track render performance
   useEffect(() => {
-    renderCountRef.current++;
+    renderCountRef.current++
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
       analytics.trackCustomEvent(
@@ -58,52 +58,52 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         'High Render Count',
         component,
         renderCountRef.current
-      );
+      )
     }
-  });
+  })
   const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
           ...context
-        });
+        })
       }
     },
     [component, trackErrors]
-  );
+  )
   const trackUserAction = useCallback(
     (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
+        analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
       }
     },
     [component, trackAnalytics]
-  );
+  )
   const measureOperation = useCallback(
     (operationName: string) => {
-      const markName = `${component}-${operationName}`;
-      const startTime = performance.now();
+      const markName = `${component}-${operationName}`
+      const startTime = performance.now()
       return {
         end: () => {
-          const duration = performance.now() - startTime;
+          const duration = performance.now() - startTime
           if (trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
               duration,
               duration > 1000 ? 'slow' : 'fast'
-            );
+            )
           }
-          return duration;
+          return duration
         }
-      };
+      }
     },
     [component, trackPerformance]
-  );
+  )
   return {
     trackError,
     trackUserAction,
     measureOperation
-  };
+  }
 }
-export default useEnhancedPerformance;
+export default useEnhancedPerformance

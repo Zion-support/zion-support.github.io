@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Star, Zap, ArrowRight } from 'lucide-react'
+
 interface Feature {
   icon: React.ComponentType<any>
   title: string
@@ -129,10 +131,10 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -143,14 +145,12 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
             Discover how our cutting-edge AI and IT solutions can transform your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></button>
               <Play className="w-5 h-5" />
               Start Demo
-
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"></button>
               <ArrowRight className="w-5 h-5" />
               Learn More
-
           </div>
         </div>
 {/* Features Grid */}
@@ -197,7 +197,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -271,17 +271,17 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
                 onClick={prevTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
+                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={togglePlayPause}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
+                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </button>
               <button
                 onClick={nextTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
+                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>
                 <ChevronRight className="w-6 h-6" />
               </button>
             </div>
@@ -290,7 +290,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() =></button> setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
                   }`}
@@ -334,13 +334,12 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
               Join thousands of satisfied customers and start your transformation journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Zap className="w-5 h-5" />
                 Get Started Today
               </button>
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Schedule Demo
-
             </div>
           </div>
         </div>

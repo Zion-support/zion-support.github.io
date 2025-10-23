@@ -1,9 +1,11 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Lock } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Lock } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
 const AICybersecurityPage: React.FC = () => {
   const features = [
     {
@@ -42,7 +44,7 @@ const AICybersecurityPage: React.FC = () => {
       description: 'Implement zero trust security model with identity verification, device trust, and least privilege access controls.',
       benefits: ['Identity verification', 'Device trust', 'Least privilege']
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Essential',
@@ -95,13 +97,13 @@ const AICybersecurityPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
   const stats = [
     { number: '99.9%', label: 'Threat Detection' },
     { number: '24/7', label: 'Monitoring' },
     { number: '60%', label: 'Faster Response' },
     { number: '100%', label: 'Compliance' }
-  ];
+  ]
   const threats = [
     {
       title: 'Ransomware Protection',
@@ -123,7 +125,7 @@ const AICybersecurityPage: React.FC = () => {
       description: 'Comprehensive network monitoring and protection with AI-powered intrusion detection and prevention systems.',
       icon: Globe
     }
-  ];
+  ]
   return (
     <>
       <SEOOptimizer
@@ -145,7 +147,7 @@ const AICybersecurityPage: React.FC = () => {
                 Protect your business with AI-powered security
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered cybersecurity platform provides advanced threat detection, 
+                Our AI-powered cybersecurity platform provides advanced threat detection,
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -298,6 +300,6 @@ const AICybersecurityPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-export default AICybersecurityPage;
+  )
+}
+export default AICybersecurityPage

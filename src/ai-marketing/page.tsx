@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { CheckCircle, Star, Zap, Brain, BarChart, TrendingUp, Target, Users, Helmet } from 'lucide-react'
 
 const AIMarketingPage: React.FC = () => {
   const aiMarketingServices = [
@@ -134,8 +135,8 @@ const AIMarketingPage: React.FC = () => {
       category: 'Personalization',
       technologies: ['Customer Data Platform', 'Real-time APIs', 'Machine Learning', 'A/B Testing Tools']
     }
-  ];
-  const categories = [...new Set(aiMarketingServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(aiMarketingServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -334,13 +335,13 @@ const AIMarketingPage: React.FC = () => {
               Contact our AI marketing experts for a free consultation and custom strategy development
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
               >
@@ -354,6 +355,6 @@ const AIMarketingPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-export default AIMarketingPage;
+  )
+}
+export default AIMarketingPage

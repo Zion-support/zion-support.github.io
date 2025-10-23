@@ -1,6 +1,8 @@
 'use client'
 import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
+
 interface ContentNewsletterSignupProps {
   title?: string
   subtitle?: string
@@ -42,7 +44,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsSubscribed(true)
       setEmail('')
     } catch (error) {
-      console.error('Subscription error:', error)
+      // console.error('Subscription error:', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -75,10 +77,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             Thank you for subscribing. You'll receive our latest insights and updates soon.
           </p>
           <button
-            onClick={() => setIsSubscribed(false)}
+            onClick={() =></button> setIsSubscribed(false)}
             className="text-white underline hover:text-blue-200 transition-colors">
             Subscribe another email
-
         </div>
       </div>
     )
@@ -111,7 +112,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address
-
                 <input
                   type="email"
                   value={email}
@@ -124,7 +124,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               <button
                 type="submit"
                 disabled={isLoading || !email}
-                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center">
+                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"></button>
                 {isLoading ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>

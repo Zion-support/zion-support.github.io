@@ -1,5 +1,5 @@
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
-import Link from "next/link";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react"
+import Link from "next/link"
 
 const HomePage = () => {
   const features = [
@@ -27,14 +27,14 @@ const HomePage = () => {
       stats: "50% faster deployment",
       link: "/micro-saas"
     }
-  ];
+  ]
 
   const stats = [
     { number: "500+", label: "Projects Completed" },
     { number: "99.9%", label: "Client Satisfaction" },
     { number: "24/7", label: "Support Available" },
     { number: "5+", label: "Years Experience" }
-  ];
+  ]
 
   const testimonials = [
     {
@@ -55,7 +55,7 @@ const HomePage = () => {
       content: "The micro SaaS solutions they provided helped us scale faster than we ever imagined possible.",
       rating: 5
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -69,17 +69,17 @@ const HomePage = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Leading provider of cutting-edge artificial intelligence and information technology solutions 
+            Leading provider of cutting-edge artificial intelligence and information technology solutions
             that drive innovation, efficiency, and growth for modern businesses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Get Started Today
             </Link>
-            <Link 
+            <Link
               href="/services" 
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
             >
@@ -88,7 +88,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -110,7 +109,7 @@ const HomePage = () => {
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-semibold">{feature.stats}</span>
-                  <Link 
+                  <Link
                     href={feature.link}
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
@@ -122,7 +121,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -140,7 +138,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -170,7 +167,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -181,13 +177,13 @@ const HomePage = () => {
             Let's discuss how our AI and IT solutions can drive your success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Start Your Project
             </Link>
-            <Link 
+            <Link
               href="/demo" 
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
             >
@@ -197,7 +193,7 @@ const HomePage = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

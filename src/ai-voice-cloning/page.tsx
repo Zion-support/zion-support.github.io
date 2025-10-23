@@ -1,8 +1,9 @@
-import React from 'react';
-import { Play } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import React from 'react'
+import { Play } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Zap, Music } from 'lucide-react'
 
 const AIVoiceCloningPage: React.FC = () => {
   const features = [
@@ -16,7 +17,7 @@ const AIVoiceCloningPage: React.FC = () => {
     'High Quality Audio',
     'Custom Voice Models',
     'Batch Processing'
-  ];
+  ]
 
   const benefits = [
     'Natural voice quality',
@@ -25,7 +26,7 @@ const AIVoiceCloningPage: React.FC = () => {
     'Custom voices',
     'Multi-language support',
     'Easy integration'
-  ];
+  ]
 
   const pricingPlans = [
     {
@@ -49,7 +50,7 @@ const AIVoiceCloningPage: React.FC = () => {
       features: ['Everything in Pro', 'Unlimited hours', 'Custom training', 'Dedicated support', 'White-label'],
       popular: false
     }
-  ];
+  ]
 
   return (
     <>
@@ -59,10 +60,8 @@ const AIVoiceCloningPage: React.FC = () => {
         keywords={['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voice automation']}
         canonicalUrl="https://ziontechgroup.com/ai-voice-cloning"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -95,7 +94,6 @@ const AIVoiceCloningPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -112,7 +110,6 @@ const AIVoiceCloningPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,7 +126,6 @@ const AIVoiceCloningPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -174,7 +170,6 @@ const AIVoiceCloningPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -201,11 +196,10 @@ const AIVoiceCloningPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIVoiceCloningPage;
+export default AIVoiceCloningPage

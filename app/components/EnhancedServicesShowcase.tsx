@@ -1,5 +1,7 @@
 import React from 'react'
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
+
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
@@ -39,12 +41,10 @@ const EnhancedServicesShowcase: React.FC = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse"></h2>
             Our Core Services
-
-          <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
+          <p className="text-xl text-cyan-400 max-w-3xl mx-auto"></p>
             Comprehensive AI and IT solutions designed to transform your business and drive innovation
-
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (</div>

@@ -1,13 +1,15 @@
-'use client';
+'use client'
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react'
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { AlertTriangle } from 'lucide-react'
 
 interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
+  enableImageOptimization?: boolean
+  enableLazyLoading?: boolean
+  enablePreloading?: boolean
+  enableCodeSplitting?: boolean
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -16,134 +18,134 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enablePreloading = true,
   enableCodeSplitting = true,
 }) => {
-  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [isOptimizing, setIsOptimizing] = useState(false)
   const [optimizationStatus, setOptimizationStatus] = useState<{
-    images: boolean;
-    lazyLoading: boolean;
-    preloading: boolean;
-    codeSplitting: boolean;
+    images: boolean
+    lazyLoading: boolean
+    preloading: boolean
+    codeSplitting: boolean
   }>({
     images: false,
     lazyLoading: false,
     preloading: false,
     codeSplitting: false,
-  });
+  })
 
   const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) return;
+    if (!enableImageOptimization) return
 
     // Optimize images
-    const images = document.querySelectorAll('img');
+    const images = document.querySelectorAll('img')
     images.forEach((img) => {
       if (img.loading !== 'lazy') {
-        img.loading = 'lazy';
+        img.loading = 'lazy'
       }
-      
+
       // Add WebP support detection
       if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
-        const webpSrc = img.src.replace('.jpg', '.webp');
-        const webpImg = new Image();
+        const webpSrc = img.src.replace('.jpg', '.webp')
+        const webpImg = new Image()
         webpImg.onload = () => {
-          img.src = webpSrc;
-        };
-        webpImg.src = webpSrc;
+          img.src = webpSrc
+        }
+        webpImg.src = webpSrc
       }
-    });
+    })
 
-    setOptimizationStatus(prev => ({ ...prev, images: true }));
-  }, [enableImageOptimization]);
+    setOptimizationStatus(prev => ({ ...prev, images: true }))
+  }, [enableImageOptimization])
 
   const enableLazyLoadingOptimization = useCallback(() => {
-    if (!enableLazyLoading) return;
+    if (!enableLazyLoading) return
 
     // Intersection Observer for lazy loading
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+            const img = entry.target as HTMLImageElement
             if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(img);
+              img.src = img.dataset.src
+              img.removeAttribute('data-src')
+              observer.unobserve(img)
             }
           }
-        });
+        })
       },
       { rootMargin: '50px' }
-    );
+    )
 
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    lazyImages.forEach((img) => observer.observe(img));
+    const lazyImages = document.querySelectorAll('img[data-src]')
+    lazyImages.forEach((img) => observer.observe(img))
 
-    setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }));
-  }, [enableLazyLoading]);
+    setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }))
+  }, [enableLazyLoading])
 
   const enablePreloadingOptimization = useCallback(() => {
-    if (!enablePreloading) return;
+    if (!enablePreloading) return
 
     // Preload critical resources
     const criticalResources = [
       '/fonts/main.woff2',
       '/css/critical.css',
-    ];
+    ]
 
     criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.href = resource
+      link.as = resource.endsWith('.css') ? 'style' : 'font'
       if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+        link.crossOrigin = 'anonymous'
       }
-      document.head.appendChild(link);
-    });
+      document.head.appendChild(link)
+    })
 
-    setOptimizationStatus(prev => ({ ...prev, preloading: true }));
-  }, [enablePreloading]);
+    setOptimizationStatus(prev => ({ ...prev, preloading: true }))
+  }, [enablePreloading])
 
   const enableCodeSplittingOptimization = useCallback(() => {
-    if (!enableCodeSplitting) return;
+    if (!enableCodeSplitting) return
 
     // Dynamic imports for code splitting
     const loadComponent = async (componentName: string) => {
       try {
-        const module = await import(`../components/${componentName}.tsx`);
-        return module.default;
+        const module = await import(`../components/${componentName}.tsx`)
+        return module.default
       } catch (error) {
-        console.warn(`Failed to load component: ${componentName}`, error);
-        return null;
+        // console.warn(`Failed to load component: ${componentName}`, error)
+        return null
       }
-    };
+    }
 
     // Store the function globally for use in other components
-    (window as any).loadComponent = loadComponent;
+    (window as any).loadComponent = loadComponent
 
-    setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }));
-  }, [enableCodeSplitting]);
+    setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }))
+  }, [enableCodeSplitting])
 
   const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
-    
+    setIsOptimizing(true)
+
     try {
       await Promise.all([
         optimizeImages(),
         enableLazyLoadingOptimization(),
         enablePreloadingOptimization(),
         enableCodeSplittingOptimization(),
-      ]);
+      ])
     } catch (error) {
-      console.error('Optimization failed:', error);
+      // console.error('Optimization failed:', error)
     } finally {
-      setIsOptimizing(false);
+      setIsOptimizing(false)
     }
-  }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization]);
+  }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization])
 
   useEffect(() => {
-    runOptimizations();
-  }, [runOptimizations]);
+    runOptimizations()
+  }, [runOptimizations])
 
-  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean);
+  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
 
   return (
     <div className="performance-optimizer">
@@ -203,7 +205,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer

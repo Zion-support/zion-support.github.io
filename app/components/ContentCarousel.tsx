@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
+import { CheckCircle, Star, Zap, TrendingUp, Users, ArrowRight } from 'lucide-react'
+
 interface Slide {
   icon: React.ComponentType<any>
   title: string
@@ -74,9 +76,8 @@ const ContentCarousel: React.FC = () => {
     <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
             Discover Our Solutions
-
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
             Explore our comprehensive suite of AI-powered solutions designed to transform your business.
           </p>
@@ -112,7 +113,7 @@ const ContentCarousel: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -153,14 +154,12 @@ const ContentCarousel: React.FC = () => {
                 )}
                 {/* CTA */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></button>
                     <Zap className="w-5 h-5" />
                     Get Started
-
-                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"></button>
                     <ArrowRight className="w-5 h-5" />
                     Learn More
-
                 </div>
               </div>
               {/* Visual Element */}
@@ -203,12 +202,12 @@ const ContentCarousel: React.FC = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"></button>
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"></button>
             <ChevronRight className="h-6 w-6" />
           </button>
         </div>
@@ -220,7 +219,7 @@ const ContentCarousel: React.FC = () => {
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
-          >
+          ></button>
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
@@ -229,7 +228,7 @@ const ContentCarousel: React.FC = () => {
           {slides.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentSlide(index)}
+              onClick={() =></button> setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                 index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
               }`}
@@ -262,7 +261,7 @@ const ContentCarousel: React.FC = () => {
             </div>
           </div>
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto">
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto"></button>
             Get Started Today
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>

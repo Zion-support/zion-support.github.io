@@ -3,6 +3,9 @@ import React from 'react'
 import React, { memo, useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {
+import { Phone, Mail, Brain } from 'lucide-react'
+import { MapPin, Clock } from 'lucide-react'
+
 X,
 Menu,
 Home,
@@ -140,7 +143,7 @@ return (
 <>
 {/* Mobile Menu Button */}
 <button
-onClick={() => setIsOpen(true)}
+onClick={() =></button> setIsOpen(true)}
 className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
 aria-label="Open sidebar"
 >
@@ -170,7 +173,7 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 </div>
 </Link>
 <button
-onClick={() => setIsOpen(false)}
+onClick={() =></button> setIsOpen(false)}
 className="lg:hidden text-gray-400 hover:text-white transition-colors"
 aria-label="Close sidebar"
 >
@@ -183,7 +186,7 @@ aria-label="Close sidebar"
 {navigationSections.map((section, sectionIndex) => (;}
 <div key={sectionIndex} className="space-y-1"></div>
 <button
-onClick={() => section.key && toggleSection(section.key)}
+onClick={() =></button> section.key && toggleSection(section.key)}
 className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
 <span>{section.title}</span>
 {section.key && (

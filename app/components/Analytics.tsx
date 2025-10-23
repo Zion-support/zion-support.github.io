@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from "react"
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: any[]) => void
   }
 }
 
@@ -13,13 +13,13 @@ const Analytics: React.FC = () => {
         window.gtag("config", "GA_MEASUREMENT_ID", {
           page_title: document.title,
           page_location: window.location.href,
-        });
+        })
       }
-    };
-    initAnalytics();
-  }, []);
+    }
+    initAnalytics()
+  }, [])
 
   return null; // Analytics component doesn't render anything
-};
+}
 
-export default Analytics;
+export default Analytics

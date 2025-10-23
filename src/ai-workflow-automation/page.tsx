@@ -1,9 +1,11 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Workflow } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -30,7 +32,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
       description: 'Connect with any system or application through our extensive integration library.',
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -50,13 +52,13 @@ const AIWorkflowAutomationPage: React.FC = () => {
       description: 'For large organizations',
       features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
     }
-  ];
+  ]
   const stats = [
     { number: '70%', label: 'Process Efficiency' },
     { number: '90%', label: 'Error Reduction' },
     { number: '50%', label: 'Time Savings' },
     { number: '99.9%', label: 'Reliability' }
-  ];
+  ]
 
   const useCases = [
     {
@@ -79,9 +81,9 @@ const AIWorkflowAutomationPage: React.FC = () => {
       description: 'Safely migrate data between systems with automated validation.',
       icon: Settings
     }
-  ];
+  ]
 
-  const pricing = pricingPlans;
+  const pricing = pricingPlans
 
   return (
     <>
@@ -104,7 +106,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 Automate complex business processes with intelligent AI
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered workflow automation platform helps you streamline operations, 
+                Our AI-powered workflow automation platform helps you streamline operations,
                 reduce errors, and increase efficiency across your entire organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -137,7 +139,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -217,7 +218,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -250,7 +250,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIWorkflowAutomationPage;
+export default AIWorkflowAutomationPage

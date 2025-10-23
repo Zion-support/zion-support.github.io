@@ -1,9 +1,11 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { MessageCircle } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -30,7 +32,7 @@ const AICustomerSupportPage: React.FC = () => {
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
     }
-  ];
+  ]
 
   const pricing = [
     {
@@ -51,15 +53,15 @@ const AICustomerSupportPage: React.FC = () => {
       description: 'For large organizations',
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
-  ];
-  
+  ]
+
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
     { number: '24/7', label: 'Availability' },
     { number: '50+', label: 'Languages Supported' }
-  ];
-  
+  ]
+
   return (
     <>
       <SEOOptimizer
@@ -70,7 +72,6 @@ const AICustomerSupportPage: React.FC = () => {
       />
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-      
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -79,7 +80,7 @@ const AICustomerSupportPage: React.FC = () => {
               AI Customer Support
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
+              Transform your customer support with intelligent AI solutions that provide 24/7 assistance,
               smart ticket routing, and predictive analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -98,7 +99,6 @@ const AICustomerSupportPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -122,7 +122,6 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -164,7 +163,6 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -198,7 +196,7 @@ const AICustomerSupportPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AICustomerSupportPage;
+export default AICustomerSupportPage

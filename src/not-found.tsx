@@ -1,3 +1,5 @@
+import { Phone } from 'lucide-react'
+import { Home } from 'lucide-react'
 
 export default function NotFound() {
   const popularPages = [
@@ -55,7 +57,7 @@ export default function NotFound() {
       href: '/contact',
       icon: '📞'
     },
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
@@ -72,7 +74,7 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-lg text-gray-600">
-            The page you're looking for doesn't exist or has been moved. 
+            The page you're looking for doesn't exist or has been moved.
             Don't worry, let's get you back on track!
           </p>
         </div>
@@ -110,5 +112,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
+  )
 }

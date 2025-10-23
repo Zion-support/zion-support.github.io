@@ -1,20 +1,21 @@
-import React from 'react';
+import React from 'react'
+import { Helmet } from 'lucide-react'
 
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
-  canonical?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
+  noindex?: boolean
+  nofollow?: boolean
+  canonical?: string
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -32,9 +33,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   nofollow = false,
   canonical
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || url;
-  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || url
+  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -108,6 +109,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         })}
       </script>
     </Helmet>
-  );
-};
-export default SEOHead;
+  )
+}
+export default SEOHead

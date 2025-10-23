@@ -1,9 +1,9 @@
 import React from 'react'
 import { cn } from '../lib/utils'
 interface ResponsiveContainerProps {
-  children: React.ReactNode;
-  className?: string;
-  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full';
+  children: React.ReactNode
+  className?: string
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full'
 }
 
 const ResponsiveContainer = ({
@@ -23,7 +23,7 @@ const ResponsiveContainer = ({
     '6xl': 'max-w-6xl',
     '7xl': 'max-w-7xl',
     full: 'max-w-full'
-  };
+  }
 
   return (
     <div className={cn(
@@ -33,7 +33,7 @@ const ResponsiveContainer = ({
     )}>
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default ResponsiveContainer;
+export default ResponsiveContainer

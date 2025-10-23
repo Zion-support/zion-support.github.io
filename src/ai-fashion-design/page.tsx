@@ -1,8 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Camera, Zap, Palette } from 'lucide-react'
 
 const AIFashionDesignPage: React.FC = () => {
   const features = [
@@ -16,7 +17,7 @@ const AIFashionDesignPage: React.FC = () => {
     'Pattern Creation',
     '3D Visualization',
     'Cost Estimation'
-  ];
+  ]
 
   const benefits = [
     'Faster design cycles',
@@ -25,7 +26,7 @@ const AIFashionDesignPage: React.FC = () => {
     'Market insights',
     'Creative inspiration',
     'Competitive advantage'
-  ];
+  ]
 
   const pricingPlans = [
     {
@@ -49,7 +50,7 @@ const AIFashionDesignPage: React.FC = () => {
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
       popular: false
     }
-  ];
+  ]
 
   return (
     <>
@@ -59,10 +60,8 @@ const AIFashionDesignPage: React.FC = () => {
         keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashion technology']}
         canonicalUrl="https://ziontechgroup.com/ai-fashion-design"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -95,7 +94,6 @@ const AIFashionDesignPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -112,7 +110,6 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,7 +126,6 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -174,7 +170,6 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -201,11 +196,10 @@ const AIFashionDesignPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIFashionDesignPage;
+export default AIFashionDesignPage

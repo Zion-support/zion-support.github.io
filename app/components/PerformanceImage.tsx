@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import { Helmet } from "react-helmet-async";
+"use client"
+import React from "react"
+import { Helmet } from "react-helmet-async"
 
 const PerformanceImagePage: React.FC = () => {
   return (
@@ -9,7 +9,6 @@ const PerformanceImagePage: React.FC = () => {
         <title>PerformanceImage | Zion Tech Group</title>
         <meta name="description" content="Professional PerformanceImage services by Zion Tech Group." />
       </Helmet>
-
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -23,7 +22,7 @@ const PerformanceImagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default PerformanceImagePage;
+export default PerformanceImagePage

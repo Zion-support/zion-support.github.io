@@ -1,6 +1,9 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
+import { Phone } from 'lucide-react'
+import { Home } from 'lucide-react'
+
 interface Props {
 children: ReactNode
 fallback?: ReactNode
@@ -54,7 +57,7 @@ We're sorry, but something unexpected happened. Please try refreshing the page o
 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
 Error Details (Development)
 </summary>
-<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
+<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></p>
 {this.state.error.toString()}
 {this.state.errorInfo?.componentStack}
 </pre>
@@ -64,14 +67,14 @@ Error Details (Development)
 <button
 onClick={this.handleReload}
 className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
->
+></button>
 <RefreshCw className="w-4 h-4" />
 <span>Reload Page</span>
 </button>
 <button
 onClick={this.handleGoHome}
 className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
->
+></button>
 <Home className="w-4 h-4" />
 <span>Go Home</span>
 </button>

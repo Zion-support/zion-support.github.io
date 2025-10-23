@@ -1,9 +1,11 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { FileText, FileImage } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { FileText, FileImage } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
 const AIDocumentProcessingPage: React.FC = () => {
   const features = [
     {
@@ -42,7 +44,7 @@ const AIDocumentProcessingPage: React.FC = () => {
       description: 'Collaborative features that allow teams to review, approve, and manage document processing workflows.',
       benefits: ['Review workflows', 'Approval processes', 'Team management']
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -92,13 +94,13 @@ const AIDocumentProcessingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
   const stats = [
     { number: '99.9%', label: 'Accuracy Rate' },
     { number: '90%', label: 'Time Savings' },
     { number: '50+', label: 'Document Types' },
     { number: '24/7', label: 'Processing' }
-  ];
+  ]
   const useCases = [
     {
       title: 'Invoice Processing',
@@ -120,7 +122,7 @@ const AIDocumentProcessingPage: React.FC = () => {
       description: 'Extract patient information from medical records while maintaining HIPAA compliance and data security.',
       icon: Shield
     }
-  ];
+  ]
   return (
     <>
       <SEOOptimizer
@@ -142,7 +144,7 @@ const AIDocumentProcessingPage: React.FC = () => {
                 Automate document processing with 99.9% accuracy
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered document processing platform automatically extracts, analyzes, and processes 
+                Our AI-powered document processing platform automatically extracts, analyzes, and processes
                 documents with advanced OCR and intelligent data extraction capabilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -295,6 +297,6 @@ const AIDocumentProcessingPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-export default AIDocumentProcessingPage;
+  )
+}
+export default AIDocumentProcessingPage

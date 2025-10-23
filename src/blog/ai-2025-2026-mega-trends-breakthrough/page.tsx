@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { Helmet } from 'lucide-react'
 
 const AIMegaTrends20252026: React.FC = () => {
   return (
@@ -112,6 +113,6 @@ const AIMegaTrends20252026: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-export default AIMegaTrends20252026;
+  )
+}
+export default AIMegaTrends20252026

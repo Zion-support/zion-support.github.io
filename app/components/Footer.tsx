@@ -2,10 +2,11 @@
 import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react'
+import { Mail, Brain, Code, Cloud } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear()
-  
   const aiServices = [
     { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
     { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
@@ -14,7 +15,6 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Automation', url: '/ai-services', description: 'Process automation' },
     { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' }
   ]
-  
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/it-services', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/it-services', description: 'Automation pipelines' },
@@ -23,7 +23,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
     { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' }
   ]
-  
   const microSaasServices = [
     { name: 'Business Intelligence', url: '/micro-saas', description: 'Analytics dashboard' },
     { name: 'AI Customer Support', url: '/micro-saas', description: 'Chatbot solutions' },
@@ -32,7 +31,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Lead Generation', url: '/micro-saas', description: 'Sales automation' },
     { name: 'Financial Analytics', url: '/micro-saas', description: 'Financial management' }
   ]
-  
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Case Studies', url: '/case-studies' },
@@ -41,7 +39,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Partners', url: '/partners' },
     { name: 'Support', url: '/support' }
   ]
-  
   const resourcesLinks = [
     { name: 'Pricing', url: '/pricing' },
     { name: 'FAQ', url: '/faq' },
@@ -50,7 +47,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Community', url: '/community' }
   ]
-
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -78,14 +74,13 @@ const Footer: React.FC = memo(() => {
               </div>
               <div className="flex items-start text-sm text-gray-300">
                 <MapPin className="w-4 h-4 mr-2 mt-0.5" />
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <span></span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
           </div>
-          
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3>
               <Brain className="w-5 h-5 mr-2" />
               AI Services
             </h3>
@@ -110,10 +105,9 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-          
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3>
               <Cloud className="w-5 h-5 mr-2" />
               IT Services
             </h3>
@@ -138,10 +132,9 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-          
           {/* Micro SAAS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3>
               <Code className="w-5 h-5 mr-2" />
               Micro SAAS
             </h3>
@@ -167,7 +160,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
         </div>
-        
         {/* Additional Links Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 pt-8 border-t border-gray-700">
           <div>
@@ -185,7 +177,6 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
-          
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
@@ -201,7 +192,6 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
-          
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -227,7 +217,6 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-          
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
@@ -243,7 +232,6 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
         </div>
-        
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -267,6 +255,5 @@ const Footer: React.FC = memo(() => {
     </footer>
   )
 })
-
 Footer.displayName = 'Footer'
 export default Footer

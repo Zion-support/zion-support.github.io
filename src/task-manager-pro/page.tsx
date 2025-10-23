@@ -1,6 +1,7 @@
-'use client';
-import React from 'react';
-import { CheckSquare } from 'lucide-react';
+'use client'
+import React from 'react'
+import { CheckSquare } from 'lucide-react'
+import { CheckCircle, Star, Phone } from 'lucide-react'
 
 const TaskManagerProPage: React.FC = () => {
   const features = [
@@ -40,7 +41,7 @@ const TaskManagerProPage: React.FC = () => {
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
       benefit: 'Data-driven improvements'
     }
-  ];
+  ]
 
   const pricingPlans = [
     {
@@ -92,7 +93,7 @@ const TaskManagerProPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
 
   const integrations = [
     { name: 'Slack', icon: '💬', description: 'Team communication' },
@@ -103,7 +104,7 @@ const TaskManagerProPage: React.FC = () => {
     { name: 'Trello', icon: '📌', description: 'Visual boards' },
     { name: 'Notion', icon: '📝', description: 'Documentation' },
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
-  ];
+  ]
 
   const testimonials = [
     {
@@ -127,7 +128,7 @@ const TaskManagerProPage: React.FC = () => {
       content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
       rating: 5
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -144,8 +145,8 @@ const TaskManagerProPage: React.FC = () => {
             AI-Powered Productivity Platform
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Supercharge your productivity with our AI-powered task management platform. 
-            Get intelligent prioritization, automated workflows, and team collaboration 
+            Supercharge your productivity with our AI-powered task management platform.
+            Get intelligent prioritization, automated workflows, and team collaboration
             tools that help you achieve more in less time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -163,7 +164,6 @@ const TaskManagerProPage: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -187,7 +187,6 @@ const TaskManagerProPage: React.FC = () => {
             <div className="text-gray-300 text-sm">With smart tracking</div>
           </div>
         </div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -204,7 +203,6 @@ const TaskManagerProPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -220,7 +218,6 @@ const TaskManagerProPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -229,7 +226,7 @@ const TaskManagerProPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
+                plan.popular
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
@@ -263,7 +260,6 @@ const TaskManagerProPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -287,14 +283,13 @@ const TaskManagerProPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Supercharge Your Productivity?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using Task Manager Pro to achieve more, 
+            Join thousands of professionals using Task Manager Pro to achieve more,
             work smarter, and reach their goals faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -314,7 +309,7 @@ const TaskManagerProPage: React.FC = () => {
         </section>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default TaskManagerProPage;
+export default TaskManagerProPage

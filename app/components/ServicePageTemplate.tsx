@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import { Helmet } from "react-helmet-async";
+"use client"
+import React from "react"
+import { Helmet } from "react-helmet-async"
 
 const ServicePageTemplatePage: React.FC = () => {
   return (
@@ -9,7 +9,6 @@ const ServicePageTemplatePage: React.FC = () => {
         <title>ServicePageTemplate | Zion Tech Group</title>
         <meta name="description" content="Professional ServicePageTemplate services by Zion Tech Group." />
       </Helmet>
-
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -23,7 +22,7 @@ const ServicePageTemplatePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default ServicePageTemplatePage;
+export default ServicePageTemplatePage

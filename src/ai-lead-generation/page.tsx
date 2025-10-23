@@ -1,9 +1,11 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Building } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Building } from 'lucide-react'
+import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react'
+
 const AILeadGenerationPage: React.FC = () => {
   const features = [
     {
@@ -42,7 +44,7 @@ const AILeadGenerationPage: React.FC = () => {
       description: 'Collaborative features that allow your team to work together on lead generation and follow-up activities.',
       benefits: ['Team workflows', 'Lead assignment', 'Activity tracking']
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -92,13 +94,13 @@ const AILeadGenerationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
   const stats = [
     { number: '300%', label: 'More Qualified Leads' },
     { number: '85%', label: 'Time Savings' },
     { number: '95%', label: 'Lead Accuracy' },
     { number: '50+', label: 'CRM Integrations' }
-  ];
+  ]
   const useCases = [
     {
       title: 'B2B Lead Generation',
@@ -120,7 +122,7 @@ const AILeadGenerationPage: React.FC = () => {
       description: 'Generate qualified real estate leads with AI-powered market analysis and automated follow-up sequences.',
       icon: Home
     }
-  ];
+  ]
   return (
     <>
       <SEOOptimizer
@@ -142,7 +144,7 @@ const AILeadGenerationPage: React.FC = () => {
                 Generate 300% more qualified leads with AI
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered lead generation platform helps businesses find, score, and nurture high-quality leads 
+                Our AI-powered lead generation platform helps businesses find, score, and nurture high-quality leads
                 with intelligent automation and personalized outreach.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -295,6 +297,6 @@ const AILeadGenerationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-export default AILeadGenerationPage;
+  )
+}
+export default AILeadGenerationPage
