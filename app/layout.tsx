@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './styles/futuristic.css'
 
@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   description: 'Pioneering the future with advanced AI, quantum computing, and cutting-edge technology solutions that transform businesses and drive innovation.',
   keywords: 'AI solutions, quantum computing, IT services, technology, business solutions, innovation',
   authors: [{ name: 'Zion Tech Group' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
     title: 'Zion Tech Group | Advanced AI and IT Solutions',
@@ -22,6 +21,11 @@ export const metadata: Metadata = {
     title: 'Zion Tech Group | Advanced AI and IT Solutions',
     description: 'Pioneering the future with advanced AI, quantum computing, and cutting-edge technology solutions that transform businesses and drive innovation.',
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
