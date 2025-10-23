@@ -1,4 +1,6 @@
 import React from 'react';
+import { Check, TrendingUp, CheckCircle, Phone } from 'lucide-react';
+
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { FileText, FileImage } from 'lucide-react';
+import { Check, CheckCircle, FileImage, FileText, Mail, Phone } from 'lucide-react';
 const AIDocumentProcessingPage: React.FC = () => {
   const features = [
     {

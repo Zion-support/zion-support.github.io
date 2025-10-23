@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+import { CheckCircle, Check, Star, BarChart, Phone } from 'lucide-react';
+
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [

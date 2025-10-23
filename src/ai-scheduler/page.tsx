@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+import { CheckCircle, Check, Star, Calendar, Phone } from 'lucide-react';
+
 
 const AISchedulerPage: React.FC = () => {
   const features = [

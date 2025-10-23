@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Send } from 'lucide-react';
+import { Check, CheckCircle, Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

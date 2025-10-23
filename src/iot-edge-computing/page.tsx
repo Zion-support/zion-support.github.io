@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Wifi } from 'lucide-react';
+import { BarChart, Check, CheckCircle, Cpu, Database, Globe, Helmet, Shield, Star, Wifi, Zap } from 'lucide-react';
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
     {

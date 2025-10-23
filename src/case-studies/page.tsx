@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Check, CheckCircle, Helmet, TrendingUp } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {

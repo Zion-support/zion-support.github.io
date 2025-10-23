@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Lock, BarChart3, FileText } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, FileText, Lock, Mail, MapPin, Phone, Zap } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const microSaasServices = [
