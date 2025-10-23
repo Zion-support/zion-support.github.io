@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { useEffect, useRef, useState } from "react";
 interface UseIntersectionObserverOptions {
@@ -62,16 +61,4 @@ export function useIntersectionObserver(
     isIntersecting,
     entry,
   };
-=======
-import { useState, useEffect } from "react";
-
-export function useIntersectionObserver() {
-  const [state, setState] = useState(null);
-
-  useEffect(() => {
-    /// Comment
-  }, []);
-
-  return { state, setState };
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 }

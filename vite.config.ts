@@ -1,10 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-<<<<<<< HEAD
 import { resolve } from "path";
-=======
-import path from "path";
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,19 +12,11 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-<<<<<<< HEAD
       "@": resolve(__dirname, "./app"),
       "@components": resolve(__dirname, "./app/components"),
       "@pages": resolve(__dirname, "./app/pages"),
       "@utils": resolve(__dirname, "./utils"),
       "@types": resolve(__dirname, "./types"),
-=======
-      "@": path.resolve(__dirname, "./app"),
-      "@components": path.resolve(__dirname, "./app/components"),
-      "@pages": path.resolve(__dirname, "./app/pages"),
-      "@utils": path.resolve(__dirname, "./utils"),
-      "@types": path.resolve(__dirname, "./types"),
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
     },
   },
   build: {
@@ -50,7 +38,6 @@ export default defineConfig({
         chunkFileNames: "assets/[name]-[hash].js",
         manualChunks: (id) => {
           if (id.includes("node_modules")) {
-<<<<<<< HEAD
             // Split React into smaller chunks
             if (id.includes("react-dom")) {
               return "react-dom";
@@ -82,29 +69,6 @@ export default defineConfig({
             if (id.includes("axios")) {
               return "http";
             }
-=======
-            if (id.includes("react") || id.includes("react-dom")) {
-              return "react";
-            }
-            if (id.includes("react-router")) {
-              return "router";
-            }
-            if (id.includes("@heroicons") || id.includes("lucide-react")) {
-              return "icons";
-            }
-            if (id.includes("framer-motion")) {
-              return "motion";
-            }
-            if (id.includes("clsx") || id.includes("tailwind-merge")) {
-              return "utils";
-            }
-            if (id.includes("web-vitals")) {
-              return "analytics";
-            }
-            if (id.includes("react-helmet-async")) {
-              return "seo";
-            }
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
             return "vendor";
           }
           // Split app code by feature
@@ -165,10 +129,6 @@ export default defineConfig({
           // Default chunk for other modules
           return "vendor";
         },
-<<<<<<< HEAD
-=======
-        chunkFileNames: "assets/[name]-[hash].js",
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
         entryFileNames: "assets/[name]-[hash].js",
         assetFileNames: "assets/[name]-[hash].[ext]",
       },

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
 
-=======
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number;
@@ -33,13 +30,7 @@ export interface ErrorReport {
   createdAt: string;
   updatedAt?: string;
 }
-<<<<<<< HEAD
 export type ErrorSeverity = "low" | "medium" | "high" | "critical";
-=======
-
-export type ErrorSeverity = "low" | "medium" | "high" | "critical";
-
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 export interface Service {
   id: string;
   title: string;

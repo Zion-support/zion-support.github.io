@@ -3,7 +3,6 @@ import "@testing-library/jest-dom";
 // Global type definitions for the application
 declare global {
   interface Window {
-<<<<<<< HEAD
     gtag?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
   }
@@ -63,19 +62,4 @@ export interface AnalyticsEvent {
   value?: number;
 }
 
-=======
-    gtag?: (
-      command: "event",
-      action: string,
-      parameters: {
-        event_category?: string;
-        event_label?: string;
-        value?: number;
-        non_interaction?: boolean;
-      },
-    ) => void;
-  }
-}
-
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 export {};

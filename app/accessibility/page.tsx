@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
@@ -115,14 +114,10 @@ const AccessibilityPage: React.FC = () => {
       status: "Fully Compliant",
     },
   ];
-=======
-import { Helmet } from "react-helmet-async";
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>
           Accessibility Solutions - Zion Tech Group | Inclusive Digital
           Experiences
@@ -134,12 +129,6 @@ import { Helmet } from "react-helmet-async";
         <meta
           name="keywords"
           content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility"
-=======
-        <title>Accessibility - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Accessibility services and solutions from Zion Tech Group."
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
         />
       </Helmet>
 
@@ -158,14 +147,9 @@ import { Helmet } from "react-helmet-async";
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Creating inclusive digital experiences that work for everyone. Our
               accessibility solutions ensure your applications are usable by
               people of all abilities and comply with international standards.
-=======
-              Professional Accessibility services and solutions for your
-              business needs.
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">

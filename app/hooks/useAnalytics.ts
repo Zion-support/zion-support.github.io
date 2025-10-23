@@ -1,21 +1,8 @@
-<<<<<<< HEAD
 import { useCallback } from "react";
 interface AnalyticsEvent {
   event_category: string;
   event_label: string;
   value?: number;
-=======
-import { useState, useEffect } from "react";
-
-export function useAnalytics() {
-  const [state, setState] = useState(null);
-
-  useEffect(() => {
-    /// Comment
-  }, []);
-
-  return { state, setState };
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 }
 
 export const useAnalytics = () => {

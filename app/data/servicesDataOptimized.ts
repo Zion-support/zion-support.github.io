@@ -68,10 +68,6 @@ export const servicesDataOptimized = {
       link: "/ai-services/automation",
     },
   ],
-<<<<<<< HEAD
-=======
-
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
   itServices: [
     {
       id: "web-development",
@@ -118,10 +114,6 @@ export const servicesDataOptimized = {
       link: "/cloud-infrastructure",
     },
   ],
-<<<<<<< HEAD
-=======
-
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
   microSaaS: [
     {
       id: "analytics-dashboard",
@@ -171,11 +163,6 @@ export const servicesDataOptimized = {
 };
 // Lazy load full services data when needed
 export const loadFullServicesData = async () => {
-<<<<<<< HEAD
   const { services } = await import("./servicesData");
   return services;
-=======
-  const { servicesData } = await import("./servicesData");
-  return servicesData;
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 };

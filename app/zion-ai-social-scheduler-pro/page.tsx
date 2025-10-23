@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
@@ -30,14 +29,10 @@ const ZionAiSocialSchedulerProPage: React.FC = () => {
         "Scale effortlessly across multiple regions with automatic load balancing.",
     },
   ];
-=======
-import { Helmet } from "react-helmet-async";
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 
   return (
     <React.Fragment>
       <Helmet>
-<<<<<<< HEAD
         <title>
           Zion Ai Social Scheduler Pro - Zion Tech Group | Advanced AI and IT
           Solutions
@@ -49,12 +44,6 @@ import { Helmet } from "react-helmet-async";
         <meta
           name="keywords"
           content="zionaisocialschedulerpro, AI solutions, IT services, automation, technology, business solutions"
-=======
-        <title>Zion Ai Social Scheduler Pro - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Zion Ai Social Scheduler Pro services and solutions from Zion Tech Group."
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
         />
       </Helmet>
 
@@ -66,13 +55,8 @@ import { Helmet } from "react-helmet-async";
               Zion Ai Social Scheduler Pro
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Professional zionaisocialschedulerpro solutions powered by
               advanced AI and cutting-edge technology.
-=======
-              Professional Zion Ai Social Scheduler Pro services and solutions
-              for your business needs.
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
