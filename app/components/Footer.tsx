@@ -5,7 +5,7 @@ import { ArrowRight, Brain, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
   
-  const _aiServices = [
+  const aiServices = [
     { name: "AI Chatbot Builder", href: "/ai-chatbot-builder" },
     { name: "AI Content Generator", href: "/ai-content-generator" },
     { name: "AI Data Visualizer", href: "/ai-data-visualizer" },
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
     { name: "AI Fraud Detection", href: "/ai-fraud-detection" },
   ];
 
-  const _itServices = [
+  const itServices = [
     { name: "Web Development", href: "/web-development" },
     { name: "Mobile Development", href: "/mobile-development" },
     { name: "API Development", href: "/api-development" },
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
     { name: "Data Analytics", href: "/data-analytics" },
   ];
 
-  const _microSaas = [
+  const microSaas = [
     { name: "Analytics Dashboard", href: "/analytics-dashboard" },
     { name: "Expense Tracker Pro", href: "/expense-tracker-pro" },
     { name: "Inventory Manager", href: "/inventory-manager" },
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
     { name: "Social Media Scheduler", href: "/social-media-scheduler" },
   ];
 
-  const _companyLinks = [
+  const companyLinks = [
     { name: "About Us", href: "/about" },
     { name: "Our Team", href: "/team" },
     { name: "Careers", href: "/careers" },
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
     { name: "Partnerships", href: "/partnerships" },
   ];
 
-  const _supportLinks = [
+  const supportLinks = [
     { name: "Help Center", href: "/help" },
     { name: "Documentation", href: "/docs" },
     { name: "Tutorials", href: "/tutorials" },
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
     { name: "Status Page", href: "/status" },
   ];
 
-  const _quickLinks = [
+  const quickLinks = [
     { name: "Free Consultation", href: "/consultation" },
     { name: "Request Demo", href: "/demo" },
     { name: "Pricing", href: "/pricing" },
@@ -57,18 +57,15 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
-          </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-        
-          </div><div className="lg:col-span-1">
-        
-          </div><div className="flex items-center space-x-2 mb-4">
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-4">
               <Brain className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">Zion Tech Group</span>
-          
-          </div><p className="text-gray-400 mb-4">
+            </div>
+            <p className="text-gray-400 mb-4">
               Advanced AI and IT solutions for modern businesses. We help you
               leverage cutting-edge technology to drive growth and innovation.
             </p>
@@ -104,9 +101,8 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">AI Services</h3>
-            
-          </div><ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
+            <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
@@ -123,9 +119,8 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">IT Services</h3>
-            
-          </div><ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
+            <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
@@ -142,9 +137,8 @@ const Footer: React.FC = () => {
 
           {/* Micro SaaS */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">Micro SaaS</h3>
-            
-          </div><ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+            <ul className="space-y-2">
               {microSaas.map((service, index) => (
                 <li key={index}>
                   <Link
@@ -161,9 +155,8 @@ const Footer: React.FC = () => {
 
           {/* Company & Support */}
           <div>
-          <h1 className="text-lg font-semibold mb-4">Company</h3>
-            
-          </div><ul className="space-y-2 mb-6">
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -177,7 +170,7 @@ const Footer: React.FC = () => {
             </ul>
 
             <h3 className="text-lg font-semibold mb-4">Support</h3>
-            </h1><ul className="space-y-2">
+            <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -194,28 +187,25 @@ const Footer: React.FC = () => {
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-        
-          </div><div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-          </div><div className="flex items-center space-x-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">+1 (555) 123-4567</span>
-        
-          </div><div className="flex items-center space-x-3">
+            </div>
+            <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">contact@ziontechgroup.com</span>
-        
-          </div><div className="flex items-center space-x-3">
+            </div>
+            <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-blue-400" />
               <span className="text-gray-400">San Francisco, CA</span>
-        </div>
-      </div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-        
-          </div><div className="text-gray-400 text-sm">
+          <div className="text-gray-400 text-sm">
             © 2024 Zion Tech Group. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
@@ -237,13 +227,11 @@ const Footer: React.FC = () => {
             >
               Cookie Policy
             </Link>
+          </div>
         </div>
-      </div>
       </div>
     </footer>
   );
 };
-
-export default Page;
 
 export default Footer;
