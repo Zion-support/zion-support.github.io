@@ -22,7 +22,6 @@ export default function PagePage() {
           </div>
         </div>
       </div>
-        </div>
-      </div>
+    </div>
   );
 }

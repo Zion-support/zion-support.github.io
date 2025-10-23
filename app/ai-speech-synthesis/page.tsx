@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function AiSpeechSynthesisPage() {
@@ -22,6 +23,10 @@ export default function AiSpeechSynthesisPage() {
             >
               View All Services
             </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>

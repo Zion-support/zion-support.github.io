@@ -5,23 +5,23 @@ export default function PageTsxPage() {
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-8">Page.Tsx</h1>
-            <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             Advanced page.tsx solutions by Zion Tech Group
           </p>
+        </div>
+
         <div className="max-w-4xl mx-auto">
-        
-          </div><div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h1 className="text-2xl font-semibold text-white mb-4">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h2 className="text-2xl font-semibold text-white mb-4">
               Coming Soon
             </h2>
-          
-          </div><p className="text-gray-300">
+            <p className="text-gray-300">
               This page is under development. Please check back later for
               updates.
             </p>
+          </div>
         </div>
       </div>
-        </div>
-      </div>
+    </div>
   );
 }

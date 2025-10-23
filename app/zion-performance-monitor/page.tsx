@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function ZionPerformanceMonitorPage() {
@@ -22,6 +23,10 @@ export default function ZionPerformanceMonitorPage() {
             >
               View All Services
             </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>

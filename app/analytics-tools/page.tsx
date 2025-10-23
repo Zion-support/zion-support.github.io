@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function AnalyticsToolsPage() {
@@ -22,6 +23,10 @@ export default function AnalyticsToolsPage() {
             >
               View All Services
             </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>

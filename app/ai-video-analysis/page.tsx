@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function AiVideoAnalysisPage() {
@@ -22,6 +23,10 @@ export default function AiVideoAnalysisPage() {
             >
               View All Services
             </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>

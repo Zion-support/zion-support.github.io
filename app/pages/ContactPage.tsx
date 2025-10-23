@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 interface ContactPageProps {
@@ -12,7 +13,5 @@ const ContactPage: React.FC<ContactPageProps> = ({ className = "" }) => {
     </div>
   );
 };
-
-export default Page;
 
 export default ContactPage;

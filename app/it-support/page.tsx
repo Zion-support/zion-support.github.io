@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function ItSupportPage() {
@@ -22,6 +23,10 @@ export default function ItSupportPage() {
             >
               View All Services
             </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>

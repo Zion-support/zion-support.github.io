@@ -474,9 +474,8 @@ const App = memo(() => {
               <ErrorBoundary>
                 <PerformanceMonitor />
                 <AccessibilityEnhancer>
-                  <SEOOptimizer />
-
-                  <Suspense fallback={<LoadingFallback />}>
+                  <SEOOptimizer>
+                    <Suspense fallback={<LoadingFallback />}>
                     <ErrorBoundary>
                       <Routes>
                         {/* Main Pages */}
@@ -1092,6 +1091,7 @@ const App = memo(() => {
                       </Routes>
                     </ErrorBoundary>
                   </Suspense>
+                  </SEOOptimizer>
                 </AccessibilityEnhancer>
               </ErrorBoundary>
             </main>

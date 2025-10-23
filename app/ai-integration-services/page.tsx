@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function AiIntegrationServicesPage() {
@@ -22,6 +23,10 @@ export default function AiIntegrationServicesPage() {
             >
               View All Services
             </a>
+    
+    
+    
+    
           </div>
         </div>
       </div>

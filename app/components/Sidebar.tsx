@@ -61,6 +61,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default Page;
-
 export default Sidebar;
