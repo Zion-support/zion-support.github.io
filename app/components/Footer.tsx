@@ -46,6 +46,17 @@ const Footer: React.FC = () => {
     { name: "Status Page", href: "/status" },
   ];
 
+<<<<<<< HEAD
+=======
+  const quickLinks = [
+    { name: "Free Consultation", href: "/consultation" },
+    { name: "Request Demo", href: "/demo" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Support", href: "/support" },
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-46db
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

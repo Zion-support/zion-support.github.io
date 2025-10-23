@@ -8,6 +8,7 @@ interface GlobalErrorBoundaryProps {
 const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ children }) => {
   return (
     <div>
+      <h1>GlobalErrorBoundary</h1>
       {children}
     </div>
   );

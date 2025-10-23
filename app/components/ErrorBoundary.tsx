@@ -8,6 +8,7 @@ interface ErrorBoundaryProps {
 const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ children }) => {
   return (
     <div>
+      <h1>ErrorBoundary</h1>
       {children}
     </div>
   );
