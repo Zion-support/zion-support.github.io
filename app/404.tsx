@@ -54,8 +54,18 @@ const NotFoundPage: React.FC = () => {
               Try searching for one of these popular pages:
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
-
-                  {item}
+              {[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Services", path: "/services" },
+                { name: "Contact", path: "/contact" }
+              ].map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
+                >
+                  {item.name}
                 </Link>
               ))}
             </div>
@@ -63,11 +73,17 @@ const NotFoundPage: React.FC = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-
+            <Link
+              to="/"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
               <Home className="w-5 h-5 mr-2" />
               Go Home
             </Link>
-
+            <button
+              onClick={() => window.history.back()}
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
+            >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </button>
@@ -83,11 +99,17 @@ const NotFoundPage: React.FC = () => {
               find exactly what you're looking for.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Contact Support
               </Link>
-
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
+              >
                 Send Email
               </a>
             </div>

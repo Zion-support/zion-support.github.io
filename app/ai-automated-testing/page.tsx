@@ -51,10 +51,16 @@ const AiAutomatedTestingPage: React.FC = () => {
               and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
+              <a
+                href="#features"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
                 Get Started
               </a>
-
+              <a
+                href="#contact"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300"
+              >
                 View All Services
               </a>
             </div>
@@ -73,7 +79,11 @@ const AiAutomatedTestingPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300"
+                >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -97,10 +107,16 @@ const AiAutomatedTestingPage: React.FC = () => {
               Let us help you implement this solution for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
+              <a
+                href="#contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
                 Start Your Project
               </a>
-
+              <a
+                href="#features"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300"
+              >
                 Learn More
               </a>
             </div>

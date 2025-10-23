@@ -1,4 +1,8 @@
 
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Target, Users, Award, ArrowRight, CheckCircle } from "lucide-react";
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -43,7 +47,40 @@ const AboutPage: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>About Us - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about AI and IT solutions that transform businesses." />
+        <meta property="og:type" content="website" />
+      </Helmet>
 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              About{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Zion Tech Group
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              We're passionate about AI and IT solutions that transform businesses
+              and create meaningful impact in the digital world.
+            </p>
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our Mission
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                To empower businesses with cutting-edge AI and IT solutions that
+                drive innovation, efficiency, and growth in the digital age.
+              </p>
             </div>
           </div>
         </section>
