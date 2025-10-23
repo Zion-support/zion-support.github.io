@@ -10,6 +10,4 @@ const SEOHead: React.FC = () => {
   );
 };
 
-export default Page;
 
-export default SEOHead;

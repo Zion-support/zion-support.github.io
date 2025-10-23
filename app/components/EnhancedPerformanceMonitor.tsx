@@ -11,6 +11,4 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
   return <div>{children}</div>;
 };
 
-export default Page;
 
-export default EnhancedPerformanceMonitor;

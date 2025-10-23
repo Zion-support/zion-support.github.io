@@ -39,15 +39,9 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
       };
     }
-
-    return () => {
-      // Cleanup function
-    };
   }, []);
 
   return null;
 };
-
-export default Page;
 
 export default PerformanceMonitor;

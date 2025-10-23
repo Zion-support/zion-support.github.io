@@ -17,6 +17,27 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('loaded');
+    }
+  });
+});
+
+const getOptimizedSrc = (src, width, height) => {
+  return `${src}?w=${width}&h=${height}&q=80&f=webp`;
+};
+
+const handleLoad = () => {
+  console.log('Image loaded');
+};
+
+const handleError = () => {
+  console.log('Image failed to load');
+};
+
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -82,7 +103,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return originalSrc;
   };
 
-  const optimizedSrc = getOptimizedSrc(src);
+  const optimizedSrc = getOptimizedSrc(src, width, height);
   const imageSrc = isInView ? optimizedSrc : placeholder;
 
   return (
@@ -122,6 +143,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-export default Page;
 
-export default OptimizedImage;
