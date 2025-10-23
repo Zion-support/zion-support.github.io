@@ -91,8 +91,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     enableFocusManagement,
   ]);
 
-  return <>{children}</div>;
+  return <>{children}</>;
 };
 
-export default Page;
+export default AccessibilityEnhancer;
 

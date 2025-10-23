@@ -64,15 +64,9 @@ class ErrorBoundary extends React.Component<
               Try Again
             </button>
           </div>
-    
-    
-    
-          </div>
         </div>
-      </div>
-    </div>
-  );
-}
+      );
+    }
 
     return this.props.children;
   }
