@@ -1,35 +1,44 @@
-'use client';
+'use client'
+
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-import React from 'react'
-import { performanceConfig } from '../../performance.config'
+
 export interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
+  lcp?: number
+  fid?: number
+  cls?: number
+  fcp?: number
+  ttfb?: number
+  inp?: number
+  memory?: {
+    used: string
+    total: string
+    limit: string
+  }
 }
+
 export interface ErrorReport {
-  message: string;
-  stack?: string;
-  component?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
+  message: string
+  stack?: string
+  component?: string
+  timestamp: number
+  userAgent: string
+  url: string
 }
+
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null
+
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
     }
   }
+
   private initializeMonitoring(): void {
     // Monitor Web Vitals
     this.monitorWebVitals()
@@ -40,6 +49,7 @@ class MonitoringService {
     // Global Error Handler
     this.setupErrorHandling()
   }
+
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
@@ -51,69 +61,80 @@ class MonitoringService {
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
+          const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid);
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+            this.metrics.fid = (entry as any).processingStart - entry.startTime
+            this.reportMetric('fid', this.metrics.fid)
+          })
+        })
+        fidObserver.observe({ entryTypes: ['first-input'] })
+
         // Cumulative Layout Shift
-        let clsValue = 0;
+        let clsValue = 0
         const clsObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+          const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value;
-              this.metrics.cls = clsValue;
-              this.reportMetric('cls', clsValue);
+              clsValue += (entry as any).value
+              this.metrics.cls = clsValue
+              this.reportMetric('cls', clsValue)
             }
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
+
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+          const entries = list.getEntries()
           entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+            this.metrics.fcp = entry.startTime
+            this.reportMetric('fcp', entry.startTime)
+          })
+        })
+        fcpObserver.observe({ entryTypes: ['paint'] })
       } catch (error) {
-        }
+        console.warn('Web Vitals monitoring setup failed:', error)
+      }
     }
   }
+
   private monitorLongTasks(): void {
-    if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
+    if ('PerformanceObserver' in window) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            }
+            console.warn('Long task detected:', entry.duration)
+          }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
         // Long task API might not be available
+        console.warn('Long task monitoring not available:', error)
       }
     }
   }
+
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
+          const entries = list.getEntries()
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
-              }
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
-        }
+              console.warn('Slow resource detected:', entry.name, entry.duration)
+            }
+          })
+        })
+        resourceObserver.observe({ entryTypes: ['resource'] })
+      } catch (error) {
+        console.warn('Resource timing monitoring failed:', error)
+      }
     }
   }
+
   private setupErrorHandling(): void {
     // Global error handler
     window.addEventListener('error', (event) => {
@@ -125,6 +146,7 @@ class MonitoringService {
         url: window.location.href
       })
     })
+
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
@@ -135,23 +157,22 @@ class MonitoringService {
       })
     })
   }
+
   private reportMetric(name: string, value: number): void {
-    // Sample rate
-    if (Math.random() > performanceConfig.monitoring.sampleRate) {
+    // Sample rate (report 10% of metrics)
+    if (Math.random() > 0.1) {
       return
     }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {
-      const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-      }
+
     // Send to analytics (if configured)
-    if (typeof gtag === 'function') {
-      gtag('event', name, {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
       })
     }
   }
+
   public logError(error: ErrorReport): void {
     this.errors.push(error)
     // Keep only last 50 errors
@@ -159,18 +180,23 @@ class MonitoringService {
       this.errors = this.errors.slice(-50)
     }
     // Send to error tracking service (if configured)
+    console.error('Error logged:', error)
   }
+
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics }
   }
+
   public getErrors(): ErrorReport[] {
     return [...this.errors]
   }
+
   public clearErrors(): void {
     this.errors = []
   }
+
   public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
+    if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
         this.metrics.memory = {
@@ -181,6 +207,7 @@ class MonitoringService {
       }
     }
   }
+
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -193,12 +220,12 @@ class MonitoringService {
           'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
           'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        });
         })
       }
     }
   }
 }
+
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
