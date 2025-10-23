@@ -24,9 +24,10 @@ export default function AiHealthcarePage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

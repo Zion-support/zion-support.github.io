@@ -25,9 +25,10 @@ export default function AiCloudInfrastructurePage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

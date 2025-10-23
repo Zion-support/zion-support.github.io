@@ -58,6 +58,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </li>
         </ul>
       </nav>
+    
+    
+    
     </div>
   );
 };

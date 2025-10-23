@@ -24,9 +24,10 @@ export default function AiSupplyChainOptimizerPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

@@ -24,9 +24,10 @@ export default function ZionAiEmailOptimizerPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

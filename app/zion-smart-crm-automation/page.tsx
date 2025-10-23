@@ -24,9 +24,10 @@ export default function ZionSmartCrmAutomationPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

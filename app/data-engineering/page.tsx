@@ -24,9 +24,10 @@ export default function DataEngineeringPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

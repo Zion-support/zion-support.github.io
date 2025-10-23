@@ -24,9 +24,6 @@ export default function AboutPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
     </div>
-  );
+  ););
 }

@@ -24,9 +24,6 @@ export default function AiAudioProcessorImprovedPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
     </div>
-  );
+  ););
 }

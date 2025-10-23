@@ -90,7 +90,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     enableFocusManagement,
   ]);
 
-  return <>{children}</>;
+  return <>{children}</div>;
 };
 
 export default Page;

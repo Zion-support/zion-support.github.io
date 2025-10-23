@@ -24,9 +24,10 @@ export default function SocialMediaSchedulerPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

@@ -24,9 +24,10 @@ export default function ZionAiSchedulingAssistantPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

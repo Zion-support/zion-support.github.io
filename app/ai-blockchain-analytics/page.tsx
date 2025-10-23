@@ -25,9 +25,10 @@ export default function AiBlockchainAnalyticsPage() {
             >
               View All Services
             </a>
-          </div>
-        </div>
-      </div>
+    
+    
+    
+    
     </div>
   );
 }

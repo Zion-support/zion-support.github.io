@@ -7,6 +7,9 @@ const PerformanceImage: React.FC = () => {
   return (
     <div>
       <h1>PerformanceImage</h1>
+    
+    
+    
     </div>
   );
 };
