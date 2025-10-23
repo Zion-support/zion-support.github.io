@@ -1,63 +1,13 @@
 'use client'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
-const DynamicContentShowcasePage: React.FC = () => {
-=======
-import React, { useState, useEffect } from 'react'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react'
-import { Star, Zap, ArrowRight } from 'lucide-react'
-
-interface Feature {
-  icon: React.ComponentType<any>title: string</a>
-  description: string
-=======
-import React, {useStateuseEffect} from 'react'
-import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight} from 'lucide-react'
-interface Featur e {icon: React.ComponentType<an y>title: stringdescription: string
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   stats?: {
     value: stringlabel: string
  }[]
 }
-<<<<<<< HEAD
-interface Testimonial {
-  id: number
-  name: string
-  company: string
-  role: string
-  content: string
-  rating: number
-  avatar: string
-}
-interface Feature {
-  icon: React.ComponentType<any>title: string</a>
-  description: string
-  benefits: string[]
-}
-const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(true)
-  const features: Feature[] = [
-=======
-interface Testimonia l {id: numbername: stringcompany: stringrole: stringcontent: stringrating: numberavatar: string}
-interface Featur e{icon:React.ComponentType<an y>title: stringdescription: stringbenefits: string[]}
-constDynamicContentShowcase: React.FC= () => {const [currentIndexsetCurrentIndex] = useState(0)
-  const [isPlayingsetIsPlaying] = useState(true)
-  constfeatures: Feature[] = [
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced artificial intelligence to automate and optimize your business processes',
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
   const features = [
     {
       icon: Brain,
@@ -94,38 +44,6 @@ constDynamicContentShowcase: React.FC= () => {const [currentIndexsetCurrentIndex
   ]
 
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>DynamicContentShowcase</title>
-        <meta name="description" content="Advanced DynamicContentShowcase solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, DynamicContentShowcase, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              DynamicContentShowcase
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced DynamicContentShowcase solution for modern businesses.
-            </p>
-=======
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-            Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
-          </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-            Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
-=======
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.</p>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -136,17 +54,6 @@ constDynamicContentShowcase: React.FC= () => {const [currentIndexsetCurrentIndex
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></button>
               <Play className="w-5 h-5" />
               Start Demo
-<<<<<<< HEAD
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"></button>
-              <ArrowRight className="w-5 h-5" />
-              Learn More
-=======
-  </
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <ArrowRight className="w-5 h-5" />
-              Learn More
-  </
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
           </div>
         </div>
 {/* Features Grid */}
@@ -269,11 +176,6 @@ constDynamicContentShowcase: React.FC= () => {const [currentIndexsetCurrentIndex
             <div className="flex justify-center mt-6 space-x-2">{testimonials.map((_, index) => (</div>
                 <button
                   key={index}
-<<<<<<< HEAD
-                  onClick={() =></button> setCurrentIndex(index)}
-=======
-                  onClick={() =>setCurrentIndex(index)}</button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
                   }`}
@@ -316,95 +218,6 @@ constDynamicContentShowcase: React.FC= () => {const [currentIndexsetCurrentIndex
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
-                <Zap className="w-5 h-5" />
-                Get Started Today
-              </button>
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
-                Schedule Demo
-=======
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default DynamicContentShowcasePage;
-=======
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">Schedule Demo</button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             </div>
           </div>
         </div>

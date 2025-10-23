@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState } from 'react'
-import { Mail, ArrowRight } from 'lucide-react'
-=======
-import { Mail, ArrowRight } from 'lucide-react';
-'use client';
-<<<<<<< HEAD
-import React, { useState } from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -72,41 +62,3 @@ constContentNewsletterSignup: React.FC= () =>{const [emailsetEmail] = useState('
           </di><
              type="submit"
               disabled={isSubmitting}
-<<<<<<< HEAD
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-            ></button>
-              {isSubmitting ? (
-                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
-              ) : (
-                <>
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </>
-              )}
-            </button>
-          </form>
-          <p className="text-xs text-purple-200 mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
-      </div>
-    </section>
-  )
-}
-export default ContentNewsletterSignup
-=======
-             className="bg-white text-purple-600px-6 py-3 rounded-lg font-semiboldhover:bg-purple-50transition-colorsdisabled:opacity-50 disabled:cursor-not-allowed flexitems-centerjustify-center"
-            ></
-             type="submit"
-              disabled={isSubmitting}
-             className="bg-white text-purple-600px-6 py-3 rounded-lg font-semiboldhover:bg-purple-50transition-colorsdisabled:opacity-50 disabled:cursor-not-allowed flexitems-centerjustify-center"
-            >{isSubmitting ? (
-              <divclassName="w-5 h-5 border-2 border-purple-600border-t-transparentrounded-fullanimate-spin"></di>)  : (
-              <>Subscribe
-                <ArrowRightclassName="w-4h-4ml-2" /></>)}
-          </butto></for><spanclassName="text-xs text-purple-200mt-4"></spa></className="text-xs text-purple-200mt-4">We respect your privacy. Unsubscribe at any time.
-        </p></di></di></sectio>
-  );
-};
-export default ContentNewsletterSignup;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

@@ -1,83 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client"
-
-import React, { createContext, useContext, useEffect } from "react"
-
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void
-  identify: (userId: string, traits?: Record<string, unknown>) => void
-  page: (name: string, properties?: Record<string, unknown>) => void
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-=======
-"useclient";
-
-import React, {createContext, useContext, useEffect} from "react";
-
-interface AnalyticsContextTyp e {track: (event: string, properties?: Record<string, unknown>) => voididentify: (userId: string,traits?:Record<string, unknown>) => voidpage: (name: string,properties?:Record<string, unknown>) => void;}
-constAnalyticsContext=createContext<AnalyticsContextType | undefined>(
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
   undefined,
 )
 
-<<<<<<< HEAD
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
-  if (!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider")
-  }
-  return context
-}
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode
-}
-=======
-export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
-  if (!context) {
-    throw newError("useAnalytics must be used within an AnalyticsProvider");
- }
-  return contex t;
-};
-
-interface AnalyticsProviderProp s {children: React.ReactNode;}
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
     // Initialize analytics
     if (type of windo w !=="undefined") {
       // Google Analytics
-<<<<<<< HEAD
-      if (process.env.NODE_ENV === "production") {
-        const script = document.createElement("script")
-        script.async = true
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
-        document.head.appendChild(script)
-
-        (window as unknown as { dataLayer: unknown[] }).dataLayer =
-          (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {
-          (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
-        }
-        gtag("js", new Date())
-        gtag("config", process.env.REACT_APP_GA_ID)
-=======
-      if (process.env.NODE_ENV==="production") {
-        constscript= document.createElement("script");
-        script.async= true;
-        script.src=`https://www.googletagmanager.com/$1/js?id=${process.env.REACT_APP_GA_ID}`;
-        do cument.head.appendChild(script);
-
-        (windo w as unknown as {dataLayer: unknown[]}).dataLayer=
-          (windo w as unknown as {dataLayer: unknown[]}).dataLayer || [];
-        function gtag(...args: unknown[]) {(windo w as unknown as { dataLayer: unknown[]}).dataLayer.push(args);
-        }
-       gtag("js", new Date());
-       gtag("config", process.env.REACT_APP_GA_ID);
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
     }
   }, [])
@@ -102,13 +31,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
           process.env.REACT_APP_GA_ID,
           {user_id: userId,
             custom_map: traits,
-<<<<<<< HEAD
-          },
-        )
-=======
-         },
-        );
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
 
       // Custom analytics
@@ -123,13 +45,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
           {page_title: name,
             page_location: windo w.location.href,
             ...properties,
-<<<<<<< HEAD
-          },
-        )
-=======
-         },
-        );
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
       }
 
       // Custom analytics
@@ -139,37 +54,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   constvalue: AnalyticsContextType = {track,
     identify,
     page,
-<<<<<<< HEAD
-  }
-
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  )
-}
-
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: unknown[]
-    gtag: (...args: any[]) => void
-  }
-=======
- };
-
-  return (
-  <AnalyticsContext.Providervalue={value}>{children}
-  </AnalyticsContext.Provider>
-  );
-};
-
-// Extend Windo w interface for TypeScript
-declare global {interface Windo w {
-    dataLayer: unknown[];
-    gtag: (...args: any[]) => void;
- }
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 }
 =======
 'use client'

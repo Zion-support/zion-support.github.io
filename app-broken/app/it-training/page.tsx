@@ -78,8 +78,3 @@ const PagePage: React.FC = () => {
   )
 }
 export default PagePage
-<<<<<<< HEAD:app-broken/app/it-training/page.tsx
-</button>
-</button>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/iot-edge/page.tsx

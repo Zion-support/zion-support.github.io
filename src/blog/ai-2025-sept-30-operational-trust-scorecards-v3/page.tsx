@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'lucide-react'
-=======
-import { Helmet } from 'lucide-react';
-=======
-import {Helmet} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 import React from 'react';
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
@@ -32,18 +23,3 @@ constOperationalTrustScorecardsPage: React.FC= () =>{return (
             </l></u></di><di v><h2className="text-2 xlfont-boldmb-3">Operational  Guardrails</h><spanclassName="text-gray-300"></spa></className="text-gray-300">Tie each KPI to budgets and routing rules. If reliability falls,
               route to safer tier; if cost exceeds budget, throttle usage; if
               safety violations spike, auto-rollback to last known good state.
-<<<<<<< HEAD
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-    </>
-  )
-}
-export default OperationalTrustScorecardsPage
-=======
-          </p></di></di></sectio></mai></>
-  );}
-export default OperationalTrustScorecardsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1

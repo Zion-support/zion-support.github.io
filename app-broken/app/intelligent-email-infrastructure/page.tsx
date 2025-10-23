@@ -73,17 +73,6 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD:app-broken/app/intelligent-email-infrastructure/page.tsx
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/custom-development/page.tsx
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
               <div key={index} className="flex items-start space-x-3">
@@ -117,9 +106,3 @@ const PagePage: React.FC = () => {
   )
 }
 export default PagePage
-<<<<<<< HEAD:app-broken/app/intelligent-email-infrastructure/page.tsx
-</button>
-</button>
-</h2>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final:app/custom-development/page.tsx

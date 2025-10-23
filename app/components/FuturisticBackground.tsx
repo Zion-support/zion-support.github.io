@@ -1,20 +1,5 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
-const FuturisticBackgroundPage: React.FC = () => {
-  const features = [
-=======
-import {Helmet} from 'react-helmet-async'
-import Navigation from '../$1/Navigation'
-import Footer from '../$1/Footer'
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Helmet} from 'lucide-react';
-constFuturisticBackgroundPage: React.FC= () =>{constfeatures= [
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -47,32 +32,9 @@ constFuturisticBackgroundPage: React.FC= () =>{constfeatures= [
   ]
 
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>FuturisticBackground - Zion Tech Group</title>
-        <meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
-        <meta name="keywords" content="AI, artificial intelligence, FuturisticBackground, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
-              FuturisticBackground
-=======
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              FuturisticBackground
-            </h1>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced futuristicbackground solutions powered by AI technology.
             </p>
@@ -81,21 +43,6 @@ constFuturisticBackgroundPage: React.FC= () =>{constfeatures= [
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Learn More
-              </button>
-=======
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-=======
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">FuturisticBackground</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Advanced futuristicbackground solutions powered by AI technology.</p>p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started</button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             </div>
           </div>
@@ -105,18 +52,6 @@ constFuturisticBackgroundPage: React.FC= () =>{constfeatures= [
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-                Key Features
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Powerful AI technology that drives results
-=======
-<<<<<<< HEAD
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -172,32 +107,6 @@ constFuturisticBackgroundPage: React.FC= () =>{constfeatures= [
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-=======
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
-              <p className="text-xl text-gray-300 mb-8">Contact our experts to discuss your requirements and get started today.</p>p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
-                  Contact Us
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
-                  Learn More
-=======
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Us</button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
               </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
@@ -206,16 +115,6 @@ constFuturisticBackgroundPage: React.FC= () =>{constfeatures= [
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-};
-
-export default FuturisticBackgroundPage;
-=======
-  )
-}
-export default FuturisticBackgroundPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
 =======
   <><Helme t><titl e>FuturisticBackground - ZionTechGroup</titl><metaname="description"content="Advanced futuristicbackground solutions powered by AItechnology." /></Helme><Navigation /><divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900">{/* HeroSection */}
       <sectionclassName="relativepy-20px-4overflow-hidden"><divclassName="absolute inset-0 bg-[radial-gradient(circle_at_2 0%_8 0%,rgba(14 7,5 1,23 4,0.3)_0%,transparent_50%)]animate-pulse" /><divclassName="absolute inset-0 bg-[radial-gradient(circle_at_8 0%_2 0%,rgba(5 9,13 0,24 6,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1 s'}} /><divclassName="relative max-w-7 xlmx-autotext-center"><spanclassName="text-5 xlmd:text-7 xl font-bold text-whitemb-6leading-tight"></spa></className="text-5 xlmd:text-7 xl font-bold text-whitemb-6leading-tight">FuturisticBackground

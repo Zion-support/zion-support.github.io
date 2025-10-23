@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { ArrowLeft } from 'lucide-react'
-import { CheckCircle, Target, ArrowRight } from 'lucide-react'
-
-=======
-import React from 'react';
-<<<<<<< HEAD
-import { ArrowLeft, CheckCircle, ArrowRight, Target, Check } from 'lucide-react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
