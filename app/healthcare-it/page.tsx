@@ -68,7 +68,7 @@ import SEOOptimizer from '../components/SEOOptimizer'
       </section>
 {/* Features Section */}
       <section className="py-20 px-4">
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions for all aspects of healthcare delivery and management.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions for all aspects of healthcare delivery and management.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{services.map((service, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
@@ -84,8 +84,8 @@ import SEOOptimizer from '../components/SEOOptimizer'
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Healthcare IT Solutions?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of modern healthcare technology with our proven solutions.</p>p>
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Healthcare IT Solutions?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of modern healthcare technology with our proven solutions.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{benefits.map((benefit, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">

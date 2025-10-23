@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async';
 import {
   Heart,
@@ -701,7 +693,6 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     { id: 'tired', label: 'Tired', icon: Meh, color: 'text-gray-400' },
     { id: 'confident', label: 'Confident', icon: Confident, color: 'text-purple-400' }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
 
 const PagePage: React.FC = () => {
   const features = [
@@ -732,12 +723,14 @@ const PagePage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
     <>
@@ -746,26 +739,7 @@ const PagePage: React.FC = () => {
         <meta name="description" content="AI-powered mental health companion with mood tracking, therapy sessions, and crisis support. Get 24/7 mental health support with our advanced AI technology." />
         <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
       </Helmet>
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              AI-powered mental health companion with mood tracking, therapy sessions, and crisis support. Get 24/7 mental health support with our advanced AI technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-=======
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
@@ -776,9 +750,9 @@ const PagePage: React.FC = () => {
               <span className="text-pink-300 font-medium">AI Mental Health Companion Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">24/7 Mental Health Support</h1>h1>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">24/7 Mental Health Support</h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Your AI-Powered Mental Health Companion</p>p>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Your AI-Powered Mental Health Companion</p>
 
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">Get compassionate, professional mental health support anytime, anywhere.</p>
               Track your mood, engage in therapy sessions, and access crisis support with our advanced AI technology.
@@ -789,7 +763,6 @@ const PagePage: React.FC = () => {
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
@@ -807,25 +780,7 @@ const PagePage: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-=======
-          </div>
+</div>
         </div>
       </div>
 
@@ -833,8 +788,8 @@ const PagePage: React.FC = () => {
       <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Your Mental Health Companion</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Track your mood, chat with your AI companion, and access professional support</p>p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Your Mental Health Companion</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Track your mood, chat with your AI companion, and access professional support</p>
           </div>
 
           <div className="max-w-6xl mx-auto">
@@ -866,8 +821,8 @@ const PagePage: React.FC = () => {
                     <h4 className="text-white font-semibold mb-2">Mood History</h4>
                     <div className="space-y-2">{moodHistory.slice(-5).map((entry) => (</div>
                         <div key={entry.id} className="flex items-center justify-between text-sm">
-                          <span className="text-gray-300">{entry.timestamp.toLocaleDateString()}</span>span>
-                          <span className="text-pink-400 capitalize">{entry.mood}</span>span>
+                          <span className="text-gray-300">{entry.timestamp.toLocaleDateString()}</span>
+                          <span className="text-pink-400 capitalize">{entry.mood}</span>
                         </div>
                       ))}
                     </div>
@@ -904,7 +859,7 @@ const PagePage: React.FC = () => {
                             }`}
                           >
                             <p className="text-sm">{message.content}</p>
-                            <p className="text-xs opacity-70 mt-1">{message.timestamp.toLocaleTimeString()}</p>p>
+                            <p className="text-xs opacity-70 mt-1">{message.timestamp.toLocaleTimeString()}</p>
                           </div>
                         </div>
                       ))
@@ -946,35 +901,16 @@ const PagePage: React.FC = () => {
                   >Crisis Support</button>button>
                 </div>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-=======
-      {/* Features Section */}
+{/* Features Section */}
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Mental Health Features</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive mental health support powered by advanced AI technology</p>p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Mental Health Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive mental health support powered by advanced AI technology</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">{features.map((feature, index) => (</div>
@@ -998,14 +934,14 @@ const PagePage: React.FC = () => {
       <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Mental Health Plans</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the mental health support plan that's right for you</p>p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Mental Health Plans</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the mental health support plan that's right for you</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-pink-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>span>
+                    <span className="bg-gradient-to-r from-pink-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>
                   </div>
                 )}
 
@@ -1042,8 +978,8 @@ const PagePage: React.FC = () => {
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Start Your Mental Health Journey</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our mental health team to learn more about our AI companion</p>p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Start Your Mental Health Journey</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our mental health team to learn more about our AI companion</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -1091,7 +1027,6 @@ const PagePage: React.FC = () => {
                 </div>
                 <button className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">Start Free Trial</button>button>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
@@ -1113,14 +1048,8 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </>
   );
-<<<<<<< HEAD
-};
-
-export default PagePage;
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

@@ -111,8 +111,8 @@ const CommunityPage: React.FC = () => {
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Community</h1>h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">Connect with thousands of technology professionals, share knowledge, and advance your career</p>p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Community</h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">Connect with thousands of technology professionals, share knowledge, and advance your career</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Join Now</button>button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Learn More</button>button>
@@ -127,7 +127,7 @@ const CommunityPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{stats.map((stat, index) => (</div>
                 <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4 text-blue-600">{stat.icon}</div>div>
+                  <div className="flex justify-center mb-4 text-blue-600">{stat.icon}</div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
@@ -178,7 +178,7 @@ const CommunityPage: React.FC = () => {
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div>
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">{event.type}</span>span>
+                        <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">{event.type}</span>
                         <h3 className="text-xl font-semibold text-gray-900">{event.title}</h3>
                       </div>
                       <p className="text-gray-600 mb-3">{event.description}</p>
@@ -220,7 +220,7 @@ const CommunityPage: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
                 <div key={index} className="bg-white rounded-lg shadow-md p-6">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">{testimonial.name.charAt(0)}</div>div>
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">{testimonial.name.charAt(0)}</div>
                     <div className="ml-4">
                       <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                       <p className="text-sm text-gray-600">{testimonial.role} at {testimonial.company}</p>
@@ -243,7 +243,7 @@ const CommunityPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Join Our Community?</h2>
-            <p className="text-xl mb-8 text-blue-100">Connect with thousands of professionals, share your knowledge, and advance your career in technology.</p>p>
+            <p className="text-xl mb-8 text-blue-100">Connect with thousands of professionals, share your knowledge, and advance your career in technology.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
                 <Heart className="mr-2 w-5 h-5" />

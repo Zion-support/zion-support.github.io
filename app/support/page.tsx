@@ -34,12 +34,14 @@ const PagePage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
     <>
@@ -57,12 +59,7 @@ const PagePage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Page
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get help and support for Zion Tech Group solutions. Find answers, contact support, and access our knowledge base.
-            </p>
-=======
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">Find answers, get support, and access resources to make the most of our solutions</p>p>
+<p className="text-xl md:text-2xl mb-8 text-blue-100">Find answers, get support, and access resources to make the most of our solutions</p>
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
@@ -88,7 +85,7 @@ const PagePage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Get Support</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{supportChannels.map((channel, index) => (</div>
                 <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4 text-blue-600">{channel.icon}</div>div>
+                  <div className="flex justify-center mb-4 text-blue-600">{channel.icon}</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{channel.title}</h3>
                   <p className="text-gray-600 mb-3">{channel.description}</p>
                   <p className="text-sm font-medium text-blue-600 mb-1">{channel.contact}</p>
@@ -134,7 +131,7 @@ const PagePage: React.FC = () => {
                       <span className="font-medium text-gray-900">{faq.question}</span>
                     </div>
                     <div className="flex items-center">
-                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-3">{faq.category}</span>span>
+                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-3">{faq.category}</span>
                       <CheckCircle className={`w-5 h-5 text-gray-400 transition-transform ${
                         expandedFAQ === index ? 'rotate-180' : ''
                       }`} />
@@ -165,20 +162,13 @@ const PagePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Still Need Help?</h2>
-            <p className="text-xl mb-8 text-blue-100">Can't find what you're looking for? Our support team is here to help.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+            <p className="text-xl mb-8 text-blue-100">Can't find what you're looking for? Our support team is here to help.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-<<<<<<< HEAD
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-=======
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Schedule a Call</button>button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Schedule a Call</button>button>
             </div>
           </div>
         </section>
@@ -249,14 +239,10 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default SupportPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

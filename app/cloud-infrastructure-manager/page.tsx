@@ -48,6 +48,7 @@ description: 'Seamless integration with CI/CD pipelines and DevOps tools for str
 }
 ]
 const benefits = [
+    
 'Centralized cloud infrastructure management',
 'Automated scaling and optimization',
 'Cost reduction and optimization',
@@ -56,15 +57,17 @@ const benefits = [
 'Easy deployment and configuration',
 'Multi-cloud support',
 'Expert technical support'
-]
-return (
+
+  ];
+
+  return (
 <>
-<Helmet>
+      <Helmet>
 <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
 <meta name="description" content="Comprehensive cloud infrastructure management platform by Zion Tech Group. Manage, monitor, and optimize your cloud resources across multiple providers." />
 <meta name="keywords" content="cloud infrastructure manager, cloud management, multi-cloud, cloud optimization, Zion Tech Group" />
 </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
 <section className="pt-20 pb-16 px-4">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
@@ -90,7 +93,7 @@ Call (302) 464-0950
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Platform Features</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our cloud infrastructure manager provides everything you need to optimize your cloud operations.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our cloud infrastructure manager provides everything you need to optimize your cloud operations.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -109,7 +112,7 @@ Call (302) 464-0950
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Optimize your cloud infrastructure with our comprehensive management platform.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Optimize your cloud infrastructure with our comprehensive management platform.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
 <div key={index} className="flex items-start space-x-3">
@@ -124,8 +127,8 @@ Call (302) 464-0950
 <section className="py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-4xl mx-auto text-center">
 <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Optimize Your Cloud?</h2>h2>
-<p className="text-xl text-purple-100 mb-8">Start your free trial today and experience the power of our cloud infrastructure manager.</p>p>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Optimize Your Cloud?</h2>
+<p className="text-xl text-purple-100 mb-8">Start your free trial today and experience the power of our cloud infrastructure manager.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />

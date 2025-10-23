@@ -41,7 +41,7 @@ const BlockchainWeb3Page: React.FC = () => {
             <h1 className="text-5xl font-bold text-white mb-6">
               Blockchain & <span className="text-cyan-400">Web3</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">

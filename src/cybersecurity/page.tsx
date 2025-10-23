@@ -4,8 +4,6 @@ import { Lock } from 'lucide-react'
 import { CheckCircle, Star, Eye, Shield, Database, Helmet } from 'lucide-react'
 import { Globe, AlertTriangle } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
 import { Lock, CheckCircle, Star, Shield, Database, Eye, Helmet, Check, Globe, AlertTriangle } from 'lucide-react';
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const CybersecurityPage: React.FC = () => {

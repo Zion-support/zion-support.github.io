@@ -109,7 +109,8 @@ description="Complete API documentation for Zion Tech Group's AI and IT solution
 keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
 />
 <Navigation />
-{/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
 <section className="py-20 px-4">
 <div className="max-w-7xl mx-auto text-center">
 <h1 className="text-5xl font-bold text-white mb-6">API Documentation</h1>
@@ -183,7 +184,7 @@ Download SDK
 endpoint.method === 'POST'
 ? 'bg-green-500/20 text-green-400'
 : 'bg-blue-500/20 text-blue-400'
-}`}>{endpoint.method}</span>span>
+}`}>{endpoint.method}</span>
 <code className="text-purple-400 font-mono">{endpoint.path}</code>
 </div>
 <button
@@ -219,8 +220,8 @@ Copy
 {/* CTA Section */}
 <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>h2>
-<p className="text-xl text-purple-100 mb-8">Start building with our APIs today and create amazing applications.</p>p>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
+<p className="text-xl text-purple-100 mb-8">Start building with our APIs today and create amazing applications.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Get API Key</button>
 <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">View SDKs</button>

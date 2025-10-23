@@ -80,12 +80,15 @@ const benefits = [
 'Provide 24/7 support and monitoring'
 ]
 const stats = [
+    
 { number: '500+', label: 'Enterprise Clients', icon: Building },
 { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
 { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
 { number: '24/7', label: 'Support Available', icon: Clock }
-]
-return (
+
+  ];
+
+  return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 <SEOOptimizer
 title="Enterprise Solutions - Zion Tech Group"
@@ -93,7 +96,8 @@ description="Comprehensive enterprise-grade solutions for large-scale business o
 keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
 />
 <Navigation />
-{/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
 <section className="relative py-20 px-4 overflow-hidden">
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -134,7 +138,7 @@ Transform your organization with cutting-edge technology and expert implementati
 <div className="max-w-7xl mx-auto"></div>
 <div className="text-center mb-16"></div>
 <h2 className="text-4xl font-bold text-white mb-4">Enterprise-Grade Features</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale, security, and performance to meet the demands of large organizations.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale, security, and performance to meet the demands of large organizations.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
@@ -155,7 +159,7 @@ Transform your organization with cutting-edge technology and expert implementati
 </div>
 </section>
 <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Solutions</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">End-to-end enterprise solutions that address every aspect of your business operations.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">End-to-end enterprise solutions that address every aspect of your business operations.</p>
 </div>
 </li>
 ))}
@@ -176,8 +180,8 @@ Transform your organization with cutting-edge technology and expert implementati
 {/* CTA Section */}
 <section className="py-20 px-4">
 <div className="max-w-4xl mx-auto text-center"></div>
-<h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>h2>
-<p className="text-xl text-gray-300 mb-8">Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>p>
+<h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>
+<p className="text-xl text-gray-300 mb-8">Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Enterprise Sales</button>
 <ArrowRight className="inline-block ml-2 w-5 h-5" />

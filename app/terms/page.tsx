@@ -4,6 +4,7 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
 export default function TermsPage() {
   const lastUpdated = 'January 1, 2024'
   const sections = [
+    
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
@@ -44,7 +45,9 @@ export default function TermsPage() {
       icon: Scale,
       content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
     }
-  ]
+  
+  ];
+
   return (
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
@@ -70,8 +73,8 @@ export default function TermsPage() {
                       <section.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <div></div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3">{index + 1}. {section.title}</h2>h2>
-                      <p className="text-gray-700 leading-relaxed">{section.content}</p>p>
+                      <h2 className="text-2xl font-bold text-gray-900 mb-3">{index + 1}. {section.title}</h2>
+                      <p className="text-gray-700 leading-relaxed">{section.content}</p>
                     </div>
                   </div>
                 </div>
@@ -79,7 +82,7 @@ export default function TermsPage() {
             </div>
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
-              <p className="text-gray-700 mb-6">If you have any questions about these Terms of Service, please contact us:</p>p>
+              <p className="text-gray-700 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
               <div className="grid md:grid-cols-2 gap-6"></div>
                 <div className="flex items-center"></div>
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
@@ -100,7 +103,7 @@ export default function TermsPage() {
               </div>
             </div>
             <div className="mt-8 text-center"></div>
-              <p className="text-sm text-gray-500">By using our services, you acknowledge that you have read and understood these terms.</p>p>
+              <p className="text-sm text-gray-500">By using our services, you acknowledge that you have read and understood these terms.</p>
             </div>
           </div>
         </div>

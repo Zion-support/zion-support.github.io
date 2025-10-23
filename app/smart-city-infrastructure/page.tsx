@@ -26,6 +26,7 @@ const PagePage: React.FC = () => {
     }
   ]
   const benefits = [
+    
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -34,7 +35,9 @@ const PagePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  
+  ];
+
   return (
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -91,7 +94,7 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Page</span>span>
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Page</span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -111,8 +114,8 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>
           </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -127,7 +130,7 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>
           </div>
               </div>
             ))}
@@ -138,8 +141,8 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page needs and get a customized solution.</p>p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page needs and get a customized solution.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -163,6 +166,7 @@ export default PagePage
   </button>
   </span>
   const benefits = [
+    
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -171,7 +175,9 @@ export default PagePage
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  
+  ];
+
   return (
     <>
       <Helmet>
@@ -180,12 +186,12 @@ export default PagePage
         <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Smart City</span>span>
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Smart City</span>
                 <br />
                 <span className="text-white">Infrastructure</span>
               </h1>
@@ -205,8 +211,8 @@ export default PagePage
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Smart City Solutions?</h2>h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our smart city solutions deliver unmatched performance, security, and scalability.</p>p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Smart City Solutions?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our smart city solutions deliver unmatched performance, security, and scalability.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -224,8 +230,8 @@ export default PagePage
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Smart City Services</h2>h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive solutions for modern smart city infrastructure.</p>p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Smart City Services</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive solutions for modern smart city infrastructure.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{smartCityServices.map((service, index) => (</div>
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -254,8 +260,8 @@ export default PagePage
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our smart city solutions for your community.</p>p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our smart city solutions for your community.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-start space-x-3">
@@ -270,8 +276,8 @@ export default PagePage
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Smart City?</h2>h2>
-              <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your smart city infrastructure needs and get a customized solution.</p>p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Smart City?</h2>
+              <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your smart city infrastructure needs and get a customized solution.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   <Phone className="mr-2 h-5 w-5" />
@@ -285,7 +291,7 @@ export default PagePage
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </>
   )

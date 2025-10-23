@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-=======
 import { CheckCircle, Zap, Palette, Camera, Check } from 'lucide-react';
 import React from 'react';
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

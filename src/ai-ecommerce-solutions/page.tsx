@@ -3,8 +3,6 @@ import React from 'react'
 import { BarChart3 } from 'lucide-react'
 import { CheckCircle, Zap, Shield, Users, Helmet } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
 import { BarChart3, CheckCircle, Shield, Zap, Users, BarChart, Helmet, Check } from 'lucide-react';
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 const AIEcommerceSolutionsPage: React.FC = () => {

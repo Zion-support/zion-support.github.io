@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"use client"
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -37,12 +34,14 @@ const PerformanceOptimizationsPage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
     <>
@@ -141,11 +140,10 @@ const PerformanceOptimizationsPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </>
   );
 };
 
 export default PerformanceOptimizationsPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

@@ -26,6 +26,7 @@ description: 'Worldwide blockchain deployment and support for international busi
 }
 ]
 const benefits = [
+    
 'Advanced blockchain technology integration',
 'Real-time transaction processing',
 'Enterprise-grade security and compliance',
@@ -34,8 +35,10 @@ const benefits = [
 'Easy integration with existing systems',
 'Cost-effective pricing plans',
 'Proven track record of success'
-]
-return (
+
+  ];
+
+  return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <Helmet>
 <title>Blockchain Solutions | Zion Tech Group</title>
@@ -48,7 +51,7 @@ return (
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with cutting-edge blockchain technology and decentralized solutions.</p>
 Powered by advanced AI and industry expertise.
 </p>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our blockchain solutions deliver unmatched performance, security, and scalability.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our blockchain solutions deliver unmatched performance, security, and scalability.</p>
 </div>
 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{features.map((feature, index) => (</div>
 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
@@ -59,7 +62,7 @@ Powered by advanced AI and industry expertise.
 ))}
 </div>
 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-<h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Blockchain Solutions?</h2>h2>
+<h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Blockchain Solutions?</h2>
 <div className="grid md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
 <div key={index} className="flex items-center space-x-3">
 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
@@ -72,7 +75,7 @@ Powered by advanced AI and industry expertise.
 <section className="py-16 bg-white">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Blockchain Services?</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Blockchain Services?</h2>
 <p className="text-xl text-gray-600">Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -143,7 +146,7 @@ Powered by advanced AI and industry expertise.
 <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
 <div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div>
-<span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{tech}</span>span>
+<span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{tech}</span>
 ))}
 </div>
 </div>
@@ -209,7 +212,7 @@ Powered by advanced AI and industry expertise.
 {/* Contact Section */}
 <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform with Blockchain?</h2>h2>
+<h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform with Blockchain?</h2>
 <p className="text-xl mb-8 text-blue-100">Contact our blockchain experts for a free consultation and custom blockchain strategy development</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <a

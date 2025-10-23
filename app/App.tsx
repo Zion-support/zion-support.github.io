@@ -21,7 +21,6 @@ const App: React.FC = () => {
           {/* Main content will be handled by Next.js routing */}
         </main>
         <Footer />
-      </div>
     </>
   );
 };

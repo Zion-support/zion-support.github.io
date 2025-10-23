@@ -74,6 +74,7 @@ const EdgeComputingPage: React.FC = () => {
     'Global Scalability'
   ]
   const useCases = [
+    
     {
       title: 'Autonomous Vehicles',
       description: 'Real-time decision making for self-driving cars',
@@ -104,7 +105,9 @@ const EdgeComputingPage: React.FC = () => {
       description: 'Cloud gaming with minimal latency',
       icon: '🎮'
     }
-  ]
+  
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>

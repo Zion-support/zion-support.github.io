@@ -44,10 +44,10 @@ const AIAudioProcessorPage: React.FC = () => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Audio Processor</h1>h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Audio Processor</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI-powered audio processing solutions for enhancement,</p>
               analysis, and real-time processing of audio content.
             </p>
@@ -68,8 +68,8 @@ const AIAudioProcessorPage: React.FC = () => {
         <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Audio Processing Features</h2>h2>
-              <p className="text-lg text-gray-300">Everything you need for professional audio processing</p>p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Audio Processing Features</h2>
+              <p className="text-lg text-gray-300">Everything you need for professional audio processing</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <div
@@ -79,7 +79,7 @@ const AIAudioProcessorPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
@@ -91,12 +91,12 @@ const AIAudioProcessorPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Audio Processor?</h2>h2>
-              <p className="text-lg text-gray-300">Advanced AI technology for professional audio processing</p>p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Audio Processor?</h2>
+              <p className="text-lg text-gray-300">Advanced AI technology for professional audio processing</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3>h3>
+                <h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3>
                 <ul className="space-y-3">
                   {benefits.map((benefit, index) => (
                     <li key={index} className="flex items-center text-gray-300">
@@ -107,7 +107,7 @@ const AIAudioProcessorPage: React.FC = () => {
                 </ul>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Use Cases</h3>h3>
+                <h3 className="text-2xl font-bold text-white mb-6">Use Cases</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li>• Podcast and audio content production</li>
                   <li>• Music production and mastering</li>
@@ -124,7 +124,7 @@ const AIAudioProcessorPage: React.FC = () => {
         {/* CTA Section */}
         <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Process Audio with AI?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Process Audio with AI?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Start using our AI audio processor to enhance and analyze your</p>
               audio content today.
             </p>

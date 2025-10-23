@@ -61,10 +61,7 @@ global.fetch = jest.fn()
 const originalConsoleWarn = console.warn
 const originalConsoleInfo = console.info
 console.warn = (...args) => {
-<<<<<<< HEAD
-    return
-=======
-  const _message = args[0]?.toString?.() || '';
+const _message = args[0]?.toString?.() || '';
   if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
@@ -72,10 +69,7 @@ console.warn = (...args) => {
   _originalConsoleWarn(...args)
 }
 console.info = (...args) => {
-<<<<<<< HEAD
-    return
-=======
-  const _message = args[0]?.toString?.() || '';
+const _message = args[0]?.toString?.() || '';
   if (_message.includes('ReactDOM.render is no longer supported')) {
     return;
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

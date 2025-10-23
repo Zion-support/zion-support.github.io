@@ -46,6 +46,7 @@ description: 'Automated incident response and immediate notification systems to 
 }
 ]
 const benefits = [
+    
 '24/7 continuous security monitoring',
 'AI-powered threat detection and analysis',
 'Real-time alerts and notifications',
@@ -54,15 +55,17 @@ const benefits = [
 'Compliance monitoring and reporting',
 'Expert security team support',
 'Customizable monitoring rules'
-]
-return (
+
+  ];
+
+  return (
 <>
-<Helmet>
+      <Helmet>
 <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
 <meta name="description" content="Professional 24/7 security monitoring services by Zion Tech Group. Advanced threat detection, real-time alerts, and comprehensive cybersecurity protection." />
 <meta name="keywords" content="security monitoring, cybersecurity, threat detection, 24/7 monitoring, security alerts, Zion Tech Group" />
 </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
 <section className="pt-20 pb-16 px-4">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
@@ -87,8 +90,8 @@ Call (302) 464-0950
 <section className="py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Security Monitoring?</h2>h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.</p>p>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Security Monitoring?</h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -107,7 +110,7 @@ Call (302) 464-0950
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience comprehensive security protection with our advanced monitoring services.</p>p>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience comprehensive security protection with our advanced monitoring services.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
 <div key={index} className="flex items-start space-x-3">
@@ -122,8 +125,8 @@ Call (302) 464-0950
 <section className="py-20 px-4 sm:px-6 lg:px-8">
 <div className="max-w-4xl mx-auto text-center">
 <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Secure Your Business?</h2>h2>
-<p className="text-xl text-purple-100 mb-8">Contact our security experts to discuss your monitoring needs and get a customized protection plan.</p>p>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Secure Your Business?</h2>
+<p className="text-xl text-purple-100 mb-8">Contact our security experts to discuss your monitoring needs and get a customized protection plan.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
 <Phone className="mr-2 h-5 w-5" />

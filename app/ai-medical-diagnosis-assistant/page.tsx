@@ -34,12 +34,14 @@ const PagePage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
     <>
@@ -76,32 +78,9 @@ const PagePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-=======
-
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>h3>
                   <p className="text-gray-300">{feature.description}</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
                 </div>
               ))}
             </div>
@@ -146,10 +125,6 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
     </>
   );
 };

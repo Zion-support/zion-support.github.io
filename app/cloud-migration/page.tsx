@@ -150,7 +150,7 @@ const CloudMigrationPage: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4">
                 <Cloud className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-5xl font-bold text-white neon-text">Cloud Migration</h1>h1>
+              <h1 className="text-5xl font-bold text-white neon-text">Cloud Migration</h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">Seamlessly migrate your infrastructure to the cloud with our expert migration services.</p>
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
@@ -276,7 +276,7 @@ const CloudMigrationPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div>
                   <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>{plan.popular && (</div>
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>span>
+                        <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
                       </div>
                     )}
                     <div className="text-center mb-6">
@@ -309,7 +309,7 @@ const CloudMigrationPage: React.FC = () => {
           <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?</h2>
-              <p className="text-xl text-gray-300 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert team.</p>p>
+              <p className="text-xl text-gray-300 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert team.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="cyber-button px-8 py-4 text-lg">Start Your Migration</button>button>
                 <button className="cyber-button-outline px-8 py-4 text-lg">Contact Our Experts</button>button>

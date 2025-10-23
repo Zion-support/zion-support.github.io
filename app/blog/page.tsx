@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 
-
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -72,12 +71,12 @@ export default function Blog() {
 
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Blog</h1>h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Insights, trends, and expertise from the Zion Tech Group team</p>p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Blog</h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Insights, trends, and expertise from the Zion Tech Group team</p>
             </div>
           </div>
         </section>
@@ -129,11 +128,11 @@ export default function Blog() {
                   </div>
                   <div className="md:w-1/2 p-8">
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">{featuredPost.category}</span>span>
-                      <span className="text-gray-500 dark:text-gray-400 text-sm">{featuredPost.readTime}</span>span>
+                      <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">{featuredPost.category}</span>
+                      <span className="text-gray-500 dark:text-gray-400 text-sm">{featuredPost.readTime}</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{featuredPost.title}</h3>h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6">{featuredPost.excerpt}</p>p>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{featuredPost.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-6">{featuredPost.excerpt}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                         <div className="flex items-center gap-1">
@@ -173,11 +172,11 @@ export default function Blog() {
                   />
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-3">
-                      <span className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium">{post.category}</span>span>
-                      <span className="text-gray-500 dark:text-gray-400 text-sm">{post.readTime}</span>span>
+                      <span className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium">{post.category}</span>
+                      <span className="text-gray-500 dark:text-gray-400 text-sm">{post.readTime}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{post.title}</h3>h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>p>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{post.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                         <div className="flex items-center gap-1">
@@ -208,5 +207,4 @@ export default function Blog() {
     </>
   );
 };
-
 

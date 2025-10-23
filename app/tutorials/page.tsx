@@ -86,7 +86,7 @@ const TutorialsPage: React.FC = () => {
   return (
     <>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">
           <div
             className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
@@ -94,7 +94,7 @@ const TutorialsPage: React.FC = () => {
           />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Learn{" "}</h1>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Technology</span>span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Technology</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Master technology skills with our comprehensive tutorials. Learn</p>
               AI development, cloud computing, cybersecurity, and more with
@@ -148,13 +148,13 @@ const TutorialsPage: React.FC = () => {
 
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">{tutorial.category.toUpperCase()}</span>span>
+                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">{tutorial.category.toUpperCase()}</span>
                       {tutorial.featured && (
-                        <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Featured</span>span>
+                        <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Featured</span>
                       )}
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-3">{tutorial.title}</h3>h3>
+                    <h3 className="text-xl font-bold text-white mb-3">{tutorial.title}</h3>
                     <p className="text-gray-300 mb-4">{tutorial.description}</p>
 
                     <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
@@ -183,7 +183,7 @@ const TutorialsPage: React.FC = () => {
                               ? "bg-yellow-500/20 text-yellow-400"
                               : "bg-red-500/20 text-red-400"
                         }`}
-                      >{tutorial.difficulty}</span>span>
+                      >{tutorial.difficulty}</span>
                       <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
                         <Play className="w-4 h-4 mr-2" />
                         Start Tutorial
@@ -200,7 +200,7 @@ const TutorialsPage: React.FC = () => {
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Learning Paths</h2>h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Learning Paths</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Follow structured learning paths to master specific technology</p>
                 domains.
               </p>
@@ -211,7 +211,7 @@ const TutorialsPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">AI Developer Path</h3>h3>
+                <h3 className="text-xl font-bold text-white mb-4">AI Developer Path</h3>
                 <p className="text-gray-300 mb-4">Complete journey from AI basics to advanced machine learning</p>
                   applications.
                 </p>
@@ -226,7 +226,7 @@ const TutorialsPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <Database className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">Cloud Architect Path</h3>h3>
+                <h3 className="text-xl font-bold text-white mb-4">Cloud Architect Path</h3>
                 <p className="text-gray-300 mb-4">Master cloud infrastructure design and deployment across major</p>
                   platforms.
                 </p>
@@ -241,7 +241,7 @@ const TutorialsPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">Security Expert Path</h3>h3>
+                <h3 className="text-xl font-bold text-white mb-4">Security Expert Path</h3>
                 <p className="text-gray-300 mb-4">Learn cybersecurity fundamentals and advanced threat</p>
                   protection techniques.
                 </p>
@@ -258,7 +258,7 @@ const TutorialsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Learning?</h2>h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Learning?</h2>
             <p className="text-xl text-gray-300 mb-8">Join thousands of learners who are advancing their careers with</p>
               our technology tutorials.
             </p>

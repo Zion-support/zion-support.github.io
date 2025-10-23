@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async';
 import {
   Shield,
@@ -757,7 +749,6 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       status: 'Open'
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
 
 const PagePage: React.FC = () => {
   const features = [
@@ -788,12 +779,14 @@ const PagePage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
     <>
@@ -802,26 +795,7 @@ const PagePage: React.FC = () => {
         <meta name="description" content="Automated code security analysis with AI Code Security Auditor Pro. Detect vulnerabilities, ensure compliance, and get auto-fix suggestions for your codebase." />
         <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
       </Helmet>
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Automated code security analysis with AI Code Security Auditor Pro. Detect vulnerabilities, ensure compliance, and get auto-fix suggestions for your codebase.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-=======
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
@@ -832,9 +806,9 @@ const PagePage: React.FC = () => {
               <span className="text-red-300 font-medium">AI Code Security Auditor Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent neon-text">Automated Security Analysis</h1>h1>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent neon-text">Automated Security Analysis</h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Secure Your Code with AI-Powered Analysis</p>p>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Secure Your Code with AI-Powered Analysis</p>
 
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">Detect vulnerabilities, ensure compliance, and get automated fix suggestions.</p>
               Protect your applications with comprehensive security analysis powered by advanced AI.
@@ -845,7 +819,6 @@ const PagePage: React.FC = () => {
                 <span className="relative z-10">Start Free Scan</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
@@ -883,30 +856,12 @@ const PagePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-=======
-      {/* Security Scanner Interface */}
+{/* Security Scanner Interface */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Scanner</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Upload your code or connect your repository for instant security analysis</p>p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Scanner</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Upload your code or connect your repository for instant security analysis</p>
           </div>
 
           <div className="max-w-6xl mx-auto">
@@ -974,7 +929,7 @@ const PagePage: React.FC = () => {
                     vulnerabilities.map((vuln, index) => (
                       <div key={index} className="bg-white/5 rounded-lg p-4 border border-white/10">
                         <div className="flex items-center justify-between mb-2">
-                          <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(vuln.severity)}`}>{vuln.severity}</span>span>
+                          <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(vuln.severity)}`}>{vuln.severity}</span>
                           <span className="text-gray-400 text-sm">Line {vuln.line}</span>
                         </div>
                         <h4 className="text-white font-semibold mb-1">{vuln.type}</h4>
@@ -991,33 +946,16 @@ const PagePage: React.FC = () => {
                   )}
                 </div>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-=======
-      {/* Security Issues Dashboard */}
+{/* Security Issues Dashboard */}
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Dashboard</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Monitor and manage security issues across your codebase</p>p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Dashboard</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Monitor and manage security issues across your codebase</p>
           </div>
 
           <div className="max-w-6xl mx-auto">
@@ -1046,7 +984,7 @@ const PagePage: React.FC = () => {
                   <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center space-x-3">
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(issue.severity)}`}>{issue.severity}</span>span>
+                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(issue.severity)}`}>{issue.severity}</span>
                         <span className="text-white font-semibold">{issue.type}</span>
                         <span className="text-gray-400 text-sm">{issue.file}:{issue.line}</span>
                       </div>
@@ -1054,33 +992,23 @@ const PagePage: React.FC = () => {
                         issue.status === 'Fixed'
                           ? 'text-green-400 bg-green-400/10'
                           : 'text-yellow-400 bg-yellow-400/10'
-                      }`}>{issue.status}</span>span>
+                      }`}>{issue.status}</span>
                     </div>
                     <p className="text-gray-300 mb-2">{issue.description}</p>
                     <p className="text-green-400 text-sm">{issue.recommendation}</p>
                   </div>
                 ))}
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-    </>
-  );
-};
-
-export default PagePage;
-=======
-
-      {/* Features Section */}
+{/* Features Section */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Features</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive security analysis tools for modern development</p>p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive security analysis tools for modern development</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">{features.map((feature, index) => (</div>
@@ -1104,14 +1032,14 @@ export default PagePage;
       <div className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Plans</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the security plan that fits your development needs</p>p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Security Plans</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the security plan that fits your development needs</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-400 to-orange-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>span>
+                    <span className="bg-gradient-to-r from-red-400 to-orange-600 text-white text-sm font-bold px-4 py-2 rounded-full">Most Popular</span>
                   </div>
                 )}
 
@@ -1148,8 +1076,8 @@ export default PagePage;
       <div className="py-20 bg-gradient-to-br from-slate-800 via-red-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Secure Your Code Today</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our security experts to discuss your code security needs</p>p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Secure Your Code Today</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Contact our security experts to discuss your code security needs</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -1204,4 +1132,3 @@ export default PagePage;
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-=======
 import React from "react";
 import { BarChart3, FileText, MessageSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 // Removed unused imports
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
 
 const PagePage: React.FC = () => {
   const features = [
@@ -41,43 +32,17 @@ const PagePage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>Page</title>
-        <meta name="description" content="Advanced Page solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced Page solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">{/* Futuristic Background Effects */}</div>
+<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">{/* Futuristic Background Effects */}</div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />{/* Animated Grid Pattern */}</div>
@@ -92,10 +57,10 @@ const PagePage: React.FC = () => {
           <div className="text-center">
 
             <div className="inline-block mb-6">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">AI Services</h1>h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">AI Services</h1>
               <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
             </div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Transform your business with our comprehensive suite of cutting-edge AI-powered solutions</p>p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Transform your business with our comprehensive suite of cutting-edge AI-powered solutions</p>
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
@@ -116,8 +81,8 @@ const PagePage: React.FC = () => {
                 <div className="text-gray-300">AI Support</div>
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services</h1>h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">Transform your business with our comprehensive suite of AI-powered solutions</p>p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">Transform your business with our comprehensive suite of AI-powered solutions</p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="holographic px-6 py-3 rounded-lg">
                 <span className="text-cyan-400 font-semibold">15+ AI Platforms</span>
@@ -128,34 +93,11 @@ const PagePage: React.FC = () => {
               <div className="holographic px-6 py-3 rounded-lg">
                 <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-=======
-      {/* Category Filter */}
+{/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-wrap justify-center gap-4">{categories.map((category) => (</div>
             <button
@@ -196,9 +138,9 @@ const PagePage: React.FC = () => {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}</h3>h3>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}</h3>
 
-                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>p>
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
@@ -221,28 +163,23 @@ const PagePage: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between mb-6">
-                  <div className="text-sm text-gray-400">{service.users} users</div>div>
-                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium">{service.category}</div>div>
+                  <div className="text-sm text-gray-400">{service.users} users</div>
+                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium">{service.category}</div>
                 </div>
 
                 <div className="mb-6">
-                  <div className="text-lg font-semibold text-cyan-400 mb-2">{service.pricing}</div>div>
+                  <div className="text-lg font-semibold text-cyan-400 mb-2">{service.pricing}</div>
                   <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h4>
                   <ul className="space-y-1">
                     {service.capabilities.map((capability, index) => (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {capability}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-              ))}
-=======
-
-                <div className="space-y-3">
+<div className="space-y-3">
                   <a
                     href={service.link}
                     className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
@@ -256,35 +193,15 @@ const PagePage: React.FC = () => {
                 </div>
               </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-            </div>
-=======
-      {/* CTA Section */}
+{/* CTA Section */}
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>h2>
-          <p className="text-xl text-purple-100 mb-8">Join 25,000+ companies already using our cutting-edge AI solutions. Start your free trial today!</p>p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
+          <p className="text-xl text-purple-100 mb-8">Join 25,000+ companies already using our cutting-edge AI solutions. Start your free trial today!</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <a
               href="https://ziontechgroup.com/contact"
@@ -294,7 +211,6 @@ const PagePage: React.FC = () => {
               href="tel:+13024640950"
               className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
             >Call: +1 (302) 464-0950</a>a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
           </div>
         </section>
 
@@ -315,14 +231,10 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default AIServicesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

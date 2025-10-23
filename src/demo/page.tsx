@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
-import { Clock } from 'lucide-react'
-=======
 import { CheckCircle, Star, Phone, Mail, Check, Clock } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';

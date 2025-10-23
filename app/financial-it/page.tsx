@@ -66,13 +66,16 @@ const FinancialITPage: React.FC = () => {
     }
   ]
   const benefits = [
+    
     'SOX Compliance Ready',
     'Bank-level Security',
     'Real-time Processing',
     'Regulatory Compliance',
     'Fraud Prevention',
     'Advanced Analytics'
-  ]
+  
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Helmet>
@@ -132,7 +135,7 @@ const FinancialITPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions for all aspects of financial services and banking operations.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions for all aspects of financial services and banking operations.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{services.map((service, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
@@ -148,8 +151,8 @@ const FinancialITPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Financial IT Solutions?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of modern financial technology with our proven solutions.</p>p>
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Financial IT Solutions?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of modern financial technology with our proven solutions.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{benefits.map((benefit, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">

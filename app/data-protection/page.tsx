@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
   const features = [
+    
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -20,7 +21,9 @@ const PagePage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
-  ]
+  
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -37,8 +40,8 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -57,7 +60,7 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our page solutions for your business.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
               <div key={index} className="flex items-start space-x-3">
@@ -72,8 +75,8 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page needs and get a customized solution.</p>p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page needs and get a customized solution.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />

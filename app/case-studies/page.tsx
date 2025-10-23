@@ -34,12 +34,14 @@ const PagePage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
     <>
@@ -48,30 +50,7 @@ const PagePage: React.FC = () => {
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
         <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
       </Helmet>
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Header */}</div>
+<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Header */}</div>
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
@@ -85,42 +64,16 @@ const PagePage: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Success Stories</h1>h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">Real results from real companies using our AI solutions</p>p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Success Stories</h1>
+              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">Real results from real companies using our AI solutions</p>
               <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">Discover how leading companies across industries have transformed their operations </p>
                 and achieved remarkable ROI with our cutting-edge AI technology.
               </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-=======
-        {/* Case Studies Grid */}
+{/* Case Studies Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{caseStudies.map((study) => (</div>
@@ -155,8 +108,8 @@ const PagePage: React.FC = () => {
                           <div className="text-sm text-gray-600">ROI</div>
                         </div>
                         <div className="text-center p-3 bg-blue-50 rounded-lg">
-                          <div className="text-2xl font-bold text-blue-600">{Object.values(study.results)[1]}</div>div>
-                          <div className="text-sm text-gray-600">{Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</div>div>
+                          <div className="text-2xl font-bold text-blue-600">{Object.values(study.results)[1]}</div>
+                          <div className="text-sm text-gray-600">{Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</div>
                         </div>
                       </div>
                     </div>
@@ -174,30 +127,18 @@ const PagePage: React.FC = () => {
                       </div>
                     </div>
                   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-=======
-        {/* Stats Section */}
+{/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Track Record</h2>h2>
-              <p className="text-xl text-gray-600">Our AI solutions deliver consistent, measurable results</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Track Record</h2>
+              <p className="text-xl text-gray-600">Our AI solutions deliver consistent, measurable results</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -211,19 +152,10 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-=======
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+<section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Create Your Success Story?</h2>h2>
-            <p className="text-xl mb-8 text-blue-100">Join the companies that have transformed their business with our AI solutions</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Create Your Success Story?</h2>
+            <p className="text-xl mb-8 text-blue-100">Join the companies that have transformed their business with our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
@@ -234,14 +166,10 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default CaseStudiesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

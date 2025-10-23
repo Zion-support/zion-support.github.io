@@ -34,12 +34,14 @@ const EnhancedAccessibilityPage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
     <>
@@ -138,14 +140,10 @@ const EnhancedAccessibilityPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default EnhancedAccessibilityPage;
-=======
 export default EnhancedAccessibility;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

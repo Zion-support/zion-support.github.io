@@ -22,7 +22,7 @@ const MicroSaaSPage: React.FC = () => {
               {title} </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
@@ -36,7 +36,7 @@ const MicroSaaSPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!</p>p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!</p>
             </div>
           </div>
         </section>

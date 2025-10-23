@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react'
 const EcommerceAnalyticsProPage: React.FC = () => {
 const features = [
+    
 {
 icon: BarChart,
 title: 'Real-time Analytics',
@@ -34,10 +35,12 @@ icon: Target,
 title: 'Conversion Tracking',
 description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
 }
-]
-return (
+
+  ];
+
+  return (
 <>
-<Helmet>
+      <Helmet>
 <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
 <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
 <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
@@ -47,7 +50,7 @@ return (
 <div className="max-w-7xl mx-auto">
 <div className="text-center mb-16">
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">E-commerce Analytics Pro</h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.</p>p>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
 <div

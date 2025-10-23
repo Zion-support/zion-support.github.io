@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
-=======
 import { CheckCircle, Star, ArrowRight, Check } from 'lucide-react';
 'use client';
 import React from 'react';

@@ -34,48 +34,21 @@ const PagePage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>Page</title>
-        <meta name="description" content="Advanced Page solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced Page solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-8">Ai Iot Analytics</h1>
-          <p className="text-xl text-gray-300 mb-8">Advanced ai iot analytics solutions by Zion Tech Group</p>p>
+          <p className="text-xl text-gray-300 mb-8">Advanced ai iot analytics solutions by Zion Tech Group</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
@@ -85,11 +58,7 @@ const PagePage: React.FC = () => {
               href="/services"
               className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
             >View All Services</a>a>
-    
-    
-    
-    
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+
           </div>
         </section>
 
@@ -159,14 +128,8 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </>
   );
-<<<<<<< HEAD
-};
-
-export default PagePage;
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final

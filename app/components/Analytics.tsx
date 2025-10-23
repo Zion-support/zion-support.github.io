@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from "react"
-
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-  }
-}
-
-const Analytics: React.FC = () => {
-  useEffect(() => {
-    const initAnalytics = () => {
-      if (typeof window !== "undefined" && window.gtag) {
-        window.gtag("config", "GA_MEASUREMENT_ID", {
-          page_title: document.title,
-          page_location: window.location.href,
-        })
-      }
-    }
-    initAnalytics()
-  }, [])
-
-  return null; // Analytics component doesn't render anything
-}
-
-export default Analytics
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -61,12 +34,14 @@ const AnalyticsPage: React.FC = () => {
   ]
 
   const benefits = [
+    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  
+  ];
 
   return (
     <>
@@ -165,11 +140,10 @@ const AnalyticsPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </>
   );
 };
 
 export default AnalyticsPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

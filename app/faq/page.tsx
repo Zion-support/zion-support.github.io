@@ -12,6 +12,7 @@ prev.includes(index)
 )
 }
 const faqs = [
+    
 {
 question: "What AI services do you offer?",
 answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."
@@ -44,10 +45,12 @@ answer: "Absolutely! We work with businesses of all sizes, from startups to ente
 question: "What industries do you serve?",
 answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
 }
-]
-return (
+
+  ];
+
+  return (
 <>
-<Helmet>
+      <Helmet>
 <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
 <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
 <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
@@ -58,7 +61,7 @@ return (
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 Frequently Asked <span className="text-cyan-400">Questions</span>
 </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>p>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>
 </div>
 </section>
 <section className="py-16 px-4">

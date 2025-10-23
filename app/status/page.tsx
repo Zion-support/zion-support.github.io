@@ -146,7 +146,7 @@ className="flex items-center gap-2 text-gray-400 hover:text-white transition-col
 Refresh
 </
 </div>
-<p className="text-gray-400 text-sm">Last updated: {lastUpdated.toLocaleString()}</p>p>
+<p className="text-gray-400 text-sm">Last updated: {lastUpdated.toLocaleString()}</p>
 </div>
 </section>
 {/* Services Status */}
@@ -161,7 +161,7 @@ Refresh
 {getStatusIcon(service.status)}
 <h3 className="text-lg font-semibold text-white">{service.name}</h3>
 </div>
-<span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>{service.status}</span>span>
+<span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>{service.status}</span>
 </div>
 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
 <div className="space-y-2 text-sm">
@@ -199,12 +199,12 @@ Refresh
 </div>
 </div>
 <div className="flex items-center gap-2"></div>
-<span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>{incident.severity}</span>span>
+<span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>{incident.severity}</span>
 <span className={`px-3 py-1 rounded-full text-sm font-medium ${
 incident.status === 'resolved'
 ? 'bg-green-500/20 text-green-400'
 : 'bg-yellow-500/20 text-yellow-400';}
-}`}>{incident.status}</span>span>
+}`}>{incident.status}</span>
 </div>
 </div>
 <p className="text-gray-300 mb-4">{incident.description}</p>
@@ -256,8 +256,8 @@ incident.status === 'resolved'
 {/* CTA Section */}
 <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
 <div className="max-w-4xl mx-auto text-center">
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need More Information?</h2>h2>
-<p className="text-xl text-purple-100 mb-8">Subscribe to status updates or contact our support team for more details.</p>p>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need More Information?</h2>
+<p className="text-xl text-purple-100 mb-8">Subscribe to status updates or contact our support team for more details.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Subscribe to Updates</button>
 <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Contact Support</button>

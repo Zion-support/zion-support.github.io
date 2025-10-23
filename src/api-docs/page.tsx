@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Key, Copy } from 'lucide-react'
-import { Code } from 'lucide-react'
-import { Check } from 'lucide-react'
-=======
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';

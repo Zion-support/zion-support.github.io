@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { ArrowLeft } from 'lucide-react'
-import { CheckCircle, Target, ArrowRight } from 'lucide-react'
-
-=======
 import React from 'react';
 import { ArrowLeft, CheckCircle, ArrowRight, Target, Check } from 'lucide-react';
 >>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4

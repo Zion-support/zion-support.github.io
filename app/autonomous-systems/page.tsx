@@ -14,7 +14,7 @@ const AutonomousSystemsPage: React.FC = () => {
             <h1 className="text-5xl font-bold text-white mb-6">
               Autonomous <span className="text-cyan-400">Systems</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced autonomous systems solutions for modern businesses.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced autonomous systems solutions for modern businesses.</p>
           </div>
         </div>
       </div>

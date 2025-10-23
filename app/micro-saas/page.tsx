@@ -1392,13 +1392,13 @@ const MicroSAASPage: React.FC = () => {
         <meta name="keywords" content="micro saas, business automation, AI tools, software as a service, business intelligence" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */}</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Micro SAAS Solutions</h1>h1>
-              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">Powerful, affordable AI-driven tools that transform your business operations</p>p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Micro SAAS Solutions</h1>
+              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">Powerful, affordable AI-driven tools that transform your business operations</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">Start Free Trial</button>button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">View Pricing</button>button>
@@ -1411,8 +1411,8 @@ const MicroSAASPage: React.FC = () => {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Micro SAAS Solutions?</h2>h2>
-              <p className="text-xl text-gray-600">Affordable, powerful, and easy-to-use tools that deliver real business value</p>p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Micro SAAS Solutions?</h2>
+              <p className="text-xl text-gray-600">Affordable, powerful, and easy-to-use tools that deliver real business value</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -1452,8 +1452,8 @@ const MicroSAASPage: React.FC = () => {
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category} Solutions</h2>h2>
-                <p className="text-xl text-gray-600">Specialized tools designed for {category.toLowerCase()} professionals</p>p>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category} Solutions</h2>
+                <p className="text-xl text-gray-600">Specialized tools designed for {category.toLowerCase()} professionals</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{microSAASServices</div>
                   .filter(service => service.category === category)
@@ -1468,7 +1468,7 @@ const MicroSAASPage: React.FC = () => {
                           <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">Save up to 50% vs market rates</div>div>
+                        <div className="text-sm text-green-600 font-semibold">Save up to 50% vs market rates</div>
                       </div>
 
                       <div className="mb-4">
@@ -1506,8 +1506,8 @@ const MicroSAASPage: React.FC = () => {
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>h2>
-            <p className="text-xl mb-8 text-blue-100">Contact us today for a free consultation and custom solution recommendations</p>p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8 text-blue-100">Contact us today for a free consultation and custom solution recommendations</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"

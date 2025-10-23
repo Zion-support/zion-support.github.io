@@ -1,15 +1,9 @@
 'use client'
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-import { Home } from 'lucide-react'
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
@@ -47,32 +41,7 @@ const ErrorHandlerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
-<<<<<<< HEAD
-  return (
-    <>
-      <Helmet>
-        <title>ErrorHandler</title>
-        <meta name="description" content="Advanced ErrorHandler solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ErrorHandler, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ErrorHandler
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced ErrorHandler solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-=======
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -130,20 +99,10 @@ const ErrorHandlerPage: React.FC = () => {
             <div className="flex justify-center mb-4">
               <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
-<<<<<<< HEAD
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-            </p>
-=======
+<h1 className="text-2xl font-bold text-gray-900 mb-4">Oops! Something went wrong</h1>
             
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Oops! Something went wrong</h1>h1>
-            
-            <p className="text-gray-600 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>p>
+            <p className="text-gray-600 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>
 
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
@@ -176,19 +135,9 @@ const ErrorHandlerPage: React.FC = () => {
               ></button>
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
               </button>
-<<<<<<< HEAD
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-              ></button>
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-=======
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+<button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
               </button>
             </div>
           </div>
@@ -223,51 +172,4 @@ const ErrorHandlerPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default ErrorHandlerPage;
-=======
 export default ErrorHandler
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
