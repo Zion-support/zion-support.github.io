@@ -57,13 +57,8 @@ const benefits = [
 'Multi-cloud support',
 'Expert technical support'
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
 <meta name="description" content="Comprehensive cloud infrastructure management platform by Zion Tech Group. Manage, monitor, and optimize your cloud resources across multiple providers." />

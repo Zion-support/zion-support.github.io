@@ -684,7 +684,6 @@ interface SmartHomeControllerProps {
 }
 
 export default function SmartHomeController({ className = '' }: SmartHomeControllerProps) {
-<<<<<<< HEAD
   const [devices, setDevices] = useState([
     { id: 1, name: 'Living Room Light', type: 'light', status: 'on', brightness: 80, room: 'Living Room' },
     { id: 2, name: 'Bedroom Light', type: 'light', status: 'off', brightness: 0, room: 'Bedroom' },
@@ -1199,5 +1198,3 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     </div>
   );
 }
-=======
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

@@ -1,50 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const Ai3dGenerationPage: React.FC = () => {
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const Ai3dGenerationPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
->>>>>>> origin/main
   return (
     <>
       <Helmet>
@@ -154,18 +111,9 @@ const Ai3dGenerationPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       <Footer />
         </React.Fragment>
   )
 }
 
 export default $1
-=======
-<<<<<<< HEAD
-    </>
-  );
-};
-
-export default Ai3dGenerationPage;
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

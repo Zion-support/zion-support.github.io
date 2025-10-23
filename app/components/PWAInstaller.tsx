@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -26,10 +25,3 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
 }
 export default PWAInstallerPage
-=======
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async"
-import { Link } from "react-router-dom"
-import { ArrowRight } from "lucide-react"
-export default function ComponentsPage() {
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

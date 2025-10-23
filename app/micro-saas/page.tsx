@@ -72,7 +72,6 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js']
     },
     {
-<<<<<<< HEAD
       id: '8',
       icon: '📱',
       title: 'Social Media Manager',
@@ -165,17 +164,6 @@ const MicroSAASPage: React.FC = () => {
       users: 'Up to 35 users',
       popular: false,
       category: 'Finance'
-=======
-      title: 'AI Inventory Optimizer',
-      description: 'Predictive inventory management with demand forecasting and automated reordering.',
-      icon: '📦',
-      price: '$299/month',
-      features: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis'],
-      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow'],
-      marketPrice: '$400-800/month',
-      category: 'Supply Chain',
-      technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models']
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
     },
     {
       title: 'Smart HR Recruitment Tool',

@@ -36,7 +36,6 @@ const AIAudioProcessorPage: React.FC = () => {
     "Multiple audio format support",
   ];
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -44,15 +43,6 @@ const PagePage: React.FC = () => {
         <title>AI API Management - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-=======
-  return (
-    <>
-      <Head>
-        <title>AI Audio Processor - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Advanced AI-powered audio processing solutions for enhancement, analysis, and real-time processing." />
-        <meta property="og:type" content="website" />
-      </Head>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

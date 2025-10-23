@@ -31,13 +31,8 @@ description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>AI CRM Assistant - Zion Tech Group</title>
 <meta name="description" content="Intelligent CRM assistant powered by AI technology." />

@@ -4,13 +4,8 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const TeamPage: React.FC = () => {
-<<<<<<< HEAD
     return (
     <React.Fragment>
-=======
-  return (
-    <>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
       <Helmet>
         <title>Our Team - Zion Tech Group</title>
         <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
@@ -36,15 +31,8 @@ const TeamPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-<<<<<<< HEAD
         </React.Fragment>
   )
 }
 
 export default $1
-=======
-    </>
-  )
-}
-export default TeamPage
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

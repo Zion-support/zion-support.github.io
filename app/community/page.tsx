@@ -99,19 +99,9 @@ const CommunityPage: React.FC = () => {
     { label: 'Countries', value: '50+', icon: <Globe className="w-6 h-6" /> }
   ];
 
-<<<<<<< HEAD
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-=======
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join our vibrant community of technology professionals. Connect, learn, and grow with like-minded individuals in AI, cybersecurity, and cloud computing." />
-        <meta name="keywords" content="tech community, AI community, cybersecurity forum, cloud computing meetup, technology networking" />
-      </Helmet>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">

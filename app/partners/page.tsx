@@ -108,7 +108,6 @@ const PartnersPage: React.FC = () => {
       description: 'Joint solution development',
       icon: <Award className="w-6 h-6" />
     }
-<<<<<<< HEAD
   ]
   const getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]
@@ -201,24 +200,6 @@ const PartnersPage: React.FC = () => {
     { icon: <Award className="w-8 h-8 text-orange-500" />, value: '25+', label: 'Awards Won' }
   ]
     return (
-=======
-  ];
-
-  const getTierColor = (tier: string) => {
-    switch (tier) {
-      case 'strategic':
-        return 'bg-gradient-to-r from-blue-500 to-purple-600 text-white';
-      case 'preferred':
-        return 'bg-gradient-to-r from-green-500 to-blue-500 text-white';
-      case 'certified':
-        return 'bg-gradient-to-r from-orange-500 to-red-500 text-white';
-      default:
-        return 'bg-gray-500 text-white';
-    }
-  };
-
-  return (
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
@@ -239,7 +220,6 @@ const PartnersPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Become a Partner
-<<<<<<< HEAD
               </Link>
               <Link
                 to="/partners/benefits"
@@ -338,12 +318,6 @@ const PartnersPage: React.FC = () => {
                   <div className={`w-full h-2 bg-gradient-to-r ${tier.color} rounded-full`}></div>
                 </div>
               ))}
-=======
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Partner Program
-              </button>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
             </div>
           </div>
         </div>

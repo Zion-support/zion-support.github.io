@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -503,10 +502,3 @@ export default ConsultationPage
   )
 }
 export default ConsultationPage
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Clock, Users, Shield, Star, Phone, Mail, MapPin } from 'lucide-react';
-
-export default function Consultation() {
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

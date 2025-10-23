@@ -58,19 +58,9 @@ const AccessibilityPage: React.FC = () => {
     "EN 301 549 compliance",
   ];
 
-<<<<<<< HEAD
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-=======
-  return (
-    <>
-      <Head>
-        <title>Accessibility Solutions - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive accessibility solutions for inclusive digital experiences. WCAG 2.1 AA compliant designs." />
-        <meta property="og:type" content="website" />
-      </Head>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

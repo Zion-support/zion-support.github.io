@@ -43,7 +43,6 @@ const AIAudioProcessorImprovedPage: React.FC = () => {
     "API integration support",
   ];
 
-<<<<<<< HEAD
 export default function AiAudioProcessorImprovedPage() {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -66,43 +65,6 @@ export default function AiAudioProcessorImprovedPage() {
             >
               View All Services
             </a>
-=======
-  return (
-    <>
-      <Head>
-        <title>
-          AI Audio Processor Improved - Zion Tech Group | Advanced AI and IT Solutions
-        </title>
-        <meta name="description" content="Professional AI audio processor with advanced features for enhanced audio processing, voice recognition, and real-time analysis." />
-        <meta property="og:type" content="website" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Audio Processor Improved
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional AI audio processor solutions powered by advanced AI
-              and cutting-edge technology for superior audio processing.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#features"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Get Started
-              </a>
-              <a
-                href="#contact"
-                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300"
-              >
-                View All Services
-              </a>
-            </div>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
           </div>
         </section>
 

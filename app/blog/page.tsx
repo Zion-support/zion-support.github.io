@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 
 
-<<<<<<< HEAD
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -274,6 +273,3 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
-=======
-export default function Blog() {
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

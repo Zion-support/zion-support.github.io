@@ -70,15 +70,8 @@ const BlockchainWeb3Page: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
         </React.Fragment>
   )
 }
 
 export default $1
-=======
-    </>
-  )
-}
-export default BlockchainWeb3Page
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

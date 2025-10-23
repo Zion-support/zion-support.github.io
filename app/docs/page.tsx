@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 export default function DocsPage() {
-<<<<<<< HEAD
 const [searchQuery, setSearchQuery] = useState('')
 const docCategories = [
 {
@@ -167,5 +166,3 @@ Join Community
 </button>
 </button>
 </SEOOptimizer>
-=======
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

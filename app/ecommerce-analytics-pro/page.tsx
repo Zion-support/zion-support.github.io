@@ -35,13 +35,8 @@ title: 'Conversion Tracking',
 description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
 }
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
 <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />

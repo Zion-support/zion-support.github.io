@@ -11,13 +11,8 @@ const features = [
 { icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },
 { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Property Management AI | Zion Tech Group - Intelligent Real Estate Management</title>
 <meta name="description" content="Transform your property management with AI-powered tools. Optimize rent, manage tenants, and maximize property value." />
@@ -44,15 +39,8 @@ return (
 </div>
 </section>
 </div>
-<<<<<<< HEAD
     </React.Fragment>
   )
 }
 
 export default $1
-=======
-</>
-)
-}
-export default PropertyManagementAIPage
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

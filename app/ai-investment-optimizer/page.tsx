@@ -677,7 +677,6 @@ interface InvestmentOptimizerProps {
 }
 
 export default function InvestmentOptimizer({ className = '' }: InvestmentOptimizerProps) {
-<<<<<<< HEAD
   const [portfolio, setPortfolio] = useState([
     { symbol: 'AAPL', name: 'Apple Inc.', shares: 100, price: 175.43, value: 17543, allocation: 25.5, change: 2.34 },
     { symbol: 'MSFT', name: 'Microsoft Corp.', shares: 50, price: 378.85, value: 18942.5, allocation: 27.6, change: -1.23 },
@@ -1191,5 +1190,3 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     </div>
   );
 }
-=======
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

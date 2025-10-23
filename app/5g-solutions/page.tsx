@@ -4,7 +4,6 @@ import Head from "next/head";
 import { Wifi, BarChart, CheckCircle, ArrowRight } from "lucide-react";
 
 const FiveGSolutionsPage: React.FC = () => {
-<<<<<<< HEAD
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -13,46 +12,6 @@ const FiveGSolutionsPage: React.FC = () => {
         <meta property="og:title" content="5G Solutions | Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 5G solutions for businesses. High-speed connectivity, IoT integration, and next-generation network infrastructure." />
       </Helmet>
-=======
-  const features = [
-    {
-      icon: Wifi,
-      title: "5G Network Solutions",
-      description:
-        "Complete 5G network solutions with ultra-low latency and high-speed connectivity.",
-      benefits: [
-        "Ultra-low latency connectivity",
-        "High-speed data transmission",
-        "Massive device connectivity",
-        "Enhanced mobile broadband",
-      ],
-    },
-    {
-      icon: BarChart,
-      title: "Performance Analytics",
-      description:
-        "Advanced analytics and reporting for 5G network performance and optimization.",
-      benefits: [
-        "Real-time network monitoring",
-        "Performance optimization",
-        "Predictive maintenance",
-        "Quality of service management",
-      ],
-    },
-    {
-      icon: CheckCircle,
-      title: "IoT Integration",
-      description:
-        "Seamless integration of IoT devices with 5G networks for smart applications.",
-      benefits: [
-        "Massive IoT connectivity",
-        "Edge computing support",
-        "Real-time data processing",
-        "Scalable device management",
-      ],
-    },
-  ];
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 
   return (
     <>

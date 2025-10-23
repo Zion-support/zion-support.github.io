@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AdminPage: React.FC = () => {
@@ -22,23 +21,8 @@ const AdminPage: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-"use client";
-import React from "react";
-
-interface AdminPageProps {
-  className?: string;
-}
-
-const AdminPage: React.FC<AdminPageProps> = ({ className = "" }) => {
-    return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h1>AdminPage</h1>
-      <p>This is a clean, functional component.</p>
->>>>>>> origin/main
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default AdminPage;

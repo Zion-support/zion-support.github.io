@@ -11,13 +11,8 @@ const features = [
 { icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },
 { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
 <meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning." />
@@ -44,15 +39,8 @@ return (
 </div>
 </section>
 </div>
-<<<<<<< HEAD
     </React.Fragment>
   )
 }
 
 export default $1
-=======
-</>
-)
-}
-export default OnlineLearningPlatformPage
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

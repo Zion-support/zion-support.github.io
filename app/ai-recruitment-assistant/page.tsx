@@ -35,13 +35,8 @@ title: 'Automated Screening',
 description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
 }
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
 <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant." />

@@ -35,13 +35,8 @@ title: 'Advanced Security',
 description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
 }
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
 <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />

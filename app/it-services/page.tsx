@@ -321,16 +321,8 @@ const ITServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
         </React.Fragment>
   )
 }
 
 export default $1
-=======
-    </>
-  );
-};
-
-export default ITServicesPage;
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

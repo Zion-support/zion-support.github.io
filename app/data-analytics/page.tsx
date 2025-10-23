@@ -56,13 +56,8 @@ const benefits = [
 'Real-time insights and reporting',
 'Custom analytics solutions'
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
 <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />

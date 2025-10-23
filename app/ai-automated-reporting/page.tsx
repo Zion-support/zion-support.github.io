@@ -30,15 +30,9 @@ const AiAutomatedReportingPage: React.FC = () => {
     },
   ];
 
-<<<<<<< HEAD
     return (
     <React.Fragment>
       <Helmet>
-=======
-  return (
-    <>
-      <Head>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
         <title>
           Ai Automated Reporting - Zion Tech Group | Advanced AI and IT
           Solutions

@@ -16,7 +16,6 @@ interface PerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean
   logToConsole?: boolean
 }
-<<<<<<< HEAD
 // Monitor Core Web Vitals
 if ('web-vitals' in window) {
 import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -125,7 +124,3 @@ className="text-gray-400 hover:text-white"
 )
 }
 export default PerformanceMonitor
-=======
-
-export default function PerformanceMonitor({ 
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

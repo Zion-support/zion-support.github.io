@@ -57,7 +57,6 @@ const AIContentWriterPage: React.FC = () => {
   ];
 
   const benefits = [
-<<<<<<< HEAD
     '10x faster content creation',
     'Improved SEO performance',
     'Consistent brand voice',
@@ -73,59 +72,6 @@ const AIContentWriterPage: React.FC = () => {
   ]
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-=======
-    'Save up to 80% of content creation time',
-    'Improve content quality with AI suggestions',
-    'Maintain consistent brand voice across all content',
-    'Generate unlimited content ideas and topics',
-    'Automatically optimize for SEO and readability',
-    'Scale content production without hiring more writers'
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$29',
-      period: 'month',
-      description: 'Perfect for individual content creators',
-      features: [
-        'Up to 50 articles/month',
-        'Basic AI writing tools',
-        'Standard templates',
-        'Email support'
-      ]
-    },
-    {
-      name: 'Professional',
-      price: '$79',
-      period: 'month',
-      description: 'Ideal for small teams and agencies',
-      features: [
-        'Up to 200 articles/month',
-        'Advanced AI features',
-        'Custom templates',
-        'Priority support',
-        'Team collaboration'
-      ]
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: 'month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited articles',
-        'All AI features',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options'
-      ]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered content writing platform by Zion Tech Group. Create engaging, SEO-optimized content with artificial intelligence." />

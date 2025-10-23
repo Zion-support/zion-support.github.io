@@ -57,13 +57,8 @@ const benefits = [
 'Expert analysis and reporting',
 'Ongoing security improvement guidance'
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
 <meta name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." />

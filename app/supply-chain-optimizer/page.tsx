@@ -11,13 +11,8 @@ const features = [
 { icon: CheckCircle, title: 'Quality Control', description: 'Automated quality control and compliance monitoring.' },
 { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' }
 ]
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
-return (
-<>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 <Helmet>
 <title>Supply Chain Optimizer | Zion Tech Group - AI-Powered Supply Chain Management</title>
 <meta name="description" content="Optimize your supply chain with AI-powered tools. Logistics optimization, demand forecasting, and automated processes." />
@@ -44,15 +39,8 @@ return (
 </div>
 </section>
 </div>
-<<<<<<< HEAD
     </React.Fragment>
   )
 }
 
 export default $1
-=======
-</>
-)
-}
-export default SupplyChainOptimizerPage
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

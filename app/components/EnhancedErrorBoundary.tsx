@@ -93,7 +93,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   )
 }
 export default EnhancedErrorBoundaryPage
-<<<<<<< HEAD
   </button>
   </button>
   </h2>
@@ -194,5 +193,3 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 }
 export default EnhancedErrorBoundary
-=======
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

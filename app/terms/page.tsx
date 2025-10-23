@@ -2,7 +2,6 @@
 import React from 'react'
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
 export default function TermsPage() {
-<<<<<<< HEAD
   const lastUpdated = 'January 1, 2024'
   const sections = [
     {
@@ -120,5 +119,3 @@ export default function TermsPage() {
   )
 }
   </p>
-=======
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

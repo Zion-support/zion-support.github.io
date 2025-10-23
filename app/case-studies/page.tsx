@@ -69,7 +69,6 @@ const CaseStudiesPage: React.FC = () => {
       image: '🏭',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
-<<<<<<< HEAD
   ]
   const filteredCaseStudies = selectedIndustry === 'All'
     ? caseStudies
@@ -82,12 +81,6 @@ const CaseStudiesPage: React.FC = () => {
   ]
     return (
     <div className="min-h-screen bg-gray-50">
-=======
-  ];
-
-  return (
-    <>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />

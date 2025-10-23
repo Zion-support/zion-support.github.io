@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -140,16 +139,6 @@ const EnhancedAnalyticsPage: React.FC = () => {
       </section>
     </div>
   )
-=======
-"use client";
-
-import React, { createContext, useContext, useEffect } from "react";
-
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-  identify: (userId: string, traits?: Record<string, unknown>) => void;
-  page: (name: string, properties?: Record<string, unknown>) => void;
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(

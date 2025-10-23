@@ -29,13 +29,8 @@ const ContentNewsletterSignup: React.FC = () => {
   };
 
   if (isSubscribed) {
-<<<<<<< HEAD
       return (
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    return (
-      <div className="bg-gradient-to-r from-green-50 to-emerald-50 py-16 px-4">
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-6xl mb-6">🎉</div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -57,7 +52,6 @@ const ContentNewsletterSignup: React.FC = () => {
       </div>
     );
   }
-<<<<<<< HEAD
     return (
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-4xl mx-auto">
@@ -96,36 +90,6 @@ const ContentNewsletterSignup: React.FC = () => {
                   className="w-full pl-10 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-=======
-
-  return (
-    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="text-6xl mb-6">📧</div>
-        <h2 className="text-4xl font-bold text-white mb-4">
-          Stay Ahead with AI Insights
-        </h2>
-        <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-          Get exclusive access to our latest AI breakthroughs, enterprise transformation guides, 
-          and cutting-edge content that's transforming businesses worldwide.
-        </p>
-
-        <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">
-            Join 10,000+ Enterprise Leaders
-          </h3>
-          
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                required
-              />
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
               <button
                 type="submit"
                 disabled={isSubmitting}

@@ -2,13 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Mail, ArrowRight } from 'lucide-react'
 const EmailMarketingSuitePage: React.FC = () => {
-<<<<<<< HEAD
     return (
     <React.Fragment>
-=======
-  return (
-    <>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
         <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />

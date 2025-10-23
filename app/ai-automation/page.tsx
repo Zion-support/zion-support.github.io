@@ -38,13 +38,8 @@ const AiAutomationPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-<<<<<<< HEAD
     return (
     <React.Fragment>
-=======
-  return (
-    <>
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
       <Helmet>
         <title>Ai Automation - Zion Tech Group</title>
                 <meta name="description" content="Advanced AI-powered ai automation solution for modern businesses." />
@@ -151,7 +146,6 @@ const AiAutomationPage: React.FC = () => {
                     </div>
                   </div>
         </section>
-<<<<<<< HEAD
               </div>
             <Footer />
             </React.Fragment>
@@ -159,11 +153,3 @@ const AiAutomationPage: React.FC = () => {
 }
 
 export default $1
-=======
-      </div>
-      <Footer />
-    </>
-  )
-}
-export default AiAutomationPage
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698

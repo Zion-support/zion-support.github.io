@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -107,26 +106,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
     </div>
   )
-=======
-"use client";
-
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  placeholder?: string;
-  sizes?: string;
-  quality?: number;
-  loading?: "lazy" | "eager";
-  onLoad?: () => void;
-  onError?: () => void;
->>>>>>> dbc62b9d098f838bcbe86265c63a54c93a7c7698
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
