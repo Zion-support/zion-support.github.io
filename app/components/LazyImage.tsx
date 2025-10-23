@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 interface LazyImageProps {
   src: string;
@@ -34,13 +35,16 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className, placeholder 
   return (
     <div ref={imgRef} className={className}>
       {isInView && (
-        <img
+        <Image
           src={src}
           alt={alt}
           onLoad={() => setIsLoaded(true)}
           className={`transition-opacity duration-300 ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
+          width={800}
+          height={600}
+          priority={false}
         />
       )}
       {!isLoaded && placeholder && (
