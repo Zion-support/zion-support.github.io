@@ -50,4 +50,3 @@ const PerformanceMonitor: React.FC = () => {
 
 export default Page;
 
-export default PerformanceMonitor;
