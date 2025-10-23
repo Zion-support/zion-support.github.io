@@ -103,7 +103,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return originalSrc;
   };
 
-  const optimizedSrc = getOptimizedSrc(src, width, height);
+  const optimizedSrc = getOptimizedSrc(src);
   const imageSrc = isInView ? optimizedSrc : placeholder;
 
   return (
