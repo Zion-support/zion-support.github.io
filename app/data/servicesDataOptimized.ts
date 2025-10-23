@@ -1,3 +1,4 @@
+"use client";
 // Optimized services data with reduced bundle size
 export const servicesDataOptimized = {
   aiServices: [
@@ -68,7 +69,6 @@ export const servicesDataOptimized = {
       link: "/ai-services/automation",
     },
   ],
-
   itServices: [
     {
       id: "web-development",
@@ -115,7 +115,6 @@ export const servicesDataOptimized = {
       link: "/cloud-infrastructure",
     },
   ],
-
   microSaaS: [
     {
       id: "analytics-dashboard",
@@ -165,5 +164,6 @@ export const servicesDataOptimized = {
 };
 // Lazy load full services data when needed
 export const loadFullServicesData = async () => {
-
+  const { services } = await import("./servicesData");
+  return services;
 };

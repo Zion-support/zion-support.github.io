@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
@@ -29,7 +31,7 @@ export interface ErrorReport {
   createdAt: string;
   updatedAt?: string;
 }
-
+export type ErrorSeverity = "low" | "medium" | "high" | "critical";
 export interface Service {
   id: string;
   title: string;

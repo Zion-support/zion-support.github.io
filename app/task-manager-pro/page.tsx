@@ -1,64 +1,35 @@
+"use client";
+import React from "react";
 
-const TaskManagerProPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Advanced Technology",
-      description:
-        "Cutting-edge solutions powered by the latest technology and AI.",
-    },
-    {
-      icon: Zap,
-      title: "High Performance",
-      description:
-        "Optimized for speed and efficiency with real-time processing capabilities.",
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description:
-        "Bank-level security with end-to-end encryption and compliance standards.",
-    },
-    {
-      icon: Globe,
-      title: "Global Scalability",
-      description:
-        "Scale effortlessly across multiple regions with automatic load balancing.",
-    },
-  ];
-
+export default function TaskManagerProPage() {
   return (
-
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Task Manager Pro</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced task manager pro solutions by Zion Tech Group
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </a>
+            <a
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </a>
+    
+    
+    
+    
           </div>
-        </section>
-
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-                Start Your Project
-              </a>
-
-                Learn More
-              </a>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-    </React.Fragment>
+    </div>
   );
-};
-
-export default TaskManagerProPage;
+}

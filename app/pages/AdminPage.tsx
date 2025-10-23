@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 interface AdminPageProps {
@@ -7,7 +8,7 @@ interface AdminPageProps {
 const AdminPage: React.FC<AdminPageProps> = ({ className = "" }) => {
   return (
     <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>AdminPage</h2>
+      <h1>AdminPage</h1>
       <p>This is a clean, functional component.</p>
     </div>
   );
