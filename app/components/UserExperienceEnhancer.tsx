@@ -38,6 +38,6 @@ document.head.appendChild(style)
 }
 enhanceUX()
 }, [])
-return <>{children}</>
+return <>{children}</><//>
 }
 export default UserExperienceEnhancer

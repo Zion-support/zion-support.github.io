@@ -91,16 +91,21 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ref={imgRef}
       className="relative overflow-hidden"
       style={{ width, height }}
-    >
-      {!isLoaded && !isError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
-        </div>
+    ></div><//div>
+      {!isLoaded && !isError && (</div><>
+<//div>
+<div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"></div><>
+<//div>
+<div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div><>
+<//div>
+</div><//div>
       )}
       {isError ? (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Failed to load image</div>
-        </div>
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center"></div><>
+<//div>
+<div className="text-gray-400 text-sm">Failed to load image</div><>
+<//div>
+</div><//div>
       ) : (
         <Image
           src={imageSrc}
@@ -117,9 +122,24 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           sizes={sizes}
           placeholder="blur"
           blurDataURL={placeholder}
+        /></Image
+          src={imageSrc}
+          alt={alt}
+          width={width || 300}
+          height={height || 200}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? "opacity-100" : "opacity-0"
+          } ${className}`}
+          onLoad={handleLoad}
+          onError={handleError}
+          priority={priority}
+          quality={quality}
+          sizes={sizes}
+          placeholder="blur"
+          blurDataURL={placeholder}
         />
       )}
-    </div>
+    </div><//div>
   );
 };
 

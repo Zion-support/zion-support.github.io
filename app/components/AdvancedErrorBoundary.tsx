@@ -175,108 +175,162 @@ class AdvancedErrorBoundary extends Component<
 
       // Default error UI
       return (
-        <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
-          <div className='sm:mx-auto sm:w-full sm:max-w-md'>
-            <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
-              <div className='text-center'>
-                <div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'>
-                  <svg
+        <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'></div><>
+<//div>
+<div className='sm:mx-auto sm:w-full sm:max-w-md'></div><>
+<//div>
+<div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'></div><>
+<//div>
+<div className='text-center'></div><>
+<//div>
+<div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'></div><>
+<//div>
+<svg
+                    className='h-6 w-6 text-red-600'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  ><>
+</svg
                     className='h-6 w-6 text-red-600'
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
                   >
-                    <path
+<path
                       strokeLinecap='round'
                       strokeLinejoin='round'
                       strokeWidth={2}
                       d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
-                    />
-                  </svg>
-                </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
-                  Oops! Something went wrong
-                </h2>
-                <p className='mt-2 text-sm text-gray-600'>
-                  We&apos;re sorry, but something unexpected happened. Our team
-                  has been notified.
-                </p>
-              </div>
-
+                    /></p><>
+<//p>
+</svg><>
+<//svg>
+</div><>
+<//div>
+<h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h1><//h1>
+                  Oops! Something went wrong</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className='mt-2 text-sm text-gray-600'></p className='mt-2 text-sm text-gray-600'>
+                  We&apos;re sorry, but something unexpected happened. Our team</p><//p>
+                  has been notified.</p><>
+<//p>
+</p><>
+<//p>
+</div><//div>
               {process.env.NODE_ENV === 'development' && (
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>
-                    Error Details:
-                  </h3>
-                  <div className='mt-2 text-sm text-red-700'>
-                    <p>
-                      <strong>Error ID:</strong> {this.state.errorId}
-                    </p>
-                    <p>
-                      <strong>Message:</strong> {this.state.error?.message}
-                    </p>
-                    <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
+                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'></div><>
+<//div>
+<h3 className='text-sm font-medium text-red-800'></h1><//h1>
+                    Error Details:</h1><>
+<//h1>
+</h3><>
+<//h3>
+<div className='mt-2 text-sm text-red-700'></div><>
+<//div>
+<p></p><>
+<//p>
+<strong>Error ID:</strong> {this.state.errorId}
+                    </p><>
+<//p>
+<p></p><>
+<//p>
+<strong>Message:</strong> {this.state.error?.message}
+                    </p><>
+<//p>
+<details className='mt-2'><>
+</details className='mt-2'>
+<summary className='cursor-pointer font-medium'></summary className='cursor-pointer font-medium'>
                         Stack Trace
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
-                        {this.state.error?.stack}
-                      </pre>
-                    </details>
-                    <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
+                      </summary><>
+<//summary>
+<pre className='mt-2 text-xs overflow-auto'></p><//p>
+                        {this.state.error?.stack}</p><>
+<//p>
+</pre><>
+<//pre>
+</details><>
+<//details>
+<details className='mt-2'><>
+</details className='mt-2'>
+<summary className='cursor-pointer font-medium'></summary className='cursor-pointer font-medium'>
                         Component Stack
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
-                        {this.state.errorInfo?.componentStack}
-                      </pre>
-                    </details>
-                  </div>
-                </div>
+                      </summary><>
+<//summary>
+<pre className='mt-2 text-xs overflow-auto'></p><//p>
+                        {this.state.errorInfo?.componentStack}</p><>
+<//p>
+</pre><>
+<//pre>
+</details><>
+<//details>
+</div><>
+<//div>
+</div><//div>
               )}
 
-              <div className='mt-6 space-y-3'>
-                {this.props.enableRetry &&
+              <div className='mt-6 space-y-3'></div><//div>
+                {this.props.enableRetry &&</div><//div>
                   this.retryCount < this.maxRetries && (
                     <button
                       onClick={this.handleRetry}
                       className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                    ></ this.maxRetries && (
+                    <button
+                      onClick={this.handleRetry}
+                      className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     >
-                      Try Again ({this.maxRetries - this.retryCount} attempts
-                      left)
-                    </button>
+                      Try Again ({this.maxRetries - this.retryCount} attempts</button><//button>
+                      left)</button><>
+<//button>
+</button><//button>
                   )}
 
                 <button
                   onClick={this.handleReload}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
-                  Reload Page
-                </button>
-
-                <button
+                ></button><//button>
+                  Reload Page</button><>
+<//button>
+</button><>
+<//button>
+<button
                   onClick={this.handleGoHome}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
-                  Go to Homepage
-                </button>
-              </div>
-
-              <div className='mt-6 text-center'>
-                <p className='text-xs text-gray-500'>
-                  If this problem persists, please contact our support team
-                  at&nbsp;
-                  <a
+                ></button><//button>
+                  Go to Homepage</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+<div className='mt-6 text-center'></div><>
+<//div>
+<p className='text-xs text-gray-500'></p className='text-xs text-gray-500'>
+                  If this problem persists, please contact our support team</p><//p>
+                  at&nbsp;</p><>
+<//p>
+<a
+                    href='mailto:kleber@ziontechgroup.com'
+                    className='text-indigo-600 hover:text-indigo-500'
+                  ></a
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
                   >
                     kleber@ziontechgroup.com
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+                  </a><>
+<//a>
+</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><//div>
       );
     }
 

@@ -215,8 +215,8 @@ r: 'Credit card number is required' }
 const cleaned = cardNumber.replace(/[\s-]/g, '')
 if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */}
 r: 'Credit card number must contain only digits' }
-}
-}</>
+}</><//>
+}</><//>
 if (cleaned.length < 13 || cleaned.length > 19) {;}
 return { isValid: false, error: 'Credit card number must be between 13 and 19 digits' }
 if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
@@ -307,7 +307,7 @@ d: true }
 * Async validation
 */
 export async function validateAsync(
-validator: (val: unknown) => Promise<ValidationResult>
+validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
 value: unknown,
 ): Promise<ValidationResult> {,
 try {,

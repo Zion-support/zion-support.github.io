@@ -90,166 +90,268 @@ const AIWorkflowAutomationPage: React.FC = () => {
         description="Automate complex business processes with AI-powered workflow automation. Increase efficiency by 70% and reduce errors by 90%."
         keywords={['AI workflow automation', 'business process automation', 'workflow optimization', 'process intelligence', 'automation platform']}
         canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
+      /><>
+</SEOOptimizer
+        title="AI Workflow Automation Solutions - Zion Tech Group"
+        description="Automate complex business processes with AI-powered workflow automation. Increase efficiency by 70% and reduce errors by 90%."
+        keywords={['AI workflow automation', 'business process automation', 'workflow optimization', 'process intelligence', 'automation platform']}
+        canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="pt-16">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><>
+<//div>
+<Navigation /><>
+</Navigation />
+<main className="pt-16"></main className="pt-16">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Workflow Automation Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Automate complex business processes with intelligent AI
-              </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered workflow automation platform helps you streamline operations, 
-                reduce errors, and increase efficiency across your entire organization.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a
+          <section className="container mx-auto px-4 py-16 text-center"><>
+</section className="container mx-auto px-4 py-16 text-center">
+<div className="max-w-4xl mx-auto"></div><>
+<//div>
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text"></h1><//h1>
+                AI Workflow Automation Solutions</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl md:text-2xl text-cyan-400 mb-8"></p><//p>
+                Automate complex business processes with intelligent AI</p><>
+<//p>
+</p><>
+<//p>
+<p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+                Our AI-powered workflow automation platform helps you streamline operations, </p><//p>
+                reduce errors, and increase efficiency across your entire organization.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div><>
+<//div>
+<a
+                  href="tel:+13024640950"
+                  className="cyber-button flex items-center space-x-2"
+                ><>
+</a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
+<Phone className="w-5 h-5" /><>
+</Phone className="w-5 h-5" />
+<span>Call (302) 464-0950</span><>
+<//span>
+</a><>
+<//a>
+<a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                ><>
+</a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
-                </a>
-              </div>
+<Mail className="w-5 h-5" /><>
+</Mail className="w-5 h-5" />
+<span>Get Free Demo</span><>
+<//span>
+</a><>
+<//a>
+</div><//div>
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
-                  </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div><//div>
+                {stats.map((stat, index) => (</div><>
+<//div>
+<div key={index} className="cyber-card p-6 text-center"></div><>
+<//div>
+<div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div><//div>
+                      {stat.number}</div><>
+<//div>
+</div><>
+<//div>
+<div className="text-gray-300 font-medium">{stat.label}</div><>
+<//div>
+</div><//div>
                 ))}
-              </div>
-            </div>
-          </section>
-
+              </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
           {/* Features Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Key Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+          <section className="mb-16"><>
+</section className="mb-16">
+<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h1><//h1>
+              Key Features</h1><>
+<//h1>
+</h2><>
+<//h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div><//div>
+              {features.map((feature, index) => (</div><>
+<//div>
+<div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div><>
+<//div>
+<feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /><>
+</feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+<h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3><>
+<//h3>
+<p className="text-gray-300 mb-4">{feature.description}</p><>
+<//p>
+<ul className="space-y-2"></ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300"><>
+</li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+<CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>
+                      </li><//li>
                     ))}
-                  </ul>
-                </div>
+                  </ul><>
+<//ul>
+</div><//div>
               ))}
-            </div>
-          </section>
+            </div><>
+<//div>
+</section><//section>
           {/* Use Cases Section */}
-          <section className="container mx-auto px-4 py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Automate Any Business Process
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
+          <section className="container mx-auto px-4 py-16"><>
+</section className="container mx-auto px-4 py-16">
+<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h1><//h1>
+              Automate Any Business Process</h1><>
+<//h1>
+</h2><>
+<//h2>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div><//div>
+              {useCases.map((useCase, index) => (</div><>
+<//div>
+<div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div><>
+<//div>
+<useCase.icon className="w-12 h-12 text-cyan-400 mb-4" /><>
+</useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
+<h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3><>
+<//h3>
+<p className="text-gray-300">{useCase.description}</p><>
+<//p>
+</div><//div>
               ))}
-            </div>
-          </section>
+            </div><>
+<//div>
+</section><//section>
           {/* Pricing Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Pricing Plans
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
-                <div
+          <section className="mb-16"><>
+</section className="mb-16">
+<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h1><//h1>
+              Pricing Plans</h1><>
+<//h1>
+</h2><>
+<//h2>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div><//div>
+              {pricing.map((plan, index) => (</div><>
+<//div>
+<div
                   key={index}
                   className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
-                >
-                  {index === 1 && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
+                ></div><//div>
+                  {index === 1 && (</div><>
+<//div>
+<div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div><>
+<//div>
+<span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold"></span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular
-                      </span>
-                    </div>
+                      </span><>
+<//span>
+</div><//div>
                   )}
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
-                  <ul className="space-y-3 mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><>
+<//h3>
+<p className="text-gray-300 mb-4">{plan.description}</p><>
+<//p>
+<div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div><>
+<//div>
+<ul className="space-y-3 mb-8"></ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-300"><>
+</li key={featureIndex} className="flex items-center text-gray-300">
+<CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </li><//li>
                     ))}
-                  </ul>
-                  <a
+                  </ul><>
+<//ul>
+<a
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
+                    className="cyber-button w-full text-center block"
+                  ></a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className="cyber-button w-full text-center block"
                   >
                     Get Started
-                  </a>
-                </div>
+                  </a><>
+<//a>
+</div><//div>
               ))}
-            </div>
-          </section>
-
+            </div><>
+<//div>
+</section><//section>
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Automate Your Workflows?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join 200+ companies already using our AI workflow automation solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+          <section className="container mx-auto px-4 py-16 text-center"><>
+</section className="container mx-auto px-4 py-16 text-center">
+<div className="cyber-card p-12 max-w-4xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text"></h1><//h1>
+                Ready to Automate Your Workflows?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-300 mb-8"></p><//p>
+                Join 200+ companies already using our AI workflow automation solutions</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<a
+                  href="tel:+13024640950"
+                  className="cyber-button flex items-center justify-center space-x-2"
+                ><>
+</a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
+<Phone className="w-5 h-5" /><>
+</Phone className="w-5 h-5" />
+<span>Call (302) 464-0950</span><>
+<//span>
+</a><>
+<//a>
+<a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center justify-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                ><>
+</a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className="w-5 h-5" />
-                  <span>Schedule Demo</span>
-                </a>
-              </div>
-            </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </>
+<Mail className="w-5 h-5" /><>
+</Mail className="w-5 h-5" />
+<span>Schedule Demo</span><>
+<//span>
+</a><>
+<//a>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</main><>
+<//main>
+<Footer /><>
+</Footer />
+</div><>
+<//div>
+</><//>
   );
 };
 

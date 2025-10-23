@@ -15,30 +15,43 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ]
   return (
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+            </h1><>
+<//h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions.</p><//p>
+              Powered by cutting-edge AI technology and industry expertise.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><>
+<//h3>
+<p className="text-gray-300">{feature.description}</p><>
+<//p>
+</div><//div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Benefits Section */}
-              </div>
+              </div><//div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* CTA Section */}
-          </div>
-        </div>
-      </section>
-    </div>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><//div>
   )
 }
 export default PagePage

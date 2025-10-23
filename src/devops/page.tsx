@@ -30,39 +30,60 @@ const DevOpsPage: React.FC = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">DevOps Services</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Accelerate your development lifecycle with our comprehensive DevOps solutions. 
-            From CI/CD to infrastructure automation, we help you deliver faster and more reliably.
-          </p>
-        </section>
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our DevOps Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <service.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><>
+<//div>
+<Navigation /><>
+</Navigation />
+<main className="container mx-auto px-4 py-16 pt-24"><>
+</main className="container mx-auto px-4 py-16 pt-24">
+<section className="text-center mb-16"><>
+</section className="text-center mb-16">
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">DevOps Services</h1><>
+<//h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Accelerate your development lifecycle with our comprehensive DevOps solutions. </p><//p>
+            From CI/CD to infrastructure automation, we help you deliver faster and more reliably.</p><>
+<//p>
+</p><>
+<//p>
+</section><>
+<//section>
+<section className="mb-16"><>
+</section className="mb-16">
+<h2 className="text-3xl font-bold text-white mb-12 text-center">Our DevOps Services</h2><>
+<//h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div><//div>
+            {services.map((service, index) => (</div><>
+<//div>
+<div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"></div><>
+<//div>
+<service.icon className="w-12 h-12 text-cyan-400 mb-4" /><>
+</service.icon className="w-12 h-12 text-cyan-400 mb-4" />
+<h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3><>
+<//h3>
+<p className="text-gray-300 mb-4">{service.description}</p><>
+<//p>
+<ul className="space-y-2"></ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"><>
+</li key={featureIndex} className="flex items-center text-sm text-gray-300">
+<CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
-                    </li>
+                    </li><//li>
                   ))}
-                </ul>
-              </div>
+                </ul><>
+<//ul>
+</div><//div>
             ))}
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+          </div><>
+<//div>
+</section><>
+<//section>
+</main><>
+<//main>
+<Footer /><>
+</Footer />
+</div><//div>
   );
 };
 export default DevOpsPage;

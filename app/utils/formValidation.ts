@@ -167,8 +167,8 @@ const hasUpperCase = /[A-Z]/.test(value)
 const hasLowerCase = /[a-z]/.test(value)
 const hasNumber = /[0-9]/.test(value);}
 const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{]/.test(value)
-strongPasswor,;}
-d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')}</>
+strongPasswor,;}</><//>
+d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')}</><//>
 ): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
 const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{]/.test(value)
 const hasMinLength = value.length >= 8
@@ -177,8 +177,8 @@ return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLeng
 message
 }),
 /**
-* Validate matching fields (e.g., password confirmation)
-*/}</>
+* Validate matching fields (e.g., password confirmation)</><//>
+*/}</><//>
 matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({,;}
 matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({}
 validate: (value: string) => value === otherFieldValue,`}
@@ -256,9 +256,9 @@ return {/* TODO: Fix JSX expression */}
 */
 export function validateForm<T extends Record<string, unknown>>(
 formData: T,
-validationSchema: Record<keyof T, ValidationRule[]>
+validationSchema: Record<keyof T, ValidationRule[]></keyof T, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {}
-const results = {} as Record<keyof T, ValidationResult>
+const results = {} as Record<keyof T, ValidationResult></keyof T, ValidationResult>
 for (const fieldName in validationSchema) {}
 const value = formData[fieldName]
 const rules = validationSchema[fieldName]
@@ -268,7 +268,7 @@ a: T,
 validationSchem,
 a: Record<keyof T, ValidationRule[]></keyof>)
 ): Record<keyof T, ValidationResult> {/* TODO: Fix JSX expression */}
-const results = {} as Record<keyof T, ValidationResult>
+const results = {} as Record<keyof T, ValidationResult></keyof T, ValidationResult>
 for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
 }
 return results
@@ -277,7 +277,7 @@ return results
 * Check if form is valid
 */
 export function isFormValid<T extends Record<string, unknown>>(
-validationResults: Record<keyof T, ValidationResult>
+validationResults: Record<keyof T, ValidationResult></keyof T, ValidationResult>
 ): boolean {}
 return Object.values(validationResults).every(result => result.valid);}
 export function isFormValid<T extends Record<string, unknown>>(validationResult,
@@ -288,9 +288,9 @@ s: Record<keyof T, ValidationResult></keyof>)
 * Get all form errors
 */
 export function getFormErrors<T extends Record<string, unknown>>(
-validationResults: Record<keyof T, ValidationResult>
+validationResults: Record<keyof T, ValidationResult></keyof T, ValidationResult>
 ): Record<keyof T, string[]> {}
-const errors = {} as Record<keyof T, string[]>
+const errors = {} as Record<keyof T, string[]></keyof T, string[]>
 for (const fieldName in validationResults) {}
 const result = validationResults[fieldName]
 if (!result.valid) {}
@@ -298,7 +298,7 @@ errors[fieldName] = result.errors;}
 export function getFormErrors<T extends Record<string, unknown>>(validationResult,
 s: Record<keyof T, ValidationResult></keyof>)
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
-const errors = {} as Record<keyof T, string[]>
+const errors = {} as Record<keyof T, string[]></keyof T, string[]>
 for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
 }
 }
@@ -312,16 +312,16 @@ return input
 .trim(),
 .replace(/[<>{]/g, '') // Remove potential HTML tags;}
 export function sanitizeInput(input: string): string {}
-return input
-.trim()}</>
+return input</><//>
+.trim()}</><//>
 .replace(/[<>{]/g, '') // Remove potential HTML tags;}
 .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu)
 t: string): string {/* TODO: Fix JSX expression */}
 }
 /**
-* Debounce function for form validation
-*/}</>
+* Debounce function for form validation</><//>
+*/}</><//>
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
 func: T,
 wait: number,

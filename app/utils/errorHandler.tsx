@@ -101,12 +101,12 @@ export class ErrorHandler {
 // Error Handler class;}
 export class ErrorHandler {}
 private static instance: ErrorHandler,
-private config: ErrorHandlerConfig;</string>
-private errors: AppError[] = [];</string>
+private config: ErrorHandlerConfig;</string><//string>
+private errors: AppError[] = [];</string><//string>
 private retryQueue: Array<{ error: AppError; retryCount: number }> = []
 constructor(config: Partial<ErrorHandlerConfig>= {}) {;}
-this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig>
-}</ErrorHandlerConfig>
+this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig><//ErrorHandlerConfig>
+}</ErrorHandlerConfig><//ErrorHandlerConfig>
 static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {
 if (!ErrorHandler.instance) {
 ErrorHandler.instance = new ErrorHandler(config)
@@ -136,7 +136,7 @@ this.config = { ...defaultErrorHandlerConfig, ...config }
 static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */}
 }
 return ErrorHandler.instance
-}</ErrorHandlerConfig>
+}</ErrorHandlerConfig><//ErrorHandlerConfig>
 // Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {</string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,
 id: this.generateErrorId(),;}
 constructor(config: Partial<ErrorHandlerConfig> = {}) {}
@@ -517,23 +517,35 @@ box-shadow: 0 2 px 10 px rgba(0,0,0,0.2)
 z-index: 10000,
 max-width: 400 px
 font-family: Arial, sans-serif
-`;</string>
-notification.innerHTML = `</string>
-<div style="display:flex;justify-content:space-between;align-items:center;"></div>
-<div></div>
-<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+`;</string><//string>
+notification.innerHTML = `</string><>
+<//string>
+<div style="display:flex;justify-content:space-between;align-items:center;"></div><>
+<//div>
+<div></div><>
+<//div>
+<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button><//button>
 `
 notification.innerHTML = `
-<div style="display: flex;justify-content:space-between;align-items:center;">,</div>
-<div>,</div>
-<strong>${error.severity} Error</strong>
-<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>
-</div>
-<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-<div style="display:flex;justify-content:space-between;align-items:center;"></div>
-<div></div>
-<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-</div>
+<div style="display: flex;justify-content:space-between;align-items:center;">,</div><>
+<//div>
+<div>,</div><>
+<//div>
+<strong>${error.severity} Error</strong><>
+<//strong>
+<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><>
+<//p>
+</div><>
+<//div>
+<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button><>
+<//button>
+<div style="display:flex;justify-content:space-between;align-items:center;"></div><>
+<//div>
+<div></div><>
+<//div>
+<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button><>
+<//button>
+</div><//div>
 `
 document.body.appendChild(notification)
 // Auto-remove after 5 seconds for non-critical errors
@@ -592,12 +604,15 @@ notification.innerHTML = `
 <div style="displa,
 y: flex; justify-conten,
 t: space-between; align-item,"
-s: center;"></div>
-<div></div>
+s: center;"></div><>
+<//div>
+<div></div><>
+<//div>
 <strong>${error.severity} Error</strong>"
 <p style="margi,
 n: 5px 0 0 0; font-siz,"
-e: 14px;">${error.message}</p>
+e: 14px;">${error.message}</p><>
+<//p>
 </div>"
 <button onclick="this.parentElement.parentElement.remove()" style="
 backgroun,
@@ -612,7 +627,8 @@ curso,
 r: pointer,
 margin-lef,
 t: 10px;"
-">×</button>
+">×</button><>
+<//button>
 </div>`
 `
 document.body.appendChild(notification)
@@ -789,7 +805,7 @@ return acc
 {} as Record<ErrorType, number>)
 const bySeverity = this.errors.reduce(
 (acc, error) => {;}
-{} as Record<ErrorType, number>
+{} as Record<ErrorType, number></ErrorType, number>
 `)
 }
 }
@@ -829,18 +845,18 @@ clearAllErrors(): void {/* TODO: Fix JSX expression */}
 // Get error statistics
 getErrorStatistics() {/* TODO: Fix JSX expression */}
 },
-{} as Record<ErrorType, number></ErrorType>
+{} as Record<ErrorType, number></ErrorType><//ErrorType>
 )
 const bySeverity = this.errors.reduce()
 (acc, error) => {/* TODO: Fix JSX expression */}
 },
-{} as Record<ErrorSeverity, number></ErrorSeverity>
+{} as Record<ErrorSeverity, number></ErrorSeverity><//ErrorSeverity>
 )
 const bySeverity = this.errors.reduce()
 (acc, error) => {}
 acc[error.severity] = (acc[error.severity] || 0) + 1
-return acc;</ErrorType>
-},</ErrorType>
+return acc;</ErrorType><//ErrorType>
+},</ErrorType><//ErrorType>
 {} as Record<ErrorSeverity, number>);</ErrorSeverity></<<<ErrorSeverit>const</ErrorSeverit></<<ErrorSeverit>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length
 const unresolved = total - resolved
 return {}
@@ -865,8 +881,8 @@ window.addEventListener('unhandledrejection', event => {)
 this.handleError(new Error(event.reason))
 }
 }
-}</ErrorSeverity>
-// React error boundary component</ErrorSeverity>
+}</ErrorSeverity><//ErrorSeverity>
+// React error boundary component</ErrorSeverity><//ErrorSeverity>
 // Set up global error handler
 window.addEventListener('error', event => {)
 this.handleError(event.error || new Error(event.message))
@@ -919,15 +935,18 @@ component: 'ErrorBoundary')
 render() {
 if (this.state.hasError) {
 return(this.props.fallback || (;}
-<div style={{ padding: '20px', textAlign: 'center' }}></div>
+<div style={{ padding: '20px', textAlign: 'center' }}></div><>
+<//div>
 <h2>Something went wrong<p>We're sorry, but something unexpected happened.<button
 render() {}
 if (this.state.hasError) {}
 return (
 this.props.fallback || (
-<div style={{ padding: '20px', textAlign: 'center' }}></div>
+<div style={{ padding: '20px', textAlign: 'center' }}></div><>
+<//div>
 <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
-onClick={() =>this.setState({ hasError: false, error: undefined })}
+onClick={() =>this.setState({ hasError: false, error: undefined })}</button><>
+<//button>
 <h2>Something went wrong</h2>)
 <p>We're sorry, but something unexpected happened.</p>)
 <button;)
@@ -938,8 +957,8 @@ padding: '10px 20px',
 backgroundColor: '#007bff',
 color: 'white',
 border: 'none',
-borderRadius: '4px'}
-cursor: 'pointer'}
+borderRadius: '4px'}</button><//button>
+cursor: 'pointer'}</button><//button>
 export class ErrorBoundary extends React.Component<
 {/* TODO: Fix JSX expression */}
 n: React.ReactNode; fallback?: React.ReactNode },
@@ -960,20 +979,24 @@ o: ErrorInfo) {/* TODO: Fix JSX expression */}
 })
 }
 render() {/* TODO: Fix JSX expression */}
-n: 'center' }}></div>
-<h2>Something went wrong</h2>
-<p>We're sorry, but something unexpected happened.</p>
-<button></button>
+n: 'center' }}></div><>
+<//div>
+<h2>Something went wrong</h2><>
+<//h2>
+<p>We're sorry, but something unexpected happened.</p><>
+<//p>
+<button></button><//button>
 onClick={/* TODO: Fix JSX expression */}
 r: undefined })}
 style={/* TODO: Fix JSX expression */}
 }}
-></button>
-Try again</button>
+></button><//button>
+Try again</button><//button>
 >
 Try again
-</button>
-</div>
+</button><>
+<//button>
+</div><//div>
 )
 )
 }
@@ -1015,4 +1038,4 @@ getErrors: () => errorHandler.getErrors(),
 getErrorStatistics: () => errorHandler.getErrorStatistics(),
 clearResolvedErrors: () => errorHandler.clearResolvedErrors()}
 }
-export default ErrorHandler;</string>
+export default ErrorHandler;</string><//string>

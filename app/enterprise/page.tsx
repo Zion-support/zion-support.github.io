@@ -86,129 +86,210 @@ const stats = [
 { number: '24/7', label: 'Support Available', icon: Clock }
 ]
 return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><>
+<//div>
 <SEOOptimizer
 title="Enterprise Solutions - Zion Tech Group"
 description="Comprehensive enterprise-grade solutions for large-scale business operations."
 keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
+/><>
+</SEOOptimizer
+title="Enterprise Solutions - Zion Tech Group"
+description="Comprehensive enterprise-grade solutions for large-scale business operations."
+keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
 />
-<Navigation />
+<Navigation /></Navigation />
 {/* Hero Section */}
-<section className="relative py-20 px-4 overflow-hidden">
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-<div className="relative max-w-7xl mx-auto text-center"></div>
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-Enterprise</h1>
-<span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+<section className="relative py-20 px-4 overflow-hidden"><>
+</section className="relative py-20 px-4 overflow-hidden">
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div><>
+<//div>
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div><>
+<//div>
+<div className="relative max-w-7xl mx-auto text-center"></div><>
+<//div>
+<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1><//h1>
+Enterprise</h1><>
+<//h1>
+<span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
 Solutions
-</
-</h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-Comprehensive enterprise-grade solutions designed for large-scale business operations.
-Transform your organization with cutting-edge technology and expert implementation.
-</p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-Get Enterprise Consultation
-<ArrowRight className="inline-block ml-2 w-5 h-5" />
-</button>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-View Case Studies
-</
-</div>
-</div>
-</section>
+</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+Comprehensive enterprise-grade solutions designed for large-scale business operations.</p><//p>
+Transform your organization with cutting-edge technology and expert implementation.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"></button><//button>
+Get Enterprise Consultation</button><>
+<//button>
+<ArrowRight className="inline-block ml-2 w-5 h-5" /><>
+</ArrowRight className="inline-block ml-2 w-5 h-5" />
+</button><>
+<//button>
+<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button><//button>
+View Case Studies</button><>
+<//button>
+</h1><>
+<//h1>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
 {/* Stats Section */}
-<section className="py-20 px-4"></section>
-<div className="max-w-7xl mx-auto"></div>
-<div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+<section className="py-20 px-4"></section><>
+<//section>
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div><//div>
 {stats.map((stat, index) => (;}
-<div key={index} className="text-center"></div>
-<div className="flex justify-center mb-4"></div>
-<stat.icon className="w-12 h-12 text-purple-400" />
-</div>
-<div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-<div className="text-gray-300 text-sm">{stat.label}</div>
-</div>
+<div key={index} className="text-center"></div><>
+<//div>
+<div className="flex justify-center mb-4"></div><>
+<//div>
+<stat.icon className="w-12 h-12 text-purple-400" /><>
+</stat.icon className="w-12 h-12 text-purple-400" />
+</div><>
+<//div>
+<div className="text-3xl font-bold text-white mb-2">{stat.number}</div><>
+<//div>
+<div className="text-gray-300 text-sm">{stat.label}</div><>
+<//div>
+</div><//div>
 ))}
-</div>
-</div>
-</section>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
 {/* Features Section */}
-<section className="py-20 px-4">
-<div className="max-w-7xl mx-auto"></div>
-<div className="text-center mb-16"></div>
-<h2 className="text-4xl font-bold text-white mb-4">
-Enterprise-Grade Features
-</
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-Built for scale, security, and performance to meet the demands of large organizations.
-</p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-<h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-</div>
-<p className="text-gray-300 mb-4">{feature.description}</p>
-<ul className="space-y-2">
+<section className="py-20 px-4"><>
+</section className="py-20 px-4">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<div className="text-center mb-16"></div><>
+<//div>
+<h2 className="text-4xl font-bold text-white mb-4"></h1><//h1>
+Enterprise-Grade Features</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p><//p>
+Built for scale, security, and performance to meet the demands of large organizations.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div><>
+<//div>
+<feature.icon className="w-8 h-8 text-purple-400 mr-3" /><>
+</feature.icon className="w-8 h-8 text-purple-400 mr-3" />
+<h3 className="text-xl font-semibold text-white">{feature.title}</h3><>
+<//h3>
+</div><>
+<//div>
+<p className="text-gray-300 mb-4">{feature.description}</p><>
+<//p>
+<ul className="space-y-2"></ul className="space-y-2">
 {feature.benefits.map((benefit, idx) => (
-<li key={idx} className="flex items-center text-sm text-gray-400">
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+<li key={idx} className="flex items-center text-sm text-gray-400"><>
+</li key={idx} className="flex items-center text-sm text-gray-400">
+<CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle className="w-4 h-4 text-green-400 mr-2" />
 {benefit}
-</li>
+</li><//li>
 ))}
-</ul>
-</div>
+</ul><>
+<//ul>
+</div><//div>
 ))}
-</div>
-</div>
-</section>
-<h2 className="text-4xl font-bold text-white mb-4">
-Comprehensive Solutions
-</
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-End-to-end enterprise solutions that address every aspect of your business operations.
-</p>
-</div>
-</li>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+<h2 className="text-4xl font-bold text-white mb-4"></h1><//h1>
+Comprehensive Solutions</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p><//p>
+End-to-end enterprise solutions that address every aspect of your business operations.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+</li><//li>
 ))}
-</ul>
-</div>
+</ul><>
+<//ul>
+</div><//div>
 ))}
-</div>
-</div>
-</section>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
 {/* Benefits Section */}
-<section className="py-20 px-4">
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
+<section className="py-20 px-4"><>
+</section className="py-20 px-4">
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
 {/* CTA Section */}
-<section className="py-20 px-4">
-<div className="max-w-4xl mx-auto text-center"></div>
-<h2 className="text-4xl font-bold text-white mb-6">
-Ready to Transform Your Enterprise?
-</h2>
-<p className="text-xl text-gray-300 mb-8">
-Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
-</p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-Contact Enterprise Sales
-<ArrowRight className="inline-block ml-2 w-5 h-5" />
-</button>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-Learn More
-</
-</div>
-</div>
-</section>
-<Footer />
-</div>
+<section className="py-20 px-4"><>
+</section className="py-20 px-4">
+<div className="max-w-4xl mx-auto text-center"></div><>
+<//div>
+<h2 className="text-4xl font-bold text-white mb-6"></h1><//h1>
+Ready to Transform Your Enterprise?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-300 mb-8"></p><//p>
+Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button><//button>
+Contact Enterprise Sales</button><>
+<//button>
+<ArrowRight className="inline-block ml-2 w-5 h-5" /><>
+</ArrowRight className="inline-block ml-2 w-5 h-5" />
+</button><>
+<//button>
+<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button><//button>
+Learn More</button><>
+<//button>
+</h1><>
+<//h1>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+<Footer /><>
+</Footer />
+</div><//div>
 )
 }
 export default EnterprisePage

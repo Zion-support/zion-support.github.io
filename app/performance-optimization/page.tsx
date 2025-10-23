@@ -25,19 +25,28 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ]
   return (
-          </div>
-        </div>
-      </section>
-              </div>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><//div>
             ))}
-          </div>
-        </div>
-      </section>
-          </div>
-              </div>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><>
+<//div>
+</div><//div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
 }
 export default PagePage

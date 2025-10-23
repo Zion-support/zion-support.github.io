@@ -14,9 +14,11 @@ import LoadingSpinner from "./app/components/LoadingSpinner";
 
 // App Loading Spinner Component
 const AppLoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <LoadingSpinner />
-  </div>
+  <div className="min-h-screen flex items-center justify-center"></div><>
+<//div>
+<LoadingSpinner /><>
+</LoadingSpinner />
+</div><//div>
 );
 import SEOOptimizer from "./app/components/SEOOptimizer";
 // Hooks
@@ -405,43 +407,65 @@ export const ErrorFallback = ({
   error: Error;
   resetErrorBoundary: () => void;
 }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-      <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-        <svg
+  <div className="min-h-screen flex items-center justify-center bg-gray-50"></div><>
+<//div>
+<div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div><>
+<//div>
+<div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div><>
+<//div>
+<svg
+          className="w-6 h-6 text-red-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        ><>
+</svg
           className="w-6 h-6 text-red-600"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path
+<path
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
             d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
-          />
-        </svg>
-      </div>
-      <div className="mt-4 text-center">
-        <h3 className="text-lg font-medium text-gray-900">
-          Something went wrong
-        </h3>
-        <p className="mt-2 text-sm text-gray-500">{error.message}</p>
-        <button
+          /></p><>
+<//p>
+</svg><>
+<//svg>
+</div><>
+<//div>
+<div className="mt-4 text-center"></div><>
+<//div>
+<h3 className="text-lg font-medium text-gray-900"></h1><//h1>
+          Something went wrong</h1><>
+<//h1>
+</h3><>
+<//h3>
+<p className="mt-2 text-sm text-gray-500">{error.message}</p><>
+<//p>
+<button
           onClick={resetErrorBoundary}
           className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
-        >
-          Try again
-        </button>
-      </div>
-    </div>
-  </div>
+        ></button><//button>
+          Try again</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><//div>
 );
 // Loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <LoadingSpinner />
-  </div>
+  <div className="min-h-screen flex items-center justify-center"></div><>
+<//div>
+<LoadingSpinner /><>
+</LoadingSpinner />
+</div><//div>
 );
 
 const App = memo(() => {
@@ -497,18 +521,28 @@ const App = memo(() => {
     }
   }, []);
   return (
-    <GlobalErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-gray-50">
-            <main className="flex-1">
-              <ErrorBoundary>
-                <PerformanceMonitor />
-                <AccessibilityEnhancer>
-                  <SEOOptimizer>
-                    <Suspense fallback={<LoadingFallback />}>
-                    <ErrorBoundary>
-                      <Routes>
+    <GlobalErrorBoundary><>
+</GlobalErrorBoundary>
+<HelmetProvider><>
+</HelmetProvider>
+<Router><>
+</Router>
+<div className="min-h-screen bg-gray-50"></div><>
+<//div>
+<main className="flex-1"><>
+</main className="flex-1">
+<ErrorBoundary><>
+</ErrorBoundary>
+<PerformanceMonitor /><>
+</PerformanceMonitor />
+<AccessibilityEnhancer><>
+</AccessibilityEnhancer>
+<SEOOptimizer><>
+</SEOOptimizer>
+<Suspense fallback={<LoadingFallback />}>
+                    <ErrorBoundary><>
+</ErrorBoundary>
+<Routes></Routes>
                         {/* Main Pages */}
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
@@ -1101,37 +1135,58 @@ const App = memo(() => {
                         <Route
                           path="*"
                           element={
-                            <div className="min-h-screen flex items-center justify-center">
-                              <div className="text-center">
-                                <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                                  404
-                                </h1>
-                                <p className="text-gray-600 mb-8">
-                                  Page not found
-                                </p>
-                                <a
+                            <div className="min-h-screen flex items-center justify-center"></div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<h1 className="text-4xl font-bold text-gray-900 mb-4"></h1><//h1>
+                                  404</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-gray-600 mb-8"></p><//p>
+                                  Page not found</p><>
+<//p>
+</p><>
+<//p>
+<a
+                                  href="/"
+                                  className="text-blue-600 hover:text-blue-800"
+                                ></a
                                   href="/"
                                   className="text-blue-600 hover:text-blue-800"
                                 >
                                   Go back home
-                                </a>
-                              </div>
-                            </div>
+                                </a><>
+<//a>
+</div><>
+<//div>
+</div><//div>
                           }
                         />
-                      </Routes>
-                    </ErrorBoundary>
-                  </Suspense>
-                  </SEOOptimizer>
-                </AccessibilityEnhancer>
-              </ErrorBoundary>
-            </main>
-
-            <Footer />
-          </div>
-        </Router>
-      </HelmetProvider>
-    </GlobalErrorBoundary>
+                      </Routes><>
+<//Routes>
+</ErrorBoundary><>
+<//ErrorBoundary>
+</Suspense><>
+<//Suspense>
+</SEOOptimizer><>
+<//SEOOptimizer>
+</AccessibilityEnhancer><>
+<//AccessibilityEnhancer>
+</ErrorBoundary><>
+<//ErrorBoundary>
+</main><>
+<//main>
+<Footer /><>
+</Footer />
+</div><>
+<//div>
+</Router><>
+<//Router>
+</HelmetProvider><>
+<//HelmetProvider>
+</GlobalErrorBoundary><//GlobalErrorBoundary>
   );
 });
 

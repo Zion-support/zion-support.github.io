@@ -15,7 +15,7 @@ main.scrollIntoView({ behavior: 'smooth' })
 }}
 >
 Skip to main content
-</a>
+</a><//a>
 )
 }
 export default EnhancedSkipLink

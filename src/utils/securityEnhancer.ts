@@ -191,7 +191,7 @@ class SecurityEnhancer {
         } catch {
           return false
         }
-      case 'text':
+      case 'text':</><//>
         return input.length > 0 && input.length < 1000
       default:
         return false

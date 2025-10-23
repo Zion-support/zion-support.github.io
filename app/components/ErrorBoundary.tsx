@@ -38,57 +38,88 @@ if (this.props.fallback) {
 return this.props.fallback
 }
 return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-<div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
-<div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-<AlertTriangle className="w-8 h-8 text-red-400" />
-</div>
-<h1 className="text-2xl font-bold text-white mb-4">
-Oops! Something went wrong
-</h1>
-<p className="text-gray-300 mb-6">
-We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
-</p>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div><>
+<//div>
+<div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center"></div><>
+<//div>
+<div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div><>
+<//div>
+<AlertTriangle className="w-8 h-8 text-red-400" /><>
+</AlertTriangle className="w-8 h-8 text-red-400" />
+</div><>
+<//div>
+<h1 className="text-2xl font-bold text-white mb-4"></h1><//h1>
+Oops! Something went wrong</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-gray-300 mb-6"></p><//p>
+We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p><>
+<//p>
+</p><//p>
 {process.env.NODE_ENV === 'development' && this.state.error && (
-<details className="mb-6 text-left">
-<summary className="text-sm text-gray-400 cursor-pointer mb-2">
+<details className="mb-6 text-left"><>
+</details className="mb-6 text-left">
+<summary className="text-sm text-gray-400 cursor-pointer mb-2"></summary className="text-sm text-gray-400 cursor-pointer mb-2">
 Error Details (Development)
-</summary>
-<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
-{this.state.error.toString()}
-{this.state.errorInfo?.componentStack}
-</pre>
-</details>
+</summary><>
+<//summary>
+<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
+{this.state.error.toString()}</p><//p>
+{this.state.errorInfo?.componentStack}</p><>
+<//p>
+</pre><>
+<//pre>
+</details><//details>
 )}
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
 <button
 onClick={this.handleReload}
 className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
->
-<RefreshCw className="w-4 h-4" />
-<span>Reload Page</span>
-</button>
+></button><>
+<//button>
+<RefreshCw className="w-4 h-4" /><>
+</RefreshCw className="w-4 h-4" />
+<span>Reload Page</span><>
+<//span>
+</button><>
+<//button>
 <button
 onClick={this.handleGoHome}
 className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
->
-<Home className="w-4 h-4" />
-<span>Go Home</span>
-</button>
-</div>
-<div className="mt-6 pt-6 border-t border-white/20">
-<p className="text-sm text-gray-400 mb-3">
-Still having trouble? Contact our support team:
-</p>
+></button><>
+<//button>
+<Home className="w-4 h-4" /><>
+</Home className="w-4 h-4" />
+<span>Go Home</span><>
+<//span>
+</button><>
+<//button>
+</div><>
+<//div>
+<div className="mt-6 pt-6 border-t border-white/20"></div><>
+<//div>
+<p className="text-sm text-gray-400 mb-3"></p><//p>
+Still having trouble? Contact our support team:</p><>
+<//p>
+</p><>
+<//p>
 <a
 href="mailto:kleber@ziontechgroup.com"
+className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"><>
+</a
+href="mailto:kleber@ziontechgroup.com"
 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-<Phone className="w-4 h-4 mr-2" />
+<Phone className="w-4 h-4 mr-2" /></Phone className="w-4 h-4 mr-2" />
 kleber@ziontechgroup.com
-</a>
-</div>
-</div>
-</div>
+</a><>
+<//a>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><//div>
 )
 }
 return this.props.children

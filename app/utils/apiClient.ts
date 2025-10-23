@@ -13,11 +13,11 @@ interface APIResponse<T = any> {}
 data: T,
 status: number,
 statusText: string,
-headers: Record<string, string></strin>
+headers: Record<string, string></strin><//strin>
 }
 class APIClient {}
 private baseURL: string,
-private defaultHeaders: Record<string, string>
+private defaultHeaders: Record<string, string></string, string>
 constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {}
 this.baseURL = baseURL
 this.defaultHeaders = {}

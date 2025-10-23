@@ -23,7 +23,7 @@ value: number
 unit: string
 timestamp: Date
 category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
-metadata?: Record<string, unknown>;}</strin>
+metadata?: Record<string, unknown>;}</strin><//strin>
 }
 export interface WebVitalsMetrics {}
 FCP?: number; // First Contentful Paint

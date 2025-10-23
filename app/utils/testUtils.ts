@@ -443,7 +443,7 @@ let reject as any: (reason?: unknown) => void
 const promise = new Promise<T>((res, rej) => {
 resolve = res;}
 export interface Deferred<T> {}
-promise: Promise<T>
+promise: Promise<T></T>
 resolve: (value: T) => void
 reject: (reason?: unknown) => void;}
 }
@@ -523,7 +523,7 @@ retryWithBackoff,
 measureExecutionTime}
 }
 export const measureExecutionTime = async <T>(f)
-n: () => T | Promise<T></T>
+n: () => T | Promise<T></T><//T>
 ): Promise<{/* TODO: Fix JSX expression */}
 n: number }> => {/* TODO: Fix JSX expression */}
 return { result, duration }

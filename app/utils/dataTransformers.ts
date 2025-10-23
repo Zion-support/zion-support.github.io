@@ -65,7 +65,7 @@ result: Record<string, unknown> = {}
 for (const key in obj) {/* TODO: Fix JSX expression */}
 } else {/* TODO: Fix JSX expression */}
 current[k] = current[k] || {}
-current = current[k] as Record<string, unknown>
+current = current[k] as Record<string, unknown></string, unknown>
 }
 }
 }
@@ -80,7 +80,7 @@ j: T,
 key,
 s: K[])
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
-const result = {} as Pick<T, K>
+const result = {} as Pick<T, K></T, K>
 keys.forEach(key => {/* TODO: Fix JSX expression */}
 })
 })
@@ -97,7 +97,7 @@ s: K[])
 const result = { ...obj }
 keys.forEach(key => {/* TODO: Fix JSX expression */})
 })
-return result as Omit<T, K>
+return result as Omit<T, K></T, K>
 }
 /**
 * Group array items by a key
@@ -109,7 +109,7 @@ y: keyof T | ((ite)
 m: T) => string | number)
 ): Record<string, T[]> {/* TODO: Fix JSX expression */}
 },
-{} as Record<string, T[]></string>
+{} as Record<string, T[]></string><//string>
 )
 }
 /**

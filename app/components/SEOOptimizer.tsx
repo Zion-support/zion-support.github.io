@@ -122,39 +122,52 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 
   return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <link rel="canonical" href={canonicalUrl} />
-      
+    <Head><>
+</Head>
+<title>{title}</title><>
+<//title>
+<meta name="description" content={description} /><>
+</meta name="description" content={description} />
+<meta name="keywords" content={keywords.join(', ')} /><>
+</meta name="keywords" content={keywords.join(', ')} />
+<link rel="canonical" href={canonicalUrl} /></link rel="canonical" href={canonicalUrl} />
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
-      
+      <meta property="og:title" content={title} /><>
+</meta property="og:title" content={title} />
+<meta property="og:description" content={description} /><>
+</meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} /><>
+</meta property="og:image" content={ogImage} />
+<meta property="og:url" content={canonicalUrl} /><>
+</meta property="og:url" content={canonicalUrl} />
+<meta property="og:type" content="website" /></meta property="og:type" content="website" />
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
+      <meta name="twitter:card" content="summary_large_image" /><>
+</meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} /><>
+</meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} /><>
+</meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} /></meta name="twitter:image" content={ogImage} />
       {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="UTF-8" />
-      
+      <meta name="robots" content="index, follow" /><>
+</meta name="robots" content="index, follow" />
+<meta name="author" content="Zion Tech Group" /><>
+</meta name="author" content="Zion Tech Group" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /><>
+</meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charSet="UTF-8" /></meta charSet="UTF-8" />
       {/* Structured Data */}
       {structuredData && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        /></script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
-    </Head>
+    </Head><//Head>
   );
 };
 

@@ -14,27 +14,42 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-          </div>
-        </div>
-      </section>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8"><>
+</section className="py-20 px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<div className="text-center mb-16"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h1><//h1>
+              Why Choose Our Page?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p><//p>
+              Our page solutions deliver unmatched performance, security, and scalability.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><>
+<//h3>
+<p className="text-gray-300">{feature.description}</p><>
+<//p>
+</div><//div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
 }
 export default PagePage

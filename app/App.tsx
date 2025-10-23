@@ -8,21 +8,31 @@ import Footer from "./components/Footer";
 const App: React.FC = () => {
   return (
     <>
-      <Head>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
-        <meta property="og:type" content="website" />
-      </Head>
-      
-      <div className="App">
-        <PerformanceMonitor />
-        <Navigation />
-        <main>
+      <Head><>
+</Head>
+<title>Zion Tech Group - AI & IT Solutions</title><>
+<//title>
+<meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." /><>
+</meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
+<meta property="og:type" content="website" /><>
+</meta property="og:type" content="website" />
+</Head><>
+<//Head>
+<div className="App"><>
+</div className="App">
+<PerformanceMonitor /><>
+</PerformanceMonitor />
+<Navigation /><>
+</Navigation />
+<main></main>
           {/* Main content will be handled by Next.js routing */}
-        </main>
-        <Footer />
-      </div>
-    </>
+        </main><>
+<//main>
+<Footer /><>
+</Footer />
+</div><>
+<//div>
+</><//>
   );
 };
 

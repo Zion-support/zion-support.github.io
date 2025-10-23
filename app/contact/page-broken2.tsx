@@ -94,50 +94,78 @@ description: 'Eastern Time'
 ]
 return (
 <>
-<Helmet>
-<title>Contact Us - Zion Tech Group | Get in Touch</title>
-<meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
-<meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
+<Helmet><>
 </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-<div className="container mx-auto px-4">
-{/* Header */}
-<div className="text-center mb-16">
-<h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-Get in
-<span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+<title>Contact Us - Zion Tech Group | Get in Touch</title><>
+<//title>
+<meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." /><>
+</meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
+<meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" /><>
+</meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
+</Helmet><>
+<//Helmet>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div><>
+<//div>
+<div className="container mx-auto px-4"></div><//div>
+{/* Header */}</div><>
+<//div>
+<div className="text-center mb-16"></div><>
+<//div>
+<h1 className="text-5xl lg:text-7xl font-bold text-white mb-6"></h1><//h1>
+Get in</h1><>
+<//h1>
+<span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"></span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
 {' '}Touch
-</
-</h1>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-Ready to transform your business? Let's discuss your project and explore
-how our AI and IT solutions can help you achieve your goals.
-</p>
-</div>
-</section>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-{/* Contact Form */}
-<div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-<h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p className="text-xl text-gray-300 max-w-3xl mx-auto">
+Ready to transform your business? Let's discuss your project and explore</p><//p>
+how our AI and IT solutions can help you achieve your goals.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+</section><>
+<//section>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div><//div>
+{/* Contact Form */}</div><>
+<//div>
+<div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div><>
+<//div>
+<h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2><//h2>
 {submitStatus === 'success' && (
-<div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
-<CheckCircle className="w-5 h-5 text-green-400" />
-<span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-</div>
+<div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div><>
+<//div>
+<CheckCircle className="w-5 h-5 text-green-400" /><>
+</CheckCircle className="w-5 h-5 text-green-400" />
+<span className="text-green-400">Message sent successfully! We'll get back to you soon.</span><>
+<//span>
+</div><//div>
 )}
 {submitStatus === 'error' && (
-<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
-<span className="text-red-400">Failed to send message. Please try again.</span>
-</div>
+<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div><>
+<//div>
+<span className="text-red-400">Failed to send message. Please try again.</span><>
+<//span>
+</div><//div>
 )}
-<form onSubmit={handleSubmit} className="space-y-6">
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">
+<form onSubmit={handleSubmit} className="space-y-6"><>
+</form onSubmit={handleSubmit} className="space-y-6">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div><>
+<//div>
+<div></div><>
+<//div>
+<label className="block text-sm font-medium text-gray-300 mb-2"></label className="block text-sm font-medium text-gray-300 mb-2">
 Full Name *
-</label>
-<div className="relative">
-<User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+</label><>
+<//label>
+<div className="relative"></div><>
+<//div>
+<User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /><>
+</User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
 <input
 type="text"
 name="name"
@@ -146,15 +174,30 @@ onChange={handleInputChange}
 required
 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
 placeholder="Your full name"
+/><>
+</input
+type="text"
+name="name"
+value={formData.name}
+onChange={handleInputChange}
+required
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+placeholder="Your full name"
 />
-</div>
-</div>
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">
+</div><>
+<//div>
+</div><>
+<//div>
+<div></div><>
+<//div>
+<label className="block text-sm font-medium text-gray-300 mb-2"></label className="block text-sm font-medium text-gray-300 mb-2">
 Email Address *
-</label>
-<div className="relative">
-<Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+</label><>
+<//label>
+<div className="relative"></div><>
+<//div>
+<Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /><>
+</Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
 <input
 type="email"
 name="email"
@@ -163,17 +206,34 @@ onChange={handleInputChange}
 required
 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
 placeholder="your@email.com"
+/><>
+</input
+type="email"
+name="email"
+value={formData.email}
+onChange={handleInputChange}
+required
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+placeholder="your@email.com"
 />
-</div>
-</div>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div><>
+<//div>
+<div></div><>
+<//div>
+<label className="block text-sm font-medium text-gray-300 mb-2"></label className="block text-sm font-medium text-gray-300 mb-2">
 Company
-</
-<div className="relative">
-<Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+</h1><>
+<//h1>
+<div className="relative"></div><>
+<//div>
+<Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /><>
+</Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
 <input
 type="text"
 name="company"
@@ -181,15 +241,29 @@ value={formData.company}
 onChange={handleInputChange}
 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
 placeholder="Your company"
+/><>
+</input
+type="text"
+name="company"
+value={formData.company}
+onChange={handleInputChange}
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+placeholder="Your company"
 />
-</div>
-</div>
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">
+</div><>
+<//div>
+</div><>
+<//div>
+<div></div><>
+<//div>
+<label className="block text-sm font-medium text-gray-300 mb-2"></label className="block text-sm font-medium text-gray-300 mb-2">
 Phone Number
-</
-<div className="relative">
-<Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+</h1><>
+<//h1>
+<div className="relative"></div><>
+<//div>
+<Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /><>
+</Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
 <input
 type="tel"
 name="phone"
@@ -197,36 +271,63 @@ value={formData.phone}
 onChange={handleInputChange}
 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
 placeholder="+1 (555) 123-4567"
+/><>
+</input
+type="tel"
+name="phone"
+value={formData.phone}
+onChange={handleInputChange}
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+placeholder="+1 (555) 123-4567"
 />
-</div>
-</div>
-</div>
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+<div></div><>
+<//div>
+<label className="block text-sm font-medium text-gray-300 mb-2"></label className="block text-sm font-medium text-gray-300 mb-2">
 Service Interest
-</
-<div className="relative">
-<Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+</h1><>
+<//h1>
+<div className="relative"></div><>
+<//div>
+<Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /><>
+</Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
 <select
 name="service"
 value={formData.service}
 onChange={handleInputChange}
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"><>
+</select
+name="service"
+value={formData.service}
+onChange={handleInputChange}
 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">
-<option value="">Select a service</option>
+<option value="">Select a service</option><//option>
 {services.map((service) => (
-<option key={service} value={service}>
+<option key={service} value={service}></option key={service} value={service}>
 {service}
-</option>
+</option><//option>
 ))}
-</select>
-</div>
-</div>
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">
+</select><>
+<//select>
+</div><>
+<//div>
+</div><>
+<//div>
+<div></div><>
+<//div>
+<label className="block text-sm font-medium text-gray-300 mb-2"></label className="block text-sm font-medium text-gray-300 mb-2">
 Message *
-</label>
-<div className="relative">
-<MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+</label><>
+<//label>
+<div className="relative"></div><>
+<//div>
+<MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" /><>
+</MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
 <textarea
 name="message"
 value={formData.message}
@@ -235,95 +336,170 @@ required
 rows={6}
 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
 placeholder="Tell us about your project, goals, or any questions you have..."
+/><>
+</textarea
+name="message"
+value={formData.message}
+onChange={handleInputChange}
+required
+rows={6}
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
+placeholder="Tell us about your project, goals, or any questions you have..."
 />
-</div>
-</div>
+</div><>
+<//div>
+</div><>
+<//div>
 <button
 type="submit"
 disabled={isSubmitting}
-className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">
-{isSubmitting ? (
+className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"></button><//button>
+{isSubmitting ? (</button><//button>
 <>
-<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-<span>Sending...</span>
-</>
+<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div><>
+<//div>
+<span>Sending...</span><>
+<//span>
+</><//>
 ) : (
 <>
-<Send className="w-5 h-5" />
-<span>Send Message</span>
-</>
+<Send className="w-5 h-5" /><>
+</Send className="w-5 h-5" />
+<span>Send Message</span><>
+<//span>
+</><//>
 )}
-</button>
-</form>
-</div>
+</button><>
+<//button>
+</form><>
+<//form>
+</div><//div>
 {/* Contact Information */}
-<div className="space-y-8">
-<div>
-<h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-<p className="text-lg text-gray-300 mb-8">
-We're here to help! Reach out to us through any of these channels
-and we'll get back to you as soon as possible.
-</p>
-</div>
+<div className="space-y-8"></div><>
+<//div>
+<div></div><>
+<//div>
+<h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2><>
+<//h2>
+<p className="text-lg text-gray-300 mb-8"></p className="text-lg text-gray-300 mb-8">
+We're here to help! Reach out to us through any of these channels</p><//p>
+and we'll get back to you as soon as possible.</p><>
+<//p>
+</p><>
+<//p>
+</div><//div>
 {/* Contact Information */}
-<div className="space-y-8">
-<div>
-<h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-<p className="text-gray-300 mb-8">
-We're here to help you transform your business with cutting-edge AI and technology solutions.
-</p>
-</div>
-<div className="space-y-6">
-<div className="flex items-center">
-<div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
-<Phone className="w-6 h-6 text-white" />
-</div>
-<div>
-<h3 className="text-lg font-semibold text-white mb-1">
-{info.title}
-</h3>
-<p className="text-cyan-400 font-medium mb-1">
-{info.details}
-</p>
-<p className="text-gray-300 text-sm">
-{info.description}
-</p>
-</div>
-</div>
-<div className="flex items-center">
-<div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
-<Mail className="w-6 h-6 text-white" />
-</div>
-<div>
-<h3 className="text-lg font-semibold text-white">Email</h3>
-<p className="text-gray-300">info@ziontechgroup.com</p>
-</div>
-</div>
-<div className="flex items-center">
-<div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
-<MapPin className="w-6 h-6 text-white" />
-</div>
-<div>
-<h3 className="text-lg font-semibold text-white">Address</h3>
-<p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
-</div>
-</div>
-<div className="flex items-center">
-<div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
-<Clock className="w-6 h-6 text-white" />
-</div>
-<div>
-<h3 className="text-lg font-semibold text-white">Business Hours</h3>
-<p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-</div>
+<div className="space-y-8"></div><>
+<//div>
+<div></div><>
+<//div>
+<h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2><>
+<//h2>
+<p className="text-gray-300 mb-8"></p><//p>
+We're here to help you transform your business with cutting-edge AI and technology solutions.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="space-y-6"></div><>
+<//div>
+<div className="flex items-center"></div><>
+<//div>
+<div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div><>
+<//div>
+<Phone className="w-6 h-6 text-white" /><>
+</Phone className="w-6 h-6 text-white" />
+</div><>
+<//div>
+<div></div><>
+<//div>
+<h3 className="text-lg font-semibold text-white mb-1"></h1><//h1>
+{info.title}</h1><>
+<//h1>
+</h3><>
+<//h3>
+<p className="text-cyan-400 font-medium mb-1"></p><//p>
+{info.details}</p><>
+<//p>
+</p><>
+<//p>
+<p className="text-gray-300 text-sm"></p><//p>
+{info.description}</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+<div className="flex items-center"></div><>
+<//div>
+<div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div><>
+<//div>
+<Mail className="w-6 h-6 text-white" /><>
+</Mail className="w-6 h-6 text-white" />
+</div><>
+<//div>
+<div></div><>
+<//div>
+<h3 className="text-lg font-semibold text-white">Email</h3><>
+<//h3>
+<p className="text-gray-300">info@ziontechgroup.com</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+<div className="flex items-center"></div><>
+<//div>
+<div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div><>
+<//div>
+<MapPin className="w-6 h-6 text-white" /><>
+</MapPin className="w-6 h-6 text-white" />
+</div><>
+<//div>
+<div></div><>
+<//div>
+<h3 className="text-lg font-semibold text-white">Address</h3><>
+<//h3>
+<p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+<div className="flex items-center"></div><>
+<//div>
+<div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div><>
+<//div>
+<Clock className="w-6 h-6 text-white" /><>
+</Clock className="w-6 h-6 text-white" />
+</div><>
+<//div>
+<div></div><>
+<//div>
+<h3 className="text-lg font-semibold text-white">Business Hours</h3><>
+<//h3>
+<p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><>
+<//div>
+</div><//div>
 )
 }
 export default ContactPage

@@ -15,7 +15,7 @@ return (props: unknown) => (}<Suspense fallback={options.loading ? options.loadi
 const LazyComponent = lazy(importFunc)
 return (props: unknown) => (}
 <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
-<LazyComponent {...props} />
+<LazyComponent {...props} /></LazyComponent {...props} />
 'use client'
 import React, { lazy, Suspense, ComponentType } from 'react'
 interface DynamicOptions {/* TODO: Fix JSX expression */}
@@ -27,8 +27,9 @@ option,
 s: DynamicOptions = {}
 ): ComponentType<unknown> {/* TODO: Fix JSX expression */}
 <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
-<LazyComponent {...props} /></LazyComponent>
-</Suspense>
+<LazyComponent {...props} /></LazyComponent><>
+<//LazyComponent>
+</Suspense><//Suspense>
 )
 }
 export default dynamic

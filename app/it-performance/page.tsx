@@ -36,52 +36,86 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          </div>
-        </div>
-      </section>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-          </div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><>
+<//div>
+<Helmet><>
+</Helmet>
+<title>Page | Zion Tech Group</title><>
+<//title>
+<meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." /><>
+</meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /><>
+</meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+</Helmet><>
+<//Helmet>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions.</p><//p>
+              Powered by cutting-edge AI technology and industry expertise.</p><>
+<//p>
+</p><>
+<//p>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p><//p>
+              Our page solutions deliver unmatched performance, security, and scalability.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p><//p>
+              Experience the power of our page solutions for your business.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
               Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
+            </h2><>
+<//h2>
+<p className="text-xl text-purple-100 mb-8"></p><//p>
+              Contact our experts to discuss your page needs and get a customized solution.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button><>
+<//button>
+<Phone className="mr-2 h-5 w-5" /></Phone className="mr-2 h-5 w-5" />
                 Call Now
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
+  </h1><>
+<//h1>
+<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button><>
+<//button>
+<Mail className="mr-2 h-5 w-5" /></Mail className="mr-2 h-5 w-5" />
                 Email Us
-  </
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+  </h1><>
+<//h1>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><//div>
   )
 }
 export default PagePage

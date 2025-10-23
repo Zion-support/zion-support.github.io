@@ -96,27 +96,37 @@ return structuredData || defaultStructuredData
 }
 return (
 <>
-<Helmet>
-<title>{title}</title>
-<meta name="description" content={description} />
-<meta name="keywords" content={keywords} />
+<Helmet><>
+</Helmet>
+<title>{title}</title><>
+<//title>
+<meta name="description" content={description} /><>
+</meta name="description" content={description} />
+<meta name="keywords" content={keywords} /></meta name="keywords" content={keywords} />
 {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 {/* Open Graph */}
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
-<meta property="og:type" content="website" />
+<meta property="og:title" content={title} /><>
+</meta property="og:title" content={title} />
+<meta property="og:description" content={description} /><>
+</meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} /><>
+</meta property="og:image" content={ogImage} />
+<meta property="og:type" content="website" /></meta property="og:type" content="website" />
 {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
 {/* Twitter Card */}
-<meta name="twitter:card" content={twitterCard} />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:card" content={twitterCard} /><>
+</meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:title" content={title} /><>
+</meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} /><>
+</meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} /></meta name="twitter:image" content={ogImage} />
 {/* Structured Data */}
-<script type="application/ld+json">
+<script type="application/ld+json"></script type="application/ld+json">
 {JSON.stringify(generateStructuredData())}
-</script>
-</Helmet>
+</script><>
+<//script>
+</Helmet><//Helmet>
 {children}
 {process.env.NODE_ENV === 'development' && (
 <div className="seo-debug" style={{
@@ -130,21 +140,25 @@ borderRadius: '5px',
 fontSize: '12px',
 zIndex: 1000,
 maxWidth: '300px'
-}}>
-<div>SEO Score: {seoScore}/100</div>
+}}></div><>
+<//div>
+<div>SEO Score: {seoScore}/100</div><//div>
 {recommendations.length > 0 && (
-<div>
-<div>Recommendations:</div>
-<ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+<div></div><>
+<//div>
+<div>Recommendations:</div><>
+<//div>
+<ul style={{ margin: '5px 0', paddingLeft: '15px' }}></ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
 {recommendations.map((rec, index) => (
-<li key={index}>{rec}</li>
+<li key={index}>{rec}</li><//li>
 ))}
-</ul>
-</div>
+</ul><>
+<//ul>
+</div><//div>
 )}
-</div>
+</div><//div>
 )}
-</>
+</><//>
 )
 }
 export default AdvancedSEOOptimizer

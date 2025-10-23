@@ -7,10 +7,13 @@ interface ContactPageProps {
 
 const ContactPage: React.FC<ContactPageProps> = ({ className = "" }) => {
   return (
-    <div className={`bg-white p-4 rounded-lg ${className}`}>
-      <h2>ContactPage</h2>
-      <p>This is a clean, functional component.</p>
-    </div>
+    <div className={`bg-white p-4 rounded-lg ${className}`}></div><>
+<//div>
+<h2>ContactPage</h2><>
+<//h2>
+<p>This is a clean, functional component.</p><>
+<//p>
+</div><//div>
   );
 };
 

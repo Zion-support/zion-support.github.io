@@ -18,29 +18,45 @@ const ContentNewsletterSignup: React.FC = () => {
   };
   if (isSubmitted) {
     return (
-      <section className="mb-16" aria-labelledby="newsletter-heading">
-        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
-          <div className="text-4xl mb-4">✅</div>
-          <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
-          <p className="text-green-100">You've been successfully subscribed to our newsletter.</p>
-        </div>
-      </section>
+      <section className="mb-16" aria-labelledby="newsletter-heading"><>
+</section className="mb-16" aria-labelledby="newsletter-heading">
+<div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center"></div><>
+<//div>
+<div className="text-4xl mb-4">✅</div><>
+<//div>
+<h2 className="text-2xl font-bold mb-2">Thank You!</h2><>
+<//h2>
+<p className="text-green-100">You've been successfully subscribed to our newsletter.</p><>
+<//p>
+</div><>
+<//div>
+</section><//section>
     );
   }
   return (
-    <section className="mb-16" aria-labelledby="newsletter-heading">
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 id="newsletter-heading" className="text-2xl sm:text-3xl font-bold mb-4">
-            Stay Updated with AI Innovation
-          </h2>
-          <p className="text-purple-100 mb-6">
-            Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
-          </p>
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <div className="flex-1 relative">
-              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+    <section className="mb-16" aria-labelledby="newsletter-heading"><>
+</section className="mb-16" aria-labelledby="newsletter-heading">
+<div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl"></div><>
+<//div>
+<div className="max-w-2xl mx-auto text-center"></div><>
+<//div>
+<h2 id="newsletter-heading" className="text-2xl sm:text-3xl font-bold mb-4"></h1><//h1>
+            Stay Updated with AI Innovation</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-purple-100 mb-6"></p><//p>
+            Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.</p><>
+<//p>
+</p><>
+<//p>
+<form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"><>
+</form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<div className="flex-1 relative"></div><>
+<//div>
+<Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /><>
+</Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+<input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -49,28 +65,38 @@ const ContentNewsletterSignup: React.FC = () => {
                 required
                 aria-label="Email address"
               />
-            </div>
-            <button
+            </div><>
+<//div>
+<button
               type="submit"
               disabled={isSubmitting}
               className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-            >
-              {isSubmitting ? (
-                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
+            ></button><//button>
+              {isSubmitting ? (</button><>
+<//button>
+<div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div><//div>
               ) : (
                 <>
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </>
+                  Subscribe</><>
+<//>
+<ArrowRight className="w-4 h-4 ml-2" /><>
+</ArrowRight className="w-4 h-4 ml-2" />
+</><//>
               )}
-            </button>
-          </form>
-          <p className="text-xs text-purple-200 mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
-      </div>
-    </section>
+            </button><>
+<//button>
+</form><>
+<//form>
+<p className="text-xs text-purple-200 mt-4"></p><//p>
+            We respect your privacy. Unsubscribe at any time.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
   );
 };
 export default ContentNewsletterSignup;

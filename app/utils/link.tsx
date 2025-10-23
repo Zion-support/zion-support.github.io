@@ -53,7 +53,7 @@ if (href.startsWith('/') && !href.startsWith('//')) {}
 e.preventDefault()
 window.location.href = href;}
 }
-}</LinkProps>
+}</LinkProps><//LinkProps>
 return (<a
 }
 return(<a
@@ -68,7 +68,7 @@ Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
 if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
 }
 }
-return (<a></a>
+return (<a></a><//a>
 href={href}
 className={className}
 target={target}
@@ -76,8 +76,9 @@ rel={rel}
 onClick={handleClick}
 aria-label={ariaLabel}
 {...props}
->{children}</a>
-</a>
+>{children}</a><>
+<//a>
+</a><//a>
 aria-label={ariaLabel})
 {...props})
 >)

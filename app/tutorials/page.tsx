@@ -85,43 +85,62 @@ const TutorialsPage: React.FC = () => {
 
   return (
     <>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div
+</><>
+<//>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><//div>
+        {/* Hero Section */}</div><>
+<//div>
+<section className="relative py-20 px-4 overflow-hidden"><>
+</section className="relative py-20 px-4 overflow-hidden">
+<div
             className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
             style={{ animationDelay: "1s" }}
-          />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Learn{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+          /></div><>
+<//div>
+<div className="relative max-w-7xl mx-auto text-center"></div><>
+<//div>
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1><//h1>
+              Learn{" "}</h1><>
+<//h1>
+<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"></span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Technology
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              </span><>
+<//span>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Master technology skills with our comprehensive tutorials. Learn
-              AI development, cloud computing, cybersecurity, and more with
-              expert-led courses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Start Learning
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Browse All
-              </button>
-            </div>
-          </div>
-        </section>
-
+              AI development, cloud computing, cybersecurity, and more with</p><//p>
+              expert-led courses.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"></button><//button>
+                Start Learning</button><>
+<//button>
+</button><>
+<//button>
+<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"></button><//button>
+                Browse All</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Category Filter */}
-        <section className="py-8 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
+        <section className="py-8 px-4"><>
+</section className="py-8 px-4">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<div className="flex flex-wrap justify-center gap-4"></div><//div>
+              {categories.map((category) => (</div><>
+<//div>
+<button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-2 rounded-full transition-all duration-300 ${
@@ -129,71 +148,108 @@ const TutorialsPage: React.FC = () => {
                       ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
                       : "bg-white/10 text-gray-300 hover:bg-white/20"
                   }`}
-                >
-                  {category.name}
-                </button>
+                ></button><//button>
+                  {category.name}</button><>
+<//button>
+</button><//button>
               ))}
-            </div>
-          </div>
-        </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Tutorials Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {filteredTutorials.map((tutorial) => (
-                <div
+        <section className="py-20 px-4"><>
+</section className="py-20 px-4">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"></div><//div>
+              {filteredTutorials.map((tutorial) => (</div><>
+<//div>
+<div
                   key={tutorial.id}
                   className={`bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 ${
                     tutorial.featured ? "ring-2 ring-purple-500" : ""
                   }`}
-                >
-                  <div className="h-48 bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
-                    <div className="text-6xl">
+                ></div><>
+<//div>
+<div className="h-48 bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center"></div><>
+<//div>
+<div className="text-6xl"></div className="text-6xl">
                       {tutorial.icon === Code
                         ? "💻"
                         : tutorial.icon === Database
-                          ? "☁️"
-                          : "🔒"}
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">
+                          ? "☁️"</div><//div>
+                          : "🔒"}</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+<div className="p-6"></div><>
+<//div>
+<div className="flex items-center gap-4 mb-4"></div><>
+<//div>
+<span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm"></span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">
                         {tutorial.category.toUpperCase()}
-                      </span>
+                      </span><//span>
                       {tutorial.featured && (
-                        <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">
+                        <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm"></span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">
                           Featured
-                        </span>
+                        </span><//span>
                       )}
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {tutorial.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4">{tutorial.description}</p>
-
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{tutorial.duration}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
-                          <span>{tutorial.students} students</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span>{tutorial.rating}</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <span
+                    </div><>
+<//div>
+<h3 className="text-xl font-bold text-white mb-3"></h1><//h1>
+                      {tutorial.title}</h1><>
+<//h1>
+</h3><>
+<//h3>
+<p className="text-gray-300 mb-4">{tutorial.description}</p><>
+<//p>
+<div className="flex items-center justify-between text-sm text-gray-400 mb-4"></div><>
+<//div>
+<div className="flex items-center gap-4"></div><>
+<//div>
+<div className="flex items-center gap-1"></div><>
+<//div>
+<Clock className="w-4 h-4" /><>
+</Clock className="w-4 h-4" />
+<span>{tutorial.duration}</span><>
+<//span>
+</div><>
+<//div>
+<div className="flex items-center gap-1"></div><>
+<//div>
+<User className="w-4 h-4" /><>
+</User className="w-4 h-4" />
+<span>{tutorial.students} students</span><>
+<//span>
+</div><>
+<//div>
+</div><>
+<//div>
+<div className="flex items-center gap-1"></div><>
+<//div>
+<Star className="w-4 h-4 text-yellow-400 fill-current" /><>
+</Star className="w-4 h-4 text-yellow-400 fill-current" />
+<span>{tutorial.rating}</span><>
+<//span>
+</div><>
+<//div>
+</div><>
+<//div>
+<div className="flex items-center justify-between"></div><>
+<//div>
+<span
+                        className={`px-3 py-1 rounded-full text-sm ${
+                          tutorial.difficulty === "Beginner"
+                            ? "bg-green-500/20 text-green-400"
+                            : tutorial.difficulty === "Intermediate"
+                              ? "bg-yellow-500/20 text-yellow-400"
+                              : "bg-red-500/20 text-red-400"
+                        }`}
+                      ></span
                         className={`px-3 py-1 rounded-full text-sm ${
                           tutorial.difficulty === "Beginner"
                             ? "bg-green-500/20 text-green-400"
@@ -203,113 +259,184 @@ const TutorialsPage: React.FC = () => {
                         }`}
                       >
                         {tutorial.difficulty}
-                      </span>
-                      <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-                        <Play className="w-4 h-4 mr-2" />
+                      </span><>
+<//span>
+<button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"></button><>
+<//button>
+<Play className="w-4 h-4 mr-2" /></Play className="w-4 h-4 mr-2" />
                         Start Tutorial
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                      </button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Learning Paths */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Learning Paths
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Follow structured learning paths to master specific technology
-                domains.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                  <BookOpen className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">
-                  AI Developer Path
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  Complete journey from AI basics to advanced machine learning
-                  applications.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li>• 12 tutorials</li>
-                  <li>• 20 hours of content</li>
-                  <li>• 5 hands-on projects</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                  <Database className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">
-                  Cloud Architect Path
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  Master cloud infrastructure design and deployment across major
-                  platforms.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li>• 15 tutorials</li>
-                  <li>• 25 hours of content</li>
-                  <li>• 8 practical labs</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">
-                  Security Expert Path
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  Learn cybersecurity fundamentals and advanced threat
-                  protection techniques.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li>• 10 tutorials</li>
-                  <li>• 18 hours of content</li>
-                  <li>• 6 security labs</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <section className="py-20 px-4 bg-white/5"><>
+</section className="py-20 px-4 bg-white/5">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<div className="text-center mb-16"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h1><//h1>
+                Learning Paths</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Follow structured learning paths to master specific technology</p><//p>
+                domains.</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div><>
+<//div>
+<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div><>
+<//div>
+<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6"></div><>
+<//div>
+<BookOpen className="w-8 h-8 text-white" /><>
+</BookOpen className="w-8 h-8 text-white" />
+</div><>
+<//div>
+<h3 className="text-xl font-bold text-white mb-4"></h1><//h1>
+                  AI Developer Path</h1><>
+<//h1>
+</h3><>
+<//h3>
+<p className="text-gray-300 mb-4"></p className="text-gray-300 mb-4">
+                  Complete journey from AI basics to advanced machine learning</p><//p>
+                  applications.</p><>
+<//p>
+</p><>
+<//p>
+<ul className="space-y-2 text-sm text-gray-400"><>
+</ul className="space-y-2 text-sm text-gray-400">
+<li>• 12 tutorials</li><>
+<//li>
+<li>• 20 hours of content</li><>
+<//li>
+<li>• 5 hands-on projects</li><>
+<//li>
+</ul><>
+<//ul>
+</div><>
+<//div>
+<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div><>
+<//div>
+<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6"></div><>
+<//div>
+<Database className="w-8 h-8 text-white" /><>
+</Database className="w-8 h-8 text-white" />
+</div><>
+<//div>
+<h3 className="text-xl font-bold text-white mb-4"></h1><//h1>
+                  Cloud Architect Path</h1><>
+<//h1>
+</h3><>
+<//h3>
+<p className="text-gray-300 mb-4"></p className="text-gray-300 mb-4">
+                  Master cloud infrastructure design and deployment across major</p><//p>
+                  platforms.</p><>
+<//p>
+</p><>
+<//p>
+<ul className="space-y-2 text-sm text-gray-400"><>
+</ul className="space-y-2 text-sm text-gray-400">
+<li>• 15 tutorials</li><>
+<//li>
+<li>• 25 hours of content</li><>
+<//li>
+<li>• 8 practical labs</li><>
+<//li>
+</ul><>
+<//ul>
+</div><>
+<//div>
+<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div><>
+<//div>
+<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6"></div><>
+<//div>
+<Shield className="w-8 h-8 text-white" /><>
+</Shield className="w-8 h-8 text-white" />
+</div><>
+<//div>
+<h3 className="text-xl font-bold text-white mb-4"></h1><//h1>
+                  Security Expert Path</h1><>
+<//h1>
+</h3><>
+<//h3>
+<p className="text-gray-300 mb-4"></p className="text-gray-300 mb-4">
+                  Learn cybersecurity fundamentals and advanced threat</p><//p>
+                  protection techniques.</p><>
+<//p>
+</p><>
+<//p>
+<ul className="space-y-2 text-sm text-gray-400"><>
+</ul className="space-y-2 text-sm text-gray-400">
+<li>• 10 tutorials</li><>
+<//li>
+<li>• 18 hours of content</li><>
+<//li>
+<li>• 6 security labs</li><>
+<//li>
+</ul><>
+<//ul>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Start Learning?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of learners who are advancing their careers with
-              our technology tutorials.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Browse All Tutorials
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                View Learning Paths
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+        <section className="py-20 px-4"><>
+</section className="py-20 px-4">
+<div className="max-w-4xl mx-auto text-center"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h1><//h1>
+              Ready to Start Learning?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-300 mb-8"></p className="text-xl text-gray-300 mb-8">
+              Join thousands of learners who are advancing their careers with</p><//p>
+              our technology tutorials.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"></button><//button>
+                Browse All Tutorials</button><>
+<//button>
+<ArrowRight className="w-5 h-5 ml-2" /><>
+</ArrowRight className="w-5 h-5 ml-2" />
+</button><>
+<//button>
+<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"></button><//button>
+                View Learning Paths</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><>
+<//div>
+</><//>
   );
 };
 

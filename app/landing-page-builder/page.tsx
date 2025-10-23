@@ -17,25 +17,39 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ]
   return (
-          </div>
-        </div>
-      </section>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><>
+<//h3>
+<p className="text-gray-300">{feature.description}</p><>
+<//p>
+</div><//div>
             ))}
-          </div>
-        </div>
-      </section>
-              </div>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><//div>
             ))}
-          </div>
-        </div>
-      </section>
-          </div>
-        </div>
-      </section>
-    </div>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><//div>
   )
 }
 export default PagePage

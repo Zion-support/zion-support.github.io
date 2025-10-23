@@ -23,6 +23,10 @@ private logs: Array<{
 level: LogLevel,
 message: string,
 context?: LogContext
+metadata?: Record<string, unknown></{
+level: LogLevel,
+message: string,
+context?: LogContext
 metadata?: Record<string, unknown>
 timestamp: number,;}
 }> = []
@@ -41,7 +45,7 @@ warn(message: string, context?: LogContext, metadata?: Record<string, unknown>):
 error(message: string;),
 errorOrContextOrMetadata?: Error | string | Record<string, unknown>)
 contextOrMetadata?: string | Record<string, unknown>)
-metadata?: Record<string, unknown>
+metadata?: Record<string, unknown></string, unknown>
 ): void {
 let error: Error | undefined
 let context: LogContext | undefined
@@ -56,7 +60,7 @@ context = { action: errorOrContextOrMetadata }
 meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined
 } else if (typeof errorOrContextOrMetadata === 'object') {
 context = errorOrContextOrMetadata
-meta = contextOrMetadata as Record<string, unknown>
+meta = contextOrMetadata as Record<string, unknown></string, unknown>
 * Enhanced Logger Utility
 * Provides structured logging with different levels and contexts
 */;}
@@ -108,7 +112,7 @@ metadata?: Record<string, unknown></string>)
 ): void {/* TODO: Fix JSX expression */}
 } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
 t: errorOrContextOrMetadata }
-meta = contextOrMetadata as Record<string, unknown>
+meta = contextOrMetadata as Record<string, unknown></string, unknown>
 } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
 }
 this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
@@ -118,7 +122,7 @@ fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>)
 private log(level: LogLevel;),
 message: string),
 context?: LogContext),
-metadata?: Record<string, unknown>
+metadata?: Record<string, unknown></string, unknown>
 ): void {
 if (level < this.logLevel) return
 const logEntry = {
@@ -148,6 +152,10 @@ break;}
 }
 }
 getLogs(level?: LogLevel): Array<{
+level: LogLevel,
+message: string,
+context?: LogContext
+metadata?: Record<string, unknown></{
 level: LogLevel,
 message: string,
 context?: LogContext

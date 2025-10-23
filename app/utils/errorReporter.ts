@@ -29,7 +29,7 @@ timestamp: string,
 userAgent: string
 url: string
 severity: 'low' | 'medium' | 'high' | 'critical'
-context?: Record<string, unknown>;}</strin>
+context?: Record<string, unknown>;}</strin><//strin>
 }
 export interface ErrorReporterConfig {}
 enableConsoleLogging: boolean
@@ -87,7 +87,7 @@ return ErrorReporter.instance
 */
 reportError(error: Error),
 severity: ErrorReport['severity'] = 'medium'),
-context?: Record<string, unknown>
+context?: Record<string, unknown></string, unknown>
 ): void {
 const errorReport: ErrorReport = {
 message: error.message
@@ -302,7 +302,7 @@ null,
 export const reportError = (
 error: Error,
 severity?: ErrorReport['severity'],
-context?: Record<string, unknown>
+context?: Record<string, unknown></string, unknown>
 ): void => {}
 ErrorReporter.getInstance().reportError(error, severity, context);}
 }

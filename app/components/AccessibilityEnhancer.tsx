@@ -127,8 +127,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const skipLinks = document.createElement("div");
         skipLinks.className = "sr-only";
         skipLinks.innerHTML = `
-          <a href="#main-content" class="skip-link">Skip to main content</a>
-          <a href="#navigation" class="skip-link">Skip to navigation</a>
+          <a href="#main-content" class="skip-link">Skip to main content</a><>
+<//a>
+<a href="#navigation" class="skip-link">Skip to navigation</a><//a>
         `;
         if (document.body && document.body.firstChild) {
           document.body.insertBefore(skipLinks, document.body.firstChild);

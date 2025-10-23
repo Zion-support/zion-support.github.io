@@ -35,131 +35,222 @@ const QuantumComputingPage: React.FC = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Quantum Computing Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-              Harness the power of quantum mechanics to solve the world's most complex computational problems
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                Explore Quantum Solutions
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50"></div><//div>
+      {/* Hero Section */}</div><>
+<//div>
+<section className="relative py-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white"><>
+</section className="relative py-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white">
+<div className="absolute inset-0 bg-black opacity-20"></div><>
+<//div>
+<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<h1 className="text-4xl md:text-6xl font-bold mb-6"></h1><//h1>
+              Quantum Computing Services</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto"></p><//p>
+              Harness the power of quantum mechanics to solve the world's most complex computational problems</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"></button><//button>
+                Explore Quantum Solutions</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Key Benefits */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Quantum Computing?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Quantum computing offers unprecedented computational power for solving complex problems
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Atom className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Exponential Speedup</h3>
-              <p className="text-gray-600">Solve problems that would take classical computers thousands of years in minutes</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ultimate Security</h3>
-              <p className="text-gray-600">Quantum cryptography provides unbreakable security for your most sensitive data</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Complex Problem Solving</h3>
-              <p className="text-gray-600">Tackle optimization, simulation, and machine learning challenges at scale</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="py-16 bg-white"><>
+</section className="py-16 bg-white">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div><>
+<//div>
+<div className="text-center mb-12"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h1><//h1>
+              Why Choose Quantum Computing?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-600 max-w-3xl mx-auto"></p><//p>
+              Quantum computing offers unprecedented computational power for solving complex problems</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div><>
+<//div>
+<div className="text-center p-6"></div><>
+<//div>
+<div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"></div><>
+<//div>
+<Atom className="w-8 h-8 text-purple-600" /><>
+</Atom className="w-8 h-8 text-purple-600" />
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">Exponential Speedup</h3><>
+<//h3>
+<p className="text-gray-600">Solve problems that would take classical computers thousands of years in minutes</p><>
+<//p>
+</div><>
+<//div>
+<div className="text-center p-6"></div><>
+<//div>
+<div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"></div><>
+<//div>
+<Shield className="w-8 h-8 text-purple-600" /><>
+</Shield className="w-8 h-8 text-purple-600" />
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">Ultimate Security</h3><>
+<//h3>
+<p className="text-gray-600">Quantum cryptography provides unbreakable security for your most sensitive data</p><>
+<//p>
+</div><>
+<//div>
+<div className="text-center p-6"></div><>
+<//div>
+<div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"></div><>
+<//div>
+<Brain className="w-8 h-8 text-purple-600" /><>
+</Brain className="w-8 h-8 text-purple-600" />
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">Complex Problem Solving</h3><>
+<//h3>
+<p className="text-gray-600">Tackle optimization, simulation, and machine learning challenges at scale</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Quantum Solutions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Cutting-edge quantum computing services designed to solve your most challenging problems
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {quantumServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
+      <section className="py-16 bg-gray-50"><>
+</section className="py-16 bg-gray-50">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div><>
+<//div>
+<div className="text-center mb-12"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h1><//h1>
+              Our Quantum Solutions</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-600 max-w-3xl mx-auto"></p><//p>
+              Cutting-edge quantum computing services designed to solve your most challenging problems</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div><//div>
+            {quantumServices.map((service) => (</div><>
+<//div>
+<div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"></div><>
+<//div>
+<h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3><>
+<//h3>
+<p className="text-gray-600 mb-6">{service.description}</p><>
+<//p>
+<div className="mb-6"></div><>
+<//div>
+<h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4><>
+<//h4>
+<ul className="space-y-2"></ul className="space-y-2">
                     {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                      <li key={index} className="flex items-center text-gray-600"><>
+</li key={index} className="flex items-center text-gray-600">
+<CheckCircle className="w-5 h-5 text-green-500 mr-2" /></CheckCircle className="w-5 h-5 text-green-500 mr-2" />
                         {feature}
-                      </li>
+                      </li><//li>
                     ))}
-                  </ul>
-                </div>
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
-                  <ul className="space-y-2">
+                  </ul><>
+<//ul>
+</div><>
+<//div>
+<div className="mb-6"></div><>
+<//div>
+<h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4><>
+<//h4>
+<ul className="space-y-2"></ul className="space-y-2">
                     {service.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center text-gray-600">
-                        <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                      <li key={index} className="flex items-center text-gray-600"><>
+</li key={index} className="flex items-center text-gray-600">
+<Star className="w-5 h-5 text-yellow-500 mr-2" /></Star className="w-5 h-5 text-yellow-500 mr-2" />
                         {benefit}
-                      </li>
+                      </li><//li>
                     ))}
-                  </ul>
-                </div>
-                <div className="border-t pt-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-purple-600">{service.marketPrice}</span>
-                    <span className="text-sm text-gray-500">{service.category}</span>
-                  </div>
-                </div>
-              </div>
+                  </ul><>
+<//ul>
+</div><>
+<//div>
+<div className="border-t pt-4"></div><>
+<//div>
+<div className="flex justify-between items-center"></div><>
+<//div>
+<span className="text-2xl font-bold text-purple-600">{service.marketPrice}</span><>
+<//span>
+<span className="text-sm text-gray-500">{service.category}</span><>
+<//span>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><//div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* CTA Section */}
-      <section className="py-16 bg-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Go Quantum?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our quantum experts help you harness the power of quantum computing
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-              Get Started Today
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
+      <section className="py-16 bg-purple-600 text-white"><>
+</section className="py-16 bg-purple-600 text-white">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold mb-4"></h1><//h1>
+            Ready to Go Quantum?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl mb-8 max-w-3xl mx-auto"></p><//p>
+            Let our quantum experts help you harness the power of quantum computing</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"></button><//button>
+              Get Started Today</button><>
+<//button>
+</button><>
+<//button>
+<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"></button><//button>
+              Learn More</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><//div>
   );
 };
 export default QuantumComputingPage;

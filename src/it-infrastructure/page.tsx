@@ -197,251 +197,440 @@ const ITInfrastructurePage: React.FC = () => {
     { metric: '100%', description: 'Security Compliance' }
   ];
   return (
+    <><>
+</ 1hr', description: 'Response Time' },
+    { metric: '100%', description: 'Security Compliance' }
+  ];
+  return (
     <>
-      <Helmet>
-        <title>IT Infrastructure Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
-        <meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IT Infrastructure Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+<Helmet><>
+</Helmet>
+<title>IT Infrastructure Services - Zion Tech Group</title><>
+<//title>
+<meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." /><>
+</meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
+<meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" /><>
+</meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
+</Helmet><>
+<//Helmet>
+<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div><//div>
+        {/* Hero Section */}</div><>
+<//div>
+<section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20"><>
+</section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+<div className="absolute inset-0 bg-black opacity-20"></div><>
+<//div>
+<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<h1 className="text-4xl md:text-6xl font-bold mb-6"></h1><//h1>
+                IT Infrastructure Services</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto"></p><//p>
+                Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<a 
+                  href="tel:+13024640950"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                ></a 
                   href="tel:+13024640950"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
                 >
                   📞 +1 302 464 0950
-                </a>
-                <a 
+                </a><>
+<//a>
+<a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                ></a 
                   href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   ✉️ Get Free Infrastructure Audit
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+                </a><>
+<//a>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Infrastructure Statistics */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Infrastructure Track Record
-              </h2>
-              <p className="text-xl text-gray-600">
-                Proven results from our IT infrastructure services
-              </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {infrastructureStats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.metric}</div>
-                  <div className="text-lg font-semibold text-gray-900 mb-1">{stat.description}</div>
-                </div>
+        <section className="py-16 bg-white"><>
+</section className="py-16 bg-white">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div><>
+<//div>
+<div className="text-center mb-12"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h1><//h1>
+                Our Infrastructure Track Record</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-600"></p><//p>
+                Proven results from our IT infrastructure services</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"></div><//div>
+              {infrastructureStats.map((stat, index) => (</div><>
+<//div>
+<div key={index} className="text-center"></div><>
+<//div>
+<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.metric}</div><>
+<//div>
+<div className="text-lg font-semibold text-gray-900 mb-1">{stat.description}</div><>
+<//div>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Key Benefits */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our IT Infrastructure Services?
-              </h2>
-              <p className="text-xl text-gray-600">
-                Enterprise-grade solutions with unmatched reliability and support
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
-                <p className="text-gray-600">Bank-level security with advanced threat protection and compliance monitoring</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">99.9% Uptime</h3>
-                <p className="text-gray-600">Guaranteed uptime with redundant systems and proactive monitoring</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock expert support with rapid response times</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cost Optimization</h3>
-                <p className="text-gray-600">Reduce IT costs by up to 40% while improving performance and reliability</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section className="py-16 bg-gray-50"><>
+</section className="py-16 bg-gray-50">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div><>
+<//div>
+<div className="text-center mb-12"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h1><//h1>
+                Why Choose Our IT Infrastructure Services?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-600"></p><//p>
+                Enterprise-grade solutions with unmatched reliability and support</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div><>
+<//div>
+<Shield className="w-8 h-8 text-blue-600" /><>
+</Shield className="w-8 h-8 text-blue-600" />
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3><>
+<//h3>
+<p className="text-gray-600">Bank-level security with advanced threat protection and compliance monitoring</p><>
+<//p>
+</div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div><>
+<//div>
+<Zap className="w-8 h-8 text-green-600" /><>
+</Zap className="w-8 h-8 text-green-600" />
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">99.9% Uptime</h3><>
+<//h3>
+<p className="text-gray-600">Guaranteed uptime with redundant systems and proactive monitoring</p><>
+<//p>
+</div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div><>
+<//div>
+<Clock className="w-8 h-8 text-purple-600" /><>
+</Clock className="w-8 h-8 text-purple-600" />
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3><>
+<//h3>
+<p className="text-gray-600">Round-the-clock expert support with rapid response times</p><>
+<//p>
+</div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div><>
+<//div>
+<BarChart className="w-8 h-8 text-orange-600" /><>
+</BarChart className="w-8 h-8 text-orange-600" />
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">Cost Optimization</h3><>
+<//h3>
+<p className="text-gray-600">Reduce IT costs by up to 40% while improving performance and reliability</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Services Grid */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                IT Infrastructure Services
-              </h2>
-              <p className="text-xl text-gray-600">
-                Comprehensive infrastructure solutions for modern businesses
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                      <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
-                    </div>
-                    <div className="text-sm text-green-600 font-semibold">
-                      Save up to 50% vs market rates
-                    </div>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
+        <section className="py-16 bg-white"><>
+</section className="py-16 bg-white">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div><>
+<//div>
+<div className="text-center mb-12"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h1><//h1>
+                IT Infrastructure Services</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-600"></p><//p>
+                Comprehensive infrastructure solutions for modern businesses</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div><//div>
+              {itServices.map((service, index) => (</div><>
+<//div>
+<div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200"></div><>
+<//div>
+<div className="text-4xl mb-4">{service.icon}</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3><>
+<//h3>
+<p className="text-gray-600 mb-4">{service.description}</p><>
+<//p>
+<div className="mb-4"></div><>
+<//div>
+<div className="flex items-center justify-between mb-2"></div><>
+<//div>
+<span className="text-2xl font-bold text-blue-600">{service.price}</span><>
+<//span>
+<span className="text-sm text-gray-500">Market: {service.marketPrice}</span><>
+<//span>
+</div><>
+<//div>
+<div className="text-sm text-green-600 font-semibold"></div><//div>
+                      Save up to 50% vs market rates</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+<div className="mb-4"></div><>
+<//div>
+<h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4><>
+<//h4>
+<ul className="space-y-1"></ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600"><>
+</li key={featureIndex} className="flex items-center text-sm text-gray-600">
+<CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
-                        </li>
+                        </li><//li>
                       ))}
-                    </ul>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                    </ul><>
+<//ul>
+</div><>
+<//div>
+<div className="mb-4"></div><>
+<//div>
+<h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4><>
+<//h4>
+<div className="flex flex-wrap gap-2"></div><//div>
+                      {service.technologies.map((tech, techIndex) => (</div><>
+<//div>
+<span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded"></span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                           {tech}
-                        </span>
+                        </span><//span>
                       ))}
-                    </div>
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                    <ul className="space-y-1">
+                    </div><>
+<//div>
+</div><>
+<//div>
+<div className="mb-6"></div><>
+<//div>
+<h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4><>
+<//h4>
+<ul className="space-y-1"></ul className="space-y-1">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600"><>
+</li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+<Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" /></Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                           {benefit}
-                        </li>
+                        </li><//li>
                       ))}
-                    </ul>
-                  </div>
-                  <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <a 
+                    </ul><>
+<//ul>
+</div><>
+<//div>
+<div className="mb-4 p-3 bg-gray-50 rounded-lg"></div><>
+<//div>
+<p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p><>
+<//p>
+</div><>
+<//div>
+<div className="flex gap-2"></div><>
+<//div>
+<a 
+                      href="tel:+13024640950"
+                      className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+                    ></a 
                       href="tel:+13024640950"
                       className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
                     >
                       Call Now
-                    </a>
-                    <a 
+                    </a><>
+<//a>
+<a 
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
+                    ></a 
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
                     >
                       Email Us
-                    </a>
-                  </div>
-                </div>
+                    </a><>
+<//a>
+</div><>
+<//div>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Process Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Infrastructure Implementation Process
-              </h2>
-              <p className="text-xl text-gray-600">
-                How we design, implement, and manage your IT infrastructure
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Assessment & Planning</h3>
-                <p className="text-gray-600">We analyze your current infrastructure and design an optimal solution</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Implementation</h3>
-                <p className="text-gray-600">We implement the infrastructure with minimal downtime and disruption</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Testing & Optimization</h3>
-                <p className="text-gray-600">We thoroughly test and optimize the system for peak performance</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Monitoring & Support</h3>
-                <p className="text-gray-600">We provide ongoing monitoring and 24/7 support for your infrastructure</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section className="py-16 bg-gray-50"><>
+</section className="py-16 bg-gray-50">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div><>
+<//div>
+<div className="text-center mb-12"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h1><//h1>
+                Our Infrastructure Implementation Process</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-600"></p><//p>
+                How we design, implement, and manage your IT infrastructure</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">Assessment & Planning</h3><>
+<//h3>
+<p className="text-gray-600">We analyze your current infrastructure and design an optimal solution</p><>
+<//p>
+</div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">Implementation</h3><>
+<//h3>
+<p className="text-gray-600">We implement the infrastructure with minimal downtime and disruption</p><>
+<//p>
+</div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">Testing & Optimization</h3><>
+<//h3>
+<p className="text-gray-600">We thoroughly test and optimize the system for peak performance</p><>
+<//p>
+</div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">Monitoring & Support</h3><>
+<//h3>
+<p className="text-gray-600">We provide ongoing monitoring and 24/7 support for your infrastructure</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Optimize Your IT Infrastructure?
-            </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Contact our IT infrastructure experts for a free assessment and custom solution design
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white"><>
+</section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold mb-4"></h1><//h1>
+              Ready to Optimize Your IT Infrastructure?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl mb-8 text-blue-100"></p><//p>
+              Contact our IT infrastructure experts for a free assessment and custom solution design</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"></div><>
+<//div>
+<a 
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+              ></a 
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
-              </a>
-              <a 
+              </a><>
+<//a>
+<a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              ></a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 ✉️ kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="text-sm text-blue-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p className="mt-2">🌐 https://ziontechgroup.com</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </a><>
+<//a>
+</div><>
+<//div>
+<div className="text-sm text-blue-200"></div><>
+<//div>
+<p>📍 364 E Main St STE 1008, Middletown DE 19709</p><>
+<//p>
+<p className="mt-2">🌐 https://ziontechgroup.com</p><>
+<//p>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><>
+<//div>
+</><//>
   );
 };
 export default ITInfrastructurePage;

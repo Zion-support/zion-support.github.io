@@ -21,6 +21,13 @@ const OptimizedImage = ({
       height={height}
       data-testid="optimized-image"
       loading="lazy"
+    /></img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      data-testid="optimized-image"
+      loading="lazy"
     />
   );
 };

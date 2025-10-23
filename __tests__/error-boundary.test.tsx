@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { BrowserRouter } from 'react-router-dom'
 import ErrorBoundary from '../app/components/ErrorBoundary'
+
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
@@ -24,22 +24,30 @@ describe('ErrorBoundary', () => {
 
   it('renders children when there is no error', () => {
     render(
-      <BrowserRouter>
-        <ErrorBoundary>
-          <ThrowError shouldThrow={false} />
-        </ErrorBoundary>
-      </BrowserRouter>
+      <BrowserRouter><>
+</BrowserRouter>
+<ErrorBoundary><>
+</ErrorBoundary>
+<ThrowError shouldThrow={false} /><>
+</ThrowError shouldThrow={false} />
+</ErrorBoundary><>
+<//ErrorBoundary>
+</BrowserRouter><//BrowserRouter>
     );
     expect(screen.getByText('No error')).toBeInTheDocument();
   });
 
   it('renders error UI when there is an error', () => {
     render(
-      <BrowserRouter>
-        <ErrorBoundary>
-          <ThrowError shouldThrow={true} />
-        </ErrorBoundary>
-      </BrowserRouter>
+      <BrowserRouter><>
+</BrowserRouter>
+<ErrorBoundary><>
+</ErrorBoundary>
+<ThrowError shouldThrow={true} /><>
+</ThrowError shouldThrow={true} />
+</ErrorBoundary><>
+<//ErrorBoundary>
+</BrowserRouter><//BrowserRouter>
     );
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
     expect(screen.getByText('Try Again')).toBeInTheDocument();
@@ -48,11 +56,15 @@ describe('ErrorBoundary', () => {
 
   it('has clickable reset button', () => {
     render(
-      <BrowserRouter>
-        <ErrorBoundary>
-          <ThrowError shouldThrow={true} />
-        </ErrorBoundary>
-      </BrowserRouter>
+      <BrowserRouter><>
+</BrowserRouter>
+<ErrorBoundary><>
+</ErrorBoundary>
+<ThrowError shouldThrow={true} /><>
+</ThrowError shouldThrow={true} />
+</ErrorBoundary><>
+<//ErrorBoundary>
+</BrowserRouter><//BrowserRouter>
     );
     const tryAgainButton = screen.getByText('Try Again');
     expect(tryAgainButton).toBeInTheDocument();
@@ -62,43 +74,16 @@ describe('ErrorBoundary', () => {
   it('renders custom fallback when provided', () => {
     const customFallback = <div>Custom error message</div>;
     render(
-      <BrowserRouter>
-        <ErrorBoundary fallback={customFallback}>
-          <ThrowError shouldThrow={true} />
-        </ErrorBoundary>
-      </BrowserRouter>
+      <BrowserRouter><>
+</BrowserRouter>
+<ErrorBoundary fallback={customFallback}><>
+</ErrorBoundary fallback={customFallback}>
+<ThrowError shouldThrow={true} /><>
+</ThrowError shouldThrow={true} />
+</ErrorBoundary><>
+<//ErrorBoundary>
+</BrowserRouter><//BrowserRouter>
     );
     expect(screen.getByText('Custom error message')).toBeInTheDocument();
-=======
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-
-// Mock ErrorBoundary component
-const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <div data-testid="error-boundary-wrapper">{children}</div>;
-};
-
-const ThrowingComponent = () => {
-  throw new Error('Test error');
-};
-
-describe('ErrorBoundary', () => {
-  it('renders children when no error occurs', () => {
-    render(
-      <ErrorBoundary>
-        <div data-testid="child">Child component</div>
-      </ErrorBoundary>
-    );
-    expect(screen.getByTestId('child')).toBeInTheDocument();
-  });
-
-  it('renders error boundary wrapper', () => {
-    render(
-      <ErrorBoundary>
-        <div data-testid="child">Child component</div>
-      </ErrorBoundary>
-    );
-    expect(screen.getByTestId('error-boundary-wrapper')).toBeInTheDocument();
->>>>>>> origin/main
   });
 });

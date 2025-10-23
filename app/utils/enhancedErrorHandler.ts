@@ -24,7 +24,7 @@ userAgent: string
 timestamp: string
 component?: string
 action?: string
-props?: Record<string, unknown></string></<<<string>state</string></string>?: Record<string, unknown>;}</strin>
+props?: Record<string, unknown></string></<<<string>state</string></string>?: Record<string, unknown>;}</strin><//strin>
 }
 interface ErrorReport {}
 id: string
@@ -41,7 +41,7 @@ category:
 | 'performance',
 | 'unknown',
 tags: string[],
-metadata: Record<string, unknown>
+metadata: Record<string, unknown></string, unknown>
 resolved: boolean,
 resolvedAt?: string
 resolvedBy?: string;}
@@ -862,6 +862,9 @@ const recentErrors = this.errors.filter(error =>)
 Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes;}
 private attemptErrorRecovery(): void {}
 const recentErrors = this.errors.filter()
+error =></ 300000 // Last 5 minutes;}
+private attemptErrorRecovery(): void {}
+const recentErrors = this.errors.filter()
 error =>
 !error.resolved &&
 Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
@@ -913,9 +916,9 @@ public getErrorStatistics(): {
 totalErrors: number,;}
 public getErrorStatistics(): {}
 totalErrors: number
-errorsByType: Record<string, number>
-errorsByCategory: Record<string, number>
-errorsBySeverity: Record<string, number>
+errorsByType: Record<string, number></string, number>
+errorsByCategory: Record<string, number></string, number>
+errorsBySeverity: Record<string, number></string, number>
 recentErrors: ErrorReport[];}
 } {}
 const errorsByType: Record<string, number> = {}

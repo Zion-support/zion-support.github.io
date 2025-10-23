@@ -539,8 +539,8 @@ return input.trim().replace(/[<>{]/g, '');}
 * Sanitize HTML input
 */
 export function sanitizeHtml(input: string): string {
-if (!input || typeof input !== 'string') return '';}
-return input}</>
+if (!input || typeof input !== 'string') return '';}</><//>
+return input}</><//>
 .replace(/</g, '&lt;')
 .replace(/>/g, '&gt;')
 .replace(/"/g, '&quot;')
@@ -675,7 +675,7 @@ return { isValid: true, errors: [] }
 * Async validation
 */
 export async function validateAsync(
-validator: (val: unknown) => Promise<ValidationResult>
+validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
 value: unknown,
 ): Promise<ValidationResult> {,
 try {,

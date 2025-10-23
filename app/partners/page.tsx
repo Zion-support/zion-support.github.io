@@ -91,22 +91,22 @@ const PartnersPage: React.FC = () => {
     {
       name: 'Technology Partners',
       description: 'Integration and technical collaboration',
-      icon: <Zap className="w-6 h-6" />
+      icon: <Zap className="w-6 h-6" /></Zap className="w-6 h-6" />
     },
     {
       name: 'Channel Partners',
       description: 'Reseller and distribution partnerships',
-      icon: <Building2 className="w-6 h-6" />
+      icon: <Building2 className="w-6 h-6" /></Building2 className="w-6 h-6" />
     },
     {
       name: 'Strategic Partners',
       description: 'Long-term strategic alliances',
-      icon: <Handshake className="w-6 h-6" />
+      icon: <Handshake className="w-6 h-6" /></Handshake className="w-6 h-6" />
     },
     {
       name: 'Solution Partners',
       description: 'Joint solution development',
-      icon: <Award className="w-6 h-6" />
+      icon: <Award className="w-6 h-6" /></Award className="w-6 h-6" />
     }
   ];
 
@@ -124,135 +124,212 @@ const PartnersPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
-        <meta name="description" content="Strategic partnerships with leading technology companies. Join our partner ecosystem and grow your business with Zion Tech Group." />
-        <meta name="keywords" content="technology partners, strategic partnerships, partner program, technology alliances, business partnerships" />
-      </Helmet>
-
+    <div className="min-h-screen bg-gray-50"></div><>
+<//div>
+<Helmet><>
+</Helmet>
+<title>Partners - Zion Tech Group | Strategic Technology Partnerships</title><>
+<//title>
+<meta name="description" content="Strategic partnerships with leading technology companies. Join our partner ecosystem and grow your business with Zion Tech Group." /><>
+</meta name="description" content="Strategic partnerships with leading technology companies. Join our partner ecosystem and grow your business with Zion Tech Group." />
+<meta name="keywords" content="technology partners, strategic partnerships, partner program, technology alliances, business partnerships" /><>
+</meta name="keywords" content="technology partners, strategic partnerships, partner program, technology alliances, business partnerships" />
+</Helmet><//Helmet>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Join our ecosystem of technology leaders and grow your business through strategic partnerships
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Become a Partner
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Partner Program
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20"><>
+</section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-4xl mx-auto text-center"></div><>
+<//div>
+<h1 className="text-4xl md:text-6xl font-bold mb-6"></h1><//h1>
+              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span><>
+<//span>
+</h1><>
+<//h1>
+<p className="text-xl md:text-2xl mb-8 text-blue-100"></p><//p>
+              Join our ecosystem of technology leaders and grow your business through strategic partnerships</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"></button><//button>
+                Become a Partner</button><>
+<//button>
+</button><>
+<//button>
+<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"></button><//button>
+                View Partner Program</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Partners Grid */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Partners</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {partners.map((partner, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <Building2 className="w-8 h-8 text-gray-600" />
-                    </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTierColor(partner.tier)}`}>
+      <section className="py-20 bg-white"><>
+</section className="py-20 bg-white">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-6xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Partners</h2><>
+<//h2>
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div><//div>
+              {partners.map((partner, index) => (</div><>
+<//div>
+<div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"></div><>
+<//div>
+<div className="flex items-center justify-between mb-4"></div><>
+<//div>
+<div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center"></div><>
+<//div>
+<Building2 className="w-8 h-8 text-gray-600" /><>
+</Building2 className="w-8 h-8 text-gray-600" />
+</div><>
+<//div>
+<span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTierColor(partner.tier)}`}></span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTierColor(partner.tier)}`}>
                       {partner.tier.toUpperCase()}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{partner.name}</h3>
-                  <p className="text-gray-600 mb-3">{partner.description}</p>
-                  <p className="text-sm text-blue-600 mb-4">{partner.category}</p>
-                  
+                    </span><>
+<//span>
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-2">{partner.name}</h3><>
+<//h3>
+<p className="text-gray-600 mb-3">{partner.description}</p><>
+<//p>
+<p className="text-sm text-blue-600 mb-4">{partner.category}</p><//p>
                   {partner.website && (
                     <a
                       href={partner.website}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    ></a
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
                     >
                       Visit Website
-                      <ExternalLink className="w-4 h-4 ml-1" />
-                    </a>
+                      <ExternalLink className="w-4 h-4 ml-1" /><>
+</ExternalLink className="w-4 h-4 ml-1" />
+</a><//a>
                   )}
-                </div>
+                </div><//div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Partnership Types */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Types</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {partnershipTypes.map((type, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4 text-blue-600">
-                    {type.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{type.name}</h3>
-                  <p className="text-gray-600 text-sm">{type.description}</p>
-                </div>
+      <section className="py-20 bg-gray-50"><>
+</section className="py-20 bg-gray-50">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-6xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Types</h2><>
+<//h2>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div><//div>
+              {partnershipTypes.map((type, index) => (</div><>
+<//div>
+<div key={index} className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow"></div><>
+<//div>
+<div className="flex justify-center mb-4 text-blue-600"></div><//div>
+                    {type.icon}</div><>
+<//div>
+</div><>
+<//div>
+<h3 className="text-lg font-semibold text-gray-900 mb-2">{type.name}</h3><>
+<//h3>
+<p className="text-gray-600 text-sm">{type.description}</p><>
+<//p>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Benefits</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </div>
+      <section className="py-20 bg-white"><>
+</section className="py-20 bg-white">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-6xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Benefits</h2><>
+<//h2>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div><//div>
+              {benefits.map((benefit, index) => (</div><>
+<//div>
+<div key={index} className="text-center"></div><>
+<//div>
+<div className="flex justify-center mb-4"></div><//div>
+                    {benefit.icon}</div><>
+<//div>
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3><>
+<//h3>
+<p className="text-gray-600">{benefit.description}</p><>
+<//p>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Partner With Us?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Join our partner ecosystem and unlock new opportunities for growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Handshake className="mr-2 w-5 h-5" />
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white"><>
+</section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-4xl mx-auto text-center"></div><>
+<//div>
+<h2 className="text-3xl font-bold mb-6">Ready to Partner With Us?</h2><>
+<//h2>
+<p className="text-xl mb-8 text-blue-100"></p><//p>
+              Join our partner ecosystem and unlock new opportunities for growth and innovation.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"></button><>
+<//button>
+<Handshake className="mr-2 w-5 h-5" /></Handshake className="mr-2 w-5 h-5" />
                 Become a Partner
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Download Partner Kit
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              </button><>
+<//button>
+<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"></button><//button>
+                Download Partner Kit</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><//div>
   );
 };
 

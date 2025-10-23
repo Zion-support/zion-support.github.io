@@ -7,7 +7,7 @@ export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
 }
 export interface FieldRule {/* TODO: Fix JSX expression */}
 }
-export type ValidationRules = Record<string, FieldRule[]>
+export type ValidationRules = Record<string, FieldRule[]></string, FieldRule[]>
 export interface ValidationResult {/* TODO: Fix JSX expression */}
 }
 export class ValidationError extends Error {
@@ -450,8 +450,8 @@ d: true }
 export function sanitizeHTML(html: string): string {
 if (!html || typeof html !== 'string') return ''
 ,
-// First escape HTML entities;}
-let clean = html.replace(/&/g, '&amp;');}</>
+// First escape HTML entities;}</><//>
+let clean = html.replace(/&/g, '&amp;');}</><//>
 clean = clean.replace(/</g, '&lt;')
 clean = clean.replace(/>/g, '&gt;')
 clean = clean.replace(/"/g, '&quot;')

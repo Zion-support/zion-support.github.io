@@ -21,7 +21,7 @@ component?: string
 action?: string
 userId?: string
 sessionId?: string
-metadata?: Record<string, unknown>;}</strin>
+metadata?: Record<string, unknown>;}</strin><//strin>
 }
 export interface TrackedError {}
 message: string
@@ -145,7 +145,7 @@ public getErrorStats(): {
 total: number,;}
 public getErrorStats(): {}
 total: number
-byComponent: Record<string, number>
+byComponent: Record<string, number></string, number>
 recent: TrackedError[];}
 } {}
 const byComponent: Record<string, number> = {}

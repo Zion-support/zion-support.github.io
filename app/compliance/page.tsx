@@ -73,146 +73,228 @@ const CompliancePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Compliance Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive compliance services by Zion Tech Group. GDPR, HIPAA, SOC 2, and ISO 27001 compliance solutions for your business." />
-        <meta name="keywords" content="compliance services, GDPR compliance, HIPAA compliance, SOC 2, ISO 27001, regulatory compliance" />
-      </Helmet>
-
+    <div className="min-h-screen bg-gray-50"></div><>
+<//div>
+<Helmet><>
+</Helmet>
+<title>Compliance Services | Zion Tech Group</title><>
+<//title>
+<meta name="description" content="Comprehensive compliance services by Zion Tech Group. GDPR, HIPAA, SOC 2, and ISO 27001 compliance solutions for your business." /><>
+</meta name="description" content="Comprehensive compliance services by Zion Tech Group. GDPR, HIPAA, SOC 2, and ISO 27001 compliance solutions for your business." />
+<meta name="keywords" content="compliance services, GDPR compliance, HIPAA compliance, SOC 2, ISO 27001, regulatory compliance" /><>
+</meta name="keywords" content="compliance services, GDPR compliance, HIPAA compliance, SOC 2, ISO 27001, regulatory compliance" />
+</Helmet><//Helmet>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Compliance Solutions
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Navigate complex regulatory requirements with confidence. Our experts help you achieve and maintain compliance across all major frameworks.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Compliance Assessment
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20"><>
+</section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-4xl mx-auto text-center"></div><>
+<//div>
+<h1 className="text-4xl md:text-6xl font-bold mb-6"></h1><//h1>
+              Compliance Solutions</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl md:text-2xl mb-8 text-blue-100"></p><//p>
+              Navigate complex regulatory requirements with confidence. Our experts help you achieve and maintain compliance across all major frameworks.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"></button><//button>
+                Get Compliance Assessment</button><>
+<//button>
+</button><>
+<//button>
+<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"></button><//button>
+                Learn More</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Compliance Frameworks */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Compliance Frameworks We Support</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {complianceFrameworks.map((framework, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-4 text-blue-600">
-                    {framework.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{framework.name}</h3>
-                  <p className="text-gray-600 mb-4 text-center">{framework.description}</p>
-                  <ul className="space-y-2">
+      <section className="py-16 bg-white"><>
+</section className="py-16 bg-white">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-6xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Compliance Frameworks We Support</h2><>
+<//h2>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div><//div>
+              {complianceFrameworks.map((framework, index) => (</div><>
+<//div>
+<div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"></div><>
+<//div>
+<div className="flex justify-center mb-4 text-blue-600"></div><//div>
+                    {framework.icon}</div><>
+<//div>
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{framework.name}</h3><>
+<//h3>
+<p className="text-gray-600 mb-4 text-center">{framework.description}</p><>
+<//p>
+<ul className="space-y-2"></ul className="space-y-2">
                     {framework.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600"><>
+</li key={featureIndex} className="flex items-center text-sm text-gray-600">
+<CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </li><//li>
                     ))}
-                  </ul>
-                </div>
+                  </ul><>
+<//ul>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Services Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Compliance Services</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  <ul className="space-y-3">
+      <section className="py-16 bg-gray-50"><>
+</section className="py-16 bg-gray-50">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-6xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Compliance Services</h2><>
+<//h2>
+<div className="grid md:grid-cols-2 gap-8"></div><//div>
+              {services.map((service, index) => (</div><>
+<//div>
+<div key={index} className="bg-white rounded-lg shadow-md p-8"></div><>
+<//div>
+<h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3><>
+<//h3>
+<p className="text-gray-600 mb-6">{service.description}</p><>
+<//p>
+<ul className="space-y-3"></ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-600"><>
+</li key={featureIndex} className="flex items-center text-gray-600">
+<CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" /></CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </li><//li>
                     ))}
-                  </ul>
-                </div>
+                  </ul><>
+<//ul>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Industries Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industries We Serve</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
-                <div key={index} className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                  <div className="text-3xl mb-3">{industry.icon}</div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{industry.name}</h3>
-                  <p className="text-sm text-gray-600">{industry.description}</p>
-                </div>
+      <section className="py-16 bg-white"><>
+</section className="py-16 bg-white">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-6xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industries We Serve</h2><>
+<//h2>
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"></div><//div>
+              {industries.map((industry, index) => (</div><>
+<//div>
+<div key={index} className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"></div><>
+<//div>
+<div className="text-3xl mb-3">{industry.icon}</div><>
+<//div>
+<h3 className="font-semibold text-gray-900 mb-2">{industry.name}</h3><>
+<//h3>
+<p className="text-sm text-gray-600">{industry.description}</p><>
+<//p>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our Compliance Services?</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-sm p-6">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
-                    <p className="text-gray-900 font-medium">{benefit}</p>
-                  </div>
-                </div>
+      <section className="py-16 bg-gray-50"><>
+</section className="py-16 bg-gray-50">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-6xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our Compliance Services?</h2><>
+<//h2>
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div><//div>
+              {benefits.map((benefit, index) => (</div><>
+<//div>
+<div key={index} className="bg-white rounded-lg shadow-sm p-6"></div><>
+<//div>
+<div className="flex items-center mb-4"></div><>
+<//div>
+<CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" /><>
+</CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
+<p className="text-gray-900 font-medium">{benefit}</p><>
+<//p>
+</div><>
+<//div>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Achieve Compliance?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Let our compliance experts help you navigate regulatory requirements and protect your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Shield className="mr-2 w-5 h-5" />
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"><>
+</section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+<div className="container mx-auto px-4"></div><>
+<//div>
+<div className="max-w-4xl mx-auto text-center"></div><>
+<//div>
+<h2 className="text-3xl font-bold mb-6">Ready to Achieve Compliance?</h2><>
+<//h2>
+<p className="text-xl mb-8 text-blue-100"></p><//p>
+              Let our compliance experts help you navigate regulatory requirements and protect your business.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"></button><>
+<//button>
+<Shield className="mr-2 w-5 h-5" /></Shield className="mr-2 w-5 h-5" />
                 Start Compliance Assessment
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Contact Our Experts
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              </button><>
+<//button>
+<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"></button><//button>
+                Contact Our Experts</button><>
+<//button>
+</button><>
+<//button>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><//div>
   );
 };
 

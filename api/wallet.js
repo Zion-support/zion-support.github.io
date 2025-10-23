@@ -18,11 +18,7 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  let wallets = [];
-=======
 let wallets = [];
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   try {
     const data = fs.readFileSync(file, 'utf8');
     wallets = JSON.parse(data);
@@ -54,20 +50,10 @@ let wallets = [];
     res.end(JSON.stringify({ 
       success: true,
       message: 'Wallet added successfully' 
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
-
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
-
-=======
 res.end(JSON.stringify({ error: 'Failed to save wallet' }));
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
 }

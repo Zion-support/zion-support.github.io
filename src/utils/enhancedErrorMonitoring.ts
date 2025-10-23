@@ -284,8 +284,8 @@ class EnhancedErrorMonitoring {
    */
   getErrorStats(): {
     total: number,
-    bySeverity: Record<string, number>
-    byCategory: Record<string, number>
+    bySeverity: Record<string, number></string, number>
+    byCategory: Record<string, number></string, number>
     recent: ErrorReport[]
   } {
     const recent = this.errorQueue

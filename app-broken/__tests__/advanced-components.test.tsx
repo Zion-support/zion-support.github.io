@@ -28,24 +28,33 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
 
   if (hasError) {
     return (
-      <div data-testid="error-boundary">
-        <h2>Unexpected Application Error!</h2>
-        <p>Oops! Something went wrong</p>
+      <div data-testid="error-boundary"></div><>
+<//div>
+<h2>Unexpected Application Error!</h2><>
+<//h2>
+<p>Oops! Something went wrong</p><//p>
         {error && (
-          <div>
-            <h3 style={{ fontStyle: 'italic' }}>{error.message}</h3>
-            <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>
-              {error.stack}
-            </pre>
-          </div>
+          <div></div><>
+<//div>
+<h3 style={{ fontStyle: 'italic' }}>{error.message}</h3><>
+<//h3>
+<pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}></p><//p>
+              {error.stack}</p><>
+<//p>
+</pre><>
+<//pre>
+</div><//div>
         )}
         {enableRetry && (
-          <div>
-            <button>Try Again</button>
-            <button>Reload Page</button>
-          </div>
+          <div></div><>
+<//div>
+<button>Try Again</button><>
+<//button>
+<button>Reload Page</button><>
+<//button>
+</div><//div>
         )}
-      </div>
+      </div><//div>
     );
   }
   return <>{children}</>;
@@ -60,9 +69,11 @@ const ErrorComponent = () => {
 describe('Advanced Components', () => {
   test('AdvancedErrorBoundary renders children when no error', () => {
     render(
-      <AdvancedErrorBoundary>
-        <TestComponent />
-      </AdvancedErrorBoundary>
+      <AdvancedErrorBoundary><>
+</AdvancedErrorBoundary>
+<TestComponent /><>
+</TestComponent />
+</AdvancedErrorBoundary><//AdvancedErrorBoundary>
     )
     expect(screen.getByText('Test Component')).toBeInTheDocument();
   });
@@ -84,10 +95,13 @@ describe('Advanced Components', () => {
       
       if (hasError) {
         return (
-          <div data-testid="error-boundary">
-            <h2>Unexpected Application Error!</h2>
-            <p>Oops! Something went wrong</p>
-          </div>
+          <div data-testid="error-boundary"></div><>
+<//div>
+<h2>Unexpected Application Error!</h2><>
+<//h2>
+<p>Oops! Something went wrong</p><>
+<//p>
+</div><//div>
         );
       }
       return <div>No error</div>;
@@ -101,16 +115,21 @@ describe('Advanced Components', () => {
 
   test('SEOEnhancer works with HelmetProvider', () => {
     const SEOEnhancer = () => (
-      <Helmet>
-        <title>Test Title</title>
-        <meta name="description" content="Test description" />
-      </Helmet>
+      <Helmet><>
+</Helmet>
+<title>Test Title</title><>
+<//title>
+<meta name="description" content="Test description" /><>
+</meta name="description" content="Test description" />
+</Helmet><//Helmet>
     );
     
     render(
-      <HelmetProvider>
-        <SEOEnhancer />
-      </HelmetProvider>
+      <HelmetProvider><>
+</HelmetProvider>
+<SEOEnhancer /><>
+</SEOEnhancer />
+</HelmetProvider><//HelmetProvider>
     );
     
     // Wait for Helmet to update the document title

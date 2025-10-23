@@ -74,144 +74,244 @@ const AnalyticsToolsPage: React.FC = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Analytics Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
-        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><>
+<//div>
+<Helmet><>
+</Helmet>
+<title>Analytics Tools - Zion Tech Group</title><>
+<//title>
+<meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." /><>
+</meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
+<meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" /><>
+</meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
+</Helmet><//Helmet>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics Tools
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
-          </p>
+      <section className="pt-24 pb-16 px-4"><>
+</section className="pt-24 pb-16 px-4">
+<div className="max-w-7xl mx-auto text-center"></div><>
+<//div>
+<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"></h1><//h1>
+            AI Analytics Tools</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p><//p>
+            Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.</p><>
+<//p>
+</p><//p>
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-              <div className="text-gray-300">Analytics Tools</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
-              <div className="text-gray-300">Starting Price</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-              <div className="text-gray-300">Accuracy</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">Real-time</div>
-              <div className="text-gray-300">Monitoring</div>
-            </div>
-          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"></div><>
+<//div>
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div><>
+<//div>
+<div className="text-3xl font-bold text-cyan-400 mb-2">6</div><>
+<//div>
+<div className="text-gray-300">Analytics Tools</div><>
+<//div>
+</div><>
+<//div>
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div><>
+<//div>
+<div className="text-3xl font-bold text-green-400 mb-2">$179</div><>
+<//div>
+<div className="text-gray-300">Starting Price</div><>
+<//div>
+</div><>
+<//div>
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div><>
+<//div>
+<div className="text-3xl font-bold text-purple-400 mb-2">95%</div><>
+<//div>
+<div className="text-gray-300">Accuracy</div><>
+<//div>
+</div><>
+<//div>
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div><>
+<//div>
+<div className="text-3xl font-bold text-orange-400 mb-2">Real-time</div><>
+<//div>
+<div className="text-gray-300">Monitoring</div><>
+<//div>
+</div><>
+<//div>
+</div><//div>
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
-                <span className="text-white font-medium">Middletown, DE</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div><>
+<//div>
+<div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div><>
+<//div>
+<div className="flex items-center space-x-2"></div><>
+<//div>
+<Phone className="w-5 h-5" /><>
+</Phone className="w-5 h-5" />
+<span className="text-white font-medium">+1 302 464 0950</span><>
+<//span>
+</div><>
+<//div>
+<div className="flex items-center space-x-2"></div><>
+<//div>
+<Mail className="w-5 h-5" /><>
+</Mail className="w-5 h-5" />
+<span className="text-white font-medium">kleber@ziontechgroup.com</span><>
+<//span>
+</div><>
+<//div>
+<div className="flex items-center space-x-2"></div><>
+<//div>
+<MapPin className="w-5 h-5" /><>
+</MapPin className="w-5 h-5" />
+<span className="text-white font-medium">Middletown, DE</span><>
+<//span>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Analytics Tools Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Analytics Tools
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {analyticsTools.map((tool, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{tool.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{tool.description}</p>
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
-                    {tool.category}
-                  </div>
-                </div>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-white mb-3">Features:</h4>
-                  <ul className="space-y-2">
+      <section className="py-16 px-4"><>
+</section className="py-16 px-4">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h1><//h1>
+            Our Analytics Tools</h1><>
+<//h1>
+</h2><>
+<//h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div><//div>
+            {analyticsTools.map((tool, index) => (</div><>
+<//div>
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div><>
+<//div>
+<div className="text-center mb-6"></div><>
+<//div>
+<div className="text-5xl mb-4">{tool.icon}</div><>
+<//div>
+<h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3><>
+<//h3>
+<p className="text-gray-300 text-sm mb-4">{tool.description}</p><>
+<//p>
+<div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4"></div><//div>
+                    {tool.category}</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+<div className="mb-6"></div><>
+<//div>
+<h4 className="font-semibold text-white mb-3">Features:</h4><>
+<//h4>
+<ul className="space-y-2"></ul className="space-y-2">
                     {tool.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300"><>
+</li key={featureIndex} className="flex items-center text-sm text-gray-300">
+<CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </li><//li>
                     ))}
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
-                  <a
+                  </ul><>
+<//ul>
+</div><>
+<//div>
+<div className="text-center"></div><>
+<//div>
+<div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div><>
+<//div>
+<a
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
+                  ></a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started
-                  </a>
-                </div>
-              </div>
+                  </a><>
+<//a>
+</div><>
+<//div>
+</div><//div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our Analytics Tools?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </div>
+      <section className="py-16 px-4"><>
+</section className="py-16 px-4">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h1><//h1>
+            Why Choose Our Analytics Tools?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div><//div>
+            {benefits.map((benefit, index) => (</div><>
+<//div>
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300"></div><>
+<//div>
+<benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /><>
+</benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+<h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3><>
+<//h3>
+<p className="text-gray-300 text-sm">{benefit.description}</p><>
+<//p>
+</div><//div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Unlock Your Data?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Get started with our AI analytics tools today and transform your data into actionable insights.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"><>
+</section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+<div className="max-w-4xl mx-auto text-center"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h1><//h1>
+            Ready to Unlock Your Data?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-purple-100 mb-8"></p><//p>
+            Get started with our AI analytics tools today and transform your data into actionable insights.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<a
+              href="tel:+13024640950"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+            ></a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
               Call (302) 464-0950
-            </a>
-            <a
+            </a><>
+<//a>
+<a
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+            ></a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
               Email Us
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+            </a><>
+<//a>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><//div>
   );
 };
 export default AnalyticsToolsPage;

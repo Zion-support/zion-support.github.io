@@ -31,92 +31,146 @@ const ZionCybersecurityAuditPage: React.FC = () => {
 
   return (
     <>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion Cybersecurity Audit
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional zioncybersecurityaudit solutions powered by advanced
-              AI and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+</><>
+<//>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><//div>
+        {/* Hero Section */}</div><>
+<//div>
+<section className="py-20 px-4 sm:px-6 lg:px-8"><>
+</section className="py-20 px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto text-center"></div><>
+<//div>
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1><//h1>
+              Zion Cybersecurity Audit</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional zioncybersecurityaudit solutions powered by advanced</p><//p>
+              AI and cutting-edge technology.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              ></a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Get Started
-              </a>
-              <a
+              </a><>
+<//a>
+<a
+                href="/services"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              ></a
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 View All Services
-              </a>
-            </div>
-          </div>
-        </section>
-
+              </a><>
+<//a>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div
+        <section className="py-20 px-4 sm:px-6 lg:px-8"><>
+</section className="py-20 px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<div className="text-center mb-16"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h1><//h1>
+                Powerful Features</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-lg text-gray-300"></p><//p>
+                Everything you need for success</p><>
+<//p>
+</p><>
+<//p>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div><//div>
+              {features.map((feature, index) => (</div><>
+<//div>
+<div
                   key={index}
                   className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                ></div><>
+<//div>
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div><>
+<//div>
+<feature.icon className="w-8 h-8 text-white" /><>
+</feature.icon className="w-8 h-8 text-white" />
+</div><>
+<//div>
+<h3 className="text-xl font-semibold text-white mb-3"></h1><//h1>
+                    {feature.title}</h1><>
+<//h1>
+</h3><>
+<//h3>
+<p className="text-gray-300">{feature.description}</p><>
+<//p>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </section>
-
+            </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+        <section className="py-20 px-4 sm:px-6 lg:px-8"><>
+</section className="py-20 px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto text-center"></div><>
+<//div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h1><//h1>
+              Ready to Get Started?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-lg text-gray-300 mb-8"></p><//p>
+              Let us help you implement this solution for your business.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              ></a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Start Your Project
-              </a>
-              <a
+              </a><>
+<//a>
+<a
+                href="/services"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              ></a
                 href="/services"
                 className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Learn More
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </a><>
+<//a>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><>
+<//div>
+</><//>
   );
 };
 

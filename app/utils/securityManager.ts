@@ -108,8 +108,8 @@ s: number): boolean {/* TODO: Fix JSX expression */}
 }
 validRequests.push(now)
 storage.set(key, validRequests)
-return true
-}}</>
+return true</><//>
+}}</><//>
 private getRateLimitStorage(): Map<string, number[]> {}
 if (!global._rateLimitStorage) {}
 global._rateLimitStorage = new Map();}

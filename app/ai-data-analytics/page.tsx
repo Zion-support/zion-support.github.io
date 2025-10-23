@@ -40,115 +40,188 @@ const AiDataAnalyticsPage: React.FC = () => {
   ]
   return (
     <>
-      <Helmet>
-        <title>Ai Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai data analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai data analytics, artificial intelligence, ai data analytics, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Data Analytics
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai data analytics solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-  </
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-  </
-            </div>
-          </div>
-        </section>
+      <Helmet><>
+</Helmet>
+<title>Ai Data Analytics - Zion Tech Group</title><>
+<//title>
+<meta name="description" content="Advanced AI-powered ai data analytics solution for modern businesses." /><>
+</meta name="description" content="Advanced AI-powered ai data analytics solution for modern businesses." />
+<meta name="keywords" content="AI ai data analytics, artificial intelligence, ai data analytics, AI solutions, intelligent automation" /><>
+</meta name="keywords" content="AI ai data analytics, artificial intelligence, ai data analytics, AI solutions, intelligent automation" />
+</Helmet><>
+<//Helmet>
+<Navigation /><>
+</Navigation />
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><//div>
+        {/* Hero Section */}</div><>
+<//div>
+<section className="relative py-20 px-4 overflow-hidden"><>
+</section className="relative py-20 px-4 overflow-hidden">
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div><>
+<//div>
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div><>
+<//div>
+<div className="relative max-w-7xl mx-auto text-center"></div><>
+<//div>
+<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1><//h1>
+              Ai Data Analytics</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p><//p>
+              Advanced AI-powered ai data analytics solution for modern businesses.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button><//button>
+                Get Started</button><>
+<//button>
+</h1><>
+<//h1>
+<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button><//button>
+                View Demo</button><>
+<//button>
+</h1><>
+<//h1>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-  </
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-  </
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+        <section className="py-20 px-4"><>
+</section className="py-20 px-4">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<div className="text-center mb-16"></div><>
+<//div>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1><//h1>
+                Key Features</h1><>
+<//h1>
+</h1><>
+<//h1>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p><//p>
+                Advanced AI technology that drives results</p><>
+<//p>
+</h1><>
+<//h1>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div><//div>
+              {features.map((feature, index) => (</div><>
+<//div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div><>
+<//div>
+<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div><>
+<//div>
+<feature.icon className="w-8 h-8 text-white" /><>
+</feature.icon className="w-8 h-8 text-white" />
+</div><>
+<//div>
+<h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3><>
+<//h3>
+<p className="text-gray-300 mb-4">{feature.description}</p><//p>
                   {feature.benefits && (
-                    <ul className="space-y-2">
+                    <ul className="space-y-2"></ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        <li key={idx} className="flex items-center text-sm text-gray-400"><>
+</li key={idx} className="flex items-center text-sm text-gray-400">
+<CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
-                        </li>
+                        </li><//li>
                       ))}
-                    </ul>
+                    </ul><//ul>
                   )}
-                </div>
+                </div><//div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-  </
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
+        <section className="py-20 px-4"><>
+</section className="py-20 px-4">
+<div className="max-w-7xl mx-auto"></div><>
+<//div>
+<div className="text-center mb-16"></div><>
+<//div>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1><//h1>
+                Why Choose Our Solution?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p><//p>
+                Proven results that drive business growth and efficiency</p><>
+<//p>
+</h1><>
+<//h1>
+</div><>
+<//div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div><//div>
+              {benefits.map((benefit, index) => (</div><>
+<//div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div><>
+<//div>
+<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div><>
+<//div>
+<CheckCircle className="w-8 h-8 text-white" /><>
+</CheckCircle className="w-8 h-8 text-white" />
+</div><>
+<//div>
+<p className="text-lg text-white font-medium">{benefit}</p><>
+<//p>
+</div><//div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div><>
+<//div>
+</div><>
+<//div>
+</section><//section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-  </
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-  </
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
+        <section className="py-20 px-4"><>
+</section className="py-20 px-4">
+<div className="max-w-4xl mx-auto text-center"></div><>
+<//div>
+<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div><>
+<//div>
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1><//h1>
+                Ready to Get Started?</h1><>
+<//h1>
+</h2><>
+<//h2>
+<p className="text-xl text-gray-300 mb-8"></p><//p>
+                Contact our experts to discuss your requirements and get started today.</p><>
+<//p>
+</p><>
+<//p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
+<//div>
+<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button><//button>
+                  Contact Us</button><>
+<//button>
+</h1><>
+<//h1>
+<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button><//button>
+                  Learn More</button><>
+<//button>
+</h1><>
+<//h1>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</section><>
+<//section>
+</div><>
+<//div>
+<Footer /><>
+</Footer />
+</><//>
   )
 }
 export default AiDataAnalyticsPage

@@ -59,7 +59,7 @@ permissionsPolicy: [,
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 export function getSecurityHeaders()
-customConfig?: Partial<SecurityHeadersConfig>
+customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string> {}
 const config = { ...defaultSecurityHeaders, ...customConfig }
 const headers: Record<string, string> = {}

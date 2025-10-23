@@ -61,25 +61,15 @@ global.fetch = jest.fn();
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 console.warn = (...args) => {
-<<<<<<< HEAD
-  const _message = args[0]?.toString?.() || '';
-  if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
-=======
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     return;
   }
   _originalConsoleWarn(...args);
 };
 console.info = (...args) => {
-<<<<<<< HEAD
-  const _message = args[0]?.toString?.() || '';
-  if (_message.includes('ReactDOM.render is no longer supported')) {
-=======
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     return;
   }
   _originalConsoleInfo(...args);

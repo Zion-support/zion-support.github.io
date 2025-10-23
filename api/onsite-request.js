@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-// API endpoint for onsite requests
-export default function handler(req, res) {
-  res.status(200).json({ message: 'Onsite request endpoint' });
-}
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -43,4 +37,3 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
 }
->>>>>>> origin/main

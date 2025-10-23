@@ -19,7 +19,7 @@ category: string
 action: string
 label?: string
 value?: number
-metadata?: Record<string, unknown>;}</strin>
+metadata?: Record<string, unknown>;}</strin><//strin>
 }
 export interface UserProperties {}
 userId?: string
@@ -326,7 +326,7 @@ public trackCustomEvent(category: string;)
 action: string;),
 label?: string),
 value?: number),
-metadata?: Record<string, unknown>
+metadata?: Record<string, unknown></string, unknown>
 ): void {
 this.trackEvent({)
 category)

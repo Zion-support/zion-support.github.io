@@ -102,185 +102,289 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+    <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20"><>
+</footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+<div className="container mx-auto px-4 py-12"></div><>
+<//div>
+<div className="grid grid-cols-1 lg:grid-cols-5 gap-8"></div><//div>
+          {/* Company Info */}</div><>
+<//div>
+<div className="lg:col-span-1"></div><>
+<//div>
+<div className="flex items-center space-x-2 mb-4"></div><>
+<//div>
+<div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"></div><>
+<//div>
+<Brain className="w-5 h-5 text-white" /><>
+</Brain className="w-5 h-5 text-white" />
+</div><>
+<//div>
+<span className="text-xl font-bold text-white neon-text">Zion Tech Group</span><>
+<//span>
+</div><>
+<//div>
+<p className="text-gray-300 mb-6 leading-relaxed"></p><//p>
+              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.</p><>
+<//p>
+</p><>
+<//p>
+<div className="space-y-3"></div><>
+<//div>
+<div className="flex items-center space-x-3 text-gray-300"></div><>
+<//div>
+<Phone className="w-4 h-4 text-cyan-400" /><>
+</Phone className="w-4 h-4 text-cyan-400" />
+<a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors"></a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                   +1 302 464 0950
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                </a><>
+<//a>
+</div><>
+<//div>
+<div className="flex items-center space-x-3 text-gray-300"></div><>
+<//div>
+<Mail className="w-4 h-4 text-cyan-400" /><>
+</Mail className="w-4 h-4 text-cyan-400" />
+<a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors"></a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                   kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
-          </div>
-
+                </a><>
+<//a>
+</div><>
+<//div>
+<div className="flex items-center space-x-3 text-gray-300"></div><>
+<//div>
+<MapPin className="w-4 h-4 text-cyan-400" /><>
+</MapPin className="w-4 h-4 text-cyan-400" />
+<span>364 E Main St STE 1008, Middletown DE 19709</span><>
+<//span>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><//div>
           {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
+          <div></div><>
+<//div>
+<h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h1><>
+<//h1>
+<Zap className="w-4 h-4 mr-2" /></Zap className="w-4 h-4 mr-2" />
               Micro SAAS
-            </h3>
-            <ul className="space-y-2">
+            </h3><>
+<//h3>
+<ul className="space-y-2"></ul className="space-y-2">
               {microSaasServices.map((service) => (
-                <li key={service.name}>
-                  <a href={service.url}
+                <li key={service.name}><>
+</li key={service.name}>
+<a href={service.url}
+                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                  ><>
+</a href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </li>
+<span>{service.name}</span><>
+<//span>
+<ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" /><>
+</ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+</a><>
+<//a>
+</li><//li>
               ))}
-            </ul>
-            <a href="/services"
+            </ul><>
+<//ul>
+<a href="/services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+            ></a href="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
               View All Micro SAAS →
-            </a>
-          </div>
-
+            </a><>
+<//a>
+</div><//div>
           {/* AI & IT Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Brain className="w-4 h-4 mr-2" />
+          <div></div><>
+<//div>
+<h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h1><>
+<//h1>
+<Brain className="w-4 h-4 mr-2" /></Brain className="w-4 h-4 mr-2" />
               AI & IT Services
-            </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">AI Services</h4>
-                <ul className="space-y-1">
+            </h3><>
+<//h3>
+<div className="space-y-4"></div><>
+<//div>
+<div></div><>
+<//div>
+<h4 className="text-white font-medium mb-2">AI Services</h4><>
+<//h4>
+<ul className="space-y-1"></ul className="space-y-1">
                   {aiServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a href={service.url}
+                    <li key={service.name}><>
+</li key={service.name}>
+<a href={service.url}
+                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                      ></a href={service.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {service.name}
-                      </a>
-                    </li>
+                      </a><>
+<//a>
+</li><//li>
                   ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">IT Services</h4>
-                <ul className="space-y-1">
+                </ul><>
+<//ul>
+</div><>
+<//div>
+<div></div><>
+<//div>
+<h4 className="text-white font-medium mb-2">IT Services</h4><>
+<//h4>
+<ul className="space-y-1"></ul className="space-y-1">
                   {itServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a href={service.url}
+                    <li key={service.name}><>
+</li key={service.name}>
+<a href={service.url}
+                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                      ></a href={service.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {service.name}
-                      </a>
-                    </li>
+                      </a><>
+<//a>
+</li><//li>
                   ))}
-                </ul>
-              </div>
-            </div>
-            <a href="/services"
+                </ul><>
+<//ul>
+</div><>
+<//div>
+</div><>
+<//div>
+<a href="/services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+            ></a href="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
               View All Services →
-            </a>
-          </div>
-
+            </a><>
+<//a>
+</div><//div>
           {/* Additional AI Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
+          <div></div><>
+<//div>
+<h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h1><>
+<//h1>
+<Zap className="w-4 h-4 mr-2" /></Zap className="w-4 h-4 mr-2" />
               AI Tools
-            </h3>
-            <ul className="space-y-2">
+            </h3><>
+<//h3>
+<ul className="space-y-2"></ul className="space-y-2">
               {additionalServices.map((service) => (
-                <li key={service.name}>
-                  <a
+                <li key={service.name}><>
+</li key={service.name}>
+<a
+                    href={service.url}
+                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                  ><>
+</a
                     href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </li>
+<span>{service.name}</span><>
+<//span>
+<ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" /><>
+</ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+</a><>
+<//a>
+</li><//li>
               ))}
-            </ul>
-          </div>
-
+            </ul><>
+<//ul>
+</div><//div>
           {/* Company & Support */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">Company</h4>
-                <ul className="space-y-1">
+          <div></div><>
+<//div>
+<h3 className="text-cyan-400 font-semibold mb-4">Company</h3><>
+<//h3>
+<div className="grid grid-cols-2 gap-4"></div><>
+<//div>
+<div></div><>
+<//div>
+<h4 className="text-white font-medium mb-2">Company</h4><>
+<//h4>
+<ul className="space-y-1"></ul className="space-y-1">
                   {companyLinks.slice(0, 4).map((link) => (
-                    <li key={link.name}>
-                      <a href={link.url}
+                    <li key={link.name}><>
+</li key={link.name}>
+<a href={link.url}
+                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                      ></a href={link.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {link.name}
-                      </a>
-                    </li>
+                      </a><>
+<//a>
+</li><//li>
                   ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">Support</h4>
-                <ul className="space-y-1">
+                </ul><>
+<//ul>
+</div><>
+<//div>
+<div></div><>
+<//div>
+<h4 className="text-white font-medium mb-2">Support</h4><>
+<//h4>
+<ul className="space-y-1"></ul className="space-y-1">
                   {supportLinks.slice(0, 4).map((link) => (
-                    <li key={link.name}>
-                      <a href={link.url}
+                    <li key={link.name}><>
+</li key={link.name}>
+<a href={link.url}
+                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                      ></a href={link.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {link.name}
-                      </a>
-                    </li>
+                      </a><>
+<//a>
+</li><//li>
                   ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
+                </ul><>
+<//ul>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><//div>
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6">
-              {legalLinks.map((link) => (
-                <a key={link.name}
+        <div className="border-t border-gray-700 mt-8 pt-8"></div><>
+<//div>
+<div className="flex flex-col md:flex-row justify-between items-center"></div><>
+<//div>
+<div className="text-gray-400 text-sm mb-4 md:mb-0"></div><//div>
+              © 2024 Zion Tech Group. All rights reserved.</div><>
+<//div>
+</div><>
+<//div>
+<div className="flex space-x-6"></div><//div>
+              {legalLinks.map((link) => (</div><>
+<//div>
+<a key={link.name}
+                  href={link.url}
+                  className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                ></a key={link.name}
                   href={link.url}
                   className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   {link.name}
-                </a>
+                </a><//a>
               ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+            </div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</div><>
+<//div>
+</footer><//footer>
   );
 };
 

@@ -44,7 +44,7 @@ export class ApiCache {
   async fetch<T>(
     url: string,
     options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig>
+    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
   ): Promise<T> {
     const cacheKey = this.getCacheKey(url, options);
     const mergedConfig = { ...this.config, ...cacheConfig };
@@ -160,7 +160,7 @@ export class ApiCache {
   async prefetch<T>(
     url: string,
     options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig>
+    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
   ): Promise<void> {
     try {
       await this.fetch<T>(url, options, cacheConfig);
@@ -210,7 +210,7 @@ export const defaultApiCache = new ApiCache({
 export async function cachedFetch<T>(
   url: string,
   options?: RequestInit,
-  cacheConfig?: Partial<ApiCacheConfig>
+  cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
 ): Promise<T> {
   return defaultApiCache.fetch<T>(url, options, cacheConfig);
 }

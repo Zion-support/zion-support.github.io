@@ -34,6 +34,6 @@ e.preventDefault()
 }
 enhanceSecurity()
 }, [])
-return <>{children}</>
+return <>{children}</><//>
 }
 export default SecurityEnhancer
