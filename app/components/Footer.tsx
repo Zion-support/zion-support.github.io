@@ -181,10 +181,23 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
+<<<<<<< HEAD
               ))}
             </ul>
           </div>
         </div>
+=======
+                <li>
+                  <a href="https://docs.ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                    Documentation
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+>>>>>>> 5ef481e1693f32fed630556520f366e126a93674
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
