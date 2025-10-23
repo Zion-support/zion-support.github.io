@@ -1,2 +1,0 @@
-
-export default NewestContent2025Banner;
