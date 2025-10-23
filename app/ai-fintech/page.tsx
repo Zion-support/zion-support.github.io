@@ -6,10 +6,7 @@ const AiFintechPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Fintech Solutions - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Revolutionize financial services with AI-powered fraud detection, risk assessment, and automated trading solutions."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">

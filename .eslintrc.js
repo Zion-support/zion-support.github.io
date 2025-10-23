@@ -26,23 +26,13 @@ module.exports = {
     },
   },
   rules: {
-<<<<<<< HEAD
-    "no-unused-vars": ["error", { varsIgnorePattern: "^_" }],
-    "@typescript-eslint/no-unused-vars": ["error", { varsIgnorePattern: "^_" }],
-=======
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
+
     "no-console": "warn",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-<<<<<<< HEAD
-    "@typescript-eslint/no-explicit-any": "off",
-=======
-    "@typescript-eslint/no-explicit-any": "warn",
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
+
     "@typescript-eslint/no-non-null-assertion": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

@@ -93,10 +93,7 @@ const ContentCarousel: React.FC = () => {
     <div className="relative">
       {/* Carousel Container */}
       <div className="relative overflow-hidden rounded-2xl">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
+
           {slides.map((slide, index) => (
             <div key={index} className="w-full flex-shrink-0">
               <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8 md:p-12">
@@ -117,11 +114,7 @@ const ContentCarousel: React.FC = () => {
                       </p>
 
                       <ul className="space-y-3 mb-8">
-                        {slide.features.map((feature, featureIndex) => (
-                          <li
-                            key={featureIndex}
-                            className="flex items-center text-gray-300"
-                          >
+
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
                           </li>
@@ -154,30 +147,15 @@ const ContentCarousel: React.FC = () => {
           ))}
         </div>
 
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
-        >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
-        >
+
           <ChevronRight className="w-6 h-6" />
         </button>
 
         {/* Dots Indicator */}
         <div className="flex justify-center mt-6 space-x-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? "bg-purple-500" : "bg-white/30"
-              }`}
-            />
+
           ))}
         </div>
       </div>
@@ -193,11 +171,7 @@ const ContentCarousel: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10"
-            >
+
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
               <span className="text-gray-300">{benefit}</span>
             </div>

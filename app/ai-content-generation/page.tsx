@@ -112,10 +112,7 @@ const AIContentGenerationPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Content Generation - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Generate high-quality, engaging content with our advanced AI content generation platform. Create blogs, articles, social media posts, and more."
-        />
+
       </Helmet>
 
       <div className="container mx-auto px-4 py-20">
@@ -146,22 +143,14 @@ const AIContentGenerationPage: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {_features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-            >
+
               <div className="text-blue-400 mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 {feature.title}
               </h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
-                {feature.benefits.map((benefit, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center text-sm text-gray-400"
-                  >
+
                     <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
                     {benefit}
                   </li>
@@ -177,15 +166,7 @@ const AIContentGenerationPage: React.FC = () => {
             Choose Your Plan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {_pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular
-                    ? "border-blue-400 ring-2 ring-blue-400"
-                    : "border-white/20"
-                } relative`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-400 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -213,13 +194,7 @@ const AIContentGenerationPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                    plan.popular
-                      ? "bg-blue-400 text-white hover:bg-blue-500"
-                      : "bg-white/20 text-white hover:bg-white/30"
-                  }`}
-                >
+
                   Get Started
                 </button>
               </div>

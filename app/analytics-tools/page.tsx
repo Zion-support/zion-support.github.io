@@ -54,14 +54,7 @@ const AnalyticsToolsPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Analytics Tools | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business."
-        />
-        <meta
-          name="keywords"
-          content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics"
-        />
+
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -90,11 +83,7 @@ const AnalyticsToolsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
-              >
+
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />{" "}
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useCallback, useRef } from "react";
 
 export interface UseEnhancedPerformanceOptions {
@@ -107,16 +106,4 @@ export function useEnhancedPerformance(
     renderCount: renderCountRef.current,
     mountTime: mountTimeRef.current,
   };
-=======
-import { useState, useEffect } from "react";
-
-export function useEnhancedPerformance() {
-  const [state, setState] = useState(null);
-
-  useEffect(() => {
-    /// Comment
-  }, []);
-
-  return { state, setState };
->>>>>>> 2edfbde844889cb288bd5d222501597528dc3630
 }

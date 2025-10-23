@@ -8,10 +8,7 @@ const AutonomousSystemsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Develop intelligent autonomous systems with AI-powered robotics and automation solutions for various industries."
-        />
+
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
