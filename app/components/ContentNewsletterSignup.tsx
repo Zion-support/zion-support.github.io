@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const [email, setEmail] = useState('');
+export default function ContentNewsletterSignup() {
+  const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [error, setError] = useState('');
