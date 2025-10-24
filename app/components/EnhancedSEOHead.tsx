@@ -1,13 +1,14 @@
-import {Helmet} from 'lucide-react';
+import {Helmet} from 'lucide-react'
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-interface EnhancedSEOHeadProps {}
+interface EnhancedSEOHeadProps {};
   className?: string;
+  
 }
-;
+  );
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({className="''" }) => {}</EnhancedSEOHeadProps>
   return (</EnhancedSEOHeadProps>
     <>
@@ -109,7 +110,8 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
+}
+  );
   )
 }
 

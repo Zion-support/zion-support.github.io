@@ -7,5 +7,6 @@ export default function Loading() {
         <p className="text-xl text-gray-300">Please wait...</p>
       </div>
     </div>
+  )
   );
 }

@@ -7,10 +7,13 @@ const CacheManager = () => {
     const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
         try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
+          const registration = await navigator.serviceWorker.register('/sw.js'
+  
           console.log('Service Worker registered:', registration);
+  );
         } catch (error) {
-          console.error('Service Worker registration failed:', error);
+          console.error('Service Worker registration failed:', error)
+  );
         }
       }
     }
@@ -25,16 +28,20 @@ const CacheManager = () => {
         '/contact',
         '/styles/main.css',
         '/scripts/main.js'
-      ]
+      ];
 
       // Cache static assets
       const cacheStaticAssets = async () => {
         try {
-          const cache = await caches.open(CACHE_NAME);
-          await cache.addAll(CACHE_URLS);
-          console.log('Static assets cached successfully');
+          const cache = await caches.open(CACHE_NAME)
+  );
+          await cache.addAll(CACHE_URLS)
+  );
+          console.log('Static assets cached successfully')
+  );
         } catch (error) {
-          console.error('Failed to cache static assets:', error);
+          console.error('Failed to cache static assets:', error)
+  );
         }
       }
 
@@ -50,8 +57,10 @@ const CacheManager = () => {
           
           return response
         } catch (error) {
-          console.error('Failed to cache API response:', error);
-          return fetch(request);
+          console.error('Failed to cache API response:', error)
+  );
+          return fetch(request)
+  );
         }
       }
 
@@ -68,10 +77,10 @@ const CacheManager = () => {
           return cacheAPIResponses(request)
         }
         
-        return originalFetch(input, init)
-      }
-    }
-
+        return originalFetch(input, init
+  )
+  );
+}
     // Memory management for large objects
     const setupMemoryManagement = () => {
       // Clean up unused objects periodically
@@ -84,9 +93,10 @@ const CacheManager = () => {
           if (usedMemory > 0.8) {
             // Force garbage collection if available
             if ((window as any).gc) {
-              (window as any).gc()
-            }
-          }
+              (window as any).gc(
+  )
+  );
+}
         }
       }, 30000) // Check every 30 seconds
 
@@ -105,9 +115,10 @@ const CacheManager = () => {
             if (img.dataset.src) {
               img.src = img.dataset.src
               img.classList.remove('lazy')
-              imageObserver.unobserve(img)
-            }
-          }
+              imageObserver.unobserve(img
+  )
+  );
+}
         })
       }, {
         rootMargin: '50px 0px',
@@ -129,7 +140,8 @@ const CacheManager = () => {
     // Cleanup function
     return () => {
       // Cleanup any intervals or observers
-      console.log('CacheManager cleanup completed');
+      console.log('CacheManager cleanup completed')
+  );
     }
   }, [])
 

@@ -22,8 +22,8 @@ const ServiceCardSkeletonPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -133,5 +133,5 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
+}
 export default ServiceCardSkeletonPag;e;"

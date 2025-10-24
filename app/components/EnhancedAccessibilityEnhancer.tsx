@@ -23,8 +23,8 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -33,7 +33,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {const features = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -124,4 +124,5 @@ export default EnhancedAccessibilityEnhancerPage}
 </ul>
 }
 export default EnhancedAccessibilityEnhancerPage;
+  
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

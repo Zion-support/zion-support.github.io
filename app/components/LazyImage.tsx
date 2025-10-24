@@ -1,5 +1,6 @@
-'use client';
+'use client'
 import React, { useState, useEffect, useRef } from 'react';
+  
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
@@ -25,4 +26,5 @@ Get Started</button>
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
 
-export default LazyImag;e;
+export default LazyImag;e
+  );

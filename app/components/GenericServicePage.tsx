@@ -1,7 +1,7 @@
 "use client"
-import React from "react";
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
+import React from "react"
+import { Link  } from "next/link"
+import { ArrowRight  } from "lucide-react"
 export default function GenericServicePage() {
 
 return (<div className="[^"]*"> <div className="[^"]*">,<h1 className="[^"]*">
@@ -26,7 +26,8 @@ export const GenericServicePage: React.FC<GenericServicePageProps> = ({ classNam
     <div className="{`genericservicepage" ${className}`}>
       {children}
     </div>
-  );
+  
+  
 };
-
 export default GenericServicePage;
+  

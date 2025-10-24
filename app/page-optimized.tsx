@@ -23,17 +23,15 @@ const PageOptimizedPage: React.FC = ( => {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance standards.',
-      benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
-    }
+      benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits'];
+    };
   ];
-
   const benefits = [
     'Increase productivity by 40%',
     'Reduce operational costs by 30%',
     'Improve decision making with data insights',
     'Gain competitive advantage with advanced technology'
   ];
-
   return (
     <React.Fragment>
       <Helmet>

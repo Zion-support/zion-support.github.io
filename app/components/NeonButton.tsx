@@ -1,15 +1,23 @@
 import React  from "react";
 import { ArrowRight }  from "lucide-react";interface NeonButtonProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
-  href?: string;
-  onClick?: () => void;
+  children?: React.ReactNode
+  );
+  className?: string
+  );
+  title?: string
+  );
+  description?: string
+  );
+  href?: string
+  );
+  onClick?: () => void
+  );
   variant?: "primary" | "secondary" | "accent"
   size?: "sm" | "md" | "lg"
-  icon?: React.ReactNode;
-  disabled?: boolean;
+  icon?: React.ReactNode
+  );
+  disabled?: boolean
+  );
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -21,7 +29,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   size="md"
   className=""
   icon
-  disabled = false;
+  disabled = false
+  );
 }) => {
   const baseClasses =
     "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
@@ -31,7 +40,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 }</NeonButtonProps>
   return (</NeonButtonProps>
     <>
@@ -58,7 +67,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </div>
         </h1>
             </h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-              NeonButton;
+              NeonButton
+  );
             </h1>
 
             <//h1>
@@ -83,7 +93,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </div>
         </button>
               </button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started;
+                Get Started
+  );
                 <ArrowRight className="ml-2 h-5 w-5" />
         </ArrowRight>
         </ArrowRight>
@@ -99,7 +110,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </div>
         </button>
               </button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More;
+                Learn More
+  );
               </button>
 
               <//button>
@@ -132,7 +144,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </p>
               </p className="text-xl text-gray-300 max-w-3xl mx-auto">
         </div>
-                Powerful AI-driven features designed to transform your business operations;
+                Powerful AI-driven features designed to transform your business operations
+  );
               </p>
 
               <//p>
@@ -216,7 +229,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </p>
               </p className="text-xl text-gray-300 max-w-3xl mx-auto">
         </div>
-                Experience the benefits of cutting-edge AI technology;
+                Experience the benefits of cutting-edge AI technology
+  );
               </p>
 
               <//p>
@@ -265,7 +279,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </p>
             </p className="text-xl text-gray-300 mb-8">
         </div>
-              Join thousands of businesses already using our AI solutions;
+              Join thousands of businesses already using our AI solutions
+  );
             </p>
 
             <//p>
@@ -278,7 +293,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </div>
         </button>
               </button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial;
+                Start Free Trial
+  );
               </button>
 
               <//button>
@@ -289,7 +305,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </div>
         </button>
               </button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales;
+                Contact Sales
+  );
               </button>
 
               <//button>
@@ -307,9 +324,11 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     </>
 
     <//>
+  )
   );
-};
-;
+}
+  );
+  );
   constvariantClasses= {
   primary: "bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl"
     secondary: "bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl"
@@ -367,7 +386,7 @@ Learn More</button>
       <//a>)
     )
   }
-;
+  );
   return ("
     <button onClick="{onClick} disabled="{disabled} className="{buttonClasses}></button>
       {content}</button>
@@ -376,9 +395,8 @@ Learn More</button>
     <//button>)
   )
 }
-;
   );
-};
-
-
+  )
+  );
+}
 export default NeonButto;n;"

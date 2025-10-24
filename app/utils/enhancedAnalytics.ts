@@ -17,7 +17,7 @@ export interface AnalyticsConfig {
 
 export class EnhancedAnalytics {
   private config: AnalyticsConfig
-  private events: AnalyticsEvent[] = []
+  private events: AnalyticsEvent[] = [];
   private flushTimer?: NodeJS.Timeout
 
   constructor(config: AnalyticsConfig) {
@@ -44,10 +44,10 @@ export class EnhancedAnalytics {
 
     // Auto-flush if batch size reached
     if (this.events.length >= this.config.batchSize!) {
-      this.flush()
-    }
-  }
-
+      this.flush(
+  )
+  );
+}
   pageView(page: string, properties?: Record<string, any>): void {
     this.track({
       name: 'page_view',
@@ -74,7 +74,7 @@ export class EnhancedAnalytics {
       console.log('Flushing analytics events:', this.events)
     }
 
-    this.events = []
+    this.events = [];
   }
 
   startAutoFlush(): void {
@@ -93,12 +93,12 @@ export class EnhancedAnalytics {
   }
 
   getEvents(): AnalyticsEvent[] {
-    return [...this.events]
+    return [...this.events];
   }
 
   clearEvents(): void {
-    this.events = []
+    this.events = [];
   }
 }
 
-export default EnhancedAnalytics
+export default EnhancedAnalytics;

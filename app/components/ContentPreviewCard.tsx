@@ -22,8 +22,8 @@ const ContentPreviewCardPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -33,7 +33,6 @@ const ContentPreviewCardPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '' }) => {
   return (
     <div className="{`contentpreviewcard" ${className}`}>
@@ -133,5 +132,5 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
+}
 export default ContentPreviewCardPag;e;"

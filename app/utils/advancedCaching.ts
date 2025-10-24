@@ -13,15 +13,16 @@ export class advancedCaching {
 
   initialize(): void {
     if (this.config.debug) {
-      console.log('advancedCaching initialized')
-    }
-  }
-
+      console.log('advancedCaching initialized'
+  )
+  );
+}
   cleanup(): void {
     if (this.config.debug) {
-      console.log('advancedCaching cleaned up')
-    }
-  }
+      console.log('advancedCaching cleaned up'
+  )
+  );
+}
 }
 
-export default advancedCaching
+export default advancedCaching;

@@ -22,8 +22,8 @@ const EnhancedErrorBoundaryPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -221,9 +221,11 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className=
       <Footer /></Footer>
     </>
   );,
-};
-export default EnhancedErrorBoundaryPag;e;
-  error?: Error;
+}
+export default EnhancedErrorBoundaryPag;e
+  );
+  error?: Error
+  );
   errorInfo?: ErrorInfo}
 class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {}
     super(props)}

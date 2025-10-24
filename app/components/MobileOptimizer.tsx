@@ -1,8 +1,9 @@
 "use client"
-import React from "react";
-import { Head  } from "next/head";
+import React from "react"
+import { Head  } from "next/head"
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
+  
 const preventZoom = () => {
   return (<div>
       <Head>
@@ -82,8 +83,9 @@ go wrong! 🤖
     </div>
     </>
   ) "}
-export default preventZoom
+export default preventZoom;
     </div>
 }
 
 export default MobileOptimizer;
+  

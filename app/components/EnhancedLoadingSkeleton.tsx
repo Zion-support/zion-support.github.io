@@ -1,8 +1,9 @@
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
+  
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -30,14 +31,14 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
     {
-icon: "BarChart",title: ""Advanced Analytics"",description: ""Comprehensive analytics dashboard with real-time data visualization."",benefits: "["Real-time dashboards"","Custom reports", "Data visualization", "Performance metrics"]
+icon: "BarChart",title: ""Advanced Analytics"",description: ""Comprehensive analytics dashboard with real-time data visualization."",benefits: "["Real-time dashboards"","Custom reports", "Data visualization", "Performance metrics"];
     }
     {
-icon: "Target",title: ""Precision Targeting"",description: ""Target specific goals and objectives with precision and accuracy."",benefits: "["Goal tracking"","Performance optimization", "Strategic planning", "Success metrics"]
+icon: "Target",title: ""Precision Targeting"",description: ""Target specific goals and objectives with precision and accuracy."",benefits: "["Goal tracking"","Performance optimization", "Strategic planning", "Success metrics"];
     }
     {
-icon: "TrendingUp",title: ""Growth Optimization"",description: ""Optimize your business growth with data-driven strategies."",benefits: "["Growth strategies"","Market analysis", "Competitive insights", "ROI optimization"]
-  ]
+icon: "TrendingUp",title: ""Growth Optimization"",description: ""Optimize your business growth with data-driven strategies."",benefits: "["Growth strategies"","Market analysis", "Competitive insights", "ROI optimization"];
+  ];
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

@@ -1,19 +1,21 @@
-'use client';
+'use client'
+  );
 'use client'
 import React from 'react'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from "lucide-react";
+  
 interface Slide {
   id: number
   title: string
   description: string
-  features: string[]
+  features: string[];
   icon: React.ReactNode
   color: string,
 }
-;
+  );
 const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] = useState(0);
   
   const slides: Slide[] = [
@@ -54,7 +56,7 @@ const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] =
       icon: <Shield className: "h-12 w-12" />,}
       color: "from-red-500 to-pink-500"
     }
-  ]
+  ];
 
   const nextSlide = (): JSX.Element => {
     setCurrentSlide((pr, e, v) => (prev + 1) % slides.length)
@@ -131,7 +133,8 @@ Learn More
         <div className=&quot;relative&quot;></div>
 <div className=&quot;overflow-hidden rounded-xl&quot;></div>
             <div
-              className=&quot;flex transition-transform duration-500 ease-in-out&quot;
+              className=&quot;flex transition-transform duration-500 ease-in-out&quot
+  );
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >{slides.map((slide, index) => (</div>
 <div key={index} className=&quot;w-full flex-shrink-0&quot;></div>
@@ -249,13 +252,15 @@ Learn More
           <button
 onClick = {prevSlide};className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" /> <ChevronLeft className="h-6 w-6" />
           </button>
-          <button;
+          <button
+  );
             onClick={nextSlide}
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
             <ChevronRight className=&quot;h-6 w-6&quot; />
           </button>
 {/* Slide Indicators */}
-            className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
+            className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot
+  );
           >
             <ChevronLeft className=&quot;w-6 h-6&quot; />
           </button>
@@ -296,7 +301,8 @@ featuresmapfeature index =>
 
           <button
             onClick={nextSlide}
-            className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
+            className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot
+  );
           ></button>
             <ChevronRight className=&quot;w-6 h-6&quot; />
           </button>
@@ -349,8 +355,8 @@ Contact Sales
       <Footer /></Footer>
     </>
   );,
-};
-
+}
+  );
             <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
           </button>
       </div>
@@ -362,3 +368,4 @@ Contact Sales
 
 
 export default ContentCarousel;
+  

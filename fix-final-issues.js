@@ -1,174 +1,145 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix duplicate exports and remaining JSX issues
-function fixFile(filePa, t, h) {
+// Function to fix final issues
+function fixFinalIssues(filePath) {
   try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-      modified = true;
-    }
-    
-    // Fix fragment issues - remove closing tags without opening tags
-    if (content.includes('</>') && !content.includes('<>')) {
-      content = content.replace(/<\/>/g, '</div>');
-      modified = true;
-    }
-
-    // Fix missing closing div tags
-    if (content.includes('</React.Fragment>') && content.includes('<div')) {
-      content = content.replace(/<\/React.Fragment>/g, '</div>');
-      modified = true;
-    }
-
-    // Fix missing semicolons in export statements
-    content = content.replace(/export default (\w+)(?!;)/g, 'export default $1;');
-
-    // Fix extra closing braces
-    if (content.includes('};\n};\n') || content.includes('};\n}\n')) {
-      content = content.replace(/};\n};\n/g, '};\n');
-      content = content.replace(/};\n}\n/g, '};\n');
-      modified = true;
-    }
-
-    // Fix missing closing braces for functions
-    if (content.includes('return (') && !content.includes('};') && content.includes('export default')) {
-      // Find the last closing parenthesis and add closing brace
-      const lastReturnIndex = content.lastIndexOf('return (');
-      if (lastReturnIndex !== -1) {
-        const afterReturn = content.substring(lastReturnIndex);
-        const lastParenIndex = afterReturn.lastIndexOf(')');
-        if (lastParenIndex !== -1) {
-          const beforeExport = content.substring(0, lastReturnIndex + lastParenIndex + 1);
-          const afterExport = content.substring(lastReturnIndex + lastParenIndex + 1);
-          content = beforeExport + ';\n};\n' + afterExport;
-          modified = true;
-        }
-      }
-    }
-
-    // Fix malformed export statements
-    content = content.replace(/export default (\w+);e;/g, 'export default $1;');
-    content = content.replace(/export default (\w+)Pag;e;/g, 'export default $1Page;');
-    content = content.replace(/export default \$1/g, 'export default ' + path.basename(filePath, '.tsx').split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('') + 'Page');
-
-    // Fix missing closing React.Fragment tags
-    if (content.includes('<React.Fragment>') && content.includes('</div>') && !content.includes('</React.Fragment>')) {
-      content = content.replace(/<\/div>\s*\);\s*};/g, '</React.Fragment>\n  );\n};');
-      modified = true;
-    }
-
-    // Fix missing closing div tags for files with React.Fragment
-    if (content.includes('<React.Fragment>') && content.includes('</div>') && !content.includes('</React.Fragment>')) {
-      content = content.replace(/<\/div>\s*\);\s*};/g, '</React.Fragment>\n  );\n};');
-      modified = true;
-    }
-
-    // Fix JSX structure issues
+    // Fix duplicate imports
     const lines = content.split('\n');
-    const fixedLines = [];
-    let inJSX = false;
-    let braceCount = 0;
-    let parenCount = 0;
-    
+    const seenImports = new Set();
+    const cleanedLines = [];
+    let inImportBlock = false;
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      const trimmedLine = line.trim();
       
-      // Track JSX state
-      if (trimmedLine.includes('return (') || trimmedLine.includes('return(')) {
-        inJSX = true;
-        parenCount = 1;
-        fixedLines.push(li, n, e);
-        continue;
+      // Check if we're starting an import block
+      if (line.trim().startsWith('import ') || line.trim().startsWith('"use client"') || line.trim().startsWith("'use client'")) {
+        inImportBlock = true;
       }
       
-      if (inJ, S, X) {
-        // Count parentheses and braces
-        for (const char of line) {
-          if (char === '(') parenCount++;
-          if (char === ')') parenCount--;
-          if (char === '{') braceCount++;
-          if (char === '}') braceCount--;
+      // Check if we're ending the import block
+      if (inImportBlock && !line.trim().startsWith('import ') && !line.trim().startsWith('"use client"') && !line.trim().startsWith("'use client'") && line.trim() !== '') {
+        inImportBlock = false;
+      }
+
+      if (inImportBlock && line.trim().startsWith('import ')) {
+        const importKey = line.trim();
+        if (!seenImports.has(importKey)) {
+          seenImports.add(importKey);
+          cleanedLines.push(line);
         }
-        
-        // Fix malformed JSX
-        if (trimmedLine === '<>' && i > 0) {
-  const prevLine = lines[i - 1].trim();
-          if (prevLine.endsWith('(') || prevLine.endsWith('return (')) {
-            fixedLines.push('    <>');
-} else {
-  fixedLines.push(li, n, e);
-    } else if (trimmedLine === '</>') {
-  if (parenCount === 0) {
-            fixedLines.push('  </>');
-            inJSX = false;
-} else {
-  fixedLines.push(li, n, e);
-    } else if (trimmedLine.startsWith('<') && !trimmedLine.includes('//') && !trimmedLine.includes('/*')) {
-          // Fix malformed JSX tags
-          if (trimmedLine.includes('  </') && !trimmedLine.includes('</>')) {
-            const tagName = trimmedLine.match(/<\/([^>]+)>/);
-            if (tagNa, m, e) {
-              fixedLines.push(`    </${tagName[1]}>`);
-            } else {
-              fixedLines.push(li, n, e);
-            }
-          } else {
-            fixedLines.push(li, n, e);
-          }
-        } else {
-          fixedLines.push(li, n, e);
-        }
-        
-        // Check if we're out of JSX
-        if (parenCount === 0 && trimmedLine === ');') {
-          inJSX = false;
+      } else if (inImportBlock && (line.trim().startsWith('"use client"') || line.trim().startsWith("'use client'"))) {
+        if (!seenImports.has('"use client"')) {
+          seenImports.add('"use client"');
+          cleanedLines.push(line);
         }
       } else {
-        fixedLines.push(li, n, e);
+        cleanedLines.push(line);
       }
     }
-    
-    // Remove empty lines at the end
-    while (fixedLines.length > 0 && fixedLines[fixedLines.length - 1].trim() === '') {
-      fixedLines.pop();
+
+    if (cleanedLines.length !== lines.length) {
+      content = cleanedLines.join('\n');
+      modified = true;
     }
-    
-    const fixedContent = fixedLines.join('\n');
-    
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${ filePa, t, h }`);
+
+    // Fix multiple export default statements
+    const exportMatches = content.match(/export default [^;]+;/g);
+    if (exportMatches && exportMatches.length > 1) {
+      // Keep only the first export default
+      const firstExport = exportMatches[0];
+      content = content.replace(/export default [^;]+;/g, '');
+      content = content.replace(/(\n|^)([^}]*\n)*\s*}\s*$/, `$1${firstExport}`);
+      modified = true;
+    }
+
+    // Fix stray ); characters
+    content = content.replace(/\s*\);\s*import/g, '\nimport');
+    content = content.replace(/\s*\);\s*export/g, '\nexport');
+    content = content.replace(/\s*\);\s*const/g, '\nconst');
+    content = content.replace(/\s*\);\s*function/g, '\nfunction');
+
+    // Fix missing semicolons after import statements
+    content = content.replace(/import[^;]*\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    // Fix missing semicolons after useState
+    content = content.replace(/useState\([^)]*\)\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    // Fix missing semicolons after array declarations
+    content = content.replace(/\]\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    // Fix missing semicolons after export default
+    content = content.replace(/export default [^;]*\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed final issues: ${filePath}`);
       return true;
     }
-    
-    return false;
-  } catch (err, o, r) {
-    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
-    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
+  return false;
 }
 
-// Get all TypeScript files
-const { execSy, n, c } = require('child_process');
-const allFiles = execSync('find app -name '*.tsx" -type f', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file.trim() !== '');
+// Function to recursively find all .tsx and .ts files
+function findFiles(dir, extensions = ['.tsx', '.ts']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
 
 // Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTSXFiles(appDir);
+console.log('Fixing final issues...');
 
-console.log(`Found ${tsxFiles.length} .tsx files`);
+const appDir = path.join('/workspace', 'app');
+const files = findFiles(appDir);
 
 let fixedCount = 0;
-allFiles.forEach(file => {
-  if (fixFile(fi, l, e)) {
+for (const file of files) {
+  if (fixFinalIssues(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed ${ fixedCou, n, t } out of ${allFiles.length} files`);
+console.log(`Fixed ${fixedCount} files with final issues.`);

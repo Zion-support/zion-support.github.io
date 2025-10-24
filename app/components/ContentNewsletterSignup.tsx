@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import Footer from './Footer'
 import Navigation from './Navigation'
 import { ArrowRight } from 'lucide-react'
@@ -14,8 +14,8 @@ interface ContentNewsletterSignupProps {
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>
     text: string
-  }>
-  onSubscribe?: (email: string) => void
+  }>;
+  onSubscribe?: (email: string) => void;
 }constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= &quot;Stay Updated with Our LatestInsights&quot;,
   subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;,
   placeholder= &quot;Enter your emailaddress&quot;,
@@ -28,20 +28,27 @@ interface ContentNewsletterSignupProps {
   ],
   onSubscribe
 }) => {const [emailsetEmail] = useState('');
+  
   const [isSubmittingsetIsSubmitting] = useState(false);
+  
   const [isSubscribedsetIsSubscribed] = useState(false);
+  
   const [isLoadingsetIsLoading] = useState(false);"
   consthandleSubmit="async" (e: React.FormEvent) => {
-;  
-    e.preventDefault();
-    if (!email) return setIsLoadin g(true);
+  );
+    e.preventDefault()
+  );
+    if (!email) return setIsLoadin g(true)
+  );
     try {
-      // Simulate API call;
+      // Simulate API call
+  );
       await new Promise(resolve=> setTimeout(resolve100 0));}
       if (onSubscrib e) {}
         onSubscribe(email)
      }
-      setIsSubscribed(true);
+      setIsSubscribed(true)
+  );
       setEmail('')
     } catch (error) {// // console.error('Subscription error: ', error)
     } finally {}
@@ -83,7 +90,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
                 Learn More
               </button>
         </div>
-    );
+    )
+  );
             </div>
           </div>
         </section>
@@ -123,15 +131,18 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
                 <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-white mb-2&quot;>
                   Email Address
                 <input
-                  type=&quot;email&quot;
+                  type=&quot;email&quot
+  );
                   value={email}
                   onChange={(e) =>setEmail(e.target.value)}
                   placeholder={placeholder}
-                 requiredclassName=&quot;w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent&quot;
+                 requiredclassName=&quot;w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent&quot
+  );
                 />
               </div>
               <button
-                type=&quot;submit&quot;
+                type=&quot;submit&quot
+  );
                 disabled={isLoading || !email}
                 className=&quot;w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center&quot;></button>
                 {isLoading ? (
@@ -183,5 +194,5 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
       <Footer /></Footer>
     </>
   );,
-};
+}
 export default ContentNewsletterSignupPag;e;"

@@ -43,10 +43,10 @@ export class APIClient {
         headers: Object.fromEntries(response.headers.entries())
       }
     } catch (error) {
-      throw new Error(`API request failed: ${error}`)
-    }
-  }
-
+      throw new Error(`API request failed: ${error}`
+  )
+  );
+}
   get<T>(endpoint: string, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'GET' })
   }
@@ -60,8 +60,8 @@ export class APIClient {
   }
 
   delete<T>(endpoint: string, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
-    return this.request<T>(endpoint, { ...config, method: 'DELETE' })
-  }
+    return this.request<T>(endpoint, { ...config, method: 'DELETE' }
+  )
+  );
 }
-
-export default APIClient
+export default APIClient;

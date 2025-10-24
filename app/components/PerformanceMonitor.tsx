@@ -1,8 +1,9 @@
 "use client"
-import React from "react";
-import { Head  } from "next/head";
+import React from "react"
+import { Head  } from "next/head"
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
+  
 const monitorCoreWebVitals = () => {
 return (<div>
       <Head>
@@ -40,7 +41,6 @@ const PerformanceMonitorPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '' }) => {
   return (
     <>
@@ -139,14 +139,16 @@ go wrong! 🤖
       <Footer /></Footer>
     </>
   );,
-};
+}
+  );
 interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void;}
   enableRealTimeMonitoring?: boolean}
   logToConsole?: boolean}
-;
 import React from 'react';
+  
 PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
-  enableRealTimeMonitoring: "true,};
+  enableRealTimeMonitoring: "true,}
+  );
   logToConsole="true"
 }: PerformanceMonitorProps) {const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: null,
@@ -158,7 +160,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
     totalBlockingTime: null
   });"
   useEffect(() => {if (!enableRealTimeMonitoring || typeof window="==" 'undefined') return;"
-    const measurePerformance=";";
+    const measurePerformance=";"
+  );
       if ('PerformanceObserver' in windo w) {// First Contentful Paint (FCP);"
         constfcpObserver="new" PerformanceObserver((list) => {
 ;  "
@@ -167,10 +170,12 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
           if (fcpEntr y) {}
             newMetrics.firstContentfulPaint="fcpEntry.startTime"
          }
-        });
+        })
+  );
         fcpObserver.observe({entryTypes: ['paint'] })
         // Largest Contentful Paint (LCP);"
-        const lcpObserver=";";
+        const lcpObserver=";"
+  );
         lcpObserver.observe({entryTypes: ['largest-contentful-paint'] })
         // First Input Delay (FID);"
         constfidObserver="new" PerformanceObserver((list) => {constentries="list.getEntries()";}
@@ -178,10 +183,12 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
   }
             newMetrics.firstInputDelay="entry.processingStart" - entry.startTime
          })
-        });
+        })
+  );
         fidObserver.observe({entryTypes: ['first-input'] })
         // Cumulative Layout Shift (CLS);"
-        letclsValue="0constclsObserver=" new PerformanceObserver((list) => {constentries="list.getEntries()";
+        letclsValue="0constclsObserver=" new PerformanceObserver((list) => {constentries="list.getEntries()"
+  );
           entries.forEach((entry: any) => {
 ;  }
             if (!entry.hadRecentInput) {}
@@ -189,7 +196,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
            }
           });"
           newMetrics.cumulativeLayoutShift="clsValue"
-        });
+        })
+  );
         clsObserver.observe({entryTypes: ['layout-shift'] })
         // Time to Interactive (TTI) - approximation;"
         constttiObserver="new" PerformanceObserver((list) => {constentries="list.getEntries()";"
@@ -197,7 +205,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
           if (longTasks.length="==" 0) {}
             newMetrics.timeToInteractive="performance.now()"
          }
-        });
+        })
+  );
         ttiObserver.observe({entryTypes: ['longtask'] })
         // Total Blocking Time (TBT) - approximation;"
         consttbtObserver="new" PerformanceObserver((list) => {constentries: "list.getEntries()";"}
@@ -205,17 +214,21 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
             .filter((entry: any) => entry.duration >50)
             .reduce((total, entry: any) => total + (entry.duration -50), 0)}
           newMetrics.totalBlockingTime="blockingTime"
-       });
+       })
+  );
         tbtObserver.observe({entry Types: ['longtask']})
       }
 
-      // Update metrics state;
+      // Update metrics state
+  );
       setMetrics(prevMetrics => ({...prevMetrics, ...newMetrics }))
-      // Call callback if provided;
+      // Call callback if provided
+  );
       if (onMetricsUpdat e) {onMetricsUpdate(newMetrics)
      }
 
-      // Log to console if enabled;
+      // Log to console if enabled
+  );
       if (logToConsole) {// // console.log('Performance Metrics Updated: ', newMetrics)
       }
       if (logToConsol e) {}
@@ -226,11 +239,13 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
    } else {windo w.addEventListener('load', measurePerformance)
    }
 
-    // Cleanup;
+    // Cleanup
+  );
     return () => {windo w.removeEventListener('load', measurePerformance)
    }
   }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole])
-  // Service Worker registration for performance monitoring;
+  // Service Worker registration for performance monitoring
+  );
   useEffect(() => {if ('serviceWorker' in navigator) {}
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {// // console.log('Service Worker registered successfully: ', registration)
@@ -247,7 +262,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
     <divclassName=&quot;fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot;><h3className=&quot;font-boldmb-2&quot;>PerformanceMetrics</h><divclassName=&quot;space-y-1&quot;><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
     )
   }
-;
+  );
   return nul l
 }
 // Global performance monitoring utilitiesexportconstperformanceUtils="{//" Measure custom performance marksmark: (name: string) => {
@@ -256,28 +271,33 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
       performance.mark(name)
    }
   },
-  // Measure time between marks;
+  // Measure time between marks
+  );
   measure: (name: string, startMark: string, endMark?: string) => {if (typeof window !== 'undefined' && 'performance' in window) {}
       if (endMark) {}
         performance.measure(name, startMark, endMark)
-     } else {performance.measure(namestartMark)
-     }
-    }
+     } else {performance.measure(namestartMark
+  )
+  );
+}
   },
-  // Get performance entries;
+  // Get performance entries
+  );
   getEntries: (type?: string) => {if (typeof window !== 'undefined' && 'performance' in window) {}
       return type ? performance.getEntriesByType(type) : performance.getEntries()
     }
-    return []
+    return [];
   },
-  // Clear performance entries;
+  // Clear performance entries
+  );
   clearEntries: (type?: string) => {if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {}
         performance.clearMeasures(type)}
         performance.clearMarks(type)
      } else {performance.clearMeasures()}
-        performance.clearMarks()
-    }
+        performance.clearMarks(
+  )
+  );
 }
 // Google Analytics integration for performance trackingexportconsttrackPerformanceToGA="(metrics:" PerformanceMetrics) => {if (type of windo w !== 'undefined' && 'gtag' in windo w) {
     windo w.gtag('event', 'performance_metrics', {
@@ -289,13 +309,15 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
         largest_contentful_paint: metrics.largestContentfulPaint,
         first_input_delay: metrics.firstInputDelay,
         cumulative_layout_shift: metrics.cumulativeLayoutShift,}
-        time_to_interactive: metrics.timeToInteractive,});
+        time_to_interactive: metrics.timeToInteractive,})
+  );
         total_blocking_time: metrics.totalBlockingTime
     ,
-    })
-  }
+    }
+  )
+  );
 }
-;
+  );
 declare global {interface Window {}
     gtag: (...args: any[]) => void
   }

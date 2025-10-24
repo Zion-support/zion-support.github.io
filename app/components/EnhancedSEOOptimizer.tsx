@@ -12,7 +12,8 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </div>
         </div>
     </div>
-  );
+  
+  
       const features = [
     {
       icon: Brain
@@ -39,14 +40,14 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       title: 'Growth Optimization'
       description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-}
-  ]
+};
+  ];
 const benefits = ["Increase efficiency by up to 50%"
     "Reduce costs by 30% with automation"
     "Improve decision-making with AI insights"
     "Scale operations without proportional staff increases"
     "Gain competitive advantage with advanced technology"
-  ]
+  ];
 return (<div>
       <Helmet>
 
@@ -56,7 +57,7 @@ return (<div>
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -194,8 +195,8 @@ return (<div>
         </div>
       </section>
     </div>
-  ;
-};
-
-export default EnhancedSEOOptimize;r;
+  );
+}
+export default EnhancedSEOOptimize;r
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

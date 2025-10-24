@@ -27,8 +27,8 @@ const LinkPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
+    };
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -36,7 +36,7 @@ const LinkPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -135,15 +135,15 @@ const LinkPage: React.FC = () => {
       <Footer />
     </>
   );
-};
-
+  );
+}
+  );
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 // link utility
 export const link = (): JSX.Element => {
   // Utility function implementation
-  return null;
-};
-
-
-
-export default lin;k;
+  return null
+  );
+}
+export default lin;k
+  );

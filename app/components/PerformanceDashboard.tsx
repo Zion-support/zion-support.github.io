@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -23,8 +23,8 @@ const PerformanceDashboardPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -34,7 +34,6 @@ const PerformanceDashboardPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '' }) => {
   return (
     <div className="{`performancedashboard" ${className}`}>
@@ -115,13 +114,16 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
+}
+  );
 loadTime: 0,
 renderTime: 0,
 memoryUsage: 0,
-fps: 0});
+fps: 0})
+  );
 const [isMonitoringsetIsMonitoring] = useState(false);
-const [alertssetAlerts]=useState<string[]>([]);"
+  
+const [alertssetAlerts]=useState<string[]>([];"
 useEffect(() => {constupdateMetrics="()" => {
 ;  "
 constnavigation="performance.getEntriesByType("
@@ -138,20 +140,26 @@ if ('requestAnimationFrame' in windo w) {letlastTime="performance.now()";"
 letframeCount="0";"
 constmeasureFPS="()" => {
 ;  "
-constcurrentTime="performance.now()";
-frameCount++;
+constcurrentTime="performance.now()"
+  );
+frameCount++
+  );
 if (currentTime - lastTime >= 100 0) {"}
 fps="Math.round((frameCount" * 100 0) / (currentTime - lastTime))}
 frameCount="0lastTime=" currentTime}
-if (isMonitorin g) {requestAnimationFrame(measureFPS)}
+if (isMonitorin g) {requestAnimationFrame(measureFPS
+  )
+  );
 }
 requestAnimationFrame(measureFPS)
 }
-constnewMetrics: PerformanceMetrics="{loadTime,";
+constnewMetrics: PerformanceMetrics="{loadTime,"
+  );
 renderTime,}
 memoryUsage,}
 fps}
-setMetrics(newMetrics);
+setMetrics(newMetrics)
+  );
 onMetricsUpdate?.(newMetrics)
 // Check for performance alerts
 checkPerformanceAlerts(newMetrics)
@@ -159,12 +167,13 @@ checkPerformanceAlerts(newMetrics)
 if (isMonitorin g) {updateMetrics();"}
 constinterval="setInterval(updateMetrics100" 0)}
 return () => clearInterval(interval)}
-}, [isMonitoringonMetricsUpdate]);"
+}, [isMonitoringonMetricsUpdate];"
 constcheckPerformanceAlerts="(currentMetrics:" PerformanceMetrics) => {constnewAlerts: string[] = [];}
 if (currentMetrics.loadTime > 300 0) {}
 newAlerts.push('Load time is above3seconds')}
 if (currentMetrics.memoryUsage > 5 0 * 1024*1024) {//50MB}</string>
-newAlerts.push('Memory usage is high')}</string>;
+newAlerts.push('Memory usage is high')}</string>
+  );
 if(currentMetrics.fps< 3 0) {newAlerts.push('FPS is below30')}
 setAlerts(newAlerts)
 }

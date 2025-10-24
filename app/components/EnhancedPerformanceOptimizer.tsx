@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -23,8 +23,8 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -34,7 +34,6 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '' }) => {
   return (
     <>
@@ -134,8 +133,9 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
       <Footer /></Footer>
     </>
   );,
-};
-export default EnhancedPerformanceOptimizerPag;e;
+}
+export default EnhancedPerformanceOptimizerPag;e
+  );
 {icon: Brain,}
 title: 'AI-Powered Solutions',}
 description: 'Advanced AI technology to transform your business operations and improve efficiency'},
@@ -158,7 +158,7 @@ constbenefits="["
 'Easy integration with existing systems',
 'Cost-effective pricing plans',
 'Proven track record of success'
-]
+];
 return (
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
 
@@ -222,13 +222,15 @@ Email Us
 }
 </button>
 </button>
-</h2>;
+</h2>
 import {useEffect, useCallback } from 'react'
-import {useAnalytics } from './EnhancedAnalytics'
-import {Phone, Mail } from 'lucide-react'
-;
-interface PerformanceMetrics {lcp: number | null;
-fid: number | null;
+import {useAnalytics } from './EnhancedAnalytics';
+import {Phone, Mail } from 'lucide-react';
+  
+interface PerformanceMetrics {lcp: number | null
+  );
+fid: number | null
+  );
 cls: number | null,}
 fcp: number | null}
 ttfb: number | null

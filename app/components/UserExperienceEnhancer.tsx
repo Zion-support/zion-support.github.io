@@ -22,8 +22,8 @@ const UserExperienceEnhancerPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -33,7 +33,6 @@ const UserExperienceEnhancerPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ className = '' }) => {
   return (
     <>
@@ -132,5 +131,5 @@ go wrong! 🤖
       <Footer /></Footer>
     </>
   );,
-};
+}
 export default UserExperienceEnhancerPag;e;"

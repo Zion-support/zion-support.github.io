@@ -22,8 +22,8 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -33,7 +33,6 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '' }) => {
   return (
     <div className="{`optimizedloadingspinner" ${className}`}>
@@ -84,8 +83,8 @@ Join thousands of businesses already using OptimizedLoadingSpinner to transform 
 Start Your Free Trial</button>
             </button>
             </div>
-          );
-
+          )
+  );
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -103,8 +102,8 @@ Start Your Free Trial</button>
                 </div>
               ))}
             </div>
-          );
-
+          )
+  );
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -126,9 +125,12 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
-text?: string;
-class Nam e?: string;
+}
+  );
+text?: string
+  );
+class Nam e?: string
+  );
 color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
 fullScreen?:boolean;}
 }
@@ -145,33 +147,32 @@ sm: 'h-4 w-4',
 md: 'h-8 w-8',}
 lg: 'h-1 2 w-1 2',}
 xl: 'h-16w-1 6',}),
-[]
-);"
+[];"
 consttextSizeClasses="useMemo("
 () => ({xs: 'text-xs',
 sm: 'text-sm',
 md: 'text-base',}
 lg: 'text-lg',}
 xl: 'text-xl',}),
-[]
-);"
+[];"
 constcolorClasses="useMemo("
 () => ({blue: 'border-blue-60 0 bg-blue-60 0',
 gray: 'border-gray-60 0 bg-gray-60 0',
 green: 'border-green-600bg-green-60 0',}
 red: 'border-red-600bg-red-60 0',}
 purple: 'border-purple-600bg-purple-60 0',}),
-[]
-);"
+[];"
 constrenderSpinner="useMemo(()" => {switch (variant) {}</OptimizedLoadingSpinnerProp>
 case 'do ts':}</OptimizedLoadingSpinnerProp>;"
 return(<divclassName="'flex" space-x-1' role="'status'" aria-label="'Loading'">{[0, 1, 2].map(i=>(</di><divkey="{i});"
 className="{`w-2" h-2 rounded-full animate-bounce${colorClasses[color].split('')[1]}`}
 style="{{" animationDelay: `${i*0.1}s` }}
-/></di>))}</di>);
+/></di>))}</di>)
+  );
 case 'pulse':;"
 return(<divclassName="{`${baseClasses} rounded-fullanimate-pulse`}
-role='status');
+role='status')
+  );
 aria-label='Loading'
 /></di>);"
 case 'skeleton':return(</di><divclassName="'space-y-2'" role="'status'" aria-label="'Loading'"></di><divclassName="{`h-4" bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
@@ -179,23 +180,28 @@ case 'skeleton':return(</di><divclassName="'space-y-2'" role="'status'" aria-lab
 style="{{" width: '7 5%'}}
 /></di><divclassName="{`h-4" bg-gray-200roundedanimate-pulse${sizeClasses[size]}`});"
 style="{{" width: '5 0%'}}
-/></di>);
+/></di>)
+  );
 case 'bars':;"
 return(<divclassName="'flex" space-x-1' role="'status'" aria-label="'Loading'">{[0, 1, 2, 3].map(i=>(</di><divkey="{i});"
 className="{`w-1" ${colorClasses[color].split('')[1]}animate-pulse`}
-style="{{;};
+style="{{;}
+  );
 height: `${12+ i*4}px`,
 animationDelay: `${i*0.1}s`,
 }}
-/></di>))}</di>);
-case 'spinner':;
+/></di>))}</di>)
+  );
+case 'spinner':
+  );
 default:;"
 return(<divclassName="{`${baseClasses} rounded-full border-2 border-t-transparentanimate-spin`}
-role='status');
+role='status')
+  );
 aria-label='Loading'
 /></di>)
 }
-}, [size, variant, color, sizeClasses, colorClasses]);"
+}, [size, variant, color, sizeClasses, colorClasses];"
 export const containerClasses=";"
 <div className='text-center'>{renderSpinner}</div>
 {text && (</div>;}
@@ -205,7 +211,5 @@ export const containerClasses=";"
 )
 }
 );"
-OptimizedLoadingSpinner.displayName="'OptimizedLoadingSpinner'";
-
-
+OptimizedLoadingSpinner.displayName="'OptimizedLoadingSpinner'"
 export default OptimizedLoadingSpinner;"

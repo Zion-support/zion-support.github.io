@@ -23,8 +23,8 @@ const SEOHeadPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -34,7 +34,6 @@ const SEOHeadPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const SEOHead: React.FC<SEOHeadProps> = ({ className = '' }) => {
   return (
     <>
@@ -114,13 +113,20 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
-description?: string;
-keywords?: string;
-canonical?: string;
-ogImage?: string;
-ogType?: string;
-twitterCard?: string;
+}
+  );
+description?: string
+  );
+keywords?: string
+  );
+canonical?: string
+  );
+ogImage?: string
+  );
+ogType?: string
+  );
+twitterCard?: string
+  );
 structuredData?:object;}
 }
 constSEOHead: React.FC<SEOHeadProp s>= ({title: "'Zion" Tech Group - Advanced AI & IT Solutions',"
@@ -129,7 +135,8 @@ keywords: "'AI" solutions, IT consulting, cloud infrastructure, cybersecurity, a
 canonical,"
 ogImage: "'/og-image.jpg',";"
 ogType: "'website',";"}
-twitterCard: "'summary_large_image',};
+twitterCard: "'summary_large_image',}
+  );
 structuredData}) => {constfullTitle="title.includes('Zion" Tech Group') ? title:`${title} | Zion TechGroup`;"
 constcanonicalUrl="canonical" || (type of windo w !== 'undefined' ? windo w.location.href: '');"
 export const defaultStructuredData="{"@context":"https: //" schema.org","@type":"Organization","name":"Zion Tech Group","url":"https: // ziontechgroup.com","logo":"https: // ziontechgroup.com/logo.png","description":"Advanced AI and IT Solutions company providing cutting-edge technology services","address": {"@type":"PostalAddress","streetAddress":"364E Main St STE1008","addressLocality":"Middletown","addressRegion":"DE","postalCode":"1970 9","addressCountry":"US"},"contactPoint": {"@type":"ContactPoint","telephone":"+1-30 2-46 4-095 0","contactType":"customer service","email":"kleber@ziontechgroup.com"},"sameAs": ["https:// www.linkedin.com/$1/zion-tech-group","https:// twitter.com/ziontechgroup"
@@ -144,8 +151,9 @@ ogImage='/og-image.jpg' ogType='website' twitterCard='summary_large_image' struc
   constfullTitle= title.includes('Zion Tech Group&apos;) ? title: `${titl,e
 } | Zion TechGroup`
 constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.location.href: '')
-const defaultStructuredData= {&quot;@context&quot;:&quot;https:// schema.org&quot;,&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https:// ziontechgroup.com&quot;,&quot;logo&quot;:&quot;https:// ziontechgroup.com/logo.png&quot;,&quot;description&quot;:&quot;Advanced AI and IT Solutions company providing cutting-edge technology services&quot;,&quot;address&quot;: {&quot;@type&quot;:&quot;PostalAddress&quot;,&quot;streetAddress&quot;:&quot;364E Main St STE1008&quot;,&quot;addressLocality&quot;:&quot;Middletown&quot;,&quot;addressRegion&quot;:&quot;DE&quot;,&quot;postalCode&quot;:&quot;1970 9&quot;,&quot;addressCountry&quot;:&quot;US&quot;},&quot;contactPoint&quot;: {&quot;@type&quot;:&quot;ContactPoint&quot;,&quot;telephone&quot;:&quot;+1-30 2-46 4-095 0&quot;,&quot;contactType&quot;:&quot;customer service&quot;,&quot;email&quot;:&quot;kleber@ziontechgroup.com&quot;},&quot;sameAs&quot;: [&quot;https:// www.linkedin.com/$1/zion-tech-group&quot;,&quot;https:// twitter.com/ziontechgroup&quot;
-]
+const defaultStructuredData= {&quot;@context&quot;:&quot;https:// schema.org&quot;,&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https:// ziontechgroup.com&quot;,&quot;logo&quot;:&quot;https:// ziontechgroup.com/logo.png&quot;,&quot;description&quot;:&quot;Advanced AI and IT Solutions company providing cutting-edge technology services&quot;,&quot;address&quot;: {&quot;@type&quot;:&quot;PostalAddress&quot;,&quot;streetAddress&quot;:&quot;364E Main St STE1008&quot;,&quot;addressLocality&quot;:&quot;Middletown&quot;,&quot;addressRegion&quot;:&quot;DE&quot;,&quot;postalCode&quot;:&quot;1970 9&quot;,&quot;addressCountry&quot;:&quot;US&quot;},&quot;contactPoint&quot;: {&quot;@type&quot;:&quot;ContactPoint&quot;,&quot;telephone&quot;:&quot;+1-30 2-46 4-095 0&quot;,&quot;contactType&quot;:&quot;customer service&quot;,&quot;email&quot;:&quot;kleber@ziontechgroup.com&quot;},&quot;sameAs&quot;: [&quot;https:// www.linkedin.com/$1/zion-tech-group&quot;,&quot;https:// twitter.com/ziontechgroup&quot
+  );
+];
 }
 return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description} /><metaname=&quot;keywords&quot; content={keywords} /><metaname=&quot;author&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;robots&quot;content=&quot;index,follow&quot; /><metaname=&quot;viewport&quot;content=&quot;width=device-width,initial-scale=1.0&quot; />{/* CanonicalURL */}
 {canonicalUrl&&<linkrel=&quot;canonical&quot;href={canonicalUrl} />}
@@ -153,4 +161,5 @@ return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname=&quot;d
 }
 
 
-export defaultSEOHead</SEOHeadProp>;
+export defaultSEOHead</SEOHeadProp>
+  );

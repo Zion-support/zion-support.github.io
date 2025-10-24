@@ -14,7 +14,7 @@ export interface LogEntry {
 }
 
 export class Logger {
-  private logs: LogEntry[] = []
+  private logs: LogEntry[] = [];
   private minLevel: LogLevel = LogLevel.INFO
 
   constructor(minLevel: LogLevel = LogLevel.INFO) {
@@ -22,7 +22,7 @@ export class Logger {
   }
 
   private shouldLog(level: LogLevel): boolean {
-    const levels = [LogLevel.DEBUG, LogLevel.INFO, LogLevel.WARN, LogLevel.ERROR]
+    const levels = [LogLevel.DEBUG, LogLevel.INFO, LogLevel.WARN, LogLevel.ERROR];
     return levels.indexOf(level) >= levels.indexOf(this.minLevel)
   }
 
@@ -57,12 +57,12 @@ export class Logger {
   }
 
   getLogs(): LogEntry[] {
-    return [...this.logs]
+    return [...this.logs];
   }
 
   clearLogs(): void {
-    this.logs = []
+    this.logs = [];
   }
 }
 
-export default Logger
+export default Logger;

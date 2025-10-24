@@ -24,8 +24,8 @@ const AdvancedSEOOptimizerNewPage: React.FC = () => {
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -35,7 +35,6 @@ const AdvancedSEOOptimizerNewPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ className = '' }) => {
   return (
     <>
@@ -133,6 +132,6 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
       <Footer /></Footer>
     </>
   );,
-};
-
-export default AdvancedSEOOptimizerNewPag;e;
+}
+export default AdvancedSEOOptimizerNewPag;e
+  );

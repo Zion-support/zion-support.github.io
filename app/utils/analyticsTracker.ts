@@ -13,7 +13,7 @@ export interface AnalyticsConfig {
 
 export class AnalyticsTracker {
   private config: AnalyticsConfig
-  private events: AnalyticsEvent[] = []
+  private events: AnalyticsEvent[] = [];
 
   constructor(config: AnalyticsConfig) {
     this.config = config
@@ -30,17 +30,17 @@ export class AnalyticsTracker {
     this.events.push(eventWithTimestamp)
 
     if (this.config.debug) {
-      console.log('Analytics event:', eventWithTimestamp)
-    }
-  }
-
+      console.log('Analytics event:', eventWithTimestamp
+  )
+  );
+}
   getEvents(): AnalyticsEvent[] {
-    return [...this.events]
+    return [...this.events];
   }
 
   clearEvents(): void {
-    this.events = []
+    this.events = [];
   }
 }
 
-export default AnalyticsTracker
+export default AnalyticsTracker;

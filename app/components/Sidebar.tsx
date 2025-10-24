@@ -1,5 +1,5 @@
-'use client';
-import {Phone, Mail, Brain} from 'lucide-react';
+'use client'
+import {Phone, Mail, Brain} from 'lucide-react'
 import React from 'react'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -23,8 +23,8 @@ const SidebarPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -34,7 +34,6 @@ const SidebarPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const Sidebar: React.FC<SidebarProps> = ({ onSidebarToggle }) => {
   return (
     <div className="{`sidebar" ${className}`}>
@@ -134,8 +133,9 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
-export default SidebarPag;e;
+}
+export default SidebarPag;e
+  );
 Menu,
 Home,
 Users,
@@ -148,22 +148,28 @@ BarChart,
 ChevronDown,
 ChevronRight,
 Phone,
-Mail,;
+Mail,
+  );
 MapPin,Clock;}
 } from 'lucide-react'"
 constSidebar: React.FC="()" =>{const [isOpensetIsOpen] = useState(false);
+  
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']));"
-constlocation="useLocation()";
+constlocation="useLocation()"
+  );
 useEffect(() => {
 ;  "
 consthandleResize="()" => {
 ;  }
 if (windo w.innerWidth >=1024) {}
-setIsOpen(false)}
+setIsOpen(false
+  )
+  );
 }
-windo w.addEventListener('resize', handleResize);
+windo w.addEventListener('resize', handleResize)
+  );
 return () => windo w.removeEventListener('resize', handleResize)
-}, []);"
+}, [];"
 consttoggleSection="(section:" string) => {constnewExpanded="new" Set(expandedSections);}
 if (newExpanded.has(section)) {;) => {
   }
@@ -182,7 +188,7 @@ items: [
 {name: 'Contact', path: '/contact', icon: Phone},
 {name: 'Blog', path: '/blog', icon: BarChart},
 {name: 'Case Studies', path: '/case-studies', icon: BarChart},
-]
+];
 },
 {title: 'AI Services',}
 key: 'ai-services',}
@@ -200,7 +206,7 @@ items: [
 {name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings},
 {name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield},
 {name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings},
-]
+];
 },
 {title: 'Micro SaaS',}
 key: 'micro-saas',}
@@ -218,7 +224,7 @@ items: [
 {name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart},
 {name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart},
 {name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings},
-]
+];
 },
 {title: 'IT Services',}
 key: 'it-services',}
@@ -232,7 +238,7 @@ items: [
 {name: 'Cybersecurity', path: '/cybersecurity', icon: Shield},
 {name: 'Database Management', path: '/database-management', icon: Settings},
 {name: 'Managed IT', path: '/managed-it', icon: Settings},
-]
+];
 },
 {title: 'Company',}
 items: [
@@ -240,7 +246,7 @@ items: [
 {name: 'Careers', path: '/careers', icon: Users},
 {name: 'Consultation', path: '/consultation', icon: Phone},
 {name: 'Pricing', path: '/pricing', icon: BarChart},
-]
+];
 },
 {title: 'Resources',}
 items: [
@@ -248,7 +254,7 @@ items: [
 {name: 'API Docs', path: '/api-do cs', icon: Code},
 {name: 'Support', path: '/support', icon: Users},
 {name: 'Status', path: '/status', icon: Settings},
-]
+];
 }
 ];"
 constcontactInfo="{phone: " '(30 2) 46 4-095 0',
@@ -261,8 +267,10 @@ return (</Set>
 {/* Mobile Menu Button */}
 <button
 onClick={() =></button> setIsOpen(true)}
-className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot;
-aria-label=&quot;Open sidebar&quot;
+className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot
+  );
+aria-label=&quot;Open sidebar&quot
+  );
 >
 <Menu className=&quot;w-6 h-6&quot; />
 </button>
@@ -291,8 +299,10 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 </Link>
 <button
 onClick={() =></button> setIsOpen(false)}
-className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot;
-aria-label=&quot;Close sidebar&quot;
+className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot
+  );
+aria-label=&quot;Close sidebar&quot
+  );
 >
 <X className=&quot;w-6 h-6&quot; />
 </button>

@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -12,8 +12,8 @@ const ContentStatistics: React.FC = () => {
     years:  ,0,
     countries:  ,0,
     uptime: 0
- ,
-})
+ ,;
+});
 
   const targetCounters={clients: 100,
       0,
@@ -31,7 +31,7 @@ const ContentStatistics: React.FC = () => {
   useEffect(() => {
     const animateCounters = () => {
       Object.keys(targetCounters).forEach(key => {
-        const target = targetCounters[key as keyof typeof targetCounters]
+        const target = targetCounters[key as keyof typeof targetCounters];
         const duration = 2000
         const increment = target / (duration / 16)
         let current = 0
@@ -119,8 +119,8 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '' })
       <Footer />
     </div>
   )
-}
-;
+};
+  );
 clients: 0,
 projects: 0,
 satisfaction: 0,
@@ -211,20 +211,25 @@ useEffect(() => {constduration="300" 0; // 3secondsconststeps="60conststepDurati
 consttimers="Object.keys(targetCounters).map((key)" => {
 ;  "
 consttarget="targetCounters[key" as keyof type of targetCounters];"
-constduration="2000;" // 2secondsconstincrement="target" / (duration /16); //60fps;
+constduration="2000;" // 2secondsconstincrement="target" / (duration /16); //60fps
+  );
 return setInterva l(() => {
-;  
+  );
 setCounters(prev=> {
 ;  "
-constcurrent="prev[key" as keyof type of prev]);}
+constcurrent="prev[key" as keyof type of prev];}
 if(current< target) {}
 return {...prev,
-[key]: Math.min(current + increment, target)}
+[key]: Math.min(current + increment, target
+  )
+  );
 }
-return pre v;
+return pre v
+  );
 })
 }, 1 6)
-});
+})
+  );
 return () =>{timers.forEach(timer=> clearInterval(timer))}
 }, [])
 return (

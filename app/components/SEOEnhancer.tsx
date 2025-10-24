@@ -31,8 +31,8 @@ const SEOEnhancerPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
+    };
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -40,14 +40,14 @@ const SEOEnhancerPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({className="''" }) => {}</SEOEnhancerProps>
   return (</SEOEnhancerProps>
     <>
       
-      <Navigation />
+      <Navigation />;
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
@@ -101,15 +101,14 @@ Powered by cutting-edge AI technology and industry expertise.
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: "from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove","
 r: scale-105" />
 'use client'
-import Navigation from './Navigation'
-import React from 'react'
 import { Helmet } from from 'react-helmet-async'
 import { ArrowRight, Brain } from from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from from 'lucide-react'
 import { Phone, Mail, ArrowRight } from from 'lucide-react'
 const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className = ''}) => {</SEOEnhancerProps>
-return (</SEOEnhancerProps>
+return (</SEOEnhancerProps>;
     <>;
+  
       <Helmet  />;<title>SEOEnhancer | Zion Tech Group</title><meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." / /><meta name="keywords" content="AI, artificial, intelligence, SEOEnhancer, AI, solutions, intelligent automation" /  />
       </Helmet>;<Navigation/ />,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"  />
             {/* Hero Section */}<section className="relative py-20 px-4 overflow-hidden" />,<div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" />,<div className="relative max-w-7 xl mx-auto text-center" />,<h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" /  />
@@ -292,7 +291,7 @@ Email Us</Mail>
       <Footer /></Footer>
     </>
   );,
-};
-
-export default SEOEnhancerPag;e;
+}
+export default SEOEnhancerPag;e
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

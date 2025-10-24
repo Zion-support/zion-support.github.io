@@ -23,8 +23,8 @@ const ErrorHandlerPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -34,7 +34,6 @@ const ErrorHandlerPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
   return (
     <>
@@ -62,7 +61,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         </div>
         </h1>
             </h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-              ErrorHandler;
+              ErrorHandler
+  );
             </h1>
 
             <//h1>
@@ -79,11 +79,13 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
 
     // Send error to monitoring service in production;"
     if (process.env.NODE_ENV="==" 'production') {// You can integrate with services like Sentry, LogRocket, etc.}
-      this.logErrorToService(errorerrorInfo)
+      this.logErrorToService(errorerrorInfo
+  )
+  );
 }
-  }
 ;"
-  logErrorToService="(error:" Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service;
+  logErrorToService="(error:" Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
+  );
     try {"
       // Replace with your actual error reportingserviceconsterrorData: "{",
         message: error.message,
@@ -91,14 +93,17 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         componentStack: errorInfo.componentStack,}
         timestamp: new Date().toISOString()
 }
-      // Send to your error reporting service here;
+      // Send to your error reporting service here
+  );
       // // console.log('Error data prepared for reporting:', errorData)
     } catch {// Error reporting failed
     }
-  };
+  }
+  );
   handleRetry="()" => {this.setState({
       hasError: false,}
-      error: null,});
+      error: null,})
+  );
       errorInfo: null
   ,
 })
@@ -106,7 +111,7 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
 ;"
   handleGoHome="()" => {windo w.location.href="'/'"
  }
-;
+  );
   render() {if (this.state.hasError) {}
       if (this.props.fallback) {}
         return thi s.props.fallback
@@ -128,7 +133,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         </h1>
             </h1 className="text-2xl font-bold text-gray-900 mb-4">
         </div>
-              Oops! Something went wrong;
+              Oops! Something went wrong
+  );
             </h1>
 
             <//h1>
@@ -206,7 +212,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
               </button>
 
               <//button>
-              <button;
+              <button
+  );
                 onClick={
   this.handleGoHome
 }
@@ -218,7 +225,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         </Home>
         </Home>
                 </Home className="w-4 h-4 mr-2" />
-                Go Home;
+                Go Home
+  );
               </button>
 
               <//button>
@@ -250,7 +258,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         </p>
               </p className="text-xl text-gray-300 max-w-3xl mx-auto">
         </div>
-                Powerful AI-driven features designed to transform your business operations;
+                Powerful AI-driven features designed to transform your business operations
+  );
               </p>
 
               <//p>
@@ -321,7 +330,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
   this.handleRetry
 }
                className="flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors"
-              ><RefreshCwclassName="w-4h-4mr-2" />Try Again;
+              ><RefreshCwclassName="w-4h-4mr-2" />Try Again
+  );
             </butto><
                 onClick={
   this.handleGoHome
@@ -332,12 +342,13 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
   this.handleGoHome
 }
                className="flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors"
-              ><HomeclassName="w-4h-4mr-2" />Go Home;
+              ><HomeclassName="w-4h-4mr-2" />Go Home
+  );
             </butto></di></di></di>
 <//di>
       )
     }
-;
+  );
     return thi s.props.children
   }
 }
@@ -361,7 +372,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         </p>
               </p className="text-xl text-gray-300 max-w-3xl mx-auto">
         </div>
-                Experience the benefits of cutting-edge AI technology;
+                Experience the benefits of cutting-edge AI technology
+  );
               </p>
 
               <//p>
@@ -410,7 +422,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         </p>
             </p className="text-xl text-gray-300 mb-8">
         </div>
-              Join thousands of businesses already using our AI solutions;
+              Join thousands of businesses already using our AI solutions
+  );
             </p>
 
             <//p>
@@ -423,7 +436,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         </div>
         </button>
               </button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial;
+                Start Free Trial
+  );
               </button>
 
               <//button>
@@ -434,7 +448,8 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         </div>
         </button>
               </button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales;
+                Contact Sales
+  );
               </button>
 
               <//button>
@@ -452,6 +467,7 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
     </>
 
     <//>
+  )
   );
-};
+}
 export default ErrorHandlerPag;e;"

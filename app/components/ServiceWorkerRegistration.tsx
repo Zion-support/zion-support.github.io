@@ -1,5 +1,5 @@
 import Footer from './Footer'
-import { CheckCircle, Phone, Mail, ArrowRight, Helmet } from "lucide-react";
+import { CheckCircle, Phone, Mail, ArrowRight, Helmet } from "lucide-react"
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react'
@@ -24,8 +24,8 @@ const ServiceWorkerRegistrationPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -65,9 +65,11 @@ const ServiceWorkerRegistrationPage: React.FC = () => {const features = [
     </>
 
     <//>
+  )
   );
-};
-export default ServiceWorkerRegistrationPag;e;
+}
+export default ServiceWorkerRegistrationPag;e
+  );
                 </div>
 
                 <//div>

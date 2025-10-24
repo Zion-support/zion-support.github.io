@@ -1,25 +1,30 @@
-'use client';
+'use client'
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 import Navigation from './Navigation'
 import { ArrowRight } from 'lucide-react'
 
-import React, {useEffect, useState, useCallback } from 'react';
-import {Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import React, {useEffect, useState, useCallback } from 'react'
+import {Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 import {CheckCircle } from 'lucide-react';
-import {AlertTriangle } from 'lucide-react'
-;
+import {AlertTriangle } from 'lucide-react';
+  
 interface PerformanceOptimizerProps {}
-  className?: string;
+  className?: string
+  );
 }
-;
+  );
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageOptimization: "true,";"
   enableLazyLoading: "true,";"}
-  enablePreloading: "true,};
+  enablePreloading: "true,}
+  );
   enableCodeSplitting="true,"</PerformanceOptimizerProps>
-}) => {const [isOptimizing, setIsOptimizing] = useState(false)</PerformanceOptimizerProps>;
+}) => {const [isOptimizing, setIsOptimizing] = useState(false)</PerformanceOptimizerProps>
+  );
   const [optimizationStatus, setOptimizationStatus] = useState<{
-    images: boolean;
+    images: boolean
+  );
     lazyLoading: boolean,}
     preloading: boolean}
     codeSplitting: boolean
@@ -27,10 +32,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
     lazyLoading: false,}
     preloading: false,}
     codeSplitting: false,
-  });
+  })
+  );
 "
   const optimizeImages=";";"
-    const images="document.querySelectorAll('img')";
+    const images="document.querySelectorAll('img')"
+  );
     images.forEach((img) => {if (img.loading !== 'lazy') {}
         img.loading="'lazy'"
       }
@@ -39,19 +46,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
       if (!img.src.includes('.webp') && img.src.includes('.jpg')) {const webpSrc: "img.src.replace('.jpg'," '.webp');"
         const webpImg=";";}
               img.removeAttribute('data-src')}
-              observer.unobserve(img)
-            }
-          }
+              observer.unobserve(img
+  )
+  );
+}
         })
       },
       {rootMargin: '50px' }
-    );
+    )
+  );
 "
-    const lazyImages="document.querySelectorAll('img[data-src]')";
-    lazyImages.forEach((img) => observer.observe(img));
-
+    const lazyImages="document.querySelectorAll('img[data-src]')"
+  );
+    lazyImages.forEach((img) => observer.observe(img))
+  );
     setOptimizationStatus(prev => ({...prev, lazyLoading: true }))
-  }, [enableLazyLoading]);
+  }, [enableLazyLoading])
+  );
 "
   const enablePreloadingOptimization=";"
       '/fonts/main.woff2',
@@ -66,10 +77,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
         link.crossOrigin="'anonymous'"
       }
       document.head.appendChild(link)
-    });
-
+    })
+  );
     setOptimizationStatus(prev => ({...prev, preloading: true }))
-  }, [enablePreloading]);
+  }, [enablePreloading])
+  );
 "
   const enableCodeSplittingOptimization=";"
       // // console.error('Optimization failed:', error)
@@ -183,9 +195,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
     </div>
   ),
 }
-;
   );
-};
-
-
+  )
+  );
+}
 export default PerformanceOptimizerPag;e;"

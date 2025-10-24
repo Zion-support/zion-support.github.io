@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState   } from "react";
+  
 interface UseLazyLoadingOptions { threshold?: number
   rootMargin?: string
   triggerOnce?: boolean }
@@ -12,8 +13,8 @@ triggerOnce = true }
 }
   } = options
 
-const [isIntersecting, setIsIntersecting ] = useState(false)
-  const [hasIntersected, setHasIntersected ] = useState(false)
+const [isIntersecting, setIsIntersecting ] = useState(false);
+  const [hasIntersected, setHasIntersected ] = useState(false);
   const elementRef = useRef<HTMLElement>(null)
 
 useEffect(() => { const element = elementRef.current
@@ -36,9 +37,10 @@ rootMargin }
 
 observer.observe(element)
 
-return () => { observer.unobserve(element) }
-    }
-
+return () => { observer.unobserve(element
+  )
+  );
+}
   }, [threshold, rootMargin, hasIntersected,])
 
 const shouldLoad = triggerOnce?hasIntersected: "isIntersecting
@@ -57,8 +59,8 @@ interface UseLazyLoadingOptions { threshold?: number
 export function useImageLazyLoading(src: "string",options: "UseLazyLoadingOptions = {"}) { const { shouldLoad, elementRef  }
 } = useLazyLoading(options)
   const [imageSrc, setImageSrc ] = useState<string|null>(null)
-  const [isLoaded, setIsLoaded ] = useState(false)
-  const [hasError, setHasError ] = useState(false)
+  const [isLoaded, setIsLoaded ] = useState(false);
+  const [hasError, setHasError ] = useState(false);
 
 useEffect(() => { if(shouldLoad && src && !imageSrc) {  
 setImageSrc(src) }

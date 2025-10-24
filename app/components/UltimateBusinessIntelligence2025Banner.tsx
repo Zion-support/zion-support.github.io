@@ -1,12 +1,12 @@
-'use client';
-
+'use client'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+  
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  
   const [isVisible, setIsVisible] = useState(true);
-
+  
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -20,7 +20,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         timeline: '6 months',
         adoption: '95%'
       },
-      tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
+      tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025'];
     },
     {
       id: 'fortune-500-case-study',
@@ -34,7 +34,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         efficiency: '400%',
         timeline: '18 months'
       },
-      tags: ['Case Study', 'Fortune 500', 'ROI', '2025']
+      tags: ['Case Study', 'Fortune 500', 'ROI', '2025'];
     },
     {
       id: 'enterprise-automation-2025',
@@ -48,26 +48,27 @@ const UltimateBusinessIntelligence2025Banner = () => {
         efficiency: '400%',
         cost: '80% reduction'
       },
-      tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
+      tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025'];
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [content.length]);
-
+      setCurrentSlide((prev) => (prev + 1) % content.length)
+  );
+    }, 5000)
+  );
+    return () => clearInterval(timer)
+  );
+  }, [content.length])
+  );
   const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
-
+    setIsVisible(false)
+  );
+  }
+  );
+  if (!isVisible) return null
+  );
   const _currentContent = content[currentSlide];
-
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -218,7 +219,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
           ))}
         </div>
     </section>
+  )
   );
-};
-
-export default UltimateBusinessIntelligence2025Banne;r;
+}
+export default UltimateBusinessIntelligence2025Banne;r
+  );

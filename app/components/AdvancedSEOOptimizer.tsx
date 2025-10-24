@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -23,8 +23,8 @@ const AdvancedSEOOptimizerPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -34,7 +34,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '' }) => {
   return (
     <>
@@ -134,12 +133,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className =
       <Footer /></Footer>
     </>
   );,
-};
-description?: string;
-keywords?: string;
-canonicalUrl?: string;
-ogImage?: string;
-twitterCard?: string;
+}
+  );
+description?: string
+  );
+keywords?: string
+  );
+canonicalUrl?: string
+  );
+ogImage?: string
+  );
+twitterCard?: string
+  );
 structuredData?: objectchildren: React.ReactNode}
 constAdvancedSEOOptimizer: React.FC<SEOOptimizerProp s>= ({title: "'Zion" Tech Group - Advanced AI and IT Solutions',"
 description: "'Professional" AI and IT solutions for your business. Advanced technology, expert support, and proven results.',"
@@ -148,8 +153,9 @@ canonicalUrl,"
 ogImage: "'/$1/og-image.jpg',";"
 twitterCard: "'summary_large_image',";}
 structuredData,}</SEOOptimizerProp>
-children}) => {const [seoScoresetSeoScore] = useState(0)</SEOOptimizerProp>;
-const [recommendationssetRecommendations]=useState<string[]>([]);"
+children}) => {const [seoScoresetSeoScore] = useState(0)</SEOOptimizerProp>
+  );
+const [recommendationssetRecommendations]=useState<string[]>([];"
 constanalyzeSEO="useCallback(()" => {
 ;  "
 if (type ofwindow="==" 'undefined') return letscore="0constnewRecommendations:" string[] = []</string>
@@ -173,7 +179,8 @@ constimagesWithAlt= do cument.querySelectorAll('img[alt]')
 if (images.length=== imagesWithAlt.length && images.length > 0) {score +=10} else {newRecommendations.push('Add alt text to all images')}
 // Check for internallinksconstinternalLinks= do cument.querySelectorAll('a[href^="/"],a[href^="./"]')
 if (internalLinks.length > 0) {score +=10} else {newRecommendations.push('Add internal links for better SEO')}
-setSeoScore(score);
+setSeoScore(score)
+  );
 setRecommendations(newRecommendations)
 }, [title, description, keywords])
 useEffect(() => {analyzeSEO()}, [analyzeSEO])

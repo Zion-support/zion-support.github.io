@@ -1,25 +1,36 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+  
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 interface AdvancedErrorBoundaryProps {
-  children: ReactNode;
-  className?: string;
-  children: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode
+  );
+  className?: string
+  );
+  children: ReactNode
+  );
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  );
 }
 
 interface ErrorReport {
-  errorId: string;
-  error: Error;
+  errorId: string
+  );
+  error: Error
+  );
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
+  hasError: boolean
+  );
+  error?: Error
+  );
+  errorInfo?: ErrorInfo
+  );
+  errorId?: string
+  );
 }
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
@@ -50,7 +61,8 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       error
       errorInfo)
     })
-    // Call custom error handler if provided;
+    // Call custom error handler if provided
+  );
     if (this.props.onError) {}
       this.props.onError(error, errorInfo)
     }
@@ -60,10 +72,10 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     }
     // Log error to external service in production;"
     if (process.env.NODE_ENV="==" 'production') {}
-      this.logErrorToService(error, errorInfo)
-    }
-  }
-
+      this.logErrorToService(error, errorInfo
+  )
+  );
+}
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
@@ -115,3 +127,4 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
 }
 
 export default AdvancedErrorBoundary;
+  

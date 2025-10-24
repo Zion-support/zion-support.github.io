@@ -1,10 +1,10 @@
-import React from 'react';
-import { Brain, Zap, Shield, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import React from "react";
-import Link from "next/link";
+import React from 'react'
+import { Brain, Zap, Shield, Globe } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React from "react"
+import Link from "next/link"
 import {
   Package,
   BarChart3,
@@ -20,17 +20,14 @@ import {
   ShoppingCart,
   Truck,
   Globe,
-} from "lucide-react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
+} from "lucide-react"
+import Footer from '../components/Footer'
+import Head from "next/head"
+import { ArrowRight } from "lucide-react"
+import Footer from "../components/Footer"
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
+  
 const Page: React.FC = () => {
   const features = [
     {
@@ -52,7 +49,6 @@ const Page: React.FC = () => {
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -102,13 +98,11 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
+  )
   );
-};
-
+}
 export default Page;
-
 export default PagePage;
-
 export default ZionAIInventoryOptimizerProPage;
-
 export default ZionAiInventoryOptimizerProPage;
+  

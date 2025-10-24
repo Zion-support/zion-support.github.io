@@ -1,19 +1,28 @@
-// Type definitions for Next.js compatibility;
+// Type definitions for Next.js compatibility
 export interface Metadata {
-  title?: string;
-  description?: string;
+  title?: string
+  );
+  description?: string
+  );
   keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[]
-  creator?: string;
-  publisher?: string;
+  authors?: Array<{ name: string; url?: string }> | string[];
+  creator?: string
+  );
+  publisher?: string
+  );
   formatDetection?: {
-  email?: boolean;
-    address?: boolean;
-    telephone?: boolean;
+  email?: boolean
+  );
+    address?: boolean
+  );
+    telephone?: boolean
+  );
 }
-  metadataBase?: URL;
+  metadataBase?: URL
+  );
   alternates?: {
-  canonical?: string;
+  canonical?: string
+  );
     languages?: Record<string , string>
         </string>
         </string>
@@ -21,50 +30,79 @@ export interface Metadata {
 </string, string>
 }
   openGraph?: {
-    title?: string;
-    description?: string;
-    url?: string;
-    siteName?: string;
-    images?: Array<{;
-      url: string;
-      width?: number;
-      height?: number;
-      alt?: string;
+    title?: string
+  );
+    description?: string
+  );
+    url?: string
+  );
+    siteName?: string
+  );
+    images?: Array<{
+  );
+      url: string
+  );
+      width?: number
+  );
+      height?: number
+  );
+      alt?: string
+  );
     }>
 </{
-      url: string;
-      width?: number;
-      height?: number;
-      alt?: string;
+      url: string
+  );
+      width?: number
+  );
+      height?: number
+  );
+      alt?: string
+  );
     }>
-    locale?: string;
-    type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[]
-    publishedTime?: string;
+    locale?: string
+  );
+    type?: string
+  );
+    authors?: Array<{ name: string; url?: string }> | string[];
+    publishedTime?: string
+  );
   }
   twitter?: {
   card?: 'summary' | 'summary_large_image' | 'app' | 'player'
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
-    images?: string[]
+    site?: string
+  );
+    creator?: string
+  );
+    title?: string
+  );
+    description?: string
+  );
+    images?: string[];
 }
   robots?: {
-  index?: boolean;
-    follow?: boolean;
+  index?: boolean
+  );
+    follow?: boolean
+  );
     googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
+      index?: boolean
+  );
+      follow?: boolean
+  );
+      'max-video-preview'?: number
+  );
       'max-image-preview'?: 'none' | 'standard' | 'large'
-      'max-snippet'?: number;
+      'max-snippet'?: number
+  );
 }
   }
   verification?: {
-  google?: string;
-    yandex?: string;
-    yahoo?: string;
+  google?: string
+  );
+    yandex?: string
+  );
+    yahoo?: string
+  );
     other?: Record<string , string>
         </string>
         </string>
@@ -73,20 +111,26 @@ export interface Metadata {
 }
 }
 export interface MetadataRoute {
-  ;
-  url: string;
-  lastModified?: string | Date;
+  );
+  url: string
+  );
+  lastModified?: string | Date
+  );
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number;
+  priority?: number
+  );
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string;
-  lastModified?: string | Date;
+  url: string
+  );
+  lastModified?: string | Date
+  );
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number;
+  priority?: number
+  );
 }
-// Custom Next.js types;
+// Custom Next.js types
 export interface NextPageProps {
   params: { [key: string]: string
 }
@@ -95,7 +139,7 @@ export interface NextPageProps {
 }
 }
 
-// API route types;
+// API route types
 export interface ApiRouteHandler {
   (req: Request): Promise<Response >
         </Response>
@@ -103,7 +147,7 @@ export interface ApiRouteHandler {
         </Response>
 </Response>
 }
-// Server components types;
+// Server components types
 export interface ServerComponentProps {
   params: { [key: string]: string
 }
@@ -112,13 +156,15 @@ export interface ServerComponentProps {
 }
 }
 
-// Client components types;
+// Client components types
 export interface ClientComponentProps {
   
-  children?: React.ReactNode;
-  className?: string;
+  children?: React.ReactNode
+  );
+  className?: string
+  );
 }
-// Route handlers;
+// Route handlers
 export interface RouteHandler {
   
   GET?: (req: Request) => Promise<Response >
@@ -147,46 +193,54 @@ export interface RouteHandler {
         </Response>
 </Response>
 }
-// Dynamic route types;
+// Dynamic route types
 export interface DynamicRoute {
   
   params: { [key: string]: string
 }
 }
 
-// Static generation types;
+// Static generation types
 export interface StaticProps {
   props: { [key: string]: any
 }
-  revalidate?: number;
-  notFound?: boolean;
+  revalidate?: number
+  );
+  notFound?: boolean
+  );
 }
 //ISR types
 
-// ISR types;
+// ISR types
 export interface ISRConfig {
   
-  revalidate: number;
-  tags?: string[]
+  revalidate: number
+  );
+  tags?: string[];
 }
-// Edge runtime types;
+// Edge runtime types
 export interface EdgeRuntime {
   
   runtime: 'edge'
 }
-// Node.js runtime types;
+// Node.js runtime types
 export interface NodeRuntime {
   
   runtime: 'nodejs'
 }
-// Extend Next.js types;
+// Extend Next.js types
+  );
 declare module 'next' {
   interface NextApiRequest {
   
-  user?: {;
-      id: string;
-      email: string;
-      name?: string;
+  user?: {
+  );
+      id: string
+  );
+      email: string
+  );
+      name?: string
+  );
 }
   }
 }"

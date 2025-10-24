@@ -3,23 +3,29 @@
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner')
+  
+const ContentCarousel = lazy(() => import('./components/ContentCarousel')
+  
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase')
+  
+const ContentStatistics = lazy(() => import('./components/ContentStatistics')
+  
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup')
+  
 // Preload critical components
 const preloadComponents  = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
+      import('./components/ContentPromotionBanner')
+import('./components/ContentCarousel'
+  
     }, 100);
+  );
   }
-};
-
+}
+  );
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -27,32 +33,39 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-
+))
+  );
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
+  );
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  
   const [isVisible, setIsVisible] = useState(false);
-
+  
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true)
+  );
     // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer = setTimeout(() => setIsVisible(true), 100)
+  );
     // Preload components
-    preloadComponents();
-    return () => clearTimeout(timer);
-  }, []);
-
+    preloadComponents()
+  );
+    return () => clearTimeout(timer)
+  );
+  }, [])
+  );
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      })
+  );
     }
-  }, []);
-
+  }, [])
+  );
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -62,7 +75,8 @@ const HomePage: React.FC = () => {
       features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration'],
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
       link: '/ai-project-manager',
-      popular: true;
+      popular: true
+  );
     },
     {
       title: 'AI Social Media Manager',
@@ -72,7 +86,8 @@ const HomePage: React.FC = () => {
       features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence'],
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
       link: '/ai-social-media-manager',
-      popular: true;
+      popular: true
+  );
     },
     {
       title: 'AI Analytics Dashboard',
@@ -82,7 +97,8 @@ const HomePage: React.FC = () => {
       features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
       link: '/ai-analytics-dashboard',
-      popular: true;
+      popular: true
+  );
     },
     {
       title: 'AI Email Marketing',
@@ -92,7 +108,8 @@ const HomePage: React.FC = () => {
       features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns'],
       benefits: ['65% open rate increase', '40% revenue growth', '80% time saved'],
       link: '/ai-email-marketing',
-      popular: true;
+      popular: true
+  );
     },
     {
       title: 'AI Customer Support Bot',
@@ -102,7 +119,8 @@ const HomePage: React.FC = () => {
       features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights'],
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically'],
       link: '/ai-customer-support-bot',
-      popular: true;
+      popular: true
+  );
     },
     {
       title: 'AI Code Review Assistant',
@@ -112,10 +130,10 @@ const HomePage: React.FC = () => {
       features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration'],
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
-      popular: false;
+      popular: false
+  );
     }
   ];
-
   const aiServices = [
     {
       title: 'Machine Learning Solutions',
@@ -150,7 +168,6 @@ const HomePage: React.FC = () => {
       color: 'text-cyan-400'
     }
   ];
-
   const itServices = [
     {
       title: 'Cloud Services',
@@ -185,7 +202,6 @@ const HomePage: React.FC = () => {
       color: 'text-purple-400'
     }
   ];
-
   return (
     <>
 
@@ -199,16 +215,19 @@ const HomePage: React.FC = () => {
 
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
-          <section;
+          <section
+  );
             className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
-              isLoaded && isVisible;
+              isLoaded && isVisible
+  );
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
             }`}
             aria-labelledby="hero-heading"
           >
             <div className="max-w-6xl mx-auto">
-              <h1;
+              <h1
+  );
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Zion Tech Group"
               >Zion Tech Group</h1>h1>
@@ -242,11 +261,13 @@ const HomePage: React.FC = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a;
+                <a
+  );
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >Get Started Today</a>a>
-                <a;
+                <a
+  );
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -298,7 +319,8 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
-                    <a;
+                    <a
+  );
                       href={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
                     >Learn More</a>a>
@@ -335,7 +357,8 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a;
+                    <a
+  );
                       href="/ai-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >Learn More</a>a>
@@ -372,7 +395,8 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a;
+                    <a
+  );
                       href="/it-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >Learn More</a>a>
@@ -391,7 +415,8 @@ const HomePage: React.FC = () => {
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
                 <p className="text-gray-300 mb-4">+1 302 464 0950</p>
-                <a;
+                <a
+  );
                   href="tel:+13024640950" 
                   onClick={handlePhoneClick}
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
@@ -402,7 +427,8 @@ const HomePage: React.FC = () => {
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
-                <a;
+                <a
+  );
                   href="mailto:kleber@ziontechgroup.com" 
                   className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
                 >Send Email</a>a>
@@ -412,7 +438,8 @@ const HomePage: React.FC = () => {
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
                 <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-                <a;
+                <a
+  );
                   href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
                   target="_blank"
                   rel="noopener noreferrer"
@@ -427,6 +454,6 @@ const HomePage: React.FC = () => {
       </div>
     </>
   )
-};
-
-export default HomePag;e;
+}
+export default HomePag;e
+  );

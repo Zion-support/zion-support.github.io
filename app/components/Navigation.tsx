@@ -1,11 +1,10 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
 import Link from 'next/link';
 import { Menu, X, ArrowRight } from 'lucide-react';
-
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const menuItems = [
     { name: 'Home', href: '/' },
     { name: 'AI Services', href: '/ai-services' },
@@ -13,7 +12,6 @@ const Navigation: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
-
   return (
     <nav className="bg-slate-900 text-white shadow-lg">
       <div className="container mx-auto px-4">
@@ -73,11 +71,11 @@ const Navigation: React.FC = () => {
               <ArrowRight className="w-4 h-4 inline ml-2" />
             </Link>
           </div>
-    </div>
-    </>
-  ) "}
-
-export default Navigation
-    </div>
+        </div>
+      </div>
+    </nav>
+  )
+  );
 }
-export default Navigation
+export default Navigation;
+  

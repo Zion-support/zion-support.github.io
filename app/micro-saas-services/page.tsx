@@ -1,8 +1,8 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
+import React from 'react'
+import Navigation from '../components/Navigation'
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
+  
 const Page: React.FC = () => {
   const features = [
     {
@@ -24,7 +24,6 @@ const Page: React.FC = () => {
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -74,17 +73,16 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
+  )
   );
-};
-
+}
 export default Page;
-
 export default PagePage;
-
 export const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
-  timezone: 'EST (Eastern Standard Time'};
+  timezone: 'EST (Eastern Standard Time'}
+  );

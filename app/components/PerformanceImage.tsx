@@ -1,6 +1,8 @@
 import React  from "react";
+  
 "use client"
 import { Helmet }  from "react-helmet-async";
+  
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -36,7 +38,6 @@ const PerformanceImagePage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
   return (
     <>
       
@@ -50,6 +51,7 @@ const PerformanceImagePage: React.FC = () => {
           </div>
         </div>
     </div>
+  )
   );
       const features = [
     {
@@ -60,8 +62,4 @@ const PerformanceImagePage: React.FC = () => {
     </div>)
   )
 }
-;
-
-
-
 export default PerformanceImagePag;e;"

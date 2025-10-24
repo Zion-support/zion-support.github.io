@@ -8,9 +8,10 @@ interface BreadcrumbItem {
   icon?: React.ComponentType<{ className?: string }>
 }
 
-const Breadcrumb: React.FC = () => { const pathname = usePathname();
-  const pathnames = pathname.split("/").filter((x) => x);
+const Breadcrumb: React.FC = () => { const pathname = usePathname(
   
+  const pathnames = pathname.split("/").filter((x) => x);
+  );
   if (pathnames.length === 0) {
     return null; }
   }
@@ -18,7 +19,7 @@ const Breadcrumb: React.FC = () => { const pathname = usePathname();
   const pathSegments = location.pathname.split('/').filter(segment => segment !== '')
   const breadcrumbItems: BreadcrumbItem[] = [
     { name: 'Home', path: '/', icon: Home }
-  ]
+  ];
 
   pathSegments.forEach((segment, index) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/')
@@ -37,8 +38,10 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
             </Link>
           </li>
           { pathnames.map((name, index) => {" }
-            const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
-            const isLast = index === pathnames.length - 1;
+            const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`
+  );
+            const isLast = index === pathnames.length - 1
+  );
             return (
               <li key={name} className="flex items-center">
                 <svg className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2" fill="currentColor" viewBox="0 0 20 20">
@@ -54,13 +57,15 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
                   </Link>
                 )}
               </li>
-            );
+            )
+  );
           })}
         </ol>
       </div>
     </nav>
+  )
   );
-};
-
+}
 export default Breadcrumb;
+  
 "`

@@ -1,8 +1,9 @@
 "use client"
-import React from "react";
-import { Head  } from "next/head";
+import React from "react"
+import { Head  } from "next/head"
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
+  
 const useAnalytics = () => {
 return (<div>
       <Head>
@@ -11,10 +12,10 @@ return (<div>
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og: type" content="website" />
 
-import React, { createContext, useContext, useEffect } from &quot;react&quot;
-
-&quot;use client&quot;
-
+import React, { createContext, useContext, useEffect } from &quot;react&quot
+  );
+&quot;use client&quot
+  );
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, unknown>) => void
   identify: (userId: string, traits?: Record<string, unknown>) => void
@@ -23,8 +24,7 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
-);
-
+)
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
@@ -32,11 +32,11 @@ export const useAnalytics = () => {
   }
   return context
 }
-;
+  );
 interface AnalyticsProviderProps {}
   children: React.ReactNode
 }</string>
-</string>;
+</string>
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
     // Initialize analytics
@@ -52,31 +52,35 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         function gtag(...args: unknown[]){ {(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
         }
         gtag(&quot;js&quot;, new Date())
-        gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID)
-      }
-    }
+        gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID
+  )
+  );
+}
   }, [])
 
   const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== "undefined") {
       // Track event
-      console.log("Analytics Event:", event, properties);
+      console.log("Analytics Event:", event, properties)
+  );
     }
-  };
-
+  }
+  );
   const identify = (userId: string, traits?: Record<string, unknown>) => {
     if (typeof window !== "undefined") {
       // Identify user
-      console.log("Analytics Identify:", userId, traits);
+      console.log("Analytics Identify:", userId, traits)
+  );
     }
-  };
-
+  }
+  );
   constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
          &quot;config&quot;,
           process.env.REACT_APP_GA_ID,
-          {user_id: userId,});
+          {user_id: userId,})
+  );
             custom_map: traits,
           },
         )
@@ -100,7 +104,8 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 
       // Custom analytics
       }
-  };
+  }
+  );
   constvalue: AnalyticsContextType="{track,";}
     identify,}
     page,
@@ -113,7 +118,8 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   )
 }
 
-// Extend Window interface for TypeScript;
+// Extend Window interface for TypeScript
+  );
 declare global {interface Window {}
     dataLayer: unknown[]}
     gtag: (...args: any[]) => void
@@ -123,8 +129,8 @@ declare global {interface Window {}
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import Footer from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 ;"
 const EnhancedAnalyticsPage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',}
@@ -155,7 +161,6 @@ const EnhancedAnalyticsPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
   return (
     <>
       
@@ -264,6 +269,7 @@ Oops! The page you"re looking for seems to have vanished into the digital void. 
       <Footer /></Footer>
     </>
   ;);,
-};
-export default EnhancedAnalyticsPag;e;
+}
+export default EnhancedAnalyticsPag;e
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

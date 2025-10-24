@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState, useRef   } from "react";
+  
 interface UsePerformanceMonitorOptions { enabled?: boolean
 threshold?: number
 measureMemoryUsage?: boolean }
@@ -20,7 +21,7 @@ export const usePerformanceMonitor = () => { const [metrics, setMetrics ] = useS
 fps: "0",memoryUsage: "0",loadTime: "0",renderTime: "0 }) => {
  }
 })
-const [isMonitoringFPS, setIsMonitoringFPS ] = useState(false)
+const [isMonitoringFPS, setIsMonitoringFPS ] = useState(false);
   const frameCountRef = useRef(0)
   const lastTimeRef = useRef(performance.now())
 const measureMemoryUsage = useCallback(() => { 

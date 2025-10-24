@@ -1,7 +1,7 @@
 
 export default function sitemap() {
-  const baseUrl = 'https://ziontechgroup.com';
-
+  const baseUrl = 'https://ziontechgroup.com'
+  );
   return [
     {
       url: baseUrl,

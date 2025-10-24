@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white py-12">
@@ -56,3 +55,4 @@ const Footer: React.FC = () => {
 }
 
 export default Footer;
+  

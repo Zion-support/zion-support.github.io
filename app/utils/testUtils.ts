@@ -1,11 +1,12 @@
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 "use client";
 import React from 'react';
-
+  
 const testUtils.ts = () => {
-  return null;
-};
-
+  return null
+  );
+}
+  );
 <<<<<<< HEAD:app-broken/app/utils/testUtils.ts
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
 'use client'
@@ -18,12 +19,14 @@ const testUtils.ts = () => {
 condition: "() => boolean",timeout = 5000
 interval = 100</void>
 ): Promise<void> => {
-  const startTime = Date.now();
+  const startTime = Date.now()
+  );
   while (!condition()) {
 if (Date.now() - startTime > timeout) {
 throw new Error(`Timeout waiting for condition after${timeout}ms`)
     }
-    await wait(interv, a, l);
+    await wait(interv, a, l)
+  );
   }
 }
 /**
@@ -64,9 +67,10 @@ const keys = Array.from(this.store.keys())",return keys[index,] || null}
 
   removeItem(key: "string): void{",this.store.delete(key)
   }
-  setItem(key: "string",value: "string): void{",this.store.set(key, value)
+  setItem(key: "string",value: "string): void{",this.store.set(key, value
+  )
+  );
 }
-  }
 }
 /**
  * Create a mock localStorage for testing*/export const createMockStorage = (): MockStorage => {
@@ -82,8 +86,9 @@ value: "{",...global.window
         ...overrides)
 
 })
-writable: "true"})
-  }
+writable: "true"}
+  )
+  );
 }
 /**
  * Create a mock performance API*/export const createMockPerformance = (): Performance => {
@@ -151,8 +156,9 @@ return `http",s: "//example.com/${generateTestData.string(10)" }`
   date: "(): Date = > {",return new Date(Date.now() - Math.random() * 365*24*60*60*1000)
   }</Window>
 array: "<T>(generato",r: "() => T",length = 5): T[] => {
-return Array.from({ length }, generator)
-  }
+return Array.from({ length }, generator
+  )
+  );
 }
 /**
  * Deep clone an object*/</T>
@@ -168,9 +174,9 @@ return JSON.parse(JSON.stringify(obj))
 /**
  * Spy on console methods*/export class ConsoleSpy{
 private originalConsole: "Console
-private logs: string[] = []
-private errors: string[] = []
-private warning",s: "string[] = []
+private logs: string[] = [];
+private errors: string[] = [];
+private warning",s: "string[] = [];
 constructor() {;"}
 this.originalConsole = { ...console }
     this.mock()
@@ -186,27 +192,25 @@ console.error = (...args: "unknown[]) => {",this.errors.push(args.map(String).jo
     }
 
     //eslint-disable-next-line no-console
-console.warn = (...args: "unknown[]) => {",this.warnings.push(args.map(String).join(" "))
-
-    }
-
-  }
-
+console.warn = (...args: "unknown[]) => {",this.warnings.push(args.map(String).join(" ")
+  )
+  );
+}
   getLogs(): string[] {
-return [...this.logs,]
+return [...this.logs,];
 }
   getErrors(): string[] {
-return [...this.errors,]
+return [...this.errors,];
 }
   getWarnings(): string[] {
-return [...this.warnings,]
+return [...this.warnings,];
 }
   restore(): void{
 Object.assign(console, this.originalConsole)
   }
   clear(): void{
-this.logs = []
-this.errors = []
+this.logs = [];
+this.errors = [];
 this.warnings = []}
 }
 }

@@ -1,6 +1,6 @@
 // Data transformation utility
 export interface TransformConfig {
-  fields?: string[]
+  fields?: string[];
   mappings?: Record<string, string>
   filters?: Record<string, any>
 }
@@ -14,7 +14,7 @@ export class DataTransformer {
 
   transform<T>(data: T[], config: TransformConfig = {}): T[] {
     const mergedConfig = { ...this.config, ...config }
-    let result = [...data]
+    let result = [...data];
 
     // Apply field filtering
     if (mergedConfig.fields) {
@@ -22,7 +22,7 @@ export class DataTransformer {
         const filtered: any = {}
         mergedConfig.fields!.forEach(field => {
           if (field in item) {
-            filtered[field] = (item as any)[field]
+            filtered[field] = (item as any)[field];
           }
         })
         return filtered as T
@@ -35,8 +35,8 @@ export class DataTransformer {
         const mapped: any = { ...item }
         Object.entries(mergedConfig.mappings!).forEach(([from, to]) => {
           if (from in mapped) {
-            mapped[to] = mapped[from]
-            delete mapped[from]
+            mapped[to] = mapped[from];
+            delete mapped[from];
           }
         })
         return mapped as T
@@ -59,7 +59,7 @@ export class DataTransformer {
     return data.reduce((groups, item) => {
       const groupKey = String(item[key])
       if (!groups[groupKey]) {
-        groups[groupKey] = []
+        groups[groupKey] = [];
       }
       groups[groupKey].push(item)
       return groups
@@ -68,14 +68,14 @@ export class DataTransformer {
 
   sortBy<T>(data: T[], key: keyof T, direction: 'asc' | 'desc' = 'asc'): T[] {
     return [...data].sort((a, b) => {
-      const aVal = a[key]
-      const bVal = b[key]
+      const aVal = a[key];
+      const bVal = b[key];
       
       if (aVal < bVal) return direction === 'asc' ? -1 : 1
       if (aVal > bVal) return direction === 'asc' ? 1 : -1
       return 0
-    })
-  }
+    }
+  )
+  );
 }
-
-export default DataTransformer
+export default DataTransformer;

@@ -1,5 +1,6 @@
 export const generateSitemap = () => {
-  const baseUrl = 'https://ziontechgroup.com';
+  const baseUrl = 'https://ziontechgroup.com'
+  );
   const staticPages = [
     '',
     '/services',
@@ -9,9 +10,10 @@ export const generateSitemap = () => {
     '/about',
     '/blog',
   ];
-
   return staticPages.map(page => ({
     url: `${baseUrl}${page}`,
     lastModified: new Date().toISOString(),
-  }));
-};
+  }))
+  );
+}
+  );

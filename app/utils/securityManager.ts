@@ -94,9 +94,10 @@ export class SecurityManager {
     for (const [sessionId, session] of this.sessions.entries()) {
       const timeSinceLastActivity = now.getTime() - session.lastActivity.getTime()
       if (timeSinceLastActivity > this.config.sessionTimeout) {
-        this.sessions.delete(sessionId)
-      }
-    }
+        this.sessions.delete(sessionId
+  )
+  );
+}
   }
 
   setupSecurityHeaders(): void {
@@ -112,9 +113,10 @@ export class SecurityManager {
 
     // Force HTTPS redirect
     if (this.config.requireHTTPS && location.protocol !== 'https:') {
-      location.replace('https:' + window.location.href.substring(window.location.protocol.length))
-    }
-  }
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length)
+  )
+  );
+}
 }
 
-export default SecurityManager
+export default SecurityManager;

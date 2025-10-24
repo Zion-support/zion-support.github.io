@@ -1,6 +1,8 @@
 "use client"
 import React from "react";
-interface EnhancedAccessibilityWrapperProps { className?: string;
+  
+interface EnhancedAccessibilityWrapperProps { className?: string
+  );
   children?: React.ReactNode; }
 }
 
@@ -10,8 +12,9 @@ const EnhancedAccessibilityWrapper: "React.FC<EnhancedAccessibilityWrapperProps>
 
     </div>
         </>
+  )
   );
   )
 }
 
-export default EnhancedAccessibilityWrapper
+export default EnhancedAccessibilityWrapper;

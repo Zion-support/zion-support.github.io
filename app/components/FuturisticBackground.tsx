@@ -124,5 +124,5 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
+}
 export default FuturisticBackgroundPag;e;"

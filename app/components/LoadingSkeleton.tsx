@@ -2,8 +2,9 @@
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
+  
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -30,14 +31,14 @@ const LoadingSkeletonPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
 
   const benefits = ['Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 return (<div>
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ className = '' }) => {
@@ -79,9 +80,10 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
         />
       ))}
     </div>
+  )
   );
-};
-
+}
+  );
               </button>
             </div>
           </div>
@@ -169,9 +171,10 @@ Contact Sales</button>
       <Footer /></Footer>
     </>
   );,
-};
-
+}
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 
 
-export default LoadingSkeletonPag;e;
+export default LoadingSkeletonPag;e
+  );

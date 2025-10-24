@@ -23,7 +23,7 @@ export class FormValidator {
 
   addRule(field: string, rule: FormValidationRule): void {
     if (!this.rules[field]) {
-      this.rules[field] = []
+      this.rules[field] = [];
     }
     this.rules[field].push(rule)
   }
@@ -33,16 +33,16 @@ export class FormValidator {
     const fieldErrors: Record<string, string[]> = {}
 
     for (const [field, value] of Object.entries(data)) {
-      const fieldRules = this.rules[field] || []
-      const fieldErrorList: string[] = []
+      const fieldRules = this.rules[field] || [];
+      const fieldErrorList: string[] = [];
       
       for (const rule of fieldRules) {
         const error = this.validateField(field, value, rule)
         if (error) {
-          fieldErrorList.push(error)
-        }
-      }
-
+          fieldErrorList.push(error
+  )
+  );
+}
       if (fieldErrorList.length > 0) {
         errors[field] = fieldErrorList
         fieldErrors[field] = fieldErrorList
@@ -125,16 +125,16 @@ export class FormValidator {
   }
 
   validateField(field: string, value: any): string[] {
-    const fieldRules = this.rules[field] || []
-    const errors: string[] = []
+    const fieldRules = this.rules[field] || [];
+    const errors: string[] = [];
     
     for (const rule of fieldRules) {
       const error = this.validateField(field, value, rule)
       if (error) {
-        errors.push(error)
-      }
-    }
-
+        errors.push(error
+  )
+  );
+}
     return errors
   }
 
@@ -144,10 +144,10 @@ export class FormValidator {
 
   getRules(field?: string): Record<string, FormValidationRule[]> | FormValidationRule[] {
     if (field) {
-      return this.rules[field] || []
+      return this.rules[field] || [];
     }
     return { ...this.rules }
   }
 }
 
-export default FormValidator
+export default FormValidator;

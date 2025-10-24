@@ -23,10 +23,9 @@ const PageFixedPage: React.FC = () => {
     {
       icon: <Settings className="w-8 h-8 text-orange-400" />,
       title: 'Custom Solutions',
-      description: 'Tailored compliance solutions that fit your specific industry requirements and regulations.'
-    }
+      description: 'Tailored compliance solutions that fit your specific industry requirements and regulations.';
+    };
   ];
-
   const benefits = [
     'Ensure regulatory compliance',
     'Reduce compliance risks',
@@ -35,7 +34,6 @@ const PageFixedPage: React.FC = () => {
     'Enhance security posture',
     'Save time and resources'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <Helmet>
@@ -114,7 +112,7 @@ const PageFixedPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
   return (
     <>
       <Helmet>
@@ -235,7 +233,8 @@ const PageFixedPage: React.FC = () => {
         </div>
       </section>
     </div>
+  )
   );
-};
-
-export default CompliancePageFixe;d;
+}
+export default CompliancePageFixe;d
+  );

@@ -20,7 +20,7 @@ export interface PerformanceMetric {
 
 export class PerformanceMonitor {
   private config: PerformanceMonitorConfig
-  private metrics: PerformanceMetric[] = []
+  private metrics: PerformanceMetric[] = [];
   private observer?: PerformanceObserver
 
   constructor(config: PerformanceMonitorConfig) {
@@ -53,7 +53,7 @@ export class PerformanceMonitor {
       }
     })
 
-    const entryTypes: PerformanceEntryType[] = []
+    const entryTypes: PerformanceEntryType[] = [];
     
     if (this.config.trackCLS) entryTypes.push('layout-shift')
     if (this.config.trackFID) entryTypes.push('first-input')
@@ -61,10 +61,10 @@ export class PerformanceMonitor {
     if (this.config.trackFCP) entryTypes.push('paint')
 
     if (entryTypes.length > 0) {
-      this.observer.observe({ entryTypes })
-    }
-  }
-
+      this.observer.observe({ entryTypes }
+  )
+  );
+}
   private processEntry(entry: PerformanceEntry): void {
     const timestamp = new Date()
     
@@ -118,14 +118,14 @@ export class PerformanceMonitor {
 
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
     if (navigation) {
-      this.processNavigationEntry(navigation)
-    }
-  }
-
+      this.processNavigationEntry(navigation
+  )
+  );
+}
   private trackResourceTiming(): void {
     if (typeof performance === 'undefined') return
 
-    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
+    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
     resources.forEach(resource => {
       this.processResourceEntry(resource)
     })
@@ -146,12 +146,12 @@ export class PerformanceMonitor {
 
     // Keep only the most recent metrics
     if (this.metrics.length > this.config.maxMetrics) {
-      this.metrics = this.metrics.slice(-this.config.maxMetrics)
-    }
-  }
-
+      this.metrics = this.metrics.slice(-this.config.maxMetrics
+  )
+  );
+}
   getMetrics(name?: string, category?: string): PerformanceMetric[] {
-    let filtered = [...this.metrics]
+    let filtered = [...this.metrics];
 
     if (name) {
       filtered = filtered.filter(m => m.name.includes(name))
@@ -178,10 +178,10 @@ export class PerformanceMonitor {
       FID: this.getAverageMetric('FID', 'web-vitals'),
       LCP: this.getAverageMetric('LCP', 'web-vitals'),
       FCP: this.getAverageMetric('FCP', 'web-vitals'),
-      TTFB: this.getAverageMetric('TTFB', 'navigation')
-    }
-  }
-
+      TTFB: this.getAverageMetric('TTFB', 'navigation'
+  )
+  );
+}
   stop(): void {
     if (this.observer) {
       this.observer.disconnect()
@@ -190,8 +190,8 @@ export class PerformanceMonitor {
   }
 
   clearMetrics(): void {
-    this.metrics = []
+    this.metrics = [];
   }
 }
 
-export default PerformanceMonitor
+export default PerformanceMonitor;

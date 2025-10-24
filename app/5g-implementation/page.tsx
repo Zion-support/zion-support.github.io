@@ -1,38 +1,36 @@
-import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, CheckCircle, Clock, Users, BarChart } from 'lucide-react';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
+import { Helmet } from 'react-helmet-async'
+import { Wifi, Zap, Shield, CheckCircle, Clock, Users, BarChart } from 'lucide-react'
+import React from "react"
+import Footer from '../components/Footer'
+import Head from "next/head"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import Footer from "../components/Footer"
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
+  
 const Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics'];
     },
     {
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target the right audience with AI-driven precision and accuracy.',
-      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking'];
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -63,30 +61,4 @@ const Page: React.FC = () => {
                 </ul>
               </div>
             ))}
-          </div>
-
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
-            </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  ;
-};
-
 export default Page;
-
-export default PagePage;
-
-export default FiveGImplementationPage;

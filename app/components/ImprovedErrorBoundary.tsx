@@ -5,37 +5,48 @@
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import monitoring from '../utils/monitoring';
-
+  
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetKeys?: Array<string | number>;
+  children: ReactNode
+  );
+  fallback?: ReactNode
+  );
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  );
+  resetKeys?: Array<string | number>
+  );
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorCount: number;
+  hasError: boolean
+  );
+  error: Error | null
+  );
+  errorInfo: ErrorInfo | null
+  );
+  errorCount: number
+  );
 }
 
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
+  );
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorCount: 0,
-    };
+    }
+  );
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
-    };
+    }
+  );
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
@@ -47,19 +58,20 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-    });
-
+    })
+  );
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
+  );
     }
 
     // Update state with error details
     this.setState((prevState) => ({
       errorInfo,
       errorCount: prevState.errorCount + 1,
-    }));
-
+    }))
+  );
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
 
@@ -73,7 +85,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             componentStack: errorInfo.componentStack,
           },
         },
-      });
+      })
+  );
     }
   }
 
@@ -81,11 +94,12 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
       const resetKeysChanged = this.props.resetKeys.some(
-        (key, index) => key !== prevProps.resetKeys![index]
-      );
-      
+        (key, index) => key !== prevProps.resetKeys![index];
+      )
+  );
       if (resetKeysChanged && this.state.hasError) {
-        this.resetErrorBoundary();
+        this.resetErrorBoundary()
+  );
       }
     }
   }
@@ -95,22 +109,26 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-    });
-  };
-
+    })
+  );
+  }
+  );
   handleReload = (): void => {
-    window.location.reload();
-  };
-
+    window.location.reload()
+  );
+  }
+  );
   handleGoHome = (): void => {
-    window.location.href = '/';
-  };
-
+    window.location.href = '/'
+  );
+  }
+  );
   render(): ReactNode {
     if (this.state.hasError) {
       // Use custom fallback if provided
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
+  );
       }
 
       // Default error UI
@@ -176,10 +194,12 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      )
+  );
     }
 
-    return this.props.children;
+    return this.props.children
+  );
   }
 }
 
@@ -274,6 +294,6 @@ const styles = {
     fontSize: '14px',
     color: '#999',
   },
-};
-
-export default ImprovedErrorBoundar;y;
+}
+export default ImprovedErrorBoundar;y
+  );

@@ -8,16 +8,16 @@ export interface AccessibilityIssue {
 }
 
 export interface AccessibilityReport {
-  issues: AccessibilityIssue[]
+  issues: AccessibilityIssue[];
   score: number
   passed: boolean
 }
 
 export class AccessibilityChecker {
-  private issues: AccessibilityIssue[] = []
+  private issues: AccessibilityIssue[] = [];
 
   checkElement(element: HTMLElement): AccessibilityIssue[] {
-    const issues: AccessibilityIssue[] = []
+    const issues: AccessibilityIssue[] = [];
     
     // Check for missing alt text on images
     if (element.tagName === 'IMG' && !element.getAttribute('alt')) {
@@ -39,15 +39,15 @@ export class AccessibilityChecker {
           type: 'error',
           message: 'Form element missing label or aria-label',
           element: element.tagName
-        })
-      }
-    }
-
+        }
+  )
+  );
+}
     return issues
   }
 
   checkDocument(): AccessibilityReport {
-    this.issues = []
+    this.issues = [];
     
     const allElements = document.querySelectorAll('*')
     allElements.forEach((element) => {
@@ -69,4 +69,4 @@ export class AccessibilityChecker {
   }
 }
 
-export default AccessibilityChecker
+export default AccessibilityChecker;

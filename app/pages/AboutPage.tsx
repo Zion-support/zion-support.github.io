@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 import { 
   CheckCircleIcon,
   UserGroupIcon,
@@ -8,7 +8,7 @@ import {
   RocketLaunchIcon,
   HeartIcon,
   ArrowRightIcon,
-  StarIcon
+  StarIcon;
 } from '@heroicons/react/24/outline';
 export default function; AboutPage() {
   const values = [
@@ -43,7 +43,6 @@ export default function; AboutPage() {
       description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'
     }
   ];
-
 return const values = [{
 icon: "Target",title: ""Mission-Driven"",description: ""We are committed to delivering innovative solutions that drive real business value and transformation.""
 }
@@ -58,7 +57,7 @@ icon: "Shield",title: ""Integrity"",description: ""We conduct business with hone
 }
   {
 icon: "Zap",title: ""Agility"",description: ""We adapt quickly to changing market conditions and client needs to deliver optimal solutions.""}
-  ]
+  ];
 const team = [{
 name: ""Kleber Santos"",role: ""CEO & Founder"",description: ""Visionary leader with 15+years in AI and technology innovation.""}
     {
@@ -67,7 +66,7 @@ name: ""Sarah Johnson"",role: ""CTO"",description: ""Technical expert specializi
 name: ""Michael Chen"",role: ""Head of Security"",description: ""Cybersecurity specialist with expertise in enterprise security solutions.""}
     {
 name: ""Emily Rodriguez"",role: ""Lead AI Engineer"",description: ""Machine learning expert focused on developing cutting-edge AI solutions.""}
-  ]
+  ];
 return (<div>
       <Helmet />
 

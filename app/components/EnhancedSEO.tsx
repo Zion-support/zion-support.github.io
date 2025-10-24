@@ -1,8 +1,9 @@
 "use client"
-import React from "react";
-import { Helmet  } from "react-helmet-async";
+import React from "react"
+import { Helmet  } from "react-helmet-async"
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe   } from "lucide-react";
 import { Navigation  } from "../components/Navigation";
+  
 const EnhancedSEOPage: "React.FC = () => {
 const benefits = [
 
@@ -15,7 +16,6 @@ const EnhancedSEO: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -35,11 +35,13 @@ const EnhancedSEO: React.FC = () => {
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
+                Call Now
+  );
               </button>
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
+                Email Us
+  );
               </button>
   const benefits = [
     'Advanced AI technology integration',
@@ -96,9 +98,8 @@ const EnhancedSEO: React.FC = () => {
     </>
 
     <//>
+  )
   );
-};
-
-
-
-export default EnhancedSE;O;
+}
+export default EnhancedSE;O
+  );

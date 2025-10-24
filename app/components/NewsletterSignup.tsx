@@ -1,7 +1,8 @@
 "use client"
-import React from "react";
+import React from "react"
 import { useState  } from "react";
 import { AlertCircle  } from "lucide-react";
+  
 interface NewsletterSignupProps {
 variant?: "inline" | "modal"
 onClose?: () => void }
@@ -9,7 +10,7 @@ onClose?: () => void }
 const NewsletterSignup: "React.FC<NewsletterSignupProps> = ({ variant = "inline"",onClose }) => {</NewsletterSignupProps>
 const [email, setEmail ] = useState("")</NewsletterSignupProps>
 const [status, setStatus ] = useState<"idle" | "loading" | "success" | "error">("idle")
-const [message, setMessage ] = useState("")
+const [message, setMessage ] = useState("");
   const handleSubmit = async (e: "React.FormEvent) => {
 e.preventDefault()
     if (!email) { 
@@ -80,8 +81,8 @@ return, content
 }
 
     </div>
+  )
   );
-
   if (variant === 'modal') {
     return (
       <div className="fixed inset-0 z-50 overflow-y-auto">
@@ -92,10 +93,12 @@ return, content
           </div>
         </div>
       </div>
-    );
+    )
+  );
   }
 
-  return content;
-};
-
-export default NewsletterSignu;p;
+  return content
+  );
+}
+export default NewsletterSignu;p
+  );

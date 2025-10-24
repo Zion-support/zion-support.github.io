@@ -1,10 +1,13 @@
 /**
 * Security Headers Configuration
 * Comprehensive security headers for production applications
-*/;
-export interface SecurityHeadersConfig {contentSecurityPolicy?: string;
-strictTransportSecurity?: string;
-xFrameOptions?: string;
+*/
+export interface SecurityHeadersConfig {contentSecurityPolicy?: string
+  );
+strictTransportSecurity?: string
+  );
+xFrameOptions?: string
+  );
 xContentTypeOptions?: string;}
 referrerPolicy?: string}
 permissionsPolicy?: string
@@ -13,7 +16,8 @@ export const defaultSecurityHeaders: SecurityHeadersConfig="{"
 // Content Security Policy}
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
 }
-// Content Security Policy;
+// Content Security Policy
+  );
 contentSecurityPolicy: ["
 "default-src 'self'","
 "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com","
@@ -27,9 +31,11 @@ contentSecurityPolicy: ["
 'upgrade-insecure-requests'].join('; '),
 // HTTP Strict Transport Security (HSTS);"
 strictTransportSecurity: 'max-age="63072000;" includeSubDomains; preload'
-// Prevent clickjacking;
+// Prevent clickjacking
+  );
 xFrameOptions: 'DENY'
-// Prevent MIME type sniffing;
+// Prevent MIME type sniffing
+  );
 xContentTypeOptions: 'nosniff'
 // Referrer Policy,
 referrerPolicy: 'strict-origin-when-cross-origin'
@@ -43,11 +49,13 @@ permissionsPolicy: [,
 'interest-cohort=()',
 'accelerometer=()',
 'gyroscope=()',
-'magnetometer=()'].join(', ')}
+'magnetometer=()'].join(', '
+  )
+  );
 }
 /**
 * Get security headers as key-value pairs
-*/;
+*/
 export function getSecurityHeaders() {
 {export function getSecurityHeaders() {</SecurityHeadersConfig>
 {customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
@@ -98,7 +106,7 @@ defaultSecurityHeaders: SecurityHeadersConfig="{/*" TODO: Fix JSX expression */}
 }
 /**
 * Get security headers as key-value pairs</string>
-*/</string>;
+*/</string>
 export function getSecurityHeaders() {
 {): Record<string, string> {/* TODO: Fix JSX expression */}</string>
 export const config=";"</string>
@@ -107,3 +115,4 @@ customConfig?: Partial<SecurityHeadersConfig>;}</SecurityHeadersConfig>
 ): Array<{key: string; value: string }> {}
 export const headers=";";"
 export default defaultSecurityHeaders;
+  

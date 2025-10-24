@@ -1,5 +1,6 @@
 //Analytics utilities for tracking user interactions and performance
 import React from "react";
+  
 interface AnalyticsEvent { category: string
   action: string
   label?: string
@@ -9,11 +10,13 @@ interface AnalyticsEvent { category: string
 }
 
 class Analytics { private static instance: Analytics
-  private events: AnalyticsEvent[] = []
+  private events: AnalyticsEvent[] = [];
   static getInstance(): Analytics {
     if (!Analytics.instance) {
-      Analytics.instance = new Analytics() }
-    }
+      Analytics.instance = new Analytics(
+  )
+  );
+}
     return Analytics.instance
   }
 
@@ -26,8 +29,10 @@ class Analytics { private static instance: Analytics
     //In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") { this.sendToAnalytics(event) }
     } else { 
-      console.log("Analytics Event:", event) }
-    }
+      console.log("Analytics Event:", event
+  )
+  );
+}
   }
 
   //Track page views
@@ -106,9 +111,10 @@ class Analytics { private static instance: Analytics
         event_label: event.label
         value: event.value
         ...event.custom_parameters }
-      })
-    }
-  }
+      }
+  )
+  );
+}
 }
 
 export const analytics = Analytics.getInstance()
@@ -124,10 +130,10 @@ export function useAnalytics() { return {
 
     trackPerformance: analytics.trackPerformance.bind(analytics)
 
-    trackError: analytics.trackError.bind(analytics)
- }
-  }
-
+    trackError: analytics.trackError.bind(analytics
+  )
+  );
+}
 }
 
 //Higher-order component for automatic page view tracking

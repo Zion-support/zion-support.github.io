@@ -1,13 +1,12 @@
 'use client'
-import React from 'react'
-import ErrorBoundary from './ErrorBoundary'
-
+import React from 'react';
+import ErrorBoundary from './ErrorBoundary';
   const benefits=";"
     'Gain competitive advantage with advanced technology'"
             <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
     }
-  ]
+  ];
 const benefits = [
     "Increase efficiency by up to 50%"
     "Reduce costs by 30% with automation"
@@ -21,7 +20,7 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -121,10 +120,11 @@ const benefits = [
       </div>
       <Footer />
     </>
+  )
   );
-};
-
-export default GlobalErrorBoundaryPag;e;
+}
+export default GlobalErrorBoundaryPag;e
+  );
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

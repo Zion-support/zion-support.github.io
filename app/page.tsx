@@ -1,24 +1,22 @@
-import React from 'react';
-import { Brain, Zap, Shield, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import React, { useCallback, useState, useEffect, Suspense } from 'react';
-import React from "react";
-import Link from "next/link";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import SEOHead from "./components/SEOHead";
-import Head from "next/head";
-import React from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import React from 'react'
+import { Brain, Zap, Shield, Globe } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import React, { useCallback, useState, useEffect, Suspense } from 'react'
+import React from "react"
+import Link from "next/link"
+import Navigation from "./components/Navigation"
+import Footer from "./components/Footer"
+import SEOHead from "./components/SEOHead"
+import Head from "next/head"
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
+  
 const Page: React.FC = () => {
   const features = [
     {
@@ -40,7 +38,6 @@ const Page: React.FC = () => {
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -99,11 +96,10 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
+  )
   );
-};
-
+}
 export default Page;
-
 export default function ServicePage() {
   return (
     <>
@@ -126,8 +122,8 @@ export default function ServicePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-                href="/contact
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105
             >
               Get Started
             </Link>
@@ -250,8 +246,8 @@ export default function ServicePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                href="/contact
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105
                 >
                   Get Started
                 </Link>
@@ -269,6 +265,6 @@ export default function ServicePage() {
         <Footer />
       </div>
     </>
-  );
-
+  )
 export default AppPage;
+  

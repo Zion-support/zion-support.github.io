@@ -1,8 +1,9 @@
 "use client"
-import React from "react";
-import { Helmet  } from "react-helmet-async";
+import React from "react"
+import { Helmet  } from "react-helmet-async"
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe   } from "lucide-react";
 import { Navigation  } from "../components/Navigation";
+  
 const EnhancedPerformanceMonitorPage: "React.FC = () => {
 const benefits = [
     "Increase efficiency by up to 50%"","Reduce costs by 30% with automation"
@@ -32,11 +33,10 @@ import { ArrowRight, Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail } from 'lucide-react'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf;
     };
+  
   ];
-
   const benefits=";"
     'Gain competitive advantage with advanced technology'"
             <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>

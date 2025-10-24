@@ -28,8 +28,8 @@ const TestRunnerPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
+    };
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -37,7 +37,7 @@ const TestRunnerPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -136,16 +136,17 @@ const TestRunnerPage: React.FC = () => {
       <Footer />
     </>
   );
-};
-
+  );
+}
+  );
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 "use client";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 import React from 'react';
+  
 const testRunner = (): JSX.Element => {
-  return null;
-};
-
-
-
-export default testRunne;r;
+  return null
+  );
+}
+export default testRunne;r
+  );

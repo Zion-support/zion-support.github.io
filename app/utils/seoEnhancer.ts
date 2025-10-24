@@ -1,9 +1,11 @@
 "use client"
 /**
-* SEO Enhancement Utilities;
-* Tools to improve search engine optimization;
+* SEO Enhancement Utilities
+  );
+* Tools to improve search engine optimization
+  );
 */
-// Generate meta tags;
+// Generate meta tags
 export const generateMetaTags=";"
 {name: 'title', content: data.title },
 {name: 'description', content: data.description },
@@ -31,7 +33,8 @@ content: data.twitterDescription || data.description
 name: 'twitter:image',
 content: data.twitterImage || data.ogImage || '/og-image.webp',
 // Generate meta tags;"
-export const generateMetaTags=";";
+export const generateMetaTags=";"
+  );
 t: data.keywords || '' },
 {/* TODO: Fix JSX expression */}
 t: 'index, follow' },
@@ -61,14 +64,17 @@ t: data.twitterTitle || data.title },
 }];
 return tags
 }
-// SEO Config interface;
+// SEO Config interface
+  );
 interface SEOConfig {title: string,}
 description: string,
 // SEO Config interface;}
 interface SEOConfig {
-  title: string;
+  title: string
+  );
 }
-description: string;
+description: string
+  );
 keywords: string[],
 canonicalUrl: string,
 ogImage: string,
@@ -76,24 +82,30 @@ ogType: string,
 twitterCard: string,
 twitterSite: string,
 twitterCreator: string,
-structuredData: Record<string, unknown>;
+structuredData: Record<string, unknown>
+  );
 robots: string,
 language: string,
 locale: string,
 siteName: string,
 author: string,
-publishedTime?: string;
-modifiedTime?: string;
-section?: string;
+publishedTime?: string
+  );
+modifiedTime?: string
+  );
+section?: string
+  );
 tags?: string[];}
 }
 // Default SEO config;"
-const defaultSEOConfig: SEOConfig="{";
+const defaultSEOConfig: SEOConfig="{"
+  );
 title: 'Zion Holdings',}
 description: 'Leading provider of AI-powered business solutions'}
-keywords: []
+keywords: [];
 // Default SEO config;}
-const defaultSEOConfig: SEOConfig="{};
+const defaultSEOConfig: SEOConfig="{}
+  );
 title: 'Zion Holdings',
 description: 'Leading provider of AI-powered business solutions',
 keywords: [],
@@ -120,7 +132,8 @@ export const baseStructure="{;}
 export const baseStructure=";"
 '@context': 'https://schema.org',
 '@type': data.type,
-name: data.name;
+name: data.name
+  );
 description: data.description,
 url: data.url || '',
 logo: data.logo || '',
@@ -128,7 +141,7 @@ sameAs: data.sameAs || []}
 }
 return {...baseStructure, ...data }
 }
-// SEO Enhancer class;
+// SEO Enhancer class
 export class SEOEnhancer {}
 private static instance: SEOEnhancer,
 // SEO Enhancer class;}
@@ -141,31 +154,38 @@ static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {}
 if (!SEOEnhancer.instance) {}
 SEOEnhancer.instance="new" SEOEnhancer(config);}
 }
-return SEOEnhancer.instance;
+return SEOEnhancer.instance
+  );
 }
-// Update page title;
+// Update page title
+  );
 updateTitle(title: string) {
 if (typeof document !== 'undefined') {
-  ;
+  );
 }
-// Update page title;
+// Update page title
+  );
 updateTitle(title: string) {,}
 if (typeof document !== 'undefined') {,}
 document.title="title;}
 }
 }
-// Update meta description;
+// Update meta description
+  );
 updateDescription(description: string) {,}
 this.updateMetaTag('description', description);}
 }
-// Update meta keywords;
+// Update meta keywords
+  );
 updateKeywords(keywords: string[]) {,}
 this.updateMetaTag('keywords', keywords.join(', '));}
 }
 // Update canonical URL;"
-updateCanonicalUrl(url: string) {let canonical: document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+updateCanonicalUrl(url: string) {let canonical: document.querySelector('link[rel="canonical"]') as HTMLLinkElement
+  );
 if (!canonical) {,"}
-canonical: "document.createElement('link'),};
+canonical: "document.createElement('link'),}
+  );
 canonical.rel="'canonical',"
 // Update page title;}
 updateTitle(title: string) {}
@@ -173,28 +193,35 @@ if (typeof document !== 'undefined') {}
 document.title="title;}
 }
 }
-// Update meta description;
+// Update meta description
+  );
 updateDescription(description: string) {}
 this.updateMetaTag('description', description);}
 }
-// Update meta keywords;
+// Update meta keywords
+  );
 updateKeywords(keywords: string[]) {}
 this.updateMetaTag('keywords', keywords.join(', '));}
 }
-// Update canonical URL;
+// Update canonical URL
+  );
 updateCanonicalUrl(url: string) {}
-let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
+  );
 if (!canonical) {}
 canonical="document.createElement('link')";"
-canonical.rel="'canonical'";
+canonical.rel="'canonical'"
+  );
 document.head.appendChild(canonical);}
 }
 canonical.href="url"
 }</SEOConfig>
-// Update Open Graph tags</SEOConfig>;
+// Update Open Graph tags</SEOConfig>
+  );
 updateOpenGraph(config: Partial<SEOConfig>) {,
 ,</SEOConfig>
-// Update Open Graph tags;}</SEOConfig>;
+// Update Open Graph tags;}</SEOConfig>
+  );
 updateOpenGraph(config: Partial<SEOConfig>) {}
 if (config.publishedTime) {}
 ogTags.push({property: 'og:published_time', content: config.publishedTime })
@@ -212,9 +239,11 @@ ogTags.forEach(({property, content }) => {}
 this.updateMetaTag(property, content);}
 })
 }</SEOConfig>
-// Update Twitter Card tags</SEOConfig>;
+// Update Twitter Card tags</SEOConfig>
+  );
 updateTwitterCard(config: Partial<SEOConfig>) {,</SEOConfig>
-// Update Twitter Card tags;}</SEOConfig>;
+// Update Twitter Card tags;}</SEOConfig>
+  );
 updateTwitterCard(config: Partial<SEOConfig>) {}
 export const twitterTags=";"
 {name: 'twitter:card', content: config.twitterCard || this.config.twitterCard },
@@ -227,20 +256,25 @@ twitterTags.forEach(({name, content }) => {}
 this.updateMetaTag(name, content);}
 })
 }</SEOConfig>
-// Update structured data</SEOConfig>;
-updateStructuredData(data: Record<string, unknown>) {// Update structured data;}</string>;
+// Update structured data</SEOConfig>
+  );
+updateStructuredData(data: Record<string, unknown>) {// Update structured data;}</string>
+  );
 updateStructuredData(data: Record<string, unknown>) {}
 export const script="document.createElement('script')";"
 script.type="'application/ld+json'";"
 script.textContent="JSON.stringify(data)"
 // Remove existing structured data;"
-export const existingScript = document.querySelector('script[type="application/ld+json"]');
+export const existingScript = document.querySelector('script[type="application/ld+json"]')
+  );
 if (existingScript) {}
 existingScript.remove();}
-// SEO Config interface;
+// SEO Config interface
+  );
 interface SEOConfig {/* TODO: Fix JSX expression */}
 }
-// Default SEO config;
+// Default SEO config
+  );
 const,"
 defaultSEOConfig: SEOConfig="{/*" TODO: Fix JSX expression */}
 a: {},
@@ -256,14 +290,16 @@ autho,
 r: 'Zion Holdings'
 }
 // Generate structured data;"
-export const generateStructuredData=";";
+export const generateStructuredData=";"
+  );
 t: config.tags.join(', ') })
 }
 ogTags.forEach(({property, content }) => {/* TODO: Fix JSX expression */}
 })
 }
 // Update Twitter Card tags;</string>
-updateTwitterCard(confi)</string>;
+updateTwitterCard(confi)</string>
+  );
 g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
 t: config.twitterCard || this.config.twitterCard },
 {/* TODO: Fix JSX expression */}
@@ -280,75 +316,95 @@ twitterTags.forEach(({name, content }) => {/* TODO: Fix JSX expression */}
 })
 }
 // Update structured data;</SEOConfig>
-updateStructuredData(dat)</SEOConfig>;
+updateStructuredData(dat)</SEOConfig>
+  );
 a: Record<string, unknown>) {/* TODO: Fix JSX expression */}
 }
 document.head.appendChild(scri, p, t)
 }
-// Update robots meta tag;
+// Update robots meta tag
+  );
 updateRobots(robots: string) {,}
 this.updateMetaTag('robots', robots);}
 }
-// Update language;
+// Update language
+  );
 updateLanguage(language: string) {,}
 if (typeof document !== 'undefined') {,}
 document.documentElement.lang="language;}
 }
 }
-// Update author;
+// Update author
+  );
 updateAuthor(author: string) {,}
 this.updateMetaTag('author', author);}
 }
-// Helper method to update meta tags;
+// Helper method to update meta tags
+  );
 private updateMetaTag(nameOrProperty: string, content: string) {,}
 if (typeof document="==" 'undefined') return;}
 let meta=";";"
-meta="document.createElement('meta')";
+meta="document.createElement('meta')"
+  );
 if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,
 // Update robots meta tag;}
 updateRobots(robots: string) {}
 this.updateMetaTag('robots', robots);}
 }
-// Update language;
+// Update language
+  );
 updateLanguage(language: string) {}
 if (typeof document !== 'undefined') {}
 document.documentElement.lang="language;}
 }
 }
-// Update author;
+// Update author
+  );
 updateAuthor(author: string) {}
 this.updateMetaTag('author', author);}
 }
-// Helper method to update meta tags;
+// Helper method to update meta tags
+  );
 private updateMetaTag(nameOrProperty: string, content: string) {}
 if (typeof document="==" 'undefined') return;"
 let meta=";";"
-meta="document.createElement('meta')";
+meta="document.createElement('meta')"
+  );
 if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {}
 meta.setAttribute('property', nameOrProperty);}
 } else {
   
 }
 meta.setAttribute('name', nameOrProperty);}
-// Update robots meta tag;
-updateRobots(robot);
+// Update robots meta tag
+  );
+updateRobots(robot)
+  );
 s: string) {/* TODO: Fix JSX expression */}
 }
-// Update language;
-updateLanguage(languag);
+// Update language
+  );
+updateLanguage(languag)
+  );
 e: string) {/* TODO: Fix JSX expression */}
 }
 }
-// Update author;
-updateAuthor(autho);
+// Update author
+  );
+updateAuthor(autho)
+  );
 r: string) {/* TODO: Fix JSX expression */}
 }
-// Helper method to update meta tags;
-private updateMetaTag(nameOrPropert,);
-y: string, conten);
+// Helper method to update meta tags
+  );
+private updateMetaTag(nameOrPropert,)
+  );
+y: string, conten)
+  );
 t: string) {/* TODO: Fix JSX expression */}
 `meta[name="${nameOrProperty}], meta[property="${nameOrProperty}]`
-) as HTMLMetaElement;
+) as HTMLMetaElement
+  );
 if (!meta) {/* TODO: Fix JSX expression */}
 } else {/* TODO: Fix JSX expression */}
 }
@@ -356,36 +412,45 @@ document.head.appendChild(meta)
 }
 meta.content="content"
 }</string>
-// Generate sitemap</string>;
+// Generate sitemap</string>
+  );
 generateSitemap(pages: Array<{url: string; lastmod: string; changefreq: string; priority: string }>)"
-) {const sitemap=";};
+) {const sitemap=";}
+  );
 generateSitemap();}
 pages: Array<{url: string; lastmod: string; changefreq: string; priority: string }>
 ) {}
 export const sitemap=";"
 .join('\n')}
-</urlset>`;
+</urlset>`
+  );
 return sitemap
 }
-// Generate robots.txt;
+// Generate robots.txt
+  );
 generateRobotsTxt(disallowPaths: string[] = []) {,}
 export const robots=";"
 // Generate robots.txt;}
 generateRobotsTxt(disallowPaths: string[] = []) {}
 export const robots=";"
 ${disallowPaths.map(path => `Disallow: ${path}`).join('\n')}
-Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
+Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
+  );
 return robots
 }
-// Initialize SEO;
-initialize(config?: Partial<SEOConfig>) {// Initialize SEO;}</SEOConfig>;
+// Initialize SEO
+  );
+initialize(config?: Partial<SEOConfig>) {// Initialize SEO;}</SEOConfig>
+  );
 initialize(config?: Partial<SEOConfig>) {}
 if (typeof document="==" 'undefined') return;}
-export const finalConfig=";";
+export const finalConfig=";"
+  );
 this.updateStructuredData(finalConfig.structuredData);}
 }
 }
-// Get current SEO data;
+// Get current SEO data
+  );
 getCurrentSEO() {}
 if (typeof document="==" 'undefined') return {}
 return {title: document.title}
@@ -416,7 +481,8 @@ export const baseStructure="{;}
 export const baseStructure=";"
 '@context': 'https://schema.org',
 '@type': data.type,
-name: data.name;
+name: data.name
+  );
 description: data.description,
 url: data.url || '',
 logo: data.logo || '',
@@ -439,8 +505,10 @@ contactPoint: {}
 telephone: '+1-555-0123',
 contactType: 'customer service'}
 // Generate sitemap;</SEOConfig>
-generateSitemap(page,</SEOConfig>;
-s: Array<{/* TODO: Fix JSX expression */});
+generateSitemap(page,</SEOConfig>
+  );
+s: Array<{/* TODO: Fix JSX expression */})
+  );
 y: string }>)
 ) {
   /* TODO: Fix JSX expression */
@@ -456,19 +524,26 @@ y: string }>)
 )
 .join(')
 ')}`
-</urlset>`;
+</urlset>`
+  );
 return sitemap
 }
-// Generate robots.txt;
-generateRobotsTxt(disallowPath);
-s: string[] = []) {/* TODO: Fix JSX expression */}`;
+// Generate robots.txt
+  );
+generateRobotsTxt(disallowPath)
+  );
+s: string[] = []) {/* TODO: Fix JSX expression */}`
+  );
 w: ${path}`).join('
 ')}
-Sitema,`;
-p: ${this.config.canonicalUrl}/sitemap.xml`;
+Sitema,`
+  );
+p: ${this.config.canonicalUrl}/sitemap.xml`
+  );
 return robots
 }
-// Initialize SEO;
+// Initialize SEO
+  );
 initialize(config?: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
 export const finalConfig=";";"
 if (typeof document="==" 'undefined') return {}
@@ -495,7 +570,8 @@ potentialAction: {}
 '@type': 'SearchAction',
 target: {}
 '@type': 'EntryPoint',`}
-urlTemplate: `${data.url}/search?q="{search_term_string};
+urlTemplate: `${data.url}/search?q="{search_term_string}
+  );
 if (data.type="==" 'WebSite') {/* TODO: Fix JSX expression */}`;"
 e: `${data.url}/search?q="{search_term_string}`"
 },"
@@ -527,9 +603,12 @@ url: data.logo || '/logo.webp'}
 }
 },
 datePublished: new Date().toISOString(),
-dateModified: new Date().toISOString()}
+dateModified: new Date().toISOString(
+  )
+  );
 }
-return baseStructure;
+return baseStructure
+  );
 }
 // Generate sitemap data;"
 export const generateSitemapData=";"
@@ -546,18 +625,20 @@ loc: page.url,
 lastmod: page.lastModified,
 changefreq: page.changeFrequency,
 priority: page.priority}
-}))
-}
+})
+  )
+  );
 }
 }
 // Generate robots.txt content;"
 export const generateRobotsTxt=";";"
-export const disallowRules="disallowPaths.map(path" => `Disallow: ${path}`).join('\n');
+export const disallowRules="disallowPaths.map(path" => `Disallow: ${path}`).join('\n')
+  );
 return `User-agent: *,
 ${ disallowRul, e, s }
 Sitemap: ${ sitemapU, r, l }`
 }
-// SEO validation;
+// SEO validation
 export const validateSEOData="(data:" {// title: string; description: string; url: string}) => {;}
 if (data.type="==" 'Article') {/* TODO: Fix JSX expression */}
 },
@@ -568,29 +649,35 @@ r: {/* TODO: Fix JSX expression */}
 datePublishe,
 d: new Date().toISOString(),
 dateModifie,
-d: new Date().toISOString()
+d: new Date().toISOString(
+  )
+  );
 }
+return baseStructure
+  );
 }
-return baseStructure;
-}
-// Generate sitemap data;
+// Generate sitemap data
 export const generateSitemapData = (page
 s: Array<{
   /* TODO: Fix JSX expression */
 }
 // Generate sitemap data;"
-export const generateSitemapData=";";
+export const generateSitemapData=";"
+  );
 w: ${path}`).join('
-');`;
+');`
+  );
 return `User-agen,
 t: *
 ${disallowRules}
-Sitema,`;
+Sitema,`
+  );
 p: ${sitemapUrl}`
 }
 // SEO validation;"
 export const validateSEOData=";"</SEOConfig>
-// Check title length;,</SEOConfig>;
+// Check title length;,</SEOConfig>
+  );
 if (data.title.length < 30) {,) => {}
 return (
 $3
@@ -598,8 +685,9 @@ $3
 }
 // SEO validation;}
 export const validateSEOData="(data:" {// title: string; description: string; url: string}) => {}
-const issues: string[] = []
-// Check title length;
+const issues: string[] = [];
+// Check title length
+  );
 if (data.title.length < 30) {}
 issues.push('Title is too short (recommended: 30-60 characters)');}
 } else if (data.title.length > 60) {
@@ -607,7 +695,8 @@ issues.push('Title is too short (recommended: 30-60 characters)');}
 }
 issues.push('Title is too long (recommended: 30-60 characters)');}
 }
-// Check description length;
+// Check description length
+  );
 if (data.description.length < 120) {// Check description length;}
 if (data.description.length < 120) {}
 issues.push('Description is too short (recommended: 120-160 characters)');}
@@ -616,12 +705,14 @@ issues.push('Description is too short (recommended: 120-160 characters)');}
 }
 issues.push('Description is too long (recommended: 120-160 characters)');}
 }
-// Check URL format;
+// Check URL format
+  );
 if (!data.url.startsWith('http')) {// Check URL format;}
 if (!data.url.startsWith('http')) {}
 issues.push('URL should start with http:// or https://');}
 }
-return issues;
+return issues
+  );
 }
 // Generate breadcrumb data;"
 export const generateBreadcrumbData=";"
@@ -632,19 +723,24 @@ export const generateBreadcrumbData=";"
 '@type': 'BreadcrumbList',
 itemListElement: breadcrumbs.map((crumb, index) => ({}
 '@type': 'ListItem',
-position: index + 1;
+position: index + 1
+  );
 name: crumb.name,
 item: crumb.url}
-}))
-}
+})
+  )
+  );
 }
 // Initialize SEO enhancements;"
 export const initializeSEOEnhancements=";";"
 if (typeof document="==" 'undefined') return
 // Add structured data for organization;"
-export const organizationData=";";
-type: 'Organization');
-name: 'Zion Holdings');
+export const organizationData=";"
+  );
+type: 'Organization')
+  );
+name: 'Zion Holdings')
+  );
 description: 'Leading provider of AI-powered business solutions'),
 url: 'https://zion.app'),
 logo: 'https://zion.app/logo.webp'),
@@ -652,7 +748,8 @@ logo: 'https://zion.app/logo.webp'),
 export const initializeSEOEnhancements=";";"
 if (typeof document="==" 'undefined') return
 // Add structured data for organization;"
-export const organizationData=";";
+export const organizationData=";"
+  );
 type: 'Organization',
 name: 'Zion Holdings',
 description: 'Leading provider of AI-powered business solutions',
@@ -662,7 +759,8 @@ sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-
 });"
 export const script="document.createElement('script')";"
 script.type="'application/ld+json'";"
-script.textContent="JSON.stringify(organizationData)";
+script.textContent="JSON.stringify(organizationData)"
+  );
 document.head.appendChild(script)
 }
 if (data.title.length < 30) {}
@@ -671,25 +769,29 @@ issues.push('Title is too short (recommended: 30-60 characters)');}
 issues.push('Title is too long (recommended: 30-60 characters)')
 ;}
 }
-// Check description length;
+// Check description length
+  );
 if (data.description.length < 120) {/* TODO: Fix JSX expression */}
 } else if (data.description.length > 160) {/* TODO: Fix JSX expression */}
 }
-// Check URL format;
+// Check URL format
+  );
 if (!data.url.startsWith('http')) {/* TODO: Fix JSX expression */}
 }
 } else if (data.description.length > 160) {
   /* TODO: Fix JSX expression */
 }
 }
-// Check URL format;
+// Check URL format
+  );
 if (!data.url.startsWith('http')) {
   /* TODO: Fix JSX expression */
 }
 }
-return issues;
+return issues
+  );
 }
-// Generate breadcrumb data;
+// Generate breadcrumb data
 export const generateBreadcrumbData = (breadcrumb
 s: Array<{
   /* TODO: Fix JSX expression */
@@ -698,7 +800,8 @@ s: Array<{
 export const generateBreadcrumbData=";";"
 export const script="document.createElement('script')";"
 script.type="'application/ld+json'";"
-script.textContent="JSON.stringify(organizationData)";
+script.textContent="JSON.stringify(organizationData)"
+  );
 document.head.appendChild(script)
 }
 "`

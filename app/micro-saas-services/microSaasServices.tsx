@@ -50,15 +50,14 @@ const MicroSaasServicesPage: React.FC = () => {
       description: 'Bank-level security with advanced encryption and compliance standards.',
       benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
-  ]
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02;
+  ];
   const benefits = [
     'Increase productivity by 40%',
     'Reduce operational costs by 30%',
     'Improve decision making with data insights',
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology';
   ];
-
   return (
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -150,19 +149,22 @@ const MicroSaasServicesPage: React.FC = () => {
       </div>
       <Footer />
     </React.Fragment>
+  )
   );
-};
-
+}
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6f1b
 
 
 =======
     </>
+  )
   );
-};
-
+}
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8f83
 export default MicroSaasServicesPage;
+  
 =======
       description: 'Bank-level security with encryption and compliance standards'
     },
@@ -171,7 +173,7 @@ export default MicroSaasServicesPage;
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ]
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -181,7 +183,7 @@ export default MicroSaasServicesPage;
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><>
 <//div>
@@ -358,5 +360,5 @@ export default MicroSaasServicesPage;
 </div><//div>
   )
 }
-export default MicroSaasServicesPage
+export default MicroSaasServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be4b

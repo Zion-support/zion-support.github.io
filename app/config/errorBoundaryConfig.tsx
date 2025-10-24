@@ -2,49 +2,59 @@ import React from 'react'
 /**
 * Error Boundary Configuration
 * Centralized configuration for error handling across the application
-*/;
-import React from 'react'
+*/
 export interface ErrorBoundaryConfig {/**
-* Whether to log errors to console
+* Whether to log errors to console;
 */;
+  
 logErrors: boolean,
 /**
 * Whether to show detailed error messages
-*/;
+*/
+  );
 showDetails: boolean,
 /**
 * Whether to send errors to external service
-*/;
+*/
+  );
 reportErrors: boolean,
 /**
 * Error reporting endpoint
-*/;
+*/
+  );
 reportingEndpoint?: string
 /**
 * Whether to show error overlay in development
-*/;
+*/
+  );
 showErrorOverlay: boolean,
 /**
 * Maximum number of errors to store
-*/;
+*/
+  );
 maxStoredErrors: number,
 /**
 * Custom error messages by error type
-*/;
+*/
+  );
 customMessages: Record<string, string>
 /**
 * Fallback UI components
 */;}</string>
-fallbackComponents: {}</string>;
-default: React.ComponentType<{error: Error; resetError: () => void }>;
-network: React.ComponentType<{error: Error; resetError: () => void }>;
+fallbackComponents: {}</string>
+  );
+default: React.ComponentType<{error: Error; resetError: () => void }>
+  );
+network: React.ComponentType<{error: Error; resetError: () => void }>
+  );
 notFound: React.ComponentType<{error: Error; resetError: () => void }>
 }
 }
 /**
 * Default error messages
-*/;
-export const DEFAULT_ERROR_MESSAGES=";";
+*/
+export const DEFAULT_ERROR_MESSAGES=";"
+  );
 default: 'Something went wrong. Please try again.',
 network: 'Network connection issue. Please check your internet connection.',
 notFound: 'The requested resource was not found.',
@@ -54,7 +64,7 @@ validation: 'Validation error. Please check your input.',
 }
 /**
 * Get error boundary configuration based on environment
-*/;
+*/
 export function getErrorBoundaryConfig(){: ErrorBoundaryConfig {return {
 logErrors: true,
 showDetails: isDevelopment,
@@ -72,7 +82,8 @@ notFound: NotFoundFallback,
 }
 /**
 * Default error fallback component
-*/;
+*/
+  );
 function DefaultErrorFallback() { {=> void }) {return ("
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>"
@@ -98,11 +109,13 @@ d="M6 18L18 6M6 6l12 12"
 )}
 <div className="mt-6 flex gap-4"></div>
 <button;"
-onClick="{resetError};
+onClick="{resetError}
+  );
 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Try Again</button>
 <button;"
 onClick="{()" =>(window.location.href="'/')}</button">;"
-className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">;
+className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+  );
 Go Home
 </
 </div>
@@ -112,7 +125,8 @@ Go Home
 }
 /**
 * Network error fallback component
-*/;
+*/
+  );
 function NetworkErrorFallback() { {=> void }) {return ("
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>"
@@ -126,7 +140,8 @@ viewBox="0 0 24 24"
 <path;"
 strokeLinecap="round";"}
 strokeLinejoin="round"}
-strokeWidth="{2};
+strokeWidth="{2}
+  );
 d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"
 /></path>
 </svg>
@@ -144,7 +159,8 @@ className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 }
 /**
 * Not found error fallback component
-*/;
+*/
+  );
 function NotFoundFallback(){: JSX.Element {return ("
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
 <div className="max-w-md w-full text-center"></div>"
@@ -154,12 +170,14 @@ function NotFoundFallback(){: JSX.Element {return ("
 <div className="mt-6 flex gap-4 justify-center"></div>
 <button});"
 onClick="{()" =>(window.location.href="'/')}</button">;"
-className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">;
+className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+  );
 Go Home
 </
 <button;"
 onClick="{()" =>window.history.back()}</button>;"
-className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">;
+className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+  );
 Go Back
 </</div>
 </div>
@@ -169,7 +187,7 @@ Go Back
 }
 /**
 * Get error type from error object
-*/;
+*/
 export function getErrorType(error: Error){: keyof typeof DEFAULT_ERROR_MESSAGES {if (error.message.includes('Network') || error.message.includes('fetch')) {}
 return 'network'
 }
@@ -189,7 +207,7 @@ return 'default'
 }
 /**
 * Format error for logging
-*/;
+*/
 export function formatErrorForLogging(error: Error){: Record<string, unknown> {return {
 message: error.message,
 stack: error.stack,

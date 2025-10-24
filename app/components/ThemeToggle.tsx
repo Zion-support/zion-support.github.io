@@ -1,7 +1,7 @@
 "use client"
-import React from "react";
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
+import React from "react"
+import { Link  } from "next/link"
+import { ArrowRight  } from "lucide-react"
 export default function ThemeToggle() {
 
 return (<div className="[^"]*"> <div className="[^"]*">,<h1 className="[^"]*">
@@ -26,7 +26,8 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', childr
     <div className="{`themetoggle" ${className}`}>
       {children}
     </div>
-  );
+  
+  
 };
-
 export default ThemeToggle;
+  

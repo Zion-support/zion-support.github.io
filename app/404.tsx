@@ -1,14 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
-
+  
   const popularPages = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">
@@ -125,9 +124,11 @@ import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
         </div>
       </div>
     </div>
+  )
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 
-export default NotFoun;d;
+export default NotFoun;d
+  );

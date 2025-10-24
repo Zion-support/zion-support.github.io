@@ -1,17 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import { CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-'use client';
-import React from 'react';
-'use client';
-import { Helmet } from 'react-helmet-async';
-
-
+  
+'use client'
+  );
+'use client'
+  );
 const AiCustomerSupportPage: React.FC = () => {
   return (
     <>
@@ -49,14 +46,11 @@ const AiCustomerSupportPage: React.FC = () => {
         </div>
       </div>
     </>
+  )
   );
-
-};
-
+}
 export default AiCustomerSupportPage;
-
 export default AiCustomerSupportPage;
-
 export default AiAutomationPage;
-
 export default AicustomersupportPage;
+  

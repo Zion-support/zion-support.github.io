@@ -77,13 +77,13 @@ method: "PUT",body: "data?JSON.stringify(data) : undefined",headers }
 async delete<T>(endpoint: "string",headers?: Record<string, string>): Promise<ApiResponse<T>> { </ApiResponse>
 return this.request<T>(endpoint, {
 method: "DELETE",headers }
-    })
-  }
+    }
+  )
+  );
 }
-
 const apiClient = new ApiClient()
 
-export default apiClient
+export default apiClient;
 export { ApiClient, type, ApiResponse, type, ApiError  };</T>
 }
 "`

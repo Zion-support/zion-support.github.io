@@ -1,8 +1,8 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
+import React from 'react'
+import Navigation from '../components/Navigation'
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
+  
 const Page: React.FC = () => {
   const features = [
     {
@@ -24,7 +24,6 @@ const Page: React.FC = () => {
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -74,9 +73,9 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
+  )
   );
-};
-
+}
 export default Page;
-
 export default PagePage;
+  

@@ -1,7 +1,8 @@
 "use client"
-import React from "react";
+import React from "react"
 import { useState  } from "react";
 import { MessageSquare, Mail, Phone, Send, CheckCircle   } from "lucide-react";
+  
 interface FormData { 
 name: "string;",email: "string
   phone: string;",company: "string
@@ -13,7 +14,7 @@ name: "string;",email: "string
 const ContactForm: "React.FC = () => { 
 const [formData",setFormData,] = useState<FormData>({" }
 name: "",email: "",phone: "",company: "",message: "",service: "" "})
-const [isSubmitting, setIsSubmitting ] = useState(false)
+const [isSubmitting, setIsSubmitting ] = useState(false);
   const [isSubmitted, setIsSubmitted ] = useState(false);</FormData>
 </FormData>
 const handleChange = () => { setFormData({)
@@ -42,7 +43,7 @@ const services = ["AI Solutions
     "Data Analytics
     "DevOps
     "Consulting
-  ]
+  ];
 if(isSubmitted) { return (</HTMLInputElement> <>
 
       </HTMLInputElement> <div className="[^"]*"> <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -149,12 +150,14 @@ Send Message
     </div>
               </div>
         </>
+  )
   );
         </button>
       </form>
       </div>
     </>
-  ) }
+  )
+  );
 }
-
-export default ContactFor;m;
+export default ContactFor;m
+  );

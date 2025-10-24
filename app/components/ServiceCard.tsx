@@ -22,8 +22,8 @@ const ServiceCardPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -33,7 +33,6 @@ const ServiceCardPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const ServiceCard: React.FC<ServiceCardProps> = ({ className = '' }) => {
   return (
     <div className="{`servicecard" ${className}`}>
@@ -133,10 +132,14 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
-price?: string;
-popular?: boolean;
-onSelect?: () =>void;
+}
+  );
+price?: string
+  );
+popular?: boolean
+  );
+onSelect?: () =>void
+  );
 class Nam e?: string}constServiceCard:React.FC<ServiceCardProp s>= ({title,
 description,
 features,
@@ -146,7 +149,8 @@ onSelect,}
 className="''"
 }) => {}</ServiceCardProp>
 return (</ServiceCardProp>"
-<div className="{`bg-white/5" backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${});
+<div className="{`bg-white/5" backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${})
+  );
 popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 }`}>{popular && (</div>
 <div className=&quot;flex items-center gap-2 mb-4&quot;></div>
@@ -172,7 +176,8 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 </div>
 )}
 {onSelect && (
-<button;
+<button
+  );
 onClick={onSelect}
 className=&quot;w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group&quot;></button>
 Get Started

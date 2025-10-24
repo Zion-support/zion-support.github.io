@@ -1,9 +1,10 @@
-'use client';
+'use client'
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from "lucide-react";
+  
 interface Testimonial {
   id: number
   name: string
@@ -12,10 +13,11 @@ interface Testimonial {
   rating: number
   avatar?: string,
 }
-;
+  );
 const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  
   const [isVisible, setIsVisible] = useState(false);
-
+  
   const testimonials: Testimonial[] = [
     {,
       id: 1,"
@@ -37,7 +39,6 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
       rating: 5
     }
   ];
-
   useEffect(() => {setIsVisible(true);"
     const interval=";""
     <div className=""bg-gradient-to-br" from-slate-900 via-purple-900 to-slate-900"></div>"
@@ -46,8 +47,10 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
           <h1 className=""text-4xl" md:text-6xl font-bold text-white mb-6"></h1>;"
             Transform Your Business with <span className=""text-transparent" bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
           </h1>"
-          <p className=""text-xl" text-gray-300 max-w-3xl mx-auto mb-8"></p>;
-            Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.;
+          <p className=""text-xl" text-gray-300 max-w-3xl mx-auto mb-8"></p>
+  );
+            Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
+  );
   return ("
     <div className=""bg-gradient-to-br" from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>"
       <div className=""max-w-7xl" mx-auto"></div>"
@@ -159,24 +162,28 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
             {/* Navigation Controls */}
             <div className=""flex" items-center justify-center gap-4 mt-8"></div>
               <button;"
-                onClick="{prevTestimonial};
+                onClick="{prevTestimonial}
+  );
                 className=""p-3" bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>"
                 <ChevronLeft className=""w-6" h-6" /></ChevronLeft>
               </button>
               <button;"
-                onClick="{togglePlayPause};
+                onClick="{togglePlayPause}
+  );
                 className=""p-3" bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>"
                 {isPlaying ? <Pause className=""w-6" h-6" /> : <Play className=""w-6" h-6" />}</Play>
               </button>
               <button;"
-                onClick="{nextTestimonial};
+                onClick="{nextTestimonial}
+  );
                 className=""p-3" bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>"
                 <ChevronRight className=""w-6" h-6" /></ChevronRight>
               </button>
             {/* Dots Indicator */}
             <div className=""flex" justify-center mt-6 space-x-2">{testimonials.map((_, index) => (</div>
                 <button}
-                  key="{index};
+                  key="{index}
+  );
                   onClick="{()" =></button> setCurrentIndex(index)}
                   className="{`w-3" h-3 rounded-full transition-colors duration-200 ${}
                     index="==" currentIndex ? 'bg-purple-400' : 'bg-white/30'
@@ -292,7 +299,8 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
                 <Zap className=""w-5" h-5" />;</Zap>
                 Get Started Today</Zap>
               </button>"
-              <button className=""bg-gradient-to-r" from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>;
+              <button className=""bg-gradient-to-r" from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+  );
                 Schedule Demo
             </div>
           </div>
@@ -303,3 +311,4 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
 }
 ;"
 export default DynamicContentShowcase;
+  

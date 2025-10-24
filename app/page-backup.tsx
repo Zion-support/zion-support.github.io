@@ -26,7 +26,6 @@ const PageBackupPage: React.FC = ( => {
     }
 <<<<<<< HEAD:app/page-backup.tsx
 'use client'
-import React from 'react'
 'use client'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
@@ -52,8 +51,8 @@ const PageBackupPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
-  ]
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02;
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -63,7 +62,7 @@ const PageBackupPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   return (
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -116,9 +115,11 @@ const PageBackupPage: React.FC = () => {
 }
 
 };
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8f83
 
 export default PageBackupPage;
+  
 =======
             </h1><>
 <//h1>
@@ -192,5 +193,5 @@ export default PageBackupPage;
 </div><//div>
   )
 }
-export default PageBackupPage
+export default PageBackupPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be4b

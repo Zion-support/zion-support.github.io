@@ -25,7 +25,7 @@ export interface TrackedError {
 
 export class EnhancedErrorTracking {
   private config: ErrorTrackingConfig
-  private errors: TrackedError[] = []
+  private errors: TrackedError[] = [];
   private errorIdCounter = 0
 
   constructor(config: ErrorTrackingConfig) {
@@ -84,10 +84,10 @@ export class EnhancedErrorTracking {
         body: JSON.stringify(error)
       })
     } catch (reportError) {
-      console.error('Failed to report error to service:', reportError)
-    }
-  }
-
+      console.error('Failed to report error to service:', reportError
+  )
+  );
+}
   getErrorById(id: string): TrackedError | undefined {
     return this.errors.find(error => error.id === id)
   }
@@ -111,16 +111,16 @@ export class EnhancedErrorTracking {
   }
 
   getAllErrors(): TrackedError[] {
-    return [...this.errors]
+    return [...this.errors];
   }
 
   clearErrors(): void {
-    this.errors = []
+    this.errors = [];
   }
 
   exportErrors(): TrackedError[] {
-    return [...this.errors]
+    return [...this.errors];
   }
 }
 
-export default EnhancedErrorTracking
+export default EnhancedErrorTracking;

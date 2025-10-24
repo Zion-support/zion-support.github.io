@@ -19,7 +19,7 @@ export interface ErrorHandlerConfig {
 
 export class EnhancedErrorHandler {
   private config: ErrorHandlerConfig
-  private errors: ErrorInfo[] = []
+  private errors: ErrorInfo[] = [];
 
   constructor(config: ErrorHandlerConfig) {
     this.config = config
@@ -56,10 +56,10 @@ export class EnhancedErrorHandler {
 
     // Keep only the most recent errors
     if (this.errors.length > this.config.maxErrors) {
-      this.errors = this.errors.slice(-this.config.maxErrors)
-    }
-  }
-
+      this.errors = this.errors.slice(-this.config.maxErrors
+  )
+  );
+}
   private async reportToService(errorInfo: ErrorInfo): Promise<void> {
     try {
       await fetch(this.config.serviceEndpoint!, {
@@ -70,12 +70,12 @@ export class EnhancedErrorHandler {
         body: JSON.stringify(errorInfo)
       })
     } catch (error) {
-      console.error('Failed to report error to service:', error)
-    }
-  }
-
+      console.error('Failed to report error to service:', error
+  )
+  );
+}
   getErrors(): ErrorInfo[] {
-    return [...this.errors]
+    return [...this.errors];
   }
 
   getErrorsBySeverity(severity: ErrorInfo['severity']): ErrorInfo[] {
@@ -87,7 +87,7 @@ export class EnhancedErrorHandler {
   }
 
   clearErrors(): void {
-    this.errors = []
+    this.errors = [];
   }
 
   getErrorStats(): Record<string, number> {
@@ -101,4 +101,4 @@ export class EnhancedErrorHandler {
   }
 }
 
-export default EnhancedErrorHandler
+export default EnhancedErrorHandler;

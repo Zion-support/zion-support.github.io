@@ -124,7 +124,8 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
+}
+  );
     if ('serviceWorker' in navigator) {}
       navigator.serviceWorker
         .register('/sw.js')
@@ -133,7 +134,8 @@ Start Your Free Trial</button>
         .catch((registrationError) => {// // console.log('SW registration failed: ', registrationError)
         })
     }
-  }, []);
+  }, [])
+  );
   return nul l
 }
 

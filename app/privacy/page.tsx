@@ -1,18 +1,16 @@
-import React from 'react';
-import { Brain, Zap, Shield, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
+import React from 'react'
+import { Brain, Zap, Shield, Globe } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react'
+import React from "react"
+import Footer from '../components/Footer'
+import Head from "next/head"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import Footer from "../components/Footer"
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
+  
 const Page: React.FC = () => {
   const features = [
 
@@ -36,7 +34,6 @@ export default function PrivacyPage() {
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
-
   return (
     <>
       <Navigation />
@@ -86,11 +83,10 @@ export default function PrivacyPage() {
       </div>
       <Footer />
     </>
+  )
   );
-};
-
+}
 export default Page;
-
 export default PagePage;
-
 export default PrivacyPage;
+  

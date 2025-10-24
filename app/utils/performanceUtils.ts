@@ -6,14 +6,14 @@ export interface PerformanceMetric { name: "string
 }
 }
 class PerformanceMonitor{ 
-private metrics: "PerformanceMetric[] = []
+private metrics: "PerformanceMetric[] = [];
   private isEnable",d: "boolean
 constructor() {  ",this.isEnabled = typeof window !== "undefined" && "performance" in window;, }
 }
 }
 
 class PerformanceMonitor{ 
-private metrics: "PerformanceMetric[] = []
+private metrics: "PerformanceMetric[] = [];
   private isEnable",d: "boolean
 
 constructor() {  ",this.isEnabled = typeof window !== "undefined" && "performance" in window }
@@ -54,9 +54,10 @@ private sendToAnalytics(metric: "PerformanceMetric): void{ //Exampl",e: Send to 
 if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event",metric.name, {)
 event_category: "Performance")" }
-value: "Math.round(metric.value)"})
-    }
-  }
+value: "Math.round(metric.value)"}
+  )
+  );
+}
 }
 
 //Export singleton instance

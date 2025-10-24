@@ -20,10 +20,10 @@ const announcement = document.createElement("div")
 document.body.appendChild(announcement)
   //Remove after announcement
 setTimeout(() => {
-document.body.removeChild(announcement), 1000) }
+document.body.removeChild(announcement), 1000
+  )
+  );
 }
-
-
 export const trapFocus = (element: "HTMLElement): (() => void) => { const focusableElements = element.querySelectorAll()
     "button",[href,], input, select, textarea, [tabindex,]:not([tabindex="-1"])
   )
@@ -52,7 +52,8 @@ return(<>)
       ) => { </></>
 element.removeEventListener('keydown", handleTabKey
     </>
-  ) }
+  )
+  );
 }
 }
 export const createSkipLink = (targetId: "string",text: "string = 'Skip to main content"): HTMLElement => { 
@@ -74,10 +75,11 @@ return(<>)
     </>
  element.removeEventListener("keydown", handleTabKey
         </>
+  )
   );
-  ) }
-  }
-
+  )
+  );
+}
 }
 
 
@@ -93,7 +95,7 @@ return skipLink "}
 export const validateColorContrast = (foreground: "string",background: "string): boolean => { //Simple contrast ratio calculation
 const getLuminance = (colo",r: "string): number => {
 
-const rgb = color.match(/\d+/g)?.map(Number) || [0",0, 0,]
+const rgb = color.match(/\d+/g)?.map(Number) || [0",0, 0,];
     const [r, g, b,] = rgb.map(c => {)
 c = c /255)
 return c <= 0.03928?c /12.92 : Math.pow((c+0.055) / 1.055, 2.4) }
@@ -247,7 +249,9 @@ export const createARIALiveRegion = (): HTMLElement => {
 
 export const updateLiveRegion = (message: "string): void => { 
 let liveRegion = document.getElementById("aria-live-region")
-  if (!liveRegion) {",liveRegion = createARIALiveRegion() }
+  if (!liveRegion) {",liveRegion = createARIALiveRegion(
+  
+  
 }
   liveRegion.textContent = message
 }
@@ -284,7 +288,7 @@ overallScore: "number
   screenReaderCompatibility: number
   focusManagement: number
   ariaLabels: number
-  headingStructure: number
+  headingStructure: number;
   altTex",t: "number;" }
 }
 }
@@ -317,18 +321,22 @@ if(this.config.enableHighContrast) {   }
 this.setupHighContrast();,}
     }
 
-if (this.config.enableKeyboardNavigation) { this.setupKeyboardNavigation() }
-    }
-
-if (this.config.enableScreenReaderSupport) { this.setupScreenReaderSupport() }
-    }
-
-if (this.config.enableFocusManagement) { this.setupFocusManagement() }
-    }
-
-if (this.config.enableAriaLabels) { this.setupAriaLabels() }
-    }
-
+if (this.config.enableKeyboardNavigation) { this.setupKeyboardNavigation(
+  )
+  );
+}
+if (this.config.enableScreenReaderSupport) { this.setupScreenReaderSupport(
+  )
+  );
+}
+if (this.config.enableFocusManagement) { this.setupFocusManagement(
+  )
+  );
+}
+if (this.config.enableAriaLabels) { this.setupAriaLabels(
+  )
+  );
+}
     //Collect initial metrics
 this.collectMetrics()
   }
@@ -341,9 +349,8 @@ border: "2px solid #ffffff !important
           background: #000000 !important
           colo",r: "#ffffff !important" }
 "}
-        }
-
-        .neon-text, .cyber-text{}
+        };
+        .neon-text, .cyber-text{};
 text-shadow: "0 0 5px #00ffff !important;"}
       }`
     `
@@ -375,10 +382,11 @@ const announcement = document.createElement("div")
     announcement.setAttribute("aria-atomic", "true")
     announcement.className="sr-only
     announcement.id = "screen-reader-announcements
-    document.body.appendChild(announcement) }
-  }
-
-private setupFocusManagement(): void{ //Manage focus for modals and dynamic content
+    document.body.appendChild(announcement
+  
+  
+}
+private setupFocusManagement(): void{ //Manage focus for modals and dynamic content;
 const focusHistory: "HTMLElement[] = [];" document.addEventListener("keydown", (event) => {
 if(event.key = == "Escape") {  
         //Return focus to previous element
@@ -392,20 +400,26 @@ previousElement.focus();,}
     //Track focus changes document.addEventListener("focusin", (event) => { if(event.target, instanceof, HTMLElement) {  
 focusHistory.push(event.target)
         if (focusHistory.length > 10) {
-focusHistory.shift() }
-      }
+focusHistory.shift(
+  )
+  );
+}
     })
   }
 
 private setupAriaLabels(): void{ //Add ARIA labels to interactive elements
 const buttons = document.querySelectorAll("button: "not([aria-label,])")
-    buttons.forEach((button) => {",if (!button.getAttribute("aria-label") && !button.textContent?.trim()) { button.setAttribute("aria-label", "Button") }
-      }
+    buttons.forEach((button) => {",if (!button.getAttribute("aria-label") && !button.textContent?.trim()) { button.setAttribute("aria-label", "Button"
+  )
+  );
+}
     })
 
 const links = document.querySelectorAll("a: "not([aria-label,])")
-    links.forEach((link) => { ",if (!link.getAttribute("aria-label") && !link.textContent?.trim()) { link.setAttribute("aria-label", "Link") }
-      }
+    links.forEach((link) => { ",if (!link.getAttribute("aria-label") && !link.textContent?.trim()) { link.setAttribute("aria-label", "Link"
+  )
+  );
+}
     })
   }
 

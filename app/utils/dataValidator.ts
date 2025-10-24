@@ -232,9 +232,9 @@ rules: ValidationRules,
 ): ValidationResult {,;}
 const errors: Record<string, string[]> = {}
 for (const field in rules) {
-const value = data[field]
-const fieldRules = rules[field] || []
-const fieldErrors: string[] = []
+const value = data[field];
+const fieldRules = rules[field] || [];
+const fieldErrors: string[] = [];
 for (const rule of fieldRules) {,
 if (!validateFieldRule(value, rule)) {
 fieldErrors.push(rule.message);}
@@ -265,8 +265,8 @@ new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
 {/* TODO: Fix JSX expression */}
 }
 }
-)
-}
+  )
+  );
 }
 return {
 isValid: Object.keys(errors).length === 0
@@ -384,6 +384,7 @@ rules = ValidationRulesBuilder
 }
 export const dataValidator = DataValidator.getInstance()
 export default DataValidator;
+  
 // Additional validation functions for tests
 export function validateLength(value: string, min: number, max?: number, fieldName: string = 'Field'): { isValid: boolean; error?: string } {
 if (max !== undefined) {

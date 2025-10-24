@@ -22,8 +22,8 @@ const ErrorBoundaryPage: React.FC = () => {const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
+    };
   ];
 "
   const benefits=";"
@@ -33,7 +33,6 @@ const ErrorBoundaryPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
 const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '' }) => {
   return (
     <>
@@ -97,7 +96,7 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '' }) => {
               )}
           </div>
         </div>
-      ;
+  );
     }
 
         {/* Benefits Section */}
@@ -141,9 +140,11 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '' }) => {
       <Footer /></Footer>
     </>
   );,
-};
-export default ErrorBoundaryPag;e;
-error?: Error;
+}
+export default ErrorBoundaryPag;e
+  );
+error?: Error
+  );
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {}
 super(props)}
@@ -158,7 +159,8 @@ if (process.env.NODE_ENV="==" 'production') {// In production, you would send th
 this.setState({errorerrorInfo})
 }
 handleReload="()" => {windo w.location.reload()}
-handleGoHome="()" => {windo w.location.href="'/'};
+handleGoHome="()" => {windo w.location.href="'/'}
+  );
 render() {if (this.state.hasError) {}
 if (this.props.fallback) {}
 return this.props.fallback
@@ -186,14 +188,17 @@ Error Details (Development)
 <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
 <button
 onClick={this.handleReload}
-className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
+className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot
+  );
 ></button>
 <RefreshCw className=&quot;w-4 h-4&quot; />
 <span>Reload Page</span>
 </button>
-<button;
+<button
+  );
 onClick={this.handleGoHome}
-className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
+className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot
+  );
 ></button>
 <Home className=&quot;w-4 h-4&quot; />
 <span>Go Home</span>
@@ -202,7 +207,8 @@ className=&quot;flex items-center justify-center space-x-2 border border-cyan-60
 <div className=&quot;mt-6 pt-6 border-t border-white/20&quot;></div>
 <p className=&quot;text-sm text-gray-400 mb-3&quot;>Still having trouble? Contact our support team:</p>p>
 <a
-href=&quot;mailto:kleber@ziontechgroup.com&quot;
+href=&quot;mailto:kleber@ziontechgroup.com&quot
+  );
 className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
 <Phone className=&quot;w-4 h-4 mr-2&quot; />
 kleber@ziontechgroup.com

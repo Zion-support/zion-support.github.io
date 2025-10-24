@@ -5,10 +5,11 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-interface HeaderProps {}
+interface HeaderProps {};
   className?: string;
+  
 }
-;
+  );
 const Header: React.FC<HeaderProps> = ({className="''" }) => {}</HeaderProps>
   return (</HeaderProps>
     <>
@@ -108,10 +109,12 @@ const Header: React.FC<HeaderProps> = ({className="''" }) => {}</HeaderProps>
       <Footer /></Footer>
     </>
   );,
-};
+}
+  );
   )
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 
 
 export default Header;
+  

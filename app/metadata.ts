@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     description: 'Advanced AI and IT Solutions',
     type: 'website',
   },
-}
 };
-
+};
 export default metadata

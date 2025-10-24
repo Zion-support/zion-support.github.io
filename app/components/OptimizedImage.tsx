@@ -3,7 +3,8 @@ return (<div>
       <Helmet />
 
 interface OptimizedImageProps {}
-  className?: string;
+  className?: string
+  );
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '&apos;, }) => {
@@ -109,7 +110,7 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
-
-export default OptimizedImagePag;e;
+}
+export default OptimizedImagePag;e
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

@@ -1,7 +1,7 @@
 "use client"
-import React from "react";
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
+import React from "react"
+import { Link  } from "next/link"
+import { ArrowRight  } from "lucide-react"
 export default function LazyWrapper() {
 
 return (<div className="[^"]*"> <div className="[^"]*">,<h1 className="[^"]*">
@@ -26,7 +26,8 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({ className = '', childr
     <div className="{`lazywrapper" ${className}`}>
       {children}
     </div>
-  );
+  
+  
 };
-
 export default LazyWrapper;
+  

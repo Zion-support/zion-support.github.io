@@ -24,7 +24,7 @@ export interface ErrorReporterConfig {
 
 export class ErrorReporter {
   private config: ErrorReporterConfig
-  private reports: ErrorReport[] = []
+  private reports: ErrorReport[] = [];
   private flushTimer?: NodeJS.Timeout
 
   constructor(config: ErrorReporterConfig) {
@@ -74,18 +74,18 @@ export class ErrorReporter {
   async flush(): Promise<void> {
     if (this.reports.length === 0) return
 
-    const reportsToSend = [...this.reports]
-    this.reports = []
+    const reportsToSend = [...this.reports];
+    this.reports = [];
 
     try {
       await this.sendReports(reportsToSend)
     } catch (error) {
       console.error('Failed to send error reports:', error)
       // Re-add reports to queue for retry
-      this.reports.unshift(...reportsToSend)
-    }
-  }
-
+      this.reports.unshift(...reportsToSend
+  )
+  );
+}
   private async sendReports(reports: ErrorReport[]): Promise<void> {
     const headers: Record<string, string> = {
       'Content-Type': 'application/json'
@@ -114,9 +114,10 @@ export class ErrorReporter {
         lastError = error as Error
         
         if (attempt < this.config.maxRetries - 1) {
-          await new Promise(resolve => setTimeout(resolve, this.config.retryDelay))
-        }
-      }
+          await new Promise(resolve => setTimeout(resolve, this.config.retryDelay)
+  )
+  );
+}
     }
 
     throw lastError || new Error('Failed to send error reports')
@@ -138,12 +139,12 @@ export class ErrorReporter {
   }
 
   getPendingReports(): ErrorReport[] {
-    return [...this.reports]
+    return [...this.reports];
   }
 
   clearPendingReports(): void {
-    this.reports = []
+    this.reports = [];
   }
 }
 
-export default ErrorReporter
+export default ErrorReporter;

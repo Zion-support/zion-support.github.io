@@ -1,17 +1,23 @@
 import Footer from './Footer'
 import Navigation from './Navigation'
 import { ArrowRight, CheckCircle } from 'lucide-react'
-import React from 'react'
+import React from 'react';
 import { cn  } from "../lib/utils";
+  
 interface ResponsiveContainerProps {
-  className?: string;
-  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
+  className?: string
+  );
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl'
+  );
 }
 
 interface ResponsiveContainerProps {
-  children?: React.ReactNode;
-  className?: string;
-  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
+  children?: React.ReactNode
+  );
+  className?: string
+  );
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl'
+  );
 }
 
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ 
@@ -37,7 +43,8 @@ constResponsiveContainer= ({children,
     '5xl': 'max-w-5xl',
     '6xl': 'max-w-6xl',
     '7xl': 'max-w-7xl'
-  };
+  }
+  );
 =======
 const ResponsiveContainer: React.FC = () => {
 return (<div>
@@ -172,6 +179,6 @@ Start Your Free Trial</button>
       <Footer /></Footer>
     </>
   );,
-};
-
-export default ResponsiveContaine;r;
+}
+export default ResponsiveContaine;r
+  );

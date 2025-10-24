@@ -1,7 +1,7 @@
 "use client"
-import React from "react";
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
+import React from "react"
+import { Link  } from "next/link"
+import { ArrowRight  } from "lucide-react"
 export default function OptimizedLoading() {
 
 return (<div className="[^"]*"> <div className="[^"]*">,<h1 className="[^"]*">
@@ -26,7 +26,8 @@ export const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({ className = 
     <div className="{`optimizedloading" ${className}`}>
       {children}
     </div>
-  );
+  
+  
 };
-
 export default OptimizedLoading;
+  

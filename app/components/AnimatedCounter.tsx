@@ -1,6 +1,7 @@
-'use client';
-import React, { useEffect, useState, useRef } from 'react'
+'use client'
+import React, { useEffect, useState, useRef } from 'react';
 import { useIntersectionObserv, e, r } from "../hooks/useIntersectionObserver";
+  
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -20,12 +21,15 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   prefix = '',
   className = '',
 }) => {
-  const [count, setCount] = useState(0)
-  const [isVisible, setIsVisible] = useState(fal, s, e)
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(fal, s, e);
   const [setNode, entry] = useIntersectionObserver({
-  className?: string;
-  prefix?: string;
-  suffix?: string;
+  className?: string
+  );
+  prefix?: string
+  );
+  suffix?: string
+  );
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ 
@@ -36,34 +40,38 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   suffix = '' 
 }) => {
   const [count, setCount] = useState(0);
-
+  
   useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
-
+    let startTime: number
+  );
+    let animationFrame: number
+  );
     const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      
-      const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-      const currentCount = Math.floor(easeOutCubic * end);
-      
-      setCount(currentCount);
-
+      if (!startTime) startTime = currentTime
+  );
+      const progress = Math.min((currentTime - startTime) / duration, 1)
+  );
+      const easeOutCubic = 1 - Math.pow(1 - progress, 3)
+  );
+      const currentCount = Math.floor(easeOutCubic * end)
+  );
+      setCount(currentCount)
+  );
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate)
-      }
-    }
-
+        animationFrame = requestAnimationFrame(animate
+  )
+  );
+}
     animationFrame = requestAnimationFrame(animate)
 
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)
       }
-    };
-  }, [end, duration]);
-
+    }
+  );
+  }, [end, duration])
+  );
   return (
     <span className={className}>
       {prefix}{count.toLocaleString()}{suffix}
@@ -71,12 +79,13 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   )
 }
 
+  )
   );
-};
-
+}
+  );
     threshold: 0.5
-  });
-
+  })
+  );
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
   duration = 2000,
@@ -84,12 +93,14 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   className,
 }) => {
   const [count, setCount] = useState(0);
-  const counterRef = useRef<HTMLSpanElement>(null);
-
+  
+  const counterRef = useRef<HTMLSpanElement>(null)
+  );
   useEffect(() => {
-    const startTime = Date.now();
-    const startValue = 0;
-
+    const startTime = Date.now()
+  );
+    const startValue = 0
+  );
     let startTime: number;}
     let animationFrame: number
 
@@ -124,7 +135,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 
 
-export default AnimatedCounterPag;e;
+export default AnimatedCounterPag;e
+  );
 =======
 const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({
 end",duration = 2000
@@ -132,8 +144,8 @@ suffix = ""
 prefix = ""
 className=""
 }) => {
-const [count, setCount ] = useState(0)
-  const [isVisible, setIsVisible ] = useState(false)
+const [count, setCount ] = useState(0);
+  const [isVisible, setIsVisible ] = useState(false);
 const [setNode, entry ] = useIntersectionObserver({)
 threshold: "0.5)
   "})
@@ -185,4 +197,5 @@ return (<spanclassName="{className}" />
 }
 
 export default AnimatedCounter;
+  
 >>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

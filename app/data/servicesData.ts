@@ -1,22 +1,36 @@
-export interface Service { id: string;
-  title: string;
-  description: string;
+export interface Service { id: string
+  );
+  title: string
+  );
+  description: string
+  );
   features: string[];
   benefits: string[];
   pricing: {
-    basic: string;
-    pro: string;
+    basic: string
+  );
+    pro: string
+  );
     enterprise: string; }
-  };
-  contactInfo: { website: string;
-    email: string;
+  }
+  );
+  contactInfo: { website: string
+  );
+    email: string
+  );
     phone: string; }
-  };
-  price?: string;
-  icon?: string;
-  href: string;
-  popular?: boolean;
-  category: "ai" | "it" | "cloud" | "security" | "data" | "automation";
+  }
+  );
+  price?: string
+  );
+  icon?: string
+  );
+  href: string
+  );
+  popular?: boolean
+  );
+  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"
+  );
 }
 
 export const aiServices: Service[] = [
@@ -118,7 +132,6 @@ export const aiServices: Service[] = [
     category: "ai
   }
 ];
-
 export const itServices: Service[] = [
   { 
     id: "web-development",
@@ -218,22 +231,18 @@ export const itServices: Service[] = [
     category: "it
   }
 ];
-
-export const itSolutions = itServices;
+export const itSolutions = itServices
 export const allServices: Service[] = [...aiServices, ...itServices];
-
 // Export as servicesData for backward compatibility
 export const servicesData = { aiServices,
   itServices,
   itSolutions: itServices,
   allServices }
-};
-
+}
 export const getServiceById = (id: string): Service | undefined => { return allServices.find(service => service.id === id); }
-};
-
+}
 export const getServicesByCategory = (category: Service["category"]): Service[] => { return allServices.filter(service => service.category === category); }
-};
-
+}
 export const getPopularServices = (): Service[] => { return allServices.filter(service => service.popular); }
-};
+}
+  );

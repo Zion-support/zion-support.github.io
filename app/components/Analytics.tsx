@@ -1,5 +1,6 @@
-'use client';
-import React, { useEffect } from &quot;react&quot;
+'use client'
+import React, { useEffect } from &quot;react&quot
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
@@ -19,27 +20,32 @@ page_title: "document.title",page_location: "window.location.href") => {
         })
       }
           page_location: window.location.href,
-        });
+        })
+  );
       }
-    };
-
-    initAnalytics();
-  }, []);
-
-  return <>{children}</>;
-};
-
-// Extend Window interface for gtag;
+    }
+  );
+    initAnalytics()
+  );
+  }, [])
+  );
+  return <>{children}</>
+  );
+}
+  );
+// Extend Window interface for gtag
+  );
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: (...args: unknown[]) => void
+  );
   }
 }
 
     }
     initAnalytics()
-  }, []);
-
+  }, [])
+  );
 initAnalytics()
   }, [])
 return (<React.Fragment>
@@ -55,18 +61,19 @@ declare global{interface Window {
 }
 }
     gtag: "(...arg",s: "any[]) => void;"}
-export default Analytics
+export default Analytics;
 }
-;
-};
-
+  );
+}
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
-};
-
+}
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
-};
-
+}
+  );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 
-export default AnalyticsPag;e;
+export default AnalyticsPag;e
+  );

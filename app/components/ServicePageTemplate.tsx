@@ -1,6 +1,8 @@
 import React  from "react";
+  
 "use client"
 import { Helmet }  from "react-helmet-async";
+  
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -12,17 +14,20 @@ const ServicePageTemplatePage: React.FC = () => {
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
+    {icon: BarChart,
+  );
       title: 'Advanced Analytics',;}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
+    {icon: Target,
+  );
       title: 'Precision Targeting',;}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
+    {icon: TrendingUp,
+  );
       title: 'Growth Optimization',;}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
@@ -36,7 +41,6 @@ const ServicePageTemplatePage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
   return (
     <>
       
@@ -50,6 +54,7 @@ const ServicePageTemplatePage: React.FC = () => {
           </div>
         </div>
     </div>
+  )
   );
       const features = [
     {
@@ -66,5 +71,6 @@ export default function; ServicePageTemplate({ className }: ServicePageTemplateP
     <div className={className}>
       <h1>Service Page Template</h1>
     </div>
+  )
   );
 }

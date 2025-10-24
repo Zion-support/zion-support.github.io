@@ -1,19 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
-import { Brain, CheckCircle, Globe, Shield, Zap } from 'lucide-react';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
-const Page: React.FC = () => {
+"use client";
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+export default function AccessibilityPage() {
   const features = [
     {
       icon: Brain,
@@ -35,7 +25,6 @@ const Page: React.FC = () => {
     }
   ];
 
-export default function ServicePage() {
   return (
     <>
       <Navigation />
@@ -43,10 +32,10 @@ export default function ServicePage() {
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              Accessibility Solutions
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced accessibility solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -71,7 +60,7 @@ export default function ServicePage() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+              Transform your business with our cutting-edge accessibility solutions. Contact us today to learn more.
             </p>
             <a
               href="/contact"
@@ -81,13 +70,9 @@ export default function ServicePage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </div>
-        </section>
+        </div>
       </div>
       <Footer />
     </>
-  ;
-};
-
-export default Page;
-
-export default PagePage;
+  );
+}

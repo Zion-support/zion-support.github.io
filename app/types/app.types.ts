@@ -11,7 +11,7 @@ id: "string
   description: string
   shortDescription: string
   icon: string
-  features: string[]
+  features: string[];
 pricing: { basic: number
     pro: number
     enterprise: number
@@ -24,8 +24,8 @@ id: "string
   name: string" }
   role: 'admin' | 'user' | 'guest'}
 }
-  benefits: "string[]
-useCases: string[]
+  benefits: "string[];
+useCases: string[];
 marketPrice: string
   contactInfo: { phone: string
     email: string

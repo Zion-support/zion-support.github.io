@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef   } from "react";
+  
 interface UseIntersectionObserverOptions { threshold?: number
   root?: Element|null
   rootMargin?: string }

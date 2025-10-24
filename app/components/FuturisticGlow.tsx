@@ -1,8 +1,9 @@
 "use client"
-import React from "react";
-import { Head  } from "next/head";
+import React from "react"
+import { Head  } from "next/head"
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
+  
 const getIntensityValue = () => {
 return (<div>
       <Head>
@@ -83,7 +84,7 @@ go wrong! 🤖
     </div>
 </>
   ) "}
-export default getIntensityValue
+export default getIntensityValue;
     </div>
 }
 
@@ -92,7 +93,8 @@ export const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ className = '', 
     <div className="{`futuristicglow" ${className}`}>
       {children}
     </div>
+  )
   );
-};
-
+}
 export default FuturisticGlow;
+  
