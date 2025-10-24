@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react'
 
@@ -111,3 +112,11 @@ const EnhancedServicesShowcase: React.FC = () => {
 }
 
 export default EnhancedServicesShowcase
+=======
+import { ArrowRight, TrendingUp } from 'lucide-react'
+import React from 'react'
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
+const EnhancedServicesShowcase: React.FC = () => {
+  const services = [
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)

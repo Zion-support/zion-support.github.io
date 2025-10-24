@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 interface FuturisticServiceCardProps {
   title: string;
   description: string;
@@ -90,3 +91,5 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
 }
 
 export default FuturisticServiceCard;}
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)

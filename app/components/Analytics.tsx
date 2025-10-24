@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useEffect } from 'react';
@@ -81,3 +82,25 @@ const Analytics: React.FC<AnalyticsProps> = ({
 };
 
 export default Analytics;
+=======
+import React, { useEffect } from &quot;react&quot
+interface AnalyticsProps {
+  className?: string
+}
+const Analytics: React.FC = () => {
+  useEffect(() => {
+    const initAnalytics = () => {
+      if (typeof window !== &quot;undefined&quot; && window.gtag) {
+        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
+          page_title: document.title,
+    page_location: window.location.href})
+      }
+    }
+    initAnalytics()
+  }, [])
+  return null; // Analytics component doesn&apos;t render anything
+}
+export default Analytics
+}
+export default AnalyticsPage
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)

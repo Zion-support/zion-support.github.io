@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 
 /**
@@ -345,3 +346,11 @@ export default TestRunner;}
 
 export default TestRunner;
 >>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
+=======
+import React from 'react'
+"use client"
+const testRunner = () => {
+  return null
+}
+export default testRunner
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)

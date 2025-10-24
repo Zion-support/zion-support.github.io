@@ -1,13 +1,25 @@
+<<<<<<< HEAD
 import { useRef, useEffect } from 'react'
 'use client'
+=======
+'use client'
+import React from 'react'
+import { useRef } from 'react'
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
  */
+<<<<<<< HEAD
 
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
+=======
+// Debounce function for performance optimization
+export const debounce = <T extends (...args: unknown[]) => unknown>(,
+    func: T
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
@@ -16,10 +28,16 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
     timeout = setTimeout(() => func(...args), wait)
   }
 }
+<<<<<<< HEAD
 
 // Throttle function for performance optimization
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
+=======
+// Throttle function for performance optimization
+export const throttle = <T extends (...args: unknown[]) => unknown>(,
+    func: T
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
@@ -31,29 +49,45 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
     }
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 // Performance monitoring utilities
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map()
   private observers: PerformanceObserver[] = [];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor()
     }
     return PerformanceMonitor.instance
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   // Track component render time
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime)
     if (process.env['NODE_ENV'] === 'development') {
+<<<<<<< HEAD
        
       console.log(`${componentName} rendered in ${renderTime}ms`)
     }
   }
 
+=======
+      // eslint-disable-next-line no-console
+    console.log(`${componentName} rendered in ${renderTime}ms`)
+    }
+  }
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
@@ -63,16 +97,23 @@ export class PerformanceMonitor {
       }
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   // Get performance metrics
   getMetrics() {
     return Object.fromEntries(this.metrics)
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   // Clear metrics
   clearMetrics() {
     this.metrics.clear()
   }
+<<<<<<< HEAD
 
   // Monitor long tasks
   startLongTaskMonitoring() {
@@ -84,12 +125,25 @@ export class PerformanceMonitor {
         if (entry.duration > 50) { // Tasks longer than 50ms
            
           console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`)
+=======
+  // Monitor long tasks
+  startLongTaskMonitoring() {
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return
+}
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.duration > 50) { // Tasks longer than 50ms
+          // eslint-disable-next-line no-console
+    console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`)
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
         }
       })
     })
     observer.observe({ entryTypes: ['longtask'] })
     this.observers.push(observer)
   }
+<<<<<<< HEAD
 
   // Cleanup observers
   cleanup() {
@@ -98,20 +152,39 @@ export class PerformanceMonitor {
   }
 }
 
+=======
+  // Cleanup observers
+  cleanup() {
+  this.observers.forEach(observer => observer.disconnect())
+    this.observers = []
+}
+}
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {
   const renderStartTime = useRef<number>(0)
   const monitor = PerformanceMonitor.getInstance()
+<<<<<<< HEAD
 
   useEffect(() => {
     renderStartTime.current = performance.now()
     return () => {
+=======
+  useEffect(() => {
+    renderStartTime.current = performance.now()
+    return (
+    <>
+      ) => {
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
       const renderTime = performance.now() - renderStartTime.current
       monitor.trackRender(componentName, renderTime)
       monitor.trackMemory(componentName)
     }
   }, [componentName, monitor])
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   return {
     trackRender: (fn: () => void) => {
       const start = performance.now()
@@ -121,7 +194,10 @@ export const usePerformanceMonitor = (componentName: string) => {
     }
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 // Image lazy loading utility
 export const lazyLoadImages = () => {
   if (typeof window === 'undefined') return
@@ -130,7 +206,11 @@ export const lazyLoadImages = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement
+<<<<<<< HEAD
         img.src = img.dataset.src || ''
+=======
+        img['src'] = img.dataset['src'] || ''
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
         img.classList.remove('lazy')
         imageObserver.unobserve(img)
       }
@@ -138,14 +218,22 @@ export const lazyLoadImages = () => {
   })
   images.forEach((img) => imageObserver.observe(img))
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 // Preload critical resources
 export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return
   const criticalResources = [
+<<<<<<< HEAD
     '/fonts/inter-var.woff2',
     '/css/critical.css'
   ]
+=======
+    '/fonts/inter-var.woff2'
+    '/css/critical.css']
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   criticalResources.forEach((resource) => {
     const link = document.createElement('link')
     link.rel = 'preload'
@@ -153,11 +241,18 @@ export const preloadCriticalResources = () => {
     link.as = resource.endsWith('.woff2') ? 'font' : 'style'
     if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous'
+<<<<<<< HEAD
     }
     document.head.appendChild(link)
   })
 }
 
+=======
+}
+    document.head.appendChild(link)
+  })
+}
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 // Optimize scroll performance
 export const optimizeScrollPerformance = () => {
   if (typeof window === 'undefined') return
@@ -169,6 +264,7 @@ export const optimizeScrollPerformance = () => {
     ticking = false
   }
   const requestTick = () => {
+<<<<<<< HEAD
     if (!ticking) {
       requestAnimationFrame(updateScrollPosition)
       ticking = true
@@ -178,76 +274,129 @@ export const optimizeScrollPerformance = () => {
   // Track Core Web Vitals
   const trackCLS = () => {
     let clsValue = 0
+=======
+  if (!ticking) {
+      requestAnimationFrame(updateScrollPosition)
+      ticking = true
+}
+  }
+  // Track Core Web Vitals
+  const trackCLS = () => {
+  let clsValue = 0
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
     const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean
       value: number
+<<<<<<< HEAD
     }
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
+=======
+  }
+    const observer = new PerformanceObserver((list) => {
+  for (const entry of list.getEntries()) {
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
         const layoutEntry = entry as LayoutShiftEntry
         if (!layoutEntry.hadRecentInput) {
           clsEntries.push(entry)
           clsValue += layoutEntry.value
+<<<<<<< HEAD
         }
+=======
+}
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
       }
     })
     observer.observe({ entryTypes: ['layout-shift'] })
     return () => {
+<<<<<<< HEAD
       observer.disconnect()
       return clsValue
     }
   }
 
+=======
+  observer.disconnect()
+      return clsValue
+}
+  }
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   const trackLCP = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
+<<<<<<< HEAD
            
           console.log('LCP:', entry.startTime)
         }
+=======
+          }
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
       }
     })
     observer.observe({ entryTypes: ['largest-contentful-paint'] })
     return () => observer.disconnect()
   }
+<<<<<<< HEAD
 
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
       processingStart: number
     }
+=======
+  const trackFID = () => {
+  interface FirstInputEntry extends PerformanceEntry {
+      processingStart: number
+  }
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry
         const fid = fidEntry.processingStart - entry.startTime
         if (process.env['NODE_ENV'] === 'development') {
+<<<<<<< HEAD
            
           console.log('FID:', fid)
         }
+=======
+          }
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
       }
     })
     observer.observe({ entryTypes: ['first-input'] })
     return () => observer.disconnect()
   }
+<<<<<<< HEAD
 
   window.addEventListener('scroll', requestTick, { passive: true })
 
+=======
+  window.addEventListener('scroll', requestTick, { passive: true })
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   // Start tracking
   const cleanupCLS = trackCLS()
   const cleanupLCP = trackLCP()
   const cleanupFID = trackFID()
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   return () => {
     cleanupCLS()
     cleanupLCP()
     cleanupFID()
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 // Memory usage monitoring
 export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null
+<<<<<<< HEAD
   }
   const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
   return {
@@ -258,12 +407,23 @@ export const getMemoryUsage = () => {
   }
 }
 
+=======
+}
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+  return {
+    used: memory.usedJSHeapSize,
+    total: memory.totalJSHeapSize
+    limit: memory.jsHeapSizeLimit,
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
+}
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {
   if (typeof window === 'undefined') return null
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
   const paint = performance.getEntriesByType('paint')
   return {
+<<<<<<< HEAD
     navigation: {
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
@@ -277,6 +437,17 @@ export const collectPerformanceMetrics = () => {
   }
 }
 
+=======
+    navigation: {,
+    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+    totalTime: navigation.loadEventEnd - navigation.fetchStart}
+    paint: {,
+    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0}
+    memory: getMemoryUsage()}
+}
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {
   if (typeof window === 'undefined') return
@@ -289,7 +460,14 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics()
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
+<<<<<<< HEAD
      
     console.log('Performance metrics:', metrics)
+=======
+    // // eslint-disable-next-line no-console
+    console.log('Performance metrics:', metrics
+    </>
+  )
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
   }
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+<<<<<<< HEAD
 import React from 'react'
 import './globals.css'
 import Analytics from './components/Analytics'
@@ -86,6 +87,19 @@ export default function RootLayout({
         {children}
         <PerformanceMonitor />
       </body>
+=======
+import './globals.css'
+const inter = Inter({ subsets: ['latin'] })
+export const metadata: Metadata = {
+    title: 'Zion Tech Group - AI & IT Solutions',
+      description: 'Advanced AI and IT solutions for modern businesses'}
+export default function RootLayout({
+  children}: {
+  children: React.ReactNode}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
     </html>
   )
 }
