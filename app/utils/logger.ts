@@ -3,7 +3,7 @@
 const log = (level: string, message: string, data?: any) => {
   if (process.env.NODE_ENV === 'development') {
     // eslint-disable-next-line no-console
-    console[level as keyof Console](`[${level.toUpperCase()}] ${message}`, data);
+    (console as any)[level](`[${level.toUpperCase()}] ${message}`, data);
   }
 };
 

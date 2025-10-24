@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { BrowserRouter } from 'react-router-dom';
 import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 
 // Mock component that throws an error
@@ -22,9 +23,11 @@ describe('EnhancedErrorBoundary', () => {
 
   it('renders children when there is no error', () => {
     render(
-      <EnhancedErrorBoundary>
-        <ThrowError shouldThrow={false} />
-      </EnhancedErrorBoundary>
+      <BrowserRouter>
+        <EnhancedErrorBoundary>
+          <ThrowError shouldThrow={false} />
+        </EnhancedErrorBoundary>
+      </BrowserRouter>
     );
 
     expect(screen.getByText('No error')).toBeInTheDocument();
@@ -32,9 +35,11 @@ describe('EnhancedErrorBoundary', () => {
 
   it('renders error fallback when there is an error', () => {
     render(
-      <EnhancedErrorBoundary>
-        <ThrowError shouldThrow={true} />
-      </EnhancedErrorBoundary>
+      <BrowserRouter>
+        <EnhancedErrorBoundary>
+          <ThrowError shouldThrow={true} />
+        </EnhancedErrorBoundary>
+      </BrowserRouter>
     );
 
     expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
@@ -44,9 +49,11 @@ describe('EnhancedErrorBoundary', () => {
     const onError = jest.fn();
     
     render(
-      <EnhancedErrorBoundary onError={onError}>
-        <ThrowError shouldThrow={true} />
-      </EnhancedErrorBoundary>
+      <BrowserRouter>
+        <EnhancedErrorBoundary onError={onError}>
+          <ThrowError shouldThrow={true} />
+        </EnhancedErrorBoundary>
+      </BrowserRouter>
     );
 
     expect(onError).toHaveBeenCalledWith(
