@@ -10,18 +10,6 @@ interface AdvancedSEOOptimizerNewProps {
 }
 
 const AdvancedSEOOptimizerNewPage: React.FC<AdvancedSEOOptimizerNewProps> = ({ className = '' }) => {
-=======
-import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-interface AdvancedSEOOptimizer_newProps {
-  className?: string;
-}
-
-const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ className = '' }) => {
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
   const features = [
     {
       icon: Brain,

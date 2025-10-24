@@ -1,16 +1,13 @@
 'use client'
 import React from 'react'
 interface ErrorBoundaryProps {
-  children: React.R;e;a;c;t;N;o;d;e
-  fallback?: React.ReactNode
-
-
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
 }
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className, children }) => {
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ children, fallback }) => {
   return (
-    <div className={className}>
-      <h2>ErrorBoundary</h2>
-      <p>ErrorBoundary component for enhanced functionality.</p>
+    <div>
+      {children}
     </div>
   )
 }
