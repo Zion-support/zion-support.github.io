@@ -1,10 +1,10 @@
-'use client';
-'use client';
+'use client'
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 interface Slide {
   id: number
@@ -16,9 +16,9 @@ interface Slide {
 }
 
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
   
-  const slides: Slide[] = [
+  const slides: Slide[] = [;
     {
       id: 1,
       title: "AI-Powered Analytics",
@@ -29,7 +29,7 @@ const ContentCarousel: React.FC = () => {
         "Custom dashboards",
         "Automated reporting"
       ],
-      icon: BarChart,
+      icon: <BarChart className="h-12 w-12" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -42,7 +42,7 @@ const ContentCarousel: React.FC = () => {
         "Advanced security",
         "24/7 monitoring"
       ],
-      icon: Cloud,
+      icon: <Cloud className="h-12 w-12" />,
       color: "from-green-500 to-emerald-500"
     },
     {
@@ -55,22 +55,26 @@ const ContentCarousel: React.FC = () => {
         "Incident response",
         "Security training"
       ],
-      icon: Shield,
+      icon: <Shield className="h-12 w-12" />,
       color: "from-red-500 to-pink-500"
     }
   ]
 
-  const nextSlide = () => {
+  const nextSlide = () => {;
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
 
-  const prevSlide = () => {
+  const prevSlide = () => {;
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
   return (
     <>
-      
+      <Helmet>;
+        <title>ContentCarousel</title>;
+        <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation&quot; />
+      </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}

@@ -1,4 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react'
+
 interface PerformanceOptimizationOptions {
   enableLazyLoading?: boolean
   enablePreloading?: boolean
@@ -6,6 +7,7 @@ interface PerformanceOptimizationOptions {
   enableCodeSplitting?: boolean
   enableCaching?: boolean
 }
+
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
     enableLazyLoading = true,
@@ -14,14 +16,18 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableCodeSplitting = true,
     enableCaching = true
   } = options
+
   const observerRef = useRef<IntersectionObserver | null>(null)
+
   // Lazy loading for images
   const setupLazyLoading = useCallback(() => {
     if (!enableLazyLoading || typeof window === 'undefined') return
+
     const images = document.querySelectorAll('img[data-src]')
     if (observerRef.current) {
       observerRef.current.disconnect()
     }
+
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -42,22 +48,27 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         threshold: 0.01
       }
     )
+
     images.forEach((img) => {
       observerRef.current?.observe(img)
     })
   }, [enableLazyLoading])
+
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading || typeof window === 'undefined') return
+
     const criticalResources = [
       '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
       '/images/logo.svg'
     ]
+
     criticalResources.forEach((resource) => {
       const link = document.createElement('link')
       link.rel = 'preload'
       link.href = resource
+
       if (resource.endsWith('.woff2')) {
         link.as = 'font'
         link.type = 'font/woff2'
@@ -65,12 +76,15 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
         link.as = 'image'
       }
+
       document.head.appendChild(link)
     })
   }, [enablePreloading])
+
   // Image optimization
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return
+
     const images = document.querySelectorAll('img')
     images.forEach((img) => {
       // Add loading="lazy" for non-critical images
@@ -87,14 +101,17 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       }
     })
   }, [enableImageOptimization])
+
   // Code splitting optimization
   const optimizeCodeSplitting = useCallback(() => {
     if (!enableCodeSplitting || typeof window === 'undefined') return
+
     // Preload critical chunks
     const criticalChunks = [
       '/static/js/main.js',
       '/static/css/main.css'
     ]
+
     criticalChunks.forEach((chunk) => {
       const link = document.createElement('link')
       link.rel = 'preload'
@@ -103,9 +120,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       document.head.appendChild(link)
     })
   }, [enableCodeSplitting])
+
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {
     if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
@@ -118,9 +137,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       })
     }
   }, [enableCaching])
+
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
     if (typeof window === 'undefined') return
+
     // Monitor long tasks
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -130,12 +151,14 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
           }
         }
       })
+
       try {
         observer.observe({ entryTypes: ['longtask'] })
       } catch {
         // Long task observer not supported
       }
     }
+
     // Monitor memory usage
     if ('memory' in performance) {
       const checkMemory = () => {
@@ -149,15 +172,18 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       setInterval(checkMemory, 30000) // Check every 30 seconds
     }
   }, [])
+
   // Resource hints
   const addResourceHints = useCallback(() => {
     if (typeof window === 'undefined') return
+
     const hints = [
       { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: '//www.google-analytics.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ]
+
     hints.forEach((hint) => {
       const link = document.createElement('link')
       Object.entries(hint).forEach(([key, value]) => {
@@ -170,6 +196,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       document.head.appendChild(link)
     })
   }, [])
+
   useEffect(() => {
     // Initialize all optimizations
     setupLazyLoading()
@@ -179,6 +206,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     registerServiceWorker()
     setupPerformanceMonitoring()
     addResourceHints()
+
     // Cleanup
     return () => {
       if (observerRef.current) {
@@ -194,6 +222,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupPerformanceMonitoring,
     addResourceHints
   ])
+
   return {
     setupLazyLoading,
     preloadCriticalResources,

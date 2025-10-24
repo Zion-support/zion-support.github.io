@@ -9,6 +9,6 @@ const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
       <h2>MetaTags</h2>
       <p>This component is under construction.</p>
     </div>
-  )
-}
+  );
+};
 export default MetaTags
