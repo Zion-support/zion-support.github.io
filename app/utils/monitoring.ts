@@ -1,215 +1,233 @@
-'use client'';/**
+'use client';
+
+/**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
 
-// Declare gtag function for Google Analytics;
-declare global {function gtag(...args: any[]): void
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: any[]): void;
+}
+
+const performanceConfig = {
+  monitoring: {
+    enableLongTaskDetection: true,
+    enableMemoryMonitoring: true,
+    sampleRate: 0.1
+  },
+  webVitals: {
+    lcp: { good: 2500, needsImprovement: 4000 },
+    fid: { good: 100, needsImprovement: 300 },
+    cls: { good: 0.1, needsImprovement: 0.25 },
+    fcp: { good: 1800, needsImprovement: 3000 },
+    ttfb: { good: 800, needsImprovement: 1800 },
+    inp: { good: 200, needsImprovement: 500 }
+  }
 };
-;
-const performanceConfig = {monitoring: {enableLongTaskDetectio,;
-n: true,;
-enableMemoryMonitoring: true,;
-sampleRate: 0.1
-  },;
-webVitals: {lc,;
-p: { goo,;
-d: 2500, needsImprovement: 4000 },;
-fid: { goo,;
-d: 100, needsImprovement: 300 },;
-cls: { goo,;
-d: 0.1, needsImprovement: 0.25 },;
-fcp: { goo,;
-d: 1800, needsImprovement: 3000 },;
-ttfb: { goo,;
-d: 800, needsImprovement: 1800 },;
-inp: { goo,;
-d: 200, needsImprovement: 500 }
-  }
+
+export interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  inp?: number;
 }
-;
-export interface PerformanceMetrics {lcp?: number;
-fid?: number;
-cls?: number;
-fcp?: number;
-ttfb?: number;
-inp?: number
+
+export interface ErrorReport {
+  message: string;
+  stack?: string;
+  component?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
 }
-;
-export interface ErrorReport {message: string;
-stack?: string;
-component?: string;
-timestamp: number;
-userAgen,;
-t: string;
-ur,;
-l: string
-}
-;
-class MonitoringService {private metrics: PerformanceMetrics = {}
+
+class MonitoringService {
+  private metrics: PerformanceMetrics = {};
   private errors: ErrorReport[] = [];
-private observe,;
-r: PerformanceObserver | null = null;
-constructor() {if (typeof window !== 'undefined') {';      this.initializeMonitoring()
+  private isInitialized = false;
+
+  constructor() {
+    this.initialize();
+  }
+
+  private initialize() {
+    if (typeof window === 'undefined') return;
+    
+    this.isInitialized = true;
+    this.setupPerformanceObserver();
+    this.setupErrorHandlers();
+    this.setupWebVitals();
+  }
+
+  private setupPerformanceObserver() {
+    if (!this.isInitialized) return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'longtask') {
+            this.trackLongTask(entry);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['longtask'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
   }
-;
-private initializeMonitoring(): void {
-    // Monitor Web Vitals;
-this.monitorWebVitals()
-    // Monitor Long Tasks;
-this.monitorLongTasks()
-    // Monitor Resource Loading;
-this.monitorResourceTiming()
-    // Global Error Handler;
-this.setupErrorHandling()
-  }
-;
-private monitorWebVitals(): void {if ('PerformanceObserver' in window) {';      try {
-        // Largest Contentful Paint;
-const lcpObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
-this.reportMetric('lcp', this.metrics.lcp)';        });
-lcpObserver.observe({ entryTypes: [
-        'largest-contentful-paint'';      ] })
 
-        // First Input Delay;
-const fidObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
-entries.forEach((entry: PerformanceEntry) => {this.metrics.fid = (entry as any).processingStart - entry.startTime;
-this.reportMetric('fid', this.metrics.fid)';          })
-        });
-fidObserver.observe({ entryTypes: [
-        'first-input'';      ] })
+  private setupErrorHandlers() {
+    if (!this.isInitialized) return;
 
-        // Cumulative Layout Shift;
-let clsValue = 0;
-const clsObserver = new PerformanceObserver(list => {const entries = list.getEntries();
-entries.forEach((entry: PerformanceEntry) => {if (!(entry as any).hadRecentInput) {clsValue += (entry as any).value;
-this.metrics.cls = clsValue;
-this.reportMetric('cls', clsValue)';            }
-          })
-        });
-clsObserver.observe({ entryTypes: [
-        'layout-shift'';      ] })
+    // Global error handler
+    window.addEventListener('error', (event) => {
+      this.reportError({
+        message: event.message,
+        stack: event.error?.stack,
+        component: 'Global',
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      });
+    });
 
-        // First Contentful Paint;
-const fcpObserver = new PerformanceObserver(list => {const entries = list.getEntries();
-entries.forEach(entry => {this.metrics.fcp = entry.startTime;
-this.reportMetric('fcp', entry.startTime)';          })
-        });
-fcpObserver.observe({ entryTypes: [
-        'paint'';      ] })
-      } catch (error) {
-        // eslint-disable-next-line no-console;
-console.error('Error setting up Web Vitals monitoring:', error)';      }
-    }
+    // Unhandled promise rejection handler
+    window.addEventListener('unhandledrejection', (event) => {
+      this.reportError({
+        message: `Unhandled Promise Rejection: ${event.reason}`,
+        stack: event.reason?.stack,
+        component: 'Promise',
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      });
+    });
   }
-;
-private monitorLongTasks(): void {if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {';      try {const longTaskObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) {
-            // eslint-disable-next-line no-console;
-console.log('Long task detected:', entry.duration)';          }
-        });
-longTaskObserver.observe({ entryTypes: [
-        'longtask'';      ] })
-      } catch (error) {
-        // Long task API might not be available
-        // eslint-disable-next-line no-console;
-console.warn('Long task monitoring not available:', error)';      }
-    }
-  }
-;
-private monitorResourceTiming(): void {if ('PerformanceObserver' in window) {';      try {const resourceObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
-entries.forEach((entry: PerformanceResourceTiming) => {if (entry.duration > 1000) {
-              // eslint-disable-next-line no-console;
-console.log('Slow resourc,';      e:', entry.name, entry.duration)';            }
-          })
-        });
-resourceObserver.observe({ entryTypes: [
-        'resource'';      ] })
-      } catch (error) {
-        // eslint-disable-next-line no-console;
-console.warn('Resource timing monitoring not available:', error)';      }
-    }
-  }
-;
-private setupErrorHandling(): void {
-    // Global error handler;
-window.addEventListener('error', (event) => {';      this.logError({message: event.message,;
-stack: event.error?.stack,;
-timestamp: Date.now(),;
-userAgent: navigator.userAgent,;
-url: window.location.href
-      })
-    })
 
-    // Unhandled promise rejection handler;
-window.addEventListener('unhandledrejection', (event) => {';      this.logError({message: `Unhandled Promise Rejectio,;n: ${event.reason}`,;
-timestamp: Date.now(),;
-userAgent: navigator.userAgent,;
-url: window.location.href
-      })
-    })
-  }
-;
-private reportMetric(name: string, value: number): void {
-    // Sample rate;
-if (Math.random() > performanceConfig.monitoring.sampleRate) {return
-    };
-;
-const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
-if (thresholds) {const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'';      // eslint-disable-next-line no-console;
-console.log(`Web Vital ${name}:`, value, `(${rating})`)    }
+  private setupWebVitals() {
+    if (!this.isInitialized) return;
 
-    // Send to analytics (if configured);
-if (typeof gtag === 'function') {';      gtag('event', name, {';        value: Math.round(name === 'cls' ? value * 100,';      0: value),;
-event_category: 'Web Vitals'';      })
-    }
+    // Import web-vitals dynamically
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB, getINP }) => {
+      getCLS((metric) => this.recordMetric('cls', metric.value));
+      getFID((metric) => this.recordMetric('fid', metric.value));
+      getFCP((metric) => this.recordMetric('fcp', metric.value));
+      getLCP((metric) => this.recordMetric('lcp', metric.value));
+      getTTFB((metric) => this.recordMetric('ttfb', metric.value));
+      getINP((metric) => this.recordMetric('inp', metric.value));
+    }).catch(() => {
+      console.warn('Web Vitals not available');
+    });
   }
-;
-public logError(error: ErrorReport): void {this.errors.push(error)
-    // Keep only last 50 errors;
-if (this.errors.length > 50) {this.errors = this.errors.slice(-50)
+
+  private recordMetric(name: keyof PerformanceMetrics, value: number) {
+    this.metrics[name] = value;
+    this.evaluateMetric(name, value);
+  }
+
+  private evaluateMetric(name: keyof PerformanceMetrics, value: number) {
+    const thresholds = performanceConfig.webVitals[name];
+    if (!thresholds) return;
+
+    let status = 'poor';
+    if (value <= thresholds.good) {
+      status = 'good';
+    } else if (value <= thresholds.needsImprovement) {
+      status = 'needs-improvement';
     }
 
-    // eslint-disable-next-line no-console;
-console.error('Error logged:', error)';
-    // Send to error tracking service (if configured);
-if (typeof gtag === 'function') {';      gtag('event', 'exception', {';        description: error.message,;
-fatal: false
-      })
+    // Send to analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'web_vital', {
+        metric_name: name,
+        metric_value: value,
+        metric_status: status
+      });
     }
   }
-;
-public getMetrics(): PerformanceMetrics {return { ...this.metrics }
-  }
-;
-public getErrors(): ErrorReport[] {return [...this.errors]
-  }
-;
-public clearErrors(): void {this.errors = []
-  }
-;
-public measureMemory(): void {if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {';      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSiz,;
-e: number; jsHeapSizeLimi,;
-t: number } }).memory;
-if (memory) {
-        // eslint-disable-next-line no-console;
-console.log('Memory usage:', {';          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,;total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,;limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`        })
-      }
+
+  private trackLongTask(entry: PerformanceEntry) {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'long_task', {
+        duration: entry.duration,
+        start_time: entry.startTime
+      });
     }
   }
-;
-public measureNavigationTiming(): void {if ('performance' in window && 'getEntriesByType' in performance) {';      const navigation = performance.getEntriesByType('navigation')[';        0
-      ] as PerformanceNavigationTiming;
-if (navigation) {
-        // eslint-disable-next-line no-console;
-console.log('Performance metrics:', {';          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,';          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,';          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,';          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,';          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,';          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,';          'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`';        })
-      }
+
+  public reportError(error: ErrorReport) {
+    this.errors.push(error);
+    
+    // Send to analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_map: {
+          component: error.component,
+          stack: error.stack
+        }
+      });
     }
+
+    // In production, send to error monitoring service
+    if (process.env.NODE_ENV === 'production') {
+      this.sendToErrorService(error);
+    }
+  }
+
+  private async sendToErrorService(error: ErrorReport) {
+    try {
+      await fetch('/api/errors', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(error),
+      });
+    } catch (err) {
+      console.error('Failed to send error to monitoring service:', err);
+    }
+  }
+
+  public getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
+
+  public getErrors(): ErrorReport[] {
+    return [...this.errors];
+  }
+
+  public clearMetrics() {
+    this.metrics = {};
+  }
+
+  public clearErrors() {
+    this.errors = [];
   }
 }
 
-// Singleton instance;
-const monitoring = new MonitoringService();
-export default PageComponent;
+// Export singleton instance
+export const monitoringService = new MonitoringService();
+
+// Export utility functions
+export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', eventName, parameters);
+  }
+};
+
+export const trackPageView = (page: string) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+      page_path: page
+    });
+  }
+};
+
+export const reportError = (error: ErrorReport) => {
+  monitoringService.reportError(error);
+};

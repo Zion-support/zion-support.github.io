@@ -8,7 +8,7 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+// import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
 
@@ -128,16 +128,7 @@ const App: React.FC = () => {
               </Suspense>
             </ErrorBoundary>
             <Footer />
-            <AccessibilityEnhancer>
-              <div></div>
-            </AccessibilityEnhancer>
-            <SEOOptimizer 
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-              keywords={['AI solutions', 'IT services', 'quantum computing', 'autonomous systems', 'enterprise technology']}
-            >
-              <div></div>
-            </SEOOptimizer>
+            {/* SEO and accessibility optimizations handled by individual pages */}
           </div>
         </Router>
       </GlobalErrorBoundary>
