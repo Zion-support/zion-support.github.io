@@ -1,15 +1,16 @@
+'use client';
+
 import React, { ReactNode, useEffect } from 'react';
-'use client'
 
 interface AccessibilityEnhancerProps {
   children: ReactNode;
   className?: string;
-};
+}
 
-  const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children, className }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children, className }) => {
   useEffect(() => {
     // Enhance accessibility features
-    const Page = () => {
+    const enhanceAccessibility = () => {
       // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -43,4 +44,4 @@ interface AccessibilityEnhancerProps {
   );
 };
 
-export default Page;
+export default AccessibilityEnhancer;

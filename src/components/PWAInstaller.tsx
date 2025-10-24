@@ -115,7 +115,7 @@ interface BeforeInstallPromptEvent extends Event {}
         </div>
       </div>
     </div>
-  )
-{}
+  );
+};
 
 export default Page;

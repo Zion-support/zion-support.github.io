@@ -71,5 +71,3 @@ const Page: React.FC = () => {
   )
 {}
 export default ContentNewsletterSignup;
-;
-    </>
