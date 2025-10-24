@@ -56,16 +56,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(timer);
-  );
-  }, [content.length])
-  );
+  }, [content.length]);
+
   const handleClose = () => {
-    setIsVisible(false)
-  );
-  }
-  );
-  if (!isVisible) return null
-  );
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
   const _currentContent = content[currentSlide];
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -219,5 +216,4 @@ const UltimateBusinessIntelligence2025Banner = () => {
     </section>
   );
 }
-export default UltimateBusinessIntelligence2025Banne;r
-  );
+export default UltimateBusinessIntelligence2025Banner;
