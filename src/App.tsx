@@ -1,6 +1,5 @@
 import React, { useEffect, useState, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { Routes, Route } from 'react-router-dom';
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
 
@@ -240,89 +239,8 @@ const App: React.FC = () => {
       <Routes>
         {/* Main Pages */}
         <Route path="/" element={<HomePage />} />
-        
-        {/* Company Pages */}
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/careers" element={<CareersPage />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        
-        {/* Main Services */}
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/demo" element={<DemoPage />} />
-        <Route path="/consultation" element={<ConsultationPage />} />
-        
-        {/* AI Services */}
-        <Route path="/ai-services" element={<AIServicesPage />} />
-        <Route path="/ai-marketing" element={<AIMarketingPage />} />
-        <Route path="/ai-automation" element={<AIAutomationPage />} />
-        <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
-        <Route path="/ai-fintech" element={<AIFintechPage />} />
-        <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-        <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-        <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
-        <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
-        <Route path="/ai-mobile-app-development" element={<AIMobileAppDevelopmentPage />} />
-        <Route path="/ai-ecommerce-solutions" element={<AIEcommerceSolutionsPage />} />
-        <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
-        <Route path="/ai-sales-automation" element={<AISalesAutomationPage />} />
-        <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
-        <Route path="/ai-lead-generation" element={<AILeadGenerationPage />} />
-        <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} />
-        
-        {/* Micro SAAS Solutions */}
-        <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
-        <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
-        <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
-        <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} />
-        <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
-        <Route path="/ai-code-generation" element={<AICodeGenerationPage />} />
-        <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
-        <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} />
-        <Route path="/ai-crm" element={<AICRMPage />} />
-        
-        {/* IT Services */}
-        <Route path="/it-services" element={<ITServicesPage />} />
-        <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
-        <Route path="/cybersecurity" element={<CybersecurityPage />} />
-        <Route path="/cloud-migration" element={<CloudMigrationPage />} />
-        <Route path="/devops-cicd" element={<DevOpsPage />} />
-        <Route path="/database-management" element={<DatabasePage />} />
-        <Route path="/network-solutions" element={<NetworkingPage />} />
-        
-        {/* Specialized Solutions */}
-        <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-        <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-        <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
-        <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
-        <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
-        <Route path="/robotics" element={<RoboticsPage />} />
-        
-        {/* Content Pages */}
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/case-studies" element={<CaseStudiesPage />} />
-        
-        {/* AI Services Routes */}
-        <Route path="/ai-ml-platform" element={<AIMLPlatformPage />} />
-        
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </Router>
-
-// 404 Page Component
-const NotFoundPage: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
-      <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
-      <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-      <a
-        href="/"
-        className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold"
-      >
-        Go Home
-      </a>
+      
+        </Routes>
     </div>
   </div>
 );

@@ -40,10 +40,13 @@ interface NavigatorWithConnection extends Navigator {}
   connection?: NetworkConnection;
   mozConnection?: NetworkConnection;
   webkitConnection?: NetworkConnection;
-}
-interface SystemMetrics {}
-  performance: {,
-  score: number;
+interface SystemMetrics {
+  // TODO: Add content
+};
+    performance: {
+  // TODO: Add content
+};
+  score: number;,
     loadTime: number;,
   firstContentfulPaint: number;
     largestContentfulPaint: number;,
@@ -101,9 +104,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({}
       const memoryInfo = getMemoryInfo();
       // Get network info
       const networkInfo = getNetworkInfo();
-      const newMetrics: SystemMetrics = {,
-  performance: {}
-          score: performanceScore,
+      const newMetrics: SystemMetrics = {
+      const _networkInfo = getNetworkInfo();
+      const _newMetrics: SystemMetrics = {;
+    score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
@@ -236,23 +240,31 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({}
         <div className="flex items-center space-x-4"></div>
           <div className="flex items-center space-x-2"></div>
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-            <span className="text-sm text-gray-600"></span>
-              {isMonitoring ? 'Monitoring' : 'Stopped'}
+            <span className="text-sm text-gray-600">{isMonitoring ? 'Monitoring' : 'Stopped'}
             </span>
           </div>
           {enableExport && ()
             <button
               onClick={handleExport}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            ></button>
-              Export Data
-            </button>
+// >//               Export Data
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
           )}
         </div>
       </div>
       {lastUpdate && ()
-        <p className="text-sm text-gray-500 mb-4"></p>
-          Last updated: {lastUpdate.toLocaleTimeString()}
+        
+          <p className="text-sm text-gray-500 mb-4"}>Last updated: {lastUpdate.toLocaleTimeString()}
+        
         </p>
       )}
       {/* Performance Metrics */}
@@ -423,13 +435,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({}
         </div>
       )}
       {/* Error Distribution */}
-      {showDetails && ()
-        <div className="mb-8"></div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-            <div className="bg-gray-50 p-4 rounded-lg"></div>
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
-              <div className="space-y-1"></div>
+      {showDetails && (
+          <h3 className="text-lg font-semibold text-gray-900 mb-4"}>Error Distribution
+        </h3>
+              <h4 className="text-sm font-medium text-gray-600 mb-2"}>By Type
+        </h4>
+              <div className="space-y-1">
                 {Object.entries(metrics.errors.byType).map(([type, count]) => ()
                   <div key={type} className="flex justify-between text-sm"></div>
                     <span className="capitalize">{type}</span>

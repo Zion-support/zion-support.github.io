@@ -1,7 +1,12 @@
 'use client';
-import { useEffect, useCallback } from 'react';
-export const usePerformanceMonitoring = () => {}
-  const reportWebVitals = useCallback((metric: { name: string; value: number; delta: number; id: string; navigationType: string }) => {}
+export const usePerformanceMonitoring = () => {
+import { useEffect } from 'react';
+export const _usePerformanceMonitoring = () => {
+  // TODO: Add content
+}
+  const reportWebVitals = useCallback((metric: any) => {
+  // TODO: Add content
+}
     const body = JSON.stringify(metric);
     const url = '/api/analytics';
     if (navigator.sendBeacon) {}

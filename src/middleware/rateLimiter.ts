@@ -103,16 +103,15 @@ export const rateLimiters = {}
   lenient: new RateLimiter({}
     windowMs: 60 * 60 * 1000,
     max: 1000
-  }),
-  // API: 60 requests per minute,
-  api: new RateLimiter({}
-    windowMs: 60 * 1000,
+// API: 60 requests per minute,
+
+    api: new RateLimiter({;
     max: 60,
     message: 'API rate limit exceeded. Please try again later.'
   }),
   // Authentication: 5 login attempts per 15 minutes,
-  auth: new RateLimiter({}
-    windowMs: 15 * 60 * 1000,
+
+    auth: new RateLimiter({;
     max: 5,
     message: 'Too many login attempts. Please try again later.',
     skipSuccessfulRequests: true

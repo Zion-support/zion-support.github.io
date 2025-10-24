@@ -2,9 +2,13 @@
  * Application Configuration
  * Centralized configuration management for the Zion Tech Group application
  */
-export interface AppConfig {}
-  app: {,
-  name: string;
+export interface AppConfig {
+  // TODO: Add content
+};
+    app: {
+  // TODO: Add content
+};
+  name: string;,
     version: string;,
   environment: 'development' | 'production' | 'test';
   };

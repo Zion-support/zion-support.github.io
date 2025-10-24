@@ -3,37 +3,78 @@ import { Cloud, Shield, Server, Database, Smartphone, Lock, BarChart, Users, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
-const pagePage = () => {
+import { Cloud, Shield, Server, BarChart } from 'react-helmet-async';
+import { Cloud, Shield, Server, Database, BarChart } from 'lucide-react';
+const ItServicesPage: React.FC = () => {;
+    title: 'Advanced Threat Protection',
+      description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
+      icon: Shield,
+      features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Security monitoring', 'Compliance reporting', 'Penetration testing'],
+      price: 'Starting at $2,000/month',
+      category: 'Security',
+      benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', 'Peace of mind'],
+      technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Firewalls', 'Intrusion Detection'],
+      title: 'IT Infrastructure',
+      description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
+      icon: Server,
+      features: ['Network setup', 'Server management', 'Backup solutions', 'Disaster recovery', 'Performance monitoring', '24/7 support'],
+      price: 'Starting at $1,200/month',
+      benefits: ['Reliable infrastructure', 'Reduced downtime', 'Improved efficiency', 'Cost savings'],
+      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
+      title: 'Business Intelligence',
+      description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
+      icon: BarChart,
+      features: ['Data visualization', 'Report generation', 'Dashboard creation', 'Data warehousing', 'ETL processes', 'Predictive analytics'],
+      price: 'Starting at $1,000/month',
+      category: 'Analytics',
+      benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost optimization'],
+      technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS'],
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
+      icon: Users,
+      features: ['Technology assessment', 'Strategic planning', 'Vendor evaluation', 'Cost analysis', 'Implementation guidance', 'Training'],
+      price: 'Starting at $150/hour',
+      category: 'Consulting',
+      benefits: ['Strategic guidance', 'Cost optimization', 'Risk mitigation', 'Technology alignment'],
+      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
+    }
+  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>IT Services | Zion Tech Group</title>
+        <meta name="description" content="Advanced IT services solutions by Zion Tech Group." /> </Helmet>
       <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              IT Services & Infrastructure
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Comprehensive IT solutions to support and optimize your business infrastructure. 
-            From cloud migration to cybersecurity, we keep your technology running smoothly.
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">IT Services</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">// Coming Soon - Advanced IT services solutions that will transform your business.
+          
+          
+          
+          
+          
+          
+          
+          
+          
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-            >
-              Get Free IT Assessment
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              (302) 464-0950
-            </a>
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">// Contact Us
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">Learn More
           </div>
         </section>
 

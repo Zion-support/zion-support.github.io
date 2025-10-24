@@ -1,25 +1,13 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const Page: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6"></h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
+const DatabasePage: React.FC = () => {return (
+    <div}>Coming Soon
         </div>
-      </div>
-    </React.Fragment>
   );
 };
-
-export default Page;
+  return (
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold text-white mb-4">Database</h1><p className="text-gray-300 mb-8">Coming Soon - Advanced database solutions</p><a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Contact Us
+        </a></div></div>
+  );
+};
+export default DatabasePage;

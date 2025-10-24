@@ -24,18 +24,35 @@ interface ErrorBoundaryProps {}
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
 }
-interface ErrorReport {}
-  errorId: string | null;,
-  error: Error;
-  errorInfo: ErrorInfo;,
-  message: string;
-  stack: string | undefined;,
-  componentStack: string | null | undefined;
-  timestamp: string;,
-  userAgent: string;
-  url: string;,
-  userId: string | null;
-  sessionId: string;
+interface ErrorReport {
+  // TODO: Add content
+};
+  errorId: string | null;
+    error: Error;
+    errorInfo: ErrorInfo;
+    message: string;
+    stack: string | undefined;,
+    componentStack: string | null | undefined;,
+    timestamp: string;,
+    userAgent: string;,
+    url: string;,
+    userId: string | null;,
+    sessionId: string;
+}
+class AdvancedErrorBoundary extends Component
+          
+          
+          
+          
+          
+          
+          
+          
+          <
+// ErrorBoundaryProps,
+//   ErrorBoundaryState
+> {
+  // TODO: Add content
 }
 class AdvancedErrorBoundary extends Component<
   ErrorBoundaryProps,
@@ -180,87 +197,67 @@ class AdvancedErrorBoundary extends Component<
                       strokeLinejoin='round'
                       strokeWidth={2}
                       d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
-                    /></path>
-                  </svg>
-                </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h2>
-                  Oops! Something went wrong
-                </h2>
-                <p className='mt-2 text-sm text-gray-600'></p>
-                  We&apos;re sorry, but something unexpected happened. Our team
+/></svg></div><h2 className='mt-6 text-3xl font-extrabold text-gray-900'>Oops! Something went wrong
+                </h2><p className='mt-2 text-sm text-gray-600'>We&apos;re sorry, but something unexpected happened. Our team
                   has been notified.
-                </p>
-              </div>
-              {process.env.NODE_ENV === 'development' && ()
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'></div>
-                  <h3 className='text-sm font-medium text-red-800'></h3>
-                    Error Details:
-                  </h3>
-                  <div className='mt-2 text-sm text-red-700'></div>
-                    <p></p>
-                      <strong>Error ID:</strong> {this.state.errorId}
-                    </p>
-                    <p></p>
-                      <strong>Message:</strong> {this.state.error?.message}
-                    </p>
-                    <details className='mt-2'></details>
-                      <summary className='cursor-pointer font-medium'></summary>
-                        Stack Trace
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'></pre>
-                        {this.state.error?.stack}
-                      </pre>
-                    </details>
-                    <details className='mt-2'></details>
-                      <summary className='cursor-pointer font-medium'></summary>
-                        Component Stack
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'></pre>
-                        {this.state.errorInfo?.componentStack}
-                      </pre>
-                    </details>
-                  </div>
-                </div>
+                </p></div>
+              {process.env.NODE_ENV === 'development' && (
+                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'><h3 className='text-sm font-medium text-red-800'}>
+          Error Details:
+                  
+        </h3><div className='mt-2 text-sm text-red-700'><p><strong}>
+          Error ID:
+        </strong}>
+          {this.state.errorId}
+                    
+        </p><p><strong>Message:</strong> {this.state.error?.message}
+                    </p><details className='mt-2'><summary className='cursor-pointer font-medium'>Stack Trace
+                      </summary><pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}
+                      </pre></details><details className='mt-2'><summary className='cursor-pointer font-medium'>Component Stack
+                      </summary><pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}
+                      </pre></details></div></div>
               )}
               <div className='mt-6 space-y-3'></div>
                 {this.props.enableRetry &&
-                  this.retryCount < this.maxRetries && ()
-                    <button
-                      onClick={this.handleRetry}
-                      className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                    ></button>
-                      Try Again ({this.maxRetries - this.retryCount} attempts
-                      left)
-                    </button>
+// this.retryCount 
+          
+          
+          
+          
+          
+          
+          
+          
+          < this.maxRetries && ()
+                    
+          <button
+onClick={this.handleRetry} className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                    >Try Again ({this.maxRetries - this.retryCount} attempts
+// left)
+                    
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
                   )}
                 <button
-                  onClick={this.handleReload}
-                  className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                ></button>
-                  Reload Page
-                </button>
-                <button
-                  onClick={this.handleGoHome}
-                  className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                ></button>
-                  Go to Homepage
-                </button>
-              </div>
-              <div className='mt-6 text-center'></div>
-                <p className='text-xs text-gray-500'></p>
+onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                >Reload Page
+                </button><button
+                  onClick={this.handleGoHome} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                >Go to Homepage
+                </button></div><div className='mt-6 text-center'><p className='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
                   at&nbsp;
                   <a
-                    href='mailto:kleber@ziontechgroup.com'
-                    className='text-indigo-600 hover:text-indigo-500'
-                  ></a>
-                    kleber@ziontechgroup.com
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+                    href='mailto:kleber@ziontechgroup.com' className='text-indigo-600 hover:text-indigo-500'
+                  >kleber@ziontechgroup.com
+                  </a></p></div></div></div></div>
       );
     }
     return this.props.children;
