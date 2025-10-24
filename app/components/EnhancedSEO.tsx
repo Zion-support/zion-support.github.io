@@ -54,4 +54,3 @@ export default EnhancedSEOPage
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             </div>
-          </div>

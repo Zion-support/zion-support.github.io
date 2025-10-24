@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, Users, Globe, Database, Settings, Shield, Zap } from 'lucide-react';
 

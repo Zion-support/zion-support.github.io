@@ -1,227 +1,79 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Common syntax error patterns and their fixes
-const fixes = [
-  // Fix missing semicolons after interface declarations
-  {
-    pattern: /interface\s+\w+\s*\{[^}]*\}\s*$/gm,
-    replacement: (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';';
-      }
-      return match;
+// Function to fix common syntax errors in React components
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix LinkContact Us pattern
+  fixed = fixed.replace(/LinkContact Us\s*>\s*\$2\s*<ArrowRight\$3 \/>\s*<\/Link>/g, 
+    `Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>`);
+  
+  // Fix ArrowRight$ pattern
+  fixed = fixed.replace(/ArrowRight\$[0-9]/g, 'ArrowRight className="w-5 h-5 ml-2"');
+  
+  // Fix $2, $3 patterns
+  fixed = fixed.replace(/\$[0-9]/g, '');
+  
+  // Fix extra closing divs - remove duplicate closing divs at the end
+  const lines = fixed.split('\n');
+  const lastLines = lines.slice(-10);
+  let extraDivs = 0;
+  
+  // Count extra closing divs in the last few lines
+  for (let i = lastLines.length - 1; i >= 0; i--) {
+    if (lastLines[i].trim() === '</div>') {
+      extraDivs++;
+    } else if (lastLines[i].trim() && !lastLines[i].trim().startsWith('//')) {
+      break;
     }
-  },
-  
-  // Fix missing closing braces in interfaces
-  {
-    pattern: /interface\s+\w+\s*\{[^}]*$/gm,
-    replacement: (match) => {
-      if (!match.includes('}')) {
-        return match + '}';
-      }
-      return match;
-    }
-  },
-  
-  // Fix missing semicolons after function declarations
-  {
-    pattern: /const\s+\w+\s*:\s*React\.FC<[^>]*>\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\}\s*$/gm,
-    replacement: (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';';
-      }
-      return match;
-    }
-  },
-  
-  // Fix missing closing braces in function declarations
-  {
-    pattern: /const\s+\w+\s*:\s*React\.FC<[^>]*>\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*$/gm,
-    replacement: (match) => {
-      if (!match.includes('}')) {
-        return match + '}';
-      }
-      return match;
-    }
-=======
-const fs = require('fs');
-const path = require('path');
-
-// Common syntax fixes
-const fixes = [
-  // Fix missing semicolons after "use client"
-  {
-    pattern: /"use client",\s*\n/g,
-    replacement: '"use client";\n'
-  },
-  {
-    pattern: /'use client',\s*\n/g,
-    replacement: "'use client";\n"
->>>>>>> cursor/fix-errors-and-merge-to-main-46c4
-  },
-  
-  // Fix missing commas in object properties
-  {
-<<<<<<< HEAD
-    pattern: /(\w+:\s*[^,}]+)\s*(\w+:\s*[^,}]+)/g,
-    replacement: '$1,\n  $2'
-  },
-  
-  // Fix missing closing parentheses in function calls
-  {
-    pattern: /(\w+\([^)]*)\s*$/gm,
-    replacement: (match) => {
-      const openParens = (match.match(/\(/g) || []).length;
-      const closeParens = (match.match(/\)/g) || []).length;
-      if (openParens > closeParens) {
-        return match + ')';
-      }
-      return match;
-    }
-  },
-  
-  // Fix missing closing braces in JSX
-  {
-    pattern: /<(\w+)[^>]*>[^<]*$/gm,
-    replacement: (match) => {
-      if (!match.includes('</')) {
-        const tagName = match.match(/<(\w+)/)?.[1];
-        if (tagName) {
-          return match + `</${tagName}>`;
-        }
-      }
-      return match;
-    }
-  },
-  
-  // Fix missing semicolons in variable declarations
-  {
-    pattern: /(const|let|var)\s+\w+\s*=\s*[^;]+$/gm,
-    replacement: (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';';
-      }
-      return match;
-    }
-  },
-  
-  // Fix missing commas in array elements
-  {
-    pattern: /(\w+)\s*(\w+)/g,
-    replacement: (match, p1, p2) => {
-      if (match.includes('[') && match.includes(']')) {
-        return `${p1},\n  ${p2}`;
-      }
-      return match;
-    }
-=======
-    pattern: /(\w+):\s*(\w+)\s*\n\s*(\w+):/g,
-    replacement: '$1: $2,\n  $3:'
-  },
-  
-  // Fix missing commas in interface properties
-  {
-    pattern: /(\w+):\s*(\w+)\s*\n\s*(\w+):/g,
-    replacement: '$1: $2;\n  $3:'
-  },
-  
-  // Fix malformed JSX attributes
-  {
-    pattern: /className="([^"]*)\s+([^"]*)"/g,
-    replacement: 'className="$1 $2"'
-  },
-  
-  // Fix missing closing tags
-  {
-    pattern: /<div([^>]*)>\s*$/gm,
-    replacement: '<div$1></div>'
-  },
-  
-  // Fix malformed arrow functions
-  {
-    pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm,
-    replacement: 'const $1 = () => {\n  '
-  },
-  
-  // Fix missing semicolons
-  {
-    pattern: /(\w+)\s*\n\s*const/g,
-    replacement: '$1;\nconst'
-  },
-  
-  // Fix malformed imports
-  {
-    pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"]\s*$/gm,
-    replacement: 'import { $1 } from "$2";'
->>>>>>> cursor/fix-errors-and-merge-to-main-46c4
   }
-];
+  
+  // Remove extra closing divs
+  if (extraDivs > 1) {
+    const extraDivsToRemove = extraDivs - 1;
+    let removed = 0;
+    for (let i = lines.length - 1; i >= 0 && removed < extraDivsToRemove; i--) {
+      if (lines[i].trim() === '</div>') {
+        lines.splice(i, 1);
+        removed++;
+      }
+    }
+    fixed = lines.join('\n');
+  }
+  
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<>\s*<Head>/g, '<>\n      <Head>');
+  fixed = fixed.replace(/<\/Head>\s*<div/g, '</Head>\n      <div');
+  
+  return fixed;
+}
 
-function fixFile(filePath) {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-<<<<<<< HEAD
-    // Apply fixes
-    for (const fix of fixes) {
-=======
-    fixes.forEach(fix => {
->>>>>>> cursor/fix-errors-and-merge-to-main-46c4
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-<<<<<<< HEAD
-    }
-    
-    // Additional specific fixes
-    // Fix missing closing braces in function components
-    if (content.includes('const ') && content.includes('React.FC') && !content.includes('export default')) {
-      const lastBrace = content.lastIndexOf('}');
-      const lastSemicolon = content.lastIndexOf(';');
-      if (lastBrace > lastSemicolon) {
-        content = content.substring(0, lastBrace + 1) + ';\n\nexport default ' + 
-          content.match(/const\s+(\w+)/)?.[1] + ';';
-        modified = true;
-      }
-    }
-    
-    // Fix missing return statements in React components
-    if (content.includes('React.FC') && content.includes('return') && !content.includes('return (')) {
-      content = content.replace(/return\s+([^;]+);/g, 'return (\n    $1\n  );');
-      modified = true;
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
-=======
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-46c4
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-<<<<<<< HEAD
+// Function to recursively find all .tsx files
 function findTsxFiles(dir) {
   const files = [];
   
@@ -234,7 +86,7 @@ function findTsxFiles(dir) {
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      } else if (item.endsWith('.tsx')) {
         files.push(fullPath);
       }
     }
@@ -245,41 +97,16 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-const workspaceDir = process.cwd();
-const tsxFiles = findTsxFiles(workspaceDir);
+const appDir = '/workspace/app';
+const tsxFiles = findTsxFiles(appDir);
 
-console.log(`Found ${tsxFiles.length} TypeScript files to check...`);
+console.log(`Found ${tsxFiles.length} .tsx files to process`);
 
 let fixedCount = 0;
 for (const file of tsxFiles) {
-  if (fixFile(file)) {
+  if (processFile(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed ${fixedCount} files.`);
-=======
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += walkDir(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixFile(filePath)) {
-        fixedCount++;
-      }
-    }
-  });
-  
-  return fixedCount;
-}
-
-console.log('Starting syntax error fixes...');
-const fixedCount = walkDir('./app');
 console.log(`Fixed ${fixedCount} files`);
->>>>>>> cursor/fix-errors-and-merge-to-main-46c4

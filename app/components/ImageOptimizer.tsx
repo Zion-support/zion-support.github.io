@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot;
 &quot;use client&quot

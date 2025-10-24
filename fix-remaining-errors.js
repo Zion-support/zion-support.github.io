@@ -1,44 +1,20 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix JSX structure issues
-function fixJSXStructure(content) {
+// Function to fix remaining syntax errors
+function fixRemainingErrors(content) {
   let fixed = content;
   
-  // Ensure proper React import at the top
-  if (!fixed.includes("import React from 'react';")) {
-    if (fixed.includes("'use client';")) {
-      fixed = fixed.replace("'use client';", "'use client';\nimport React from 'react';");
-    } else {
-      fixed = "import React from 'react';\n" + fixed;
-    }
-  }
-  
-  // Fix malformed Link components
-  fixed = fixed.replace(/LinkContact Us\s*>\s*\$2\s*<ArrowRight\$3 \/>\s*<\/Link>/g, 
-    `Link
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>`);
-  
-  // Fix ArrowRight$ pattern
-  fixed = fixed.replace(/ArrowRight\$[0-9]/g, 'ArrowRight className="w-5 h-5 ml-2"');
-  
-  // Fix $2, $3 patterns
-  fixed = fixed.replace(/\$[0-9]/g, '');
-  
-  // Fix extra closing divs
+  // Fix extra closing divs at the end
   const lines = fixed.split('\n');
+  const lastLines = lines.slice(-10);
   let extraDivs = 0;
   
   // Count extra closing divs in the last few lines
-  for (let i = lines.length - 1; i >= 0; i--) {
-    if (lines[i].trim() === '</div>') {
+  for (let i = lastLines.length - 1; i >= 0; i--) {
+    if (lastLines[i].trim() === '</div>') {
       extraDivs++;
-    } else if (lines[i].trim() && !lines[i].trim().startsWith('//')) {
+    } else if (lastLines[i].trim() && !lastLines[i].trim().startsWith('//')) {
       break;
     }
   }
@@ -73,7 +49,7 @@ function fixJSXStructure(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXStructure(content);
+    const fixed = fixRemainingErrors(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');

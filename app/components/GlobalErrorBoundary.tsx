@@ -10,4 +10,3 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
     'Gain competitive advantage with advanced technology',
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             </div>
-          </div>

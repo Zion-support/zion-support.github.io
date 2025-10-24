@@ -75,4 +75,3 @@ export default ServiceWorkerRegistrationPage
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.</p>p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             </div>
-          </div>
