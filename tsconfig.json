@@ -1,14 +1,25 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2020",
     "lib": ["dom", "dom.iterable", "es6"],
+=======
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+>>>>>>> f528457f8fa8b9033a9d844cb9a2cfdec2cb5831
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
+<<<<<<< HEAD
     "module": "esnext",
+=======
+>>>>>>> f528457f8fa8b9033a9d844cb9a2cfdec2cb5831
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -19,6 +30,7 @@
         "name": "next"
       }
     ],
+<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
@@ -27,3 +39,31 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
+=======
+    "target": "ES2017"
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "corrupted-src-backup",
+    "problematic-files-backup",
+    "problematic-pages",
+    "**/ai-pages-backup/**",
+    "**/all-pages-backup/**",
+    "**/backup*/**",
+    "**/*.backup.*",
+    "**/*.bak",
+    "**/backup/**"
+  ]
+}
+>>>>>>> f528457f8fa8b9033a9d844cb9a2cfdec2cb5831

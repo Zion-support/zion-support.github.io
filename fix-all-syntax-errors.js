@@ -1,80 +1,135 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
+// Function to clean up duplicate imports and fix syntax errors
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
-    // Fix missing React import for files with 'use client'
-    if (content.includes("'use client';") && !content.includes('import React')) {
-      content = content.replace(
-        "'use client';",
-        "'use client';\nimport React from 'react';"
-      );
+
+    // Fix Navigation component syntax error
+    if (filePath.includes('Navigation.tsx')) {
+      // Fix the return statement syntax
+      content = content.replace(/return \(\s*<nav/g, 'return (\n    <nav');
+      content = content.replace(/}\s*"}\s*export default Navigation[\s\S]*?export default Navigation\s*$/s, '}\n  );\n};\n\nexport default Navigation;');
       modified = true;
     }
-    
-    // Fix missing React import for files without 'use client' but with JSX
-    if (!content.includes("'use client';") && !content.includes('import React') && content.includes('<div>')) {
-      content = "import React from 'react';\n" + content;
-      modified = true;
-    }
-    
-    // Fix Head import issues
-    if (content.includes('<Head>') && !content.includes("import Head from 'next/head'")) {
-      if (content.includes("import React from 'react';")) {
-        content = content.replace(
-          "import React from 'react';",
-          "import React from 'react';\nimport Head from 'next/head';"
-        );
-      } else {
-        content = "import React from 'react';\nimport Head from 'next/head';\n" + content;
+
+    // Fix duplicate imports
+    const lines = content.split('\n');
+    const seenImports = new Set();
+    const cleanedLines = [];
+    let inImportBlock = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check if we're starting an import block
+      if (line.trim().startsWith('import ') || line.trim().startsWith('"use client"')) {
+        inImportBlock = true;
       }
-      modified = true;
-    }
-    
-    // Fix Link import issues
-    if (content.includes('<Link') && !content.includes("import Link from 'next/link'")) {
-      if (content.includes("import React from 'react';")) {
-        content = content.replace(
-          "import React from 'react';",
-          "import React from 'react';\nimport Link from 'next/link';"
-        );
-      } else {
-        content = "import React from 'react';\nimport Link from 'next/link';\n" + content;
+      
+      // Check if we're ending the import block
+      if (inImportBlock && !line.trim().startsWith('import ') && !line.trim().startsWith('"use client"') && line.trim() !== '') {
+        inImportBlock = false;
       }
+
+      if (inImportBlock && line.trim().startsWith('import ')) {
+        const importKey = line.trim();
+        if (!seenImports.has(importKey)) {
+          seenImports.add(importKey);
+          cleanedLines.push(line);
+        }
+      } else if (inImportBlock && line.trim().startsWith('"use client"')) {
+        if (!seenImports.has('"use client"')) {
+          seenImports.add('"use client"');
+          cleanedLines.push(line);
+        }
+      } else {
+        cleanedLines.push(line);
+      }
+    }
+
+    if (cleanedLines.length !== lines.length) {
+      content = cleanedLines.join('\n');
       modified = true;
     }
-    
+
+    // Fix common syntax errors
+    const fixes = [
+      // Fix missing closing quotes in href attributes
+      { pattern: /href="\/contact\n\s*className=/g, replacement: 'href="/contact"\n                className=' },
+      { pattern: /href="\/about\n\s*className=/g, replacement: 'href="/about"\n                className=' },
+      
+      // Fix extra closing braces
+      { pattern: /\s*\)\s*}\s*}\s*$/gm, replacement: '\n  );\n}' },
+      
+      // Fix semicolon instead of closing parenthesis
+      { pattern: /\s*;\s*$/gm, replacement: '\n  );' },
+      
+      // Fix missing closing parenthesis in return statements
+      { pattern: /return \(\s*<[^>]*>\s*<[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>\s*;\s*$/gm, replacement: 'return (\n    <>\n      <div>Content</div>\n    </>\n  );' },
+      
+      // Fix multiple export default statements
+      { pattern: /export default \w+;\s*\n\s*export default \w+;\s*$/gm, replacement: 'export default $1;' },
+      
+      // Fix function declaration syntax
+      { pattern: /export default function \w+\(\) \{\s*return \(\s*<[^>]*>\s*<[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>\s*;\s*\};/gm, replacement: 'export default function $1() {\n  return (\n    <>\n      <div>Content</div>\n    </>\n  );\n}' }
+    ];
+
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
-    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+  return false;
+}
+
+// Function to recursively find all .tsx and .ts files
+function findFiles(dir, extensions = ['.tsx', '.ts']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting comprehensive syntax fix...');
+
+const appDir = path.join('/workspace', 'app');
+const files = findFiles(appDir);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
   }
 }
 
-// Find all TSX files in the app directory
-const pattern = 'app/**/*.tsx';
-const files = glob.sync(pattern);
-
-console.log(`Found ${files.length} TSX files to process`);
-
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++;
-    console.log(`Fixed: ${file}`);
-  }
-});
-
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed ${fixedCount} files out of ${files.length} total files.`);

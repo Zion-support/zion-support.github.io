@@ -1,48 +1,12 @@
 #!/usr/bin/env python3
 """
 <<<<<<< HEAD
-Script to clean up merge conflict markers and fix common syntax errors
-"""
-import os
-import re
-import glob
-
-def clean_merge_conflicts(content):
-    """Clean up merge conflict markers and fix common issues"""
-    # Remove merge conflict markers
-    content = re.sub(r'<<<<<<< HEAD.*?\n', '', content, flags=re.DOTALL)
-    content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
-    content = re.sub(r'>>>>>>> [a-f0-9]+.*?\n', '', content, flags=re.DOTALL)
-    
-    # Fix common syntax issues
-    # Fix missing semicolons after imports
-    content = re.sub(r"import ([^;]+)\n", r"import \1;\n", content)
-    
-    # Fix missing semicolons after variable declarations
-    content = re.sub(r"(const|let|var) ([^=]+) = ([^;]+)\n", r"\1 \2 = \3;\n", content)
-    
-    # Fix missing semicolons after function declarations
-    content = re.sub(r"(export default|export) ([^;]+)\n", r"\1 \2;\n", content)
-    
-    # Fix JSX syntax issues
-    content = re.sub(r'className="([^"]*)"\s*$', r'className="\1"', content, flags=re.MULTILINE)
-    
-    # Fix missing closing braces
-    lines = content.split('\n')
-    brace_count = 0
-    for i, line in enumerate(lines):
-        brace_count += line.count('{') - line.count('}')
-        if brace_count < 0:
-            # Add missing opening brace
-            lines[i] = '{' + line
-            brace_count = 0
-    
-    return '\n'.join(lines)
-
-def process_file(file_path):
-    """Process a single file"""
+Script to clean up merge conflict markers from files.
+This script will resolve merge conflicts by keeping the latest version (after the last =======).
 =======
-Script to clean up merge conflicts and fix common syntax errors in the codebase.
+Script to automatically resolve merge conflicts by choosing the HEAD version.
+This will remove all merge conflict markers and keep only the HEAD version.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 """
 
 import os
@@ -50,142 +14,155 @@ import re
 import glob
 from pathlib import Path
 
+<<<<<<< HEAD
 def clean_merge_conflicts(content):
-    """Remove merge conflict markers and resolve conflicts by keeping the HEAD version."""
-    lines = content.split('\n')
-    cleaned_lines = []
-    in_conflict = False
-    keep_lines = True
+    """Clean merge conflict markers from file content."""
+    # Pattern to match merge conflict markers
+    conflict_pattern = r'<<<<<<<.*?\n(.*?)\n=======.*?\n(.*?)\n>>>>>>>.*?\n'
     
-    for line in lines:
-        if line.startswith('<<<<<<<'):
-            in_conflict = True
-            keep_lines = True
-            continue
-        elif line.startswith('======='):
-            keep_lines = False
-            continue
-        elif line.startswith('>>>>>>>'):
-            in_conflict = False
-            keep_lines = True
-            continue
-        elif in_conflict and not keep_lines:
-            continue
-        else:
-            cleaned_lines.append(line)
+    def replace_conflict(match):
+        # Get the content after the last =======
+        after_equals = match.group(2)
+        return after_equals
     
-    return '\n'.join(cleaned_lines)
-
-def fix_common_syntax_errors(content):
-    """Fix common syntax errors in the code."""
-    # Fix missing semicolons after imports
-    content = re.sub(r"import\s+([^;]+)(?<!;)$", r"import \1;", content, flags=re.MULTILINE)
+    # Replace all merge conflicts
+    cleaned = re.sub(conflict_pattern, replace_conflict, content, flags=re.DOTALL)
     
-    # Fix missing semicolons after variable declarations
-    content = re.sub(r"(\w+)\s*=\s*([^;]+)(?<!;)$", r"\1 = \2;", content, flags=re.MULTILINE)
+    # Also handle cases where there might be multiple conflict markers in sequence
+    # Remove any remaining conflict markers
+    cleaned = re.sub(r'<<<<<<<.*?\n', '', cleaned, flags=re.DOTALL)
+    cleaned = re.sub(r'=======.*?\n', '', cleaned, flags=re.DOTALL)
+    cleaned = re.sub(r'>>>>>>>.*?\n', '', cleaned, flags=re.DOTALL)
     
-    # Fix missing commas in object literals
-    content = re.sub(r"(\w+):\s*([^,}]+)(?<![,}])\s*\n", r"\1: \2,\n", content)
-    
-    # Fix missing closing braces
-    content = re.sub(r"(\w+)\s*{\s*$", r"\1 {", content, flags=re.MULTILINE)
-    
-    # Fix JSX syntax issues
-    content = re.sub(r"<(\w+)\s*([^>]*?)(?<!>)$", r"<\1 \2>", content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_import_issues(content):
-    """Fix common import issues."""
-    # Fix missing imports for lucide-react icons
-    if 'Mail' in content and 'import { Mail' not in content:
-        content = re.sub(r"import\s*{\s*([^}]+)\s*}\s*from\s*['\"]lucide-react['\"]", 
-                        r"import { \1, Mail } from 'lucide-react'", content)
-    
-    if 'Send' in content and 'import { Send' not in content:
-        content = re.sub(r"import\s*{\s*([^}]+)\s*}\s*from\s*['\"]lucide-react['\"]", 
-                        r"import { \1, Send } from 'lucide-react'", content)
-    
-    if 'CheckCircle' in content and 'import { CheckCircle' not in content:
-        content = re.sub(r"import\s*{\s*([^}]+)\s*}\s*from\s*['\"]lucide-react['\"]", 
-                        r"import { \1, CheckCircle } from 'lucide-react'", content)
-    
-    return content
+    return cleaned
 
 def process_file(file_path):
-    """Process a single file to clean up merge conflicts and fix syntax errors."""
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+    """Process a single file to remove merge conflicts."""
+=======
+def clean_merge_conflicts(file_path):
+    """Clean merge conflicts from a single file."""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
 <<<<<<< HEAD
-        content = clean_merge_conflicts(content)
-        
-=======
-        
-        # Clean merge conflicts
-        content = clean_merge_conflicts(content)
-        
-        # Fix common syntax errors
-        content = fix_common_syntax_errors(content)
-        
-        # Fix import issues
-        content = fix_import_issues(content)
-        
-        # Only write if content changed
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-        if content != original_content:
+        # Check if file has merge conflicts
+        if '<<<<<<<' in content or '=======' in content or '>>>>>>>' in content:
+            print(f"Processing: {file_path}")
+            cleaned_content = clean_merge_conflicts(content)
+            
+            # Write back the cleaned content
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed: {file_path}")
+                f.write(cleaned_content)
+            
+            print(f"✓ Cleaned: {file_path}")
             return True
-<<<<<<< HEAD
-        return False
-=======
         else:
-            print(f"No changes needed: {file_path}")
             return False
             
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+=======
+        # Pattern to match merge conflict blocks
+        # <<<<<<< HEAD
+        # ... content ...
+        # =======
+        # ... other content ...
+        # >>>>>>> branch-name
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+'
+        
+        # Replace with just the HEAD content
+        cleaned_content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        
+        # Also handle cases where there might be multiple conflicts in one file
+        # Remove any remaining conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+', '', cleaned_content, flags=re.DOTALL)
+        
+        # Clean up any remaining conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+', '', cleaned_content, flags=re.DOTALL)
+        
+        # Remove any standalone conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD\n', '', cleaned_content)
+        cleaned_content = re.sub(r'=======\n', '', cleaned_content)
+        cleaned_content = re.sub(r'>>>>>>> [^\n]+\n', '', cleaned_content)
+        
+        # Clean up extra whitespace
+        cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
+        
+        # Write back the cleaned content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(cleaned_content)
+        
+        return True
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"✗ Error processing {file_path}: {e}")
         return False
 
 def main():
 <<<<<<< HEAD
-    """Main function to process all files"""
-    # Get all TypeScript and JavaScript files
-=======
     """Main function to process all files."""
-    # Get all TypeScript/TSX files
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+    # Get all TypeScript and JavaScript files
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
-        'src/**/*.tsx',
-        'src/**/*.ts',
-        'components/**/*.tsx',
-        'components/**/*.ts'
+        '*.tsx',
+        '*.ts',
+        '*.jsx',
+        '*.js'
+=======
+    """Main function to clean all merge conflicts."""
+    # Find all TypeScript and JavaScript files
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.js',
+        '**/*.jsx'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     ]
     
     files_processed = 0
-    files_fixed = 0
+    files_with_conflicts = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path):
-                files_processed += 1
-                if process_file(file_path):
-                    files_fixed += 1
-    
+            # Skip node_modules and other directories
 <<<<<<< HEAD
-    print(f"\nProcessed {files_processed} files, fixed {files_fixed} files")
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next', 'out']):
+                continue
+                
+            files_processed += 1
+            if process_file(file_path):
+                files_cleaned += 1
+    
+    print(f"\nSummary:")
+    print(f"Files processed: {files_processed}")
+    print(f"Files cleaned: {files_cleaned}")
 =======
-    print(f"\nProcessed {files_processed} files")
-    print(f"Fixed {files_fixed} files")
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+            if 'node_modules' in file_path or '.git' in file_path:
+                continue
+                
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Check if file has merge conflicts
+                if '<<<<<<< HEAD' in content:
+                    files_with_conflicts += 1
+                    print(f"Processing: {file_path}")
+                    
+                    if clean_merge_conflicts(file_path):
+                        files_processed += 1
+                        print(f"✓ Cleaned: {file_path}")
+                    else:
+                        print(f"✗ Failed: {file_path}")
+                        
+            except Exception as e:
+                print(f"Error reading {file_path}: {e}")
+    
+    print(f"\nSummary:")
+    print(f"Files with conflicts found: {files_with_conflicts}")
+    print(f"Files successfully cleaned: {files_processed}")
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 if __name__ == "__main__":
     main()
