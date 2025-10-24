@@ -7,14 +7,18 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   className?: string;
+  "data-testid"?: string;
+  [key: string]: any;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ 
-  src, 
-  alt, 
-  width, 
-  height, 
-  className = '' 
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  className = "",
+  "data-testid": testId,
+  ...props
 }) => {
   return (
     <Image
@@ -23,6 +27,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       width={width}
       height={height}
       className={className}
+      data-testid={testId}
+      {...props}
     />
   );
 };
