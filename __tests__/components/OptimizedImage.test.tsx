@@ -14,7 +14,8 @@ describe('OptimizedImage', () => {
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', '/test-image.jpg');
+    // Next.js Image component transforms the src, so we check for the transformed URL
+    expect(image).toHaveAttribute('src', expect.stringContaining('test-image.jpg'));
     expect(image).toHaveAttribute('alt', 'Test image');
   });
 
@@ -62,7 +63,8 @@ describe('OptimizedImage', () => {
         />
       )
       const image = screen.getByTestId('optimized-image')
-      expect(image).toHaveAttribute('src', src)
+      // Next.js Image component transforms the src, so we check for the transformed URL
+      expect(image).toHaveAttribute('src', expect.stringContaining(src.split('/').pop() || src))
       expect(image).toHaveAttribute('alt', `Test image ${index + 1}`)
       unmount()
     })

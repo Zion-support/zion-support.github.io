@@ -1,6 +1,9 @@
 // Polyfill fetch and enable fetch mocks
 // import 'whatwg-fetch';
 
+// Import jest-dom matchers
+import '@testing-library/jest-dom';
+
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

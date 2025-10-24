@@ -32,6 +32,9 @@ describe('EnhancedErrorBoundary', () => {
   });
 
   it('renders error fallback when there is an error', () => {
+    // Suppress the error that will be thrown
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    
     render(
       <EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
@@ -39,10 +42,14 @@ describe('EnhancedErrorBoundary', () => {
     );
 
     expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
+    
+    consoleSpy.mockRestore();
   });
 
   it('calls onError when an error occurs', () => {
     const onError = jest.fn();
+    // Suppress the error that will be thrown
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     
     render(
       <EnhancedErrorBoundary onError={onError}>
@@ -54,5 +61,7 @@ describe('EnhancedErrorBoundary', () => {
       expect.any(Error),
       expect.any(Object)
     );
+    
+    consoleSpy.mockRestore();
   });
 });
