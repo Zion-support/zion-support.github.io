@@ -1,7 +1,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp, PieChart } from 'lucide-react'
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [
