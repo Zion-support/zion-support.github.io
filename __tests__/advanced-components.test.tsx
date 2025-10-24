@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {render, screen, fireEvent, waitFor} from '@testing-library/react'
 import {HelmetProvider} from 'react-helmet-async'
 import {MemoryRouter} from 'react-router-dom'
@@ -17,6 +18,49 @@ import {MemoryRouter} from 'react-router-dom'
     // Test implementation;
   })
 })
+=======
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
+import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
+import AdvancedSEOOptimizer from '../src/components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from '../src/components/AdvancedPerformanceMonitor';
+
+// Mock component that throws an error
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  if (shouldThrow) {
+    throw new Error('Test error');
+  }
+  return <div>Test content</div>;
+};
+
+// Test component for error boundary tests
+const TestComponent = () => <div>Test component</div>;
+
+// Mock onError callback
+const onError = jest.fn();
+
+// Mock helmet context
+const helmetContext = {};
+
+describe('AdvancedErrorBoundary', () => {
+  it('renders children when there is no error', () => {
+    render(
+      <MemoryRouter>
+        <AdvancedErrorBoundary>
+          <div>Test content</div>
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText('Test content')).toBeInTheDocument();
+  });
+
+  it('renders error UI when there is an error', () => {
+    const consoleSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
 
     render(
     )

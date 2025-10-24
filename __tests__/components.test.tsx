@@ -2,7 +2,12 @@
 import { describe, test, expect } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
+=======
+import LoadingSpinner from '../src/components/LoadingSpinner';
+import SEOEnhancer from '../src/components/SEOEnhancer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
 
 const TestComponent = () => {
   return (

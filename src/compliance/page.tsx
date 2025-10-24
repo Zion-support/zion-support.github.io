@@ -7,6 +7,7 @@ import React from 'react';
 
 
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
@@ -15,6 +16,11 @@ import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileTe
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+=======
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
 const CompliancePage: React.FC = () => {
   const _certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -25,6 +31,7 @@ const CompliancePage: React.FC = () => {
     { name: 'NIST Framework', status: 'Implemented' }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const complianceAreas = [
     {
@@ -53,6 +60,89 @@ const CompliancePage: React.FC = () => {
     }
   ];
 
+=======
+  const complianceFrameworks = [
+    {
+      name: 'SOC 2 Type II',
+      description: 'Security, availability, and confidentiality controls',
+      status: 'Certified',
+      validUntil: '2025-12-31',
+      icon: Shield,
+      details: [
+        'Security controls implemented and tested',
+        'Availability monitoring and incident response',
+        'Confidentiality protection measures',
+        'Regular third-party audits'
+      ]
+    },
+    {
+      name: 'ISO 27001',
+      description: 'Information security management system',
+      status: 'Certified',
+      validUntil: '2025-11-30',
+      icon: FileText,
+      details: [
+        'Risk assessment and management',
+        'Security policies and procedures',
+        'Continuous improvement processes',
+        'Management commitment and oversight'
+      ]
+    },
+    {
+      name: 'GDPR',
+      description: 'General Data Protection Regulation compliance',
+      status: 'Compliant',
+      validUntil: 'Ongoing',
+      icon: Lock,
+      details: [
+        'Data protection by design and default',
+        'Privacy impact assessments',
+        'Data subject rights implementation',
+        'Data breach notification procedures'
+      ]
+    },
+    {
+      name: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act',
+      status: 'Compliant',
+      validUntil: 'Ongoing',
+      icon: Users,
+      details: [
+        'Administrative safeguards',
+        'Physical safeguards',
+        'Technical safeguards',
+        'Business associate agreements'
+      ]
+    }
+  ];
+
+  const complianceAreas = [
+    {
+      title: 'Data Protection',
+      description: 'Comprehensive data protection and privacy controls',
+      icon: Shield,
+      frameworks: ['GDPR', 'CCPA', 'PIPEDA']
+    },
+    {
+      title: 'Security',
+      description: 'Robust security measures and controls',
+      icon: Lock,
+      frameworks: ['SOC 2', 'ISO 27001', 'NIST']
+    },
+    {
+      title: 'Healthcare',
+      description: 'Healthcare-specific compliance requirements',
+      icon: Users,
+      frameworks: ['HIPAA', 'HITECH', 'FDA']
+    },
+    {
+      title: 'Financial',
+      description: 'Financial services compliance standards',
+      icon: Award,
+      frameworks: ['PCI DSS', 'SOX', 'Basel III']
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
 =======

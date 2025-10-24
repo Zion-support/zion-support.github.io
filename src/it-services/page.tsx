@@ -915,10 +915,18 @@ const ItServicesPage: React.FC = () => {
               </a>
             </div>
           </div>
+<<<<<<< HEAD
           </section>
         </main>
         <Footer />
       </div>
+=======
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
 };

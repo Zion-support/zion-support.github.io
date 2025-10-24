@@ -202,6 +202,7 @@ const memory =
   O: Add content;}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
+<<<<<<< HEAD
     const resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter()
       (resourc)
@@ -218,6 +219,20 @@ const memory =
       //   siz,
   e: r.transferSize;)
       // })));
+=======
+    const _resources = performance.getEntriesByType('resource');
+    const slowResources = _resources.filter(
+      (resource: PerformanceResourceTiming) => resource.duration > 1000
+    );
+    if (slowResources.length > 0) {
+      // eslint-disable-next-line no-console
+      console.log(slowResources.map(r => ({
+          name: r.name,
+          duration: r.duration,
+          size: r.transferSize
+        }))
+      );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}

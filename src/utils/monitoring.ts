@@ -98,10 +98,17 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
+<<<<<<< HEAD
             console.warn('Long task detected:', {
               duration: entry.duration,
               startTime: entry.startTime
             });
+=======
+            // console.warn('Long task detected:', {
+            //   duration: entry.duration,
+            //   startTime: entry.startTime
+            // });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -118,6 +125,7 @@ class MonitoringService {
 <<<<<<< HEAD
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
+<<<<<<< HEAD
               console.warn('Slow resource detected:', {
                 name: entry.name,
                 duration: entry.duration,
@@ -133,6 +141,13 @@ class MonitoringService {
               //   type: resourceEntry.initiatorType
               // })
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
+=======
+              // console.warn('Slow resource detected:', {
+              //   name: entry.name,
+              //   duration: entry.duration,
+              //   type: entry.initiatorType
+              // });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
             }
           });
         });
