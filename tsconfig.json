@@ -21,12 +21,8 @@
         "name": "next"
       }
     ],
-<<<<<<< HEAD
     "target": "ES2017",
     "types": ["jest", "@testing-library/jest-dom"]
-=======
-    "target": "ES2017"
->>>>>>> ccdd793f83f956daa600fba7f9424f13ae1ffb73
   },
   "include": [
     "next-env.d.ts",
@@ -34,14 +30,7 @@
     "types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-<<<<<<< HEAD
     "jest.setup.ts"
-=======
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx"
->>>>>>> ccdd793f83f956daa600fba7f9424f13ae1ffb73
   ],
   "exclude": [
     "node_modules",
@@ -53,7 +42,6 @@
     "**/backup*/**",
     "**/*.backup.*",
     "**/*.bak",
-<<<<<<< HEAD
     "**/backup/**",
     "**/temp-backup/**",
     "**/temp-disabled/**",
@@ -62,8 +50,5 @@
     "**/temp-pages/**",
     "**/temp-problematic/**",
     "**/temp-all-problematic/**"
-=======
-    "**/backup/**"
->>>>>>> ccdd793f83f956daa600fba7f9424f13ae1ffb73
   ]
 }
