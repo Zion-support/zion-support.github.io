@@ -92,3 +92,4 @@ export default PagePage;
 
 export default AiContentStudioPage;
 export default AiContentStudioPage;
+export default AiContentStudioPage;
