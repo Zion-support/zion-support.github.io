@@ -14,6 +14,11 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import FuturisticBackground from './app/components/FuturisticBackground';
 import LoadingSpinner from './app/components/LoadingSpinner';
+import Breadcrumb from './app/components/Breadcrumb';
+import HomePage from './app/page';
+import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/EnhancedAccessibility';
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -150,8 +155,11 @@ function App() {
             </Suspense>
             <Footer />
             <PerformanceOptimizer />
-            <AccessibilityEnhancer />
-            <EnhancedAccessibility />
+            <AccessibilityEnhancer>
+              <EnhancedAccessibility>
+                <div></div>
+              </EnhancedAccessibility>
+            </AccessibilityEnhancer>
             <PerformanceMonitor />
           </div>
         </Router>

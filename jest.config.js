@@ -3,7 +3,7 @@ import { TextEncoder, TextDecoder } from 'util';
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts', '<rootDir>/setupTests.ts'],
   globals: {
     TextEncoder,
     TextDecoder,

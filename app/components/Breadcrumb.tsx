@@ -1,8 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Link from 'next/link';
 
 const Breadcrumb: React.FC = () => {
@@ -45,7 +44,7 @@ const Breadcrumb: React.FC = () => {
                   </span>
                 ) : (
                   <Link
-                    to={routeTo}
+                    href={routeTo}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}

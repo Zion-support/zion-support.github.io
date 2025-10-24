@@ -45,9 +45,6 @@
     "hooks/**/*",
     "types/**/*",
     "utils/**/*",
-    "jest.d.ts",
-    "jest.setup.ts",
-    "setupTests.ts",
     "app/App.tsx",
     "app/root-layout.tsx"
   ]
