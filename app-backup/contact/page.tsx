@@ -96,5 +96,5 @@ className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-8 
     <h1 className="text-lg font-semibold text-gray-900 mb-2"
               <p className="text-gray-600","
     <div className="bg-white p-6 rounded-xl shadow-lg","
-    <h1 className="text-lg font-semibold text-gray-900 mb-2;
+    <h1 className="text-lg font-semibold text-gray-900 mb-2;"
               <p className="text-gray-600";'"

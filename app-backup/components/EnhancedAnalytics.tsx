@@ -12,6 +12,6 @@ console.log('Analytics "Event": '
 if (typeof window !== 'undefined'
           'config'"
 console.log('Analytics "Identify": '
-if (typeof window !== 'undefined'"
+if (typeof window !== 'undefined'";
           'config");
       console.log('Analytics "Page": ");"))))))))))'"

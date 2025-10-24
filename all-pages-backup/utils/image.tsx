@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 use client;
 import React, { useState, useCallback } from 'react'
-_placeholder?: 'blur' | 'empty'"
+_placeholder?: 'blur' | 'empty'";
 placeholder = 'empty";'"
   "height": '100%";'"
 {"objectFit": 'cover";'

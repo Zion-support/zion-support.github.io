@@ -1,11 +1,17 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Component, ErrorInfo, ReactNode, useState, useEffect } from 'react';
 // Test component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
+    throw new Error('Test error');
+  }
+  return <div>No error</div>;
+};
+
+// Test component that can be controlled for retry testing
+let shouldThrowAfterRetry = true;
+const ControllableThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  if (shouldThrow && shouldThrowAfterRetry) {
     throw new Error('Test error');
   }
   return <div>No error</div>;
@@ -37,6 +43,7 @@ class TestErrorBoundary extends Component<
     if (this.state.hasError) {
       return (
         <div data-testid="error-boundary">
+
           <h2>Something went wrong.</h2>
           <button onClick={this.handleRetry}>Try again</button>
           <p>Retry count: {this.state.retryCount}</p>
@@ -51,13 +58,23 @@ const TestPerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<any>(null);
   useEffect(() => {
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+      // Mock performance API for testing
+      const mockNavigation = {
+        loadEventEnd: 1000,
+        loadEventStart: 500,
+        domContentLoadedEventEnd: 800,
+        domContentLoadedEventStart: 600,
+      };
+      const mockPaint = [
+        { name: 'first-paint', startTime: 200 },
+        { name: 'first-contentful-paint', startTime: 300 },
+      ];
+      
       setMetrics({
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        loadTime: mockNavigation.loadEventEnd - mockNavigation.loadEventStart,
+        domContentLoaded: mockNavigation.domContentLoadedEventEnd - mockNavigation.domContentLoadedEventStart,
+        firstPaint: mockPaint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: mockPaint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
       });
     };
     measurePerformance();
@@ -89,13 +106,19 @@ const TestAccessibilityEnhancer = ({ children }: { children: ReactNode }) => {
 describe('Advanced Components', () => {
   describe('ErrorBoundary', () => {
     it('should catch and display error when child component throws', () => {
+      // Suppress console.error for this test since we expect an error
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      
       render(
         <TestErrorBoundary>
           <ThrowError shouldThrow={true} />
         </TestErrorBoundary>
       );
+      
       expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
       expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+      
+      consoleSpy.mockRestore();
     });
     it('should render children when no error occurs', () => {
       render(
@@ -107,16 +130,30 @@ describe('Advanced Components', () => {
       expect(screen.queryByTestId('error-boundary')).not.toBeInTheDocument();
     });
     it('should retry when retry button is clicked', async () => {
+      // Suppress console.error for this test since we expect an error
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      
+      // Reset the throw flag
+      shouldThrowAfterRetry = true;
+      
       render(
         <TestErrorBoundary>
-          <ThrowError shouldThrow={true} />
+          <ControllableThrowError shouldThrow={true} />
         </TestErrorBoundary>
       );
+      
       expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+      
+      // After retry, don't throw error
+      shouldThrowAfterRetry = false;
+      
       fireEvent.click(screen.getByText('Try again'));
+      
       await waitFor(() => {
         expect(screen.getByText('No error')).toBeInTheDocument();
       });
+      
+      consoleSpy.mockRestore();
     });
   });
   describe('PerformanceMonitor', () => {

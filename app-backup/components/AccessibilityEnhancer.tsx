@@ -1,5 +1,5 @@
 import Navigation from './Navigation;
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 'use client';'"
 if(typeof window = == 'undefined";'"
 if (event.key === 'Tab";'"

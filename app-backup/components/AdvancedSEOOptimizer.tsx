@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async;
 import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react;
 import Navigation from '../components/Navigation;
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 'use client';'"
     "title": 'Advanced SEO Analysis'"
       "description": 'Comprehensive SEO analysis and optimization recommendations.'"
