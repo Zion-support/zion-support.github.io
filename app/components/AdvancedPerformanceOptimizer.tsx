@@ -8,7 +8,7 @@ interface PerformanceOptimizerProps {
 }
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children
+  children,
   enableOptimizations = true
 }) => {
   const [isOptimized, setIsOptimized] = useState(false)
@@ -70,11 +70,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const scriptsOptimized = optimizeScripts()
     const cssOptimized = optimizeCSS()
     setOptimizationMetrics({
-      imagesOptimized
-      scriptsOptimized
-      cssOptimized
+      imagesOptimized,
+      scriptsOptimized,
+      cssOptimized,
       totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
-    })
+    });
     setIsOptimized(true)
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS])
   useEffect(() => {
