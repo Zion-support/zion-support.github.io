@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
-'use client';
->>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
 
-import React from 'react';
 import Link from 'next/link';
 import SEOHead from '../components/SEOHead';
 
 export default function Page() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -26,29 +20,6 @@ export default function Page() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional ai design studio services and solutions for modern businesses
             </p>
-=======
-    <>
-      <SEOHead
-        title=" - Zion Tech Group"
-        description="Professional  services by Zion Tech Group"
-        keywords=", technology, solutions"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional  services and solutions
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700"
-            >
-              Get Started
-            </Link>
->>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
           </div>
         </div>
       </div>

@@ -8,7 +8,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 import { Navigation  } from './Navigation';
 import { Helmet  } from 'react-helmet-async';
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp  } from 'lucide-react';
-import React from 'react';
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp  } from 'lucide-react';
 const ContentPromotionBanner: "React.FC = () => {",const benefits = [
     'Increase efficiency by up to 50%'

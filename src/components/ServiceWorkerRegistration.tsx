@@ -7,7 +7,6 @@ import { Helmet  } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
 import { CheckCircle, Phone, Mail, ArrowRight  } from 'lucide-react';
 import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet  } from 'lucide-react';
-import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet  } from 'lucide-react';
 import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet  } from 'lucide-react';

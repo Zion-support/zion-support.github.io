@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { defineConfig  } from 'vite';
 import { react  } from '@vitejs/plugin-react';
 import { resolve  } from 'path';
@@ -37,24 +36,6 @@ return 'react-dom'
             ",}
             if (id.includes('react/') && !id.includes('react-dom')) {
 return 'react-core'
-=======
-import { defineConfig   } from 'vite';
-import { react  } from '@vitejs/plugin-react';
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()]
-  build: {
-    outDir: 'dist'
-    sourcemap: true
-    minify: 'terser'
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor'
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
             }
             if (id.includes('react-router')) {
               return 'router-vendor'
@@ -78,7 +59,6 @@ export default defineConfig({
           if (id.includes('components/PerformanceMonitor') || id.includes('components/AccessibilityEnhancer')) {
             return 'monitoring'
           }
-<<<<<<< HEAD
           if (id.includes('/app/data/')) {
 return 'data'
           }
@@ -149,39 +129,3 @@ css: "{
 devSourcemap: true",}
 
 })
-=======
-        }
-      }
-    }
-
-    chunkSizeWarningLimit: 1000
-  }
-
-  server: {
-    port: 3000
-    open: true
-    hmr: {
-      overlay: false
-    }
-  }
-
-  optimizeDeps: {
-    include: [
-      'react'
-      'react-dom'
-      'react-router-dom'
-      '@heroicons/react'
-      'framer-motion'
-      'lucide-react'
-    ]
-  }
-
-  esbuild: {
-    drop: ['console', 'debugger']
-  }
-
-  css: {
-    devSourcemap: true
-  }
-})
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81

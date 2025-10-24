@@ -19,7 +19,6 @@ sm: "sm",md: "md",lg: "lg",xl: "'max-w-xl'",import { Footer   } from './Footer';
 import Navigation } from './Navigation';
 import { Helmet  } from 'react-helmet-async';
 import { ArrowRight, CheckCircle  } from 'lucide-react';
-import React from 'react';
 import { cn  } from '../lib/utils';
 interface ResponsiveContainerProps {
 className?: string

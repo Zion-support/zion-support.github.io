@@ -4,8 +4,8 @@ const path = require('path')
 function fixSyntaxErrors(content) {
 
   // Remove merge conflict markers
-  content = content.replace(/<<<<<<< HEAD[\s\S,]*?=======[\s\S,]*?>>>>>>> [a-f0-9,]+/g, '')
-  content = content.replace(/<<<<<<< HEAD[\s\S,]*?>>>>>>> [a-f0-9,]+/g, '')
+  content = content.replace(/[\s\S,]*?[\s\S,]*?>>>>>>> [a-f0-9,]+/g, '')
+  content = content.replace(/[\s\S,]*?>>>>>>> [a-f0-9,]+/g, '')
   // Fix common JSX syntax issues
   content = content.replace(/<(\w+)\s*([^>]*?)\s*>\s*<\/\1>/g, '<$1$2 />')
   // Fix missing semicolons

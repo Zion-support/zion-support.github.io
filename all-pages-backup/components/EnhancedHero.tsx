@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe  } from 'lucide-react';
 'use client'
-import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 import { ArrowRight, Brain  } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';

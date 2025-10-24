@@ -2,17 +2,12 @@
 "use client"
 import React from 'react';
 :all-pages-backup/components/LoadingSpinner.tsx export default function LoadingSpinner() {
-
 return(<> <div className="flex items-center justify-center" />
     <divclassName = "animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600" / / />
       </>)
   )
-
 ,;}
-
 }
-
-import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
 import { Navigation   } from '../components/Navigation';
