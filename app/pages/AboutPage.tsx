@@ -1,14 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  CheckCircleIcon,
   UserGroupIcon,
   LightBulbIcon,
   ShieldCheckIcon,
   RocketLaunchIcon,
   HeartIcon,
   ArrowRightIcon,
-  StarIcon
+  StarIcon,
+  Target,
+  Users,
+  Award,
+  Lightbulb,
+  Shield,
+  Zap
 } from '@heroicons/react/24/outline';
 export default function AboutPage() {
   const values = [
