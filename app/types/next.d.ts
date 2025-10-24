@@ -9,9 +9,54 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
+=======
+const NextPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ]
+
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Next.d | Zion Tech Group</title>
+        <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
+      </Helmet>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   description?: string;
   keywords?: string[];
   authors?: Array<{ name: string; url?: string }> | string[];
@@ -283,6 +328,7 @@ declare module 'next' {
 export {};
 =======
 
+<<<<<<< HEAD
 export {};
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
 =======
@@ -294,3 +340,6 @@ declare module '*.svg' {
   export default content;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+export {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602

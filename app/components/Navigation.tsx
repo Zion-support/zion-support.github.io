@@ -91,10 +91,62 @@ import {ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart,
   ];
 
   const itServices = [
+<<<<<<< HEAD
     { name: "Autonomous Systems", href: "/autonomous-systems" },
     { name: "Blockchain Solutions", href: "/blockchain" },
     { name: "Blockchain Web3", href: "/blockchain-web3" },
     { name: "Business Intelligence", href: "/business-intelligence" }
+=======
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
+    { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
+    { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: Shield, description: 'Comprehensive security' },
+    { name: 'Database Management', href: '/database-management', icon: Database, description: 'Data processing & storage' },
+    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
+    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
+    { name: 'DevOps & CI/CD', href: '/devops-cicd', icon: Settings, description: 'Automated deployment' },
+    { name: 'IT Support', href: '/it-support', icon: Monitor, description: '24/7 technical support' },
+    { name: 'Data Analytics & BI', href: '/data-analytics-bi', icon: BarChart, description: 'Business intelligence' },
+    { name: 'Custom Software', href: '/custom-software', icon: Code, description: 'Tailored solutions' },
+    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Wifi, description: 'Network design & setup' },
+    { name: 'IT Asset Management', href: '/it-asset-management', icon: Package, description: 'Asset lifecycle management' },
+    { name: 'IT Security Services', href: '/it-security-services', icon: Lock, description: 'Security assessment & monitoring' },
+    { name: 'IT Project Management', href: '/it-project-management', icon: Calendar, description: 'Professional project management' },
+    { name: 'Cloud-Native Development', href: '/cloud-native-development', icon: Cloud, description: 'Microservices & containers' },
+    { name: 'AI Integration Services', href: '/ai-integration-services', icon: Brain, description: 'AI model integration' },
+    { name: 'Blockchain Development', href: '/blockchain-development', icon: Link, description: 'Smart contracts & DeFi' },
+    { name: 'IoT Development', href: '/iot-development', icon: Wifi, description: 'Connected device solutions' },
+    { name: 'E-commerce Development', href: '/e-commerce-development', icon: ShoppingCart, description: 'Online store platforms' },
+    { name: 'Advanced API Development', href: '/api-development-advanced', icon: Code, description: 'Enterprise-grade APIs' },
+    { name: 'Data Engineering', href: '/data-engineering', icon: Database, description: 'Data pipeline development' },
+    { name: 'Advanced Cybersecurity', href: '/cybersecurity-advanced', icon: Shield, description: 'Threat hunting & response' },
+    { name: 'Cloud Migration', href: '/cloud-migration-advanced', icon: Cloud, description: 'Zero-downtime migration' },
+    { name: 'Advanced DevOps & SRE', href: '/devops-advanced', icon: Settings, description: 'Site reliability engineering' },
+    { name: 'MLOps & AI Operations', href: '/machine-learning-ops', icon: Cpu, description: 'ML model deployment' },
+    { name: 'Enterprise Integration', href: '/enterprise-integration', icon: Link, description: 'System integration' },
+    { name: 'Performance Optimization', href: '/performance-optimization', icon: Zap, description: 'App & infrastructure optimization' },
+    { name: 'Disaster Recovery', href: '/disaster-recovery-advanced', icon: Shield, description: 'Business continuity' },
+    { name: 'Compliance Automation', href: '/compliance-automation', icon: CheckCircle, description: 'Regulatory compliance' },
+    { name: 'Cloud Cost Optimization', href: '/cloud-cost-optimization', icon: TrendingUp, description: 'Cost reduction' },
+    { name: 'Security Automation', href: '/security-automation', icon: Shield, description: 'Automated security' },
+    { name: 'Data Visualization & BI', href: '/data-visualization', icon: BarChart, description: 'Advanced dashboards' },
+    { name: 'Workflow Automation', href: '/workflow-automation', icon: Settings, description: 'Process automation' },
+    { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' }
+  ]
+
+  const microSaasServices = [
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Real-time BI & Analytics' },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'No-code Chatbot Platform' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Automated Email Campaigns' },
+    { name: 'Social Media AI', href: '/social-media-ai', icon: Globe, description: 'AI Social Management' },
+    { name: 'AI Project Management', href: '/ai-project-management', icon: Settings, description: 'Smart Project Tracking' },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Target, description: 'Automated SEO Tools' },
+    { name: 'AI Sales CRM', href: '/ai-sales-crm', icon: TrendingUp, description: 'Intelligent CRM System' },
+    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Code, description: 'AI Design Tools' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Database, description: 'Smart Inventory Tracking' },
+    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: Users, description: 'Automated Invoicing' },
+    { name: 'AI Document Processor', href: '/ai-document-processor', icon: Zap, description: 'Document AI Processing' },
+    { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Cpu, description: 'Intelligent Lead Qualification' }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   ];
 
 <<<<<<< HEAD

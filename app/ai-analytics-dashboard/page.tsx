@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
@@ -103,6 +104,20 @@ import {
   Mail as MailIcon,
   MapPin as Location;
 } from 'lucide-react';
+=======
+'use client';
+import React, { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { BarChart, TrendingUp, Users, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Database, Target, Globe } from 'lucide-react';
+
+const AIAnalyticsDashboard: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
@@ -659,6 +674,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     </div>);
 };
 
+<<<<<<< HEAD
 export default AIAnalyticsDashboardPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 =======
@@ -683,3 +699,6 @@ export default function AIAnalyticsDashboard() {
   );
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default AIAnalyticsDashboard;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602

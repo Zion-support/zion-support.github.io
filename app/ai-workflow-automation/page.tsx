@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -99,6 +100,22 @@ export default function AiWorkflowAutomationZionTechGroup() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 =======
 const AIWorkflowAutomationPage: React.FC = () => {
+=======
+'use client';
+import React, { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users } from 'lucide-react';
+
+const AIWorkflowAutomation: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   const features = [
     {
       icon: Workflow;
@@ -268,6 +285,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
                   )}
 =======
                   <ul className="space-y-2"></ul>
@@ -283,6 +301,11 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
+=======
+                  </div>
+                ))}
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
             </div>
           </section>
 
@@ -338,6 +361,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution?
               </h2>
+<<<<<<< HEAD
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Proven results that drive business growth and efficiency
               </p>
@@ -389,6 +413,35 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   Learn More
                 </button>
               </div></div></div>
+=======
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, index) => (
+                  <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
+                    <div className="text-4xl mb-4 text-cyan-400">
+                      <service.icon className="w-10 h-10" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                      <div className="text-sm text-gray-400 mb-4">{service.period}</div>
+                      <div className="space-y-1">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <a 
+                      href="/contact"
+                      className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-flex items-center justify-center mt-4"
+                    >
+                      Get Started
+                    </a>
+                  </div>
+                ))}
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
             </div>
           </div>
         </section>
@@ -398,6 +451,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+<<<<<<< HEAD
 =======
           {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-12 border border-cyan-500/20"></section>
@@ -445,3 +499,8 @@ const AiWorkflowAutomationPage: React.FC = () => {return (
   );}
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default AiWorkflowAutomationPage;
+
+export default AIWorkflowAutomation;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602

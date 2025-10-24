@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Accessibilityenhancer utility functions
 export function accessibilityenhancer() {
   // Implementation here
@@ -10,27 +11,46 @@ export function accessibilityenhancer() {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+=======
+/**
+ * Accessibility Enhancer Utility
+ * Provides comprehensive accessibility improvements for web applications
+ */
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
 
 const AccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
+<<<<<<< HEAD
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
+=======
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
     },
     {
       icon: Zap,
       title: 'High Performance',
+<<<<<<< HEAD
       description: 'Lightning-fast processing and real-time analytics for optimal results',
+=======
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
+<<<<<<< HEAD
       description: 'Bank-level security with encryption and compliance standards',
+=======
+      description: 'Bank-level security with encryption and compliance standards'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
     },
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',
 =======
 /**
@@ -887,6 +907,27 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private getFocusableElements(): HTMLElement[] {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
+=======
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  }
+  private handleEscapeKey(event: KeyboardEvent): void {
+    // Close any open modals or dropdowns
+    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
+    modals.forEach(modal => {
+      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
+      closeButton?.click();
+    })
+    
+    // Close any open menus
+    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
+    menus.forEach(menu => {
+      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
+      trigger?.click();
+    })
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   /**
    * Announce to screen reader
    */
@@ -919,6 +960,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
    * Get accessibility metrics
    */
 <<<<<<< HEAD
+<<<<<<< HEAD
   getMetrics(): AccessibilityMetrics {
 =======
   getMetrics(): AccessibilityMetrics {/* TODO: Fix JSX expression */}
@@ -942,13 +984,53 @@ Accessibility Report: - Color Contrast Score: ${metrics.colorContrastScore,}/100
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
+=======
+  public updateFocusableElements(): void {
+    this.updateFocusableElements();
+  }
+
+  /**
+   * Get current focusable elements
+   */
+  public getFocusableElements(): HTMLElement[] {
+    return [...this.focusableElements]
+  }
+
+  /**
+   * Focus first focusable element
+   */
+  public focusFirst(): void {
+    this.focusableElements[0]?.focus();
+  }
+
+  /**
+   * Focus last focusable element
+   */
+  public focusLast(): void {
+    this.focusableElements[this.focusableElements.length - 1]?.focus();
+  }
+
+  /**
+   * Cleanup and destroy
+   */
+  public destroy(): void {
+    this.isInitialized = false;
+    this.focusableElements = []
+    this.skipLinks = []
+    this.landmarks = []
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
   ];
+=======
+  ]
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -958,6 +1040,7 @@ Accessibility Report: - Color Contrast Score: ${metrics.colorContrastScore,}/100
         <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer" />
       </Helmet>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1077,3 +1160,6 @@ export const utilityFunction = () => {
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+export default AccessibilityEnhancerPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602

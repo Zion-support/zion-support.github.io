@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Accessibilitychecker utility functions
 export function accessibilitychecker() {
   // Implementation here
@@ -127,6 +128,9 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           fix: 'Add descriptive alt text to the image',
           codeExample: '<img src="..." alt="Description of image" />'</im>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
 
   const benefits = [
     'Advanced AI technology integration',
@@ -253,6 +257,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 };
 
 export default AccessibilityCheckerPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
 =======
 // Utility functions
@@ -829,3 +834,5 @@ ${report.results;
  accessibilityChecker.getAccessibilityScore();
  accessibilityChecker.generateReport();
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
