@@ -148,8 +148,6 @@ export default defineConfig({
     // Additional optimizations
     assetsInlineLimit: 4096,
     cssMinify: true,
-    chunkSizeWarningLimit: 1000,
-    reportCompressedSize: false,
   },
   server: {
     port: 3000,

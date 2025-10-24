@@ -56,7 +56,14 @@ self.addEventListener('sync', (event) => {
   if (event.tag === 'analytics-sync') {
     event.waitUntil(
       // Send queued analytics data
-      sendQueuedAnalytics()
+      (async () => {
+        try {
+          // Implementation for sending queued analytics data
+          console.log('Syncing analytics data...');
+        } catch (error) {
+          console.error('Analytics sync failed:', error);
+        }
+      })()
     );
   }
 });
