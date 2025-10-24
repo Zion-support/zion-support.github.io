@@ -105,7 +105,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       description: 'Track sales metrics and forecast revenue',
       icon: '🎯',
     }
-  ],
+  ];
 
   return (
     <>
@@ -253,12 +253,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 };
 
 export default AIAnalyticsDashboardPage;
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiAnalyticsDashboardPage: React.FC = () => {,
     const features = [
     {
       icon: Brain,
@@ -276,14 +272,15 @@ const AiAnalyticsDashboardPage: React.FC = () => {,
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}}
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
   ]
 const benefits = [
     'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',;
-    'Improve decision-making with AI insights',;
-    'Scale operations without proportional staff increases',;
-    'Gain competitive advantage with advanced technology';
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
   ]
 return(<>)
       <Helmet />

@@ -6,13 +6,6 @@ import Footer from '../components/Footer';
 import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } from 'lucide-react';
 
 const AIAnalyticsPage: React.FC = () => {
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiAnalyticsPage: React.FC = () => {,
   const features = [
     {
       icon: Brain,
@@ -47,6 +40,8 @@ title: 'Advanced Analytics',
       title: 'Data Visualization',
       description: 'Transform complex data into clear, actionable insights with advanced visualization tools.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export options']
+    },
+    {
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with automated alerts and goal monitoring.',
       benefits: ['KPI tracking', 'Goal setting', 'Progress monitoring', 'Alert system']
@@ -74,11 +69,7 @@ title: 'Advanced Analytics',
     'Automate routine analytics tasks',
     'Scale analytics across departments',
     'Enhance competitive advantage'
-  ];
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']},
-    {icon: TrendingUp,
-      title: 'Performance Optimization',
+              ];
       description: 'Optimize your business performance with AI-driven recommendations and insights.',
       benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']},
     {icon: Zap,
