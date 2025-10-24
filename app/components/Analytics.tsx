@@ -1,83 +1,60 @@
-'use client';
+'use client'
 
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
+import Script from 'next/script'
 
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: {
+      (..._args: unknown[]): void
+      q?: unknown[]
+    }
   }
 }
 
-interface AnalyticsProps {
-  enableGoogleAnalytics?: boolean;
-  enablePerformanceMonitoring?: boolean;
-  enableErrorTracking?: boolean;
-  enableUserBehaviorTracking?: boolean;
+const Analytics: React.FC = () => {
+  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
+
+  useEffect(() => {
+    if (!GA_TRACKING_ID) return
+
+    // Initialize gtag
+    window.gtag = window.gtag || function() {
+      (window.gtag.q = window.gtag.q || []).push(arguments)
+    }
+
+    window.gtag('js', new Date())
+    window.gtag('config', GA_TRACKING_ID, {
+      page_title: document.title,
+      page_location: window.location.href,
+    })
+  }, [GA_TRACKING_ID])
+
+  if (!GA_TRACKING_ID) return null
+
+  return (
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_title: document.title,
+              page_location: window.location.href,
+            });
+          `,
+        }}
+      />
+    </>
+  )
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({
-  enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true
-}) => {
-  useEffect(() => {
-    // Initialize Google Analytics
-    if (enableGoogleAnalytics && typeof window !== 'undefined') {
-      if (process.env.NODE_ENV === 'production') {
-        const script = document.createElement('script');
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
-        script.async = true;
-        document.head.appendChild(script);
-
-        window.gtag = function() {
-          (window as any).dataLayer = (window as any).dataLayer || [];
-          (window as any).dataLayer.push(arguments);
-        };
-
-        window.gtag('js', new Date());
-        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
-      }
-    }
-
-    // Performance monitoring
-    if (enablePerformanceMonitoring && typeof window !== 'undefined') {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry);
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
-    }
-
-    // Error tracking
-    if (enableErrorTracking && typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
-        console.error('Global error:', event.error);
-      });
-
-      window.addEventListener('unhandledrejection', (event) => {
-        console.error('Unhandled promise rejection:', event.reason);
-      });
-    }
-
-    // User behavior tracking
-    if (enableUserBehaviorTracking && typeof window !== 'undefined') {
-      const trackClick = (event: Event) => {
-        const target = event.target as HTMLElement;
-        if (target.tagName === 'BUTTON' || target.tagName === 'A') {
-          console.log('User clicked:', target.textContent);
-        }
-      };
-
-      document.addEventListener('click', trackClick);
-      return () => document.removeEventListener('click', trackClick);
-    }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
-
-  return null;
-};
-
-export default Analytics;
+export default Analytics

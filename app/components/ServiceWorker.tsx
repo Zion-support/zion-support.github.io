@@ -1,9 +1,11 @@
-'use client';
-
 import React from 'react';
 
 const ServiceWorker: React.FC = () => {
-  return null; // This component doesn't render anything
-};
+  return (
+    <div>
+      {/* Service Worker Component */}
+    </div>
+  )
+}
 
-export default ServiceWorker;
+export default ServiceWorker
