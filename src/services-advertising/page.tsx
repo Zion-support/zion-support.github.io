@@ -5,17 +5,6 @@ import { CheckCircle, Target, ArrowRight } from 'lucide-react'
 export default function ServicesAdvertisingPage
 ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-100 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          Page
-        </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">
-            This page is under construction. Please check back later.
-          </p>
-=======
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&quot;></div>
       {/* Header */}
       <header className=&quot;bg-white shadow-sm border-b&quot;>
@@ -348,7 +337,6 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
               View Success Stories
             </a>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>

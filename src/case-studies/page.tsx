@@ -6,9 +6,6 @@ import { CheckCircle, TrendingUp, Helmet } from 'lucide-react'
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
-<<<<<<< HEAD
-=======
-=======
 import {ArrowLeft, CheckCircle, TrendingUp, Helmet} from 'lucide-react';;
 constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
     {
@@ -224,4 +221,3 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
   )
 }
 export default CaseStudiesPage
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

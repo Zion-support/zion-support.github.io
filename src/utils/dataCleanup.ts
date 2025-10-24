@@ -4,9 +4,6 @@ export const dataCleanup = () => {
   return null;
 };
 
-<<<<<<< HEAD
-export default dataCleanup;
-=======
 export interface CleanupConfig {
   maxAge?: number
   maxRecords?: number
@@ -233,4 +230,3 @@ class DataCleanup {
 }
 
 export const dataCleanup = new DataCleanup()
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

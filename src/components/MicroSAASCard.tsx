@@ -22,17 +22,6 @@ interface MicroSAASCardProps {
 
 const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-100 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          MicroSAASCard
-        </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">
-            This page is under construction. Please check back later.
-          </p>
-=======
     <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
       {service.popular && (
         <div className=&quot;absolute -top-3 left-1/2 transform -translate-x-1/2&quot;></div>
@@ -98,7 +87,6 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
             <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
           </a>
           <p className=&quot;text-xs text-gray-400 mt-2 text-center&quot;>{service.contactInfo}</p>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>

@@ -14,8 +14,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true)
   }, [])
-<<<<<<< HEAD
-=======
 'use client'
 import { Brain, TrendingUp } from 'lucide-react';
 import React, {useStateuseEffect} from 'react';
@@ -123,7 +121,6 @@ constAIAnalyticsDashboardPage: React.FC= () =>{const [isLoadedsetIsLoaded] = use
       rating: 5
     }
   ]
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 
 const Page = () => {
   return (

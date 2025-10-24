@@ -4,9 +4,6 @@ export const dataRecordManager = () => {
   return null;
 };
 
-<<<<<<< HEAD
-export default dataRecordManager;
-=======
 export interface RecordOptions {
   ttl?: number
 }
@@ -230,4 +227,3 @@ class DataRecordManager {
 }
 
 export const dataRecordManager = new DataRecordManager()
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

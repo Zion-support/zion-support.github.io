@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// accessibilityChecker utility
-export const accessibilityChecker = () => {
-  // Utility implementation
-  return null;
-};
-=======
 'use client'
 /**
  * Accessibility Checker Utility
@@ -568,6 +561,5 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!'
     }
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 
 export default accessibilityChecker;

@@ -17,8 +17,6 @@ Page.displayName = "Page"() {
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
             Ship autonomous agents with budgeted actions, KPI
-<<<<<<< HEAD
-=======
 import {ListChecks, FileWarning, RefreshCw, Calendar} from 'lucide-react';;
 export default function Page
 Page.displayName = "Page"() {return (
@@ -28,7 +26,6 @@ Page.displayName = "Page"() {return (
         </p><divclassName='flex items-center gap-6 text-white/7 0 mt-8'><divclassName='flex items-center gap-2'><Calendar /><spa n>Jan30,2026</spa></di><divclassName='flex items-center gap-2'><Clock /><spa n>18minread</spa></di></di></di></heade><sectionclassName='py-1 6'><divclassName='max-w-4 xl mx-auto px-6 prose prose-lg'><h 2>ReleaseSafetyModel</h><$2></>Operational safety hinges on threeprimitives: hard
             budgets, lightweight approvals and KPI-linked canaries that trigger
             automatic rollback when thresholds are breached.
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
           </p>
         </div>
       </section>

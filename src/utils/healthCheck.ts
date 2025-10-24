@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// healthCheck utility
-export const healthCheck = () => {
-  // Utility implementation
-  return null;
-};
-=======
 'use client'
 /**
  * Application Health Check Utility
@@ -205,6 +198,5 @@ class HealthCheckService {
           message = `Performance: ${values.length - poorCount - needsImprovementCount} good, ${needsImprovementCount} needs improvement, ${poorCount} poor`
         }
       }
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 
 export default healthCheck;

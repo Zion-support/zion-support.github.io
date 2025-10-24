@@ -4,9 +4,6 @@ export const sitemap = () => {
   return null;
 };
 
-<<<<<<< HEAD
-export default sitemap;
-=======
 export default function sitemap
 sitemap.displayName = "sitemap"(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com'
@@ -163,4 +160,3 @@ sitemap.displayName = "sitemap"(): SitemapEntry[] {
     priority: page === '' ? 1.0 : page.includes('/blog/') ? 0.7 : 0.8,
   }))
 }
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

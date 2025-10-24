@@ -78,8 +78,6 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return []
   }
 }
-<<<<<<< HEAD
-=======
  }))
 });
 // Mock requestAnimationFrame
@@ -137,4 +135,3 @@ delete (window as unknown as Record<string, unknown>).location
   assign: jest.fn(),
   replace: jest.fn()
 }
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

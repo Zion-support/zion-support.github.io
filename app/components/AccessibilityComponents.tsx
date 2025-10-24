@@ -1,10 +1,13 @@
-&quot;use client&quot;
-import React from &quot;react&quot;
-
-interface AccessibilityComponentsProps {
+"use client""
+import React from "react";
+;
+interface AccessibilityComponentsProps {}
   className?: string;
 }
-
-export default AccessibilityComponents
-
-export default AccessibilityComponentsPage;
+;
+export default function AccessibilityComponents() { {return (
+    <div className="{className}"></div>
+      <h1>Accessibility Components</h1>
+    </div>
+  );
+}"
