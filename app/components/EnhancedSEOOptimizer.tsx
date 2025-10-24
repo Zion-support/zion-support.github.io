@@ -1,10 +1,12 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { Phone, Mail, ArrowRight } from 'lucide-react';
-const EnhancedSEOOptimizerPage: React.FC = () => {
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+
+interface EnhancedSEOOptimizerProps {
+  className?: string;
+}
+
+const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ _className = '' }) => {
   const features = [
     {
       icon: Brain,
@@ -31,7 +33,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
   ]
-  const benefits = [
+  const _benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -44,10 +46,10 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            {title}
+            Enhanced SEO Optimizer
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            {description}
+            Advanced SEO optimization tools for your business
           </p>
         </div>
 
@@ -56,7 +58,8 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-center">
                 <div className="text-2xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-white mb-4">{feature}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             </div>
           ))}
@@ -64,5 +67,17 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            </div>
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Get Started
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default EnhancedSEOOptimizer;
