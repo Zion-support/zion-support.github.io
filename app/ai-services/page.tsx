@@ -2,11 +2,19 @@
 
 
 import React from "react";
-import { CheckCircle, ArrowRight, Brain, Zap, BarChart, Target } from "lucide-react";
+import { CheckCircle, ArrowRight, Brain, Zap, BarChart, Shield, Target } from "lucide-react";
 const AIServicesPage: React.FC = () => {
+  const iconMap = {
+    Brain,
+    Zap,
+    BarChart,
+    Shield,
+    Target
+  };
+
   const services = [
   {
-      icon: Brain,
+      icon: 'Brain',
     title: "Machine Learning Solutions",
       description: "Custom ML models tailored to your business needs",
     features: [
@@ -18,7 +26,7 @@ const AIServicesPage: React.FC = () => {
       price: "Starting at $5,000"
 },
   {
-    icon: Zap,
+    icon: 'Zap',
     title: "AI Automation",
       description: "Streamline operations with intelligent automation",
     features: [
@@ -30,7 +38,7 @@ const AIServicesPage: React.FC = () => {
       price: "Starting at $3,000"
 },
   {
-    icon: Target,
+    icon: 'Target',
     title: "Natural Language Processing",
       description: "Understand and process human language at scale",
     features: [
@@ -42,7 +50,7 @@ const AIServicesPage: React.FC = () => {
       price: "Starting at $4,000"
 },
   {
-    icon: BarChart,
+    icon: 'BarChart',
     title: "Computer Vision",
       description: "Extract insights from images and videos",
     features: [
@@ -118,7 +126,7 @@ const AIServicesPage: React.FC = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
-                  <service.icon className="h-6 w-6 text-white" />
+                  {React.createElement(iconMap[service.icon as keyof typeof iconMap], { className: "h-6 w-6 text-white" })}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
