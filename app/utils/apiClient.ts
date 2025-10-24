@@ -1,6 +1,16 @@
 // API Client for making HTTP requests
 import logger from './logger';
 
+// Type definition for fetch options
+type FetchOptions = {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+  signal?: AbortSignal;
+  timeout?: number;
+  retries?: number;
+};
+
 export interface ApiResponse<T = unknown> {
   data: T;
   status: number;
@@ -29,7 +39,7 @@ class ApiClient {
 
   private async makeRequest<T>(
     url: string,
-    options: RequestInit & RequestOptions = {}
+    options: FetchOptions & RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const {
       timeout = this.defaultOptions.timeout,
