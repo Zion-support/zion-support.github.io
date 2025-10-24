@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 import { ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle } from 'lucide-react'
 
 const ConsultationPage: React.FC = () => {
@@ -63,11 +63,11 @@ const ConsultationPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Free Consultation - Zion Tech Group | Expert Technology Advice</title>
         <meta name="description" content="Get expert advice on your technology needs. Schedule a free consultation with our team to discuss AI solutions, cloud infrastructure, and digital transformation." />
         <meta name="keywords" content="free consultation, technology advice, AI solutions, cloud computing, digital transformation, expert consultation" />
-      </Helmet>
+      </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
