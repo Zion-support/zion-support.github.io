@@ -29,6 +29,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
         setTimeout(() => {
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           const paint = performance.getEntriesByType('paint');
+=======
+          
+>>>>>>> dd7fda2613d852773835e2791dbc2d1b243c1cce
           if (process.env.NODE_ENV === 'development') {
             // eslint-disable-next-line no-console
             console.log('Performance Metrics: ', {
@@ -48,15 +51,27 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Memory Usage: ', {
-          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+          usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
+          jsHeapSizeLimit: memory.jsHeapSizeLimit,
         });
       }
     }
   }, []);
 
-  return null;
+  return (
+    <div className="performance-monitor">
+      {performanceData && (
+        <div className="performance-data">
+          <h3>Performance Metrics</h3>
+          <pre>{JSON.stringify(performanceData, null, 2)}</pre>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default PerformanceMonitor;
+=======
+export default PerformanceMonitor;
+>>>>>>> dd7fda2613d852773835e2791dbc2d1b243c1cce
