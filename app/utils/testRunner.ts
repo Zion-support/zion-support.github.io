@@ -136,16 +136,16 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     // Check for keyboard navigation
     const focusableElements = document.querySelectorAll('button, input, select, textarea, a[href]')
     tests.push({
-      name: 'Focusable elements present'
-      status: focusableElements.length > 0 ? 'passed' : 'failed'
+      name: 'Focusable elements present',
+      status: focusableElements.length > 0 ? 'passed' : 'failed',
       duration: 0,
       error: focusableElements.length === 0 ? 'No focusable elements found' : undefined
     })
     const passedTests = tests.filter(test => test.status === 'passed').length
     const totalTests = tests.length
     return {
-      name: 'Accessibility Tests'
-      tests
+      name: 'Accessibility Tests',
+      tests,
       duration: 0,
       status: passedTests === totalTests ? 'passed' : passedTests > 0 ? 'partial' : 'failed',
     };

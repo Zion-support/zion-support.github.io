@@ -57,7 +57,7 @@ export const performanceUtils = {
     }
   },
 
-  debounce: (func: Function, wait: number) => {
+  debounce: (func: (...args: any[]) => void, wait: number) => {
     let timeout: NodeJS.Timeout;
     return function executedFunction(...args: any[]) {
       const later = () => {
@@ -69,7 +69,7 @@ export const performanceUtils = {
     };
   },
 
-  throttle: (func: Function, limit: number) => {
+  throttle: (func: (...args: any[]) => void, limit: number) => {
     let inThrottle: boolean;
     return function executedFunction(...args: any[]) {
       if (!inThrottle) {
