@@ -120,7 +120,8 @@ export function useForm<T extends Record<string, unknown>>({
       try {
         await onSubmit(values);
       } catch (error) {
-        console.error('Form submission error:', error);
+        // Form submission error - could be logged to external service
+        setErrors({ submit: 'An error occurred while submitting the form' });
       } finally {
         setIsSubmitting(false);
       }
