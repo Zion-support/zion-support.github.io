@@ -1,7 +1,7 @@
 'use client';
 import { Home, Info, Briefcase, Phone, GraduationCap, X, Menu } from 'lucide-react';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 const Navigation = () => {
