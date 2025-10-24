@@ -26,13 +26,15 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx"
+    "types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules",
+    "corrupted-src-backup",
+    "problematic-files-backup",
+    "problematic-pages",
     "**/ai-pages-backup/**",
     "**/all-pages-backup/**",
     "**/backup*/**",
