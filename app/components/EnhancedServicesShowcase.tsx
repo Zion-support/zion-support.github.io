@@ -19,10 +19,6 @@ const EnhancedServicesShowcase: React.FC = () => {
       color: 'text-yellow-400',
       features: ['Code Optimization', 'Database Tuning', 'Caching Strategies', 'Load Balancing'],
       stats: '10x Faster'
-<<<<<<< HEAD
-    }
-  ];
-=======
     },
     {
       icon: Shield,
@@ -33,15 +29,14 @@ const EnhancedServicesShowcase: React.FC = () => {
       stats: '99.9% Uptime'
     },
     {
-      icon: Globe,
+      icon: Cloud,
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and migration services',
       color: 'text-blue-400',
       features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Monitoring'],
       stats: '50% Cost Savings'
     }
-  ]
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
+  ];
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">

@@ -2,11 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
 
 const features = [
   {
@@ -30,7 +26,6 @@ const features = [
     description: 'Worldwide deployment and support for international businesses',
   }
 ];
-<<<<<<< HEAD
 
 const benefits = [
   'Advanced AI technology integration',
@@ -42,8 +37,6 @@ const benefits = [
   'Cost-effective pricing plans',
   'Proven track record of success'
 ];
-=======
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
 
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
