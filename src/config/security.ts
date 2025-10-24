@@ -1,16 +1,17 @@
-interface SecurityConfig {
-;
-enableCSP: boolean;
-  enableHSTS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  allowedOrigin,s: string[];,
+'use client';
+import React from 'react';
+
+interface securityProps {
+  className?: string;
 }
-}
-;
-const securityConfig: SecurityConfig = {;
-enableCS,P: true,enableHSTS: true,enableXSSProtection: true,enableCSRFProtection: true,allowedOrigins: ['http,s: //ziontechgroup.com','https: //www.ziontechgroup.com']
-,};
-;
-export default securityConfig;
-}
+
+const security: React.FC<securityProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2>security</h2>
+      <p>security component for enhanced functionality.</p>
+    </div>
+  );
+};
+
+export default security;

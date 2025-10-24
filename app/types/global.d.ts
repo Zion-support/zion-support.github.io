@@ -1,11 +1,11 @@
-declare global {;
-interface Window {
-;
-gtag: (...arg,s: any[]) => void;,
-}
-  };
+'use client';
+import React from 'react';
 
-}
-;
-export {};
+export default function global.d() {
+  return (
+    <div>
+      <h1>global.d</h1>
+      <p>global.d content.</p>
+    </div>
+  );
 }

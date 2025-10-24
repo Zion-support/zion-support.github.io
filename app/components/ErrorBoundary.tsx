@@ -3,13 +3,13 @@ import React from 'react';
 
 interface ErrorBoundaryProps {
   className?: string;
-  children?: React.ReactNode;
 }
 
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className, children }) => {
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className }) => {
   return (
     <div className={className}>
-      {children}
+      <h2>ErrorBoundary</h2>
+      <p>ErrorBoundary component for enhanced functionality.</p>
     </div>
   );
 };

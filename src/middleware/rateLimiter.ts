@@ -1,15 +1,17 @@
-interface RateLimitConfig {
-;
-windowMs: number;
-  maxRequests: number;
-  messag,e: string;,
+'use client';
+import React from 'react';
+
+interface rateLimiterProps {
+  className?: string;
 }
-}
-;
-const rateLimitConfig: RateLimitConfig = {;
-windowM,s: 15 * 60 * 1000,// 15 minutes;
-maxRequests: 100,message: 'Too many requests from this IP,please try again later.'
+
+const rateLimiter: React.FC<rateLimiterProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2>rateLimiter</h2>
+      <p>rateLimiter component for enhanced functionality.</p>
+    </div>
+  );
 };
-;
-export default rateLimitConfig;
-}
+
+export default rateLimiter;

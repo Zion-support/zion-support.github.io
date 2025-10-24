@@ -3,16 +3,13 @@ import React from 'react';
 
 interface SEOHeadWrapperProps {
   className?: string;
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  children?: React.ReactNode;
 }
 
-const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className, title, description, keywords, children }) => {
+const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className }) => {
   return (
     <div className={className}>
-      {children}
+      <h2>SEOHeadWrapper</h2>
+      <p>SEOHeadWrapper component for enhanced functionality.</p>
     </div>
   );
 };

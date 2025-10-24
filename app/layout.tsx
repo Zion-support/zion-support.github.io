@@ -1,17 +1,17 @@
-import type { Metadata } from 'next';
-import { Inter     } from 'next/font/google';
-import './globals.css';
-export default function RootLayout({
-children
-}: {
-children: React.ReactNode
-,}) {
-return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
+'use client';
+import React from 'react';
 
-    </html>
-  )
+interface layoutProps {
+  className?: string;
 }
+
+const layout: React.FC<layoutProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2>layout</h2>
+      <p>layout component for enhanced functionality.</p>
+    </div>
+  );
+};
+
+export default layout;
