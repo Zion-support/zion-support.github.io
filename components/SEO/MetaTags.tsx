@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 interface MetaTagsProps {
   className?: string;
@@ -7,7 +7,7 @@ interface MetaTagsProps {
 const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      {/* Meta Tags component */}
+      {/* Meta tags component content */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 interface StructuredDataProps {
   className?: string;
@@ -7,7 +7,7 @@ interface StructuredDataProps {
 const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      {/* Structured Data component */}
+      {/* Structured data component content */}
     </div>
   );
 };

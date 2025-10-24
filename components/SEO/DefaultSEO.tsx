@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 interface DefaultSEOProps {
   className?: string;
@@ -7,7 +7,7 @@ interface DefaultSEOProps {
 const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      {/* Default SEO component */}
+      {/* Default SEO component content */}
     </div>
   );
 };
