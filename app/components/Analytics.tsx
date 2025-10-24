@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 
 declare global {
   interface Window {
-    gtag: (..._args: any[]) => void;
+    gtag: (..._args: unknown[]) => void;
   }
 }
 
@@ -16,9 +16,9 @@ const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Initialize gtag
-      window.gtag = window.gtag || function(..._args: any[]) {
-        (window as any).gtag.q = (window as any).gtag.q || [];
-        (window as any).gtag.q.push(_args);
+      window.gtag = window.gtag || function(..._args: unknown[]) {
+        (window as { gtag: { q: unknown[] } }).gtag.q = (window as { gtag: { q: unknown[] } }).gtag.q || [];
+        (window as { gtag: { q: unknown[] } }).gtag.q.push(_args);
       };
 
       // Load GA script
