@@ -6,6 +6,7 @@ interface SEOHeadProps {
   keywords?: string;
   image?: string;
   url?: string;
+  canonical?: string;
   type?: string;
   structuredData?: any;
 }
@@ -17,6 +18,7 @@ export default function SEOHead({
   image = '/og-image.jpg',
   url = 'https://zion.app',
   type = 'website',
+  canonical,
   structuredData,
 }: SEOHeadProps) {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -60,7 +62,7 @@ export default function SEOHead({
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
 
       {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
+      <link rel="canonical" href={canonical || fullUrl} />
 
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />

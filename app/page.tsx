@@ -1,9 +1,19 @@
+import React from 'react';
 import Link from 'next/link';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
+import SEOOptimizer from './components/SEOOptimizer';
+import { useAnalytics } from './utils/analytics';
 
 export default function HomePage() {
+  const { trackPageView } = useAnalytics();
+
+  // Track page view on mount
+  React.useEffect(() => {
+    trackPageView('/', 'Zion Tech Group - Advanced AI & IT Solutions');
+  }, [trackPageView]);
+
   return (
     <>
       <SEOHead
@@ -24,7 +34,28 @@ export default function HomePage() {
           }
         }}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "description": "Advanced AI & IT Solutions for the Future",
+          "url": "https://zion.app",
+          "logo": "https://zion.app/logo.png",
+          "sameAs": [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup",
+            "https://github.com/ziontechgroup"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-123-4567",
+            "contactType": "customer service"
+          }
+        }}
+        canonicalUrl="https://zion.app"
+      >
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -192,7 +223,8 @@ export default function HomePage() {
         </div>
 
         <Footer />
-      </div>
+        </div>
+      </SEOOptimizer>
     </>
   );
 }

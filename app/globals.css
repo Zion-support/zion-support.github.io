@@ -44,6 +44,48 @@ body {
   }
 }
 
+/* Performance optimizations */
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+  }
+  
+  .high-contrast .bg-gray-900 {
+    background-color: #000000 !important;
+  }
+  
+  .high-contrast .text-white {
+    color: #ffffff !important;
+  }
+  
+  .high-contrast .text-gray-300 {
+    color: #ffffff !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
