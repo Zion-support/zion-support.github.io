@@ -3,15 +3,15 @@ import { render, screen, waitFor, act } from '@testing-library/react'
 import '@testing-library/jest-dom'
 // Mock OptimizedImage component
 const OptimizedImage = ({
-  src
-  alt
-  width
+  src,
+  alt,
+  width,
   height
 }: {
-  src: string; ,
-    alt: string; 
-  width?: number
-  height?: number
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
 }) => {
   return (
     <img
@@ -43,9 +43,10 @@ describe('OptimizedImage', () => {
   })
   it('renders with different image sources', () => {
     const testSources = [
-      '/image1.jpg'
-      '/image2.png'
-      'https: //example.com/image3.webp']
+      '/image1.jpg',
+      '/image2.png',
+      'https://example.com/image3.webp'
+    ]
     testSources.forEach((src, index) => {
       const { unmount } = render(
         <OptimizedImage

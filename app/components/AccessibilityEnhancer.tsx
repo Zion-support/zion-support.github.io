@@ -8,9 +8,9 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean
 }
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true
-  enableScreenReaderSupport = true
-  enableHighContrast = true
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
   enableFocusManagement = true
 }) => {
   useEffect(() => {
@@ -29,9 +29,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       }
       document.addEventListener('keydown', handleKeyDown)
-      return (
-    <>
-      ) => document.removeEventListener('keydown', handleKeyDown)
+      return () => document.removeEventListener('keydown', handleKeyDown)
     }
   }, [enableKeyboardNavigation])
   useEffect(() => {
@@ -41,7 +39,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const skipLink = document.createElement('a')
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild)
       // Add ARIA landmarks
       const main = document.querySelector('main')
@@ -65,11 +63,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       style.textContent = `
         @media (prefers-contrast: high) {
           * {
-            border-color: currentColor !important
-  }
+            border-color: currentColor !important;
+          }
           button, a {
-  border: 2px solid currentColor !important
-  }
+            border: 2px solid currentColor !important;
+          }
         }
       `
       document.head.appendChild(style)
@@ -103,9 +101,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const modals = document.querySelectorAll('[role="dialog"]')
       modals.forEach(trapFocus)
     }
-  }, [enableFocusManagement]
-    </>
-  )
+  }, [enableFocusManagement])
+
   return null
 }
 export default AccessibilityEnhancer

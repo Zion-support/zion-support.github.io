@@ -37,11 +37,12 @@ const SolutionsPage = lazy(() => import("./app/solutions/page"))
 const FiveGSolutionsPage = lazy(() => import("./app/5g-solutions/page"))
 // Error fallback component
 export const ErrorFallback = ({
-  error
-  resetErrorBoundary}: {
-  error: Error;,
-    resetErrorBoundary: () => void
-  }) => (
+  error,
+  resetErrorBoundary
+}: {
+  error: Error;
+  resetErrorBoundary: () => void;
+}) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
       <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
@@ -66,7 +67,7 @@ export const ErrorFallback = ({
         <p className="mt-2 text-sm text-gray-500">{error.message}</p>
         <button
           onClick={resetErrorBoundary}
-          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
         >
           Try again
         </button>
@@ -90,10 +91,10 @@ const App = memo(() => {
         .register("/sw.js")
         .then(() => {
           // Service worker registered successfully
-})
+        })
         .catch(() => {
-  // Service worker registration failed
-})
+          // Service worker registration failed
+        })
     }
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -101,7 +102,7 @@ const App = memo(() => {
       const fontPreload = document.createElement("link")
       fontPreload.rel = "preload"
       fontPreload.href =
-        "https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
+        "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
       fontPreload.as = "style"
       fontPreload.crossOrigin = "anonymous"
       document.head.appendChild(fontPreload)
@@ -197,7 +198,7 @@ const App = memo(() => {
                                   </p>
                                   <a
                                     href="/"
-                                    className="text-blue-600 hover: text-blue-800"
+                                    className="text-blue-600 hover:text-blue-800"
                                   >
                                     Go back home
                                   </a>

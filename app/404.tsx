@@ -34,9 +34,9 @@ const NotFound = () => {
             <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>
             <div className="flex flex-wrap gap-2 justify-center">
               {[
-                { name: "Home", path: "/" }
-                { name: "About", path: "/about" }
-                { name: "Services", path: "/services" }
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Services", path: "/services" },
                 { name: "Contact", path: "/contact" }
               ].map((item, index) => (
                 <Link
