@@ -1,8 +1,11 @@
 import React from 'react'
+
 "use client"
+
 interface MetaTagsProps {
   className?: string
 }
+
 const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
   return (
     <div className={className}>
@@ -10,5 +13,6 @@ const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
       <p>This component is under construction.</p>
     </div>
   )
-};
+}
+
 export default MetaTags

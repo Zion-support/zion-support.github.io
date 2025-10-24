@@ -1,68 +1,150 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-interface PerformanceMonitorProps {
-  performanceData?: any;
+interface PerformanceMetrics {
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null
+  });
+
+  const [warnings, setWarnings] = useState<string[]>([]);
+
   useEffect(() => {
     // Monitor Core Web Vitals
-    const logMetric = (metric: any) => {
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log(metric);
+    const monitorCoreWebVitals = () => {
+      if (typeof window !== 'undefined') {
+        getCLS((metric) => {
+          setMetrics(prev => ({ ...prev, cls: metric.value }));
+          if (metric.value > 0.1) {
+            setWarnings(prev => [...prev, `CLS is ${metric.value.toFixed(3)} (should be < 0.1)`]);
+          }
+        });
+        
+        getFID((metric) => {
+          setMetrics(prev => ({ ...prev, fid: metric.value }));
+          if (metric.value > 100) {
+            setWarnings(prev => [...prev, `FID is ${metric.value.toFixed(0)}ms (should be < 100ms)`]);
+          }
+        });
+        
+        getFCP((metric) => {
+          setMetrics(prev => ({ ...prev, fcp: metric.value }));
+          if (metric.value > 1800) {
+            setWarnings(prev => [...prev, `FCP is ${metric.value.toFixed(0)}ms (should be < 1800ms)`]);
+          }
+        });
+        
+        getLCP((metric) => {
+          setMetrics(prev => ({ ...prev, lcp: metric.value }));
+          if (metric.value > 2500) {
+            setWarnings(prev => [...prev, `LCP is ${metric.value.toFixed(0)}ms (should be < 2500ms)`]);
+          }
+        });
+        
+        getTTFB((metric) => {
+          setMetrics(prev => ({ ...prev, ttfb: metric.value }));
+          if (metric.value > 600) {
+            setWarnings(prev => [...prev, `TTFB is ${metric.value.toFixed(0)}ms (should be < 600ms)`]);
+          }
+        });
       }
     };
 
-    getCLS(logMetric);
-    getFID(logMetric);
-    getFCP(logMetric);
-    getLCP(logMetric);
-    getTTFB(logMetric);
-
     // Monitor performance metrics
-    if ('performance' in window) {
-      window.addEventListener('load', () => {
-        setTimeout(() => {
+    const monitorPerformance = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        // Monitor page load time
+        window.addEventListener('load', () => {
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          const paint = performance.getEntriesByType('paint');
-          
           if (process.env.NODE_ENV === 'development') {
             // eslint-disable-next-line no-console
-            console.log('Performance Metrics: ', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
-            });
+            console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
           }
-        }, 0);
-      });
-    }
-
-    // Monitor memory usage
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Memory Usage: ', {
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit,
         });
+
+        // Monitor resource loading
+        const observer = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.entryType === 'resource' && process.env.NODE_ENV === 'development') {
+              // eslint-disable-next-line no-console
+              console.log('Resource loaded:', entry.name, entry.duration);
+            }
+          });
+        });
+
+        observer.observe({ entryTypes: ['resource'] });
       }
-    }
+    };
+
+    // Initialize monitoring
+    monitorCoreWebVitals();
+    monitorPerformance();
+
+    // Cleanup
+    return () => {
+      // Cleanup if needed
+    };
   }, []);
 
   return (
-    <div className="performance-monitor">
-      {performanceData && (
-        <div className="performance-data">
-          <h3>Performance Metrics</h3>
-          <pre>{JSON.stringify(performanceData, null, 2)}</pre>
+    <div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50">
+      <h3 className="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>
+      <div className="space-y-1 text-xs">
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={metrics.fcp && metrics.fcp > 1800 ? 'text-red-600' : 'text-green-600'}>
+            {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : '...'}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className={metrics.lcp && metrics.lcp > 2500 ? 'text-red-600' : 'text-green-600'}>
+            {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : '...'}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>FID:</span>
+          <span className={metrics.fid && metrics.fid > 100 ? 'text-red-600' : 'text-green-600'}>
+            {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : '...'}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className={metrics.cls && metrics.cls > 0.1 ? 'text-red-600' : 'text-green-600'}>
+            {metrics.cls ? metrics.cls.toFixed(3) : '...'}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className={metrics.ttfb && metrics.ttfb > 600 ? 'text-red-600' : 'text-green-600'}>
+            {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : '...'}
+          </span>
+        </div>
+      </div>
+
+      {warnings.length > 0 && (
+        <div className="mt-2 p-2 bg-red-50 rounded text-xs">
+          <div className="font-semibold text-red-800 mb-1">Warnings:</div>
+          {warnings.map((warning, index) => (
+            <div key={index} className="text-red-700">• {warning}</div>
+          ))}
         </div>
       )}
     </div>

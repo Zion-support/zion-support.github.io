@@ -1,112 +1,86 @@
-import React, { useState, useRef, useEffect, memo } from 'react';
-import Image from 'next/image';
-import { optimizeImageUrl, generateImagePlaceholder, lazyLoadImage } from '../utils/imageOptimizer';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  quality?: number;
-  format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  className?: string;
-  lazy?: boolean;
-  placeholder?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
+const OptimizedImage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>OptimizedImage</title>
+        <meta name="description" content="Advanced OptimizedImage solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, OptimizedImage, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              OptimizedImage
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced OptimizedImage solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make OptimizedImage the perfect solution for your business.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
+                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
+                <p className="text-gray-300">Grows with your business needs and requirements.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
+                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using OptimizedImage to transform their operations.
+            </p>
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Your Free Trial
+            </button>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  )
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
-  src,
-  alt,
-  width,
-  height,
-  quality = 80,
-  format = 'webp',
-  className = '',
-  lazy = true,
-  placeholder = true,
-  onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  const optimizedSrc = optimizeImageUrl(src, {
-    quality,
-    format,
-    width,
-    height
-  });
-
-  const placeholderSrc = placeholder && (width && height) 
-    ? generateImagePlaceholder(width, height)
-    : undefined;
-
-  useEffect(() => {
-    if (lazy && imgRef.current) {
-      lazyLoadImage(imgRef.current);
-    }
-  }, [lazy]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
-  if (hasError) {
-    return (
-      <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <div className="text-center text-gray-500">
-          <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-          </svg>
-          <span className="text-sm">Failed to load</span>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
-      {placeholder && !isLoaded && placeholderSrc && (
-        <Image
-          src={placeholderSrc}
-          alt=""
-          fill
-          className="object-cover"
-          aria-hidden="true"
-        />
-      )}
-      
-      <Image
-        ref={imgRef}
-        src={optimizedSrc}
-        data-src={lazy ? optimizedSrc : undefined}
-        alt={alt}
-        width={width || 0}
-        height={height || 0}
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`w-full h-full object-cover transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
-        loading={lazy ? 'lazy' : 'eager'}
-        decoding="async"
-      />
-    </div>
-  );
-});
-
-OptimizedImage.displayName = 'OptimizedImage';
-
-export default OptimizedImage;
+export default OptimizedImage

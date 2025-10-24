@@ -1,8 +1,11 @@
 import React from 'react'
+
 "use client"
+
 interface StructuredDataProps {
   className?: string
 }
+
 const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
   return (
     <div className={className}>
@@ -10,5 +13,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
       <p>This component is under construction.</p>
     </div>
   )
-};
+}
+
 export default StructuredData

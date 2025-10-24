@@ -1,128 +1,156 @@
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-#!/usr/bin/env node
-// Get all TypeScript/JavaScript files
-const getFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
-  let files = []
-  const items = fs.readdirSync(dir)
-  for (const item of items) {
-    const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
-    if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules') && !item.includes('dist')) {
-      files = files.concat(getFiles(fullPath, extensions))
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath)
-    }
-  }
-  return files
-}
-// Remove unused imports from a file
-const removeUnusedImports = (filePath) => {
+import fs from 'fs';
+import path from 'path';
+// Get list of files with linting errors;
+function getFilesWithErrors() {
   try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    const originalContent = content
-    // Common unused imports to remove
-    const unusedImports = [
-  'Download', 'Share', 'Star', 'Clock', 'Users', 'Award', 'ArrowRight', 'Sparkles'
-      'Eye', 'DollarSign', 'Zap', 'Mail', 'MapPin', 'Shield', 'Globe', 'Target'
-      'PieChart', 'Activity', 'AlertCircle', 'CheckCircle', 'MessageSquare', 'Phone'
-      'TrendingUp', 'Database', 'Settings', 'AlertTriangle', 'Headphones', 'Bot'
-      'BarChart', 'Calendar', 'Brain', 'Cpu', 'Search', 'Link', 'useState', 'useEffect'
-      'Helmet', 'Check', 'Arrow', 'PhoneIcon', 'MailIcon', 'Location', 'Cube', 'Mic'
-      'Truck', 'HardDrive', 'FileCheck', 'Cloud', 'Code', 'Wrench', 'Hammer', 'Paintbrush'
-      'Scissors', 'Calculator', 'Clock3', 'Compass', 'TrendingDown', 'Lightning'
-      'Crosshair', 'Security', 'People', 'StarIcon', 'Palette', 'Camera', 'Music'
-      'Video', 'Gamepad2', 'ShoppingCart', 'CreditCard', 'Factory', 'Car', 'Plane'
-      'Ship', 'Train', 'Home', 'Heart', 'Stethoscope', 'GraduationCap', 'Briefcase'
-]
-    // Remove unused imports from lucide-react
-    const lucideImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?/g)
-    if (lucideImports) {
-      lucideImports.forEach(importLine => {
-        const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/)
-        if (importMatch) {
-          const imports = importMatch[1].split(',').map(imp => imp.trim())
-          const usedImports = imports.filter(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim()
-            return content.includes(cleanImp) && !unusedImports.includes(cleanImp)
-          })
-          if (usedImports.length === 0) {
-            content = content.replace(importLine, '')
-          } else if (usedImports.length < imports.length) {
-            const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`
-            content = content.replace(importLine, newImport)
-          }
-        }
-      })
-    }
-    // Remove unused React imports
-    const reactImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]react['"];?/g)
-    if (reactImports) {
-      reactImports.forEach(importLine => {
-        const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]react['"];?/)
-        if (importMatch) {
-          const imports = importMatch[1].split(',').map(imp => imp.trim())
-          const usedImports = imports.filter(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim()
-            return content.includes(cleanImp) && !unusedImports.includes(cleanImp)
-          })
-          if (usedImports.length === 0) {
-            content = content.replace(importLine, '')
-          } else if (usedImports.length < imports.length) {
-            const newImport = `import { ${usedImports.join(', ')} } from 'react';`
-            content = content.replace(importLine, newImport)
-          }
-        }
-      })
-    }
-    // Remove unused react-helmet-async imports
-    const helmetImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]react-helmet-async['"];?/g)
-    if (helmetImports) {
-      helmetImports.forEach(importLine => {
-        const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]react-helmet-async['"];?/)
-        if (importMatch) {
-          const imports = importMatch[1].split(',').map(imp => imp.trim())
-          const usedImports = imports.filter(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim()
-            return content.includes(cleanImp) && !unusedImports.includes(cleanImp)
-          })
-          if (usedImports.length === 0) {
-            content = content.replace(importLine, '')
-          } else if (usedImports.length < imports.length) {
-            const newImport = `import { ${usedImports.join(', ')} } from 'react-helmet-async';`
-            content = content.replace(importLine, newImport)
-          }
-        }
-      })
-    }
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content)
-      // eslint-disable-next-line no-console
-    console.log(`Fixed unused imports in: ${filePath}`)
-    }
+&1', { encoding: 'utf8' });
+    const lines = output.split('\n');
+    const files = new Set();
+    
+      if (line.includes('error') && line.includes('is defined but never used')) {
+        const match = line.match(/^\/workspace\/([^:]+):/);
+        if (match) {
+          files.add(match[1]);
+    });
+    
+    return Array.from(files);
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(`Error processing ${filePath}:`, error.message)
-  }
-}
-// Main execution
-const __dirname = path.dirname(new URL(import.meta.url).pathname)
-const srcDir = path.join(__dirname, 'src')
-const appDir = path.join(__dirname, 'app')
-// eslint-disable-next-line no-console
-    console.log('Fixing unused imports...')
-// Process src directory
-if (fs.existsSync(srcDir)) {
-  const srcFiles = getFiles(srcDir)
-  srcFiles.forEach(removeUnusedImports)
-}
-// Process app directory
-if (fs.existsSync(appDir)) {
-  const appFiles = getFiles(appDir)
-  appFiles.forEach(removeUnusedImports)
-}
-// eslint-disable-next-line no-console
-    console.log('Unused imports cleanup completed!')
+    console.log('Error getting files with errors:', error.message);
+    return [];
+
+// Fix unused imports in a file;
+function fixUnusedImports(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const lines = content.split('\n');
+    const newLines = [];
+    const usedImports = new Set();
+    
+    // First pass: collect all used imports by scanning the file;
+    const fileContent = content.toLowerCase();
+    
+    // Check for common icon usage patterns;
+    const iconPatterns = [;
+      'w-6 h-6', 'w-5 h-5', 'w-4 h-4', 'w-8 h-8', 'w-10 h-10',
+      'className="', 'text-', 'bg-', 'hover:', 'focus:'
+    ];
+    
+    // Check for JSX usage patterns;
+    const jsxPatterns = [;
+      '
+      '
+      '
+      '
+      '
+    ];
+    
+      // Skip import lines for now;
+      if (line.trim().startsWith('import ')) {
+        newLines.push(line);
+        return;
+      
+      // Check if this line uses any imports;
+      const lineLower = line.toLowerCase();
+      let hasUsedImport = false;
+      
+      // Check for icon usage;
+        if (lineLower.includes(pattern)) {
+          hasUsedImport = true;
+      });
+      
+      // Check for JSX usage;
+        if (line.includes(pattern)) {
+          hasUsedImport = true;
+      });
+      
+      // Check for direct variable usage;
+      if (line.includes('Helmet') || line.includes('Link') || line.includes('ArrowRight')) {
+        hasUsedImport = true;
+      
+      if (hasUsedImport) {
+        newLines.push(line);
+      } else {
+        newLines.push(line);
+    });
+    
+    // Now process import lines and remove unused ones;
+    const finalLines = [];
+    let inImportBlock = false;
+    let importLines = [];
+    
+      if (line.trim().startsWith('import ')) {
+        if (!inImportBlock) {
+          inImportBlock = true;
+          importLines = [];
+        importLines.push(line);
+      } else {
+        if (inImportBlock) {
+          // Process accumulated import lines;
+          const processedImports = processImportLines(importLines, newLines.join('\n'));
+          finalLines.push(...processedImports);
+          inImportBlock = false;
+          importLines = [];
+        finalLines.push(line);
+    });
+    
+    // Handle any remaining import lines;
+    if (inImportBlock) {
+      const processedImports = processImportLines(importLines, newLines.join('\n'));
+      finalLines.push(...processedImports);
+    
+    const newContent = finalLines.join('\n');
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent);
+      console.log(`Fixed unused imports in ${filePath}`);
+    
+  } catch (error) {
+    console.log(`Error fixing ${filePath}:`, error.message);
+
+function processImportLines(importLines, fullContent) {
+  const result = [];
+  
+    // Extract imported names;
+    const importMatch = line.match(/import\s+.*?\s+from\s+['"]([^'"]+)['"]/);
+    if (!importMatch) {
+      result.push(line);
+      return;
+    
+    const moduleName = importMatch[1];
+    const isDefaultImport = line.includes('import React') || line.includes('import { Helmet }') || line.includes('import { Link }');
+    
+    if (isDefaultImport) {
+      // For default imports, check if they're used;
+      const isUsed = fullContent.includes('React') || fullContent.includes('Helmet') || fullContent.includes('Link');
+      if (isUsed) {
+        result.push(line);
+    } else {
+      // For named imports, extract the names and check usage;
+      const namedImportsMatch = line.match(/import\s*{\s*([^}]+)\s*}/);
+      if (namedImportsMatch) {
+ imp.trim());
+          const cleanName = imp.replace(/\s+as\s+\w+/, '').trim();
+          return fullContent.includes(cleanName);
+        });
+        
+ 0) {
+          if (usedImports.length === imports.length) {
+            result.push(line);
+          } else {
+            const newLine = line.replace(/\{[^}]+\}/, `{ ${usedImports.join(', ')} }`);
+            result.push(newLine);
+      } else {
+        result.push(line);
+  });
+  
+  return result;
+
+// Main execution;
+const files = getFilesWithErrors();
+console.log(`Found ${files.length} files with unused import errors`);
+
+  const fullPath = path.join('/workspace', file);
+  if (fs.existsSync(fullPath)) {
+    fixUnusedImports(fullPath);
+});
+
+console.log('Finished fixing unused imports');
