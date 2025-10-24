@@ -32,9 +32,7 @@ export interface ErrorReport {
   createdAt: string;
   updatedAt?: string;
 }
-
 export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
-
 export interface Service {
   id: string;
   title: string;
@@ -84,26 +82,34 @@ export interface ContactFormData {
   message: string;
   service: string;
   phone?: string;
+<<<<<<< HEAD
   budget?: string
   timeline?: string
+=======
+  budget?: string;
+  timeline?: string;
+}
+>>>>>>> origin/main
 
 export interface AnalyticsEvent {
-  name: string
-  timestamp: number
-  properties?: Record<string, string | number | boolean | null>
-  userId?: string
-  sessionId?: string
+  name: string;
+  timestamp: number;
+  properties?: Record<string, string | number | boolean | null>;
+  userId?: string;
+  sessionId?: string;
+}
 
 export interface SEOData {
-  title: string
-  description: string
-  keywords: string[]
-  canonical?: string
-  ogTitle?: string
-  ogDescription?: string
-  ogImage?: string
-  twitterCard?: 'summary' | 'summary_large_image'
-  structuredData?: Record<string, unknown>
+  title: string;
+  description: string;
+  keywords: string[];
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterCard?: 'summary' | 'summary_large_image';
+  structuredData?: Record<string, unknown>;
+}
 
 export interface NavigationItem {
   name: string;
@@ -204,4 +210,8 @@ export interface InputProps extends BaseComponentProps {
   required?: boolean;
   error?: string;
   label?: string;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

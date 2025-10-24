@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -10,12 +11,19 @@ const AiEmailAutomationPage: React.FC = () => {
       <Navigation />
       
       <main>
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Email Automation</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">AI Email Automation</h1>
+            <p className="text-xl text-gray-300 mb-8">Automate your email campaigns with AI</p>
+          </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
+              <p className="text-xl text-gray-300">Advanced AI solutions</p>
+            </div>
           </div>
         </section>
 
@@ -42,7 +50,7 @@ const AiEmailAutomationPage: React.FC = () => {
           </div>
         </section>
       </main>
-
+      
       <Footer />
     </div>
   );

@@ -1,17 +1,17 @@
 import React from 'react';
 
 interface LoadingSkeletonProps {
-  className?: string;
   lines?: number;
   height?: string;
   width?: string;
+  className?: string;
 }
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-  className = '',
-  lines = 1,
+  lines = 3,
   height = 'h-4',
-  width = 'w-full'
+  width = 'w-full',
+  className = ''
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>

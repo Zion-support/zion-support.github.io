@@ -41,11 +41,13 @@ export const performanceUtils = {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {
         performance.clearMeasures(type)
-        performance.clearMarks(type)} else {
+        performance.clearMarks(type)
+      } else {
         performance.clearMeasures()
         performance.clearMarks()
-    
-  
+      }
+    }
+  }
 }
 
 // Google Analytics integration for performance tracking

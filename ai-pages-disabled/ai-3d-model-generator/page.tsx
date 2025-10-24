@@ -4,8 +4,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD:ai-pages-disabled/ai-3d-model-generator/page.tsx
 
 const Ai3dModelGeneratorPage: React.FC = () => {
+=======
+const FiveGSolutionsPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2da3:app/5g-solutions/page.tsx
   const features = [
     {
       icon: 'Brain',
@@ -51,8 +55,13 @@ const Ai3dModelGeneratorPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
+<<<<<<< HEAD:ai-pages-disabled/ai-3d-model-generator/page.tsx
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               Page
+=======
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              5G Solutions
+>>>>>>> cursor/fix-errors-and-merge-to-main-2da3:app/5g-solutions/page.tsx
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Generate 3D models using AI technology. Create high-quality 3D assets with our advanced AI-powered model generator.
@@ -136,7 +145,15 @@ const Ai3dModelGeneratorPage: React.FC = () => {
         </div>
       </div>
       <Footer />
+<<<<<<< HEAD:ai-pages-disabled/ai-3d-model-generator/page.tsx
 </>
   )
 }
 export default Ai3dModelGeneratorPage
+=======
+    </>
+  );
+};
+
+export default FiveGSolutionsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2da3:app/5g-solutions/page.tsx

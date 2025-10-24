@@ -8,25 +8,25 @@ export interface User {
 }
 
 export interface Service {
-  id: string
-  title: string
-  description: string
-  shortDescription: string
-  icon: string
-  features: string[]
+  id: string;
+  title: string;
+  description: string;
+  shortDescription: string;
+  icon: string;
+  features: string[];
   pricing: {
-    basic: number
-    pro: number
-    enterprise: number
-  }
-  benefits: string[]
-  useCases: string[]
-  marketPrice: string
+    basic: number;
+    pro: number;
+    enterprise: number;
+  };
+  benefits: string[];
+  useCases: string[];
+  marketPrice: string;
   contactInfo: {
-    phone: string
-    email: string
-    website: string
-  }
+    phone: string;
+    email: string;
+    website: string;
+  };
   link: string;
 }
 
@@ -70,6 +70,12 @@ export interface ErrorReport {
   severity: ErrorSeverity;
   resolved: boolean;
   createdAt: string;
+<<<<<<< HEAD
 };
 
 export type ErrorSeverity = "low" | "medium" | "high" | "critical";
+=======
+}
+
+export type ErrorSeverity = "low" | "medium" | "high" | "critical";
+>>>>>>> origin/main
