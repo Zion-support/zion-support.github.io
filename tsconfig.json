@@ -5,6 +5,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": ["@testing-library/jest-dom"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -32,13 +33,16 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "jest.setup.ts"
   ],
   "exclude": [
     "node_modules",
     "app-backup/**/*",
     "ai-pages-backup/**/*",
     "all-pages-backup/**/*",
+    "backup-problematic/**/*",
+    "corrupted-src-backup/**/*",
     "problematic-files-backup/**/*",
     "src/**/*",
     "components/**/*",
