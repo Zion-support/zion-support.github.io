@@ -28,18 +28,18 @@ export interface Metadata {;
       height?: number()
       alt?: string()
 }>
-    locale?: string()
-    type?: string()
-    authors?: Array<{ "name": string; url?: string }> | string[]
+    locale?: string()"
+    type?: string()"
+    authors?: Array<{ "name": string"; url?: string }> | string[]
     publishedTime?: string()
   }
   twitter?: {
-  card?: 'summary' | 'summary_large_image' | 'app' | 'player''
-      'max-video-preview''
-      'max-image-preview'?: 'none' | 'standard' | 'large''
+  card?: 'summary' | 'summary_large_image' | 'app' | 'player'
+      'max-video-preview'
+      'max-image-preview'?: 'none' | 'standard' | 'large'
       'max-snippet''
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never''
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never''
-  "runtime": 'edge'',
-  "runtime": 'nodejs'',
-declare module 'next''
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never''''
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly" | "never'''''
+  'runtime": "edge',''
+  'runtime": "nodejs',''''
+declare module 'next"

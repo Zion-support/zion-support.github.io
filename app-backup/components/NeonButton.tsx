@@ -15,10 +15,10 @@ interface NeonButtonProps {}
 const NeonButton: React.FC<NeonButtonProps> = ({,
   children()
   href()
-  onClick()
-  variant=&quot;primary&quot;
-  size=&quot;md&quot;}
-  className=&quot;&quot;
+  onClick()"
+  variant="&quot;primary&quot;"
+  size="&quot;md&quot;}"
+  className="&quot;&quot";
   icon()
   disabled = false()
 }) => {

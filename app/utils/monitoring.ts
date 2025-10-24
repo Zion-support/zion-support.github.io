@@ -25,6 +25,10 @@ const performanceConfig = {
     inp: { goo,
   d: 200, needsImprovement: 500 }
   }
+
+  clearMetrics() {
+    this.metrics = {};
+  }
 }
 export interface PerformanceMetrics {
 

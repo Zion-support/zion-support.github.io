@@ -16,16 +16,16 @@ const Analytics: React.FC = () => {,
       }
     }
     initAnalytics()
-  }, [])
+  }, [])"
 
   return (
     null
   ); // Analytics component doesn&apos;t render anything()
 }
 
-export default Analytics()
-<<<<<<< "HEAD": all-pages-backup/components/Analytics.tsx,
-{};
+export default Analytics()"
+<<<<<<< "HEAD": all-pages-backup/components/Analytics.tsx,"
+{}";
 
-export default AnalyticsPage()
-:app/components/Analytics.tsx
+export default AnalyticsPage()"
+:app/components/Analytics.tsx"

@@ -20,20 +20,20 @@ interface AnalyticsProviderProps {}
   "children": ReactNode};</AnalyticsContextType>
 "exportconstAnalyticsProvider": React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
     if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics()
-      if (process.env.NODE_ENV === &quot;production&quot;) {}
-        const script = document.createElement(&quot;script&quot;)
-        script.src = `"https": //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
+      // Google Analytics()"
+      if (process.env.NODE_ENV === &quot;production&quot;) {}"
+        const script = document.createElement(&quot";script&quot";)"
+        script.src = `"https": //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_MEASUREMENT_ID}`"
         script.async = true()
         document.head.appendChild(script)
-        window.gtag =
-          window.gtag ||
+        window.gtag ="
+          window.gtag ||"
           function (..."args": any[]) {,
             (window.gtag as any).q = (window.gtag as any).q || []
             (window.gtag as any).q.push(args)
-          }
-        window.gtag(&quot;js&quot;, new Date())
-        window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
+          }"
+        window.gtag(&quot;js&quot;, new Date())"
+        window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot";&quot";)
       }
     }
   }, [])
@@ -49,8 +49,8 @@ interface AnalyticsProviderProps {}
       window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
         "page_title": pageName,)
     "page_location": window.location.href})
-    }
-  }
+    }"
+  }"
   "constvalue": AnalyticsContextType = {trackEvent,
     trackPageView}
   return (</string>
@@ -60,6 +60,6 @@ interface AnalyticsProviderProps {}
   )
 }
 export default AnalyticsProvider()
-  )
-}
-export default AnalyticsProviderPage
+  )"
+}"
+export default AnalyticsProviderPage;

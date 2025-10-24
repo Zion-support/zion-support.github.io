@@ -18,15 +18,15 @@ import React, { useRef, useEffect } from 'react''
       link.crossOrigin = 'anonymous''
   if (typeof window === 'undefined''
     document.documentElement.style.setProperty('--scroll-top''
-    observer.observe({ "entryTypes": ['layout-shift'',
-        if (process.env['NODE_ENV'] === 'development''
-          console.log('"LCP": '',
-    observer.observe({ "entryTypes": ['largest-contentful-paint'',
-        if (process.env['NODE_ENV'] === 'development''
-          console.log('"FID": '',
-    observer.observe({ "entryTypes": ['first-input'',
-  window.addEventListener('scroll''
-  if (typeof window === 'undefined' || !('memory''
+    observer.observe({ 'entryTypes': ['layout-shift',''
+        if (process.env['NODE_ENV'] === 'development''''
+          console.log('LCP": ",'
+    observer.observe({ 'entryTypes': ['largest-contentful-paint',''
+        if (process.env['NODE_ENV'] === 'development''''
+          console.log("FID": ",'
+    observer.observe({ 'entryTypes': ['first-input','
+  window.addEventListener('scroll'
+  if (typeof window === 'undefined' || !('memory'
   if (typeof window === 'undefined''
   const navigation = performance.getEntriesByType('navigation''}
   const paint = performance.getEntriesByType('paint'')

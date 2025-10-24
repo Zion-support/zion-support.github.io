@@ -1,7 +1,8 @@
 
-'use client''
-"category": 'load' | 'runtime' | 'network' | 'memory' | 'custom'',
-"category": 'load' | 'runtime' | 'network' | 'memory' | 'custom'',
+'use client'
+'category": "load' | 'runtime' | 'network' | 'memory' | 'custom','
+'category": "load' | 'runtime' | 'network' | 'memory' | 'custom','
+if (typeof window !== 'undefined'
 if (typeof window !== 'undefined''
 if (typeof window !== 'undefined''
 if ('PerformanceObserver''

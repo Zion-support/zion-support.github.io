@@ -18,10 +18,10 @@ const NeonButton: React.FC<NeonButtonProps> = ({;,
   children()
   href()
   onClick,
-:app/components/NeonButton.tsx()
-  variant=&quot;primary&quot;
-  size=&quot;md&quot;}
-  className=&quot;&quot;
+:app/components/NeonButton.tsx()"
+  variant="&quot;primary&quot;"
+  size="&quot;md&quot;}"
+  className="&quot;&quot";
   icon()
   disabled = false()
 }) => {</NeonButtonProps>
