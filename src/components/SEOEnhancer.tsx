@@ -1,12 +1,15 @@
+import React from 'react'
+import { Helmet } from 'lucide-react'
 import React from 'react';
+import { Code, Helmet } from 'lucide-react';
 
 interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  children: React.ReactNode;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  children: React.ReactNode
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
@@ -28,57 +31,54 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "industry": "Technology",
     "services": [
       "AI Solutions",
-      "Quantum Computing", 
+      "Quantum Computing",
       "Autonomous Systems",
       "Digital Transformation",
       "Cloud Services",
       "Automation",
       "Business Intelligence"
     ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "Customer Service",
-      "areaServed": "US",
-      "availableLanguage": "en"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+   "contactPoint": {
+     "@type":"ContactPoint",
+     "telephone":"+1-30 2-46 4-095 0",
+     "contactType":"Customer Service",
+     "areaServed":"US",
+     "availableLanguage":"en"
+   },
+   "sameAs": [
+     "https:// twitter.com/ziontechgroup",
+     "https:// linkedin.com/$1/ziontechgroup"
     ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "offers": [
-      {
-        "@type": "Offer",
-        "category": "AI Solutions",
-        "description": "Enterprise AI solutions, digital transformation, and cloud services",
-        "price": "1500",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "1500",
-          "priceCurrency": "USD",
-          "billingIncrement": "P1M"
-        }
+   "address": {"@type":"PostalAddress",
+     "streetAddress":"364E Main St STE1008",
+     "addressLocality":"Middletown",
+     "addressRegion":"DE",
+     "postalCode":"1970 9",
+     "addressCountry":"US"
+   },
+   "offers": [
+      {"@type":"Offer",
+       "category":"AI Solutions",
+       "description":"Enterprise AI solutions, digital transformation, and cloud services",
+       "price":"150 0",
+       "priceCurrency":"USD",
+       "priceSpecification": {
+         "@type":"PriceSpecification",
+         "price":"150 0",
+         "priceCurrency":"USD",
+         "billingIncrement":"P1 M"
+       }
       }
     ],
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "39.8283",
-        "longitude": "-75.5795"
-      },
-      "geoRadius": "1000000"
+   "serviceArea": {"@type":"GeoCircle",
+     "geoMidpoint": {
+       "@type":"GeoCoordinates",
+       "latitude":"3 9.828 3",
+       "longitude":"-7 5.579 5"
+     },
+     "geoRadius":"100000 0"
     }
-  };
+  }
   return (
     <>
       <Helmet>
@@ -115,6 +115,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       </Helmet>
       {children}
     </>
-  );
-};
-export default SEOEnhancer;
+  )
+}
+export default SEOEnhancer

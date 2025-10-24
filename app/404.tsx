@@ -1,23 +1,16 @@
 "use client";
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import {Home,
-  ArrowLeft,
-  Search,
-  AlertTriangle,
-  RefreshCw,,} from "lucide-react";
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
-export default function NotFound() {
+const NotFound = () => {
   return (
     <>
       <Head>
-        <title}>{404 - Page Not Found | Zion Tech Group}</title>
+        <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-        <meta property="og:description" content="Advanced AI and IT solutions for modern businesses" />
-        <meta property="og:image" content="/og-image.jpg" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
@@ -31,7 +24,6 @@ export default function NotFound() {
 
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
-
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you&apos;re looking for seems to have vanished into the
             digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
@@ -42,6 +34,7 @@ export default function NotFound() {
             <div className="flex items-center justify-center mb-4">
               <Search className="w-6 h-6 text-cyan-400 mr-2" />
               <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
+            </div>
             <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages:</p>
             <div className="flex flex-wrap gap-2 justify-center">
               {[
@@ -78,7 +71,7 @@ export default function NotFound() {
 
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-3">Still can&apos;t find what you need?</h3>
+            <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
             <p className="text-gray-300 text-sm mb-4">
               Our support team is here to help you navigate our services and
               find exactly what you&apos;re looking for.
@@ -97,17 +90,20 @@ export default function NotFound() {
               >
                 Send Email
               </a>
+            </div>
           </div>
 
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">
-              <span className="text-cyan-400">Fun Fact:</span>
+              <span className="text-cyan-400">Fun Fact:</span> Even our AI gets
+              confused sometimes. That&apos;s why we have humans to help when things
+              go wrong! 🤖
+            </p>
           </div>
         </div></div></div></div></div></div></div>
     </>
   );
 }
 
-
-))
+export default NotFound;

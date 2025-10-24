@@ -1,36 +1,21 @@
 "use client";
-import React from "react";
-import Head from "next/head";
-import PerformanceMonitor from "./components/PerformanceMonitor";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import ErrorBoundary from "./components/ErrorBoundary";
+import React from 'react';
 
-export default function Page() {
+const App = () => {
   return (
-    <ErrorBoundary>
-      <>
-        <Head>
-          <title}>{Zion Tech Group - AI & IT Solutions}</title>
-          <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta property="og:description" content="Advanced AI and IT solutions for modern businesses" />
-          <meta property="og:image" content="/og-image.jpg" />
-        </Head>
-        
-        <div className="App">
-          <PerformanceMonitor />
-          <Navigation />
-          <main>
-            {/* Main content will be handled by Next.js routing */}
-          </main>
-          <Footer />
+    <div className="min-h-screen bg-gray-100 py-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          App
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-gray-600">
+            This page is under construction. Please check back later.
+          </p>
         </div>
-      </>
-    </ErrorBoundary>
+      </div>
+    </div>
   );
-}
+};
 
-
-
+export default App;

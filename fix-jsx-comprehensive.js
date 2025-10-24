@@ -1,55 +1,152 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix JSX syntax issues
-function fixJSXInFile(filePath) {
+// Function to fix JSX structure issues
+function fixJSXFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix malformed meta tags
-    content = content.replace(/<meta> <\/Head>/g, '</Head>');
-    content = content.replace(/<meta> <\/Head>/g, '</Head>');
+    // Check if this is a React component file
+    if (!content.includes('React') && !content.includes('react')) {
+      return false;
+    }
     
-    // Fix any remaining Helmet references
-    content = content.replace(/import { Helmet } from "react-helmet-async";/g, 'import Head from "next/head";');
-    content = content.replace(/<Helmet>/g, '<Head>');
-    content = content.replace(/<\/Helmet>/g, '</Head>');
-    
-    // Fix any remaining react-router-dom references
-    content = content.replace(/import { Link } from "react-router-dom";/g, 'import Link from "next/link";');
-    content = content.replace(/to=/g, 'href=');
-    
-    // Fix React.Fragment
-    content = content.replace(/React\.Fragment/g, '<>');
+    // Fix React.Fragment issues
+    content = content.replace(/<React\.Fragment>/g, '<>');
     content = content.replace(/<\/React\.Fragment>/g, '</>');
     
-    // Fix <<>> fragments
-    content = content.replace(/<<>>/g, '<>');
-    content = content.replace(/<\/<>>/g, '</>');
+    // Fix malformed JSX structure
+    const lines = content.split('\n');
+    let fixedLines = [];
+    let inJSX = false;
+    let braceCount = 0;
+    let parenCount = 0;
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const trimmedLine = line.trim();
+      
+      // Track JSX state
+      if (trimmedLine.includes('return (') || trimmedLine.includes('return(')) {
+        inJSX = true;
+        parenCount = 1;
+        fixedLines.push(line);
+        continue;
+      }
+      
+      if (inJSX) {
+        // Count parentheses and braces
+        for (const char of line) {
+          if (char === '(') parenCount++;
+          if (char === ')') parenCount--;
+          if (char === '{') braceCount++;
+          if (char === '}') braceCount--;
+        }
+        
+        // Check for malformed JSX
+        if (trimmedLine === '<>' && i > 0) {
+          // Ensure proper indentation
+          const prevLine = lines[i - 1].trim();
+          if (prevLine.endsWith('(') || prevLine.endsWith('return (')) {
+            fixedLines.push('    <>');
+          } else {
+            fixedLines.push(line);
+          }
+        } else if (trimmedLine === '</>') {
+          // Ensure proper closing
+          if (parenCount === 0) {
+            fixedLines.push('  </>');
+            inJSX = false;
+          } else {
+            fixedLines.push(line);
+          }
+        } else if (trimmedLine.startsWith('<') && !trimmedLine.includes('//') && !trimmedLine.includes('/*')) {
+          // Fix malformed JSX tags
+          if (trimmedLine.includes('  </') && !trimmedLine.includes('</>')) {
+            // This looks like a malformed closing tag
+            const tagName = trimmedLine.match(/<\/([^>]+)>/);
+            if (tagName) {
+              fixedLines.push(`    </${tagName[1]}>`);
+            } else {
+              fixedLines.push(line);
+            }
+          } else {
+            fixedLines.push(line);
+          }
+        } else {
+          fixedLines.push(line);
+        }
+        
+        // Check if we're out of JSX
+        if (parenCount === 0 && trimmedLine === ');') {
+          inJSX = false;
+        }
+      } else {
+        fixedLines.push(line);
+      }
+    }
+    
+    // Remove duplicate or malformed lines at the end
+    const finalLines = [];
+    let foundProperEnd = false;
+    
+    for (let i = fixedLines.length - 1; i >= 0; i--) {
+      const line = fixedLines[i].trim();
+      
+      if (line === ');' || line === '}' || line === '};' || line.includes('export default')) {
+        foundProperEnd = true;
+        finalLines.unshift(fixedLines[i]);
+      } else if (foundProperEnd) {
+        finalLines.unshift(fixedLines[i]);
+      } else if (line.match(/^<\/[^>]+>$/)) {
+        // Skip malformed closing tags
+        continue;
+      } else {
+        finalLines.unshift(fixedLines[i]);
+      }
+    }
+    
+    // Ensure proper export
+    const lastLine = finalLines[finalLines.length - 1];
+    if (!lastLine.includes('export default')) {
+      const componentName = path.basename(filePath, '.tsx')
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, l => l.toUpperCase())
+        .replace(/\s/g, '');
+      finalLines.push('');
+      finalLines.push(`export default ${componentName}Page;`);
+    }
+    
+    const fixedContent = finalLines.join('\n');
+    
+    // Only write if content changed
+    if (fixedContent !== content) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Function to recursively find and fix all .tsx files
-function fixAllFiles(dir) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixAllFiles(filePath);
-    } else if (file.endsWith('.tsx')) {
-      fixJSXInFile(filePath);
-    }
-  });
-}
+// Get all problematic files
+const { execSync } = require('child_process');
+const problematicFiles = execSync('find app -name "*.tsx" -exec grep -l "return (" {} \\;', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file.trim() !== '');
 
-// Start fixing from the app directory
-fixAllFiles('./app');
-console.log('Comprehensive JSX syntax fixes completed!');
+console.log(`Found ${problematicFiles.length} files to fix`);
+
+let fixedCount = 0;
+problematicFiles.forEach(file => {
+  if (fixJSXFile(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files`);
