@@ -1,10 +1,5 @@
 import React from 'react';
 import Footer from 'components/Footer';
-<<<<<<< HEAD
-// import Head from "next/head";
-// import Link from "next/link";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d47f
 import Navigation from 'components/Navigation';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target } from 'lucide-react';
 
