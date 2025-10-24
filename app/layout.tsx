@@ -1,16 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import React from 'react'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading Technology Solutions Provider',
+  title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services from Zion Tech Group.',
   keywords: 'AI solutions, cloud architecture, web development, mobile apps, data analytics, cybersecurity',
-}
-
 }
 
 export default function RootLayout({
@@ -20,10 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
-
 }
