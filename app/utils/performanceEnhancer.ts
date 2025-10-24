@@ -43,7 +43,8 @@ export class PerformanceMonitor {
   // Track component render time
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.log(`${componentName} rendered in ${renderTime}ms`);
     }
   }
@@ -72,7 +73,10 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-          console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
+          }
         }
       });
     });

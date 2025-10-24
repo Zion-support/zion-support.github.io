@@ -2,7 +2,10 @@
 
 export const performanceOptimizer = {
   optimize: () => {
-    console.log('Performance optimization applied');
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log('Performance optimization applied');
+    }
   },
   
   getMetrics: () => {
