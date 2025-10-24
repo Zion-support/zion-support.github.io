@@ -1,50 +1,162 @@
-import React from 'react'
-import '@testing-library/jest-dom'
+<<<<<<< HEAD
+// Mock analytics
+jest.mock('./app/utils/analytics.ts', () => ({
+=======
 
-// Mock react-router-dom
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom')
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
+// Polyfills for Node.js environment
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+// Mock files that use import.meta.env
+jest.mock('./src/utils/logger.ts', () => ({
+  logger: {
+    debug: jest.fn(),
+    info: jest.fn(),
+    warn: jest.fn(),
+    error: jest.fn(),
+    log: jest.fn(),
+  },
+}));
+
+jest.mock('./src/utils/analytics.ts', () => ({
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
+  trackEvent: jest.fn(),
+  trackPageView: jest.fn(),
+  initAnalytics: jest.fn(),
+}));
+
+jest.mock('./src/utils/errorTracking.ts', () => ({
+  reportError: jest.fn(),
+  initErrorReporting: jest.fn(),
+}));
+
+<<<<<<< HEAD
+jest.mock('./app/utils/performance.ts', () => ({
+  measurePerformance: jest.fn(),
+  getPerformanceMetrics: jest.fn(),
+  initPerformanceMonitoring: jest.fn(),
+=======
+jest.mock('./src/hooks/usePerformance.ts', () => ({
+  usePerformance: jest.fn(() => ({
+    metrics: {},
+    optimize: jest.fn(),
+  })),
+}));
+
+jest.mock('./src/hooks/usePerformanceMonitoring.ts', () => ({
+  usePerformanceMonitoring: jest.fn(() => ({
+    metrics: {},
+    report: {},
+  })),
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
+}));
+
+jest.mock('./app/utils/seoData.ts', () => ({
+  getSEOData: jest.fn(),
+  generateStructuredData: jest.fn(),
+  initSEO: jest.fn(),
+}));
+
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
       pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-      key: 'default'
-    }),
-    Link: ({ to, children, ...props }) => {
-      const mockReact = jest.requireActual('react')
-      return mockReact.createElement('a', { href: to, ...props }, children)
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => children,
-    Routes: ({ children }) => children,
-    Route: ({ element }) => element,
-    useParams: () => ({}),
-    useSearchParams: () => [new URLSearchParams(), jest.fn()],
-    createBrowserRouter: () => {
-      const mockReact = jest.requireActual('react')
-      return {
-        path: '/',
-        element: mockReact.createElement('div')
-      }
-    }
-  }
-})
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn(),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+    };
+  },
+}));
 
-// Suppress console warnings for tests
-const originalError = console.error
-beforeAll(() => {
-  console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
-      return
-    }
-    originalError.call(console, ...args)
-  }
-})
+// Mock Next.js navigation
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {
+      push: jest.fn(),
+      replace: jest.fn(),
+      prefetch: jest.fn(),
+      back: jest.fn(),
+      forward: jest.fn(),
+      refresh: jest.fn(),
+    };
+  },
+  usePathname() {
+    return '/';
+  },
+  useSearchParams() {
+    return new URLSearchParams();
+  },
+}));
 
-afterAll(() => {
-  console.error = originalError
-})
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock performance API
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []),
+  },
+});
+
+// Mock localStorage
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+global.localStorage = localStorageMock;
+
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+global.sessionStorage = sessionStorageMock;

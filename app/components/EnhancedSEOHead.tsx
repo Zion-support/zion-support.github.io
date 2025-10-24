@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import {Helmet} from 'lucide-react'
 import React from 'react'
@@ -113,3 +114,5 @@ export default EnhancedSEOHeadPage
   )
 }
 export default EnhancedSEOHead
+=======
+>>>>>>> main

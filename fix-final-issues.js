@@ -1,121 +1,145 @@
+const fs = require('fs');
+const path = require('path');
 
-const fs = require('fs')
-const path = require('path')
-// Function to fix duplicate exports and remaining JSX issues
-function fixFile(filePath) {
+// Function to fix final issues
+function fixFinalIssues(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Fix duplicate default exports
-    const exportMatches = content.match(/export default [^;]+;/g)
-    if (exportMatches && exportMatches.length > 1) {
-      // Keep only the first export
-      const firstExport = exportMatches[0]
-      content = content.replace(/export default [^;]+;/g, '')
-      content += '\n' + firstExport
-      modified = true
-}
-    // Fix JSX structure issues
-    const lines = content.split('\n')
-    const fixedLines = []
-    let inJSX = false
-    let braceCount = 0
-    let parenCount = 0
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix duplicate imports
+    const lines = content.split('\n');
+    const seenImports = new Set();
+    const cleanedLines = [];
+    let inImportBlock = false;
+
     for (let i = 0; i < lines.length; i++) {
-  const line = lines[i]
-      const trimmedLine = line.trim()
-      // Track JSX state
-      if (trimmedLine.includes('return (
-    <>
-      ') || trimmedLine.includes('return(')) {
-        inJSX = true
-        parenCount = 1
-        fixedLines.push(line)
-        continue
-}
-      if (inJSX) {
-        // Count parentheses and braces
-        for (const char of line) {
-          if (char === '(') parenCount++
-          if (char === ')') parenCount--
-          if (char === '{') braceCount++
-          if (char === '}'
-    </>
-  ) braceCount--
+      const line = lines[i];
+      
+      // Check if we're starting an import block
+      if (line.trim().startsWith('import ') || line.trim().startsWith('"use client"') || line.trim().startsWith("'use client'")) {
+        inImportBlock = true;
+      }
+      
+      // Check if we're ending the import block
+      if (inImportBlock && !line.trim().startsWith('import ') && !line.trim().startsWith('"use client"') && !line.trim().startsWith("'use client'") && line.trim() !== '') {
+        inImportBlock = false;
+      }
+
+      if (inImportBlock && line.trim().startsWith('import ')) {
+        const importKey = line.trim();
+        if (!seenImports.has(importKey)) {
+          seenImports.add(importKey);
+          cleanedLines.push(line);
         }
-        // Fix malformed JSX
-        if (trimmedLine === '<>' && i > 0) {
-          const prevLine = lines[i - 1].trim()
-          if (prevLine.endsWith('(') || prevLine.endsWith('return (
-    <>
-      ')
-    </>
-  ) {
-            fixedLines.push('    <>')
-          } else {
-            fixedLines.push(line)
-          }
-        } else if (trimmedLine === '</>') {
-  if (parenCount === 0) {
-            fixedLines.push('  </>')
-            inJSX = false
-} else {
-            fixedLines.push(line)
-          }
-        } else if (trimmedLine.startsWith('<') && !trimmedLine.includes('//') && !trimmedLine.includes('/*')) {
-          // Fix malformed JSX tags
-          if (trimmedLine.includes('  </') && !trimmedLine.includes('</>')) {
-            const tagName = trimmedLine.match(/<\/([^>]+)>/)
-            if (tagName) {
-              fixedLines.push(`    </${tagName[1]}>`)
-            } else {
-              fixedLines.push(line)
-            }
-          } else {
-            fixedLines.push(line)
-          }
-        } else {
-          fixedLines.push(line)
+      } else if (inImportBlock && (line.trim().startsWith('"use client"') || line.trim().startsWith("'use client'"))) {
+        if (!seenImports.has('"use client"')) {
+          seenImports.add('"use client"');
+          cleanedLines.push(line);
         }
-        // Check if we're out of JSX
-        if (parenCount === 0 && trimmedLine === ')') {
-  inJSX = false
-}
       } else {
-        fixedLines.push(line)
+        cleanedLines.push(line);
       }
     }
-    // Remove empty lines at the end
-    while (fixedLines.length > 0 && fixedLines[fixedLines.length - 1].trim() === '') {
-      fixedLines.pop()
+
+    if (cleanedLines.length !== lines.length) {
+      content = cleanedLines.join('\n');
+      modified = true;
     }
-    const fixedContent = fixedLines.join('\n')
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent)
-      // eslint-disable-next-line no-console
-    console.log(`Fixed: ${filePath}`)
-      return true
+
+    // Fix multiple export default statements
+    const exportMatches = content.match(/export default [^;]+;/g);
+    if (exportMatches && exportMatches.length > 1) {
+      // Keep only the first export default
+      const firstExport = exportMatches[0];
+      content = content.replace(/export default [^;]+;/g, '');
+      content = content.replace(/(\n|^)([^}]*\n)*\s*}\s*$/, `$1${firstExport}`);
+      modified = true;
     }
-    return false
+
+    // Fix stray ); characters
+    content = content.replace(/\s*\);\s*import/g, '\nimport');
+    content = content.replace(/\s*\);\s*export/g, '\nexport');
+    content = content.replace(/\s*\);\s*const/g, '\nconst');
+    content = content.replace(/\s*\);\s*function/g, '\nfunction');
+
+    // Fix missing semicolons after import statements
+    content = content.replace(/import[^;]*\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    // Fix missing semicolons after useState
+    content = content.replace(/useState\([^)]*\)\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    // Fix missing semicolons after array declarations
+    content = content.replace(/\]\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    // Fix missing semicolons after export default
+    content = content.replace(/export default [^;]*\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed final issues: ${filePath}`);
+      return true;
+    }
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+  return false;
+}
+
+// Function to recursively find all .tsx and .ts files
+function findFiles(dir, extensions = ['.tsx', '.ts']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Fixing final issues...');
+
+const appDir = path.join('/workspace', 'app');
+const files = findFiles(appDir);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFinalIssues(file)) {
+    fixedCount++;
   }
 }
-// Get all TypeScript files
-const { execSync } = require('child_process')
-const allFiles = execSync('find app -name "*.tsx" -type f', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file.trim() !== '')
-// eslint-disable-next-line no-console
-    console.log(`Found ${allFiles.length} files to check`)
-let fixedCount = 0
-allFiles.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++
-}
-})
-// eslint-disable-next-line no-console
-    console.log(`Fixed ${fixedCount} out of ${allFiles.length} files`)
+
+console.log(`Fixed ${fixedCount} files with final issues.`);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import Footer from './Footer'
 import Navigation from './Navigation'
@@ -126,3 +127,18 @@ export default ResponsiveContainerPage
   )
 }
 export default ResponsiveContainer
+=======
+"use client";
+import React from 'react';
+
+const ResponsiveContainer = () => {
+  return (
+    <div>
+      <h1>ResponsiveContainer</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default ResponsiveContainer;
+>>>>>>> main

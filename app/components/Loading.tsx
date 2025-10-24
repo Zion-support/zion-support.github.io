@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -139,3 +140,47 @@ const LoadingPage: React.FC = () => {
   )
 }
 export default LoadingPage
+=======
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+
+interface LoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+}
+
+const Loading: React.FC<LoadingProps> = ({
+  size = 'md',
+  text = 'Loading...'
+}) => {
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center p-8">
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
+      {text && (
+        <p className="mt-4 text-gray-600 text-sm font-medium">
+          {text}
+        </p>
+      )}
+=======
+"use client";
+import React from 'react';
+
+const Loading = () => {
+  return (
+    <div>
+      <h1>Loading</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
+    </div>
+  );
+};
+
+export default Loading;
+>>>>>>> main

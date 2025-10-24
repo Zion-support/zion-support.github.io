@@ -1,14 +1,26 @@
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-// Mock components for testing
-const MockComponent = () => <div data-testid="mock-component">Mock Component</div>
-describe('Components', () => {
-  it('renders mock component', () => {
-    render(<MockComponent />)
-    expect(screen.getByTestId('mock-component')).toBeInTheDocument()
+import { describe, test, expect } from '@jest/globals';
+import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
+import LoadingSpinner from '../src/components/OptimizedLoadingSpinner';
+import SEOEnhancer from '../src/components/SEOEnhancer';
+
+describe('Component Tests', () => {
+  test('renders with HelmetProvider', () => {
+    render(
+      <HelmetProvider>
+        <div>SEO Test</div>
+      </HelmetProvider>
+    )
+    expect(screen.getByText('SEO Test')).toBeTruthy()
   })
-  it('displays correct text', () => {
+  
+  test('renders mock component', () => {
     render(<MockComponent />)
-    expect(screen.getByText('Mock Component')).toBeInTheDocument()
+    expect(screen.getByTestId('mock-component')).toBeTruthy()
+  })
+  
+  test('displays correct text', () => {
+    render(<MockComponent />)
+    expect(screen.getByText('Mock Component')).toBeTruthy()
   })
 })

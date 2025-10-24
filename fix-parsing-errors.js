@@ -1,100 +1,37 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';'import path from 'path';'export {fixFileContent, processFile};
+#!/usr/bin/env node;
+// Function to fix common parsing errors;
+function fixFileContent(content) {let fixed = content;
 
-// Function to fix common parsing errors
-function fixParsingErrors(content) {
-  let fixed = content;
-  
-  // Fix merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-  fixed = fixed.replace(/<<<<<<< [a-f0-9]+[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-  
-  // Fix unterminated string literals
-  fixed = fixed.replace(/('|")([^'"]*?)(\n|$)/g, (match, quote, content, newline) => {
-    if (content.includes(quote)) return match;
-    return quote + content + quote + (newline === '\n' ? ';' : '');
-  });
-  
-  // Fix malformed object properties
-  fixed = fixed.replace(/\{\s*,\s*,/g, '{');
-  fixed = fixed.replace(/,\s*,\s*\}/g, '}');
-  fixed = fixed.replace(/,\s*,\s*,/g, ',');
-  
-  // Fix malformed JSX
-  fixed = fixed.replace(/<\s*>\s*<\s*\/\s*>/g, '<></>');
-  
-  // Fix function declarations
-  fixed = fixed.replace(/const\s+Page:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g, 'const PageComponent: React.FC = () => {');
-  fixed = fixed.replace(/export\s+default\s+Page;/g, 'export default PageComponent;');
-  
-  // Fix missing semicolons
-  fixed = fixed.replace(/([^;}])\s*\n\s*([a-zA-Z_$])/g, '$1;\n$2');
-  
-  // Fix malformed return statements
-  fixed = fixed.replace(/return\s*\(\s*\)\s*;/g, 'return null;');
-  
-  // Fix malformed JSX expressions
-  fixed = fixed.replace(/\{\s*;\s*\}/g, '');
-  fixed = fixed.replace(/\{\s*,\s*\}/g, '');
-  
-  // Fix malformed array/object syntax
-  fixed = fixed.replace(/\[\s*,\s*\]/g, '[]');
-  fixed = fixed.replace(/\{\s*,\s*\}/g, '{}');
-  
-  // Fix malformed template literals
-  fixed = fixed.replace(/`([^`]*?)\n([^`]*?)`/g, '`$1$2`');
-  
-  // Fix malformed class names
-  fixed = fixed.replace(/className\s*=\s*['"]([^'"]*?)\s*,\s*([^'"]*?)['"]/g, 'className="$1 $2"');
-  
-  // Fix malformed function calls
-  fixed = fixed.replace(/\(\s*,\s*\)/g, '()');
-  fixed = fixed.replace(/\(\s*,\s*,/g, '(');
-  fixed = fixed.replace(/,\s*,\s*\)/g, ')');
-  
+
+
+  // Fix specific common patterns;
+  fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');'  fixed = fixed.replace(/text-whitemb-6/g, 'text-white mb-6');'  fixed = fixed.replace(/text-gray-300mb-8/g, 'text-gray-300 mb-8');'  fixed = fixed.replace(/mx-autow-fit/g, 'mx-auto w-fit');'  fixed = fixed.replace(/w-5 h-5ml-2/g, 'w-5 h-5 ml-2');'  fixed = fixed.replace(/border-tborder-slate-800/g, 'border-t border-slate-800');'  fixed = fixed.replace(/px-4 sm: px-6 lg:px-8py-12/g, 'px-4 sm: px-6 lg:px-8 py-12');'  fixed = fixed.replace(/grid-cols-1 md:grid-cols-4gap-8/g, 'grid-cols-1 md: grid-cols-4 gap-8');'  fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md: col-span-2');'
+  // Fix malformed JSX - add missing opening tags;
+  fixed = fixed.replace(/<div className="[^"]*"\  />/g, (match) => {const className = match.match(/className="([^"]*)"/)[1];"    return `<div className="${className}">`;"  });`
+  // Fix self-closing divs that should be opening tags;
+  fixed = fixed.replace(/<div className="([^"]*)"\  />\s*<([^>]+)>/g, '<div className="$1">\n        <$2>');"'  // Remove invalid 'use client' directive (this is a Vite project, not Next.js)'  fixed = fixed.replace(/'use client';\s*\n/g, '');'
+  // Fix JSX expressions that need parent elements;
+  fixed = fixed.replace(/<Helmet \  />\s*<title>/g, '<Helmet>\n        <title>');'  fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta');'  fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>');'
   return fixed;
-}
 
-// Function to process a file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixParsingErrors(content);
-    
+// Function to process a single file;
+function processFile(filePath) {try {
+    const content = fs.readFileSync(filePath, 'utf8');'    const fixed = fixFileContent(content);
+
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      fs.writeFileSync(filePath, fixed, 'utf8');'      console.log(`Fixed: ${filePath}`);`      return true;
     return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+  } catch (error) {console.error(`Error processing ${filePath}:`, error.message);`    return false;
 
-// Function to recursively find and process files
-function processDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
+// Main function;
+async function main() {console.log('Starting to fix parsing errors...');'
+  // Get all TypeScript/TSX files;
+  const files = await glob('**/*.{ts,tsx}', {ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']});'
   let fixedCount = 0;
-  
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      fixedCount += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      if (processFile(fullPath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
-}
 
-// Main execution
-console.log('Starting parsing error fixes...');
-const fixedCount = processDirectory('./app');
-console.log(`Fixed ${fixedCount} files.`);
+    if (processFile(file)) {fixedCount++;});
+
+  console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);`
+main().catch(console.error);
+</div></div></div></div>

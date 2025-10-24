@@ -1,65 +1,100 @@
 import React from 'react';
-import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
-
-
-const Page: React.FC = () => {
-  const feature,
-      s = []
-    'AI-powered project planning and resource allocation'
-    'Intelligent timeline prediction and risk assessment'
-    'Smart task management with priority optimization'
-    'Real-time collaboration and team coordination'
-    'Predictive analytics for project success'
-    'Automated progress tracking and reporting'
-    'Budget optimization and cost forecasting'
-    'Integration with popular project management tools'
-  ]
-
-  const benefits = [];
-    '40% increase in project delivery speed',
-    '70% reduction in project delays',
-    '85% improvement in planning accuracy',
-    '30% cost reduction through optimization',
-    '95% team productivity boost',
-    '50% faster decision making'
-  ]
-
-  constpricin,
-      g = [
-    {
-      plan: 'Starter'
-      price: '$19 9'
-      perio,
-      d: '/month'
-      feature,
-      s: ['Up to5projects', '10team members', 'Basic AI planning', 'Email support']
-      popular: false
-   }
-    {plan: 'Professional'
-      price: '$39 9'
-      perio,
-      d: '/month'
-      feature,
-      s: ['Unlimited projects', '50team members', 'Advanced AI features', 'Priority support', 'Custom integrations']
-      popular: true
-   }
-    {plan: 'Enterprise'
-      price: 'Custom'
-      perio,
-      d: ''
-      feature,
-      s: ['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee']
-      popular: false
-    }
-  ]
-
-const Page = () => {};
-  return (
-</>
-  )
+const AIProjectManagerPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
+  );
 };
-;
-export default Page;
+  const _features = [
+const AiProjectManagerPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
+  );
+};
+  const features = [
+  // TODO: Add items
+];;
+    {
+  // TODO: Add content
+};
+  icon: BarChart,
+      title: 'AI-Powered Planning',
+      description: 'Intelligent project planning with predictive analytics and resource optimization',
+      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
+    },
+      icon: Target,
+      title: 'Smart Task Management',
+      description: 'Automated task assignment and priority management based on AI insights',
+      benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhanced team collaboration with AI-powered communication and coordination',
+      benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
+    }
+  ];
+  const pricingPlans = [
+      name: 'Professional',
+      price: '$199',
+      description: 'Ideal for growing businesses',
+        'Up to 25 projects',
+        'Advanced AI planning',
+        'Full team collaboration',
+        'Priority support',
+        'Advanced analytics',
+        'Custom integrations'
+      popular: true,
+
+const pagePage = () => {
+  return (
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Project Manager | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." /> </Helmet>
+      <Navigation />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">// Coming Soon - Advanced AI project management solutions that will transform your business.
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">// Contact Us
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">Learn More
+          </div>
+      <Footer />
+  );
+};
+
+export default pagePage;

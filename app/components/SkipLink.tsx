@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -139,3 +140,21 @@ const SkipLinkPage: React.FC = () => {
   )
 }
 export default SkipLinkPage
+=======
+<<<<<<< HEAD
+=======
+"use client";
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
+import React from 'react';
+
+const SkipLink = () => {
+  return (
+    <div>
+      <h1>SkipLink</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default SkipLink;
+>>>>>>> main

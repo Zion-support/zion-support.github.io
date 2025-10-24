@@ -1,73 +1,56 @@
+import fs from 'fs';
+import path from 'path';
+import React from 'react';
+export default ${componentName};`;
 
-const fs = require('fs')
-const path = require('path')
-// Function to fix a single page file
-function fixPageFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Fix component names
-    if (content.includes('const PagePage: React.FC = () => {')) {
-      const pageName = path.basename(path.dirname(filePath))
-      const componentName = pageName.split('-').map(word =>
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page'
-      content = content.replace('const PagePage: React.FC = () => {', `const ${componentName}: React.FC = () => {`)
-      content = content.replace(`export default PagePage;`, `export default ${componentName}`)
-      modified = true
-    }
-    // Remove react-helmet-async imports and usage
-    if (content.includes("import { Helmet } from 'react-helmet-async';")) {
-      content = content.replace("import { Helmet } from 'react-helmet-async';\n", '')
-      modified = true
-    }
-    if (content.includes('<Helmet>')) {
-  // Remove Helmet blocks
-      content = content.replace(/<Helmet>[\s\S]*?<\/Helmet>/g, '')
-      modified = true
-}
-    // Fix empty lines in JSX
-    if (content.includes('<>      \n      <Navigation />')) {
-  content = content.replace('<>      \n      <Navigation />', '<>\n      <Navigation />')
-      modified = true
-}
-    if (modified) {
-      fs.writeFileSync(filePath, content)
-      // eslint-disable-next-line no-console
-    console.log(`Fixed: ${filePath}`)
-      return true
-    }
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(`Error fixing ${filePath}:`, error.message)
-  }
-  return false
-}
-// Function to recursively find and fix all page files
-function fixAllPages(dir) {
-  const items = fs.readdirSync(dir)
-  let fixedCount = 0
-  for (const item of items) {
-    const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {
-      // Check if this is a page directory (contains page.tsx)
-      const pagePath = path.join(fullPath, 'page.tsx')
-      if (fs.existsSync(pagePath)) {
-        if (fixPageFile(pagePath)) {
-          fixedCount++
-}
-      }
-      // Recursively check subdirectories
-      fixedCount += fixAllPages(fullPath)
-    }
-  }
-  return fixedCount
-}
-// Start fixing from the app directory
-const appDir = path.join(__dirname, 'app')
-// eslint-disable-next-line no-console
-    console.log('Starting to fix pages...')
-const totalFixed = fixAllPages(appDir)
-// eslint-disable-next-line no-console
-    console.log(`Fixed ${totalFixed} page files.`)
+// List of pages that need to be fixed;
+const pagesToFix = ['cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog',
+  'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'];`'use client';
+  return (
+      <Helmet>
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${title} services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="${pageName}, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                ${title}
+              Professional ${title.toLowerCase()} services by Zion Tech Group.
+
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+              We're working on bringing you comprehensive ${title.toLowerCase()} solutions.
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+
+  );
+};
+
+// Fix pages;
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'Page';
+
+  const pageDir = path.join('/workspace/app', pageName);
+  const pageFile = path.join(pageDir, 'page.tsx');
+
+  // Create directory if it doesn't exist;
+  if (!fs.existsSync(pageDir)) {fs.mkdirSync(pageDir, { recursive: true});
+
+  // Overwrite page file with correct template;
+  fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
+  console.log(`Fixed: ${pageFile}`);
+});
+
+console.log('Page fixes completed!');

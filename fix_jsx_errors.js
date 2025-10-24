@@ -1,69 +1,53 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-// Function to fix common JSX errors
-function fixJSXErrors(content) {
-  let fixed = content;
-  
-  // Fix unclosed JSX fragments
-  fixed = fixed.replace(/<>\s*$/gm, '<>');
-  fixed = fixed.replace(/^\s*<\/>/gm, '</>');
-  
-  // Fix malformed JSX elements
-  fixed = fixed.replace(/<(\w+)\s*>\s*<\/\1>\s*$/gm, '');
-  
-  // Fix missing closing tags for common elements
-  fixed = fixed.replace(/<div[^>]*>\s*$/gm, (match) => {
-    if (!match.includes('</div>')) {
-      return match + '\n        </div>';
-    }
-    return match;
-  });
-  
-  // Fix merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+\n/g, '');
-  
-  // Fix common syntax errors
-  fixed = fixed.replace(/\*\s*100\s+0\)/g, '* 1000)');
-  fixed = fixed.replace(/,\s*\)/g, ')');
-  fixed = fixed.replace(/,\s*}/g, '}');
-  
-  return fixed;
-}
+// Find all page.tsx files;
+function findPageFiles(dir) {const files = [];
+  const items = fs.readdirSync(dir);
 
-// Function to process a file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed);
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-}
-
-// Function to recursively find and process files
-function processDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
+  for (const item, of, items) {
+    const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
-      processFile(fullPath);
-    }
-  }
-}
 
-// Process the app directory
-console.log('Fixing JSX errors...');
-processDirectory('/workspace/app');
-processDirectory('/workspace/src');
-console.log('JSX error fixing complete!');
+    if (stat.isDirectory()) {
+      files.push(...findPageFiles(fullPath));} else if (item === 'page.tsx') {files.push(fullPath);
+
+  return files;
+
+// Fix JSX errors in a file;
+function fixJSXErrors(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+
+  // Fix malformed JSX tags like "Page\n  </\n  <br>"
+  const malformedTagRegex = /(\s+Page\s*\n\s*<\/\s*\n\s*<br \  />)/g;
+  if (malformedTagRegex.test(content)) {
+      // Extract the page name from the file path;
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+
+      return `\n              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">\n                ${pageName}\n              </span>\n              <br   />`;
+    });
+    modified = true;
+
+  // Fix generic "page solutions" text;
+  const pageSolutionsRegex = /Transform your business with our advanced page solutions\./g;
+  if (pageSolutionsRegex.test(content)) {word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+
+    content = content.replace(pageSolutionsRegex, `Transform your business with our advanced ${pageName.toLowerCase()} solutions.`);
+    modified = true;
+
+  if (modified) {fs.writeFileSync(filePath, content);
+    console.log(`Fixed JSX errors in: ${filePath}`);
+
+// Find and fix all page files;
+const pageFiles = findPageFiles('/workspace/app');
+console.log(`Found ${pageFiles.length} page files`);
+
+let fixedCount = 0;
+for (const file, of, pageFiles) {try {
+    fixJSXErrors(file);
+    fixedCount++;} catch (error) {console.error(`Error fixing ${file}:`, error.message);
+
+console.log(`Fixed ${fixedCount} files`);

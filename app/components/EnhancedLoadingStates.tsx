@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -195,3 +196,18 @@ export const ContentSkeleton: React.FC = () => (
 </div>
 </div>
 )
+=======
+"use client";
+import React from 'react';
+
+const EnhancedLoadingStates = () => {
+  return (
+    <div>
+      <h1>EnhancedLoadingStates</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default EnhancedLoadingStates;
+>>>>>>> main

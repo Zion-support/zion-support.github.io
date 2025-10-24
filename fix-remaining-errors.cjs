@@ -1,109 +1,156 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix remaining errors
-function fixRemainingErrors(filePath) {
+// More specific fixes for remaining errors
+const fixes = [
+  // Fix malformed JSX closing tags
+  {
+    pattern: /<\/(\w+)\s*>\s*}\s*\/>/g,
+    replacement: '</$1>'
+  },
+  
+  // Fix object properties with missing opening brace
+  {
+    pattern: /{\s*,\s*(\w+):/g,
+    replacement: '{\n    $1:'
+  },
+  
+  // Fix malformed import statements with missing closing parenthesis
+  {
+    pattern: /import\s*{\s*([^}]+)\s*,\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*$/gm,
+    replacement: (match, p1, p2, p3) => {
+      const cleanImports = p1.replace(/,\s*$/, '').trim();
+      return `import { ${cleanImports} } from '${p3}';`;
+    }
+  },
+  
+  // Fix malformed JSX expressions
+  {
+    pattern: /{\s*([^}]*)\s*>\s*([^<]+)\s*<\s*\/\s*([^>]+)\s*>/g,
+    replacement: '{$1}>\n          $2\n        </$3>'
+  },
+  
+  // Fix missing semicolons in object properties
+  {
+    pattern: /(\w+):\s*([^,;]+)\s*\n\s*(\w+):/g,
+    replacement: '$1: $2;\n    $3:'
+  },
+  
+  // Fix malformed function declarations
+  {
+    pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/[^}]*}\s*\/\/[^}]*}\s*:\s*{\s*\/\/[^}]*};\s*([^}]+)\s*}\s*\)/g,
+    replacement: 'export default function $1({\n  $2\n}: {\n  $2: React.ReactNode;\n})'
+  },
+  
+  // Fix incomplete JSX elements
+  {
+    pattern: /<(\w+)([^>]*)>\s*([^<]+)\s*<\s*\/\s*(\w+)\s*>/g,
+    replacement: '<$1$2>$3</$4>'
+  },
+  
+  // Fix malformed object literals
+  {
+    pattern: /{\s*,\s*(\w+):\s*([^,}]+)\s*,/g,
+    replacement: '{\n    $1: $2,'
+  },
+  
+  // Fix missing commas in import statements
+  {
+    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*$/gm,
+    replacement: (match, imports, module) => {
+      const cleanImports = imports.replace(/,\s*$/, '').trim();
+      return `import { ${cleanImports} } from '${module}';`;
+    }
+  },
+  
+  // Fix malformed JSX attributes
+  {
+    pattern: /<(\w+)([^>]*)\s*>\s*([^<]+)\s*<\s*\/\s*(\w+)\s*>/g,
+    replacement: '<$1$2>$3</$4>'
+  },
+  
+  // Fix incomplete function parameters
+  {
+    pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/[^}]*}\s*\/\/[^}]*}\s*:\s*{\s*\/\/[^}]*};\s*([^}]+)\s*}\s*\)/g,
+    replacement: 'export default function $1({\n  $2\n}: {\n  $2: React.ReactNode;\n})'
+  },
+  
+  // Fix malformed object properties
+  {
+    pattern: /{\s*,\s*(\w+):\s*([^,}]+)\s*,/g,
+    replacement: '{\n    $1: $2,'
+  },
+  
+  // Fix incomplete JSX closing tags
+  {
+    pattern: /<h2([^>]*)>\s*([^<]+)\s*<\/h2>\s*<h2/g,
+    replacement: '<h2$1>$2</h2>\n        <h2'
+  },
+  
+  // Fix malformed JSX expressions with missing closing tags
+  {
+    pattern: /{\s*([^}]*)\s*>\s*([^<]+)\s*<\s*\/\s*([^>]+)\s*>/g,
+    replacement: '{$1}>\n          $2\n        </$3>'
+  },
+  
+  // Fix missing semicolons in object properties
+  {
+    pattern: /(\w+):\s*([^,;]+)\s*\n\s*(\w+):/g,
+    replacement: '$1: $2;\n    $3:'
+  },
+  
+  // Fix malformed import statements
+  {
+    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*$/gm,
+    replacement: (match, imports, module) => {
+      const cleanImports = imports.replace(/,\s*$/, '').trim();
+      return `import { ${cleanImports} } from '${module}';`;
+    }
+  }
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix $1 references (regex replacement artifacts)
-    if (content.includes('$1')) {
-      content = content.replace(/\$1/g, 'Page');
-      modified = true;
-    }
-
-    // Fix duplicate React imports
-    const reactImportRegex = /import\s+React\s+from\s+["']react["'];?\s*\n/g;
-    const matches = content.match(reactImportRegex);
-    if (matches && matches.length > 1) {
-      content = content.replace(reactImportRegex, '');
-      content = 'import React from "react";\n' + content;
-      modified = true;
-    }
-
-    // Fix unused variables by adding underscore prefix
-    const unusedVarRegex = /const\s+(\w+)\s*=\s*[^;]+;\s*$/gm;
-    content = content.replace(unusedVarRegex, (match, varName) => {
-      if (varName !== 'React' && varName !== 'Helmet' && !varName.startsWith('_')) {
-        return match.replace(new RegExp(`\\b${varName}\\b`, 'g'), `_${varName}`);
+    
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
-      return match;
     });
-
-    // Fix PerformanceObserverCallback type
-    if (content.includes('PerformanceObserverCallback')) {
-      content = content.replace(/PerformanceObserverCallback/g, 'any');
-      modified = true;
-    }
-
-    // Remove unused imports
-    const lines = content.split('\n');
-    const filteredLines = lines.filter(line => {
-      // Keep React and Helmet imports
-      if (line.includes('import React') || line.includes('import { Helmet }')) {
-        return true;
-      }
-      // Remove other imports that might be unused
-      if (line.startsWith('import ') && !line.includes('from "react"') && !line.includes('from "react-helmet-async"')) {
-        // Check if the import is actually used
-        const importName = line.match(/import\s+{([^}]+)}/);
-        if (importName) {
-          const names = importName[1].split(',').map(n => n.trim());
-          const isUsed = names.some(name => content.includes(name));
-          return isUsed;
-        }
-      }
-      return true;
-    });
-
-    if (filteredLines.length !== lines.length) {
-      content = filteredLines.join('\n');
-      modified = true;
-    }
-
+    
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
+      fixedCount++;
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Failed to fix ${filePath}:`, error.message);
+    errorCount++;
   }
 }
 
-// Find all TSX files in the app directory
-function findTSXFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findTSXFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-}
+// Find all TSX/TS files in src directory
+const files = glob.sync('/workspace/src/**/*.{ts,tsx}', {
+  ignore: [
+    '/workspace/src/**/node_modules/**',
+    '/workspace/src/**/dist/**',
+    '/workspace/src/**/.next/**'
+  ]
+});
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTSXFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} TSX files to check...`);
+console.log(`Found ${files.length} files to check...`);
 
 let fixedCount = 0;
-tsxFiles.forEach(file => {
-  const originalContent = fs.readFileSync(file, 'utf8');
-  fixRemainingErrors(file);
-  const newContent = fs.readFileSync(file, 'utf8');
-  if (originalContent !== newContent) {
+files.forEach(file => {
+  if (fixFile(file)) {
     fixedCount++;
   }
 });
 
-console.log(`Fixed ${fixedCount} files.`);
+console.log(`Fixed ${fixedCount} files`);

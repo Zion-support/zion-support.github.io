@@ -1,283 +1,85 @@
 import React from 'react';
-import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-=======
->>>>>>> 936c9169b8529ba98f1996ac9beac1bb365b75be
-import React from 'react';
-import Head from "next/head";
-import { Phone, Target, Mail, CheckCircle, Helmet } from 'lucide-react';
-
-
-constMarketingToolsPage: React.FC = () => {constmarketingTool,
-      s = [
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+const Pagetsx: React.FC = () => {
+  const _features = [
+    {;
+    icon: Users,
+      title: 'Advanced Features',
+      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
+      benefits: ['Improved efficiency', 'Better results', 'Cost savings'];
+    },
     {
-      title: 'AI Content Generator'
-      pric,
-      e: '$19 9/month'
-      descriptio,
-      n: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.'
-      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support']
-      icon: '✍️'
-      categor,
-      y: 'Content Creation'
-   }
-    {title: 'AI SEO Optimizer'
-      price: '$29 9/month'
-      descriptio,
-      n: 'Advanced SEO analysis and optimization recommendations powered by machine learning.'
-      feature,
-      s: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights']
-      icon: '🔍'
-      categor,
-      y: 'SEO'
-   }
-    {title: 'AI Social Media Manager'
-      price: '$24 9/month'
-      descriptio,
-      n: 'Automated social media management with intelligent posting and engagement optimization.'
-      feature,
-      s: ['Content scheduling', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics']
-      icon: '📱'
-      categor,
-      y: 'Social Media'
-   }
-    {title: 'AI Email Marketing'
-      price: '$17 9/month'
-      descriptio,
-      n: 'Intelligent email marketing campaigns with personalization and automation capabilities.'
-      feature,
-      s: ['Email templates', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management']
-      icon: '📧'
-      categor,
-      y: 'Email Marketing'
-   }
-    {title: 'AI Ad Campaign Manager'
-      price: '$39 9/month'
-      descriptio,
-      n: 'Automated ad campaign creation and optimization across multiple platforms.'
-      feature,
-      s: ['Campaign creation', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis']
-      icon: '📊'
-      categor,
-      y: 'Advertising'
-   }
-    {title: 'AI Analytics Dashboard'
-      price: '$29 9/month'
-      descriptio,
-      n: 'Comprehensive marketing analytics with AI-powered insights and predictions.'
-      feature,
-      s: ['Real-time analytics', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting']
-      icon: '📈'
-      categor,
-      y: 'Analytics'
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'Optimized performance and scalability for enterprise-grade applications',
+      benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with full compliance and data protection',
+      benefits: ['Data protection', 'Compliance', 'Secure operations']
     }
-  ]
-  const benefits = [
-    {,,,
-    'icon: TrendingUp,',,,
-    'title: 'Increase ROI'',,,
-    'description: 'Average250% increase in marketing ROI with AI-powered optimization'',,,
-    '}',,,
-    {,,,
-    'icon: Clock,',,,
-    'title: 'Save Time'',,,
-    'description: 'Reduce marketing tasks by80% with intelligent automation'',,,
-    '}',,,
-    {,,,
-    'icon: Target,',,,
-    'title: 'Better Targeting'',,,
-    'description: 'Reach the right audience with AI-powered targeting and personalization'',,,
-    '}',,,
-    {,,,
-    'icon: BarChart,',,,
-    'title: 'Data-Driven'',,,
-    'description: 'Make informed decisions with comprehensive analytics and insights'',,,
-    '}'
-  ]
-  return (</div>
+  ];
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
-        <Head>
-        <title >Marketing Tools - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
-        <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
-      </Helmet>
-      {
-    /* Hero Section  */
-    return (</section>
-        <div className="max-w-7x lmx-auto text-center"></div>
-          <h1 className="tex t-4xlsm: text-5xl m,
-      d:text-6xl font-bold text-white mb-6">
-        </div>
-            AI Marketing Tools
-          </h1>
-          <p className="tex t-xltext-gray-300 mb-8 max-w-3xl mx-auto">
-        </div>
-            Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
-          </p>
-          {
-    /* Stats  */
-    return (</div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
-              <div className="tex t-3xlfont-bold text-cyan-400 mb-2">6</div>
-              <div className="tex t-gray-300">Marketing Tools</div>
-            </div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
-              <div className="tex t-3xlfont-bold text-green-400 mb-2">$179</div>
-              <div className="tex t-gray-300">Starting Price</div>
-            </div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
-              <div className="tex t-3xlfont-bold text-purple-400 mb-2">250%</div>
-              <div className="tex t-gray-300">Average ROI</div>
-            </div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
-              <div className="tex t-3xlfont-bold text-orange-400 mb-2">80%</div>
-              <div className="tex t-gray-300">Time Saved</div>
+        <title>tsx - Zion Tech Group</title>
+        <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" /> </Helmet>
+      <Navigation />
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">tsx
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced tsx solutions powered by AI and cutting-edge technology
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Get Started
+              </a>
+              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors">View Demo
+              </a>
             </div>
           </div>
-          {
-    /* Contact Info  */
-    return (</div>
-            <div className="fle xflex-col md: flex-row items-center justify-center space-y-4 m,
-      d:space-y-0 m,
-      d:space-x-8"></div>
-              <div className="fle xitems-center space-x-2"></div>
-                <Phone className="w-5h-5" />
-                <span className="tex t-whitefont-medium">+1 302 464 0950</span>
-              </div>
-              <div className="fle xitems-center space-x-2"></div>
-                <Mail className="w-5h-5" />
-                <span className="tex t-whitefont-medium">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="fle xitems-center space-x-2"></div>
-                <MapPin className="w-5h-5" />
-                <span className="tex t-whitefont-medium">Middletown, DE</span>
-              </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {_features.map((feature, index) => (
+                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="text-sm text-gray-400 space-y-1">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />{benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-      {
-    /* Marketing Tools Grid  */
-    return (</section>
-        <div className="max-w-7x lmx-auto"></div>
-          <h2 className="tex t-3xlmd: text-4xl font-bold text-white text-center mb-12 neon-text">
-        </div>
-            Our Marketing Tools
-          </h2>
-          <div className="gri dgrid-cols-1 m,
-      d:grid-cols-2 l,
-      g:grid-cols-3 gap-8"></div>
-            {marketingTools.map((tool, index) => ()
-              <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div>
-                <div className="tex t-centermb-6"></div>
-                  <div className="tex t-5xlmb-4">{tool.icon};
-
-  return (
-                  <h3 className="tex t-xlfont-bold text-white mb-2">{tool.title};
-
-  return (
-                  <p className="tex t-gray-300text-sm mb-4">{tool.description};
-
-  return (
-                  <div className="bg-pu rple-100text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4"></div>
-                    {tool.category};
-
-  return (
-                </div>
-                <div className="mb-6"></div>
-                  <h4 className="fon t-semiboldtext-white mb-3">Features: </h4>
-                  <ul className="spa ce-y-2">
-        </div>
-                    {tool.features.map((feature, featureIndex) => ()
-                      <li key={featureIndex} className="fle xitems-center text-sm text-gray-300">
-        </div>
-                        <CheckCircle className="w-4h-4te x t-green-400 mr-2 flex-shrink-0" />
-                        {feature};
-
-  return (
-                    ))};
-
-  return (
-                </div>
-                <div className="tex t-center"></div>
-                  <div className="tex t-2xlfont-bold text-cyan-400 mb-4">{tool.price};
-
-  return (
-                  <a href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}>
-                    className="w-ful lbg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hove,
-      r:to-blue-700 transition-all inline-block"
-                  >
-        </div>
-                    Get Started
-                  </a>
-                </div>
-              </div>
-            ))};
-
-  return (
-        </div>
-      </section>
-      {
-    /* Benefits Section  */
-    return (</section>
-        <div className="max-w-7x lmx-auto"></div>
-          <h2 className="tex t-3xlmd: text-4xl font-bold text-white text-center mb-12 neon-text">
-        </div>
-            Why Choose Our Marketing Tools?
-          </h2>
-          <div className="gri dgrid-cols-1 m,
-      d:grid-cols-2 l,
-      g:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit, index) => ()
-              <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300"></div>
-                <benefit.icon className="w-12h-12te x t-cyan-400 mx-auto mb-4" />
-                <h3 className="tex t-xlfont-bold text-white mb-3">{benefit.title};
-
-  return (
-                <p className="tex t-gray-300text-sm">{benefit.description};
-
-  return (
-              </div>
-            ))};
-
-  return (
-        </div>
-      </section>
-      {
-    /* CTA Section  */
-    return (</section>
-        <div className="max-w-4x lmx-auto text-center"></div>
-          <h2 className="tex t-3xlmd: text-4xl font-bold text-white mb-6">
-        </div>
-            Ready to Transform Your Marketing?
-          </h2>
-          <p className="tex t-xltext-purple-100 mb-8">
-        </div>
-            Get started with our AI marketing tools today and see the difference intelligent automation can make.
-          </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
-            <a href="tel:+13024640950">
-              className="bg-wh itetext-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
-        </div>
-              Call (302) 464-0950
-            </a>
-            <a href="mailto:kleber@ziontechgroup.com">
-              className="bg-tr ansparentborder-2 border-white text-white px-8 py-3 rounded-lg font-medium hove,
-      r:bg-white hove,
-      r:text-purple-600 transition-colors"
-            >
-        </div>
-              Email Us
+        </section>
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gray-800">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>
+            <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Contact Us
             </a>
           </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-export default Page;
-}}}}}}
+        </section>
+      </main>
+      <Footer /> </div>
+  );
+};
+
+export default pagePage;

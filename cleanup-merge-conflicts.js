@@ -1,61 +1,39 @@
-const fs = require('fs');
-const path = require('path');
 
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Function to clean merge conflicts from a file
 function cleanMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    // Check if file has merge conflicts
+        conflictType = 'main';
+        continue;
+        inConflict = false;
+        conflictType = null;
+      }
+      
+
+      
+      // Clean up any extra whitespace
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+      
+      fs.writeFileSync(filePath, content);
+      return true;
+
     
-    // Fix common syntax issues
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
-    content = content.replace(/,\s*\)/g, ')');
+    // Write cleaned content back
+    const cleanedContent = cleanedLines.join('\n');
+    fs.writeFileSync(filePath, cleanedContent, 'utf8');
     
-    // Fix JSX syntax issues
-    content = content.replace(/<(\w+)([^>]*?)\s*>\s*<\/\1>/g, '<$1$2 />');
-    
-    // Remove empty lines with just whitespace
-    content = content.replace(/^\s*$/gm, '');
-    
-    // Fix common TypeScript issues
-    content = content.replace(/:\s*any\[\]/g, ': any[]');
-    content = content.replace(/:\s*string\[\]/g, ': string[]');
-    content = content.replace(/:\s*number\[\]/g, ': number[]');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Cleaned: ${filePath}`);
+    return true; // Conflicts were cleaned
   } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
-  }
-}
 
-function findTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-}
+    return false;
 
-// Clean all TypeScript/TSX files in the app directory
-const appDir = './app';
-const files = findTsxFiles(appDir);
 
-console.log(`Found ${files.length} files to clean...`);
-
-files.forEach(cleanMergeConflicts);
-
-console.log('Cleanup complete!');

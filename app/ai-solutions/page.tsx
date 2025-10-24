@@ -1,41 +1,51 @@
+'use client';
+
 import React from 'react';
-import { Metadata } from 'next';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
-  openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/ai-solutions',
-  },
-};
-
-const PagePage = () => {
+const AiSolutionsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive page solutions for modern businesses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
-              Get Started
-            </a>
-            <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Learn More
-            </a>
+      <Navigation />
+      
+      <main>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Solutions</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
           </div>
-        </div>
-      </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
+              <p className="text-xl text-gray-300">Advanced AI solutions</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered</h3>
+                <p className="text-gray-300">Leverage artificial intelligence for enhanced performance and insights.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
+                <p className="text-gray-300">Built to scale with your business needs and growth.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and compliance features.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };
 
-export default PagePage;
+export default AiSolutionsPage;

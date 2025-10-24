@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Link from 'next/link'
 import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle, Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu, Send, BarChart3, Target, DollarSign, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { 
+  ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle,
+  Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu
+} from 'lucide-react';
+
+>>>>>>> main
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
       icon: Zap,
+<<<<<<< HEAD
     title: 'Workflow Automation',
       description: 'Automate complex business processes with intelligent workflow management.'},
     {
@@ -21,6 +33,28 @@ const AIAutomationPage: React.FC = () => {
     title: 'Scalable Solutions',
     description: 'Automation solutions that grow with your business and adapt to changing needs.'}
   ]
+=======
+      title: 'Workflow Automation',
+      description: 'Automate complex business processes with intelligent workflow management.'
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Decision Making',
+      description: 'AI-powered decision making based on data analysis and business rules.'
+    },
+    {
+      icon: Settings,
+      title: 'Custom Integrations',
+      description: 'Seamlessly integrate with your existing systems and third-party applications.'
+    },
+    {
+      icon: Globe,
+      title: 'Scalable Solutions',
+      description: 'Automation solutions that grow with your business and adapt to changing needs.'
+    }
+  ];
+
+>>>>>>> main
   const useCases = [
     {
       title: 'Customer Service',
@@ -39,6 +73,7 @@ const AIAutomationPage: React.FC = () => {
     },
     {
       title: 'Financial Operations',
+<<<<<<< HEAD
     description: 'Automate invoice processing, expense management, and financial reporting.',
     icon: FileText}
   ]
@@ -50,11 +85,28 @@ const AIAutomationPage: React.FC = () => {
     "Scalable and adaptable solutions",
     "ROI within 3-6 months"
   ]
+=======
+      description: 'Automate invoice processing, expense management, and financial reporting.',
+      icon: FileText
+    }
+  ];
+
+  const benefits = [
+    'Reduce operational costs by up to 70%',
+    'Increase productivity and efficiency',
+    'Eliminate human errors in repetitive tasks',
+    '24/7 automated operations',
+    'Scalable and adaptable solutions',
+    'ROI within 3-6 months'
+  ];
+
+>>>>>>> main
   const stats = [
     { number: '70%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Automated Operations', icon: Clock },
     { number: '99.9%', label: 'Accuracy Rate', icon: Shield },
     { number: '3-6', label: 'Months ROI', icon: Star }
+<<<<<<< HEAD
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -62,18 +114,37 @@ const AIAutomationPage: React.FC = () => {
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+=======
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> main
             AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span> Services
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business operations with intelligent automation solutions that reduce costs, increase efficiency, and eliminate repetitive tasks.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> main
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Get Started Today
+<<<<<<< HEAD
               <ArrowRight className="w-8 h-8" />
+=======
+              <ArrowRight className="ml-2 w-5 h-5" />
+>>>>>>> main
             </Link>
             <Link
               href="/ai-services"
@@ -84,6 +155,7 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -92,6 +164,17 @@ const AIAutomationPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
                   {stat.icon}
+=======
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
+                  <stat.icon className="w-6 h-6 text-white" />
+>>>>>>> main
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -100,22 +183,39 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+=======
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> main
               Powerful Automation Features
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Our AI automation solutions come with advanced features designed to streamline your business processes.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
                   {feature.icon}
+=======
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+                <div className="mb-6">
+                  <feature.icon className="w-8 h-8 text-cyan-400" />
+>>>>>>> main
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -124,22 +224,39 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+=======
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> main
               Real-World Use Cases
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               See how our AI automation solutions are transforming businesses across different industries.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
                   {useCase.icon}
+=======
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
+                <div className="mb-6">
+                  <useCase.icon className="w-8 h-8 text-purple-400" />
+>>>>>>> main
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
@@ -148,12 +265,22 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg: grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+=======
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> main
                 Why Choose Our AI Automation?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
@@ -162,7 +289,11 @@ const AIAutomationPage: React.FC = () => {
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
+<<<<<<< HEAD
                     <CheckCircle className="w-8 h-8" />
+=======
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+>>>>>>> main
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
@@ -172,7 +303,11 @@ const AIAutomationPage: React.FC = () => {
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
+<<<<<<< HEAD
                     <Cpu className="w-8 h-8" />
+=======
+                    <Cpu className="w-10 h-10 text-white" />
+>>>>>>> main
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">Intelligent Automation</h3>
                   <p className="text-gray-300">
@@ -184,10 +319,18 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+=======
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> main
             Ready to Automate Your Business?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
@@ -199,7 +342,11 @@ const AIAutomationPage: React.FC = () => {
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Your Automation Journey
+<<<<<<< HEAD
               <ArrowRight className="w-8 h-8" />
+=======
+              <ArrowRight className="ml-2 w-5 h-5" />
+>>>>>>> main
             </Link>
             <Link 
               href="/ai-services" 
@@ -211,6 +358,13 @@ const AIAutomationPage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
 export default AIAutomationPage
+=======
+  );
+};
+
+export default AIAutomationPage;
+>>>>>>> main

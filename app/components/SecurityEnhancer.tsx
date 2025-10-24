@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -139,3 +140,22 @@ const SecurityEnhancerPage: React.FC = () => {
   )
 }
 export default SecurityEnhancerPage
+=======
+<<<<<<< HEAD
+
+=======
+"use client";
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
+import React from 'react';
+
+const SecurityEnhancer = () => {
+  return (
+    <div>
+      <h1>SecurityEnhancer</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default SecurityEnhancer;
+>>>>>>> main

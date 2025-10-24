@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 /**
@@ -213,3 +214,11 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
+=======
+// monitoring utility functions
+export const monitoring = () => {
+  return null;
+};
+
+export default monitoring;
+>>>>>>> main

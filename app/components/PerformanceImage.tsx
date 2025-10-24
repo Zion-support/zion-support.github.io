@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from &quot;react&quot
 import { Helmet } from &quot;react-helmet-async&quot
 &quot;use client&quot
@@ -55,3 +56,18 @@ const PerformanceImagePage: React.FC = () => {
 }
 export default PerformanceImagePage
 export default PerformanceImagePage
+=======
+"use client";
+import React from 'react';
+
+const PerformanceImage = () => {
+  return (
+    <div>
+      <h1>PerformanceImage</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default PerformanceImage;
+>>>>>>> main

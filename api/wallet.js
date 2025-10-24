@@ -1,51 +1,72 @@
-import fs from 'fs'
-import path from 'path'
-const dir = path.join(process.cwd(), 'data')
-const file = path.join(dir, 'wallets.json')
-export default async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
-  const { address, type, name, userId } = req.body
+
+  const { address, type, name, userId } = req.body;
   if (!address || !type) {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Address and type are required' }))
-    return
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Address and type are required' }));
+    return;
   }
-  let wallets = []
+
   try {
-    const data = fs.readFileSync(file, 'utf8')
-    wallets = JSON.parse(data)
+    switch (action) {
+      case 'create_payment_intent': {
+        if (!amount) {
+          res.statusCode = 400;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: 'Amount is required for payment intent' }));
+
+        // Mock payment intent creation
+        const paymentIntent = {
+          id: 'pi_' + Math.random().toString(36).substr(2, 9),
+          amount: Math.round(amount * 100), // Convert to cents
+          currency,
+          status: 'requires_payment_method',
+          created: Math.floor(Date.now() / 1000)
+        };
+
+    // Check if wallet address already exists
+    if (data.find(wallet => wallet.address === address)) {
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Wallet address already exists' }));
+      return;
+    }
+
+    // Add new wallet
+    const newWallet = {
+      id: Date.now(),
+      address,
+      type,
+      name: name || '',
+      userId: userId || null,
+      status: 'active',
+      createdAt: new Date().toISOString()
+    };
+
+      case 'get_balance': {
+        // Mock balance retrieval
+        const balance = {
+          currency,
+          amount: 0, // In a real app, this would come from a database
+          lastUpdated: new Date().toISOString()
+        };
+
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Wallet added successfully',
+      walletId: newWallet.id
+    }));
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error:', error)
-  }
-  if (wallets.find(wallet => wallet.address === address)) {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Wallet address already exists' }))
-    return
-  }
-  const newWallet = {
-    id: Date.now().toString()
-    address
-    type
-    name: name || '',
-    userId: userId || ''
-    status: 'active',
-    createdAt: new Date().toISOString()}
-  try {
-    wallets.push(newWallet)
-    fs.writeFileSync(file, JSON.stringify(wallets, null, 2))
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({
-      success: true,
-    message: 'Wallet added successfully' }))
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error:', error)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }))
+    console.error('Error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to add wallet' }));
   }
 }

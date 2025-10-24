@@ -1,38 +1,51 @@
+const withSentry = require('../../api/withSentry.cjs');
 
-const isValidEmail = (email) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return emailRegex.test(email)
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
-export default async function handler(req, res) {
+
+async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
-  const { email } = req.body
+
+  const { email, name } = req.body;
+  
   if (!email) {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Email is required' }))
-    return
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email is required' }));
+    return;
   }
+
   if (!isValidEmail(email)) {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Invalid email format' }))
-    return
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Invalid email format' }));
+    return;
   }
+
   try {
-    // eslint-disable-next-line no-console
-    console.log('Newsletter subscription:', email)
-    res.setHeader('Content-Type', 'application/json')
+    // Here you would typically save to a database
+    console.log('Newsletter subscription:', { email, name });
+    
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
-      success: true,
-    message: 'Successfully subscribed to newsletter' }))
+      message: 'Successfully subscribed to newsletter',
+      subscription
+    }));
+
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Newsletter subscription error:', error)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({
+    console.error('Newsletter subscription error:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
       error: 'Failed to subscribe to newsletter',
-    details: process.env.NODE_ENV === 'development' ? error.message : undefined}))
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }
+
+module.exports = withSentry(handler);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Accessibility utilities for improving user experience and compliance
 
 export const generateId = (prefix: string = 'id'): string => {
@@ -576,3 +577,17 @@ class AccessibilityEnhancer {
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
+=======
+// Utility file: accessibilityUtils
+export const accessibilityUtils = {}
+  // Utility functions will be implemented here
+};
+
+export const focusWithAnnouncement = (element: HTMLElement, announceText?: string) => {
+  accessibilityUtils.focusElement(element, announceText);
+};
+
+export const trapFocusInContainer = (container: HTMLElement) => {
+  return accessibilityUtils.trapFocusInContainer(container);
+};
+>>>>>>> main

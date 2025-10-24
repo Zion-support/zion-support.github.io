@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot
 declare global {
   interface Window {
@@ -63,3 +64,18 @@ export default AnalyticsProvider
   )
 }
 export default AnalyticsProviderPage
+=======
+"use client";
+import React from 'react';
+
+const AnalyticsProvider = () => {
+  return (
+    <div>
+      <h1>AnalyticsProvider</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default AnalyticsProvider;
+>>>>>>> main

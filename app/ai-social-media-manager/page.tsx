@@ -1,1 +1,87 @@
+<<<<<<< HEAD
 
+=======
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Share2, MessageCircle, TrendingUp, Users, BarChart, Calendar, Target } from 'lucide-react';
+export default function AISocialMediaManagerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
+      {/* Hero Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            AI Social Media <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Manager</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Automate your social media presence with AI-powered content creation, scheduling, and analytics.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="w-8 h-8" />
+            </Link>
+            <Link href="/ai-services" className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">AI-Powered Features</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Manage all your social media platforms with intelligent automation and insights.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+              <Share2 className="w-8 h-8 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Content Creation</h3>
+              <p className="text-gray-300">AI-generated posts, captions, and hashtags for all platforms.</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+              <Calendar className="w-8 h-8 text-purple-400 mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Smart Scheduling</h3>
+              <p className="text-gray-300">Optimal posting times based on audience engagement data.</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+              <BarChart className="w-8 h-8 text-green-400 mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Analytics & Insights</h3>
+              <p className="text-gray-300">Comprehensive performance tracking and growth insights.</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+              <Users className="w-8 h-8 text-orange-400 mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Audience Management</h3>
+              <p className="text-gray-300">AI-powered audience analysis and engagement optimization.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Social Media?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Start managing your social media presence with AI-powered automation today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                Get Started Now
+                <ArrowRight className="w-8 h-8" />
+              </Link>
+              <Link href="/ai-services" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+>>>>>>> main

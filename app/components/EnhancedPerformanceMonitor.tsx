@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -16,3 +17,18 @@ import { Phone, Mail } from 'lucide-react'
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
+=======
+"use client";
+import React from 'react';
+
+const EnhancedPerformanceMonitor = () => {
+  return (
+    <div>
+      <h1>EnhancedPerformanceMonitor</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default EnhancedPerformanceMonitor;
+>>>>>>> main

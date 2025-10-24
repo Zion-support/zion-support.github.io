@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from &quot;react&quot
 import { Helmet } from &quot;react-helmet-async&quot
 &quot;use client&quot
@@ -55,3 +56,18 @@ const ServicePageTemplatePage: React.FC = () => {
 }
 export default ServicePageTemplatePage
 export default ServicePageTemplatePage
+=======
+"use client";
+import React from 'react';
+
+const ServicePageTemplate = () => {
+  return (
+    <div>
+      <h1>ServicePageTemplate</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default ServicePageTemplate;
+>>>>>>> main

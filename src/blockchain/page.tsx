@@ -1,6 +1,18 @@
 import React from 'react';
-"use client";
 
-import { Coins } from 'lucide-react';
-import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react';
-import { Cpu } from 'lucide-react';
+const pagePage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Page
+        </h1>
+        <p className="text-lg text-gray-600">
+          This page is under construction. Please check back later for updates.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default pagePage;

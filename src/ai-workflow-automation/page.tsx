@@ -1,45 +1,12 @@
-'use client'
-import { Brain, BarChart } from 'lucide-react';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow } from 'lucide-react';
-import { CheckCircle, Phone, Mail } from 'lucide-react';
-    { number: '99.9%', label: 'Reliability' }
-  ]
-
-  const useCases = []
-    {title: 'HR Onboarding'
-      descriptio,
-      n: 'Automate employee onboarding processes from application to first day.'
-      ico,
-      n: Users
-   }
-    {title: 'Invoice Processing'
-      descriptio,
-      n: 'Automatically process invoices, validate data, and route for approval.'
-      icon: Database
-   }
-    {title: 'Customer Support'
-      descriptio,
-      n: 'Route tickets, escalate issues, and provide automated responses.'
-      icon: Globe
-   }
-    {title: 'Data Migration'
-      descriptio,
-      n: 'Safely migrate data between systems with automated validation.'
-      ico,
-      n: Settings
-    }
-  ]
-
-  const pricing = pricingPlans;
-
-const Page = () => {};
-  return (
-</>
-  )
+const AiWorkflowAutomationPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
+  );
 };
-;
-export default Page;
+  return (
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold text-white mb-4">Ai Workflow Automation</h1><p className="text-gray-300 mb-8">Coming Soon - Advanced ai workflow automation solutions</p><a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Contact Us
+        </a></div></div>
+  );
+};
+export default AiWorkflowAutomationPage;

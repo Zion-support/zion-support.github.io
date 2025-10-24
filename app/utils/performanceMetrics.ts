@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 
 /**
@@ -676,3 +677,11 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 export const performanceMetrics = PerformanceMetrics.getInstance()
 export default PerformanceMetrics
 `
+=======
+// performanceMetrics utility functions
+export const performanceMetrics = () => {
+  return null;
+};
+
+export default performanceMetrics;
+>>>>>>> main
