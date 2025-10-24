@@ -8,7 +8,7 @@ interface SEOEnhancerProps {
   canonicalUrl?: string;
   ogImage?: string;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   children: React.ReactNode;
 }
 
