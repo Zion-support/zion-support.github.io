@@ -69,13 +69,17 @@ const PerformanceMonitor: React.FC = () => {
         // Monitor page load time
         window.addEventListener('load', () => {
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
+          }
         });
 
         // Monitor resource loading
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'resource') {
+            if (entry.entryType === 'resource' && process.env.NODE_ENV === 'development') {
+              // eslint-disable-next-line no-console
               console.log('Resource loaded:', entry.name, entry.duration);
             }
           });
