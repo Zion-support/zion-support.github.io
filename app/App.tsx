@@ -142,29 +142,20 @@ const FiveGPrivateNetworksPage = lazy(() => import('./5g-private-networks/page')
 const FiveGSmartCitySolutionsPage = lazy(() => import('./5g-smart-city-solutions/page'));
 const FiveGSolutionsPage = lazy(() => import('./5g-solutions/page'));
 
+// Test Page
+const TestPage = lazy(() => import('./test/page'));
+
 // Main App Component
 function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <PerformanceMonitor />
-        <AccessibilityEnhancer />
         <BrowserRouter>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/cookies" element={<CookiesPage />} />
+              <Route path="/test" element={<TestPage />} />
 
               {/* AI Services */}
               <Route path="/ai-services" element={<AIServicesPage />} />

@@ -22,6 +22,14 @@ const nextConfig = {
   },
   // Disable static generation to avoid prerendering errors
   staticPageGenerationTimeout: 1000,
+  // Force dynamic rendering for all pages
+  generateStaticParams: false,
+  // Disable static optimization
+  swcMinify: false,
+  // Force all pages to be dynamic
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
+  },
 }
 
 module.exports = nextConfig
