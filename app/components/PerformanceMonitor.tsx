@@ -31,8 +31,8 @@ const PerformanceMonitor: React.FC = () => {
       }));
 
       // Send to analytics service (replace with your analytics endpoint)
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', metric.name, {
           event_category: 'Web Vitals',
           value: Math.round(metric.value),
           event_label: metric.id,
