@@ -14,16 +14,26 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
+<<<<<<< HEAD
 const $1: React.FC = () => {
   const webServices = [,
     {,
+=======
+const WebDevelopmentPage: React.FC = () => {
+  const webServices = [
+    {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
       icon: Code,
       price: '$1,200/month',
       features: ['React/Next.js', 'Vue.js/Angular', 'Responsive Design', 'PWA Development'],
       benefits: ['50% faster load times', 'Mobile-first approach', 'SEO optimized'],
+<<<<<<< HEAD
       color: 'text-blue-400',},
+=======
+      color: 'text-blue-400'},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     {
       title: 'Backend Development',
       description: 'Scalable server-side solutions and API development',
@@ -31,7 +41,11 @@ const $1: React.FC = () => {
       price: '$1,500/month',
       features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Design'],
       benefits: ['99.9% uptime', 'Scalable architecture', 'Secure APIs'],
+<<<<<<< HEAD
       color: 'text-green-400',},
+=======
+      color: 'text-green-400'},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     {
       title: 'Full-Stack Development',
       description: 'Complete web solutions from frontend to backend',
@@ -39,7 +53,11 @@ const $1: React.FC = () => {
       price: '$2,200/month',
       features: ['End-to-end development', 'Cloud deployment', 'DevOps integration', 'Testing & QA'],
       benefits: ['Unified solution', 'Faster development', 'Better performance'],
+<<<<<<< HEAD
       color: 'text-purple-400',},
+=======
+      color: 'text-purple-400'},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     {
       title: 'E-commerce Development',
       description: 'Custom e-commerce platforms and online stores',
@@ -47,14 +65,22 @@ const $1: React.FC = () => {
       price: '$1,800/month',
       features: ['Custom platforms', 'Payment integration', 'Inventory management', 'Analytics'],
       benefits: ['Higher conversion rates', 'Mobile optimized', 'Secure payments'],
+<<<<<<< HEAD
       color: 'text-orange-400',},
+=======
+      color: 'text-orange-400'},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     {
       title: 'Maintenance & Support',
       description: 'Ongoing maintenance and support for your web applications',
       icon: Users,
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
+<<<<<<< HEAD
       color: 'text-gray-400',}
+=======
+      color: 'text-gray-400'}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
@@ -257,6 +283,7 @@ const WebDevelopmentPage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 </div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -311,29 +338,71 @@ const WebDevelopmentPage: React.FC = () => {
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
+=======
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <Navigation />
+        <main className="container mx-auto px-4 py-16 pt-24"></main>
+          {/* Hero Section */}
+          <section className="text-center mb-16"></section>
+            <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text"></h1>
+              Web Development Services;
+            </h1>,
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+              Build modern, scalable, and high-performance web applications with our expert development team.
+              From frontend to backend, we deliver solutions that drive business growth.
+            </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+<<<<<<< HEAD
               >Start Your Project<a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >Call +1 302 464 0950</a>
               >
+=======
+              ></a>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 Start Your Project;
               </a>
               <a;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              ></a>
                 Call +1 302 464 0950;
               </a>
             </div>,
           </section>,
 ,
           {/* Services Grid */}
+<<<<<<< HEAD
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
+=======
+          <section className="mb-20"></section>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
+              Our Web Development Services;)
+            </h2>)
+)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),
+              {webServices.map((service, index) => (
+                <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>
+                  <div className="flex items-center mb-6">,
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,
+                      <service.icon className="w-8 h-8 text-white" />,
+                    </div>,
+                    <div>,
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
+                      <div className={`font-semibold ${service.color}`}>{service.price}</div>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</section>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
@@ -370,7 +439,7 @@ const WebDevelopmentPage: React.FC = () => {
 
                   <div className="mb-6"></div>
                     <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
-                        <li key={featureIndex} className="flex items-center text-gray-300">
+                        <li key={featureIndex} className="flex items-center text-gray-300"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
                         </CheckCircle>
                       ))}
@@ -380,7 +449,7 @@ const WebDevelopmentPage: React.FC = () => {
                   {service.benefits && (
                     <div className="mb-6"></div>
                       <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (</ul>
-                          <li key={benefitIndex} className="flex items-center text-gray-300">
+                          <li key={benefitIndex} className="flex items-center text-gray-300"></li>
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}</ArrowRight>
                           </ArrowRight>
                         ))}
@@ -390,12 +459,15 @@ const WebDevelopmentPage: React.FC = () => {
 
                   <a;
                     href="/contact"
+<<<<<<< HEAD
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
                   >Get Started</a>
                   </a>
                 </div>
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
-                  >
+                  ></a>
                     Get Started;
                   </a>,
                 </div>))}
@@ -403,12 +475,17 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
 
           {/* Technologies */}
+<<<<<<< HEAD
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
+=======
+          <section className="mb-20"></section>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               Technologies We Use;
             </h2>,
 ,
@@ -428,12 +505,17 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
 
           {/* Process */}
+<<<<<<< HEAD
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
+=======
+          <section className="mb-20"></section>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               Our Development Process;
             </h2>,
 ,
@@ -456,6 +538,7 @@ const WebDevelopmentPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
@@ -469,6 +552,16 @@ const WebDevelopmentPage: React.FC = () => {
               </p>
 <<<<<<< HEAD
 =======
+=======
+          {/* CTA Section */}
+          <section className="text-center"></section>
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text"></h2>
+                Ready to Build Your Next Web Application?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8"></p>
+                Let's discuss your project requirements and create a custom solution that drives your business forward.
+              </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a;
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
@@ -478,17 +571,21 @@ const WebDevelopmentPage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+<<<<<<< HEAD
                 >Start Your Project<a
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >Call +1 302 464 0950</a>
                 >
+=======
+                ></a>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   Start Your Project;
                 </a>
                 <a;
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
+                ></a>
                   Call +1 302 464 0950;
                 </a>
               </div>
@@ -581,8 +678,12 @@ const WebDevelopmentPage: React.FC = () => {
 =======
         <Footer />
       </div>,
+<<<<<<< HEAD
     </React.Fragment>);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+    </>);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 

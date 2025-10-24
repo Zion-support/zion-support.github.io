@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export const services = [
   {
@@ -529,6 +530,8 @@ export const specializedServices = [
     users: '400+',
     freeTrial: '30 days',}
 ];
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export interface Service {
   id: string,
   name: string,
@@ -1382,4 +1385,7 @@ export const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST',
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, { useEffect } from 'react'
 
@@ -175,6 +176,13 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   )
 }
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 export default PerformanceMonitor
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3

@@ -58,6 +58,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
+<<<<<<< HEAD
 const NewsPage: React.FC = () => {
   const features = [
     {
@@ -117,6 +118,29 @@ const NewsPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ];
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center"></section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">News</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">This page is under construction. Please check back soon for updates.</p><a
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+          >Contact Us</a>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">News</h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            This page is under construction. Please check back soon for updates.
+          </p>
+          <a;
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+          ></a>
+            Contact Us;
+          </a>
+        </section>
+      </main>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -314,9 +338,16 @@ const NewsPage: React.FC = () => {
         </section>
       </div>
       <Footer />
+<<<<<<< HEAD
     </>
+=======
+    </section>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 
 export default NewsPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

@@ -204,6 +204,7 @@ class PerformanceReporter {
     if (typeof window === 'undefined') {
       return
     }
+<<<<<<< HEAD
     // Google Analytics
     if (typeof gtag === 'function') {
       gtag('event', metric.name, {
@@ -211,6 +212,23 @@ class PerformanceReporter {
         value: Math.round(metric.value),
         event_label: metric.rating,
         non_interaction: true
+=======
+    // Google Analytics;
+    if (typeof gtag === 'function') {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+      gtag('event', metric.name, {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  event_categor,
+  y: 'Web Vitals',
+        valu)
+  e: Math.round(metric.value),
+        event_labe,
+  l: metric.rating,
+        non_interactio,
+  n: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       })
     }
   }

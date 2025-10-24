@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const Component: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
@@ -18,6 +19,13 @@ import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +35,12 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -38,11 +48,15 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps,) {
@@ -81,6 +95,9 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
         fatal: false,
       });
     }
+=======
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
 
   render() {
@@ -96,10 +113,13 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   public render() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
     if (this.state.hasError) {
+<<<<<<< HEAD
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       return (
 <<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -125,6 +145,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             <p className="text-gray-600 text-center mb-6">
 =======
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+<<<<<<< HEAD
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
@@ -163,6 +184,30 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 </pre>
               </details>
             )}
+=======
+          <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-center">
+            <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <div className="space-y-3">
+              <button
+                onClick={() => window.location.reload()}
+                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
+              >
+                <RefreshCw className="w-5 h-5 mr-2" />
+                Refresh Page
+              </button>
+              <button
+                onClick={() => window.location.href = '/'}
+                className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
+              >
+                <Home className="w-5 h-5 mr-2" />
+                Go Home
+              </button>
+            </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </div>
       );

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -405,3 +406,35 @@ const DocumentationPage: React.FC = () => {
 
 export default DocumentationPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+'use client';
+
+import React from 'react';
+import Footer from '../components/Footer';
+import SEOHead from '../components/SEOHead';
+import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+
+const DocsPage = () => {
+  return (
+    <ErrorBoundary>
+      <SEOHead 
+        title="Documentation - Zion Tech Group"
+        description="Documentation for Zion Tech Group services"
+      />
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h1 className="text-4xl font-bold text-white mb-8">Documentation</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </main>
+
+      <Footer />
+    </ErrorBoundary>
+  );
+};
+
+export default DocsPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

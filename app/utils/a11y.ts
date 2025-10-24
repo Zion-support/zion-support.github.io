@@ -1,8 +1,203 @@
 /**
+<<<<<<< HEAD
  * Accessibility (A11Y) Utilities
  * Provides helpers for improving web accessibility
  */
 
+=======
+
+  constructor(options: A11yOptions = {}) {}
+    this.options = {}
+      announceChanges: true,
+      focusManagement: true,
+      keyboardNavigation: true,
+      screenReaderSupport: true,
+      ...options
+    };
+
+    this.initializeLiveRegion();
+  }
+
+  private initializeLiveRegion(): void {}
+    if (this.options.announceChanges && typeof document !== 'undefined') {}
+      this.liveRegion = document.createElement('div');
+      this.liveRegion.setAttribute('aria-live', 'polite');
+      this.liveRegion.setAttribute('aria-atomic', 'true');
+      this.liveRegion.className = 'sr-only';
+      document.body.appendChild(this.liveRegion);
+    }
+  }
+
+  /**
+   * Announce changes to screen readers;
+   */
+  announce(message: string): void {}
+    if (this.liveRegion && this.options.announceChanges) {}
+      this.liveRegion.textContent = message;
+    }
+  }
+
+  /**
+   * Set focus to an element;
+   */
+  focus(element: HTMLElement | null): void {}
+    if (element && this.options.focusManagement) {}
+      element.focus();
+    }
+  }
+
+  /**
+   * Trap focus within a container;
+   */
+  trapFocus(container: HTMLElement): void {}
+    if (!this.options.focusManagement) return;
+
+    const focusableElements = container.querySelectorAll()
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    const handleKeyDown = (e: KeyboardEvent) => {}
+      if (e.key === 'Tab') {}
+        if (e.shiftKey) {}
+          if (document.activeElement === firstElement) {}
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {}
+          if (document.activeElement === lastElement) {}
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    };
+
+    container.addEventListener('keydown', handleKeyDown);
+    firstElement?.focus();
+  }
+
+  /**
+   * Add keyboard navigation support;
+   */
+  addKeyboardNavigation(element: HTMLElement): void {}
+    if (!this.options.keyboardNavigation) return;
+
+    element.addEventListener('keydown', (e) => {}
+      switch (e.key) {}
+        case 'Enter':
+        case ' ':
+          e.preventDefault();
+          element.click();
+          break;
+        case 'Escape':
+          element.blur();
+          break;
+      }
+
+  }
+
+  /**
+   * Enhance button accessibility;
+   */
+  enhanceButton(button: HTMLButtonElement): void {}
+    if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {}
+      button.setAttribute('aria-label', 'Button');
+    }
+
+    this.addKeyboardNavigation(button);
+  }
+
+  /**
+   * Enhance form field accessibility;
+   */
+  enhanceFormField(field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement): void {}
+    const label = document.querySelector(`label[for="${field.id}"]`);
+
+    if (!label && !field.getAttribute('aria-label')) {}
+      field.setAttribute('aria-label', field.placeholder || 'Form field');
+    }
+
+    if (field.required) {}
+      field.setAttribute('aria-required', 'true');
+    }
+  }
+
+  /**
+   * Create accessible modal;
+   */
+  createAccessibleModal(modal: HTMLElement): void {}
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+
+    const title = modal.querySelector('[data-modal-title]');
+    if (title) {}
+      modal.setAttribute('aria-labelledby', title.id || 'modal-title');
+    }
+
+    this.trapFocus(modal);
+  }
+
+  /**
+   * Clean up resources;
+   */
+  destroy(): void {}
+    if (this.liveRegion) {}
+      this.liveRegion.remove();
+      this.liveRegion = null;
+    }
+  }
+}
+
+// Utility functions
+export const a11yUtils = {}
+  /**
+   * Check if element is visible to screen readers;
+   */
+  isVisibleToScreenReader(element: HTMLElement): boolean {}
+    const style = window.getComputedStyle(element);
+    return style.display !== 'none' &&,
+           style.visibility !== 'hidden' &&,
+           element.getAttribute('aria-hidden') !== 'true';
+  },
+
+  /**
+   * Get accessible name for element;
+   */
+  getAccessibleName(element: HTMLElement): string {}
+    return element.getAttribute('aria-label') ||
+           element.getAttribute('aria-labelledby') ||
+           element.textContent?.trim() ||
+           element.getAttribute('title') ||
+           '';
+  },
+
+  /**
+   * Check if element is focusable;
+   */
+  isFocusable(element: HTMLElement): boolean {}
+    const tabIndex = element.getAttribute('tabindex');
+    if (tabIndex === '-1') return false;
+
+    if (element instanceof HTMLButtonElement ||
+        element instanceof HTMLInputElement ||
+        element instanceof HTMLSelectElement ||
+        element instanceof HTMLTextAreaElement ||
+        element instanceof HTMLAnchorElement) {}
+      return !element.disabled;
+    }
+
+    return tabIndex !== null;
+  }
+};
+
+export default A11yManager;
+ * Accessibility (A11Y) Utilities;
+ * Provides helpers for improving web accessibility;
+ */
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 /**
  * Generate unique ID for aria-describedby and aria-labelledby
  */
@@ -34,6 +229,7 @@ export function announceToScreenReader(
 /**
  * Trap focus within a container (useful for modals)
  */
+<<<<<<< HEAD
 export function trapFocus(element: HTMLElement,): () => void {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -53,6 +249,12 @@ export function trapFocus(element: HTMLElement,): () => void {
           firstFocusable?.focus();
           e.preventDefault();
         }
+=======
+export function trapFocus(elemen)
+  t: HTMLElement): () => void {/* TODO: Fix JSX expression */}
+      }
+    } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       }
     }
   };
@@ -68,20 +270,34 @@ export function trapFocus(element: HTMLElement,): () => void {
 /**
  * Check if element is keyboard accessible
  */
+<<<<<<< HEAD
 export function isKeyboardAccessible(element: HTMLElement,): boolean {
   const tabIndex = element.getAttribute('tabindex');
   return tabIndex !== null && tabIndex !== '-1';
+=======
+export function isKeyboardAccessible(elemen)
+  t: HTMLElement): boolean {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 
 /**
  * Add keyboard navigation support to custom interactive elements
  */
+<<<<<<< HEAD
 export function makeKeyboardAccessible(
   element: HTMLElement,
   onClick: (e: Event,) => void,
   options: {
     role?: string;
     tabindex?: number;
+=======
+export function makeKeyboardAccessible(elemen,
+  t: HTMLElement,
+  onClic)
+  k: (e: Event) => void,
+  option,
+  s: {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   } = {}
 ): () => void {
   const { role = 'button', tabindex = 0 } = options;
@@ -108,12 +324,18 @@ export function makeKeyboardAccessible(
 /**
  * Check color contrast ratio (WCAG 2.1)
  */
+<<<<<<< HEAD
 export function getContrastRatio(color1: string, color2: string,): number {
   const getLuminance = (color: string,): number => {
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+=======
+export function getContrastRatio(color,
+  1: string, color)
+  2: string): number {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   };
@@ -142,8 +364,13 @@ export function meetsContrastRequirements(
 /**
  * Skip to content link helper
  */
+<<<<<<< HEAD
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
   const skipLink = document.createElement('a');
+=======
+export function createSkipLink(targetI)
+  d: string, text = 'Skip to main content'): HTMLAnchorElement {/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
@@ -184,8 +411,14 @@ export function prefersDarkMode(): boolean {
 /**
  * Get ARIA label for form validation error
  */
+<<<<<<< HEAD
 export function getAriaInvalid(hasError: boolean,): Record<string, string> {
   return {
+=======
+export function getAriaInvalid(hasErro)
+  r: boolean): {/* TODO: Fix JSX expression */}
+} {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     ...(hasError && { 'aria-describedby': generateId('error') })
   };
 }
@@ -270,6 +503,7 @@ export class FocusManager {
       this.previousActiveElement.focus();
     }
   }
+<<<<<<< HEAD
 
   moveFocusInside(container: HTMLElement,): void {
     const focusableElements = container.querySelectorAll(
@@ -279,3 +513,10 @@ export class FocusManager {
     firstFocusable?.focus();
   }
 }
+=======
+  moveFocusInside(containe)
+  r: HTMLElement): void {/* TODO: Fix JSX expression */}
+  }
+}
+`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

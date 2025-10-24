@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/</loc>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +14,16 @@
     <lastmod>2025-10-13T04:15:00.592Z</lastmod>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02ab
     <changefreq>daily</changefreq>
+=======
+    <loc>https://ziontechgroup.com</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/about</loc>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <lastmod>2025-10-15T12:16:58.932Z</lastmod>
@@ -1434,10 +1441,27 @@
     <lastmod>2025-10-13T00:25:37.382Z</lastmod>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03bd
     <changefreq>monthly</changefreq>
+=======
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/blog</loc>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <lastmod>2025-10-15T12:16:58.932Z</lastmod>
@@ -1508,10 +1532,15 @@
     <lastmod>2025-10-13T00:25:37.382Z</lastmod>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03bd
     <changefreq>monthly</changefreq>
+=======
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/case-studies</loc>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <lastmod>2025-10-13T04:15:00.592Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -1824,10 +1853,33 @@
     <loc>https://ziontechgroup.com/disaster-recovery-advanced</loc>
     <lastmod>2025-10-13T00:25:37.382Z</lastmod>
     <changefreq>monthly</changefreq>
+=======
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/privacy</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/terms</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/sitemap</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/docs</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-13T00:25:37.382Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -3365,28 +3417,46 @@
   <url>
     <loc>https://ziontechgroup.com/help</loc>
     <lastmod>2025-10-15T12:16:58.932Z</lastmod>
+=======
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/api-docs</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-15T12:16:58.932Z</lastmod>
+=======
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/privacy</loc>
     <lastmod>2025-10-15T12:16:58.932Z</lastmod>
+=======
+    <loc>https://ziontechgroup.com/support</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/terms</loc>
     <lastmod>2025-10-15T12:16:58.932Z</lastmod>
+=======
+    <loc>https://ziontechgroup.com/status</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/cookies</loc>
     <lastmod>2025-10-15T12:16:58.932Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -3731,6 +3801,16 @@
     <priority>0.7</priority>
 =======
     <lastmod>2025-10-13T04:15:00.592Z</lastmod>
+=======
+    <loc>https://ziontechgroup.com/demo</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/consultation</loc>
+    <lastmod>2025-10-10T11:45:40.650Z</lastmod>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

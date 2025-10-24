@@ -16,6 +16,7 @@ import Footer from '../components/Footer';
 <<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -152,6 +153,112 @@ const AIContentGenerationPage: React.FC = () => {
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-6 h-6 text-white" />
+=======
+const AIContentGenerationPage: React.FC = () => {
+  const contentServices = [
+    {
+      title: 'AI Blog Content Generator Pro',
+      description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',
+      icon: '✍️',
+      price: '$199/month',
+      features: [
+        'SEO-optimized content generation',
+        'Research integration',
+        'Brand voice consistency',
+        'Multi-language support',
+        'Content calendar automation',
+        'Performance analytics'
+      ],
+      benefits: [
+        'Create 10x more content',
+        'Improve SEO rankings by 150%',
+        'Save 40+ hours per week',
+        'Increase organic traffic by 200%'
+      ],
+      marketPrice: '$500-1000/month',
+      technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'},
+    {
+      title: 'AI Social Media Content Suite',
+      description: 'Comprehensive social media content creation with platform-specific optimization, hashtag research, and engagement prediction.',
+      icon: 'smartphone',
+      price: '$149/month',
+      features: [
+        'Platform-specific optimization',
+        'Hashtag research automation',
+        'Engagement prediction',
+        'Visual content generation',
+        'Posting schedule optimization',
+        'Viral content analysis'
+      ],
+      benefits: [
+        'Increase engagement by 300%',
+        'Grow followers organically',
+        'Save 25+ hours per week',
+        'Improve brand awareness'
+      ],
+      marketPrice: '$300-600/month',
+      technologies: ['OpenAI GPT-4', 'DALL-E', 'Instagram API', 'Twitter API', 'LinkedIn API'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'}
+  ];
+
+  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"></h1>
+              AI Content Generation;
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">)
+                Services;)
+              </span>)
+            </h1>)
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">),
+              Transform your content strategy with our AI-powered content generation services.),
+              Create high-quality blog posts, social media content, and marketing copy 10x faster.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a
+                href="tel:+13024640950"
+        className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+      ></a>
+                <span>Call Now: (302) 464-0950</span>
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a;
+                href="/contact"
+                className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+              ></a>
+                Get Free Consultation;
+              </a>
+            </div>
+          </div>
+        </div>,
+      </section>,
+,
+      {/* Services Section */}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
+              Our AI Content Services;
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+              Choose from our comprehensive suite of AI-powered content generation services;
+            </p>,
+          </div>,
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
+            {contentServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">,
+                <div className="flex items-center mb-4">,
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></section>
+          <div className="text-center mb-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Content Services</h2><p className="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive suite of AI-powered content generation services</p><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{contentServices.map((service, index) => (</div>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
+                <div className="flex items-center mb-4"></div>
+                  <span className="text-4xl mr-4">{service.icon}</span>
+                  <div></div>
+                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3><p className="text-gray-600">{service.description}</p>
+                  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -255,6 +362,7 @@ const AIContentGenerationPage: React.FC = () => {
                     </ul>
                   )}
                 </div>
+<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -296,10 +404,21 @@ const AIContentGenerationPage: React.FC = () => {
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
+=======
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Features:<ul className="space-y-2">{service.features.map((feature, idx) => (</ul>
+                  <h4 className="font-semibold text-gray-900 mb-3">Features: </h4>,
+                  <ul className="space-y-2">,
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600"></li>
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" >{feature}</CheckCircle>
+                      </CheckCircle>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                     ))}
                   </ul>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
+<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -345,6 +464,21 @@ const AIContentGenerationPage: React.FC = () => {
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
+=======
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:<ul className="space-y-2">{service.benefits.map((benefit, idx) => (</ul>
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits: </h4>,
+                  <ul className="space-y-2">,
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600"></li>
+                        <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" >{benefit}</Star>
+                      </Star>
+                    ))}
+                  </ul>
+                </div>
+                <div className="border-t pt-4"></div>
+                  <p className="text-sm text-gray-600">{service.contactInfo}</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Advancedanalytics utility functions
 export function advancedanalytics() {
   // Implementation here
@@ -30,9 +31,92 @@ const AdvancedAnalyticsPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
+=======
+interface UserEvent {}
+  id: string
+  type: string
+  name: string
+  value?: number
+  timestamp: string,
+    sessionId: string
+  userId?: string
+  url: string
+  metadata?: Record<string, unknown></strin>
+}
+
+interface UserSession {}
+  id: string
+  startTime: string
+  endTime?: string
+  duration?: number
+  pageViews: number
+  events: UserEvent[]
+  referrer?: string;
+  userAgent: string;
+  device: 'desktop' | 'mobile' | 'tablet'
+  browser: string;
+  os: string;
+  country?: string;,
+  city?: string;
+}
+
+interface AnalyticsConfig {}
+  enableTracking: boolean
+  enableHeatmaps: boolean
+  enableSessionRecording: boolean
+  enableA_BTesting: boolean
+  enableConversionTracking: boolean
+  enablePerformanceTracking: boolean
+  enableErrorTracking: boolean
+  enableUserJourneyTracking: boolean
+}
+
+class AdvancedAnalytics {}
+  private static instance: AdvancedAnalytics
+  private config: AnalyticsConfig
+  private currentSession: UserSession
+  private eventQueue: UserEvent[] = []
+
+  constructor() {}
+    this.config = {}
+      enableTracking: true,
+      enableHeatmaps: true,
+      enableSessionRecording: false,
+      enableA_BTesting: true,
+      enableConversionTracking: true,
+      enablePerformanceTracking: true,
+      enableErrorTracking: true,
+      enableUserJourneyTracking: true
+    }
+    this.currentSession = this.createNewSession()
+    this.initializeTracking()
+  }
+
+  static getInstance(): AdvancedAnalytics {}
+    if (!AdvancedAnalytics.instance) {}
+      AdvancedAnalytics.instance = new AdvancedAnalytics()
+'use client';
+/**
+ * Advanced Analytics System for Zion Tech Group Website;
+ * Provides comprehensive user behavior tracking and insights;
+ */
+interface UserEvent {/* TODO: Fix JSX expression */}
+}
+interface UserSession {/* TODO: Fix JSX expression */}
+}
+interface AnalyticsConfig {/* TODO: Fix JSX expression */}
+}
+class AdvancedAnalytics {/* TODO: Fix JSX expression */}
+    };
+    this.currentSession = this.createNewSession();
+    this.initializeTracking();
+  }
+  static getInstance(): AdvancedAnalytics {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -51,6 +135,16 @@ const AdvancedAnalyticsPage: React.FC = () => {
         <meta name="description" content="Professional AdvancedAnalytics services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="advancedAnalytics, AI solutions, IT services, Zion Tech Group, advancedanalytics" />
       </Helmet>
+=======
+  /**
+   * Initialize comprehensive analytics tracking;
+   */
+  private initializeTracking(): void {}
+    if (typeof window === 'undefined' || !this.config.enableTracking) return
+
+    // Track page views
+    this.trackPageView()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -118,6 +212,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
             </p>
           </div></div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -158,3 +253,412 @@ const AdvancedAnalyticsPage: React.FC = () => {
 
 export default AdvancedAnalyticsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+    // Track performance
+    if (this.config.enablePerformanceTracking) {}
+      this.trackPerformance()
+    }
+
+    // Track user journey
+    if (this.config.enableUserJourneyTracking) {}
+      this.trackUserJourney()
+    }
+
+    // Setup network monitoring;
+    this.setupNetworkMonitoring()
+  private initializeTracking(): void {/* TODO: Fix JSX expression */}
+    }
+    // Track user journey;
+    if (this.config.enableUserJourneyTracking) {/* TODO: Fix JSX expression */}
+    }
+    // Setup network monitoring;
+    this.setupNetworkMonitoring();
+  }
+
+  /**
+   * Create new user session;
+   */
+  private createNewSession(): UserSession {}
+    return {}
+      id: this.generateSessionId(),
+      startTime: new Date().toISOString(),
+      pageViews: 0,
+      events: [],
+      userAgent: navigator.userAgent,
+      device: this.detectDevice(),
+      browser: this.detectBrowser(),
+      os: this.detectOS(),
+      referrer: document.referrer;
+    }
+  private createNewSession(): UserSession {/* TODO: Fix JSX expression */}
+    };
+  }
+
+  /**
+   * Track page views;
+   */
+  trackPageView(url?: string, title?: string): void {}
+    const event: UserEvent = {}
+      id: this.generateEventId(),
+      type: 'page_view',
+      name: 'Page View',
+      timestamp: new Date().toISOString(),
+      sessionId: this.currentSession.id,
+      url: url || window.location.href,
+      metadata: {}
+        title: title || document.title,
+        referrer: document.referrer
+  trackPageView(url?: string, title?: string): void {/* TODO: Fix JSX expression */}
+        }
+      }
+    }
+
+    this.addEvent(event)
+    this.currentSession.pageViews++
+  }
+
+  /**
+  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {}
+    const event: UserEvent = {}
+      id: this.generateEventId(),
+      type: 'custom_event',
+      name,
+      value,
+      timestamp: new Date().toISOString()
+      sessionId: this.currentSession.id;
+      url: window.location.href;
+      metadata;
+    }
+
+    this.addEvent(event)
+  }
+
+  /**
+   * Track clicks;
+   */
+  private trackClicks(): void {}
+    document.addEventListener('click', (event) => {}
+      const target = event.target as HTMLElement
+      const element = target.closest('a, button, [role="button"]')
+
+      if (element) {}
+        this.trackEvent('click', undefined, {)}
+          element: element.tagName.toLowerCase(),
+          text: element.textContent?.trim(),
+          href: (element as HTMLAnchorElement).href;
+          className: element.className;
+        })
+      }
+    })
+   * Track clicks;
+   */
+  private trackClicks(): void {/* TODO: Fix JSX expression */}
+          }
+        }
+      };
+      this.trackEvent(clickEvent);
+    });
+  }
+
+  /**
+   * Track scrolls;
+   */
+  private trackScrolls(): void {}
+    let scrollTimeout: NodeJS.Timeout
+
+    window.addEventListener('scroll', () => {}
+      clearTimeout(scrollTimeout)
+      scrollTimeout = setTimeout(() => {}
+        const scrollPercent = Math.round()
+          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+        )
+
+        this.trackEvent('scroll', scrollPercent, {)}
+          scrollY: window.scrollY,
+          scrollPercent
+        })
+      }, 150)
+    })
+  private trackScrolls(): void {/* TODO: Fix JSX expression */}
+          }
+        };
+        this.trackEvent(scrollEvent);
+      }, 100);
+    });
+  }
+
+  /**
+   * Track form submissions;
+   */
+  private trackFormSubmissions(): void {}
+    document.addEventListener('submit', (event) => {}
+      const form = event.target as HTMLFormElement
+      this.trackEvent('form_submit', undefined, {)}
+        formId: form.id,
+        formAction: form.action,
+        formMethod: form.method,
+        fieldCount: form.elements.length
+      })
+    })
+  private trackFormSubmissions(): void {/* TODO: Fix JSX expression */}
+        }
+      };
+      this.trackEvent(submitEvent);
+    });
+  }
+
+  /**
+   * Track downloads;
+   */
+  private trackDownloads(): void {}
+    document.addEventListener('click', (event) => {}
+      const target = event.target as HTMLElement
+      const link = target.closest('a[href]') as HTMLAnchorElement
+
+      if (link && this.isDownloadLink(link.href)) {}
+        this.trackEvent('download', undefined, {)}
+          fileName: link.href.split('/').pop(),
+          fileType: link.href.split('.').pop(),
+          href: link.href;
+        })
+  private trackDownloads(): void {/* TODO: Fix JSX expression */}
+          }
+        };
+        this.trackEvent(downloadEvent);
+      }
+    })
+  }
+
+  /**
+   * Track performance metrics;
+   */
+  private trackPerformance(): void {}
+    if (typeof window.performance === 'undefined') return
+
+    window.addEventListener('load', () => {}
+      setTimeout(() => {}
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const paint = performance.getEntriesByType('paint')
+
+        this.trackEvent('performance', undefined, {)}
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
+          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
+        })
+      }, 0)
+    })
+  private trackPerformance(): void {/* TODO: Fix JSX expression */}
+              }
+            };
+            this.trackEvent(paintEvent);
+          }
+        }
+      }).observe({/* TODO: Fix JSX expression */})
+  s: ['paint'] });
+      // Track navigation timing;
+      window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
+          }
+        };
+        this.trackEvent(performanceEvent);
+      });
+    }
+  }
+
+  /**
+   * Track user journey;
+   */
+  private trackUserJourney(): void {}
+    // Track page visibility changes
+    document.addEventListener('visibilitychange', () => {}
+      this.trackEvent('visibility_change', undefined, {)}
+        hidden: document.hidden,
+        visibilityState: document.visibilityState
+      })
+    })
+
+    // Track focus changes
+    window.addEventListener('focus', () => {}
+      this.trackEvent('window_focus')
+    })
+
+    window.addEventListener('blur', () => {}
+      this.trackEvent('window_blur')
+    })
+  private trackUserJourney(): void {/* TODO: Fix JSX expression */}
+      }
+    });
+    observer.observe(document.body, {/* TODO: Fix JSX expression */})
+    });
+  }
+
+  /**
+   * Setup network monitoring;
+   */
+  private setupNetworkMonitoring(): void {}
+    if ('connection' in navigator) {}
+      const connection = (navigator as any).connection
+      this.trackEvent('connection_info', undefined, {)}
+        effectiveType: connection.effectiveType,
+        downlink: connection.downlink,
+        rtt: connection.rtt
+      })
+  private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}
+    });
+    window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
+    });
+  }
+  /**
+   * Track custom event;
+   */
+  trackEvent(even)
+  t: UserEvent): void {/* TODO: Fix JSX expression */}
+    }
+    // Send to analytics service;
+    if (this.isOnline) {/* TODO: Fix JSX expression */}
+    }
+  }
+
+  /**
+  private addEvent(event: UserEvent): void {}
+    this.eventQueue.push(event)
+    this.currentSession.events.push(event)
+
+    // Send to analytics service (implement based on your needs)
+    this.sendToAnalytics(event)
+   * Send event to analytics service;
+   */
+  private async sendEvent(even)
+  t: UserEvent): Promise<void> {/* TODO: Fix JSX expression */}
+        },
+        bod,
+  y: JSON.stringify(event)
+      });
+    } catch (error) {/* TODO: Fix JSX expression */}
+      }
+  }
+
+  /**
+  private sendToAnalytics(event: UserEvent): void {}
+    // Implement your analytics service integration here
+   * Flush event queue when back online;
+   */
+  private async flushEventQueue(): Promise<void> {/* TODO: Fix JSX expression */}
+    }
+  }
+  /**
+   * Get element information for tracking;
+   */
+  private getElementInfo(elemen)
+  t: HTMLElement): {/* TODO: Fix JSX expression */}
+  } {/* TODO: Fix JSX expression */}
+    } else if (tagName === 'a' || element.closest('a')) {/* TODO: Fix JSX expression */}
+    } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {/* TODO: Fix JSX expression */}
+    }
+    // Create label;
+    let label = id || className || text?.substring(0, 50) || tagName;
+    return {/* TODO: Fix JSX expression */}
+    };
+  }
+  /**
+   * Check if link is a download;
+   */
+  private isDownloadLink(lin)
+  k: HTMLAnchorElement): boolean {/* TODO: Fix JSX expression */}
+  }
+  /**
+   * Detect device type;
+   */
+  private detectDevice(): 'desktop' | 'mobile' | 'tablet' {/* TODO: Fix JSX expression */}
+  }
+  /**
+   * Detect browser;
+   */
+  private detectBrowser(): string {/* TODO: Fix JSX expression */}
+  }
+  /**
+   * Detect operating system;
+   */
+  private detectOS(): string {/* TODO: Fix JSX expression */}
+  }
+  /**
+   * Generate session ID;
+   */
+  private generateSessionId(): string {/* TODO: Fix JSX expression */}
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+  /**
+   * Generate event ID;
+   */
+  private generateEventId(): string {/* TODO: Fix JSX expression */}`
+    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+  /**
+   * Get user ID from storage or generate one;
+   */
+  private getUserId(): string | undefined {/* TODO: Fix JSX expression */}`
+      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      localStorage.setItem('analytics_user_id', userId);
+    }
+    return userId;
+  }
+  /**
+   * Get analytics summary;
+   */
+  getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
+  s: number }>;
+    conversionRat,
+  e: number;
+  } {/* TODO: Fix JSX expression */}
+      },
+      {} as Record<string, number></string>
+    );
+    const eventsByCategory = events.reduce()
+      (acc, event) => {/* TODO: Fix JSX expression */}
+      },
+      {} as Record<string, number></string>
+    );
+    const pageViews = events.filter(e => e.type === 'page_view');
+    const topPages = pageViews;
+      .reduce()
+        (acc, event) => {/* TODO: Fix JSX expression */}
+          } else {/* TODO: Fix JSX expression */}
+  s: 1 });
+          }
+          return acc;
+        },
+        [] as Array<{/* TODO: Fix JSX expression */}
+  s: number }>
+      )
+      .sort((a, b) => b.views - a.views);
+    const conversions = events.filter(e => e.category === 'conversion').length;
+    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
+    return {/* TODO: Fix JSX expression */}
+    };
+  }
+  /**
+   * Send session data to analytics service;
+   */
+  private async sendSessionData(sessio)
+  n: UserSession): Promise<void> {/* TODO: Fix JSX expression */}
+        },
+        bod,
+  y: JSON.stringify(session)
+      });
+    } catch (error) {/* TODO: Fix JSX expression */}
+      }
+  }
+  /**
+   * End current session;
+   */
+  endSession(): void {/* TODO: Fix JSX expression */}
+    }
+    // Create new session;
+    this.currentSession = this.createNewSession();
+  }
+}
+// Export singleton instance;
+export const advancedAnalytics = AdvancedAnalytics.getInstance();
+export default advancedAnalytics;
+`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

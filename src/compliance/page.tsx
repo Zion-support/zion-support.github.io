@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
+=======
+
+
+
+import { Link } from 'react-router-dom';
+
+import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -13,6 +22,7 @@ const CompliancePage: React.FC = () => {
     { name: 'NIST Framework', status: 'Implemented' }
   ];
 
+<<<<<<< HEAD
   const complianceAreas = [
     {
       icon: Shield,
@@ -42,9 +52,13 @@ const CompliancePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+=======
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         <Navigation />
         
         {/* Header */}
+<<<<<<< HEAD
         <section className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center">
@@ -55,6 +69,27 @@ const CompliancePage: React.FC = () => {
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Privacy Policy
               </Link>
+=======
+        <section className="bg-white shadow-sm border-b"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"></div>
+            <div className="flex items-center"></div>
+              <Link
+                to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
+
+// ></Link>
+                
+          
+          
+          
+          
+          
+          
+          
+          "
+          <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
+// Back to Privacy Policy;
+          </Link>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
           </div>
@@ -145,4 +180,9 @@ const CompliancePage: React.FC = () => {
 };
 
 export default CompliancePage;
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

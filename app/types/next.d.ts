@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Next.js type definitions
 =======
 'use client';
@@ -14,6 +15,11 @@ export interface Metadata {
   description?: string;
   keywords?: string[];
   authors?: Array<{ name: string; url?: string }> | string[];
+=======
+// Type definitions for Next.js compatibility in Vite;
+export interface Metadata {/* TODO: Fix JSX expression */}
+  e: string; url?: string }> | string[];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   creator?: string;
   publisher?: string;
   formatDetection?: {
@@ -39,6 +45,7 @@ export interface Metadata {
     }>;
     locale?: string;
     type?: string;
+<<<<<<< HEAD
     authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string;
   };
@@ -99,6 +106,24 @@ export interface MetadataRoute {
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
+=======
+    authors?: Array<{/* TODO: Fix JSX expression */}
+  e: string; url?: string }> | string[];
+    publishedTime?: string;
+  };
+  twitter?: {/* TODO: Fix JSX expression */}
+  };
+  robots?: {/* TODO: Fix JSX expression */}
+    };
+  };
+  verification?: {/* TODO: Fix JSX expression */}
+  };
+}
+export interface MetadataRoute {/* TODO: Fix JSX expression */}
+}
+export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
+export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {

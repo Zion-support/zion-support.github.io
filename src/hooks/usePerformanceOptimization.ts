@@ -129,8 +129,12 @@ export const _usePerformanceOptimization = () => {
     preloadCriticalResources();
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
+<<<<<<< HEAD
   return {
     measurePerformance,
+=======
+  return {measurePerformance}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     optimizeImages,
     preloadCriticalResources
   };

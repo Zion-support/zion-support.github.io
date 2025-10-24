@@ -68,6 +68,7 @@ class MonitoringService {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
+<<<<<<< HEAD
             }
           })
         })
@@ -171,6 +172,35 @@ class MonitoringService {
     this.errors.push(error)
     // Keep only last 50 errors
     if (this.errors.length > 50) {
+=======
+        clsObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['layout-shift'] })
+        // First Contentful Paint;
+        messag,
+  e: `Unhandled Promise,`
+  Rejection: ${event.reason}`,
+  private reportMetric(nam,
+  e: string, valu)
+  e: number): void {// Sample rate;}
+    if (Math.random() > performanceConfig.monitoring.sampleRate) {return;}
+    // Send to analytics (if configured)
+    if (typeof gtag === 'function') {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+      gtag('event', name, {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  valu)
+  e: Math.round(name === 'cls' ? value * 1000 : value),
+        event_categor,
+  y: 'Web Vitals'
+  public logError(erro)
+  r: ErrorReport): void {this.errors.push(error)}
+    // Keep only last 50 errors;
+    if (this.errors.length > 50) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       this.errors = this.errors.slice(-50)
     }
     // console.error('[Error]', error)
@@ -214,6 +244,30 @@ class MonitoringService {
     }
   }
 }
+<<<<<<< HEAD
 // Singleton instance
+=======
+    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {/* TODO: Fix JSX expression */}
+  t: number } }).memory;
+      if (memory) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+        console.log('[Memory]', {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  use)`
+  d: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+          tota,`
+  l: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
+          limi,`
+  t: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
+  public measureNavigationTiming(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    if ('performance' in window && 'getEntriesByType' in performance) {// Singleton instance;}
+const _monitoring = new MonitoringService()
+export default monitoring;
+// Singleton instance;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 const monitoring = new MonitoringService()
 export default monitoring

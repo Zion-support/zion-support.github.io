@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import React from 'react';
@@ -67,11 +68,85 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       addStructuredData(structuredData);
     }
     // Add breadcrumb structured data
+=======
+'use client';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOData {
+  title: string;,
+    description: string;
+  keywords: string[];,
+    canonical: string;
+  ogImage: string;,
+    twitterCard: string;
+  structuredData: object;
+}
+
+export const SEOOptimizer: React.FC = () => {
+  const seoData: SEOData = {
+    title: 'Zion Tech Group - AI-Powered Enterprise Solutions',
+    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.',
+    keywords: [
+      'AI solutions',
+      'artificial intelligence',
+      'machine learning',
+      'quantum computing',
+      'digital transformation',
+      'enterprise software',
+      'automation',
+      'data analytics'
+    ],
+    canonical: 'https://ziontechgroup.com',
+    ogImage: 'https://ziontechgroup.com/og-image.webp',
+    twitterCard: 'summary_large_image',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.webp',
+      description: 'Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.',
+      address: {
+        '@type': 'PostalAddress'
+        streetAddress: '364 E Main St STE 1008',
+        addressLocality: 'Middletown',
+        addressRegion: 'DE',
+        postalCode: '19709',
+        addressCountry: 'US'},
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        contactType: 'customer service',
+        email: 'kleber@ziontechgroup.com'},
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https: //twitter.com/ziontechgroup',
+        'https://github.com/zion-tech-group'],
+
+
+interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
+}
+
+const,
+  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+    }
+    
+    // Add breadcrumb structured data;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     addBreadcrumbStructuredData();
     // Add organization structured data
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+<<<<<<< HEAD
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
+=======
+
+  const updateMetaTag = (nam,
+  e: string, conten,
+  t: string, attribut)
+  e: string = 'name') => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
       meta = document.createElement('meta');
@@ -80,6 +155,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     meta.setAttribute('content', content);
   };
+<<<<<<< HEAD
   const updateCanonicalUrl = (url: string,) => {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -98,6 +174,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     const existing = document.getElementById('structured-data');
     if (existing) {
       existing.remove();
+=======
+
+  const updateCanonicalUrl = (ur)
+  l: string) => {/* TODO: Fix JSX expression */}
+    }
+    canonical.setAttribute('href', url);
+  };
+
+  const addStructuredData = (dat)
+  a: any) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
     document.head.appendChild(script);
   };
@@ -127,7 +214,54 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
+<<<<<<< HEAD
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, title, description }) => {
+=======
+  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
+          }
+        },
+        {/* TODO: Fix JSX expression */}
+          }
+        },
+        {/* TODO: Fix JSX expression */}
+          }
+        }
+      ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(faqData);
+    script.id = 'faq-structured-data';
+    // Remove existing FAQ data;
+    const existing = document.getElementById('faq-structured-data');
+    if (existing) {/* TODO: Fix JSX expression */}
+    }
+    document.head.appendChild(script);
+  };
+
+  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
+      },
+      'address': {/* TODO: Fix JSX expression */}
+      },
+      'sameAs': [
+        'http,
+  s://twitter.com/ziontechgroup',
+        'http,
+  s://linkedin.com/company/ziontechgroup'
+      ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(organizationData);
+    script.id = 'organization-structured-data';
+    // Remove existing organization data;
+    const existing = document.getElementById('organization-structured-data');
+    if (existing) {/* TODO: Fix JSX expression */}
+
+    }
+  };
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   useEffect(() => {
     // Add structured data for better SEO
     const addStructuredData = () => {
@@ -233,6 +367,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, title, descriptio
       });
     };
 
+<<<<<<< HEAD
     // Initialize SEO optimizations
     addStructuredData();
     addSocialMetaTags();
@@ -252,6 +387,29 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, title, descriptio
           {JSON.stringify(structuredData)}
         </script>
       )}
+=======
+  return(<Helmet>)
+      <title>{seoData.title}</title>)
+      <meta name="description" content={seoData.description} />)
+      <meta name="keywords" content={seoData.keywords.join(', ')} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      {/* Open Graph */}
+      <meta property="og:title" content={seoData.title} />
+      <meta property="og:description" content={seoData.description} />
+      <meta property="og:url" content={seoData.canonical} />
+      <meta property="og:image" content={seoData.ogImage} />
+      <meta property="og: type" content="website" />,
+      <meta property="og:site_name" content="Zion Tech Group" />,
+,
+      {/* Twitter Card */}
+      <meta name="twitter:card" content={seoData.twitterCard} />
+      <meta name="twitter:title" content={seoData.title} />
+      <meta name="twitter:description" content={seoData.description} />
+      <meta name="twitter:image" content={seoData.ogImage} />
+      {/* Canonical */}
+      <link rel="canonical" href={seoData.canonical} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     </Helmet>
   )
 }

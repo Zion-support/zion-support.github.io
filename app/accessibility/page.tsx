@@ -230,6 +230,7 @@ const AccessibilityPage: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
 =======
@@ -244,6 +245,11 @@ const AccessibilityPage: React.FC = () => {
       </div>
       <Footer />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
+=======
+      </section>
+
+      <Footer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     </div>
 =======
     </React.Fragment>

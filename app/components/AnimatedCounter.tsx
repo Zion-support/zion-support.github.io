@@ -1,23 +1,34 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 'use client';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 import React, { useState, useEffect } from 'react';
 
 interface AnimatedCounterProps {
   end: number;
   duration?: number;
+<<<<<<< HEAD
   prefix?: string;
   suffix?: string;
   className?: string;
+=======
+  suffix?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
   duration = 2000,
+<<<<<<< HEAD
   prefix = '',
   suffix = '',
   className = ''
+=======
+  suffix = ''
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }) => {
   const [count, setCount] = useState(0);
 
@@ -29,12 +40,17 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       
+<<<<<<< HEAD
       // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentCount = Math.floor(easeOutQuart * end);
       
       setCount(currentCount);
 
+=======
+      setCount(Math.floor(progress * end));
+      
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
       }
@@ -48,6 +64,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     };
   }, [end, duration]);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 const AnimatedCounter: React.FC = () => {
@@ -57,6 +74,10 @@ const AnimatedCounter: React.FC = () => {
       <p>AnimatedCounter component.</p>
     </div>
   );
+=======
+
+  return <span>{count}{suffix}</span>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default AnimatedCounter;

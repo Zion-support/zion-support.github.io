@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const GlobalErrorBoundary: React.FC = () => {
   return (
 <<<<<<< HEAD
@@ -24,9 +25,55 @@ const GlobalErrorBoundary: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our globalerrorboundary solutions deliver unmatched performance, security, and scalability.
+=======
+class GlobalErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+
+    // Log error to console in development;
+    if (process.env.NODE_ENV === 'development') {
+      }
+
+    // Call onError callback if provided;
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // In production, you might want to send this to an error reporting service;
+    if (process.env.NODE_ENV === 'production') {
+      // Example: Send to error reporting service;
+      // errorReportingService.captureException(error, { extra: errorInfo });
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // Custom fallback UI;
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      // Default error UI;
+      return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>
+            <div className="text-6xl mb-4">⚠️<h1 className="text-2xl font-bold text-white mb-4">Something went wrong<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>
+            <div className="text-6xl mb-4">⚠️</div><h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1><p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
           </div></div></div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -78,6 +125,41 @@ const GlobalErrorBoundary: React.FC = () => {
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
+=======
+            {process.env.NODE_ENV === 'development' && this.state.error && ()
+              <details className="text-left bg-black/20 rounded-lg p-4 mb-6">)
+                <summary className="cursor-pointer text-cyan-400 font-medium mb-2">)
+                  Error Details (Development Only)
+                </summary>
+                <pre className="text-xs text-red-400 overflow-auto"></pre>
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
+
+            <div className="space-y-3"></div>
+              <button
+                onClick={() =>window.location.reload()}</button></<<<butto>className</butto></butto>="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+              ></<<<button>Refresh</button></<<button>Page</button><button
+                onClick={() =>this.setState({ hasError: false, error: undefined, errorInfo: undefined })}</button></<<<butto>className</butto></butto>="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+              ></<<<button>Try</button></<<button>Again</button><a
+                href="/"
+                className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+              >Go Home</a>
+              <button;
+                onClick={() => window.location.reload()}
+                className="w-full bg-cyan-600 hover: bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+              >
+                Refresh Page;
+              </button>,
+,
+              <button;
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="w-full bg-purple-600 hover: bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+              >
+                Try Again;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
@@ -92,4 +174,23 @@ const GlobalErrorBoundary: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default GlobalErrorBoundary;
+=======
+              <a;
+                href="/"
+                className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+              ></a>
+                Go Home;
+              </a>
+            </div>
+          </div>,
+        </div>);
+    }
+
+    return this.props.children;
+  }
+}
+
+export { GlobalErrorBoundary };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

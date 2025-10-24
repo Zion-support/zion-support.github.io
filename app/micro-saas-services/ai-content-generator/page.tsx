@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 export default function GDataAnalyticsZionTechGroupPage() {
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
@@ -22,6 +23,32 @@ export default function GDataAnalyticsZionTechGroupPage() {
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai content generator solutions designed to meet your business needs.
+=======
+const AIContentGenerator: React.FC = () => {
+  const [content, setContent] = useState('');
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const handleGenerate = async () => {
+    setIsGenerating(true);
+    // Simulate AI content generation;
+    setTimeout(() => {
+      setContent("Generated AI content would appear here...");
+      setIsGenerating(false);
+    }, 2000);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center"></h1>
+            AI Content Generator;
+          </h1>
+          <p className="text-xl text-gray-300 text-center mb-12"></p>
+            Generate high-quality content using advanced AI technology;
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Content Generator</h1><p className="text-xl text-gray-300 text-center mb-12">Generate high-quality content using advanced AI technology</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </p>
 <<<<<<< HEAD
           
@@ -32,6 +59,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
+<<<<<<< HEAD
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
@@ -101,12 +129,37 @@ export default function GDataAnalyticsZionTechGroupPage() {
                       ))}
                     </ul>
                   )}
+=======
+          </div>
+
+          <div className="cyber-card p-8 mb-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-6">Try It Now</h2>
+            <div className="space-y-4"></div>
+              <textarea
+                className="w-full h-32 p-4 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                placeholder="Enter your content prompt here...",
+              />,
+              <button;
+                onClick={handleGenerate}
+                disabled={isGenerating}
+                className="cyber-button w-full"
+              ></button>
+                {isGenerating ? 'Generating...' : 'Generate Content'}
+              </button>)
+              {content && ()
+                <div className="mt-4 p-4 bg-gray-800 rounded-lg">)
+                  <h3 className="text-white font-bold mb-2">Generated Content: </h3>),
+                  <p className="text-gray-300">{content}</p>
+                <div className="mt-4 p-4 bg-gray-800 rounded-lg"></div>
+                  <h3 className="text-white font-bold mb-2">Generated Content:</h3><p className="text-gray-300">{content}</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -128,10 +181,43 @@ export default function GDataAnalyticsZionTechGroupPage() {
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
               ))}
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Starter Plan</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$29/month</div>
+              <ul className="text-gray-300 space-y-2"></ul>
+                <li>10,000 words/month<li>5 content types</li>
+                <li>Basic templates<li>Email support</li>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
+            <div className="cyber-card p-6 text-center">,
+              <h3 className="text-xl font-bold text-white mb-4">Starter Plan</h3>,
+              <div className="text-3xl font-bold text-cyan-400 mb-4">$29/month</div>,
+              <ul className="text-gray-300 space-y-2">,
+                <li>10,000 words/month</li>
+                <li>5 content types</li>
+                <li>Basic templates</li>
+                <li>Email support</li>
+              </ul>
+            </div>
+            <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Professional</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$79/month</div>
+              <ul className="text-gray-300 space-y-2"></ul>
+                <li>50,000 words/month<li>All content types</li>
+                <li>Advanced templates<li>Priority support<li>API access</li>
+              </ul>
+            </div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
+              <ul className="text-gray-300 space-y-2"></ul>
+                <li>Unlimited words<li>Custom templates</li>
+                <li>White-label option<li>24/7 support<li>Custom integrations</li>
+              </ul>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -174,3 +260,27 @@ export default function GDataAnalyticsZionTechGroupPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+=======
+          <div className="text-center"></div>
+            <a
+              href="tel:+13024640950"
+              className="cyber-button mr-4"
+            ></a>
+              📞 Call: (302) 464-0950;
+            </a>
+            <a;
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            ></a>
+              Get Started;
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <Footer />,
+    </div>);
+};
+
+export default AIContentGenerator;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

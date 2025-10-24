@@ -16,9 +16,12 @@ class ProductionLogger {}
   private isDevelopment = process.env.NODE_ENV === 'development';
   private isProduction = process.env.NODE_ENV === 'production';
 
+<<<<<<< HEAD
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
     const entry: LogEntry = {,
       level;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
     const entry: LogEntry = {,}
       level,
@@ -28,9 +31,12 @@ class ProductionLogger {}
       context;
     };
 
+<<<<<<< HEAD
     // Only log in development;
     if (this.isDevelopment) {
       switch (level) {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Only log in development
     if (this.isDevelopment) {}
       switch (level) {}
@@ -45,14 +51,18 @@ class ProductionLogger {}
       }
     }
 
+<<<<<<< HEAD
     // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {}
       this.sendToMonitoring(entry);
     }
   }
 
+<<<<<<< HEAD
   private sendToMonitoring(entry: LogEntry,): void {,
     // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {,
@@ -63,6 +73,9 @@ class ProductionLogger {}
         event_category: 'Error',
 ,
   private sendToMonitoring(entry: LogEntry,): void {,}
+=======
+  private sendToMonitoring(entry: LogEntry): void {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Send to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'error_log', {)}

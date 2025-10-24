@@ -129,29 +129,33 @@ const AISchedulerPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
+      <section className="container mx-auto px-4 py-16 pt-24"></section>
+        <div className="text-center mb-16"></div>
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6"></div>
             <Calendar className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             AI Scheduler
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium"></p>
             Intelligent Meeting & Event Scheduling
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
             the best meeting times, coordinate complex team schedules, and optimize your calendar 
             for maximum productivity.
+<<<<<<< HEAD
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
+            ></a>
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
@@ -160,13 +164,17 @@ const AISchedulerPage: React.FC = () => {
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial
+<<<<<<< HEAD
             </Link>
           </div>
         </div>
+=======
+            </Link></Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
         {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16"></div>
+          <div className="text-center"></div>
             <div className="text-4xl font-bold text-cyan-400 mb-2">5+</div>
             <div className="text-white font-semibold mb-2">Hours Saved</div>
             <div className="text-gray-300 text-sm">Per week on scheduling tasks</div>
@@ -189,13 +197,13 @@ const AISchedulerPage: React.FC = () => {
         </div>
 
         {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+        <section className="mb-16"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"></h2>
             Smart Scheduling Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300"></div>
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
@@ -209,10 +217,14 @@ const AISchedulerPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Works with Your Favorite Tools
+<<<<<<< HEAD
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+=======
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300"></div>
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
@@ -225,28 +237,36 @@ const AISchedulerPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Simple, Transparent Pricing
+<<<<<<< HEAD
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular 
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
-              }`}>
+              }`}></div>
                 {plan.popular && (
-                  <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
+                  <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
                     Most Popular
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-300">{plan.period}</span>
+<<<<<<< HEAD
                 </div>
                 <ul className="space-y-3 mb-8">
+=======
+                <ul className="space-y-3 mb-8"></ul>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
@@ -258,27 +278,35 @@ const AISchedulerPage: React.FC = () => {
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                 }`}>
                   Get Started
+<<<<<<< HEAD
                 </button>
               </div>
             ))}
           </div>
         </section>
+=======
+                </button></button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             What Our Users Say
+<<<<<<< HEAD
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-center mb-4">
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+                <div className="flex items-center mb-4"></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
+                <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
@@ -289,11 +317,15 @@ const AISchedulerPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Master Your Schedule?
+<<<<<<< HEAD
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+=======
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
           </p>
@@ -319,4 +351,10 @@ const AISchedulerPage: React.FC = () => {
 };
 
 export default AISchedulerPage;
+<<<<<<< HEAD
 import React from 'react';
+=======
+import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
+
+export default AISchedulerPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

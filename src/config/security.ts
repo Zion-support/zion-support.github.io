@@ -35,6 +35,7 @@ export const _securityHeaders = {
       upgradeInsecureRequests: true
     }
   },
+<<<<<<< HEAD
   // Security Headers
   headers: {
     'X-DNS-Prefetch-Control': 'on',
@@ -45,6 +46,17 @@ export const _securityHeaders = {
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
   }
+=======
+  // Security Headers,
+  header,
+  s: {// 'X-DNS-Prefetch-Control': 'on'}
+// 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+// 'X-XSS-Protection': '1; mode=block',
+// 'X-Frame-Options': 'SAMEORIGIN',
+// 'X-Content-Type-Options': 'nosniff',
+// 'Referrer-Policy': 'strict-origin-when-cross-origin',
+// 'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 /**
  * Rate limiting configuration
@@ -87,6 +99,7 @@ export const validationPatterns = {
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   alphanumeric: /^[a-zA-Z0-9]+$/,
   noSpecialChars: /^[a-zA-Z0-9\s]+$/
+<<<<<<< HEAD
 };
 /**
  * Sanitize user input
@@ -97,18 +110,67 @@ export function sanitizeInput(input: string): string {
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
+=======
+
+ * Sanitize user input;
+export function sanitizeInput(inpu)
+  t: string): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  return input;
+//     .replace(/[
+          
+          
+          
+          
+          
+          
+          
+          )
+          <>]/g, '') // Remove;
+          < and >
+
+    .replace(/javascript:/gi, '') // Remove javascript: protocol;
+
+    .replace(/on\w+\s*=/gi, '') // Remove event handlers;
+    .trim();
+ * Validate email address;
+export function validateEmail(emai)
+  l: string): boolean {/* TODO: Fix JSX expression */}
+  O: Add content;}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
   return validationPatterns.email.test(email);
+<<<<<<< HEAD
+=======
+ * Validate URL;
+export function validateUrl(ur)
+  l: string): boolean {/* TODO: Fix JSX expression */}
+  O: Add content;}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Validate URL
  */
 export function validateUrl(url: string): boolean {
   return validationPatterns.url.test(url);
+<<<<<<< HEAD
+=======
+ * Generate secure token;
+export function generateSecureToken(lengt)
+  h: number = 32): string {const array = new Uint8Array(length);}
+export function generateSecureToken(_lengt)
+  h: number = 32): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  const _array = new Uint8Array(length);
+  if (typeof window !== 'undefined' && window.crypto) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Generate secure token
@@ -124,9 +186,13 @@ export function generateSecureToken(length: number = 32): string {
     }
   }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+<<<<<<< HEAD
 }
 export default {
   securityHeaders,
+=======
+export default {securityHeaders}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   rateLimitConfig,
   corsConfig,
   sessionConfig,

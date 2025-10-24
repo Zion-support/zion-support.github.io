@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 
+<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -8,6 +9,18 @@ export default function Component() {
       <p>This component is under construction.</p>
     </div>
   );
+=======
+'use client'
+export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
+import { useEffect, useCallback } from 'react';
+
+export const _usePerformanceMonitoring = () => {// TODO: Add content;}
+
+}
+  const reportWebVitals = useCallback((metri)
+  c: any) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 =======
 'use client';

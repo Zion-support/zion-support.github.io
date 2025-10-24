@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 const AIEmailMarketingPage: React.FC = () => {
   const _features = [
@@ -111,6 +114,7 @@ import Footer from '../components/Footer';
 const AIEmailMarketingPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Ai Email Marketing}</h1>
@@ -123,3 +127,35 @@ const AIEmailMarketingPage: React.FC = () => {
 };
 
 export default AiEmailMarketingPage;
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>AI Email Marketing | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
+          <h1 className="text-5xl font-bold text-white mb-6">AI Email Marketing</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            Coming Soon - Advanced AI email marketing solutions that will transform your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></button>
+              Contact Us
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors"></button>
+              Learn More
+          </div>
+      
+      <Footer />
+  );
+};
+
+
+export default $1;
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Mail as EmailIcon, Send, BarChart3 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

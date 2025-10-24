@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -593,6 +594,30 @@ const ApiDocsPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+'use client';
+
+import React from 'react';
+import Footer from '../components/Footer';
+import SEOHead from '../components/SEOHead';
+import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+
+const ApiDocsPage = () => {
+  return (
+    <ErrorBoundary>
+      <SEOHead 
+        title="API Documentation - Zion Tech Group"
+        description="API Documentation for Zion Tech Group services"
+      />
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h1 className="text-4xl font-bold text-white mb-8">API Documentation</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       </main>
       
       <Footer />
@@ -600,6 +625,7 @@ const ApiDocsPage: React.FC = () => {
   )
 }
 
+<<<<<<< HEAD
 export default ApiDocsPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
 =======
@@ -780,3 +806,11 @@ const APIDocumentationPage: React.FC = () => {
 
 export default APIDocumentationPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+      <Footer />
+    </ErrorBoundary>
+  );
+};
+
+export default ApiDocsPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

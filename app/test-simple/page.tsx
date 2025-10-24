@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -199,5 +200,12 @@ const PagePage: React.FC = () => {
       </section>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     </div>
+=======
+export default function TestPage() {
+  return(<div>)
+      <h1>Test Page</h1>)
+      <p>This is a simple test page</p>)
+    </div>)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 }

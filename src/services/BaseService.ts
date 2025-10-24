@@ -4,7 +4,20 @@
  * Provides common functionality for all service classes
  */
 import logger from '../utils/logger';
+<<<<<<< HEAD
 export interface ServiceOptions {
+=======
+import axios from 'axios';
+// Create axios instance with default config;
+const apiClient = axios.create({// TODO: Add content;}
+};
+  timeout: 30000,
+  headers: {// TODO: Add content;}
+}
+    'Content-Type': 'application/json'}});
+export interface ServiceOptions {// TODO: Add content;}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   baseUrl?: string;
   timeout?: number;
   retries?: number;

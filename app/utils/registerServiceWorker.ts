@@ -1,6 +1,7 @@
 /**
  * Service Worker Registration Utility;
  */
+<<<<<<< HEAD
 export interface ServiceWorkerConfig {
   onSuccess?: (registration: ServiceWorkerRegistration,) => void;
   onUpdate?: (registration: ServiceWorkerRegistration,) => void;
@@ -9,10 +10,18 @@ export interface ServiceWorkerConfig {}
   onUpdate?: (registration: ServiceWorkerRegistration,) => void
   onError?: (error: Error,) => void;}
 export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */,}
+=======
+export interface ServiceWorkerConfig {}
+  onSuccess?: (registration: ServiceWorkerRegistration) => void
+  onUpdate?: (registration: ServiceWorkerRegistration) => void
+  onError?: (error: Error) => void;}
+export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Register service worker with lifecycle callbacks;
  */
+<<<<<<< HEAD
 export async function registerServiceWorker(config: ServiceWorkerConfig = {,})
 ): Promise<ServiceWorkerRegistration | undefined> {
   // Check if service workers are supported;
@@ -22,6 +31,8 @@ export async function registerServiceWorker(config: ServiceWorkerConfig = {,})
   // Only register in production or if explicitly enabled;
   const isLocalhost = Boolean(window.location.hostname === 'localhost' ||)
       window.location.hostname === '[::1]' ||)
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export async function registerServiceWorker()
   config: ServiceWorkerConfig = {,}
 ): Promise<ServiceWorkerRegistration | undefined> {}
@@ -38,10 +49,13 @@ export async function registerServiceWorker()
   // Use isLocalhost for conditional logic if needed;
   if (isLocalhost) {}
     }
+<<<<<<< HEAD
   try {
     // Wait for page to load;
     await new Promise<void>((resolve) => {
       if (document.readyState === 'complete') {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   try {}
     // Wait for page to load
     await new Promise<void>((resolve) => {}
@@ -51,6 +65,7 @@ export async function registerServiceWorker()
         window.addEventListener('load', () => resolve());}
       }
     })
+<<<<<<< HEAD
     const registration = await navigator.serviceWorker.register('/service-worker.js', {)
       scope: '/',})
     })
@@ -68,6 +83,8 @@ export async function registerServiceWorker()
           } else {
             // Content cached for offline use;
             if (config.onSuccess) {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     const registration = await navigator.serviceWorker.register('/service-worker.js', {)}
       scope: '/',}
     })
@@ -107,66 +124,98 @@ export async function registerServiceWorker(confi,
     // Handle updates;
     registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */,}
             }
+<<<<<<< HEAD
           } else {/* TODO: Fix JSX expression */,}
+=======
+          } else {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             }
           }
         }
       })
     })
+<<<<<<< HEAD
     return registration;
   } catch (error) {
     if (config.onError && error instanceof Error) {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     return registration
   } catch (error) {}
     if (config.onError && error instanceof Error) {}
       config.onError(error);}
+<<<<<<< HEAD
   } catch (error) {/* TODO: Fix JSX expression */,}
+=======
+  } catch (error) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   }
 }
 /**
  * Unregister service worker;
  */
+<<<<<<< HEAD
 export async function unregisterServiceWorker(): Promise<boolean> {}
   if (!('serviceWorker' in navigator)) {}
     return false;}
   }
   try {
     const registration = await navigator.serviceWorker.ready;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   try {}
     const registration = await navigator.serviceWorker.ready
     const result = await registration.unregister()
     return result;}
   } catch (error) {}
     return false;}
+<<<<<<< HEAD
 export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */,}
   }
   try {/* TODO: Fix JSX expression */,}
   } catch (error) {/* TODO: Fix JSX expression */,}
+=======
+export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */}
+  }
+  try {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
 }
 /**
  * Check for service worker updates;
  */
+<<<<<<< HEAD
 export async function checkForUpdates(): Promise<void> {}
   if (!('serviceWorker' in navigator)) {}
     return;}
   }
   try {
     const registration = await navigator.serviceWorker.ready;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   try {}
     const registration = await navigator.serviceWorker.ready
     await registration.update();}
     } catch (error) {}
+<<<<<<< HEAD
 export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */,}
   }
   try {/* TODO: Fix JSX expression */,}
     } catch (error) {/* TODO: Fix JSX expression */,}
+=======
+export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
+  }
+  try {/* TODO: Fix JSX expression */}
+    } catch (error) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
 }
 /**
  * Skip waiting and activate new service worker;
  */
+<<<<<<< HEAD
 export function skipWaiting(): void {}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
     return;}
@@ -176,10 +225,17 @@ export function skipWaiting(): void {/* TODO: Fix JSX expression */,}
   }
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */,})
   n: 'skipWaiting' ,});
+=======
+export function skipWaiting(): void {/* TODO: Fix JSX expression */}
+  }
+  navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
+  n: 'skipWaiting' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Clear all caches;
  */
+<<<<<<< HEAD
 export function clearCaches(): void {}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
     return;}
@@ -189,10 +245,17 @@ export function clearCaches(): void {/* TODO: Fix JSX expression */,}
   }
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */,})
   n: 'clearCache' ,});
+=======
+export function clearCaches(): void {/* TODO: Fix JSX expression */}
+  }
+  navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
+  n: 'clearCache' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
 /**
  * Get service worker registration status;
  */
+<<<<<<< HEAD
 export async function getServiceWorkerStatus(): Promise<{
   supported: boolean,
   registered: boolean,
@@ -202,6 +265,8 @@ export async function getServiceWorkerStatus(): Promise<{
     return {
       supported: false,
       registered: false,
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export async function getServiceWorkerStatus(): Promise<{}
   supported: boolean;
   registered: boolean;
@@ -211,11 +276,16 @@ export async function getServiceWorkerStatus(): Promise<{}
     return {}
       supported: false,
       registered: false,
+<<<<<<< HEAD
       active: false;}
+=======
+      active: false}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   }
   try {}
     const registration = await navigator.serviceWorker.getRegistration()
+<<<<<<< HEAD
     return {
       supported: true,
       registered: !!registration;
@@ -225,6 +295,8 @@ export async function getServiceWorkerStatus(): Promise<{}
     return {
       supported: true,
       registered: false,
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     return {}
       supported: true,
       registered: !!registration,
@@ -234,10 +306,17 @@ export async function getServiceWorkerStatus(): Promise<{}
     return {}
       supported: true,
       registered: false,
+<<<<<<< HEAD
       active: false;}
     }
 export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expression */,}
 }> {/* TODO: Fix JSX expression */,}
+=======
+      active: false}
+    }
+export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expression */}
+}> {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     };
   }
   try {/* TODO: Fix JSX expression */,}

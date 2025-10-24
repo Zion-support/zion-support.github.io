@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 <<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -90,6 +91,14 @@ const AIAPIManagerPage: React.FC = () => {
 <<<<<<< HEAD
         <title>Ai Api Manager - Zion Tech Group</title>
         <meta name="description" content="Ai Api Manager solutions by Zion Tech Group" />
+=======
+const aiapimanagerPage: React.FC = () => {
+  return(<>)
+      <Helmet>)
+        <title>Ai Api Manager | Zion Tech Group</title>)
+        <meta name="description" content="Professional ai api manager services by Zion Tech Group. Advanced AI and IT solutions for your business." />),
+        <meta name="keywords" content="ai api manager, AI solutions, IT services, Zion Tech Group" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
@@ -112,6 +121,7 @@ const AIAPIManagerPage: React.FC = () => {
       </Helmet>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -146,6 +156,17 @@ const AIAPIManagerPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced solutions designed for modern business needs
+=======
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1>
+              Ai Api Manager;
+            </h1>
+            <p className="text-xl text-gray-300 mb-8"></p>
+              Professional ai api manager services powered by advanced AI and cutting-edge technology.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Api Manager</h1><p className="text-xl text-gray-300 mb-8">Professional ai api manager services powered by advanced AI and cutting-edge technology.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
           </div>
           
@@ -211,6 +232,7 @@ const AIAPIManagerPage: React.FC = () => {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
+<<<<<<< HEAD
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
@@ -410,6 +432,29 @@ const AIAPIManagerPage: React.FC = () => {
 <<<<<<< HEAD
 }
 =======
+=======
+
+            <div className="space-y-4"></div>
+              <a
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              ></a>
+                Get Started Today;
+              </a>
+              <div></div>
+                <a
+                  href="/"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                ></a>
+                  ← Back to Home;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>,
+    </>);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 <<<<<<< HEAD

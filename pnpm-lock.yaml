@@ -11,12 +11,18 @@ importers:
       '@heroicons/react':
         specifier: ^2.0.18
         version: 2.2.0(react@18.3.1)
+<<<<<<< HEAD
       '@vitejs/plugin-react':
         specifier: ^5.0.4
         version: 5.0.4(vite@7.1.12(@types/node@20.19.23)(jiti@1.21.7)(lightningcss@1.30.2)(terser@5.44.0))
       axios:
         specifier: ^1.6.0
         version: 1.12.2
+=======
+      '@types/react-router-dom':
+        specifier: ^5.3.3
+        version: 5.3.3
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       clsx:
         specifier: ^2.0.0
         version: 2.1.1
@@ -24,11 +30,19 @@ importers:
         specifier: ^10.16.0
         version: 10.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       lucide-react:
+<<<<<<< HEAD
         specifier: ^0.294.0
         version: 0.294.0(react@18.3.1)
       next:
         specifier: ^14.0.0
         version: 14.2.33(@babel/core@7.28.4)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+=======
+        specifier: ^0.544.0
+        version: 0.544.0(react@18.3.1)
+      next:
+        specifier: ^15.5.4
+        version: 15.5.4(@babel/core@7.28.4)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -55,11 +69,25 @@ importers:
         version: 3.5.2
     devDependencies:
       '@jest/globals':
+<<<<<<< HEAD
         specifier: ^29.0.0
         version: 29.7.0
       '@tailwindcss/postcss':
         specifier: ^4.1.16
         version: 4.1.16
+=======
+        specifier: ^30.2.0
+        version: 30.2.0
+      '@rollup/rollup-linux-x64-gnu':
+        specifier: 4.52.3
+        version: 4.52.3
+      '@tailwindcss/postcss':
+        specifier: ^4.1.14
+        version: 4.1.14
+      '@testing-library/dom':
+        specifier: ^10.4.1
+        version: 10.4.1
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       '@testing-library/jest-dom':
         specifier: ^6.0.0
         version: 6.9.1
@@ -87,6 +115,24 @@ importers:
       autoprefixer:
         specifier: ^10.4.0
         version: 10.4.21(postcss@8.5.6)
+<<<<<<< HEAD
+=======
+      axios:
+        specifier: ^1.12.2
+        version: 1.12.2
+      babel-jest:
+        specifier: ^30.2.0
+        version: 30.2.0(@babel/core@7.28.4)
+      babel-plugin-transform-import-meta:
+        specifier: ^2.3.3
+        version: 2.3.3(@babel/core@7.28.4)
+      cheerio:
+        specifier: ^1.1.2
+        version: 1.1.2
+      cssnano:
+        specifier: ^7.1.1
+        version: 7.1.1(postcss@8.5.6)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       eslint:
         specifier: ^8.0.0
         version: 8.57.1
@@ -652,8 +698,13 @@ packages:
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
 
+<<<<<<< HEAD
   '@next/env@14.2.33':
     resolution: {integrity: sha512-CgVHNZ1fRIlxkLhIX22flAZI/HmpDaZ8vwyJ/B0SDPTBuLZ1PJ+DWMjCHhqnExfmSQzA/PbZi8OAc7PAq2w9IA==}
+=======
+  '@next/env@15.5.4':
+    resolution: {integrity: sha512-27SQhYp5QryzIT5uO8hq99C69eLQ7qkzkDPsk3N+GuS2XgOgoYEeOav7Pf8Tn4drECOVDsDg8oj+/DVy8qQL2A==}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   '@next/eslint-plugin-next@14.2.33':
     resolution: {integrity: sha512-DQTJFSvlB+9JilwqMKJ3VPByBNGxAGFTfJ7BuFj25cVcbBy7jm88KfUN+dngM4D3+UxZ8ER2ft+WH9JccMvxyg==}
@@ -873,11 +924,22 @@ packages:
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
 
+<<<<<<< HEAD
   '@tailwindcss/node@4.1.16':
     resolution: {integrity: sha512-BX5iaSsloNuvKNHRN3k2RcCuTEgASTo77mofW0vmeHkfrDWaoFAFvNHpEgtu0eqyypcyiBkDWzSMxJhp3AUVcw==}
 
   '@tailwindcss/oxide-android-arm64@4.1.16':
     resolution: {integrity: sha512-8+ctzkjHgwDJ5caq9IqRSgsP70xhdhJvm+oueS/yhD5ixLhqTw9fSL1OurzMUhBwE5zK26FXLCz2f/RtkISqHA==}
+=======
+  '@swc/helpers@0.5.15':
+    resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
+
+  '@tailwindcss/node@4.1.14':
+    resolution: {integrity: sha512-hpz+8vFk3Ic2xssIA3e01R6jkmsAhvkQdXlEbRTk6S10xDAtiQiM3FyvZVGsucefq764euO/b8WUW9ysLdThHw==}
+
+  '@tailwindcss/oxide-android-arm64@4.1.14':
+    resolution: {integrity: sha512-a94ifZrGwMvbdeAxWoSuGcIl6/DOP5cdxagid7xJv6bwFp3oebp7y2ImYsnZBMTwjn5Ev5xESvS3FFYUGgPODQ==}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [android]
@@ -1499,6 +1561,12 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
 
+<<<<<<< HEAD
+=======
+  caniuse-api@3.0.0:
+    resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   caniuse-lite@1.0.30001749:
     resolution: {integrity: sha512-0rw2fJOmLfnzCRbkm8EyHL8SvI2Apu5UbnQuTsJ0ClgrH8hcwFooJ1s5R0EP8o8aVrFu8++ae29Kt9/gZAZp/Q==}
 
@@ -1525,6 +1593,12 @@ packages:
   cjs-module-lexer@1.4.3:
     resolution: {integrity: sha512-9z8TZaGM1pfswYeXrUpzPrkx8UnWYdhJclsiYMm6x/w5+nN+8Tf/LnAgfLGQCm59qAOxU8WwHEq2vNwF6i4j+Q==}
 
+<<<<<<< HEAD
+=======
+  cjs-module-lexer@2.1.0:
+    resolution: {integrity: sha512-UX0OwmYRYQQetfrLEZeewIFFI+wSTofC+pMBLNuH3RUuu/xzG1oz84UCEDOSoQlN3fZ4+AzmV50ZYvGqkMh9yA==}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
 
@@ -1550,10 +1624,23 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+<<<<<<< HEAD
+=======
+  colord@2.9.3:
+    resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   combined-stream@1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
+<<<<<<< HEAD
+=======
+  commander@11.1.0:
+    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
+    engines: {node: '>=16'}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
@@ -1580,6 +1667,36 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
+<<<<<<< HEAD
+=======
+  csp_evaluator@1.1.5:
+    resolution: {integrity: sha512-EL/iN9etCTzw/fBnp0/uj0f5BOOGvZut2mzsiiBZ/FdT6gFQCKRO/tmcKOxn5drWZ2Ndm/xBb1SI4zwWbGtmIw==}
+
+  css-declaration-sorter@7.3.0:
+    resolution: {integrity: sha512-LQF6N/3vkAMYF4xoHLJfG718HRJh34Z8BnNhd6bosOMIVjMlhuZK5++oZa3uYAgrI5+7x2o27gUqTR2U/KjUOQ==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.0.9
+
+  css-mediaquery@0.1.2:
+    resolution: {integrity: sha512-COtn4EROW5dBGlE/4PiKnh6rZpAPxDeFLaEEwt4i10jpDMFt2EhQGS79QmmrO+iKCHv0PU/HrOWEhijFd1x99Q==}
+
+  css-select@5.2.2:
+    resolution: {integrity: sha512-TizTzUddG/xYLA3NXodFM0fSbNizXjOKhqiQQwvhlspadZokn1KDy0NZFS0wuEubIYAV5/c1/lAr0TaaFXEXzw==}
+
+  css-tree@2.2.1:
+    resolution: {integrity: sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==}
+    engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
+
+  css-tree@3.1.0:
+    resolution: {integrity: sha512-0eW44TGN5SQXU1mWSkKwFstI/22X2bG1nYzZTYMAWjylYURhse752YgbE4Cx46AC+bAvI+/dYTPRk1LqSUnu6w==}
+    engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
+
+  css-what@6.2.2:
+    resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
+    engines: {node: '>= 6'}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   css.escape@1.5.1:
     resolution: {integrity: sha512-YUifsXXuknHlUsmlgyY0PKzgPOr7/FjCePfHNt0jxm83wHZi44VDMQ7/fGNkjY3/jV1MC+1CmZbaHzugyeRtpg==}
 
@@ -1594,9 +1711,33 @@ packages:
   cssom@0.5.0:
     resolution: {integrity: sha512-iKuQcq+NdHqlAcwUY0o/HL69XQrUaQdMjmStJ8JFmUaiiQErlhrmuigkg/CU4E2J0IyUKUrMAgl36TvN67MqTw==}
 
+<<<<<<< HEAD
   cssstyle@2.3.0:
     resolution: {integrity: sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==}
     engines: {node: '>=8'}
+=======
+  cssnano@7.1.1:
+    resolution: {integrity: sha512-fm4D8ti0dQmFPeF8DXSAA//btEmqCOgAc/9Oa3C1LW94h5usNrJEfrON7b4FkPZgnDEn6OUs5NdxiJZmAtGOpQ==}
+    engines: {node: ^18.12.0 || ^20.9.0 || >=22.0}
+    peerDependencies:
+      postcss: ^8.4.32
+
+  csso@5.0.5:
+    resolution: {integrity: sha512-0LrrStPOdJj+SPCCrGhzryycLjwcgUSHBtxNA8aIDxf0GLsRh1cKYhB00Gd1lDOS4yGH69+SNn13+TWbVHETFQ==}
+    engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
+
+  cssstyle@3.0.0:
+    resolution: {integrity: sha512-N4u2ABATi3Qplzf0hWbVCdjenim8F3ojEXpBDF5hBpjzW182MjNGLqfmQ0SkSPeQ+V86ZXgeH8aXj6kayd4jgg==}
+    engines: {node: '>=14'}
+
+  cssstyle@4.6.0:
+    resolution: {integrity: sha512-2z+rWdzbbSZv6/rhtvzvqeZQHrBaqgogqt85sqFNbabZOuFbCVFb8kPeEtZjiKkbrm395irpNKiYeFeLiQnFPg==}
+    engines: {node: '>=18'}
+
+  cssstyle@5.3.1:
+    resolution: {integrity: sha512-g5PC9Aiph9eiczFpcgUhd9S4UUO3F+LHGRIi5NUMZ+4xtoIYbHNZwZnWA2JsFGe8OU8nl4WyaEFiZuGuxlutJQ==}
+    engines: {node: '>=20'}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
@@ -2794,6 +2935,15 @@ packages:
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
+<<<<<<< HEAD
+=======
+  lodash.throttle@4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+
+  lodash.uniq@4.5.0:
+    resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
@@ -2833,6 +2983,15 @@ packages:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
 
+<<<<<<< HEAD
+=======
+  mdn-data@2.0.28:
+    resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}
+
+  mdn-data@2.12.2:
+    resolution: {integrity: sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA==}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
 
@@ -2900,9 +3059,23 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
+<<<<<<< HEAD
   next@14.2.33:
     resolution: {integrity: sha512-GiKHLsD00t4ACm1p00VgrI0rUFAC9cRDGReKyERlM57aeEZkOQGcZTpIbsGn0b562FTPJWmYfKwplfO9EaT6ng==}
     engines: {node: '>=18.17.0'}
+=======
+  netlify-plugin-cloudinary@1.17.0:
+    resolution: {integrity: sha512-PddOtwF5cMo6sa4nfEo60JPAIf2lfmg8eloHESLEF2zCaZia6GeYV9HtzYRzvFV1H2Z52YKnzrKgp3HsFiaJ0w==}
+    engines: {node: '>=16'}
+
+  netmask@2.0.2:
+    resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
+    engines: {node: '>= 0.4.0'}
+
+  next@15.5.4:
+    resolution: {integrity: sha512-xH4Yjhb82sFYQfY3vbkJfgSDgXvBB6a8xPs9i35k6oZJRoQRihZH+4s9Yo2qsWpzBmZ3lPXaJ2KPXLfkvW4LnA==}
+    engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -2918,6 +3091,18 @@ packages:
       sass:
         optional: true
 
+<<<<<<< HEAD
+=======
+  node-fetch@2.7.0:
+    resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   node-int64@0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
 
@@ -3078,9 +3263,15 @@ packages:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
 
+<<<<<<< HEAD
   postcss-import@15.1.0:
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
     engines: {node: '>=14.0.0'}
+=======
+  postcss-calc@10.1.1:
+    resolution: {integrity: sha512-NYEsLHh8DgG/PRH2+G9BTuUdtf9ViS+vdoQ0YA5OQdGsfN4ztiwtDWNtBl9EKeqNMFnIu8IKZ0cLxEQ5r5KVMw==}
+    engines: {node: ^18.12 || ^20.9 || >=22.0}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     peerDependencies:
       postcss: ^8.0.0
 
@@ -3162,8 +3353,24 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
+<<<<<<< HEAD
   pure-rand@6.1.0:
     resolution: {integrity: sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==}
+=======
+  puppeteer-core@24.23.0:
+    resolution: {integrity: sha512-yl25C59gb14sOdIiSnJ08XiPP+O2RjuyZmEG+RjYmCXO7au0jcLf7fRiyii96dXGUBW7Zwei/mVKfxMx/POeFw==}
+    engines: {node: '>=18'}
+
+  pure-rand@7.0.1:
+    resolution: {integrity: sha512-oTUZM/NAZS8p7ANR3SHh30kXB+zK2r2BPcEn/awJIbOvq82WoMN4p62AWWp3Hhw50G0xMsw1mhIBLqHw64EcNQ==}
+
+  q@1.5.1:
+    resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
+    engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
+    deprecated: |-
+      You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+      (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   querystringify@2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
@@ -3327,6 +3534,12 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
+<<<<<<< HEAD
+=======
+  sax@1.4.1:
+    resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   saxes@6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
@@ -3494,8 +3707,16 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
+<<<<<<< HEAD
   styled-jsx@5.1.1:
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
+=======
+  stubborn-fs@1.2.5:
+    resolution: {integrity: sha512-H2N9c26eXjzL/S/K+i/RHHcFanE74dptvvjM8iwzwbVcWY/zjBbgRqF3K0DY4+OD+uTTASTBvDoxPDaPN02D7g==}
+
+  styled-jsx@5.1.6:
+    resolution: {integrity: sha512-qSVyDTeMotdvQYoHWLNGwRFJHC+i+ZvdBRYosOFgC+Wg1vx4frN2/RG/NA7SYqqvKNLf39P2LSRA2pu6n0XYZA==}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     engines: {node: '>= 12.0.0'}
     peerDependencies:
       '@babel/core': '*'
@@ -3524,6 +3745,14 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+<<<<<<< HEAD
+=======
+  svgo@4.0.0:
+    resolution: {integrity: sha512-VvrHQ+9uniE+Mvx3+C9IEe/lWasXCU0nXMY2kZeLrHNICuRiC8uMPyM14UEaMOFA5mhyQqEkB02VoQ16n3DLaw==}
+    engines: {node: '>=16'}
+    hasBin: true
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
 
@@ -3697,6 +3926,14 @@ packages:
   url-parse@1.5.10:
     resolution: {integrity: sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==}
 
+<<<<<<< HEAD
+=======
+  use-sync-external-store@1.6.0:
+    resolution: {integrity: sha512-Pp6GSwGP/NrPIrxVFAIkOQeyw8lFenOHijQWkUTrDvrF4ALqylP2C/KCkeS9dpUM3KvYRQhna5vt7IL95+ZQ9w==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -4476,7 +4713,11 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
+<<<<<<< HEAD
   '@next/env@14.2.33': {}
+=======
+  '@next/env@15.5.4': {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   '@next/eslint-plugin-next@14.2.33':
     dependencies:
@@ -4615,12 +4856,22 @@ snapshots:
 
   '@swc/counter@0.1.3': {}
 
+<<<<<<< HEAD
   '@swc/helpers@0.5.5':
+=======
+  '@standard-schema/utils@0.3.0': {}
+
+  '@swc/helpers@0.5.15':
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     dependencies:
       '@swc/counter': 0.1.3
       tslib: 2.8.1
 
+<<<<<<< HEAD
   '@tailwindcss/node@4.1.16':
+=======
+  '@tailwindcss/node@4.1.14':
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     dependencies:
       '@jridgewell/remapping': 2.3.5
       enhanced-resolve: 5.18.3
@@ -5316,6 +5567,16 @@ snapshots:
 
   camelcase@6.3.0: {}
 
+<<<<<<< HEAD
+=======
+  caniuse-api@3.0.0:
+    dependencies:
+      browserslist: 4.26.3
+      caniuse-lite: 1.0.30001749
+      lodash.memoize: 4.1.2
+      lodash.uniq: 4.5.0
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   caniuse-lite@1.0.30001749: {}
 
   chalk@4.1.2:
@@ -5343,6 +5604,11 @@ snapshots:
 
   cjs-module-lexer@1.4.3: {}
 
+<<<<<<< HEAD
+=======
+  cjs-module-lexer@2.1.0: {}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   client-only@0.0.1: {}
 
   cliui@8.0.1:
@@ -5363,14 +5629,25 @@ snapshots:
 
   color-name@1.1.4: {}
 
+<<<<<<< HEAD
+=======
+  colord@2.9.3: {}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   combined-stream@1.0.8:
     dependencies:
       delayed-stream: 1.0.0
 
+<<<<<<< HEAD
   commander@2.20.3:
     optional: true
 
   commander@4.1.1: {}
+=======
+  commander@11.1.0: {}
+
+  commander@2.20.3: {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   concat-map@0.0.1: {}
 
@@ -5399,6 +5676,37 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
+<<<<<<< HEAD
+=======
+  csp_evaluator@1.1.5: {}
+
+  css-declaration-sorter@7.3.0(postcss@8.5.6):
+    dependencies:
+      postcss: 8.5.6
+
+  css-mediaquery@0.1.2: {}
+
+  css-select@5.2.2:
+    dependencies:
+      boolbase: 1.0.0
+      css-what: 6.2.2
+      domhandler: 5.0.3
+      domutils: 3.2.2
+      nth-check: 2.1.1
+
+  css-tree@2.2.1:
+    dependencies:
+      mdn-data: 2.0.28
+      source-map-js: 1.2.1
+
+  css-tree@3.1.0:
+    dependencies:
+      mdn-data: 2.12.2
+      source-map-js: 1.2.1
+
+  css-what@6.2.2: {}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   css.escape@1.5.1: {}
 
   cssesc@3.0.0: {}
@@ -5409,7 +5717,34 @@ snapshots:
 
   cssstyle@2.3.0:
     dependencies:
+<<<<<<< HEAD
       cssom: 0.3.8
+=======
+      cssnano-preset-default: 7.0.9(postcss@8.5.6)
+      lilconfig: 3.1.3
+      postcss: 8.5.6
+
+  csso@5.0.5:
+    dependencies:
+      css-tree: 2.2.1
+
+  cssstyle@3.0.0:
+    dependencies:
+      rrweb-cssom: 0.6.0
+
+  cssstyle@4.6.0:
+    dependencies:
+      '@asamuzakjp/css-color': 3.2.0
+      rrweb-cssom: 0.8.0
+
+  cssstyle@5.3.1(postcss@8.5.6):
+    dependencies:
+      '@asamuzakjp/css-color': 4.0.5
+      '@csstools/css-syntax-patches-for-csstree': 1.0.14(postcss@8.5.6)
+      css-tree: 3.1.0
+    transitivePeerDependencies:
+      - postcss
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   csstype@3.1.3: {}
 
@@ -7035,6 +7370,13 @@ snapshots:
 
   lodash.merge@4.6.2: {}
 
+<<<<<<< HEAD
+=======
+  lodash.throttle@4.1.1: {}
+
+  lodash.uniq@4.5.0: {}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   lodash@4.17.21: {}
 
   loose-envify@1.4.0:
@@ -7069,6 +7411,13 @@ snapshots:
 
   math-intrinsics@1.1.0: {}
 
+<<<<<<< HEAD
+=======
+  mdn-data@2.0.28: {}
+
+  mdn-data@2.12.2: {}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   merge-stream@2.0.0: {}
 
   merge2@1.4.1: {}
@@ -7122,9 +7471,30 @@ snapshots:
 
   next@14.2.33(@babel/core@7.28.4)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
+<<<<<<< HEAD
       '@next/env': 14.2.33
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
+=======
+      cloudinary: 2.7.0
+      glob: 10.4.5
+      jsdom: 21.1.2
+      node-fetch: 2.7.0
+      p-limit: 3.1.0
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - encoding
+      - supports-color
+      - utf-8-validate
+
+  netmask@2.0.2: {}
+
+  next@15.5.4(@babel/core@7.28.4)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      '@next/env': 15.5.4
+      '@swc/helpers': 0.5.15
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       caniuse-lite: 1.0.30001749
       graceful-fs: 4.2.11
       postcss: 8.4.31
@@ -7146,6 +7516,13 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
+<<<<<<< HEAD
+=======
+  node-fetch@2.7.0:
+    dependencies:
+      whatwg-url: 5.0.0
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   node-int64@0.4.0: {}
 
   node-releases@2.0.23: {}
@@ -7298,7 +7675,50 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
+<<<<<<< HEAD
   postcss-import@15.1.0(postcss@8.5.6):
+=======
+  postcss-calc@10.1.1(postcss@8.5.6):
+    dependencies:
+      postcss: 8.5.6
+      postcss-selector-parser: 7.1.0
+      postcss-value-parser: 4.2.0
+
+  postcss-colormin@7.0.4(postcss@8.5.6):
+    dependencies:
+      browserslist: 4.26.3
+      caniuse-api: 3.0.0
+      colord: 2.9.3
+      postcss: 8.5.6
+      postcss-value-parser: 4.2.0
+
+  postcss-convert-values@7.0.7(postcss@8.5.6):
+    dependencies:
+      browserslist: 4.26.3
+      postcss: 8.5.6
+      postcss-value-parser: 4.2.0
+
+  postcss-discard-comments@7.0.4(postcss@8.5.6):
+    dependencies:
+      postcss: 8.5.6
+      postcss-selector-parser: 7.1.0
+
+  postcss-discard-duplicates@7.0.2(postcss@8.5.6):
+    dependencies:
+      postcss: 8.5.6
+
+  postcss-discard-empty@7.0.1(postcss@8.5.6):
+    dependencies:
+      postcss: 8.5.6
+
+  postcss-discard-overridden@7.0.1(postcss@8.5.6):
+    dependencies:
+      postcss: 8.5.6
+
+  postcss-media-query-parser@0.2.3: {}
+
+  postcss-merge-longhand@7.0.5(postcss@8.5.6):
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     dependencies:
       postcss: 8.5.6
       postcss-value-parser: 4.2.0
@@ -7584,6 +8004,11 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
+<<<<<<< HEAD
+=======
+  sax@1.4.1: {}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   saxes@6.0.0:
     dependencies:
       xmlchars: 2.2.0
@@ -7781,7 +8206,13 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
+<<<<<<< HEAD
   styled-jsx@5.1.1(@babel/core@7.28.4)(react@18.3.1):
+=======
+  stubborn-fs@1.2.5: {}
+
+  styled-jsx@5.1.6(@babel/core@7.28.4)(react@18.3.1):
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     dependencies:
       client-only: 0.0.1
       react: 18.3.1
@@ -7808,6 +8239,19 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
+<<<<<<< HEAD
+=======
+  svgo@4.0.0:
+    dependencies:
+      commander: 11.1.0
+      css-select: 5.2.2
+      css-tree: 3.1.0
+      css-what: 6.2.2
+      csso: 5.0.5
+      picocolors: 1.1.1
+      sax: 1.4.1
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   symbol-tree@3.2.4: {}
 
   tailwind-merge@2.6.0: {}
@@ -8027,6 +8471,13 @@ snapshots:
       querystringify: 2.2.0
       requires-port: 1.0.0
 
+<<<<<<< HEAD
+=======
+  use-sync-external-store@1.6.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   util-deprecate@1.0.2: {}
 
   v8-to-istanbul@9.3.0:

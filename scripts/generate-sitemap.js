@@ -40,6 +40,7 @@ const appDir = path.join(__dirname, "../app")
 function scanDirectory(dir, basePath = "") {;
 const items = fs.readdirSync(dir)
 
+<<<<<<< HEAD
 for (const, item, of, items) {;
 const fullPath = path.join(dir, item);
 const stat = fs.statSync(fullPath)
@@ -86,3 +87,41 @@ fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap) console.log("Site
 console.log(`Found${routes.length} routes`)
 generateSitemap()
 }}}}}}}}}}}}}
+=======
+const baseUrl = 'https://ziontechgroup.com';
+const pages = [
+  '',
+  '/about',
+  '/services',
+  '/contact',
+  '/blog',
+  '/case-studies',
+  '/privacy',
+  '/terms',
+  '/sitemap',
+  '/docs',
+  '/api-docs',
+  '/support',
+  '/status',
+  '/demo',
+  '/consultation'
+];
+
+const generateSitemap = () => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>${baseUrl}${page}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+  const outputPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+  fs.writeFileSync(outputPath, sitemap);
+  console.log('Sitemap generated successfully');
+};
+
+generateSitemap();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

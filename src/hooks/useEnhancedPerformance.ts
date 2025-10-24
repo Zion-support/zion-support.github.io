@@ -19,8 +19,18 @@ export interface UseEnhancedPerformanceOptions {
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
+<<<<<<< HEAD
 export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions = {}) {
   const {
+=======
+export function useEnhancedPerformance(__option)
+  s: UseEnhancedPerformanceOptions = {}) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  const {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
@@ -77,7 +87,45 @@ export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions 
         });
       }
     },
+<<<<<<< HEAD
     [component, trackErrors]
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
   );
 }
+=======
+    [component, trackErrors])
+  const trackUserAction = useCallback()
+    (actio,
+  n: string, metadata?: Record;)
+          <string, unknown>) => {analytics.trackCustomEvent('User Action', action, component, undefined, metadata);}
+    [component, trackAnalytics]
+  const measureOperation = useCallback()
+    (operationNam)
+  e: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+      const markName = `${component}-${operationName}`;
+      const startTime = performance.now();
+      return {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  en,
+  d: () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+
+          const duration = performance.now() - startTime;
+analytics.trackPerformance(
+              `${component}-${operationName}`,
+
+//               duration,
+              duration > 1000 ? 'slow' : 'fast'
+          return duration;
+[component, trackPerformance]
+    trackError,
+    trackUserAction,
+    measureOperation;)`
+
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

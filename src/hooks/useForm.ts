@@ -24,10 +24,24 @@ import {
   getFormErrors,
   // ValidationResult as _ValidationResult
 } from '../utils/formValidation';
+<<<<<<< HEAD
 export interface UseFormConfig<T extends Record<string, unknown>> {
   initialValues: T;
   validationSchema?: Partial<Record<keyof T, ValidationRule[]>>;
   onSubmit: (values: T) => void | Promise<void>;
+=======
+export interface UseFormConfig;
+          <T extends Record<string, unknown>> {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  initialValue,
+  s: T;
+  validationSchema?: Partial;
+          <Record<keyof T, ValidationRule[]>>;
+  onSubmi,
+  t: (value)
+  s: T) => void | Promise<void>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
 }
@@ -54,9 +68,18 @@ export function useForm<T extends Record<string, unknown>>({
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
   // Validate a single field
   const validateSingleField = useCallback(
     (field: keyof T): void => {
+=======
+  // Validate a single field;
+const validateSingleField = useCallback()
+    (fiel)
+  d: keyof T): void => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       if (!validationSchema[field]) return;
       const fieldValue = values[field];
       const rules = validationSchema[field];
@@ -133,6 +156,7 @@ export function useForm<T extends Record<string, unknown>>({
       } catch (error) {
       } finally {
         setIsSubmitting(false);
+<<<<<<< HEAD
       }
     },
     [values, validateAllFields]
@@ -144,9 +168,20 @@ export function useForm<T extends Record<string, unknown>>({
       [field]: value
     }));
     if (validateOnChange && touched[field]) {
+=======
+[values, validateAllFields]
+  // Set field value programmatically;
+  const setFieldValue = useCallback((fiel,
+  d: keyof T, valu)
+  e: T[keyof T]) => {[field]: value;}
+    if (validateOnChange && touched[field]) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       setTimeout(() => validateSingleField(field), 0);
     }
   }, [validateOnChange, touched, validateSingleField]);
+<<<<<<< HEAD
   // Set field error programmatically
   const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
     setErrors(prev => ({
@@ -165,14 +200,33 @@ export function useForm<T extends Record<string, unknown>>({
   const resetForm = useCallback(() => {
     setValues(initialValues);
     setErrors({} as Record<keyof T, string[]>);
+=======
+// Set field error programmatically;
+  const setFieldError = useCallback((fiel,
+  d: keyof T, fieldError)
+  s: string[]) => {[field]: fieldErrors;}
+  }, []);
+// Set field touched programmatically;
+  const setFieldTouched = useCallback((fiel,
+  d: keyof T, isTouche)
+  d: boolean) => {[field]: isTouched;}
+  // Reset form to initial values;
+  const resetForm = useCallback(() => {setValues(initialValues);}
+    setErrors({} as Record;)
+          <keyof T, string[]>);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     setTouched({} as Record<keyof T, boolean>);
     setIsSubmitting(false);
   }, [initialValues]);
   // Check if form is valid
   const isValid = Object.keys(errors).length === 0 || 
     Object.values(errors).every(errorArray => errorArray.length === 0);
+<<<<<<< HEAD
   return {
     values,
+=======
+  return {values}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     errors,
     touched,
     isSubmitting,

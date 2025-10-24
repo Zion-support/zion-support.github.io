@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 const AiCustomerSupportPage: React.FC = () => {
   return (
@@ -19,3 +20,9 @@ const AiCustomerSupportPage: React.FC = () => {
 
 export default AICustomerSupportPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
+=======
+import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+
+export default AICustomerSupportPage;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

@@ -8,14 +8,20 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface AnalyticsProps {
+=======
+interface AnalyticsProps {
+interface AnalyticsProps {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   enableGoogleAnalytics?: boolean;
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean;
 }
 
+<<<<<<< HEAD
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
@@ -24,6 +30,18 @@ const Analytics: React.FC<AnalyticsProps> = ({
 }) => {
   useEffect(() => {
     if (enableGoogleAnalytics) {
+=======
+const Analytics: React.FC<AnalyticsProps> = ({}
+  enableGoogleAnalytics = true,
+const Analytics: React.FC<AnalyticsProps> = ({
+  enableGoogleAnalytics = true;
+  enablePerformanceMonitoring = true,
+  enableErrorTracking = true,
+  enableUserBehaviorTracking = true
+}) => {}
+  useEffect(() => {}
+    if (enableGoogleAnalytics) {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       initializeGoogleAnalytics();
     }
 
@@ -40,7 +58,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 
+<<<<<<< HEAD
   const initializeGoogleAnalytics = () => {
+=======
+  const initializeGoogleAnalytics = () => {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Load Google Analytics
     const script = document.createElement('script');
     script.async = true;
@@ -49,16 +71,80 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Initialize gtag
     (window as any).dataLayer = (window as any).dataLayer || [];
+<<<<<<< HEAD
     function gtag(...args: any[]) {
+=======
+    function gtag(...args: any[]) {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       (window as any).dataLayer.push(args);
     }
     (window as any).gtag = gtag;
 
     gtag('js', new Date());
+<<<<<<< HEAD
     gtag('config', 'GA_MEASUREMENT_ID', {
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true;
+=======
+    gtag('config', 'GA_MEASUREMENT_ID', {)}
+      page_title: document.title,
+      page_location: window.location.href,
+      send_page_view: true
+    });
+    gtag('config', 'GA_MEASUREMENT_ID', {)
+      page_title: document.title),
+      page_location: window.location.href),
+      send_page_view: true;
+  };
+
+  const initializePerformanceMonitoring = () => {}
+    if ('PerformanceObserver' in window) {}
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {}
+        for (const entry of list.getEntries()) {}
+          if (entry.entryType === 'largest-contentful-paint') {}
+            trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));
+          } else if (entry.entryType === 'first-input') {}
+            const fid = (entry as any).processingStart - entry.startTime;
+            trackEvent('web_vitals', 'FID', Math.round(fid));
+          } else if (entry.entryType === 'layout-shift') {}
+            if (!(entry as any).hadRecentInput) {}
+              trackEvent('web_vitals', 'CLS', (entry as any).value);
+            }
+interface AnalyticsProps {
+  trackingId?: string;
+  enabled?: boolean;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({
+  trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID,
+  enabled = true
+}) => {
+  useEffect(() => {
+    if (!enabled || !trackingId) return;
+    
+    initializeGoogleAnalytics();
+    initializePerformanceMonitoring();
+    initializeErrorTracking();
+    initializeUserBehaviorTracking();
+  }, [enabled, trackingId]);
+
+  const initializeGoogleAnalytics = () => {
+    if (!trackingId) return;
+    
+    const gtag = (...args: any[]) => {
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push(args);
+    };
+    
+    (window as any).gtag = gtag;
+    
+    gtag('js', new Date());
+    gtag('config', trackingId, {
+      page_title: document.title,
+      page_location: window.location.href
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     });
   };
 
@@ -73,9 +159,13 @@ const Analytics: React.FC<AnalyticsProps> = ({
             const fid = (entry as any).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid));
           } else if (entry.entryType === 'layout-shift') {
+<<<<<<< HEAD
             if (!(entry as any).hadRecentInput) {
               trackEvent('web_vitals', 'CLS', (entry as any).value);
             }
+=======
+            // Track CLS
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           }
         }
       });
@@ -83,19 +173,38 @@ const Analytics: React.FC<AnalyticsProps> = ({
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
       // Monitor page load time
+<<<<<<< HEAD
       window.addEventListener('load', () => {
+=======
+      window.addEventListener('load', () => {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));
+<<<<<<< HEAD
+=======
+      // Monitor page load time
+      window.addEventListener('load', () => {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        if (loadTime) {
+          // Track page load time
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         }
       });
     }
   };
 
+<<<<<<< HEAD
   const initializeErrorTracking = () => {
     // Track JavaScript errors
     window.addEventListener('error', (event) => {
       trackEvent('error', 'javascript_error', {
+=======
+  const initializeErrorTracking = () => {}
+    // Track JavaScript errors
+    window.addEventListener('error', (event) => {}
+      trackEvent('error', 'javascript_error', {)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         message: event.message,
         filename: event.filename,
         lineno: event.lineno,
@@ -104,27 +213,82 @@ const Analytics: React.FC<AnalyticsProps> = ({
       });
     });
 
+<<<<<<< HEAD
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {
+=======
+
+    // Track unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {}
+      trackEvent('error', 'unhandled_promise_rejection', {)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         reason: event.reason,
         promise: event.promise,
       });
     });
 
+<<<<<<< HEAD
     // Track resource loading errors
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
         trackEvent('error', 'resource_error', {
+=======
+
+    // Track resource loading errors
+    window.addEventListener('error', (event) => {}
+      if (event.target !== window) {}
+        trackEvent('error', 'resource_error', {)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
           error: event.type,
         });
+<<<<<<< HEAD
+=======
+      trackEvent('error', 'javascript_error', {)
+        message: event.message;)
+        filename: event.filename;)
+        lineno: event.lineno)
+        colno: event.colno),
+        error: event.error?.stack;
+    // Track unhandled promise rejections;
+    window.addEventListener('unhandledrejection', (event) => {
+      trackEvent('error', 'unhandled_promise_rejection', {)
+        reason: event.reason),
+        promise: event.promise;
+    // Track resource loading errors;
+    window.addEventListener('error', (event) => {
+      if (event.target !== window) {
+        trackEvent('error', 'resource_error', {)
+          type: (event.target as any).tagName;
+          src: (event.target as any).src || (event.target as any).href;
+          error: event.type;
+  const initializeErrorTracking = () => {
+    // Track JavaScript errors
+    window.addEventListener('error', (event) => {
+      // Track error
+    });
+
+    // Track unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      // Track promise rejection
+    });
+
+    // Track resource loading errors
+    window.addEventListener('error', (event) => {
+      if (event.target !== window) {
+        // Track resource error
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       }
     }, true);
   };
 
+<<<<<<< HEAD
   const initializeUserBehaviorTracking = () => {
+=======
+  const initializeUserBehaviorTracking = () => {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Track page views
     trackEvent('page_view', 'page_view', {
       page_title: document.title,
@@ -133,8 +297,21 @@ const Analytics: React.FC<AnalyticsProps> = ({
     });
 
     // Track scroll depth
+<<<<<<< HEAD
     let maxScroll = 0;
     window.addEventListener('scroll', () => {
+=======
+    let maxScroll = 0;)
+    // Track page views;
+    trackEvent('page_view', 'page_view', {)
+      page_title: document.title)
+      page_location: window.location.href)
+      page_path: window.location.pathname;
+    // Track scroll depth;
+    let maxScroll = 0;
+    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       if (scrollPercent > maxScroll) {
         maxScroll = scrollPercent;
@@ -144,6 +321,73 @@ const Analytics: React.FC<AnalyticsProps> = ({
       }
     });
 
+<<<<<<< HEAD
+=======
+    // Track time on page;
+    const startTime = Date.now();
+    window.addEventListener('beforeunload', () => {}
+      const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+      trackEvent('engagement', 'time_on_page', timeOnPage);
+    });
+
+    // Track clicks on important elements
+    document.addEventListener('click', (event) => {}
+      const target = event.target as HTMLElement;
+      const tagName = target.tagName.toLowerCase();
+
+      if (tagName === 'a') {}
+        const href = (target as HTMLAnchorElement).href;
+          link_url: href,
+          link_text: target.textContent?.trim()
+        });
+      } else if (tagName === 'button') {
+        trackEvent('engagement', 'button_click', {)
+    button_text: target.textContent?.trim(),
+        trackEvent('engagement', 'link_click', {)}
+          link_url: href,
+          link_text: target.textContent?.trim()
+
+      } else if (tagName === 'button') {}
+        trackEvent('engagement', 'button_click', {)}
+          button_text: target.textContent?.trim(),
+          button_class: target.className
+        });
+        trackEvent('engagement', 'link_click', {)
+          link_url: href),
+          link_text: target.textContent?.trim()} else if (tagName === 'button') {
+        trackEvent('engagement', 'button_click', {)
+          button_text: target.textContent?.trim(),
+          button_class: target.className;
+      }
+    });
+
+    // Track form submissions
+    document.addEventListener('submit', (event) => {}
+      const form = event.target as HTMLFormElement;
+      trackEvent('engagement', 'form_submit', {)}
+        form_id: form.id,
+        form_class: form.className,
+        form_action: form.action
+  const initializeUserBehaviorTracking = () => {
+    // Track page views
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href
+      });
+    }
+
+    // Track scroll depth
+    let maxScroll = 0;
+    window.addEventListener('scroll', () => {}
+      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      if (<<<scrollPercent>maxScroll</scrollPercent></scrollPercent>) {
+        maxScroll = scrollPercent;
+        // Track scroll depth
+      }
+    });
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Track time on page
     const startTime = Date.now();
     window.addEventListener('beforeunload', () => {
@@ -179,6 +423,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         form_action: form.action,
       });
     });
+<<<<<<< HEAD
   };
 
   const trackEvent = (category: string, action: string, value?: any) => {
@@ -190,6 +435,28 @@ const Analytics: React.FC<AnalyticsProps> = ({
       });
     }
   };
+=======
+      trackEvent('engagement', 'form_submit', {)
+        form_id: form.id),
+        form_class: form.className),
+        form_action: form.action;
+  };
+
+        value: typeof value === 'number' ? value : undefined
+  const trackEvent = (category: string, action: string, value?: any) => {
+    if ((window as any).gtag) {
+      (window as any).gtag('event', action, {
+        event_category: category,
+        value: value
+      });
+      (window as any).gtag('event', action, {)
+        event_category: category),
+        event_label: typeof value === 'object' ? JSON.stringify(value) : value;
+        value: typeof value === 'number' ? value : undefined;
+  trackingId?: string;
+  children?: React.ReactNode;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   return null;
 };
@@ -217,6 +484,7 @@ const Analytics: React.FC = () => {
 
 <<<<<<< HEAD
       // Initialize gtag
+<<<<<<< HEAD
       window.gtag = function() {
         (window.gtag as any).q = (window.gtag as any).q || [];
         (window.gtag as any).q.push(arguments);
@@ -307,3 +575,19 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode ,}> = ({ ch
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
+=======
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: unknown[]) {
+        window.dataLayer.push(args);
+      }
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', trackingId);
+    }
+  }, [trackingId]);
+
+  return <>{children}</>;
+};
+</AnalyticsProps>
+export default Analytics;</AnalyticsProps>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

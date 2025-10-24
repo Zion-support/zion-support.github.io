@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface PerformanceoptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -146,3 +147,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+=======
+
+const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

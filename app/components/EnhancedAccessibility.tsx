@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -113,3 +114,12 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode ,}> = ({ child
 
 export default EnhancedAccessibility;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+import React from 'react';
+
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default EnhancedAccessibility;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

@@ -329,6 +329,7 @@ const IoTEdgePage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -353,6 +354,17 @@ const IoTEdgePage: React.FC = () => {
               </a>
             </div>
             <div className="mt-8 text-sm text-cyan-200">
+=======
+              <a
+                href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
+// ></a>
+//                  +1 302 464 0950;
+          </a>
+href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
+                ✉️ kleber@ziontechgroup.com;
+            <div className="mt-8 text-sm text-cyan-200"></div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

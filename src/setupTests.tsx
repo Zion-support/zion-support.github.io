@@ -58,10 +58,17 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
+<<<<<<< HEAD
+=======
+// eslint-disable-next-line no-console
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // eslint-disable-next-line no-console
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
@@ -73,6 +80,10 @@ console.warn = (...args) => {
   }
   originalConsoleWarn(...args);
 };
+<<<<<<< HEAD
+=======
+// eslint-disable-next-line no-console
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 console.info = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {

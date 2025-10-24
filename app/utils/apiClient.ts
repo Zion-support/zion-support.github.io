@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Apiclient utility functions
 export function apiclient() {
   // Implementation here
@@ -54,6 +55,9 @@ class APIClient {}
 
     // Check cache for GET requests;
     if (method === 'GET' && cache) {
+=======
+/**
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Check cache for GET requests
     if (method === 'GET' && cache) {}
       const cachedData = apiCache.get(cacheKey);
@@ -62,6 +66,7 @@ class APIClient {}
       }
     }
 
+<<<<<<< HEAD
     try {
       const response = await fetch(url, {)
         method)
@@ -80,6 +85,8 @@ class APIClient {}
 
       // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     try {}
       const response = await fetch(url, {)}
         method,
@@ -105,7 +112,11 @@ class APIClient {}
 
       return apiResponse;
     } catch (error) {}
+<<<<<<< HEAD
       throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error',}`);
+=======
+      throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
  * Enhanced API Client with retry logic, caching, and error handling;
  */
 export interface ApiClientConfig {/* TODO: Fix JSX expression */,}
@@ -122,7 +133,11 @@ class ApiClient {/* TODO: Fix JSX expression */,}
   private,
   abortControllers: Map<string, AbortController> = new Map();
   constructor(confi)
+<<<<<<< HEAD
   g: ApiClientConfig = {,}) {/* TODO: Fix JSX expression */,}
+=======
+  g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       },
       cacheOption,
   s: config.cacheOptions;
@@ -185,7 +200,11 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    * Main request method with retry logic;
    */
   private async request<T>(confi)
+<<<<<<< HEAD
   g: RequestConfig,): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
+=======
+  g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       headers = {},
       cacheOption,
   s: cacheConfig,
@@ -258,7 +277,11 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    */
   cancel(ur,
   l: string, metho)
+<<<<<<< HEAD
   d: string = 'GET'): void {/* TODO: Fix JSX expression */,}`
+=======
+  d: string = 'GET'): void {/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     const cacheKey = `${method}:${url}`;
     const controller = this.abortControllers.get(cacheKey);
     if (controller) {/* TODO: Fix JSX expression */,}
@@ -275,7 +298,11 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    * Update default config;
    */
   setConfig(confi)
+<<<<<<< HEAD
   g: Partial<ApiClientConfig>): void {/* TODO: Fix JSX expression */,}
+=======
+  g: Partial<ApiClientConfig>): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         ...(config.headers || {})
       }
     };
@@ -284,7 +311,11 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    * Set authorization header;
    */
   setAuthToken(toke)
+<<<<<<< HEAD
   n: string,): void {/* TODO: Fix JSX expression */,}`
+=======
+  n: string): void {/* TODO: Fix JSX expression */}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     this.config.headers['Authorization'] = `Bearer ${token}`;
   }
   /**
@@ -296,16 +327,27 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    * Delay helper;
    */
   private delay(m)
+<<<<<<< HEAD
   s: number,): Promise<void> {/* TODO: Fix JSX expression */,}
+=======
+  s: number): Promise<void> {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Health check;
    */
   async healthCheck(endpoin)
+<<<<<<< HEAD
   t: string = '/health'): Promise<boolean> {/* TODO: Fix JSX expression */,}
   s: 1; });
       return response.status === 200;
     } catch {/* TODO: Fix JSX expression */,}
+=======
+  t: string = '/health'): Promise<boolean> {/* TODO: Fix JSX expression */}
+  s: 1 });
+      return response.status === 200;
+    } catch {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   }
 
@@ -329,6 +371,7 @@ class ApiClient {/* TODO: Fix JSX expression */,}
     return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' ,});
   }
 
+<<<<<<< HEAD
   // Set base URL;
   setBaseURL(baseURL: string,): void {,
     this.baseURL = baseURL;
@@ -341,6 +384,8 @@ class ApiClient {/* TODO: Fix JSX expression */,}
 
   // Clear cache;
   clearCache(): void {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Set base URL
   setBaseURL(baseURL: string,): void {,}
     this.baseURL = baseURL;
@@ -356,11 +401,14 @@ class ApiClient {/* TODO: Fix JSX expression */,}
     apiCache.clear();
   }
 }
+<<<<<<< HEAD
 
 // Create singleton instance;
 export const apiClient = new APIClient();
 
 export default APIClient;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Create default instance;
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */,}
   })
@@ -369,4 +417,7 @@ const apiClient = new ApiClient({/* TODO: Fix JSX expression */,}
 export { apiClient };
 export default ApiClient;
 `
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

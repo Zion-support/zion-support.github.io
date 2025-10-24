@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
+=======
+const HomePage = lazy(() => import('../app/page'));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 // Import enhancement utilities
 import PerformanceEnhancer from './utils/performanceEnhancer';
@@ -11,11 +15,77 @@ import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
+<<<<<<< HEAD
+=======
+import ITServicesPage from './it-services/page';
+import ITInfrastructurePage from './it-infrastructure/page';
+import CybersecurityPage from './cybersecurity/page';
+import CloudMigrationPage from './cloud-migration/page';
+import DevOpsPage from './devops/page';
+import DatabasePage from './database/page';
+import NetworkingPage from './networking/page';
+import AICRMPage from './ai-crm/page';
+import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
+import AIChatbotBuilderPage from './ai-chatbot-builder/page';
+import AIEmailMarketingPage from './ai-email-marketing/page';
+import AIWritingAssistantPage from './ai-writing-assistant/page';
+import TeamPage from './team/page';
+import CareersPage from './careers/page';
+import NewsPage from './news/page';
+import AboutPage from './about/page';
+import ContactPage from './contact/page';
+import ServicesPage from './services/page';
+import BlogPage from './blog/page';
+import CaseStudiesPage from './case-studies/page';
+import AICustomerSupportBotPage from './ai-customer-support-bot/page';
+import AICodeGenerationPage from './ai-code-generation/page';
+import AISocialMediaManagerPage from './ai-social-media-manager/page';
+import AIMLPlatformPage from './ai-ml-platform/page';
+
+'use client';
+
+const _HomePage = lazy(() => import('../app/page'));
+
+// Import components
+import React, { Suspense, lazy, useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const BlogPage = lazy(() => import('./blog/page'));
+
+// AI Services
+const AiServicesPage = lazy(() => import('./ai-services/page'));
+const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
+const AiAutomationPage = lazy(() => import('./ai-automation/page'));
+const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const AiFintechPage = lazy(() => import('./ai-fintech/page'));
+
+// IT Services
+const ItServicesPage = lazy(() => import('./it-services/page'));
+const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
+const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+
+// Specialized Solutions
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const MicroSaasPage = lazy(() => import('./micro-saas/page'));
+
+// Additional pages
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const CookiesPage = lazy(() => import('./cookies/page'));
+const NotFoundPage = lazy(() => import('./not-found'));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
+    <div className="text-center"></div>
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
     </div>
@@ -62,6 +132,12 @@ import BlockchainWeb3Page from './blockchain-web3/page';
 import IoTEdgeComputingPage from './iot-edge-computing/page';
 import BusinessIntelligencePage from './business-intelligence/page';
 import RoboticsPage from './robotics/page';
+<<<<<<< HEAD
+=======
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 // Company Pages
 import TeamPage from './team/page';
@@ -265,11 +341,23 @@ const App: React.FC = () => {
 
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         // Reports generated silently in development
       }
 
       setIsInitialized(true);
     } catch {
+=======
+        // Reports are available but not logged to console
+        performanceEnhancer.getMetrics();
+        accessibilityEnhancer.generateReport();
+        securityEnhancer.generateSecurityReport();
+        uxEnhancer.generateUXReport();
+      }
+
+      setIsInitialized(true);
+    } catch (error) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
     }
@@ -280,8 +368,13 @@ const App: React.FC = () => {
   }
 
   return (
+<<<<<<< HEAD
     <Router>
       <Routes>
+=======
+    <Router></Router>
+      <Routes></Routes>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         {/* Main Pages */}
         <Route path="/" element={<HomePage />} />
         
@@ -357,20 +450,68 @@ const App: React.FC = () => {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
+<<<<<<< HEAD
+=======
+    <ErrorBoundary></ErrorBoundary>
+      <div className="App"></div>
+        <Navigation />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes></Routes>
+            {/* Main Pages */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            
+            {/* AI Services */}
+            <Route path="/ai-services" element={<AiServicesPage />} />
+            <Route path="/ai-marketing" element={<AiMarketingPage />} />
+            <Route path="/ai-automation" element={<AiAutomationPage />} />
+            <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+            <Route path="/ai-fintech" element={<AiFintechPage />} />
+            
+            {/* IT Services */}
+            <Route path="/it-services" element={<ItServicesPage />} />
+            <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
+            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+            
+            {/* Specialized Solutions */}
+            <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+            <Route path="/micro-saas" element={<MicroSaasPage />} />
+            
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/cookies" element={<CookiesPage />} />
+            
+            {/* Catch all route */}
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+        <Footer />
+      </div>
+    </ErrorBoundary>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
+<<<<<<< HEAD
   <div className="min-h-screen flex items-center justify-center">
     <div className="text-center">
+=======
+  <div className="min-h-screen flex items-center justify-center"></div>
+    <div className="text-center"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
       <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
       <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
       <a
         href="/"
         className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold"
-      >
+      ></a>
         Go Home
       </a>
     </div>

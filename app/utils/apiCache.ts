@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Apicache utility functions
 export function apicache() {
   // Implementation here
@@ -30,9 +31,61 @@ const ApiCachePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
+=======
+/**
+ * API Caching Utility;
+ * Provides caching, deduplication, and retry logic for API calls;
+ */
+interface ApiCacheConfig {/* TODO: Fix JSX expression */}
+}
+interface PendingRequest<T> {/* TODO: Fix JSX expression */}
+}
+/**
+ * API Cache Manager with request deduplication;
+ */
+export class ApiCache {/* TODO: Fix JSX expression */}
+  g: ApiCacheConfig = {}) {/* TODO: Fix JSX expression */}
+    });
+    this.config = {/* TODO: Fix JSX expression */}
+    };
+    // Auto-cleanup every 5 minutes;
+    setInterval(() => {/* TODO: Fix JSX expression */}
+    }, 5 * 60 * 1000);
+  }
+  /**
+   * Fetch with caching and deduplication;
+   */
+  async fetch<T>(ur,
+  l: string,
+    option,
+  s: RequestInit = {},
+    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>)
+  ): Promise<T> {/* TODO: Fix JSX expression */}
+    const mergedConfig = { ...this.config, ...cacheConfig };
+    // Check cache first;
+    if (this.cache.has(cacheKey)) {/* TODO: Fix JSX expression */}
+    }
+    // Check if there's a pending request;
+    if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
+      }
+    }
+    // Create new request with retry logic;
+    const requestPromise = this.fetchWithRetry<T>(url,
+      options,
+      mergedConfig.maxRetries,
+      mergedConfig.retryDelay;)
+    );
+    // Store pending request;
+    if (mergedConfig.deduplicate) {/* TODO: Fix JSX expression */}
+      });
+    }
+    try {/* TODO: Fix JSX expression */}
+    } finally {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -158,3 +211,148 @@ const ApiCachePage: React.FC = () => {
 
 export default ApiCachePage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+    return entry.data;
+  }
+  /**
+   * Fetch with retry logic;
+   */
+  private async fetchWithRetry<T>(ur,
+  l: string,
+    option,
+  s: RequestInit,
+    maxRetrie,
+  s: number,
+    retryDela,
+  y: number,
+    attempt = 1;)
+  ): Promise<T> {/* TODO: Fix JSX expression */}
+        }
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      return data as T;
+    } catch (error) {/* TODO: Fix JSX expression */}
+      }
+      throw error;
+    }
+
+    return true;
+  }
+  /**
+   * Invalidate cache entries matching a pattern;
+   */
+  invalidate(patter)
+  n: string | RegExp): number {/* TODO: Fix JSX expression */}
+  }
+  /**
+   * Clear entire cache;
+   */
+  clear(): void {/* TODO: Fix JSX expression */}
+  }
+  /**
+   * Get cache statistics;
+   */
+  getStats() {/* TODO: Fix JSX expression */}
+    };
+  }
+  /**
+   * Prefetch data;
+   */
+  async prefetch<T>(ur,
+  l: string,
+    option,
+  s: RequestInit = {},
+    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>)
+  ): Promise<void> {/* TODO: Fix JSX expression */}
+    } catch (error) {/* TODO: Fix JSX expression */}
+      }
+  }
+  /**
+   * Generate cache key from URL and options;
+   */
+  private getCacheKey(ur,
+  l: string, option)
+  s: RequestInit): string {/* TODO: Fix JSX expression */}`
+    return `${method}:${url}:${body}`;
+  }
+  /**
+   * Delay helper;
+   */
+  private delay(m)
+  s: number): Promise<void> {/* TODO: Fix JSX expression */}
+  }
+  /**
+   * Clean up old pending requests;
+   */
+  private cleanupPendingRequests(): void {/* TODO: Fix JSX expression */}
+      }
+    }
+
+    expiredKeys.forEach(key => this.cache.delete(key));
+  }
+}
+/**
+ * Default API cache instance;
+ */
+export const defaultApiCache = new ApiCache({/* TODO: Fix JSX expression */})
+});
+/**
+ * Cached fetch helper;
+ */
+export async function cachedFetch<T>(ur,
+  l: string,
+  options?: RequestInit,
+  cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>)
+): Promise<T> {/* TODO: Fix JSX expression */}
+}
+/**
+ * Create a cached API client;
+ */
+export function createCachedApi(baseUr,
+  l: string, defaultOption)
+  s: RequestInit = {}) {/* TODO: Fix JSX expression */}`
+      cache.fetch<T>(`${baseUrl}${path}`, {/* TODO: Fix JSX expression */})
+  d: 'GET' }),
+    pos,
+  t: <T>(pat,
+  h: string, bod)
+  y: unknown, options?: RequestInit) =>`
+      cache.fetch<T>(`${baseUrl}${path}`, {/* TODO: Fix JSX expression */})
+          ...(defaultOptions.headers || {}),
+          ...(options?.headers || {})
+        },
+        bod,
+  y: JSON.stringify(body)
+      }),
+    pu,
+  t: <T>(pat,
+  h: string, bod)
+  y: unknown, options?: RequestInit) =>`
+      cache.fetch<T>(`${baseUrl}${path}`, {/* TODO: Fix JSX expression */})
+          ...(defaultOptions.headers || {}),
+          ...(options?.headers || {})
+        },
+        bod,
+  y: JSON.stringify(body)
+      }),
+    delet,
+  e: <T>(pat)
+  h: string, options?: RequestInit) =>`
+      cache.fetch<T>(`${baseUrl}${path}`, {/* TODO: Fix JSX expression */})
+  d: 'DELETE' }),
+    invalidat,
+  e: (patter)
+  n: string | RegExp) => cache.invalidate(pattern),
+    clea,
+  r: () => cache.clear(),
+    stat,
+  s: () => cache.getStats(),
+    prefetc,
+  h: <T>(pat)
+  h: string, options?: RequestInit) =>`
+      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
+  };
+}
+export default ApiCache;`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

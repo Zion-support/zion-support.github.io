@@ -4,6 +4,7 @@
  * Configuration Manager;
  * Centralized configuration management with environment-based settings;
  */
+<<<<<<< HEAD
 
 export type Environment = 'development' | 'staging' | 'production' | 'test'
 
@@ -156,6 +157,8 @@ class ConfigManager {
 // Export singleton instance;
 export const configManager = new ConfigManager()
 export default configManager;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {/* TODO: Fix JSX expression */,}
   };
@@ -272,10 +275,17 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}
    */
   private mergeConfig(bas,
   e: AppConfig, overrid)
+<<<<<<< HEAD
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */,}
     const result = { ...base } as AppConfig;
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke)
   y: K,) => {/* TODO: Fix JSX expression */,}
+=======
+  e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
+    const result = { ...base } as AppConfig;
+    (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke)
+  y: K) => {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
           } else {/* TODO: Fix JSX expression */,}
           }
@@ -288,7 +298,11 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}
    * Get configuration value;
    */
   get<K extends keyof AppConfig>(ke)
+<<<<<<< HEAD
   y: K,): AppConfig[K];
+=======
+  y: K): AppConfig[K];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
     nestedKe,
@@ -333,7 +347,11 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}
    * Get default value for a config key;
    */
   private getDefaultForKey<K extends keyof AppConfig>(ke)
+<<<<<<< HEAD
   y: K,): AppConfig[K] {/* TODO: Fix JSX expression */,}
+=======
+  y: K): AppConfig[K] {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       },
       feature,
   s: {/* TODO: Fix JSX expression */,}
@@ -368,19 +386,31 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}
    * Check if feature is enabled;
    */
   isFeatureEnabled(featur)
+<<<<<<< HEAD
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */,}
+=======
+  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Enable feature;
    */
   enableFeature(featur)
+<<<<<<< HEAD
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */,}
+=======
+  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Disable feature;
    */
   disableFeature(featur)
+<<<<<<< HEAD
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */,}
+=======
+  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Get API configuration;
@@ -392,7 +422,11 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}
    * Update API configuration;
    */
   updateAPIConfig(confi)
+<<<<<<< HEAD
   g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */,}
+=======
+  g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     this.config.api = { ...this.config.api, ...config };
   }
   /**
@@ -419,7 +453,11 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}
    * Override configuration;
    */
   override(confi)
+<<<<<<< HEAD
   g: Partial<AppConfig>): void {/* TODO: Fix JSX expression */,}
+=======
+  g: Partial<AppConfig>): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Reset configuration;

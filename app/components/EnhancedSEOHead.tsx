@@ -1,11 +1,10 @@
-'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title: string;
   description: string;
+<<<<<<< HEAD
   keywords?: string;
   image?: string;
   url?: string;
@@ -101,6 +100,21 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
+=======
+  structuredData?: any;
+}
+
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({ title, description, structuredData }) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     </Helmet>
   );
 };

@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Calendar } from 'lucide-react';
@@ -70,6 +71,26 @@ export default function GDataAnalyticsZionTechGroupPage() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai smart calendar solution for modern businesses.
+=======
+
+const aismartcalendarPage: React.FC = () => {
+  return(<>)
+      <Helmet>)
+        <title>Ai Smart Calendar | Zion Tech Group</title>)
+        <meta name="description" content="Professional ai smart calendar services by Zion Tech Group. Advanced AI and IT solutions for your business." />),
+        <meta name="keywords" content="ai smart calendar, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1>
+              Ai Smart Calendar;
+            </h1>
+            <p className="text-xl text-gray-300 mb-8"></p>
+              Professional ai smart calendar services powered by advanced AI and cutting-edge technology.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Smart Calendar</h1><p className="text-xl text-gray-300 mb-8">Professional ai smart calendar services powered by advanced AI and cutting-edge technology.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -94,6 +115,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
               </p>
             </div></div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -117,6 +139,29 @@ export default function GDataAnalyticsZionTechGroupPage() {
             </div>
           </div>
         </section>
+=======
+            <div className="space-y-4"></div>
+              <a
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              ></a>
+                Get Started Today;
+              </a>
+              <div></div>
+                <a
+                  href="/"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                ></a>
+                  ← Back to Home;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>,
+    </>);
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
         {/* Benefits Section */}
         <section className="py-20 px-4">

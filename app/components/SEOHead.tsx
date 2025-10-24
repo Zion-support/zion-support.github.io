@@ -16,6 +16,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 interface SEOHeadProps {
+<<<<<<< HEAD
   title?: string
   description?: string
   keywords?: string
@@ -242,6 +243,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {breadcrumbs.length > 0 && (
         <script type="application/ld+json">
           {JSON.stringify(generateBreadcrumbStructuredData())}
+=======
+  title: string;
+  description: string;
+  structuredData?: any;
+}
+
+const SEOHead: React.FC<SEOHeadProps> = ({ title, description, structuredData }) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </script>
       )}
     </Helmet>

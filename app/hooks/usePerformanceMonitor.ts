@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Star } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { useState, useEffect } from 'react';
@@ -35,4 +36,9 @@ export function usePerformanceMonitor() {
 export default usePerformanceMonitor;
 
   return null;
+=======
+export const usePerformanceMonitor = () => {
+  // Performance monitoring logic would go here
+  return {};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };

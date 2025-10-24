@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
+=======
+'use client';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -92,6 +97,7 @@ const AIProjectManagerPage: React.FC = () => {
 
 const AiProjectManagerPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Ai Project Manager}</h1>
@@ -104,3 +110,38 @@ const AiProjectManagerPage: React.FC = () => {
 };
 
 export default AiProjectManagerPage;
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>AI Project Manager | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
+          <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            Coming Soon - Advanced AI project management solutions that will transform your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></button>
+              Contact Us
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors"></button>
+              Learn More
+          </div>
+      
+      <Footer />
+  );
+};
+
+
+export default $1;
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+
+export default AIProjectManagerPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

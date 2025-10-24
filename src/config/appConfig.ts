@@ -76,6 +76,7 @@ const _config: AppConfig = {
 /**
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
+<<<<<<< HEAD
  */
 export function getConfig<T = unknown>(keyPath: string): T {
   const keys = keyPath.split('.');
@@ -84,10 +85,36 @@ export function getConfig<T = unknown>(keyPath: string): T {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key];
     } else {
+=======
+export function getConfig;
+          <T = unknown>(keyPat)
+  h: string): T {const keys = keyPath.split('.');}
+  const __keys = keyPath.split('.');
+  let,
+  value: unknown = config;
+  for (const key of keys) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+      value = (value as Record;)
+          <string, unknown>)[key];
+    } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       throw new Error(`Configuration key "${keyPath}" not found`);
     }
   }
   return value as T;
+<<<<<<< HEAD
+=======
+ * Check if a feature is enabled;
+export function isFeatureEnabled(featur)
+  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
+  O: Add content;}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Check if a feature is enabled

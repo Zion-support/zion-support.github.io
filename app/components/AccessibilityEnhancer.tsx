@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 <<<<<<< HEAD
@@ -172,9 +173,16 @@ import React, { useEffect } from 'react'
 import React from 'react';
 =======
   return <React.Fragment>{children}</React.Fragment>;
+=======
+import React from 'react';
+
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
+<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC = () => {
   return (
     <div className="accessibilityenhancer">
@@ -235,3 +243,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 export default AccessibilityEnhancer
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+export default AccessibilityEnhancer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

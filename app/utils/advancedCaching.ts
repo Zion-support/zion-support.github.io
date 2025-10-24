@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Advancedcaching utility functions
 export function advancedcaching() {
   // Implementation here
@@ -30,6 +31,38 @@ const AdvancedCachingPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
+=======
+/**
+export interface CacheOptions {}
+  ttl?: number; // Time to live in milliseconds
+  storage?: 'memory' | 'localStorage' | 'sessionStorage';
+  maxSize?: number; // Maximum number of entries;
+}
+
+export interface CacheEntry<T> {}
+  value: T;
+  expiry: number;
+  hits: number;
+  lastAccessed: number;
+}
+
+class AdvancedCache<T = unknown> {}
+  private cache: Map<string, CacheEntry<T>> = new Map();
+  private accessOrder: string[] = [];
+  private options: Required<CacheOptions>;
+  private storageKey = 'advanced-cache';
+
+  constructor(options: CacheOptions = {}) {}
+    this.options = {}
+      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
+      storage: options.storage || 'memory',
+      maxSize: options.maxSize || 100;
+    };
+
+    // Load from persistent storage if needed
+    if (this.options.storage !== 'memory') {}
+      this.loadFromStorage();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   ];
 
@@ -44,6 +77,7 @@ const AdvancedCachingPage: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -51,6 +85,16 @@ const AdvancedCachingPage: React.FC = () => {
         <meta name="description" content="Professional AdvancedCaching services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="advancedCaching, AI solutions, IT services, Zion Tech Group, advancedcaching" />
       </Helmet>
+=======
+  private setupCleanup(): void {}
+    if (typeof window !== 'undefined') {}
+      // Clean expired entries every minute
+      setInterval(() => {}
+        this.cleanExpired();
+      }, 60 * 1000);
+    }
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -129,6 +173,7 @@ const AdvancedCachingPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -158,3 +203,253 @@ const AdvancedCachingPage: React.FC = () => {
 
 export default AdvancedCachingPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+    switch (this.options.storage) {}
+      case 'localStorage':
+        return window.localStorage;
+      case 'sessionStorage':
+        return window.sessionStorage;
+      default: return null;
+ * Advanced Caching Utility;
+ * Provides intelligent caching with TTL, LRU eviction, and storage options;
+ */
+export interface CacheOptions {/* TODO: Fix JSX expression */}
+}
+export interface CacheEntry<T> {/* TODO: Fix JSX expression */}
+}
+class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
+  s: CacheOptions = {}) {/* TODO: Fix JSX expression */}
+    };
+    // Load from persistent storage if needed;
+    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
+    }
+    // Setup periodic cleanup;
+    this.setupCleanup();
+  }
+  private setupCleanup(): void {/* TODO: Fix JSX expression */}
+      }, 60 * 1000);
+    }
+  }
+  private loadFromStorage(): void {/* TODO: Fix JSX expression */}
+      }
+    } catch (error) {/* TODO: Fix JSX expression */}
+      }
+  }
+  private saveToStorage(): void {/* TODO: Fix JSX expression */}
+      };
+      storage?.setItem(this.storageKey, JSON.stringify(data));
+    } catch (error) {/* TODO: Fix JSX expression */}
+      }
+  }
+  private getStorage(): Storage | null {/* TODO: Fix JSX expression */}
+    } else if (this.options.storage === 'sessionStorage') {/* TODO: Fix JSX expression */}
+    }
+  }
+
+    for (const [key, entry] of this.cache.entries()) {}
+      if (entry.expiry <= now) {}
+        expiredKeys.push(key);
+      }
+    }
+
+    expiredKeys.forEach(key => {)}
+      this.cache.delete(key);
+      const index = this.accessOrder.indexOf(key);
+      if (index > -1) {}
+        this.accessOrder.splice(index, 1);
+      }
+
+    if (expiredKeys.length > 0) {}
+      this.saveToStorage();
+    }
+
+    // Update access statistics;
+  public set(ke,
+  y: string, valu)
+  e: T, ttl?: number): void {/* TODO: Fix JSX expression */}
+    }
+    this.cache.set(key, {/* TODO: Fix JSX expression */})
+    });
+    // Update access order;
+    this.updateAccessOrder(key);
+    // Save to storage if needed;
+    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
+    }
+  }
+  public get(ke)
+  y: string): T | null {/* TODO: Fix JSX expression */}
+    }
+    // Check if expired;
+    if (Date.now() > entry.expiry) {/* TODO: Fix JSX expression */}
+    }
+    // Update stats;
+    entry.hits++;
+    entry.lastAccessed = now;
+    this.updateAccessOrder(key);
+
+    return entry.value;
+  }
+  private updateAccessOrder(key: string): void {}
+    const index = this.accessOrder.indexOf(key);
+    if (index > -1) {}
+      this.accessOrder.splice(index, 1);
+  public has(ke)
+  y: string): boolean {/* TODO: Fix JSX expression */}
+    }
+    return true;
+  }
+  public delete(ke)
+  y: string): boolean {/* TODO: Fix JSX expression */}
+  }
+  public clear(): void {/* TODO: Fix JSX expression */}
+    }
+  }
+  private updateAccessOrder(ke)
+  y: string): void {/* TODO: Fix JSX expression */}
+  }
+  private removeFromAccessOrder(ke)
+  y: string): void {/* TODO: Fix JSX expression */}
+    }
+    this.accessOrder.push(key);
+  }
+    // Remove existing entry if it exists
+    if (this.cache.has(key)) {}
+      this.cache.delete(key);
+      const index = this.accessOrder.indexOf(key);
+      if (index > -1) {}
+        this.accessOrder.splice(index, 1);
+      }
+    }
+
+    // Check if we need to evict entries
+    while (this.cache.size >= this.options.maxSize) {}
+      this.evictLRU();
+    }
+
+    const entry: CacheEntry<T> = {}
+      value,
+      expiry: now + ttl,
+      hits: 0,
+      lastAccessed: now
+    };
+
+    this.cache.set(key, entry);
+    this.updateAccessOrder(key);
+    this.saveToStorage();
+  }
+
+  get(key: string): T | null {}
+    const entry = this.cache.get(key);
+    if (!entry) return null;
+
+    const now = Date.now();
+    if (entry.expiry <= now) {}
+      this.cache.delete(key);
+      const index = this.accessOrder.indexOf(key);
+      if (index > -1) {}
+        this.accessOrder.splice(index, 1);
+      }
+      this.saveToStorage();
+      return null;
+    }
+
+    // Update access statistics;
+    entry.hits++;
+    entry.lastAccessed = now;
+    this.updateAccessOrder(key);
+
+    return entry.value;
+  }
+
+  has(key: string): boolean {}
+    const entry = this.cache.get(key);
+    if (!entry) return false;
+
+    const now = Date.now();
+    if (entry.expiry <= now) {}
+      this.cache.delete(key);
+      const index = this.accessOrder.indexOf(key);
+      if (index > -1) {}
+        this.accessOrder.splice(index, 1);
+      }
+      this.saveToStorage();
+      return false;
+    }
+
+    return true;
+  }
+
+  delete(key: string): boolean {}
+    const deleted = this.cache.delete(key);
+    if (deleted) {}
+      const index = this.accessOrder.indexOf(key);
+      if (index > -1) {}
+        this.accessOrder.splice(index, 1);
+      }
+      this.saveToStorage();
+  private evictLRU(): void {/* TODO: Fix JSX expression */}
+    }
+  }
+  private cleanExpired(): void {/* TODO: Fix JSX expression */}
+      }
+    });
+    keysToDelete.forEach(key => this.delete(key));
+    if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
+    }
+    return deleted;
+  }
+    return {}
+      size: this.cache.size,
+      maxSize: this.options.maxSize,
+      hitRate,
+      oldestEntry,
+      newestEntry;
+    };
+  }
+}
+
+// Create singleton instances for different use cases;
+export const memoryCache = new AdvancedCache({ storage: 'memory' });
+export const localStorageCache = new AdvancedCache({)}
+  storage: 'localStorage',
+  ttl: 30 * 60 * 1000, // 30 minutes
+  maxSize: 50
+
+export const sessionStorageCache = new AdvancedCache({)}
+  storage: 'sessionStorage',
+  ttl: 10 * 60 * 1000, // 10 minutes
+  maxSize: 25
+
+export default AdvancedCache;
+  public getStats(): {/* TODO: Fix JSX expression */}
+    }>;
+  } {/* TODO: Fix JSX expression */}
+  e: number }> = [];
+    let totalHits = 0;
+    const now = Date.now();
+    this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
+      });
+    });
+    return {/* TODO: Fix JSX expression */}
+    };
+  }
+  // Utility method for async operations with caching;
+  public async getOrFetch<R extends T>(ke,
+  y: string,
+    fetche)
+  r: () => Promise<R>,
+    ttl?: number;
+  ): Promise<R> {/* TODO: Fix JSX expression */}
+    }
+    const value = await fetcher();
+    this.set(key, value, ttl);
+    return value;
+  }
+}
+// Export factory function;
+export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<T> {/* TODO: Fix JSX expression */}
+}
+// Export default cache instance;
+export const defaultCache = new AdvancedCache();
+export default AdvancedCache;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

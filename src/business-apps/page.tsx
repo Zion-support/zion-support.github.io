@@ -119,6 +119,7 @@ const BusinessAppsPage: React.FC = () => {
   const categories = [...new Set(businessApps.map(app => app.category))];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -130,6 +131,20 @@ const BusinessAppsPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive business applications powered by AI to streamline your operations and drive growth
+=======
+    <div></div>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
+            Page
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
+            Coming Soon
+          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
+            This page is under development. Please check back soon for updates.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -148,6 +163,7 @@ const BusinessAppsPage: React.FC = () => {
         </section>
 
         {/* Key Benefits */}
+<<<<<<< HEAD
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
             Why Choose Our Business Apps?
@@ -171,6 +187,33 @@ const BusinessAppsPage: React.FC = () => {
             <div className="cyber-card hologram-card p-6 text-center">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>
+=======
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text"></h2>
+
+// Why Choose Our Business Apps?
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </h2>"
+<div className="text-4xl mb-4">🚀</div>"
+              <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>"
+              <p className="text-gray-300 text-sm">Intelligent automation and insights powered by advanced AI</p>"
+              <div className="text-4xl mb-4">⚡</div>"
+              <h3 className="text-xl font-bold text-white mb-3">Fast Implementation</h3>"
+              <p className="text-gray-300 text-sm">Quick deployment with minimal disruption to your workflow</p>"
+              <div className="text-4xl mb-4">🔒</div>"
+              <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>"
+              <p className="text-gray-300 text-sm">Bank-level security and compliance for your sensitive data</p>"
+              <div className="text-4xl mb-4">📊</div>"
+              <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               <p className="text-gray-300 text-sm">Live insights and analytics to drive better decisions</p>
             </div>
           </div>

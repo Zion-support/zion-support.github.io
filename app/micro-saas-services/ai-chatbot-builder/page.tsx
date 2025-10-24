@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 export default function GDataAnalyticsZionTechGroupPage() {
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
@@ -63,6 +64,76 @@ export default function GDataAnalyticsZionTechGroupPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
+=======
+const AIChatbotBuilder: React.FC = () => {
+  const [botName, setBotName] = useState('');
+  const [botPurpose, setBotPurpose] = useState('');
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Chatbot Builder</h1><p className="text-xl text-gray-300 text-center mb-12">Create intelligent chatbots for your website without coding</p>
+          </p>
+
+          <div className="cyber-card p-8 mb-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-6">Build Your Chatbot</h2>
+            <div className="space-y-6"></div>
+              <div></div>
+                <label className="block text-white font-medium mb-2">Bot Name<input
+                  type="text"
+                  value={botName}
+                  onChange={(e) =>setBotName(e.target.value)}</input></<<<inpu>className</inpu></inpu>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                  placeholder="Enter your bot name..."</input>
+                /></input>
+              </div>
+              <div></div>
+                <label className="block text-white font-medium mb-2">Bot Purpose<select
+                  value={botPurpose}
+                  onChange={(e) =>setBotPurpose(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                ></select>
+                  <option value="">Select purpose...<option value="customer-support">Customer Support</option>
+                  <option value="sales">Sales Assistant<option value="lead-generation">Lead Generation</option>
+                  <option value="faq">FAQ Bot<option value="booking">Booking Assistant<button className="cyber-button w-full">Create Chatbot</button>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center"></h1>
+            AI Chatbot Builder;
+          </h1>
+          <p className="text-xl text-gray-300 text-center mb-12"></p>
+            Create intelligent chatbots for your website without coding;
+          </p>
+
+          <div className="cyber-card p-8 mb-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-6">Build Your Chatbot</h2>)
+            <div className="space-y-6">)
+              <div>)
+                <label className="block text-white font-medium mb-2">Bot Name</label>)
+                <input;),
+                  type="text"),
+                  value={botName}
+                  onChange={(e) => setBotName(e.target.value)}
+                  className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
+                  placeholder="Enter your bot name..."
+                />,
+              </div>,
+              <div>,
+                <label className="block text-white font-medium mb-2">Bot Purpose</label>,
+                <select;
+                  value={botPurpose}
+                  onChange={(e) => setBotPurpose(e.target.value)}
+                  className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
+                >
+                  <option value="">Select purpose...</option>
+                  <option value="customer-support">Customer Support</option>
+                  <option value="sales">Sales Assistant</option>
+                  <option value="lead-generation">Lead Generation</option>
+                  <option value="faq">FAQ Bot</option>
+                  <option value="booking">Booking Assistant</option>
+                </select>
+              </div>
+              <button className="cyber-button w-full"></button>
+                Create Chatbot;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
@@ -132,6 +203,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -174,3 +246,58 @@ export default function GDataAnalyticsZionTechGroupPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Basic</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>
+              <ul className="text-gray-300 space-y-2"></ul>
+                <li>1 chatbot<li>1,000 conversations/month</li>
+                <li>Basic templates<li>Email support</li>
+              <h3 className="text-xl font-bold text-white mb-4">Basic</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>,
+              <ul className="text-gray-300 space-y-2">,
+                <li>1 chatbot</li>,
+                <li>1,000 conversations/month</li>
+                <li>Basic templates</li>
+                <li>Email support</li>
+              </ul>
+            </div>
+            <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Professional</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$149/month</div>
+              <ul className="text-gray-300 space-y-2"></ul>
+                <li>5 chatbots<li>10,000 conversations/month</li>
+                <li>Advanced features<li>Priority support<li>Analytics</li>
+              </ul>
+            </div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$399/month</div>
+              <ul className="text-gray-300 space-y-2"></ul>
+                <li>Unlimited chatbots<li>Unlimited conversations</li>
+                <li>Custom integrations<li>24/7 support<li>White-label option</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center"></div>
+            <a
+              href="tel:+13024640950"
+              className="cyber-button mr-4"
+            ></a>
+              📞 Call: (302) 464-0950;
+            </a>
+            <a;
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            ></a>
+              Start Building;
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <Footer />,
+    </div>);
+};
+
+export default AIChatbotBuilder;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

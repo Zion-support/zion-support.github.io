@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 
 const ARVRSolutionsPage: React.FC = () => {
   const _features = [
@@ -99,6 +100,8 @@ const ARVRSolutionsPage: React.FC = () => {
     </div>
   );
 };
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 export default ARVRSolutionsPage;
 import Footer from '../components/Footer';

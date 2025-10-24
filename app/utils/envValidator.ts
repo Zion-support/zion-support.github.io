@@ -3,6 +3,7 @@
  * Environment Variables Validator;
  * Ensures all required environment variables are present and valid;
  */
+<<<<<<< HEAD
 export interface EnvConfig {}
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
@@ -16,6 +17,8 @@ class EnvValidator {
    * Validate all environment variables;
    */,
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 class EnvValidator {}
   private errors: string[] = []
   private warnings: string[] = []
@@ -29,23 +32,34 @@ class EnvValidator {}
     this.validateNodeEnv()
     // Validate optional but recommended variables;
     this.validateOptionalVars()
+<<<<<<< HEAD
     return {
       isValid: this.errors.length === 0;
       errors: this.errors;
       warnings: this.warnings;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     return {}
       isValid: this.errors.length === 0,
       errors: this.errors,
       warnings: this.warnings
+<<<<<<< HEAD
 export interface EnvConfig {/* TODO: Fix JSX expression */,}
 }
 class EnvValidator {/* TODO: Fix JSX expression */,}
   s: string[] ,} {/* TODO: Fix JSX expression */,}
+=======
+export interface EnvConfig {/* TODO: Fix JSX expression */}
+}
+class EnvValidator {/* TODO: Fix JSX expression */}
+  s: string[] } {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     };
   }
   /**
    * Get validated environment configuration;
    */
+<<<<<<< HEAD
   getConfig(): EnvConfig {}
     const validation = this.validate()
     if (!validation.isValid) {}
@@ -82,6 +96,8 @@ class EnvValidator {/* TODO: Fix JSX expression */,}
     if (nodeEnv === 'production') {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // In production, these should be set
     if (nodeEnv === 'production') {}
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
@@ -99,7 +115,11 @@ class EnvValidator {/* TODO: Fix JSX expression */,}
   private getNodeEnv(): 'development' | 'production' | 'test' {}
     const env = process.env['NODE_ENV'] || 'development'
     return env as 'development' | 'production' | 'test'
+<<<<<<< HEAD
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */,}
+=======
+  getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   failed:
 ${validation.errors.join('
 ')}`
@@ -130,13 +150,20 @@ ${validation.errors.join('
       }
     }
   }
+<<<<<<< HEAD
   private getNodeEnv(): 'development' | 'production' | 'test' {/* TODO: Fix JSX expression */,}
+=======
+  private getNodeEnv(): 'development' | 'production' | 'test' {/* TODO: Fix JSX expression */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
 }
 // Export singleton instance;
 export const envValidator = new EnvValidator()
+<<<<<<< HEAD
 // Export convenience function;
 export function validateEnv(): EnvConfig {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Export convenience function
 export function validateEnv(): EnvConfig {}
   return envValidator.getConfig()

@@ -20,6 +20,7 @@ interface LoadingSpinnerProps {
   className?: string
 }
 
+<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   className = '' 
@@ -51,6 +52,26 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
           {text}
         </p>
+=======
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  text,
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+const,
+  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+  };
+
+  return (<div className={`flex flex-col items-center justify-center gap-3 ${className}`}></div>`
+      <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} /></Loader2>
+      {/* TODO: Fix JSX expression */}
+        <p className="text-gray-300 text-sm animate-pulse">{text}</p>)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       )}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     </div>

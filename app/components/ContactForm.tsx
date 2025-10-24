@@ -28,13 +28,11 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: '',
-  });
+    message: ''});
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
-    message: '',
-  });
+    message: ''});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -52,6 +50,7 @@ const ContactForm: React.FC = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
 
+<<<<<<< HEAD
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.',
@@ -66,6 +65,20 @@ const ContactForm: React.FC = () => {
         service: '',
         message: '',
       });
+=======
+      setStatus({)
+        type: 'success'),
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'});
+
+      // Reset form;
+      setFormData({)
+        name: '')
+        email: ''),
+        company: ''),
+        phone: ''),
+        service: ''),
+        message: ''});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     } catch (error) {
       setStatus({
         type: 'error',
@@ -86,6 +99,7 @@ const ContactForm: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Contact Information */}
@@ -118,11 +132,66 @@ const ContactForm: React.FC = () => {
                 <p className="font-semibold">Address</p>
                 <p className="text-blue-100">123 Tech Street, Innovation City, IC 12345</p>
               </div></div>
+=======
+    <div className="max-w-4xl mx-auto"></div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
+        {/* Contact Information */}</div>
+        <div className="space-y-8"></div>
+          <div></div>
+            <h2 className="text-3xl font-bold text-white mb-4"></h2>
+              Get in Touch;
+            </h2>
+            <p className="text-gray-300 text-lg"></p>
+              Ready to transform your business with AI? Let's discuss your project and how we can help you achieve your goals.
+            </p>
+          </div>
+
+          <div className="space-y-6"></div>
+            <div className="flex items-start space-x-4"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <Phone className="w-6 h-6 text-white" />
+              </div>
+              <div></div>
+                <h3 className="text-white font-semibold mb-1">Phone</h3>
+                <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors"></a>
+                  +1 (302) 464-0950;
+                </a>
+                <p className="text-gray-400 text-sm mt-1">Mon-Fri 9 AM-6 PM EST</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <Mail className="w-6 h-6 text-white" />
+              </div>
+              <div></div>
+                <h3 className="text-white font-semibold mb-1">Email</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors"></a>
+                  kleber@ziontechgroup.com;
+                </a>
+                <p className="text-gray-400 text-sm mt-1">We'll respond within 24 hours</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <div></div>
+                <h3 className="text-white font-semibold mb-1">Office</h3>
+                <p className="text-gray-300"></p>
+                  364 E Main St STE 1008</p><br />
+                  Middletown, DE 19709
+                </p>
+                <p className="text-gray-400 text-sm mt-1">United States</p>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </div>
 
         {/* Contact Form */}
+<<<<<<< HEAD
         <div className="p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -161,6 +230,48 @@ const ContactForm: React.FC = () => {
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
+=======
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
+          <form onSubmit={handleSubmit} className="space-y-6"></form>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div></div>
+                <label htmlFor="name" className="block text-white font-medium mb-2"></label>
+                  Full Name *
+                </label>
+                <input;
+                  type="text",
+                  id="name",
+                  name="name",
+                  value={formData.name}
+                  onChange={handleChange}
+                  required;
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
+                  placeholder="John Doe"
+                /></inpu>
+              </div>
+
+              <div></div>
+                <label htmlFor="email" className="block text-white font-medium mb-2"></label>
+                  Email Address *
+                </label>
+                <input;
+                  type="email",
+                  id="email",
+                  name="email",
+                  value={formData.email}
+                  onChange={handleChange}
+                  required;
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
+                  placeholder="john@company.com"
+                /></inpu>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div></div>
+                <label htmlFor="company" className="block text-white font-medium mb-2"></label>
+                  Company;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </label>
                 <input
                   type="text"
@@ -173,9 +284,15 @@ const ContactForm: React.FC = () => {
                 />
               </div></div>
 
+<<<<<<< HEAD
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                   Phone Number
+=======
+              <div></div>
+                <label htmlFor="phone" className="block text-white font-medium mb-2"></label>
+                  Phone Number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </label>
                 <input
                   type="tel"
@@ -189,28 +306,47 @@ const ContactForm: React.FC = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
             <div>
               <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                 Service Interest
+=======
+            <div></div>
+              <label htmlFor="service" className="block text-white font-medium mb-2"></label>
+                Service Interest;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </label>
               <select
                 id="service"
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               >
                 <option value="">Select a service</option>
                 {services.map((service) => (
                   <option key={service} value={service}>
+=======
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors",
+              >,
+                <option value="">Select a service</option>,
+                {services.map((service) => (,
+                  <option key={service} value={service} className="bg-gray-800"></option>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                     {service}
                   </option>
                 ))}
               </select>
             </div>
 
+<<<<<<< HEAD
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+            <div></div>
+              <label htmlFor="message" className="block text-white font-medium mb-2"></label>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 Message *
               </label>
               <textarea
@@ -224,6 +360,7 @@ const ContactForm: React.FC = () => {
                 placeholder="Tell us about your project..."
               />
             </div>
+<<<<<<< HEAD
 
             {status.type !== 'idle' && (
               <div className={`flex items-center space-x-2 p-4 rounded-lg ${
@@ -233,6 +370,17 @@ const ContactForm: React.FC = () => {
               }`}>
                 {status.type === 'success' ? (
                   <CheckCircle className="h-5 w-5" />
+=======
+,
+            {status.message && (,
+              <div className={`flex items-center space-x-2 p-4 rounded-lg ${
+                status.type === 'success' ? 'bg-green-500/20 text-green-300' :,
+                status.type === 'error' ? 'bg-red-500/20 text-red-300' :}
+                'bg-blue-500/20 text-blue-300'}
+              }`}></div>
+                {status.type === 'success' ? (</div>
+                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 ) : status.type === 'error' ? (
                   <AlertCircle className="h-5 w-5" />
                 ) : (
@@ -245,19 +393,31 @@ const ContactForm: React.FC = () => {
             <button
               type="submit"
               disabled={status.type === 'loading'}
+<<<<<<< HEAD
               className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
             >
+=======
+              className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+            ></button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               {status.type === 'loading' ? (
                 <React.Fragment>
                   <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                   <span>Sending...</span>
                 </React.Fragment>
               ) : (
+<<<<<<< HEAD
                 <React.Fragment>
                   <Send className="h-5 w-5" />
                   <span>Send Message</span>
                 </React.Fragment>
               )}
+=======
+                <>
+                  Send Message;
+                  <Send className="w-5 h-5 ml-2" />,
+                </>)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </button>
           </form>
 
