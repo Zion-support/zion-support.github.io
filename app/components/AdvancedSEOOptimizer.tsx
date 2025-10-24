@@ -3,26 +3,28 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from 'Footer';
+import Footer from '../components/Footer';
+
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
       icon: Search,
-    title: 'Advanced SEO Analysis',
+      title: 'Advanced SEO Analysis',
       description: 'Comprehensive SEO analysis and optimization recommendations.',
-    benefits: ['Keyword research', 'Content optimization', 'Technical SEO', 'Performance insights']
-},
-  {
-    icon: Target,
-    title: 'Precision Targeting',
+      benefits: ['Keyword research', 'Content optimization', 'Technical SEO', 'Performance insights']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
       description: 'Target specific keywords and audiences with precision.',
-    benefits: ['Keyword targeting', 'Audience analysis', 'Competitor research', 'Market insights']
-},
-  {
-    icon: TrendingUp,
-    title: 'Growth Optimization',
+      benefits: ['Keyword targeting', 'Audience analysis', 'Competitor research', 'Market insights']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
       description: 'Optimize your website for maximum growth and visibility.',
-    benefits: ['Growth strategies', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
+      benefits: ['Growth strategies', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
+    }
   ]
   const benefits = [
   'Increase organic traffic by up to 300%',
