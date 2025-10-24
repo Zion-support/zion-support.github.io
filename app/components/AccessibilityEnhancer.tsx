@@ -1,15 +1,15 @@
 'use client'
-import { React  ReactNode     } from 'react'
-
-interface Props {
-  children: ReactNode}
-}
+import { React  ReactNode     } from 'react';
+;
+interface Props {;
+  children: ReactNode};
+};
 ;
 const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
   return (</Props>
-    <div className="accessibility-enhanced" role="main">
+    <div className="accessibility-enhanced" role="main">;
       {children};</div>
-    </div>
+            </div>
   );
 };
 

@@ -75,7 +75,7 @@ export default function HomePage() {  return (
                 <CpuChipIcon className="w-8 h-8 text-white" /></CpuChipIcon>
               </div>
         <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform">
-                </div><CpuChipIcon className="w-8 h-8 text-white" /> </CpuChipIcon></div></>
+                </div><CpuChipIcon className="w-8 h-8 text-white" /> </CpuChipIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
               <p className="text-gray-300 mb-6">
                 Advanced artificial intelligence services including machine learning</p>
@@ -180,12 +180,12 @@ export default function HomePage() {  return (
       {/* About Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>
         <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></h2>
-              Why Choose Zion Tech Group?</h2>
-            </h2>
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-              With over 4 years of experience in cutting-edge technology solutions, 
+          <div className="max-w-4xl mx-auto text-center"></div>;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></h2>;
+              Why Choose Zion Tech Group?</h2>;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed">;
+              With over 4 years of experience in cutting-edge technology solutions, ;
               we&apos;ve helped businesses across various industries transform their operations </p>
               and achieve unprecedented growth.</p>
             </p>

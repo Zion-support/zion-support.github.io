@@ -1,10 +1,11 @@
-'use client'
+'use client';
+import React from 'react';
 
-import { Link from 'next/link'
-import { usePathname   } from 'next/navigation'
-import React   } from 'react'
-
-const Breadcrumb: React.FC = () => {
+import { Link from 'next/link';
+import { usePathname   } from 'next/navigation';
+import React   } from 'react';
+;
+const Breadcrumb: React.FC = () => {;
   const pathname = usePathname();
   const pathnames = pathname.split('/').filter((x) => x);
   

@@ -30,7 +30,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
   ];
 
 export default EnhancedLoadingSkeletonPage;

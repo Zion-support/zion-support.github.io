@@ -1,6 +1,6 @@
-import { React  Component ReactNode ErrorInfo  from 'react'
-
-interface Props {
+import { React  Component ReactNode ErrorInfo  from 'react';
+;
+interface Props {;
   children: ReactNode;
 }
 
@@ -172,7 +172,7 @@ class ErrorBoundary extends Component<Props, State> {
 }export default ErrorBoundaryPage
 error?: Error
 errorInfo?: ErrorInfo}
-class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {,
+class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {,;
 super(props);,
 this.state = {
  hasError: false,

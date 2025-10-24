@@ -1,3 +1,4 @@
+import React from 'react';
 import React, { createContext, useContext, useEffect, ReactNode } from "react"
 declare global {
   interface Window {
@@ -9,13 +10,13 @@ declare global {
 interface AnalyticsContextType {
 
 
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void,
-
-}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined
-export const useAnalytics = () => {
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string) => void,;
+;
+};
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
+  undefined;
+export const useAnalytics = () => {;
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
@@ -32,7 +33,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true
+        script.async = true;
         document.head.appendChild(script);
         window.gtag =
           window.gtag ||
@@ -54,7 +55,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
     page_location: window.location.href})}
   constvalue: AnalyticsContextType = {,
 trackEvent,
-    trackPageView
+    trackPageView;
 };
   return (
     <AnalyticsContext.Provider value={value}></AnalyticsContext>

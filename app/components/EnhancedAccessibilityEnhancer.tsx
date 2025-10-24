@@ -28,7 +28,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    };
   ];
 
   const benefits = [
@@ -36,7 +36,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology';
   ];
 
   return (
@@ -53,9 +53,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         <section className="relativepy-20px-4overflow-hidden"></section>
           <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
         <div className="relativemax-w-7xlmx-autotext-center">
-            <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
-            Enhanced Accessibility Enhancer
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">Enhanced Accessibility Enhancer</h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
             Advanced Enhanced Accessibility Enhancer solution for modern businesses.
             </p>
@@ -118,7 +116,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
 
 export default EnhancedAccessibilityEnhancerPage        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         </div>
@@ -127,7 +124,7 @@ export default EnhancedAccessibilityEnhancerPage        <section className="py-2
             </p></div>
         <div className="grid grid-cols-1 mdgrid-cols-2 gap-6">benefitsmapbenefit index => 
               </div>
-        <div key=index className=quotflex items-start space-x-3quot> </div></div></><CheckCircle className=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0quot /> </CheckCircle><p className=quottext-gray-300 text-lgquot>benefit</p></p>
+        <div key=index className=quotflex items-start space-x-3quot> </div></div><CheckCircle className=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0quot /> </CheckCircle><p className=quottext-gray-300 text-lgquot>benefit</p></p>
               </div>
             
           </div>

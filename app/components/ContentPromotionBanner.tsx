@@ -2,7 +2,7 @@
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import Footer from '../components/Footer'
 
 const ContentPromotionBanner: React.FC = () => {
   return (
@@ -77,13 +77,13 @@ const ContentPromotionBanner: React.FC = () => {
               Join thousands of businesses already using ContentPromotionBanner to transform their operations.</p>
             </p>
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
-              Start Your Free Trial</button>
-            </button>
-          </div>
-        </section>
-      </div>
-      <Footer /></Footer>
-    </>
+              Start Your Free Trial</button>;
+            </button>;
+          </div>;
+        </section>;
+      </div>;
+      <Footer /></Footer>;
+    </>;
   );
 };
 

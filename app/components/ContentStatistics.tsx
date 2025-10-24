@@ -3,7 +3,7 @@ import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import  ArrowRight Brain BarChart Target TrendingUp  from 'lucide-react'
 import Navigation from '/components/Navigation'
-import Footer from '/components/Footer'
+import Footer from '../components/Footer'
 import  CheckCircle ArrowRight Star Clock Zap Shield Brain BarChart Target TrendingUp Globe Database Users Settings     } from 'lucide-react'
 const ContentStatistics ReactFC =  =>     const steps = 60 const stepDuration = duration / steps const interval = setInterval => 
 const steps = 60 const stepDuration = duration / steps const interval = setInterval =>         
@@ -25,13 +25,13 @@ const ContentStatistics: React.FC = () => {
 
     clients: 1000,
     projects: 500
-    satisfactio,
-  n: 99,
-    years: 10
-    countrie,
-  s: 25,
-    uptime: 99.9}
-  useEffect(() => {
+    satisfactio,;
+  n: 99,;
+    years: 10;
+    countrie,;
+  s: 25,;
+    uptime: 99.9};
+  useEffect(() => {;
     const duration = 2000;
     const steps = 60;
     const stepDuration = duration / steps;
@@ -50,7 +50,7 @@ const ContentStatistics: React.FC = () => {
               target
             allComplete = false)
         })
-        if (allComplete) {
+        if (allComplete) {;
           clearInterval(interval);
         return newCounters
       })
@@ -211,7 +211,7 @@ const ContentStatistics: React.FC = () => {
         <div className="grid md grid-cols-2 lggrid-cols-4 gap-8">
             featuresmapfeature index => 
                 </div>
-        <div key=index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div></div></><featureicon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
+        <div key=index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div></div><featureicon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
                   <p className="text-gray-300 mb-4">featuredescription</p></p>
                   <ul className="space-y-2">featurebenefitsmapbenefit idx => 
                       </ul><li key=idx className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />benefit</CheckCircle></li>
@@ -231,7 +231,7 @@ const ContentStatistics: React.FC = () => {
         <div className="grid md grid-cols-2 lggrid-cols-3 gap-8">
             benefitsmapbenefit index => 
                 </div>
-        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>          
+        <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>          
         </div>
       </div>
     </section>,
@@ -341,11 +341,11 @@ constachievements= [
     icon: Rocket,
     title: 'Growth Rate',
       description: 'Year-over-year business growth',
-    value: '30 0%'}
+    value: '30 0%'};
 ];
 useEffect(() => {constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps
 consttimers= Object.keys(targetCounters).map((key) => {
-consttarget= targetCounters[key as keyof type of targetCounters]
+consttarget= targetCounters[key as keyof type of targetCounters];
 constduration=2000; // 2secondsconstincrement= target / (duration /16) //60fps
 return setInterva l(() => {
 setCounters(prev=> {
@@ -492,7 +492,7 @@ View Case Studies
 </div>
 </div>
 )
-=======
+=======;
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-996d
 };
@@ -593,7 +593,7 @@ constcurrent="prevkey" as keyof type of prev ifcurrent< target return (prev key 
         </div>
         <div className="text-center mb-16"> </div></div><h2 className="text-3xl md text-4xl font-bold text-white mb-4">
 Our Impact in Numbers</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">See how we've transformed businesses and delivered exceptional results</p></p><div/ Header /</div></div>
-        <div className="text-center mb-16"> </div></div></><h2 className="text-3xl md text-4xl font-bold text-white mb-6">
+        <div className="text-center mb-16"> </div></div><h2 className="text-3xl md text-4xl font-bold text-white mb-6">
 Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers</h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">See how we've helped businesses transform with our AI and IT solutions</p></p>p>
 </div>
@@ -601,11 +601,11 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 <><div className="grid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-8 mb-16">statisticsmapstat index => </div></div>
         <div key=index className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">
         </div>
-        <div className="flex justify-center mb-4"> </div></div></><><div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center">
+        <div className="flex justify-center mb-4"> </div></div><><div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center">
 </div></div><staticon className="h-8 w-8 text-white" />
 </stat></div>
 </div>
-        <div className=text-3xl font-bold statcolor mb-2>Mathfloorstatvaluestatsuffix</div></div></>div>
+        <div className=text-3xl font-bold statcolor mb-2>Mathfloorstatvaluestatsuffix</div></div>div>
 <><div className="text-gray-300">statlabel</div></div>
 </div>
 
@@ -613,18 +613,18 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 / Achievements /
 <div className="grid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-8">achievementsmapachievement index => </div></div>
         <div key=index className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover bg-white/10 transition-all duration-300">
-</div></div></><><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4"> </div></div><achievementicon className="h-6 w-6 text-white" />
+</div></div><><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4"> </div></div><achievementicon className="h-6 w-6 text-white" />
 </achievement></div>
 <h3 className="text-xl font-semibold text-white mb-2">achievementtitle</h3>
 <p className="text-gray-300 text-sm">achievementdescription</p></p>
 </div>
         <div className="grid grid-cols-1 mdgrid-cols-2 lggrid-cols-3 gap-8 mb-16">statisticsmapstat index => </div></div>
         <div key=index className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover bg-white/10 transition-all duration-300">
-</div></div></><><div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4"> </div></div><staticon className="w-8 h-8 text-slate-900" />
+</div></div><><div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4"> </div></div><staticon className="w-8 h-8 text-slate-900" />
 </stat></div>
-        <div className=text-4xl font-bold statcolor mb-2>statvaluestatsuffix</div></div></>div>
+        <div className=text-4xl font-bold statcolor mb-2>statvaluestatsuffix</div></div>div>
 <><div className="text-lg font-semibold text-white mb-2">statlabel</div></div>
-        <div className="text-gray-400 text-sm">statdescription</div></div></>
+        <div className="text-gray-400 text-sm">statdescription</div></div>
 </div>
 
 </div>
@@ -635,16 +635,16 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div></div><h3 className="text-2xl font-bold text-white mb-4">Key Features</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the powerful features that make our solutions stand out</p></p>p>
 </div>
-        <div className="grid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-8">featuresmapfeature index => </div></div></>
+        <div className="grid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-8">featuresmapfeature index => </div></div>
 <><div key=index className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover bg-white/10 transition-all duration-300">
 </div></div>
-        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4"> </div></div></><featureicon className="w-6 h-6 text-white" />
+        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4"> </div></div><featureicon className="w-6 h-6 text-white" />
 </feature></div>
 <h4 className="text-lg font-semibold text-white mb-3">featuretitle</h4>
 <p className="text-gray-300 text-sm mb-4">featuredescription</p></p>
 <><div className="space-y-2">featurestatsmapstat statIndex => </div></div>
         <div key=statIndex className="flex items-center text-gray-300 text-sm">
-</div></div></><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+</div></div><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 </CheckCircle><span>stat</span>
 </div>
 
@@ -660,10 +660,10 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div></div><h3 className="text-2xl font-bold text-white mb-4">Our Achievements</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Recognition and milestones that showcase our commitment to excellence</p></p>p>
 </div>
-        <div className="grid grid-cols-1 mdgrid-cols-3 gap-8">achievementsmapachievement index => </div></div></>
+        <div className="grid grid-cols-1 mdgrid-cols-3 gap-8">achievementsmapachievement index => </div></div>
 <><div key=index className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover bg-white/10 transition-all duration-300">
 </div></div>
-        <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"> </div></div></><achievementicon className="w-8 h-8 text-white" />
+        <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"> </div></div><achievementicon className="w-8 h-8 text-white" />
 </achievement></div>
 <><div className="text-3xl font-bold text-white mb-2">achievementvalue</div></div>
 <h4 className="text-lg font-semibold text-white mb-2">achievementtitle</h4>
@@ -679,7 +679,7 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div></div><h3 className="text-2xl font-bold text-white mb-4">Why Choose Us</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the advantages that make our solutions the preferred choice</p></p>p>
 </div>
-        <div className="grid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-6">benefitsmapbenefit index => </div></div></>
+        <div className="grid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-6">benefitsmapbenefit index => </div></div>
 <div key=index className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover bg-white/10 transition-all duration-300">
 </div></div><CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
 </CheckCircle><span className="text-gray-300">benefit</span>
@@ -702,5 +702,5 @@ View Case Studies</button></div>
 </div>
 </div>
 </div>
-
+;
 export default ContentStatistics }

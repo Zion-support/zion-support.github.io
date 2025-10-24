@@ -22,11 +22,10 @@ export default function OptimizedLoading() {
   r:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           ></Link>
             Contact Us</Link>
-            <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
-          </Link>
+            <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>;
+          </Link>;
+        </div>;
+      </div>;
         </div>
-      </div>
-    </div>
-    </div>
   );
 }

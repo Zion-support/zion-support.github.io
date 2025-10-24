@@ -1,8 +1,9 @@
-'use client'
-import { { { useState  from 'react'
-import  MessageSquare Mail Phone Send CheckCircle           } from 'lucide-react'
-
-interface FormData {
+'use client';
+import React from 'react';
+import { { { useState  from 'react';
+import  MessageSquare Mail Phone Send CheckCircle           } from 'lucide-react';
+;
+interface FormData {;
   name: string;
   email: string;
   phone: string;
@@ -19,7 +20,7 @@ const ContactForm: React.FC = () => {
     phone: '',
     company: '',
     message: '',
-    service: ''
+    service: '';
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,7 +28,7 @@ const ContactForm: React.FC = () => {
 </FormData>
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formData,
+      ...formData,;
       [e.target.name]: e.target.value);
     });
   };
@@ -60,7 +61,7 @@ const ContactForm: React.FC = () => {
     'Cloud Migration',
     'Cybersecurity',
     'Data Analytics',
-    'DevOps',
+    'DevOps',;
     'Consulting';
   ];
 
@@ -73,7 +74,6 @@ const ContactForm: React.FC = () => {
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       </div>
-    </>
   );
   }
 
@@ -218,7 +218,7 @@ handleChange
           )}
         </button>
       </form>
-    </div>
+            </div>
   );
 };
 

@@ -34,7 +34,7 @@ const EnhancedHero: React.FC = () => {
                   </div>
         <div className="flex-shrink-0">
                     </div><CheckCircle className="w-6 h-6 text-emerald-400" />
-                  </div></>
+                  </div>
                   <p className="text-gray-300">benefit</p></p>
                 </div>
               
@@ -51,12 +51,11 @@ const EnhancedHero: React.FC = () => {
             <button className="bg-emerald-600 hoverbg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               Start Your Free Trial</button>
           </div>
-        </section>
-      </div>
-    </>
-
-export default EnhancedHero    'Gain competitive advantage with advanced technology'
-            <div className=quotflex flex-col sm flex-row gap-4 justify-centerquot>
-            </div></div></div>
-          </div>
+        </section>;
+      </div>;
+;
+export default EnhancedHero    'Gain competitive advantage with advanced technology';
+            <div className=quotflex flex-col sm flex-row gap-4 justify-centerquot>;
+            </div></div></div>;
+          </div>;
 }

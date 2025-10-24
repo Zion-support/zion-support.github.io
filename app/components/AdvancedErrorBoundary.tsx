@@ -1,3 +1,4 @@
+import React from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 import { Mail } from 'lucide-react';
@@ -12,7 +13,7 @@ interface State {
   errorId?: string,
 class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)}
+    super(props)};
     this.state = { hasError: false};
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorRepor,
@@ -27,7 +28,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       errorInfo)
 })
     // Call custom error handler if provided
-    if (this.props.onError) {
+    if (this.props.onError) {;
       this.props.onError(error, errorInfo);
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {

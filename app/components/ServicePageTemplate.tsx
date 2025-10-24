@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 import { Helmet } from "react-helmet-async"
 "use client&quot
 const ServicePageTemplatePage: React.FC = () => {
@@ -45,12 +45,12 @@ const ServicePageTemplatePage: React.FC = () => {
         <div className="container mx-auto max-w-6xl"></div>
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">ServicePageTemplate</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional ServicePageTemplate services tailored to your business needs.</p>p>
-          </div>
-        </div>
-      </section>
-    </div>
-<<<<<<< HEAD
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional ServicePageTemplate services tailored to your business needs.</p>p>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+<<<<<<< HEAD;
     </div>
   );,
   ),

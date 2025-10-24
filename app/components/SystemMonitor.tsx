@@ -16,13 +16,13 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
   return (</SystemMonitorProps>
     <>
     
-  </>
-      <Helmet></Helmet>
-        <title>SystemMonitor</title>
-        <meta name="description" content="Advanced SystemMonitor solution for modern businesses." /></meta>
-        <meta name="keywords" content="AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation" /></meta>
-      </Helmet>
-      <Navigation /></Navigation>
+  </>;
+      <Helmet></Helmet>;
+        <title>SystemMonitor</title>;
+        <meta name="description" content="Advanced SystemMonitor solution for modern businesses." /></meta>;
+        <meta name="keywords" content="AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation" /></meta>;
+      </Helmet>;
+      <Navigation /></Navigation>;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">;</div>
             {/* Hero Section */};</div>
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -93,7 +93,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+        <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
                 </div>
               
             </div>

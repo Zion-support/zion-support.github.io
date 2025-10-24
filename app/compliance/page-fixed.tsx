@@ -99,7 +99,7 @@ const PageFixedPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <Footer /></Footer>;
 </>;
   );
 };

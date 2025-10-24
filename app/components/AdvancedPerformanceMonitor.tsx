@@ -142,7 +142,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <Footer /></Footer>;
 </>;
   );
 };

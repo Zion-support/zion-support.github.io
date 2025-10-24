@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';;
 import React, { useEffect, useCallback, useState } from 'react';
 interface PerformanceMetrics {
 
@@ -34,7 +35,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   const measureWebVitals = useCallback(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
       // Measure Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
         setPerformanceMetrics(prev => ({
@@ -43,7 +44,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // Measure First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver((list) => {;
   const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
           const fid = (entry as any).processingStart - entry.startTime
@@ -52,11 +53,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             fid)
 })
         })
-      })
+      });
       fidObserver.observe({ entryTypes: ['first-input'] });
       // Measure Cumulative Layout Shift
       let clsValue = 0
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
           if (!(entry as any).hadRecentInput) {
@@ -69,7 +70,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       })
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       // Measure First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         entries.forEach(entry => {
           setPerformanceMetrics(prev => ({
@@ -83,7 +84,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return (
     // Service Worker registration
-    if ('serviceWorker' in navigator && enableServiceWorker) {
+    if ('serviceWorker' in navigator && enableServiceWorker) {;
       navigator.serviceWorker.register('/sw.js');
         .then((registration) => {
           // eslint-disable-next-line no-console
@@ -99,7 +100,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : input.url
       const cacheKey = `${url}-${JSON.stringify(init)}`
-      if (cache.has(cacheKey)) {
+      if (cache.has(cacheKey)) {;
         return cache.get(cacheKey);
       const response = await originalFetch(input, init);
       if (response.ok) {
@@ -130,7 +131,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       link.href = resource
       link.as = resource.endsWith('.woff2') ? 'font' : 'style'
       if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous'
+        link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     })
   }, [])
@@ -153,7 +154,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       })
   }, [performanceMetrics])
   useEffect(() => {
-    if (enableAdvancedCaching) {
+    if (enableAdvancedCaching) {;
       setupAdvancedCaching();
     if (enableImageOptimization) {
       optimizeImages();

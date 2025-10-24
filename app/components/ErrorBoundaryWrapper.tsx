@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';;
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -12,7 +13,7 @@ interface State {
 
 class ErrorBoundaryWrapper extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)}
+    super(props)};
     this.state = { hasError: false};
   static getDerivedStateFromError(error: Error): State {
     return { hasErro,
@@ -38,10 +39,9 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
             >
               Try Again</button>
             </button>
-          </div>
-        </div>
-      );
-    }
+            </div>
+  );
+}
 
     return this.props.children;
   }

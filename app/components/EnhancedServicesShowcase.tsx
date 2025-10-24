@@ -4,7 +4,7 @@ import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, U
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const EnhancedServicesShowcase: React.FC = () => {
+const EnhancedServicesShowcase: React.FC = () => {;
   const services = [;
 
 export default EnhancedServicesShowcase;

@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security' },
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image recognition' },
     { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
-    { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' }
+    { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' },
   ];
 
   const itServices = [
@@ -25,28 +25,28 @@ const Footer: React.FC = () => {
     { name: 'DevOps', url: '/devops', description: 'Development operations' },
     { name: 'Data Analytics', url: '/data-analytics', description: 'Data insights' },
     { name: 'IoT Solutions', url: '/iot-solutions', description: 'Internet of Things' },
-    { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' }
+    { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' },
   ];
 
   const company = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
-    { name: 'Contact', url: '/contact' }
+    { name: 'Contact', url: '/contact' },
   ];
 
   const resources = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api' },
     { name: 'Blog', url: '/blog' },
-    { name: 'Case Studies', url: '/case-studies' }
+    { name: 'Case Studies', url: '/case-studies' },
   ];
 
   const legal = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
-    { name: 'GDPR Compliance', url: '/gdpr' }
+    { name: 'GDPR Compliance', url: '/gdpr' },
   ];
 
   return (

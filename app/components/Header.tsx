@@ -27,7 +27,7 @@ const features = [
     title: "Automation",
     description: "Streamline your business processes",
     benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"]
-  }
+  };
 ];
 
 const benefits = [
@@ -36,7 +36,7 @@ const benefits = [
   "Scale your business with cloud solutions",
   "Make data-driven decisions with analytics",
   "Enhance security with advanced monitoring",
-  "Improve customer experience with AI"
+  "Improve customer experience with AI";
 ];
 
 const Header: React.FC = () => {
@@ -48,9 +48,7 @@ const Header: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
             <div className="relative max-w-7xl mx-auto text-center">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                Header
-              </h1>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Header</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Advanced Header solution for modern businesses.
               </p>
@@ -109,7 +107,7 @@ const Header: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+        <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
                 </div>
               
             </div>
@@ -134,6 +132,6 @@ const Header: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </header>
+    </header>;
   );
 };

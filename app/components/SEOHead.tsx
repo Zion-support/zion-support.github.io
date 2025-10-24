@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
-
-interface SEOHeadProps {
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import Navigation  } from '/components/Navigation';
+import Footer from '../components/Footer';
+;
+interface SEOHeadProps {;
   title?: string;
   description?: string;
   keywords?: string;
@@ -97,7 +97,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
       </div>
       <Footer /></Footer>
     </>
-
+;
   );
 }  )}
 export default SEOHead

@@ -17,7 +17,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
         <meta name="keywords" content="AI, artificial intelligence, SEOEnhancer, AI solutions, intelligent automation" /></meta>
       </Helmet>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>;
             {/* Hero Section */};</div>
         <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
@@ -120,7 +120,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+        <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
                 </div>
               
             </div>

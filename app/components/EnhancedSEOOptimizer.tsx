@@ -30,7 +30,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    };
   ];
 
   const benefits = [
@@ -38,7 +38,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology';
   ];
 
   return (
@@ -53,9 +53,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Enhanced SEO Optimizer
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Enhanced SEO Optimizer</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Advanced SEO optimization tools powered by AI that maximize your search engine
                 visibility and drive organic traffic to your website.

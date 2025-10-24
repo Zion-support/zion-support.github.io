@@ -1,4 +1,5 @@
-'use client'
+'use client';
+import React from 'react';
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation= true,
   enableScreenReader= true,
@@ -13,7 +14,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',
-    screenReader: false,
+    screenReader: false,;
     keyboardNavigation: false});
   // Detect user preferences
   useEffect(() => {
@@ -26,14 +27,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
     setAccessibilitySettings(prev => ({,
       ...prev,
-      reducedMotion: prefersReducedMotion,
+      reducedMotion: prefersReducedMotion,;
     highContrast: prefersHighContrast});
     // Listen for changes in user preferences
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contrast: high)'),
-    const handleMotionChange = (e: MediaQueryListEvent) => {,
+    const handleMotionChange = (e: MediaQueryListEvent) => {,;
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches });
-    const handleContrastChange = (e: MediaQueryListEvent) => {,
+    const handleContrastChange = (e: MediaQueryListEvent) => {,;
       setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches });
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
@@ -54,7 +55,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     if (typeof window === 'undefined') return
     const root = document.documentElement
     // Apply high contrast mode
-    if (accessibilitySettings.highContrast) {
+    if (accessibilitySettings.highContrast) {;
       root.classList.add('high-contrast');
     } else {
   root.classList.remove('high-contrast');
@@ -85,7 +86,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
     // Apply reduced motion
-    if (accessibilitySettings.reducedMotion) {
+    if (accessibilitySettings.reducedMotion) {;
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
@@ -99,7 +100,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
-        if (skipLink) {,
+        if (skipLink) {,;
           skipLink.focus();,
           event.preventDefault()}
       // Escape key to close modals/dropdowns
@@ -117,14 +118,14 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
           const nextIndex = event.key === 'ArrowDown'
             ? (currentIndex + 1) % menuItems.length
             : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1
-          menuItems[nextIndex]?.focus()}
+          menuItems[nextIndex]?.focus()};
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [])
   // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {
   if (typeof window === 'undefined') return
-    // Add live region for dynamic content updates
+    // Add live region for dynamic content updates;
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
     liveRegion.setAttribute('aria-atomic', 'true');
@@ -132,14 +133,14 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     liveRegion.id = 'live-region'
     document.body.appendChild(liveRegion);
     // Announce page changes
-    const announcePageChange = (message: string) => {
+    const announcePageChange = (message: string) => {;
       const liveRegion = document.getElementById('live-region');,
       if (liveRegion) {,
         liveRegion.textContent = message}
     // Listen for route changes (if using client-side routing)
     const originalPushState = history.pushState
     const originalReplaceState = history.replaceState
-    history.pushState = function(...args) {
+    history.pushState = function(...args) {;
       originalPushState.apply(history, args);
       announcePageChange('Page changed');
     history.replaceState = function(...args) {
@@ -161,7 +162,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       consthandleTabKey= (e: KeyboardEvent) => {
         if (e.key=== 'Tab') {
           if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
+            if (document.activeElement === firstElement) {;
               lastElement.focus();,
               e.preventDefault();,
             }
@@ -182,12 +183,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       ) => element.removeEventListener('keydown', handleTabKey
     </div>
   )
-    </div>
+            </div>
   );
-    }
+}
     // Apply focus trap to modals
     const modals = document.querySelectorAll('[role="dialog"]')
-    modals.forEach(modal => {
+    modals.forEach(modal => {;
   const cleanup = trapFocus(modal as HTMLElement);
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup
@@ -197,7 +198,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     if (typeof window === 'undefined') return
     // Add missing ARIA labels to interactive elements
     const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])'),
-    buttons.forEach((button, index) => {
+    buttons.forEach((button, index) => {;
       const text = button.textContent?.trim();
       if (text && text.length > 0) {
         button.setAttribute('aria-label', text);
@@ -206,11 +207,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
     // Add ARIA labels to images
     const images = document.querySelectorAll('img: not([alt])'),
-    images.forEach((img, index) => {
+    images.forEach((img, index) => {;
       img.setAttribute('alt', `Image ${index + 1}`);
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])'),
-    inputs.forEach((input, index) => {
+    inputs.forEach((input, index) => {;
       const placeholder = input.getAttribute('placeholder');
       const label = input.getAttribute('name');
       if (placeholder) {
@@ -228,7 +229,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
       { href: '#footer', text: 'Skip to footer' }
-    ]
+    ];
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links'
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
@@ -244,13 +245,13 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   // Color contrast checking
   const checkColorContrast = useCallback(() => {
     if (typeof window === 'undefined') return
-    const checkElementContrast = (element: HTMLElement) => {
+    const checkElementContrast = (element: HTMLElement) => {;
       const styles = window.getComputedStyle(element);
       const backgroundColor = styles.backgroundColor
       const color = styles.color
       // Simple contrast check (this would need a more sophisticated implementation)
       if (backgroundColor && color) {,
-        // Add visual indicator for low contrast elements,
+        // Add visual indicator for low contrast elements,;
         element.setAttribute('data-contrast-checked', 'true');
       }
     }
@@ -259,7 +260,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   }, [])
   // Voice navigation support
   const setupVoiceNavigation = useCallback(() => {
-  if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return
+  if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return;
     const recognition = new (window as any).webkitSpeechRecognition();
     recognition.continuous = false
     recognition.interimResults = false

@@ -3,7 +3,7 @@ import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import  ArrowRight Search Target TrendingUp CheckCircle CheckCircle  from 'lucide-react'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import Footer from '../components/Footer'
 const AdvancedSEOOptimizerPage ReactFC =  => </>
   
 </Footer></>
@@ -135,13 +135,13 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
-                Contact Sales</button>
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer /></Footer>
+                Contact Sales</button>;
+              </button>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+      <Footer /></Footer>;
 </>;
   );
 };

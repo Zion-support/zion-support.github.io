@@ -47,13 +47,13 @@ export default function AboutPage() {
     {
       name: 'Emily Rodriguez',
     role: 'Lead AI Engineer',
-    description: 'Machine learning expert focused on developing cutting-edge AI solutions.'}
-  ]
-  return (
-    <>
-    
-  </>
-      <Helmet></Helmet>
+    description: 'Machine learning expert focused on developing cutting-edge AI solutions.'};
+  ];
+  return (;
+    <>;
+    ;
+  </>;
+      <Helmet></Helmet>;
         <title>About Us - Zion Tech Group</title>;
         <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and expertise in AI and IT solutions. Discover our team and company culture." /></meta>
         <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" /></meta>
@@ -105,7 +105,7 @@ export default function AboutPage() {
           <pFounded in 2020 Zion Tech Group emerged from a vision to democratize advanced technology and make AI and IT solutions accessible to businesses of all sizes Our journey began when our founder Kleber Santos recognized the growing gap between cutting-edge technology and practical business implementation</p>
                 </p><pToday weaposve grown into a trusted partner for organizations worldwide helping them navigate the complex landscape of digital transformation while maintaining focus on security scalability and innovation</p>
               </p></div>
-        <div> </div></div></><pOur team combines deep technical expertise with real-world business understanding ensuring that every solution we deliver not only meets technical requirements but also drives tangible business value</p>
+        <div> </div></div><pOur team combines deep technical expertise with real-world business understanding ensuring that every solution we deliver not only meets technical requirements but also drives tangible business value</p>
                 </p><pWe believe in the power of technology to solve complex problems and create opportunities for growth efficiency and innovation across all industries</p>
               </p></div>
             </div>
@@ -129,9 +129,8 @@ export default function AboutPage() {
             {value.description}
           </p>
                   </div>
-    </>
   );
-              })}
+})}
             </div>
           </div>
           {/* Team Section */}

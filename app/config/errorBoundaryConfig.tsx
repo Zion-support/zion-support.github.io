@@ -53,7 +53,7 @@ default: 'Something went wrong. Please try again.',
 notFound: 'The requested resource was not found.',
     timeout: 'Request timed out. Please try again.',
 serverError: 'Server error occurred. Please try again later.',
-    validation: 'Validation error. Please check your input.',
+    validation: 'Validation error. Please check your input.',;
 };
 /**
 * Get error boundary configuration based on environment
@@ -166,9 +166,7 @@ function NotFoundFallback(): JSX.Element {
 return (
     <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
 <div className="max-w-mdw-fulltext-center"></div>
-<h1 className="text-6xlfont-boldtext-gray-900">
-            404
-          </h1>
+<h1 className="text-6xlfont-boldtext-gray-900">404</h1>
 <h2 className="mt-4 text-2xlfont-boldtext-gray-900">Page Not Found</h2>
 <p className="mt-2text-gray-600">
             The page you're looking for doesn't exist or has been moved.

@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';;
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
@@ -16,7 +17,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
     document.title = title
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
+    if (metaDescription) {;
       metaDescription.setAttribute('content', description);
     } else {
       const meta = document.createElement('meta');
@@ -26,7 +27,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
   ]
     // Update keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]')
-    if (metaKeywords) {
+    if (metaKeywords) {;
       metaKeywords.setAttribute('content', keywords.join(', ');
     } else {
       const meta = document.createElement('meta');
@@ -45,7 +46,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
     // Update Open Graph tags
     const updateOGTag = (property: string, content: string) => {
       let ogTag = document.querySelector(`meta[property="${property}"]`)
-      if (ogTag) {
+      if (ogTag) {;
         ogTag.setAttribute('content', content);
       } else {
         ogTag = document.createElement('meta');
@@ -60,7 +61,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
     // Update Twitter Card tags
     const updateTwitterTag = (name: string, content: string) => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`)
-      if (twitterTag) {
+      if (twitterTag) {;
         twitterTag.setAttribute('content', content);
       } else {
         twitterTag = document.createElement('meta');

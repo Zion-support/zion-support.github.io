@@ -1,7 +1,7 @@
-import { React  useEffect useState useRef  from 'react'
-import  useIntersectionObserver     } from '/hooks/useIntersectionObserver'
-
-interface AnimatedCounterProps {
+import { React  useEffect useState useRef  from 'react';
+import  useIntersectionObserver     } from '/hooks/useIntersectionObserver';
+;
+interface AnimatedCounterProps {;
   end: number;
   duration?: number;
   suffix?: string;
@@ -15,11 +15,11 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   suffix = '',
   prefix = '',
   className = ''
-}) => {
+}) => {;
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({
-    threshold: 0.5)
+    threshold: 0.5);
   });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     let startTime: number;
     let animationFrame: number;
     
-    const animate = (currentTim,
+    const animate = (currentTim,;
   e: number) => {;
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);

@@ -26,9 +26,7 @@ const Navigation = () => {
           </div>
           
           {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Page Not Found
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you're looking for seems to have vanished into the digital void. Don't worry, even our AI can't predict everything!
           </p>
@@ -109,7 +107,6 @@ const Navigation = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
