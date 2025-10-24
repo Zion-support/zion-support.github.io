@@ -8,37 +8,41 @@ import {
   RocketLaunchIcon,
   HeartIcon,
   ArrowRightIcon,
-  StarIcon
+  StarIcon,
+  TagIcon,
+  UsersIcon,
+  TrophyIcon,
+  BoltIcon
 } from '@heroicons/react/24/outline';
 export default function AboutPage() {
   const values = [
     {
-      icon: Target,
+      icon: TagIcon,
       title: 'Mission-Driven',
       description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'
     },
     {
-      icon: Users,
+      icon: UsersIcon,
       title: 'Client-Focused',
       description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'
     },
     {
-      icon: Award,
+      icon: TrophyIcon,
       title: 'Excellence',
       description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'
     },
     {
-      icon: Lightbulb,
+      icon: LightBulbIcon,
       title: 'Innovation',
       description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'
     },
     {
-      icon: Shield,
+      icon: ShieldCheckIcon,
       title: 'Integrity',
       description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
     },
     {
-      icon: Zap,
+      icon: BoltIcon,
       title: 'Agility',
       description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'
     }

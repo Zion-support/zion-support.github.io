@@ -3,8 +3,7 @@
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
  */
-import React from 'react';
-import { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -258,7 +257,7 @@ export const initializePerformanceEnhancements = () => {
   optimizeScrollPerformance();
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
-  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
+  if (metrics && process.env['NODE_ENV'] === 'development') {
     // console.log('Performance metrics:', metrics)
   }
 };
