@@ -22,6 +22,7 @@ export default function NotFound() {
             Page Not Found
           </h2>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b820
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2b3c
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you're looking for seems to have vanished into the digital void. Don't worry, even our AI can't predict everything!
           </p>

@@ -47,7 +47,7 @@ export default function HomePage() {
         "Real-time Reporting"
       ]
     }
-  ]
+  ];
 
   const benefits = ['Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',

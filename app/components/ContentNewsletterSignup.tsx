@@ -44,6 +44,7 @@ interface ContentNewsletterSignupProps {
     } catch (error) {// // console.error('Subscription error: ', error)
     } finally {}
       setIsSubmitting(false)
+      setIsLoading(false)
     }
   ];
 "
