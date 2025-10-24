@@ -1,44 +1,49 @@
 import React from 'react';
-import { Helmet } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-const $1: React.FC = () => {;
-  const pages = [];
-    { url: '/', title: 'Home', priority: '1.0' },
-    { url: '/about', title: 'About Us', priority: '0.8' },
-    { url: '/services', title: 'All Services', priority: '0.9' },
-    { url: '/ai-services', title: 'AI Services', priority: '0.9' },
-    { url: '/ai-marketing', title: 'AI Marketing', priority: '0.8' },
-    { url: '/ai-automation', title: 'AI Automation', priority: '0.8' },
-    { url: '/ai-healthcare', title: 'AI Healthcare', priority: '0.8' },
-    { url: '/ai-fintech', title: 'AI Fintech', priority: '0.8' },
-    { url: '/ai-data-analytics', title: 'AI Data Analytics', priority: '0.8' },
-    { url: '/ai-cybersecurity', title: 'AI Cybersecurity', priority: '0.8' },
-    { url: '/ai-workflow-automation', title: 'AI Workflow Automation', priority: '0.8' },
-    { url: '/ai-cloud-infrastructure', title: 'AI Cloud Infrastructure', priority: '0.8' },
-    { url: '/ai-ecommerce-solutions', title: 'AI E-commerce Solutions', priority: '0.8' },
-    { url: '/ai-mobile-app-development', title: 'AI Mobile App Development', priority: '0.8' },
-    { url: '/it-services', title: 'IT Services', priority: '0.8' },
-    { url: '/micro-saas', title: 'Micro SAAS', priority: '0.8' },
-    { url: '/cybersecurity', title: 'Cybersecurity', priority: '0.8' },
-    { url: '/quantum-computing', title: 'Quantum Computing', priority: '0.7' },
-    { url: '/autonomous-systems', title: 'Autonomous Systems', priority: '0.7' },
-    { url: '/business-intelligence', title: 'Business Intelligence', priority: '0.7' },
-    { url: '/blockchain-web3', title: 'Blockchain & Web3', priority: '0.7' },
-    { url: '/iot-edge-computing', title: 'IoT & Edge Computing', priority: '0.7' },
-    { url: '/enterprise', title: 'Enterprise Solutions', priority: '0.8' },
-    { url: '/case-studies', title: 'Case Studies', priority: '0.6' },
-    { url: '/team', title: 'Our Team', priority: '0.5' },
-    { url: '/contact', title: 'Contact Us', priority: '0.8' },
-    { url: '/blog', title: 'Blog', priority: '0.7' },
-    { url: '/guides', title: 'Technical Guides', priority: '0.6' },
-    { url: '/privacy', title: 'Privacy Policy', priority: '0.3' },
-    { url: '/terms', title: 'Terms of Service', priority: '0.3' }]
-  return ()
-        </div>
+const SitemappagePage: React.FC = () => {
+  return (
+    <>
+      <SEOOptimizer
+        title="Sitemap page - Zion Tech Group"
+        description="Professional sitemap page services and solutions"
+        keywords={['sitemap page', 'technology', 'solutions', 'services']}
+        canonicalUrl="https://ziontechgroup.com/sitemap-page"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="container mx-auto px-4 py-16 pt-24">
+          <section className="text-center mb-16">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Sitemap page
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Professional sitemap page services and solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all"
+                >
+                  Call +1 302 464 0950
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+        <Footer />
       </div>
-</>
-  )
-}
-export default SitemapPage;
+    </>
+  );
+};
+
+export default SitemappagePage;

@@ -1,58 +1,49 @@
 import React from 'react';
-import React from 'react';
-import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-constAIProjectManagerPage: React.FC= () =>{constfeatures= []
-    'AI-powered project planning and resource allocation',
-    'Intelligent timeline prediction and risk assessment',
-    'Smart task management with priority optimization',
-    'Real-time collaboration and team coordination',
-    'Predictive analytics for project success',
-    'Automated progress tracking and reporting',
-    'Budget optimization and cost forecasting',
-    'Integration with popular project management tools'
-  ]
-
-  const benefits = [];
-    '40% increase in project delivery speed',
-    '70% reduction in project delays',
-    '85% improvement in planning accuracy',
-    '30% cost reduction through optimization',
-    '95% team productivity boost',
-    '50% faster decision making'
-  ]
-
-  constpricing= [
-    {
-      plan: 'Starter',
-      price: '$19 9',
-      period: '/month',
-      features: ['Up to5projects', '10team members', 'Basic AI planning', 'Email support'],
-      popular: false
-   },
-    {plan: 'Professional',
-      price: '$39 9',
-      period: '/month',
-      features: ['Unlimited projects', '50team members', 'Advanced AI features', 'Priority support', 'Custom integrations'],
-      popular: true
-   },
-    {plan: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      features: ['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee'],
-      popular: false
-    }
-  ]
-
-const Page = () => {};
-  return ()
+const PagePage: React.FC = () => {
+  return (
+    <>
+      <SEOOptimizer
+        title="Page - Zion Tech Group"
+        description="Professional page services and solutions"
+        keywords={['page', 'technology', 'solutions', 'services']}
+        canonicalUrl="https://ziontechgroup.com/page"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="container mx-auto px-4 py-16 pt-24">
+          <section className="text-center mb-16">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Page
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Professional page services and solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all"
+                >
+                  Call +1 302 464 0950
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+        <Footer />
       </div>
-</>
-  )
+    </>
+  );
 };
-;
-export default Page;
+
+export default PagePage;

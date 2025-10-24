@@ -1,20 +1,49 @@
-"use client";
 import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-const App = () => {
+const AppPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          App
-        </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">
-            This page is under construction. Please check back later.
-          </p>
-        </div>
+    <>
+      <SEOOptimizer
+        title="App - Zion Tech Group"
+        description="Professional app services and solutions"
+        keywords={['app', 'technology', 'solutions', 'services']}
+        canonicalUrl="https://ziontechgroup.com/App"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="container mx-auto px-4 py-16 pt-24">
+          <section className="text-center mb-16">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                App
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Professional app services and solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all"
+                >
+                  Call +1 302 464 0950
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+        <Footer />
       </div>
-    </div>;
-  )};
+    </>
+  );
+};
 
-export default App
+export default AppPage;

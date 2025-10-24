@@ -1,80 +1,49 @@
-'use client'
-/**
- * Jest setup file for testing environment
- */
 import React from 'react';
-import '@testing-library/jest-dom';
-// Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder as any
-global.TextDecoder = TextDecoder as any
-// Suppress jsdom navigation warnings
-const originalConsoleError = console.error;
-console.error = (...args) => {}
-  const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') ||
-      message.includes('navigation (except hash changes)')) {}
-    return
-{  }
-  originalConsoleError(...args)
-{}
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {}
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({}
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-{  }))
-{})
-// Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
-// Mock localStorage
-const localStorageMock = {};
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn()
-{}
-Object.defineProperty(window, 'localStorage', {}
-  value: localStorageMock
-{})
-// Mock sessionStorage
-const sessionStorageMock = {};
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn()
-{}
-Object.defineProperty(window, 'sessionStorage', {}
-  value: sessionStorageMock
-{})
-// Mock fetch
-global.fetch = jest.fn()
-// Mock console methods for cleaner test output
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-console.warn = (...args) => {}
-    return
-{  }
-  _originalConsoleWarn(...args)
-{}
-console.info = (...args) => {}
-    return
-{  }
-  _originalConsoleInfo(...args)
-{}
-// Mock PerformanceObserver
-global.PerformanceObserver = class MockPerformanceObserver {}
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift']
-  constructor(public callback: PerformanceObserverCallback) {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {}
-    return []
-{  };
-{};
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+
+const SetupTestsPage: React.FC = () => {
+  return (
+    <>
+      <SEOOptimizer
+        title="SetupTests - Zion Tech Group"
+        description="Professional setuptests services and solutions"
+        keywords={['setuptests', 'technology', 'solutions', 'services']}
+        canonicalUrl="https://ziontechgroup.com/setupTests"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="container mx-auto px-4 py-16 pt-24">
+          <section className="text-center mb-16">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                SetupTests
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Professional setuptests services and solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all"
+                >
+                  Call +1 302 464 0950
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default SetupTestsPage;
