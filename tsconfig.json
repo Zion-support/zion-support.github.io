@@ -45,6 +45,9 @@
     "corrupted-src-backup/**/*",
     "problematic-files-backup/**/*",
     "problematic-pages/**/*",
-    "temp-pages/**/*"
+    "temp-pages/**/*",
+    "temp-all-problematic/**/*",
+    "temp-backup/**/*",
+    "temp-problematic/**/*"
   ]
 }
