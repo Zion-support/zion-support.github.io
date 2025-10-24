@@ -43,18 +43,15 @@ const ServiceCardSkeletonPage: React.FC = () =>{
   ]
 
 const ServiceCardSkeleton: React.FC = () => {
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>ServiceCardSkeleton</title>
         <meta name="description" content="Advanced ServiceCardSkeleton solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, ServiceCardSkeleton, AI solutions, intelligent automation" />
-      </Helmet>
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      <Navigation />
+      </Helmet>      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -145,9 +142,9 @@ const ServiceCardSkeleton: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
-    </>
-  );
+      <Footer />  );
 };
 
 export default ServiceCardSkeletonPage;
+
+};

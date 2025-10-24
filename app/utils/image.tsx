@@ -82,11 +82,13 @@ objectFit: 'cover'}
 })
 }
 if (hasError) {</ImageProps>
+const Component = () => {
+  
 return (</ImageProps>;}
-if (hasError) {}
+if (hasError) {};
 return (
     <div}
-if (hasError) {;}
+if (hasError) {;};
 return(<div}
 'use client'
 import React, { useState, useCallback } from 'react'
@@ -115,9 +117,9 @@ style={imageStyle}
 <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
 </div>
 )
-}
-return(<img
-return (<img></img>
+};
+return(<img;
+  return (<img></img>
 src={src}
 alt={alt}
 width={width}
@@ -132,3 +134,5 @@ onError={handleError}
 >)</img>
 }</img>
 export default Image</img>
+
+};

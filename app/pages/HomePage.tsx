@@ -12,6 +12,10 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
+const Page = () => {
+  
+const Page = () => {
+  
 export default function HomePage() {  return (
     <>
 
@@ -249,3 +253,4 @@ export default function HomePage() {  return (
     </>
   );
 }
+};

@@ -3,6 +3,8 @@ import { useCallback, useEffect, useRef } from 'react'
       document.documentElement.classList.toggle('high-contrast'
     mediaQuery.addEventListener('change'
     document.documentElement.classList.toggle('high-contrast'
+const Component = () => {
+  
     return () => mediaQuery.removeEventListener('change'
     if (typeof: window === 'undefined'
     const mediaQuery  = window.matchMedia('(prefers-reduced-motion: reduce)'
@@ -27,3 +29,4 @@ import { useCallback, useEffect, useRef } from 'react'
     skipLink.textContent = '
     skipLink.className = '
 import { useEffect } from '
+};

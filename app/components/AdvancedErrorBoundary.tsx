@@ -42,16 +42,12 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
     this.setState({
       error,
       errorInfo,
       errorId: this.generateErrorId()
     })
-    // Call custom error handler if provided
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-    if (this.props.onError) {
+    // Call custom error handler if provided    if (this.props.onError) {
       this.props.onError(error, errorInfo)
 
     // Log error to console in development
@@ -62,7 +58,6 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)
     }
-<<<<<<< HEAD
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo)
@@ -70,10 +65,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)
-    }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-  }
+    }  }
 
   logErrorToService = (error: Error, errorInfo: ErrorInfo) =</ {
     // You can integrate with services like Sentry, LogRocket, etc.
@@ -95,6 +87,8 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
 
   render() {
     if (this.state.hasError) {
+const Component = () => {
+  
       return (
         <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`}>
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
@@ -141,9 +135,11 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
         </div>
       )
     }
-
+;
     return this.props.children
   }
 }
 
 export default AdvancedErrorBoundary
+
+};

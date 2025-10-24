@@ -42,19 +42,16 @@ const ErrorHandlerPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
+;
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>ErrorHandler</title>
         <meta name="description" content="Advanced ErrorHandler solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, ErrorHandler, AI solutions, intelligent automation" />
-      </Helmet>
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      <Navigation />
+      </Helmet>      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -78,6 +75,7 @@ const ErrorHandlerPage: React.FC = () => {
     if (process.env.NODE_ENV=== 'production') {// You can integrate with services like Sentry, LogRocket, etc.
       this.logErrorToService(errorerrorInfo)
    }
+  };
   }
 
   logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
@@ -109,7 +107,7 @@ const ErrorHandlerPage: React.FC = () => {
       if (this.props.fallback) {
         return thi s.props.fallback
      }
-
+;
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
@@ -201,7 +199,7 @@ const ErrorHandlerPage: React.FC = () => {
             </butto></di></di></di>
       )
     }
-
+;
     return thi s.props.children
   }
 }
@@ -250,3 +248,5 @@ const ErrorHandlerPage: React.FC = () => {
 };
 
 export default ErrorHandlerPage;
+
+};

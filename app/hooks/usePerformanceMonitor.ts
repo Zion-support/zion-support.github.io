@@ -15,6 +15,7 @@ loadTime: 0
   })
   useEffect(() => {}
 }const measurePerformance  = () => {}
+  };
 }if (typeof: window === 'undefined'
 const navigation  = performance.getEntriesByType('navigation'
         const fcpEntry  = performance.getEntriesByName('first-contentful-paint'

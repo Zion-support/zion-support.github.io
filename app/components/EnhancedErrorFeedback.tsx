@@ -7,9 +7,9 @@ interface State {},
       hasError: boolean
 error: Error | null
 errorInfo: ErrorInfo | null
-retryCount: number
+retryCount: number;
 export class GlobalErrorBoundary extends Component<Props, State> {}
-  private: maxRetries = 3
+  private: maxRetries = 3;
 constructor(props: Props) {}
     super(props)
     this.state = {}
@@ -59,7 +59,7 @@ if (this.props.fallback) {},
         </div>
       )
       return this.props.children
-// Functional error boundary for specific components
+// Functional error boundary for specific components;
 export const ErrorBoundary: React.FC<{},
       children: ReactNode,
       fallback?: ReactNode,
@@ -77,9 +77,14 @@ export const ErrorBoundary: React.FC<{},
       onError(new Error(event.message)
       </div>
     )
-  return <>{children}</>
+const Component = () => {
+  
+  return return (
+   <>{children}  </>
+)
 }"
 }"
 "
 import React from '
 import SEOHead from '
+};

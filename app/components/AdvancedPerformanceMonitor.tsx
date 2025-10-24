@@ -19,7 +19,7 @@ interface PerformanceMetrics {}
     fmp: null,
     memory: null,
 
-      return
+      return;
     const newMetrics: PerformanceMetrics  =  {}
       fcp: null,
       lcp: null,
@@ -55,7 +55,9 @@ interface PerformanceMetrics {}
 
     }
 
-
+;
+const Component = () => {
+  
   return (
     <>
       
@@ -136,3 +138,5 @@ interface PerformanceMetrics {}
 , }
 
 export default AdvancedPerformanceMonitor;
+
+};

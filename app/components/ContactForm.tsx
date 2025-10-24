@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import React from 'react';
 'use client';
 'use client';
 
@@ -70,6 +70,8 @@ const ContactForm: React.FC = () => {
   ];
 
   if (isSubmitted) {
+const Component = () => {
+  
     return (
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -78,7 +80,7 @@ const ContactForm: React.FC = () => {
       </div>
     );
   }
-
+;
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
@@ -222,32 +224,8 @@ const ContactForm: React.FC = () => {
       </div>
     </div>
   );
+  };
 };
 
 export default ContactForm;
-=======
-
-      interface FormData {},
-      name: string,
-      email: string,
-      phone: string,
-      company: string,
-      message: string,
-      service: string
-name: ","
-      email: ","
-      phone: ","
-      company: ","
-      message: ","
-      service: "}),"
-    } catch (error) {};"
-      } finally {}"
-      setIsSubmitting(false)"
-        {isSubmitting ? "Sending..." : "Send Message"}"
-      </button>"
-    </form>"
-  )"
-},"
-      "
-import React from '
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
+};

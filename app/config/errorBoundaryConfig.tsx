@@ -74,6 +74,8 @@ notFound: NotFoundFallback,
 * Default error fallback component
 */
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
+const Component = () => {
+  
 return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
@@ -188,7 +190,7 @@ return 'serverError';}
 }
 if (error.message.includes('validation')) {
 return 'validation';}
-}
+};
 return 'default'
 }
 /**
@@ -206,3 +208,5 @@ url: typeof window !== 'undefined' ? window.location.href : 'unknown',
 }
 }
 export default getErrorBoundaryConfig
+
+};

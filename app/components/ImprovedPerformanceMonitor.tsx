@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface PerformanceMetrics {
   lcp?: number
@@ -10,7 +11,7 @@ interface PerformanceMetrics {
 interface PerformanceMonitorProps {
   showDetails?: boolean
   logMetrics?: boolean
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({,
     showDetails = false,
   logMetrics = false,

@@ -1,3 +1,4 @@
+import React from 'react';
 
     </div>
   </div>
@@ -5,7 +6,9 @@
 export const LazyWrapper: React.FC<LazyWrapperProps> = ({};)
   fallback = <DefaultFallback>
   children
-}) => {}
+}) => {};
+const Component = () => {
+  
   return ()
     <fallback={fallback}></>
       {children}
@@ -17,3 +20,5 @@ export const createLazyComponent  = <P extends Record<string, unknown>>()
       const WrappedComponent  = (props: P) => ()
     <LazyWrapper></LazyWrapper>
 
+
+};

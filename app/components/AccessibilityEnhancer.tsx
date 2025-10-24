@@ -34,6 +34,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({
       };
 
       document.addEventListener('keydown', handleKeyDown);
+const Component = () => {
+  
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [enableKeyboardNavigation]);
@@ -109,12 +111,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({
         });
       };
 
-<<<<<<< HEAD
-      // Apply focus trapping to modals
-=======
-      // Apply focus trapping to modals;
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      const modals = document.querySelectorAll('[role="dialog"]');
+      // Apply focus trapping to modals      const modals = document.querySelectorAll('[role="dialog"]');
       modals.forEach(trapFocus);
     }
   }, [enableFocusManagement]);
@@ -123,3 +120,5 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({
 };
 
 export default AccessibilityEnhancer;
+
+};

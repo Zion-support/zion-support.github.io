@@ -6,9 +6,12 @@
               img.classList.remove('lazy'
       if (e.ctrlKey && e.shiftKey && e.key === 'C'
     window.addEventListener('keydown'
+const Component = () => {
+  
     return () => window.removeEventListener('keydown'
       if ('caches'
       if (bytes === 0) return '
     const sizes  = ['Bytes', 'KB', 'MB', 'GB'
     return parseFloat((bytes / Math.pow(k, i).toFixed(2) + ' '
       if (!isVisible || process.env.NODE_ENV !== 'development'
+};

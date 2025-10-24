@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react"
 import { ArrowRight } from "lucide-react"
 interface NeonButtonProps {
@@ -11,24 +10,7 @@ interface NeonButtonProps {
   variant?: "primary" | "secondary" | "accent"
   size?: "sm" | "md" | "lg"
   icon?: React.ReactNode
-  disabled?: boolean
-=======
-import { Metadata } from 'next';
-import React from &quot;react&quot;
-import { ArrowRight } from &quot;lucide-react&quot;
-interface NeonButtonProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
-  href?: string;
-  onClick?: () => void;
-  variant?: "primary" | "secondary" | "accent"
-  size?: "sm" | "md" | "lg"
-  icon?: React.ReactNode;
-  disabled?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-}
+  disabled?: boolean}
 
 const NeonButton: React.FC<NeonButtonProps>= ({
   children,
@@ -36,12 +18,7 @@ const NeonButton: React.FC<NeonButtonProps>= ({
   onClick,
   variant="primary",
   size="md",
-<<<<<<< HEAD
-  className="",
-=======
-  className=&quot;",
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-  icon,
+  className="",  icon,
   disabled = false;
 }) =</ {
   const baseClasses =
@@ -55,9 +32,10 @@ const NeonButton: React.FC<NeonButtonProps>= ({
     'Gain competitive advantage with advanced technology'
   ];
 
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>NeonButton</title>
         <meta name="description" content="Advanced NeonButton solution for modern businesses." />
@@ -158,38 +136,22 @@ const NeonButton: React.FC<NeonButtonProps>= ({
     </>
   );
 };
-=======
-      
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-
 export default NeonButtonPage;
 
   constvariantClasses= {primary:
      "bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl",
     secondary:
      "bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl",
-<<<<<<< HEAD
     accent:
       "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl"
   }
 
   const neonEffect =
     "before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10"
-=======
-    accent: "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl"
-  }
-
-  const neonEffect =
-    "before: absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10&quot;
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`
 
   constcontent= (
   <di v>{icon&&<spanclassName="mr-2">{icon}</spa>}
-<<<<<<< HEAD
       {children}
       {!icon && <ArrowRight className="w-5 h-5 ml-2" />}
     </div>
@@ -202,7 +164,7 @@ export default NeonButtonPage;
       </a>
     )
   }
-
+;
   return (
     <button onClick={onClick} disabled={disabled} className={buttonClasses}>
       {content}
@@ -213,7 +175,6 @@ export default NeonButtonPage;
 export default NeonButton
   );
 };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-
 export default NeonButton;
+
+};

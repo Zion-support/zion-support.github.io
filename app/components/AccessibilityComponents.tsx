@@ -6,6 +6,8 @@ interface AccessibilityComponentsProps {
 }
 
 const AccessibilityComponents: React.FC<AccessibilityComponentsProps>= ({className }) =</ {
+const Component = () => {
+  
   return (
     <div className={className} />
       <h2>Accessibility Components</h2 />
@@ -15,3 +17,5 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps>= ({classNa
 };
 
 export default AccessibilityComponents;
+
+};

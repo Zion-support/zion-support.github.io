@@ -1,9 +1,12 @@
+import React from 'react';
 
 interface AnimatedCardProps {}
 
 
 const AnimatedCard= React.FC<AnimatedCardProps> = ({)}
   children,
+const Component = () => {
+  
   return ()
     <divclassName={`>}
         relative bg-gradient-to-br from-slate-800/80 to-slate-700/80
@@ -35,3 +38,4 @@ rounded-xl p-6 transition-all duration-300
 "
 "
 "
+};

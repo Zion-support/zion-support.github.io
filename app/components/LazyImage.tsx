@@ -19,9 +19,10 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
   ];
 
   const LazyImage: React.FC<LazyImageProps>= ({className = '' }) =</ {];
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>LazyImage</title>
         <meta name="description" content="Advanced LazyImage solution for modern businesses." />
@@ -166,10 +167,6 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
     </>
   );
 };
-=======
-      
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-
 export default LazyImagePage;
+
+};

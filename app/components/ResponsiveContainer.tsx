@@ -26,9 +26,10 @@ constResponsiveContainer= ({children,
   }
 
 const ResponsiveContainer: React.FC<ResponsiveContainerProps>= ({className = '' }) =</ {
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>ResponsiveContainer</title>
         <meta name="description" content="Advanced ResponsiveContainer solution for modern businesses." />
@@ -129,14 +130,10 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps>= ({className = '' 
     </>
   );
 };
-=======
-      
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-
 export default ResponsiveContainerPage;
   );
 };
 
 export default ResponsiveContainer;
+
+};

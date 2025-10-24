@@ -34,19 +34,16 @@ const PerformanceMonitorPage: React.FC = () => {
     }
   ]
 
-
+;
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>PerformanceMonitor</title>
         <meta name="description" content="Advanced PerformanceMonitor solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, PerformanceMonitor, AI solutions, intelligent automation" />
-      </Helmet>
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      <Navigation />
+      </Helmet>      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -137,9 +134,7 @@ const PerformanceMonitorPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
-    </>
-  );
+      <Footer />  );
 };
 
 export default PerformanceMonitorPage;
@@ -213,18 +208,11 @@ setTimeout(sendMetrics, 5000)
   }, [])
   // Performance monitoring dashboard (only in development)
   if (process.env.NODE_ENV=== 'development') {return (
-<<<<<<< HEAD
     <divclassName="fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs"><h3className="font-boldmb-2">PerformanceMetrics</h><divclassName="space-y-1"><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
-    )
-=======
-    <divclassName="fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs"><h3className="font-boldmb-2">PerformanceMetrics</h><divclassName="space-y-1"><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di />)
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-  }
+    )  }
 
   }, [metrics])
-  // Performance warnings
-
-
+  // Performance warnings;
   return null
 }
 
@@ -232,3 +220,5 @@ declare global {interface Window {
     gtag: (...args: any[]) =</ void;
   }
 }
+
+};

@@ -79,7 +79,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({enableImageOp
   const enablePreloadingOptimization = useCallback(() => {
     if (!enablePreloading) return
 
-    // Preload critical resources
+    // Preload critical resources;
     const criticalResources = [
       '/fonts/main.woff2',
       '/css/critical.css',
@@ -142,18 +142,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({enableImageOp
 
   const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
 
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>PerformanceOptimizer</title>
         <meta name="description" content="Advanced PerformanceOptimizer solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, PerformanceOptimizer, AI solutions, intelligent automation" />
-      </Helmet>
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      <Navigation />
+      </Helmet>      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -253,3 +250,5 @@ export default PerformanceOptimizer
 };
 
 export default PerformanceOptimizerPage;
+
+};
