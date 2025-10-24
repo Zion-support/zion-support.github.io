@@ -1,56 +1,56 @@
-import React from 'react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
-export default function ContactPage() {
+const ContactPage: React.FC = () => {
   return (
-    <div className="min-h-screen py-12">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h2>
-            <p className="text-gray-600 mb-4">
-              Ready to transform your business with AI and IT solutions? 
-              Contact us today to discuss your needs.
-            </p>
-            <div className="space-y-2">
-              <p className="text-gray-600">Email: contact@ziontechgroup.com</p>
-              <p className="text-gray-600">Phone: +1 (555) 123-4567</p>
+    <>
+      <Navigation />
+      
+      <main className="pt-16">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
+              <p className="text-xl text-blue-100">
+                Ready to transform your business? Let's discuss your project
+              </p>
             </div>
           </div>
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Send us a Message</h2>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                <input 
-                  type="text" 
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+        </section>
+
+        {/* Contact Info Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                  <p className="text-gray-600">info@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                </div>
+                <div className="text-center">
+                  <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
+                  <p className="text-gray-600">123 Tech Street, Innovation City</p>
+                </div>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input 
-                  type="email" 
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea 
-                  rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                ></textarea>
-              </div>
-              <button 
-                type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default ContactPage

@@ -1,8 +1,16 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import '@/types/analytics';
-import { PerformanceMetrics } from '@/app/utils/performanceUtils';
+
+interface PerformanceMetrics {
+  loadTime: number | null;
+  firstContentfulPaint: number | null;
+  largestContentfulPaint: number | null;
+  firstInputDelay: number | null;
+  cumulativeLayoutShift: number | null;
+  timeToInteractive: number | null;
+  totalBlockingTime: number | null;
+}
 
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
@@ -178,6 +186,3 @@ export default function PerformanceMonitor({
 
   return null;
 }
-
-
-// Global types are now defined in types/analytics.ts

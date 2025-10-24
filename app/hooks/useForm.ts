@@ -12,10 +12,11 @@ export const useForm = (initialValues = {}) => {
     }));
   };
 
-  const handleSubmit = (onSubmit: (_values: unknown) => void) => (e: React.FormEvent) => {
+
+
+
     e.preventDefault();
     onSubmit(values);
-  };
 
   return {
     values,
@@ -24,5 +25,3 @@ export const useForm = (initialValues = {}) => {
     handleSubmit,
     setValues,
     setErrors
-  };
-};
