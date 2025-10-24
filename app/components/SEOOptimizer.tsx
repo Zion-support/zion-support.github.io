@@ -1,7 +1,14 @@
 'use client'
-import React from 'react'
-import, React, { useEffect } from 'react'
-import Head from 'next/head'
+import React, { useEffect } from 'react'
+
 interface SEOOptimizerProps {
-className?: string
-// Conflict resolved: taking HEAD version
+  className?: string
+}
+
+export default function SEOOptimizer({ className }: SEOOptimizerProps) {
+  useEffect(() => {
+    // SEO optimization logic here
+  }, [])
+
+  return <div className={className}>SEO Optimizer Component</div>
+}

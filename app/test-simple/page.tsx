@@ -1,4 +1,8 @@
-'use client'
-import React from 'react'
-import Head from 'next/head'
-// Conflict resolved: taking HEAD version
+export default function TestPage() {
+  return (
+    <div>
+      <h1>Test Page</h1>
+      <p>This is a simple test page.</p>
+    </div>
+  )
+}
