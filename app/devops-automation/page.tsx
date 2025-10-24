@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const DevopsAutomationPage: React.FC = () => {
@@ -30,7 +31,6 @@ const DevopsAutomationPage: React.FC = () => {
 
   return (
     <React.Fragment>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -38,7 +38,7 @@ const DevopsAutomationPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Devops Automation
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional devopsautomation solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
