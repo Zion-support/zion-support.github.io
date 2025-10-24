@@ -2,11 +2,11 @@
 
 import React from 'react';
 
-interface FuturisticHeroProps {
+interface LoadingSkeletonProps {
   // Add props here
 }
 
-const FuturisticHero: React.FC<FuturisticHeroProps> = (_props) => {
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = (_props) => {
   return (
     <div>
       {/* Component content */}
@@ -14,4 +14,4 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = (_props) => {
   );
 };
 
-export default FuturisticHero;
+export default LoadingSkeleton;
