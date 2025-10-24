@@ -18,7 +18,7 @@ export default function AiecommercesolutionsPage() {
             Ai Ecommerce Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-ecommerce-solutions services coming soon.
+            ai-ecommerce-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

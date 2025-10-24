@@ -18,7 +18,7 @@ export default function ZionaienergymanagerPage() {
             Zion Ai Energy Manager
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-energy-manager services coming soon.
+            zion-ai-energy-manager services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

@@ -5,7 +5,7 @@
             
             // Log performance metrics;
             console.log('Page Load Performance:', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,)
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,)
  entry.name === 'first-paint')?.startTime,
  entry.name === 'first-contentful-paint')?.startTime,
@@ -18,7 +18,7 @@
       if ('performance' in window) {
             if (entry.entryType === 'resource') {
               console.log('Resource loaded:', {
-                name: entry.name,
+                name: entry.name,)
                 duration: entry.duration,)
                 size: (entry, as, any).transferSize,
               });

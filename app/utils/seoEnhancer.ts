@@ -27,15 +27,24 @@ export const generateMetaTags = (data: {,
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'author', content: 'Zion Tech Group' },
     { name: 'canonical', content: data.canonical || '' },
-    { property: 'og:title', content: data.ogTitle || data.title },
-    { property: 'og:description', content: data.ogDescription || data.description },
-    { property: 'og:image', content: data.ogImage || '/og-image.webp' },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: 'Zion Tech Group' },
-    { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
-    { name: 'twitter:title', content: data.twitterTitle || data.title },
-    { name: 'twitter:description', content: data.twitterDescription || data.description },
-    { name: 'twitter:image', content: data.twitterImage || data.ogImage || '/og-image.webp' }
+    { property: 'o,
+  g:title', content: data.ogTitle || data.title },
+    { property: 'o,
+  g:description', content: data.ogDescription || data.description },
+    { property: 'o,
+  g:image', content: data.ogImage || '/og-image.webp' },
+    { property: 'o,
+  g:type', content: 'website' },
+    { property: 'o,
+  g:site_name', content: 'Zion Tech Group' },
+    { name: 'twitte,
+  r:card', content: data.twitterCard || 'summary_large_image' },
+    { name: 'twitte,
+  r:title', content: data.twitterTitle || data.title },
+    { name: 'twitte,
+  r:description', content: data.twitterDescription || data.description },
+    { name: 'twitte,
+  r:image', content: data.twitterImage || data.ogImage || '/og-image.webp' }
   ]
 
   return tags
@@ -52,12 +61,14 @@ export const generateStructuredData = (data: {
     addressLocality: string
     addressRegion: string
     postalCode: string
-    addressCountry: string
+    addressCountr,
+  y: string
   }
   contactPoint?: {
     telephone: string
     contactType: string
-    email: string
+    emai,
+  l: string
   }
   sameAs?: string[]
 }) => {
@@ -91,15 +102,16 @@ export const generateSitemap = (pages: Array<{
   url: string
   lastModified: string
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority: number
+  priorit,
+  y: number
 }>) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+${pages.map(page => `  <url></url>
     <loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
-    <priority>${page.priority}</priority>
+    <priority>${page.priority}</priority>)
   </url>`).join('\n')}
 </urlset>`
 
@@ -109,7 +121,8 @@ ${pages.map(page => `  <url>
 // Generate robots.txt
 export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {
   return `User-agent: *
-${allowAll ? 'Allow: /' : 'Disallow: /'}
+${allowAll ? 'Allow: /' : 'Disallo,
+  w: /'}
 
 Sitemap: ${sitemapUrl}`
 }
@@ -119,4 +132,4 @@ export default {
   generateStructuredData,
   generateSitemap,
   generateRobotsTxt
-}
+};

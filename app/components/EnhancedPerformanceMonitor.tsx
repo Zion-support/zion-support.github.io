@@ -11,64 +11,8 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Monitoring',
-      description: 'Advanced AI algorithms that continuously monitor and optimize system performance.',
-      benefits: ['Real-time analysis', 'Predictive insights', 'Automated optimization', 'Smart alerts']
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Performance',
-      description: 'Monitor system performance in real-time with instant feedback and alerts.',
-      benefits: ['Live metrics', 'Instant notifications', 'Performance tracking', 'Quick response']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Enterprise-grade security with comprehensive monitoring and protection.',
-      benefits: ['Advanced security', 'Compliance monitoring', 'Threat detection', 'Data protection']
-    },
-    {
-      icon: Globe,
-      title: 'Global Monitoring',
-      description: 'Monitor performance across multiple locations and environments worldwide.',
-      benefits: ['Multi-region support', 'Global visibility', 'Distributed monitoring', 'Scalable architecture']
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Enhanced Performance Monitor - Zion Tech Group</title>
-        <meta name="description" content="Advanced performance monitoring solutions for optimal system performance" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gray-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Enhanced Performance Monitor
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced performance monitoring solutions that provide real-time insights and optimization
-                for your systems and applications.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Started
-                  <ArrowRight className="ml-2 h-5 w-5 inline" />
-                </button>
-                <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
+    'Gain competitive advantage with advanced technology',
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             </div>
           </div>
         </section>

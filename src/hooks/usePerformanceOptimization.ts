@@ -7,9 +7,9 @@ interface PerformanceOptimizationOptions {
   enablePreloading?: boolean
   enableImageOptimization?: boolean
   enableCodeSplitting?: boolean
-  enableCaching?: boolean
+  enableCaching?: boolean}
 }
-
+;
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
     enableLazyLoading = true
@@ -26,7 +26,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (!enableLazyLoading || typeof window === 'undefined') return
 
       // Preload critical resources
-      if (options.enablePreloading) {
+      if (options.enablePreloading) {;
         const criticalResources = document.querySelectorAll('[data-preload]');
         criticalResources.forEach((resource) => {
           const link = document.createElement('link');
@@ -50,7 +50,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       setIsOptimized(true);
     }
 
-    observerRef.current = new IntersectionObserver(
+    observerRef.current = new IntersectionObserver()
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -202,8 +202,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     const hints = [
       { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: '//www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+      { rel: 'preconnect', href: 'http,
+  s://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'http,
+  s://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ]
 
     hints.forEach((hint) => {
@@ -251,4 +253,4 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     optimizeImages
     registerServiceWorker,
     setupPerformanceMonitoring
-  }}
+  }}</IntersectionObserver>;

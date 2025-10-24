@@ -18,7 +18,7 @@ export default function AisupplychainoptimizationproPage() {
             Ai Supply Chain Optimization Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-supply-chain-optimization-pro services coming soon.
+            ai-supply-chain-optimization-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

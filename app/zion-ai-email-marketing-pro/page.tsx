@@ -18,7 +18,7 @@ export default function ZionaiemailmarketingproPage() {
             Zion Ai Email Marketing Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-email-marketing-pro services coming soon.
+            zion-ai-email-marketing-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

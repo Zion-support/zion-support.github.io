@@ -18,7 +18,7 @@ export default function AibusinessintelligencePage() {
             Ai Business Intelligence
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-business-intelligence services coming soon.
+            ai-business-intelligence services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

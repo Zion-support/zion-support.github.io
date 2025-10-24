@@ -18,7 +18,7 @@ export default function IotplatformPage() {
             Iot Platform
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional iot-platform services coming soon.
+            iot-platform services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

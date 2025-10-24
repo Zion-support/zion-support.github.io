@@ -9,7 +9,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      ico,
+  n: Brain,
   title: title,
   description: description,
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -30,6 +31,9 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     icon: TrendingUp,
   title: title,
   description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
     };
   ]};
+
+
+export default EnhancedLoadingSkeletonPage;

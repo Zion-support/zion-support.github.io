@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 } from '@heroicons/react/24/outline'
-    window.addEventListener('scroll'
+    window.addEventListener('scroll')
       ) => window.removeEventListener('scroll'
     { "name": 'Home', "href": '/',
     { "name": 'About', "href": '/about',
@@ -21,4 +21,4 @@ import { usePathname } from 'next/navigation'
     { "name": 'Demo', "href": '/demo',
     { "name": 'Support', "href": '/support',
     { "name": 'Contact', "href": '/contact';,
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent')

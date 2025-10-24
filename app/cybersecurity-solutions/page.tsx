@@ -18,7 +18,7 @@ export default function CybersecuritysolutionsPage() {
             Cybersecurity Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional cybersecurity-solutions services coming soon.
+            cybersecurity-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

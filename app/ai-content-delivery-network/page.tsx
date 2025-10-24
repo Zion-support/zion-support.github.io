@@ -18,7 +18,7 @@ export default function AicontentdeliverynetworkPage() {
             Ai Content Delivery Network
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-content-delivery-network services coming soon.
+            ai-content-delivery-network services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

@@ -18,7 +18,7 @@ export default function ContentgeneratorPage() {
             Content Generator
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional content-generator services coming soon.
+            content-generator services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

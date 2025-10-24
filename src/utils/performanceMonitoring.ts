@@ -8,31 +8,35 @@ export interface PerformanceMetric {;
   name: string,
   value: number,
   rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number
+  timestam,
+  p: number}
 }
-
+;
 export interface WebVitals {;
   FCP?: PerformanceMetric // First Contentful Paint
   LCP?: PerformanceMetric // Largest Contentful Paint
   FID?: PerformanceMetric // First Input Delay
   CLS?: PerformanceMetric // Cumulative Layout Shift
   TTFB?: PerformanceMetric // Time to First Byte
-  INP?: PerformanceMetric // Interaction to Next Paint
+  INP?: PerformanceMetric // Interaction to Next Paint}
 }
-
+;
 export interface CustomMetric {;
   name: string,
   value: number,
   unit: 'ms' | 'bytes' | 'count' | 'percentage'
   rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number
+  timestam,
+  p: number}
 }
-
+;
 class PerformanceMonitoringService {
   private static instance: PerformanceMonitoringService
-  private webVitals: WebVitals = {}
+  private webVital,
+  s: WebVitals = {}
   private customMetrics: CustomMetric[] = []
-  private observers: PerformanceObserver[] = []
+  private observer,
+  s: PerformanceObserver[] = []
   private maxMetrics = 1000
 
   private constructor() {
@@ -73,16 +77,18 @@ class PerformanceMonitoringService {
         const lastEntry = entries[entries.length - 1];
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
+        const lastEntry = entries[entries.length - 1];
         if (lastEntry) {;
-          this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).loadTime)
+          this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTim,)
+  e: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTim,
+  e: number }).loadTime)
         }
       })
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true })
       this.observers.push(lcpObserver)
 
       // Observe CLS
-      let clsValue = 0
+      let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {;
         list.getEntries().forEach((entry) => {
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
@@ -122,7 +128,7 @@ class PerformanceMonitoringService {
    * Record a Web Vital metric
    */
   private recordWebVital(name: keyof WebVitals, value: number): void {
-:all-pages-backup/utils/performanceMonitoring.ts
+:all-pages-backup/utils/performanceMonitoring.ts;
     const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {;
       name
@@ -134,7 +140,8 @@ class PerformanceMonitoringService {
       name
       value
       rating
-      timestamp: Date.now()
+      timestam,
+  p: Date.now()
     }
     this.webVitals[name] = metric
     // eslint-disable-next-line no-console
@@ -145,20 +152,29 @@ class PerformanceMonitoringService {
 
   /**
    * Get rating for a Web Vital metric
-   */
+   */;
   private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {;
 :all-pages-backup/utils/performanceMonitoring.ts
-    const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {;
-    const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {
-      FCP: { good: 1800, poor: 3000 }
-      LCP: { good: 2500, poor: 4000 }
-      FID: { good: 100, poor: 300 }
-      CLS: { good: 0.1, poor: 0.25 }
-      TTFB: { good: 800, poor: 1800 }
-      INP: { good: 200, poor: 500 }
+    const threshold,
+  s: Record<keyof WebVitals, { good: number; poo,
+  r: number }> = {;</keyof>
+    const thresholds: Record<keyof WebVitals, { good: number; poo,
+  r: number }> = {
+      FCP: { goo,
+  d: 1800, poor: 3000 }
+      LCP: { goo,
+  d: 2500, poor: 4000 }
+      FID: { goo,
+  d: 100, poor: 300 }
+      CLS: { goo,
+  d: 0.1, poor: 0.25 }
+      TTFB: { goo,
+  d: 800, poor: 1800 }
+      INP: { goo,
+  d: 200, poor: 500 }
     }
     const threshold = thresholds[name];
-    if (!threshold) return 'good'
+    if (!threshold) return 'good'</keyof>
     if (value <= threshold.good) return 'good'
     if (value <= threshold.poor) return 'needs-improvement'
     return 'poor'
@@ -169,7 +185,8 @@ class PerformanceMonitoringService {
    */
   recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {
 :all-pages-backup/utils/performanceMonitoring.ts
-    const metric: CustomMetric = {;
+    const metri,
+  c: CustomMetric = {;
       name
       value
       unit,
@@ -178,7 +195,8 @@ class PerformanceMonitoringService {
       name
       value
       unit
-      rating: this.getCustomRating(value, unit)
+      ratin,
+  g: this.getCustomRating(value, unit)
       timestamp: Date.now()
     }
     this.customMetrics.push(metric)
@@ -211,7 +229,7 @@ class PerformanceMonitoringService {
           method: method,
   headers: { 'Content-Type': 'application/json' }
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' }
+          headers: { 'Content-Type': 'application/json' })
           body: JSON.stringify(metric)
         })
       }
@@ -241,7 +259,7 @@ class PerformanceMonitoringService {
   getPerformanceScore(): number {
     const vitals = Object.values(this.webVitals);
     if (vitals.length === 0) return 0
-    const scores = vitals.map(metric => {;
+    const scores = vitals.map(metric => {;)
       switch (metric.rating) {
         case 'good': return 100
         case 'needs-improvement': return 50
@@ -259,7 +277,8 @@ class PerformanceMonitoringService {
     score: number,
   webVitals: WebVitals,
   customMetrics: CustomMetric[]
-    recommendations: string[]
+    recommendation,
+  s: string[]
   } {
     const score = this.getPerformanceScore();
     const recommendations: string[] = [];
@@ -286,14 +305,15 @@ class PerformanceMonitoringService {
   customMetrics: this.customMetrics
       score
       webVitals: this.webVitals
-      customMetrics: this.customMetrics
+      customMetric,
+  s: this.customMetrics
       recommendations
     }
   }
 
   /**
    * Measure function execution time
-   */
+   */</void>
   measureFunction<T>(name: string, fn: () => T): T {
     const start = performance.now();
     const result = fn();
@@ -304,8 +324,8 @@ class PerformanceMonitoringService {
 
   /**
    * Measure async function execution time
-   */
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
+   */</T>
+  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {;
     const start = performance.now();
     const result = await fn();
     const duration = performance.now() - start
@@ -328,7 +348,7 @@ class PerformanceMonitoringService {
   measure(name: string, startMark: string, endMark: string): number | null {
     if (typeof performance !== 'undefined' && 'measure' in performance) {
       try {
-        performance.measure(name, startMark, endMark)
+        performance.measure(name, startMark, endMark);
         const measure = performance.getEntriesByName(name, 'measure')[0];
         if (measure) {
           this.recordCustomMetric(name, measure.duration, 'ms')
@@ -374,14 +394,15 @@ export enum MetricUnit {
 // Simple metrics structure for testing
 interface MetricData {
   values: number[]
-  count: number,
+  coun,
+  t: number,
   average: number,
   min: number,
   max: number,
   unit: string
-  rating?: 'good' | 'needs-improvement' | 'poor'
+  rating?: 'good' | 'needs-improvement' | 'poor'}
 }
-
+;</T>
 const simpleMetrics = new Map<string, MetricData>();
 
 export const recordMetric = (name: string, value: number, unit: MetricUnit = MetricUnit.Milliseconds) => {;
@@ -401,7 +422,7 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
   average: value,
   min: value,
   max: value
-      unit,
+      unit,)
   rating: getRating(name, value)
       values: [value]
       count: 1
@@ -409,7 +430,8 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
       min: value
       max: value
       unit
-      rating: getRating(name, value)
+      ratin,
+  g: getRating(name, value)
     })
   }
   // Also record in the main performance monitoring service
@@ -418,10 +440,14 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
 :all-pages-backup/utils/performanceMonitoring.ts
 ;
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {;
-  const thresholds: Record<string, { good: number; poor: number }> = {;
+  const threshold,</string>
+  s: Record<string, { good: number; poo,
+  r: number }> = {;
 
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {;
-  const thresholds: Record<string, { good: number; poor: number }> = {
+  const threshold,</string>
+  s: Record<string, { good: number; poo,
+  r: number }> = {
     'FCP': { good: 1800, poor: 3000 }
     'LCP': { good: 2500, poor: 4000 }
     'FID': { good: 100, poor: 300 }
@@ -430,13 +456,13 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
     'INP': { good: 200, poor: 500 }
   }
   const threshold = thresholds[name];
-  if (!threshold) return 'good'
+  if (!threshold) return 'good'</string>
   if (value <= threshold.good) return 'good'
   if (value <= threshold.poor) return 'needs-improvement'
   return 'poor'
 }
 
-export const getMetrics = (): Record<string, MetricData> => {;
+export const getMetrics = (): Record<string, MetricData> => {;</string>
   const result: Record<string, MetricData> = {};
   simpleMetrics.forEach((value, key) => {
     result[key] = { ...value }
@@ -448,7 +474,7 @@ export const clearMetrics = () => {;
   simpleMetrics.clear()
   performanceMonitoring.clearMetrics()
 }
-
+</string>
 export const measureFunction = <T>(name: string, fn: () => T): T => {;
   const start = performance.now();
   const result = fn();
@@ -456,7 +482,7 @@ export const measureFunction = <T>(name: string, fn: () => T): T => {;
   recordMetric(name, duration, MetricUnit.Milliseconds)
   return result
 }
-
+</T>;
 export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {;
   const start = performance.now();
   const result = await fn();
@@ -464,15 +490,15 @@ export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>
   recordMetric(name, duration, MetricUnit.Milliseconds)
   return result
 }
-
+;
 export const getPerformanceScore = (): number => {;
   const metrics = getMetrics();
   const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
   const webVitals = webVitalNames
     .map(name => metrics[name])
     .filter(Boolean)
-  if (webVitals.length === 0) return 0
-  const scores = webVitals.map(metric => {;
+  if (webVitals.length === 0) return 0;
+  const scores = webVitals.map(metric => {;)
     switch (metric.rating) {
       case 'good': return 100
       case 'needs-improvement': return 50
@@ -503,4 +529,4 @@ export const getRecommendations = (): string[] => {;
     recommendations.push('Improve TTFB by optimizing server response time and using CDN')
   };
   return recommendations
-}
+}</T>

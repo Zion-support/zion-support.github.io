@@ -18,7 +18,7 @@ export default function ZionaicontentmoderatorPage() {
             Zion Ai Content Moderator
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-content-moderator services coming soon.
+            zion-ai-content-moderator services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

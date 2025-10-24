@@ -18,7 +18,7 @@ export default function AineuralinterfacePage() {
             Ai Neural Interface
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-neural-interface services coming soon.
+            ai-neural-interface services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

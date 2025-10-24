@@ -17,12 +17,13 @@ interface AdvancedAccessibilityEnhancerProps {
   enableColorContrast?: boolean
   enableMotionReduction?: boolean
   enableFontScaling?: boolean
-  enableVoiceNavigation?: boolean
+  enableVoiceNavigation?: boolean}
 }
-
+;
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
 constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true
+constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
+  r: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true
   enableScreenReader= true
   enableHighContrast= true
   enableFocusManagement= true
@@ -40,9 +41,11 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
   keyboardNavigation: false
     highContrast: false
     reducedMotion: false
-    fontSize: 'normal',
+    fontSiz,
+  e: 'normal',
     screenReader: false
-    keyboardNavigation: false
+    keyboardNavigatio,
+  n: false)
   })
 
   // Detect user preferences
@@ -54,7 +57,8 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
     // Check for high contrast preference
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
     // Check for color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const prefersDarkScheme = window.matchMedia('(prefers-color-schem,)
+  e: dark)').matches
     setAccessibilitySettings(prev => ({
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
       ...prev,
@@ -62,14 +66,16 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
   highContrast: prefersHighContrast
       ...prev
       reducedMotion: prefersReducedMotion
-      highContrast: prefersHighContrast
+      highContras,
+  t: prefersHighContrast)
     }))
 
-    // Listen for changes in user preferences
+    // Listen for changes in user preferences;
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
 
-    const handleMotionChange = (e: MediaQueryListEvent) => {;
+    const handleMotionChange = (,;
+  e: MediaQueryListEvent) => {;
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
     }
 
@@ -101,7 +107,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-      icon: Brain,
+      ico,
+  n: Brain,
   title: title,
   description: description,
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -124,25 +131,29 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
       icon: Brain
-      title: 'AI-Powered Intelligence',
+      titl,
+  e: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
   {
     icon: BarChart
-      title: 'Advanced Analytics',
+      titl,
+  e: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
   {
     icon: Target
-      title: 'Precision Targeting',
+      titl,
+  e: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
   {
     icon: TrendingUp
-      title: 'Growth Optimization',
+      titl,
+  e: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -159,7 +170,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')
   }, [accessibilitySettings])
 
-  // Keyboard navigation enhancement
+  // Keyboard navigation enhancement;
   const setupKeyboardNavigation = useCallback(() => {;
     if (typeof window === 'undefined') return
 
@@ -183,7 +194,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
 
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-      // Arrow keys for menu navigation
+      // Arrow keys for menu navigation;
       // Arrow keys for menu navigation;
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {;
         const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
@@ -237,16 +248,17 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   }, [])
 
-  // Focus management
+  // Focus management;
   const setupFocusManagement = useCallback(() => {;
     if (typeof window === 'undefined') return
 
     // Trap focus in modals
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const trapFocus = (element: HTMLElement) => {;
-    const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(;
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',
+    const trapFocus = (elemen,
+  t: HTMLElement) => {;
+      const focusableElements = element.querySelectorAll(;)
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',</AdvancedAccessibilityEnhancerProp>
       ) as NodeListOf<HTMLElement>
 
       const firstElement = focusableElements[0];
@@ -278,26 +290,27 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     // Apply focus trap to modals
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
-    modals.forEach(modal => {
+    modals.forEach(modal => {)
       const cleanup = trapFocus(modal as HTMLElement);
     // Apply focus trap to modals;
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
-    modals.forEach(modal = > {
+    modals.forEach(modal = > {)
       const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup
 
   }, [])
 
-  // ARIA labels enhancement
+  // ARIA labels enhancement;
   const enhanceARIALabels = useCallback(() => {;
     if (typeof window === 'undefined') return
 
     // Add missing ARIA labels to interactive elements
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])')
-    buttons.forEach((button, index) => {
+    const buttons = document.querySelectorAll('butto,)
+  n: not([aria-label]):not([aria-labelledby])')
+    buttons.forEach((button, index) => {;
       const text = button.textContent?.trim();
       if (text && text.length > 0) {
         button.setAttribute('aria-label', text)
@@ -308,15 +321,17 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     // Add ARIA labels to images
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const images = document.querySelectorAll('img:not([alt])');
-    const images = document.querySelectorAll('img: not([alt])')
+    const images = document.querySelectorAll('im,)
+  g: not([alt])')
     images.forEach((img, index) => {
       img.setAttribute('alt', `Image ${index + 1}`)
 
     // Add ARIA labels to form inputs
-:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
+:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])')
-    inputs.forEach((input, index) => {
+    const inputs = document.querySelectorAll('inpu,)
+  t: not([aria-label]):not([aria-labelledby])')
+    inputs.forEach((input, index) => {;
       const placeholder = input.getAttribute('placeholder');
       const label = input.getAttribute('name');
       if (placeholder) {
@@ -337,7 +352,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
       { href: '#footer', text: 'Skip to footer' }
-    ]
+    ];
 ;
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links'
@@ -368,7 +383,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         element.setAttribute('data-contrast-checked', 'true')
       }
     }
-
+;
     const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
     elements.forEach(element => checkElementContrast(element as HTMLElement))
   }, [])
@@ -450,3 +465,4 @@ export default AdvancedAccessibilityEnhancerPage
 }}}}}
 }
 export default AdvancedAccessibilityEnhancerPage;
+</HTMLElement>

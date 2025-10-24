@@ -9,12 +9,12 @@ import Head from 'next/head'
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]'
       metaDescription.setAttribute('content'
       const meta = document.createElement('meta'
-      meta.name = 'description'
+      meta.name = 'description';
     const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]'
       metaKeywords.setAttribute('content', keywords.join(', '
       const meta = document.createElement('meta'
       meta.name = 'keywords'
-      meta.content = keywords.join(', '
+      meta.content = keywords.join(', ';
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]'
       canonicalLink.setAttribute('href'
       canonicalLink = document.createElement('link'
@@ -37,12 +37,12 @@ import Head from 'next/head'
     updateTwitterTag('"twitter": description',
     updateTwitterTag('"twitter": image',
       const script = document.createElement('script'
-      script.type = 'application/ld+json'
+      script.type = 'application/ld+json';
     let viewport = document.querySelector('meta[name=&quot;viewport&quot;]'
       viewport = document.createElement('meta'
       viewport.setAttribute('name', 'viewport'
       viewport.setAttribute('content', 'width=device-width, initial-scale=1'
     let charset = document.querySelector('meta[charset]'
       charset = document.createElement('meta'
-      charset.setAttribute('charset', 'UTF-8'
-      <meta name=&quot;keywords&quot; content={keywords.join(', '
+      charset.setAttribute('charset', 'UTF-8';
+      <meta name=&quot;keywords&quot; content={keywords.join(', ')

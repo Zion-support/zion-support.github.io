@@ -1,9 +1,10 @@
-export function debounce<T extends (...args: any[]) => any>()
+export function debounce<T extends (...args: any[]) => any>()</T>
 export function throttle<T extends (...args: any[]) => any>(
 export function createIntersectionObserver()
 export function getMemoryUsage(): any {
 export function preloadCriticalResources(): void {
-export function optimizeImage(src: string, width?: number, height?: number): string {
+export function optimizeImage(sr,)
+  c: string, width?: number, height?: number): string {
 export function createLazyImageObserver(): IntersectionObserver | null {
 export function checkPerformanceBudget(): void {
 export function addResourceHints(): void {
@@ -13,20 +14,22 @@ export function addResourceHints(): void {
 
 // Debounce function for performance optimization;
   func: T,
-  wait: number;
+  wait: number;</T>
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+  return (...arg,</T>
+  s: Parameters<T>) => {
     clearTimeout(timeout);
  func(...args), wait);
   };
 
 // Throttle function for performance optimization;
   func: T,
-  limit: number;
+  limit: number;</T>
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+  return (...arg,</T>
+  s: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
@@ -42,7 +45,7 @@ export function addResourceHints(): void {
   
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
-    threshold: 0.1,
+    threshold: 0.1,)
     ...options,)
   });
 
@@ -120,11 +123,13 @@ export function addResourceHints(): void {
   const hints = [;
     { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
     { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+    { rel: 'preconnect', href: 'http,
+  s://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'http,
+  s://fonts.gstatic.com', crossorigin: 'anonymous' },
   ];
   
     const link = document.createElement('link');
     Object.assign(link, hint);
     document.head.appendChild(link);
-  });
+  });</T>

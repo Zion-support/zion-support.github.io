@@ -18,7 +18,7 @@ export default function AifinancialplannerPage() {
             Ai Financial Planner
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-financial-planner services coming soon.
+            ai-financial-planner services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

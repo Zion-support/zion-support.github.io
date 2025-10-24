@@ -8,8 +8,9 @@ import Footer from '../components/Footer';
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
+      ico,
+  n: Brain,
+    title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
@@ -29,94 +30,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Enhanced Loading Skeleton - Zion Tech Group</title>
-        <meta name="description" content="Advanced loading skeleton components for better user experience" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gray-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Enhanced Loading Skeleton
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced loading skeleton components that provide smooth, engaging user experiences
-                while content loads in the background.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Started
-                  <ArrowRight className="ml-2 h-5 w-5 inline" />
-                </button>
-                <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our enhanced loading skeleton system provides the perfect balance of performance and user experience.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Enhance Your Loading Experience?
-              </h2>
-              <p className="text-xl text-purple-100 mb-8">
-                Get started with our enhanced loading skeleton components today.
-              </p>
-              <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Start Building
-                <ArrowRight className="ml-2 h-5 w-5 inline" />
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
 
 export default EnhancedLoadingSkeletonPage;

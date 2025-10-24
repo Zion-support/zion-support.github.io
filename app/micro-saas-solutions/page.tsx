@@ -18,7 +18,7 @@ export default function MicrosaassolutionsPage() {
             Micro Saas Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional micro-saas-solutions services coming soon.
+            micro-saas-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

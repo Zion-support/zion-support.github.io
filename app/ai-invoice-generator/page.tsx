@@ -18,7 +18,7 @@ export default function AiinvoicegeneratorPage() {
             Ai Invoice Generator
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-invoice-generator services coming soon.
+            ai-invoice-generator services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

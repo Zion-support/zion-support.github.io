@@ -18,7 +18,7 @@ export default function AienergygridmanagementproPage() {
             Ai Energy Grid Management Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-energy-grid-management-pro services coming soon.
+            ai-energy-grid-management-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"
