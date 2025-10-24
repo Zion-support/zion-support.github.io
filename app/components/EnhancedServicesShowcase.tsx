@@ -34,7 +34,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Code Optimization', 'Database Tuning', 'Caching Strategies', 'Load Balancing'],
-      stats: '10x Faster'
+      stats: '10x Faster',
     }
   ]
 
@@ -91,7 +91,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <ArrowRight className="h-4 w-4 ml-2" />
               </button>
             </div>
-          </div>
         ))}
         </div>
       </div>
