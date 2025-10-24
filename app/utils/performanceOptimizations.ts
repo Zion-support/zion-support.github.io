@@ -1,7 +1,8 @@
 'use client';
 import { useCallback, useMemo } from 'react';
 // Performance optimization utilities
-// Debounce utility for performance
+// Debounce utility for performance;
+
 export const debounce = <T extends (...args: any[]) => any>(,
     func: T
   wait: number</T>
@@ -28,7 +29,8 @@ export const throttle = <T extends (...args: any[]) => any>(,
     }
   }
 }
-// Intersection Observer hook for lazy loading
+// Intersection Observer hook for lazy loading;
+
 export const useIntersectionObserver = (
   callback: (entrie,
   s: IntersectionObserverEntry[]) => void,
@@ -52,8 +54,14 @@ export const useIntersectionObserver = (
         return (</T>
     <>
       ) => observer.unobserve(element)
+    </>
+    </>
       }
-      return () => {}
+      return (
+    <>
+      ) => {}
+    </>
+    </>
     }
     [observer]
     </div>
@@ -70,7 +78,8 @@ export const useIntersectionObserver = (
   }, [disconnect])
   return { observe, disconnect }
 }
-// Image lazy loading hook
+// Image lazy loading hook;
+
 export const useLazyImage = (src: string, placeholder?: string) => {
   const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false);
@@ -97,16 +106,17 @@ export const useLazyImage = (src: string, placeholder?: string) => {
   );
   return { imageSrc, isLoaded, isError, observe }
 }
-// Performance monitoring hook
+// Performance monitoring hook;
+
 export const usePerformanceMonitoring = (
     </div>
   ) => {
   const [metrics, setMetrics] = useState<{
-    fcp?: number
-    lcp?: number
-    fid?: number
-    cls?: number
-    ttfb?: number
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number;
 }>({})
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -150,18 +160,20 @@ export const usePerformanceMonitoring = (
   }, [])
   return metrics
 }
-// Memory usage monitoring
+// Memory usage monitoring;
+
 export const useMemoryMonitoring = (
     </div>
   ) => {
   const [memoryInfo, setMemoryInfo] = useState<{
-    usedJSHeapSize?: number
-    totalJSHeapSize?: number
-    jsHeapSizeLimit?: number
+    usedJSHeapSize?: number;
+    totalJSHeapSize?: number;
+    jsHeapSizeLimit?: number;
 }>({})
   useEffect(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return
-    const updateMemoryInfo = () => {
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
+
+const updateMemoryInfo = () => {
       const memory = (performance as any).memory
       if (memory) {
         setMemoryInfo({
@@ -211,10 +223,10 @@ export const useBundleSizeMonitoring = (
     </div>
   ) => {
   const [bundleSize, setBundleSize] = useState<{
-    totalSize?: number
-    jsSize?: number
-    cssSize?: number
-    imageSize?: number
+    totalSize?: number;
+    jsSize?: number;
+    cssSize?: number;
+    imageSize?: number;
 }>({})
   useEffect(() => {
   if (typeof window === 'undefined') return

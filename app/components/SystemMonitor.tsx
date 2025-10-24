@@ -1,17 +1,15 @@
-'use client';
-import Footer from 'Footer';
-import Navigation from './Navigation';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-  ]
-  const benefits = [
-  'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+'use client'
+import { { { Footer from 'Footer'
+import { Navigation from '/Navigation'
+import React from 'react'
+import  Helmet  from 'react-helmet-async'
+import  Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe          } from 'lucide-react'
+import { { ArrowRight       } from 'lucide-react'
+  
+  const benefits="'Increase" efficiency by up to 50'
+    'Reduce costs by 30 with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</SystemMonitorProps>
@@ -45,6 +43,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
               </button>
+              <button className="border border-emerald-400 text-emerald-400 hover bg-emerald-400 hovertext-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More</button>
             </div>
           </div>,
         </section>,
@@ -73,7 +73,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
                     ))}
                   </ul>
                 </div>
-              ))}
+              
             </div>
           </div>
         </section>
@@ -93,7 +93,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+                </div>
+              
             </div>
           </div>
         </section>

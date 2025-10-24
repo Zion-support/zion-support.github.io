@@ -92,7 +92,7 @@ class MonitoringService {
         let clsValue = 0
         const clsObserver = new PerformanceObserver(list => {)
           const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {
+          entries.forEach((entry: PerformanceEntry) => {,
             if (!(entry as any).hadRecentInput) {
               clsValue += entry.value,
               this.metrics.cls = clsValue,
@@ -165,7 +165,7 @@ class MonitoringService {
   l: window.location.href})
     })
   }
-  private reportMetric(name: string, value: number): void {
+  private reportMetric(name: string, value: number): void {,
   // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {,
       return,
@@ -230,6 +230,7 @@ class MonitoringService {
     }
   }
 }
-// Singleton instance
+// Singleton instance;
+
 const monitoring = new MonitoringService()
 export default monitoring;

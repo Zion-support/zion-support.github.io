@@ -1,15 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Link from 'next/link';
-import { CheckCircleIcon;
-  UserGroupIcon
-  LightBulbIcon
-  ShieldCheckIcon
-  RocketLaunchIcon
-  HeartIcon
-  ArrowRightIcon
-  StarIcon
-} from '@heroicons/react/24/outline'  );
+import React from 'react'
+import  Helmet  from 'react-helmet-async'
+import Link  } from 'next/link'
+import  CheckCircleIcon UserGroupIcon LightBulbIcon ShieldCheckIcon RocketLaunchIcon HeartIcon ArrowRightIcon StarIcon } from 'heroicons/react/24/outline'  
 
 export default function AboutPage() {
   const values = [
@@ -109,6 +101,13 @@ export default function AboutPage() {
                   for growth, efficiency, and innovation across all industries.</p>
                 </p>
               </div>
+        <div> </div></div>
+          <pFounded in 2020 Zion Tech Group emerged from a vision to democratize advanced technology and make AI and IT solutions accessible to businesses of all sizes Our journey began when our founder Kleber Santos recognized the growing gap between cutting-edge technology and practical business implementation</p>
+                </p><pToday weaposve grown into a trusted partner for organizations worldwide helping them navigate the complex landscape of digital transformation while maintaining focus on security scalability and innovation</p>
+              </p></div>
+        <div> </div></div></><pOur team combines deep technical expertise with real-world business understanding ensuring that every solution we deliver not only meets technical requirements but also drives tangible business value</p>
+                </p><pWe believe in the power of technology to solve complex problems and create opportunities for growth efficiency and innovation across all industries</p>
+              </p></div>
             </div>
           </div>
           {/* Values Section */}
@@ -155,7 +154,16 @@ export default function AboutPage() {
             {member.description}
           </p>
                 </div>
-              ))}
+        <div key=index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+        </div>
+        <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center"> </div></div><span className="text-2xl font-bold text-white">membernamesplit' 'mapn => n0join''
+                    </span></span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">membername</h3>
+                  <p className="text-cyan-400 text-sm mb-3">memberrole</p></p>
+                  <p className="text-gray-300 text-sm">memberdescription</p></p>
+                </div>
+              
             </div>
           </div>
           {/* Stats Section */}

@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '/components/Footer'
 
 export default function HelpPage() {
   return (
@@ -25,7 +25,7 @@ export default function HelpPage() {
             $2
             <ArrowRight$3 />
           </Link>
-        </div>
+        </div></>
       </div>
       <Footer />
     </div>

@@ -91,17 +91,25 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       setIsOptimized(isOptimized);
     };
 
-    // Check optimization after metrics are updated
-    const timeoutId = setTimeout(checkOptimization, 1000);
+    // Check optimization after metrics are updated;
 
-    return () => clearTimeout(timeoutId);
+const timeoutId = setTimeout(checkOptimization, 1000);
+
+    return (
+    <>
+      ) => clearTimeout(timeoutId
+    </>
+    </>
+    </>
+  );
   }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
   const optimizePerformance = useCallback(() => {;
     if (typeof document === 'undefined') return;
 
-    // Preload critical resources
-    const criticalResources = [
+    // Preload critical resources;
+
+const criticalResources = [
       '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
       '/images/logo.png',;
@@ -118,8 +126,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       document.head.appendChild(link);
     });
 
-    // Optimize images
-    const images = document.querySelectorAll('img[data-src]');
+    // Optimize images;
+
+const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {;
@@ -133,7 +142,13 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
 
     images.forEach((img) => imageObserver.observe(img));
 
-    return () => imageObserver.disconnect();
+    return (
+    <>
+      ) => imageObserver.disconnect(
+    </>
+    </>
+    </>
+  );
   }, []);
 
   const measurePerformance = useCallback((name: string, fn: () => void) => {

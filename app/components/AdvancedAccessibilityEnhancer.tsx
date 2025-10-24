@@ -1,18 +1,4 @@
-'use client';
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from './Navigation';
-import React, { useEffect, useState, useCallback } from 'react';
-interface AdvancedAccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean
-  enableScreenReader?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableARIALabels?: boolean
-  enableSkipLinks?: boolean
-  enableColorContrast?: boolean
-  enableMotionReduction?: boolean
-  enableFontScaling?: boolean
-  enableVoiceNavigation?: boolean
+'use client'
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation= true,
   enableScreenReader= true,

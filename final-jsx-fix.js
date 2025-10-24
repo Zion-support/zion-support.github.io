@@ -1,83 +1,94 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix specific JSX issues
-function fixJsxIssues(content) {
-  let fixed = content;
-  
-  // Fix malformed JSX structure with title tags outside of Helmet
-  fixed = fixed.replace(/<>\s*<title>([^<]+)\s*<\/title>/g, '<>\n      <Helmet>\n        <title>$1</title>');
-  
-  // Fix malformed JSX structure with h1 tags
-  fixed = fixed.replace(/<title>([^<]+)\s*<\/title>\s*<h1([^>]*)>/g, '<title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Helmet>\n      \n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\n        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">\n          <h1$2>');
-  
-  // Fix malformed JSX structure with p tags
-  fixed = fixed.replace(/<h1([^>]*)>([^<]+)\s*<\/h1>\s*<p([^>]*)>/g, '<h1$1>$2</h1>\n          <p$3>');
-  
-  // Fix malformed JSX structure with Link tags
-  fixed = fixed.replace(/<p([^>]*)>([^<]+)\s*<\/p>\s*<Link([^>]*)>/g, '<p$1>$2</p>\n          <Link$3>');
-  
-  // Fix malformed JSX structure with ArrowRight
-  fixed = fixed.replace(/<Link([^>]*)>([^<]+)<\/Link>\s*<>\s*<ArrowRight([^>]*)\s*\/>\s*<\/ArrowRight>/g, '<Link$1>$2<ArrowRight$3 /></Link>');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/Link>\s*<\/>\s*<\/div>\s*<\/>\s*<\/div>\s*<\/>\s*\);/g, '</Link>\n        </div>\n      </div>\n    </>');
-  
-  // Fix malformed Layout components
-  fixed = fixed.replace(/<Layout\s*title="([^"]+)"\s*description="([^"]+)"\s*keywords="([^"]+)"\s*>/g, '<Layout\n      title="$1"\n      description="$2"\n      keywords="$3"\n    >');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/>\s*<\/div>\s*<\/>\s*\);/g, '</>\n    </div>\n  );');
-  
-  // Fix malformed function declarations
-  fixed = fixed.replace(/export default ([^;]+);\s*const ([^:]+): React\.FC = \(\) => {/g, 'const $2: React.FC = () => {');
-  
-  // Fix malformed closing braces
-  fixed = fixed.replace(/}\s*;\s*$/g, '};\n\nexport default $1;');
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+function fixJSXStructure(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJsxIssues(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix JSX structure issues
+    const fixes = [
+      // Fix malformed fragments with content outside
+      {
+        pattern: /<>\s*<\/>\s*<([^>]+)>/gs,
+        replacement: '<>\n      <$1>'
+      },
+      // Fix empty fragments that should contain content
+      {
+        pattern: /<>\s*<\/>\s*([^<]+)/gs,
+        replacement: '<>\n      $1'
+      },
+      // Fix malformed return statements
+      {
+        pattern: /return\s*\(\s*<>\s*<\/>\s*([^<]+)/gs,
+        replacement: 'return (\n    <>\n      $1'
+      },
+      // Fix missing closing fragments
+      {
+        pattern: /<>\s*([^<]*?)\s*$/gm,
+        replacement: '<>\n      $1\n    </>'
+      },
+      // Fix malformed JSX elements
+      {
+        pattern: /<(\w+)([^>]*)>\s*<\/\1>\s*([^<]+)/gs,
+        replacement: '<$1$2>$3</$1>'
+      },
+      // Fix missing semicolons
+      {
+        pattern: /(\w+)\s*\n\s*export/g,
+        replacement: '$1;\n\nexport'
+      }
+    ];
+
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    // Additional specific fixes
+    // Fix the specific pattern where Head is outside fragment
+    if (content.includes('<Head>') && content.includes('</>')) {
+      content = content.replace(
+        /<>\s*<\/>\s*<Head>/gs,
+        '<>\n      <Head>'
+      );
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed JSX structure in: ${filePath}`);
+      return true;
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
+  return false;
 }
 
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
+function walkDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += walkDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixJSXStructure(filePath)) {
+        fixedCount++;
+      }
     }
-  }
-  
-  return files;
+  });
+
+  return fixedCount;
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
-
-tsxFiles.forEach(processFile);
-
-console.log('Final JSX fixing completed!');
+console.log('Starting final JSX structure fixes...');
+const fixedCount = walkDirectory('./app');
+console.log(`Fixed JSX structure in ${fixedCount} files`);
