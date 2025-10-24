@@ -200,6 +200,7 @@ export default function CloudInfrastructurePage() {
             Professional cloud infrastructure services coming soon.
           </p>
           <Link
+<<<<<<< HEAD
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
@@ -208,6 +209,17 @@ export default function CloudInfrastructurePage() {
           </Link>
         </div>
       </div>
+=======
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+      <Footer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }

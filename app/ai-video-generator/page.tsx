@@ -18,6 +18,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai video generator solutions designed to meet your business needs.
           </p>
+<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -43,6 +44,18 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </div>
         </div>
       </div>
+=======
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+      <Footer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }

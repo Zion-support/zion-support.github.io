@@ -18,14 +18,24 @@ export default function AiInvoiceGeneratorZionTechGroup() {
             Professional aiinvoicegenerator services coming soon.
           </p>
           <Link
+<<<<<<< HEAD
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+=======
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
 </div>
+=======
+      <Footer />
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
   );
 }

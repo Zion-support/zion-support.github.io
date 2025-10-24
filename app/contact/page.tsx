@@ -111,6 +111,7 @@ export default function Contact() {
             Ready to transform your business with AI and cutting-edge technology? 
             Get in touch with our experts today.
           </p>
+<<<<<<< HEAD
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -283,6 +284,18 @@ export default function Contact() {
           </div>
         </div>
       </div>
+=======
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+      <Footer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }

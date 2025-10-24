@@ -45,6 +45,7 @@ export default function AIEmailAssistant() {
             Transform your data into actionable insights with our advanced AI analytics platform. 
             Get real-time predictions, automated reporting, and intelligent recommendations.
           </p>
+<<<<<<< HEAD
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -156,6 +157,19 @@ export default function AIEmailAssistant() {
         </div>
       </div>
 </div>
+=======
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+      <Footer />
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
   );
 };
 

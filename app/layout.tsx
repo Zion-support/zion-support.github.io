@@ -21,6 +21,7 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   metadataBase: new URL('https://zion.app'),
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
@@ -34,6 +35,28 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://zion.app',
     siteName: 'Zion Tech Group',
+=======
+  title: 'ZionTechGroup - AI Solutions & Technology Services',
+  description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
+  keywords: ['AI solutions', 'technology services', 'digital transformation', 'machine learning', 'artificial intelligence'],
+  authors: [{ name: 'ZionTechGroup' }],
+  creator: 'ZionTechGroup',
+  publisher: 'ZionTechGroup',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'ZionTechGroup - AI Solutions & Technology Services',
+    description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'ZionTechGroup',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     images: [
       {
         url: '/og-image.jpg',
@@ -49,6 +72,7 @@ export const metadata: Metadata = {
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     images: ['/og-image.jpg'],
   },
+<<<<<<< HEAD
   alternates: {
     canonical: 'https://zion.app',
   },
@@ -59,10 +83,28 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
 }
+=======
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
 
 export default function RootLayout({
   children,
 }: {
+<<<<<<< HEAD
   children: React.ReactNode
 }) {
   return (
@@ -105,6 +147,14 @@ export default function RootLayout({
           </main>
           <Footer />
         </ErrorBoundary>
+=======
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        {children}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
       </body>
     </html>
   );

@@ -196,6 +196,7 @@ export default function Pricing() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Choose the perfect plan for your business. All plans include our core features with no hidden fees.
           </p>
+<<<<<<< HEAD
         </div>
 
         {/* AI Services Pricing */}
@@ -376,6 +377,18 @@ export default function Pricing() {
           </div>
         </div>
       </div>
+=======
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+      <Footer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }

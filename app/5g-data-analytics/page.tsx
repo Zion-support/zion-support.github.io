@@ -43,6 +43,10 @@ export default function DataAnalytics5GPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      <Footer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
