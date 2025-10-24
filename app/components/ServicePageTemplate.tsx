@@ -1,67 +1,38 @@
-import React from &quot;react&quot;
-import { Helmet } from &quot;react-helmet-async&quot;
-&quot;use client&quot;
+import React from quotreactquot import  Helmet  from quotreact-helmet-asyncquot quotuse clientquot const ServicePageTemplatePage ReactFC =  => 
+  const features="icon" Brain title 'AI-Powered Intelligence'
+      description 'Advanced AI algorithms that provide intelligent insights and recommendations'
+    benefits 'Smart recommendations' 'Predictive analytics' 'Automated insights' 'Real-time analysis'
 
-const ServicePageTemplatePage: React.FC = () => {,
-  const features = [
-    {
-      icon: Brain,
-    title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-  {
-    icon: BarChart,
-    title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
-  {
-    icon: Target,
-    title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
-  {
-    icon: TrendingUp,
-    title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  ]
-  const benefits = [
-  'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    icon BarChart title 'Advanced Analytics'
+      description 'Comprehensive analytics dashboard with real-time data visualization'
+    benefits 'Real-time dashboards' 'Custom reports' 'Data visualization' 'Performance metrics'
+
+    icon Target title 'Precision Targeting'
+      description 'Target specific goals and objectives with precision and accuracy'
+    benefits 'Goal tracking' 'Performance optimization' 'Strategic planning' 'Success metrics'
+
+    icon TrendingUp title 'Growth Optimization'
+      description 'Optimize your business growth with data-driven strategies'
+    benefits 'Growth strategies' 'Market analysis' 'Competitive insights' 'ROI optimization'
+  
+  const benefits="'Increase" efficiency by up to 50'
+    'Reduce costs by 30 with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-  ]
-  return (
-    <>
+  
+  return (<div>
       
-    </>
-      <Helmet> </Helmet><title>ServicePageTemplate | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; /> </meta><meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation&quot; /> </meta></Helmet>
-      <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;container mx-auto max-w-6xl&quot;>
-        <div className=&quot;text-center mb-16&quot;> </div><h1 className=&quot;text-5xl md: text-6xl font-bold text-white mb-6&quot;>ServicePageTemplate</h1>,
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional ServicePageTemplate services tailored to your business needs.</p>p>
+    </div></div>
+      <Helmet> </Helmet><title>ServicePageTemplate  Zion Tech Group</title>
+        <meta name=quotdescriptionquot content=quotProfessional ServicePageTemplate services by Zion Tech Groupquot /> </meta><meta name=quotkeywordsquot content=quotAI artificial intelligence ServiceTemplatePage AI solutions intelligent automationquot /> </meta></Helmet>
+      <section className=quotpy-20 px-4quot> </section><div className=quotcontainer mx-auto max-w-6xlquot>
+        </div>
+        <div className=quottext-center mb-16quot> </div></div>
+          <h1 className=quottext-5xl md text-6xl font-bold text-white mb-6quot>ServicePageTemplate</h1>
+            <p className=quottext-xl text-gray-300 max-w-3xl mx-auto leading-relaxedquot>Professional ServicePageTemplate services tailored to your business needs</p></p>p>
           </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-    </>
-  );
-  )
-}
-<<<<<<< HEAD
- ServicePageTemplatePage
-=======
-export default ServicePageTemplatePage
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
-=======
-
-  </>
-export default ServicePageTemplatePage;
-
-export default ServicePageTemplatePage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+export default ServicePageTemplatePage }

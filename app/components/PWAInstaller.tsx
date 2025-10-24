@@ -1,130 +1,42 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { X , Download  } from 'lucide-react';
-interface BeforeInstallPromptEvent extends Event {
-<<<<<<< HEAD
-  prompt(): Promise<void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
-const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
-  const [isInstalled, setIsInstalled] = useState(false)
-  useEffect(() => {
-    // Check if app is already installed
-    const checkInstalled = () => {
-      if (window.matchMedia('(display-mode: standalone)').matches) {
-        setIsInstalled(true)}
-    checkInstalled()
-    // Listen for beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault()
-      setDeferredPrompt(e as BeforeInstallPromptEvent)
-      setShowInstallPrompt(true)
-    // Listen for appinstalled event
-    const handleAppInstalled = () => {
-      setIsInstalled(true)
-      setShowInstallPrompt(false)
-      setDeferredPrompt(null)
-=======
-  prompt(): Promise<void>userChoice: Promise</void><{ outcome: 'accepted' | 'dismissed' }>
-}
-const PWAInstaller: React.FC = ($2) => {
-$3
-};
-    }
-    checkInstalled()
-    // Listen for beforeinstallprompt event;
+'use client'
+import { { { React  useState useEffect  from 'react'
+import  X  Download            } from 'lucide-react'
+interface BeforeInstallPromptEvent extends Event prompt Promise<void>userChoice Promise</void>< outcome 'accepted'  'dismissed' >
 
-const handleBeforeInstallPrompt = ($2) => {
-$3
-};
-    // Listen for appinstalled event;
+const PWAInstaller ReactFC = 2 => 
+3 checkInstalled // Listen for beforeinstallprompt event const handleBeforeInstallPrompt = 2 => 
+3 // Listen for appinstalled event const handleAppInstalled = 2 => 
+3 consoleerror'Installation failed' error const handleDismiss =  => 
+    setShowInstallPromptfalse // Donapost show again for this session sessionStoragesetItem'pwa-install-dismissed' 'true'
+  // Donapost show if already installed or dismissed this session if isInstalled  showInstallPrompt  sessionStoragegetItem'pwa-install-dismissed'
+    </>
+  
+    consoleerror'Installation failed' error const handleDismiss = 2 => 
+3</>
 
-const handleAppInstalled = ($2) => {
-$3
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-    window.addEventListener('appinstalled', handleAppInstalled)
-    return (
-    <>
-      ) => {
+  // Donapost show if already installed or dismissed this session if isInstalled  showInstallPrompt  sessionStoragegetItem'pwa-install-dismissed'
     </>
-    </>
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-      window.removeEventListener('appinstalled', handleAppInstalled)
-  }, [])
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return
-    try {
-      await deferredPrompt.prompt()
-      const { outcome } = await deferredPrompt.userChoice
-      if (outcome === 'accepted') {
-  // Installation successful
-} else {
-  // Installation dismissed
-      setDeferredPrompt(null)
-      setShowInstallPrompt(false)
-    } catch (error) {
-      // // eslint-disable-next-line no-console
-<<<<<<< HEAD
-    console.error('Installation failed:', error)}
-  const handleDismiss = () => {
-    setShowInstallPrompt(false)
-    // Don&apos;t show again for this session
-    sessionStorage.setItem('pwa-install-dismissed', 'true')
-  // Don&apos;t show if already installed or dismissed this session
-  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')
-    </>
-  );
-}
-=======
-    console.error('Installation failed:', error)
-    }
-  }
-  const handleDismiss = ($2) => {
-$3
-  </>
-};
-  // Don&apos;t show if already installed or dismissed this session
-  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')
-    </>
-  ) {
-  return null
-}
-  return (
-    <div className=&quot;fixed bottom-4 right-4 z-50 max-w-sm&quot;>
-        <div className=&quot;bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4&quot;> </div><div className=&quot;flex items-start justify-between mb-3&quot;>
-        <div className=&quot;flex items-center space-x-2&quot;> </div><div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center&quot;> </div><Download className=&quot;w-4 h-4 text-white&quot; /> </Download></div>
-            <div> </div><h3 className=&quot;text-white text-sm font-medium&quot;>Install App</h3>
-              <p className=&quot;text-gray-300 text-xs&quot;>Get quick access to Zion Tech Group</p>
+   
+  return null return (<><div className=quotfixed bottom-4 right-4 z-50 max-w-smquot>
+        </div>
+        <div className=quotbg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4quot> </div></div>
+        <div className=quotflex items-start justify-between mb-3quot>
+        </div>
+        <div className=quotflex items-center space-x-2quot> </div></div></><><div className=quotw-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-centerquot> </div></div><Download className=quotw-4 h-4 text-whitequot /> </Download></div>
+        <div> </div></div></><h3 className=quottext-white text-sm font-mediumquot>Install App</h3>
+              <p className=quottext-gray-300 text-xsquot>Get quick access to Zion Tech Group</p></p>
             </div>
           </div>
-          <button
-            onClick={handleDismiss}
-            className=&quot;text-gray-400 hover: text-white transition-colors&quot;,
-            aria-label=&quot;Dismiss install prompt&quot
-          > </button><X className=&quot;w-4 h-4&quot; /> </X></button>
+          <button onClick=handleDismiss className=quottext-gray-400 hover text-white transition-colorsquot aria-label=quotDismiss install promptquot > </button><X className=quotw-4 h-4quot /> </X></button>
         </div>
-        <div className=&quot;space-y-2&quot;> </div><button
-            onClick={handleInstallClick}
-            className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium&quot;,
-          >Install Now
-          </button></button>
-          <button
-            onClick={handleDismiss}
-            className=&quot;w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover: bg-slate-700 hover:text-white transition-all duration-300 text-sm&quot;,
-          >Not Now
-          </button></button>
+        <><div className=quotspace-y-2quot> </div></div><button onClick=handleInstallClick className=quotw-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover from-cyan-600 hoverto-purple-700 transition-all duration-300 text-sm font-mediumquot >Install Now</button></button>
+          <button onClick=handleDismiss className=quotw-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover bg-slate-700 hovertext-white transition-all duration-300 text-smquot >Not Now</button></button>
         </div>
-        <div className=&quot;mt-3 text-xs text-gray-400&quot;> </div><p>• Faster loading</p>
-          <p>• Offline access</p>
-          <p>• Native app experience</p>
+        <div className=quotmt-3 text-xs text-gray-400quot> </div></div></><p> Faster loading</p></p>
+          <p> Offline access</p></p>
+          <p> Native app experience</p></p>
         </div>
       </div>
     </div>
-  )
-}
 
-export default PWAInstaller
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+export default PWAInstaller }

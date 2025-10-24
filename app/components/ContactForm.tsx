@@ -1,269 +1,61 @@
-'use client';
-import { useState } from 'react';
-import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
+'use client'
+import { { { useState  from 'react'
+import  MessageSquare Mail Phone Send CheckCircle           } from 'lucide-react'
 
-interface FormData {
-<<<<<<< HEAD
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  service: string;
-}
-
-const ContactForm: React.FC = () => {
-=======
-  name: string;,
-    email: string;,
-  phone: string;,
-    company: string;,
-  message: string;,
-    service: string,
-  }
-const ContactForm: React.FC = () => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
-    service: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-<<<<<<< HEAD
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-=======
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
-  setFormData({
-      ...formData
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-      [e.target.name]: e.target.value
-    })
-  }
-<<<<<<< HEAD
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-=======
-  const handleSubmit = async (e: React.FormEvent) => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        service: ''
-      })
-    }, 3000)
-  }
-  
-  const services = [
-    'AI Solutions',
-    'Web Development',
-    'Mobile Development',
-    'Cloud Migration',
-    'Cybersecurity',
-    'Data Analytics',
-    'DevOps',
-    'Consulting'
-  ]
-  
-  if (isSubmitted) {
-    return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"> </div><CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> </CheckCircle><h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-        <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
-      </div>
-    )
-  }
-  
-  return (
-<<<<<<< HEAD
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-      <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-              Full Name *
-            </label>
-=======
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"> </div><h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-      <form onSubmit={handleSubmit} className="space-y-6"> </form><div className="grid md: grid-cols-2 gap-6">,
-          <div> </div><label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Full Name *
-            </label></label>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-<<<<<<< HEAD
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-              placeholder="Your full name"
-            /> </input></div>
-          <div> </div><label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address *
-            </label></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-<<<<<<< HEAD
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-              placeholder="your@email.com"
-            /> </input></div>
-        </div>
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-              Phone Number
-            </label>
-=======
-        <div className="grid md: grid-cols-2 gap-6">,
-          <div> </div><label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number
-            </label></label>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-<<<<<<< HEAD
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-              placeholder="+1 (555) 123-4567"
-            /> </input></div>
-          <div> </div><label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">Company
-            </label></label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-<<<<<<< HEAD
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-              placeholder="Your company name"
-            /> </input></div>
-        </div>
-        <div> </div><label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">Service Interest
-          </label></label>
-          <select
-            id="service"
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-<<<<<<< HEAD
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+interface FormData name string email string phone string company string message string service string const ContactForm ReactFC =  =>   
+  const handleChange="e" ReactChangeEvent<HTMLInputElement  HTMLTextAreaElement  HTMLSelectElement> => 
+    setFormData formData  const handleChange="e" ReactChangeEvent<HTMLInputElement  HTMLTextAreaElement  HTMLSelectElement> => 
+  setFormData formData const handleSubmit = async e ReactFormEvent =>   const handleSubmit = async e ReactFormEvent =>     <><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+      </div><h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+      <form onSubmit=handleSubmit className="space-y-6">
+        <div className="grid mdgrid-cols-2 gap-6">
+          </div>
+        <div>
+            </div><label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+              Full Name</label>    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"> </div></div><h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+      <form onSubmit=handleSubmit className="space-y-6"> </form><div className="grid md grid-cols-2 gap-6">
+          </div>
+        <div> </div></div><label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Full Name</label></label>              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focusoutline-none focusring-2 focusring-cyan-500 focusborder-transparent"              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus outline-none focusring-2 focusring-cyan-500 focusborder-transparent"              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focusoutline-none focusring-2 focusring-cyan-500 focusborder-transparent"              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus outline-none focusring-2 focusring-cyan-500 focusborder-transparent"        <div className="grid mdgrid-cols-2 gap-6">
+          </div>
+        <div>
+            </div><label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+              Phone Number</label>        <div className="grid md grid-cols-2 gap-6">
+          </div>
+        <div> </div></div><label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label></label>              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focusoutline-none focusring-2 focusring-cyan-500 focusborder-transparent"              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus outline-none focusring-2 focusring-cyan-500 focusborder-transparent"              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focusoutline-none focusring-2 focusring-cyan-500 focusborder-transparent"              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus outline-none focusring-2 focusring-cyan-500 focusborder-transparent"            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focusoutline-none focusring-2 focusring-cyan-500 focusborder-transparent"
           >
-            <option value="">Select a service</option>
-=======
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
-          > </select><option value="">Select a service</option>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-            {services.map((service, index) => (
-              <option key={index} value={service} className="bg-gray-800">{service}
-              </option></option>
-            ))}
-          </select>
-        </div>
-        <div> </div><label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message *
-          </label></label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows={6}
-<<<<<<< HEAD
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-=======
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none",
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-            placeholder="Tell us about your project or how we can help..."
-          /> </textarea></div>
-        <button
-          type="submit"
-          disabled={isSubmitting}
-<<<<<<< HEAD
-          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            <option value="">Select a service</option>            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus outline-none focusring-2 focusring-cyan-500 focusborder-transparent"
+          > </select><option value="">Select a service</option>            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focusoutline-none focusring-2 focusring-cyan-500 focusborder-transparent resize-none"            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus outline-none focusring-2 focusring-cyan-500 focusborder-transparent resize-none"          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hoverfrom-cyan-600 hoverto-purple-600 transition-all duration-300 disabledopacity-50 disabledcursor-not-allowed"
         >
-          {isSubmitting ? (
-            <>
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-              Sending...
-            </>
-          ) : (
+          isSubmitting  <>
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div></div>
+              Sending</>
+            
             <>
               <Send className="w-5 h-5 mr-2" />
-              Send Message
-            </>
-          )}
+              Send Message</>
+          
+        </button>
+      </form>          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover from-cyan-600 hoverto-purple-600 transition-all duration-300 disabledopacity-50 disabledcursor-not-allowed"
+        >isSubmitting</button><div>
+      
+    </div></div>
+        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">Sending</div></div></></>
+            
+            <><div>
+      
+    </div></div>
+      <Send className="w-5 h-5 mr-2" />Send Message</Send></>
+          
         </button>
       </form>
-=======
-          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed",
-        >{isSubmitting ? (
-            </button><>
-      
-    </>
-      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">Sending...
-</div></>
-          ) : (
-            <>
-      
-    </>
-      <Send className="w-5 h-5 mr-2" />Send Message
-</Send></>
-          )}
-        </button>
-      </form>
-      <div className="mt-8 pt-8 border-t border-white/10"> </div><h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
+      <div className="mt-8 pt-8 border-t border-white/10"> </div></div><h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
         <div className="space-y-3">
-        <div className="flex items-center justify-center"> </div><Mail className="w-5 h-5 text-cyan-400 mr-2" /> </Mail><span className="text-gray-300">kleber@ziontechgroup.com</span>
+        </div>
+        <div className="flex items-center justify-center"> </div></div><Mail className="w-5 h-5 text-cyan-400 mr-2" /> </Mail><span className="text-gray-300">kleberziontechgroupcom</span>
           </div>
-          <div className="flex items-center justify-center"> </div><Phone className="w-5 h-5 text-purple-400 mr-2" /> </Phone><span className="text-gray-300">+1 (302) 464-0950</span>
+        <div className="flex items-center justify-center"> </div></div></><Phone className="w-5 h-5 text-purple-400 mr-2" /> </Phone><span className="text-gray-300">1 302 464-0950</span>
           </div>
-          <div className="flex items-center justify-center"> </div><MessageSquare className="w-5 h-5 text-green-400 mr-2" /> </MessageSquare><span className="text-gray-300">24/7 Support</span>
+        <div className="flex items-center justify-center"> </div></div><MessageSquare className="w-5 h-5 text-green-400 mr-2" /> </MessageSquare><span className="text-gray-300">24/7 Support</span>
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-    </div>
-  )
-}
-
-export default ContactForm

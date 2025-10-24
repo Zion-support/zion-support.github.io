@@ -1,147 +1,34 @@
-'use client';
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-interface SEOOptimizerProps {
-<<<<<<< HEAD
-  className?: string
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-=======
-  className?: string;
-}
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-  title = 'Zion Tech Group - Advanced AI and IT Solutions'
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']
-  canonicalUrl = 'https: //ziontechgroup.com',
-  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
-  structuredData
-}) => {
-  useEffect(() => {
-    // Update page title
-    document.title = title
-    // Update meta description;
+'use client'
 
-const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description)
-    } else {
-      const meta = document.createElement('meta')
-      meta.name = 'description'
-      meta.content = description
-      document.head.appendChild(meta),
-  ]
-    // Update keywords;
+import { React  useEffect  from 'react'
+import Head    } from 'next/head'
 
-const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', ')
-    } else {
-      const meta = document.createElement('meta')
-      meta.name = 'keywords'
-      meta.content = keywords.join(', ')
-      document.head.appendChild(meta)
-    // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
-    if (canonicalLink) {
-      canonicalLink.setAttribute('href', canonicalUrl)
-    } else {
-      canonicalLink = document.createElement('link')
-      canonicalLink.rel = 'canonical'
-      canonicalLink.href = canonicalUrl
-      document.head.appendChild(canonicalLink)
-<<<<<<< HEAD
-    // Update Open Graph tags
-    const updateOGTag = (property: string, content: string) => {
-=======
-    }
-    // Update Open Graph tags;
+interface SEOOptimizerProps className string const SEOOptimizer ReactFC<SEOOptimizerProps> =  className  => 
+  useEffect => 
+    // Update meta tags dynamically const updateMetaTag = name string content string => 
+      let meta = documentquerySelectormetaname="name"
+      if meta meta = documentcreateElement'meta'
+        metasetAttribute'name' name documentheadappendChildmeta metasetAttribute'content' content // Update Open Graph tags const updateOGTag = property string content string => 
+      let meta="documentquerySelectormetaproperty=""property"
+      if meta meta="documentcreateElement'meta'"
+        metasetAttribute'property' property documentheadappendChildmeta metasetAttribute'content' content // Set default SEO values updateMetaTag'description' 'Zion Tech Group - Advanced AI and Technology Solutions'
+    updateMetaTag'keywords' 'AI technology solutions automation innovation'
+    updateOGTag'ogtitle' 'Zion Tech Group - AI  Technology Solutions'
+    updateOGTag'ogdescription' 'Advanced AI and Technology Solutions for Modern Businesses'
+    updateOGTag'ogtype' 'website'
+    updateOGTag'ogurl' windowlocationhref const structuredData = 
+    "context" "https//schemaorg"
+    "type" "Organization"
+    "name" "Zion Tech Group"
+    "description" "Advanced AI and Technology Solutions"
+    "url" typeof window="=" 'undefined'  windowlocationorigin  ''
+    "logo" typeof window="=" 'undefined'  windowlocationorigin/logopng  ''
+    "sameAs" 
+      "https//twittercom/ziontechgroup"
+      "https//linkedincom/company/ziontechgroup"
 
-const updateOGTag = (property: string, content: string) => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-      let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
-      if (ogTag) {
-        ogTag.setAttribute('content', content)
-      } else {
-        ogTag = document.createElement('meta')
-        ogTag.setAttribute('property', property)
-        ogTag.setAttribute('content', content)
-        document.head.appendChild(ogTag)}
-    updateOGTag('og:title', title)
-    updateOGTag('og:description', description)
-    updateOGTag('og:image', ogImage)
-    updateOGTag('og:url', canonicalUrl)
-    updateOGTag('og:type', 'website')
-    // Update Twitter Card tags;
-
-const updateTwitterTag = (name: string, content: string) => {,
-      let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`)
-      if (twitterTag) {
-        twitterTag.setAttribute('content', content)
-      } else {
-        twitterTag = document.createElement('meta')
-        twitterTag.setAttribute('name', name)
-        twitterTag.setAttribute('content', content)
-        document.head.appendChild(twitterTag)}
-    updateTwitterTag('twitter:card', 'summary_large_image')
-    updateTwitterTag('twitter:title', title)
-    updateTwitterTag('twitter:description', description)
-    updateTwitterTag('twitter:image', ogImage)
-    // Add structured data
-    if (structuredData) {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.textContent = JSON.stringify(structuredData)
-      document.head.appendChild(script)
-    // Add viewport meta tag if not present
-    let viewport = document.querySelector('meta[name=&quot;viewport&quot;]')
-    if (!viewport) {
-      viewport = document.createElement('meta')
-      viewport.setAttribute('name', 'viewport')
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1')
-      document.head.appendChild(viewport)
-    // Add charset if not present
-    let charset = document.querySelector('meta[charset]')
-    if (!charset) {
-      charset = document.createElement('meta')
-      charset.setAttribute('charset', 'UTF-8')
-      document.head.insertBefore(charset, document.head.firstChild)
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
-  return (
-    <Head> </Head><title>{title}</title>
-      <meta name=&quot;description&quot; content={description} /> </meta><meta name=&quot;keywords&quot; content={keywords.join(', ')} /> </meta><link rel=&quot;canonical&quot; href={canonicalUrl} />{/* Open Graph */}
-      </link><meta property=&quot;og:title&quot; content={title} /> </meta><meta property=&quot;og:description&quot; content={description} /> </meta><meta property=&quot;og:image&quot; content={ogImage} /> </meta><meta property=&quot;og:url&quot; content={canonicalUrl} /> </meta><meta property=&quot;og: type&quot; content=&quot;website&quot; />,
-      {/* Twitter Card */}
-      <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; />,
-      <meta name=&quot;twitter:title&quot; content={title} /> </meta><meta name=&quot;twitter:description&quot; content={description} /> </meta><meta name=&quot;twitter:image&quot; content={ogImage} />{/* Additional SEO meta tags */}
-      </meta><meta name=&quot;robots&quot; content=&quot;index, follow&quot; /> </meta><meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; /> </meta><meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /> </meta><meta charSet=&quot;UTF-8&quot; />{/* Structured Data */}
-      {structuredData && (
-        </meta><script
-          type=&quot;application/ld+json&quot
-<<<<<<< HEAD
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}
-        />
-      )}
+  return (<Head></Head><script type="application/ldjson"
+        dangerouslySetInnerHTML= __html JSONstringifystructuredData />
     </Head>
-<<<<<<< HEAD
-  )
-}
- SEOOptimizer
-  )
-}
-=======
-export default SEOOptimizer
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
-=======
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />)}
-    </script></Head>
-  )
-}
 
-export default SEOOptimizer
-  )
-}
-
-export default SEOOptimizerPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+export default SEOOptimizer }

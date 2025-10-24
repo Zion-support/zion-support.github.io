@@ -1,90 +1,17 @@
-import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void}
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined
-<<<<<<< HEAD
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
-  if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
-=======
-)
-export const useAnalytics = ($2) => {
-$3
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-  return context
-interface AnalyticsProviderProps {
-  children: ReactNode}
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
-    if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics
-      if (process.env.NODE_ENV === &quot;production&quot;) {
-        const script = document.createElement(&quot;script&quot;)
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true
-        document.head.appendChild(script)
-        window.gtag =
-          window.gtag ||
-          function (...args: any[]) {,
-            (window.gtag as any).q = (window.gtag as any).q || []
-            (window.gtag as any).q.push(args)
-        window.gtag(&quot;js&quot;, new Date()
-        window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)}
-  }, [])
-<<<<<<< HEAD
-  consttrackEvent= (
-    eventName: string
-    parameters?: Record<string, unknown>
-  ) => {
-    if (typeof window !== &quot;undefined&quot; && window.gtag) {
-      window.gtag(&quot;event&quot;, eventName, parameters)}
-  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
-      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
-        page_title: pageName,
-    page_location: window.location.href})}
-  constvalue: AnalyticsContextType = {trackEvent
-    trackPageView}
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-<<<<<<< HEAD
-  )
-}
- AnalyticsProvider
-  )
-}
-=======
-export default AnalyticsProvider
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
-=======
-  consttrackEvent = ($2) => {
-$3
-};
-  }
-  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {,
-      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
-        page_title: pageName,
-    page_location: window.location.href})
-    }
-  }
-  constvalue: AnalyticsContextType = {trackEvent,
-    trackPageView}
-  return (
-    <AnalyticsContext.Provider value={value}>{children}
-    </AnalyticsContext></AnalyticsContext.Provider>
-  )
-}
+import { React  createContext useContext useEffect ReactNode  } from \"react\"
 
-export default AnalyticsProvider
-  )
-}
+declare global interface Window gtag args any => void interface AnalyticsContextType trackEvent eventName string parameters Record<string unknown> => void trackPageView pageName string => void const AnalyticsContext="createContext"<AnalyticsContextType  undefined>
+  undefined export const useAnalytics =  => 
+  const context="useContextAnalyticsContext"
+  if context="==" undefined throw new Error'useAnalytics must be used within an AnalyticsProvider'
+  
+  return context interface AnalyticsProviderProps children ReactNode const AnalyticsProvider ReactFC<AnalyticsProviderProps> =  children  => 
+  const trackEvent="eventName" string parameters Record<string unknown>
+   => 
+    if typeof window == "undefined"  windowgtag windowgtag"event" eventName parameters const trackPageView = pageName string => 
+    if typeof window="=" "undefined"  windowgtag windowgtag"config" "GA_MEASUREMENT_ID" 
+        page_title pageName page_location windowlocationhref const value AnalyticsContextType="trackEvent"
+    trackPageView return (<AnalyticsContextProvider value=value>
+      children</AnalyticsContextProvider>
 
-export default AnalyticsProviderPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+export default AnalyticsProvider }

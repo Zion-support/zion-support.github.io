@@ -1,100 +1,56 @@
-'use client';
+'use client'
 
-import React, { useEffect } from 'react';
+import { React  useEffect     } from 'react'
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Add high contrast mode support;
+const EnhancedAccessibility ReactFC< children ReactReactNode > =  children  => 
+  useEffect => 
+    // Add high contrast mode support const addHighContrastSupport =  => 
+      if typeof window == 'undefined'  typeof document == 'undefined' 
+        const mediaQuery = windowmatchMedia'prefers-contrast high'
+        const handleContrastChange = e MediaQueryListEvent => 
+          if ematches documentdocumentElementclassListadd'high-contrast'
+           else documentdocumentElementclassListremove'high-contrast'
 
-const addHighContrastSupport = () => {
-      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-        const mediaQuery = window.matchMedia('(prefers-contrast: high)');,
-        const handleContrastChange = (e: MediaQueryListEvent) => {,
-          if (e.matches) {
-            document.documentElement.classList.add('high-contrast');
-          } else {
-            document.documentElement.classList.remove('high-contrast');
-          }
-        };
-        mediaQuery.addEventListener('change', handleContrastChange);
-        handleContrastChange(mediaQuery as any);
+        mediaQueryaddEventListener'change' handleContrastChange handleContrastChangemediaQuery as any return (<div>
+       => mediaQueryremoveEventListener'change' handleContrastChange</div></div>
+    </>
+    </>
 
-        return (
-    <>
-      ) => mediaQuery.removeEventListener('change', handleContrastChange
+      return (<div>
+       => 
+    </div></div>
     </>
-    </>
-    </>
-  );
-      }
-      return (
-    <>
-      ) => {};
-    </>
-    </>
-    };
 
-    // Add reduced motion support;
+    // Add reduced motion support const addReducedMotionSupport =  => 
+      if typeof window == 'undefined'  typeof document == 'undefined' 
+        const mediaQuery = windowmatchMedia'prefers-reduced-motion reduce'
+        const handleMotionChange = e MediaQueryListEvent => 
+          if ematches documentdocumentElementclassListadd'reduce-motion'
+    </>
+  
+           else documentdocumentElementclassListremove'reduce-motion'
 
-const addReducedMotionSupport = () => {
-      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');,
-        const handleMotionChange = (e: MediaQueryListEvent) => {,
-          if (e.matches) {
-            document.documentElement.classList.add('reduce-motion'
+        mediaQueryaddEventListener'change' handleMotionChange handleMotionChangemediaQuery as any return (<div>
+       => mediaQueryremoveEventListener'change' handleMotionChange</div></div>
     </>
-  );
-          } else {
-            document.documentElement.classList.remove('reduce-motion');
-          }
-        };
-        mediaQuery.addEventListener('change', handleMotionChange);
-        handleMotionChange(mediaQuery as any);
+    </>
 
-        return (
-    <>
-      ) => mediaQuery.removeEventListener('change', handleMotionChange
+      return (<div>
+       => 
+    </div></div>
     </>
-    </>
-    </>
-  );
-      }
-      return (
-    <>
-      ) => {};
-    </>
-    </>
-    };
 
-    // Add screen reader announcements;
-
-const addScreenReaderAnnouncements = ($2) => {
-$3
-};
-    };
-
-    // Initialize accessibility features;
-
-const cleanupContrast = addHighContrastSupport(
+    // Add screen reader announcements const addScreenReaderAnnouncements = 2 => 
+3 // Initialize accessibility features const cleanupContrast="addHighContrastSupport"
     </>
-  );
-    const cleanupMotion = addReducedMotionSupport();
-    addScreenReaderAnnouncements();
-
-    // Cleanup
-    return (
-    <>
-      ) => {
+  
+    const cleanupMotion="addReducedMotionSupport"
+    addScreenReaderAnnouncements // Cleanup return (<div>
+       => 
+    </div></div>
     </>
-    </>
-      cleanupContrast?.(
-    </>
-  );
-      cleanupMotion?.();
-    };
-  }, []);
+      cleanupContrast</>
+  
+      cleanupMotion return <ReactFragment>children</ReactFragment>
 
-  return <React.Fragment>{children}</React.Fragment>;
-};
-
-export default EnhancedAccessibility;
+export default EnhancedAccessibility }
