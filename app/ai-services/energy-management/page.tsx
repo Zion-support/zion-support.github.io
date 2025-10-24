@@ -28,8 +28,6 @@ export default function EnergyManagementPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default EnergyManagementPage

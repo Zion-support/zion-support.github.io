@@ -28,8 +28,6 @@ export default function AiInvestmentOptimizerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiInvestmentOptimizerPage

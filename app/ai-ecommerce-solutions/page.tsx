@@ -28,8 +28,6 @@ export default function AiEcommerceSolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiEcommerceSolutionsPage

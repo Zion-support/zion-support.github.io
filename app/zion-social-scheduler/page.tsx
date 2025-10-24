@@ -28,8 +28,6 @@ export default function ZionSocialSchedulerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionSocialSchedulerPage

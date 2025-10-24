@@ -28,8 +28,6 @@ export default function AiManufacturingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiManufacturingPage

@@ -28,8 +28,6 @@ export default function AiMentalHealthCompanionPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiMentalHealthCompanionPage

@@ -28,8 +28,6 @@ export default function ZionWorkflowAutomationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionWorkflowAutomationPage

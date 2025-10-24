@@ -28,8 +28,6 @@ export default function FraudDetectionPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default FraudDetectionPage

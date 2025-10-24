@@ -28,8 +28,6 @@ export default function ZionContentStudioPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionContentStudioPage

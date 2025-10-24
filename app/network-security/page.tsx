@@ -28,8 +28,6 @@ export default function NetworkSecurityPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default NetworkSecurityPage

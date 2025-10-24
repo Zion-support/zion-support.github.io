@@ -28,8 +28,6 @@ export default function AiComputerVisionPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiComputerVisionPage

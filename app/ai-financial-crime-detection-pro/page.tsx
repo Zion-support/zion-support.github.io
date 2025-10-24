@@ -28,8 +28,6 @@ export default function AiFinancialCrimeDetectionProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiFinancialCrimeDetectionProPage

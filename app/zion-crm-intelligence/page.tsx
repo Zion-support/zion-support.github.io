@@ -28,8 +28,6 @@ export default function ZionCrmIntelligencePage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionCrmIntelligencePage

@@ -28,8 +28,6 @@ export default function AiEducationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiEducationPage

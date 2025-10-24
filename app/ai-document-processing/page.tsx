@@ -28,8 +28,6 @@ export default function AiDocumentProcessingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiDocumentProcessingPage

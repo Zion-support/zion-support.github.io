@@ -28,8 +28,6 @@ export default function AiG3dGenerationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AI3DGenerationPage

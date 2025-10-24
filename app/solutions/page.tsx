@@ -28,8 +28,6 @@ export default function SolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default SolutionsPage

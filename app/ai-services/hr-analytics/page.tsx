@@ -28,8 +28,6 @@ export default function HrAnalyticsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default HrAnalyticsPage

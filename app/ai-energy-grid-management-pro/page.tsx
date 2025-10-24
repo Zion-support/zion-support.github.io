@@ -28,8 +28,6 @@ export default function AiEnergyGridManagementProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiEnergyGridManagementProPage

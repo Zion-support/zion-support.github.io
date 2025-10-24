@@ -28,8 +28,6 @@ export default function AiHrPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiHrPage

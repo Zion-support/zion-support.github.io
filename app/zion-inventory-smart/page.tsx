@@ -28,8 +28,6 @@ export default function ZionInventorySmartPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionInventorySmartPage

@@ -28,8 +28,6 @@ export default function ZionAiWorkflowAutomatorProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionAiWorkflowAutomatorProPage

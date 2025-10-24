@@ -28,8 +28,6 @@ export default function AiInfrastructureMonitoringPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiInfrastructureMonitoringPage

@@ -28,8 +28,6 @@ export default function AiContentStudioPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiContentStudioPage

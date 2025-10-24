@@ -28,8 +28,6 @@ export default function ZionEmailAutomationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionEmailAutomationPage

@@ -28,8 +28,6 @@ export default function AiFinancialAdvisorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiFinancialAdvisorPage

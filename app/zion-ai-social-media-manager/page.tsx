@@ -28,8 +28,6 @@ export default function ZionAiSocialMediaManagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionAiSocialMediaManagerPage

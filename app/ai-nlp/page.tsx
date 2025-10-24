@@ -28,8 +28,6 @@ export default function AiNlpPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiNlpPage

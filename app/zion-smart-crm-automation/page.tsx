@@ -28,8 +28,6 @@ export default function ZionSmartCrmAutomationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionSmartCrmAutomationPage

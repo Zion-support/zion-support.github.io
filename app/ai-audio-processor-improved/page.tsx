@@ -28,8 +28,6 @@ export default function AiAudioProcessorImprovedPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiAudioProcessorImprovedPage

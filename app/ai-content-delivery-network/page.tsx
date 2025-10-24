@@ -28,8 +28,6 @@ export default function AiContentDeliveryNetworkPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiContentDeliveryNetworkPage

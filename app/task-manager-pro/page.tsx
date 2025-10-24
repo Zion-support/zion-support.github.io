@@ -28,8 +28,6 @@ export default function TaskManagerProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default TaskManagerProPage

@@ -28,8 +28,6 @@ export default function AiFraudDetectionPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiFraudDetectionPage

@@ -28,8 +28,6 @@ export default function AiApiManagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiApiManagerPage

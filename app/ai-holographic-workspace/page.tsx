@@ -28,8 +28,6 @@ export default function AiHolographicWorkspacePage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiHolographicWorkspacePage

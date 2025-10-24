@@ -28,8 +28,6 @@ export default function AiMarketingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiMarketingPage

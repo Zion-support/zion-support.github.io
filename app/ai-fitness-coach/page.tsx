@@ -28,8 +28,6 @@ export default function AiFitnessCoachPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiFitnessCoachPage

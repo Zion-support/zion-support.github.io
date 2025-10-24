@@ -28,8 +28,6 @@ export default function AiLogoDesignerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiLogoDesignerPage

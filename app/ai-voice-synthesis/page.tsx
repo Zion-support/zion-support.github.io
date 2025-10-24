@@ -28,8 +28,6 @@ export default function AiVoiceSynthesisPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiVoiceSynthesisPage

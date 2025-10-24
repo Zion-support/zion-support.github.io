@@ -28,8 +28,6 @@ export default function SlaPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default SlaPage

@@ -28,8 +28,6 @@ export default function AiInsurancePage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiInsurancePage

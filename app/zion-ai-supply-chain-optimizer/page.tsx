@@ -28,8 +28,6 @@ export default function ZionAiSupplyChainOptimizerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionAiSupplyChainOptimizerPage

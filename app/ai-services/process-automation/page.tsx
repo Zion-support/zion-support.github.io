@@ -28,8 +28,6 @@ export default function ProcessAutomationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ProcessAutomationPage

@@ -28,8 +28,6 @@ export default function AiDrugDiscoveryProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiDrugDiscoveryProPage

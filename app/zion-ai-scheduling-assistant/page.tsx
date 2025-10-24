@@ -28,8 +28,6 @@ export default function ZionAiSchedulingAssistantPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionAiSchedulingAssistantPage

@@ -28,8 +28,6 @@ export default function AiRoboticsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiRoboticsPage

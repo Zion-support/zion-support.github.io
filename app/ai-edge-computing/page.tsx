@@ -28,8 +28,6 @@ export default function AiEdgeComputingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiEdgeComputingPage

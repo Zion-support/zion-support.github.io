@@ -28,8 +28,6 @@ export default function AiDocumentScannerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiDocumentScannerPage

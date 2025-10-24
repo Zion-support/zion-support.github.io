@@ -28,8 +28,6 @@ export default function ZionAiSalesPredictorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionAiSalesPredictorPage

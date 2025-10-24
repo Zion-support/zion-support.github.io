@@ -28,8 +28,6 @@ export default function SmartAnalyticsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default SmartAnalyticsPage

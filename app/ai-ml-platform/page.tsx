@@ -28,8 +28,6 @@ export default function AiMlPlatformPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiMlPlatformPage

@@ -28,8 +28,6 @@ export default function AiPasswordManagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiPasswordManagerPage

@@ -28,8 +28,6 @@ export default function MicroSaasSolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default MicroSaasSolutionsPage

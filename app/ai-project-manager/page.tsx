@@ -28,8 +28,6 @@ export default function AiProjectManagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiProjectManagerPage

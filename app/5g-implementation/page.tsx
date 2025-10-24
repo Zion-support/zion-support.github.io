@@ -28,8 +28,6 @@ export default function G5gImplementationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default FiveGImplementationPage

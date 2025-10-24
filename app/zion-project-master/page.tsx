@@ -28,8 +28,6 @@ export default function ZionProjectMasterPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionProjectMasterPage

@@ -28,8 +28,6 @@ export default function CaseStudiesPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default CaseStudiesPage

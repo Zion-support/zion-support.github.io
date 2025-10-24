@@ -28,8 +28,6 @@ export default function AiVoiceCloningStudioPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiVoiceCloningStudioPage

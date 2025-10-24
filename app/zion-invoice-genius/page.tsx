@@ -28,8 +28,6 @@ export default function ZionInvoiceGeniusPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionInvoiceGeniusPage

@@ -28,8 +28,6 @@ export default function AiWritingAssistantPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiWritingAssistantPage

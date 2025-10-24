@@ -27,8 +27,7 @@ export default function ContactPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </main>
-      <Footer />
-    </div>
-  )
+      </div>
+    </>
+  );
 }

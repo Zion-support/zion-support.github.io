@@ -28,8 +28,6 @@ export default function ZionPerformanceMonitorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionPerformanceMonitorPage

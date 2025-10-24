@@ -28,8 +28,6 @@ export default function ZionIotSolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default ZionIotSolutionsPage

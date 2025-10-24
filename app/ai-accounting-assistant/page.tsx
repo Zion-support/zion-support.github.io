@@ -28,8 +28,6 @@ export default function AiAccountingAssistantPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+    </>
+  );
 }
-export default AiAccountingAssistantPage

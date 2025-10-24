@@ -28,8 +28,6 @@ export default function AiHealthcareSolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiHealthcareSolutionsPage

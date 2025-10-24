@@ -28,8 +28,6 @@ export default function AiNeuralMemoryAssistantPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiNeuralMemoryAssistantPage

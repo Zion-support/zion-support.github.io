@@ -28,8 +28,6 @@ export default function AiImageRecognitionPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-</>
-  )
+      </>
+  );
 }
-export default AiImageRecognitionPage
