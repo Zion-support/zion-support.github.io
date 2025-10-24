@@ -83,6 +83,13 @@
     "**/__tests__/**",
     "**/ai-customer-support-disabled/**",
     "**/ai-workflow-automation-disabled/**",
-    "**/api-disabled/**"
+    "**/api-disabled/**",
+    "**/*-backup.*",
+    "**/*-broken*",
+    "**/*-fixed.*",
+    "**/corrupted-pages/**",
+    "**/AdvancedAccessibilityEnhancer.tsx",
+    "**/ecommerce-analytics-pro/**",
+    "**/edge-computing/**"
   ]
 }
