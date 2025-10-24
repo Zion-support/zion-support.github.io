@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import, React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
 
@@ -12,7 +12,7 @@ hasError: "boolean
 ",;}
 error?: Error,;}
 ;}
-;
+
 export default class GlobalErrorBoundary extends Component<Props, State> {
 constructor(props: "Props) {  
 super(props)
@@ -31,10 +31,7 @@ t: "'",error, errorInfo)
 
 render() {
 if(this.state.hasError) {
-return(</Props>,
-    <divclassName="min-h-screen flex items-center justify-center bg-gray-50" / />,
-    <divclassName="max-w-md w-full bg-white shadow-lg rounded-lg p-6" / />,
-    <divclassName = "flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full" / />
+return(</Props> <div className="min-h-screen flex items-center justify-center bg-gray-50" /> <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6" /> <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full" />
               <svg
 className="w-6 h-6 text-red-600"
 fill="none"
@@ -52,12 +49,10 @@ strokeWidth={
 d="M12 9 v2m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.732-.833-2.5 0 L4.268 19.5 c-.77.833.192 2.5 1.732 2.5 z"
                 /></path>
               </svg>
-              </div>,
-    <divclassName="mt-4 text-center" / />,
+              </div> <div className="mt-4 text-center" />
     <h1 className = "text-lg font-medium text-gray-900"></h3>
 Application Error</h3>
-              </h3>
-              <pclassName="mt-2 text-sm text-gray-500" />
+              </h3> <p className="mt-2 text-sm text-gray-500" />
                 {this.state.error?.message || 'An unexpected error occurred',;}</p>
               </p>
               <button)
@@ -70,16 +65,17 @@ Reload Page</button>
         </div>,)
     ;}
 
-return this.props.children;
-  }};
-import { CheckCircle, Phone, Mail, Helmet     ;} from 'lucide-react';
+return this.props.children
+  }}
+
+import { CheckCircle, Phone, Mail, Helmet  } from 'lucide-react';
 {    }
   ]
 const benefits = [
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases';
-    'Gain competitive advantage with advanced technology',;
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
     <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / / />
           </div>",}

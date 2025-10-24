@@ -1,7 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe     ;} from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe  } from 'lucide-react';
 const EnhancedAccessibilityEnhancerPage: "React.FC = () => {
 const features = [",{
 icon: "Brain",title: "'AI-Powered Intelligence'",description: "'Advanced AI algorithms that provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -23,8 +23,8 @@ const benefits = [
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
-return(<div>
-
+return (
+    <div>
       <Helmet />
 
         <title>Enhanced Accessibility Enhancer - Zion Tech Group</title>
@@ -32,56 +32,37 @@ return(<div>
         <meta name="keywords" content="AI, artificial, intelligence, enhanced, accessibility, enhancer, AI, solutions, intelligent automation" / />
 
       </Helmet>
-    </div>,
-    <divclassName = "min-h-screen bg-gradient-to-brfrom-slate-900 via-emerald-900 to-slate-900" />
-        {/* Hero Section */,}
-
-        <section className="relativepy-20 px-4 overflow-hidden" />,
-    <divclassName="absolute inset-0 bg-gradient-to-rfrom-emerald-600/20 to-blue-600/20" />,
-    <divclassName="relativemax-w-7 xlmx-autotext-center" />,
-    <h1className="text-5 xl md: text-7 xl font-boldtext-whitemb-6 leading-tight" />
+    </div> <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-emerald-900 to-slate-900" />
+        {/* Hero Section */,} <section className="relativepy-20 px-4 overflow-hidden" /> <div className="absolute inset-0 bg-gradient-to-rfrom-emerald-600/20 to-blue-600/20" /> <div className="relativemax-w-7 xlmx-autotext-center" /> <h1 className="text-5 xl md: text-7 xl font-boldtext-whitemb-6 leading-tight" />
 Enhanced Accessibility Enhancer
-            </h1>
-            <pclassName="text-xl text-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed" />
+            </h1> <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed" />
 Advanced Enhanced Accessibility Enhancer solution for modern businesses.
-            </p>,<divclassName="flex flex-colsm: flex-rowgap-4 justify-center" / />
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
-Get Started
-                <ArrowRightclassName="ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200" />
+            </p>,<div className="flex flex-colsm: flex-rowgap-4 justify-center" /> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
+Get Started <ArrowRight className="ml-2 w-5 h-5" />
+              </button> <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200" />
 Learn More
               </button>
               </div>
             </div>
         </section>,{/* Features Section */}
-<section className="py-20 px-4">,
-    <divclassName="max-w-7 xl mx-auto" />,
-    <divclassName="text-center mb-16" />,
-    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2>
-              <pclassName="text-xl text-gray-300 max-w-3 xl mx-auto" />
+<section className="py-20 px-4"> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
+    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
 Discover the powerful features that make Enhanced Accessibility Enhancer the perfect solution for your business.
               </p>
-              </div>,)
-    <divclassName="gridmd: grid-cols-2 lg:grid-cols-4 gap-8" />,{features.map((feature, index) => (
-                <divkey = {index,} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" />,
-    <divclassName="flex items-center mb-4" />
-                    <feature.icon className="w-8 h-8 text-emerald-400 mr-3" />,
+              </div>,) <div className="gridmd: grid-cols-2 lg:grid-cols-4 gap-8" />,{features.map((feature, index) => (
+                <divkey = {index,} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" /> <div className="flex items-center mb-4" />
+                    <feature.icon className="w-8 h-8 text-emerald-400 mr-3" />
     <h1 className = "text-xl font-semibold text-white">{feature.title,}</h3>
                     </div>
           <p className="text-gray-300 mb-4">featuredescription</p></p>
                   <ul className="space-y-2">
 featurebenefitsmapbenefit benefitIndex => 
-                      <li key=benefitIndex className="flex items-center text-sm text-gray-300">
-                        <CheckCircleclassName="w-4 h-4 text-emerald-400 mr-2" />
-benefit</li>                <divkey=index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" / / /><featureicon className="h-12 w-12 text-emerald-400 mb-4" / /><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
+                      <li key=benefitIndex className="flex items-center text-sm text-gray-300"> <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+benefit</li>                <divkey=index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" / / /><featureicon className="h-12 w-12 text-emerald-400 mb-4" /><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
                   <p className="text-gray-300 mb-4">featuredescription</p></p>
                   <ul className="space-y-2">featurebenefitsmapbenefit idx => 
-                      </ul><li key=idx className="flex items-center text-sm text-gray-300" /><CheckCircleclassName="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />benefit</CheckCircle></li>        <section className="py-20 px-4 bg-white/5">,
-    <divclassName="max-w-7 xl mx-auto" / />,
-    <divclassName="grid grid-cols-1 md: grid-cols-2 gap-6" />{benefits.map((benefit,index) => (
-              <divkey = {index,} className = "flex items-start space-x-3" / />
-                <CheckCircleclassName="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                      </ul><li key=idx className="flex items-center text-sm text-gray-300" /><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />benefit</CheckCircle></li>        <section className="py-20 px-4 bg-white/5"> <div className="max-w-7 xl mx-auto" /> <div className="grid grid-cols-1 md: grid-cols-2 gap-6" />{benefits.map((benefit,index) => (
+              <divkey = {index,} className="flex items-start space-x-3" /> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit,}</p>
     </div>
   ));}
@@ -90,8 +71,7 @@ benefit</li>                <divkey=index className="bg-white/10 backdrop-blur-s
 
         / CTA Section /
         <section className = "py-20 px-4">
-          <><divclassName="max-w-4 xl mx-auto text-center" / /><h2 className="text-4 xl font-bold text-white mb-6">Ready to Get Started</h2>
-            <pclassName="text-xl text-gray-300 mb-8" />
+          <><div className="max-w-4 xl mx-auto text-center" /><h2 className="text-4 xl font-bold text-white mb-6">Ready to Get Started</h2> <p className="text-xl text-gray-300 mb-8" />
 Join thousands of businesses already using Enhanced Accessibility Enhancer to transform their operations</p></p>
             <button className="bg-emerald-600 hoverbg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 Start Your Free Trial</button>
@@ -99,12 +79,12 @@ Start Your Free Trial</button>
         </section>
         </div>
       </div>
-  );
-,};
-export default EnhancedAccessibilityEnhancerPage;        <section className = "py-20 px-4 bg-white/5" /><divclassName="max-w-7 xl mx-auto" / />,
+  )
+,}
+
+export default EnhancedAccessibilityEnhancerPage; <section className="py-20 px-4 bg-white/5" /><div className="max-w-7 xl mx-auto" />
     <divclassName="text-center mb-16" / / /><h2 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <pExperience the benefits of cutting-edge AI technology</p / />  </div>,
-    <divclassName = "grid grid-cols-1 mdgrid-cols-2 gap-6" />benefitsmapbenefit index => 
+              <pExperience the benefits of cutting-edge AI technology</p / />  </div> <div className="grid grid-cols-1 mdgrid-cols-2 gap-6" />benefitsmapbenefit index => 
 
       <divkey=index className=quotflex items-start space-x-3 quot / / />
     </div><CheckCircleclassName=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0 quot / /><p className=quottext-gray-300 text-lgquot>benefit</p></p>
@@ -112,9 +92,10 @@ export default EnhancedAccessibilityEnhancerPage;        <section className = "p
 
             </div>
           </div>
-      </section>;
-;
-  </>;
+      </section>
+
+  </>
+
 export default EnhancedAccessibilityEnhancerPage; ,}
 </ul>
 }

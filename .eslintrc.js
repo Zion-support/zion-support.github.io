@@ -6,4 +6,4 @@ module.exports = {
     "no-var": "error",
     "react/no-unescaped-entities": "off"
   }
-};
+}

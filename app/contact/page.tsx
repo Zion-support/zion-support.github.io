@@ -1,20 +1,19 @@
-'use client';
+'use client'
 import React, { useState, useCallback, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEOHead from '../components/SEOHead';
-import { generateStructuredData } from '../utils/seoData';
-
+import { generateStructuredData   } from '../utils/seoData';
 interface FormData {
-  name: string;
-  email: string;
-  message: string;
+  name: string
+  email: string
+  message: string
 }
 
 interface FormErrors {
-  name?: string;
-  email?: string;
-  message?: string;
+  name?: string
+  email?: string
+  message?: string
 }
 
 const ContactPage: React.FC = () => {
@@ -22,81 +21,72 @@ const ContactPage: React.FC = () => {
     name: '',
     email: '',
     message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [errors, setErrors] = useState<FormErrors>({});
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errors, setErrors] = useState<FormErrors>({})
   const validateForm = useCallback((data: FormData): FormErrors => {
-    const newErrors: FormErrors = {};
-    
+    const newErrors: FormErrors = {}
+
     if (!data.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = 'Name is required'
     } else if (data.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters';
+      newErrors.name = 'Name must be at least 2 characters'
     }
     
     if (!data.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Please enter a valid email address'
     }
     
     if (!data.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = 'Message is required'
     } else if (data.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
+      newErrors.message = 'Message must be at least 10 characters'
     }
     
-    return newErrors;
-  }, []);
-
+    return newErrors
+  }, [])
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-    
+    }))
     // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({
         ...prev,
         [name]: undefined
-      }));
+      }))
     }
-  }, [errors]);
-
+  }, [errors])
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const formErrors = validateForm(formData);
+    e.preventDefault()
+    const formErrors = validateForm(formData)
     if (Object.keys(formErrors).length > 0) {
-      setErrors(formErrors);
-      return;
+      setErrors(formErrors)
+      return
     }
     
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-    setErrors({});
-
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+    setErrors({})
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise(resolve => setTimeout(resolve, 1000))
       // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
-      
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      console.log('Form submitted:', formData)
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', message: '' })
     } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus('error');
+      console.error('Error submitting form:', error)
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  }, [formData, validateForm]);
-
+  }, [formData, validateForm])
   const structuredData = useMemo(() => generateStructuredData({
     '@type': 'LocalBusiness',
     name: 'Zion Tech Group',
@@ -110,14 +100,13 @@ const ContactPage: React.FC = () => {
       addressLocality: 'Innovation City',
       addressRegion: 'IC',
       postalCode: '12345',
-      addressCountry: 'US',
+      addressCountry: 'US'
     },
     openingHours: ['Mo-Fr 09:00-17:00'],
-    priceRange: '$$',
-  }), []);
+    priceRange: '$$'
+  }), [])
+  return ( <>
 
-  return (
-    <>
       <Head>
         <title>Contact | Zion Tech Group</title>
         <meta name="description" content="Professional contact services and solutions for modern businesses." />
@@ -137,44 +126,7 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default function ServicePage() {
-  return (
-    <>
-      <Head>
-        <title>Contact | Zion Tech Group</title>
-        <meta name="description" content="Professional contact services and solutions for modern businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Contact | Zion Tech Group" />
-        <meta property="og:description" content="Professional contact services and solutions for modern businesses." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Contact
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional contact services and solutions for modern businesses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
-            >
-              Get Started
-            </Link>
-            <Link
-              href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+export default ContactPage

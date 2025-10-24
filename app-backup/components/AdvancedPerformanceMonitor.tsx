@@ -1,8 +1,8 @@
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle     ;} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle  } from 'lucide-react';
+import { Navigation   } from '../components/Navigation';
+import Footer } from '../components/Footer'
 'use client'
     "title": 'AI-Powered Intelligence'
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'
@@ -20,4 +20,4 @@ import Footer from '../components/Footer'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology';

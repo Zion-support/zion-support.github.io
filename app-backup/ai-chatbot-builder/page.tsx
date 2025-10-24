@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart, Send, BarChart3, Shield, DollarSign, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart     ;} from 'lucide-react';
+import Link } from 'next/link';
+import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart, Send, BarChart3, Shield, DollarSign, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart  } from 'lucide-react';
 'use client'
       "title": 'No-Code Builder'
     "description": 'Create sophisticated chatbots without any programming knowledge using our visual interface'
@@ -64,5 +64,5 @@ import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Ta
     'SLA guarantee'
     { "number": '10,000+', "label": 'Chatbots Created'
     { "number": '50+', "label": 'Languages Supported'
-    { "number": '99.9%', "label": 'Uptime Guarantee';
+    { "number": '99.9%', "label": 'Uptime Guarantee'
     { "number": '24/7', "label": 'Customer Support'

@@ -1,8 +1,8 @@
-"use client";
-import React from "react",
+"use client"
+import React from 'react';
     <div className = "min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"
-      <main className="py-20 px-4",
-    <div className="max-w-4 xl mx-auto",
+      <main className="py-20 px-4"
+    <div className="max-w-4 xl mx-auto"
     <h1 className="text-4 xl font-bold text-gray-900 mb-8"
           <p className="text-xl text-gray-600 mb-8"
       "icon": <Network className="w-8 h-8 text-cyan-400"
@@ -15,7 +15,7 @@ import React from "react",
       "icon": <Globe className="w-6 h-6 text-emerald-400"
       "icon": <Cpu className="w-6 h-6 text-purple-400"
       "icon": <Shield className="w-6 h-6 text-red-400"
-    { "number": '10 Gbps', "label": 'Peak Speed';
-    { "number": '1 ms', "label": 'Latency';
-    { "number": '1 M+', "label": 'Devices per km²';
+    { "number": '10 Gbps', "label": 'Peak Speed'
+    { "number": '1 ms', "label": 'Latency'
+    { "number": '1 M+', "label": 'Devices per km²'
     { "number": '99.9%', "label": 'Reliability'

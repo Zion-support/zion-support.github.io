@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star     ;} from 'lucide-react';
-import { Brain     ;} from 'lucide-react';
+import Link } from 'next/link';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star  } from 'lucide-react';
+import { Brain  } from 'lucide-react';
     { "name": 'AI Analytics & BI', "url": '/ai-analytics', "description": 'Business intelligence'
     { "name": 'AI Automation', "url": '/ai-automation', "description": 'Process automation'
     { "name": 'AI Chatbots & NLP', "url": '/ai-chatbot-builder', "description": 'Conversational AI'
@@ -25,5 +25,5 @@ import { Brain     ;} from 'lucide-react';
     { "name": 'Contact', "url": '/contact'
     { "name": 'Privacy Policy', "url": '/privacy'
     { "name": 'Terms of Service', "url": '/terms'
-    { "name": 'Cookie Policy', "url": '/cookies';
+    { "name": 'Cookie Policy', "url": '/cookies'
     { "name": 'GDPR Compliance', "url": '/gdpr'

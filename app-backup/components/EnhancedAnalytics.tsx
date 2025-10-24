@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import, React, { createContext, useContext, useEffect } from 'react'
 throw new Error('useAnalytics must be used within an AnalyticsProvider'
 if (typeof window !== 'undefined'
@@ -13,5 +13,5 @@ if (typeof window !== 'undefined'
           'config'
 console.log('Analytics "Identify": '
 if (typeof window !== 'undefined'
-          'config');
-      console.log('Analytics "Page": ');
+          'config')
+      console.log('Analytics "Page": ')

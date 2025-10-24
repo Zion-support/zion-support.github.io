@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 interface ContentNewsletterSignupProps {
 className?: string
 ;}
@@ -6,12 +6,14 @@ className?: string
 ;}
 
 const ContentNewsletterSignup: "React.FC<ContentNewsletterSignupProps> = ({ className = '' ",;}) => {
-return(</ContentNewsletterSignupProps>,
+return (
+    </ContentNewsletterSignupProps>
     <divclassName = {className,;} / />
       <h2>ContentNewsletterSignup</h2>
       <p>This component is under construction.</p>
       </div>)
-  );
-};
-export default ContentNewsletterSignup;
+  )
+}
+
+export default ContentNewsletterSignup
 }

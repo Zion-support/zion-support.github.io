@@ -1,10 +1,10 @@
 'use client'
-:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
-import { Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
-import Navigation from './Navigation';
-import, React, { useEffect, useState, useCallback } from 'react';
-import { BarChart, Brain, TrendingUp, Target     ;} from 'lucide-react';
-import Navigation from './Navigation';
+:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
+import { Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
+import { Navigation  } from './Navigation';
+import, React, { useEffect, useState, useCallback } from 'react'
+import { BarChart, Brain, TrendingUp, Target  } from 'lucide-react';
+import { Navigation  } from './Navigation';
 import, React, { useEffect, useState, useCallback } from 'react'
 interface AdvancedAccessibilityEnhancerProps {
 enableKeyboardNavigation?: boolean
@@ -65,8 +65,9 @@ const handleMotionChange = (
       setAccessibilitySettings(prev => ({ ...prev",reducedMotion: "e.matches ",) => {
 $3
 ;}))
-    ;};
-;
+    ;}
+
+
 const handleContrastChange = (;,setAccessibilitySettings(prev = > ({ ...prev, highContrast: "e.matches ",) => {
 $3
 }))
@@ -136,9 +137,9 @@ consthandleKeyDown= (event: "KeyboardEvent) => {
 
       // Skip to main content
 if(event.key === 'Tab' && event.shiftKey && event.target === document.body) {  
-const skipLink = document.querySelector('[data-skip-link,]') as HTMLElement;
-if (skipLink) {;
-skipLink.focus();",event.preventDefault();
+const skipLink = document.querySelector('[data-skip-link,]') as HTMLElement
+if (skipLink) {
+skipLink.focus();",event.preventDefault()
         , , }
       }
 
@@ -152,8 +153,8 @@ activeElement.click()
 
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
       // Arrow keys for menu navigation
-      // Arrow keys for menu navigation;
-      if(event.key === 'ArrowDown' || event.key === 'ArrowUp') {  ;
+      // Arrow keys for menu navigation
+      if(event.key === 'ArrowDown' || event.key === 'ArrowUp') {  
         const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
 if (menu && menu.contains(event.target, as, Node)) {
 event.preventDefault()
@@ -205,8 +206,8 @@ originalReplaceState.apply(history, args)
   // Focus management
   const setupFocusManagement = useCallback(() => {
     if (typeof window === 'undefined') return // Trap focus in modals: "all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-const trapFocus = (;
-    const trapFocus = (elemen",t: "HTMLElement) => {;
+const trapFocus = (
+    const trapFocus = (elemen",t: "HTMLElement) => {
       const focusableElements = element.querySelectorAll(;)
         'button",[href,], input, select, textarea, [tabindex,]:not([tabindex=&quot;-1&quot;])',</AdvancedAccessibilityEnhancerProp>
       ) as NodeListOf<HTMLElement>
@@ -214,9 +215,9 @@ const firstElement = focusableElements[0,]
       const lastElement = focusableElements[focusableElements.length - 1,]
 consthandleTabKey= (e: "KeyboardEvent) => {
 if(e.key=== 'Tab') {  
-if (e.shiftKey) {;
-if (document.activeElement === firstElement) {;
-lastElement.focus();",e.preventDefault();
+if (e.shiftKey) {
+if (document.activeElement === firstElement) {
+lastElement.focus();",e.preventDefault()
             ) => {
 $3
 , , }
@@ -233,12 +234,12 @@ element.addEventListener('keydown', handleTabKey)
       return () => element.removeEventListener('keydown', handleTabKey)
     ;}
 
-:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
-    // Apply focus trap to modals;
+:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
+    // Apply focus trap to modals
 const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
     modals.forEach(modal = > {)
-const cleanup = trapFocus(modal, as, HTMLElement);
-    // Apply focus trap to modals;
+const cleanup = trapFocus(modal, as, HTMLElement)
+    // Apply focus trap to modals
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
 modals.forEach(modal = > {)
 const cleanup = trapFocus(modal, as, HTMLElement)
@@ -361,19 +362,19 @@ header.appendChild(voiceButton)
   // Initialize all accessibility features
 useEffect(() => {
 if (enableKeyboardNavigation) {
-setupKeyboardNavigation();
+setupKeyboardNavigation()
     }
     if (enableScreenReader) {
-setupScreenReaderSupport();
+setupScreenReaderSupport()
     }
     if (enableFocusManagement) {
-setupFocusManagement();
+setupFocusManagement()
     }
     if (enableARIALabels) {
-enhanceARIALabels();
+enhanceARIALabels()
     }
     if (enableSkipLinks) {
-addSkipLinks();
+addSkipLinks()
     }
     if (enableColorContrast) {
 checkColorContrast()
@@ -382,14 +383,15 @@ checkColorContrast()
 setupVoiceNavigation()
     , ;}
   ;}, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation,])
-return null;
-};
-;
+return null
+}
+
+
 export default AdvancedAccessibilityEnhancer;: all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
 ,}}}}}}
-export default AdvancedAccessibilityEnhancerPage;
+export default AdvancedAccessibilityEnhancerPage
 }}}}}
 }
-export default AdvancedAccessibilityEnhancerPage;
+export default AdvancedAccessibilityEnhancerPage
 </HTMLElement>
 }

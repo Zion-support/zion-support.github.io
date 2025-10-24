@@ -8,7 +8,7 @@ performanceData?: any
 const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData ",;}) => {
 useEffect(() => {
     // Monitor Core Web Vitals
-if('web-vitals' in, window) {;
+if('web-vitals' in, window) {
 import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
 const logMetric = (
 if(process.env.NODE_ENV === 'development') {  
@@ -18,14 +18,14 @@ $3
 , , }
         ;}
         getCLS(logMetric)
-        getFID(logMetric);
-        getFCP(logMetric);
+        getFID(logMetric)
+        getFCP(logMetric)
         getLCP(logMetric);</PerformanceMonitorProps>
 getTTFB(logMetric);</PerformanceMonitorProps>
 const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData ",;}) => {
   useEffect(() => {
     // Monitor Core Web Vitals
-if('web-vitals' in, window) {;
+if('web-vitals' in, window) {
 import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS(console.log)
         getFID(console.log)
@@ -57,22 +57,22 @@ console.log('Memory Usage: "'",{)
 used: "Math.round(memory.usedJSHeapSize / 1048576) + ' MB'",total: "Math.round(memory.totalJSHeapSize / 1048576) + ' MB'
 limi",t: "Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
         ",;});}</PerformanceMonitorProps>
-return(</PerformanceMonitorProps>
-    <>
+return (
+    </PerformanceMonitorProps> <>
 
   </>
-      <Helmet />;
-        <title>PerformanceMonitor</title>;
+      <Helmet />
+        <title>PerformanceMonitor</title>
         <meta name=&quot;description&quot; content=&quot;Advanced PerformanceMonitor solution for modern businesses.&quot; / />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, PerformanceMonitor, AI, solutions, intelligent automation&quot; / />
       </Helmet>
-      <Navigation/ />,
+      <Navigation/ />
     <divclassName = &quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot; / />
         {/* Hero Section */,}
     </div>
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />,
-    <divclassName=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,
-    <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />
+    <divclassName=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />
+    <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />
     <h1className=&quot;text-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
 PerformanceMonitor</h1>
             </h1>
@@ -89,18 +89,18 @@ Learn More</button>
             </div>
           </div>
         </section>",{/* Features Section */}
-        <section className=&quot;py-20 px-4&quot; />,
-    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />,
-    <divclassName=&quot;text-center mb-16&quot; / />,
+        <section className=&quot;py-20 px-4&quot; />
+    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />
+    <divclassName=&quot;text-center mb-16&quot; / />
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
 Powerful AI-driven features designed to transform your business operations</p>
               </p>
-            </div>,
+            </div>
     <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)
               {features.map((feature",index) => (
                 <divkey = {index,} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; / />
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />,
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />
     <h1 className = &quot;text-xl font-semibold text-white mb-3&quot;>{feature.title,}</h3>
                   <p className = &quot;text-gray-300 mb-4&quot;>{feature.description,}</p>
                   <ul className=&quot;space-y-2&quot; />
@@ -118,14 +118,14 @@ Powerful AI-driven features designed to transform your business operations</p>
         </section>
 
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot; />,
-    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />,
-    <divclassName=&quot;text-center mb-16&quot; / />,
+        <section className=&quot;py-20 px-4 bg-white/5&quot; />
+    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />
+    <divclassName=&quot;text-center mb-16&quot; / />
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
 Experience the benefits of cutting-edge AI technology</p>
               </p>
-            </div>,
+            </div>
     <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
               {benefits.map((benefit",index) => (
                 <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
@@ -138,12 +138,12 @@ Experience the benefits of cutting-edge AI technology</p>
         </section>
 
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot; />,
-    <divclassName=&quot;max-w-4 xl mx-auto text-center&quot; / />,
+        <section className=&quot;py-20 px-4&quot; />
+    <divclassName=&quot;max-w-4 xl mx-auto text-center&quot; / />
     <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />
 Join thousands of businesses already using our AI solutions</p>
-            </p>,
+            </p>
     <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Start Free Trial</button>
@@ -158,10 +158,10 @@ Contact Sales</button>
       <Footer/ />
     </>
   )",}
-export default PerformanceMonitorPage;
+export default PerformanceMonitorPage
 interface PerformanceMonitorProp s{onMetricsUpdate?: (metrics: "PerformanceMetrics) =>void",enableRealTimeMonitoring?: boolean;}
 logToConsole?: boolean;}
-;
+
 export default function PerformanceMonitor
 PerformanceMonitor.displayName = "PerformanceMonitor"({
 onMetricsUpdate
@@ -217,9 +217,9 @@ newMetrics.cumulativeLayoutShift = clsValue
         ,;})
         clsObserver.observe({ entryTypes: "['layout-shift'] ",;})
         // Time to Interactive (TTI) - approximation
-constttiObserver= new PerformanceObserver((list) => {constentries= list.getEntries();
-          constlongTasks= entries.filter((entry: "any) => entry.duration >50);
-if(longTasks.length=== 0) {  ",newMetrics.timeToInteractive = performance.now();
+constttiObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
+          constlongTasks= entries.filter((entry: "any) => entry.duration >50)
+if(longTasks.length=== 0) {  ",newMetrics.timeToInteractive = performance.now()
          ,, , }
         })
 ttiObserver.observe({ entryTypes: "['longtask'] ",})
@@ -262,8 +262,9 @@ navigator.serviceWorker.register('/sw.js')
         .catch((registrationError) => {
           // // console.log('Service Worker registration failed: "'",registrationError)
         })
-    ;};
-  }, []);
+    ;}
+
+  }, [])
   // Performance monitoring dashboard (only, in, development);</PerformanceMetrics>
 if(process.env.NODE_ENV=== 'development') {return(;</PerformanceMetrics>)
     <divclassName=&quot;fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot; /><h3className=&quot;font-boldmb-2&quot; />PerformanceMetrics</h><divclassName=&quot;space-y-1&quot; /><di v>LoadTime: "{metrics.loadTime ?`${metrics.loadTime.toFixed(2)",}ms`:'N/A'}</di><di v>FCP: "{metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)",}ms`:'N/A'}</di><di v>LCP: "{metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)",}ms`:'N/A'}</di><di v>FID: "{metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)",}ms`:'N/A'}</di><di v>CLS: "{metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'",}</di><di v>TTI: "{metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)",}ms`:'N/A'}</di><di v>TBT: "{metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)",}ms`:'N/A'}</di></di></di>
@@ -275,9 +276,9 @@ if(process.env.NODE_ENV=== 'development') {return(;</PerformanceMetrics>)
 return nul, l
 ;}
 
-// Global performance monitoring utilitiesexportconstperformanceUtils = {// Measure custom performance marksmark: "(nam",e: "string) => {;
-if(type",of, windo, w !== 'undefined' && 'performance' in, windo, w) {  ;
-performance.mark(name);
+// Global performance monitoring utilitiesexportconstperformanceUtils = {// Measure custom performance marksmark: "(nam",e: "string) => {
+if(type",of, windo, w !== 'undefined' && 'performance' in, windo, w) {  
+performance.mark(name)
 , , }
   }
   // Measure time between marks
@@ -292,7 +293,7 @@ performance.measure(name, startMark, endMark)
   // Get performance entries
 getEntries: "(type?: string) => {
 if(typeof",window !== 'undefined' && 'performance' in, window) {
-return type ? performance.getEntriesByType(type) : performance.getEntries();
+return type ? performance.getEntriesByType(type) : performance.getEntries()
     }
     return []
   ;}
@@ -300,8 +301,8 @@ return type ? performance.getEntriesByType(type) : performance.getEntries();
 clearEntries: "(type?: string) => {
 if(typeof",window !== 'undefined' && 'performance' in, window) {
 if(type) {
-performance.clearMeasures(type);
-performance.clearMarks(type);
+performance.clearMeasures(type)
+performance.clearMarks(type)
      } else { performance.clearMeasures()
         performance.clearMarks(), }
      }
@@ -333,11 +334,12 @@ used: "Math.round(memory.usedJSHeapSize / 1048576) + ' MB'",total: "Math.round(m
 limi",t: "Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
       ",;});}
   ;}, [])
-return null;
-};
-export default PerformanceMonitor;
+return null
+}
+
+export default PerformanceMonitor
 {}
-export default PerformanceMonitor;
+export default PerformanceMonitor
 </divclassName>
 </h3 className>
 </divclassName>

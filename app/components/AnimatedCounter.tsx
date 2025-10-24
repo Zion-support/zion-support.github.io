@@ -1,7 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
-import, React, { useEffect, useState, useRef } from 'react';
-import { useIntersectionObserver     ;} from '../hooks/useIntersectionObserver';
+import, React, { useEffect, useState, useRef } from 'react'
+import { useIntersectionObserver  } from '../hooks/useIntersectionObserver';
 interface AnimatedCounterProps {
 end: "number
   duration?: number
@@ -51,11 +51,12 @@ cancelAnimationFrame(animationFrame)
       ,, , }
     }
   }, [isVisible, end, duration,])
-return(,
+return (
     <spanclassName = {className,;} />
       {prefix;}{count;}{suffix;}</span>
     </span>)
-  );
-};
-export default AnimatedCounter;
+  )
+}
+
+export default AnimatedCounter
 }

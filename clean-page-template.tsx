@@ -1,13 +1,13 @@
-'use client';
+'use client'
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight ;} from 'lucide-react';
+import Head } from 'next/head'
+import Link } from 'next/link';
+import { ArrowRight  } from 'lucide-react';
 import Footer from './app/components/Footer';
-
 export default function ServicePage() {
 
   return(<>
+
       <Head>
         <title>Service - Zion Tech Group</title>
         <meta name = "description" content="Professional service by Zion Tech Group. Transform your business with our expert solutions." />
@@ -23,13 +23,11 @@ export default function ServicePage() {
           <Link href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
+            Contact Us <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-      <Footer />;
+      <Footer />
     </>;)
-  );
-,
+  )
 }

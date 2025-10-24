@@ -1,15 +1,13 @@
 'use client'
 :all-pages-backup/components/AccessibilityEnhancer.tsx
-"use client";
+"use client"
 import, React, { useEffect } from 'react'
 interface AccessibilityEnhancerProps {
 
 
 ;}
 children: "React.ReactNode",;}
-;}
-;
-export default function AccessibilityEnhancer() {
+;} export default function AccessibilityEnhancer() {
 
 return useEffect(() => {
     // Accessibility enhancements
@@ -35,10 +33,11 @@ existingSkipLink.remove()
         ,, , ;}
       ;}
     ;}
-  ;}, []);
-  return <div>{children}</div>;};
-import { useEffect     ;} from 'react';
-import Navigation from './Navigation'
+  ;}, [])
+  return <div>{children}</div>;}
+
+import { useEffect  } from 'react';
+import { Navigation  } from './Navigation';
 const AccessibilityEnhancer: "React.FC<{ childre",n: "React.ReactNode ",}> = ({ children }) => {
 useEffect(() => {
     // Add keyboard navigation support: "all-pages-backup/components/AccessibilityEnhancer.tsx
@@ -65,8 +64,8 @@ if (firstLink) {
 firstLink.focus(),;}
     if(enableKeyboardNavigation) {  
 const handleKeyDown = (
-        // Skip to main content;
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
+        // Skip to main content
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
           const mainContent = document.querySelector('main,[role=&quot;main&quot;]')
           if (mainContent) {
             (mainContent, as, HTMLElement).focus()
@@ -124,8 +123,8 @@ border: "2 px solid currentColor !important",}
       document.head.appendChild(style);}
   ;}, [enableHighContrast,])
 useEffect(() => {
-    // Add focus management;
-if (enableFocusManagement) {;
+    // Add focus management
+if (enableFocusManagement) {
 const focusableElements = 'button, [href,], input, select, textarea, [tabindex,]:not([tabindex=&quot;-1&quot;])'
       .sr-only{position: "absolute",width: "1 px",height: "1 px",padding: "0",margin: "-1 px",overflow: "hidden",clip: "rect(0",0, 0, 0)}
         white-space: "nowrap",border: "0",}
@@ -165,10 +164,11 @@ const footer = document.querySelector('footer')
     if (footer && !footer.getAttribute('role')) {
 footer.setAttribute('role', 'contentinfo')}
   ;}, [])
-:all-pages-backup/components/AccessibilityEnhancer.tsx;
-return <div>{children}</div>;};
-export default AccessibilityEnhancer;
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+return <div>{children}</div>;}
+
+export default AccessibilityEnhancer
 return <div>{children}  </div>
 ;}
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer
 }

@@ -1,127 +1,110 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs')
+const path = require('path')
 // Performance monitoring script
 function checkPerformance() {
-  console.log('🔍 Running performance checks...\n');
 
+  console.log('🔍 Running performance checks...\n')
   // Check bundle size
-  const buildDir = path.join(process.cwd(), '.next');
+  const buildDir = path.join(process.cwd(), '.next')
   if (fs.existsSync(buildDir)) {
-    checkBundleSize(buildDir);
+    checkBundleSize(buildDir)
   } else {
-    console.log('⚠️  Build directory not found. Run "npm run build" first.');
+    console.log('⚠️  Build directory not found. Run "npm run build" first.')
   }
 
   // Check for large files
-  checkLargeFiles();
-
+  checkLargeFiles()
   // Check for unused dependencies
-  checkUnusedDependencies();
-
-  console.log('\n✅ Performance check completed!');
+  checkUnusedDependencies()
+  console.log('\n✅ Performance check completed!')
 }
 
 function checkBundleSize(buildDir) {
-  console.log('📦 Bundle Size Analysis:');
-  
-  const staticDir = path.join(buildDir, 'static');
+  console.log('📦 Bundle Size Analysis:')
+  const staticDir = path.join(buildDir, 'static')
   if (fs.existsSync(staticDir)) {
-    const files = getAllFiles(staticDir);
-    const jsFiles = files.filter(file => file.endsWith('.js'));
-    const cssFiles = files.filter(file => file.endsWith('.css'));
-    
-    let totalJsSize = 0;
-    let totalCssSize = 0;
-    
+    const files = getAllFiles(staticDir)
+    const jsFiles = files.filter(file => file.endsWith('.js'))
+    const cssFiles = files.filter(file => file.endsWith('.css'))
+    let totalJsSize = 0
+    let totalCssSize = 0
     jsFiles.forEach(file => {
-      const stats = fs.statSync(file);
-      totalJsSize += stats.size;
-    });
-    
+      const stats = fs.statSync(file)
+      totalJsSize += stats.size
+    })
     cssFiles.forEach(file => {
-      const stats = fs.statSync(file);
-      totalCssSize += stats.size;
-    });
-    
-    console.log(`  JavaScript: ${formatBytes(totalJsSize)}`);
-    console.log(`  CSS: ${formatBytes(totalCssSize)}`);
-    console.log(`  Total: ${formatBytes(totalJsSize + totalCssSize)}`);
-    
+      const stats = fs.statSync(file)
+      totalCssSize += stats.size
+    })
+    console.log(`  JavaScript: ${formatBytes(totalJsSize)}`)
+    console.log(`  CSS: ${formatBytes(totalCssSize)}`)
+    console.log(`  Total: ${formatBytes(totalJsSize + totalCssSize)}`)
     // Warn if bundle is too large
     if (totalJsSize > 500 * 1024) { // 500KB
-      console.log('  ⚠️  JavaScript bundle is large. Consider code splitting.');
+      console.log('  ⚠️  JavaScript bundle is large. Consider code splitting.')
     }
     
     if (totalCssSize > 100 * 1024) { // 100KB
-      console.log('  ⚠️  CSS bundle is large. Consider purging unused styles.');
+      console.log('  ⚠️  CSS bundle is large. Consider purging unused styles.')
     }
   }
 }
 
 function checkLargeFiles() {
-  console.log('\n📁 Large Files Check:');
-  
-  const appDir = path.join(process.cwd(), 'app');
-  const files = getAllFiles(appDir);
-  
+
+  console.log('\n📁 Large Files Check:')
+  const appDir = path.join(process.cwd(), 'app')
+  const files = getAllFiles(appDir)
   const largeFiles = files
     .map(file => ({
-      path: file,
+      path: file
       size: fs.statSync(file).size
     }))
     .filter(file => file.size > 50 * 1024) // 50KB
-    .sort((a, b) => b.size - a.size);
-  
+    .sort((a, b) => b.size - a.size)
   if (largeFiles.length > 0) {
     largeFiles.forEach(file => {
-      console.log(`  ${file.path}: ${formatBytes(file.size)}`);
-    });
+      console.log(`  ${file.path}: ${formatBytes(file.size)}`)
+    })
   } else {
-    console.log('  ✅ No large files found.');
+    console.log('  ✅ No large files found.')
   }
 }
 
 function checkUnusedDependencies() {
-  console.log('\n📋 Dependency Analysis:');
-  
-  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  const dependencies = Object.keys(packageJson.dependencies || {});
-  
+
+  console.log('\n📋 Dependency Analysis:')
+  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))
+  const dependencies = Object.keys(packageJson.dependencies || {})
   // This is a simple check - in a real scenario, you'd use tools like depcheck
-  console.log(`  Total dependencies: ${dependencies.length}`);
-  console.log('  💡 Consider running "npx depcheck" for detailed unused dependency analysis.');
+  console.log(`  Total dependencies: ${dependencies.length}`)
+  console.log('  💡 Consider running "npx depcheck" for detailed unused dependency analysis.')
 }
 
 function getAllFiles(dir) {
-  let files = [];
-  const items = fs.readdirSync(dir);
-  
+  let files = []
+  const items = fs.readdirSync(dir)
   items.forEach(item => {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
-      files = files.concat(getAllFiles(fullPath));
+      files = files.concat(getAllFiles(fullPath))
     } else {
-      files.push(fullPath);
+      files.push(fullPath)
     }
-  });
-  
-  return files;
+  })
+  return files
 }
 
 function formatBytes(bytes) {
-  if (bytes === 0) return '0 Bytes';
-  
-  const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  if (bytes === 0) return '0 Bytes'
+  const k = 1024
+  const sizes = ['Bytes', 'KB', 'MB', 'GB']
+  const i = Math.floor(Math.log(bytes) / Math.log(k))
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
 }
 
 // Run the performance check
-checkPerformance();
+checkPerformance()

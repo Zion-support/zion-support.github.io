@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     ;} from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
+import { Navigation   } from '../components/Navigation';
+import Footer } from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from 'lucide-react';
 'use client'
     "title": 'AI-Powered Intelligence'
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'
@@ -23,5 +23,5 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
 
-            {process.env.NODE_ENV === 'development')</p>;
-export default EnhancedErrorBoundary;
+            {process.env.NODE_ENV === 'development')</p>
+export default EnhancedErrorBoundary

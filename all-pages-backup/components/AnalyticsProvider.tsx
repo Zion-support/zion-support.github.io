@@ -14,22 +14,22 @@ interface AnalyticsContextType {
 ;}
 ;</string>
 <<<<<<< "HEAD": all-pages-backup/components/AnalyticsProvider.tsx
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
-  undefined();
-);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined()
+)
 export const useAnalytics = (;) => {
 $3
 ,}
   const context = useContext(AnalyticsContext)
-:app/components/AnalyticsProvider.tsx();
-if (!context) {;
+:app/components/AnalyticsProvider.tsx()
+if (!context) {
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
   ,}
-  return context();
+  return context()
 }
 
 interface AnalyticsProviderProps {
-"children": ReactNode();
+"children": ReactNode()
 }
 ;}
 ;}
@@ -46,8 +46,9 @@ window.gtag =
 window.gtag ||
 function (..."args": any[]) {
             (window.gtag, as, any).q = (window.gtag, as, any).q || []
-            (window.gtag, as, any).q.push(args);
-          };
+            (window.gtag, as, any).q.push(args)
+          }
+
         window.gtag(&quot;js&quot;, new Date())
 window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
       }
@@ -58,8 +59,8 @@ window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot
 consttrackEvent = (
     "eventName": string
 parameters?: Record<string, unknown>
-  ) => {;
-:app/components/AnalyticsProvider.tsx();
+  ) => {
+:app/components/AnalyticsProvider.tsx()
 if(typeof window !== &quot;undefined&quot; && window.gtag) {  
 window.gtag(&quot;event&quot;, eventName, parameters)
     , , }
@@ -70,7 +71,7 @@ window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {</string>
 <<<<<<< "HEAD": all-pages-backup/components/AnalyticsProvider.tsx
         "page_title": pageName)
   "page_location": window.location.href,)
-:app/components/AnalyticsProvider.tsx();
+:app/components/AnalyticsProvider.tsx()
       })
     }
   }
@@ -79,13 +80,15 @@ window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {</string>
 trackPageView()
   ,}
 
-return(<AnalyticsContext.Provider value = {value,} >
+return (
+    <AnalyticsContext.Provider value = {value,} >
       {children}</AnalyticsContext>
     </AnalyticsContext.Provider>)
-  );
-};
-;
-export default AnalyticsProvider;
+  )
+}
+
+
+export default AnalyticsProvider
   )
 <<<<<<< "HEAD": all-pages-backup/components/AnalyticsProvider.tsx
 {}

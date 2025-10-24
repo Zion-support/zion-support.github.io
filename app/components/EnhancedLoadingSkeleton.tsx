@@ -1,8 +1,8 @@
-'use client';
+'use client'
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check     ;} from 'lucide-react';
-import Navigation from '../components/Navigation'
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check  } from 'lucide-react';
+import { Navigation  } from '../components/Navigation';
 const EnhancedLoadingSkeletonPage: "React.FC = () => {
 const features = [
     {
@@ -14,8 +14,8 @@ icon: "BarChart",title: "'Advanced Analytics'",description: "'Comprehensive anal
     {
 icon: "Target",title: "'Precision Targeting'",description: "'Target specific goals and objectives with precision and accuracy.'",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics']
     ;}
-    {;
-icon: "TrendingUp",title: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization'];
-  ];
-export default EnhancedLoadingSkeletonPage;
+    {
+icon: "TrendingUp",title: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization']
+  ]
+export default EnhancedLoadingSkeletonPage
 }}

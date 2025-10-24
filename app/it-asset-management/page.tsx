@@ -1,10 +1,10 @@
-'use client';
+'use client'
 import React from 'react';
 import Head from 'next/head';
-
 export default function ServicePage() {
-  return (
-    <>
+
+  return ( <>
+
       <Head>
         <title>It Asset Management | Zion Tech Group</title>
         <meta name="description" content="Professional it asset management services and solutions for modern businesses." />
@@ -24,5 +24,5 @@ export default function ServicePage() {
         </div>
       </div>
     </>
-  );
+  )
 }

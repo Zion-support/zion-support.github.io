@@ -1,41 +1,39 @@
-'use client';
-import, React, { useEffect, useCallback, useState } from 'react';
-
+'use client'
+import, React, { useEffect, useCallback, useState } from 'react'
 interface PerformanceMetrics {
-lcp: "number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
+lcp: "number
+  fid: number
+  cls: number
+  fcp: number
+  ttfb: number
 ",}
 ,}
 
 interface AdvancedPerformanceOptimizerProps {
-className?: string;
-  enableWebVitals?: boolean;
-  enableAdvancedCaching?: boolean;
-  enableImageOptimization?: boolean;
-  enablePreloading?: boolean;
-  enableServiceWorker?: boolean;
+className?: string
+  enableWebVitals?: boolean
+  enableAdvancedCaching?: boolean
+  enableImageOptimization?: boolean
+  enablePreloading?: boolean
+  enableServiceWorker?: boolean
 }
 }
 
 const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps> = ({
-  className",
-  enableWebVitals = true,
-  enableAdvancedCaching = true,
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableServiceWorker = true,
+  className"
+  enableWebVitals = true
+  enableAdvancedCaching = true
+  enableImageOptimization = true
+  enablePreloading = true
+  enableServiceWorker = true
 ;}) => {
   const [performanceMetrics, setPerformanceMetrics,] = useState<PerformanceMetrics>({
-    lcp: "0",
-    fid: "0",
-    cls: "0",
-    fcp: "0",;
-    ttfb: "0",;
-  });
-
+    lcp: "0"
+    fid: "0"
+    cls: "0"
+    fcp: "0"
+    ttfb: "0"
+  })
   // Web Vitals monitoring
   const measureWebVitals = useCallback(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
@@ -44,25 +42,24 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             setPerformanceMetrics(prev => ({
-              ...prev,;
+              ...prev
               lcp: "entry.startTime",;)
-            }));
+            }))
           }
         }
-      });
-      observer.observe({ entryTypes: "['largest-contentful-paint'] ",});
+      })
+      observer.observe({ entryTypes: "['largest-contentful-paint'] ",})
     }
-  }, [enableWebVitals,]);
-
+  }, [enableWebVitals,])
   useEffect(() => {
-    measureWebVitals();
-  }, [measureWebVitals,]);
-
-  return(<div className = {className,}>
+    measureWebVitals()
+  }, [measureWebVitals,])
+  return (
+    <div className = {className,}>
       <h2>Advanced Performance Optimizer</h2>
-      <p>Advanced performance optimization for better application performance.</p>;
+      <p>Advanced performance optimization for better application performance.</p>
     </div>;)
-  );
-};
+  )
+}
 
-export default AdvancedPerformanceOptimizer;
+export default AdvancedPerformanceOptimizer

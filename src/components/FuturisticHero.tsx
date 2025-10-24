@@ -1,9 +1,9 @@
-'use client';
+'use client'
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     ;} from 'lucide-react';
-import { Phone, Mail     ;} from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
+import { Phone, Mail  } from 'lucide-react';
 const FuturisticHeroPage: "React.FC = () => {
 const features = [
     {
@@ -22,8 +22,8 @@ icon: "TrendingUp",title: "title",description: "description",benefits: "['Growth
 const benefits = [
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
-    'Improve decision-making with AI insights';
-    'Scale operations without proportional staff increases';
-    'Gain competitive advantage with advanced technology';
-export default FuturisticHeroPage;
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
+export default FuturisticHeroPage
 ,}

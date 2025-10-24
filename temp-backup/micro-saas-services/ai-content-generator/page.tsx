@@ -1,10 +1,10 @@
-'use client';
+'use client'
 import React from 'react';
 import Head from 'next/head';
-
 export default function ServicePage() {
-  return (
-    <>
+
+  return ( <>
+
       <Head>
         <title>Ai Content Generator | Zion Tech Group</title>
         <meta name="description" content="Professional ai content generator services and solutions for modern businesses." />
@@ -38,8 +38,7 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
-  );
-
+  )
     </>
-  );
+  )
 }

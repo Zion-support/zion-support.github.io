@@ -1,16 +1,14 @@
 'use client'
-"use client";
-import, React, { useEffect } from 'react';
-import { Helmet     ;} from 'react-helmet-async';
+"use client"
+import, React, { useEffect } from 'react'
+import { Helmet  } from 'react-helmet-async';
 :all-pages-backup/components/SEOOptimizer.tsx
 interface SEOOptimizerProps {
 
 
 }
 children: "React.ReactNode",;}
-;}
-;
-export default function SEOOptimizer() {
+;} export default function SEOOptimizer() {
 
 return return
 useEffect(() => {
@@ -47,10 +45,11 @@ return(<>
       </Helmet>
       {children;}
     </>)
-  );
-};
-import, React, { useEffect } from 'react';
-import Head from 'next/head'
+  )
+}
+
+import, React, { useEffect } from 'react'
+import { Head  } from 'next/head';
 interface SEOOptimizerProps {
 className?: string
 ;}
@@ -75,8 +74,8 @@ structuredData
 ",;}) => {
 useEffect(() => {
     // Update page title
-document.title = title: "all-pages-backup/components/SEOOptimizer.tsx;
-    // Update meta description;
+document.title = title: "all-pages-backup/components/SEOOptimizer.tsx
+    // Update meta description
 const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
     // Update meta description
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
@@ -89,8 +88,8 @@ meta.content = description
     ;}
   ]
 
-:all-pages-backup/components/SEOOptimizer.tsx;
-    // Update keywords;
+:all-pages-backup/components/SEOOptimizer.tsx
+    // Update keywords
 const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
     // Update keywords
     const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
@@ -102,8 +101,8 @@ metaKeywords.setAttribute('content', keywords.join(', '))
       document.head.appendChild(meta), }
     ;}
 
-:all-pages-backup/components/SEOOptimizer.tsx;
-    // Update canonical URL;
+:all-pages-backup/components/SEOOptimizer.tsx
+    // Update canonical URL
 let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
     // Update canonical URL
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
@@ -114,8 +113,8 @@ canonicalLink.setAttribute('href', canonicalUrl)
 canonicalLink.href = canonicalUrl
       document.head.appendChild(canonicalLink),, }
     }
-;
-    // Update Open Graph tags;
+
+    // Update Open Graph tags
 const updateOGTag = (;,:all-pages-backup/components/SEOOptimizer.tsx
 let ogTag = document.querySelector(`meta[property=&quot;${property) => {
 $3
@@ -134,8 +133,8 @@ updateOGTag('og: "title'",title)
     updateOGTag('og: "description'",description)
     updateOGTag('og: "image'",ogImage)
     updateOGTag('og: "url'",canonicalUrl)
-    updateOGTag('og: "type'",'website');
-    // Update Twitter Card tags;
+    updateOGTag('og: "type'",'website')
+    // Update Twitter Card tags
 const updateTwitterTag = (;,:all-pages-backup/components/SEOOptimizer.tsx
 let twitterTag = document.querySelector(`meta[name=&quot;${name) => {
 $3
@@ -162,8 +161,8 @@ const script = document.createElement('script')
       document.head.appendChild(script)
     ,;}
 
-:all-pages-backup/components/SEOOptimizer.tsx;
-    // Add viewport meta tag if not present;
+:all-pages-backup/components/SEOOptimizer.tsx
+    // Add viewport meta tag if not present
 let viewport = document.querySelector('meta[name=&quot;viewport&quot;]')
     // Add viewport meta tag if not present
     let viewport = document.querySelector('meta[name=&quot;viewport&quot;]')
@@ -184,18 +183,19 @@ charset = document.createElement('meta')
 
   ;}, [title, description, keywords, canonicalUrl, ogImage, structuredData,])
 </SEOOptimizerProps>
-return(</SEOOptimizerProps>
+return (
+    </SEOOptimizerProps>
     <Head />
-:all-pages-backup/components/SEOOptimizer.tsx</Head>;
-      <title>{title}</title>;
+:all-pages-backup/components/SEOOptimizer.tsx</Head>
+      <title>{title}</title>
       <meta name = &quot;description&quot; content = {description,} / />;)
-      <meta name=&quot;keywords&quot; content = {keywords.join(', ')} / />;
-      <link rel = &quot;canonical&quot; href = {canonicalUrl,} / />;
-        <title>{title}</title>;
+      <meta name=&quot;keywords&quot; content = {keywords.join(', ')} / />
+      <link rel = &quot;canonical&quot; href = {canonicalUrl,} / />
+        <title>{title}</title>
       <meta name = &quot;description&quot; content={description,} />;</meta>
       <meta name=&quot;keywords&quot; content={keywords.join(', ')} />;</meta>
-      <link rel = &quot;canonical&quot; href = {canonicalUrl,} / />;
-      {/* Open Graph */}</link>;
+      <link rel = &quot;canonical&quot; href = {canonicalUrl,} / />
+      {/* Open Graph */}</link>
       <meta property=&quot;og: "title&quot; content={title",} />;</meta>
       <meta property=&quot;og: "description&quot; content={description",} />;</meta>
       <meta property=&quot;og: "image&quot; content={ogImage",} />;</meta>
@@ -205,8 +205,8 @@ return(</SEOOptimizerProps>
       <meta name=&quot;twitter: "card&quot; content=&quot;summary_large_image&quot; / />
       <meta name=&quot;twitte",r: "title&quot; content={title",} />;</meta>
       <meta name=&quot;twitter: "description&quot; content={description",} />;</meta>
-      <meta name=&quot;twitter: "image&quot; content = {ogImage",} / />;
-      {/* Additional SEO meta tags */}</meta>;
+      <meta name=&quot;twitter: "image&quot; content = {ogImage",} / />
+      {/* Additional SEO meta tags */}</meta>
       <meta name=&quot;robots&quot; content=&quot;index, follow&quot; / />
       <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; / />
       <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale = 1&quot; / />
@@ -216,20 +216,22 @@ return(</SEOOptimizerProps>
 :all-pages-backup/components/SEOOptimizer.tsx</meta>
         <script
 type=&quot;application/ld+json&quot
-dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) ",}};
+dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) ",}}
+
         <script type=&quot;application/ld+json&quot; />
 dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) ",}}
         /></script>
       )}</script>
     </Head>
-  );
-};
-;
-export default SEOOptimizer;
+  )
+}
+
+
+export default SEOOptimizer
   )
 :all-pages-backup/components/SEOOptimizer.tsx
 {}
-export default SEOOptimizerPage;
+export default SEOOptimizerPage
 }
-export default SEOOptimizerPage;
+export default SEOOptimizerPage
 }

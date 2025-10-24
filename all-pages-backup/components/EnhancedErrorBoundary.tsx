@@ -1,10 +1,10 @@
-'use client';
+'use client'
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     ;} from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
+import { Navigation   } from '../components/Navigation';
+import Footer } from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from 'lucide-react';
   "benefits": ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'
   "benefits": ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'
   "benefits": ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'
@@ -14,5 +14,5 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-</EnhancedErrorBoundaryProps>;
-export default EnhancedErrorBoundary;
+</EnhancedErrorBoundaryProps>
+export default EnhancedErrorBoundary

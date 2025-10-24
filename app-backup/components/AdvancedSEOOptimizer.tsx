@@ -1,8 +1,8 @@
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Search, Target, TrendingUp, CheckCircle     ;} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Search, Target, TrendingUp, CheckCircle  } from 'lucide-react';
+import { Navigation   } from '../components/Navigation';
+import Footer } from '../components/Footer'
 'use client'
     "title": 'Advanced SEO Analysis'
       "description": 'Comprehensive SEO analysis and optimization recommendations.'
@@ -17,4 +17,4 @@ import Footer from '../components/Footer'
     'Improve search rankings with AI-powered insights'
     'Optimize content for better visibility'
     'Track performance with detailed analytics'
-    'Stay ahead of SEO trends and updates'
+    'Stay ahead of SEO trends and updates';

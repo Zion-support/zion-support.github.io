@@ -4,10 +4,10 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
 import Head from 'next/head';
-
 export default function ServicePage() {
-  return (
-    <>
+
+  return ( <>
+
       <Head>
         <title>App | Zion Tech Group</title>
         <meta name="description" content="Professional app services and solutions for modern businesses." />
@@ -170,5 +170,5 @@ export default function ServicePage() {
         <Footer />
       </div>
     </>
-  );
+  )
 }

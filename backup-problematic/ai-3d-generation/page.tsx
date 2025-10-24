@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 export default function Ai3 dGenerationPage() {
 const features = [
     {
@@ -31,17 +31,11 @@ return(<>
         <metaname="description" content="Transform your ideas into stunning 3 D models with our advanced AI-powered generation technology." / />
       </Helmet>
 
-      {/* Hero Section */,}
-      <sectionclassName="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20" />,
-    <divclassName="max-w-7 xl mx-auto px-4" />,
-    <divclassName="text-center" />,
-    <h1 className="text-5 xl font-bold mb-6">AI 3 D Generation</h1>
-            <pclassName="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" />
+      {/* Hero Section */,} <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20" /> <div className="max-w-7 xl mx-auto px-4" /> <div className="text-center" />
+    <h1 className="text-5 xl font-bold mb-6">AI 3 D Generation</h1> <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" />
 Transform your ideas into stunning 3 D models with our advanced AI-powered generation technology.</p>
 Create detailed 3 D assets from text descriptions or 2 D images in seconds.</p>
-            </p>,
-    <divclassName="flex flex-col sm: flex-row gap-4 justify-center" />
-              <buttonclassName="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300" />
+            </p> <div className="flex flex-col sm: flex-row gap-4 justify-center" /> <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300" />
 Get Started</button>
               </button>
               <buttonclassName="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: "bg-white hove",r: text-gray-900 transition-all duration-300" />
@@ -52,24 +46,19 @@ Try Demo</button>
         </div>
       </section>
 
-      {/* Features Section */,}
-      <sectionclassName="py-20 bg-gray-50" />,
-    <divclassName="max-w-7 xl mx-auto px-4" />,
-    <divclassName="text-center mb-16" />,
-    <h1 className="text-4 xl font-bold text-gray-900 mb-4">Powerful 3 D Generation Features</h2>
-            <pclassName="text-xl text-gray-600 max-w-3 xl mx-auto" />
+      {/* Features Section */,} <section className="py-20 bg-gray-50" /> <div className="max-w-7 xl mx-auto px-4" /> <div className="text-center mb-16" />
+    <h1 className="text-4 xl font-bold text-gray-900 mb-4">Powerful 3 D Generation Features</h2> <p className="text-xl text-gray-600 max-w-3 xl mx-auto" />
 Everything you need to create professional 3 D models with AI assistance.</p>
             </p>
-          </div>,
+          </div>
     <divclassName="grid md: "grid-cols-2 l",g: grid-cols-4 gap-8" />)
             {features.map((feature,index) => (
       <divkey = {index,} className="bg-white p-6 rounded-lg shadow-lg" />
-    </div>,
-    <div className = "text-4 xl mb-4">{feature.icon,}</div>,
+    </div>
+    <div className = "text-4 xl mb-4">{feature.icon,}</div>
     <h1 className = "text-xl font-semibold text-gray-900 mb-4"></h3>
                   {feature.title,;}</h3>
-                </h3>
-                <pclassName = "text-gray-600" />
+                </h3> <p className="text-gray-600" />
                   {feature.description,;}</p>
                 </p>
               </div>
@@ -78,18 +67,13 @@ Everything you need to create professional 3 D models with AI assistance.</p>
         </div>
       </section>
 
-      {/* Use Cases Section */;}
-      <sectionclassName="py-20 bg-white" />,
-    <divclassName="max-w-7 xl mx-auto px-4" />,
-    <divclassName="text-center mb-16" />,
-    <h1 className="text-4 xl font-bold text-gray-900 mb-4">Perfect For</h2>
-            <pclassName="text-xl text-gray-600 max-w-3 xl mx-auto" />
+      {/* Use Cases Section */;} <section className="py-20 bg-white" /> <div className="max-w-7 xl mx-auto px-4" /> <div className="text-center mb-16" />
+    <h1 className="text-4 xl font-bold text-gray-900 mb-4">Perfect For</h2> <p className="text-xl text-gray-600 max-w-3 xl mx-auto" />
 Our AI 3 D generation technology excels in various industries and applications.</p>
             </p>
-          </div>,
-    <divclassName="flex flex-wrap justify-center gap-4" />
+          </div> <div className="flex flex-wrap justify-center gap-4" />
             {useCases.map((useCase, index) => (</div>
-              <spankey = {index,;} className = "bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold" />
+              <spankey = {index,;} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold" />
                 {useCase,;}</span>
               </span>
             ));}
@@ -97,15 +81,10 @@ Our AI 3 D generation technology excels in various industries and applications.<
         </div>
       </section>
 
-      {/* CTA Section */;}
-      <sectionclassName="py-20 bg-gradient-to-r from-purple-900 to-blue-900 text-white" />,
-    <divclassName="max-w-7 xl mx-auto px-4 text-center" />,
-    <h1 className="text-4 xl font-bold mb-6">Ready to Create Amazing 3 D Models?</h2>
-          <pclassName="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" />
+      {/* CTA Section */;} <section className="py-20 bg-gradient-to-r from-purple-900 to-blue-900 text-white" /> <div className="max-w-7 xl mx-auto px-4 text-center" />
+    <h1 className="text-4 xl font-bold mb-6">Ready to Create Amazing 3 D Models?</h2> <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" />
 Start generating professional 3 D models with our AI-powered technology today.</p>
-          </p>,
-    <divclassName="flex flex-col sm: flex-row gap-4 justify-center" />
-            <buttonclassName="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300" />
+          </p> <div className="flex flex-col sm: flex-row gap-4 justify-center" /> <button className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300" />
 Get Started Today</button>
             </button>
             <buttonclassName="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: "bg-white hove",r: text-purple-900 transition-all duration-300" />
@@ -115,5 +94,5 @@ View All AI Services</button>
         </div>
       </section>
     </>
-  );
-,};
+  )
+,}

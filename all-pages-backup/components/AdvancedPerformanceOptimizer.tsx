@@ -1,5 +1,5 @@
-'use client';
-import, React, { useEffect, useState, useCallback } from 'react';
+'use client'
+import, React, { useEffect, useState, useCallback } from 'react'
 import, React, { useEffect, useCallback, useState } from 'react'
 if(enableWebVitals && typeof window !== 'undefined'
 if (entry.name = == 'first-contentful-paint')
@@ -50,7 +50,7 @@ link.as = resource.endsWith('.woff2') ? 'font' : 'style'
 if(resource.endsWith('.woff2'
 link.crossOrigin = 'anonymous'
 if (typeof window === 'undefined',;}
-    const style = document.createElement('style';
+    const style = document.createElement('style'
 if (typeof window === 'undefined';)
     if ('gtag';)
       (window, as, any).gtag('event', 'web_vitals')

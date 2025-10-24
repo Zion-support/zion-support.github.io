@@ -1,28 +1,30 @@
 export interface StructuredData {
-  '@context': string;
-  '@type': string;
-  name: string;
-  description: string;
-  url: string;
-  logo?: string;
-  sameAs?: string[];
-  telephone?: string;
-  email?: string;
-  openingHours?: string[];
-  priceRange?: string;
+  '@context': string
+  '@type': string
+  name: string
+  description: string
+  url: string
+  logo?: string
+  sameAs?: string[]
+  telephone?: string
+  email?: string
+  openingHours?: string[]
+  priceRange?: string
   contactPoint?: {
-    '@type': string;
-    telephone: string;
-    contactType: string;
-  };
+    '@type': string
+    telephone: string
+    contactType: string
+  }
+
   address?: {
-    '@type': string;
-    streetAddress: string;
-    addressLocality: string;
-    addressRegion: string;
-    postalCode: string;
-    addressCountry: string;
-  };
+    '@type': string
+    streetAddress: string
+    addressLocality: string
+    addressRegion: string
+    postalCode: string
+    addressCountry: string
+  }
+
 }
 
 export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {
@@ -52,8 +54,9 @@ export const generateStructuredData = (data: Partial<StructuredData>): Structure
       addressCountry: 'US'
     },
     ...data
-  };
-};
+  }
+
+}
 
 export const defaultSEOData = {
   title: 'Zion Tech Group - AI Solutions',
@@ -61,4 +64,4 @@ export const defaultSEOData = {
   keywords: 'AI, artificial intelligence, technology solutions, business automation, IT services, cloud computing, cybersecurity',
   ogImage: '/og-image.jpg',
   canonical: 'https://ziontechgroup.com'
-};
+}

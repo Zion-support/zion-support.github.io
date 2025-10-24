@@ -24,7 +24,7 @@ link.as = resource.endsWith('.woff2') ? 'font' : 'style'
 if(resource.endsWith('.woff2'
 link.crossOrigin = 'anonymous'
 if (typeof window === 'undefined')
-if ('gtag');
-      (window, as, any).gtag('event', 'web_vitals';
+if ('gtag')
+      (window, as, any).gtag('event', 'web_vitals'
         "event_category": 'Performance';)
     "event_label": 'Core Web Vitals')

@@ -1,15 +1,13 @@
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs')
+const path = require('path')
 // Working page template
-const workingTemplate = `'use client';
-
+const workingTemplate = `'use client'
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
+import Head } from 'next/head';
+import Link } from 'next/link';
 const WorkingPage = (
   return(<>
+
       <Head>
         <title>{title) => {
 $3
@@ -31,73 +29,66 @@ $3
             Contact Us
           </Link>
         </div>
-      </div>;
+      </div>
     </>;)
-  );
-,};
+  )
+,}
 
-export default WorkingPage;`;
-
+export default WorkingPage;`
 // Function to generate page content
 function generatePageContent(filePath) {
 
-  const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.replace(/-/g, ' ').replace(/\b\w/g, l = > l.toUpperCase());
-  const description = `Professional ${title.toLowerCase();
-,} services by Zion Tech Group.`;
-  
-  return workingTemplate.replace('{ title, description }', `{ title: "${title,}", description: "${description,}" ;}`);
+  const fileName = path.basename(filePath, '.tsx')
+  const title = fileName.replace(/-/g, ' ').replace(/\b\w/g, l = > l.toUpperCase())
+  const description = `Professional ${title.toLowerCase()
+,} services by Zion Tech Group.`
+  return workingTemplate.replace('{ title, description }', `{ title: "${title,}", description: "${description,}" ;}`)
 }
 
 // Function to process a single file
 function processFile(filePath) {
 
-  try{const content = generatePageContent(filePath);
-    fs.writeFileSync(filePath, content);
+  try{const content = generatePageContent(filePath)
+    fs.writeFileSync(filePath, content)
 }
-    console.log(`Replaced: "${filePath",}`);
-    return true;
+    console.log(`Replaced: "${filePath",}`)
+    return true
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
   }
 }
 
 // Function to recursively find and process files
 function processDirectory(dirPath) { 
 
-  let processedCount = 0;
-  
-  try { const items = fs.readdirSync(dirPath);
-    
+  let processedCount = 0
+  try { const items = fs.readdirSync(dirPath)
     for (const item, of, items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
+      const fullPath = path.join(dirPath, item)
+      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories
         if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-          processedCount += processDirectory(fullPath);
+          processedCount += processDirectory(fullPath)
 , , }
         }
       } else if (item.endsWith('.tsx') && item.startsWith('page')) {
         if (processFile(fullPath)) {
-          processedCount++;
+          processedCount++
         }
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
+    console.error(`Error processing directory ${dirPath}:`, error.message)
   }
   
-  return processedCount;
+  return processedCount
 }
 
 // Main execution
-console.log('Starting page replacement...');
-const startTime = Date.now();
-
-const processedCount = processDirectory('/workspace/app');
-
-const endTime = Date.now();
-console.log(`\nCompleted! Processed ${processedCount,} files in ${endTime - startTime;}ms`);
+console.log('Starting page replacement...')
+const startTime = Date.now()
+const processedCount = processDirectory('/workspace/app')
+const endTime = Date.now()
+console.log(`\nCompleted! Processed ${processedCount,} files in ${endTime - startTime;}ms`)

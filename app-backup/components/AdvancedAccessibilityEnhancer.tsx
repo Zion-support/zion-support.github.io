@@ -1,5 +1,5 @@
-import { Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
-import Navigation from './Navigation';
+import { Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
+import { Navigation  } from './Navigation';
 import, React, { useEffect, useState, useCallback } from 'react'
 'use client'
     "fontSize": 'normal'
@@ -35,8 +35,8 @@ if (typeof window === 'undefined'
 if (event.key === 'Tab'
 const skipLink = document.querySelector('[data-skip-link,]'
 if (event.key === 'Escape'
-if (activeElement && activeElement.hasAttribute('data-close-on-escape';
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp';
+if (activeElement && activeElement.hasAttribute('data-close-on-escape'
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp'
         const menu = document.querySelector('[role=&quot;menu&quot;]'
 const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]'
 const nextIndex = event.key === 'ArrowDown')
@@ -50,12 +50,12 @@ liveRegion.className = 'sr-only'
 liveRegion.id = 'live-region'
 const liveRegion = document.getElementById('live-region'
 announcePageChange('Page changed'
-announcePageChange('Page updated');
-if (typeof window === 'undefined');
+announcePageChange('Page updated')
+if (typeof window === 'undefined')
         'button, [href,], input, select, textarea, [tabindex,]:not([tabindex=&quot;-1&quot;])'
 if(e.key = == 'Tab')
-element.addEventListener('keydown');
-      ) => element.removeEventListener('keydown';
+element.addEventListener('keydown')
+      ) => element.removeEventListener('keydown'
 const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
 if (typeof window = == 'undefined')
 const buttons = document.querySelectorAll('"button": not([aria-label,]):not([aria-labelledby,])'
@@ -98,5 +98,5 @@ window.location.href = '"mailto": kleber@ziontechgroup.com'
 const voiceButton = document.createElement('button'
 voiceButton.textContent = 'Voice Navigation'
 voiceButton.className = 'voice-navigation-button')
-voiceButton.setAttribute('aria-label', 'Start voice navigation');
-const header = document.querySelector('header') || document.querySelector('nav');
+voiceButton.setAttribute('aria-label', 'Start voice navigation')
+const header = document.querySelector('header') || document.querySelector('nav')

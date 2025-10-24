@@ -1,11 +1,11 @@
-'use client';
-import Navigation from './Navigation';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight     ;} from 'lucide-react';
-import, React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle     ;} from 'lucide-react';
-import { CheckCircle     ;} from 'lucide-react';
-import { AlertTriangle     ;} from 'lucide-react';
+'use client'
+import { Navigation  } from './Navigation';
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight  } from 'lucide-react';
+import, React, { useEffect, useState, useCallback } from 'react'
+import { Settings, Zap, CheckCircle, AlertTriangle  } from 'lucide-react';
+import { CheckCircle  } from 'lucide-react';
+import { AlertTriangle  } from 'lucide-react';
     const images = document.querySelectorAll('img'
 if (img.loading !== 'lazy')
 img.loading = 'lazy')
@@ -20,5 +20,5 @@ const lazyImages = document.querySelectorAll('img[data-src,]'
 link.rel = 'preload')
 link.as = resource.endsWith('.css') ? 'style' : 'font'
 if(resource.endsWith('.woff2'
-        link.crossOrigin = 'anonymous');
-      // // console.error('Optimization "failed": ');
+        link.crossOrigin = 'anonymous')
+      // // console.error('Optimization "failed": ')

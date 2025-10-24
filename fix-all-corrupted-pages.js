@@ -1,16 +1,14 @@
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs')
+const path = require('path')
 // Generic service page template
-const genericServicePageTemplate = (title, description) => `'use client';
-
+const genericServicePageTemplate = (title, description) => `'use client'
 import React from 'react';
-import Head from 'next/head';
+import Head } from 'next/head';
 import Link from 'next/link';
-
 export default function ServicePage() {
-  return (
-    <>
+
+  return ( <>
+
       <Head>
         <title>${title} | Zion Tech Group</title>
         <meta name="description" content="${description}" />
@@ -44,85 +42,78 @@ export default function ServicePage() {
         </div>
       </div>
     </>
-  );
-}`;
-
+  )
+}`
 // Function to generate title and description from directory name
 function generateServiceInfo(dirName) {
   // Convert kebab-case to Title Case
   const title = dirName
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-  
+    .join(' ')
   // Generate a generic description
-  const description = `Professional ${title.toLowerCase()} services and solutions for modern businesses.`;
-  
-  return { title, description };
+  const description = `Professional ${title.toLowerCase()} services and solutions for modern businesses.`
+  return { title, description }
+
 }
 
 // Function to check if a file is corrupted
 function isCorrupted(content) {
   // Check for common corruption patterns
   const corruptionPatterns = [
-    /return\(<>\s*<Head>/,
-    /title\)\s*=>\s*{/,
-    /\$3/,
-    /,\}\s*\|\s*Zion Tech Group/,
-    /name\s*=\s*"description"/,
-    /content=\{description,\}/,
-    /property="og:\s*type"/,
-    /content=\{`\$\{title,\}/,
-    /sm:\s*px-6/,
+    /return\(<>\s*<Head>/
+    /title\)\s*=>\s*{/
+    /\$3/
+    /,\}\s*\|\s*Zion Tech Group/
+    /name\s*=\s*"description"/
+    /content=\{description,\}/
+    /property="og:\s*type"/
+    /content=\{`\$\{title,\}/
+    /sm:\s*px-6/
     /className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">/
-  ];
-  
-  return corruptionPatterns.some(pattern => pattern.test(content));
+  ]
+  return corruptionPatterns.some(pattern => pattern.test(content))
 }
 
 // Function to fix a specific page
 function fixPage(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
+    const content = fs.readFileSync(filePath, 'utf8')
     // Check if the file is corrupted
     if (!isCorrupted(content)) {
-      console.log(`File ${filePath} appears to be clean, skipping...`);
-      return;
+      console.log(`File ${filePath} appears to be clean, skipping...`)
+      return
     }
     
     // Get directory name for service info
-    const dirName = path.basename(path.dirname(filePath));
-    const { title, description } = generateServiceInfo(dirName);
-    
-    const newContent = genericServicePageTemplate(title, description);
-    fs.writeFileSync(filePath, newContent);
-    console.log(`Fixed: ${filePath}`);
+    const dirName = path.basename(path.dirname(filePath))
+    const { title, description } = generateServiceInfo(dirName)
+    const newContent = genericServicePageTemplate(title, description)
+    fs.writeFileSync(filePath, newContent)
+    console.log(`Fixed: ${filePath}`)
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message)
   }
 }
 
 // Function to recursively find and fix corrupted pages
 function fixCorruptedPages(dir) {
-  const files = fs.readdirSync(dir);
-  
+  const files = fs.readdirSync(dir)
   for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
+    const filePath = path.join(dir, file)
+    const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       // Skip node_modules and .git directories
       if (file !== 'node_modules' && file !== '.git' && file !== 'dist' && file !== 'build' && file !== '.next') {
-        fixCorruptedPages(filePath);
+        fixCorruptedPages(filePath)
       }
     } else if (file === 'page.tsx') {
-      fixPage(filePath);
+      fixPage(filePath)
     }
   }
 }
 
 // Start fixing from the app directory
-console.log('Starting comprehensive corrupted page fixes...');
-fixCorruptedPages('./app');
-console.log('Comprehensive corrupted page fixes completed!');
+console.log('Starting comprehensive corrupted page fixes...')
+fixCorruptedPages('./app')
+console.log('Comprehensive corrupted page fixes completed!')

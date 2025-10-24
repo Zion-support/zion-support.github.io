@@ -1,28 +1,28 @@
 'use client'
-"use client";
-import React from 'react'
-:all-pages-backup/components/LoadingSpinner.tsx;
-export default function LoadingSpinner() {
+"use client"
+import React from 'react';
+:all-pages-backup/components/LoadingSpinner.tsx export default function LoadingSpinner() {
 
-return(<>,
-    <divclassName = "flex items-center justify-center" / />,
+return(<> <div className="flex items-center justify-center" />
     <divclassName = "animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600" / / />
       </>)
   )
 
-,;};
-};
+,;}
+
+}
+
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     ;} from 'lucide-react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp     ;} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp     ;} from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
+import { Navigation   } from '../components/Navigation';
+import Footer } from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp  } from 'lucide-react';
+import { Navigation   } from '../components/Navigation';
+import Footer } from '../components/Footer';
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp  } from 'lucide-react';
 const LoadingSpinnerPage: "React.FC = () => {
 const features = [
     {
@@ -60,31 +60,31 @@ const benefits = [
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
-return(:all-pages-backup/components/LoadingSpinner.tsx
-      <>
-;
-    </>;
-      <Helmet>;</Helmet>
-      <>
+return(:all-pages-backup/components/LoadingSpinner.tsx <>
+
+    </>
+
+      <Helmet>;</Helmet> <>
+
     </>
       <Helmet>;</Helmet>
         <Head />
         <title>LoadingSpinner</title>
         <meta name=&quot;description&quot; content=&quot;Advanced LoadingSpinner solution for modern businesses.&quot; / />
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
-      </Head>;
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, LoadingSpinner, AI, solutions, intelligent automation&quot; / />
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
       </Head>
-      </Helmet>;
-      <Navigation/ />,;
+      </Helmet>
+      <Navigation/ />
     <divclassName = &quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot; / />
         {/* Hero Section */,}
         </div>
         </div>
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />,
-    <divclassName=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,
-    <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />
+    <divclassName=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />
+    <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />
     <h1className=&quot;text-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
 LoadingSpinner</h1>
             </h1>
@@ -101,18 +101,18 @@ Learn More</button>
                 </div>
               </div>
         </section>",{/* Features Section */}
-        <section className=&quot;py-20 px-4&quot; />,
-    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />,
-    <divclassName=&quot;text-center mb-16&quot; / />,
+        <section className=&quot;py-20 px-4&quot; />
+    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />
+    <divclassName=&quot;text-center mb-16&quot; / />
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
 Powerful AI-driven features designed to transform your business operations</p>
               </p>
-                </div>,
+                </div>
     <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)
               {features.map((feature",index) => (
                 <divkey = {index,} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; / />
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />,
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />
     <h1 className = &quot;text-xl font-semibold text-white mb-3&quot;>{feature.title,}</h3>
                   <p className = &quot;text-gray-300 mb-4&quot;>{feature.description,}</p>
                   <ul className=&quot;space-y-2&quot; />
@@ -130,14 +130,14 @@ Powerful AI-driven features designed to transform your business operations</p>
         </section>
 
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot; />,
-    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />,
-    <divclassName=&quot;text-center mb-16&quot; / />,
+        <section className=&quot;py-20 px-4 bg-white/5&quot; />
+    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />
+    <divclassName=&quot;text-center mb-16&quot; / />
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
 Experience the benefits of cutting-edge AI technology</p>
               </p>
-                </div>,
+                </div>
     <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
               {benefits.map((benefit",index) => (
                 <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
@@ -150,12 +150,12 @@ Experience the benefits of cutting-edge AI technology</p>
         </section>
 
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot; />,
-    <divclassName=&quot;max-w-4 xl mx-auto text-center&quot; / />,
+        <section className=&quot;py-20 px-4&quot; />
+    <divclassName=&quot;max-w-4 xl mx-auto text-center&quot; / />
     <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />
 Join thousands of businesses already using our AI solutions</p>
-            </p>,
+            </p>
     <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Start Free Trial</button>
@@ -171,15 +171,16 @@ Contact Sales</button>
       </>
 :all-pages-backup/components/LoadingSpinner.tsx
   )",}
-export default LoadingSpinnerPage;
+export default LoadingSpinnerPage
 color?: 'primary' | 'secondary' | 'white'
 {text?: string}
 constLoadingSpinner: "React.FC<LoadingSpinnerProp s>= ({size = 'md'",color = 'primary'
 text,}) => {constsizeClasses={
 sm: "sm",md: "md",lg: "'w-12 h-1 2'",}
-constcolorClasses={primary: "primary",secondary: "secondary",</LoadingSpinnerProp>;
-white: "'text-white'",}</LoadingSpinnerProp>;
-return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;>
+constcolorClasses={primary: "primary",secondary: "secondary",</LoadingSpinnerProp>
+white: "'text-white'",}</LoadingSpinnerProp>
+return (
+    <divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;>
       <divclassName = {`animate-spin rounded-full border-2 border-gray-300 border-t-transparent${sizeClasses[size,]}${colorClasses[color,]}`} / />)
     </div>{text &&(< className={`text-sm${colorClasses[color,]}animate-pulse`}></ className={`text-sm${colorClasses[color,]}animate-pulse`}>{text}</p>)}</di>)
             </div>
@@ -187,35 +188,38 @@ return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot
 }
 const colorClasses={
 
-primary: "primary",secondary: "secondary",white: "'text-white'",);
-};
-export default LoadingSpinnerPage;
+primary: "primary",secondary: "secondary",white: "'text-white'",)
+}
+
+export default LoadingSpinnerPage
 color?: 'primary' | 'secondary' | 'white'
 text?: string}
 constLoadingSpinner: "React.FC<LoadingSpinnerProp s>= ({size = 'md'",color = 'primary'
 text,}) => {constsizeClasses={
 sm: "'w-4 h-4'",md: "'w-8 h-8'",lg: "'w-12 h-1 2'",}
 constcolorClasses={primary: "'text-indigo-60 0'
-secondar",y: "'text-gray-60 0'",</LoadingSpinnerProp>;
-white: "'text-white'",}</LoadingSpinnerProp>;
-return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;>
-
+secondar",y: "'text-gray-60 0'",</LoadingSpinnerProp>
+white: "'text-white'",}</LoadingSpinnerProp>
+return (
+    <divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;>
       <divclassName = {`animate-spin rounded-full border-2 border-gray-300 border-t-transparent${sizeClasses[size,]}${colorClasses[color,]}`} / />)
     </div>{text &&(< className={`text-sm${colorClasses[color,]}animate-pulse`}></ className={`text-sm${colorClasses[color,]}animate-pulse`}>{text}</p>)}</di>)
 }
 const colorClasses={
 primary: "'text-indigo-600'",secondary: "'text-gray-600'",white: "'text-white'
-",;};
-return(,;
-    <divclassName=&quot;flex flex-col items-center justify-center space-y-2&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot; / />,
+",;}
+
+return (
+    <divclassName=&quot;flex flex-col items-center justify-center space-y-2&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot; / />
     <divclassName = {`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size,]} ${colorClasses[color,]}`} / />
 {text && (
 <p className={`text-sm ${colorClasses[color,]} animate-pulse`}>{text}</p>p>)
 )}
     </div>
-);
-{};
-export default LoadingSpinner;
+)
+{}
+
+export default LoadingSpinner
 </divclassName>
 </divclassName>
 }

@@ -1,11 +1,10 @@
-'use client';
-
+'use client'
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
+import Head } from 'next/head';
+import Link } from 'next/link';
 const WorkingPage = (
   return(<>
+
       <Head>
         <title>{title) => {
 $3
@@ -27,9 +26,9 @@ $3
             Contact Us
           </Link>
         </div>
-      </div>;
+      </div>
     </>;)
-  );
-,};
+  )
+,}
 
-export default WorkingPage;
+export default WorkingPage

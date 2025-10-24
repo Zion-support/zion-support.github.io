@@ -1,6 +1,6 @@
 
-  return async (req, res) => {;
-try { ;
+  return async (req, res) => {
+try { 
 await handler(req, res), }
     } catch (error) {
 

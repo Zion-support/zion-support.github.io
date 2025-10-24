@@ -1,17 +1,17 @@
 'use client'
-:all-pages-backup/components/EnhancedErrorBoundary.tsx;
+:all-pages-backup/components/EnhancedErrorBoundary.tsx
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     ;} from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
+import { Navigation   } from '../components/Navigation';
+import Footer } from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from 'lucide-react';
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp     ;} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp     ;} from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp  } from 'lucide-react';
+import { Navigation   } from '../components/Navigation';
+import Footer } from '../components/Footer';
+import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp  } from 'lucide-react';
 const EnhancedErrorBoundaryPage: "React.FC = () => {
 const features = [
     {
@@ -47,11 +47,11 @@ const benefits = [
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
-    'Gain competitive advantage with advanced technology';
-  ];
+    'Gain competitive advantage with advanced technology'
+  ]
 const EnhancedErrorBoundary: "React.FC<EnhancedErrorBoundaryProps> = ({ className = '' ",;}) => {;</EnhancedErrorBoundaryProps>
-return(</EnhancedErrorBoundaryProps>
-    <>
+return (
+    </EnhancedErrorBoundaryProps> <>
 
   </>
       <Helmet>;</Helmet>
@@ -59,18 +59,18 @@ return(</EnhancedErrorBoundaryProps>
         <Head />
         <title>EnhancedErrorBoundary | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; / />
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
-      </Head>;
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedErrorBoundary, AI, solutions, intelligent automation&quot; / />
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
       </Head>
-      </Helmet>;
-      <Navigation/ />,;
+      </Helmet>
+      <Navigation/ />
     <divclassName = &quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot; / />
         {/* Hero Section */,}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />,
-    <divclassName=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,
-    <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />
+    <divclassName=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />
+    <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />
     <h1className=&quot;text-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
 EnhancedErrorBoundary</h1>
             </h1>
@@ -91,7 +91,7 @@ Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and 
         </div>
       </section>
       {/* CTA Section */}
-      <section className=&quot;py-20 px-4 sm: "px-6 lg:px-8&quot; />",<divclassName=&quot;max-w-4 xl mx-auto text-center&quot; / />,
+      <section className=&quot;py-20 px-4 sm: "px-6 lg:px-8&quot; />",<divclassName=&quot;max-w-4 xl mx-auto text-center&quot; / />
     <divclassName=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: "p-12&quot; / />",<h1 className=&quot;text-3 xl md: "text-4 xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>
             <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>p>",<divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot; />
@@ -103,18 +103,18 @@ Email Us</Mail>
             </div>
           </div>
         </section>",{/* Features Section */}
-        <section className=&quot;py-20 px-4&quot; />,
-    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />,
-    <divclassName=&quot;text-center mb-16&quot; / />,
+        <section className=&quot;py-20 px-4&quot; />
+    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />
+    <divclassName=&quot;text-center mb-16&quot; / />
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
 Powerful AI-driven features designed to transform your business operations</p>
               </p>
-            </div>,
+            </div>
     <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />
               {features.map((feature",index) => (
                 <divkey = {index,} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; / />
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />,
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />
     <h1 className = &quot;text-xl font-semibold text-white mb-3&quot;>{feature.title,}</h3>
                   <p className = &quot;text-gray-300 mb-4&quot;>{feature.description,}</p>
                   <ul className=&quot;space-y-2&quot; />
@@ -134,14 +134,14 @@ Powerful AI-driven features designed to transform your business operations</p>
         </section>
 
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot; />,
-    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />,
-    <divclassName=&quot;text-center mb-16&quot; / />,
+        <section className=&quot;py-20 px-4 bg-white/5&quot; />
+    <divclassName=&quot;max-w-7 xl mx-auto&quot; / />
+    <divclassName=&quot;text-center mb-16&quot; / />
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
 Experience the benefits of cutting-edge AI technology</p>
               </p>
-            </div>,
+            </div>
     <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
               {benefits.map((benefit",index) => (
                 <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
@@ -154,12 +154,12 @@ Experience the benefits of cutting-edge AI technology</p>
         </section>
 
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot; />,
-    <divclassName=&quot;max-w-4 xl mx-auto text-center&quot; / />,
+        <section className=&quot;py-20 px-4&quot; />
+    <divclassName=&quot;max-w-4 xl mx-auto text-center&quot; / />
     <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />
 Join thousands of businesses already using our AI solutions</p>
-            </p>,
+            </p>
     <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Start Free Trial</button>
@@ -175,11 +175,11 @@ Contact Sales</button>
     </>
 :all-pages-backup/components/EnhancedErrorBoundary.tsx
   )",}
-export default EnhancedErrorBoundaryPage;
+export default EnhancedErrorBoundaryPage
     </div>
   )
 }
-export default EnhancedErrorBoundaryPage;
+export default EnhancedErrorBoundaryPage
   error?: Error
 errorInfo?: ErrorInfo}
 class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: "Props) {  
@@ -196,17 +196,17 @@ this.state = { hasErro",r: "false",, , }
  ,;}
   render() {if(this.state.hasError) {
 if(this.props.fallback) {
-return thi s.props.fallback;
-     }</Props>;
-return(;</Props>,
-    <divclassName=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot; / />,
-    <divclassName=&quot;max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2 xl p-8 text-center&quot; / />,
+return thi s.props.fallback
+     }</Props>
+return(;</Props>
+    <divclassName=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot; / />
+    <divclassName=&quot;max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2 xl p-8 text-center&quot; / />
     <divclassName=&quot;w-16 h-16 bg-red-500/20 rounded-2 xl flex items-center justify-center mb-6 mx-auto&quot; / />
               <AlertTriangleclassName=&quot;w-8 h-8 text-red-400&quot; / />
-            </div>,
+            </div>
     <h1 className=&quot;text-2 xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>
             <p className=&quot;text-gray-300 mb-6&quot;>We're, sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>
-            {process.env.NODE_ENV = == 'development' && this.state.error && (;
+            {process.env.NODE_ENV = == 'development' && this.state.error && (
               <details className=&quot;mb-6 text-left&quot; />
                 <summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot; />)
 Error Details (Development)</summary>

@@ -1,8 +1,8 @@
 
-'use client';
+'use client'
 import React from 'react';
-import React from &quot;react&quot;
-import { Helmet ;} from &quot;react-helmet-async&quot
+import React from &quot;react&quot
+import { Helmet } from from &quot;react-helmet-async&quot
 &quot;use client&quot
 const ImageOptimizerPage: "React.FC = () => {
 const features = [",{
@@ -23,11 +23,11 @@ const benefits = [
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-  ];
-return(;
-</>;
-export default ImageOptimizerPage;
-export default ImageOptimizerPage;
+  ]
+return (
+    </>
+export default ImageOptimizerPage
+export default ImageOptimizerPage
     <div>
 
       <Helmet />
@@ -37,17 +37,14 @@ export default ImageOptimizerPage;
         <meta name="keywords" content="AI, artificial, intelligence, ImageOptimizer, AI, solutions, intelligent automation" />
 
       </Helmet>
-    </div>
-      <section className="py-20 px-4" />,
-    <divclassName="container mx-auto max-w-6 xl" />,
-    <divclassName="text-center mb-16" />,
+    </div> <section className="py-20 px-4" /> <div className="container mx-auto max-w-6 xl" /> <div className="text-center mb-16" />
     <h1 className="text-5 xl md: text-6 xl font-bold text-white mb-6">ImageOptimizer</h1>
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto leading-relaxed">Professional ImageOptimizer services tailored to your business needs.</p>p>
 
-        </div>;
-      </section>;
-    </div>;
-export default ImageOptimizerPage;
+        </div>
+      </section>
+    </div>
+export default ImageOptimizerPage
 </div>
 ,}}
 )

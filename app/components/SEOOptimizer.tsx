@@ -1,7 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
-import, React, { useEffect } from 'react';
-import Head from 'next/head'
+import, React, { useEffect } from 'react'
+import { Head  } from 'next/head';
 interface SEOOptimizerProps {
 className?: string
 const SEOOptimizer: "React.FC<SEOOptimizerProps> = ({",title = 'Zion Tech Group - Advanced AI and IT Solutions'
@@ -94,8 +94,8 @@ dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData) ",;};}
     </script></Head>
   )
 ;}
-    <Head />;
-      <title>{title}</title>;
+    <Head />
+      <title>{title}</title>
       <meta name = "description" content={description,};/>
       <meta name="keywords" content={keywords.join(', ')};/>
       <link rel = "canonical" href={canonicalUrl,};/>
@@ -105,8 +105,9 @@ dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData) ",;};}
       <meta property="og: image" content={ogImage,};/>
       <meta property="og: url" content={canonicalUrl,};/>
       <meta property = "og: type" content="website" />
-      {/* Twitter Card */,};
-      <meta name="twitter: card" content="summary_large_image" />;
+      {/* Twitter Card */,}
+
+      <meta name="twitter: card" content="summary_large_image" />
       <meta name="twitter:title" content={title,};/>
       <meta name="twitter: description" content={description,};/>
       <meta name="twitter: image" content={ogImage,};/>
@@ -117,8 +118,8 @@ dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData) ",;};}
       <meta charSet="UTF-8" />
       {/* Structured Data */,}
       {structuredData && (
-        <script;
-type="application/ld+json&quot;
+        <script
+type="application/ld+json&quot
 dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData)",};/>
       )}
     </Head>

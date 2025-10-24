@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     ;} from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from 'lucide-react';
+import { Navigation   } from '../components/Navigation';
+import Footer } from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from 'lucide-react';
 'use client'
     "title": 'AI-Powered Intelligence'
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'
@@ -43,7 +43,8 @@ color= 'blue'
     "red": 'border-red-600 bg-red-60 0'
 "purple": 'border-purple-600 bg-purple-60 0'
 case 'do ts'
-return(<divclassName='flex space-x-1' role='status' aria-label='Loading'
+return (
+    <divclassName='flex space-x-1' role='status' aria-label='Loading'
 case 'pulse'
 role='status'
 aria-label='Loading'</divclassName />
@@ -51,10 +52,11 @@ case 'skeleton': return(</di><divclassName='space-y-2' role='status' aria-label=
 style={{ "width": '7 5%'
 style={{ "width": '5 0%'
 case 'bars'
-return(<divclassName='flex space-x-1' role='status' aria-label='Loading',,}
+return (
+    <divclassName='flex space-x-1' role='status' aria-label='Loading',,}
 
 case 'spinner'
 role='status'
-aria-label='Loading'</divclassName />,
-    <div className='text-center');
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner');
+aria-label='Loading'</divclassName />
+    <div className='text-center')
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner')
