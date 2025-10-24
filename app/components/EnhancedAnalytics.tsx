@@ -42,7 +42,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         setIsLoaded(true);
       };
     } else {
-      setIsLoaded(true);
+      // Use setTimeout to avoid calling setState synchronously within effect
+      setTimeout(() => setIsLoaded(true), 0);
     }
   }, []);
 

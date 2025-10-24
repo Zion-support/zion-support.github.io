@@ -30,18 +30,20 @@ export default async function handler(req, res) {
     return
   }
   const newSubscriber = {
-    id: Date.now().toString()
-    email
+    id: Date.now().toString(),
+    email,
     name: name || '',
-    status: 'active'
-    subscribedAt: new Date().toISOString()}
+    status: 'active',
+    subscribedAt: new Date().toISOString()
+  }
   try {
     subscribers.push(newSubscriber)
     fs.writeFileSync(file, JSON.stringify(subscribers, null, 2))
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({
       success: true,
-    message: 'Successfully subscribed to newsletter' }))
+      message: 'Successfully subscribed to newsletter'
+    }))
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Error:', error)

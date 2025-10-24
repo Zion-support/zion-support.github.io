@@ -4,7 +4,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Wifi, Smartphone, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import { Wifi, Smartphone, Shield, Zap, ArrowRight } from 'lucide-react';
 
 const Page: React.FC = () => {
   const features = [

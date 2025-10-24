@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 interface MetadataOptions {
   title?: string;
@@ -13,15 +13,22 @@ interface MetadataState {
 }
 
 export const useMetadata = (options: MetadataOptions = {}) => {
-  const stateRef = useRef<MetadataState>({
+  const [metadata, setMetadata] = useState<MetadataState>({
     title: options.title || 'Zion Tech Group',
     description: options.description || 'Advanced AI and IT Solutions',
     keywords: options.keywords || ['AI', 'IT', 'Technology', 'Solutions'],
   });
 
-  return {
-    title: stateRef.current.title,
-    description: stateRef.current.description,
-    keywords: stateRef.current.keywords,
-  };
+  useEffect(() => {
+    // Use setTimeout to avoid calling setState synchronously within effect
+    setTimeout(() => {
+      setMetadata({
+        title: options.title || 'Zion Tech Group',
+        description: options.description || 'Advanced AI and IT Solutions',
+        keywords: options.keywords || ['AI', 'IT', 'Technology', 'Solutions'],
+      });
+    }, 0);
+  }, [options.title, options.description, options.keywords]);
+
+  return metadata;
 };

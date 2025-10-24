@@ -51,7 +51,7 @@ function fixFile(filePath) {
     
     // Fix malformed useEffect
     content = content.replace(/useEffect\(\(\) => \{\}/g, 'useEffect(() => {');
-    content = content.replace(/setIsLoaded\(true\)\n  \}, \[\]\)/g, 'setIsLoaded(true);\n  }, []);');
+    content = content.replace(/setIsLoaded\(true\)\n {2}\}, \[\]\)/g, 'setIsLoaded(true);\n  }, []);');
     
     // Fix malformed return statements
     content = content.replace(/return \(<\/section>/g, 'return (\n        <section>');
@@ -65,15 +65,15 @@ function fixFile(filePath) {
     content = content.replace(/\)\}\);<\/section>/g, '))}\n          </section>');
     
     // Fix malformed CSS classes
-    content = content.replace(/className=&quot;text-xl m,\n      d:text-2xl/g, 'className="text-xl md:text-2xl"');
-    content = content.replace(/className=&quot;grid grid-cols-1 m,\n      d:grid-cols-2 l,\n      g:grid-cols-4/g, 'className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"');
+    content = content.replace(/className=&quot;text-xl m,\n {6}d:text-2xl/g, 'className="text-xl md:text-2xl"');
+    content = content.replace(/className=&quot;grid grid-cols-1 m,\n {6}d:grid-cols-2 l,\n {6}g:grid-cols-4/g, 'className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"');
     content = content.replace(/className=&quot;flex flex-col sm: flex-row/g, 'className="flex flex-col sm:flex-row"');
     content = content.replace(/className=&quot;text-5xl md: text-7xl/g, 'className="text-5xl md:text-7xl"');
     content = content.replace(/className=&quot;text-4xl md: text-5xl/g, 'className="text-4xl md:text-5xl"');
     
     // Fix malformed hover states
-    content = content.replace(/hove,\n      r:bg-blue-400 hove,\n      r:text-slate-900/g, 'hover:bg-blue-400 hover:text-slate-900');
-    content = content.replace(/hove,\n      r:bg-white hove,\n      r:text-gray-900/g, 'hover:bg-white hover:text-gray-900');
+    content = content.replace(/hove,\n {6}r:bg-blue-400 hove,\n {6}r:text-slate-900/g, 'hover:bg-blue-400 hover:text-slate-900');
+    content = content.replace(/hove,\n {6}r:bg-white hove,\n {6}r:text-gray-900/g, 'hover:bg-white hover:text-gray-900');
     
     // Fix malformed export statements
     content = content.replace(/export default Page;\n\}\}\}\}\}\}\}\}/g, 'export default Page;');
@@ -89,7 +89,7 @@ function fixFile(filePath) {
     content = content.replace(/'description: '([^']+)',/g, "description: '$1',");
     
     // Fix malformed array syntax
-    content = content.replace(/const feature,\n      s = \[/g, 'const features = [');
+    content = content.replace(/const feature,\n {6}s = \[/g, 'const features = [');
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');

@@ -18,20 +18,22 @@ export default async function handler(req, res) {
     const rates = [
       {
         service: 'Standard',
-    cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier)
-        days: destination === 'international' ? '7-14' : '3-5'}
+        cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier),
+        days: destination === 'international' ? '7-14' : '3-5'
+      },
       {
         service: 'Express',
-    cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier * 1.5),
-    days: destination === 'international' ? '3-7' : '1-2'}
-  ]
+        cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier * 1.5),
+        days: destination === 'international' ? '3-7' : '1-2'
+      }
+    ]
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({
-  success: true
-      rates
-      destination
+      success: true,
+      rates,
+      destination,
       weight
-}))
+    }))
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Error:', error)

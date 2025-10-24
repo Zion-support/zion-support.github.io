@@ -14,22 +14,24 @@ export default async function handler(req, res) {
   try {
     // Process the quote request
     const quote = {
-      id: Date.now().toString()
-      name
-      email
-      phone
-      details
+      id: Date.now().toString(),
+      name,
+      email,
+      phone,
+      details,
       country: country || 'Not specified',
-    service: service || 'General inquiry'
+      service: service || 'General inquiry',
       status: 'pending',
-    createdAt: new Date().toISOString()}
+      createdAt: new Date().toISOString()
+    }
     // Here you would typically save the quote to a database
     // eslint-disable-next-line no-console
     console.log('Quote request processed:', quote.id)
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({
       success: true,
-    message: 'Quote request submitted successfully' }))
+      message: 'Quote request submitted successfully'
+    }))
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Quote submission error:', error)

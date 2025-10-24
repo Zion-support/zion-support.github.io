@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 interface AnimatedCounterProps {
@@ -24,7 +24,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
   useEffect(() => {
     if (entry?.isIntersecting && !isVisible) {
-      setIsVisible(true)
+      // Use setTimeout to avoid calling setState synchronously within effect
+      setTimeout(() => setIsVisible(true), 0)
     }
   }, [entry, isVisible])
 

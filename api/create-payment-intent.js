@@ -26,8 +26,9 @@ export default withErrorLogging(async (req, res) => {
   try {
     const paymentIntent = {
       status: 'requires_payment_method',
-    amount: amount
-      currency: currency}
+      amount: amount,
+      currency: currency
+    }
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify(paymentIntent))
   } catch (error) {
