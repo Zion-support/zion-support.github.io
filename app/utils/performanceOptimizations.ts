@@ -119,12 +119,12 @@ export const usePerformanceMonitoring = () => {
     }
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
-        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })));
-        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
-        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
-        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+      import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+        onINP((metric) => setMetrics(prev => ({ ...prev, inp: metric.value })));
+        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
+        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
       });
     }
     return () => {

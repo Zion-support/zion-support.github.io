@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 function fixPageFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8')
+    const content = fs.readFileSync(filePath, 'utf8')
     // Skip if it's already a proper Next.js page
     if (content.includes('export default function') && !content.includes('React.FC')) {
       return

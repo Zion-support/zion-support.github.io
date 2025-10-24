@@ -7,18 +7,18 @@ interface PerformanceMonitorProps {
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
   useEffect(() => {
     // Monitor Core Web Vitals
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
       const logMetric = (metric: any) => {
         if (process.env.NODE_ENV === 'development') {
           // eslint-disable-next-line no-console
           console.log(metric);
         }
       };
-      getCLS(logMetric);
-      getFID(logMetric);
-      getFCP(logMetric);
-      getLCP(logMetric);
-      getTTFB(logMetric);
+      onCLS(logMetric);
+      onINP(logMetric);
+      onFCP(logMetric);
+      onLCP(logMetric);
+      onTTFB(logMetric);
     });
 
     // Monitor performance metrics

@@ -5,7 +5,7 @@ const path = require('path')
 function fixIconRendering(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
+    const modified = false
     // Fix icon objects in features arrays - change from JSX to component references
     content = content.replace(/icon: <([A-Z][a-zA-Z0-9]+) className="[^"]*" \/>/g, 'icon: $1')
     // Fix any remaining icon usage that might be causing issues

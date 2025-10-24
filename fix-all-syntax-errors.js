@@ -14,7 +14,7 @@ function fixFile(filePath) {
     const cleanedLines = []
     let hasUseClient = false
     let hasReactImport = false
-    let hasOtherImports = false
+    const hasOtherImports = false
     for (let i = 0; i < lines.length; i++) {
   const line = lines[i].trim()
       // Skip duplicate "use client" directives

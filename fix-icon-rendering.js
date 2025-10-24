@@ -5,7 +5,7 @@ const path = require('path')
 function fixIconRendering(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
+    const modified = false
     // Fix icon objects that are being rendered directly
     // Change from icon: Component to icon: <Component className="w-8 h-8" />
     content = content.replace(/icon: ([A-Z][a-zA-Z0-9]+),/g, 'icon: <$1 className="w-8 h-8" />,')

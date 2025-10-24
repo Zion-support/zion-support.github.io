@@ -8,7 +8,7 @@ const path = require('path')
 // Function to completely rewrite a malformed file
 function rewriteFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8')
+    const content = fs.readFileSync(filePath, 'utf8')
     // Extract basic info from the file
     const fileName = path.basename(filePath, '.tsx')
     const componentName = fileName
