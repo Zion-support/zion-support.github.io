@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 'use client'
-import { Metadata } from 'next';
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail } from 'lucide-react'
@@ -34,7 +31,7 @@ const FuturisticHeroPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -42,4 +39,3 @@ const FuturisticHeroPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-;
