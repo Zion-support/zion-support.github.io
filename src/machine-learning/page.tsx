@@ -1,64 +1,38 @@
 import React from 'react';
-import React from 'react';
-import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-constMachineLearningPage: React.FC= () =>{constfeatures= []
-    'Custom ML model development and training',
-    'Predictive analytics and forecasting',
-    'Data preprocessing and feature engineering',
-    'Model optimization and hyperparameter tuning',
-    'Real-time inference and deployment',
-    'A/B testing and performance monitoring',
-    'Integration with existing systems',
-    'Continuous learning and model updates'
-  ]
-
-  const benefits = [];
-    '40% better prediction accuracy',
-    '60% faster insights generation',
-    '50% reduction in manual analysis',
-    '30% improvement in decision making',
-    '95% model reliability',
-    '80% cost savings on analytics'
-  ]
-
-  constuseCases= [
-    {
-      title: 'Predictive Analytics',
-      description: 'Forecast sales, demand, and market trends with high accuracy',
-      icon: '📈'
-   },
-    {title: 'Customer Segmentation',
-      description: 'Identify and target customer groups for personalized marketing',
-      icon: '👥'
-   },
-    {title: 'Fraud Detection',
-      description: 'Detect and prevent fraudulent activities in real-time',
-      icon: '🛡️'
-   },
-    {title: 'Recommendation Systems',
-      description: 'Provide personalized recommendations to increase engagement',
-      icon: '🎯'
-   },
-    {title: 'Process Optimization',
-      description: 'Optimize business processes and reduce operational costs',
-      icon: '⚙️'
-   },
-    {title: 'Risk Assessment',
-      description: 'Evaluate and mitigate business risks with data-driven insights',
-      icon: '⚠️'
-    }
-  ]
-
-const Page = () => {};
-  return ()
+const Page: React.FC = () => {
+  return (
+    <>
+      <SEOOptimizer
+        title="Page"
+        description="Professional page services and solutions for your business needs."
+        keywords={["page","AI solutions","business automation","technology services"]}
+        canonicalUrl="https://ziontechgroup.com/page"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="container mx-auto px-4 py-16 pt-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 neon-text">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional page services and solutions for your business needs.
+            </p>
+            <div className="cyber-card p-8 max-w-4xl mx-auto">
+              <p className="text-gray-300">
+                This page is under development. Please check back soon for more information about our page services.
+              </p>
+            </div>
+          </div>
+        </main>
+        <Footer />
       </div>
-</>
-  )
+    </>
+  );
 };
-;
+
 export default Page;
