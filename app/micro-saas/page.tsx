@@ -1,92 +1,31 @@
-"use client";
+'use client';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-import React from "react";
-import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
-const MicroSaasPage: React.FC = () => {
-  const services = [
-    {
-      icon: Zap,
-      title: "Rapid Development",
-      description: "Get your SaaS product to market in weeks, not months",
-      features: [
-        "MVP Development",
-        "Rapid Prototyping",
-        "Agile Methodology",
-        "Quick Iterations"
-      ],
-      price: "Starting at $8,000"
-    },
-    {
-      icon: Layers,
-      title: "Scalable Architecture",
-      description: "Built to grow with your business from day one",
-      features: [
-        "Microservices Design",
-        "Cloud-Native Solutions",
-        "Auto-Scaling",
-        "Load Balancing"
-      ],
-      price: "Starting at $12,000"
-    },
-    {
-      icon: Users,
-      title: "User Management",
-      description: "Complete user authentication and management system",
-      features: [
-        "Multi-Tenant Support",
-        "Role-Based Access",
-        "SSO Integration",
-        "User Analytics"
-      ],
-      price: "Starting at $6,000"
-    },
-    {
-      icon: TrendingUp,
-      title: "Analytics & Insights",
-      description: "Comprehensive analytics to drive growth",
-      features: [
-        "Usage Analytics",
-        "Performance Metrics",
-        "Business Intelligence",
-        "Custom Dashboards"
-      ],
-      price: "Starting at $4,000"
-    }
-  ]
-  const platforms = [
-  "Web Applications",
-    "Mobile Apps (iOS/Android)",
-    "Desktop Applications",
-    "API-First Solutions",
-    "Progressive Web Apps",
-    "Chrome Extensions"
-  ]
-  const techStack = [
-    "React", "Next.js", "Vue.js", "Angular", "Node.js", "Python", "Go",
-    "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes",
-    "Stripe", "Auth0", "SendGrid", "Twilio", "WebSocket", "GraphQL"
-  ]
+export default function MicroSaasPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
-            Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">SaaS</span>
+    <>
+      <Head>
+        <title>Micro Saas - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saas services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Micro Saas
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Build, launch, and scale your software-as-a-service product with our comprehensive development and growth services.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional micro saas services coming soon.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-              Start Your SaaS
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              View Examples
-            </button>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
       {/* Services Grid */}

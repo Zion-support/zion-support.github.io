@@ -1,92 +1,31 @@
 'use client';
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle, Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu, Send, BarChart3, Target, DollarSign, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
-const AIAutomationPage: React.FC = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: 'Workflow Automation',
-      description: 'Automate complex business processes with intelligent workflow management.'
-    },
-    {
-      icon: Brain,
-      title: 'Intelligent Decision Making',
-      description: 'AI-powered decision making based on data analysis and business rules.'
-    },
-    {
-      icon: Settings,
-      title: 'Custom Integrations',
-      description: 'Seamlessly integrate with your existing systems and third-party applications.'
-    },
-    {
-      icon: Globe,
-      title: 'Scalable Solutions',
-      description: 'Automation solutions that grow with your business and adapt to changing needs.'
-    }
-  ];
-  const useCases = [
-    {
-      title: 'Customer Service',
-      description: 'Automate ticket routing, response generation, and issue resolution.',
-      icon: Users
-    },
-    {
-      title: 'Data Processing',
-      description: 'Automate data collection, validation, and analysis workflows.',
-      icon: BarChart
-    },
-    {
-      title: 'Marketing Automation',
-      description: 'Automate email campaigns, lead scoring, and customer segmentation.',
-      icon: MessageCircle
-    },
-    {
-      title: 'Financial Operations',
-      description: 'Automate invoice processing, expense management, and financial reporting.',
-      icon: FileText
-    }
-  ]
-  const benefits = [
-  'Reduce operational costs by up to 70%',
-    'Increase productivity and efficiency',
-    'Eliminate human errors in repetitive tasks',
-    '24/7 automated operations',
-    'Scalable and adaptable solutions',
-    'ROI within 3-6 months'
-  ]
-  const stats = [
-    { number: '70%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Automated Operations', icon: Clock },
-    { number: '99.9%', label: 'Accuracy Rate', icon: Shield },
-    { number: '3-6', label: 'Months ROI', icon: Star }
-  ]
+import { ArrowRight } from 'lucide-react';
+
+export default function AiAutomationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span> Services
+    <>
+      <Head>
+        <title>Ai Automation - Zion Tech Group</title>
+        <meta name="description" content="Professional ai automation services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Ai Automation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business operations with intelligent automation solutions that reduce costs, increase efficiency, and eliminate repetitive tasks.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional ai automation services coming soon.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-            >
-              Get Started Today
-              <ArrowRight className="w-8 h-8" />
-            </Link>
-            <Link
-              href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-            >
-              View All AI Services
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
       {/* Stats Section */}

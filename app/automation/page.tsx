@@ -1,60 +1,31 @@
 'use client';
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
-const AutomationPage: React.FC = () => {
-  const features = [
-    {
-      icon: Zap,
-    title: 'Process Automation',
-      description: 'Automate repetitive business processes to increase efficiency and reduce human error.'},
-  {
-    icon: Workflow,
-    title: 'Workflow Optimization',
-      description: 'Design and implement optimized workflows that streamline your business operations.'},
-  {
-    icon: Brain,
-    title: 'AI-Powered Automation',
-      description: 'Leverage AI and machine learning to create intelligent automation solutions.'},
-  {
-    icon: Settings,
-    title: 'Custom Integration',
-    description: 'Seamlessly integrate automation solutions with your existing systems and tools.'}
-  ]
-  const benefits = [
-  'Reduce operational costs by 60%',
-    'Increase productivity by 40%',
-    'Eliminate human errors in repetitive tasks',
-    'Enable 24/7 automated operations',
-    'Improve process consistency and quality',
-    'Free up staff for higher-value activities'
-  ]
+import { ArrowRight } from 'lucide-react';
+
+export default function AutomationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            Business Process <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span>
+    <>
+      <Head>
+        <title>Automation - Zion Tech Group</title>
+        <meta name="description" content="Professional automation services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Automation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with intelligent automation solutions. Streamline processes, reduce costs, and increase efficiency with our automation services.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional automation services coming soon.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-            >
-              Get Started
-              <ArrowRight className="w-8 h-8" />
-            </Link>
-            <Link
-              href="/it-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-            >
-              View All IT Services
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
       {/* Features Section */}

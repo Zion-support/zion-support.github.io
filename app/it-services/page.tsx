@@ -1,85 +1,31 @@
-"use client";
+'use client';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-import React from "react";
-import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
-const ITServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure for modern businesses",
-      features: [
-        "AWS/Azure/GCP Migration",
-        "Cloud Architecture Design",
-        "Cost Optimization",
-        "24/7 Monitoring"
-      ],
-      price: "Starting at $2,000"
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Protect your business from evolving threats",
-      features: [
-        "Security Audits",
-        "Threat Detection",
-        "Compliance Management",
-        "Incident Response"
-      ],
-      price: "Starting at $3,500"
-    },
-    {
-      icon: Server,
-      title: "DevOps Services",
-      description: "Streamline development and deployment processes",
-      features: [
-        "CI/CD Pipeline Setup",
-        "Infrastructure as Code",
-        "Container Orchestration",
-        "Performance Monitoring"
-      ],
-      price: "Starting at $4,000"
-    },
-    {
-      icon: Database,
-      title: "Data Analytics",
-      description: "Turn your data into actionable insights",
-      features: [
-        "Data Warehousing",
-        "Business Intelligence",
-        "Real-time Dashboards",
-        "Predictive Analytics"
-      ],
-      price: "Starting at $5,000"
-    }
-  ]
-  const technologies = [
-    "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform",
-    "Jenkins", "GitLab CI", "Prometheus", "Grafana", "Elasticsearch",
-    "PostgreSQL", "MongoDB", "Redis", "Apache Kafka", "React", "Node.js",
-    "Python", "Go", "Rust", "TypeScript"
-  ]
+export default function ItServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
-            IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Services</span>
+    <>
+      <Head>
+        <title>It Services - Zion Tech Group</title>
+        <meta name="description" content="Professional it services services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            It Services
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Comprehensive technology solutions to modernize your infrastructure and accelerate your digital transformation.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional it services services coming soon.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              View Portfolio
-            </button>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
       {/* Services Grid */}

@@ -1,21 +1,9 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-interface HeaderProps {
-  className?: string
-}
-const Header: React.FC<HeaderProps> = ({ className = '' }) => {
+import Navigation from './Navigation';
+
+const Header: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Header</title>
-        <meta name="description" content="Advanced Header solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, Header, AI solutions, intelligent automation" />
-      </Helmet>
+    <header className="bg-white shadow-sm border-b">
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
             {/* Hero Section */}

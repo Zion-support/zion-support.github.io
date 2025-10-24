@@ -1,71 +1,83 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-const ErrorBoundaryPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-    title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-  {
-    icon: BarChart,
-    title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
-  {
-    icon: Target,
-    title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
-  {
-    icon: TrendingUp,
-    title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+
+interface Props {
+  children: ReactNode;
 }
-  ]
-  const benefits = [
-  'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-  return (
-    <>
-      <Helmet>
-        <title>ErrorBoundary</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced ErrorBoundary solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorBoundary, AI solutions, intelligent automation&quot; />
-      </Helmet>
-      <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
-              ErrorBoundary
-            </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
-              Advanced ErrorBoundary solution for modern businesses.
-            </p>
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Learn More
-              </button>
+
+interface State {
+  hasError: boolean;
+  error: Error | undefined;
+}
+
+class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
+    hasError: false,
+    error: undefined,
+  };
+
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    // Log error to console in development only
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+  }
+
+  public render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-lg p-6">
+            <div className="text-center">
+              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mb-4">
+                <svg
+                  className="h-6 w-6 text-red-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
+                </svg>
+              </div>
+              <h2 className="text-xl font-semibold text-white mb-2">
+                Something went wrong
+              </h2>
+              <p className="text-gray-300 mb-4">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+              <div className="space-y-2">
+                <button
+                  onClick={() => window.location.reload()}
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+                >
+                  Refresh Page
+                </button>
+                <button
+                  onClick={() => window.location.href = '/'}
+                  className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+                >
+                  Go Home
+                </button>
+              </div>
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mt-4 text-left">
+                  <summary className="text-gray-400 cursor-pointer">
+                    Error Details (Development)
+                  </summary>
+                  <pre className="mt-2 text-xs text-red-400 bg-gray-900 p-2 rounded overflow-auto">
+                    {this.state.error.toString()}
+                  </pre>
+                </details>
+              )}
             </div>
           </div>
         </section>

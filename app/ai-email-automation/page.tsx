@@ -1,175 +1,30 @@
 import React from 'react';
-import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react';
+import Head from 'next/head';
 import Link from 'next/link';
-import type { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Email Automation - Smart Email Marketing | Zion Tech Group',
-  description: 'Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week.',
-  keywords: 'AI email automation, email marketing, email generation, lead scoring, email analytics, marketing automation, AI content creation',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'AI Email Automation - Smart Email Marketing | Zion Tech Group',
-    description: 'Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/ai-email-automation',
-  },
-}
-
-const AIEmailAutomationPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-    title: 'AI Email Generation',
-      description: 'Generate personalized, high-converting emails using AI that understands your audience and brand voice.',
-      benefits: ['Personalized content', 'A/B testing', 'Brand voice training', 'Multi-language support']
-},
-  {
-    icon: Send,
-    title: 'Smart Automation',
-      description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.',
-      benefits: ['Behavioral triggers', 'Smart segmentation', 'Dynamic content', 'Cross-channel sync']
-},
-  {
-    icon: TrendingUp,
-    title: 'Performance Analytics',
-      description: 'Advanced analytics with AI insights to optimize email performance and improve ROI.',
-    benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']
-},
-  {
-    icon: Zap,
-    title: 'Automated Sequences',
-      description: 'AI-powered email sequences that adapt based on recipient behavior and engagement patterns.',
-    benefits: ['Adaptive sequences', 'Behavioral triggers', 'Personalization', 'Optimal timing']
-},
-  {
-    icon: BarChart3,
-    title: 'Lead Scoring',
-      description: 'AI automatically scores leads based on email engagement and behavior to prioritize follow-ups.',
-    benefits: ['Lead scoring', 'Engagement tracking', 'Priority alerts', 'CRM integration']
-},
-  {
-    icon: Shield,
-    title: 'Deliverability Optimization',
-      description: 'AI ensures maximum deliverability with reputation monitoring and content optimization.',
-    benefits: ['Reputation monitoring', 'Content optimization', 'Spam prevention', 'Compliance checks']
-}
-  ]
-  const pricingPlans = [
-  {
-      name: 'Starter',
-    price: '$59',
-      period: '/month',
-    description: 'Perfect for small businesses and startups',
-      features: [
-        'Up to 5,000 contacts',
-        '10,000 emails/month',
-        'Basic AI features',
-        'Email templates',
-        'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [
-        'Up to 25,000 contacts',
-        '50,000 emails/month',
-        'Advanced AI features',
-        'A/B testing',
-        'Priority support',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations with high volume needs',
-      features: [
-        'Unlimited contacts',
-        'Unlimited emails',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options'
-      ],
-      popular: false
-    }
-  ]
-  const testimonials = [
-    {
-      name: 'Jennifer Lee',
-      company: 'E-commerce Store',
-      content: 'AI Email Automation increased our email revenue by 300%. The AI-generated content is incredibly effective.',
-      rating: 5,
-      avatar: 'JL'
-    },
-    {
-      name: 'Mark Thompson',
-      company: 'SaaS Company',
-      content: 'The lead scoring feature helped us identify high-value prospects and increased our conversion rate by 150%.',
-      rating: 5,
-      avatar: 'MT'
-    },
-    {
-      name: 'Lisa Chen',
-      company: 'Marketing Agency',
-      content: 'Saves us 20+ hours per week on email campaigns. The automation features are incredibly powerful.',
-      rating: 5,
-      avatar: 'LC'
-    }
-  ]
-  const stats = [
-    { number: '300%', label: 'Revenue Increase', icon: DollarSign },
-    { number: '150%', label: 'Conversion Boost', icon: TrendingUp },
-    { number: '20hrs', label: 'Time Saved/Week', icon: Clock },
-    { number: '95%', label: 'Deliverability Rate', icon: Shield }
-  ]
+export default function AiEmailAutomationPage() {
   return (
     <>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-blue-400/30">
-            <Mail className="w-8 h-8" />
-            <span>AI-Powered Email Marketing</span>
-          </div>
-          <h1 className="text-4xl sm: text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-            AI Email
-            <br />
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Automation Pro
-            </span>
+      <Head>
+        <title>Ai Email Automation - Zion Tech Group</title>
+        <meta name="description" content="Professional ai email automation services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Ai Email Automation
           </h1>
-          <p className="text-lg sm: text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your email marketing with AI-powered automation
-            content generation, and performance optimization that increases revenue by 300%.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional ai email automation services coming soon.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link 
-              href="/contact" 
-              className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transform hover:scale-105"
-            >
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-8 h-8" />
-            </Link>
-            <Link 
-              href="#demo" 
-              className="group border-2 border-blue-400 text-blue-400 px-10 py-4 rounded-xl font-semibold hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
-            >
-              <span>Watch Demo</span>
-              <ArrowRight className="w-8 h-8" />
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
       {/* Stats Section */}

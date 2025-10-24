@@ -1,106 +1,31 @@
-"use client";
+'use client';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-import React from "react";
-import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from "lucide-react";
-const AIServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: "Machine Learning Solutions",
-      description: "Custom ML models tailored to your business needs",
-      features: [
-        "Predictive Analytics",
-        "Pattern Recognition",
-        "Automated Decision Making",
-        "Real-time Processing"
-      ],
-      price: "Starting at $5,000"
-    },
-    {
-      icon: Zap,
-      title: "AI Automation",
-      description: "Streamline operations with intelligent automation",
-      features: [
-        "Process Automation",
-        "Workflow Optimization",
-        "Intelligent Routing",
-        "Error Reduction"
-      ],
-      price: "Starting at $3,000"
-    },
-    {
-      icon: Target,
-      title: "Natural Language Processing",
-      description: "Understand and process human language at scale",
-      features: [
-        "Text Analysis",
-        "Sentiment Analysis",
-        "Language Translation",
-        "Chatbot Development"
-      ],
-      price: "Starting at $4,000"
-    },
-    {
-      icon: BarChart,
-      title: "Computer Vision",
-      description: "Extract insights from images and videos",
-      features: [
-        "Image Recognition",
-        "Object Detection",
-        "Video Analysis",
-        "Quality Control"
-      ],
-      price: "Starting at $6,000"
-    }
-  ]
-  const process = [
-    {
-      step: "1",
-      title: "Discovery & Analysis",
-      description: "We analyze your business needs and data to understand the best AI approach."
-    },
-    {
-      step: "2",
-      title: "Solution Design",
-      description: "Our team designs a custom AI solution tailored to your specific requirements."
-    },
-    {
-      step: "3",
-      title: "Development & Training",
-      description: "We develop and train your AI models using the latest technologies and best practices."
-    },
-    {
-      step: "4",
-      title: "Integration & Deployment",
-      description: "We integrate the solution into your existing systems and deploy it securely."
-    },
-    {
-      step: "5",
-      title: "Monitoring & Optimization",
-      description: "We continuously monitor performance and optimize the solution for better results."
-    }
-  ]
+export default function AiServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Services</span>
+    <>
+      <Head>
+        <title>Ai Services - Zion Tech Group</title>
+        <meta name="description" content="Professional ai services services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Ai Services
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence solutions designed to drive growth and efficiency.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional ai services services coming soon.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              View Case Studies
-            </button>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
       {/* Services Grid */}

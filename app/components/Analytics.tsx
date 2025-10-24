@@ -4,17 +4,28 @@ interface AnalyticsProps {
 }
 const Analytics: React.FC = () => {
   useEffect(() => {
+    // Initialize analytics tracking
     const initAnalytics = () => {
-      if (typeof window !== &quot;undefined&quot; && window.gtag) {
-        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
+      // Google Analytics initialization
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
-    page_location: window.location.href})
+          page_location: window.location.href
+        });
       }
-    }
-    initAnalytics()
-  }, [])
-  return null; // Analytics component doesn&apos;t render anything
+    };
+
+    initAnalytics();
+  }, []);
+
+  return <React.Fragment>{children}</React.Fragment>;
+};
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
 }
-export default Analytics
-}
-export default AnalyticsPage
+
+export default Analytics;

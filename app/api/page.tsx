@@ -1,61 +1,31 @@
 'use client';
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
-const APIPage: React.FC = () => {
-  const features = [
-    {
-      icon: Code,
-    title: 'RESTful API Design',
-      description: 'Well-designed RESTful APIs that are intuitive, scalable, and easy to integrate.'
-},
-  {
-    icon: Zap,
-    title: 'High Performance',
-      description: 'Optimized APIs with fast response times and efficient data processing capabilities.'},
-  {
-    icon: Brain,
-    title: 'AI-Powered Features',
-      description: 'APIs enhanced with AI capabilities for intelligent data processing and automation.'},
-  {
-    icon: Settings,
-    title: 'Easy Integration',
-    description: 'Comprehensive documentation and SDKs for seamless integration with any platform.'}
-  ]
-  const benefits = [
-  'Accelerate development with pre-built APIs',
-    'Reduce integration time by 70%',
-    'Ensure security and compliance',
-    'Scale automatically with your business',
-    'Get 24/7 monitoring and support',
-    'Access comprehensive documentation'
-  ]
+import { ArrowRight } from 'lucide-react';
+
+export default function ApiPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">API Services</span>
+    <>
+      <Head>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Professional api services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Api
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional API development and integration services. Build scalable, secure, and high-performance APIs for your business needs.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional api services coming soon.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-            >
-              Get Started
-              <ArrowRight className="w-8 h-8" />
-            </Link>
-            <Link
-              href="/it-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-            >
-              View All IT Services
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
       {/* Features Section */}

@@ -7,13 +7,16 @@ import './app/styles/futuristic.css';
 
 // Components
 import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
+import ErrorBoundaryWrapper from './app/components/ErrorBoundaryWrapper';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import FuturisticBackground from './app/components/FuturisticBackground';
 import LoadingSpinner from './app/components/LoadingSpinner';
+import Breadcrumb from './app/components/Breadcrumb';
+import HomePage from './app/page';
+import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import EnhancedAccessibilityWrapper from './app/components/EnhancedAccessibilityWrapper';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -79,7 +82,7 @@ const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <ErrorBoundaryWrapper>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <FuturisticBackground />
@@ -150,12 +153,15 @@ function App() {
             </Suspense>
             <Footer />
             <PerformanceOptimizer />
-            <AccessibilityEnhancer />
-            <EnhancedAccessibility />
+            <AccessibilityEnhancer>
+              <EnhancedAccessibilityWrapper>
+                <div></div>
+              </EnhancedAccessibilityWrapper>
+            </AccessibilityEnhancer>
             <PerformanceMonitor />
           </div>
         </Router>
-      </ErrorBoundary>
+      </ErrorBoundaryWrapper>
     </HelmetProvider>
   );
 }

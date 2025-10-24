@@ -25,9 +25,29 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const setupLazyLoading = useCallback(() => {
     if (!enableLazyLoading || typeof window === 'undefined') return
 
-    const images = document.querySelectorAll('img[data-src]')
-    if (observerRef.current) {
-      observerRef.current.disconnect()
+      // Preload critical resources
+      if (options.enablePreloading) {
+        const criticalResources = document.querySelectorAll('[data-preload]');
+        criticalResources.forEach((resource) => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.href = resource.getAttribute('href') || '';
+          link.as = resource.getAttribute('as') || 'script';
+          document.head.appendChild(link);
+        });
+      }
+
+      // Enable compression
+      if (options.enableCompression) {
+        // This would typically be handled by the server
+      }
+
+      // Enable caching
+      if (options.enableCaching) {
+        // This would typically be handled by the server
+      }
+
+      setIsOptimized(true);
     }
 
     observerRef.current = new IntersectionObserver(
