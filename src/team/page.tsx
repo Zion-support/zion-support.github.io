@@ -1,4 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Users, Brain, Code, Shield, BarChart, Zap, Award, Globe, Mail, Linkedin, Github, Twitter, CheckCircle, Star, Clock, Target, DollarSign } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
 
 const TeamPage: React.FC = () => {
   return (

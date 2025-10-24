@@ -260,17 +260,29 @@ const WebDevelopmentPage: React.FC = () => {
   return(<React.Fragment>
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
+<<<<<<< HEAD
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
         canonicalUrl="https: //ziontechgroup.com/web-development",
       />,
         <PerformanceOptimizer;
+=======
+        description="Professional web development services including frontend, backend, full-stack, e-commerce, and performance optimization. Build modern, scalable web applications."
+        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'web applications']}
+        canonicalUrl="https://ziontechgroup.com/web-development"
+      />
+        <PerformanceOptimizer
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
           enableImageOptimization={true}
           enableLazyLoading={true}
           enableCodeSplitting={true}
           enablePrefetching={true}
         />
+<<<<<<< HEAD
       <AccessibilityEnhancer;
+=======
+      <AccessibilityEnhancer
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
         enableHighContrast={true}

@@ -176,6 +176,7 @@ class SEOOptimizer {// TODO: Add content;}
 }
     if (!this.currentPageData) return 'index, follow';
     const directives = [];
+<<<<<<< HEAD
     if (!this.currentPageData.noindex) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -188,7 +189,17 @@ class SEOOptimizer {// TODO: Add content;}
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+=======
+    if (this.currentPageData.noindex) {
+      directives.push('noindex');
+    } else {
+      directives.push('index');
+    }
+    if (this.currentPageData.nofollow) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
       directives.push('nofollow');
+    } else {
+      directives.push('follow');
     }
     return directives.join(', ')
   }
@@ -379,8 +390,12 @@ private addStructuredData(data: unknown): void {const script = document.createEl
   url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
+<<<<<<< HEAD
         priority: '1.0'
 
+=======
+        priority: 1.0
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
       }
     ]
   }

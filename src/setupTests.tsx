@@ -5,10 +5,17 @@
 /* eslint-disable no-console */
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
+<<<<<<< HEAD
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
+=======
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder as any;
+global.TextDecoder = TextDecoder as any;
+// Suppress jsdom navigation warnings
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
 const originalConsoleError = console.error;
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
@@ -59,6 +66,7 @@ Object.defineProperty(window, 'sessionStorage', {
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // eslint-disable-next-line no-console
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
@@ -73,6 +81,10 @@ const originalConsoleInfo = console.info;
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
+=======
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {

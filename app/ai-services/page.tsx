@@ -1421,6 +1421,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
 
   return (
     <>
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden"></div>
       {/* Futuristic Background Effects */}</div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" /></div>
@@ -1738,6 +1739,33 @@ const AIServicesPage: React.FC = () => {
         <meta name="description" content="Professional AI services including chatbots, analytics, content generation, and process automation for modern businesses." />
         <meta name="keywords" content="AI services, artificial intelligence, chatbots, analytics, automation, business intelligence" />
       </Helmet>
+=======
+      <SEOOptimizer
+        title="AI Services - Zion Tech Group"
+        description="Advanced AI services including machine learning, NLP, computer vision, automation, and more. Transform your business with cutting-edge artificial intelligence solutions."
+        keywords={['AI services', 'machine learning', 'NLP', 'computer vision', 'AI automation', 'predictive analytics', 'AI consulting']}
+        canonicalUrl="https://ziontechgroup.com/ai-services"
+      />
+        <PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        />
+        <AccessibilityEnhancer 
+          enableKeyboardNavigation={true}
+          enableScreenReaderSupport={true}
+          enableHighContrast={true}
+          enableFocusManagement={true}
+        />
+        <SecurityEnhancer 
+          enableCSP={true}
+          enableHTTPSRedirect={true}
+          enableXSSProtection={true}
+          enableClickjackingProtection={true}
+        />
+      <Analytics />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
       
       <Navigation />
       

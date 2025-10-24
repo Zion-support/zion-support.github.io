@@ -52,9 +52,30 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
 
   public cleanup(): void {// Cleanup accessibility enhancements;}
   }
+<<<<<<< HEAD
 }
 
 export default AccessibilityEnhancer;`
 
 
 
+=======
+  /**
+   * Get accessibility report
+   */
+  getReport(): string {
+    const metrics = this.getMetrics();
+    return `
+Accessibility Report:
+Overall Score: ${metrics.overallScore}/100
+Focusable Elements: ${metrics.focusableElements}
+Images Without Alt: ${metrics.imagesWithoutAlt}
+Links Without Text: ${metrics.linksWithoutText}
+Headings Without Content: ${metrics.headingsWithoutContent}
+Color Contrast Issues: ${metrics.colorContrastIssues}
+Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
+Screen Reader Score: ${metrics.screenReaderScore}/100
+`;
+  }
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468

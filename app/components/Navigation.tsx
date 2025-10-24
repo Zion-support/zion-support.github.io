@@ -83,6 +83,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     { name: "Business Intelligence", href: "/business-intelligence" }
   ];
 
+<<<<<<< HEAD
   const microSaaSServices = [
     { name: "E-commerce Analytics Pro", href: "/ecommerce-analytics-pro" },
     { name: "Legal Document Manager", href: "/legal-document-manager" },
@@ -90,6 +91,21 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     { name: "Online Learning Platform", href: "/online-learning-platform" },
     { name: "Property Management AI", href: "/property-management-ai" },
     { name: "Supply Chain Optimizer", href: "/supply-chain-optimizer" }
+=======
+  const specializedServices = [
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
+    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
+    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
+    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
+    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+    { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart3 },
+    { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
+    { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
+    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Check },
+    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
   ];
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);

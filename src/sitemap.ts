@@ -1,5 +1,14 @@
+<<<<<<< HEAD
+=======
+interface SitemapEntry {
+  url: string;
+  lastModified: Date;
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority: number;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function sitemap(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com'
   
   const routes = [

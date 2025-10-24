@@ -27,7 +27,7 @@ import {
 <<<<<<< HEAD
 export interface UseFormConfig<T extends Record<string, unknown>> {
   initialValues: T;
-  validationSchema?: Partial<Record<keyof T, ValidationRule[]>>;
+  validationSchema?: Record<keyof T, ValidationRule[]>;
   onSubmit: (values: T) => void | Promise<void>;
 =======
 export interface UseFormConfig;

@@ -1,4 +1,10 @@
 'use client';
+
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(command: string, targetId: string, config?: any): void;
+}
+
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
@@ -65,7 +71,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value;
+              clsValue += (entry as any).value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
 <<<<<<< HEAD
@@ -109,6 +115,7 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
+<<<<<<< HEAD
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
@@ -116,6 +123,16 @@ class MonitoringService {
                 duration: entry.duration,
                 type: entry.initiatorType
               });
+=======
+          entries.forEach((entry) => {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            if (resourceEntry.duration > 1000) {
+              // console.warn('Slow resource detected:', {
+              //   name: resourceEntry.name,
+              //   duration: resourceEntry.duration,
+              //   type: resourceEntry.initiatorType
+              // })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
             }
           });
         });

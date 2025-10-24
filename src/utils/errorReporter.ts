@@ -213,6 +213,7 @@ export class ErrorReporter {// TODO: Add content;}
         bod)
   y: JSON.stringify(report)
       });
+<<<<<<< HEAD
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -223,6 +224,12 @@ export class ErrorReporter {// TODO: Add content;}
 
         logger.warn('Failed to send error to remote endpoint:', error);
 
+=======
+    } catch (error) {
+      // Silently fail to avoid infinite loop
+      if (this.config.enableConsoleLogging) {
+        logger.warn('Failed to send error to remote endpoint:', { error: error as Error });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
       }
     }
   }

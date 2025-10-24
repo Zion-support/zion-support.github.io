@@ -8,6 +8,7 @@ import { ArrowRight } from 'lucide-react';
 export default function GDataAnalyticsZionTechGroupPage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
 =======
     <React.Fragment>
@@ -17,6 +18,34 @@ export default function GDataAnalyticsZionTechGroupPage() {
         <meta name="description" content="Ai Fraud Detection solutions by Zion Tech Group" />
       </Helmet>
 <<<<<<< HEAD
+=======
+    <>
+      <SEOOptimizer
+        title="AI Fraud Detection Services - Zion Tech Group"
+        description="Advanced AI-powered fraud detection and prevention services. Protect your business from fraud with real-time monitoring, transaction analysis, and identity verification."
+        keywords={['AI fraud detection', 'fraud prevention', 'transaction monitoring', 'identity verification', 'AML compliance', 'fraud analytics']}
+        canonicalUrl="https://ziontechgroup.com/ai-fraud-detection"
+      />
+        <PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        />
+      <AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReaderSupport={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+      />
+      <SecurityEnhancer
+        enableCSP={true}
+        enableHTTPSRedirect={true}
+        enableXSSProtection={true}
+        enableClickjackingProtection={true}
+      />
+      <Analytics />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
       
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Ai Fraud Detection</h1>

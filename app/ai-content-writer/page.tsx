@@ -108,6 +108,7 @@ const AIContentWriterPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
@@ -115,6 +116,34 @@ const AIContentWriterPage: React.FC = () => {
         <meta name="keywords" content="ai content writer, AI solutions, IT services, Zion Tech Group" />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
       </Helmet>
+=======
+    <>
+      <SEOOptimizer
+        title="AI Content Writer Services - Zion Tech Group"
+        description="Professional AI-powered content writing services including blog posts, social media content, email marketing, and SEO-optimized copy. Boost your content marketing with AI."
+        keywords={['AI content writer', 'content writing', 'blog writing', 'social media content', 'email marketing', 'SEO content']}
+        canonicalUrl="https://ziontechgroup.com/ai-content-writer"
+      />
+        <PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        />
+      <AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReaderSupport={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+      />
+      <SecurityEnhancer
+        enableCSP={true}
+        enableHTTPSRedirect={true}
+        enableXSSProtection={true}
+        enableClickjackingProtection={true}
+      />
+      <Analytics />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
       
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Ai Content Writer</h1>
