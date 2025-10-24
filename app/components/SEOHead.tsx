@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 'use client'
 import { Metadata } from 'next';
+=======
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-75df
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'

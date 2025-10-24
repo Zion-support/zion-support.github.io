@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 'use client'
 import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
 import Footer from '/components/Footer'
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+>>>>>>> cursor/fix-errors-and-merge-to-main-75df
 
 const ServiceWorker: React.FC = () => {
   return (

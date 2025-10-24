@@ -7,6 +7,7 @@ import Footer from 'Footer';
 const AdvancedPerformanceMonitorPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       ico,
   n: Brain,
     title: 'AI-Powered Intelligence',
@@ -28,9 +29,32 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
   {
     icon: TrendingUp,
     title: 'Growth Optimization',
+=======
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+>>>>>>> cursor/fix-errors-and-merge-to-main-75df
       description: 'Optimize your business growth with data-driven strategies.',
-    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  ]
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
   const benefits = [
   'Increase efficiency by up to 50%''',
     'Reduce costs by 30% with automation''',

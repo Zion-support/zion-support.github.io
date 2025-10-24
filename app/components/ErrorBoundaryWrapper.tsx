@@ -1,5 +1,9 @@
 'use client';
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-75df
 
 interface Props {
   children: ReactNode;

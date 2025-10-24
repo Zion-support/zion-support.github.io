@@ -34,10 +34,16 @@ class ErrorBoundary extends Component<Props, State> {
     error: undefined,
   };
 
+<<<<<<< HEAD
   public static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
+=======
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-75df
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error to console in development only
     if (process.env.NODE_ENV === 'development') {

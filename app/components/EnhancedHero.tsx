@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import { Metadata } from 'next';
 import React from 'react'
@@ -8,6 +9,15 @@ import { { Phone Mail     } from 'lucide-react'
       'Gain competitive advantage with advanced technology'
 
 const EnhancedHero: React.FC = () => {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
+    'use client';
+  ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-75df
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',

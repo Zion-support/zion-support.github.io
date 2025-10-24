@@ -2,9 +2,16 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
+<<<<<<< HEAD
   className?: string
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
+=======
+  className?: string;
+}
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'
+>>>>>>> cursor/fix-errors-and-merge-to-main-75df
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']
   canonicalUrl = 'https://ziontechgroup.com'

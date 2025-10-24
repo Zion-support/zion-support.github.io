@@ -8,10 +8,16 @@ interface FormData {
   phone: string;
   company: string;
   message: string;
+<<<<<<< HEAD
   servic,
   e: string;}
 }
 ;
+=======
+  service: string;
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-75df
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
