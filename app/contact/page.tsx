@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import SEOHead from "../components/SEOHead";
-import { generateStructuredData  } from "../utils/seoData";
+import { generateSEOData } from "../utils/seoData";
 interface FormData {
   name: string
   email: string
@@ -88,7 +88,7 @@ const ContactPage: React.FC = () => {
       setIsSubmitting(false)
     }
   }, [formData, validateForm])
-  const structuredData = useMemo(() => generateStructuredData({
+  const structuredData = useMemo(() => generateSEOData({
     "@type": "LocalBusiness",
     name: "Zion Tech Group",
     description: "Leading provider of AI and IT solutions for modern businesses",

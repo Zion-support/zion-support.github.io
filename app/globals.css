@@ -41,7 +41,6 @@ a {
   background-clip: text;
 }
 
-<<<<<<< HEAD
 /* Performance optimizations */
 .lazy {
   opacity: 0;
@@ -91,12 +90,12 @@ a {
   50% {
     opacity: 0.5;
   }
-=======
+}
+
 .glass-dark {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
->>>>>>> origin/main
 }
 
 .animate-fade-in {
