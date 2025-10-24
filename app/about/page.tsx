@@ -106,7 +106,7 @@ const AboutPage: React.FC = () => {
               {values.map((value, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                   <div className="flex justify-center mb-4">
-                    {value.icon}
+                    <value.icon className="w-8 h-8 text-cyan-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
@@ -114,9 +114,8 @@ const AboutPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
   );
 };
 

@@ -179,7 +179,7 @@ const AIEmailAutomationPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
                 <div className="flex justify-center mb-4">
-                  {stat.icon}
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl md: text-4xl font-bold text-white mb-2">
                   {stat.number}
@@ -208,7 +208,7 @@ const AIEmailAutomationPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl mb-6 group-hover: scale-110 transition-transform duration-300">
-                  {feature.icon}
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors">
                   {feature.title}

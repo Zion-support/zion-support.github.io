@@ -1,4 +1,8 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+// Template for a basic AI service page
+const createBasicPage = (serviceName, displayName, description) => `'use client';
 
 import React from 'react';
 import Link from 'next/link';
@@ -6,7 +10,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AIEmailMarketingAutomationPage: React.FC = () => {
+const ${serviceName}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -44,10 +48,10 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20" />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Email Marketing Automation
+              ${displayName}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Automate your email marketing campaigns with AI-powered personalization and optimization.
+              ${description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -134,4 +138,60 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
   );
 };
 
-export default AIEmailMarketingAutomationPage;
+export default ${serviceName}Page;
+`;
+
+// List of corrupted files to fix
+const corruptedFiles = [
+  {
+    path: 'app/ai-email-marketing-automation/page.tsx',
+    serviceName: 'AIEmailMarketingAutomation',
+    displayName: 'AI Email Marketing Automation',
+    description: 'Automate your email marketing campaigns with AI-powered personalization and optimization.'
+  },
+  {
+    path: 'app/ai-invoice-generator/page.tsx',
+    serviceName: 'AIInvoiceGenerator',
+    displayName: 'AI Invoice Generator',
+    description: 'Generate professional invoices automatically with AI-powered templates and customization.'
+  },
+  {
+    path: 'app/ai-expense-tracker/page.tsx',
+    serviceName: 'AIExpenseTracker',
+    displayName: 'AI Expense Tracker',
+    description: 'Track and categorize expenses automatically with AI-powered receipt recognition.'
+  },
+  {
+    path: 'app/ai-video-editor/page.tsx',
+    serviceName: 'AIVideoEditor',
+    displayName: 'AI Video Editor',
+    description: 'Edit videos automatically with AI-powered tools and intelligent recommendations.'
+  },
+  {
+    path: 'app/ai-social-media-manager/page.tsx',
+    serviceName: 'AISocialMediaManager',
+    displayName: 'AI Social Media Manager',
+    description: 'Manage your social media presence with AI-powered content creation and scheduling.'
+  },
+  {
+    path: 'app/ai-voice-assistant/page.tsx',
+    serviceName: 'AIVoiceAssistant',
+    displayName: 'AI Voice Assistant',
+    description: 'Build intelligent voice assistants with natural language processing capabilities.'
+  }
+];
+
+// Fix each corrupted file
+corruptedFiles.forEach(file => {
+  const fullPath = path.join(__dirname, file.path);
+  const content = createBasicPage(file.serviceName, file.displayName, file.description);
+  
+  try {
+    fs.writeFileSync(fullPath, content, 'utf8');
+    console.log(`Fixed: ${file.path}`);
+  } catch (error) {
+    console.error(`Error fixing ${file.path}:`, error.message);
+  }
+});
+
+console.log(`\nFixed ${corruptedFiles.length} corrupted files.`);

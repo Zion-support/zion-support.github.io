@@ -52,8 +52,8 @@ const Footer: React.FC = () => {
   ]
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -66,13 +66,13 @@ const Footer: React.FC = () => {
               Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover: text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover: text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover: text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
@@ -88,9 +88,9 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link
                     href={service.url}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover: opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -108,9 +108,9 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link
                     href={service.url}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover: opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
                   <li key={index}>
                     <Link
                       href={item.url}
-                      className="text-gray-400 hover: text-white transition-colors text-sm"
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {item.name}
                     </Link>
@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
                   <li key={index}>
                     <Link
                       href={item.url}
-                      className="text-gray-400 hover: text-white transition-colors text-sm"
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {item.name}
                     </Link>
@@ -153,7 +153,7 @@ const Footer: React.FC = () => {
         </div>
         {/* Contact Info */}
         <div className="border-t border-slate-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-cyan-400" />
               <div>
@@ -178,8 +178,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
         {/* Bottom Bar */}
-        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md: flex-row justify-between items-center">
-          <div className="flex flex-wrap gap-6 mb-4 md: mb-0">
+        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {legal.map((item, index) => (
               <Link
                 key={index}

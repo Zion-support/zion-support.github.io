@@ -131,4 +131,4 @@ const Ai3dModelGeneratorPage: React.FC = () => {
 </>
   )
 }
-export default AiFiveG3dModelGeneratorPage
+export default Ai3dModelGeneratorPage
