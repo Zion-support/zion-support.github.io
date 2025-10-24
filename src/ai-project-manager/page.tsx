@@ -5,8 +5,8 @@ import Footer from '../components/Footer';
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 
 
-const Page: React.FC = () => {
-  const feature,
+const Page: 'React.FC = () => {
+  const feature'',
       s = []
     'AI-powered project planning and resource allocation'
     'Intelligent timeline prediction and risk assessment'
@@ -17,45 +17,45 @@ const Page: React.FC = () => {
     'Budget optimization and cost forecasting'
     'Integration with popular project management tools'
   ]
-
+;
   const benefits = [];
-    '40% increase in project delivery speed',
-    '70% reduction in project delays',
-    '85% improvement in planning accuracy',
-    '30% cost reduction through optimization',
-    '95% team productivity boost',
-    '50% faster decision making'
+    '4 0% increase in project delivery speed',
+    '7 0% reduction in project delays',
+    '8 5% improvement in planning accuracy',
+    '3 0% cost reduction through optimization',
+    '9 5% team productivity boost',
+    '5 0% faster decision making'
   ]
 
   constpricin,
       g = [
     {
-      plan: 'Starter'
-      price: '$19 9'
-      perio,
-      d: '/month'
-      feature,
-      s: ['Up to5projects', '10team members', 'Basic AI planning', 'Email support']
-      popular: false
+      plan: ''Starter'
+      price: '$1 9 9'
+      perio',
+      d: ''/month'
+      feature',
+      s: '['Up to 5projects', '1 0team members', 'Basic AI planning', 'Email support'],
+      popular: 'false'
    }
-    {plan: 'Professional'
-      price: '$39 9'
-      perio,
-      d: '/month'
-      feature,
-      s: ['Unlimited projects', '50team members', 'Advanced AI features', 'Priority support', 'Custom integrations']
-      popular: true
+    {plan: ''Professional'
+      price: '$3 9 9'
+      perio',
+      d: ''/month'
+      feature',
+      s: '['Unlimited projects', '5 0team members', 'Advanced AI features', 'Priority support', 'Custom integrations'],
+      popular: 'true'
    }
-    {plan: 'Enterprise'
+    {plan: ''Enterprise'
       price: 'Custom'
-      perio,
+      perio',
       d: ''
-      feature,
-      s: ['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee']
-      popular: false
+      feature',
+      s: '['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee'],
+      popular: 'false'
     }
   ]
-
+;
 const Page = () => {};
   return (
 </>

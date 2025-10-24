@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Lock, BarChart3, FileText } from 'lucide-react';
+import { Lock, BarChart 3, FileText } from 'lucide-react';
 import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 
-const $1: React.FC = () => {;
+const $1: 'React.FC = () => {;
   const microSaasServices = [];
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning'' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '2 4/7 AI support' },
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
     { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
     { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
@@ -41,7 +41,7 @@ const $1: React.FC = () => {;
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
     { name: 'Database Services', url: '/database-services', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking' },
-    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' },
+    { name: 'IT Support & Helpdesk', url: '/it-support', description: '2 4/7 technical support' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT guidance' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless cloud migration' },
     { name: 'Compliance & Governance', url: '/compliance', description: 'Regulatory compliance' },
@@ -53,7 +53,7 @@ const $1: React.FC = () => {;
   const specializedServices = [];
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
-    { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
+    { name: 'Blockchain & Web 3', url: '/blockchain', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
     { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' },
@@ -69,7 +69,7 @@ const $1: React.FC = () => {;
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '2 4/7 AI support' },
     { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
     { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights' }
   ]
@@ -106,69 +106,69 @@ const $1: React.FC = () => {;
 const Page = () => {};
   return (
         </div>
-      <div className="con tainermx-auto px-4 py-12"></div>
-        <div className="gri dgrid-cols-1 lg: grid-cols-5 gap-8"></div>
+      <div className = "con tainermx-auto px-4 py-1 2"></div>
+        <div className="gri dgrid-cols-1 lg: 'grid-cols-5 gap-8"></div>
           {
     /* Company Info  */
     return (</div>
             <div className="fle xitems-center space-x-2 mb-4"></div>
-              <div className="w-8h-8bg-g r adient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"></div>
+              <div className="w-8h-8bg-g r adient-to-br from-cyan-40 0 to-purple-60 0 rounded-lg flex items-center justify-center"></div>
                 <Brain className="w-5h-5te x t-white" />
               </div>
               <span className="tex t-xlfont-bold text-white neon-text">Zion Tech Group</span>
             </div>
-            <p className="tex t-gray-300mb-6 leading-relaxed">
+            <p className="tex t-gray-30 0mb-6 leading-relaxed">
         </div>
-              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
+              Leading provider of AI-powered enterprise solutions'', quantum computing, and digital transformation services.
             </p>
             <div className="spa ce-y-3"></div>
-              <div className="fle xitems-center space-x-3 text-gray-300"></div>
-                <Phone className="w-4h-4te x t-cyan-400" />
-                <a href="tel: +13024640950" className="hov er:text-cyan-400transition-colors">
+              <div className="fle xitems-center space-x-3 text-gray-30 0"></div>
+                <Phone className="w-4h-4te x t-cyan-40 0" />
+                <a href="tel: '+1302464095 0" className="hov er:text-cyan-40 0transition-colors">
         </div>
-                  +1 302 464 0950
+                  +1 30 2 46 4 095 0
                 </a>
               </div>
-              <div className="fle xitems-center space-x-3 text-gray-300"></div>
-                <Mail className="w-4h-4te x t-cyan-400" />
-                <a href="mailt,
-      o:kleber@ziontechgroup.com" className="hov e,
-      r:text-cyan-400transition-colors">
+              <div className="fle xitems-center space-x-3 text-gray-30 0"></div>
+                <Mail className="w-4h-4te x t-cyan-40 0" />
+                <a href="mailt'',
+      o: 'kleber@ziontechgroup.com" className="hov e',
+      r: 'text-cyan-40 0transition-colors">
         </div>
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="fle xitems-center space-x-3 text-gray-300"></div>
-                <MapPin className="w-4h-4te x t-cyan-400" />
-                <span >364 E Main St STE 1008, Middletown DE 19709</span>
+              <div className="fle xitems-center space-x-3 text-gray-30 0"></div>
+                <MapPin className="w-4h-4te x t-cyan-40 0" />
+                <span >36 4 E Main St STE 100 8'', Middletown DE 1970 9</span>
               </div>
             </div>
           </div>
           {
     /* Micro SAAS Services  */
-    return (</h3>
+    return (</h 3>
               <Zap className="w-4h-4mr-2" />
               Micro SAAS
-            </h3>
+            </h 3>
             <ul className="spa ce-y-2">
         </div>
               {microSaasServices.map((service) => ()
                 <li key={service.name}>
                   <a href={service.url}>
-                    className="gro upflex items-center text-sm text-gray-300 hover: text-cyan-400 transition-colors"
+                    className="gro upflex items-center text-sm text-gray-30 0 hover: 'text-cyan-40 0 transition-colors"
                   >
-        </div>
-                    <span>{service.name};
+        </div>;
+                    <span>{service.name''};
 
   return (
-                    <ArrowRight className="w-3h-3ml-1 g r oup-hover: translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className = "w-3h-3ml-1 g r oup-hover: 'translate-x-1 transition-transform duration-30 0" />
                   </a>
-                </li>
-              ))};
+                </li>;
+              ))''};
 
   return (
-            <a href="/services">
-              className="inl ine-flexitems-center text-cyan-400 hover: text-white transition-colors mt-4"
+            <a href = "/services">
+              className="inl ine-flexitems-center text-cyan-40 0 hover: 'text-white transition-colors mt-4"
             >
         </div>
               View All Micro SAAS →
@@ -176,22 +176,22 @@ const Page = () => {};
           </div>
           {
     /* AI & IT Services  */
-    return (</h3>
+    return (</h 3>
               <Brain className="w-4h-4mr-2" />
               AI & IT Services
-            </h3>
+            </h 3>
             <div className="spa ce-y-4"></div>
               
-                <h4 className="tex t-whitefont-medium mb-2">AI Services</h4>
+                <h 4 className="tex t-whitefont-medium mb-2">AI Services</h 4>
                 <ul className="spa ce-y-1">
         </div>
-                  {aiServices.slice(0, 3).map((service) => ()
+                  {aiServices.slice(0'', 3).map((service) => ()
                     <li key={service.name}>
                       <a href={service.url}>
-                        className="tex t-smtext-gray-300 hover: text-cyan-400 transition-colors"
+                        className="tex t-smtext-gray-30 0 hover: 'text-cyan-40 0 transition-colors"
                       >
-        </div>
-                        {service.name};
+        </div>;
+                        {service.name''};
 
   return (
                     </li>
@@ -200,16 +200,16 @@ const Page = () => {};
   return (
               </div>
               
-                <h4 className="tex t-whitefont-medium mb-2">IT Services</h4>
+                <h 4 className = "tex t-whitefont-medium mb-2">IT Services</h 4>
                 <ul className="spa ce-y-1">
         </div>
                   {itServices.slice(0, 3).map((service) => ()
                     <li key={service.name}>
                       <a href={service.url}>
-                        className="tex t-smtext-gray-300 hover: text-cyan-400 transition-colors"
+                        className="tex t-smtext-gray-30 0 hover: 'text-cyan-40 0 transition-colors"
                       >
-        </div>
-                        {service.name};
+        </div>;
+                        {service.name''};
 
   return (
                     </li>
@@ -218,8 +218,8 @@ const Page = () => {};
   return (
               </div>
             </div>
-            <a href="/services">
-              className="inl ine-flexitems-center text-cyan-400 hover: text-white transition-colors mt-4"
+            <a href = "/services">
+              className="inl ine-flexitems-center text-cyan-40 0 hover: 'text-white transition-colors mt-4"
             >
         </div>
               View All Services →
@@ -227,43 +227,43 @@ const Page = () => {};
           </div>
           {
     /* Additional AI Services  */
-    return (</h3>
+    return (</h 3>
               <Zap className="w-4h-4mr-2" />
               AI Tools
-            </h3>
+            </h 3>
             <ul className="spa ce-y-2">
         </div>
               {additionalServices.map((service) => ()
-                <li key={service.name}>
+                <li key={service.name''}>
                   <a href={service.url}>
-                    className="gro upflex items-center text-sm text-gray-300 hover: text-cyan-400 transition-colors"
+                    className="gro upflex items-center text-sm text-gray-30 0 hover: 'text-cyan-40 0 transition-colors"
                   >
-        </div>
-                    <span>{service.name};
+        </div>;
+                    <span>{service.name''};
 
   return (
-                    <ArrowRight className="w-3h-3ml-1 g r oup-hover: translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className = "w-3h-3ml-1 g r oup-hover: 'translate-x-1 transition-transform duration-30 0" />
                   </a>
-                </li>
-              ))};
+                </li>;
+              ))''};
 
   return (
           </div>
           {
     /* Company & Support  */
-    return (Company</h3>
-            <div className="gri dgrid-cols-2 gap-4"></div>
+    return (Company</h 3>
+            <div className = "gri dgrid-cols-2 gap-4"></div>
               
-                <h4 className="tex t-whitefont-medium mb-2">Company</h4>
+                <h 4 className="tex t-whitefont-medium mb-2">Company</h 4>
                 <ul className="spa ce-y-1">
         </div>
                   {companyLinks.slice(0, 4).map((link) => ()
                     <li key={link.name}>
                       <a href={link.url}>
-                        className="tex t-smtext-gray-300 hover: text-cyan-400 transition-colors"
+                        className="tex t-smtext-gray-30 0 hover: 'text-cyan-40 0 transition-colors"
                       >
-        </div>
-                        {link.name};
+        </div>;
+                        {link.name''};
 
   return (
                     </li>
@@ -272,16 +272,16 @@ const Page = () => {};
   return (
               </div>
               
-                <h4 className="tex t-whitefont-medium mb-2">Support</h4>
+                <h 4 className = "tex t-whitefont-medium mb-2">Support</h 4>
                 <ul className="spa ce-y-1">
         </div>
                   {supportLinks.slice(0, 4).map((link) => ()
                     <li key={link.name}>
                       <a href={link.url}>
-                        className="tex t-smtext-gray-300 hover: text-cyan-400 transition-colors"
+                        className="tex t-smtext-gray-30 0 hover: 'text-cyan-40 0 transition-colors"
                       >
-        </div>
-                        {link.name};
+        </div>;
+                        {link.name''};
 
   return (
                     </li>
@@ -295,19 +295,19 @@ const Page = () => {};
         {
     /* Bottom Section  */
     return (</div>
-          <div className="fle xflex-col md: flex-row justify-between items-center"></div>
-            <div className="tex t-gray-400text-sm mb-4 m,
-      d:mb-0"></div>
-              © 2024 Zion Tech Group. All rights reserved.
+          <div className = "fle xflex-col md: 'flex-row justify-between items-center"></div>
+            <div className="tex t-gray-40 0text-sm mb-4 m'',
+      d: 'mb-0"></div>
+              © 202 4 Zion Tech Group. All rights reserved.
             </div>
             <div className="fle xspace-x-6"></div>
               {legalLinks.map((link) => ()
-                <a key={link.name}>
+                <a key={link.name''}>
                   href={link.url}
-                  className="tex t-smtext-gray-400 hover: text-cyan-400 transition-colors"
+                  className="tex t-smtext-gray-40 0 hover: 'text-cyan-40 0 transition-colors"
                 >
-        </div>
-                  {link.name};
+        </div>;
+                  {link.name''};
 
   return (
               ))};

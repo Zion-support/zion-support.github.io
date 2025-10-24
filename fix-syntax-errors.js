@@ -1,143 +1,48 @@
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-function fixSyntaxErrors(filePath) {
+const fs = require('fs');
+const path = require('path');
+
+// List of files with merge conflicts
+const filesWithConflicts = [
+  './src/business-intelligence/page.tsx',
+  './src/analytics-tools/page.tsx',
+  './src/ai-marketing/page.tsx',
+  './src/marketing-tools/page.tsx',
+  './src/blog/ai-2026-february-mega-breakthrough-revolution/page.tsx',
+  './src/blog/ai-enterprise-transformation-2025/page.tsx',
+  './src/blog/ai-2026-hyperconscious-computing-revolution/page.tsx',
+  './src/blog/ai-2026-february-ultimate-consciousness-breakthrough/page.tsx',
+  './src/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx',
+  './src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',
+  './src/blog/ai-2026-enterprise-breakthrough/page.tsx',
+  './src/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx'
+];
+
+// Function to clean merge conflicts
+function cleanMergeConflicts(content) {
+  // Remove merge conflict markers
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+  content = content.replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+  
+  return content;
+}
+
+// Process each file
+filesWithConflicts.forEach(filePath => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    // Check if file has syntax issues
-    if (!content.includes(';') || !content.includes('</')) {
-      return false; // No obvious syntax issues
-}
-    // eslint-disable-next-line no-console
-    console.log(`Fixing syntax errors in: ${filePath}`)
-    // Fix common syntax issues
-    let fixedContent = content
-      // Remove trailing semicolons that shouldn't be there
-      .replace(/;\s*$/gm, '')
-      // Fix JSX closing tags that have semicolons
-      .replace(/<\/([^>]+)>;\s*$/gm, '</$1>')
-      // Fix JSX opening tags that have semicolons
-      .replace(/<([^>]+)>;\s*$/gm, '<$1>')
-      // Fix JSX attributes that have semicolons
-      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1="$2"')
-      // Fix JSX expressions that have semicolons
-      .replace(/\{\s*([^}]+)\s*\}\s*;\s*$/gm, '{$1}')
-      // Remove standalone semicolons
-      .replace(/^\s*;\s*$/gm, '')
-      // Fix multiple empty lines
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      // Fix JSX fragments
-      .replace(/<>\s*;\s*$/gm, '<>')
-      .replace(/<\/>\s*;\s*$/gm, '</>')
-      // Fix React.Fragment
-      .replace(/<React\.Fragment>\s*;\s*$/gm, '<React.Fragment>')
-      .replace(/<\/React\.Fragment>\s*;\s*$/gm, '</React.Fragment>')
-      // Fix common JSX syntax issues
-      .replace(/>\s*;\s*</gm, '><')
-      .replace(/>\s*;\s*$/gm, '>')
-      // Fix function declarations
-      .replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\(\s*;\s*$/gm, 'const $1 = () => (')
-      .replace(/const\s+(\w+)\s*=\s*\(\s*;\s*$/gm, 'const $1 = (')
-      // Fix return statements
-      .replace(/return\s*\(\s*;\s*$/gm, 'return (
-    <>
-      '
-    </>
-  )
-      // Fix JSX elements that are missing closing tags
-      .replace(/<(\w+)([^>]*)>\s*;\s*$/gm, '<$1$2>')
-      // Clean up extra whitespace
-      .replace(/\s+$/gm, '')
-      .replace(/^\s+/gm, '')
-    // Try to fix incomplete JSX structures
-    const lines = fixedContent.split('\n')
-    const fixedLines = []
-    let inJSX = false
-    let jsxDepth = 0
-    for (let i = 0; i < lines.length; i++) {
-  let line = lines[i]
-      // Skip lines that are just semicolons or empty
-      if (line.trim() === ';' || line.trim() === '') {
-        continue
-}
-      // Skip lines that are just closing braces with semicolons
-      if (line.trim() === '}' || line.trim() === '}') {
-  if (jsxDepth > 0) {
-          jsxDepth--
-}
-        fixedLines.push(line.replace(/;+$/, ''))
-        continue
-      }
-      // Skip lines that are just opening braces with semicolons
-      if (line.trim() === '{
-  ' || line.trim() === '{') {
-        jsxDepth++
-        fixedLines.push(line.replace(/;+$/, ''))
-        continue
-}
-      // Fix lines that end with semicolons inappropriately
-      if (line.includes(';') && !line.includes('//') && !line.includes('*')) {
-        // Check if this is a JSX line
-        if (line.includes('<') && line.includes('>')) {
-          line = line.replace(/;\s*$/, '')
-        } else if (line.includes('return') || line.includes('const') || line.includes('let') || line.includes('var')) {
-  // Keep semicolons for regular JavaScript
-} else {
-          line = line.replace(/;\s*$/, '')
-        }
-      }
-      fixedLines.push(line)
+    if (fs.existsSync(filePath)) {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Clean merge conflicts
+      content = cleanMergeConflicts(content);
+      
+      // Write back the cleaned content
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
     }
-    const finalContent = fixedLines.join('\n')
-    // Only write if content changed
-    if (finalContent !== content) {
-  fs.writeFileSync(filePath, finalContent)
-      return true
-}
-    return false
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-}
-function findTsxFiles(dir) {
-  const files = []
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath)
-      }
-    }
-  }
-  traverse(dir)
-  return files
-}
-// Main execution
-const appDir = path.join(__dirname, 'app')
-const files = findTsxFiles(appDir)
-// eslint-disable-next-line no-console
-    console.log(`Found ${files.length} TypeScript files to check`)
-let fixedCount = 0
-for (const file of files) {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++
-}
-}
-// eslint-disable-next-line no-console
-    console.log(`Fixed syntax errors in ${fixedCount} files`)
-// Also check the root App.tsx
-if (fixSyntaxErrors(path.join(__dirname, 'App.tsx'))) {
-  fixedCount++
-  // eslint-disable-next-line no-console
-    console.log('Fixed syntax errors in App.tsx')
-}
-// eslint-disable-next-line no-console
-    console.log(`Total files fixed: ${fixedCount}`)
+});
+
+console.log('Merge conflict cleaning completed!');

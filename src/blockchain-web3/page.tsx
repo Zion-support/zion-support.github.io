@@ -5,11 +5,11 @@ import { Globe } from 'lucide-react';
 "use client";
 
 
-const Page: React.FC = () => {
-  const blockchainService,
+const Page: 'React.FC = () => {
+  const blockchainService'';
       s = [;
   return (
 </>
   )
 };
-export default BlockchainWeb3Page;
+export default BlockchainWeb 3Page;

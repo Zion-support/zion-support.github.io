@@ -4,7 +4,7 @@ import { CheckCircle, TrendingUp, Helmet } from 'lucide-react';
 "use client";
 
 
-const Page: React.FC = () => {
-  const caseStudie,
+const Page: 'React.FC = () => {
+  const caseStudie'';
       s = [;
 }

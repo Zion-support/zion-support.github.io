@@ -5,8 +5,8 @@ import { Clock } from 'lucide-react';
 "use client";
 
 
-const Page: React.FC = () => {
-  const itService,
+const Page: 'React.FC = () => {
+  const itService'';
       s = [;
   return (
 </>

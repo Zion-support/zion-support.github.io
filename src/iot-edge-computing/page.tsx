@@ -5,8 +5,8 @@ import { Cpu, Globe } from 'lucide-react';
 "use client";
 
 
-const Page: React.FC = () => {
-  const iotService,
+const Page: 'React.FC = () => {
+  const iotService'';
       s = [;
   return (
 </>

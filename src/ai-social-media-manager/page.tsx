@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 
 
-constAISocialMediaManagerPage: React.FC = () => {constfeature,
+constAISocialMediaManagerPage: 'React.FC = () => {constfeature',
       s = []
     'AI-powered content creation and curation'
     'Smart scheduling across all platforms'
@@ -16,21 +16,21 @@ constAISocialMediaManagerPage: React.FC = () => {constfeature,
     'Automated engagement and responses'
     'Multi-platform campaign management'
   ]
-
+;
   const benefits = [];
-    '200% increase in engagement rates',
-    '20+ hours saved per week',
-    '40% improvement in reach',
-    '50% better ROI on campaigns',
-    '95% content quality consistency',
-    '60% faster content creation'
+    '20 0% increase in engagement rates',
+    '2 0+ hours saved per week',
+    '4 0% improvement in reach',
+    '5 0% better ROI on campaigns',
+    '9 5% content quality consistency',
+    '6 0% faster content creation'
   ]
 
   const platforms = [];
     { name: 'Facebook', icon: '📘', users: '2.9B' },
     { name: 'Instagram', icon: '📷', users: '1.4B' },
-    { name: 'Twitter', icon: '🐦', users: '450M' },
-    { name: 'LinkedIn', icon: '💼', users: '900M' },
+    { name: 'Twitter', icon: '🐦', users: '45 0M' },
+    { name: 'LinkedIn', icon: '💼', users: '90 0M' },
     { name: 'TikTok', icon: '🎵', users: '1B' },
     { name: 'YouTube', icon: '📺', users: '2.7B' }
   ]

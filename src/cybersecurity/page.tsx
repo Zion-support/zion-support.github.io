@@ -5,8 +5,8 @@ import { Globe, AlertTriangle } from 'lucide-react';
 "use client";
 
 
-const Page: React.FC = () => {
-  const securityService,
+const Page: 'React.FC = () => {
+  const securityService'';
       s = [;
   return (
 </>

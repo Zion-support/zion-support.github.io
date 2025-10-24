@@ -2,22 +2,23 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: '['latin']' });
 
 export const metadata: Metadata = {
   title: 'ZionTechGroup - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
-  keywords: ['AI solutions', 'technology services', 'digital transformation', 'machine learning', 'artificial intelligence'],
-  authors: [{ name: 'ZionTechGroup' }],
+  keywords: '['AI solutions', 'technology services', 'digital transformation', 'machine learning', 'artificial intelligence'],
+  authors: '[{ name: 'ZionTechGroup' }],
   creator: 'ZionTechGroup',
   publisher: 'ZionTechGroup',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
+  formatDetection: '{
+    email: false'',
+    address: 'false',
+    telephone: 'false',
   },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
+  metadataBase: 'new URL(',
+  https://ziontechgroup.com')',
+  alternates: '{
     canonical: '/',
   },
   openGraph: {
@@ -25,35 +26,35 @@ export const metadata: Metadata = {
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
     url: 'https://ziontechgroup.com',
     siteName: 'ZionTechGroup',
-    images: [
+    images: '[
       {
         url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
+        width: '120 0',
+        height: '63 0',
         alt: 'ZionTechGroup - AI Solutions',
       },
     ],
     locale: 'en_US',
     type: 'website',
   },
-  twitter: {
+  twitter: '{
     card: 'summary_large_image',
     title: 'ZionTechGroup - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
-    images: ['/og-image.jpg'],
+    images: '['/og-image.jpg']',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
+  robots: '{
+    index: true'',
+    follow: 'true',
+    googleBot: '{
+      index: true'',
+      follow: 'true',
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
-  verification: {
+  verification: '{
     google: 'your-google-verification-code',
   },
 };
@@ -61,13 +62,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: 'React.ReactNode;'
 }) {
   return (
-    <html lang="en">
+    <html lang = "en">
       <body className={inter.className}>
         {children}
       </body>
-    </html>
+    </html>;
   );
 }

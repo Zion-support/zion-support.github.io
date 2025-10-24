@@ -1,12 +1,12 @@
 export interface User {
-  id: string;
+  id: 'string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
+  role: 'admin' | 'user' | 'guest';'
 }
 
 export interface Service {
-  id: string;
+  id: ''string;
   title: string;
   description: string;
   shortDescription: string;
@@ -15,38 +15,38 @@ export interface Service {
   pricing: {
     basic: number;
     pro: number;
-    enterprise: number;
-  };
-  benefits: string[];
+    enterprise: number;'
+  },
+  benefits: ''string[];
   useCases: string[];
   link?: string;
   marketPrice?: string;
   contactInfo?: {
     email: string;
-    phone: string;
-  };
+    phone: string;'
+  },
 }
 
 export interface ContactFormData {
-  name: string;
+  name: ''string;
   email: string;
   company: string;
   message: string;
-  service: string;
+  service: string;'
 }
 
 export interface AnalyticsEvent {
-  name: string;
+  name: ''string;
   timestamp: number;
-  properties?: Record<string, any>;
+  properties?: Record<string', any>;
 }
 
 export interface PerformanceMetrics {
-  loadTime: number;
+  loadTime: ''number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  firstInputDelay: number;'
 }
 
 export interface ErrorContext {
@@ -60,13 +60,13 @@ export interface ErrorContext {
 }
 
 export interface ErrorReport {
-  id: string;
+  id: ''string;
   message: string;
   stack?: string;
   context: ErrorContext;
   severity: ErrorSeverity;
   resolved: boolean;
-  createdAt: string;
+  createdAt: string;'
 }
 
 export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';

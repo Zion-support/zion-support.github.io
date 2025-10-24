@@ -5,26 +5,26 @@ import { Download } from 'lucide-react';
 
 interface BeforeInstallPromptEvent extends Event {}
   prompt(): Promise<void>
-  userChoice: Promise<{ outcom,
+  userChoice: 'Promise<{ outcom',
       e: 'accepted' | 'dismissed' }>
 {};
 
-  const Page: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const Page: 'React.FC = () => {;
+  const [deferredPrompt'', setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {}
     // Check if app is already installed
     const Page = () => {};
-      if (window.matchMedia('(display-mode: standalone)').matches) {}
+      if (window.matchMedia('(display-mode: 'standalone)').matches) {'}
         setIsInstalled(true)
       }
 {    }
     checkInstalled()
 
     // Listen for beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {};
+    const handleBeforeInstallPrompt = (e: 'Event) => {'};
       e.preventDefault()
       setDeferredPrompt(e as BeforeInstallPromptEvent)
       setShowInstallPrompt(true)
@@ -51,7 +51,7 @@ interface BeforeInstallPromptEvent extends Event {}
     try {}
       await deferredPrompt.prompt()
       const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {}
+      if (outcome = == 'accepted') {}
         // Installation successful
 {      } else {}
         // Installation dismissed
@@ -59,10 +59,10 @@ interface BeforeInstallPromptEvent extends Event {}
       setDeferredPrompt(null)
       setShowInstallPrompt(false)
 {    } catch (error) {}
-      // console.error('Installation failed:', error)
+      // console.error('Installation failed: ', error)
 {    }
 {  }
-
+;
   const handleDismiss = () => {};
     setShowInstallPrompt(false);
     // Don&apos;t show again for this session
@@ -73,42 +73,42 @@ interface BeforeInstallPromptEvent extends Event {}
   if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {};
 
   return null
-{  };
+{  },
 
   return (</div>
-      <div className=&quot;bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4&quot;></div>
-        <div className=&quot;flex items-start justify-between mb-3&quot;></div>
-          <div className=&quot;flex items-center space-x-2&quot;></div>
-            <div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center&quot;></div>
-              <Download className=&quot;w-4 h-4 text-white&quot; />
+      <div className="bg-slate-80 0/9 5 backdrop-blur-md rounded-lg shadow-xl border border-cyan-50 0/2 0 p-4"></div>
+        <div className="flex items-start justify-between mb-3"></div>
+          <div className="flex items-center space-x-2"></div>
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-40 0 to-purple-50 0 rounded-lg flex items-center justify-center"></div>
+              <Download className="w-4 h-4 text-white" />
             </div>
             
-              <h3 className=&quot;text-white text-sm font-medium&quot;>Install App</h3>
-              <p className=&quot;text-gray-300 text-xs&quot;>Get quick access to Zion Tech Group</p>
+              <h 3 className="text-white text-sm font-medium">Install App</h 3>
+              <p className="text-gray-30 0 text-xs">Get quick access to Zion Tech Group</p>
             </div>
           </div>
           <button onClick = {handleDismiss};>
-            className=&quot;text-gray-400 hover: text-white transition-colors&quot;
-            aria-label=&quot;Dismiss install prompt&quot;
+            className="text-gray-40 0 hover: 'text-white transition-colors"
+            aria-label="Dismiss install prompt"
           >
-            <X className=&quot;w-4 h-4&quot; />
+            <X className="w-4 h-4" />
           </button>
         </div>
-        <div className=&quot;space-y-2&quot;></div>
-          <button ,>onClick = {handleInstallClick}
-            className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover: from-cyan-600 hove,
-      r:to-purple-700 transition-all duration-300 text-sm font-medium&quot;
+        <div className="space-y-2"></div>
+          <button'' ,>onClick = {handleInstallClick};
+            className="w-full bg-gradient-to-r from-cyan-50 0 to-purple-60 0 text-white px-4 py-2 rounded-lg hover: 'from-cyan-60 0 hove',
+      r: 'to-purple-70 0 transition-all duration-30 0 text-sm font-medium"
           >
             Install Now
           </button>
-          <button ,>onClick = {handleDismiss}
-            className=&quot;w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover: bg-slate-700 hove,
-      r:text-white transition-all duration-300 text-sm&quot;
+          <button'' ,>onClick = {handleDismiss};
+            className="w-full bg-transparent border border-gray-60 0 text-gray-30 0 px-4 py-2 rounded-lg hover: 'bg-slate-70 0 hove',
+      r: 'text-white transition-all duration-30 0 text-sm"
           >
             Not Now
           </button>
         </div>
-        <div className=&quot;mt-3 text-xs text-gray-400&quot;></div>
+        <div className="mt-3 text-xs text-gray-40 0"></div>
           <p >• Faster loading</p>
           <p >• Offline access</p>
           <p >• Native app experience</p>
@@ -116,6 +116,6 @@ interface BeforeInstallPromptEvent extends Event {}
       </div>
     </div>
   )
-{}
+{''}
 
 export default Page;

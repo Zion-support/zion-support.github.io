@@ -1,17 +1,17 @@
 // Performance monitoring utilities
 export interface PerformanceMetric {
-  name: string;
+  name: 'string;
   value: number;
   timestamp: number;
-  url: string;
+  url: string;''
 }
 
 class PerformanceMonitor {
-  private metrics: PerformanceMetric[] = [];
+  private metrics: 'PerformanceMetric[] = [];
   private isEnabled: boolean;
 
   constructor() {
-    this.isEnabled = typeof window !== 'undefined' && 'performance' in window;
+    this.isEnabled = typeof window !== 'undefined' && 'performance' in window;'
   }
 
   // Measure page load time
@@ -27,20 +27,20 @@ class PerformanceMonitor {
   }
 
   // Record a custom metric
-  recordMetric(name: string, value: number): void {
+  recordMetric(name: 'string', value: 'number): void {
     if (!this.isEnabled) return;
 
     const metric: PerformanceMetric = {
-      name,
+      name'',
       value,
-      timestamp: Date.now(),
-      url: window.location.href,
-    };
+      timestamp: 'Date.now()',
+      url: 'window.location.href';
+    },
 
     this.metrics.push(metric);
 
     // Send to analytics in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV = == 'production') {;
       this.sendToAnalytics(metric);
     }
   }
@@ -51,12 +51,12 @@ class PerformanceMonitor {
   }
 
   // Send metrics to analytics service
-  private sendToAnalytics(metric: PerformanceMetric): void {
+  private sendToAnalytics(metric: 'PerformanceMetric): void {
     // Example: Send to Google Analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', metric.name, {
         event_category: 'Performance',
-        value: Math.round(metric.value),
+        value: 'Math.round(metric.value)',
       });
     }
   }
