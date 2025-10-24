@@ -58,7 +58,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       width={width || 300}
       height={height || 200}
       className={className}
-<<<<<<< HEAD
       priority={priority}
       quality={quality}
       sizes={sizes}
