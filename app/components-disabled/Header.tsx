@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Workflow, Cloud } from 'lucide-react';
 
 const Header: React.FC = () => {
   const features = [

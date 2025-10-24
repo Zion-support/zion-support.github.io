@@ -1,7 +1,8 @@
+'use client';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 'use client'
 import Navigation from './Navigation'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
 import React from 'react'
 
 const ContentPromotionBanner: React.FC = () => {

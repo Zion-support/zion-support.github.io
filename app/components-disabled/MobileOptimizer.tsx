@@ -1,10 +1,6 @@
 "use client";
 
 import React, { useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
-
 const MobileOptimizer: React.FC = () => {
   useEffect(() => {
     // Add touch-friendly classes
@@ -69,7 +65,6 @@ $3
       
       window.addEventListener('scroll', requestTick, { passive: true })};
 
-
     // Initialize mobile optimizations
     preventZoom();
     addTouchClasses();
@@ -91,6 +86,5 @@ $3
     </>
   );
   return null};
-
 
 export default MobileOptimizer;

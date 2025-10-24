@@ -1,20 +1,9 @@
 'use client';
+import { Home, Info, Briefcase, Phone, GraduationCap, X, Menu } from 'lucide-react';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {
-  Bars3Icon,
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  BriefcaseIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  ChevronDownIcon
-} from '@heroicons/react/24/outline';
-
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,11 +23,11 @@ const Navigation = () => {
   };
 
   const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { name: 'Services', href: '/services', icon: BriefcaseIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon },
-    { name: 'Team', href: '/team', icon: AcademicCapIcon }
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Info },
+    { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'Contact', href: '/contact', icon: Phone },
+    { name: 'Team', href: '/team', icon: GraduationCap }
   ];
 
   return (
@@ -94,9 +83,9 @@ const Navigation = () => {
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
-                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
-                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                <Menu className="block h-6 w-6" aria-hidden="true" />
               )}
             </button>
           </div>

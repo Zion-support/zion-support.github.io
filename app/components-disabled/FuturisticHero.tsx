@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Brain, Globe, } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const FuturisticHero: React.FC = () => {
