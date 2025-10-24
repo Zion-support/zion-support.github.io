@@ -1,47 +1,44 @@
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
+'use client'
 const EnhancedErrorBoundaryPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
+    title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+}
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
+  icon: BarChart,
+    title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+}
     {
-      icon: Target,
-      title: 'Precision Targeting',
+  icon: Target,
+    title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+}
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
+  icon: TrendingUp,
+    title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+}
   ]
-
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
+  'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {
   return (
     <>
@@ -56,7 +53,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               EnhancedErrorBoundary
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -73,22 +70,21 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         </div>
       </section>
       {/* CTA Section */}
-      <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-          <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12&quot;></div>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>
+          <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12&quot;></div>
+            <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>
             <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Phone className=&quot;mr-2 h-5 w-5&quot; />
                 Call Now
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Mail className=&quot;mr-2 h-5 w-5&quot; />
                 Email Us
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -98,7 +94,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -117,7 +113,6 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -127,7 +122,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -137,7 +132,6 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -145,11 +139,11 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             <p className=&quot;text-xl text-gray-300 mb-8&quot;>
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Contact Sales
               </button>
             </div>
@@ -157,11 +151,10 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         </section>
       </div>
       <Footer />
-    </>
-  );
-};
-
-export default EnhancedErrorBoundaryPage;
+</>
+  )
+}
+export default EnhancedErrorBoundaryPage
   error?: Error
   errorInfo?: ErrorInfo}
 class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {
@@ -172,14 +165,16 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo})
     // Log error to monitoring service
-    // // console.error('Error caught by boundary:', error, errorInfo)
+    // // // eslint-disable-next-line no-console
+    console.error('Error caught by boundary:', error, errorInfo)
   }
   handleReload= () => {windo w.location.reload()
  }
-  render() {if (this.state.hasError) {
+  render() {
+  if (this.state.hasError) {
       if (this.props.fallback) {
         return thi s.props.fallback
-     }
+}
       return (
         <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot;></div>
           <div className=&quot;max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center&quot;></div>

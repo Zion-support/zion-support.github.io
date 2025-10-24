@@ -1,8 +1,9 @@
-"use client";
-import React from 'react';
+import React from 'react'
 
-const usePerformanceMonitor.ts = () => {
-  return null;
-};
+"use client"
 
-export default usePerformanceMonitor.ts;
+const usePerformanceMonitor = () => {
+  return null
+}
+
+export default usePerformanceMonitor

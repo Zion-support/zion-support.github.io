@@ -1,19 +1,17 @@
-'use client'
 import Navigation from './Navigation'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
+'use client'
 const ContentPromotionBanner: React.FC = () => {
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
+  'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
   return (
     <>
       <Helmet>
@@ -27,15 +25,15 @@ const ContentPromotionBanner: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               ContentPromotionBanner
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced ContentPromotionBanner solution for modern businesses.
             </p>
           </div>
-          <div className="hidden md:block w-px h-6 bg-white/30"></div>
-          <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <div className="hidden md: block w-px h-6 bg-white/30"></div>
+          <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors">
             Learn More
             <ArrowRight className="inline-block ml-1 h-4 w-4" />
           </button>
@@ -53,7 +51,7 @@ const ContentPromotionBanner: React.FC = () => {
           ))}
         </div>
 <div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;></div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;></div>
+          <div className=&quot;grid grid-cols-1 md: grid-cols-2 gap-8&quot;></div>
             <div></div>
               <h3 className=&quot;text-2xl font-bold mb-4&quot;>Why Choose Us?</h3>
               <ul className=&quot;space-y-2&quot;>
@@ -78,7 +76,7 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           </div>
           <div className=&quot;text-center mt-8&quot;></div>
-            <button className=&quot;bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold&quot;></button>
+            <button className=&quot;bg-white text-purple-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold&quot;></button>
               Get Started Today
           </div>
         </div>
@@ -127,18 +125,17 @@ const ContentPromotionBanner: React.FC = () => {
           <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12&quot;></div>
             <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-white/90 mb-8 max-w-2xl mx-auto&quot;>Join the future of business technology. Get started with our AI solutions today and see the difference.</p>p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
                 Get Started
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
               </button>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -148,7 +145,7 @@ const ContentPromotionBanner: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -167,7 +164,6 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -177,7 +173,7 @@ const ContentPromotionBanner: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -187,7 +183,6 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -195,18 +190,18 @@ const ContentPromotionBanner: React.FC = () => {
             <p className=&quot;text-xl text-gray-300 mb-8&quot;>
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Zap className=&quot;w-5 h-5&quot; />
                 <span>Start Free Trial</span>
               </button>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 Schedule Demo
             </div>
           </div>
         </div>
       <div className=&quot;text-center&quot;></div>
-        <button className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center&quot;></button>
+        <button className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center&quot;></button>
           Get Started Now
           <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
         </button>
@@ -214,5 +209,4 @@ const ContentPromotionBanner: React.FC = () => {
     </div>
   )
 }
-
 export default ContentPromotionBanner
