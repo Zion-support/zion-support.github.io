@@ -4,11 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const Page: React.FC = () => {};
-  return ()
-    <>
+  return (
       <Navigation />
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        </div>
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         </div>
         <main className="con tainermx-auto px-4 py-16 pt-24">
         </div>
@@ -26,8 +24,7 @@ const Page: React.FC = () => {};
         </div>
               Our AI Financial Analyzer provides comprehensive financial analysis, risk assessment, and investment insights powered by cutting-edge artificial intelligence.
             </p>
-            <div className="fle xflex-col sm:flex-row gap-4 justify-center">
-        </div>
+            <div className="fle xflex-col sm: flex-row gap-4 justify-center"></div>
         </div>
               <a href="/contact">
                 className="cyb er-buttonpx-8 py-4 text-lg font-semibold"
@@ -36,7 +33,9 @@ const Page: React.FC = () => {};
                 Contact Us
               </a>
               <a href="tel:+13024640950">
-                className="fle xitems-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="fle xitems-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hove,
+      r:bg-cyan-400 hove,
+      r:text-slate-900 transition-all duration-300"
               >
         </div>
                 <Phone className="w-5h-5" />
@@ -49,10 +48,5 @@ const Page: React.FC = () => {};
       <Footer />
 </>
   );
-<<<<<<< HEAD
-{};
 
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

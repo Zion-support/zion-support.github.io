@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
 
 interface PerformanceMonitorProps {
   performanceData?: any;
-}
+};
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
+  const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         const logMetric = (metric: any) => {
           if (process.env.NODE_ENV === 'development') {
             // eslint-disable-next-line no-console
@@ -27,7 +27,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
     if ('performance' in window) {
       window.addEventListener('load', () => {
         setTimeout(() => {
-          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const navigation = performance.getEntriesByType('navigation')[
+        0
+      ] as PerformanceNavigationTiming;
           const paint = performance.getEntriesByType('paint');
           
           if (process.env.NODE_ENV === 'development') {
@@ -61,12 +63,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
     <div className="performance-monitor">
       {performanceData && (
         <div className="performance-data">
-          <h3>Performance Metrics</h3>
-          <pre>{JSON.stringify(performanceData, null, 2)}</pre>
+          <h3 >Performance Metrics</h3>
+          <pre>{JSON.stringify(performanceData, null, 2)};
+
+  return (
         </div>
-      )}
-    </div>
+      )};
+
+  return (
   );
 };
 
-export default PerformanceMonitor;
+export default Page;

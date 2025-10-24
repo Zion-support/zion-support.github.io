@@ -61,7 +61,9 @@ export class MockStorage implements Storage {
 
   key(index: number): string | null {
     const keys = Array.from(this.store.keys())
-    return keys[index] || null
+    return keys[
+        index
+      ] || null
   }
 
   getItem(key: string): string | null {
@@ -93,7 +95,9 @@ export class MockSessionStorage implements Storage {
 
   key(index: number): string | null {
     const keys = Array.from(this.store.keys())
-    return keys[index] || null
+    return keys[
+        index
+      ] || null
   }
 
   getItem(key: string): string | null {
@@ -130,8 +134,12 @@ export const createMockElement = (tagName: string, attributes: Record<string, st
 export const mockWindow = (overrides: Partial<Window> = {}): Window => {
   const mockWin = {
     location: {
-      href: 'http://localhost:3000',
-      origin: 'http://localhost:3000',
+      href: 'htt,
+      p://localhos,
+      t:3000',
+      origin: 'htt,
+      p://localhos,
+      t:3000',
       pathname: '/',
       search: '',
       hash: '',
@@ -140,12 +148,14 @@ export const mockWindow = (overrides: Partial<Window> = {}): Window => {
       reload: jest.fn()
     },
     navigator: {
-      userAgent: 'test-agent',
+      userAgen,
+      t: 'test-agent',
       language: 'en-US',
       platform: 'test-platform'
     },
     document: {
-      title: 'Test Document',
+      titl,
+      e: 'Test Document',
       createElement: jest.fn(() => createMockElement('div')),
       querySelector: jest.fn(),
       querySelectorAll: jest.fn(() => []),
@@ -154,9 +164,11 @@ export const mockWindow = (overrides: Partial<Window> = {}): Window => {
     },
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    setTimeout: jest.fn((fn: Function, delay: number) => setTimeout(fn, delay)),
+    setTimeout: jest.fn((f,
+      n: Function, delay: number) => setTimeout(fn, delay)),
     clearTimeout: jest.fn(),
-    setInterval: jest.fn((fn: Function, delay: number) => setInterval(fn, delay)),
+    setInterval: jest.fn((f,
+      n: Function, delay: number) => setInterval(fn, delay)),
     clearInterval: jest.fn(),
     ...overrides
   } as unknown as Window
@@ -167,7 +179,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): Window => {
 /**
  * Mock console methods for testing
  */
-export const mockConsole = () => {
+export const Page = () => {
   const originalConsole = { ...console }
   
   beforeEach(() => {
@@ -199,7 +211,7 @@ export const createMockCustomEvent = (type: string, detail: unknown = null): Cus
 /**
  * Mock IntersectionObserver for testing
  */
-export const mockIntersectionObserver = () => {
+export const Page = () => {
   const mockObserver = {
     observe: jest.fn(),
     unobserve: jest.fn(),
@@ -218,7 +230,7 @@ export const mockIntersectionObserver = () => {
 /**
  * Mock ResizeObserver for testing
  */
-export const mockResizeObserver = () => {
+export const Page = () => {
   const mockObserver = {
     observe: jest.fn(),
     unobserve: jest.fn(),
@@ -256,11 +268,12 @@ export const mockMatchMedia = (matches: boolean = false) => {
 /**
  * Mock performance API for testing
  */
-export const mockPerformance = () => {
+export const Page = () => {
   Object.defineProperty(window, 'performance', {
     writable: true,
     value: {
-      now: jest.fn(() => Date.now()),
+      no,
+      w: jest.fn(() => Date.now()),
       mark: jest.fn(),
       measure: jest.fn(),
       getEntriesByType: jest.fn(() => []),
@@ -274,7 +287,7 @@ export const mockPerformance = () => {
 /**
  * Mock requestAnimationFrame for testing
  */
-export const mockRequestAnimationFrame = () => {
+export const Page = () => {
   Object.defineProperty(window, 'requestAnimationFrame', {
     writable: true,
     value: jest.fn(cb => setTimeout(cb, 16))
@@ -289,7 +302,7 @@ export const mockRequestAnimationFrame = () => {
 /**
  * Setup common mocks for testing
  */
-export const setupTestMocks = () => {
+export const Page = () => {
   mockIntersectionObserver()
   mockResizeObserver()
   mockMatchMedia()
@@ -300,7 +313,7 @@ export const setupTestMocks = () => {
 /**
  * Clean up mocks after testing
  */
-export const cleanupTestMocks = () => {
+export const Page = () => {
   jest.clearAllMocks()
   jest.restoreAllMocks()
 }

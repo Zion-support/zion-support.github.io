@@ -1,20 +1,22 @@
-'use client'
 import React, { ReactNode, useEffect } from 'react';
+'use client'
 
 interface AccessibilityEnhancerProps {
   children: ReactNode;
   className?: string;
-}
+};
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children, className }) => {
+  const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children, className }) => {
   useEffect(() => {
     // Enhance accessibility features
-    const enhanceAccessibility = () => {
+    const Page = () => {
       // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
+      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focu,
+      s:top-0 focu,
+      s:left-0 bg-blue-600 text-white p-2 z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
 
       // Add main content landmark
@@ -25,7 +27,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children,
 
       // Enhance focus management
       const focusableElements = document.querySelectorAll(
-        'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+        'a[
+        href
+      ], button, input, textarea, select, [
+        tabindex
+      ]:not([tabindex="-1"])'
       );
       
       focusableElements.forEach((element) => {
@@ -38,9 +44,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children,
 
   return (
     <div className={className}>
-      {children}
-    </div>
+      {children};
+
+  return (
   );
 };
 
-export default AccessibilityEnhancer;
+export default Page;

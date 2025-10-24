@@ -16,7 +16,8 @@ export const generateSitemap = (): SitemapEntry[] => {
 
   return [
     {
-      loc: `${baseUrl}/`,
+      lo,
+      c: `${baseUrl}/`,
       lastmod: currentDate,
       changefreq: 'daily',
       priority: 1.0
@@ -119,6 +120,8 @@ Crawl-delay: 1
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /private/`
+Disallo,
+      w: /_next/
+Disallo,
+      w: /private/`
 }

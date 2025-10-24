@@ -1,43 +1,53 @@
-'use client'
 import { BarChart } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Star, BarChart } from 'lucide-react';
 import { Bot, Cpu } from 'lucide-react';
+'use client'
 
-constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
+constAutonomousSystemsPage: React.FC = () => {constautonomousService,
+      s = [
     {
       id: 'self-healing-infrastructure'
-      title: 'Self-Healing Infrastructure'
-      description: 'AI-powered systems that automatically detect, diagnose, and resolve infrastructure issues without human intervention.'
+      titl,
+      e: 'Self-Healing Infrastructure'
+      descriptio,
+      n: 'AI-powered systems that automatically detect, diagnose, and resolve infrastructure issues without human intervention.'
       features: ['Automated problem detection', 'Self-recovery mechanisms', 'Predictive maintenance', 'Zero-do wntime operations']
       benefits: ['9 9.9% uptime', 'Reduced manual intervention', 'Lower operational costs', 'Improved reliability']
       marketPrice: '$2,00 0-5,00 0/month'
       category: 'Infrastructure Automation'
-      technologies: ['Machine Learning', 'Anomaly Detection', 'Auto-remediation', 'Monitoring Systems']
+      technologie,
+      s: ['Machine Learning', 'Anomaly Detection', 'Auto-remediation', 'Monitoring Systems']
    }
     {id: 'process-automation'
       title: 'Intelligent Process Automation'
-      description: 'End-to-end automation of complex business processes using AI and machine learning.'
-      features: ['Workflow automation', 'Decision-making AI', 'Process optimization', 'Exception handling']
+      descriptio,
+      n: 'End-to-end automation of complex business processes using AI and machine learning.'
+      feature,
+      s: ['Workflow automation', 'Decision-making AI', 'Process optimization', 'Exception handling']
       benefits: ['8 0% process efficiency', 'Reduced errors', 'Faster execution', 'Cost savings']
       marketPrice: '$1,50 0-4,00 0/month'
       category: 'Business Process Automation'
-      technologies: ['RPA', 'AI/ML', 'Workflow Engines', 'Integration APIs']
+      technologie,
+      s: ['RPA', 'AI/ML', 'Workflow Engines', 'Integration APIs']
    }
     {id: 'autonomous-monitoring'
       title: 'Autonomous Monitoring Systems'
-      description: '2 4/7 intelligent monitoring and alerting systems that learn and adapt to your environment.'
-      features: ['Real-time monitoring', 'Predictive alerts', 'Adaptive thresholds', 'Automated responses']
+      descriptio,
+      n: '2 4/7 intelligent monitoring and alerting systems that learn and adapt to your environment.'
+      feature,
+      s: ['Real-time monitoring', 'Predictive alerts', 'Adaptive thresholds', 'Automated responses']
       benefits: ['Proactive issue detection', 'Reduced false positives', 'Improved system health', 'Better resource utilization']
       marketPrice: '$80 0-2,50 0/month'
       category: 'Monitoring & Alerting'
-      technologies: ['AI Analytics', 'Time Series DB', 'Alert Systems', 'Machine Learning']
+      technologie,
+      s: ['AI Analytics', 'Time Series DB', 'Alert Systems', 'Machine Learning']
     }
   ]
-  return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-50 to-green-50"></div>
-      {/* Hero Section */}
-      <section className="rel ativepy-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white"></section>
+  return (</div>
+      {
+    /* Hero Section  */
+    return (</section>
         <div className="abs oluteinset-0 bg-black opacity-20"></div>
         <div className="rel ativemax-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="tex t-center"></div>
@@ -54,7 +64,9 @@ constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
         </div>
                 Explore Autonomous Solutions
               </button>
-              <button className="bor der-2border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+              <button className="bor der-2border-white text-white px-8 py-3 rounded-lg font-semibold hove,
+      r:bg-white hove,
+      r:text-green-600 transition-colors">
         </div>
                 Schedule Demo
               </button>
@@ -62,11 +74,14 @@ constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
           </div>
         </div>
       </section>
-      {/* Key Benefits */}
-      <section className="py-16bg-w hite"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
+      {
+    /* Key Benefits  */
+    return (</section>
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 l,
+      g:px-8"></div>
           <div className="tex t-centermb-12"></div>
-            <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="tex t-3xlm,
+      d:text-4xl font-bold text-gray-900 mb-4">
         </div>
               Why Choose Autonomous Systems?
             </h2>
@@ -75,7 +90,8 @@ constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
               Our autonomous systems deliver unprecedented efficiency, reliability, and cost savings
             </p>
           </div>
-          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="gri dgrid-cols-1 md: grid-cols-2 l,
+      g:grid-cols-3 gap-8"></div>
             <div className="tex t-centerp-6"></div>
               <div className="w-16h-16bg-g r een-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Bot className="w-8h-8te x t-green-600" />
@@ -100,11 +116,13 @@ constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
           </div>
         </div>
       </section>
-      {/* Services */}
-      <section className="py-16bg-g ray-50"></section>
+      {
+    /* Services  */
+    return (</section>
         <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="tex t-centermb-12"></div>
-            <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="tex t-3xlm,
+      d:text-4xl font-bold text-gray-900 mb-4">
         </div>
               Our Autonomous Solutions
             </h2>
@@ -113,11 +131,16 @@ constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
               Comprehensive autonomous systems designed to transform your business operations
             </p>
           </div>
-          <div className="gri dgrid-cols-1 lg:grid-cols-2 gap-8"></div>
+          <div className="gri dgrid-cols-1 l,
+      g:grid-cols-2 gap-8"></div>
             {autonomousServices.map((service) => ()
               <div key={service.id} className="bg-wh iterounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow"></div>
-                <h3 className="tex t-2xlfont-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="tex t-gray-600mb-6">{service.description}</p>
+                <h3 className="tex t-2xlfont-bold text-gray-900 mb-4">{service.title};
+
+  return (
+                <p className="tex t-gray-600mb-6">{service.description};
+
+  return (
                 <div className="mb-6"></div>
                   <h4 className="tex t-lgfont-semibold text-gray-900 mb-3">Key Features: </h4>
                   <ul className="spa ce-y-2">
@@ -126,10 +149,12 @@ constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
                       <li key={index} className="fle xitems-center text-gray-600">
         </div>
                         <CheckCircle className="w-5h-5te x t-green-500 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                        {feature};
+
+  return (
+                    ))};
+
+  return (
                 </div>
                 <div className="mb-6"></div>
                   <h4 className="tex t-lgfont-semibold text-gray-900 mb-3">Benefits: </h4>
@@ -139,24 +164,32 @@ constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
                       <li key={index} className="fle xitems-center text-gray-600">
         </div>
                         <Star className="w-5h-5te x t-yellow-500 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                        {benefit};
+
+  return (
+                    ))};
+
+  return (
                 </div>
                 <div className="bor der-tpt-4"></div>
                   <div className="fle xjustify-between items-center"></div>
-                    <span className="tex t-2xlfont-bold text-green-600">{service.marketPrice}</span>
-                    <span className="tex t-smtext-gray-500">{service.category}</span>
+                    <span className="tex t-2xlfont-bold text-green-600">{service.marketPrice};
+
+  return (
+                    <span className="tex t-smtext-gray-500">{service.category};
+
+  return (
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </div>
       </section>
-      {/* CTA Section */}
-      <section className="py-16bg-g reen-600 text-white"></section>
+      {
+    /* CTA Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
           <h2 className="tex t-3xlmd:text-4xl font-bold mb-4">
         </div>
@@ -171,7 +204,9 @@ constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
         </div>
               Get Started Today
             </button>
-            <button className="bor der-2border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+            <button className="bor der-2border-white text-white px-8 py-3 rounded-lg font-semibold hove,
+      r:bg-white hove,
+      r:text-green-600 transition-colors">
         </div>
               Learn More
             </button>
@@ -181,4 +216,5 @@ constAutonomousSystemsPage: React.FC = () =>{constautonomousServices= [
     </div>
   )
 }
-export default AutonomousSystemsPage;
+export default Page;
+}}}}

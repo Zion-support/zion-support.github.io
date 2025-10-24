@@ -1,92 +1,108 @@
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star } from 'lucide-react'
+'use client'
 
-const AboutPage = () => {
-  const stats = [
-    { icon: Users, value: '100+', label: 'Happy Clients' },
-    { icon: Award, value: '50+', label: 'Awards Won' },
-    { icon: Star, value: '1000+', label: 'Projects Completed' }
-  ]
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Brain, Users, Target, Award, CheckCircle, ArrowRight } from 'lucide-react';
+
+const Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI Innovation',
+      description: 'Cutting-edge artificial intelligence solutions that transform businesses.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Team',
+      description: 'Experienced professionals dedicated to your success.'
+    },
+    {
+      icon: Target,
+      title: 'Proven Results',
+      description: 'Delivering measurable outcomes for our clients.'
+    },
+    {
+      icon: Award,
+      title: 'Industry Recognition',
+      description: 'Award-winning solutions and trusted by leading companies.'
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI and IT solutions that help businesses transform and grow.
-          </p>
-        </div>
-      </section>
+    <>
+      <SEOOptimizer
+        title="About Us - ZionTechGroup"
+        description="Learn about ZionTechGroup's mission to revolutionize business through AI and technology solutions."
+        keywords={['about us', 'AI company', 'technology solutions', 'team']}
+        canonicalUrl="https://ziontechgroup.com/about"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="pt-24 pb-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            {/* Hero Section */}
+            <section className="text-center mb-16">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+                About ZionTechGroup
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                We are pioneers in AI technology, dedicated to transforming businesses through innovative solutions and cutting-edge technology.
+              </p>
+            </section>
 
-      {/* Stats Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-white p-8 rounded-xl shadow-lg">
-                  <stat.icon className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
+            {/* Features Section */}
+            <section className="mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                    <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Mission Section */}
+            <section className="mb-16">
+              <div className="cyber-card p-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8 neon-text">
+                  Our Mission
+                </h2>
+                <p className="text-xl text-gray-300 text-center max-w-4xl mx-auto leading-relaxed">
+                  To democratize AI technology and make it accessible to businesses of all sizes, 
+                  empowering them to achieve unprecedented growth and efficiency through intelligent automation and data-driven insights.
+                </p>
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="text-center">
+              <div className="cyber-card p-12 max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                  Ready to Work With Us?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8">
+                  Let's discuss how we can help transform your business with AI.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="cyber-button px-8 py-4 text-lg">
+                    Get Started
+                  </button>
+                  <button className="cyber-button-outline px-8 py-4 text-lg">
+                    Learn More
+                  </button>
                 </div>
               </div>
-            ))}
+            </section>
           </div>
-        </div>
-      </section>
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+};
 
-      {/* Mission Section */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
-                efficiency, and growth. We believe technology should be accessible, powerful, and transformative.
-              </p>
-              <p className="text-lg text-gray-600">
-                Our team of experts works tirelessly to deliver solutions that not only meet your 
-                current needs but also prepare you for the future of technology.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Us?</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center">
-                  <CheckCircle className="w-6 h-6 text-emerald-600 mr-3" />
-                  <span className="text-gray-700">Expert team with 10+ years experience</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-6 h-6 text-emerald-600 mr-3" />
-                  <span className="text-gray-700">Cutting-edge technology solutions</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-6 h-6 text-emerald-600 mr-3" />
-                  <span className="text-gray-700">24/7 support and maintenance</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-6 h-6 text-emerald-600 mr-3" />
-                  <span className="text-gray-700">Proven track record of success</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <Footer />
-    </div>
-  )
-}
-
-export default AboutPage
+export default Page;

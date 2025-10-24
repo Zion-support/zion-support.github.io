@@ -1,49 +1,58 @@
 'use client'
-import React, { ReactNode, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+
+import React from 'react';
+import Head from 'next/head';
 
 interface SEOOptimizerProps {
-  children: ReactNode;
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
   className?: string;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, className }) => {
-  useEffect(() => {
-    // Add structured data
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Leading technology solutions provider specializing in AI, IT services, and 5G solutions",
-      "url": typeof window !== 'undefined' ? window.location.origin : '',
-      "logo": typeof window !== 'undefined' ? `${window.location.origin}/logo.png` : '',
-      "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup"
-      ]
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
-    return () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
-  }, []);
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title,
+  description,
+  keywords = [],
+  canonicalUrl,
+  ogImage = '/og-image.jpg',
+  className = ''
+}) => {
+  const fullTitle = title.includes('ZionTechGroup') ? title : `${title} | ZionTechGroup`;
+  const keywordsString = keywords.join(', ');
 
   return (
-    <div className={className}>
-      <Helmet>
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      </Helmet>
-      {children}
-    </div>
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywordsString} />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="ZionTechGroup" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      
+      {/* Additional SEO */}
+      <meta name="author" content="ZionTechGroup" />
+      <meta name="theme-color" content="#0f172a" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
   );
 };
 

@@ -1,19 +1,22 @@
-'use client'
 import { Brain, BarChart } from 'lucide-react';
 import React from 'react';
 import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react';
+'use client'
 
-constMicroSAASPage: React.FC = () =>{constcategories= [
+constMicroSAASPage: React.FC = () => {constcategorie,
+      s = [
     {
       title: 'AI-Powered Tools'
       icon: Brain
       color: 'text-purple-40 0'
       bgColor: 'bg-purple-50 0/2 0'
-      services: []
-        { name: 'AI Writing Assistant', price: '$1 9/month', description: 'AI-powered content creation and editing'}
+      service,
+      s: []
+        { nam,
+      e: 'AI Writing Assistant', price: '$1 9/month', description: 'AI-powered content creation and editing'}
         {name: 'AI Code Generator', price: '$4 9/month', description: 'AI-assisted coding and development'}
         {name: 'AI Design Studio', price: '$3 9/month', description: 'AI-powered graphic design tools'}
         {name: 'AI Analytics Dashboard', price: '$7 9/month', description: 'Real-time business intelligence'}
@@ -25,8 +28,10 @@ constMicroSAASPage: React.FC = () =>{constcategories= [
       icon: BarChart
       color: 'text-blue-40 0'
       bgColor: 'bg-blue-50 0/2 0'
-      services: []
-        { name: 'AI-Powered CRM', price: '$4 9/month', description: 'Intelligent customer relationship management'}
+      service,
+      s: []
+        { nam,
+      e: 'AI-Powered CRM', price: '$4 9/month', description: 'Intelligent customer relationship management'}
         {name: 'AI Invoice Generator', price: '$1 9/month', description: 'Automated invoicing and billing'}
         {name: 'AI Lead Scoring', price: '$3 9/month', description: 'Intelligent lead qualification'}
         {name: 'AI Social Media Manager', price: '$5 9/month', description: 'Social media automation'}
@@ -38,8 +43,10 @@ constMicroSAASPage: React.FC = () =>{constcategories= [
       icon: Settings2
       color: 'text-green-40 0'
       bgColor: 'bg-green-50 0/2 0'
-      services: []
-        { name: 'AI Task Manager Pro', price: '$2 9/month', description: 'Intelligent task management'}
+      service,
+      s: []
+        { nam,
+      e: 'AI Task Manager Pro', price: '$2 9/month', description: 'Intelligent task management'}
         {name: 'AI Expense Tracker', price: '$1 9/month', description: 'Smart expense management'}
         {name: 'AI Scheduler', price: '$3 9/month', description: 'Intelligent scheduling'}
         {name: 'AI Document Processor', price: '$4 9/month', description: 'Intelligent do cument processing'}
@@ -51,8 +58,10 @@ constMicroSAASPage: React.FC = () =>{constcategories= [
       icon: Palette
       color: 'text-pink-40 0'
       bgColor: 'bg-pink-50 0/2 0'
-      services: []
-        { name: 'AI Video Creator', price: '$7 9/month', description: 'Automated video production'}
+      service,
+      s: []
+        { nam,
+      e: 'AI Video Creator', price: '$7 9/month', description: 'Automated video production'}
         {name: 'AI Music Composer', price: '$4 9/month', description: 'AI music generation'}
         {name: 'AI3D Generator', price: '$8 9/month', description: 'AI3D modeling and design'}
         {name: 'AI Fashion Design', price: '$6 9/month', description: 'AI fashion solutions'}
@@ -64,8 +73,10 @@ constMicroSAASPage: React.FC = () =>{constcategories= [
       icon: CreditCard
       color: 'text-orange-40 0'
       bgColor: 'bg-orange-50 0/2 0'
-      services: []
-        { name: 'AI E-commerce Assistant', price: '$7 9/month', description: 'E-commerce optimization'}
+      service,
+      s: []
+        { nam,
+      e: 'AI E-commerce Assistant', price: '$7 9/month', description: 'E-commerce optimization'}
         {name: 'AI Store Optimizer', price: '$5 9/month', description: 'Store performance optimization'}
         {name: 'AI Market Research', price: '$8 9/month', description: 'Automated market analysis'}
         {name: 'AI A/B Testing', price: '$4 9/month', description: 'Intelligent testing platform'}
@@ -77,8 +88,10 @@ constMicroSAASPage: React.FC = () =>{constcategories= [
       icon: ShieldCheck
       color: 'text-red-40 0'
       bgColor: 'bg-red-50 0/2 0'
-      services: []
-        { name: 'AI Security Monitor', price: '$9 9/month', description: 'Real-time security monitoring'}
+      service,
+      s: []
+        { nam,
+      e: 'AI Security Monitor', price: '$9 9/month', description: 'Real-time security monitoring'}
         {name: 'AI Performance Tracker', price: '$4 9/month', description: 'Comprehensive performance tracking'}
         {name: 'AI Predictive Analytics', price: '$7 9/month', description: 'Future outcome predictions'}
         {name: 'AI Health Tracker', price: '$2 9/month', description: 'Personal health monitoring'}
@@ -88,33 +101,41 @@ constMicroSAASPage: React.FC = () =>{constcategories= [
     }
   ]
 
-  constbenefits= []
-    {icon: Zap
+  const benefits = []
+    {
+      icon: Zap,
       title: 'Instant Deployment'
-      description: 'Get started in minutes with our ready-to-use applications'
+      descriptio,
+      n: 'Get started in minutes with our ready-to-use applications'
    }
-    {icon: Star
+    {
+      icon: Star,
       title: 'Proven Results'
-      description: 'Average200% productivity increase within 30days'
+      descriptio,
+      n: 'Average200% productivity increase within 30days'
    }
-    {icon: ShieldCheck
+    {
+      icon: ShieldCheck,
       title: 'Enterprise Security'
-      description: 'Bank-level security and compliance for all applications'
+      descriptio,
+      n: 'Bank-level security and compliance for all applications'
    }
-    {icon: BarChart
+    {
+      icon: BarChart,
       title: 'Scalable Solutions'
-      description: 'Grow from startup to enterprise with flexible pricing'
+      descriptio,
+      n: 'Grow from startup to enterprise with flexible pricing'
     }
   ]
 
 const Page = () => {};
-  return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  return (</div>
       <Navigation />
       <main className="con tainermx-auto px-4 py-16 pt-24">
         </div>
-        {/* Hero Section */}
-        <section className="tex t-centermb-16"></section>
+        {
+    /* Hero Section  */
+    return (</section>
           <h1 className="tex t-4xlmd: text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gr adient-to-rfrom-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
         </div>
@@ -134,34 +155,46 @@ const Page = () => {};
               Browse All Solutions
             </a>
             <a href="tel:+13024640950">
-              className="bor der-2border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              className="bor der-2border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hove,
+      r:bg-cyan-400 hove,
+      r:text-slate-900 transition-all duration-300"
             >
         </div>
               (302) 464-0950
             </a>
           </div>
         </section>
-        {/* Categories */}
-        <section className="mb-16"></section>
+        {
+    /* Categories  */
+    return (</section>
           <h2 className="tex t-3xlfont-bold text-white text-center mb-12">Solution Categories</h2>
-          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="gri dgrid-cols-1 md: grid-cols-2 l,
+      g:grid-cols-3 gap-8"></div>
             {categories.map((category, index) => ()
               <div key={index} className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
                 <div className="fle xitems-center mb-6"></div>
                   <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}></div>
                     <category.icon className={`w-6 h-6 ${category.color}`} />
                   </div>
-                  <h3 className="tex t-xlfont-bold text-white">{category.title}</h3>
+                  <h3 className="tex t-xlfont-bold text-white">{category.title};
+
+  return (
                 </div>
                 <div className="spa ce-y-3"></div>
                   {category.services.map((service, serviceIndex) => ()
                     <div key={serviceIndex} className="fle xjustify-between items-center p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700/70 transition-colors"></div>
                       
-                        <div className="fon t-mediumtext-white text-sm">{service.name}</div>
-                        <div className="tex t-xstext-gray-400">{service.description}</div>
+                        <div className="fon t-mediumtext-white text-sm">{service.name};
+
+  return (
+                        <div className="tex t-xstext-gray-400">{service.description};
+
+  return (
                       </div>
                       <div className="tex t-right"></div>
-                        <div className={`font-bold ${category.color} text-sm`}>{service.price}</div>
+                        <div className={`font-bold ${category.color} text-sm`}>{service.price};
+
+  return (
                         <a href="/contact">
                           className="tex t-xstext-cyan-400 hover: text-cyan-300 transition-colors"
                         >
@@ -170,31 +203,41 @@ const Page = () => {};
                         </a>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  ))};
+
+  return (
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </section>
-        {/* Benefits Section */}
-        <section className="mb-16"></section>
+        {
+    /* Benefits Section  */
+    return (</section>
           <div className="bg-gr adient-to-rfrom-indigo-900/50 to-purple-900/50 rounded-2xl p-8"></div>
             <h2 className="tex t-3xlfont-bold text-white text-center mb-12">Why Choose Our Micro SAAS Solutions?</h2>
-            <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="gri dgrid-cols-1 md: grid-cols-2 l,
+      g:grid-cols-4 gap-8"></div>
               {benefits.map((benefit, index) => ()
                 <div key={index} className="tex t-center"></div>
                   <div className="w-16h-16bg-c y an-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <benefit.icon className="w-8h-8te x t-cyan-400" />
                   </div>
-                  <h3 className="tex t-xlfont-bold text-white mb-2">{benefit.title}</h3>
-                  <p className="tex t-gray-300">{benefit.description}</p>
+                  <h3 className="tex t-xlfont-bold text-white mb-2">{benefit.title};
+
+  return (
+                  <p className="tex t-gray-300">{benefit.description};
+
+  return (
                 </div>
-              ))}
-            </div>
+              ))};
+
+  return (
           </div>
         </section>
-        {/* Pricing Tiers */}
-        <section className="mb-16"></section>
+        {
+    /* Pricing Tiers  */
+    return (</section>
           <h2 className="tex t-3xlfont-bold text-white text-center mb-12">Simple Pricing</h2>
           <div className="gri dgrid-cols-1 md: grid-cols-3 gap-8"></div>
             <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-6"></div>
@@ -252,7 +295,8 @@ const Page = () => {};
                 </li>
               </ul>
               <a href="/contact">
-                className="blo ckw-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
+                className="blo ckw-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hove,
+      r:bg-cyan-600 transition-colors"
               >
         </div>
                 Get Started
@@ -285,7 +329,8 @@ const Page = () => {};
                 </li>
               </ul>
               <a href="/contact">
-                className="blo ckw-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
+                className="blo ckw-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hove,
+      r:bg-cyan-600 transition-colors"
               >
         </div>
                 Contact Sales
@@ -293,15 +338,16 @@ const Page = () => {};
             </div>
           </div>
         </section>
-        {/* CTA Section */}
-        <section className="tex t-center"></section>
+        {
+    /* CTA Section  */
+    return (</section>
           <div className="bg-gr adient-to-rfrom-cyan-900/50 to-purple-900/50 rounded-2xl p-8"></div>
             <h2 className="tex t-3xlfont-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="tex t-gray-300mb-8 max-w-2xl mx-auto">
         </div>
               Choose from our extensive library of AI-powered applications and start seeing results immediately.
             </p>
-            <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="fle xflex-col sm: flex-row gap-4 justify-center"></div>
               <a href="/contact">
                 className="bg-gr adient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
@@ -309,14 +355,16 @@ const Page = () => {};
                 Browse All Solutions
               </a>
               <a href="tel:+13024640950">
-                className="bor der-2border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="bor der-2border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hove,
+      r:bg-cyan-400 hove,
+      r:text-slate-900 transition-all duration-300"
               >
         </div>
                 (302) 464-0950
               </a>
             </div>
             <div className="mt-8te xt-sm text-gray-400"></div>
-              <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p >📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>
@@ -324,10 +372,7 @@ const Page = () => {};
       <Footer />
     </div>
   )
-<<<<<<< HEAD
-};
-;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+
 export default Page;
+}
+}}}}}

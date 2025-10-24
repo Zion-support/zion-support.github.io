@@ -1,15 +1,15 @@
 import React from 'react';
 import Head from "next/head";
-
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+
 
 export default function AiContentGeneratorPage() {
   return (
     <>
 
         <Head>
-        <title>AiContentGenerator - Zion Tech Group</title>
+        <title >AiContentGenerator - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
 

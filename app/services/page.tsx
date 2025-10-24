@@ -1,112 +1,114 @@
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+'use client'
 
-const ServicesPage: React.FC = () => {
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Brain, Zap, Shield, Target, CheckCircle, ArrowRight } from 'lucide-react';
+
+const Page: React.FC = () => {
   const services = [
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Advanced AI-powered solutions for modern businesses.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      description: 'Advanced AI-powered solutions for modern businesses including machine learning, natural language processing, and predictive analytics.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Computer Vision']
+    },
+    {
+      icon: Zap,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions that grow with your business needs.',
+      features: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your business.',
-      features: ['Threat Detection', 'Data Protection', 'Security Audits', 'Incident Response']
+      description: 'Comprehensive security solutions to protect your business from evolving threats.',
+      features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response']
     },
     {
-      icon: Globe,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for your business needs.',
-      features: ['Cloud Migration', 'Infrastructure Management', 'Scalability', 'Cost Optimization']
-    },
-    {
-      icon: Zap,
+      icon: Target,
       title: 'Digital Transformation',
-      description: 'Transform your business with digital solutions.',
-      features: ['Process Automation', 'Digital Strategy', 'Technology Integration', 'Change Management']
+      description: 'Complete digital transformation services to modernize your business operations.',
+      features: ['Process Automation', 'Data Migration', 'System Integration', 'Change Management']
     }
-  ]
+  ];
 
   return (
     <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="w-8 h-8" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4">
+      <SEOOptimizer
+        title="Services - ZionTechGroup"
+        description="Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation."
+        keywords={['services', 'AI solutions', 'cloud infrastructure', 'cybersecurity', 'digital transformation']}
+        canonicalUrl="https://ziontechgroup.com/services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to meet your business needs
+            {/* Hero Section */}
+            <section className="text-center mb-16">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+                Our Services
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive technology services designed to transform your business and drive growth.
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <service.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-8 h-8" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+            </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us today to discuss your project requirements
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Us
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                View Portfolio
-              </button>
-            </div>
+            {/* Services Grid */}
+            <section className="mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {services.map((service, index) => (
+                  <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <service.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                        <p className="text-gray-300 mb-4">{service.description}</p>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center space-x-2">
+                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                              <span className="text-gray-300 text-sm">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="text-center">
+              <div className="cyber-card p-12 max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                  Ready to Get Started?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8">
+                  Let's discuss how our services can help transform your business.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="cyber-button px-8 py-4 text-lg inline-flex items-center space-x-2">
+                    <span>Get Started</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                  <button className="cyber-button-outline px-8 py-4 text-lg">
+                    Schedule Consultation
+                  </button>
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
+        </main>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };
 
-export default ServicesPage;
+export default Page;
