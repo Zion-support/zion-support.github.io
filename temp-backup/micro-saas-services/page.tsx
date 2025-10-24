@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client";"
 import React from 'react";"
 import Head from 'next/head";
@@ -23,6 +24,33 @@ export default function ServicePage() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link"
+=======
+'use client'
+import React from 'react';
+import Head from 'next/head';
+export default function ServicePage() {
+
+  return ( <>
+
+      <Head>
+        <title>Micro Saas Services | Zion Tech Group</title>
+        <meta name="description" content="Professional micro saas services services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Micro Saas Services | Zion Tech Group" />
+        <meta property="og:description" content="Professional micro saas services services and solutions for modern businesses." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Micro Saas Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional micro saas services services and solutions for modern businesses.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
               href="/contact"
               className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
             >
@@ -38,9 +66,13 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
-  );
-
+  )
     </>
+<<<<<<< HEAD
   );"
 }"
 "'"
+=======
+  )
+}
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352

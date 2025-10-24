@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client";"
 import React from 'react";"
 import Link from 'next/link";"
@@ -18,12 +19,35 @@ className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rou
 r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />"
 Contact Us</Link>"
             <ArrowRight className="w-5 h-5 ml-2" />
+=======
+'use client'
+import React from 'react';
+import Link } from 'next/link';
+import { ArrowRight } from from 'lucide-react';
+export default function microSaasServices() {
+
+return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" /> <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />,<h1 className="text-4 xl font-bold text-white mb-6" />
+MicroSaasServices | Zion Tech Group</h1>
+          </h1> <p className="text-lg text-gray-300 mb-8" />
+Professional microsaasservices | zion tech group services coming soon.</p>
+          </p>
+          <Linkhref="/contact"
+className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: "from-cyan-600 hove","
+r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />
+Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
           </Link>
 )
   )
-,
+
 ;}
     </div>
+<<<<<<< HEAD
     </div>"
     </div>;"
 };"'"
+=======
+    </div>
+    </div>
+}
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352

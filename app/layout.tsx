@@ -66,6 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+<<<<<<< HEAD
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
@@ -82,6 +83,10 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         {children}
       </body>
+=======
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
     </html>
   );
 }

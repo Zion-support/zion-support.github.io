@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import ContactForm from '../components/ContactForm';
 
@@ -100,10 +101,18 @@ const ContactPage: React.FC = () => {
     openingHours: ['Mo-Fr 09:00-17:00'],
     priceRange: '$$',
   }), []);
+=======
 
+import React from 'react';
+import Link from 'next/link';
+import SEOHead from '../components/SEOHead';
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
+
+export default function Page() {
   return (
     <>
       <SEOHead
+<<<<<<< HEAD
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
         keywords="contact us, get in touch, AI consultation, IT support, customer service, Zion Tech Group"
@@ -251,11 +260,36 @@ const ContactPage: React.FC = () => {
                 </button>
               </form>
             </div>
+=======
+        title=" - Zion Tech Group"
+        description="Professional  services by Zion Tech Group"
+        keywords=", technology, solutions"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional  services and solutions
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700"
+            >
+              Get Started
+            </Link>
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
           </div>
         </div>
       </div>
     </>
   );
+<<<<<<< HEAD
 };
 
 export default ContactPage;
+=======
+}
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352

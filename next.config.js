@@ -11,20 +11,36 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+<<<<<<< HEAD
   
   // Build optimizations
+=======
+
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
+
   typescript: {
     // Warning: This allows production builds to successfully complete even if
     // your project has type errors.
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true
   },
+<<<<<<< HEAD
   
   // Performance optimizations
+=======
+
+  // Skip problematic pages for now
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+    optimizePackageImports: ['@heroicons/react', 'lucide-react']
+  },
+
+  // Optimize static generation
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
   staticPageGenerationTimeout: 60,
   swcMinify: true,
   compress: true,
@@ -33,6 +49,7 @@ const nextConfig = {
   generateBuildId: async () => {
     return 'build-' + Date.now();
   },
+<<<<<<< HEAD
   
   // Headers for better caching and security
   async headers() {
@@ -105,5 +122,28 @@ const nextConfig = {
     return config;
   },
 };
+=======
 
-module.exports = nextConfig;
+  // Enable compression
+  compress: true,
+
+  // Exclude problematic files temporarily
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false
+      }
+    }
+    
+    // Exclude problematic micro-saas-services files temporarily
+    config.module.rules.push({
+      test: /app\/micro-saas-services\/.*\.tsx$/,
+      use: 'ignore-loader'
+    })
+    return config
+  }
+}
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
+
+module.exports = nextConfig

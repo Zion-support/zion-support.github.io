@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { useRouter    } from 'next/navigation'
@@ -283,3 +284,154 @@ function App() {
       </>);
     </HelmetProvider>);"
   )}";'"
+=======
+app/App.tsx'app/App.app/App.tsx;
+app/App.tsx'app/App.tsx;
+
+import React from app/App.tsx'app/App.tsx;
+import { useRouter   } from app/App.tsx'app/App.tsx;
+import, React, { Suspense, lazy } from app/App.tsx'app/App.app/App.tsx;
+import { BrowserRouter, Routes, Route  } from app/App.tsx'app/App.tsx;
+import { HelmetProvider  } from app/App.tsx'app/App.tsx;
+import { { ErrorBoundary  } from app/App.tsx'app/App.tsx;
+import PerformanceMonitor  } from app/App.tsx'app/App.tsx;
+import AccessibilityEnhancer  } from app/App.tsx'app/App.app/App.tsx;
+import LoadingSpinner } from app/App.tsx'app/App.app/App.tsx;
+// Lazy load pages for better app/App.tsx;
+const HomePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AboutPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ContactPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ServicesPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const PricingPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CaseStudiesPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const BlogPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const TeamPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CareersPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const PrivacyPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const TermsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CookiesPage = lazy(() => import(app/App.tsx'app/App.tsx))
+// AI app/App.tsx;
+const AIServicesPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIMarketingPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIAutomationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIHealthcarePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIFintechPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIContentGenerationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIDataAnalyticsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AICybersecurityPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AICRMPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIVoiceSolutionsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIEcommerceSolutionsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIHRSolutionsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIWorkflowAutomationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIDocumentProcessingPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIPredictiveAnalyticsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIEdgeComputingPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIVideoAnalysisPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AISpeechSynthesisPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIRecommendationEnginePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AISentimentAnalysisPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIChatbotEnterprisePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIContentModerationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIPredictiveModelingPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIDocumentIntelligencePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIConversationAnalyticsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AISupplyChainAIPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIHealthcareDiagnosticsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIFinancialForecastingPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIIoTAnalyticsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIConversationalAIPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIAutomatedTestingPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIKnowledgeManagementPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AICustomerChurnPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIAutomatedReportingPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIVoiceAssistantPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIContentGenerationProPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIAccountingAssistantPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AICybersecurityMonitorProPage = lazy(() => import(app/App.tsx'app/App.tsx))
+// IT app/App.tsx;
+const CloudInfrastructurePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CybersecuritySolutionsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const WebDevelopmentPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const MobileDevelopmentPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const APIDevelopmentPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const DatabaseManagementPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const DevOpsCICDPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ITSupportPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const DataAnalyticsBIPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CustomSoftwarePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const NetworkInfrastructurePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ITAssetManagementPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ITSecurityServicesPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ITProjectManagementPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CloudNativeDevelopmentPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const AIIntegrationServicesPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const BlockchainDevelopmentPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const IoTDevelopmentPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ECommerceDevelopmentPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const APIDevelopmentAdvancedPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const DataEngineeringPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CybersecurityAdvancedPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CloudMigrationAdvancedPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const DevOpsAdvancedPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const MachineLearningOpsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const EnterpriseIntegrationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const PerformanceOptimizationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const DisasterRecoveryAdvancedPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ComplianceAutomationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CloudCostOptimizationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const SecurityAutomationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const DataVisualizationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const WorkflowAutomationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const CloudNativeSecurityPage = lazy(() => import(app/App.tsx'app/App.tsx))
+// Micro SAAS app/App.tsx;
+const ZionAnalyticsProPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionChatAIPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionSecurityShieldPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionCloudVaultPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionContentStudioPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionCRMIntelligencePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionDataSyncPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionLeadMagnetPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionProjectMasterPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionEmailAutomationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionSocialSchedulerPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionWorkflowAutomationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAIContentModerationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAIPredictiveMaintenancePage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAIFraudDetectorPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAISupplyChainOptimizerPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAIDocumentAIPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAICustomerServiceProPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAIContractAnalyzerPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAITranslatorProPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionInvoiceGeniusPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionInventorySmartPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionComplianceManagerPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionPerformanceMonitorPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAICodeReviewerPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAISurveyBuilderPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAIMarketingAutomationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAIAccountingAssistantPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAISEOOptimizerPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionAIDataCleanerPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const ZionCustomerInsightsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+// 5G Solutions app/App.tsx;
+const FiveGDataAnalyticsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const FiveGEdgeComputingPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const FiveGImplementationPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const FiveGIoTSolutionsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const FiveGMobileApplicationsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+const FiveGNetworkInfrastructurePage = lazy(() => import(app/App.tsx'app/App.tsx));
+const FiveGPrivateNetworksPage = lazy(() => import(app/App.tsx'app/App.tsx));
+const FiveGSmartCitySolutionsPage = lazy(() => import(app/App.tsx'app/App.tsx));
+const FiveGSolutionsPage = lazy(() => import(app/App.tsx'app/App.tsx))
+// Test Page - removed as it doesnapp/App.tsx'app/App.tsx/app/App.tsx"app/App.tsx/ai-servicesapp/App.tsx"app/App.tsx/ai-marketingapp/App.tsx"app/App.tsx/ai-automationapp/App.tsx"app/App.tsx/ai-healthcareapp/App.tsx"app/App.tsx/ai-fintechapp/App.tsx"app/App.tsx/ai-content-generationapp/App.tsx"app/App.tsx/ai-data-analyticsapp/App.tsx"app/App.tsx/ai-cybersecurityapp/App.tsx"app/App.tsx/ai-crmapp/App.tsx"app/App.tsx/ai-voice-solutionsapp/App.tsx"app/App.tsx/ai-ecommerce-solutionsapp/App.tsx"app/App.tsx/ai-hr-solutionsapp/App.tsx"app/App.tsx/ai-workflow-automationapp/App.tsx"app/App.tsx/ai-document-processingapp/App.tsx"app/App.tsx/ai-predictive-analyticsapp/App.tsx"app/App.tsx/ai-edge-computingapp/App.tsx"app/App.tsx/ai-video-analysisapp/App.tsx"app/App.tsx/ai-speech-synthesisapp/App.tsx"app/App.tsx/ai-recommendation-engineapp/App.tsx"app/App.tsx/ai-sentiment-analysisapp/App.tsx"app/App.tsx/ai-chatbot-enterpriseapp/App.tsx"app/App.tsx/ai-content-moderationapp/App.tsx"app/App.tsx/ai-predictive-modelingapp/App.tsx"app/App.tsx/ai-document-intelligenceapp/App.tsx"app/App.tsx/ai-conversation-analyticsapp/App.tsx"app/App.tsx/ai-supply-chain-aiapp/App.tsx"app/App.tsx/ai-healthcare-diagnosticsapp/App.tsx"app/App.tsx/ai-financial-forecastingapp/App.tsx"app/App.tsx/ai-iot-analyticsapp/App.tsx"app/App.tsx/ai-conversational-aiapp/App.tsx"app/App.tsx/ai-automated-testingapp/App.tsx"app/App.tsx/ai-knowledge-managementapp/App.tsx"app/App.tsx/ai-customer-churnapp/App.tsx"app/App.tsx/ai-automated-reportingapp/App.tsx"app/App.tsx/ai-voice-assistantapp/App.tsx"app/App.tsx/ai-content-generation-proapp/App.tsx"app/App.tsx/ai-accounting-assistantapp/App.tsx"app/App.tsx/ai-cybersecurity-monitor-proapp/App.tsx"app/App.tsx/cloud-infrastructureapp/App.tsx"app/App.tsx/cybersecurity-solutionsapp/App.tsx"app/App.tsx/web-developmentapp/App.tsx"app/App.tsx/mobile-developmentapp/App.tsx"app/App.tsx/api-developmentapp/App.tsx"app/App.tsx/database-managementapp/App.tsx"app/App.tsx/devops-cicdapp/App.tsx"app/App.tsx/it-supportapp/App.tsx"app/App.tsx/data-analytics-biapp/App.tsx"app/App.tsx/custom-softwareapp/App.tsx"app/App.tsx/network-infrastructureapp/App.tsx"app/App.tsx/it-asset-managementapp/App.tsx"app/App.tsx/it-security-servicesapp/App.tsx"app/App.tsx/it-project-managementapp/App.tsx"app/App.tsx/cloud-native-developmentapp/App.tsx"app/App.tsx/ai-integration-servicesapp/App.tsx"app/App.tsx/blockchain-developmentapp/App.tsx"app/App.tsx/iot-developmentapp/App.tsx"app/App.tsx/e-commerce-developmentapp/App.tsx"app/App.tsx/api-development-advancedapp/App.tsx"app/App.tsx/data-engineeringapp/App.tsx"app/App.tsx/cybersecurity-advancedapp/App.tsx"app/App.tsx/cloud-migration-advancedapp/App.tsx"app/App.tsx/devops-advancedapp/App.tsx"app/App.tsx/machine-learning-opsapp/App.tsx"app/App.tsx/enterprise-integrationapp/App.tsx"app/App.tsx/performance-optimizationapp/App.tsx"app/App.tsx/disaster-recovery-advancedapp/App.tsx"app/App.tsx/compliance-automationapp/App.tsx"app/App.tsx/cloud-cost-optimizationapp/App.tsx"app/App.tsx/security-automationapp/App.tsx"app/App.tsx/data-visualizationapp/App.tsx"app/App.tsx/workflow-automationapp/App.tsx"app/App.tsx/cloud-native-securityapp/App.tsx"app/App.tsx/zion-analytics-proapp/App.tsx"app/App.tsx/zion-chat-aiapp/App.tsx"app/App.tsx/zion-security-shieldapp/App.tsx"app/App.tsx/zion-cloud-vaultapp/App.tsx"app/App.tsx/zion-content-studioapp/App.tsx"app/App.tsx/zion-crm-intelligenceapp/App.tsx"app/App.tsx/zion-data-syncapp/App.tsx"app/App.tsx/zion-lead-magnetapp/App.tsx"app/App.tsx/zion-project-masterapp/App.tsx"app/App.tsx/zion-email-automationapp/App.tsx"app/App.tsx/zion-social-schedulerapp/App.tsx"app/App.tsx/zion-workflow-automationapp/App.tsx"app/App.tsx/zion-ai-content-moderationapp/App.tsx"app/App.tsx/zion-ai-predictive-maintenanceapp/App.tsx"app/App.tsx/zion-ai-fraud-detectorapp/App.tsx"app/App.tsx/zion-ai-supply-chain-optimizerapp/App.tsx"app/App.tsx/zion-ai-document-aiapp/App.tsx"app/App.tsx/zion-ai-customer-service-proapp/App.tsx"app/App.tsx/zion-ai-contract-analyzerapp/App.tsx"app/App.tsx/zion-ai-translator-proapp/App.tsx"app/App.tsx/zion-invoice-geniusapp/App.tsx"app/App.tsx/zion-inventory-smartapp/App.tsx"app/App.tsx/zion-compliance-managerapp/App.tsx"app/App.tsx/zion-performance-monitorapp/App.tsx"app/App.tsx/zion-ai-code-reviewerapp/App.tsx"app/App.tsx/zion-ai-survey-builderapp/App.tsx"app/App.tsx/zion-ai-marketing-automationapp/App.tsx"app/App.tsx/zion-ai-accounting-assistantapp/App.tsx"app/App.tsx/zion-ai-seo-optimizerapp/App.tsx"app/App.tsx/zion-ai-data-cleanerapp/App.tsx"app/App.tsx/zion-customer-insightsapp/App.tsx"app/App.tsx/5g-data-analyticsapp/App.tsx"app/App.tsx/5g-edge-computingapp/App.tsx"app/App.tsx/5g-implementationapp/App.tsx"app/App.tsx/5g-iot-solutionsapp/App.tsx"app/App.tsx/5g-mobile-applicationsapp/App.tsx"app/App.tsx/5g-network-infrastructureapp/App.tsx"app/App.tsx/5g-private-networksapp/App.tsx"app/App.tsx/5g-smart-city-solutionsapp/App.tsx"app/App.tsx/5g-solutions" element={<FiveGSolutionsPage />,;} />
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+      </ErrorBoundary>
+    </HelmetProvider>;)
+  )
+}
+>>>>>>> e4a686ee3f0c7f64fed385c71883376af9923352
