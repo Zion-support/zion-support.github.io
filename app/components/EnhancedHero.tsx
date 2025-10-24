@@ -148,9 +148,7 @@ const EnhancedHero: React.FC = () => {
         </div>
       </section>
     </div>
-  )
-}
-
-}
+  );
+};
 
 export default EnhancedHero;}

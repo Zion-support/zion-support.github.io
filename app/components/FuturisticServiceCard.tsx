@@ -84,9 +84,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
         </div>
       </div>
     </div>
-  )
-}
-
-}
+  );
+};
 
 export default FuturisticServiceCard;}
