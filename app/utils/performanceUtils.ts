@@ -96,6 +96,13 @@ export const defaultFunction = () => {
 
 // Performance utilities object
 export const performanceUtils = {
+  measurePerformance: (name: string, fn: () => void) => {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    console.log(`${name} took ${end - start} milliseconds`);
+  },
+
   monitorWebVitals: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Core Web Vitals
@@ -138,6 +145,7 @@ export const performanceUtils = {
         }
       });
     }
+    return true;
   },
 
   optimizeFonts: () => {
@@ -158,9 +166,10 @@ export const performanceUtils = {
         document.head.appendChild(link);
       });
     }
+    return true;
   },
 
-  optimizeThirdPartyScripts: () => {
+  optimizeThirdParty: () => {
     if (typeof window !== 'undefined') {
       // Defer non-critical scripts
       const scripts = document.querySelectorAll('script[data-defer]');
@@ -176,6 +185,7 @@ export const performanceUtils = {
         }
       });
     }
+    return true;
   },
 
   preloadResource: (href: string, as: string) => {
