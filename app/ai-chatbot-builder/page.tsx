@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from 'lucide-react';
 
@@ -129,11 +128,7 @@ const AiChatbotBuilderPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group | No-Code Chatbot Platform</title>
-        <meta name="description" content="Build intelligent chatbots without coding. Our no-code AI chatbot builder helps you create, deploy, and manage chatbots for customer support, lead generation, and more." />
-        <meta name="keywords" content="AI chatbot builder, no-code chatbot, conversational AI, customer support bot, lead generation bot, chatbot platform" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

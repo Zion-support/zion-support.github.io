@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -34,15 +33,7 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and project inquiries." />
-        <meta name="keywords" content="contact us, AI solutions, IT services, consultation, support" />
-        <meta property="og:title" content="Contact Us - Zion Tech Group" />
-        <meta property="og:description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and project inquiries." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/contact" />
-      </Helmet>
+      
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
         {/* Hero Section */}
