@@ -51,6 +51,7 @@
         const measure = performance.getEntriesByName(name'', 'measure'
           this.recordCustomMetric(name'', measure.duration, 'ms'
         console.error('Failed to measure performance'
+>>>>>>> origin/main
   Milliseconds = 'ms'
   Bytes = 'bytes'
   Count = 'count''
