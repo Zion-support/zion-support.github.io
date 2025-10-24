@@ -7,7 +7,7 @@ interface MetaTagsProps {
 const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      {/* MetaTags component */}
+      {/* Meta tags component content */}
     </div>
   );
 };

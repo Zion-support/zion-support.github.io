@@ -7,7 +7,7 @@ interface StructuredDataProps {
 const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      {/* StructuredData component */}
+      {/* Structured data component content */}
     </div>
   );
 };
