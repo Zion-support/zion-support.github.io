@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-import React from 'react';
-
-interface FuturisticServiceCardProps {
-  // Add props here
-=======
 'use client';;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -115,7 +107,6 @@ return (
           </div>
         </div>
   ),
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = (_props) => {

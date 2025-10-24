@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-'use client';
-=======
 'use client';;
 import React, {useState, useEffect}from 'react';
 import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react';
@@ -95,7 +92,6 @@ interface PerformanceMetrics {loadTime: number;,}
         fps,
       });
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 import React from 'react';
 

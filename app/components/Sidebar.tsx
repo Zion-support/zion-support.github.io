@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-'use client';
-=======
 'use client';;
 import React, {Suspense, lazy}from 'react';
 import {Link, useLocation}}from 'react-router-dom';
@@ -16,7 +13,6 @@ import {X,}
   BarChart,
   ChevronDown,
   ChevronRight,
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 import React from 'react';
 
@@ -26,11 +22,6 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = (_props) => {
   return (
-<<<<<<< HEAD
-    <div>
-      {/* Component content */}
-    </div>
-=======
     <>
   </>
       {/* Mobile Menu Button */}
@@ -140,7 +131,6 @@ const Sidebar: React.FC<SidebarProps> = (_props) => {
           </div>
       </aside>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
   );
 };
 

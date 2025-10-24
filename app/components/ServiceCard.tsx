@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-'use client';
-
-=======
 'use client';;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 import React from 'react';
 
-<<<<<<< HEAD
-=======
 const ServiceCardPage: React.FC = () => {
   const features = [
     {
@@ -182,7 +175,6 @@ interface ServiceCardProps {title: string;,}
 'use client';
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 interface ServiceCardProps {
   // Add props here
 }

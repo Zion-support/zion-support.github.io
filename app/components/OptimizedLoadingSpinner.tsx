@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-'use client';
-=======
 'use client';;
 import React, {Suspense, lazy}from 'react';
 interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}
@@ -10,12 +7,9 @@ interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 import React from 'react';
 
-<<<<<<< HEAD
-=======
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
               /></div>
               <div;
@@ -35,7 +29,6 @@ case 'bars':;
                     animationDelay: `${i * 0.1,}s`,
 'use client';
 import React, { Suspense, lazy } from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 interface OptimizedLoadingSpinnerProps {
   // Add props here
 }

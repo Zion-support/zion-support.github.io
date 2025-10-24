@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-'use client';
-
-=======
 'use client';;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 import React from 'react';
 
 interface ContentPromotionBannerProps {
@@ -12,10 +7,6 @@ interface ContentPromotionBannerProps {
 
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (_props) => {
   return (
-<<<<<<< HEAD
-    <div>
-      {/* Component content */}
-=======
     <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
@@ -252,7 +243,6 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
     </div>
   );
 };

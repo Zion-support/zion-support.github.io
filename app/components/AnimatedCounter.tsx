@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-'use client';
-
-=======
 'use client';;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 import React from 'react';
 
 interface AnimatedCounterProps {
@@ -19,8 +14,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = (_props) => {
 };
 
 export default AnimatedCounter;
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react'
 import React, { useState, useEffect } from 'react'
@@ -65,4 +58,3 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
   )
 }
 export default AnimatedCounter
->>>>>>> cursor/fix-errors-and-merge-to-main-328b

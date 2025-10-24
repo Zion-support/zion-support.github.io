@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-import React from 'react';
-=======
 'use client';;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -31,7 +26,6 @@ const benefits = [
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 interface EnhancedAccessibilityEnhancerProps {
   // Add props here

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-import React from 'react';
-=======
 'use client';;
 import React from 'react';
 'use client';;
@@ -14,7 +9,6 @@ useEffect(() => {// UX enhancement logic;
       // Add smooth scrolling;
       document.documentElement.style.scrollBehavior = 'smooth';
 // Add loading states for interactive elements;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 interface UserExperienceEnhancerProps {
   // Add props here

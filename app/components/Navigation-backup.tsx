@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-import React from 'react';
-=======
 'use client';;
 import React, {useState, useEffect}from 'react';
 import {Link}}from 'react-router-dom';
@@ -15,7 +10,6 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 interface NavigationBackupProps {
   // Add props here

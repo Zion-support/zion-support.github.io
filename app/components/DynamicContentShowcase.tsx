@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-=======
 'use client';;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -52,7 +48,6 @@ const DynamicContentShowcase: React.FC = () => {
 
   const features: Feature[] = [
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 import React from 'react';
 
 interface DynamicContentShowcaseProps {

@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-'use client';
-
-=======
 'use client';;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 import React from 'react';
 
-<<<<<<< HEAD
-interface ServiceWorkerRegistrationProps {
-  // Add props here
-=======
 'use client';;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -237,7 +228,6 @@ return (
       </section>
     </div>
   ),
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 }
 
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = (_props) => {

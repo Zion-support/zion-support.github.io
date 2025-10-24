@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-=======
 'use client';;
 interface SEOOptimizerProps {title: string;,}
   description: string;,
@@ -35,7 +33,6 @@ interface SEOOptimizerProps {title: string;,}
 
 import React, { useEffect } from 'react';
 import Head from 'next/head';
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 interface SEOOptimizerProps {
   // Add props here

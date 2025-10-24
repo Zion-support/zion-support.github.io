@@ -1,6 +1,4 @@
 'use client';
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const ContentNewsletterSignup: React.FC = React.memo((props) => {
@@ -8,7 +6,6 @@ const ContentNewsletterSignup: React.FC = React.memo((props) => {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 import React from 'react';
 
@@ -18,10 +15,6 @@ interface ContentNewsletterSignupProps {
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (_props) => {
   return (
-<<<<<<< HEAD
-    <div>
-      {/* Component content */}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentNewsletterSignup | Zion Tech Group</title>
@@ -266,7 +259,6 @@ const ContentNewsletterSignup: React.FC = () => {
           ))
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
     </div>
   );
 };

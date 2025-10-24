@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-'use client';
-
-=======
 'use client';;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 import React from 'react';
 
 interface SystemMonitorProps {
@@ -12,10 +7,6 @@ interface SystemMonitorProps {
 
 const SystemMonitor: React.FC<SystemMonitorProps> = (_props) => {
   return (
-<<<<<<< HEAD
-    <div>
-      {/* Component content */}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>SystemMonitor | Zion Tech Group</title>
@@ -148,7 +139,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
     </div>
   );
 };

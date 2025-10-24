@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-'use client';
-=======
 'use client';;
 import React, {createContext, useContext, useEffect, ReactNode}from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 import React from 'react';
 
-<<<<<<< HEAD
-interface AnalyticsProviderProps {
-  // Add props here
-=======
 export const useAnalytics = () => {const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}return context;
@@ -36,7 +28,6 @@ export const useAnalytics = () => {
   }
   return context;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 }
 
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = (_props) => {

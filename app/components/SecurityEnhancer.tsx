@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-'use client';
-=======
 'use client';;
 import React from 'react';
 'use client';;
@@ -18,7 +15,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({children ,}) => {use
   )}'Referrer-Policy': 'strict-origin-when-cross-origin';}
       }
 // Add CSP meta tag;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 import React from 'react';
 

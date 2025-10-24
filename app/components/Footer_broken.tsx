@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-'use client';
-=======
 'use client';;
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 import React from 'react';
 

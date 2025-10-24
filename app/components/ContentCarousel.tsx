@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-'use client';
-
-=======
 'use client';;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 import React from 'react';
 
-<<<<<<< HEAD
-interface ContentCarouselProps {
-  // Add props here
-}
-
-const ContentCarousel: React.FC<ContentCarouselProps> = (_props) => {
-=======
 const ContentCarouselPage: React.FC = () => {
   const features = [
     {
@@ -182,7 +170,6 @@ const ContentCarousel: React.FC = React.memo((props) => {
                       </div>
                     ))}
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
   return (
     <div>
       {/* Component content */}

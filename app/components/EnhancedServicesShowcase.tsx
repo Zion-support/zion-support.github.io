@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
 const EnhancedServicesShowcase: React.FC = () => {
     const services = [
@@ -39,7 +37,6 @@ const EnhancedServicesShowcase: React.FC = () => {
       stats: '95% Efficiency',
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
 interface EnhancedServicesShowcaseProps {
   // Add props here
