@@ -11,33 +11,33 @@ const PerformanceMonitor: React.FC = () => {
           getCLS((metric) => {
             // Log performance metrics in development
             if (process.env.NODE_ENV === 'development') {
-              console.log('CLS:', metric);
+              // console.log('CLS:', metric);
             }
           });
           getFID((metric) => {
             if (process.env.NODE_ENV === 'development') {
-              console.log('FID:', metric);
+              // console.log('FID:', metric);
             }
           });
           getFCP((metric) => {
             if (process.env.NODE_ENV === 'development') {
-              console.log('FCP:', metric);
+              // console.log('FCP:', metric);
             }
           });
           getLCP((metric) => {
             if (process.env.NODE_ENV === 'development') {
-              console.log('LCP:', metric);
+              // console.log('LCP:', metric);
             }
           });
           getTTFB((metric) => {
             if (process.env.NODE_ENV === 'development') {
-              console.log('TTFB:', metric);
+              // console.log('TTFB:', metric);
             }
           });
         }
       } catch (error) {
         if (process.env.NODE_ENV === 'development') {
-          console.warn('Performance monitoring not available:', error);
+          // console.warn('Performance monitoring not available:', error);
         }
       }
     };
