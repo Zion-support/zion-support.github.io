@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 interface SEOConfig {
   title?: string;
@@ -14,7 +14,7 @@ interface SEOConfig {
 }
 
 export const useSEO = (config: SEOConfig = {}) => {
-  const location = useLocation();
+  const pathname = usePathname();
 
   const updateMetaTag = useCallback((name: string, content: string) => {
     let meta = document.querySelector(`meta[name="${name}"]`);
@@ -176,9 +176,9 @@ export const useSEO = (config: SEOConfig = {}) => {
     }
 
     // Add page-specific structured data
-    addPageStructuredData(location.pathname);
+    addPageStructuredData(pathname);
 
-  }, [config, location.pathname, addPageStructuredData, updateOpenGraphTags, updateTwitterTags, updateMetaTag, updateCanonicalUrl, addStructuredData]);
+  }, [config, pathname, addPageStructuredData, updateOpenGraphTags, updateTwitterTags, updateMetaTag, updateCanonicalUrl, addStructuredData]);
 
 
   return {

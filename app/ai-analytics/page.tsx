@@ -1,10 +1,10 @@
 'use client';
 import React, { lazy } from 'react';
-import { CheckCircle, TrendingUp } from 'lucide-react';
+import { CheckCircle, TrendingUp, Brain, BarChart, Target, Users } from 'lucide-react';
 
-const Navigation = lazy(() => import('../components/Navigation'))
-const Footer = lazy(() => import('../components/Footer'))
-const AIAnalyticsPage: React.FC = React.memo((props) => {
+const Navigation = lazy(() => import('../components/Navigation'));
+const Footer = lazy(() => import('../components/Footer'));
+const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -22,41 +22,43 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       icon: Target,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-optimized content and visualizations.',
-      benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']}
+      benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']
     },
     {
       icon: TrendingUp,
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with advanced analytics and benchmarking.',
-      benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']}
+      benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']
     }
-  ]
+  ];
+
   const analyticsTypes = [
     {
       title: 'Sales Analytics',
       description: 'Track sales performance, pipeline health, and revenue trends.',
       icon: TrendingUp,
-      metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']}
+      metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']
     },
     {
       title: 'Marketing Analytics',
       description: 'Measure marketing campaign effectiveness and ROI.',
       icon: Target,
-      metrics: ['Campaign performance', 'Lead generation', 'Customer acquisition', 'ROI analysis']}
+      metrics: ['Campaign performance', 'Lead generation', 'Customer acquisition', 'ROI analysis']
     },
     {
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences.',
       icon: Users,
-      metrics: ['Customer segmentation', 'Behavior analysis', 'Retention rates', 'Lifetime value']}
+      metrics: ['Customer segmentation', 'Behavior analysis', 'Retention rates', 'Lifetime value']
     },
     {
       title: 'Financial Analytics',
       description: 'Monitor financial health and profitability.',
       icon: BarChart,
-      metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']}
+      metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']
     }
-  ]
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -71,7 +73,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         '1,000 data points/month',
         'Basic integrations'
       ],
-      popular: false}
+      popular: false
     },
     {
       name: 'Professional',
@@ -88,7 +90,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         'API access',
         'Custom metrics'
       ],
-      popular: true}
+      popular: true
     },
     {
       name: 'Enterprise',
@@ -105,9 +107,10 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         'Advanced security',
         'Dedicated account manager'
       ],
-      popular: false}
+      popular: false
     }
-  ]
+  ];
+
   const integrations = [
     { name: 'Google Analytics', icon: '📊' },
     { name: 'Salesforce', icon: '☁️' },
@@ -117,7 +120,8 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
     { name: 'Mailchimp', icon: '📧' },
     { name: 'Facebook Ads', icon: '📱' },
     { name: 'Google Ads', icon: '🔍' }
-  ]
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -317,6 +321,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
 
       <Footer />
     </div>
-  )
-}
-export default AIAnalyticsPage
+  );
+};
+
+export default AIAnalyticsPage;
