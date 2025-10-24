@@ -66,6 +66,7 @@ export class PerformanceMetrics {;
             if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming
               this.recordMetric({
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
                 name: name,
   value: navEntry.loadEventEnd - navEntry.fetchStart,
   unit: unit,
@@ -74,6 +75,7 @@ export class PerformanceMetrics {;
   metadata: {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
   domInteractive: navEntry.domInteractive - navEntry.fetchStart
+:app/utils/performanceMetrics.ts
                 }
               })
             }
@@ -88,10 +90,12 @@ export class PerformanceMetrics {;
             if (entry.name === 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime
               this.recordMetric({
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
                 name: name,
   value: entry.startTime,
   unit: unit,
   timestamp: new Date()
+:app/utils/performanceMetrics.ts
                 category: 'load'
               })
             }
@@ -107,10 +111,12 @@ export class PerformanceMetrics {;
           if (lastEntry) {
             this.webVitals.LCP = lastEntry.startTime
             this.recordMetric({
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
               name: name,
   value: lastEntry.startTime,
   unit: unit,
   timestamp: new Date()
+:app/utils/performanceMetrics.ts
               category: 'load'
             })
           }
@@ -127,10 +133,12 @@ export class PerformanceMetrics {;
           }
           this.webVitals.CLS = clsValue
           this.recordMetric({
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
             name: name,
   value: clsValue,
   unit: unit,
   timestamp: new Date()
+:app/utils/performanceMetrics.ts
             category: 'runtime'
           })
         })
@@ -162,6 +170,7 @@ export class PerformanceMetrics {;
     const perfData = window.performance.timing
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
     this.recordMetric({
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
       name: name,
   value: pageLoadTime,
   unit: unit,
@@ -172,6 +181,7 @@ export class PerformanceMetrics {;
   tcpConnection: perfData.connectEnd - perfData.connectStart,
   serverResponse: perfData.responseEnd - perfData.requestStart,
   domParsing: perfData.domComplete - perfData.domLoading
+:app/utils/performanceMetrics.ts
       }
     })
   }
@@ -181,12 +191,14 @@ export class PerformanceMetrics {;
    */
   recordNetworkRequest(url: string, duration: number, status: number): void {
     this.recordMetric({
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
       name: name,
   value: duration,
   unit: unit,
   timestamp: new Date()
       category: category,
   metadata: {
+:app/utils/performanceMetrics.ts
         url
         status
       }
@@ -201,6 +213,7 @@ export class PerformanceMetrics {;
     if (!(performance as PerformanceWithMemory).memory) return
     const memory = (performance as PerformanceWithMemory).memory
     this.recordMetric({
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
       name: name,
   value: memory.usedJSHeapSize,
   unit: unit,
@@ -210,6 +223,7 @@ export class PerformanceMetrics {;
         total: memory.totalJSHeapSize,
   limit: memory.jsHeapSizeLimit,
   percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+:app/utils/performanceMetrics.ts
       }
     })
   }
@@ -222,10 +236,12 @@ export class PerformanceMetrics {;
     const result = fn();
     const endTime = performance.now();
     this.recordMetric({
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
       name: name,
   value: endTime - startTime,
   unit: unit,
   timestamp: new Date()
+:app/utils/performanceMetrics.ts
       category: 'runtime'
     })
     return result
@@ -239,10 +255,12 @@ export class PerformanceMetrics {;
     const result = await fn();
     const endTime = performance.now();
     this.recordMetric({
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
       name: name,
   value: endTime - startTime,
   unit: unit,
   timestamp: new Date()
+:app/utils/performanceMetrics.ts
       category: 'runtime'
     })
     return result
@@ -332,9 +350,11 @@ export class PerformanceMetrics {;
       metrics: this.getMetrics()
       webVitals: this.getWebVitals()
       summary: {
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
         avgLoadTime,
   totalMetrics: this.metrics.length,
   performanceScore: this.calculatePerformanceScore()
+:app/utils/performanceMetrics.ts
         recommendations: this.getRecommendations()
       }
       timestamp: new Date()
@@ -381,5 +401,7 @@ interface LayoutShift extends PerformanceEntry {
 }
 
 // Export singleton instance
+<<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics
+:app/utils/performanceMetrics.ts

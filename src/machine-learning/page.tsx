@@ -6,14 +6,14 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 
-constMachineLearningPage: React.FC= () =>{constfeatures= []
-    'Custom ML model development and training',
-    'Predictive analytics and forecasting',
-    'Data preprocessing and feature engineering',
-    'Model optimization and hyperparameter tuning',
-    'Real-time inference and deployment',
-    'A/B testing and performance monitoring',
-    'Integration with existing systems',
+constMachineLearningPage: React.FC = () =>{constfeatures= []
+    'Custom ML model development and training'
+    'Predictive analytics and forecasting'
+    'Data preprocessing and feature engineering'
+    'Model optimization and hyperparameter tuning'
+    'Real-time inference and deployment'
+    'A/B testing and performance monitoring'
+    'Integration with existing systems'
     'Continuous learning and model updates'
   ]
 
@@ -28,28 +28,28 @@ constMachineLearningPage: React.FC= () =>{constfeatures= []
 
   constuseCases= [
     {
-      title: 'Predictive Analytics',
-      description: 'Forecast sales, demand, and market trends with high accuracy',
+      title: 'Predictive Analytics'
+      description: 'Forecast sales, demand, and market trends with high accuracy'
       icon: '📈'
-   },
-    {title: 'Customer Segmentation',
-      description: 'Identify and target customer groups for personalized marketing',
+   }
+    {title: 'Customer Segmentation'
+      description: 'Identify and target customer groups for personalized marketing'
       icon: '👥'
-   },
-    {title: 'Fraud Detection',
-      description: 'Detect and prevent fraudulent activities in real-time',
+   }
+    {title: 'Fraud Detection'
+      description: 'Detect and prevent fraudulent activities in real-time'
       icon: '🛡️'
-   },
-    {title: 'Recommendation Systems',
-      description: 'Provide personalized recommendations to increase engagement',
+   }
+    {title: 'Recommendation Systems'
+      description: 'Provide personalized recommendations to increase engagement'
       icon: '🎯'
-   },
-    {title: 'Process Optimization',
-      description: 'Optimize business processes and reduce operational costs',
+   }
+    {title: 'Process Optimization'
+      description: 'Optimize business processes and reduce operational costs'
       icon: '⚙️'
-   },
-    {title: 'Risk Assessment',
-      description: 'Evaluate and mitigate business risks with data-driven insights',
+   }
+    {title: 'Risk Assessment'
+      description: 'Evaluate and mitigate business risks with data-driven insights'
       icon: '⚠️'
     }
   ]

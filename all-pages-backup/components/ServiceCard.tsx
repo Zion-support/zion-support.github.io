@@ -1,14 +1,17 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/ServiceCard.tsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
+:app/components/ServiceCard.tsx
 
 const ServiceCardPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD:all-pages-backup/components/ServiceCard.tsx
       icon: Brain,
   title: title,
   description: description,
@@ -31,6 +34,7 @@ const ServiceCardPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+:app/components/ServiceCard.tsx
     }
   ]
 
@@ -43,11 +47,17 @@ const ServiceCardPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD:all-pages-backup/components/ServiceCard.tsx
     <>;
       <Helmet>;
+:app/components/ServiceCard.tsx
         <title>ServiceCard</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ServiceCard solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceCard, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -55,7 +65,7 @@ const ServiceCardPage: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               ServiceCard
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -82,7 +92,7 @@ const ServiceCardPage: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -111,7 +121,7 @@ const ServiceCardPage: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -142,9 +152,11 @@ const ServiceCardPage: React.FC = () => {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD:all-pages-backup/components/ServiceCard.tsx
   )};
 
 export default ServiceCardPage
+:app/components/ServiceCard.tsx
 price?: string
 popular?: boolean
 onSelect?: () =>void
@@ -152,21 +164,23 @@ class Nam e?: string}constServiceCard:React.FC<ServiceCardProp s>= ({title
 description
 features
 price
+<<<<<<< HEAD:all-pages-backup/components/ServiceCard.tsx
 popular= false
+:app/components/ServiceCard.tsx
 onSelect
 className = ''
 }) => {
 return (
-<div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${
+<div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${>
 popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
-}`}>{popular && (</div>
+}`}>{popular && (</div>;
 <div className=&quot;flex items-center gap-2 mb-4&quot;></div>
 <div className=&quot;w-2 h-2 bg-purple-400 rounded-full&quot;></div>
 <span className=&quot;text-purple-400 text-sm font-semibold&quot;>Most Popular</span>
 </div>
 )}
 <div className=&quot;mb-4&quot;></div>
-<h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors&quot;>$3</h3>
+<h3 className=&quot;text-xl font-bold text-white mb-2 group-hover: text-purple-400 transition-colors&quot;>$3</h3>
 <p className=&quot;text-gray-300 text-sm&quot;>{description}</p>
 </div>
 <div className=&quot;space-y-2 mb-6&quot;>{features.map((feature, index) => (</div>
@@ -183,9 +197,8 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 </div>
 )}
 {onSelect && (
-<button
-onClick={onSelect}
-className=&quot;w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group&quot;></button>
+<button onClick = {onSelect};>
+className=&quot;w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group&quot;></button>
 Get Started
 <ArrowRight className=&quot;w-4 h-4 group-hover:translate-x-1 transition-transform&quot; />
 </button>

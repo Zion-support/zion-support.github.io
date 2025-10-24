@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/OptimizedImage.tsx
 import Footer from './Footer';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -11,15 +12,21 @@ interface OptimizedImageProps {;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {;
+:app/components/OptimizedImage.tsx
   return (;
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <Helmet>
+        <Head>
         <title>OptimizedImage | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       {/* Hero Section */}
-      <section className=&quot;relative py-20 px-4 sm:px-6 lg:px-8&quot;></section>
+      <section className=&quot;relative py-20 px-4 sm: px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
           <div className=&quot;text-center&quot;></div>
             <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;></h1>
@@ -44,7 +51,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {;
         </div>
       </section>
       {/* Features Section */}
-      <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
@@ -54,7 +61,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {;
               Our optimizedimage solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+          <div className=&quot;grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
             {features.map((feature, index) => (
               <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300&quot;></div>
                 <div className=&quot;flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4&quot;></div>
@@ -68,7 +75,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {;
         </div>
       </section>
       {/* Benefits Section */}
-      <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 bg-white/5&quot;></section>
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;></h2>
@@ -88,7 +95,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {;
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -119,6 +126,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {;
       </div>
       <Footer />
     </>
+<<<<<<< HEAD:all-pages-backup/components/OptimizedImage.tsx
   )};
 
 export default OptimizedImagePage
+:app/components/OptimizedImage.tsx

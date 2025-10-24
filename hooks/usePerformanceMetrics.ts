@@ -1,6 +1,5 @@
 import React from 'react'
 
-<<<<<<< HEAD
 "use client"
 
 =======

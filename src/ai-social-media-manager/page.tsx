@@ -6,14 +6,14 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 
-constAISocialMediaManagerPage: React.FC= () =>{constfeatures= []
-    'AI-powered content creation and curation',
-    'Smart scheduling across all platforms',
-    'Advanced analytics and performance insights',
-    'Audience intelligence and targeting',
-    'Hashtag optimization and trend analysis',
-    'Competitor analysis and benchmarking',
-    'Automated engagement and responses',
+constAISocialMediaManagerPage: React.FC = () =>{constfeatures= []
+    'AI-powered content creation and curation'
+    'Smart scheduling across all platforms'
+    'Advanced analytics and performance insights'
+    'Audience intelligence and targeting'
+    'Hashtag optimization and trend analysis'
+    'Competitor analysis and benchmarking'
+    'Automated engagement and responses'
     'Multi-platform campaign management'
   ]
 

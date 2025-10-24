@@ -4,12 +4,14 @@ import { useEffect } from 'react';
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
   useEffect(() => {
     // Add high contrast mode support
+<<<<<<< HEAD:all-pages-backup/components/EnhancedAccessibility.tsx
     const handleContrastChange = (e: MediaQueryListEvent) => {;
       if (e.matches) {;
         document.documentElement.classList.add('high-contrast')} else {
         document.documentElement.classList.remove('high-contrast')}
     };
 
+:app/components/EnhancedAccessibility.tsx
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     mediaQuery.addEventListener('change', handleContrastChange);
     // Call with the MediaQueryList directly
@@ -18,9 +20,14 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   return (
     <>
       <Helmet>
+        <Head>
         <title>EnhancedAccessibility</title>
         <meta name=&quot;description&quot; content=&quot;Advanced EnhancedAccessibility solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedAccessibility, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -28,7 +35,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               EnhancedAccessibility
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -55,7 +62,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -84,7 +91,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -116,6 +123,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       <Footer />
     </>
   );
+<<<<<<< HEAD:all-pages-backup/components/EnhancedAccessibility.tsx
     return () => {
       mediaQuery.removeEventListener('change', handleContrastChange)}}, []);
 
@@ -168,3 +176,4 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   return <>{children}</>};
 
 export default EnhancedAccessibility
+:app/components/EnhancedAccessibility.tsx

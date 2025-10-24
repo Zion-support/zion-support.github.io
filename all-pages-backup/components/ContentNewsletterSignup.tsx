@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/ContentNewsletterSignup.tsx
 import Footer from './Footer';
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
@@ -6,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+:app/components/ContentNewsletterSignup.tsx
 
 interface ContentNewsletterSignupProps {
   title?: string
@@ -16,11 +18,14 @@ interface ContentNewsletterSignupProps {
     icon: React.ComponentType<{ className?: string }>
     text: string
   }>
+<<<<<<< HEAD:all-pages-backup/components/ContentNewsletterSignup.tsx
   onSubscribe?: (email: string) => void
+:app/components/ContentNewsletterSignup.tsx
 }constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= &quot;Stay Updated with Our LatestInsights&quot;
   subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;
   placeholder= &quot;Enter your emailaddress&quot;
   buttonText= &quot;Subscribe&quot;
+<<<<<<< HEAD:all-pages-backup/components/ContentNewsletterSignup.tsx
   features= [
     { icon: Star, text:&quot;Exclusive content&quot}
     {icon: Users, text:&quot;Industry insights&quot}
@@ -33,6 +38,7 @@ interface ContentNewsletterSignupProps {
   const [isSubscribedsetIsSubscribed] = useState(false);
   const [isLoadingsetIsLoading] = useState(false);
   consthandleSubmit= async (e: React.FormEvent) => {
+:app/components/ContentNewsletterSignup.tsx
   
     e.preventDefault()
     if (!email) return setIsLoadin g(true)
@@ -63,9 +69,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
   return (
     <>
       <Helmet>
+<<<<<<< HEAD:all-pages-backup/components/ContentNewsletterSignup.tsx
+:app/components/ContentNewsletterSignup.tsx
         <title>ContentNewsletterSignup</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentNewsletterSignup solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentNewsletterSignup, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -73,7 +85,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               ContentNewsletterSignup
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -103,7 +115,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -127,6 +139,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
               <div></div>
                 <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-white mb-2&quot;>
                   Email Address
+<<<<<<< HEAD:all-pages-backup/components/ContentNewsletterSignup.tsx
                 <input
                   type=&quot;email&quot
                   value={email}
@@ -138,6 +151,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
               <button
                 type=&quot;submit&quot
                 disabled={isLoading || !email}
+:app/components/ContentNewsletterSignup.tsx
                 className=&quot;w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center&quot;></button>
                 {isLoading ? (
                   <>
@@ -155,7 +169,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -186,6 +200,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
       </div>
       <Footer />
     </>
+<<<<<<< HEAD:all-pages-backup/components/ContentNewsletterSignup.tsx
   )};
 
 export default ContentNewsletterSignupPage
+:app/components/ContentNewsletterSignup.tsx

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
 "use client"
 
 import React, { useEffect } from 'react'
@@ -35,10 +36,12 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
   return <>{children}</>};
 'use client';
 import { useEffect } from 'react';
+:app/components/AccessibilityEnhancer.tsx
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
+<<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content with Alt + M
       if (e.altKey && e.key === 'm') {;
@@ -57,22 +60,26 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
           const firstLink = navigation.querySelector('a') as HTMLElement
           if (firstLink) {
             firstLink.focus()}
+:app/components/AccessibilityEnhancer.tsx
         }
       }
-    };
-
+    }
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
+<<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
       document.removeEventListener('keydown', handleKeyDown)}}, []);
+:app/components/AccessibilityEnhancer.tsx
 
   useEffect(() => {
     // Add focus indicators
     const style = document.createElement('style');
     style.textContent = `
+<<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
       *:focus {
         outline: 2px solid #8b5cf6 !important
         outline-offset: 2px !important
+:app/components/AccessibilityEnhancer.tsx
       }
 
       const nav = document.querySelector('nav');
@@ -91,8 +98,10 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
+<<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
           * {
             border-color: currentColor !important
+:app/components/AccessibilityEnhancer.tsx
           }
           button, a {
             border: 2px solid currentColor !important
@@ -131,16 +140,20 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     document.head.appendChild(style);
 
     return () => {
+<<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
       document.head.removeChild(style)}}, []);
+:app/components/AccessibilityEnhancer.tsx
 
       // Apply focus trapping to modals
       const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
       modals.forEach(trapFocus);
+<<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
   useEffect(() => {
     // Add ARIA landmarks
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
       main.setAttribute('role', 'main')}
+:app/components/AccessibilityEnhancer.tsx
 
     const nav = document.querySelector('nav');
     if (nav && !nav.getAttribute('role')) {
@@ -151,6 +164,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       footer.setAttribute('role', 'contentinfo')}
   }, []);
 
+<<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
   return <>{children}</>};
 
 export default AccessibilityEnhancer
+:app/components/AccessibilityEnhancer.tsx

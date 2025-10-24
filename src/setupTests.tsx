@@ -20,13 +20,13 @@ console.error = (...args) => {}
 {}
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {}
-  writable: true,
+  writable: true
   value: jest.fn().mockImplementation(query => ({}
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
+    matches: false
+    media: query
+    onchange: null
+    addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn()
+    removeEventListener: jest.fn()
     dispatchEvent: jest.fn()
 {  }))
 {})

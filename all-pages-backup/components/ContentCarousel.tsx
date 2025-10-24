@@ -1,10 +1,12 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/ContentCarousel.tsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+:app/components/ContentCarousel.tsx
 
 interface Slide {
   id: number,
@@ -20,6 +22,7 @@ const ContentCarousel: React.FC = () => {;
   
   const slides: Slide[] = [;
     {
+<<<<<<< HEAD:all-pages-backup/components/ContentCarousel.tsx
       id: 1,
   title: title,
   description: description,
@@ -41,6 +44,7 @@ const ContentCarousel: React.FC = () => {;
   description: description,
   features: features,
   icon: <Shield className="h-12 w-12" />
+:app/components/ContentCarousel.tsx
       color: "from-red-500 to-pink-500"
     }
   ]
@@ -56,9 +60,15 @@ const ContentCarousel: React.FC = () => {;
   return (
     <>
       <Helmet>;
+<<<<<<< HEAD:all-pages-backup/components/ContentCarousel.tsx
+:app/components/ContentCarousel.tsx
         <title>ContentCarousel</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -66,7 +76,7 @@ const ContentCarousel: React.FC = () => {;
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               ContentCarousel
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -93,7 +103,7 @@ const ContentCarousel: React.FC = () => {;
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -124,10 +134,12 @@ const ContentCarousel: React.FC = () => {;
         </div>
         <div className=&quot;relative&quot;></div>
 <div className=&quot;overflow-hidden rounded-xl&quot;></div>
+<<<<<<< HEAD:all-pages-backup/components/ContentCarousel.tsx
             <div
               className=&quot;flex transition-transform duration-500 ease-in-out&quot
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >{slides.map((slide, index) => (</div>
+:app/components/ContentCarousel.tsx
 <div key={index} className=&quot;w-full flex-shrink-0&quot;></div>
                   <div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;></div>
                     <div className=&quot;text-center mb-8&quot;></div>
@@ -143,13 +155,13 @@ const ContentCarousel: React.FC = () => {;
                           <span className=&quot;text-purple-100&quot;>{feature}</span>
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">{slide.title}</h3>
-                        <p className="text-gray-600 mb-6">{slide.description}</p>
-                        <ul className="space-y-2">
+                      <div className = "flex-1">
+                        <h3 className="tex t-2xlfont-bold text-gray-900 mb-4">{slide.title}</h3>
+                        <p className="tex t-gray-600mb-6">{slide.description}</p>
+                        <ul className="spa ce-y-2">
                           {slide.features.map((feature, index) => (
-                            <li key={index} className="flex items-center text-gray-700">
-                              <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                            <li key={index} className="fle xitems-center text-gray-700">
+                              <CheckCircle className="h-5w-5te x t-green-500 mr-2" />
                               {feature}
                             </li>
                           ))}
@@ -162,7 +174,7 @@ const ContentCarousel: React.FC = () => {;
     <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4&quot;></div>
       <div className=&quot;max-w-7xl mx-auto&quot;>{/* Header */}</div>
         <div className=&quot;text-center mb-16&quot;></div>
-          <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;></h2>
+          <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-6&quot;></h2>
             Discover Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Solutions</span>
           </h2>
           <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
@@ -170,7 +182,7 @@ const ContentCarousel: React.FC = () => {;
         {/* Carousel Container */}
         {/* Carousel */}
         <div className=&quot;relative&quot;></div>
-          <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden&quot;></div>
+          <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md: p-12 overflow-hidden&quot;></div>
             <div className=&quot;flex items-center justify-between mb-8&quot;></div>
               <div className=&quot;flex items-center gap-4&quot;></div>
                 <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center&quot;></div>
@@ -178,7 +190,7 @@ const ContentCarousel: React.FC = () => {;
                 </div>
                 {/* Features */}
                 <div className=&quot;space-y-4&quot;></div>
-                  <h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Key Features:</h4>
+                  <h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Key Features: </h4>
                   <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-3&quot;>{currentSlideData.features.map((feature, index) => (</div>
                       <div key={index} className=&quot;flex items-center space-x-3&quot;></div>
                         <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; />
@@ -239,13 +251,12 @@ const ContentCarousel: React.FC = () => {;
             )}
           </div>
 
-          <button
-            onClick={prevSlide}
+          <button onClick = {prevSlide};>
             className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
             <ChevronLeft className=&quot;h-6 w-6&quot; />
           </button>
-          <button
-            onClick={nextSlide}
+          <button ,>
+            onClick = {nextSlide}
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
             <ChevronRight className=&quot;h-6 w-6&quot; />
           </button>
@@ -256,17 +267,18 @@ const ContentCarousel: React.FC = () => {;
             <ChevronLeft className=&quot;w-6 h-6&quot; />
           </button>
 
+<<<<<<< HEAD:all-pages-backup/components/ContentCarousel.tsx
           <button
             onClick={nextSlide}
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot
+:app/components/ContentCarousel.tsx
           ></button>
             <ChevronRight className=&quot;w-6 h-6&quot; />
           </button>
         </div>
         {/* Slide Indicators */}
         <div className=&quot;flex justify-center mt-8 space-x-2&quot;>{slides.map((_, index) => (</div>
-            <button
-              key={index}
+            <button key = {index}>
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
@@ -277,7 +289,7 @@ const ContentCarousel: React.FC = () => {;
         </div>
         {/* Additional Info */}
         <div className=&quot;mt-16 text-center&quot;></div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto&quot;></div>
+          <div className=&quot;grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto&quot;></div>
             <div className=&quot;flex items-center justify-center gap-3 text-white&quot;></div>
               <Star className=&quot;w-6 h-6 text-yellow-400&quot; />
               <div className=&quot;text-left&quot;></div>
@@ -316,9 +328,11 @@ const ContentCarousel: React.FC = () => {;
       </div>
       <Footer />
     </>
+<<<<<<< HEAD:all-pages-backup/components/ContentCarousel.tsx
   )};
 
 export default ContentCarouselPage
+:app/components/ContentCarousel.tsx
             <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
           </button>
         </div>
@@ -327,4 +341,6 @@ export default ContentCarouselPage
   )
 }
 
+<<<<<<< HEAD:all-pages-backup/components/ContentCarousel.tsx
 export default ContentCarousel
+:app/components/ContentCarousel.tsx

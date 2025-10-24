@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 // Function to fix common JSX errors comprehensively
 function fixJSXErrors(content) {
   let fixed = content;
@@ -178,7 +177,6 @@ function processFile(filePath) {
     // eslint-disable-next-line no-console
     console.error(`Error processing ${filePath}:`, error.message)
   }
-<<<<<<< HEAD
 }
 
 // Function to recursively find and process files

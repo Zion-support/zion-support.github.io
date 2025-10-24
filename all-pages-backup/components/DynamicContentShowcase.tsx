@@ -1,10 +1,12 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/DynamicContentShowcase.tsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+:app/components/DynamicContentShowcase.tsx
 
 interface Testimonial {
   id: number,
@@ -21,6 +23,7 @@ const DynamicContentShowcase: React.FC = () => {;
 
   const testimonials: Testimonial[] = [;
     {
+<<<<<<< HEAD:all-pages-backup/components/DynamicContentShowcase.tsx
       id: 1,
   name: name,
   company: company,
@@ -40,6 +43,7 @@ const DynamicContentShowcase: React.FC = () => {;
   company: company,
   content: content,
   rating: 5
+:app/components/DynamicContentShowcase.tsx
     }
   ]
 
@@ -54,6 +58,7 @@ const DynamicContentShowcase: React.FC = () => {;
 
   const features = [
     {
+<<<<<<< HEAD:all-pages-backup/components/DynamicContentShowcase.tsx
       icon: <Brain className="h-8 w-8" />
       title: title,
   description: description,
@@ -73,11 +78,12 @@ const DynamicContentShowcase: React.FC = () => {;
     }
   ];
 ;
+:app/components/DynamicContentShowcase.tsx
   return (;
     <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;max-w-7xl mx-auto text-center&quot;></div>
-          <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;></h1>
+          <h1 className=&quot;text-4xl md: text-6xl font-bold text-white mb-6&quot;></h1>
             Transform Your Business with <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>AI Solutions</span>
           </h1>
           <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto mb-8&quot;></p>
@@ -99,7 +105,7 @@ const DynamicContentShowcase: React.FC = () => {;
         </div>
 {/* Features Grid */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16&quot;>{features.map((feature, index) => (</div>
-            <div key={index} className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300&quot;></div>
+            <div key={index} className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-cyan-400/50 transition-all duration-300&quot;></div>
               <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4&quot;></div>
                 <feature.icon className=&quot;w-6 h-6 text-white&quot; />
               </div>
@@ -138,7 +144,7 @@ const DynamicContentShowcase: React.FC = () => {;
       <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;></h2>
+            <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-6&quot;></h2>
               Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Solutions</span>
             </h2>
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Comprehensive AI and IT solutions designed to transform your business operations.</p>p>
@@ -197,26 +203,23 @@ const DynamicContentShowcase: React.FC = () => {;
             </div>
             {/* Navigation Controls */}
             <div className=&quot;flex items-center justify-center gap-4 mt-8&quot;></div>
-              <button
-                onClick={prevTestimonial}
+              <button onClick = {prevTestimonial};>
                 className=&quot;p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200&quot;></button>
                 <ChevronLeft className=&quot;w-6 h-6&quot; />
               </button>
-              <button
-                onClick={togglePlayPause}
+              <button ,>
+                onClick = {togglePlayPause}
                 className=&quot;p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200&quot;></button>
                 {isPlaying ? <Pause className=&quot;w-6 h-6&quot; /> : <Play className=&quot;w-6 h-6&quot; />}
               </button>
-              <button
-                onClick={nextTestimonial}
+              <button onClick = {nextTestimonial};>
                 className=&quot;p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200&quot;></button>
                 <ChevronRight className=&quot;w-6 h-6&quot; />
               </button>
             </div>
             {/* Dots Indicator */}
             <div className=&quot;flex justify-center mt-6 space-x-2&quot;>{testimonials.map((_, index) => (</div>
-                <button
-                  key={index}
+                <button key = {index}>
                   onClick={() =></button> setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
@@ -249,7 +252,7 @@ const DynamicContentShowcase: React.FC = () => {;
       <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
           <div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-12&quot;></div>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+            <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;>Join thousands of satisfied customers and start your transformation journey today.</p>p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
@@ -272,7 +275,7 @@ const DynamicContentShowcase: React.FC = () => {;
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -301,7 +304,7 @@ const DynamicContentShowcase: React.FC = () => {;
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />

@@ -11,11 +11,10 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false
-  };
-
+    hasError: false;
+  }
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -30,20 +29,20 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">
+        <div className = "min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="tex t-center">
+            <h1 className="tex t-4xlfont-bold text-white mb-4">Something went wrong</h1>
+            <p className="tex t-gray-300mb-8">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <button
+            <button >
               onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-6py-3 b g-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               Refresh Page
             </button>
           </div>
-        </div>
+        </div>;
       );
     }
 

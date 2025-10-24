@@ -9,12 +9,14 @@ const FuturisticBackground: React.FC = () => {;
     const canvas = canvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d');
+<<<<<<< HEAD:all-pages-backup/components/FuturisticBackground.tsx
     if (!ctx) return
     const resizeCanvas = () => {;
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
     };
 
+:app/components/FuturisticBackground.tsx
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
@@ -31,6 +33,7 @@ const FuturisticBackground: React.FC = () => {;
     // Create particles
     for (let i = 0; i < 50; i++) {
       particles.push({
+<<<<<<< HEAD:all-pages-backup/components/FuturisticBackground.tsx
         x: Math.random() * canvas.width,
   y: Math.random() * canvas.height,
   vx: (Math.random() - 0.5) * 2,
@@ -38,6 +41,7 @@ const FuturisticBackground: React.FC = () => {;
   size: Math.random() * 3 + 1,
   opacity: Math.random() * 0.5 + 0.1
       })}
+:app/components/FuturisticBackground.tsx
 
     const animate = () => {;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -73,26 +77,33 @@ const FuturisticBackground: React.FC = () => {;
             ctx.stroke()}
         })});
 
+<<<<<<< HEAD:all-pages-backup/components/FuturisticBackground.tsx
       requestAnimationFrame(animate)};
 
     animate();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas)}}, []);
+:app/components/FuturisticBackground.tsx
 
   return (
     <>
       <Helmet>
+        <Head>
         <title>FuturisticBackground - Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Advanced futuristicbackground solutions powered by AI technology.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, FuturisticBackground, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               FuturisticBackground
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced futuristicbackground solutions powered by AI technology.
@@ -113,7 +124,7 @@ const FuturisticBackground: React.FC = () => {;
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
             <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;></h2>
+              <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6&quot;></h2>
                 Key Features
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI technology that drives results
@@ -147,7 +158,7 @@ const FuturisticBackground: React.FC = () => {;
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -179,6 +190,7 @@ const FuturisticBackground: React.FC = () => {;
       </div>
       <Footer />
     </>
+<<<<<<< HEAD:all-pages-backup/components/FuturisticBackground.tsx
     <canvas
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
@@ -187,3 +199,4 @@ const FuturisticBackground: React.FC = () => {;
   )};
 
 export default FuturisticBackground
+:app/components/FuturisticBackground.tsx

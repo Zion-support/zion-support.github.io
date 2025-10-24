@@ -121,8 +121,10 @@ export interface NodeRuntime {;
 declare module 'next' {
   interface NextApiRequest {
     user?: {
+<<<<<<< HEAD:all-pages-backup/types/next.d.ts
       id: string,
   email: string
+:app/types/next.d.ts
       name?: string
 }
   }

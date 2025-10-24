@@ -10,12 +10,14 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string) => void
 }
 
+<<<<<<< HEAD:all-pages-backup/components/AnalyticsProvider.tsx
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined
 )
 
 export const useAnalytics = () => {;
   const context = useContext(AnalyticsContext);
+:app/components/AnalyticsProvider.tsx
   if (!context) {;
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
   }
@@ -48,10 +50,12 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     }
   }, [])
 
+<<<<<<< HEAD:all-pages-backup/components/AnalyticsProvider.tsx
   consttrackEvent= (
     eventName: string
     parameters?: Record<string, unknown>
   ) => {
+:app/components/AnalyticsProvider.tsx
     if (typeof window !== &quot;undefined&quot; && window.gtag) {
       window.gtag(&quot;event&quot;, eventName, parameters)
     }
@@ -59,8 +63,10 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 
   consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
       window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
+<<<<<<< HEAD:all-pages-backup/components/AnalyticsProvider.tsx
         page_title: pageName,
   page_location: window.location.href
+:app/components/AnalyticsProvider.tsx
       })
     }
   }
@@ -76,8 +82,10 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   )
 }
 
-export default AnalyticsProvider
+export default AnalyticsProvider;
   );
+<<<<<<< HEAD:all-pages-backup/components/AnalyticsProvider.tsx
 {};
 
 export default AnalyticsProviderPage
+:app/components/AnalyticsProvider.tsx

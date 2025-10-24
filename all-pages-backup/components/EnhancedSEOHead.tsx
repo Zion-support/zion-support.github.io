@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/EnhancedSEOHead.tsx
 import {Helmet} from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -8,6 +9,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 'use client';
 
+:app/components/EnhancedSEOHead.tsx
 
 interface SEOHeadProps {
   title?: string
@@ -20,7 +22,9 @@ interface SEOHeadProps {
   structuredData?: object
 }
 
+<<<<<<< HEAD:all-pages-backup/components/EnhancedSEOHead.tsx
 const SEOHead: React.FC<SEOHeadProps> = ({;
+:app/components/EnhancedSEOHead.tsx
   title = 'Zion Tech Group - Advanced AI & IT Solutions'
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.'
   keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence'
@@ -30,7 +34,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
   twitterCard = 'summary_large_image'
   structuredData
 }) => {
+<<<<<<< HEAD:all-pages-backup/components/EnhancedSEOHead.tsx
   const defaultStructuredData = {;
+:app/components/EnhancedSEOHead.tsx
     "@context": "https://schema.org"
     "@type": "Organization"
     "name": "Zion Tech Group"
@@ -40,7 +46,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
     "sameAs": [
       "https://twitter.com/ziontechgroup"
       "https://linkedin.com/company/ziontechgroup"
+<<<<<<< HEAD:all-pages-backup/components/EnhancedSEOHead.tsx
       "https://github.com/ziontechgroup"
+:app/components/EnhancedSEOHead.tsx
     ]
     "contactPoint": {
       "@type": "ContactPoint"
@@ -48,6 +56,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       "contactType": "customer service"
       "areaServed": "US"
       "availableLanguage": "English"
+<<<<<<< HEAD:all-pages-backup/components/EnhancedSEOHead.tsx
     }
     "address": {
       "@type": "PostalAddress"
@@ -58,12 +67,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       "addressCountry": "US"
     }};
 
+:app/components/EnhancedSEOHead.tsx
   return (
     <>
       <Helmet>
+        <Head>
         <title>{title}</title>
         <meta name=&quot;description&quot; content=&quot;Zion Tech Group&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedSEOHead, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -71,7 +86,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               EnhancedSEOHead
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -98,7 +113,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -127,7 +142,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -157,6 +172,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
         </section>
       </div>
       <Footer />
+<<<<<<< HEAD:all-pages-backup/components/EnhancedSEOHead.tsx
       {/* Basic Meta Tags */}
       <title>{title}</title>
         <meta name="description" content={description} />
@@ -193,3 +209,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
   )};
 
 export default SEOHead
+:app/components/EnhancedSEOHead.tsx

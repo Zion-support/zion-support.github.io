@@ -49,13 +49,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
       logo: 'https:// ziontechgroup.com/logo.png',
       description: 'Advanced AI and IT Solutions',
       address: {}
-        '@type': 'PostalAddress',
+        '@type': 'PostalAddress'
         addressCountry: 'US'
 {     },
       sameAs: []
-        'https:// www.linkedin.com/$1/zion-tech-group',
-        'https:// twitter.com/ziontechgroup',
-        'https:// github.com/Zion-Holdings'],
+        'https:// www.linkedin.com/$1/zion-tech-group'
+        'https:// twitter.com/ziontechgroup'
+        'https:// github.com/Zion-Holdings']
       ...seoData.structuredData
 {    }
     return baseStructuredData
@@ -67,9 +67,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
       '@type': 'BreadcrumbList',
       itemListElement: []
         {}
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
+          '@type': 'ListItem'
+          position: 1
+          name: 'Home'
           item: 'https:// ziontechgroup.com'
 {       },
         {'@type': 'ListItem',
@@ -87,17 +87,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
       '@type': 'FAQPage',
       mainEntity: []
         {}
-          '@type': 'Question',
-          name: 'What services do es Zion Tech Group offer?',
+          '@type': 'Question'
+          name: 'What services do es Zion Tech Group offer?'
           acceptedAnswer: {}
-            '@type': 'Answer',
+            '@type': 'Answer'
             text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.'
 {         }
 {        },
         {'@type': 'Question',
           name: 'How can I contact Zion Tech Group?',
           acceptedAnswer: {}
-            '@type': 'Answer',
+            '@type': 'Answer'
             text: 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.'
          }
 {        }]
@@ -140,7 +140,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
   const _trackPageView = (config: SEOData) => {};
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {}
-        page_title: config.title,
+        page_title: config.title
         page_location: config.canonicalUrl
 {      })
 {    }
@@ -151,8 +151,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData) {}
           (window as any).gtag('event', 'page_load_performance', {}
-            event_category: 'Performance',
-            event_label: 'Page Load',
+            event_category: 'Performance'
+            event_label: 'Page Load'
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
 {          })
 {        }
@@ -181,7 +181,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
         </script>
       )}
       {/* Preconnect to external domains for performance */}
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https: //fonts.googleapis.com&quot; />
       <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
       <link rel=&quot;preconnect&quot; href=&quot;https://www.google-analytics.com&quot; />
       <link rel=&quot;preconnect&quot; href=&quot;https://www.googletagmanager.com&quot; />

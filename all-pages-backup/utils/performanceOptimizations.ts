@@ -3,11 +3,13 @@ import { useCallback, useMemo, useState, useEffect } from 'react';
 // Performance optimization utilities
 
 // Debounce utility for performance
+<<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
 export const debounce = <T extends (...args: any[]) => any>(;
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout
+:app/utils/performanceOptimizations.ts
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
@@ -15,11 +17,13 @@ export const debounce = <T extends (...args: any[]) => any>(;
 }
 
 // Throttle utility for performance
+<<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
 export const throttle = <T extends (...args: any[]) => any>(;
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean
+:app/utils/performanceOptimizations.ts
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args)
@@ -30,16 +34,20 @@ export const throttle = <T extends (...args: any[]) => any>(;
 }
 
 // Intersection Observer hook for lazy loading
+<<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
 export const useIntersectionObserver = (;
   callback: (entries: IntersectionObserverEntry[]) => void,
+:app/utils/performanceOptimizations.ts
   options: IntersectionObserverInit = {}
 ) => {
   const observer = useMemo(;
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {
+<<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
             threshold: 0.1,
   rootMargin: '50px'
+:app/utils/performanceOptimizations.ts
             ...options
           })
         : null
@@ -120,8 +128,10 @@ export const usePerformanceMonitoring = () => {;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
       setMetrics({
         fcp
+<<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
         lcp,
   ttfb: navigation?.responseStart - navigation?.requestStart
+:app/utils/performanceOptimizations.ts
       })
     }
 
@@ -166,9 +176,11 @@ export const useMemoryMonitoring = () => {;
       const memory = (performance as any).memory
       if (memory) {
         setMemoryInfo({
+<<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
           usedJSHeapSize: memory.usedJSHeapSize,
   totalJSHeapSize: memory.totalJSHeapSize,
   jsHeapSizeLimit: memory.jsHeapSizeLimit
+:app/utils/performanceOptimizations.ts
         })
       }
     }
@@ -257,7 +269,9 @@ export const useBundleSizeMonitoring = () => {;
   return bundleSize
 }
 
+<<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
 const performanceOptimizations = {;
+:app/utils/performanceOptimizations.ts
   debounce
   throttle
   useIntersectionObserver
@@ -267,6 +281,8 @@ const performanceOptimizations = {;
   preloadResource
   preloadCriticalResources
   useBundleSizeMonitoring
+<<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
 };
 ;
 export default performanceOptimizations
+:app/utils/performanceOptimizations.ts
