@@ -1,10 +1,9 @@
+import React from 'react';
 'use client';
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
  */
-import React from 'react';
-import { useRef } from 'react';
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -263,7 +262,6 @@ export const initializePerformanceEnhancements = () => {
     // // console.log('Performance metrics:', metrics)
   }
 }
-=======
     }
 };
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/performanceEnhancer.ts

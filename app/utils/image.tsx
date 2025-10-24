@@ -1,7 +1,9 @@
 'use client'
 import React from 'react'
-'use client'
 import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
+'use client'
+'use client'
 interface ImageProps {
 src: string,
 alt: string;}
@@ -89,8 +91,6 @@ return (
     <div}
 if (hasError) {;}
 return(<div}
-'use client'
-import React, { useState, useCallback } from 'react'
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
 export const,

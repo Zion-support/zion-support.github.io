@@ -1,11 +1,9 @@
 import React from 'react'
-import React from 'react';
 import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react';
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Camera, Zap, Palette } from 'lucide-react'
 
 constAIFashionDesignPage: React.FC= () =>{constfeatures= [
     'Design Generation',

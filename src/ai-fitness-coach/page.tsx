@@ -3,7 +3,6 @@ import { Play } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Zap, Heart } from 'lucide-react'
 
 constAIFitnessCoachPage: React.FC= () =>{constfeatures= [
     'Personalized Plans',

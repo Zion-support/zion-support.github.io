@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from "lucide-react";
-
 const AIServicesPage: React.FC = () => {
   const services = [
     {

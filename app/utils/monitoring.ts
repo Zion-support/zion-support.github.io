@@ -1,3 +1,8 @@
+'use client'
+import { Download } from 'lucide-react'
+import Navigation from './Navigation'
+import React from 'react'
+import { performanceConfig } from '../../performance.config'
 <<<<<<< HEAD:src/utils/monitoring.ts
 // monitoring utility
 export const monitoring = () => {
@@ -6,20 +11,13 @@ export const monitoring = () => {
 };
 
 export default monitoring;
-=======
 <<<<<<< HEAD:app/utils/monitoring.ts
 'use client';
-=======
-'use client'
-import { Download } from 'lucide-react'
-import Navigation from './Navigation'
 >>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-import React from 'react'
-import { performanceConfig } from '../../performance.config'
 export interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -100,7 +98,6 @@ class MonitoringService {
       } catch (error) {
 <<<<<<< HEAD:app/utils/monitoring.ts
         }
-=======
         // // // console.error('Error setting up performance observers:', error)
       }
 >>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
@@ -113,7 +110,6 @@ class MonitoringService {
           for (const entry of list.getEntries()) {
 <<<<<<< HEAD:app/utils/monitoring.ts
             }
-=======
             // // // console.warn('Long task detected:', {
             //   duration: entry.duration,
             //   startTime: entry.startTime
@@ -141,7 +137,6 @@ class MonitoringService {
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
         }
-=======
           const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming
@@ -192,7 +187,6 @@ class MonitoringService {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
 <<<<<<< HEAD:app/utils/monitoring.ts
       }
-=======
       // // // console.log(`[Performance] ${name}:`, {
       //   value,
       //   rating,
@@ -215,7 +209,6 @@ class MonitoringService {
       this.errors = this.errors.slice(-50)
     }
 <<<<<<< HEAD:app/utils/monitoring.ts
-=======
     // // // console.error('[Error]', error)
 >>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
     // Send to error tracking service (if configured)
@@ -239,7 +232,6 @@ class MonitoringService {
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         }
-=======
         // // // console.log('[Memory]', {
         //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
@@ -264,7 +256,6 @@ class MonitoringService {
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         });
         })
-=======
         // // // console.log('[Navigation Timing]', {
         //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
         //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,

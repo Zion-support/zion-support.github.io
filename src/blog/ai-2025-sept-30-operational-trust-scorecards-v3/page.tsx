@@ -1,7 +1,5 @@
 import React from 'react'
 import { Helmet } from 'lucide-react'
-import React from 'react';
-import { Helmet } from 'lucide-react';
 
 constOperationalTrustScorecardsPage: React.FC= () =>{return (
   <><Helme t><titl e>Operational TrustScorecardsv3</titl><metaname=&quot;description&quot;content=&quot;Measure reliability, cost, safety, and value with live AIscorecards.&quot; /><metaproperty=&quot;og:type&quot;content=&quot;article&quot; /></Helme><mainclassName=&quot;min-h-screen bg-slate-950text-white&quot;><sectionclassName=&quot;py-16border-bborder-white/10&quot;><divclassName=&quot;max-w-3 xlmx-autopx-4&quot;><divclassName=&quot;mb-6 inline-flexitems-centergap-2&quot;><spanclassName=&quot;px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30&quot;></className=&quot;px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30&quot;>GUIDE

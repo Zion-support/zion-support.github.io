@@ -1,12 +1,8 @@
 'use client'
 import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight } from 'lucide-react'
+import { Helmet, ArrowRight } from 'lucide-react'
 
 import React, { useEffect, useState, useCallback } from 'react'
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
-import { CheckCircle } from 'lucide-react'
-import { AlertTriangle } from 'lucide-react'
 
 interface PerformanceOptimizerProps {
   className?: string;
@@ -151,15 +147,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return (
     <>
-<<<<<<< HEAD
       
-=======
-      <Helmet>
-        <title>PerformanceOptimizer</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizer solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceOptimizer, AI solutions, intelligent automation&quot; />
-      </Helmet>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}

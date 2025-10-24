@@ -1,14 +1,13 @@
-<<<<<<< HEAD:app-broken/app/utils/testUtils.ts
-"use client";
+'use client'
 import React from 'react';
 
+<<<<<<< HEAD:app-broken/app/utils/testUtils.ts
+"use client";
 const testUtils.ts = () => {
   return null;
 };
 
 export default testUtils.ts;
-=======
-'use client'
 /**
 * Testing Utilities
 * Provides helper functions and utilities for testing

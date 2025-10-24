@@ -4,8 +4,6 @@ import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
-import { Clock } from 'lucide-react'
 
 constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',

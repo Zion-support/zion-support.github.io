@@ -1,11 +1,8 @@
 'use client'
 import Footer from './Footer'
 import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { Helmet, ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-import { Home } from 'lucide-react'
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
@@ -45,15 +42,7 @@ const ErrorHandlerPage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
       
-=======
-      <Helmet>
-        <title>ErrorHandler</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced ErrorHandler solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorHandler, AI solutions, intelligent automation&quot; />
-      </Helmet>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
@@ -111,17 +100,10 @@ const ErrorHandlerPage: React.FC = () => {
      }
 
       return (
-<<<<<<< HEAD
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="flex justify-center mb-4">
               <AlertTriangle className="w-16 h-16 text-red-500" />
-=======
-        <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50&quot;></div>
-          <div className=&quot;max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center&quot;></div>
-            <div className=&quot;flex justify-center mb-4&quot;></div>
-              <AlertTriangle className=&quot;w-16 h-16 text-red-500&quot; />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
             </div>
             <h1 className=&quot;text-2xl font-bold text-gray-900 mb-4&quot;>
               Oops! Something went wrong
@@ -193,70 +175,3 @@ const ErrorHandlerPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
-              ></
-                onClick={this.handleRetry}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
-              ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again
-            </butto><
-                onClick={this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
-              ></
-                onClick={this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
-              ><HomeclassName=&quot;w-4h-4mr-2&quot; />Go Home
-            </butto></di></di></di>
-      )
-    }
-
-    return thi s.props.children
-  }
-}
-
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default ErrorHandlerPage;
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

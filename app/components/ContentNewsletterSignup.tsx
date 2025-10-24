@@ -1,11 +1,8 @@
 'use client'
 import Footer from './Footer'
 import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight } from 'lucide-react'
+import { Helmet, ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
 interface ContentNewsletterSignupProps {
   title?: string
@@ -61,15 +58,7 @@ interface ContentNewsletterSignupProps {
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
   return (
     <>
-<<<<<<< HEAD
       
-=======
-      <Helmet>
-        <title>ContentNewsletterSignup</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced ContentNewsletterSignup solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentNewsletterSignup, AI solutions, intelligent automation&quot; />
-      </Helmet>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
@@ -144,11 +133,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
                 className=&quot;w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center&quot;></button>
                 {isLoading ? (
                   <>
-<<<<<<< HEAD
       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
-=======
-                    <div className=&quot;animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2&quot;></div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
                     Subscribing...
                   </>
                 ) : (

@@ -1,11 +1,11 @@
 'use client'
+import React from 'react'
+import { Helmet } from 'lucide-react'
+
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
-import React from 'react'
-import { Helmet } from 'lucide-react'
-
 export interface SEOProps {
   title?: string
   description?: string

@@ -1,6 +1,6 @@
-"use client";
 import React from 'react';
 
+"use client";
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-8">

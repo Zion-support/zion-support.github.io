@@ -1,8 +1,5 @@
 import React from 'react'
 import { CheckCircle, Phone, Mail, TrendingUp, Helmet } from 'lucide-react'
-import { MapPin } from 'lucide-react'
-import React from 'react';
-import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Camera, Palette, Video, Music, Calendar, Code, Bot, Helmet, MapPin, Check } from 'lucide-react';
 
 constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
     // AI-Powered Developer Tools
@@ -3119,7 +3116,6 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
   ]
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">
@@ -3131,162 +3127,6 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
           </p>
         </div>
       </div>
-=======
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-      <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps&quot; />
-      </Helmet>
-      {/* Hero Section */}
-      <section className=&quot;pt-24 pb-16 px-4&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto text-center&quot;></div>
-          <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6&quot;>
-            Micro SAAS Solutions
-          </h1>
-          <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
-            50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
-          </p>
-          {/* Stats */}
-          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-12&quot;></div>
-            <div className=&quot;bg-white/10 backdrop-blur-sm rounded-lg p-6&quot;></div>
-              <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>50+</div>
-              <div className=&quot;text-gray-300&quot;>Applications</div>
-            </div>
-            <div className=&quot;bg-white/10 backdrop-blur-sm rounded-lg p-6&quot;></div>
-              <div className=&quot;text-3xl font-bold text-green-400 mb-2&quot;>$49</div>
-              <div className=&quot;text-gray-300&quot;>Starting Price</div>
-            </div>
-            <div className=&quot;bg-white/10 backdrop-blur-sm rounded-lg p-6&quot;></div>
-              <div className=&quot;text-3xl font-bold text-purple-400 mb-2&quot;>24/7</div>
-              <div className=&quot;text-gray-300&quot;>Support</div>
-            </div>
-            <div className=&quot;bg-white/10 backdrop-blur-sm rounded-lg p-6&quot;></div>
-              <div className=&quot;text-3xl font-bold text-orange-400 mb-2&quot;>99.9%</div>
-              <div className=&quot;text-gray-300&quot;>Uptime</div>
-            </div>
-          </div>
-          {/* Contact Info */}
-          <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12&quot;></div>
-            <div className=&quot;flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8&quot;></div>
-              <div className=&quot;flex items-center space-x-2&quot;></div>
-                <Phone className=&quot;w-5 h-5&quot; />
-                <span className=&quot;text-white font-medium&quot;>+1 302 464 0950</span>
-              </div>
-              <div className=&quot;flex items-center space-x-2&quot;></div>
-                <Mail className=&quot;w-5 h-5&quot; />
-                <span className=&quot;text-white font-medium&quot;>kleber@ziontechgroup.com</span>
-              </div>
-              <div className=&quot;flex items-center space-x-2&quot;></div>
-                <MapPin className=&quot;w-5 h-5&quot; />
-                <span className=&quot;text-white font-medium&quot;>Middletown, DE</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Services Grid */}
-      <section className=&quot;py-16 px-4&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>
-            Choose Your Perfect AI Tools
-          </h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-            {microSAASServices.map((service, index) => (
-              <div key={index} className=&quot;bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105&quot;></div>
-                <div className=&quot;text-center mb-6&quot;></div>
-                  <div className=&quot;text-5xl mb-4&quot;>{service.icon}</div>
-                  <h3 className=&quot;text-xl font-bold text-gray-900 mb-2&quot;>{service.title}</h3>
-                  <p className=&quot;text-gray-600 text-sm&quot;>{service.description}</p>
-                </div>
-                <div className=&quot;mb-6&quot;></div>
-                  <div className=&quot;flex items-center justify-between mb-4&quot;></div>
-                    <span className=&quot;text-2xl font-bold text-green-600&quot;>{service.price}</span>
-                    <span className=&quot;text-sm text-gray-500&quot;>Market: {service.marketPrice}</span>
-                  </div>
-                  <div className=&quot;bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block&quot;></div>
-                    {service.category}
-                  </div>
-                </div>
-                <div className=&quot;mb-6&quot;></div>
-                  <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Key Features:</h4>
-                  <ul className=&quot;space-y-2&quot;>
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-600&quot;>
-                        <CheckCircle className=&quot;w-4 h-4 text-green-500 mr-2 flex-shrink-0&quot; />
-                        {feature}
-                      </li>
-                    ))}
-                    {service.features.length > 4 && (
-                      <li className=&quot;text-sm text-gray-500&quot;>
-                        +{service.features.length - 4} more features
-                      </li>
-                    )}
-                  </ul>
-                </div>
-                <div className=&quot;mb-6&quot;></div>
-                  <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Benefits:</h4>
-                  <ul className=&quot;space-y-1&quot;>
-                    {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className=&quot;text-sm text-gray-600 flex items-center&quot;>
-                        <TrendingUp className=&quot;w-3 h-3 text-blue-500 mr-2 flex-shrink-0&quot; />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className=&quot;mb-6&quot;></div>
-                  <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Technologies:</h4>
-                  <div className=&quot;flex flex-wrap gap-2&quot;></div>
-                    {service.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className=&quot;bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded&quot;>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className=&quot;text-center&quot;></div>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
-                    className=&quot;w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block&quot;
-                  >
-                    Get Started Now
-                  </a>
-                  <p className=&quot;text-xs text-gray-500 mt-2&quot;>
-                    {service.contactInfo}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className=&quot;py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600&quot;></section>
-        <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-          <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
-            Ready to Transform Your Business?
-          </h2>
-          <p className=&quot;text-xl text-purple-100 mb-8&quot;>
-            Get started with our micro SAAS solutions today and see the difference AI can make.
-          </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-            <a
-              href=&quot;tel:+13024640950&quot;
-              className=&quot;bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors&quot;
-            >
-              Call (302) 464-0950
-            </a>
-            <a
-              href=&quot;mailto:kleber@ziontechgroup.com&quot;
-              className=&quot;bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors&quot;
-            >
-              Email Us
-            </a>
-          </div>
-        </div>
-      </section>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
 }

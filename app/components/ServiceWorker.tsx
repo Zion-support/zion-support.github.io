@@ -1,10 +1,5 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -45,15 +40,7 @@ const ServiceWorkerPage: React.FC = () => {
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {
   return (
     <>
-<<<<<<< HEAD
       
-=======
-      <Helmet>
-        <title>ServiceWorker - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced serviceworker solutions powered by AI technology.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceWorker, AI solutions, intelligent automation&quot; />
-      </Helmet>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
