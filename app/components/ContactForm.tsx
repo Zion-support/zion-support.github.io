@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState } from 'react';
-=======
-import React, {useState}from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
+
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {

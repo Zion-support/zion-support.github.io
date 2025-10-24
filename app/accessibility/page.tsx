@@ -4,7 +4,7 @@ import React from 'react';
 export const dynamic = 'force-dynamic';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Eye, Volume2, Keyboard, Mouse, CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { Eye, Volume2, Keyboard, Mouse, CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Code } from 'lucide-react';
 
 const AccessibilityPage: React.FC = () => {
   const accessibilityFeatures = [

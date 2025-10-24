@@ -1,13 +1,6 @@
 'use client';;
 import React from 'react';
-<<<<<<< HEAD:app/micro-saas-services/services.tsx
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react';
-const ServicesPage: React.FC = () => {
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const EnhancedAccessibilityEnhancerPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-328b:working-pages/components/EnhancedAccessibilityEnhancer.tsx
+
     const features = [
     {
       icon: Brain,
@@ -54,12 +47,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-<<<<<<< HEAD:app/micro-saas-services/services.tsx
-      <title>Services | Zion Tech Group</title>
-=======
-      <Helmet>
-        </Helmet><title>EnhancedAccessibilityEnhancer | Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-328b:working-pages/components/EnhancedAccessibilityEnhancer.tsx
+
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

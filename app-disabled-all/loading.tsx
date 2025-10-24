@@ -1,15 +1,6 @@
 'use client';;
 import React from 'react';
-<<<<<<<< HEAD:app-disabled-all/loading.tsx
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
-========
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
->>>>>>>> cursor/fix-errors-and-merge-to-main-328b:corrupted-pages-backup/loading.tsx
+
 const LoadingPage: React.FC = () => {
   const features = [
     {
