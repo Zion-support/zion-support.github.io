@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useCallback } from 'react';
+import Image from 'next/image';
 
 interface ImageOptimizerProps {
   src: string;
@@ -45,14 +46,14 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           <span className="text-gray-500">Loading...</span>
         </div>
       )}
-      <img
+      <Image
         src={src}
         alt={alt}
-        width={width}
-        height={height}
+        width={width || 800}
+        height={height || 600}
         onLoad={handleLoad}
         onError={handleError}
-        loading={priority ? 'eager' : 'lazy'}
+        priority={priority}
         className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
       />
     </div>

@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Use standalone output for better compatibility
-  output: 'standalone',
-  trailingSlash: true,
-  
-  // Disable static generation to avoid server component issues
+  // Use export for static generation
   output: 'export',
   distDir: 'dist',
   trailingSlash: true,
@@ -40,41 +36,7 @@ const nextConfig = {
     return 'build-' + Date.now();
   },
   
-  // Headers for better caching and security
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-      {
-        source: '/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ];
-  },
+  // Headers removed for export compatibility
   
   // Experimental features for better performance
   experimental: {

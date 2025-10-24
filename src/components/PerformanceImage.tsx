@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useCallback } from 'react';
+import Image from 'next/image';
 
 interface PerformanceImageProps {
   src: string;
@@ -45,9 +46,10 @@ const PerformanceImage: React.FC<PerformanceImageProps> = ({
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {isLoading && placeholder === 'blur' && blurDataURL && (
-        <img
+        <Image
           src={blurDataURL}
           alt=""
+          fill
           className="absolute inset-0 w-full h-full object-cover filter blur-sm scale-110"
         />
       )}
@@ -58,14 +60,14 @@ const PerformanceImage: React.FC<PerformanceImageProps> = ({
         </div>
       )}
       
-      <img
+      <Image
         src={src}
         alt={alt}
-        width={width}
-        height={height}
+        width={width || 800}
+        height={height || 600}
         onLoad={handleLoad}
         onError={handleError}
-        loading={priority ? 'eager' : 'lazy'}
+        priority={priority}
         className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
       />
     </div>

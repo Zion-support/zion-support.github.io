@@ -5,4 +5,3 @@ interface SEOHeadProps {
   description?: string
   keywords?: string
   structuredData?: any}
-// Conflict resolved: taking HEAD version
