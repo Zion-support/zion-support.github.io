@@ -43,16 +43,22 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   publishedTime,
 //   modifiedTime,
 //   section,
-  tags = []}) => {
-    const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description
-  }
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords
+  tags = [],
+}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {/* TODO: Fix JSX expression */}
-    }
-    metaDescription.setAttribute('content', description)
+    
+          
+          
+          
+          
+          
+          
+          
+          <div}>Coming Soon
+        </div>
+  )
+    
           <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
@@ -74,9 +80,11 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   e:tag" content={tag} />
       ))}
       {/* Structured Data */}
-      {structuredData && ()}"
-          <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+      {structuredData && ()
+        
+          <script type="application/ld+json"}>{JSON.stringify(structuredData)}
+        
+        </script>
       )}
       {/* Preconnect to external domains */}"
 <nk rel="preconnect" href="http,"$2 />
@@ -88,14 +96,34 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <nk rel="preconnect" href="http,"$2 />
   s:// www.googletagmanager.com" />
       {/* DNS Prefetch */}
-          "
-          <link rel="dns-prefetch" href="// fonts.googleapis.com" /></link>"
-          <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
-          <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
-          </Helmet>
-  )
-}
-export default EnhancedSEO;"`
-  </SEOProps>
-  </SEOProps>
-</li></li>
+      
+          
+          
+          
+          
+          
+          
+          
+          
+          <link rel="dns-prefetch" href="// fonts.googleapis.com" />
+          
+          
+          
+          
+          
+          
+          
+          
+          <link rel="dns-prefetch" href="// www.google-analytics.com" />
+          
+          
+          
+          
+          
+          
+          
+          
+          <link rel="dns-prefetch" href="// www.googletagmanager.com" /> </Helmet>
+  );
+};
+export default EnhancedSEO;

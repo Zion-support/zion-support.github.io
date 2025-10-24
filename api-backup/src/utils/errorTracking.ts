@@ -1,4 +1,5 @@
-export const reportError = (error: Error, context?: Record<string, any>) => {
+export const reportError = (error: Error, context?: Record<string, any>) =>
+                {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'exception', {
       description: error.message,
@@ -12,17 +13,19 @@ export const reportError = (error: Error, context?: Record<string, any>) => {
   }
 }
 
-export const initErrorReporting = () => {
+export const initErrorReporting  = () => {
   if (typeof window !== 'undefined') {
     // Global error handler
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', (event) =>
+                {
       reportError(event.error, {
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno})
     })
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', (event) =>
+                {
       reportError(new Error(event.reason), {
         type: 'unhandledrejection'})
     })
@@ -71,7 +74,7 @@ export interface ErrorMetadata {
   userId?: string
   sessionId?: string
   context?: Record
-          <string>
+          <string></string>
   tags?: string[],
   timestam,
   p: number
@@ -130,7 +133,8 @@ class ErrorTrackingService {
 }
     if (typeof window === 'undefined') return
     // Handle unhandled errors
-    window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
+    window.addEventListener('error', event =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       this.trackError(event.error || new Error(event.message), {/* TODO: Fix JSX expression */}
@@ -153,7 +157,8 @@ class ErrorTrackingService {
       })
     })
     // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
+    window.addEventListener('unhandledrejection', event =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       this.trackError(new Error(`Unhandled Promise)`
@@ -293,7 +298,8 @@ const,
   }
 
 }
-    this.errorListeners.forEach(listener => {/* TODO: Fix JSX expression */}
+    this.errorListeners.forEach(listener =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       try {/* TODO: Fix JSX expression */}
@@ -313,7 +319,8 @@ const,
    */
 
   private async reportToExternalService(errorId: string): Promise,
-          <void> {
+          <void></void>
+                {
     // TODO: Add content
   }
 
@@ -390,9 +397,9 @@ const,
   l: number,,
     byCategor,
   y: Record,
-          <ErrorCategory>
+          <ErrorCategory></ErrorCategory>
     bySeverit,
-  y: Record<ErrorSeverity>
+  y: Record<ErrorSeverity></ErrorSeverity>
     topError,
   s: TrackedError[],
   } {/* TODO: Fix JSX expression */}
@@ -400,9 +407,10 @@ const,
 }
     const errors = this.getErrors()
     const byCategory = {} as Record
-          <ErrorCategory>
-    const bySeverity = {} as Record<ErrorSeverity>
-    errors.forEach(error => {/* TODO: Fix JSX expression */}
+          <ErrorCategory></ErrorCategory>
+    const bySeverity = {} as Record<ErrorSeverity></ErrorSeverity>
+    errors.forEach(error =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 

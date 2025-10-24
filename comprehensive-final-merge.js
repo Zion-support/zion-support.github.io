@@ -44,7 +44,7 @@ try {/* TODO: Fix JSX expression */}
 //   }
 
 // //Step 3: Process branches in batches to avoid conflicts
-// const BATCH_SIZE = 50
+// const BATCH_SIZE = 50;
 for (let i = 0; i < allBranches.length, i += BATCH_SIZE) {
     ,
   batches.push(allBranches.slice(i, i + BATCH_SIZE))
