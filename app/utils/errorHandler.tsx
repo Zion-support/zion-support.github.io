@@ -220,39 +220,39 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
   // Determine error type
   private determineErrorType(error: Error): ErrorType {const message = error.message.toLowerCase()
-    const stack = error.stack?.toLowerCase() || ''
-    if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {,
+    const stack = error.stack?.toLowerCase() ''
+    if (message.includes('network')message.includes('fetch')message.includes('axios')) {,
   // Generate unique error ID}
   private generateErrorId(): string {}
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
   // Determine error type
   private determineErrorType(error: Error): ErrorType {}
     const message = error.message.toLowerCase()
-    const stack = error.stack?.toLowerCase() || ''
-    if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {}
+    const stack = error.stack?.toLowerCase()''
+    if (message.includes('network')message.includes('fetch')message.includes('axios')) {}
       return ErrorType.NETWORK}
-    if (message.includes('validation') || message.includes('invalid')) {}
+    if (message.includes('validation')message.includes('invalid')) {}
       return ErrorType.VALIDATION}
-    if (message.includes('auth') || message.includes('login') || message.includes('token')) {}
+    if (message.includes('auth')message.includes('login')message.includes('token')) {}
       return ErrorType.AUTHENTICATION}
-    if (message.includes('permission') || message.includes('unauthorized')) {}
+    if (message.includes('permission')message.includes('unauthorized')) {}
       return ErrorType.AUTHORIZATION}
-    if (message.includes('not found') || message.includes('404')) {}
+    if (message.includes('not found')message.includes('404')) {}
       return ErrorType.NOT_FOUND}
-    if (message.includes('server') || message.includes('500')) {}
+    if (message.includes('server')message.includes('500')) {}
       return ErrorType.SERVER}
-    if (stack.includes('react') || stack.includes('component')) {}
+    if (stack.includes('react') stack.includes('component')) {}
       return ErrorType.CLIENT}
     return ErrorType.UNKNOWN}
   // Determine error severity
   private determineErrorSeverity(error: Error): ErrorSeverity {const message = error.message.toLowerCase()
-    if (message.includes('critical') || message.includes('fatal')) {,
+    if (message.includes('critical')| message.includes('fatal')) {,
   // Determine error severity}
   private determineErrorSeverity(error: Error): ErrorSeverity {}
     const message = error.message.toLowerCase()
-    if (message.includes('critical') || message.includes('fatal')) {}
+    if (message.includes('critical')| message.includes('fatal')) {}
       return ErrorSeverity.CRITICAL}
-    if (message.includes('error') || message.includes('exception')) {}
+    if (message.includes('error')| message.includes('exception')) {}
       return ErrorSeverity.HIGH}
     if (message.includes('warning') || message.includes('deprecated')) {}
       return ErrorSeverity.MEDIUM}
@@ -267,7 +267,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Log error
   private logError(error: AppError) {,
     if (this.config.enableConsoleLogging) {,}
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`
+      const logMessage =[${error.severity}] ${error.type}: ${error.message}`
       switch (error.severity) {case ErrorSeverity.CRITICAL: case ErrorSeverity.HIGH: break,
         case ErrorSeverity.MEDIUM: break,
         case ErrorSeverity.LOW:,
@@ -339,15 +339,15 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private determineErrorType(erro)
   r: Error): ErrorType {/* TODO: Fix JSX expression */}
     }
-    if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */}
+    if (message.includes('validation') message.includes('invalid')) {/* TODO: Fix JSX expression */}
     }
-    if (message.includes('auth') || message.includes('login') || message.includes('token')) {/* TODO: Fix JSX expression */}
+    if (message.includes('auth')message.includes('login')message.includes('token')) {/* TODO: Fix JSX expression */}
     }
-    if (message.includes('permission') || message.includes('unauthorized')) {/* TODO: Fix JSX expression */}
+    if (message.includes('permission')message.includes('unauthorized')) {/* TODO: Fix JSX expression */}
     }
-    if (message.includes('not found') || message.includes('404')) {/* TODO: Fix JSX expression */}
+    if (message.includes('not found')message.includes('404')) {/* TODO: Fix JSX expression */}
     }
-    if (message.includes('server') || message.includes('500')) {/* TODO: Fix JSX expression */}
+    if (message.includes('server')| message.includes('500')) {/* TODO: Fix JSX expression */}
     }
     if (stack.includes('react') || stack.includes('component')) {/* TODO: Fix JSX expression */}
     }
@@ -366,7 +366,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Log error
   private logError(erro)
-  r: AppError) {/* TODO: Fix JSX expression */}`
+  r: AppError) {/* TODO: Fix JSX expression */}
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`
       switch (error.severity) {/* TODO: Fix JSX expression */}
               }
@@ -457,8 +457,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       font-family: Arial, sans-serif
     `;</string>
     notification.innerHTML = `</string>
-      <div style="display:flex;justify-content:space-between;align-items:center;"></div>
-        <div></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;"><div></div></div>
           <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
     `
     notification.innerHTML = `
@@ -468,8 +467,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>
         </div>
         <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-      <div style="display:flex;justify-content:space-between;align-items:center;"></div>
-        <div></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;"><div></div></div>
           <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
       </div>
     `
@@ -524,8 +522,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       <div style="displa,
   y: flex; justify-conten,
   t: space-between; align-item,"
-  s: center;"></div>
-        <div></div>
+  s: center;"><div></div></div>
           <strong>${error.severity} Error</strong>"
           <p style="margi,
   n: 5px 0 0 0; font-siz,"
@@ -842,8 +839,7 @@ export class ErrorBoundary extends React.Component<{/* TODO: Fix JSX expression 
   n: 'center' }}></div>
             <h2>Something went wrong</h2>
             <p>We're sorry, but something unexpected happened.</p>
-            <button></button>
-              onClick={/* TODO: Fix JSX expression */}
+            <button>onClick={/* TODO: Fix JSX expression */}
   r: undefined })}
               style={/* TODO: Fix JSX expression */}
               }}

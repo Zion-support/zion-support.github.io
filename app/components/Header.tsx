@@ -323,8 +323,7 @@ const Header = () => {
             </div>
             <div className="hidden md:flex items-center space-x-4">
               <span className="text-cyan-200">24/7 Support Available</span>
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            </div>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"> </div>
           </div>
         </div>
 

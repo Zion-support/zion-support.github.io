@@ -30,8 +30,8 @@ const BundleAnalyzer: React.FC = () => {
         const chunks: Array<{ name: string; size: number; gzipSize: number }> = [];
 
         resources.forEach(resource => {
-          const size = resource.transferSize || 0;
-          const name = resource.name.split('/').pop() || '';
+          const size = resource.transferSize | 0;
+          const name = resource.name.split('/').pop()| '';
           
           if (name.endsWith('.js')) {
             jsSize += size;
@@ -42,7 +42,7 @@ const BundleAnalyzer: React.FC = () => {
             });
           } else if (name.endsWith('.css')) {
             cssSize += size;
-          } else if (name.match(/\.(png|jpg|jpeg|gif|svg|webp)$/i)) {
+          } else if (name.match(/\.(pngjpgjpeggifsvg|webp)$/i)) {
             imageSize += size;
           }
         });

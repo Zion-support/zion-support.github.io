@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [
@@ -37,7 +37,6 @@ export default function Footer() {
     ]
   };
 
-const FooterPage: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-slate-700/50 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -63,10 +62,6 @@ const FooterPage: React.FC = () => {
               <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
                 <span>+1-302-464-0950</span>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <MapPin className="h-5 w-5 mr-3" />
-                <span>123 Tech Street, Silicon Valley, CA 94000</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPinIcon className="w-5 h-5 text-purple-400" />
@@ -146,8 +141,6 @@ const FooterPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </footer>
   );
-};
-
-export default Footer;
+}

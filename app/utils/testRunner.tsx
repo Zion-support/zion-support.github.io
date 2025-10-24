@@ -110,7 +110,7 @@ export interface TestConfig {
   timeout?: number
   verbose?: boolean
   bail?: boolean
-  reporter?: 'console' | 'json' | 'html' | 'junit'
+  reporter?: 'console' 'json''html''junit'
   retries?: number
   parallel?: boolean
   watch?: boolean
@@ -134,10 +134,10 @@ export const defaultTestConfig: TestConfig = {,
 }
 interface TestResult {
     name: string,
-    status: 'passed' | 'failed' | 'skipped' | 'pending'
+    status: 'passed''failed''skipped' 'pending'
 interface TestResult {
     name: string,
-    status: 'passed' | 'failed' | 'skipped' | 'pending',
+    status: 'passed' 'failed''skipped''pending',
   duration: number
   error?: Error
   assertions: AssertionResult[]
@@ -145,10 +145,10 @@ interface TestResult {
 }
 interface AssertionResult {
     name: string,
-    status: 'passed' | 'failed'
+    status: 'passed''failed'
 interface AssertionResult {
     name: string,
-    status: 'passed' | 'failed'
+    status: 'passed''failed'
   expected?: unknown
   actual?: unknown
   message?: string}
@@ -163,7 +163,7 @@ interface CoverageResult {
 interface TestSuite {
     name: string,
     tests: Test[],
-  beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[]}</void>
+  beforeAll: (() => void Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[]}</void>
 }
 interface Test {</void>
   name: string,</void>
@@ -183,10 +183,10 @@ export const defaultTestConfig: TestConfig = {,
   accessibilityThreshold: 90}
 }
 interface TestResult {name: string,
-    status: 'passed' | 'failed' | 'skipped' | 'pending'}
+    status: 'passed' 'failed''skipped''pending'}
 interface TestResult {
     name: string,
-  status: 'passed' | 'failed' | 'skipped' | 'pending',
+  status: 'passed''failed''skipped' 'pending',
     duration: number
   error?: Error
   assertions: AssertionResult[]
@@ -1055,9 +1055,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
     </div>
-    <div class="tests"></div>
-        ${this.results
-            </div>
+    <div class="tests">${this.results</div>
         <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
@@ -1065,8 +1063,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
     </div>
-    <div class="tests"></div>
-        ${this.results}
+    <div class="tests">${this.results}
           .map(result => `}
         ${this.results}
           .map()

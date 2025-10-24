@@ -83,8 +83,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
           <div className="w-20 h-20 mx-auto bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center animate-pulse">
             <Zap className="w-10 h-10 text-white" />
           </div>
-          <div className="absolute inset-0 w-20 h-20 mx-auto bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-ping opacity-20"></div>
-        </div>
+          <div className="absolute inset-0 w-20 h-20 mx-auto bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-ping opacity-20"> </div>
 
         {/* Loading Message */}
         <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
@@ -106,8 +105,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
         <div className="flex justify-center space-x-2">
           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
           <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-          <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-        </div>
+          <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}> </div>
       </div>
     </div>
   );
@@ -192,12 +190,10 @@ export const CardSkeleton: React.FC<CardSkeletonProps> = ({
           {/* Description Skeleton */}
           <div className="space-y-2 mb-4">
             <div className="h-4 bg-slate-700 rounded"></div>
-            <div className="h-4 bg-slate-700 rounded w-3/4"></div>
-          </div>
+            <div className="h-4 bg-slate-700 rounded w-3/4"> </div>
           
           {/* Button Skeleton */}
-          <div className="h-10 bg-slate-700 rounded"></div>
-        </div>
+          <div className="h-10 bg-slate-700 rounded"> </div>
       ))}
     </div>
   );
@@ -220,9 +216,7 @@ export const TableSkeleton: React.FC<TableSkeletonProps> = ({
         {/* Header */}
         <div className="flex space-x-4 mb-4">
           {Array.from({ length: columns }).map((_, index) => (
-            <div key={index} className="h-4 bg-slate-700 rounded flex-1"></div>
-          ))}
-        </div>
+            <div key={index} className="h-4 bg-slate-700 rounded flex-1">))}</div>
         
         {/* Rows */}
         {Array.from({ length: rows }).map((_, rowIndex) => (
@@ -233,9 +227,7 @@ export const TableSkeleton: React.FC<TableSkeletonProps> = ({
                 className={`h-4 bg-slate-700 rounded ${
                   colIndex === columns - 1 ? 'w-1/2' : 'flex-1'
                 }`}
-              ></div>
-            ))}
-          </div>
+              >))}</div>
         ))}
       </div>
     </div>

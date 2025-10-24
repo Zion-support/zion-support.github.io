@@ -111,8 +111,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div className="relative">
         <div className={`${sizeClasses[size]} border-4 ${spinnerClasses[variant]} rounded-full animate-spin`} aria-hidden="true"></div>
         <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-          <div className={`${sizeClasses[size === 'lg' ? 'md' : 'sm']} border-2 border-transparent border-t-purple-600 rounded-full animate-spin`}></div>
-        </div>
+          <div className={`${sizeClasses[size === 'lg' ? 'md' : 'sm']} border-2 border-transparent border-t-purple-600 rounded-full animate-spin`}> </div>
       </div>
       <span className="sr-only">{message}</span>
     </div>
