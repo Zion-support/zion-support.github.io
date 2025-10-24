@@ -86,5 +86,6 @@ const ErrorHandler: React.FC = () => {
     </>
 
   );
-}  )}
-export default ErrorHandler
+};
+
+export default ErrorHandler;

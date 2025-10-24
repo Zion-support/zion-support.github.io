@@ -84,7 +84,7 @@ const EnhancedErrorBoundary: React.FC = () => {
       </div>
       <Footer /></Footer>
     </>
-
   );
-}  )}
-export default EnhancedErrorBoundary
+};
+
+export default EnhancedErrorBoundary;

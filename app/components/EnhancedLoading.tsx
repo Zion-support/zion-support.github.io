@@ -84,7 +84,7 @@ const EnhancedLoading: React.FC = () => {
       </div>
       <Footer /></Footer>
     </>
-
   );
-}  )}
-export default EnhancedLoading
+};
+
+export default EnhancedLoading;

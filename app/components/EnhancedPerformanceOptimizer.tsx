@@ -86,5 +86,6 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     </>
 
   );
-}  )}
-export default EnhancedPerformanceOptimizer
+};
+
+export default EnhancedPerformanceOptimizer;

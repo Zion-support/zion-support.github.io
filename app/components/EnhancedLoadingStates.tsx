@@ -86,5 +86,6 @@ const EnhancedLoadingStates: React.FC = () => {
     </>
 
   );
-}  )}
-export default EnhancedLoadingStates
+};
+
+export default EnhancedLoadingStates;
