@@ -63,7 +63,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
                   </ul>
                 </div>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
