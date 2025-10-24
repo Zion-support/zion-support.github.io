@@ -1,10 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Zap, Settings, Shield, Clock, CheckCircle, ArrowRight, Phone, Mail, Star, TrendingUp, Users, Award } from 'lucide-react';
-import Header from '../components/Header';
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Brain, Target, BarChart, Users, ArrowRight, Sparkles } from 'lucide-react';
@@ -93,7 +89,7 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
-  return (</div>
+  return (
     <>
       <Helmet>
         <title>AI Automation - Zion Tech Group</title>
