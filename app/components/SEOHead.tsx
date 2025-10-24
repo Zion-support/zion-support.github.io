@@ -11,9 +11,9 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Leading provider of AI solutions, cloud infrastructure, and digital transformation services.',
-  keywords = 'AI, artificial intelligence, cloud computing, digital transformation, technology solutions',
+  title = 'Zion Tech Group - Advanced Technology Solutions',
+  description = 'Leading provider of AI, IT, and 5G solutions for modern businesses',
+  keywords = 'AI solutions, IT services, 5G technology, cloud computing, digital transformation',
   canonicalUrl,
   ogImage = '/images/og-image.jpg',
   structuredData
