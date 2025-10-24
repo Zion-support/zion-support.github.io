@@ -1,10 +1,5 @@
 {
   "extends": ["next/core-web-vitals"],
-<<<<<<< HEAD
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-=======
->>>>>>> b0cfc2bd9ff5b1b47467c418e43a363dfc207047
   "rules": {
     "no-unused-vars": "off",
     "no-console": ["warn", { "allow": ["warn", "error"] }],

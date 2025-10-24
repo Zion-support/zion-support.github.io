@@ -20,40 +20,35 @@
       {
         "name": "next"
       }
-<<<<<<< HEAD
-    ]
-=======
     ],
-    "target": "ES2017"
->>>>>>> origin/main
+    "target": "ES2017",
+    "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-<<<<<<< HEAD
     "types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "jest.setup.ts"
   ],
   "exclude": [
     "node_modules",
     "corrupted-src-backup",
     "problematic-files-backup",
-    "problematic-pages"
-=======
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
+    "problematic-pages",
     "**/ai-pages-backup/**",
     "**/all-pages-backup/**",
     "**/backup*/**",
     "**/*.backup.*",
     "**/*.bak",
-    "**/backup/**"
->>>>>>> origin/main
+    "**/backup/**",
+    "**/temp-backup/**",
+    "**/temp-disabled/**",
+    "**/temp-disabled-auth-pages/**",
+    "**/temp-disabled-pages/**",
+    "**/temp-pages/**",
+    "**/temp-problematic/**",
+    "**/temp-all-problematic/**"
   ]
 }

@@ -14,13 +14,13 @@ describe('Components', () => {
   
   test('should render test content', () => {
     render(<TestComponent />);
-    expect(screen.getByText('Test content')).toBeInTheDocument();
+    expect(screen.getByText('Test content')).toBeTruthy();
   });
   
   test('should handle basic component rendering', () => {
     render(
       <div>SEO Test</div>
     );
-    expect(screen.getByText('SEO Test')).toBeInTheDocument();
+    expect(screen.getByText('SEO Test')).toBeTruthy();
   });
 });

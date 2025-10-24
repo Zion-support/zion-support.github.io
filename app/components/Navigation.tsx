@@ -72,11 +72,7 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-<<<<<<< HEAD
             <Link href="/" className="flex items-center space-x-2">
-=======
-                <Link href="/" className="flex items-center space-x-2">
->>>>>>> b0cfc2bd9ff5b1b47467c418e43a363dfc207047
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>

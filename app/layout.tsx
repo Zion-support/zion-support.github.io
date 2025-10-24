@@ -87,13 +87,14 @@ export default function RootLayout({
       <body className={inter.className}>
         <Analytics />
         <PerformanceMonitor />
-        <AccessibilityEnhancer />
         <ErrorBoundary>
-          <Header />
-          <main className="pt-16">
-            {children}
-          </main>
-          <Footer />
+          <AccessibilityEnhancer>
+            <Header />
+            <main className="pt-16">
+              {children}
+            </main>
+            <Footer />
+          </AccessibilityEnhancer>
         </ErrorBoundary>
       </body>
     </html>
