@@ -51,10 +51,10 @@ const Page: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                       {benefit}
                     </li>
-                  ))
+                  ))}
                 </ul>
               </div>
-            ))
+            ))}
           </div>
 
           <div className="text-center">
@@ -70,7 +70,6 @@ const Page: React.FC = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </div>
-        </div>
         </div>
       </div>
       <Footer />
