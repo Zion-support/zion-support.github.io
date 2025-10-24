@@ -19,9 +19,12 @@ const PagePage: React.FC = () => {
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
 <<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
+<<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 >>>>>>> main:app/zion-ai-social-media-manager/page.tsx
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-sales-predictor/page.tsx
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891:app/zion-ai-sales-predictor/page.tsx
     },
     {
       icon: BarChart,
@@ -44,6 +47,7 @@ const PagePage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 <<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -167,6 +171,22 @@ export default Cloudinfrastructuremanager;
               Advanced Page solution for modern businesses.
             </p>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-sales-predictor/page.tsx
+=======
+    <>
+      
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced Page solution for modern businesses.
+            </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891:app/zion-ai-sales-predictor/page.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
@@ -252,4 +272,7 @@ export default Cloudinfrastructuremanager;
 };
 
 export default PagePage;
+<<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 >>>>>>> main:app/zion-ai-social-media-manager/page.tsx
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891:app/zion-ai-sales-predictor/page.tsx

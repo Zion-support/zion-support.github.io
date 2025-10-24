@@ -161,3 +161,5 @@ export default SupportPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

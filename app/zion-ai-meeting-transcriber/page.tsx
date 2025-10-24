@@ -6,7 +6,7 @@ const Zionaimeetingtranscriber = () => {
     {
       icon: "🚀",
       title: "Professional",
-      description: "Professional zion ai meeting transcriber solutions"
+      description: "Professional zion meeting transcriber solutions"
     },
     {
       icon: "⚡",

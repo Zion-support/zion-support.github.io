@@ -108,3 +108,5 @@ const Zionaiaccountingassistant = () => {
 };
 
 export default Zionaiaccountingassistant;
+
+export default Zionaiaccountingassistant;

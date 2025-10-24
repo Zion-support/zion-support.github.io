@@ -6,7 +6,7 @@ const Zionaicontentmoderator = () => {
     {
       icon: "🚀",
       title: "Professional",
-      description: "Professional zion ai content moderator solutions"
+      description: "Professional zion content moderator solutions"
     },
     {
       icon: "⚡",

@@ -6,7 +6,7 @@ const Zionaicustomerchurnpredictor = () => {
     {
       icon: "🚀",
       title: "Professional",
-      description: "Professional zion ai customer churn predictor solutions"
+      description: "Professional zion customer churn predictor solutions"
     },
     {
       icon: "⚡",

@@ -139,4 +139,8 @@ const AiAutomatedTestingPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD:app-backup/ai-automated-testing/page.tsx
 export default AiAutomatedTestingPage;
+=======
+export default PagePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891:app/zion-ai-workflow-automator/page.tsx

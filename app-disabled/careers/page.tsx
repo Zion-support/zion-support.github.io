@@ -77,7 +77,7 @@ const eersPage: React.FC = () => ,{}
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-cyan-400">eers</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
             Join our team and help shape the future of AI and IT solutions.
           </p>
         </div>
@@ -239,12 +239,12 @@ import { Right, Circle, Star } from 'lucide-react'
       label: 'Glassdoor Ratin,g,
       description: 'Highly rated workplac,e});)
         <title>eers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us. />
-        <meta name="keywords" content="careers, jobs, AI engineer, quantum computing, tech jobs, remote work, engineering positions />
-        <meta property="og:title" content="eers - Zion Tech Group />
-        <meta property="og:description" content="Join our team and work on the future of technology />
-        <meta property="og:type" content="website />
-        <meta property="og:url" content="https://ziontechgroup.com/careers />
+        <meta name=&quot;description&quot; content=&quot;Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us. />
+        <meta name=&quot;keywords&quot; content=&quot;careers, jobs, AI engineer, quantum computing, tech jobs, remote work, engineering positions />
+        <meta property=&quot;og:title&quot; content=&quot;eers - Zion Tech Group />
+        <meta property=&quot;og:description&quot; content=&quot;Join our team and work on the future of technology />
+        <meta property=&quot;og:type&quot; content=&quot;website />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/careers />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900></div>
         {/* Hero Section */}
@@ -254,7 +254,7 @@ import { Right, Circle, Star } from 'lucide-react'
                 Page
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8>
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto mb-8>
               Build the future of technology with us. Were looking for passionate individuals to join our mission of advancing AI and emerging technologies.
             </p>
             {/* Filter Controls */}
@@ -262,10 +262,10 @@ import { Right, Circle, Star } from 'lucide-react'
               <select
                 value={selectedDepartment}
                 onChange={(e) => setSelectedDepartment(e.target.value)}
-                className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors
+                className=&quot;px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors
               >
                 {departments.map((dept) => ()
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
 Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
 Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
@@ -286,18 +286,18 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                     </p>
                   </div>
                 </div>
-                  <option key={dept.id} value={dept.id} className="bg-slate-800>
+                  <option key={dept.id} value={dept.id} className=&quot;bg-slate-800>
                 {locations.map((loc) => ()
-                  <option key={loc.id} value={loc.id} className="bg-slate-800>
+                  <option key={loc.id} value={loc.id} className=&quot;bg-slate-800>
         </section>
   return (<div></div>
         <title>eers - Zion Tech Group | Join Our Team<
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture.
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs
+        <meta name=&quot;description&quot; content=&quot;Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture.
+        <meta name=&quot;keywords&quot; content=&quot;careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs
       <
-        <section className="py-20 px-4">
+        <section className=&quot;py-20 px-4&quot;>
         </section>
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300&quot;
                 >
                   <div className="flex items-start justify-between mb-4"></div>
                     <div></div>
@@ -310,7 +310,7 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6>
               Join Our Team
             <
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto>
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
             <
           <
@@ -331,10 +331,10 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                   <div className="flex justify-center mb-4"></div>
                     {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className=&quot;text-xl font-semibold text-gray-900 mb-3&quot;>
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className=&quot;text-gray-600&quot;>
                     {benefit.description}
                   </p>
         </div>
@@ -364,9 +364,9 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                   } hover: border-purple-400 transition-all duration-300 grou,p}
                 >                <div></div>
                   {position.featured && ()
-                  <p className="text-gray-300 mb-6>{position.description}</p>
+                  <p className=&quot;text-gray-300 mb-6>{position.description}</p>
                       {position.requirements.length > 3 && ()
-                        <li className="text-sm text-gray-400>
+                        <li className=&quot;text-sm text-gray-400>
             </div>  ));)
 export default eersPage
 

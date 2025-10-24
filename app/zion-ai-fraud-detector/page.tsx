@@ -108,3 +108,5 @@ const Zionaifrauddetector = () => {
 };
 
 export default Zionaifrauddetector;
+
+export default Zionaifrauddetector;

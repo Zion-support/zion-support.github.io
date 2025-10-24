@@ -108,3 +108,5 @@ const Enterpriseintegration = () => {
 };
 
 export default Enterpriseintegration;
+
+export default Enterpriseintegration;

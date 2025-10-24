@@ -108,3 +108,5 @@ const Iotintegration = () => {
 };
 
 export default Iotintegration;
+
+export default Iotintegration;

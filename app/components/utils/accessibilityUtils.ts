@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 "use client";
+<<<<<<< HEAD
 
 /**
  * Accessibility Utilities
@@ -188,3 +190,7 @@ export default {
 "use client"
 >>>>>>> cursor/fix-errors-and-merge-to-main-4b1f
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
+=======
+"use client"
+>>>>>>> cursor/fix-errors-and-merge-to-main-4b1f
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891

@@ -6,7 +6,7 @@ const Zionaicustomersupportpro = () => {
     {
       icon: "🚀",
       title: "Professional",
-      description: "Professional zion ai customer support pro solutions"
+      description: "Professional zion customer support pro solutions"
     },
     {
       icon: "⚡",

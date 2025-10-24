@@ -108,3 +108,5 @@ const Machinelearningops = () => {
 };
 
 export default Machinelearningops;
+
+export default Machinelearningops;

@@ -167,8 +167,7 @@ const CaseStudiesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -197,6 +196,8 @@ const CaseStudiesPage: React.FC = () => {
 };
 
 export default CaseStudiesPage;
+
+export default PagePage;
 
 export default PagePage;
 

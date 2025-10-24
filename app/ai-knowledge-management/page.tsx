@@ -108,3 +108,5 @@ const Aiknowledgemanagement = () => {
 };
 
 export default Aiknowledgemanagement;
+
+export default Aiknowledgemanagement;

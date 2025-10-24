@@ -108,3 +108,5 @@ const Zionaicontentmoderation = () => {
 };
 
 export default Zionaicontentmoderation;
+
+export default Zionaicontentmoderation;

@@ -110,3 +110,5 @@ const Machinelearning = () => {
 export default Machinelearning;
 
 export default MachineLearning;
+
+export default Machinelearning;

@@ -110,3 +110,5 @@ const Computervision = () => {
 export default Computervision;
 
 export default ComputerVision;
+
+export default Computervision;

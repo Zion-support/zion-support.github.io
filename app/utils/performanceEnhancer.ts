@@ -239,3 +239,4 @@ export const initializePerformanceEnhancements=";";"
 <<<<<<< HEAD
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891

@@ -6,7 +6,7 @@ const Zionaidocumentanalyzer = () => {
     {
       icon: "🚀",
       title: "Professional",
-      description: "Professional zion ai document analyzer solutions"
+      description: "Professional zion document analyzer solutions"
     },
     {
       icon: "⚡",

@@ -143,3 +143,5 @@ export default ZionSmartAnalyticsDashboardPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

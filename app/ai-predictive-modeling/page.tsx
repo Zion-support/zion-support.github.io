@@ -108,3 +108,5 @@ const Aipredictivemodeling = () => {
 };
 
 export default Aipredictivemodeling;
+
+export default Aipredictivemodeling;

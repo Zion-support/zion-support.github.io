@@ -72,6 +72,7 @@ export interface Metadata {
 </string, string>
 }
 }
+
 export interface MetadataRoute {
   ;
   url: string;
@@ -79,6 +80,7 @@ export interface MetadataRoute {
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number;
 }
+
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string;
   lastModified?: string | Date;

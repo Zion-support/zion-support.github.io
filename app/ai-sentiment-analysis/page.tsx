@@ -108,3 +108,5 @@ const Aisentimentanalysis = () => {
 };
 
 export default Aisentimentanalysis;
+
+export default Aisentimentanalysis;

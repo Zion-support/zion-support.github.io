@@ -1,9 +1,20 @@
+<<<<<<< HEAD:src/utils/monitoring.ts
+// monitoring utility
+export const monitoring = () => {
+  // Utility implementation
+  return null;
+};
+
+export default monitoring;
+=======
+<<<<<<< HEAD:app/utils/monitoring.ts
 'use client';
 'use client'
 import { Download } from 'lucide-react'
 import Navigation from './Navigation'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
@@ -117,6 +128,7 @@ class MonitoringService {
         }
         // // // console.error('Error setting up performance observers:', error)
       }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
     }
   }
 
@@ -132,6 +144,7 @@ class MonitoringService {
             //   startTime: entry.startTime
             // })
           }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -170,6 +183,7 @@ class MonitoringService {
       } catch (_error) {
         // // // console.error('Error monitoring resources:', _error)
       }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
     }
   }
 
@@ -212,6 +226,7 @@ class MonitoringService {
       //   unit: name === 'cls' ? 'score' : 'ms'
       // })
     }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {
@@ -229,6 +244,7 @@ class MonitoringService {
     }
 <<<<<<< HEAD:app/utils/monitoring.ts
     // // // console.error('[Error]', error)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {
@@ -255,6 +271,7 @@ class MonitoringService {
         //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         // })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
       }
     }
   }
@@ -282,6 +299,7 @@ class MonitoringService {
         //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
         //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         // })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
       }
     }
   }
@@ -324,3 +342,4 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/monitoring.ts

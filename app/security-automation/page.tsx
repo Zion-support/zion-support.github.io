@@ -108,3 +108,5 @@ const Securityautomation = () => {
 };
 
 export default Securityautomation;
+
+export default Securityautomation;

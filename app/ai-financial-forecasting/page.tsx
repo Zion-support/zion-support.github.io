@@ -108,3 +108,5 @@ const Aifinancialforecasting = () => {
 };
 
 export default Aifinancialforecasting;
+
+export default Aifinancialforecasting;

@@ -108,3 +108,5 @@ const Aisupplychainai = () => {
 };
 
 export default Aisupplychainai;
+
+export default Aisupplychainai;

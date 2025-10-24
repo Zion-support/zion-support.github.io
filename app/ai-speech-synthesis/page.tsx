@@ -108,3 +108,5 @@ const Aispeechsynthesis = () => {
 };
 
 export default Aispeechsynthesis;
+
+export default Aispeechsynthesis;
