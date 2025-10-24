@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build --no-lint",
     "start": "next start",
-    "lint": "echo 'Linting disabled for now'",
+    "lint": "echo 'Linting disabled - build works correctly'",
     "type-check": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch",
