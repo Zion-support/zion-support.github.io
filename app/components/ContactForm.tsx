@@ -1,14 +1,16 @@
 'use client';
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
+
 interface FormData {
-  name: string;,
-    email: string;
-  phone: string;,
-    company: string;
-  message: string;,
-    service: string
-  }
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+  service: string;
+}
+
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -16,36 +18,41 @@ const ContactForm: React.FC = () => {
     phone: '',
     company: '',
     message: '',
-    service: ''})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+    service: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  setFormData({
-      ...formData
+    setFormData({
+      ...formData,
       [e.target.name]: e.target.value
-})
-  }
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(false);
+    setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
+      setIsSubmitted(false);
       setFormData({
         name: '',
-    email: '',
+        email: '',
         phone: '',
-    company: '',
+        company: '',
         message: '',
-    service: ''})
-    }, 3000)
-  }
+        service: ''
+      });
+    }, 3000);
+  };
+
   const services = [
-  'AI Solutions',
+    'AI Solutions',
     'Web Development',
     'Mobile Development',
     'Cloud Migration',
@@ -53,7 +60,8 @@ const ContactForm: React.FC = () => {
     'Data Analytics',
     'DevOps',
     'Consulting'
-  ]
+  ];
+
   if (isSubmitted) {
     return (
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
@@ -61,13 +69,14 @@ const ContactForm: React.FC = () => {
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       </div>
-    )
+    );
   }
+
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid md: grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               Full Name *
@@ -79,7 +88,7 @@ const ContactForm: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Your full name"
             />
           </div>
@@ -94,12 +103,12 @@ const ContactForm: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="your@email.com"
             />
           </div>
         </div>
-        <div className="grid md: grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
               Phone Number
@@ -110,7 +119,7 @@ const ContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="+1 (555) 123-4567"
             />
           </div>
@@ -124,7 +133,7 @@ const ContactForm: React.FC = () => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Your company name"
             />
           </div>
@@ -138,7 +147,7 @@ const ContactForm: React.FC = () => {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           >
             <option value="">Select a service</option>
             {services.map((service, index) => (
@@ -159,25 +168,25 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
             rows={6}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
             placeholder="Tell us about your project or how we can help..."
           />
         </div>
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
               Sending...
-</>
+            </>
           ) : (
             <>
               <Send className="w-5 h-5 mr-2" />
               Send Message
-</>
+            </>
           )}
         </button>
       </form>
@@ -199,6 +208,7 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
-export default ContactForm
+  );
+};
+
+export default ContactForm;
