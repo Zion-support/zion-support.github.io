@@ -1,15 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import React from 'react'
 import './globals.css'
-import Analytics from './components/Analytics'
-import PerformanceMonitor from './components/PerformanceMonitor'
-import PerformanceOptimizer from './components/PerformanceOptimizer'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
   description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services. Expert technology solutions for modern enterprises.',
   keywords: 'AI solutions, artificial intelligence, cloud architecture, web development, mobile apps, data analytics, cybersecurity, machine learning, cloud computing, digital transformation',
@@ -58,6 +51,10 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+=======
+  title: 'Zion Tech Group - AI & IT Solutions',
+  description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
 }
 
 export default function RootLayout({
@@ -66,6 +63,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+<<<<<<< HEAD
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
@@ -84,6 +82,10 @@ export default function RootLayout({
         </AccessibilityEnhancer>
         <PerformanceMonitor />
       </body>
+=======
+    <html lang="en">
+      <body>{children}</body>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
     </html>
   )
 }

@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 'use client'
 import React, { useState, useCallback } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, User, Building, Globe, MessageCircle } from 'lucide-react'
+=======
+'use client';
+
+import React, { useState, useCallback } from 'react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, User, Building, Globe, MessageCircle } from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: ''
@@ -22,6 +30,7 @@ const ContactPage: React.FC = () => {
     }))
   }, [])
   const handleSubmit = async (e: React.FormEvent) => {
+<<<<<<< HEAD
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
@@ -29,6 +38,16 @@ const ContactPage: React.FC = () => {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000))
       setSubmitStatus('success')
+=======
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSubmitStatus('success');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
       setFormData({
         name: '',
         email: '',
@@ -44,7 +63,12 @@ const ContactPage: React.FC = () => {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
   const services = [
     'AI Solutions'
     'Cloud Computing'
@@ -55,7 +79,12 @@ const ContactPage: React.FC = () => {
     'DevOps'
     'Consulting'
     'Other'
+<<<<<<< HEAD
     ];
+=======
+  ];
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
   const contactInfo = [
     {
       icon: Phone,
@@ -83,11 +112,19 @@ const ContactPage: React.FC = () => {
     }
     ];
   return (
+<<<<<<< HEAD
     <div className="...">
       <div className="...">
         {/* Header */}
         <div className="...">
           <h1 className="...">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
             Get in
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
               Touch
@@ -98,7 +135,11 @@ const ContactPage: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className="grid lg:grid-cols-2 gap-12">
+=======
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
           {/* Contact Form */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
             <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
@@ -123,6 +164,7 @@ const ContactPage: React.FC = () => {
                     <User className="inline h-4 w-4 mr-2" />
                     Full Name *
                   </label>
+<<<<<<< HEAD
                   <input
                     type="text"
                     id="name"
@@ -154,6 +196,42 @@ const ContactPage: React.FC = () => {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
+=======
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Email Address *
+                  </label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                     <Building className="inline h-4 w-4 mr-2" />
@@ -337,6 +415,13 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 export default ContactPage
+=======
+  );
+};
+
+export default ContactPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588

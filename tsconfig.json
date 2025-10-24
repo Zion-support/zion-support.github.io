@@ -8,9 +8,8 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmitOnError": false,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -19,30 +18,30 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "jsxImportSource": "react",
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     ".next/types/**/*.ts",
-    "app/about/page.tsx",
-    "app/accessibility/page.tsx",
-    "app/ai-accounting-assistant/page.tsx",
-    "app/ai-agricultural-intelligence-pro/page.tsx",
-    "app/contact/page.tsx",
-    "app/layout.tsx",
-    "app/page.tsx",
+    "app/**/*.tsx",
+    "app/**/*.ts",
     "next-env.d.ts",
-    "types/**/*.ts",
     "dist/types/**/*.ts"
   ],
   "exclude": [

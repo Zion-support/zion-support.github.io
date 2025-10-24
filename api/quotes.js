@@ -7,13 +7,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, details, country, service } = req.body || {};
-
-    if (!name || !email || !phone || !details) {
-      res.statusCode = 400;
-      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
-
-    // Process quote submission logic here
+    // Process the quote request
     const quote = {
       id: Date.now().toString(),
       name,
@@ -38,5 +32,7 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Quote submission error:', error);
-    res.statusCode = 500;
-
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}
