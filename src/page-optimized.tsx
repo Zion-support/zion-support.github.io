@@ -1,8 +1,8 @@
-'use client'
 import React, { lazy, Suspense } from 'react'
 import SEOOptimizer from './components/SEOOptimizer'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import PerformanceMonitor from './components/PerformanceMonitor'
+'use client'
 // Fallback component
 const EmptyComponent = () => null
 // Lazy load heavy components - these may not exist, so make them optional
@@ -13,15 +13,12 @@ const UnifiedBanner = lazy(() =>
 )
 const ContentPromotion = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({
-    default: EmptyComponent
-  }))
+    default: EmptyComponent}))
 )
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
-    default: () => <div /></div>
-  }))
+    default: () => <div /></div>}))
 )
-
     </div>
   )
 }

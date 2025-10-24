@@ -1,6 +1,6 @@
+
 export const usePerformance = () => {
   // Hook implementation
-  return null;
-};
-
-export default usePerformance;
+  return null
+}
+export default usePerformance

@@ -1,8 +1,7 @@
-'use client'
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import { Mail, ArrowRight } from 'lucide-react'
-
+'use client'
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -30,20 +29,20 @@ const ContentNewsletterSignup: React.FC = () => {
     )
   }
   return (
-  <sectionclassName=&quot;mb-16&quot;aria-labelledby=&quot;newsletter-heading&quot;><divclassName=&quot;bg-gradient-to-r from-purple-600to-blue-600text-whitep-8rounded-xl&quot;><divclassName=&quot;max-w-2 xlmx-autotext-center&quot;><id=&quot;newsletter-heading&quot;className=&quot;text-2 xlsm:text-3 xlfont-boldmb-4&quot;></id=&quot;newsletter-heading&quot;className=&quot;text-2 xlsm:text-3 xlfont-boldmb-4&quot;>Stay Updated with AI Innovation
+  <sectionclassName=&quot;mb-16&quot;aria-labelledby=&quot;newsletter-heading&quot;><divclassName=&quot;bg-gradient-to-r from-purple-600to-blue-600text-whitep-8rounded-xl&quot;><divclassName=&quot;max-w-2 xlmx-autotext-center&quot;><id=&quot;newsletter-heading&quot;className=&quot;text-2 xlsm: text-3 xlfont-boldmb-4&quot;></id=&quot;newsletter-heading&quot;className=&quot;text-2 xlsm:text-3 xlfont-boldmb-4&quot;>Stay Updated with AI Innovation
         </h><spanclassName=&quot;text-purple-100mb-6&quot;></spa></className=&quot;text-purple-100mb-6&quot;>Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
-        </p><formonSubmit={handleSubmit}className=&quot;flex flex-colsm:flex-row gap-4max-w-mdmx-auto&quot;><divclassName=&quot;flex-1relative&quot;><MailclassName=&quot;absolute left-3 top-1/2 transform -translate-y-1/2text-gray-400w-5h-5&quot; /><inputtype=&quot;email&quot;
+        </p><formonSubmit={handleSubmit}className=&quot;flex flex-colsm: flex-row gap-4max-w-mdmx-auto&quot;><divclassName=&quot;flex-1relative&quot;><MailclassName=&quot;absolute left-3 top-1/2 transform -translate-y-1/2text-gray-400w-5h-5&quot; /><inputtype=&quot;email&quot;
                 value={email}
                 onChange={(e) =>setEmail(e.target.value)}
-               placeholder=&quot;Enter your emailaddress&quot;
-               className=&quot;w-full pl-10pr-4 py-3 rounded-lg text-gray-900placeholder-gray-500 focus:outline-nonefocus:ring-2focus:ring-purple-300&quot;
+               placeholder=&quot;Enter your emailaddress&quot
+               className=&quot;w-full pl-10pr-4 py-3 rounded-lg text-gray-900placeholder-gray-500 focus: outline-nonefocus:ring-2focus:ring-purple-300&quot;
                 required
-               aria-label=&quot;Emailaddress&quot;
+               aria-label=&quot;Emailaddress&quot
               />
           </di><
-             type=&quot;submit&quot;
+             type=&quot;submit&quot
               disabled={isSubmitting}
-              className=&quot;bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center&quot;
+              className=&quot;bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center&quot;
             ></button>
               {isSubmitting ? (
                 <div className=&quot;w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin&quot;></div>
@@ -51,7 +50,7 @@ const ContentNewsletterSignup: React.FC = () => {
                 <>
                   Subscribe
                   <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
-                </>
+</>
               )}
             </button>
           </form>

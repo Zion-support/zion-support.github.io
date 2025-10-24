@@ -1,8 +1,6 @@
-"use client";
-import React from 'react';
-
+import React from 'react'
+"use client"
 const seoConstants.ts = () => {
-  return null;
-};
-
-export default seoConstants.ts;
+  return null
+}
+export default seoConstants.ts

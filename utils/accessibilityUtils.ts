@@ -1,8 +1,6 @@
-"use client";
-import React from 'react';
-
+import React from 'react'
+"use client"
 const accessibilityUtils.ts = () => {
-  return null;
-};
-
-export default accessibilityUtils.ts;
+  return null
+}
+export default accessibilityUtils.ts

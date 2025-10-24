@@ -1,7 +1,6 @@
 import { ListChecks, FileWarning, RefreshCw } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 import { Clock } from 'lucide-react'
-
 export default function Page
 Page.displayName = "Page"() {
   return (
@@ -12,16 +11,16 @@ Page.displayName = "Page"() {
             <ListChecks />
             <span className='text-sm font-semibold'>Agent Ops • 2026</span>
           </div>
-          <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
+          <h1 className='text-5xl md: text-6xl font-extrabold leading-tight mb-4'>
             Agent Release Runbooks v2 (2026)
           </h1>
-          <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
+          <p className='text-lg md: text-xl text-white/80 max-w-3xl'>
             Ship autonomous agents with budgeted actions, KPI
           </p>
         </div>
       </section>
       <section className='py-12 bg-white'></section>
-        <div className='max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6'></div>
+        <div className='max-w-6xl mx-auto px-6 grid md: grid-cols-3 gap-6'></div>
           <div className='rounded-xl border p-6'></div>
             <div className='text-3xl font-extrabold text-fuchsia-600 mb-2'></div>
               Budgets
@@ -55,8 +54,8 @@ Page.displayName = "Page"() {
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
             </div>
-            <a href=&quot;/contact&quot;
-              className=&quot;bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2&quot;
+            <a href=&quot;/contact&quot
+              className=&quot;bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2&quot
             >
               Engage <RefreshCw />
             </a>

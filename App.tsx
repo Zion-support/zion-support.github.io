@@ -1,51 +1,44 @@
-import React, { Suspense, lazy, useEffect, memo } from "react";
-import { HelmetProvider } from "react-helmet-async";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import React, { Suspense, lazy, useEffect, memo } from "react"
+import { HelmetProvider } from "react-helmet-async"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Footer from "./app/components/Footer"
+import ErrorBoundary from "./app/components/ErrorBoundary"
+import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary"
+import PerformanceMonitor from "./app/components/PerformanceMonitor"
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer"
+import LoadingSpinner from "./app/components/LoadingSpinner"
+import SEOOptimizer from "./app/components/SEOOptimizer"
+import { usePerformanceOptimization } from "./app/hooks/usePerformanceOptimization"
 // Components
-import Footer from "./app/components/Footer";
-import ErrorBoundary from "./app/components/ErrorBoundary";
-import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import LoadingSpinner from "./app/components/LoadingSpinner";
-import SEOOptimizer from "./app/components/SEOOptimizer";
-
 // Hooks
-import { usePerformanceOptimization } from "./app/hooks/usePerformanceOptimization";
-
 // Lazy load pages for better performance
-const HomePage = lazy(() => import("./app/page"));
-const AboutPage = lazy(() => import("./app/about/page"));
-const ContactPage = lazy(() => import("./app/contact/page"));
-const ServicesPage = lazy(() => import("./app/services/page"));
-const PricingPage = lazy(() => import("./app/pricing/page"));
-const CaseStudiesPage = lazy(() => import("./app/case-studies/page"));
-const BlogPage = lazy(() => import("./app/blog/page"));
-const TeamPage = lazy(() => import("./app/team/page"));
-const CareersPage = lazy(() => import("./app/careers/page"));
-const PrivacyPage = lazy(() => import("./app/privacy/page"));
-const TermsPage = lazy(() => import("./app/terms/page"));
-
+const HomePage = lazy(() => import("./app/page"))
+const AboutPage = lazy(() => import("./app/about/page"))
+const ContactPage = lazy(() => import("./app/contact/page"))
+const ServicesPage = lazy(() => import("./app/services/page"))
+const PricingPage = lazy(() => import("./app/pricing/page"))
+const CaseStudiesPage = lazy(() => import("./app/case-studies/page"))
+const BlogPage = lazy(() => import("./app/blog/page"))
+const TeamPage = lazy(() => import("./app/team/page"))
+const CareersPage = lazy(() => import("./app/careers/page"))
+const PrivacyPage = lazy(() => import("./app/privacy/page"))
+const TermsPage = lazy(() => import("./app/terms/page"))
 // AI Services Pages
-const AIServicesPage = lazy(() => import("./app/ai-services/page"));
-const AISolutionsPage = lazy(() => import("./app/ai-solutions/page"));
-
+const AIServicesPage = lazy(() => import("./app/ai-services/page"))
+const AISolutionsPage = lazy(() => import("./app/ai-solutions/page"))
 // IT Services Pages
-const ITServicesPage = lazy(() => import("./app/it-services/page"));
-const ITSolutionsPage = lazy(() => import("./app/it-solutions/page"));
-const CloudInfrastructurePage = lazy(() => import("./app/cloud-infrastructure/page"));
-const DigitalTransformationPage = lazy(() => import("./app/digital-transformation/page"));
-const CybersecurityPage = lazy(() => import("./app/cybersecurity/page"));
-const SolutionsPage = lazy(() => import("./app/solutions/page"));
-
+const ITServicesPage = lazy(() => import("./app/it-services/page"))
+const ITSolutionsPage = lazy(() => import("./app/it-solutions/page"))
+const CloudInfrastructurePage = lazy(() => import("./app/cloud-infrastructure/page"))
+const DigitalTransformationPage = lazy(() => import("./app/digital-transformation/page"))
+const CybersecurityPage = lazy(() => import("./app/cybersecurity/page"))
+const SolutionsPage = lazy(() => import("./app/solutions/page"))
 // 5G Solutions Pages
-const FiveGSolutionsPage = lazy(() => import("./app/5g-solutions/page"));
-
+const FiveGSolutionsPage = lazy(() => import("./app/5g-solutions/page"))
 // Error fallback component
 export const ErrorFallback = ({
   error,
-  resetErrorBoundary,
+  resetErrorBoundary
 }: {
   error: Error;
   resetErrorBoundary: () => void;
@@ -81,19 +74,16 @@ export const ErrorFallback = ({
       </div>
     </div>
   </div>
-);
-
+)
 // Loading component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center">
     <LoadingSpinner />
   </div>
-);
-
+)
 const App = memo(() => {
   // Initialize performance optimizations
-  usePerformanceOptimization();
-
+  usePerformanceOptimization()
   useEffect(() => {
     // Register service worker
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
@@ -104,36 +94,32 @@ const App = memo(() => {
         })
         .catch(() => {
           // Service worker registration failed
-        });
+        })
     }
-
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload critical fonts
-      const fontPreload = document.createElement("link");
-      fontPreload.rel = "preload";
+      const fontPreload = document.createElement("link")
+      fontPreload.rel = "preload"
       fontPreload.href =
         "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
-      fontPreload.as = "style";
-      fontPreload.crossOrigin = "anonymous";
-      document.head.appendChild(fontPreload);
-
+      fontPreload.as = "style"
+      fontPreload.crossOrigin = "anonymous"
+      document.head.appendChild(fontPreload)
       // Preload critical pages
-      const criticalPages = ["/about", "/contact", "/services"];
+      const criticalPages = ["/about", "/contact", "/services"]
       criticalPages.forEach((page) => {
-        const link = document.createElement("link");
-        link.rel = "prefetch";
-        link.href = page;
-        document.head.appendChild(link);
-      });
-    };
-
+        const link = document.createElement("link")
+        link.rel = "prefetch"
+        link.href = page
+        document.head.appendChild(link)
+      })
+    }
     // Only preload in production
     if (process.env.NODE_ENV === "production") {
-      preloadCriticalResources();
+      preloadCriticalResources()
     }
-  }, []);
-
+  }, [])
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
@@ -162,7 +148,6 @@ const App = memo(() => {
                           <Route path="/careers" element={<CareersPage />} />
                           <Route path="/privacy" element={<PrivacyPage />} />
                           <Route path="/terms" element={<TermsPage />} />
-
                           {/* AI Services */}
                           <Route
                             path="/ai-services"
@@ -172,7 +157,6 @@ const App = memo(() => {
                             path="/ai-solutions"
                             element={<AISolutionsPage />}
                           />
-
                           {/* IT Services */}
                           <Route
                             path="/it-services"
@@ -195,18 +179,16 @@ const App = memo(() => {
                             element={<CybersecurityPage />}
                           />
                           <Route path="/solutions" element={<SolutionsPage />} />
-
                           {/* 5G Solutions */}
                           <Route
                             path="/5g-solutions"
                             element={<FiveGSolutionsPage />}
                           />
-
                           {/* Catch all route */}
                           <Route
                             path="*"
                             element={
-                              <div className="min-h-screen flex items-center justify-center">
+  <div className="min-h-screen flex items-center justify-center">
                                 <div className="text-center">
                                   <h1 className="text-4xl font-bold text-gray-900 mb-4">
                                     404
@@ -222,7 +204,7 @@ const App = memo(() => {
                                   </a>
                                 </div>
                               </div>
-                            }
+}
                           />
                         </Routes>
                       </ErrorBoundary>
@@ -236,8 +218,7 @@ const App = memo(() => {
         </Router>
       </HelmetProvider>
     </GlobalErrorBoundary>
-  );
-});
-
-App.displayName = "App";
-export default App;
+  )
+})
+App.displayName = "App"
+export default App

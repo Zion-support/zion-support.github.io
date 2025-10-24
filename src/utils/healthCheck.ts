@@ -1,2 +1,3 @@
 
-export default healthCheck;
+
+export default healthCheck

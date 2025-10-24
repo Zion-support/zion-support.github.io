@@ -1,62 +1,73 @@
-const fs = require('fs');
-const path = require('path');
 
+const fs = require('fs')
+const path = require('path')
+// Function to fix a single page file
 function fixPageFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix the broken features map section
-    const brokenPattern = /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">\s*<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">\s*<feature\.icon className="w-8 h-8 text-white" \/>\s*<\/div>\s*<h3 className="text-xl font-semibold text-white mb-3">\s*{feature\.title}\s*<\/h3>\s*<p className="text-gray-300">{feature\.description}<\/p>\s*<\/div>\s*\)\)}/gs;
-    
-    const fixedContent = `{features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}`;
-    
-    if (brokenPattern.test(content)) {
-      content = content.replace(brokenPattern, fixedContent);
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+    // Fix component names
+    if (content.includes('const PagePage: React.FC = () => {')) {
+      const pageName = path.basename(path.dirname(filePath))
+      const componentName = pageName.split('-').map(word =>
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join('') + 'Page'
+      content = content.replace('const PagePage: React.FC = () => {', `const ${componentName}: React.FC = () => {`)
+      content = content.replace(`export default PagePage;`, `export default ${componentName}`)
+      modified = true
     }
-    
-    return false;
+    // Remove react-helmet-async imports and usage
+    if (content.includes("import { Helmet } from 'react-helmet-async';")) {
+      content = content.replace("import { Helmet } from 'react-helmet-async';\n", '')
+      modified = true
+    }
+    if (content.includes('<Helmet>')) {
+  // Remove Helmet blocks
+      content = content.replace(/<Helmet>[\s\S]*?<\/Helmet>/g, '')
+      modified = true
+}
+    // Fix empty lines in JSX
+    if (content.includes('<>      \n      <Navigation />')) {
+  content = content.replace('<>      \n      <Navigation />', '<>\n      <Navigation />')
+      modified = true
+}
+    if (modified) {
+      fs.writeFileSync(filePath, content)
+      // eslint-disable-next-line no-console
+    console.log(`Fixed: ${filePath}`)
+      return true
+    }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    // eslint-disable-next-line no-console
+    console.error(`Error fixing ${filePath}:`, error.message)
   }
+  return false
 }
-
-function findAndFixPages(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
+// Function to recursively find and fix all page files
+function fixAllPages(dir) {
+  const items = fs.readdirSync(dir)
+  let fixedCount = 0
+  for (const item of items) {
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
-      fixedCount += findAndFixPages(filePath);
-    } else if (file === 'page.tsx') {
-      if (fixPageFile(filePath)) {
-        fixedCount++;
+      // Check if this is a page directory (contains page.tsx)
+      const pagePath = path.join(fullPath, 'page.tsx')
+      if (fs.existsSync(pagePath)) {
+        if (fixPageFile(pagePath)) {
+          fixedCount++
+}
       }
+      // Recursively check subdirectories
+      fixedCount += fixAllPages(fullPath)
     }
   }
-  
-  return fixedCount;
+  return fixedCount
 }
-
-const appDir = path.join(__dirname, 'app');
-const fixedCount = findAndFixPages(appDir);
-console.log(`Fixed ${fixedCount} page files`);
+// Start fixing from the app directory
+const appDir = path.join(__dirname, 'app')
+// eslint-disable-next-line no-console
+    console.log('Starting to fix pages...')
+const totalFixed = fixAllPages(appDir)
+// eslint-disable-next-line no-console
+    console.log(`Fixed ${totalFixed} page files.`)

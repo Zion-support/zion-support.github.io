@@ -1,7 +1,7 @@
+
 // useEnhancedPerformance hook
 export const useEnhancedPerformance = () => {
   // Hook implementation
-  return null;
-};
-
-export default useEnhancedPerformance;
+  return null
+}
+export default useEnhancedPerformance

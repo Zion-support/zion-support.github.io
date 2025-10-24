@@ -1,7 +1,6 @@
-#!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
+#!/usr/bin// Fixed regex
   '
   '
   '
@@ -19,7 +18,10 @@ import path from 'path'
     if (line.startsWith('<<<<<<<') || line.startsWith('') || line.startsWith('>>>>>>>'
       while (i < lines.length && (lines[i].startsWith('<<<<<<<') || lines[i].startsWith('') || lines[i].startsWith('>>>>>>>'
   return resolved.join('\n'
-  console.error('Error:'
+  // eslint-disable-next-line no-console
+    console.error('Error: '
     const content = fs.readFileSync(filePath, 'utf8'
-console.log('Starting merge conflict resolution...'
-console.log('Merge conflict resolution completed!'
+// eslint-disable-next-line no-console
+    console.log('Starting merge conflict resolution...'
+// eslint-disable-next-line no-console
+    console.log('Merge conflict resolution completed!'
