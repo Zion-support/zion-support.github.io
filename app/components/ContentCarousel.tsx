@@ -1,6 +1,4 @@
 'use client';
-<<<<<<< HEAD
-'use client'
 import React from 'react'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
