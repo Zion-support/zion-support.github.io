@@ -1,10 +1,16 @@
-&quot;use client&quot;
-import React from &quot;react&quot;
+"use client";
+import React from "react";
 
 interface AccessibilityUtilsProps {
   className?: string;
 }
 
-export default AccessibilityUtils
+const AccessibilityUtils: React.FC<AccessibilityUtilsProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h1>Accessibility Utils</h1>
+    </div>
+  );
+};
 
-export default AccessibilityUtilsPage;
+export default AccessibilityUtils;

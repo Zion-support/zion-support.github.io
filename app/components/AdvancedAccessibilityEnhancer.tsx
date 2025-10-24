@@ -16,7 +16,7 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean
 }
 
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true,
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation = true,
   enableScreenReader= true,
   enableHighContrast= true,
   enableFocusManagement= true,
@@ -25,7 +25,8 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
   enableColorContrast= true,
   enableMotionReduction= true,
   enableFontScaling= true,
-  enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
+  enableVoiceNavigation= true}) => {
+  const [accessibilitySettings, setAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',
