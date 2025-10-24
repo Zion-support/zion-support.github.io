@@ -51,18 +51,18 @@ const SidebarPage: React.FC = () => {
         <meta name="keywords" content="AI, artificial intelligence, Sidebar, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+          <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Sidebar
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Sidebar solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -75,15 +75,15 @@ const SidebarPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon {...feature.iconProps} />
@@ -104,15 +104,15 @@ const SidebarPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
@@ -124,13 +124,13 @@ const SidebarPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
@@ -290,11 +290,11 @@ onClick={() =>setIsOpen(false)}</div>
 <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}>
-<div className="flex flex-col h-full"></div>
+<div className="flex flex-col h-full">
 {/* Header */}</div>
-<div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
+<div className="flex items-center justify-between p-6 border-b border-slate-700/50">
 <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
-<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
+<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
 <Brain className="w-6 h-6 text-white" />
 </div>
 <div></div>
@@ -311,7 +311,7 @@ aria-label="Close sidebar"
 </button>
 </div>
 {/* Navigation */}
-<div className="flex-1 overflow-y-auto py-6"></div>
+<div className="flex-1 overflow-y-auto py-6">
 <nav className="space-y-2 px-4">
 {navigationSections.map((section, sectionIndex) => (;}
 <div key={sectionIndex} className="space-y-1"></div>
@@ -326,7 +326,7 @@ expandedSections.has(section.key) ?
 )}
 </button>
 {(!section.key || expandedSections.has(section.key)) && (
-<div className="ml-4 space-y-1"></div>
+<div className="ml-4 space-y-1">
 {section.items.map((item, itemIndex) => (</div>
 <Link
 key={itemIndex}
