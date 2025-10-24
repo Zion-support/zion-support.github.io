@@ -180,7 +180,7 @@ export default function HomePage() {  return (
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
               With over 4 years of experience in cutting-edge technology solutions, 
-              we've helped businesses across various industries transform their operations 
+              we&apos;ve helped businesses across various industries transform their operations 
               and achieve unprecedented growth.
             </p>
             

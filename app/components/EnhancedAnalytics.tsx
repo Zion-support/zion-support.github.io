@@ -1,6 +1,6 @@
-&quot;use client&quot;
+"use client"
 
-import React, { createContext, useContext, useEffect } from &quot;react&quot;
+import React, { createContext, useContext, useEffect } from "react"
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, unknown>) => void
@@ -15,7 +15,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
   }
   return context
 }
@@ -27,10 +27,10 @@ interface AnalyticsProviderProps {
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
     // Initialize analytics
-    if (type of windo w !==&quot;undefined&quot;) {
+    if (type of windo w !=="undefined") {
       // Google Analytics
-      if (process.env.NODE_ENV === &quot;production&quot;) {
-        const script = document.createElement(&quot;script&quot;)
+      if (process.env.NODE_ENV === "production") {
+        const script = document.createElement("script")
         script.async = true
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
         document.head.appendChild(script)
@@ -40,16 +40,16 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         function gtag(...args: unknown[]) {
           (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
         }
-        gtag(&quot;js&quot;, new Date())
-        gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID)
+        gtag("js", new Date())
+        gtag("config", process.env.REACT_APP_GA_ID)
       }
     }
   }, [])
 
-  consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
+  consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;event&quot;,
+         "event",
           event,
           properties,
         )
@@ -59,10 +59,10 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
       }
   }
 
-  constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
+  constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;config&quot;,
+         "config",
           process.env.REACT_APP_GA_ID,
           {user_id: userId,
             custom_map: traits,
@@ -74,11 +74,11 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
       }
   }
 
-  constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
+  constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;event&quot;,
-         &quot;page_view&quot;,
+         "event",
+         "page_view",
           {page_title: name,
             page_location: windo w.location.href,
             ...properties,

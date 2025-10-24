@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
+import React, { createContext, useContext, useEffect, ReactNode } from "react"
 
 declare global {
   interface Window {
@@ -8,66 +8,66 @@ declare global {
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void
+  trackPageView: (pagePath: string, pageTitle?: string) => void
+  trackConversion: (conversionId: string, value?: number, currency?: string) => void
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined,
-)
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
-  if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
-  }
-  return context
-}
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 
 interface AnalyticsProviderProps {
   children: ReactNode
 }
 
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
-  
-    if (type of windo w !==&quot;undefined&quot;) {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
       // Google Analytics
-      if (process.env.NODE_ENV === &quot;production&quot;) {
-        const script = document.createElement(&quot;script&quot;)
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
+      if (process.env.NODE_ENV === "production") {
+        const script = document.createElement('script')
         script.async = true
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`
         document.head.appendChild(script)
 
-        window.gtag =
-          window.gtag ||
-          function (...args: any[]) {
-            (window.gtag as any).q = (window.gtag as any).q || []
-            (window.gtag as any).q.push(args)
-          }
-        window.gtag(&quot;js&quot;, new Date())
-        window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
+        window.dataLayer = window.dataLayer || []
+        function gtag(...args: any[]) {
+          window.dataLayer.push(args)
+        }
+        window.gtag = gtag
+        gtag('js', new Date())
+        gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID')
       }
     }
   }, [])
 
-  consttrackEvent= (
-    eventName: string,
-    parameters?: Record<string, unknown>,
-  ) => {
-    if (typeof window !== &quot;undefined&quot; && window.gtag) {
-      window.gtag(&quot;event&quot;, eventName, parameters)
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag('event', eventName, parameters)
     }
   }
 
-  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
-      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
-        page_title: pageName,
-        page_location: window.location.href,
+  const trackPageView = (pagePath: string, pageTitle?: string) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID', {
+        page_path: pagePath,
+        page_title: pageTitle || document.title,
       })
     }
   }
 
-  constvalue: AnalyticsContextType = {trackEvent,
+  const trackConversion = (conversionId: string, value?: number, currency?: string) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: conversionId,
+        value: value,
+        currency: currency || 'USD',
+      })
+    }
+  }
+
+  const value: AnalyticsContextType = {
+    trackEvent,
     trackPageView,
+    trackConversion,
   }
 
   return (
@@ -77,8 +77,12 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   )
 }
 
-export default AnalyticsProvider
-  );
-};
+export const useAnalytics = (): AnalyticsContextType => {
+  const context = useContext(AnalyticsContext)
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')
+  }
+  return context
+}
 
-export default AnalyticsProviderPage;
+export default AnalyticsProvider

@@ -13,7 +13,7 @@ interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean
 }
 
-constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> = ({enableAdvancedCaching= true,
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({enableAdvancedCaching= true,
   enableImageOptimization= true,
   enableLazyLoading= true,
   enablePreloading= true,
@@ -21,7 +21,8 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   enableResourceHints= true,
   enableServiceWorker= true,
   enableCriticalCSS= true,
-  enableWebVitals= true}) => {const [performanceMetricssetPerformanceMetrics] = useState({
+  enableWebVitals= true}) => {
+  const [performanceMetrics, setPerformanceMetrics] = useState({
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -30,8 +31,9 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   })
 
   // Web Vitals monitoring
-  useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {
-      constmeasureWebVitals= () => {
+  useEffect(() => {
+    if (enableWebVitals && typeof window !== 'undefined') {
+      const measureWebVitals = () => {
   
         // First Contentful Paint
         new PerformanceObserver((list) => {
@@ -81,9 +83,11 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // })
+          console.log('Service Worker registered:', registration)
+        })
         .catch((registrationError) => {
-          // })
+          console.error('Service Worker registration failed:', registrationError)
+        })
     }
 
     // Memory-based caching for API responses
@@ -132,6 +136,8 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
             imageObserver.unobserve(img)
           }
         }
+      })
+    })
 
     images.forEach((img) => imageObserver.observe(img))
   }, [])
@@ -152,7 +158,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
       link.href = resource
       link.as = resource.endsWith('.css') ? 'style' : 'script'
       document.head.appendChild(link)
-
+    })
   }, [])
 
   // Resource hints for better performance
@@ -174,7 +180,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
         link.crossOrigin = 'anonymous'
       }
       document.head.appendChild(link)
-
+    })
   }, [])
 
   // Critical CSS inlining
@@ -198,8 +204,8 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     if (typeof window === 'undefined') return
 
     // Report to analytics
-    if ('gtag' in windo w) {
-      (windo w as any).gtag('event', 'web_vitals', {
+    if ('gtag' in window) {
+      (window as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: 'Core Web Vitals',
         value: Math.round(performanceMetrics.lcp),
@@ -207,8 +213,9 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
           fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 100 0) / 1000}
-
+          cls: Math.round(performanceMetrics.cls * 1000) / 1000
+        }
+      })
     }
   }, [performanceMetrics])
 
@@ -240,7 +247,3 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 }
 
 export default AdvancedPerformanceOptimizer
-}}}}}
-};
-
-export default AdvancedPerformanceOptimizerPage;
