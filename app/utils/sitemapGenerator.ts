@@ -11,13 +11,12 @@ export interface SitemapEntry {
 }
 
 export const generateSitemap = (): SitemapEntry[] => {
-  const baseUrl = 'https: //ziontechgroup.com'
+  const baseUrl = 'https://ziontechgroup.com'
   const currentDate = new Date().toISOString()
 
   return [
     {
-      lo,
-      c: `${baseUrl}/`,
+      loc: `${baseUrl}/`,
       lastmod: currentDate,
       changefreq: 'daily',
       priority: 1.0

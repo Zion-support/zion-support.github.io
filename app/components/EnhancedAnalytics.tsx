@@ -1,24 +1,21 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-'use client';
+"use client"
 
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventNam,
-      e: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pag,
-      e: string) => void;
-};
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
+}
 
-  const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const Page = () => {
+export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  };
-
+  }
   return context;
-};
+}
 
 interface AnalyticsProviderProps {
   children: React.ReactNode;
@@ -70,9 +67,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   return (
     <AnalyticsContext.Provider value={value}>
-      {children};
-
-  return (
+      {children}
+    </AnalyticsContext.Provider>
   );
 };
 
@@ -80,8 +76,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 declare global {
   interface Window {
     dataLayer: any[];
-    gta,
-      g: (...arg,
-      s: any[]) => void;
+    gtag: (...args: any[]) => void;
   }
 }

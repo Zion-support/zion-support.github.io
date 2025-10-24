@@ -90,7 +90,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
       
       <Image
         ref={imgRef}
-        src={lazy ? undefined : optimizedSrc}
+        src={lazy ? '/placeholder.jpg' : optimizedSrc}
         data-src={lazy ? optimizedSrc : undefined}
         alt={alt}
         width={width || 0}
