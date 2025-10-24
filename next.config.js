@@ -4,7 +4,8 @@ const nextConfig = {
   output: 'standalone',
   trailingSlash: true,
   images: {
-    unoptimized: true
+    unoptimized: true,
+    formats: ['image/webp', 'image/avif'],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if
