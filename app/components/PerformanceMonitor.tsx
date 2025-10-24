@@ -10,7 +10,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
   enabled?: boolean;
 }
 
@@ -18,7 +18,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enabled = true
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [_metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !enabled) return;
@@ -33,7 +33,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // These would need to be measured with specific APIs
     const firstInputDelay = 0; // Would need to measure with PerformanceObserver
     const cumulativeLayoutShift = 0; // Would need to measure with PerformanceObserver
-    const timeToInteractive = navigation.domContentLoadedEventEnd - navigation.navigationStart;
+    const timeToInteractive = navigation.domContentLoadedEventEnd - navigation.fetchStart;
 
     const performanceMetrics: PerformanceMetrics = {
       loadTime,
@@ -62,12 +62,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   // Log performance metrics in development
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && metrics) {
-      console.log('Performance Metrics:', metrics);
+    if (process.env.NODE_ENV === 'development' && _metrics) {
+      console.log('Performance Metrics:', _metrics);
     }
-  }, [metrics]);
+  }, [_metrics]);
 
-  if (!enabled || !metrics) {
+  if (!enabled || !_metrics) {
     return null;
   }
 
