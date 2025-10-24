@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
+=======
+'use client'
+import React from 'react'
+import { Loader2 } from 'lucide-react'
+>>>>>>> cursor/delete-records-fd55
 
 export const PageLoader: React.FC = () => {
   return (
@@ -30,4 +36,21 @@ export const SkeletonLoader: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default PageLoader;
+=======
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 animate-pulse">
+    <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
+    <div className="h-3 bg-gray-200 rounded w-full mb-2"></div>
+    <div className="h-3 bg-gray-200 rounded w-2/3"></div>
+  </div>
+);
+
+export default {
+  PageLoader,
+  LoadingSpinner,
+  LoadingSkeleton,
+  ServiceCardSkeleton
+}
+>>>>>>> cursor/delete-records-fd55
