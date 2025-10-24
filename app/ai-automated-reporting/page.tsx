@@ -1,17 +1,14 @@
 'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { BarChart, TrendingUp, FileText, Zap, Brain, CheckCircle, ArrowRight, Star, Users, Clock, Shield, Target } from 'lucide-react';
 
 const AIAutomatedReportingPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>AI Automated Reporting | Zion Tech Group</title>
-        <meta name="description" content="Transform your business intelligence with AI-powered automated reporting. Generate insights, analytics, and reports automatically with our advanced AI reporting solutions." />
-        <meta name="keywords" content="AI reporting, automated reports, business intelligence, data analytics, smart reporting, AI insights" />
-      
-      
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -45,8 +42,8 @@ const AIAutomatedReportingPage: React.FC = () => {
                 </button>
               </div>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -136,166 +133,9 @@ const AIAutomatedReportingPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Smart Automation</h3>
-                <p className="text-gray-300 mb-4">
-                  Automate complex reporting workflows with intelligent scheduling, 
-                  data processing, and distribution to stakeholders.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
-                    Workflow automation
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
-                    Smart scheduling
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
-                    Auto-distribution
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Data Security</h3>
-                <p className="text-gray-300 mb-4">
-                  Enterprise-grade security ensures your data and reports are protected 
-                  with advanced encryption and compliance standards.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                    End-to-end encryption
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                    Access controls
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                    Audit trails
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Custom Dashboards</h3>
-                <p className="text-gray-300 mb-4">
-                  Create personalized dashboards with drag-and-drop functionality 
-                  and customizable widgets for your specific reporting needs.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                    Drag-and-drop builder
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                    Custom widgets
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                    Interactive charts
-                  </li>
-                </ul>
-              </div>
             </div>
-        </div>
-      </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Why Choose AI Automated Reporting?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your reporting process with intelligent automation 
-                and gain competitive advantages through data-driven insights.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="space-y-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Save 80% Time on Reporting</h3>
-                      <p className="text-gray-300">
-                        Automate repetitive reporting tasks and focus on strategic analysis 
-                        instead of manual data compilation and formatting.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Enhanced Collaboration</h3>
-                      <p className="text-gray-300">
-                        Share insights across teams with automated distribution, 
-                        real-time collaboration, and role-based access controls.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <TrendingUp className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Better Decision Making</h3>
-                      <p className="text-gray-300">
-                        Access comprehensive insights and predictions to make 
-                        informed decisions faster and with greater confidence.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-500/20">
-                <h3 className="text-2xl font-bold text-white mb-6">Key Metrics</h3>
-                <div className="space-y-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Report Generation Time</span>
-                    <span className="text-cyan-400 font-bold">-80%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Data Accuracy</span>
-                    <span className="text-green-400 font-bold">99.9%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">User Productivity</span>
-                    <span className="text-purple-400 font-bold">+150%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Cost Reduction</span>
-                    <span className="text-orange-400 font-bold">-60%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -316,9 +156,10 @@ const AIAutomatedReportingPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
       </div>
+      <Footer />
     </>
   );
 };

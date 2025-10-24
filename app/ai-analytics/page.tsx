@@ -1,6 +1,6 @@
 'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } from 'lucide-react';
@@ -17,18 +17,36 @@ const AIAnalyticsPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Leverage machine learning to uncover hidden patterns and predictions.',
-  
+      benefits: ['Predictive modeling', 'Pattern recognition', 'Automated insights', 'Smart recommendations']
+    },
+    {
+      icon: Target,
+      title: 'Custom Dashboards',
+      description: 'Create personalized dashboards tailored to your business needs.',
+      benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile responsive']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Tracking',
+      description: 'Monitor key metrics and track performance across all channels.',
+      benefits: ['KPI monitoring', 'Trend analysis', 'Performance alerts', 'Growth tracking']
+    },
+    {
+      icon: Zap,
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive reports automatically with AI assistance.',
+      benefits: ['Scheduled reports', 'Custom templates', 'Data visualization', 'Export options']
+    },
+    {
+      icon: Eye,
+      title: 'Data Visualization',
+      description: 'Transform complex data into clear, actionable visualizations.',
+      benefits: ['Interactive charts', 'Multiple chart types', 'Real-time updates', 'Export capabilities']
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group | Advanced Data Intelligence</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Real-time dashboards, predictive analytics, and automated reporting." />
-        <meta name="keywords" content="AI analytics, data intelligence, business intelligence, predictive analytics, data visualization, real-time dashboards" />
-      
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
