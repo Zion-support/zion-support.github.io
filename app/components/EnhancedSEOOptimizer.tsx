@@ -1,41 +1,46 @@
-import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'EnhancedSEOOptimizer - Zion Tech Group',
-  description: 'Comprehensive enhancedseooptimizer solutions for modern businesses.',
-  keywords: 'enhancedseooptimizer, AI solutions, technology services',
-  openGraph: {
-    title: 'EnhancedSEOOptimizer - Zion Tech Group',
-    description: 'Comprehensive enhancedseooptimizer solutions for modern businesses.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/components',
-  },
-};
-
-const EnhancedSEOOptimizerPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            EnhancedSEOOptimizer
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive enhancedseooptimizer solutions for modern businesses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
-              Get Started
-            </a>
-            <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Learn More
-            </a>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail, ArrowRight } from 'lucide-react'
+const EnhancedSEOOptimizerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+    title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+},
+    {
+  icon: BarChart,
+    title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+},
+    {
+  icon: Target,
+    title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+},
+    {
+  icon: TrendingUp,
+    title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+}
+  ]
+  const benefits = [
+    "Increase efficiency by up to 50%",
+      "Reduce costs by 30% with automation",
+      "Improve decision-making with AI insights",
+      "Scale operations without proportional staff increases"
+    'Gain competitive advantage with advanced technology'
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default EnhancedSEOOptimizerPage;
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+            </div>
+          </div>
