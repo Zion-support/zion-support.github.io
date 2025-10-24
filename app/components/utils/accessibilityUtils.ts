@@ -171,7 +171,7 @@ export const focusManagement = {
   }
 };
 
-export default {
+const accessibilityUtils = {
   isVisibleToScreenReader,
   getAccessibleName,
   hasProperFocus,
@@ -182,3 +182,5 @@ export default {
   isKeyboardAccessible,
   focusManagement
 };
+
+export default accessibilityUtils;
